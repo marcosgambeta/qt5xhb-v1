@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWebEngineUrlSchemeHandler INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
 
    METHOD requestStarted
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

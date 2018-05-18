@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWebEngineUrlRequestInfo
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
 %%   METHOD new
 %%   METHOD delete
@@ -26,9 +23,7 @@ CLASS QWebEngineUrlRequestInfo
    METHOD resourceType
    METHOD setHttpHeader
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

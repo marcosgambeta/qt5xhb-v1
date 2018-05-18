@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWebEngineUrlRequestJob INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -19,9 +19,7 @@ CLASS QWebEngineUrlRequestJob INHERIT QObject
    METHOD requestMethod
    METHOD requestUrl
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

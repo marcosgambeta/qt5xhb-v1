@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWebEngineCookieStore INHERIT QObject
+$beginClassFrom=QObject
 
 %%   METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QWebEngineCookieStore INHERIT QObject
 %%   METHOD onCookieAdded
 %%   METHOD onCookieRemoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
