@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSerialPort INHERIT QIODevice
+$beginClassFrom=QIODevice
 
    METHOD new
    METHOD delete
@@ -63,9 +63,7 @@ CLASS QSerialPort INHERIT QIODevice
    METHOD onError
    METHOD onSettingsRestoredOnCloseChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

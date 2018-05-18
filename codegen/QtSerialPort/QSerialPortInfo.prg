@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QSerialPortInfo
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -30,15 +27,7 @@ CLASS QSerialPortInfo
    METHOD standardBaudRates
    METHOD availablePorts
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
