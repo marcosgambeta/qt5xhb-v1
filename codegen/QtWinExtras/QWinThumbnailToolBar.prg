@@ -13,7 +13,7 @@ REQUEST QWINDOW
 REQUEST QWINTHUMBNAILTOOLBUTTON
 #endif
 
-CLASS QWinThumbnailToolBar INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -26,9 +26,7 @@ CLASS QWinThumbnailToolBar INHERIT QObject
    METHOD count
    METHOD clear
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

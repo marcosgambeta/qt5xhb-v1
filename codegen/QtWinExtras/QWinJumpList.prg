@@ -12,7 +12,7 @@ $header
 REQUEST QWINJUMPLISTCATEGORY
 #endif
 
-CLASS QWinJumpList INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QWinJumpList INHERIT QObject
    METHOD addCategory
    METHOD clear
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

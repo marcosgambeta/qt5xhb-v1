@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWinTaskbarProgress INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -38,9 +38,7 @@ CLASS QWinTaskbarProgress INHERIT QObject
    METHOD onPausedChanged
    METHOD onStoppedChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

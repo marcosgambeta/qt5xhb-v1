@@ -12,7 +12,7 @@ $header
 REQUEST QICON
 #endif
 
-CLASS QWinThumbnailToolButton INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QWinThumbnailToolButton INHERIT QObject
    METHOD onClicked
    METHOD onChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

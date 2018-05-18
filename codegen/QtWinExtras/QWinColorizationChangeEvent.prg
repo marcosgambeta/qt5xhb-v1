@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWinColorizationChangeEvent INHERIT QWinEvent
+$beginClassFrom=QWinEvent
 
    METHOD new
    METHOD delete
    METHOD color
    METHOD opaqueBlend
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

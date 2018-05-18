@@ -14,7 +14,7 @@ REQUEST QICON
 REQUEST QWINTASKBARPROGRESS
 #endif
 
-CLASS QWinTaskbarButton INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QWinTaskbarButton INHERIT QObject
    METHOD progress
    METHOD eventFilter
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
