@@ -13,7 +13,7 @@ $header
 REQUEST QQMLWEBCHANNELATTACHED
 #endif
 
-CLASS QQmlWebChannel INHERIT QWebChannel
+$beginClassFrom=QWebChannel
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QQmlWebChannel INHERIT QWebChannel
    METHOD connectTo
    METHOD disconnectFrom
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

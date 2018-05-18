@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWebChannel INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QWebChannel INHERIT QObject
 
    METHOD onBlockUpdatesChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
