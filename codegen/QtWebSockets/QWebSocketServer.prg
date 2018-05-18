@@ -15,7 +15,7 @@ REQUEST QNETWORKPROXY
 REQUEST QSSLCONFIGURATION
 #endif
 
-CLASS QWebSocketServer INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -51,9 +51,7 @@ CLASS QWebSocketServer INHERIT QObject
    METHOD onSslErrors
    METHOD onClosed
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

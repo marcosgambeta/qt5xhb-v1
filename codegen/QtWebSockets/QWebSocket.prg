@@ -16,7 +16,7 @@ REQUEST QURL
 REQUEST QSSLCONFIGURATION
 #endif
 
-CLASS QWebSocket INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -70,9 +70,7 @@ CLASS QWebSocket INHERIT QObject
    METHOD onBytesWritten
    METHOD onSslErrors
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

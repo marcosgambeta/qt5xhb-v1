@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QWebSocketCorsAuthenticator
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -20,15 +17,7 @@ CLASS QWebSocketCorsAuthenticator
    METHOD allowed
    METHOD setAllowed
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
