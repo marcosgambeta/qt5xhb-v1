@@ -17,7 +17,7 @@ REQUEST QRECT
 REQUEST QCOLOR
 #endif
 
-CLASS QTabBar INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -77,9 +77,7 @@ CLASS QTabBar INHERIT QWidget
    METHOD onTabCloseRequested
    METHOD onTabMoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

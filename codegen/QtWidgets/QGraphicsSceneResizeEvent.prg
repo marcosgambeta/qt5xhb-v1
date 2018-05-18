@@ -12,16 +12,14 @@ $header
 REQUEST QSIZEF
 #endif
 
-CLASS QGraphicsSceneResizeEvent INHERIT QGraphicsSceneEvent
+$beginClassFrom=QGraphicsSceneEvent
 
    METHOD new
    METHOD delete
    METHOD newSize
    METHOD oldSize
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

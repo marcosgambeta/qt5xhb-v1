@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionToolButton INHERIT QStyleOptionComplex
+$beginClassFrom=QStyleOptionComplex
 
    METHOD new
 %%   METHOD delete
@@ -31,9 +31,7 @@ CLASS QStyleOptionToolButton INHERIT QStyleOptionComplex
    METHOD setPos
    METHOD setFont
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

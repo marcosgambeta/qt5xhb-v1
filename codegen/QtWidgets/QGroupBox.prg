@@ -12,7 +12,7 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QGroupBox INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS QGroupBox INHERIT QWidget
    METHOD onClicked
    METHOD onToggled
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

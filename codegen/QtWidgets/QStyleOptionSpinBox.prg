@@ -12,7 +12,7 @@ $header
 %% #ifndef QT_NO_SPINBOX
 %% #endif // QT_NO_SPINBOX
 
-CLASS QStyleOptionSpinBox INHERIT QStyleOptionComplex
+$beginClassFrom=QStyleOptionComplex
 
    METHOD new
 %%   METHOD delete
@@ -25,9 +25,7 @@ CLASS QStyleOptionSpinBox INHERIT QStyleOptionComplex
    METHOD setStepEnabled
    METHOD setFrame
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

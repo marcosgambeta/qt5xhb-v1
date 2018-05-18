@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionFrame INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -23,9 +23,7 @@ CLASS QStyleOptionFrame INHERIT QStyleOption
    METHOD setFeatures
    METHOD setFrameShape
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

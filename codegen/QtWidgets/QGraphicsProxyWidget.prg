@@ -13,7 +13,7 @@ REQUEST QRECTF
 REQUEST QWIDGET
 #endif
 
-CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
+$beginClassFrom=QGraphicsWidget
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QGraphicsProxyWidget INHERIT QGraphicsWidget
    METHOD setGeometry
    METHOD type
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

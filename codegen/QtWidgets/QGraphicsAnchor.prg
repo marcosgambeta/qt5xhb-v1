@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QGraphicsAnchor INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD setSizePolicy
@@ -17,9 +17,7 @@ CLASS QGraphicsAnchor INHERIT QObject
    METHOD spacing
    METHOD unsetSpacing
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

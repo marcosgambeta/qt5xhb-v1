@@ -36,7 +36,7 @@ REQUEST QWINDOW
 REQUEST QGESTUREEVENT
 #endif
 
-CLASS QWidget INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -278,9 +278,7 @@ CLASS QWidget INHERIT QObject
    METHOD onWindowIconTextChanged // TODO: verificar se ainda é valido no Qt 5
    METHOD onCustomContextMenuRequested
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

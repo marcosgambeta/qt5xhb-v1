@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionGroupBox INHERIT QStyleOptionComplex
+$beginClassFrom=QStyleOptionComplex
 
    METHOD new
 %%   METHOD delete
@@ -27,9 +27,7 @@ CLASS QStyleOptionGroupBox INHERIT QStyleOptionComplex
    METHOD setLineWidth
    METHOD setMidLineWidth
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

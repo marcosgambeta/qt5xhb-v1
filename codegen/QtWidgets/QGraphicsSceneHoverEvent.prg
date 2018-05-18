@@ -13,7 +13,7 @@ REQUEST QPOINTF
 REQUEST QPOINT
 #endif
 
-CLASS QGraphicsSceneHoverEvent INHERIT QGraphicsSceneEvent
+$beginClassFrom=QGraphicsSceneEvent
 
    METHOD delete
    METHOD lastPos
@@ -24,9 +24,7 @@ CLASS QGraphicsSceneHoverEvent INHERIT QGraphicsSceneEvent
    METHOD scenePos
    METHOD screenPos
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

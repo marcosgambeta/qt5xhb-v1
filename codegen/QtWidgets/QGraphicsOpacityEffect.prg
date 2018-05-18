@@ -12,7 +12,7 @@ $header
 REQUEST QBRUSH
 #endif
 
-CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect
+$beginClassFrom=QGraphicsEffect
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QGraphicsOpacityEffect INHERIT QGraphicsEffect
    METHOD onOpacityChanged
    METHOD onOpacityMaskChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

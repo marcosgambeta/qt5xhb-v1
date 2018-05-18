@@ -12,16 +12,14 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QGraphicsSceneMoveEvent INHERIT QGraphicsSceneEvent
+$beginClassFrom=QGraphicsSceneEvent
 
    METHOD new
    METHOD delete
    METHOD newPos
    METHOD oldPos
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

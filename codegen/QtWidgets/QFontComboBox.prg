@@ -13,7 +13,7 @@ REQUEST QFONT
 REQUEST QSIZE
 #endif
 
-CLASS QFontComboBox INHERIT QComboBox
+$beginClassFrom=QComboBox
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QFontComboBox INHERIT QComboBox
 
    METHOD onCurrentFontChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

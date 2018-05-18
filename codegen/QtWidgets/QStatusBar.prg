@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStatusBar INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QStatusBar INHERIT QWidget
 
    METHOD onMessageChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,7 +15,7 @@ REQUEST QPOINTF
 REQUEST QTIMELINE
 #endif
 
-CLASS QGraphicsItemAnimation INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -40,9 +40,7 @@ CLASS QGraphicsItemAnimation INHERIT QObject
    METHOD yTranslationAt
    METHOD setStep
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

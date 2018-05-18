@@ -15,7 +15,7 @@ REQUEST QICON
 REQUEST QTABBAR
 #endif
 
-CLASS QTabWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -71,9 +71,7 @@ CLASS QTabWidget INHERIT QWidget
    METHOD onTabBarClicked
    METHOD onTabBarDoubleClicked
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

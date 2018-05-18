@@ -10,7 +10,7 @@ $header
 
 %% TODO: class under condition #ifndef QT_NO_ITEMVIEWS
 
-CLASS QStyleOptionViewItem INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -49,9 +49,7 @@ CLASS QStyleOptionViewItem INHERIT QStyleOption
    METHOD setViewItemPosition
    METHOD setBackgroundBrush
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

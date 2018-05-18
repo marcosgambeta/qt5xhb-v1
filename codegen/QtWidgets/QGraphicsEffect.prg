@@ -12,7 +12,7 @@ $header
 REQUEST QRECTF
 #endif
 
-CLASS QGraphicsEffect INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD boundingRect
@@ -23,9 +23,7 @@ CLASS QGraphicsEffect INHERIT QObject
 
    METHOD onEnabledChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

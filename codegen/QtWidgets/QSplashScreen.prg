@@ -12,7 +12,7 @@ $header
 REQUEST QPIXMAP
 #endif
 
-CLASS QSplashScreen INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QSplashScreen INHERIT QWidget
 
    METHOD onMessageChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

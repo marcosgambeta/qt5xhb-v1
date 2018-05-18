@@ -12,16 +12,14 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QScrollBar INHERIT QAbstractSlider
+$beginClassFrom=QAbstractSlider
 
    METHOD new
    METHOD delete
    METHOD event
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QWIDGET
 #endif
 
-CLASS QStackedLayout INHERIT QLayout
+$beginClassFrom=QLayout
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QStackedLayout INHERIT QLayout
    METHOD onSetCurrentIndex
    METHOD onSetCurrentWidget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

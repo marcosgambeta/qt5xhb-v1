@@ -12,7 +12,7 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QPanGesture INHERIT QGesture
+$beginClassFrom=QGesture
 
    METHOD delete
    METHOD acceleration
@@ -23,9 +23,7 @@ CLASS QPanGesture INHERIT QGesture
    METHOD setLastOffset
    METHOD setOffset
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

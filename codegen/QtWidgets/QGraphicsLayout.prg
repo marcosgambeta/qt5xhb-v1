@@ -12,7 +12,7 @@ $header
 REQUEST QGRAPHICSLAYOUTITEM
 #endif
 
-CLASS QGraphicsLayout INHERIT QGraphicsLayoutItem
+$beginClassFrom=QGraphicsLayoutItem
 
    METHOD delete
    METHOD activate
@@ -28,9 +28,7 @@ CLASS QGraphicsLayout INHERIT QGraphicsLayoutItem
    METHOD instantInvalidatePropagation
    METHOD setInstantInvalidatePropagation
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

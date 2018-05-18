@@ -12,7 +12,7 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QTapAndHoldGesture INHERIT QGesture
+$beginClassFrom=QGesture
 
    METHOD delete
    METHOD position
@@ -20,9 +20,7 @@ CLASS QTapAndHoldGesture INHERIT QGesture
    METHOD setTimeout
    METHOD timeout
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

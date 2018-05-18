@@ -12,7 +12,7 @@ $header
 REQUEST QFONT
 #endif
 
-CLASS QFontDialog INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QFontDialog INHERIT QDialog
    METHOD onCurrentFontChanged
    METHOD onFontSelected
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

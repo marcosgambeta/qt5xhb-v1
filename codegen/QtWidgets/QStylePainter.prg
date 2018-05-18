@@ -12,7 +12,7 @@ $header
 REQUEST QSTYLE
 #endif
 
-CLASS QStylePainter INHERIT QPainter
+$beginClassFrom=QPainter
 
    METHOD new
    //METHOD delete
@@ -25,9 +25,7 @@ CLASS QStylePainter INHERIT QPainter
    METHOD drawItemPixmap
    METHOD style
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

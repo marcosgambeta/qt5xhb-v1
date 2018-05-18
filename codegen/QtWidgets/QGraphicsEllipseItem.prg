@@ -13,7 +13,7 @@ REQUEST QRECTF
 REQUEST QPAINTERPATH
 #endif
 
-CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem
+$beginClassFrom=QAbstractGraphicsShapeItem
 
    METHOD new
    METHOD delete
@@ -31,9 +31,7 @@ CLASS QGraphicsEllipseItem INHERIT QAbstractGraphicsShapeItem
    METHOD shape
    METHOD type
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

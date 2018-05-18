@@ -12,7 +12,7 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QWidgetItemV2 INHERIT QWidgetItem
+$beginClassFrom=QWidgetItem
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QWidgetItemV2 INHERIT QWidgetItem
    METHOD maximumSize
    METHOD heightForWidth
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

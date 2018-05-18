@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionFocusRect INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -17,9 +17,7 @@ CLASS QStyleOptionFocusRect INHERIT QStyleOption
 
    METHOD setBackgroundColor
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

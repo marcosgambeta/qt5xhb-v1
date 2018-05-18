@@ -14,7 +14,7 @@ REQUEST QWIDGET
 REQUEST QSIZE
 #endif
 
-CLASS QFormLayout INHERIT QLayout
+$beginClassFrom=QLayout
 
    METHOD new
    METHOD delete
@@ -51,9 +51,7 @@ CLASS QFormLayout INHERIT QLayout
    METHOD sizeHint
    METHOD takeAt
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

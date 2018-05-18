@@ -15,10 +15,7 @@ REQUEST QGRAPHICSITEM
 REQUEST QSIZEPOLICY
 #endif
 
-CLASS QGraphicsLayoutItem
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD contentsRect
@@ -53,15 +50,7 @@ CLASS QGraphicsLayoutItem
    METHOD sizePolicy
    METHOD updateGeometry
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

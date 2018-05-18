@@ -15,7 +15,7 @@ REQUEST QPIXMAP
 REQUEST QCHECKBOX
 #endif
 
-CLASS QMessageBox INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD delete
@@ -65,9 +65,7 @@ CLASS QMessageBox INHERIT QDialog
 
    METHOD onButtonClicked
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

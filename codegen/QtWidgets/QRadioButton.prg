@@ -12,16 +12,14 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QRadioButton INHERIT QAbstractButton
+$beginClassFrom=QAbstractButton
 
    METHOD new
    METHOD delete
    METHOD sizeHint
    METHOD minimumSizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

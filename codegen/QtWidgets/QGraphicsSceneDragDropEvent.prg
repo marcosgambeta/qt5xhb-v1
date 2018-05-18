@@ -15,7 +15,7 @@ REQUEST QPOINT
 REQUEST QWIDGET
 #endif
 
-CLASS QGraphicsSceneDragDropEvent INHERIT QGraphicsSceneEvent
+$beginClassFrom=QGraphicsSceneEvent
 
    METHOD delete
    METHOD acceptProposedAction
@@ -31,9 +31,7 @@ CLASS QGraphicsSceneDragDropEvent INHERIT QGraphicsSceneEvent
    METHOD setDropAction
    METHOD source
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

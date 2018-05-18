@@ -13,7 +13,7 @@ REQUEST QRECTF
 REQUEST QSIZEF
 #endif
 
-CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout
+$beginClassFrom=QAbstractTextDocumentLayout
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QPlainTextDocumentLayout INHERIT QAbstractTextDocumentLayout
    METHOD hitTest
    METHOD pageCount
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

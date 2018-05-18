@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionComplex INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
    METHOD delete
@@ -19,9 +19,7 @@ CLASS QStyleOptionComplex INHERIT QStyleOption
    METHOD setSubControls
    METHOD setActiveSubControls
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

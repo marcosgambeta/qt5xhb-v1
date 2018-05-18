@@ -12,7 +12,7 @@ $header
 REQUEST QKEYSEQUENCE
 #endif
 
-CLASS QKeySequenceEdit INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QKeySequenceEdit INHERIT QWidget
    METHOD onEditingFinished
    METHOD onKeySequenceChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

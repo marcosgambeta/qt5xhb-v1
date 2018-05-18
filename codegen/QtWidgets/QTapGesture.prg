@@ -12,15 +12,13 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QTapGesture INHERIT QGesture
+$beginClassFrom=QGesture
 
    METHOD delete
    METHOD position
    METHOD setPosition
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

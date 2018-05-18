@@ -17,7 +17,7 @@ REQUEST QRECTF
 REQUEST QPAINTERPATH
 #endif
 
-CLASS QGraphicsTextItem INHERIT QGraphicsObject
+$beginClassFrom=QGraphicsObject
 
    METHOD new
    METHOD delete
@@ -53,9 +53,7 @@ CLASS QGraphicsTextItem INHERIT QGraphicsObject
    METHOD onLinkActivated
    METHOD onLinkHovered
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

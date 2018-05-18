@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionGraphicsItem INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -23,9 +23,7 @@ CLASS QStyleOptionGraphicsItem INHERIT QStyleOption
    METHOD setMatrix
    METHOD setLevelOfDetail
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

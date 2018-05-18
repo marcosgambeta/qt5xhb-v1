@@ -14,7 +14,7 @@ REQUEST QMENU
 REQUEST QSIZE
 #endif
 
-CLASS QToolButton INHERIT QAbstractButton
+$beginClassFrom=QAbstractButton
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QToolButton INHERIT QAbstractButton
 
    METHOD onTriggered
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

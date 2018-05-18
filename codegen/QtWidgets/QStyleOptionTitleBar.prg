@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionTitleBar INHERIT QStyleOptionComplex
+$beginClassFrom=QStyleOptionComplex
 
    METHOD new
 %%   METHOD delete
@@ -23,9 +23,7 @@ CLASS QStyleOptionTitleBar INHERIT QStyleOptionComplex
    METHOD setTitleBarState
    METHOD setTitleBarFlags
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

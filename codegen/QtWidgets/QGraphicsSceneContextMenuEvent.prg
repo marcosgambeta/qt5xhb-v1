@@ -13,7 +13,7 @@ REQUEST QPOINTF
 REQUEST QPOINT
 #endif
 
-CLASS QGraphicsSceneContextMenuEvent INHERIT QGraphicsSceneEvent
+$beginClassFrom=QGraphicsSceneEvent
 
    METHOD delete
    METHOD modifiers
@@ -22,9 +22,7 @@ CLASS QGraphicsSceneContextMenuEvent INHERIT QGraphicsSceneEvent
    METHOD scenePos
    METHOD screenPos
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

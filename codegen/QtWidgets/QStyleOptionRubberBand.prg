@@ -12,7 +12,7 @@ $header
 %% #ifndef QT_NO_RUBBERBAND
 %% #endif // QT_NO_RUBBERBAND
 
-CLASS QStyleOptionRubberBand INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -23,9 +23,7 @@ CLASS QStyleOptionRubberBand INHERIT QStyleOption
    METHOD setShape
    METHOD setOpaque
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

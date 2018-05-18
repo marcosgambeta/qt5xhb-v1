@@ -13,7 +13,7 @@ REQUEST QWIDGET
 REQUEST QSIZE
 #endif
 
-CLASS QAbstractItemDelegate INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD createEditor
@@ -32,9 +32,7 @@ CLASS QAbstractItemDelegate INHERIT QObject
    METHOD onCommitData
    METHOD onSizeHintChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

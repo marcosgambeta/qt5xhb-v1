@@ -13,7 +13,7 @@ REQUEST QVARIANT
 REQUEST QSIZE
 #endif
 
-CLASS QAbstractSpinBox INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD delete
    METHOD fixup
@@ -53,9 +53,7 @@ CLASS QAbstractSpinBox INHERIT QWidget
 
    METHOD onEditingFinished
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

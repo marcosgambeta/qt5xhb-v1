@@ -16,7 +16,7 @@ REQUEST QWIDGET
 REQUEST QSIZE
 #endif
 
-CLASS QLayout INHERIT QObject,QLayoutItem
+$beginClassFrom=QObject,QLayoutItem
 
    METHOD delete
    METHOD activate
@@ -52,9 +52,7 @@ CLASS QLayout INHERIT QObject,QLayoutItem
    METHOD setGeometry
    METHOD closestAcceptableSize
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

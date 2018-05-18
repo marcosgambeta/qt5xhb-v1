@@ -14,7 +14,7 @@ REQUEST QMODELINDEX
 REQUEST QRECT
 #endif
 
-CLASS QListView INHERIT QAbstractItemView
+$beginClassFrom=QAbstractItemView
 
    METHOD new
    METHOD delete
@@ -53,9 +53,7 @@ CLASS QListView INHERIT QAbstractItemView
 
    METHOD onIndexesMoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

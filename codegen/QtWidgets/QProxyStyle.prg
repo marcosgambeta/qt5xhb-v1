@@ -17,7 +17,7 @@ REQUEST QPIXMAP
 REQUEST QPALETTE
 #endif
 
-CLASS QProxyStyle INHERIT QCommonStyle
+$beginClassFrom=QCommonStyle
 
    METHOD new
    METHOD delete
@@ -44,9 +44,7 @@ CLASS QProxyStyle INHERIT QCommonStyle
    METHOD polish
    METHOD unpolish
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

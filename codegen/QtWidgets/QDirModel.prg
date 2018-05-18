@@ -16,7 +16,7 @@ REQUEST QICON
 REQUEST QFILEINFO
 #endif
 
-CLASS QDirModel INHERIT QAbstractItemModel
+$beginClassFrom=QAbstractItemModel
 
    METHOD new
    METHOD delete
@@ -56,9 +56,7 @@ CLASS QDirModel INHERIT QAbstractItemModel
    METHOD fileInfo
    METHOD refresh
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

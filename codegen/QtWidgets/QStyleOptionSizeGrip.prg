@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionSizeGrip INHERIT QStyleOptionComplex
+$beginClassFrom=QStyleOptionComplex
 
    METHOD new
 %%   METHOD delete
@@ -17,9 +17,7 @@ CLASS QStyleOptionSizeGrip INHERIT QStyleOptionComplex
 
    METHOD setCorner
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

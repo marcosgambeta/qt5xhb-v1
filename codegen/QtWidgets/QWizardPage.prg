@@ -12,7 +12,7 @@ $header
 REQUEST QPIXMAP
 #endif
 
-CLASS QWizardPage INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QWizardPage INHERIT QWidget
 
    METHOD onCompleteChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

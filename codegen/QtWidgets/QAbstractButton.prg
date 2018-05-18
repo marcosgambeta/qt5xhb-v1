@@ -15,7 +15,7 @@ REQUEST QKEYSEQUENCE
 REQUEST QBUTTONGROUP
 #endif
 
-CLASS QAbstractButton INHERIT QWidget
+$beginClassFrom=QWidget
 
 %%   METHOD new
    METHOD delete
@@ -52,9 +52,7 @@ CLASS QAbstractButton INHERIT QWidget
    METHOD onReleased
    METHOD onToggled
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

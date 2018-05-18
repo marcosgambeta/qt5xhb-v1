@@ -13,7 +13,7 @@ REQUEST QGRAPHICSLAYOUTITEM
 REQUEST QSIZEF
 #endif
 
-CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
+$beginClassFrom=QGraphicsLayout
 
    METHOD new
    METHOD delete
@@ -61,9 +61,7 @@ CLASS QGraphicsGridLayout INHERIT QGraphicsLayout
    METHOD setGeometry
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

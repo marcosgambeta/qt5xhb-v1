@@ -13,7 +13,7 @@ REQUEST QBYTEARRAY
 REQUEST QSIZE
 #endif
 
-CLASS QHeaderView INHERIT QAbstractItemView
+$beginClassFrom=QAbstractItemView
 
    METHOD new
    METHOD delete
@@ -92,9 +92,7 @@ CLASS QHeaderView INHERIT QAbstractItemView
    METHOD onSectionResized
    METHOD onSortIndicatorChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

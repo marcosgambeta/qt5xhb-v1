@@ -13,15 +13,13 @@ REQUEST QPOINTF
 REQUEST QPOINT
 #endif
 
-CLASS QGraphicsSceneHelpEvent INHERIT QGraphicsSceneEvent
+$beginClassFrom=QGraphicsSceneEvent
 
    METHOD delete
    METHOD scenePos
    METHOD screenPos
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

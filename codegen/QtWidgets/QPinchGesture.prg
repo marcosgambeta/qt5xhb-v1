@@ -12,7 +12,7 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QPinchGesture INHERIT QGesture
+$beginClassFrom=QGesture
 
    METHOD delete
    METHOD centerPoint
@@ -38,9 +38,7 @@ CLASS QPinchGesture INHERIT QGesture
    METHOD totalRotationAngle
    METHOD totalScaleFactor
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

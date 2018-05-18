@@ -12,7 +12,7 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QProgressBar INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -42,9 +42,7 @@ CLASS QProgressBar INHERIT QWidget
 
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

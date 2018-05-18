@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstractSlider INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD delete
    METHOD maximum
@@ -43,9 +43,7 @@ CLASS QAbstractSlider INHERIT QWidget
    METHOD onSliderReleased
    METHOD onValueChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

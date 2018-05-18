@@ -8,11 +8,9 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QMacNativeWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

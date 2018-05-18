@@ -14,7 +14,7 @@ REQUEST QSCROLLERPROPERTIES
 REQUEST QOBJECT
 #endif
 
-CLASS QScroller INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD finalPosition
    METHOD handleInput
@@ -40,9 +40,7 @@ CLASS QScroller INHERIT QObject
    METHOD onScrollerPropertiesChanged
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

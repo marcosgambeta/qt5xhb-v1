@@ -12,7 +12,7 @@ $header
 REQUEST QITEMEDITORFACTORY
 #endif
 
-CLASS QItemDelegate INHERIT QAbstractItemDelegate
+$beginClassFrom=QAbstractItemDelegate
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QItemDelegate INHERIT QAbstractItemDelegate
    METHOD setClipping
    METHOD setItemEditorFactory
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

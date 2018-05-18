@@ -16,7 +16,7 @@ REQUEST QTIME
 REQUEST QSIZE
 #endif
 
-CLASS QDateTimeEdit INHERIT QAbstractSpinBox
+$beginClassFrom=QAbstractSpinBox
 
    METHOD new
    METHOD delete
@@ -73,9 +73,7 @@ CLASS QDateTimeEdit INHERIT QAbstractSpinBox
    METHOD onDateTimeChanged
    METHOD onTimeChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QKeyEventTransition INHERIT QEventTransition
+$beginClassFrom=QEventTransition
 
    METHOD new
    METHOD delete
@@ -17,9 +17,7 @@ CLASS QKeyEventTransition INHERIT QEventTransition
    METHOD setKey
    METHOD setModifierMask
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QABSTRACTBUTTON
 #endif
 
-CLASS QButtonGroup INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QButtonGroup INHERIT QObject
    METHOD onButtonReleased1
    METHOD onButtonReleased2
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -14,7 +14,7 @@ REQUEST QOPENGLCONTEXT
 REQUEST QIMAGE
 #endif
 
-CLASS QOpenGLWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QOpenGLWidget INHERIT QWidget
    METHOD onAboutToResize
    METHOD onResized
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -16,7 +16,7 @@ REQUEST QPIXMAP
 REQUEST QSIZE
 #endif
 
-CLASS QLabel INHERIT QFrame
+$beginClassFrom=QFrame
 
    METHOD new
    METHOD delete
@@ -58,9 +58,7 @@ CLASS QLabel INHERIT QFrame
    METHOD onLinkActivated
    METHOD onLinkHovered
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

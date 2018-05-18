@@ -15,7 +15,7 @@ REQUEST QABSTRACTITEMVIEW
 REQUEST QWIDGET
 #endif
 
-CLASS QCompleter INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -58,9 +58,7 @@ CLASS QCompleter INHERIT QObject
    METHOD onHighlighted1
    METHOD onHighlighted2
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

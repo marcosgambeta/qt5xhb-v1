@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionHeader INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -33,9 +33,7 @@ CLASS QStyleOptionHeader INHERIT QStyleOption
    METHOD setSortIndicator
    METHOD setOrientation
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

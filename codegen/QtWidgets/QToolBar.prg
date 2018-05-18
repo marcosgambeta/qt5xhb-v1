@@ -14,7 +14,7 @@ REQUEST QSIZE
 REQUEST QWIDGET
 #endif
 
-CLASS QToolBar INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -51,9 +51,7 @@ CLASS QToolBar INHERIT QWidget
    METHOD onTopLevelChanged
    METHOD onVisibilityChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

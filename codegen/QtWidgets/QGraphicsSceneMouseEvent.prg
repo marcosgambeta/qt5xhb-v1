@@ -13,7 +13,7 @@ REQUEST QPOINTF
 REQUEST QPOINT
 #endif
 
-CLASS QGraphicsSceneMouseEvent INHERIT QGraphicsSceneEvent
+$beginClassFrom=QGraphicsSceneEvent
 
    METHOD delete
    METHOD button
@@ -29,9 +29,7 @@ CLASS QGraphicsSceneMouseEvent INHERIT QGraphicsSceneEvent
    METHOD scenePos
    METHOD screenPos
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

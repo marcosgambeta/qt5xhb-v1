@@ -24,7 +24,7 @@ REQUEST QVARIANT
 REQUEST QSIZE
 #endif
 
-CLASS QGraphicsView INHERIT QAbstractScrollArea
+$beginClassFrom=QAbstractScrollArea
 
    METHOD new
    METHOD delete
@@ -84,9 +84,7 @@ CLASS QGraphicsView INHERIT QAbstractScrollArea
    METHOD updateScene
    METHOD updateSceneRect
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

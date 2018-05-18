@@ -12,7 +12,7 @@ $header
 REQUEST QCOLOR
 #endif
 
-CLASS QGraphicsColorizeEffect INHERIT QGraphicsEffect
+$beginClassFrom=QGraphicsEffect
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QGraphicsColorizeEffect INHERIT QGraphicsEffect
    METHOD onColorChanged
    METHOD onStrengthChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

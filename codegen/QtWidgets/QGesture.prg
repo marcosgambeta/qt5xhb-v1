@@ -12,7 +12,7 @@ $header
 REQUEST QPOINTF
 #endif
 
-CLASS QGesture INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QGesture INHERIT QObject
    METHOD state
    METHOD unsetHotSpot
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

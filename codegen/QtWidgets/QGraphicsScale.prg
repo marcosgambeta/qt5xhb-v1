@@ -12,7 +12,7 @@ $header
 REQUEST QVECTOR3D
 #endif
 
-CLASS QGraphicsScale INHERIT QGraphicsTransform
+$beginClassFrom=QGraphicsTransform
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QGraphicsScale INHERIT QGraphicsTransform
    METHOD onYScaleChanged
    METHOD onZScaleChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

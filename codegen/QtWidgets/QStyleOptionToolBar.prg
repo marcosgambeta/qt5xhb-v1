@@ -12,7 +12,7 @@ $header
 %% #ifndef QT_NO_TOOLBAR
 %% #endif // QT_NO_TOOLBAR
 
-CLASS QStyleOptionToolBar INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -31,9 +31,7 @@ CLASS QStyleOptionToolBar INHERIT QStyleOption
    METHOD setLineWidth
    METHOD setMidLineWidth
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

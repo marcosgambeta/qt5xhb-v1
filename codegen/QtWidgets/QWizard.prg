@@ -17,7 +17,7 @@ REQUEST QWIDGET
 REQUEST QSIZE
 #endif
 
-CLASS QWizard INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD delete
@@ -68,9 +68,7 @@ CLASS QWizard INHERIT QDialog
    METHOD onPageAdded
    METHOD onPageRemoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

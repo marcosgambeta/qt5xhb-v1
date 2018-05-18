@@ -12,16 +12,14 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QSizeGrip INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
    METHOD setVisible
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

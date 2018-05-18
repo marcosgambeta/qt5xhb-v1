@@ -14,7 +14,7 @@ REQUEST QBRUSH
 REQUEST QSIZE
 #endif
 
-CLASS QMdiArea INHERIT QAbstractScrollArea
+$beginClassFrom=QAbstractScrollArea
 
    METHOD new
    METHOD delete
@@ -53,9 +53,7 @@ CLASS QMdiArea INHERIT QAbstractScrollArea
 
    METHOD onSubWindowActivated
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

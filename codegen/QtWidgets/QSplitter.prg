@@ -15,7 +15,7 @@ REQUEST QWIDGET
 REQUEST QSIZE
 #endif
 
-CLASS QSplitter INHERIT QFrame
+$beginClassFrom=QFrame
 
    METHOD new
    METHOD delete
@@ -45,9 +45,7 @@ CLASS QSplitter INHERIT QFrame
 
    METHOD onSplitterMoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

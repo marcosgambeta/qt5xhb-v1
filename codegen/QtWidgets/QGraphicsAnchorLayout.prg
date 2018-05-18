@@ -13,7 +13,7 @@ REQUEST QGRAPHICSANCHOR
 REQUEST QGRAPHICSLAYOUTITEM
 #endif
 
-CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
+$beginClassFrom=QGraphicsLayout
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QGraphicsAnchorLayout INHERIT QGraphicsLayout
    METHOD removeAt
    METHOD setGeometry
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

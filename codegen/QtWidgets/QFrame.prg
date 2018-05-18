@@ -13,7 +13,7 @@ REQUEST QRECT
 REQUEST QSIZE
 #endif
 
-CLASS QFrame INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -32,9 +32,7 @@ CLASS QFrame INHERIT QWidget
    METHOD setMidLineWidth
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

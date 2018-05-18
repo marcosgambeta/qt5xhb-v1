@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionProgressBar INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -33,9 +33,7 @@ CLASS QStyleOptionProgressBar INHERIT QStyleOption
    METHOD setInvertedAppearance
    METHOD setBottomToTop
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

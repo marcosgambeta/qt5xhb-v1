@@ -12,14 +12,12 @@ $header
 REQUEST QWIDGET
 #endif
 
-CLASS QGraphicsSceneEvent INHERIT QEvent
+$beginClassFrom=QEvent
 
    METHOD delete
    METHOD widget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QProgressDialog INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD delete
@@ -43,9 +43,7 @@ CLASS QProgressDialog INHERIT QDialog
 
    METHOD onCanceled
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -19,7 +19,7 @@ REQUEST QVARIANT
 REQUEST QCOLOR
 #endif
 
-CLASS QTextEdit INHERIT QAbstractScrollArea
+$beginClassFrom=QAbstractScrollArea
 
    METHOD new
    METHOD delete
@@ -111,9 +111,7 @@ CLASS QTextEdit INHERIT QAbstractScrollArea
    METHOD onTextChanged
    METHOD onUndoAvailable
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

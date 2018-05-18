@@ -12,7 +12,7 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QSlider INHERIT QAbstractSlider
+$beginClassFrom=QAbstractSlider
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QSlider INHERIT QAbstractSlider
    METHOD minimumSizeHint
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

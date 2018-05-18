@@ -12,7 +12,7 @@ $header
 REQUEST QWIDGET
 #endif
 
-CLASS QWidgetAction INHERIT QAction
+$beginClassFrom=QAction
 
    METHOD new
    METHOD delete
@@ -21,9 +21,7 @@ CLASS QWidgetAction INHERIT QAction
    METHOD requestWidget
    METHOD setDefaultWidget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

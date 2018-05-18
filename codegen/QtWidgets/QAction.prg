@@ -19,7 +19,7 @@ REQUEST QMENU
 REQUEST QKEYSEQUENCE
 #endif
 
-CLASS QAction INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -82,9 +82,7 @@ CLASS QAction INHERIT QObject
    METHOD onToggled
    METHOD onTriggered
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

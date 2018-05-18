@@ -12,7 +12,7 @@ $header
 REQUEST QRECTF
 #endif
 
-CLASS QGraphicsBlurEffect INHERIT QGraphicsWidget
+$beginClassFrom=QGraphicsWidget
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QGraphicsBlurEffect INHERIT QGraphicsWidget
    METHOD onBlurHintsChanged
    METHOD onBlurRadiusChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,7 +15,7 @@ REQUEST QRECT
 REQUEST QCOLOR
 #endif
 
-CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
+$beginClassFrom=QAccessibleObject,QAccessibleActionInterface
 
    METHOD new
    METHOD isValid
@@ -35,9 +35,7 @@ CLASS QAccessibleWidget INHERIT QAccessibleObject,QAccessibleActionInterface
    METHOD doAction
    METHOD keyBindingsForAction
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

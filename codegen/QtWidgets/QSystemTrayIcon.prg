@@ -14,7 +14,7 @@ REQUEST QRECT
 REQUEST QICON
 #endif
 
-CLASS QSystemTrayIcon INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QSystemTrayIcon INHERIT QObject
    METHOD onActivated
    METHOD onMessageClicked
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

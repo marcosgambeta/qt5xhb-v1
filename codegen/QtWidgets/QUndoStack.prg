@@ -13,7 +13,7 @@ REQUEST QUNDOCOMMAND
 REQUEST QACTION
 #endif
 
-CLASS QUndoStack INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -49,9 +49,7 @@ CLASS QUndoStack INHERIT QObject
    METHOD onRedoTextChanged
    METHOD onUndoTextChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

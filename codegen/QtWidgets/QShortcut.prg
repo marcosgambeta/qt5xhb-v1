@@ -13,7 +13,7 @@ REQUEST QKEYSEQUENCE
 REQUEST QWIDGET
 #endif
 
-CLASS QShortcut INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -33,9 +33,7 @@ CLASS QShortcut INHERIT QObject
    METHOD onActivated
    METHOD onActivatedAmbiguously
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

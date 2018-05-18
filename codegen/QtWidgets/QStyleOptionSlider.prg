@@ -12,7 +12,7 @@ $header
 %% #ifndef QT_NO_SLIDER
 %% #endif // QT_NO_SLIDER
 
-CLASS QStyleOptionSlider INHERIT QStyleOptionComplex
+$beginClassFrom=QStyleOptionComplex
 
    METHOD new
 %%   METHOD delete
@@ -43,9 +43,7 @@ CLASS QStyleOptionSlider INHERIT QStyleOptionComplex
    METHOD setNotchTarget
    METHOD setDialWrapping
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

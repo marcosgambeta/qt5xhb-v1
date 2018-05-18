@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleHintReturnVariant INHERIT QStyleHintReturn
+$beginClassFrom=QStyleHintReturn
 
    METHOD new
    METHOD delete
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

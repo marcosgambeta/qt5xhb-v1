@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionComboBox INHERIT QStyleOptionComplex
+$beginClassFrom=QStyleOptionComplex
 
    METHOD new
 %%   METHOD delete
@@ -27,9 +27,7 @@ CLASS QStyleOptionComboBox INHERIT QStyleOptionComplex
    METHOD setCurrentIcon
    METHOD setIconSize
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

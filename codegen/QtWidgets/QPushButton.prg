@@ -12,7 +12,7 @@ $header
 REQUEST QMENU
 #endif
 
-CLASS QPushButton INHERIT QAbstractButton
+$beginClassFrom=QAbstractButton
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QPushButton INHERIT QAbstractButton
    METHOD minimumSizeHint
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

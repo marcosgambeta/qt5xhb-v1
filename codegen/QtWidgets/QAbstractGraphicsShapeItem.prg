@@ -14,7 +14,7 @@ REQUEST QPEN
 REQUEST QPAINTERPATH
 #endif
 
-CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem
+$beginClassFrom=QGraphicsItem
 
    METHOD delete
    METHOD brush
@@ -24,9 +24,7 @@ CLASS QAbstractGraphicsShapeItem INHERIT QGraphicsItem
    METHOD isObscuredBy
    METHOD opaqueArea
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

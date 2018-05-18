@@ -13,7 +13,7 @@ REQUEST QRECT
 REQUEST QSIZE
 #endif
 
-CLASS QSpacerItem INHERIT QLayoutItem
+$beginClassFrom=QLayoutItem
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QSpacerItem INHERIT QLayoutItem
    METHOD sizeHint
    METHOD spacerItem
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

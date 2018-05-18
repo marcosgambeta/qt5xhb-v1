@@ -17,7 +17,7 @@ REQUEST QPALETTE
 REQUEST QPOINT
 #endif
 
-CLASS QStyle INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD drawComplexControl
@@ -51,9 +51,7 @@ CLASS QStyle INHERIT QObject
    METHOD onTabCloseRequested
    METHOD onTabMoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

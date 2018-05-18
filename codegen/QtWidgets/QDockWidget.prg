@@ -13,7 +13,7 @@ REQUEST QWIDGET
 REQUEST QACTION
 #endif
 
-CLASS QDockWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QDockWidget INHERIT QWidget
    METHOD onTopLevelChanged
    METHOD onVisibilityChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

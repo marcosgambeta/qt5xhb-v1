@@ -12,7 +12,7 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QCheckBox INHERIT QAbstractButton
+$beginClassFrom=QAbstractButton
 
    METHOD new
    METHOD delete
@@ -25,9 +25,7 @@ CLASS QCheckBox INHERIT QAbstractButton
 
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -15,7 +15,7 @@ REQUEST QSIZE
 REQUEST QRECT
 #endif
 
-CLASS QColumnView INHERIT QAbstractItemView
+$beginClassFrom=QAbstractItemView
 
    METHOD new
    METHOD delete
@@ -36,9 +36,7 @@ CLASS QColumnView INHERIT QAbstractItemView
 
    METHOD onUpdatePreviewWidget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

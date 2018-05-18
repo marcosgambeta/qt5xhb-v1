@@ -16,7 +16,7 @@ REQUEST QABSTRACTITEMMODEL
 REQUEST QMODELINDEX
 #endif
 
-CLASS QDataWidgetMapper INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -48,9 +48,7 @@ CLASS QDataWidgetMapper INHERIT QObject
 
    METHOD onCurrentIndexChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

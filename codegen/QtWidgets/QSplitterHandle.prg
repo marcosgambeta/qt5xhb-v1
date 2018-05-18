@@ -13,7 +13,7 @@ REQUEST QSPLITTER
 REQUEST QSIZE
 #endif
 
-CLASS QSplitterHandle INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QSplitterHandle INHERIT QWidget
    METHOD splitter
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -12,7 +12,7 @@ $header
 REQUEST QWIDGET
 #endif
 
-CLASS QStackedWidget INHERIT QFrame
+$beginClassFrom=QFrame
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QStackedWidget INHERIT QFrame
    METHOD onCurrentChanged
    METHOD onWidgetRemoved
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

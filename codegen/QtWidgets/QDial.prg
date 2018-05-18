@@ -12,7 +12,7 @@ $header
 REQUEST QSIZE
 #endif
 
-CLASS QDial INHERIT QAbstractSlider
+$beginClassFrom=QAbstractSlider
 
    METHOD new
    METHOD delete
@@ -26,9 +26,7 @@ CLASS QDial INHERIT QAbstractSlider
    METHOD setNotchesVisible
    METHOD setWrapping
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

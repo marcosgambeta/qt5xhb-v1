@@ -14,7 +14,7 @@ REQUEST QUNDOGROUP
 REQUEST QUNDOSTACK
 #endif
 
-CLASS QUndoView INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -27,9 +27,7 @@ CLASS QUndoView INHERIT QWidget
    METHOD setGroup
    METHOD setStack
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

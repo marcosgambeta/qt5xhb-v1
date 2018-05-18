@@ -14,7 +14,7 @@ REQUEST QWIDGET
 REQUEST QRECT
 #endif
 
-CLASS QListWidget INHERIT QListView
+$beginClassFrom=QListView
 
    METHOD new
    METHOD delete
@@ -56,9 +56,7 @@ CLASS QListWidget INHERIT QListView
    METHOD onItemPressed
    METHOD onItemSelectionChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

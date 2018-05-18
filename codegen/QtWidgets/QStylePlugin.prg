@@ -12,14 +12,12 @@ $header
 REQUEST QSTYLE
 #endif
 
-CLASS QStylePlugin INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD create
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

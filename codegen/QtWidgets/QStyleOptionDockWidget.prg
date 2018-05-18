@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionDockWidget INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -25,9 +25,7 @@ CLASS QStyleOptionDockWidget INHERIT QStyleOption
    METHOD setFloatable
    METHOD setVerticalTitleBar
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

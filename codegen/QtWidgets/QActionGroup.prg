@@ -12,7 +12,7 @@ $header
 REQUEST QACTION
 #endif
 
-CLASS QActionGroup INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -30,9 +30,7 @@ CLASS QActionGroup INHERIT QObject
    METHOD onHovered
    METHOD onTriggered
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

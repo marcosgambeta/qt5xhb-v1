@@ -17,7 +17,7 @@ REQUEST QDIR
 REQUEST QURL
 #endif
 
-CLASS QFileDialog INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD delete
@@ -94,9 +94,7 @@ CLASS QFileDialog INHERIT QDialog
    METHOD onCurrentUrlChanged
    METHOD onDirectoryUrlEntered
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

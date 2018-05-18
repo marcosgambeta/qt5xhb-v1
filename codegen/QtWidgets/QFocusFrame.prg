@@ -12,16 +12,14 @@ $header
 REQUEST QWIDGET
 #endif
 
-CLASS QFocusFrame INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
    METHOD setWidget
    METHOD widget
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

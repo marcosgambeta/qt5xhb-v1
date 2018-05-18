@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
+$beginClassFrom=QObject,QGraphicsItem
 
    METHOD delete
    METHOD grabGesture
@@ -24,9 +24,7 @@ CLASS QGraphicsObject INHERIT QObject,QGraphicsItem
    METHOD onYChanged
    METHOD onZChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -19,7 +19,7 @@ REQUEST QDIR
 REQUEST QMIMEDATA
 #endif
 
-CLASS QFileSystemModel INHERIT QAbstractItemModel
+$beginClassFrom=QAbstractItemModel
 
    METHOD new
    METHOD delete
@@ -72,9 +72,7 @@ CLASS QFileSystemModel INHERIT QAbstractItemModel
    METHOD onFileRenamed
    METHOD onRootPathChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

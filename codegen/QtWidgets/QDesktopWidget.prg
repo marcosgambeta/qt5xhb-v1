@@ -13,7 +13,7 @@ REQUEST QRECT
 REQUEST QWIDGET
 #endif
 
-CLASS QDesktopWidget INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD delete
    METHOD availableGeometry
@@ -28,9 +28,7 @@ CLASS QDesktopWidget INHERIT QWidget
    METHOD onScreenCountChanged
    METHOD onWorkAreaResized
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

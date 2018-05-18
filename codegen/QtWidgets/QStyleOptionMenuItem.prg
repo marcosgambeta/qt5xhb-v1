@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QStyleOptionMenuItem INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -35,9 +35,7 @@ CLASS QStyleOptionMenuItem INHERIT QStyleOption
    METHOD setTabWidth
    METHOD setFont
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

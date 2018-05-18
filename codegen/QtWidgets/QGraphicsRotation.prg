@@ -12,7 +12,7 @@ $header
 REQUEST QVECTOR3D
 #endif
 
-CLASS QGraphicsRotation INHERIT QGraphicsTransform
+$beginClassFrom=QGraphicsTransform
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QGraphicsRotation INHERIT QGraphicsTransform
    METHOD onAxisChanged
    METHOD onOriginChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

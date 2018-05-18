@@ -17,7 +17,7 @@ REQUEST QTEXTDOCUMENT
 REQUEST QVARIANT
 #endif
 
-CLASS QPlainTextEdit INHERIT QAbstractScrollArea
+$beginClassFrom=QAbstractScrollArea
 
    METHOD new
    METHOD delete
@@ -89,9 +89,7 @@ CLASS QPlainTextEdit INHERIT QAbstractScrollArea
    METHOD onUndoAvailable
    METHOD onUpdateRequest
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

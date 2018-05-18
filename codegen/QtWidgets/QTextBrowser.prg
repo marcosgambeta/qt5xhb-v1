@@ -13,7 +13,7 @@ REQUEST QURL
 REQUEST QVARIANT
 #endif
 
-CLASS QTextBrowser INHERIT QTextEdit
+$beginClassFrom=QTextEdit
 
    METHOD new
    METHOD delete
@@ -46,9 +46,7 @@ CLASS QTextBrowser INHERIT QTextEdit
    METHOD onHistoryChanged
    METHOD onSourceChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

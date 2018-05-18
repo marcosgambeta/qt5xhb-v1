@@ -14,7 +14,7 @@ REQUEST QWIDGET
 REQUEST QITEMEDITORFACTORY
 #endif
 
-CLASS QStyledItemDelegate INHERIT QAbstractItemDelegate
+$beginClassFrom=QAbstractItemDelegate
 
    METHOD new
    METHOD delete
@@ -28,9 +28,7 @@ CLASS QStyledItemDelegate INHERIT QAbstractItemDelegate
    METHOD setItemEditorFactory
    METHOD displayText
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

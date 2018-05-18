@@ -15,7 +15,7 @@ REQUEST QRECTF
 REQUEST QPAINTERPATH
 #endif
 
-CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
+$beginClassFrom=QGraphicsItem
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QGraphicsPixmapItem INHERIT QGraphicsItem
    METHOD shape
    METHOD type
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

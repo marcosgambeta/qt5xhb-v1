@@ -12,7 +12,7 @@ $header
 REQUEST QCOLOR
 #endif
 
-CLASS QColorDialog INHERIT QDialog
+$beginClassFrom=QDialog
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QColorDialog INHERIT QDialog
    METHOD onColorSelected
    METHOD onCurrentColorChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

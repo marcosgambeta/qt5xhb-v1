@@ -13,10 +13,7 @@ REQUEST QFONT
 REQUEST QPALETTE
 #endif
 
-CLASS QToolTip
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD font
@@ -28,15 +25,7 @@ CLASS QToolTip
    METHOD showText
    METHOD text
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

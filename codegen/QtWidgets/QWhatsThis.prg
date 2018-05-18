@@ -12,10 +12,7 @@ $header
 REQUEST QACTION
 #endif
 
-CLASS QWhatsThis
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD createAction
@@ -25,15 +22,7 @@ CLASS QWhatsThis
    METHOD leaveWhatsThisMode
    METHOD showText
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

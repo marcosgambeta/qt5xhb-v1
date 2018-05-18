@@ -12,7 +12,7 @@ $header
 REQUEST QPAINTERPATH
 #endif
 
-CLASS QMouseEventTransition INHERIT QEventTransition
+$beginClassFrom=QEventTransition
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QMouseEventTransition INHERIT QEventTransition
    METHOD setHitTestPath
    METHOD setModifierMask
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

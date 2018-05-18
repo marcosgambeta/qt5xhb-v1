@@ -13,7 +13,7 @@ REQUEST QLAYOUTITEM
 REQUEST QSIZE
 #endif
 
-CLASS QBoxLayout INHERIT QLayout
+$beginClassFrom=QLayout
 
    METHOD new
    METHOD delete
@@ -49,9 +49,7 @@ CLASS QBoxLayout INHERIT QLayout
    METHOD sizeHint
    METHOD takeAt
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -13,7 +13,7 @@ REQUEST QWIDGET
 REQUEST QICON
 #endif
 
-CLASS QToolBox INHERIT QFrame
+$beginClassFrom=QFrame
 
    METHOD new
    METHOD delete
@@ -38,9 +38,7 @@ CLASS QToolBox INHERIT QFrame
 
    METHOD onCurrentChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

@@ -14,7 +14,7 @@ REQUEST QPOINTF
 REQUEST QRECTF
 #endif
 
-CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
+$beginClassFrom=QGraphicsEffect
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QGraphicsDropShadowEffect INHERIT QGraphicsEffect
    METHOD onColorChanged
    METHOD onOffsetChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

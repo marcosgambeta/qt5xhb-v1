@@ -14,7 +14,7 @@ REQUEST QWIDGET
 REQUEST QRECT
 #endif
 
-CLASS QTreeWidget INHERIT QTreeView
+$beginClassFrom=QTreeView
 
    METHOD new
    METHOD delete
@@ -65,9 +65,7 @@ CLASS QTreeWidget INHERIT QTreeView
    METHOD onItemPressed
    METHOD onItemSelectionChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

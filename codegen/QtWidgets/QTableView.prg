@@ -13,7 +13,7 @@ REQUEST QHEADERVIEW
 REQUEST QMODELINDEX
 #endif
 
-CLASS QTableView INHERIT QAbstractItemView
+$beginClassFrom=QAbstractItemView
 
    METHOD new
    METHOD delete
@@ -63,9 +63,7 @@ CLASS QTableView INHERIT QAbstractItemView
    METHOD showColumn
    METHOD showRow
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

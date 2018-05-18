@@ -13,7 +13,7 @@ REQUEST QWIDGET
 REQUEST QSIZE
 #endif
 
-CLASS QScrollArea INHERIT QAbstractScrollArea
+$beginClassFrom=QAbstractScrollArea
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QScrollArea INHERIT QAbstractScrollArea
    METHOD focusNextPrevChild
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

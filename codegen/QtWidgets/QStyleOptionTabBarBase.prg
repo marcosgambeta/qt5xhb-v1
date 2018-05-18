@@ -12,7 +12,7 @@ $header
 %% #ifndef QT_NO_TABBAR
 %% #endif // QT_NO_TABBAR
 
-CLASS QStyleOptionTabBarBase INHERIT QStyleOption
+$beginClassFrom=QStyleOption
 
    METHOD new
 %%   METHOD delete
@@ -27,9 +27,7 @@ CLASS QStyleOptionTabBarBase INHERIT QStyleOption
    METHOD setSelectedTabRect
    METHOD setDocumentMode
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
