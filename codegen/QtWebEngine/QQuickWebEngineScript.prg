@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QQuickWebEngineScript INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -34,9 +34,7 @@ CLASS QQuickWebEngineScript INHERIT QObject
    METHOD onSourceUrlChanged
    METHOD onWorldIdChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

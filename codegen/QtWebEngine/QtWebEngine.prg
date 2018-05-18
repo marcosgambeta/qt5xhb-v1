@@ -8,16 +8,11 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QtWebEngine
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD initialize
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

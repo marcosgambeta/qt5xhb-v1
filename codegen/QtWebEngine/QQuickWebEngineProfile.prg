@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QQuickWebEngineProfile INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -60,9 +60,7 @@ CLASS QQuickWebEngineProfile INHERIT QObject
    METHOD onSpellCheckLanguagesChanged
    METHOD onStorageNameChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
