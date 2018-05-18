@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDomCharacterData INHERIT QDomNode
+$beginClassFrom=QDomNode
 
    METHOD new
    METHOD delete
@@ -22,9 +22,7 @@ CLASS QDomCharacterData INHERIT QDomNode
    METHOD setData
    METHOD substringData
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

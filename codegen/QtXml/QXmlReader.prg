@@ -17,10 +17,7 @@ REQUEST QXMLERRORHANDLER
 REQUEST QXMLLEXICALHANDLER
 #endif
 
-CLASS QXmlReader
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD DTDHandler
@@ -43,15 +40,7 @@ CLASS QXmlReader
    METHOD setLexicalHandler
    METHOD setProperty
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

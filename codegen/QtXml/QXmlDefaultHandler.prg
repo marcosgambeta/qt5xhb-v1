@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
+$beginClassFrom=QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
 
    METHOD new
    METHOD delete
@@ -40,9 +40,7 @@ CLASS QXmlDefaultHandler INHERIT QXmlContentHandler,QXmlErrorHandler,QXmlDTDHand
    METHOD unparsedEntityDecl
    METHOD warning
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

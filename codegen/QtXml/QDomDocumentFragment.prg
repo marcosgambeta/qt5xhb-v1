@@ -8,15 +8,13 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QDomDocumentFragment INHERIT QDomNode
+$beginClassFrom=QDomNode
 
    METHOD new
    METHOD delete
    METHOD nodeType
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

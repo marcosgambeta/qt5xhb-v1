@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QXmlContentHandler
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD characters
@@ -27,15 +24,7 @@ CLASS QXmlContentHandler
    METHOD startElement
    METHOD startPrefixMapping
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

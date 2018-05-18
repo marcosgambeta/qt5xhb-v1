@@ -24,7 +24,7 @@ REQUEST QDOMNODE
 REQUEST QBYTEARRAY
 #endif
 
-CLASS QDomDocument INHERIT QDomNode
+$beginClassFrom=QDomNode
 
    METHOD new
    METHOD delete
@@ -50,9 +50,7 @@ CLASS QDomDocument INHERIT QDomNode
    METHOD toByteArray
    METHOD toString
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

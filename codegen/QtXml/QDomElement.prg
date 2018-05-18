@@ -14,7 +14,7 @@ REQUEST QDOMNAMEDNODEMAP
 REQUEST QDOMNODELIST
 #endif
 
-CLASS QDomElement INHERIT QDomNode
+$beginClassFrom=QDomNode
 
    METHOD new
    METHOD delete
@@ -52,9 +52,7 @@ CLASS QDomElement INHERIT QDomNode
    METHOD tagName
    METHOD text
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

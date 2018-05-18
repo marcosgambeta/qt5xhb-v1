@@ -12,7 +12,7 @@ $header
 REQUEST QDOMNAMEDNODEMAP
 #endif
 
-CLASS QDomDocumentType INHERIT QDomNode
+$beginClassFrom=QDomNode
 
    METHOD new
    METHOD delete
@@ -24,9 +24,7 @@ CLASS QDomDocumentType INHERIT QDomNode
    METHOD publicId
    METHOD systemId
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

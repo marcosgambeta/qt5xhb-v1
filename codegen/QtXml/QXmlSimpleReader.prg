@@ -8,16 +8,14 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QXmlSimpleReader INHERIT QXmlReader
+$beginClassFrom=QXmlReader
 
    METHOD new
    METHOD delete
    METHOD parse
    METHOD parseContinue
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
