@@ -14,7 +14,7 @@ REQUEST QSIZE
 REQUEST QSVGRENDERER
 #endif
 
-CLASS QGraphicsSvgItem INHERIT QGraphicsObject
+$beginClassFrom=QGraphicsObject
 
    METHOD new
    METHOD delete
@@ -29,9 +29,7 @@ CLASS QGraphicsSvgItem INHERIT QGraphicsObject
    METHOD setSharedRenderer
    METHOD type
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
