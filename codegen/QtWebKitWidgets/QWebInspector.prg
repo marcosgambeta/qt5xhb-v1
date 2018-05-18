@@ -13,7 +13,7 @@ REQUEST QSIZE
 REQUEST QWEBPAGE
 #endif
 
-CLASS QWebInspector INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -23,9 +23,7 @@ CLASS QWebInspector INHERIT QWidget
    METHOD setPage
    METHOD sizeHint
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

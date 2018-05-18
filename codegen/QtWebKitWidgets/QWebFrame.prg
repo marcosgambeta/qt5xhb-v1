@@ -22,7 +22,7 @@ REQUEST QWEBPAGE
 REQUEST QWEBSECURITYORIGIN
 #endif
 
-CLASS QWebFrame INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD addToJavaScriptWindowObject
    METHOD baseUrl
@@ -81,9 +81,7 @@ CLASS QWebFrame INHERIT QObject
    METHOD onTitleChanged
    METHOD onUrlChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

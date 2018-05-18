@@ -19,7 +19,7 @@ REQUEST QWEBPAGE
 REQUEST QWEBSETTINGS
 #endif
 
-CLASS QGraphicsWebView INHERIT QGraphicsWidget
+$beginClassFrom=QGraphicsWidget
 
    METHOD new
    METHOD delete
@@ -69,9 +69,7 @@ CLASS QGraphicsWebView INHERIT QGraphicsWidget
    METHOD onTitleChanged
    METHOD onUrlChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

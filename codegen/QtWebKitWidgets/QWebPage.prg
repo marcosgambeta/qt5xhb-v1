@@ -23,7 +23,7 @@ REQUEST QWEBSETTINGS
 REQUEST QWIDGET
 #endif
 
-CLASS QWebPage INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -105,9 +105,7 @@ CLASS QWebPage INHERIT QObject
    METHOD onViewportChangeRequested
    METHOD onWindowCloseRequested
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
