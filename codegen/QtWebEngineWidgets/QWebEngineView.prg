@@ -16,7 +16,7 @@ REQUEST QACTION
 REQUEST QSIZE
 #endif
 
-CLASS QWebEngineView INHERIT QWidget
+$beginClassFrom=QWidget
 
    METHOD new
    METHOD delete
@@ -51,9 +51,7 @@ CLASS QWebEngineView INHERIT QWidget
    METHOD onUrlChanged
    METHOD onIconUrlChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

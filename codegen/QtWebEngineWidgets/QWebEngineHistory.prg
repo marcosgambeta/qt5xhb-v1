@@ -14,10 +14,7 @@ $header
 REQUEST QWEBENGINEHISTORYITEM
 #endif
 
-CLASS QWebEngineHistory
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD clear
    METHOD items
@@ -35,15 +32,7 @@ CLASS QWebEngineHistory
    METHOD currentItemIndex
    METHOD count
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

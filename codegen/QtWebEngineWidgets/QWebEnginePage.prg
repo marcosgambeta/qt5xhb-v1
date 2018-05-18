@@ -17,7 +17,7 @@ REQUEST QURL
 REQUEST QWEBENGINESETTINGS
 #endif
 
-CLASS QWebEnginePage INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -62,9 +62,7 @@ CLASS QWebEnginePage INHERIT QObject
    METHOD onUrlChanged
    METHOD onIconUrlChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
