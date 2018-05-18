@@ -16,7 +16,7 @@ REQUEST QWIDGET
 REQUEST QDIR
 #endif
 
-CLASS QUiLoader INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QUiLoader INHERIT QObject
    METHOD setWorkingDirectory
    METHOD workingDirectory
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
