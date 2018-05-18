@@ -8,14 +8,12 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstractMessageHandler INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD message
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

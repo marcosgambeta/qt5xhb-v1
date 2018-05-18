@@ -8,7 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QXmlFormatter INHERIT QXmlSerializer
+$beginClassFrom=QXmlSerializer
 
    METHOD new
    METHOD delete
@@ -26,9 +26,7 @@ CLASS QXmlFormatter INHERIT QXmlSerializer
    METHOD startElement
    METHOD startOfSequence
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

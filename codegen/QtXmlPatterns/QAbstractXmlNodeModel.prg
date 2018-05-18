@@ -16,7 +16,7 @@ REQUEST QSOURCELOCATION
 REQUEST QVARIANT
 #endif
 
-CLASS QAbstractXmlNodeModel INHERIT QSharedData
+$beginClassFrom=QSharedData
 
    METHOD delete
    METHOD baseUri
@@ -32,9 +32,7 @@ CLASS QAbstractXmlNodeModel INHERIT QSharedData
    METHOD stringValue
    METHOD typedValue
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

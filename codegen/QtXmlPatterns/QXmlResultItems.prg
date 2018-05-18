@@ -12,10 +12,7 @@ $header
 REQUEST QXMLITEM
 #endif
 
-CLASS QXmlResultItems
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -23,15 +20,7 @@ CLASS QXmlResultItems
    METHOD hasError
    METHOD next
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

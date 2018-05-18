@@ -12,10 +12,7 @@ $header
 REQUEST QABSTRACTXMLNODEMODEL
 #endif
 
-CLASS QXmlNodeModelIndex
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -25,15 +22,7 @@ CLASS QXmlNodeModelIndex
    METHOD isNull
    METHOD model
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

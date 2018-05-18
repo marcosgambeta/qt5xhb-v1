@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-CLASS QAbstractXmlReceiver
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD delete
    METHOD atomicValue
@@ -27,15 +24,7 @@ CLASS QAbstractXmlReceiver
    METHOD startElement
    METHOD startOfSequence
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

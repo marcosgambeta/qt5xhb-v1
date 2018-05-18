@@ -16,10 +16,7 @@ REQUEST QNETWORKACCESSMANAGER
 REQUEST QABSTRACTURIRESOLVER
 #endif
 
-CLASS QXmlQuery
-
-   DATA pointer
-   DATA self_destruction INIT .F.
+$beginClass
 
    METHOD new
    METHOD delete
@@ -39,15 +36,7 @@ CLASS QXmlQuery
    METHOD setUriResolver
    METHOD uriResolver
 
-   METHOD newFrom
-   METHOD newFromObject
-   METHOD newFromPointer
-   METHOD selfDestruction
-   METHOD setSelfDestruction
-
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

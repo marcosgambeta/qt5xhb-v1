@@ -13,7 +13,7 @@ REQUEST QTEXTCODEC
 REQUEST QIODEVICE
 #endif
 
-CLASS QXmlSerializer INHERIT QAbstractXmlReceiver
+$beginClassFrom=QAbstractXmlReceiver
 
    METHOD new
    METHOD delete
@@ -33,9 +33,7 @@ CLASS QXmlSerializer INHERIT QAbstractXmlReceiver
    METHOD startElement
    METHOD startOfSequence
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

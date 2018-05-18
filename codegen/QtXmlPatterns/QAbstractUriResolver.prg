@@ -12,14 +12,12 @@ $header
 REQUEST QURL
 #endif
 
-CLASS QAbstractUriResolver INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
    METHOD resolve
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

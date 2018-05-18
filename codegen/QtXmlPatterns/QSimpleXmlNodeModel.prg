@@ -15,7 +15,7 @@ REQUEST QXMLNODEMODELINDEX
 REQUEST QXMLNAME
 #endif
 
-CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
+$beginClassFrom=QAbstractXmlNodeModel
 
    METHOD delete
    METHOD namePool
@@ -25,9 +25,7 @@ CLASS QSimpleXmlNodeModel INHERIT QAbstractXmlNodeModel
    METHOD nodesByIdref
    METHOD stringValue
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
