@@ -13,7 +13,7 @@ REQUEST QLOCALE
 REQUEST QVOICE
 #endif
 
-CLASS QTextToSpeechEngine INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD new
    METHOD delete
@@ -38,9 +38,7 @@ CLASS QTextToSpeechEngine INHERIT QObject
 
    METHOD onStateChanged
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
