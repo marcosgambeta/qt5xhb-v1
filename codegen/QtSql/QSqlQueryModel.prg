@@ -15,7 +15,7 @@ REQUEST QSQLRECORD
 REQUEST QVARIANT
 #endif
 
-CLASS QSqlQueryModel INHERIT QAbstractTableModel
+$beginClassFrom=QAbstractTableModel
 
    METHOD new
    METHOD delete
@@ -35,9 +35,7 @@ CLASS QSqlQueryModel INHERIT QAbstractTableModel
    METHOD setHeaderData
    METHOD setQuery
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

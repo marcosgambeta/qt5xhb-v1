@@ -12,7 +12,7 @@ $header
 REQUEST QWIDGET
 #endif
 
-CLASS QSqlRelationalDelegate INHERIT QItemDelegate
+$beginClassFrom=QItemDelegate
 
    METHOD new
    METHOD delete
@@ -20,9 +20,7 @@ CLASS QSqlRelationalDelegate INHERIT QItemDelegate
    METHOD createEditor
    METHOD setModelData
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 

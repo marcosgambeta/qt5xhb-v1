@@ -16,7 +16,7 @@ REQUEST QSQLRESULT
 REQUEST QVARIANT
 #endif
 
-CLASS QSqlDriver INHERIT QObject
+$beginClassFrom=QObject
 
    METHOD delete
 
@@ -49,9 +49,7 @@ CLASS QSqlDriver INHERIT QObject
    METHOD onNotification1
    METHOD onNotification2
 
-   DESTRUCTOR destroyObject
-
-END CLASS
+$endClass
 
 $destructor
 
