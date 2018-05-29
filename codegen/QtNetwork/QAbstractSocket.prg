@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QHOSTADDRESS
-REQUEST QNETWORKPROXY
-REQUEST QVARIANT
-#endif
+$addRequests
 
 $beginClassFrom=QIODevice
 

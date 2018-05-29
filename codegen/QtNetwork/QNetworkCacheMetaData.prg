@@ -13,10 +13,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QDATETIME
-REQUEST QURL
-#endif
+$addRequests
 
 $beginClass
 

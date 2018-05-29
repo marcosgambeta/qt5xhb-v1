@@ -12,6 +12,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClassFrom=QTcpServer
 
    METHOD new

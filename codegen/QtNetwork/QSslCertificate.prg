@@ -11,11 +11,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-REQUEST QDATETIME
-REQUEST QSSLKEY
-#endif
+$addRequests
 
 $beginClass
 

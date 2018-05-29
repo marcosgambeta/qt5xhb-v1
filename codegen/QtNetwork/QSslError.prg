@@ -12,9 +12,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSSLCERTIFICATE
-#endif
+$addRequests
 
 $beginClass
 

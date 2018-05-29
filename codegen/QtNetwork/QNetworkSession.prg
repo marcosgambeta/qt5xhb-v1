@@ -12,11 +12,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKCONFIGURATION
-REQUEST QNETWORKINTERFACE
-REQUEST QVARIANT
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
