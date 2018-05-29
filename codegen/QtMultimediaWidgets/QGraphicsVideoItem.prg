@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIAOBJECT
-REQUEST QPOINTF
-REQUEST QSIZEF
-REQUEST QRECTF
-#endif
+$addRequests
 
 $beginClassFrom=QGraphicsObject,QMediaBindableInterface
 
