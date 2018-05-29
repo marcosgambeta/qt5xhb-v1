@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QHELPSEARCHQUERY
-REQUEST QHELPSEARCHQUERYWIDGET
-REQUEST QHELPSEARCHRESULTWIDGET
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
