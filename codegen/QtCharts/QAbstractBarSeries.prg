@@ -8,6 +8,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClassFrom=QAbstractSeries
 
 %%   METHOD new

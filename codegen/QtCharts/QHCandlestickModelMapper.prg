@@ -8,6 +8,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClassFrom=QCandlestickModelMapper
 
    METHOD new
