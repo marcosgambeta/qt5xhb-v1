@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTTABLECELL
-REQUEST QTEXTCURSOR
-REQUEST QTEXTTABLEFORMAT
-#endif
+$addRequests
 
 $beginClassFrom=QTextFrame
 

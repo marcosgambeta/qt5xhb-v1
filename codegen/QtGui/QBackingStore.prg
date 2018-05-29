@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-%% REQUEST QPLATFORMBACKINGSTORE
-REQUEST QPAINTDEVICE
-REQUEST QSIZE
-REQUEST QREGION
-REQUEST QWINDOW
-#endif
+$addRequests
 
 $beginClass
 

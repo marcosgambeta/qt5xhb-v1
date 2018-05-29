@@ -8,14 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
-REQUEST QRECT
-REQUEST QIODEVICE
-REQUEST QBYTEARRAY
-REQUEST QIMAGE
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClass
 

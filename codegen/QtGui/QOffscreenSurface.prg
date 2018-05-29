@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSURFACEFORMAT
-REQUEST QSIZE
-REQUEST QSCREEN
-%% REQUEST QPLATFORMOFFSCREENSURFACE
-#endif
+$addRequests
 
 $beginClassFrom=QObject,QSurface
 

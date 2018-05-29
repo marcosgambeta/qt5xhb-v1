@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
-REQUEST QRECT
-REQUEST QACCESSIBLEINTERFACE
-#endif
+$addRequests
 
 $beginClassFrom=QAccessibleInterface
 

@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QBITMAP
-REQUEST QPOINT
-REQUEST QPIXMAP
-#endif
+$addRequests
 
 $beginClass
 

@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTFORMAT
-REQUEST QTEXTDOCUMENT
-%% REQUEST QTEXTDOCUMENTPRIVATE
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 

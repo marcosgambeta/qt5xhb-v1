@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZEF
-REQUEST QSIZE
-REQUEST QRECTF
-REQUEST QRECT
-#endif
+$addRequests
 
 $beginClass
 

@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINT
-REQUEST QRECT
-REQUEST QSIZE
-REQUEST QTRANSFORM
-#endif
+$addRequests
 
 %% TODO: revisar e completar implementacao da classe
 

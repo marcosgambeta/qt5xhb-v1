@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTFRAMEFORMAT
-REQUEST QTEXTCURSOR
-%% REQUEST QTEXTFRAMELAYOUTDATA
-#endif
+$addRequests
 
 $beginClassFrom=QTextObject
 

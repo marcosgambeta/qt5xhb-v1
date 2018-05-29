@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QVECTOR2D
-REQUEST QVECTOR3D
-REQUEST QPOINT
-REQUEST QPOINTF
-#endif
+$addRequests
 
 $beginClass
 

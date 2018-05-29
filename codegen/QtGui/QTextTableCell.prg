@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTCHARFORMAT
-REQUEST QTEXTCURSOR
-#endif
+$addRequests
 
 $beginClass
 

@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QFONT
-REQUEST QCOLOR
-REQUEST QPEN
-#endif
+$addRequests
 
 $beginClassFrom=QTextFormat
 

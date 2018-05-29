@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QOPENGLFRAMEBUFFEROBJECTFORMAT
-REQUEST QSIZE
-REQUEST QIMAGE
-#endif
+$addRequests
 
 $beginClass
 
