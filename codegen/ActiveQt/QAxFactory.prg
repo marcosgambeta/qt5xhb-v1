@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QUUID
-REQUEST QOBJECT
-REQUEST QMETAOBJECT
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
