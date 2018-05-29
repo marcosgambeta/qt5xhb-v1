@@ -8,14 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-%% TODO: corrigir
-%% #ifndef QT5XHB_NO_REQUESTS
-%% REQUEST QDBUSREPLY<QSTRINGLIST>
-%% REQUEST QDBUSREPLY<BOOL>
-%% REQUEST QDBUSREPLY<QSTRING>
-%% REQUEST QDBUSREPLY<UINT>
-%% REQUEST QDBUSREPLY<VOID>
-%% #endif
+$addRequests
 
 $beginClassFrom=QDBusAbstractInterface
 
