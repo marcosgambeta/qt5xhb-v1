@@ -8,6 +8,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClassFrom=Qt3DCore::QComponent
 
 %%   METHOD new
