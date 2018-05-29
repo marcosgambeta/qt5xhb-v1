@@ -8,6 +8,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClassFrom=QUuid
 
    METHOD new2

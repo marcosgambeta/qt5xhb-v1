@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QBLUETOOTHSERVICEINFO
-REQUEST QBLUETOOTHUUID
-REQUEST QBLUETOOTHADDRESS
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
