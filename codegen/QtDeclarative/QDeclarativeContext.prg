@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
-REQUEST QOBJECT
-REQUEST QVARIANT
-REQUEST QDECLARATIVEENGINE
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
