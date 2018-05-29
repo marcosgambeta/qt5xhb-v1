@@ -27,11 +27,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKREQUEST
-REQUEST QSIZE
-REQUEST QURL
-#endif
+$addRequests
 
 $beginClass
 

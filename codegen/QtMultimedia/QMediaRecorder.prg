@@ -8,14 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
-REQUEST QAUDIOENCODERSETTINGS
-REQUEST QVARIANT
-REQUEST QSIZE
-REQUEST QVIDEOENCODERSETTINGS
-REQUEST QMEDIAOBJECT
-#endif
+$addRequests
 
 $beginClassFrom=QObject,QMediaBindableInterface
 

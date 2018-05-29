@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QAUDIOFORMAT
-REQUEST QAUDIOBUFFER
-REQUEST QIODEVICE
-#endif
+$addRequests
 
 $beginClassFrom=QMediaObject
 

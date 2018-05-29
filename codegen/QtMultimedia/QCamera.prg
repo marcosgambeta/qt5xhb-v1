@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QCAMERAEXPOSURE
-REQUEST QCAMERAFOCUS
-REQUEST QCAMERAIMAGEPROCESSING
-REQUEST QBYTEARRAY
-#endif
+$addRequests
 
 $beginClassFrom=QMediaObject
 

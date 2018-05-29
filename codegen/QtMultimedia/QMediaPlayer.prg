@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIACONTENT
-REQUEST QNETWORKCONFIGURATION
-REQUEST QIODEVICE
-REQUEST QMEDIAPLAYLIST
-#endif
+$addRequests
 
 $beginClassFrom=QMediaObject
 
