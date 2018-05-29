@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIGNALTRANSITION
-REQUEST QABSTRACTTRANSITION
-REQUEST QABSTRACTSTATE
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractState
 

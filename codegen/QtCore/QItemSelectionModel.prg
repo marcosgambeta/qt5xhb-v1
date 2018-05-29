@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
-REQUEST QABSTRACTITEMMODEL
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 

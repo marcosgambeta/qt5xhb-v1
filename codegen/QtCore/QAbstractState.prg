@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTATEMACHINE
-REQUEST QSTATE
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
