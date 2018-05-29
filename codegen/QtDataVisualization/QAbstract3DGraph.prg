@@ -8,6 +8,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClassFrom=QWindow
 %% CLASS QAbstract3DGraph INHERIT QWindow // protected QOpenGLFunction
 
