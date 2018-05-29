@@ -10,6 +10,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClassFrom=QAbstractOAuth
 
 %%   METHOD new

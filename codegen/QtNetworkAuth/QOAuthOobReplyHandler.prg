@@ -11,6 +11,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClassFrom=QAbstractOAuthReplyHandler
 
    METHOD new

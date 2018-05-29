@@ -11,6 +11,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClass
 
    METHOD new

@@ -11,6 +11,8 @@ $header
 
 #include "hbclass.ch"
 
+$addRequests
+
 $beginClassFrom=QOAuthOobReplyHandler
 
    METHOD new
