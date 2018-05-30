@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QMIMEDATA
-REQUEST QPOINTF
-REQUEST QPOINT
-REQUEST QWIDGET
-#endif
+$addRequests
 
 $beginClassFrom=QGraphicsSceneEvent
 

@@ -6,11 +6,13 @@
 
 $header
 
-#include "hbclass.ch"
-
 %% TODO:
 %% #ifndef QT_NO_TABWIDGET
 %% #endif // QT_NO_TABWIDGET
+
+#include "hbclass.ch"
+
+$addRequests
 
 $beginClassFrom=QStyleOption
 

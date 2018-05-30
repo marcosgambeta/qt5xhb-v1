@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTCHARFORMAT
-REQUEST QDATE
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClassFrom=QWidget
 

@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QMARGINS
-REQUEST QRECT
-REQUEST QLAYOUTITEM
-REQUEST QWIDGET
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClassFrom=QObject,QLayoutItem
 

@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QCALENDARWIDGET
-REQUEST QDATE
-REQUEST QDATETIME
-REQUEST QTIME
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractSpinBox
 

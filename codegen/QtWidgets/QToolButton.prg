@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
-REQUEST QMENU
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractButton
 

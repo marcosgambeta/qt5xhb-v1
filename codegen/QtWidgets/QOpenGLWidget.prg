@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSURFACEFORMAT
-REQUEST QOPENGLCONTEXT
-REQUEST QIMAGE
-#endif
+$addRequests
 
 $beginClassFrom=QWidget
 

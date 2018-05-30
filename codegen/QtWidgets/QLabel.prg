@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
-REQUEST QMOVIE
-REQUEST QPICTURE
-REQUEST QPIXMAP
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClassFrom=QFrame
 

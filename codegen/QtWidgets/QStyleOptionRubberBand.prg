@@ -6,11 +6,13 @@
 
 $header
 
-#include "hbclass.ch"
-
 %% TODO: class under condition
 %% #ifndef QT_NO_RUBBERBAND
 %% #endif // QT_NO_RUBBERBAND
+
+#include "hbclass.ch"
+
+$addRequests
 
 $beginClassFrom=QStyleOption
 

@@ -8,9 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOLOR
-#endif
+$addRequests
 
 $beginClassFrom=QGraphicsEffect
 

@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QWINDOW
-REQUEST QACCESSIBLEINTERFACE
-REQUEST QRECT
-REQUEST QCOLOR
-#endif
+$addRequests
 
 $beginClassFrom=QAccessibleObject,QAccessibleActionInterface
 

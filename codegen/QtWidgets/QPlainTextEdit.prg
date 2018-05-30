@@ -8,14 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QMENU
-REQUEST QTEXTCHARFORMAT
-REQUEST QTEXTCURSOR
-REQUEST QRECT
-REQUEST QTEXTDOCUMENT
-REQUEST QVARIANT
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractScrollArea
 

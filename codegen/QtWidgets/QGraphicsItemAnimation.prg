@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QGRAPHICSITEM
-REQUEST QMATRIX
-REQUEST QPOINTF
-REQUEST QTIMELINE
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 

@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QLISTWIDGETITEM
-REQUEST QWIDGET
-REQUEST QRECT
-#endif
+$addRequests
 
 $beginClassFrom=QListView
 

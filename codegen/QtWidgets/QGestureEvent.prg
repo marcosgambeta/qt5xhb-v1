@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QGESTURE
-REQUEST QPOINTF
-REQUEST QWIDGET
-#endif
+$addRequests
 
 $beginClassFrom=QEvent
 

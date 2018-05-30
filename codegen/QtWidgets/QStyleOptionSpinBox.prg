@@ -6,11 +6,13 @@
 
 $header
 
-#include "hbclass.ch"
-
 %% TODO:
 %% #ifndef QT_NO_SPINBOX
 %% #endif // QT_NO_SPINBOX
+
+#include "hbclass.ch"
+
+$addRequests
 
 $beginClassFrom=QStyleOptionComplex
 

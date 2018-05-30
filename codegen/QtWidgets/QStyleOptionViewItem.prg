@@ -6,9 +6,11 @@
 
 $header
 
+%% TODO: class under condition #ifndef QT_NO_ITEMVIEWS
+
 #include "hbclass.ch"
 
-%% TODO: class under condition #ifndef QT_NO_ITEMVIEWS
+$addRequests
 
 $beginClassFrom=QStyleOption
 

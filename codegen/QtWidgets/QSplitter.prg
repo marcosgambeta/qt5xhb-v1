@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSPLITTERHANDLE
-REQUEST QBYTEARRAY
-REQUEST QWIDGET
-REQUEST QSIZE
-#endif
+$addRequests
 
 $beginClassFrom=QFrame
 

@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINTF
-REQUEST QSCROLLERPROPERTIES
-REQUEST QOBJECT
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 

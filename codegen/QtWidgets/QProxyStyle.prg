@@ -8,14 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTYLE
-REQUEST QSIZE
-REQUEST QRECT
-REQUEST QICON
-REQUEST QPIXMAP
-REQUEST QPALETTE
-#endif
+$addRequests
 
 $beginClassFrom=QCommonStyle
 

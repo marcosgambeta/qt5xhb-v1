@@ -8,15 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QFONT
-REQUEST QGRAPHICSLAYOUT
-REQUEST QPALETTE
-REQUEST QRECTF
-REQUEST QSIZEF
-REQUEST QSTYLE
-REQUEST QPAINTERPATH
-#endif
+$addRequests
 
 $beginClassFrom=QGraphicsObject,QGraphicsLayoutItem
 

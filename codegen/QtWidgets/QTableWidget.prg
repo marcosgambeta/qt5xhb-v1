@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
-REQUEST QTABLEWIDGETITEM
-REQUEST QRECT
-#endif
+$addRequests
 
 $beginClassFrom=QTableView
 

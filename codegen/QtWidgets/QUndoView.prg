@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QUNDOGROUP
-REQUEST QUNDOSTACK
-#endif
+$addRequests
 
 $beginClassFrom=QWidget
 

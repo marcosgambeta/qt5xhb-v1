@@ -6,11 +6,13 @@
 
 $header
 
-#include "hbclass.ch"
-
 %% TODO:
 %% #ifndef QT_NO_TOOLBAR
 %% #endif // QT_NO_TOOLBAR
+
+#include "hbclass.ch"
+
+$addRequests
 
 $beginClassFrom=QStyleOption
 

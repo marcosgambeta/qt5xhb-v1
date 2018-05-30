@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QMODELINDEX
-REQUEST QVARIANT
-REQUEST QFILEICONPROVIDER
-REQUEST QICON
-REQUEST QFILEINFO
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractItemModel
 

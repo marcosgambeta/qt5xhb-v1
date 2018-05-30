@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QPUSHBUTTON
-REQUEST QABSTRACTBUTTON
-REQUEST QPIXMAP
-REQUEST QCHECKBOX
-#endif
+$addRequests
 
 $beginClassFrom=QDialog
 

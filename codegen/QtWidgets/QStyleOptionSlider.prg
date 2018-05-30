@@ -6,11 +6,13 @@
 
 $header
 
-#include "hbclass.ch"
-
 %% TODO:
 %% #ifndef QT_NO_SLIDER
 %% #endif // QT_NO_SLIDER
+
+#include "hbclass.ch"
+
+$addRequests
 
 $beginClassFrom=QStyleOptionComplex
 
