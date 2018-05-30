@@ -10,14 +10,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QACTION
-REQUEST QICON
-REQUEST QURL
-REQUEST QWEBHISTORY
-REQUEST QWEBPAGE
-REQUEST QWEBSETTINGS
-#endif
+$addRequests
 
 $beginClassFrom=QGraphicsWidget
 
