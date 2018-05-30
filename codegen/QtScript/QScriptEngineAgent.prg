@@ -8,10 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSCRIPTENGINE
-REQUEST QVARIANT
-#endif
+$addRequests
 
 $beginClass
 
