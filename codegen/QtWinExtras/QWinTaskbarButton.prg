@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QWINDOW
-REQUEST QICON
-REQUEST QWINTASKBARPROGRESS
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
