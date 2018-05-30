@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
-%% REQUEST QRANGELIST
-%% REQUEST QOUTPUTRANGELIST
-REQUEST QSENSORFILTER
-REQUEST QSENSORREADING
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
