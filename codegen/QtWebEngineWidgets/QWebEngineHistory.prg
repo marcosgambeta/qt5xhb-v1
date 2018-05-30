@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-%% TODO: corrigir
-%%//REQUEST QLIST<QWEBENGINEHISTORYITEM>
-REQUEST QWEBENGINEHISTORYITEM
-#endif
+$addRequests
 
 $beginClass
 
