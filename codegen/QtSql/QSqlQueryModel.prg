@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSQLERROR
-REQUEST QSQLQUERY
-REQUEST QSQLRECORD
-REQUEST QVARIANT
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractTableModel
 

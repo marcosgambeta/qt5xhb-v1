@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QSQLDRIVER
-REQUEST QSQLERROR
-REQUEST QSQLINDEX
-REQUEST QSQLQUERY
-REQUEST QSQLRECORD
-#endif
+$addRequests
 
 $beginClass
 
