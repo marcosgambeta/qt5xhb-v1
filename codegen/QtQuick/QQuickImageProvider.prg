@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QIMAGE
-REQUEST QPIXMAP
-REQUEST QQUICKTEXTUREFACTORY
-#endif
+$addRequests
 
 $beginClassFrom=QQmlImageProviderBase
 

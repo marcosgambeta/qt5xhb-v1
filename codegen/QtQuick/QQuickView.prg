@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QQMLENGINE
-REQUEST QSIZE
-REQUEST QQMLCONTEXT
-REQUEST QQUICKITEM
-REQUEST QURL
-#endif
+$addRequests
 
 $beginClassFrom=QQuickWindow
 

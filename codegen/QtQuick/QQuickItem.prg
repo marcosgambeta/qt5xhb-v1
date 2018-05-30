@@ -8,14 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QCURSOR
-REQUEST QVARIANT
-REQUEST QPOINTF
-REQUEST QSGTEXTUREPROVIDER
-REQUEST QQUICKWINDOW
-#endif
+$addRequests
 
 $beginClassFrom=QObject,QQmlParserStatus
 

@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
-REQUEST QSIZE
-REQUEST QCOLOR
-#endif
+$addRequests
 
 $beginClassFrom=QQuickItem
 
