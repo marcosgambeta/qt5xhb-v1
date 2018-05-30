@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECT
-REQUEST QVARIANT
-REQUEST QWEBELEMENTCOLLECTION
-REQUEST QWEBFRAME
-#endif
+$addRequests
 
 $beginClass
 
