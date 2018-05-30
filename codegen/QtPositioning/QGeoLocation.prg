@@ -8,11 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QGEOADDRESS
-REQUEST QGEOCOORDINATE
-REQUEST QGEORECTANGLE
-#endif
+$addRequests
 
 $beginClass
 
