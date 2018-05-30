@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QXMLNAMEPOOL
-REQUEST QURL
-REQUEST QXMLNODEMODELINDEX
-REQUEST QXMLNAME
-#endif
+$addRequests
 
 $beginClassFrom=QAbstractXmlNodeModel
 

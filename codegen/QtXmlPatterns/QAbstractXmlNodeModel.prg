@@ -8,13 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
-REQUEST QXMLNODEMODELINDEX
-REQUEST QXMLNAME
-REQUEST QSOURCELOCATION
-REQUEST QVARIANT
-#endif
+$addRequests
 
 $beginClassFrom=QSharedData
 
