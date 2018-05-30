@@ -8,9 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QPRINTER
-#endif
+$addRequests
 
 $beginClassFrom=QDialog
 
