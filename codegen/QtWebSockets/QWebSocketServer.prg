@@ -8,12 +8,7 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QHOSTADDRESS
-REQUEST QWEBSOCKET
-REQUEST QNETWORKPROXY
-REQUEST QSSLCONFIGURATION
-#endif
+$addRequests
 
 $beginClassFrom=QObject
 
