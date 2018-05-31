@@ -20,9 +20,7 @@ $beginClassFrom=QObject
    METHOD registeredProduct
    METHOD setPlatformProperty
 
-   METHOD onProductRegistered
-   METHOD onProductUnknown
-   METHOD onTransactionReady
+$addSignals
 
 $endClass
 
