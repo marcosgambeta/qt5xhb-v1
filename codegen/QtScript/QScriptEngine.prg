@@ -52,7 +52,7 @@ $beginClassFrom=QObject
    METHOD undefinedValue
    METHOD checkSyntax
 
-   METHOD onSignalHandlerException
+$addSignals
 
 $endClass
 
