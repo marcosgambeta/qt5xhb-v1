@@ -30,8 +30,7 @@ $beginClassFrom=QObject
    METHOD setFlat
    METHOD click
 
-   METHOD onClicked
-   METHOD onChanged
+$addSignals
 
 $endClass
 

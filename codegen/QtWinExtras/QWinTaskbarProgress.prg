@@ -33,12 +33,7 @@ $beginClassFrom=QObject
    METHOD resume
    METHOD stop
 
-   METHOD onValueChanged
-   METHOD onMinimumChanged
-   METHOD onMaximumChanged
-   METHOD onVisibilityChanged
-   METHOD onPausedChanged
-   METHOD onStoppedChanged
+$addSignals
 
 $endClass
 
