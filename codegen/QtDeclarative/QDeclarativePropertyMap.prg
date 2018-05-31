@@ -23,7 +23,7 @@ $beginClassFrom=QObject
    METHOD size
    METHOD value
 
-   METHOD onValueChanged
+$addSignals
 
 $endClass
 

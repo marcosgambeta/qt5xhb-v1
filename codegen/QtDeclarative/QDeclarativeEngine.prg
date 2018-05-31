@@ -39,8 +39,7 @@ $beginClassFrom=QObject
    METHOD setContextForObject
    METHOD setObjectOwnership
 
-   METHOD onQuit
-   METHOD onWarnings
+$addSignals
 
 $endClass
 

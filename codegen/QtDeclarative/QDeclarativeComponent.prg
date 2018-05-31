@@ -29,8 +29,7 @@ $beginClassFrom=QObject
    METHOD status
    METHOD url
 
-   METHOD onProgressChanged
-   METHOD onStatusChanged
+$addSignals
 
 $endClass
 

@@ -25,8 +25,7 @@ $beginClassFrom=QGraphicsView
    METHOD source
    METHOD status
 
-   METHOD onSceneResized
-   METHOD onStatusChanged
+$addSignals
 
 $endClass
 
