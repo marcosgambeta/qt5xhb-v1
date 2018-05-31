@@ -58,16 +58,7 @@ $beginClassFrom=QObject
    METHOD url
    METHOD zoomFactor
 
-   METHOD onContentsSizeChanged
-   METHOD onIconChanged
-   METHOD onInitialLayoutCompleted
-   METHOD onJavaScriptWindowObjectCleared
-   METHOD onLoadFinished
-   METHOD onLoadStarted
-   METHOD onPageChanged
-   //METHOD onProvisionalLoad
-   METHOD onTitleChanged
-   METHOD onUrlChanged
+$addSignals
 
 $endClass
 

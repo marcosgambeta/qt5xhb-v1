@@ -64,33 +64,7 @@ $beginClassFrom=QObject
    METHOD viewportSize
    METHOD visibilityState
 
-   METHOD onApplicationCacheQuotaExceeded
-   METHOD onContentsChanged
-   METHOD onDatabaseQuotaExceeded
-   METHOD onDownloadRequested
-   METHOD onFeaturePermissionRequestCanceled
-   METHOD onFeaturePermissionRequested
-   METHOD onFrameCreated
-   METHOD onGeometryChangeRequested
-   METHOD onLinkClicked
-   METHOD onLinkHovered
-   METHOD onLoadFinished
-   METHOD onLoadProgress
-   METHOD onLoadStarted
-   METHOD onMenuBarVisibilityChangeRequested
-   METHOD onMicroFocusChanged
-   METHOD onPrintRequested
-   METHOD onRepaintRequested
-   METHOD onRestoreFrameStateRequested
-   METHOD onSaveFrameStateRequested
-   METHOD onScrollRequested
-   METHOD onSelectionChanged
-   METHOD onStatusBarMessage
-   METHOD onStatusBarVisibilityChangeRequested
-   METHOD onToolBarVisibilityChangeRequested
-   METHOD onUnsupportedContent
-   METHOD onViewportChangeRequested
-   METHOD onWindowCloseRequested
+$addSignals
 
 $endClass
 
