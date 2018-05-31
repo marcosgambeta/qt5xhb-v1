@@ -46,24 +46,7 @@ $beginClassFrom=QObject
    METHOD revert
    METHOD submit
 
-   METHOD onColumnsAboutToBeInserted
-   METHOD onColumnsAboutToBeMoved
-   METHOD onColumnsAboutToBeRemoved
-   METHOD onColumnsInserted
-   METHOD onColumnsMoved
-   METHOD onColumnsRemoved
-   METHOD onDataChanged
-   METHOD onHeaderDataChanged
-   METHOD onLayoutAboutToBeChanged
-   METHOD onLayoutChanged
-   METHOD onModelAboutToBeReset
-   METHOD onModelReset
-   METHOD onRowsAboutToBeInserted
-   METHOD onRowsAboutToBeMoved
-   METHOD onRowsAboutToBeRemoved
-   METHOD onRowsInserted
-   METHOD onRowsMoved
-   METHOD onRowsRemoved
+$addSignals
 
 $endClass
 

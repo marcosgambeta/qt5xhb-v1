@@ -33,8 +33,7 @@ $beginClassFrom=QObject
    METHOD startingUp
    METHOD closingDown
 
-   METHOD onAboutToBlock
-   METHOD onAwake
+$addSignals
 
 $endClass
 

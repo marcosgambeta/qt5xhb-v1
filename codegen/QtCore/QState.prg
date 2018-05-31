@@ -25,8 +25,7 @@ $beginClassFrom=QAbstractState
    METHOD setInitialState
    METHOD transitions
 
-   METHOD onFinished
-   METHOD onPropertiesAssigned
+$addSignals
 
 $endClass
 

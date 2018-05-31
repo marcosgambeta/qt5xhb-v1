@@ -209,8 +209,7 @@ $beginClass
    METHOD onZeroTimerEventEvent
    METHOD onZOrderChangeEvent
 
-   METHOD onDestroyed
-   METHOD onObjectNameChanged
+$addSignals
 
    METHOD connect
    METHOD disconnect

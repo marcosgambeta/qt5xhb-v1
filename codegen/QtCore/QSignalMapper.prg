@@ -19,10 +19,7 @@ $beginClassFrom=QObject
    METHOD mapping
    METHOD map
 
-   METHOD onMapped1
-   METHOD onMapped2
-   METHOD onMapped3
-   METHOD onMapped4
+$addSignals
 
 $endClass
 

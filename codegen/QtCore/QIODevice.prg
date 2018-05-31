@@ -42,10 +42,7 @@ $beginClassFrom=QObject
    METHOD waitForReadyRead
    METHOD write
 
-   METHOD onAboutToClose
-   METHOD onBytesWritten
-   METHOD onReadChannelFinished
-   METHOD onReadyRead
+$addSignals
 
 $endClass
 

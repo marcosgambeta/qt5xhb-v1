@@ -34,8 +34,7 @@ $beginClassFrom=QObject
    METHOD usleep
    METHOD yieldCurrentThread
 
-   METHOD onFinished
-   METHOD onStarted
+$addSignals
 
 $endClass
 

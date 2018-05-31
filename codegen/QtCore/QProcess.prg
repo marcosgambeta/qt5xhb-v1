@@ -68,13 +68,7 @@ $beginClassFrom=QIODevice
    METHOD nullDevice
 %%   METHOD createProcessArgumentsModifier
 
-   METHOD onError
-   METHOD onErrorOccurred
-   METHOD onFinished
-   METHOD onReadyReadStandardError
-   METHOD onReadyReadStandardOutput
-   METHOD onStarted
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

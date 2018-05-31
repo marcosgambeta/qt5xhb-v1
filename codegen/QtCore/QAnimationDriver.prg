@@ -22,8 +22,7 @@ $beginClassFrom=QObject
    METHOD setStartTime
    METHOD startTime
 
-   METHOD onStarted
-   METHOD onStopped
+$addSignals
 
 $endClass
 

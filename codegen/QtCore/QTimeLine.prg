@@ -43,10 +43,7 @@ $beginClassFrom=QObject
    METHOD stop
    METHOD toggleDirection
 
-   METHOD onFinished
-   METHOD onFrameChanged
-   METHOD onStateChanged
-   METHOD onValueChanged
+$addSignals
 
 $endClass
 

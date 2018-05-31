@@ -16,8 +16,7 @@ $beginClassFrom=QObject
    METHOD machine
    METHOD parentState
 
-   METHOD onEntered
-   METHOD onExited
+$addSignals
 
 $endClass
 

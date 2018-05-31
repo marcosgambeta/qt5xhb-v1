@@ -31,10 +31,7 @@ $beginClassFrom=QObject
    METHOD start
    METHOD stop
 
-   METHOD onCurrentLoopChanged
-   METHOD onDirectionChanged
-   METHOD onFinished
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

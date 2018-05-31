@@ -24,7 +24,7 @@ $beginClassFrom=QObject
    METHOD stop
    METHOD singleShot
 
-   METHOD onTimeout
+$addSignals
 
 $endClass
 

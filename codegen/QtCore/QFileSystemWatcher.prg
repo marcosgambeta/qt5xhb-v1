@@ -21,8 +21,7 @@ $beginClassFrom=QObject
    METHOD removePath
    METHOD removePaths
 
-   METHOD onDirectoryChanged
-   METHOD onFileChanged
+$addSignals
 
 $endClass
 

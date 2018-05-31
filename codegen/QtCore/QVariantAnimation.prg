@@ -24,7 +24,7 @@ $beginClassFrom=QAbstractAnimation
    METHOD setStartValue
    METHOD startValue
 
-   METHOD onValueChanged
+$addSignals
 
 $endClass
 

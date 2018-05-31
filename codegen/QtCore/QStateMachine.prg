@@ -34,8 +34,7 @@ $beginClassFrom=QState
    METHOD start
    METHOD stop
 
-   METHOD onStarted
-   METHOD onStopped
+$addSignals
 
 $endClass
 

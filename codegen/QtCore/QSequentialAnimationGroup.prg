@@ -19,7 +19,7 @@ $beginClassFrom=QAnimationGroup
    METHOD insertPause
    METHOD duration
 
-   METHOD onCurrentAnimationChanged
+$addSignals
 
 $endClass
 

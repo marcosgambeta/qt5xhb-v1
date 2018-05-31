@@ -23,7 +23,7 @@ $beginClassFrom=QObject
    METHOD targetState
    METHOD targetStates
 
-   METHOD onTriggered
+$addSignals
 
 $endClass
 

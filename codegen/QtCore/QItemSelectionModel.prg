@@ -33,10 +33,7 @@ $beginClassFrom=QObject
    METHOD clearSelection
    METHOD clearCurrentIndex
 
-   METHOD onSelectionChanged
-   METHOD onCurrentChanged
-   METHOD onCurrentRowChanged
-   METHOD onCurrentColumnChanged
+$addSignals
 
 $endClass
 
