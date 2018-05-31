@@ -24,7 +24,7 @@ $beginClassFrom=QObject
    METHOD startLogging
    METHOD stopLogging
 
-   METHOD onMessageLogged
+$addSignals
 
 $endClass
 

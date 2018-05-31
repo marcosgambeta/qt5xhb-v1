@@ -45,14 +45,7 @@ $beginClassFrom=QObject
    METHOD grabWindow
    METHOD refreshRate
 
-   METHOD onGeometryChanged
-   METHOD onPhysicalSizeChanged
-   METHOD onPhysicalDotsPerInchChanged
-   METHOD onLogicalDotsPerInchChanged
-   METHOD onVirtualGeometryChanged
-   METHOD onPrimaryOrientationChanged
-   METHOD onOrientationChanged
-   METHOD onRefreshRateChanged
+$addSignals
 
 $endClass
 

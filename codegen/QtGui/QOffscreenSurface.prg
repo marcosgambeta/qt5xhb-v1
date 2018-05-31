@@ -26,7 +26,7 @@ $beginClassFrom=QObject,QSurface
    METHOD setScreen
 %%   METHOD handle
 
-   METHOD onScreenChanged
+$addSignals
 
 $endClass
 

@@ -17,7 +17,7 @@ $beginClassFrom=QValidator
    METHOD regularExpression
    METHOD setRegularExpression
 
-   METHOD onRegularExpressionChanged
+$addSignals
 
 $endClass
 

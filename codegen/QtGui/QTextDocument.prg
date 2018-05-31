@@ -85,15 +85,7 @@ $beginClassFrom=QObject
    METHOD setModified
 %%   METHOD docHandle
 
-   METHOD onContentsChange
-   METHOD onContentsChanged
-   METHOD onUndoAvailable
-   METHOD onRedoAvailable
-   METHOD onUndoCommandAdded
-   METHOD onModificationChanged
-   METHOD onCursorPositionChanged
-   METHOD onBlockCountChanged
-   METHOD onDocumentLayoutChanged
+$addSignals
 
 $endClass
 

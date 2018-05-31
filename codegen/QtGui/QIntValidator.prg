@@ -24,7 +24,7 @@ $beginClassFrom=QValidator
    METHOD top
    METHOD validate
 
-   METHOD onChanged
+$addSignals
 
 $endClass
 

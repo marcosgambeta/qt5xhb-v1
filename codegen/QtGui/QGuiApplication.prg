@@ -51,11 +51,7 @@ $beginClassFrom=QCoreApplication
    METHOD topLevelAt
    METHOD topLevelWindows
 
-   METHOD onFocusObjectChanged
-   METHOD onFocusWindowChanged
-   METHOD onFontDatabaseChanged
-   METHOD onLastWindowClosed
-   METHOD onScreenAdded
+$addSignals
 
 $endClass
 

@@ -28,8 +28,7 @@ $beginClassFrom=QObject
    METHOD supportedActions
    METHOD target
 
-   METHOD onActionChanged
-   METHOD onTargetChanged
+$addSignals
 
 $endClass
 

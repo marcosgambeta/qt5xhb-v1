@@ -81,15 +81,7 @@ $beginClassFrom=QObject,QSurface
    METHOD setPosition
    METHOD requestUpdate
 
-   METHOD onContentOrientationChanged
-   METHOD onFocusObjectChanged
-   METHOD onHeightChanged
-   METHOD onScreenChanged
-   METHOD onVisibleChanged
-   METHOD onWidthChanged
-   METHOD onWindowModalityChanged
-   METHOD onXChanged
-   METHOD onYChanged
+$addSignals
 
 $endClass
 

@@ -34,7 +34,7 @@ $beginClassFrom=QObject
    METHOD areSharing
    METHOD currentContext
 
-   METHOD onAboutToBeDestroyed
+$addSignals
 
 $endClass
 
