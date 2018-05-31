@@ -30,7 +30,7 @@ $beginClassFrom=QObject
    METHOD setSourceLocation
    METHOD sourceFile
 
-   METHOD onValueChanged
+$addSignals
 
 $endClass
 

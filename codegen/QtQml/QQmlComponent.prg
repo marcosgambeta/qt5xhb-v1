@@ -28,8 +28,7 @@ $beginClassFrom=QObject
    METHOD loadUrl
    METHOD setData
 
-   METHOD onProgressChanged
-   METHOD onStatusChanged
+$addSignals
 
 $endClass
 

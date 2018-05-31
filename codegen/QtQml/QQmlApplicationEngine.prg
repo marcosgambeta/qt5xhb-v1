@@ -18,7 +18,7 @@ $beginClassFrom=QQmlEngine
    METHOD load
    METHOD loadData
 
-   METHOD onObjectCreated
+$addSignals
 
 $endClass
 

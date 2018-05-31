@@ -44,7 +44,7 @@ $beginClassFrom=QJSEngine
    METHOD setContextForObject
    METHOD setObjectOwnership
 
-   METHOD onQuit
+$addSignals
 
 $endClass
 
