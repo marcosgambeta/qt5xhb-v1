@@ -20,8 +20,7 @@ $beginClassFrom=QObject
    METHOD error
    METHOD abort
 
-   METHOD onFinished
-   METHOD onError
+$addSignals
 
 $endClass
 

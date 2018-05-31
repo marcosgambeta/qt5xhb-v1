@@ -28,8 +28,7 @@ $beginClassFrom=QObject
    METHOD setMeasurementSystem
    METHOD measurementSystem
 
-   METHOD onFinished
-   METHOD onError
+$addSignals
 
 $endClass
 

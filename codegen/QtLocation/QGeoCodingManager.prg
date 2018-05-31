@@ -20,8 +20,7 @@ $beginClassFrom=QObject
    METHOD setLocale
    METHOD locale
 
-   METHOD onFinished
-   METHOD onError
+$addSignals
 
 $endClass
 

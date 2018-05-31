@@ -34,15 +34,7 @@ $beginClassFrom=QObject
    METHOD compatiblePlace
    METHOD matchingPlaces
 
-   METHOD onFinished
-   METHOD onError
-   METHOD onPlaceAdded
-   METHOD onPlaceUpdated
-   METHOD onPlaceRemoved
-   METHOD onCategoryAdded
-   METHOD onCategoryUpdated
-   METHOD onCategoryRemoved
-   METHOD onDataChanged
+$addSignals
 
 $endClass
 

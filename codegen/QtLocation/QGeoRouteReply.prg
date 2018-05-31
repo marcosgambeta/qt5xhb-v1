@@ -21,8 +21,7 @@ $beginClassFrom=QObject
    METHOD routes
    METHOD abort
 
-   METHOD onFinished
-   METHOD onError
+$addSignals
 
 $endClass
 

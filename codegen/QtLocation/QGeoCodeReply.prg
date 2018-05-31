@@ -23,8 +23,7 @@ $beginClassFrom=QObject
    METHOD offset
    METHOD abort
 
-   METHOD onFinished
-   METHOD onError
+$addSignals
 
 $endClass
 
