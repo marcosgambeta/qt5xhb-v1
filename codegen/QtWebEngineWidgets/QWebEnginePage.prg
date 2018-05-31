@@ -40,20 +40,7 @@ $beginClassFrom=QObject
    METHOD runJavaScript
    METHOD settings
 
-   METHOD onLoadStarted
-   METHOD onLoadProgress
-   METHOD onLoadFinished
-   METHOD onLinkHovered
-   METHOD onSelectionChanged
-   METHOD onGeometryChangeRequested
-   METHOD onWindowCloseRequested
-   METHOD onFeaturePermissionRequested
-   METHOD onFeaturePermissionRequestCanceled
-   METHOD onAuthenticationRequired
-   METHOD onProxyAuthenticationRequired
-   METHOD onTitleChanged
-   METHOD onUrlChanged
-   METHOD onIconUrlChanged
+$addSignals
 
 $endClass
 

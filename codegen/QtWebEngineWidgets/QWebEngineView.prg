@@ -37,13 +37,7 @@ $beginClassFrom=QWidget
    METHOD forward
    METHOD reload
 
-   METHOD onLoadStarted
-   METHOD onLoadProgress
-   METHOD onLoadFinished
-   METHOD onTitleChanged
-   METHOD onSelectionChanged
-   METHOD onUrlChanged
-   METHOD onIconUrlChanged
+$addSignals
 
 $endClass
 
