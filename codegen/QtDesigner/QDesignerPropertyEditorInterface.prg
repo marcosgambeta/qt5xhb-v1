@@ -21,7 +21,7 @@ $beginClassFrom=QWidget
    METHOD setPropertyValue
    METHOD setReadOnly
 
-   METHOD onPropertyChanged
+$addSignals
 
 $endClass
 

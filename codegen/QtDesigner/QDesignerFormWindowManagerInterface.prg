@@ -40,9 +40,7 @@ $beginClassFrom=QObject
    METHOD removeFormWindow
    METHOD setActiveFormWindow
 
-   METHOD onActiveFormWindowChanged
-   METHOD onFormWindowAdded
-   METHOD onFormWindowRemoved
+$addSignals
 
 $endClass
 
