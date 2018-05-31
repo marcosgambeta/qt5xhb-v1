@@ -27,11 +27,7 @@ $beginClassFrom=QMediaControl
    METHOD saturation
    METHOD setSaturation
 
-   METHOD onFullScreenChanged
-   METHOD onBrightnessChanged
-   METHOD onContrastChanged
-   METHOD onHueChanged
-   METHOD onSaturationChanged
+$addSignals
 
 $endClass
 

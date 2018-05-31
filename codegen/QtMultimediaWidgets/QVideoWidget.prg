@@ -29,11 +29,7 @@ $beginClassFrom=QWidget,QMediaBindableInterface
    METHOD setHue
    METHOD setSaturation
 
-   METHOD onFullScreenChanged
-   METHOD onBrightnessChanged
-   METHOD onContrastChanged
-   METHOD onHueChanged
-   METHOD onSaturationChanged
+$addSignals
 
 $endClass
 

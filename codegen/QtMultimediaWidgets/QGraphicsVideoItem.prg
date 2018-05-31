@@ -25,7 +25,7 @@ $beginClassFrom=QGraphicsObject,QMediaBindableInterface
    METHOD boundingRect
    METHOD paint
 
-   METHOD onNativeSizeChanged
+$addSignals
 
 $endClass
 
