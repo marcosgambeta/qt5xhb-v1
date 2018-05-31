@@ -19,7 +19,7 @@ $beginClassFrom=QDialog
    METHOD done
    METHOD setVisible
 
-   METHOD onPaintRequested
+$addSignals
 
 $endClass
 

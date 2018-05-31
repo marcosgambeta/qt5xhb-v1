@@ -24,7 +24,7 @@ $beginClassFrom=QAbstractPrintDialog
    METHOD exec
    METHOD setVisible
 
-   METHOD onAccepted
+$addSignals
 
 $endClass
 

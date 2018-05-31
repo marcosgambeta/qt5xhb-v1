@@ -38,8 +38,7 @@ $beginClassFrom=QWidget
    METHOD zoomIn
    METHOD zoomOut
 
-   METHOD onPaintRequested
-   METHOD onPreviewChanged
+$addSignals
 
 $endClass
 
