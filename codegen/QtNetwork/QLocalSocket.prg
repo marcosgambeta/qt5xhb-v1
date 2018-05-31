@@ -40,10 +40,7 @@ $beginClassFrom=QIODevice
    METHOD waitForDisconnected
    METHOD waitForReadyRead
 
-   METHOD onConnected
-   METHOD onDisconnected
-   METHOD onError
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

@@ -55,14 +55,11 @@ $beginClassFrom=QIODevice
    METHOD waitForDisconnected
    METHOD waitForReadyRead
 
-   METHOD onConnected
-   METHOD onDisconnected
-   METHOD onError
-   METHOD onHostFound
+$addSignals
+
 %% #ifndef QT_NO_NETWORKPROXY
-   METHOD onProxyAuthenticationRequired
+%% METHOD onProxyAuthenticationRequired
 %% #endif
-   METHOD onStateChanged
 
 $endClass
 

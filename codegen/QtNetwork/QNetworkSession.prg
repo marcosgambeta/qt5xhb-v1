@@ -42,13 +42,7 @@ $beginClassFrom=QObject
    METHOD usagePolicies
    METHOD waitForOpened
 
-   METHOD onClosed
-   METHOD onError
-   METHOD onNewConfigurationActivated
-   METHOD onOpened
-   METHOD onPreferredConfigurationChanged
-   METHOD onStateChanged
-   METHOD onUsagePoliciesChanged
+$addSignals
 
 $endClass
 

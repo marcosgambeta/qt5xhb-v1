@@ -26,11 +26,7 @@ $beginClassFrom=QObject
    METHOD isOnline
    METHOD updateConfigurations
 
-   METHOD onConfigurationAdded
-   METHOD onConfigurationChanged
-   METHOD onConfigurationRemoved
-   METHOD onOnlineStateChanged
-   METHOD onUpdateCompleted
+$addSignals
 
 $endClass
 

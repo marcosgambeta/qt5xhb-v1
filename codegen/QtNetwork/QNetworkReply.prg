@@ -46,18 +46,13 @@ $beginClassFrom=QIODevice
 %% #endif
    METHOD url
 
-   METHOD onDownloadProgress
-   METHOD onError
-   METHOD onFinished
-   METHOD onMetaDataChanged
-   METHOD onUploadProgress
+$addSignals
+
 %% #ifndef QT_NO_SSL
-   METHOD onEncrypted
-   METHOD onSslErrors
-   METHOD onPreSharedKeyAuthenticationRequired
+%%   METHOD onEncrypted
+%%   METHOD onSslErrors
+%%   METHOD onPreSharedKeyAuthenticationRequired
 %% #endif
-   METHOD onRedirected
-   METHOD onRedirectAllowed
 
 $endClass
 

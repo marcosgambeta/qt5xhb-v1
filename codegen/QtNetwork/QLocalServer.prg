@@ -32,7 +32,7 @@ $beginClassFrom=QObject
    METHOD socketOptions
    METHOD waitForNewConnection
 
-   METHOD onNewConnection
+$addSignals
 
 $endClass
 

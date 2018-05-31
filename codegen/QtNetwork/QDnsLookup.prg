@@ -34,10 +34,7 @@ $beginClassFrom=QObject
    METHOD textRecords
    METHOD type
 
-   METHOD onFinished
-   METHOD onNameChanged
-   METHOD onNameserverChanged
-   METHOD onTypeChanged
+$addSignals
 
 $endClass
 

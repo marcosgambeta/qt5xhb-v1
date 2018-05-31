@@ -55,19 +55,19 @@ $beginClassFrom=QObject
    METHOD redirectPolicy
 %%   METHOD createRequest
 
+$addSignals
+
 %% #ifndef QT_NO_NETWORKPROXY
-   METHOD onProxyAuthenticationRequired
+%%   METHOD onProxyAuthenticationRequired
 %% #endif
-   METHOD onAuthenticationRequired
-   METHOD onFinished
 %% #ifndef QT_NO_SSL
-   METHOD onEncrypted
-   METHOD onSslErrors
-   METHOD onPreSharedKeyAuthenticationRequired
+%%   METHOD onEncrypted
+%%   METHOD onSslErrors
+%%   METHOD onPreSharedKeyAuthenticationRequired
 %% #endif
 %% #ifndef QT_NO_BEARERMANAGEMENT
-   METHOD onNetworkSessionConnected
-   METHOD onNetworkAccessibleChanged
+%%   METHOD onNetworkSessionConnected
+%%   METHOD onNetworkAccessibleChanged
 %% #endif
 
 $endClass

@@ -93,12 +93,7 @@ $beginClassFrom=QTcpSocket
    METHOD waitForEncrypted
    METHOD waitForReadyRead
 
-   METHOD onEncrypted
-   METHOD onEncryptedBytesWritten
-   METHOD onModeChanged
-   METHOD onPeerVerifyError
-   METHOD onPreSharedKeyAuthenticationRequired
-   METHOD onSslErrors
+$addSignals
 
 $endClass
 
