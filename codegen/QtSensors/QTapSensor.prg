@@ -18,7 +18,7 @@ $beginClassFrom=QSensor
    METHOD returnDoubleTapEvents
    METHOD setReturnDoubleTapEvents
 
-   METHOD onReturnDoubleTapEventsChanged
+$addSignals
 
 $endClass
 

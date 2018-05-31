@@ -18,7 +18,7 @@ $beginClassFrom=QSensor
    METHOD hasZ
    METHOD setHasZ
 
-   METHOD onHasZChanged
+$addSignals
 
 $endClass
 

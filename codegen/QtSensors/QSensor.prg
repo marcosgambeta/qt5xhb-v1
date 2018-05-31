@@ -57,20 +57,7 @@ $beginClassFrom=QObject
    METHOD sensorsForType
    METHOD defaultSensorForType
 
-   METHOD onBusyChanged
-   METHOD onActiveChanged
-   METHOD onReadingChanged
-   METHOD onSensorError
-   METHOD onAvailableSensorsChanged
-   METHOD onAlwaysOnChanged
-   METHOD onDataRateChanged
-   METHOD onSkipDuplicatesChanged
-   METHOD onAxesOrientationModeChanged
-   METHOD onCurrentOrientationChanged
-   METHOD onUserOrientationChanged
-   METHOD onMaxBufferSizeChanged
-   METHOD onEfficientBufferSizeChanged
-   METHOD onBufferSizeChanged
+$addSignals
 
 $endClass
 

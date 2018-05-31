@@ -21,7 +21,7 @@ $beginClassFrom=QObject
    METHOD startDetection
    METHOD stopDetection
 
-   METHOD onDetected
+$addSignals
 
 $endClass
 

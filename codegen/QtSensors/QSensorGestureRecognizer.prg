@@ -20,7 +20,7 @@ $beginClassFrom=QObject
    METHOD createBackend
    METHOD gestureSignals
 
-   METHOD onDetected
+$addSignals
 
 $endClass
 

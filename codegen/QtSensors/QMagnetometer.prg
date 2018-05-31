@@ -20,7 +20,7 @@ $beginClassFrom=QSensor
    METHOD returnGeoValues
    METHOD setReturnGeoValues
 
-   METHOD onReturnGeoValuesChanged
+$addSignals
 
 $endClass
 

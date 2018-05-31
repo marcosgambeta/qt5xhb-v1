@@ -19,7 +19,7 @@ $beginClassFrom=QObject
    METHOD recognizerSignals
    METHOD sensorGestureRecognizer
 
-   METHOD onNewSensorGestureAvailable
+$addSignals
 
 $endClass
 

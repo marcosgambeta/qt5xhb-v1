@@ -18,7 +18,7 @@ $beginClassFrom=QSensor
    METHOD setAccelerationMode
    METHOD reading
 
-   METHOD onAccelerationModeChanged
+$addSignals
 
 $endClass
 

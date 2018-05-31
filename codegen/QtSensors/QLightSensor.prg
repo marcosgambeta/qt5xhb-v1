@@ -20,7 +20,7 @@ $beginClassFrom=QSensor
    METHOD fieldOfView
    METHOD setFieldOfView
 
-   METHOD onFieldOfViewChanged
+$addSignals
 
 $endClass
 
