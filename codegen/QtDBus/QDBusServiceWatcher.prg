@@ -23,9 +23,7 @@ $beginClassFrom=QObject
    METHOD connection
    METHOD setConnection
 
-   METHOD onServiceRegistered
-   METHOD onServiceUnregistered
-   METHOD onServiceOwnerChanged
+$addSignals
 
 $endClass
 

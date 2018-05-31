@@ -17,7 +17,7 @@ $beginClassFrom=QObject,QDBusPendingCall
    METHOD isFinished
    METHOD waitForFinished
 
-   METHOD onFinished
+$addSignals
 
 $endClass
 

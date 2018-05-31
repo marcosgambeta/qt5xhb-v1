@@ -23,10 +23,7 @@ $beginClassFrom=QDBusAbstractInterface
 %%   METHOD serviceUid
 %%   METHOD startService
 
-   METHOD onServiceRegistered
-   METHOD onServiceUnregistered
-   METHOD onServiceOwnerChanged
-   METHOD onCallWithCallbackFailed
+$addSignals
 
 $endClass
 

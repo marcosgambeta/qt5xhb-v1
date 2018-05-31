@@ -18,7 +18,7 @@ $beginClassFrom=QObject
    METHOD lastError
    METHOD address
 
-   METHOD onNewConnection
+$addSignals
 
 $endClass
 
