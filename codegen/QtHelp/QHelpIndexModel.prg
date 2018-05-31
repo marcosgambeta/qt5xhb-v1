@@ -16,8 +16,7 @@ $beginClassFrom=QStringListModel
    METHOD filter
    METHOD isCreatingIndex
 
-   METHOD onIndexCreated
-   METHOD onIndexCreationStarted
+$addSignals
 
 $endClass
 

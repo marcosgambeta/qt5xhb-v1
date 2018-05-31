@@ -22,8 +22,7 @@ $beginClassFrom=QAbstractItemModel
    METHOD parent
    METHOD rowCount
 
-   METHOD onContentsCreated
-   METHOD onContentsCreationStarted
+$addSignals
 
 $endClass
 

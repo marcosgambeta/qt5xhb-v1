@@ -16,7 +16,7 @@ $beginClassFrom=QListView
    METHOD activateCurrentItem
    METHOD filterIndices
 
-   METHOD onLinkActivated
+$addSignals
 
 $endClass
 

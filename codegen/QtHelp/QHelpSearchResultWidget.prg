@@ -15,7 +15,7 @@ $beginClassFrom=QWidget
    METHOD delete
    METHOD linkAt
 
-   METHOD onRequestShowLink
+$addSignals
 
 $endClass
 

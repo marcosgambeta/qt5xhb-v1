@@ -16,7 +16,7 @@ $beginClassFrom=QWidget
    METHOD delete
    METHOD query
 
-   METHOD onSearch
+$addSignals
 
 $endClass
 

@@ -15,7 +15,7 @@ $beginClassFrom=QTreeView
    METHOD delete
    METHOD indexOf
 
-   METHOD onLinkActivated
+$addSignals
 
 $endClass
 

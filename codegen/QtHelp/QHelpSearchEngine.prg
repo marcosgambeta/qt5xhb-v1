@@ -23,10 +23,7 @@ $beginClassFrom=QObject
    METHOD reindexDocumentation
    METHOD search
 
-   METHOD onIndexingFinished
-   METHOD onIndexingStarted
-   METHOD onSearchingFinished
-   METHOD onSearchingStarted
+$addSignals
 
 $endClass
 
