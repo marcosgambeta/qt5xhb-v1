@@ -35,10 +35,7 @@ $beginClassFrom=QIODevice
    METHOD error
    METHOD errorString
 
-   METHOD onConnected
-   METHOD onDisconnected
-   METHOD onError
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

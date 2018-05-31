@@ -21,8 +21,7 @@ $beginClassFrom=QObject
    METHOD request
    METHOD abort
 
-   METHOD onFinished
-   METHOD onTransferProgress
+$addSignals
 
 $endClass
 

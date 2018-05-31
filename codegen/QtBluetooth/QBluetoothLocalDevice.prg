@@ -25,11 +25,7 @@ $beginClassFrom=QObject
    METHOD pairingConfirmation
    METHOD allDevices
 
-   METHOD onHostModeStateChanged
-   METHOD onPairingFinished
-   METHOD onPairingDisplayPinCode
-   METHOD onPairingDisplayConfirmation
-   METHOD onError
+$addSignals
 
 $endClass
 

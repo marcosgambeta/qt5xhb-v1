@@ -28,8 +28,7 @@ $beginClassFrom=QObject
    METHOD serverType
    METHOD error
 
-   METHOD onNewConnection
-   METHOD onError
+$addSignals
 
 $endClass
 

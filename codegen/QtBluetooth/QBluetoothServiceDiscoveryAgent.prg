@@ -26,10 +26,7 @@ $beginClassFrom=QObject
    METHOD stop
    METHOD clear
 
-   METHOD onServiceDiscovered
-   METHOD onFinished
-   METHOD onCanceled
-   METHOD onError
+$addSignals
 
 $endClass
 

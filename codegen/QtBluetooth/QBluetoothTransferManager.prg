@@ -16,7 +16,7 @@ $beginClassFrom=QObject
    METHOD delete
    METHOD put
 
-   METHOD onFinished
+$addSignals
 
 $endClass
 

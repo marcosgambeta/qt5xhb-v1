@@ -23,10 +23,7 @@ $beginClassFrom=QObject
    METHOD start
    METHOD stop
 
-   METHOD onDeviceDiscovered
-   METHOD onFinished
-   METHOD onError
-   METHOD onCanceled
+$addSignals
 
 $endClass
 
