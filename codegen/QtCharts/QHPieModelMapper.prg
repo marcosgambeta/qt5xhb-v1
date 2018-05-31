@@ -28,12 +28,7 @@ $beginClassFrom=QPieModelMapper
    METHOD setValuesRow
    METHOD valuesRow
 
-   METHOD onColumnCountChanged
-   METHOD onFirstColumnChanged
-   METHOD onLabelsRowChanged
-   METHOD onModelReplaced
-   METHOD onSeriesReplaced
-   METHOD onValuesRowChanged
+$addSignals
 
 $endClass
 

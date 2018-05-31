@@ -31,11 +31,7 @@ $beginClassFrom=QAbstractAxis
    METHOD setRange
    METHOD type
 
-   METHOD onCategoriesChanged
-   METHOD onCountChanged
-   METHOD onMaxChanged
-   METHOD onMinChanged
-   METHOD onRangeChanged
+$addSignals
 
 $endClass
 

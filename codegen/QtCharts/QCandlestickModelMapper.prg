@@ -21,8 +21,7 @@ $beginClassFrom=QObject
    METHOD setModel
    METHOD setSeries
 
-   METHOD onModelReplaced
-   METHOD onSeriesReplaced
+$addSignals
 
 $endClass
 

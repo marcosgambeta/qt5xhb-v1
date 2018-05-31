@@ -27,16 +27,7 @@ $beginClassFrom=QObject
    METHOD setPen
    METHOD setValue
 
-   METHOD onBrushChanged
-   METHOD onCleared
-   METHOD onClicked
-   METHOD onDoubleClicked
-   METHOD onHovered
-   METHOD onPenChanged
-   METHOD onPressed
-   METHOD onReleased
-   METHOD onValueChanged
-   METHOD onValuesChanged
+$addSignals
 
 $endClass
 

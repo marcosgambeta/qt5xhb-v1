@@ -28,12 +28,7 @@ $beginClassFrom=QBarModelMapper
    METHOD setRowCount
    METHOD setSeries
 
-   METHOD onFirstBarSetColumnChanged
-   METHOD onFirstRowChanged
-   METHOD onLastBarSetColumnChanged
-   METHOD onModelReplaced
-   METHOD onRowCountChanged
-   METHOD onSeriesReplaced
+$addSignals
 
 $endClass
 

@@ -40,15 +40,7 @@ $beginClassFrom=QAbstractSeries
    METHOD type
    METHOD verticalPosition
 
-   METHOD onAdded
-   METHOD onClicked
-   METHOD onCountChanged
-   METHOD onDoubleClicked
-   METHOD onHovered
-   METHOD onPressed
-   METHOD onReleased
-   METHOD onRemoved
-   METHOD onSumChanged
+$addSignals
 
 $endClass
 

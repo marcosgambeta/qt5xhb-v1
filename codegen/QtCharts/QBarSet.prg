@@ -39,22 +39,7 @@ $beginClassFrom=QObject
    METHOD setPen
    METHOD sum
 
-   METHOD onBorderColorChanged
-   METHOD onBrushChanged
-   METHOD onClicked
-   METHOD onColorChanged
-   METHOD onDoubleClicked
-   METHOD onHovered
-   METHOD onLabelBrushChanged
-   METHOD onLabelChanged
-   METHOD onLabelColorChanged
-   METHOD onLabelFontChanged
-   METHOD onPenChanged
-   METHOD onPressed
-   METHOD onReleased
-   METHOD onValueChanged
-   METHOD onValuesAdded
-   METHOD onValuesRemoved
+$addSignals
 
 $endClass
 

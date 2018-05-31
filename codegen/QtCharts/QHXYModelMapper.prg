@@ -28,12 +28,7 @@ $beginClassFrom=QXYModelMapper
    METHOD xRow
    METHOD yRow
 
-   METHOD onColumnCountChanged
-   METHOD onFirstColumnChanged
-   METHOD onModelReplaced
-   METHOD onSeriesReplaced
-   METHOD onXRowChanged
-   METHOD onYRowChanged
+$addSignals
 
 $endClass
 

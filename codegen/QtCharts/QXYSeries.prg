@@ -44,23 +44,7 @@ $beginClassFrom=QAbstractSeries
    METHOD setPointLabelsVisible
    METHOD setPointsVisible
 
-   METHOD onClicked
-   METHOD onColorChanged
-   METHOD onDoubleClicked
-   METHOD onHovered
-   METHOD onPenChanged
-   METHOD onPointAdded
-   METHOD onPointLabelsClippingChanged
-   METHOD onPointLabelsColorChanged
-   METHOD onPointLabelsFontChanged
-   METHOD onPointLabelsFormatChanged
-   METHOD onPointLabelsVisibilityChanged
-   METHOD onPointRemoved
-   METHOD onPointReplaced
-   METHOD onPointsRemoved
-   METHOD onPointsReplaced
-   METHOD onPressed
-   METHOD onReleased
+$addSignals
 
 $endClass
 

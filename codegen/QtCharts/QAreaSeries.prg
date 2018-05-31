@@ -41,19 +41,7 @@ $beginClassFrom=QAbstractSeries
    METHOD type
    METHOD upperSeries
 
-   METHOD onBorderColorChanged
-   METHOD onClicked
-   METHOD onColorChanged
-   METHOD onDoubleClicked
-   METHOD onHovered
-   METHOD onPointLabelsClippingChanged
-   METHOD onPointLabelsColorChanged
-   METHOD onPointLabelsFontChanged
-   METHOD onPointLabelsFormatChanged
-   METHOD onPointLabelsVisibilityChanged
-   METHOD onPressed
-   METHOD onReleased
-   METHOD onSelected
+$addSignals
 
 $endClass
 

@@ -32,15 +32,7 @@ $beginClassFrom=QObject
    METHOD shape
    METHOD type
 
-   METHOD onBrushChanged
-   METHOD onClicked
-   METHOD onFontChanged
-   METHOD onHovered
-   METHOD onLabelBrushChanged
-   METHOD onLabelChanged
-   METHOD onPenChanged
-   METHOD onShapeChanged
-   METHOD onVisibleChanged
+$addSignals
 
 $endClass
 

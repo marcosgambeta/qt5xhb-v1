@@ -45,14 +45,7 @@ $beginClassFrom=QGraphicsWidget
    METHOD setShowToolTips
    METHOD showToolTips
 
-   METHOD onBackgroundVisibleChanged
-   METHOD onBorderColorChanged
-   METHOD onColorChanged
-   METHOD onFontChanged
-   METHOD onLabelColorChanged
-   METHOD onMarkerShapeChanged
-   METHOD onReverseMarkersChanged
-   METHOD onShowToolTipsChanged
+$addSignals
 
 $endClass
 

@@ -33,18 +33,7 @@ $beginClassFrom=QAbstractSeries
    METHOD setLabelsVisible
    METHOD take
 
-   METHOD onBarsetsAdded
-   METHOD onBarsetsRemoved
-   METHOD onClicked
-   METHOD onCountChanged
-   METHOD onDoubleClicked
-   METHOD onHovered
-   METHOD onLabelsAngleChanged
-   METHOD onLabelsFormatChanged
-   METHOD onLabelsPositionChanged
-   METHOD onLabelsVisibleChanged
-   METHOD onPressed
-   METHOD onReleased
+$addSignals
 
 $endClass
 

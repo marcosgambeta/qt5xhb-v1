@@ -74,31 +74,7 @@ $beginClassFrom=QObject
    METHOD titleText
    METHOD type
 
-   METHOD onColorChanged
-   METHOD onGridLineColorChanged
-   METHOD onGridLinePenChanged
-   METHOD onGridVisibleChanged
-   METHOD onLabelsAngleChanged
-   METHOD onLabelsBrushChanged
-   METHOD onLabelsColorChanged
-   METHOD onLabelsFontChanged
-   METHOD onLabelsVisibleChanged
-   METHOD onLinePenChanged
-   METHOD onLineVisibleChanged
-   METHOD onMinorGridLineColorChanged
-   METHOD onMinorGridLinePenChanged
-   METHOD onMinorGridVisibleChanged
-   METHOD onReverseChanged
-   METHOD onShadesBorderColorChanged
-   METHOD onShadesBrushChanged
-   METHOD onShadesColorChanged
-   METHOD onShadesPenChanged
-   METHOD onShadesVisibleChanged
-   METHOD onTitleBrushChanged
-   METHOD onTitleFontChanged
-   METHOD onTitleTextChanged
-   METHOD onTitleVisibleChanged
-   METHOD onVisibleChanged
+$addSignals
 
 $endClass
 

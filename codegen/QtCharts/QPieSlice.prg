@@ -50,25 +50,7 @@ $beginClassFrom=QObject
    METHOD startAngle
    METHOD value
 
-   METHOD onAngleSpanChanged
-   METHOD onBorderColorChanged
-   METHOD onBorderWidthChanged
-   METHOD onBrushChanged
-   METHOD onClicked
-   METHOD onColorChanged
-   METHOD onDoubleClicked
-   METHOD onHovered
-   METHOD onLabelBrushChanged
-   METHOD onLabelChanged
-   METHOD onLabelColorChanged
-   METHOD onLabelFontChanged
-   METHOD onLabelVisibleChanged
-   METHOD onPenChanged
-   METHOD onPercentageChanged
-   METHOD onPressed
-   METHOD onReleased
-   METHOD onStartAngleChanged
-   METHOD onValueChanged
+$addSignals
 
 $endClass
 

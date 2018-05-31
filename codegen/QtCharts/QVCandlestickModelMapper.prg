@@ -31,13 +31,7 @@ $beginClassFrom=QCandlestickModelMapper
    METHOD setTimestampRow
    METHOD timestampRow
 
-   METHOD onCloseRowChanged
-   METHOD onFirstSetColumnChanged
-   METHOD onHighRowChanged
-   METHOD onLastSetColumnChanged
-   METHOD onLowRowChanged
-   METHOD onOpenRowChanged
-   METHOD onTimestampRowChanged
+$addSignals
 
 $endClass
 

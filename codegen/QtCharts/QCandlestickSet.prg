@@ -30,18 +30,7 @@ $beginClassFrom=QObject
    METHOD setTimestamp
    METHOD timestamp
 
-   METHOD onBrushChanged
-   METHOD onClicked
-   METHOD onCloseChanged
-   METHOD onDoubleClicked
-   METHOD onHighChanged
-   METHOD onHovered
-   METHOD onLowChanged
-   METHOD onOpenChanged
-   METHOD onPenChanged
-   METHOD onPressed
-   METHOD onReleased
-   METHOD onTimestampChanged
+$addSignals
 
 $endClass
 

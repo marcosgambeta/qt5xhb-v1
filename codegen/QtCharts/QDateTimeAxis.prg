@@ -26,11 +26,7 @@ $beginClassFrom=QAbstractAxis
    METHOD tickCount
    METHOD type
 
-   METHOD onFormatChanged
-   METHOD onMaxChanged
-   METHOD onMinChanged
-   METHOD onRangeChanged
-   METHOD onTickCountChanged
+$addSignals
 
 $endClass
 

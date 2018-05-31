@@ -32,18 +32,7 @@ $beginClassFrom=QAbstractSeries
    METHOD take
    METHOD type
 
-   METHOD onBoxOutlineVisibilityChanged
-   METHOD onBoxsetsAdded
-   METHOD onBoxsetsRemoved
-   METHOD onBoxWidthChanged
-   METHOD onBrushChanged
-   METHOD onClicked
-   METHOD onCountChanged
-   METHOD onDoubleClicked
-   METHOD onHovered
-   METHOD onPenChanged
-   METHOD onPressed
-   METHOD onReleased
+$addSignals
 
 $endClass
 

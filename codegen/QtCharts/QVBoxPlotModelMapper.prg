@@ -28,12 +28,7 @@ $beginClassFrom=QBoxPlotModelMapper
    METHOD setRowCount
    METHOD setSeries
 
-   METHOD onFirstBoxSetColumnChanged
-   METHOD onFirstRowChanged
-   METHOD onLastBoxSetColumnChanged
-   METHOD onModelReplaced
-   METHOD onRowCountChanged
-   METHOD onSeriesReplaced
+$addSignals
 
 $endClass
 

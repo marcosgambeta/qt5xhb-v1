@@ -75,7 +75,7 @@ $beginClassFrom=QGraphicsWidget
    METHOD zoomOut
    METHOD zoomReset
 
-   METHOD onPlotAreaChanged
+$addSignals
 
 $endClass
 

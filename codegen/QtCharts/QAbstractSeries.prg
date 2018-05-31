@@ -31,10 +31,7 @@ $beginClassFrom=QObject
    METHOD type
    METHOD useOpenGL
 
-   METHOD onNameChanged
-   METHOD onOpacityChanged
-   METHOD onUseOpenGLChanged
-   METHOD onVisibleChanged
+$addSignals
 
 $endClass
 

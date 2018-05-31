@@ -28,10 +28,7 @@ $beginClassFrom=QXYSeries
    METHOD setPen
    METHOD type
 
-   METHOD onBorderColorChanged
-   METHOD onColorChanged
-   METHOD onMarkerShapeChanged
-   METHOD onMarkerSizeChanged
+$addSignals
 
 $endClass
 

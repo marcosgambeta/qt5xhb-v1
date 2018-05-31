@@ -27,8 +27,7 @@ $beginClassFrom=QValueAxis
    METHOD startValue
    METHOD type
 
-   METHOD onCategoriesChanged
-   METHOD onLabelsPositionChanged
+$addSignals
 
 $endClass
 

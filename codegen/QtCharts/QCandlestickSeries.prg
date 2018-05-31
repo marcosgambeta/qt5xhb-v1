@@ -44,24 +44,7 @@ $beginClassFrom=QAbstractSeries
    METHOD take
    METHOD type
 
-   METHOD onBodyOutlineVisibilityChanged
-   METHOD onBodyWidthChanged
-   METHOD onBrushChanged
-   METHOD onCandlestickSetsAdded
-   METHOD onCandlestickSetsRemoved
-   METHOD onCapsVisibilityChanged
-   METHOD onCapsWidthChanged
-   METHOD onClicked
-   METHOD onCountChanged
-   METHOD onDecreasingColorChanged
-   METHOD onDoubleClicked
-   METHOD onHovered
-   METHOD onIncreasingColorChanged
-   METHOD onMaximumColumnWidthChanged
-   METHOD onMinimumColumnWidthChanged
-   METHOD onPenChanged
-   METHOD onPressed
-   METHOD onReleased
+$addSignals
 
 $endClass
 
