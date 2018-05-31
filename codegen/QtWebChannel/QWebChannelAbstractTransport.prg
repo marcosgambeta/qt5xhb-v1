@@ -16,7 +16,7 @@ $beginClassFrom=QObject
    METHOD delete
    METHOD sendMessage
 
-   METHOD onMessageReceived
+$addSignals
 
 $endClass
 

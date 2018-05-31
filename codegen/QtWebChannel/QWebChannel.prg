@@ -21,7 +21,7 @@ $beginClassFrom=QObject
    METHOD connectTo
    METHOD disconnectFrom
 
-   METHOD onBlockUpdatesChanged
+$addSignals
 
 $endClass
 
