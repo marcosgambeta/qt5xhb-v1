@@ -22,9 +22,7 @@ $beginClassFrom=QAbstractClipBlendNode
    METHOD setStartClip
    METHOD setEndClip
 
-   METHOD onBlendFactorChanged
-   METHOD onStartClipChanged
-   METHOD onEndClipChanged
+$addSignals
 
 $endClass
 

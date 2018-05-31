@@ -18,7 +18,7 @@ $beginClassFrom=Qt3DAnimation::QAbstractClipAnimator
    METHOD clip
    METHOD setClip
 
-   METHOD onClipChanged
+$addSignals
 
 $endClass
 

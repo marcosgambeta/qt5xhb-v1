@@ -22,9 +22,7 @@ $beginClassFrom=QAbstractClipBlendNode
    METHOD setBaseClip
    METHOD setAdditiveClip
 
-   METHOD onAdditiveFactorChanged
-   METHOD onBaseClipChanged
-   METHOD onAdditiveClipChanged
+$addSignals
 
 $endClass
 

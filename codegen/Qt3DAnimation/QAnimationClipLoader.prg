@@ -19,8 +19,7 @@ $beginClassFrom=QAbstractAnimationClip
    METHOD source
    METHOD status
 
-   METHOD onSourceChanged
-   METHOD onStatusChanged
+$addSignals
 
 $endClass
 

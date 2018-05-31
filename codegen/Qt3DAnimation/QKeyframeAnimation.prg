@@ -32,12 +32,7 @@ $beginClassFrom=QAbstractAnimation
    METHOD target
    METHOD targetName
 
-   METHOD onFramePositionsChanged
-   METHOD onTargetChanged
-   METHOD onEasingChanged
-   METHOD onTargetNameChanged
-   METHOD onStartModeChanged
-   METHOD onEndModeChanged
+$addSignals
 
 $endClass
 

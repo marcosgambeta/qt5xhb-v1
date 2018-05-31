@@ -17,7 +17,7 @@ $beginClassFrom=Qt3DCore::QNode
 
    METHOD duration
 
-   METHOD onDurationChanged
+$addSignals
 
 $endClass
 

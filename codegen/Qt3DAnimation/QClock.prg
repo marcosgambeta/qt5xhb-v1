@@ -18,7 +18,7 @@ $beginClassFrom=Qt3DCore::QNode
    METHOD playbackRate
    METHOD setPlaybackRate
 
-   METHOD onPlaybackRateChanged
+$addSignals
 
 $endClass
 

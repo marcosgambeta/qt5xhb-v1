@@ -25,9 +25,7 @@ $beginClassFrom=QObject
    METHOD setName
    METHOD setPosition
 
-   METHOD onNameChanged
-   METHOD onPositionChanged
-   METHOD onDurationChanged
+$addSignals
 
 $endClass
 

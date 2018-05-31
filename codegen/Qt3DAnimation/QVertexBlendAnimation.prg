@@ -28,10 +28,7 @@ $beginClassFrom=QAbstractAnimation
    METHOD targetPositions
    METHOD updateAnimation
 
-   METHOD onInterpolatorChanged
-   METHOD onTargetChanged
-   METHOD onTargetNameChanged
-   METHOD onTargetPositionsChanged
+$addSignals
 
 $endClass
 

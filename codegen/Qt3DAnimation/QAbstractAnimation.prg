@@ -22,9 +22,7 @@ $beginClassFrom=QObject
    METHOD setAnimationName
    METHOD setPosition
 
-   METHOD onAnimationNameChanged
-   METHOD onDurationChanged
-   METHOD onPositionChanged
+$addSignals
 
 $endClass
 

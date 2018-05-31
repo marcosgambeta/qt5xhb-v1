@@ -22,7 +22,7 @@ $beginClassFrom=QObject
    METHOD removeAttribute
    METHOD setAttributes
 
-   METHOD onAttributeNamesChanged
+$addSignals
 
 $endClass
 

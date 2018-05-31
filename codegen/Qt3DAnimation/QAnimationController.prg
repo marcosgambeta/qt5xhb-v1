@@ -34,12 +34,7 @@ $beginClassFrom=QObject
    METHOD setPositionScale
    METHOD setRecursive
 
-   METHOD onActiveAnimationGroupChanged
-   METHOD onEntityChanged
-   METHOD onPositionChanged
-   METHOD onPositionOffsetChanged
-   METHOD onPositionScaleChanged
-   METHOD onRecursiveChanged
+$addSignals
 
 $endClass
 

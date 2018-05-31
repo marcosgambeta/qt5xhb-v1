@@ -18,7 +18,7 @@ $beginClassFrom=QAbstractChannelMapping
    METHOD skeleton
    METHOD setSkeleton
 
-   METHOD onSkeletonChanged
+$addSignals
 
 $endClass
 

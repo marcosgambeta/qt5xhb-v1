@@ -20,7 +20,7 @@ $beginClassFrom=QAbstractChannelMapping
    METHOD setCallback
    METHOD setChannelName
 
-   METHOD onChannelNameChanged
+$addSignals
 
 $endClass
 

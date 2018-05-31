@@ -26,10 +26,7 @@ $beginClassFrom=Qt3DCore::QComponent
    METHOD start
    METHOD stop
 
-   METHOD onRunningChanged
-   METHOD onChannelMapperChanged
-   METHOD onLoopCountChanged
-   METHOD onClockChanged
+$addSignals
 
 $endClass
 

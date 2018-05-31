@@ -18,7 +18,7 @@ $beginClassFrom=Qt3DAnimation::QAbstractClipAnimator
    METHOD blendTree
    METHOD setBlendTree
 
-   METHOD onBlendTreeChanged
+$addSignals
 
 $endClass
 

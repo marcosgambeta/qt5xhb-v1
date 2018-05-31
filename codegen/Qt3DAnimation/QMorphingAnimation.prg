@@ -33,12 +33,7 @@ $beginClassFrom=QAbstractAnimation
    METHOD targetName
    METHOD targetPositions
 
-   METHOD onTargetPositionsChanged
-   METHOD onInterpolatorChanged
-   METHOD onTargetChanged
-   METHOD onTargetNameChanged
-   METHOD onMethodChanged
-   METHOD onEasingChanged
+$addSignals
 
 $endClass
 

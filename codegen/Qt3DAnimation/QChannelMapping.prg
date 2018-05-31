@@ -22,9 +22,7 @@ $beginClassFrom=QAbstractChannelMapping
    METHOD setTarget
    METHOD target
 
-   METHOD onChannelNameChanged
-   METHOD onTargetChanged
-   METHOD onPropertyChanged
+$addSignals
 
 $endClass
 
