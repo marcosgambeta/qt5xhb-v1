@@ -21,12 +21,7 @@ $beginClassFrom=QObject
    METHOD scriptEngine
    METHOD scriptName
 
-   METHOD onEntered
-   METHOD onError
-   METHOD onFinished1
-   METHOD onFinished2
-   METHOD onFinished3
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

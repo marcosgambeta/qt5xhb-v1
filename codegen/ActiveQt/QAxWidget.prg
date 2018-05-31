@@ -33,9 +33,7 @@ $beginClassFrom=QWidget,QAxBase
    METHOD setPropertyWritable
    METHOD verbs
 
-   METHOD onException
-   METHOD onPropertyChanged
-   METHOD onSignal
+$addSignals
 
 $endClass
 
