@@ -54,25 +54,7 @@ $beginClassFrom=QObject
    METHOD setUpKey
    METHOD upKey
 
-   METHOD onActiveChanged
-   METHOD onGamepadChanged
-   METHOD onUpKeyChanged
-   METHOD onDownKeyChanged
-   METHOD onLeftKeyChanged
-   METHOD onRightKeyChanged
-   METHOD onButtonAKeyChanged
-   METHOD onButtonBKeyChanged
-   METHOD onButtonXKeyChanged
-   METHOD onButtonYKeyChanged
-   METHOD onButtonSelectKeyChanged
-   METHOD onButtonStartKeyChanged
-   METHOD onButtonGuideKeyChanged
-   METHOD onButtonL1KeyChanged
-   METHOD onButtonR1KeyChanged
-   METHOD onButtonL2KeyChanged
-   METHOD onButtonR2KeyChanged
-   METHOD onButtonL3KeyChanged
-   METHOD onButtonR3KeyChanged
+$addSignals
 
 $endClass
 

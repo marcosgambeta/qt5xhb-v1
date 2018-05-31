@@ -25,15 +25,7 @@ $beginClassFrom=QObject
    METHOD setCancelConfigureButton
    METHOD setSettingsFile
 
-   METHOD onAxisConfigured
-   METHOD onButtonConfigured
-   METHOD onConfigurationCanceled
-   METHOD onConnectedGamepadsChanged
-   METHOD onGamepadAxisEvent
-   METHOD onGamepadButtonPressEvent
-   METHOD onGamepadButtonReleaseEvent
-   METHOD onGamepadConnected
-   METHOD onGamepadDisconnected
+$addSignals
 
 $endClass
 

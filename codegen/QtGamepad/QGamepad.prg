@@ -42,31 +42,7 @@ $beginClassFrom=QObject
    METHOD name
    METHOD setDeviceId
 
-   METHOD onAxisLeftXChanged
-   METHOD onAxisLeftYChanged
-   METHOD onAxisRightXChanged
-   METHOD onAxisRightYChanged
-   METHOD onButtonAChanged
-   METHOD onButtonBChanged
-   METHOD onButtonCenterChanged
-   METHOD onButtonDownChanged
-   METHOD onButtonGuideChanged
-   METHOD onButtonL1Changed
-   METHOD onButtonL2Changed
-   METHOD onButtonL3Changed
-   METHOD onButtonLeftChanged
-   METHOD onButtonR1Changed
-   METHOD onButtonR2Changed
-   METHOD onButtonR3Changed
-   METHOD onButtonRightChanged
-   METHOD onButtonSelectChanged
-   METHOD onButtonStartChanged
-   METHOD onButtonUpChanged
-   METHOD onButtonXChanged
-   METHOD onButtonYChanged
-   METHOD onConnectedChanged
-   METHOD onDeviceIdChanged
-   METHOD onNameChanged
+$addSignals
 
 $endClass
 
