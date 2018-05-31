@@ -24,7 +24,7 @@ $beginClassFrom=QQuickWindow
    METHOD status
    METHOD setSource
 
-   METHOD onStatusChanged
+$addSignals
 
 $endClass
 

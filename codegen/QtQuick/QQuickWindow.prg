@@ -39,13 +39,7 @@ $beginClassFrom=QWindow
    METHOD releaseResources
    METHOD update
 
-   METHOD onAfterRendering
-   METHOD onBeforeRendering
-   METHOD onBeforeSynchronizing
-   METHOD onColorChanged
-   METHOD onFrameSwapped
-   METHOD onSceneGraphInitialized
-   METHOD onSceneGraphInvalidated
+$addSignals
 
 $endClass
 

@@ -35,10 +35,7 @@ $beginClassFrom=QQuickItem
    METHOD setRenderTarget
    METHOD update
 
-   METHOD onContentsScaleChanged
-   METHOD onContentsSizeChanged
-   METHOD onFillColorChanged
-   METHOD onRenderTargetChanged
+$addSignals
 
 $endClass
 
