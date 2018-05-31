@@ -25,13 +25,7 @@ $beginClassFrom=QMediaControl
    METHOD stationId
    METHOD stationName
 
-   METHOD onAlternativeFrequenciesEnabledChanged
-   METHOD onError
-   METHOD onProgramTypeChanged
-   METHOD onProgramTypeNameChanged
-   METHOD onRadioTextChanged
-   METHOD onStationIdChanged
-   METHOD onStationNameChanged
+$addSignals
 
 $endClass
 

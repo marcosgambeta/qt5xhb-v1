@@ -18,7 +18,7 @@ $beginClassFrom=QMediaControl
    METHOD currentConfiguration
    METHOD setConfigurations
 
-   METHOD onConfigurationChanged
+$addSignals
 
 $endClass
 

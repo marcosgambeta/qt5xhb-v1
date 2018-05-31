@@ -35,9 +35,7 @@ $beginClassFrom=QObject
    METHOD category
    METHOD setCategory
 
-   METHOD onErrorChanged
-   METHOD onStateChanged
-   METHOD onNotify
+$addSignals
 
 $endClass
 

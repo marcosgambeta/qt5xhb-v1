@@ -18,8 +18,7 @@ $beginClassFrom=QObject
    METHOD isActive
    METHOD setSource
 
-   METHOD onFlush
-   METHOD onVideoFrameProbed
+$addSignals
 
 $endClass
 

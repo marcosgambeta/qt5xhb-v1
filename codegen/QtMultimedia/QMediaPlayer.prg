@@ -50,22 +50,7 @@ $beginClassFrom=QMediaObject
    METHOD audioRole
    METHOD setAudioRole
 
-   METHOD onAudioAvailableChanged
-   METHOD onAudioRoleChanged
-   METHOD onBufferStatusChanged
-   METHOD onCurrentMediaChanged
-   METHOD onDurationChanged
-   METHOD onError
-   METHOD onMediaChanged
-   METHOD onMediaStatusChanged
-   METHOD onMutedChanged
-   METHOD onNetworkConfigurationChanged
-   METHOD onPlaybackRateChanged
-   METHOD onPositionChanged
-   METHOD onSeekableChanged
-   METHOD onStateChanged
-   METHOD onVideoAvailableChanged
-   METHOD onVolumeChanged
+$addSignals
 
 $endClass
 

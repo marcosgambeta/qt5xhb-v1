@@ -45,14 +45,7 @@ $beginClassFrom=QMediaObject
    METHOD unlock
    METHOD viewfinderSettings
 
-   METHOD onCaptureModeChanged
-   METHOD onError
-   METHOD onLocked
-   METHOD onLockFailed
-   METHOD onLockStatusChanged1
-   METHOD onLockStatusChanged2
-   METHOD onStateChanged
-   METHOD onStatusChanged
+$addSignals
 
 $endClass
 

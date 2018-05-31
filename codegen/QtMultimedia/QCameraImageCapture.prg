@@ -35,15 +35,7 @@ $beginClassFrom=QObject,QMediaBindableInterface
    METHOD cancelCapture
    METHOD capture
 
-   METHOD onBufferFormatChanged
-   METHOD onCaptureDestinationChanged
-   METHOD onError
-   METHOD onImageAvailable
-   METHOD onImageCaptured
-   METHOD onImageExposed
-   METHOD onImageMetadataAvailable
-   METHOD onImageSaved
-   METHOD onReadyForCaptureChanged
+$addSignals
 
 $endClass
 

@@ -34,12 +34,7 @@ $beginClassFrom=QMediaControl
    METHOD setWinId
    METHOD winId
 
-   METHOD onBrightnessChanged
-   METHOD onContrastChanged
-   METHOD onFullScreenChanged
-   METHOD onHueChanged
-   METHOD onNativeSizeChanged
-   METHOD onSaturationChanged
+$addSignals
 
 $endClass
 

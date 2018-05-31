@@ -55,19 +55,7 @@ $beginClassFrom=QObject,QMediaBindableInterface
    METHOD setVolume
    METHOD stop
 
-   METHOD onActualLocationChanged
-   METHOD onAvailabilityChanged1
-   METHOD onAvailabilityChanged2
-   METHOD onDurationChanged
-   METHOD onError
-   METHOD onMetaDataAvailableChanged
-   METHOD onMetaDataChanged1
-   METHOD onMetaDataChanged2
-   METHOD onMetaDataWritableChanged
-   METHOD onMutedChanged
-   METHOD onStateChanged
-   METHOD onStatusChanged
-   METHOD onVolumeChanged
+$addSignals
 
 $endClass
 

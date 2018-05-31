@@ -33,9 +33,7 @@ $beginClassFrom=QObject
    METHOD setVolume
    METHOD volume
 
-   METHOD onErrorChanged
-   METHOD onStateChanged
-   METHOD onNotify
+$addSignals
 
 $endClass
 

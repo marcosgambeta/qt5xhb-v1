@@ -21,9 +21,7 @@ $beginClassFrom=QMediaControl
    METHOD setValue
    METHOD supportedParameterRange
 
-   METHOD onActualValueChanged
-   METHOD onParameterRangeChanged
-   METHOD onRequestedValueChanged
+$addSignals
 
 $endClass
 

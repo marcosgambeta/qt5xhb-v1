@@ -19,9 +19,7 @@ $beginClassFrom=QMediaControl
    METHOD metaData
    METHOD availableMetaData
 
-   METHOD onMetaDataAvailableChanged
-   METHOD onMetaDataChanged1
-   METHOD onMetaDataChanged2
+$addSignals
 
 $endClass
 

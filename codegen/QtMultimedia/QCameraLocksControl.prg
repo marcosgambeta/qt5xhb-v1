@@ -20,7 +20,7 @@ $beginClassFrom=QMediaControl
    METHOD supportedLocks
    METHOD unlock
 
-   METHOD onLockStatusChanged
+$addSignals
 
 $endClass
 

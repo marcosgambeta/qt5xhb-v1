@@ -36,8 +36,7 @@ $beginClassFrom=QObject
    METHOD suspend
    METHOD volume
 
-   METHOD onNotify
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

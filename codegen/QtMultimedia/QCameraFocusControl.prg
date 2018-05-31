@@ -25,10 +25,7 @@ $beginClassFrom=QMediaControl
    METHOD setFocusMode
    METHOD setFocusPointMode
 
-   METHOD onCustomFocusPointChanged
-   METHOD onFocusModeChanged
-   METHOD onFocusPointModeChanged
-   METHOD onFocusZonesChanged
+$addSignals
 
 $endClass
 

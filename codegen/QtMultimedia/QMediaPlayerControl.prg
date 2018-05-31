@@ -38,20 +38,7 @@ $beginClassFrom=QMediaControl
    METHOD stop
    METHOD volume
 
-   METHOD onAudioAvailableChanged
-   METHOD onAvailablePlaybackRangesChanged
-   METHOD onBufferStatusChanged
-   METHOD onDurationChanged
-   METHOD onError
-   METHOD onMediaChanged
-   METHOD onMediaStatusChanged
-   METHOD onMutedChanged
-   METHOD onPlaybackRateChanged
-   METHOD onPositionChanged
-   METHOD onSeekableChanged
-   METHOD onStateChanged
-   METHOD onVideoAvailableChanged
-   METHOD onVolumeChanged
+$addSignals
 
 $endClass
 

@@ -33,15 +33,7 @@ $beginClassFrom=QObject
    METHOD supportedMimeTypes
    METHOD volume
 
-   METHOD onCategoryChanged
-   METHOD onLoadedChanged
-   METHOD onLoopCountChanged
-   METHOD onLoopsRemainingChanged
-   METHOD onMutedChanged
-   METHOD onPlayingChanged
-   METHOD onSourceChanged
-   METHOD onStatusChanged
-   METHOD onVolumeChanged
+$addSignals
 
 $endClass
 

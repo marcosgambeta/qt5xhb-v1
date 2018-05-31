@@ -21,9 +21,7 @@ $beginClassFrom=QMediaControl
    METHOD setCrossfadeTime
    METHOD setNextMedia
 
-   METHOD onAdvancedToNextMedia
-   METHOD onCrossfadeTimeChanged
-   METHOD onNextMediaChanged
+$addSignals
 
 $endClass
 

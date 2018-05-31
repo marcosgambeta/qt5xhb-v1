@@ -20,7 +20,7 @@ $beginClassFrom=QMediaControl
    METHOD isFlashReady
    METHOD setFlashMode
 
-   METHOD onFlashReady
+$addSignals
 
 $endClass
 

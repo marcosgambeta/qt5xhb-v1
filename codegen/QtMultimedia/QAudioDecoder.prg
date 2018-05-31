@@ -32,15 +32,7 @@ $beginClassFrom=QMediaObject
    METHOD state
    METHOD stop
 
-   METHOD onBufferAvailableChanged
-   METHOD onBufferReady
-   METHOD onDurationChanged
-   METHOD onError
-   METHOD onFinished
-   METHOD onFormatChanged
-   METHOD onPositionChanged
-   METHOD onSourceChanged
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

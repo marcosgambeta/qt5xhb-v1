@@ -16,7 +16,7 @@ $beginClassFrom=QMediaControl
    METHOD delete
    METHOD availability
 
-   METHOD onAvailabilityChanged
+$addSignals
 
 $endClass
 

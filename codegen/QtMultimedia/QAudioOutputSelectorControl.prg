@@ -21,8 +21,7 @@ $beginClassFrom=QMediaControl
    METHOD outputDescription
    METHOD setActiveOutput
 
-   METHOD onActiveOutputChanged
-   METHOD onAvailableOutputsChanged
+$addSignals
 
 $endClass
 

@@ -23,12 +23,7 @@ $beginClassFrom=QMediaControl
    METHOD requestedOpticalZoom
    METHOD zoomTo
 
-   METHOD onCurrentDigitalZoomChanged
-   METHOD onCurrentOpticalZoomChanged
-   METHOD onMaximumDigitalZoomChanged
-   METHOD onMaximumOpticalZoomChanged
-   METHOD onRequestedDigitalZoomChanged
-   METHOD onRequestedOpticalZoomChanged
+$addSignals
 
 $endClass
 

@@ -15,8 +15,7 @@ $beginClassFrom=QMediaControl
 %%   METHOD new
    METHOD delete
 
-   METHOD onAudioBufferProbed
-   METHOD onFlush
+$addSignals
 
 $endClass
 

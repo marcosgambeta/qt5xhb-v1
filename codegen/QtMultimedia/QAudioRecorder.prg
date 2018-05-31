@@ -20,8 +20,7 @@ $beginClassFrom=QMediaRecorder
    METHOD defaultAudioInput
    METHOD setAudioInput
 
-   METHOD onAudioInputChanged
-   METHOD onAvailableAudioInputsChanged
+$addSignals
 
 $endClass
 

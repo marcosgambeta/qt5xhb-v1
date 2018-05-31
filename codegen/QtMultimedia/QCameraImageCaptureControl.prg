@@ -21,13 +21,7 @@ $beginClassFrom=QMediaControl
    METHOD isReadyForCapture
    METHOD setDriveMode
 
-   METHOD onError
-   METHOD onImageAvailable
-   METHOD onImageCaptured
-   METHOD onImageExposed
-   METHOD onImageMetadataAvailable
-   METHOD onImageSaved
-   METHOD onReadyForCaptureChanged
+$addSignals
 
 $endClass
 

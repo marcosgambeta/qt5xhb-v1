@@ -23,10 +23,7 @@ $beginClassFrom=QMediaObject
    METHOD state
    METHOD status
 
-   METHOD onCaptureModeChanged
-   METHOD onError
-   METHOD onStateChanged
-   METHOD onStatusChanged
+$addSignals
 
 $endClass
 

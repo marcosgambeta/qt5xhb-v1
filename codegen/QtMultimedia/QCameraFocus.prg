@@ -28,11 +28,7 @@ $beginClassFrom=QObject
    METHOD setFocusPointMode
    METHOD zoomTo
 
-   METHOD onDigitalZoomChanged
-   METHOD onFocusZonesChanged
-   METHOD onMaximumDigitalZoomChanged
-   METHOD onMaximumOpticalZoomChanged
-   METHOD onOpticalZoomChanged
+$addSignals
 
 $endClass
 

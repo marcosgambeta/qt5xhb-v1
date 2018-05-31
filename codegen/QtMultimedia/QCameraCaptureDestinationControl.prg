@@ -19,7 +19,7 @@ $beginClassFrom=QMediaObject
    METHOD isCaptureDestinationSupported
    METHOD setCaptureDestination
 
-   METHOD onCaptureDestinationChanged
+$addSignals
 
 $endClass
 

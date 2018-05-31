@@ -15,8 +15,7 @@ $beginClassFrom=QMediaControl
 %%   METHOD new
    METHOD delete
 
-   METHOD onFlush
-   METHOD onVideoFrameProbed
+$addSignals
 
 $endClass
 

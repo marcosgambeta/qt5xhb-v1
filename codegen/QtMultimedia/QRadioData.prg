@@ -27,13 +27,7 @@ $beginClassFrom=QObject,QMediaBindableInterface
    METHOD errorString
    METHOD setAlternativeFrequenciesEnabled
 
-   METHOD onAlternativeFrequenciesEnabledChanged
-   METHOD onError
-   METHOD onProgramTypeChanged
-   METHOD onProgramTypeNameChanged
-   METHOD onRadioTextChanged
-   METHOD onStationIdChanged
-   METHOD onStationNameChanged
+$addSignals
 
 $endClass
 

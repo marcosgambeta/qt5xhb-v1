@@ -46,13 +46,7 @@ $beginClassFrom=QObject
    METHOD setManualShutterSpeed
    METHOD setMeteringMode
 
-   METHOD onApertureChanged
-   METHOD onApertureRangeChanged
-   METHOD onExposureCompensationChanged
-   METHOD onFlashReady
-   METHOD onIsoSensitivityChanged
-   METHOD onShutterSpeedChanged
-   METHOD onShutterSpeedRangeChanged
+$addSignals
 
 $endClass
 

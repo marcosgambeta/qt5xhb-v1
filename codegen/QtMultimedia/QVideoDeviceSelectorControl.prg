@@ -22,9 +22,7 @@ $beginClassFrom=QMediaControl
    METHOD selectedDevice
    METHOD setSelectedDevice
 
-   METHOD onDevicesChanged
-   METHOD onSelectedDeviceChanged1
-   METHOD onSelectedDeviceChanged2
+$addSignals
 
 $endClass
 

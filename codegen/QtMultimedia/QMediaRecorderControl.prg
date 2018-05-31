@@ -27,13 +27,7 @@ $beginClassFrom=QMediaControl
    METHOD setState
    METHOD setVolume
 
-   METHOD onActualLocationChanged
-   METHOD onDurationChanged
-   METHOD onError
-   METHOD onMutedChanged
-   METHOD onStateChanged
-   METHOD onStatusChanged
-   METHOD onVolumeChanged
+$addSignals
 
 $endClass
 

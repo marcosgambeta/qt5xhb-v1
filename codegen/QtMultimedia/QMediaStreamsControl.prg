@@ -21,8 +21,7 @@ $beginClassFrom=QMediaControl
    METHOD streamCount
    METHOD streamType
 
-   METHOD onActiveStreamsChanged
-   METHOD onStreamsChanged
+$addSignals
 
 $endClass
 

@@ -43,17 +43,7 @@ $beginClassFrom=QMediaObject
    METHOD stop
    METHOD volume
 
-   METHOD onAntennaConnectedChanged
-   METHOD onBandChanged
-   METHOD onError
-   METHOD onFrequencyChanged
-   METHOD onMutedChanged
-   METHOD onSearchingChanged
-   METHOD onSignalStrengthChanged
-   METHOD onStateChanged
-   METHOD onStationFound
-   METHOD onStereoStatusChanged
-   METHOD onVolumeChanged
+$addSignals
 
 $endClass
 

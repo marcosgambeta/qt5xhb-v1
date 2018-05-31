@@ -19,7 +19,7 @@ $beginClassFrom=QMediaObject
    METHOD setBufferFormat
    METHOD supportedBufferFormats
 
-   METHOD onBufferFormatChanged
+$addSignals
 
 $endClass
 

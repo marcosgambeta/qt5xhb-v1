@@ -18,8 +18,7 @@ $beginClassFrom=QObject
    METHOD isActive
    METHOD setSource
 
-   METHOD onAudioBufferProbed
-   METHOD onFlush
+$addSignals
 
 $endClass
 

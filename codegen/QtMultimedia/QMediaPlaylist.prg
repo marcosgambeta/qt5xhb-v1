@@ -40,16 +40,7 @@ $beginClassFrom=QObject,QMediaBindableInterface
    METHOD setPlaybackMode
    METHOD shuffle
 
-   METHOD onCurrentIndexChanged
-   METHOD onCurrentMediaChanged
-   METHOD onLoaded
-   METHOD onLoadFailed
-   METHOD onMediaAboutToBeInserted
-   METHOD onMediaAboutToBeRemoved
-   METHOD onMediaChanged
-   METHOD onMediaInserted
-   METHOD onMediaRemoved
-   METHOD onPlaybackModeChanged
+$addSignals
 
 $endClass
 

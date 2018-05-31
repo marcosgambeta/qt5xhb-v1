@@ -21,8 +21,7 @@ $beginClassFrom=QMediaControl
    METHOD inputDescription
    METHOD setActiveInput
 
-   METHOD onActiveInputChanged
-   METHOD onAvailableInputsChanged
+$addSignals
 
 $endClass
 
