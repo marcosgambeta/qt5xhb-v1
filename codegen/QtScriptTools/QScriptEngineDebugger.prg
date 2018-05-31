@@ -25,8 +25,7 @@ $beginClassFrom=QObject
    METHOD state
    METHOD widget
 
-   METHOD onEvaluationResumed
-   METHOD onEvaluationSuspended
+$addSignals
 
 $endClass
 
