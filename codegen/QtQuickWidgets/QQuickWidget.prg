@@ -29,8 +29,7 @@ $beginClassFrom=QWidget
    METHOD format
    METHOD setFormat
 
-   METHOD onStatusChanged
-   METHOD onSceneGraphError
+$addSignals
 
 $endClass
 
