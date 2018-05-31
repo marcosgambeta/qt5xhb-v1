@@ -36,15 +36,7 @@ $beginClassFrom=Q3DObject
    METHOD yRotation
    METHOD zoomLevel
 
-   METHOD onCameraPresetChanged
-   METHOD onMaxZoomLevelChanged
-   METHOD onMinZoomLevelChanged
-   METHOD onTargetChanged
-   METHOD onWrapXRotationChanged
-   METHOD onWrapYRotationChanged
-   METHOD onXRotationChanged
-   METHOD onYRotationChanged
-   METHOD onZoomLevelChanged
+$addSignals
 
 $endClass
 

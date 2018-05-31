@@ -31,11 +31,7 @@ $beginClassFrom=QAbstract3DGraph
    METHOD setAxisZ
    METHOD setFlipHorizontalGrid
 
-   METHOD onAxisXChanged
-   METHOD onAxisYChanged
-   METHOD onAxisZChanged
-   METHOD onFlipHorizontalGridChanged
-   METHOD onSelectedSeriesChanged
+$addSignals
 
 $endClass
 

@@ -18,7 +18,7 @@ $beginClassFrom=QAbstract3DAxis
    METHOD labels
    METHOD setLabels
 
-   METHOD onLabelsChanged
+$addSignals
 
 $endClass
 

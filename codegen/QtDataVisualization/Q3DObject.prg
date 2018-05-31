@@ -20,7 +20,7 @@ $beginClassFrom=QObject
    METHOD position
    METHOD setPosition
 
-   METHOD onPositionChanged
+$addSignals
 
 $endClass
 

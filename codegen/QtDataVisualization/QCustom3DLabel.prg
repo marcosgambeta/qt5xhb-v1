@@ -30,13 +30,7 @@ $beginClassFrom=QCustom3DItem
    METHOD text
    METHOD textColor
 
-   METHOD onBackgroundColorChanged
-   METHOD onBackgroundEnabledChanged
-   METHOD onBorderEnabledChanged
-   METHOD onFacingCameraChanged
-   METHOD onFontChanged
-   METHOD onTextChanged
-   METHOD onTextColorChanged
+$addSignals
 
 $endClass
 

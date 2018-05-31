@@ -49,22 +49,7 @@ $beginClassFrom=QObject
    METHOD type
    METHOD userDefinedMesh
 
-   METHOD onBaseColorChanged
-   METHOD onBaseGradientChanged
-   METHOD onColorStyleChanged
-   METHOD onItemLabelChanged
-   METHOD onItemLabelFormatChanged
-   METHOD onItemLabelVisibilityChanged
-   METHOD onMeshChanged
-   METHOD onMeshRotationChanged
-   METHOD onMeshSmoothChanged
-   METHOD onMultiHighlightColorChanged
-   METHOD onMultiHighlightGradientChanged
-   METHOD onNameChanged
-   METHOD onSingleHighlightColorChanged
-   METHOD onSingleHighlightGradientChanged
-   METHOD onUserDefinedMeshChanged
-   METHOD onVisibilityChanged
+$addSignals
 
 $endClass
 

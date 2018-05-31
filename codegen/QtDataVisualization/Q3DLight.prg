@@ -18,7 +18,7 @@ $beginClassFrom=Q3DObject
    METHOD isAutoPosition
    METHOD setAutoPosition
 
-   METHOD onAutoPositionChanged
+$addSignals
 
 $endClass
 

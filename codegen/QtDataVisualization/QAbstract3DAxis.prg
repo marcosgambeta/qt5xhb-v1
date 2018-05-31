@@ -35,16 +35,7 @@ $beginClassFrom=QObject
    METHOD title
    METHOD type
 
-   METHOD onAutoAdjustRangeChanged
-   METHOD onLabelAutoRotationChanged
-   METHOD onLabelsChanged
-   METHOD onMaxChanged
-   METHOD onMinChanged
-   METHOD onOrientationChanged
-   METHOD onRangeChanged
-   METHOD onTitleChanged
-   METHOD onTitleFixedChanged
-   METHOD onTitleVisibilityChanged
+$addSignals
 
 $endClass
 

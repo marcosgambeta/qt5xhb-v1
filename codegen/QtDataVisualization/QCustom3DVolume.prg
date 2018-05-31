@@ -58,24 +58,7 @@ $beginClassFrom=QCustom3DItem
    METHOD textureWidth
    METHOD useHighDefShader
 
-   METHOD onAlphaMultiplierChanged
-   METHOD onColorTableChanged
-   METHOD onDrawSliceFramesChanged
-   METHOD onDrawSlicesChanged
-   METHOD onPreserveOpacityChanged
-   METHOD onSliceFrameColorChanged
-   METHOD onSliceFrameGapsChanged
-   METHOD onSliceFrameThicknessesChanged
-   METHOD onSliceFrameWidthsChanged
-   METHOD onSliceIndexXChanged
-   METHOD onSliceIndexYChanged
-   METHOD onSliceIndexZChanged
-%%   METHOD onTextureDataChanged
-   METHOD onTextureDepthChanged
-   METHOD onTextureFormatChanged
-   METHOD onTextureHeightChanged
-   METHOD onTextureWidthChanged
-   METHOD onUseHighDefShaderChanged
+$addSignals
 
 $endClass
 

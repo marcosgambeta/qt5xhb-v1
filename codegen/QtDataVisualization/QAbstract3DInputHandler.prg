@@ -28,9 +28,7 @@ $beginClassFrom=QObject
 %%   METHOD touchEvent
 %%   METHOD wheelEvent
 
-   METHOD onInputViewChanged
-   METHOD onPositionChanged
-   METHOD onSceneChanged
+$addSignals
 
 $endClass
 

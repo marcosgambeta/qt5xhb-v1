@@ -22,9 +22,7 @@ $beginClassFrom=QValue3DAxisFormatter
    METHOD setShowEdgeLabels
    METHOD showEdgeLabels
 
-   METHOD onAutoSubGridChanged
-   METHOD onBaseChanged
-   METHOD onShowEdgeLabelsChanged
+$addSignals
 
 $endClass
 

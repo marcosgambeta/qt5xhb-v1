@@ -23,9 +23,7 @@ $beginClassFrom=QAbstract3DSeries
    METHOD setItemSize
    METHOD setSelectedItem
 
-   METHOD onDataProxyChanged
-   METHOD onItemSizeChanged
-   METHOD onSelectedItemChanged
+$addSignals
 
 $endClass
 

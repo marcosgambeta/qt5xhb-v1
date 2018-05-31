@@ -30,15 +30,7 @@ $beginClassFrom=QAbstractDataProxy
 %%   METHOD setRow
 %%   METHOD setRows
 
-   METHOD onArrayReset
-   METHOD onColumnCountChanged
-   METHOD onItemChanged
-   METHOD onRowCountChanged
-   METHOD onRowsAdded
-   METHOD onRowsChanged
-   METHOD onRowsInserted
-   METHOD onRowsRemoved
-   METHOD onSeriesChanged
+$addSignals
 
 $endClass
 

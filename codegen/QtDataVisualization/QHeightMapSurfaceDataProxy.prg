@@ -29,12 +29,7 @@ $beginClassFrom=QSurfaceDataProxy
    METHOD setMinZValue
    METHOD setValueRanges
 
-   METHOD onHeightMapChanged
-   METHOD onHeightMapFileChanged
-   METHOD onMaxXValueChanged
-   METHOD onMaxZValueChanged
-   METHOD onMinXValueChanged
-   METHOD onMinZValueChanged
+$addSignals
 
 $endClass
 

@@ -28,13 +28,7 @@ $beginClassFrom=QAbstractDataProxy
    METHOD setItem
 %%   METHOD setItems
 
-   METHOD onArrayReset
-   METHOD onItemCountChanged
-   METHOD onItemsAdded
-   METHOD onItemsChanged
-   METHOD onItemsInserted
-   METHOD onItemsRemoved
-   METHOD onSeriesChanged
+$addSignals
 
 $endClass
 

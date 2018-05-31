@@ -36,15 +36,7 @@ $beginClassFrom=QObject
    METHOD setVisible
    METHOD textureFile
 
-   METHOD onMeshFileChanged
-   METHOD onPositionAbsoluteChanged
-   METHOD onPositionChanged
-   METHOD onRotationChanged
-   METHOD onScalingAbsoluteChanged
-   METHOD onScalingChanged
-   METHOD onShadowCastingChanged
-   METHOD onTextureFileChanged
-   METHOD onVisibleChanged
+$addSignals
 
 $endClass
 

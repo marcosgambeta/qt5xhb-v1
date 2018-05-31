@@ -23,9 +23,7 @@ $beginClassFrom=QAbstract3DSeries
    METHOD setMeshAngle
    METHOD setSelectedBar
 
-   METHOD onDataProxyChanged
-   METHOD onMeshAngleChanged
-   METHOD onSelectedBarChanged
+$addSignals
 
 $endClass
 

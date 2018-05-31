@@ -71,24 +71,7 @@ $beginClassFrom=QWindow
    METHOD shadowsSupported
    METHOD themes
 
-   METHOD onActiveInputHandlerChanged
-   METHOD onActiveThemeChanged
-   METHOD onAspectRatioChanged
-   METHOD onCurrentFpsChanged
-   METHOD onHorizontalAspectRatioChanged
-   METHOD onLocaleChanged
-   METHOD onMarginChanged
-   METHOD onMeasureFpsChanged
-   METHOD onOptimizationHintsChanged
-   METHOD onOrthoProjectionChanged
-   METHOD onPolarChanged
-   METHOD onQueriedGraphPositionChanged
-   METHOD onRadialLabelOffsetChanged
-   METHOD onReflectionChanged
-   METHOD onReflectivityChanged
-   METHOD onSelectedElementChanged
-   METHOD onSelectionModeChanged
-   METHOD onShadowQualityChanged
+$addSignals
 
 $endClass
 

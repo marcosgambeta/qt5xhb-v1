@@ -42,16 +42,7 @@ $beginClassFrom=QAbstract3DGraph
    METHOD setValueAxis
    METHOD valueAxis
 
-   METHOD onBarSpacingChanged
-   METHOD onBarSpacingRelativeChanged
-   METHOD onBarThicknessChanged
-   METHOD onColumnAxisChanged
-   METHOD onFloorLevelChanged
-   METHOD onMultiSeriesUniformChanged
-   METHOD onPrimarySeriesChanged
-   METHOD onRowAxisChanged
-   METHOD onSelectedSeriesChanged
-   METHOD onValueAxisChanged
+$addSignals
 
 $endClass
 

@@ -29,10 +29,7 @@ $beginClassFrom=QAbstract3DGraph
    METHOD setAxisY
    METHOD setAxisZ
 
-   METHOD onAxisXChanged
-   METHOD onAxisYChanged
-   METHOD onAxisZChanged
-   METHOD onSelectedSeriesChanged
+$addSignals
 
 $endClass
 

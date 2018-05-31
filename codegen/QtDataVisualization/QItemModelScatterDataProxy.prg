@@ -43,19 +43,7 @@ $beginClassFrom=QScatterDataProxy
    METHOD zPosRolePattern
    METHOD zPosRoleReplace
 
-   METHOD onItemModelChanged
-   METHOD onRotationRoleChanged
-   METHOD onRotationRolePatternChanged
-   METHOD onRotationRoleReplaceChanged
-   METHOD onXPosRoleChanged
-   METHOD onXPosRolePatternChanged
-   METHOD onXPosRoleReplaceChanged
-   METHOD onYPosRoleChanged
-   METHOD onYPosRolePatternChanged
-   METHOD onYPosRoleReplaceChanged
-   METHOD onZPosRoleChanged
-   METHOD onZPosRolePatternChanged
-   METHOD onZPosRoleReplaceChanged
+$addSignals
 
 $endClass
 

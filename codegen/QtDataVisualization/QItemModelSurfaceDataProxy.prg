@@ -63,28 +63,7 @@ $beginClassFrom=QSurfaceDataProxy
    METHOD zPosRolePattern
    METHOD zPosRoleReplace
 
-   METHOD onAutoColumnCategoriesChanged
-   METHOD onAutoRowCategoriesChanged
-   METHOD onColumnCategoriesChanged
-   METHOD onColumnRoleChanged
-   METHOD onColumnRolePatternChanged
-   METHOD onColumnRoleReplaceChanged
-   METHOD onItemModelChanged
-   METHOD onMultiMatchBehaviorChanged
-   METHOD onRowCategoriesChanged
-   METHOD onRowRoleChanged
-   METHOD onRowRolePatternChanged
-   METHOD onRowRoleReplaceChanged
-   METHOD onUseModelCategoriesChanged
-   METHOD onXPosRoleChanged
-   METHOD onXPosRolePatternChanged
-   METHOD onXPosRoleReplaceChanged
-   METHOD onYPosRoleChanged
-   METHOD onYPosRolePatternChanged
-   METHOD onYPosRoleReplaceChanged
-   METHOD onZPosRoleChanged
-   METHOD onZPosRolePatternChanged
-   METHOD onZPosRoleReplaceChanged
+$addSignals
 
 $endClass
 

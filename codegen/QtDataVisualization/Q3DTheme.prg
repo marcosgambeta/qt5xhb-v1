@@ -60,28 +60,7 @@ $beginClassFrom=QObject
    METHOD type
    METHOD windowColor
 
-   METHOD onAmbientLightStrengthChanged
-   METHOD onBackgroundColorChanged
-   METHOD onBackgroundEnabledChanged
-   METHOD onBaseColorsChanged
-   METHOD onBaseGradientsChanged
-   METHOD onColorStyleChanged
-   METHOD onFontChanged
-   METHOD onGridEnabledChanged
-   METHOD onGridLineColorChanged
-   METHOD onHighlightLightStrengthChanged
-   METHOD onLabelBackgroundColorChanged
-   METHOD onLabelBackgroundEnabledChanged
-   METHOD onLabelBorderEnabledChanged
-   METHOD onLabelTextColorChanged
-   METHOD onLightColorChanged
-   METHOD onLightStrengthChanged
-   METHOD onMultiHighlightColorChanged
-   METHOD onMultiHighlightGradientChanged
-   METHOD onSingleHighlightColorChanged
-   METHOD onSingleHighlightGradientChanged
-   METHOD onTypeChanged
-   METHOD onWindowColorChanged
+$addSignals
 
 $endClass
 

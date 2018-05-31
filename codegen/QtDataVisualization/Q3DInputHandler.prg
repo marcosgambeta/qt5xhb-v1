@@ -28,10 +28,7 @@ $beginClassFrom=QAbstract3DInputHandler
    METHOD setZoomEnabled
 %%   METHOD wheelEvent
 
-   METHOD onRotationEnabledChanged
-   METHOD onSelectionEnabledChanged
-   METHOD onZoomAtTargetEnabledChanged
-   METHOD onZoomEnabledChanged
+$addSignals
 
 $endClass
 

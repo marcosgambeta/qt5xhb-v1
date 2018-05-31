@@ -38,16 +38,7 @@ $beginClassFrom=QObject
    METHOD setSlicingActive
    METHOD viewport
 
-   METHOD onActiveCameraChanged
-   METHOD onActiveLightChanged
-   METHOD onDevicePixelRatioChanged
-   METHOD onGraphPositionQueryChanged
-   METHOD onPrimarySubViewportChanged
-   METHOD onSecondarySubviewOnTopChanged
-   METHOD onSecondarySubViewportChanged
-   METHOD onSelectionQueryPositionChanged
-   METHOD onSlicingActiveChanged
-   METHOD onViewportChanged
+$addSignals
 
 $endClass
 

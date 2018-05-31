@@ -57,25 +57,7 @@ $beginClassFrom=QBarDataProxy
    METHOD valueRolePattern
    METHOD valueRoleReplace
 
-   METHOD onAutoColumnCategoriesChanged
-   METHOD onAutoRowCategoriesChanged
-   METHOD onColumnCategoriesChanged
-   METHOD onColumnRoleChanged
-   METHOD onColumnRolePatternChanged
-   METHOD onColumnRoleReplaceChanged
-   METHOD onItemModelChanged
-   METHOD onMultiMatchBehaviorChanged
-   METHOD onRotationRoleChanged
-   METHOD onRotationRolePatternChanged
-   METHOD onRotationRoleReplaceChanged
-   METHOD onRowCategoriesChanged
-   METHOD onRowRoleChanged
-   METHOD onRowRolePatternChanged
-   METHOD onRowRoleReplaceChanged
-   METHOD onUseModelCategoriesChanged
-   METHOD onValueRoleChanged
-   METHOD onValueRolePatternChanged
-   METHOD onValueRoleReplaceChanged
+$addSignals
 
 $endClass
 

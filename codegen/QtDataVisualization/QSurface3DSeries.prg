@@ -30,13 +30,7 @@ $beginClassFrom=QAbstract3DSeries
    METHOD texture
    METHOD textureFile
 
-   METHOD onDataProxyChanged
-   METHOD onDrawModeChanged
-   METHOD onFlatShadingEnabledChanged
-   METHOD onFlatShadingSupportedChanged
-   METHOD onSelectedPointChanged
-   METHOD onTextureChanged
-   METHOD onTextureFileChanged
+$addSignals
 
 $endClass
 
