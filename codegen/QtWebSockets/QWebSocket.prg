@@ -49,20 +49,7 @@ $beginClassFrom=QObject
    METHOD open
    METHOD ping
 
-   METHOD onAboutToClose
-   METHOD onConnected
-   METHOD onDisconnected
-   METHOD onStateChanged
-   METHOD onProxyAuthenticationRequired
-   METHOD onReadChannelFinished
-   METHOD onTextFrameReceived
-   METHOD onBinaryFrameReceived
-   METHOD onTextMessageReceived
-   METHOD onBinaryMessageReceived
-   METHOD onError
-   METHOD onPong
-   METHOD onBytesWritten
-   METHOD onSslErrors
+$addSignals
 
 $endClass
 

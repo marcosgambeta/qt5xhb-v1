@@ -38,13 +38,7 @@ $beginClassFrom=QObject
    METHOD sslConfiguration
    METHOD supportedVersions
 
-   METHOD onAcceptError
-   METHOD onServerError
-   METHOD onOriginAuthenticationRequired
-   METHOD onNewConnection
-   METHOD onPeerVerifyError
-   METHOD onSslErrors
-   METHOD onClosed
+$addSignals
 
 $endClass
 
