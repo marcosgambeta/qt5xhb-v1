@@ -29,7 +29,7 @@ $beginClassFrom=QObject
    METHOD viewBox
    METHOD viewBoxF
 
-   METHOD onRepaintNeeded
+$addSignals
 
 $endClass
 
