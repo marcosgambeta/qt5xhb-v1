@@ -40,7 +40,7 @@ $beginClassFrom=QObject
    METHOD toNext
    METHOD toPrevious
 
-   METHOD onCurrentIndexChanged
+$addSignals
 
 $endClass
 

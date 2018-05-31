@@ -33,9 +33,7 @@ $beginClassFrom=QWidget
    METHOD setExtension
    METHOD showExtension
 
-   METHOD onAccepted
-   METHOD onFinished
-   METHOD onRejected
+$addSignals
 
 $endClass
 

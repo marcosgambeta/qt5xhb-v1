@@ -58,7 +58,7 @@ $beginClassFrom=QDialog
    METHOD buttonText
    METHOD setButtonText
 
-   METHOD onButtonClicked
+$addSignals
 
 $endClass
 

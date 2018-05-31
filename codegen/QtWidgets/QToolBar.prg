@@ -38,14 +38,7 @@ $beginClassFrom=QWidget
    METHOD setIconSize
    METHOD setToolButtonStyle
 
-   METHOD onActionTriggered
-   METHOD onAllowedAreasChanged
-   METHOD onIconSizeChanged
-   METHOD onMovableChanged
-   METHOD onOrientationChanged
-   METHOD onToolButtonStyleChanged
-   METHOD onTopLevelChanged
-   METHOD onVisibilityChanged
+$addSignals
 
 $endClass
 

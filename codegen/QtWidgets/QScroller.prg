@@ -33,8 +33,7 @@ $beginClassFrom=QObject
    METHOD scroller
    METHOD ungrabGesture
 
-   METHOD onScrollerPropertiesChanged
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

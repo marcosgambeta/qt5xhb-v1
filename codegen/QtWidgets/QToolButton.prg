@@ -30,7 +30,7 @@ $beginClassFrom=QAbstractButton
    METHOD setToolButtonStyle
    METHOD showMenu
 
-   METHOD onTriggered
+$addSignals
 
 $endClass
 

@@ -75,13 +75,7 @@ $beginClassFrom=QWidget
    METHOD setCurrentIndex
    METHOD setEditText
 
-   METHOD onActivated1
-   METHOD onActivated2
-   METHOD onCurrentIndexChanged1
-   METHOD onCurrentIndexChanged2
-   METHOD onEditTextChanged
-   METHOD onHighlighted1
-   METHOD onHighlighted2
+$addSignals
 
    // for compatibility
    METHOD onActivated            // = onActivated1

@@ -30,8 +30,7 @@ $beginClassFrom=QDialog
    METHOD standardColor
    METHOD setStandardColor
 
-   METHOD onColorSelected
-   METHOD onCurrentColorChanged
+$addSignals
 
 $endClass
 

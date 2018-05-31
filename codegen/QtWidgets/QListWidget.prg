@@ -41,16 +41,7 @@ $beginClassFrom=QListView
    METHOD clear
    METHOD scrollToItem
 
-   METHOD onCurrentItemChanged
-   METHOD onCurrentRowChanged
-   METHOD onCurrentTextChanged
-   METHOD onItemActivated
-   METHOD onItemChanged
-   METHOD onItemClicked
-   METHOD onItemDoubleClicked
-   METHOD onItemEntered
-   METHOD onItemPressed
-   METHOD onItemSelectionChanged
+$addSignals
 
 $endClass
 

@@ -57,21 +57,7 @@ $beginClassFrom=QTableView
    METHOD removeRow
    METHOD scrollToItem
 
-   METHOD onCellActivated
-   METHOD onCellChanged
-   METHOD onCellClicked
-   METHOD onCellDoubleClicked
-   METHOD onCellEntered
-   METHOD onCellPressed
-   METHOD onCurrentCellChanged
-   METHOD onCurrentItemChanged
-   METHOD onItemActivated
-   METHOD onItemChanged
-   METHOD onItemClicked
-   METHOD onItemDoubleClicked
-   METHOD onItemEntered
-   METHOD onItemPressed
-   METHOD onItemSelectionChanged
+$addSignals
 
 $endClass
 

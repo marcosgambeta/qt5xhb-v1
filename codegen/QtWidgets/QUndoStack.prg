@@ -39,12 +39,7 @@ $beginClassFrom=QObject
    METHOD setIndex
    METHOD undo
 
-   METHOD onCanRedoChanged
-   METHOD onCanUndoChanged
-   METHOD onCleanChanged
-   METHOD onIndexChanged
-   METHOD onRedoTextChanged
-   METHOD onUndoTextChanged
+$addSignals
 
 $endClass
 

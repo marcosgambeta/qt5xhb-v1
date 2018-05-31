@@ -38,7 +38,7 @@ $beginClassFrom=QWidget
    METHOD setRange
    METHOD setValue
 
-   METHOD onValueChanged
+$addSignals
 
 $endClass
 

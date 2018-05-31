@@ -27,10 +27,7 @@ $beginClassFrom=QWidget
    METHOD standardButton
    METHOD standardButtons
 
-   METHOD onAccepted
-   METHOD onClicked
-   METHOD onHelpRequested
-   METHOD onRejected
+$addSignals
 
 $endClass
 

@@ -27,8 +27,7 @@ $beginClassFrom=QObject
    METHOD setWhatsThis
    METHOD whatsThis
 
-   METHOD onActivated
-   METHOD onActivatedAmbiguously
+$addSignals
 
 $endClass
 

@@ -21,7 +21,7 @@ $beginClassFrom=QAbstractButton
    METHOD minimumSizeHint
    METHOD sizeHint
 
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

@@ -18,8 +18,7 @@ $beginClassFrom=QWidget
    METHOD setKeySequence
    METHOD clear
 
-   METHOD onEditingFinished
-   METHOD onKeySequenceChanged
+$addSignals
 
 $endClass
 

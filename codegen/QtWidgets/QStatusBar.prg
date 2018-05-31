@@ -25,7 +25,7 @@ $beginClassFrom=QWidget
    METHOD clearMessage
    METHOD showMessage
 
-   METHOD onMessageChanged
+$addSignals
 
 $endClass
 

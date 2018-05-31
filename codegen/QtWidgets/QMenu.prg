@@ -50,10 +50,7 @@ $beginClassFrom=QWidget
    METHOD setToolTipsVisible
    METHOD toNSMenu
 
-   METHOD onAboutToHide
-   METHOD onAboutToShow
-   METHOD onHovered
-   METHOD onTriggered
+$addSignals
 
 $endClass
 

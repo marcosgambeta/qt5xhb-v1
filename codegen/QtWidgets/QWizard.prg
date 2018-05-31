@@ -55,11 +55,7 @@ $beginClassFrom=QDialog
    METHOD next
    METHOD restart
 
-   METHOD onCurrentIdChanged
-   METHOD onCustomButtonClicked
-   METHOD onHelpRequested
-   METHOD onPageAdded
-   METHOD onPageRemoved
+$addSignals
 
 $endClass
 

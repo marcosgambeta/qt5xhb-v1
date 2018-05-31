@@ -25,12 +25,7 @@ $beginClassFrom=QObject
    METHOD setExclusive
    METHOD setId
 
-   METHOD onButtonClicked1
-   METHOD onButtonClicked2
-   METHOD onButtonPressed1
-   METHOD onButtonPressed2
-   METHOD onButtonReleased1
-   METHOD onButtonReleased2
+$addSignals
 
 $endClass
 

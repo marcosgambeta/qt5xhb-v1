@@ -42,10 +42,7 @@ $beginClassFrom=QWidget
    METHOD text
    METHOD toggle
 
-   METHOD onClicked
-   METHOD onPressed
-   METHOD onReleased
-   METHOD onToggled
+$addSignals
 
 $endClass
 

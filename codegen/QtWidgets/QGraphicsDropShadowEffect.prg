@@ -26,9 +26,7 @@ $beginClassFrom=QGraphicsEffect
    METHOD setXOffset
    METHOD setYOffset
 
-   METHOD onBlurRadiusChanged
-   METHOD onColorChanged
-   METHOD onOffsetChanged
+$addSignals
 
 $endClass
 

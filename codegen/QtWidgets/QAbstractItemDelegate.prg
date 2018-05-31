@@ -25,9 +25,7 @@ $beginClassFrom=QObject
    METHOD elidedText
    METHOD paintingRoles
 
-   METHOD onCloseEditor
-   METHOD onCommitData
-   METHOD onSizeHintChanged
+$addSignals
 
 $endClass
 

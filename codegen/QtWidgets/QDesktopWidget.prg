@@ -21,9 +21,7 @@ $beginClassFrom=QWidget
    METHOD screenGeometry
    METHOD screenNumber
 
-   METHOD onResized
-   METHOD onScreenCountChanged
-   METHOD onWorkAreaResized
+$addSignals
 
 $endClass
 

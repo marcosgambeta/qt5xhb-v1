@@ -25,8 +25,7 @@ $beginClassFrom=QObject
    METHOD setExclusive
    METHOD setVisible
 
-   METHOD onHovered
-   METHOD onTriggered
+$addSignals
 
 $endClass
 

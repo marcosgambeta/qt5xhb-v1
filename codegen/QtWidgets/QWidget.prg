@@ -247,10 +247,9 @@ $beginClassFrom=QObject
    METHOD setTabOrder
    METHOD createWindowContainer
 
-   METHOD onWindowTitleChanged
-   METHOD onWindowIconChanged
-   METHOD onWindowIconTextChanged // TODO: verificar se ainda é valido no Qt 5
-   METHOD onCustomContextMenuRequested
+$addSignals
+
+%%   METHOD onWindowIconTextChanged // TODO: verificar se ainda é valido no Qt 5
 
 $endClass
 

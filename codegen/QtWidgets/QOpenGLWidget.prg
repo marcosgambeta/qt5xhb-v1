@@ -23,10 +23,7 @@ $beginClassFrom=QWidget
    METHOD defaultFramebufferObject
    METHOD grabFramebuffer
 
-   METHOD onAboutToCompose
-   METHOD onFrameSwapped
-   METHOD onAboutToResize
-   METHOD onResized
+$addSignals
 
 $endClass
 

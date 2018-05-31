@@ -27,11 +27,7 @@ $beginClassFrom=QWidget
    METHOD toggleViewAction
    METHOD widget
 
-   METHOD onAllowedAreasChanged
-   METHOD onDockLocationChanged
-   METHOD onFeaturesChanged
-   METHOD onTopLevelChanged
-   METHOD onVisibilityChanged
+$addSignals
 
 $endClass
 

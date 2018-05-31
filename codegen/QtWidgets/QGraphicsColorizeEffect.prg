@@ -19,8 +19,7 @@ $beginClassFrom=QGraphicsEffect
    METHOD setColor
    METHOD setStrength
 
-   METHOD onColorChanged
-   METHOD onStrengthChanged
+$addSignals
 
 $endClass
 

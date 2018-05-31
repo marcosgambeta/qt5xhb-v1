@@ -24,8 +24,7 @@ $beginClassFrom=QLayout
    METHOD setCurrentIndex
    METHOD setCurrentWidget
 
-   METHOD onSetCurrentIndex
-   METHOD onSetCurrentWidget
+$addSignals
 
 $endClass
 

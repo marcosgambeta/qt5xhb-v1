@@ -56,10 +56,7 @@ $beginClassFrom=QWidget
    METHOD showSelectedDate
    METHOD showToday
 
-   METHOD onActivated
-   METHOD onClicked
-   METHOD onCurrentPageChanged
-   METHOD onSelectionChanged
+$addSignals
 
 $endClass
 

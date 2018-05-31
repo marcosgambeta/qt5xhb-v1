@@ -66,9 +66,7 @@ $beginClassFrom=QWidget
    METHOD changeCurrentOnDrag
    METHOD setChangeCurrentOnDrag
 
-   METHOD onCurrentChanged
-   METHOD onTabCloseRequested
-   METHOD onTabMoved
+$addSignals
 
 $endClass
 

@@ -31,8 +31,7 @@ $beginClassFrom=QAbstractSpinBox
    METHOD displayIntegerBase
    METHOD setDisplayIntegerBase
 
-   METHOD onValueChanged1
-   METHOD onValueChanged2
+$addSignals
 
 $endClass
 

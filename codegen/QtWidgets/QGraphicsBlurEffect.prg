@@ -20,8 +20,7 @@ $beginClassFrom=QGraphicsWidget
    METHOD setBlurHints
    METHOD setBlurRadius
 
-   METHOD onBlurHintsChanged
-   METHOD onBlurRadiusChanged
+$addSignals
 
 $endClass
 

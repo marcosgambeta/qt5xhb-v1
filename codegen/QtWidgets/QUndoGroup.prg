@@ -29,13 +29,7 @@ $beginClassFrom=QObject
    METHOD setActiveStack
    METHOD undo
 
-   METHOD onActiveStackChanged
-   METHOD onCanRedoChanged
-   METHOD onCanUndoChanged
-   METHOD onCleanChanged
-   METHOD onIndexChanged
-   METHOD onRedoTextChanged
-   METHOD onUndoTextChanged
+$addSignals
 
 $endClass
 

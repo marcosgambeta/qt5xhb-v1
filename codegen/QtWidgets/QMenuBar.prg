@@ -40,8 +40,7 @@ $beginClassFrom=QWidget
    METHOD wceRefresh
    METHOD toNSMenu
 
-   METHOD onHovered
-   METHOD onTriggered
+$addSignals
 
 $endClass
 

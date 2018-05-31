@@ -61,10 +61,7 @@ $beginClassFrom=QWidget
    METHOD setTabBarAutoHide
    METHOD tabBar
 
-   METHOD onCurrentChanged
-   METHOD onTabCloseRequested
-   METHOD onTabBarClicked
-   METHOD onTabBarDoubleClicked
+$addSignals
 
 $endClass
 

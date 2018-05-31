@@ -33,7 +33,7 @@ $beginClassFrom=QFrame
    METHOD setCurrentIndex
    METHOD setCurrentWidget
 
-   METHOD onCurrentChanged
+$addSignals
 
 $endClass
 

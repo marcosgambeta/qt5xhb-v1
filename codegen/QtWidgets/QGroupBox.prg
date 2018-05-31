@@ -26,8 +26,7 @@ $beginClassFrom=QWidget
    METHOD minimumSizeHint
    METHOD setChecked
 
-   METHOD onClicked
-   METHOD onToggled
+$addSignals
 
 $endClass
 

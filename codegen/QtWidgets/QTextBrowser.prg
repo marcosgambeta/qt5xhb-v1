@@ -35,13 +35,7 @@ $beginClassFrom=QTextEdit
    METHOD reload
    METHOD setSource
 
-   METHOD onAnchorClicked
-   METHOD onBackwardAvailable
-   METHOD onForwardAvailable
-   METHOD onHighlighted1
-   METHOD onHighlighted2
-   METHOD onHistoryChanged
-   METHOD onSourceChanged
+$addSignals
 
 $endClass
 

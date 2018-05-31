@@ -39,7 +39,7 @@ $beginClassFrom=QDialog
    METHOD setCancelButtonText
    METHOD setRange
 
-   METHOD onCanceled
+$addSignals
 
 $endClass
 

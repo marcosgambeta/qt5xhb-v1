@@ -24,11 +24,7 @@ $beginClassFrom=QGraphicsTransform
    METHOD zScale
    METHOD applyTo
 
-   METHOD onOriginChanged
-   METHOD onScaleChanged
-   METHOD onXScaleChanged
-   METHOD onYScaleChanged
-   METHOD onZScaleChanged
+$addSignals
 
 $endClass
 

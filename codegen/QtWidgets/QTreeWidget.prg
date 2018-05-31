@@ -50,16 +50,7 @@ $beginClassFrom=QTreeView
    METHOD expandItem
    METHOD scrollToItem
 
-   METHOD onCurrentItemChanged
-   METHOD onItemActivated
-   METHOD onItemChanged
-   METHOD onItemClicked
-   METHOD onItemCollapsed
-   METHOD onItemDoubleClicked
-   METHOD onItemEntered
-   METHOD onItemExpanded
-   METHOD onItemPressed
-   METHOD onItemSelectionChanged
+$addSignals
 
 $endClass
 

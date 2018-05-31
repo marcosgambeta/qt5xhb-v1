@@ -73,9 +73,7 @@ $beginClassFrom=QObject
    METHOD clear
    METHOD clearSelection
 
-   METHOD onChanged
-   METHOD onSceneRectChanged
-   METHOD onSelectionChanged
+$addSignals
 
 $endClass
 

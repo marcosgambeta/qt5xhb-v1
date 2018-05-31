@@ -25,8 +25,7 @@ $beginClassFrom=QFrame
    METHOD setCurrentIndex
    METHOD setCurrentWidget
 
-   METHOD onCurrentChanged
-   METHOD onWidgetRemoved
+$addSignals
 
 $endClass
 

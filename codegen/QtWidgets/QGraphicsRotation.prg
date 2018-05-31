@@ -22,9 +22,7 @@ $beginClassFrom=QGraphicsTransform
    METHOD setOrigin
    METHOD applyTo
 
-   METHOD onAngleChanged
-   METHOD onAxisChanged
-   METHOD onOriginChanged
+$addSignals
 
 $endClass
 

@@ -35,8 +35,7 @@ $beginClassFrom=QAbstractSpinBox
    METHOD fixup
    METHOD validate
 
-   METHOD onValueChanged1
-   METHOD onValueChanged2
+$addSignals
 
 $endClass
 

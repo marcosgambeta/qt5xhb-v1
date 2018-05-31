@@ -63,9 +63,7 @@ $beginClassFrom=QAbstractSpinBox
    METHOD setDateTime
    METHOD setTime
 
-   METHOD onDateChanged
-   METHOD onDateTimeChanged
-   METHOD onTimeChanged
+$addSignals
 
 $endClass
 

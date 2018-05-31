@@ -77,15 +77,7 @@ $beginClassFrom=QDialog
    METHOD getExistingDirectoryUrl
    METHOD getOpenFileUrls
 
-   METHOD onCurrentChanged
-   METHOD onDirectoryEntered
-   METHOD onFileSelected
-   METHOD onFilesSelected
-   METHOD onFilterSelected
-   METHOD onUrlSelected
-   METHOD onUrlsSelected
-   METHOD onCurrentUrlChanged
-   METHOD onDirectoryUrlEntered
+$addSignals
 
 $endClass
 

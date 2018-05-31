@@ -47,7 +47,7 @@ $beginClassFrom=QAbstractItemView
    METHOD scrollTo
    METHOD visualRect
 
-   METHOD onIndexesMoved
+$addSignals
 
 $endClass
 

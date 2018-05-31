@@ -29,8 +29,7 @@ $beginClassFrom=QObject
    METHOD isSystemTrayAvailable
    METHOD supportsMessages
 
-   METHOD onActivated
-   METHOD onMessageClicked
+$addSignals
 
 $endClass
 

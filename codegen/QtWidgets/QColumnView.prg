@@ -29,7 +29,7 @@ $beginClassFrom=QAbstractItemView
    METHOD sizeHint
    METHOD visualRect
 
-   METHOD onUpdatePreviewWidget
+$addSignals
 
 $endClass
 

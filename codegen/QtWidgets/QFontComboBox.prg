@@ -22,7 +22,7 @@ $beginClassFrom=QComboBox
    METHOD sizeHint
    METHOD setCurrentFont
 
-   METHOD onCurrentFontChanged
+$addSignals
 
 $endClass
 

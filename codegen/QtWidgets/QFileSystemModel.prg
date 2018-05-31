@@ -59,9 +59,7 @@ $beginClassFrom=QAbstractItemModel
    METHOD sort
    METHOD supportedDropActions
 
-   METHOD onDirectoryLoaded
-   METHOD onFileRenamed
-   METHOD onRootPathChanged
+$addSignals
 
 $endClass
 

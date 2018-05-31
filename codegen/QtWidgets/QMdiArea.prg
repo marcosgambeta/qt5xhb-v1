@@ -47,7 +47,7 @@ $beginClassFrom=QAbstractScrollArea
    METHOD tabsMovable
    METHOD setTabsMovable
 
-   METHOD onSubWindowActivated
+$addSignals
 
 $endClass
 

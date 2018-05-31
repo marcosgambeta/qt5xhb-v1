@@ -72,8 +72,7 @@ $beginClassFrom=QAbstractItemView
    METHOD resizeColumnToContents
    METHOD showColumn
 
-   METHOD onCollapsed
-   METHOD onExpanded
+$addSignals
 
 $endClass
 

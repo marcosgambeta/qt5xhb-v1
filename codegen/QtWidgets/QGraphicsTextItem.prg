@@ -43,8 +43,7 @@ $beginClassFrom=QGraphicsObject
    METHOD shape
    METHOD type
 
-   METHOD onLinkActivated
-   METHOD onLinkHovered
+$addSignals
 
 $endClass
 

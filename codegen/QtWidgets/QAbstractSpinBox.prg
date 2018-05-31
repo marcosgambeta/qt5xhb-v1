@@ -48,7 +48,7 @@ $beginClassFrom=QWidget
    METHOD isGroupSeparatorShown
    METHOD setGroupSeparatorShown
 
-   METHOD onEditingFinished
+$addSignals
 
 $endClass
 

@@ -19,8 +19,7 @@ $beginClassFrom=QGraphicsEffect
    METHOD setOpacity
    METHOD setOpacityMask
 
-   METHOD onOpacityChanged
-   METHOD onOpacityMaskChanged
+$addSignals
 
 $endClass
 

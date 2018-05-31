@@ -72,15 +72,7 @@ $beginClassFrom=QAbstractScrollArea
    METHOD setPlainText
    METHOD undo
 
-   METHOD onBlockCountChanged
-   METHOD onCopyAvailable
-   METHOD onCursorPositionChanged
-   METHOD onModificationChanged
-   METHOD onRedoAvailable
-   METHOD onSelectionChanged
-   METHOD onTextChanged
-   METHOD onUndoAvailable
-   METHOD onUpdateRequest
+$addSignals
 
 $endClass
 

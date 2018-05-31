@@ -80,12 +80,7 @@ $beginClassFrom=QAbstractScrollArea
    METHOD update
    METHOD doItemsLayout
 
-   METHOD onActivated
-   METHOD onClicked
-   METHOD onDoubleClicked
-   METHOD onEntered
-   METHOD onPressed
-   METHOD onViewportEntered
+$addSignals
 
 $endClass
 
