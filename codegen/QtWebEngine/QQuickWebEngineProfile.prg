@@ -48,19 +48,7 @@ $beginClassFrom=QObject
    METHOD urlSchemeHandler
 %%   METHOD userScripts
 
-   METHOD onCachePathChanged
-%%   METHOD onDownloadFinished
-%%   METHOD onDownloadRequested
-   METHOD onHttpAcceptLanguageChanged
-   METHOD onHttpCacheMaximumSizeChanged
-   METHOD onHttpCacheTypeChanged
-   METHOD onHttpUserAgentChanged
-   METHOD onOffTheRecordChanged
-   METHOD onPersistentCookiesPolicyChanged
-   METHOD onPersistentStoragePathChanged
-   METHOD onSpellCheckEnabledChanged
-   METHOD onSpellCheckLanguagesChanged
-   METHOD onStorageNameChanged
+$addSignals
 
 $endClass
 

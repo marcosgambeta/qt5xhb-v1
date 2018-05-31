@@ -29,12 +29,7 @@ $beginClassFrom=QObject
    METHOD toString
    METHOD worldId
 
-   METHOD onInjectionPointChanged
-   METHOD onNameChanged
-   METHOD onRunOnSubframesChanged
-   METHOD onSourceCodeChanged
-   METHOD onSourceUrlChanged
-   METHOD onWorldIdChanged
+$addSignals
 
 $endClass
 
