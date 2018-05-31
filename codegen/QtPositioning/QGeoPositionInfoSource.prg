@@ -29,9 +29,7 @@ $beginClassFrom=QObject
    METHOD createSource
    METHOD availableSources
 
-   METHOD onPositionUpdated
-   METHOD onUpdateTimeout
-   METHOD onError
+$addSignals
 
 $endClass
 

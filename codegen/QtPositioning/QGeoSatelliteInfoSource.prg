@@ -25,10 +25,7 @@ $beginClassFrom=QObject
    METHOD createSource
    METHOD availableSources
 
-   METHOD onSatellitesInViewUpdated
-   METHOD onSatellitesInUseUpdated
-   METHOD onRequestTimeout
-   METHOD onError
+$addSignals
 
 $endClass
 

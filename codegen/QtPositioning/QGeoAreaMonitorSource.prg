@@ -26,10 +26,7 @@ $beginClassFrom=QObject
    METHOD createSource
    METHOD availableSources
 
-   METHOD onAreaEntered
-   METHOD onAreaExited
-   METHOD onMonitorExpired
-   METHOD onError
+$addSignals
 
 $endClass
 
