@@ -40,8 +40,7 @@ $beginClassFrom=QObject
    METHOD tables
    METHOD unsubscribeFromNotification
 
-   METHOD onNotification1
-   METHOD onNotification2
+$addSignals
 
 $endClass
 
