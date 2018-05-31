@@ -33,7 +33,7 @@ $beginClassFrom=QObject
    METHOD voice
    METHOD volume
 
-   METHOD onStateChanged
+$addSignals
 
 $endClass
 

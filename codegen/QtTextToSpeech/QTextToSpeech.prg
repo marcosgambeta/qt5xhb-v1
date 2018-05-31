@@ -34,12 +34,7 @@ $beginClassFrom=QObject
    METHOD voice
    METHOD volume
 
-   METHOD onLocaleChanged
-   METHOD onPitchChanged
-   METHOD onRateChanged
-   METHOD onStateChanged
-   METHOD onVoiceChanged
-   METHOD onVolumeChanged
+$addSignals
 
 $endClass
 
