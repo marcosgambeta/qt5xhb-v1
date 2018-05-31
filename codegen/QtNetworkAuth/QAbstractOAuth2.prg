@@ -36,14 +36,7 @@ $beginClassFrom=QAbstractOAuth
    METHOD state
    METHOD userAgent
 
-%%   METHOD onAuthorizationCallbackReceived
-   METHOD onClientIdentifierSharedKeyChanged
-   METHOD onError
-   METHOD onExpirationAtChanged
-   METHOD onResponseTypeChanged
-   METHOD onScopeChanged
-   METHOD onStateChanged
-   METHOD onUserAgentChanged
+$addSignals
 
 $endClass
 

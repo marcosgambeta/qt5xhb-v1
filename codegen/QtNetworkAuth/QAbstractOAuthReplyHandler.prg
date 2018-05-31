@@ -21,10 +21,7 @@ $beginClassFrom=QObject
    METHOD callback
    METHOD networkReplyFinished
 
-   METHOD onCallbackDataReceived
-%%   METHOD onCallbackReceived
-   METHOD onReplyDataReceived
-%%   METHOD onTokensReceived
+$addSignals
 
 $endClass
 

@@ -41,17 +41,7 @@ $beginClassFrom=QObject
 %%   METHOD status
    METHOD token
 
-   METHOD onAuthorizationUrlChanged
-   METHOD onAuthorizeWithBrowser
-   METHOD onClientIdentifierChanged
-   METHOD onContentTypeChanged
-%%   METHOD onExtraTokensChanged
-   METHOD onFinished
-   METHOD onGranted
-   METHOD onReplyDataReceived
-%%   METHOD onRequestFailed
-   METHOD onStatusChanged
-   METHOD onTokenChanged
+$addSignals
 
 $endClass
 

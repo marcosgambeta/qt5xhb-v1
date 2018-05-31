@@ -23,7 +23,7 @@ $beginClassFrom=QAbstractOAuth2
    METHOD refreshAccessToken
    METHOD setAccessTokenUrl
 
-   METHOD onAccessTokenUrlChanged
+$addSignals
 
 $endClass
 

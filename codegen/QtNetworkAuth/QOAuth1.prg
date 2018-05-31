@@ -40,11 +40,7 @@ $beginClassFrom=QAbstractOAuth
    METHOD tokenCredentialsUrl
    METHOD tokenSecret
 
-   METHOD onClientSharedSecretChanged
-   METHOD onSignatureMethodChanged
-   METHOD onTemporaryCredentialsUrlChanged
-   METHOD onTokenCredentialsUrlChanged
-   METHOD onTokenSecretChanged
+$addSignals
 
 $endClass
 
