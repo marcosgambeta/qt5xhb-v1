@@ -54,16 +54,7 @@ $beginClassFrom=QIODevice
    METHOD sendBreak
    METHOD setBreakEnabled
 
-   METHOD onBaudRateChanged
-   METHOD onDataBitsChanged
-   METHOD onParityChanged
-   METHOD onStopBitsChanged
-   METHOD onFlowControlChanged
-   METHOD onDataErrorPolicyChanged
-   METHOD onDataTerminalReadyChanged
-   METHOD onRequestToSendChanged
-   METHOD onError
-   METHOD onSettingsRestoredOnCloseChanged
+$addSignals
 
 $endClass
 
