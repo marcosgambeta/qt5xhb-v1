@@ -10,7 +10,7 @@ $header
 
 $addRequests
 
-$beginClass
+$beginClassFrom=
 
    METHOD delete
    METHOD descent

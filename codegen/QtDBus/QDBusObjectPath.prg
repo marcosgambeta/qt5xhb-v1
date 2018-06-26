@@ -10,7 +10,7 @@ $header
 
 $addRequests
 
-$beginClass
+$beginClassFrom=
 
    METHOD new1
    METHOD new2

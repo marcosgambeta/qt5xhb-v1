@@ -10,7 +10,7 @@ $header
 
 $addRequests
 
-$beginClass
+$beginClassFrom=
 
    METHOD clearIconDatabase
    METHOD clearMemoryCaches

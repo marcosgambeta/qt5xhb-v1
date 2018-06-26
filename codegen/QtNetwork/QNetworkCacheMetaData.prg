@@ -15,7 +15,7 @@ $header
 
 $addRequests
 
-$beginClass
+$beginClassFrom=
 
    METHOD new
    METHOD delete
