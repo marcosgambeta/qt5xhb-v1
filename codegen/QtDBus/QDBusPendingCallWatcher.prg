@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QDBusPendingCall
 
-   METHOD new
-   METHOD delete
-   METHOD isFinished
-   METHOD waitForFinished
+$addMethods
 
 $addSignals
 

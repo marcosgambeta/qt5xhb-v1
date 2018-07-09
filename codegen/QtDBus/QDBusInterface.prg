@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QDBusAbstractInterface
 
-   METHOD new
-   METHOD delete
-   METHOD metaObject
-   METHOD qt_metacast
-%%   METHOD qt_metacall
+$addMethods
 
 $endClass
 

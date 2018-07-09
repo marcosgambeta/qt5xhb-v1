@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD demarshall
-   METHOD signatureToType
-   METHOD typeToSignature
+$addMethods
 
 $endClass
 

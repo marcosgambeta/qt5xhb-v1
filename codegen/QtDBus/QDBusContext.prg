@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD calledFromDBus
-   METHOD connection
-   METHOD message
-   METHOD isDelayedReply
-   METHOD setDelayedReply
-   METHOD sendErrorReply
+$addMethods
 
 $endClass
 

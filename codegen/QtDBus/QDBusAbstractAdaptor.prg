@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

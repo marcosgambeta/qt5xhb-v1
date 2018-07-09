@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD beginStructure
-   METHOD endStructure
-   METHOD beginArray
-   METHOD endArray
-   METHOD beginMap
-   METHOD endMap
-   METHOD beginMapEntry
-   METHOD endMapEntry
-   METHOD appendVariant
-   METHOD currentSignature
-   METHOD currentType
-   METHOD atEnd
-   METHOD asVariant
+$addMethods
 
 $endClass
 

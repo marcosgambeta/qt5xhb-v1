@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD isValid
-   METHOD fileDescriptor
-   METHOD setFileDescriptor
-   METHOD giveFileDescriptor
-   METHOD takeFileDescriptor
-   METHOD isSupported
+$addMethods
 
 $endClass
 

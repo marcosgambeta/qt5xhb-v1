@@ -12,35 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isConnected
-   METHOD baseService
-   METHOD lastError
-   METHOD name
-   METHOD connectionCapabilities
-   METHOD send
-   METHOD callWithCallback
-   METHOD call
-   METHOD asyncCall
-   METHOD connect
-   METHOD disconnect
-   METHOD registerObject
-   METHOD unregisterObject
-   METHOD objectRegisteredAt
-   METHOD registerVirtualObject
-   METHOD registerService
-   METHOD unregisterService
-   METHOD interface
-   METHOD internalPointer
-   METHOD connectToBus
-   METHOD connectToPeer
-   METHOD disconnectFromBus
-   METHOD disconnectFromPeer
-   METHOD localMachineId
-   METHOD sessionBus
-   METHOD systemBus
-   METHOD sender
+$addMethods
 
 $endClass
 

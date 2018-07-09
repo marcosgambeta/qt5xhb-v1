@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD createReply
-   METHOD createErrorReply
-   METHOD service
-   METHOD path
-   METHOD interface
-   METHOD member
-   METHOD errorName
-   METHOD errorMessage
-   METHOD type
-   METHOD signature
-   METHOD isReplyRequired
-   METHOD setDelayedReply
-   METHOD isDelayedReply
-   METHOD setAutoStartService
-   METHOD autoStartService
-   METHOD setArguments
-   METHOD arguments
-   METHOD createSignal
-   METHOD createMethodCall
-   METHOD createError
+$addMethods
 
 $endClass
 

@@ -14,10 +14,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-%%   METHOD delete
-%%   METHOD introspect
-%%   METHOD handleMessage
+$addMethods
 
 $endClass
 

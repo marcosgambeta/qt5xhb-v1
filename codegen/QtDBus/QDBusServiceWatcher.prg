@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD watchedServices
-   METHOD setWatchedServices
-   METHOD addWatchedService
-   METHOD removeWatchedService
-   METHOD watchMode
-   METHOD setWatchMode
-   METHOD connection
-   METHOD setConnection
+$addMethods
 
 $addSignals
 

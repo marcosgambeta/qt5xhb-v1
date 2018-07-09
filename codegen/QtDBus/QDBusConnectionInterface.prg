@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QDBusAbstractInterface
 
-%%   METHOD new
-%%   METHOD delete
-%%   METHOD registeredServiceNames
-%%   METHOD isServiceRegistered
-%%   METHOD serviceOwner
-%%   METHOD unregisterService
-%%   METHOD registerService
-%%   METHOD servicePid
-%%   METHOD serviceUid
-%%   METHOD startService
+$addMethods
 
 $addSignals
 

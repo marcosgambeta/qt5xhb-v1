@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QDBusAbstractInterfaceBase
 
-   METHOD delete
-   METHOD isValid
-   METHOD connection
-   METHOD service
-   METHOD path
-   METHOD interface
-   METHOD lastError
-   METHOD setTimeout
-   METHOD timeout
-   METHOD call
-   METHOD callWithArgumentList
-   METHOD callWithCallback
-   METHOD asyncCall
-   METHOD asyncCallWithArgumentList
+$addMethods
 
 $endClass
 

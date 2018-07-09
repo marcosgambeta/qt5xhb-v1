@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD isFinished
-   METHOD waitForFinished
-   METHOD isError
-   METHOD isValid
-   METHOD error
-   METHOD reply
-   METHOD fromError
-   METHOD fromCompletedCall
+$addMethods
 
 $endClass
 

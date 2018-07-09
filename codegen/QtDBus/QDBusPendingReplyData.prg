@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QDBusPendingCall
 
-%%   METHOD new
-%%   METHOD delete
-%%   METHOD assign
-%%   METHOD argumentAt
-%%   METHOD setMetaTypes
+$addMethods
 
 $endClass
 
