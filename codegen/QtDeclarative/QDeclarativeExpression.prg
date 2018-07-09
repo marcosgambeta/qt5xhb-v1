@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD clearError
-   METHOD context
-   METHOD engine
-   METHOD error
-   METHOD evaluate
-   METHOD expression
-   METHOD hasError
-   METHOD lineNumber
-   METHOD notifyOnValueChanged
-   METHOD scopeObject
-   METHOD setExpression
-   METHOD setNotifyOnValueChanged
-   METHOD setSourceLocation
-   METHOD sourceFile
+$addMethods
 
 $addSignals
 

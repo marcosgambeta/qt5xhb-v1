@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsObject,QDeclarativeParserStatus
 
-   METHOD new
-   METHOD delete
-   METHOD baselineOffset
-   METHOD childAt
-   METHOD childrenRect
-   METHOD clip
-   METHOD forceActiveFocus
-   METHOD implicitHeight
-   METHOD implicitWidth
-   METHOD keepMouseGrab
-   METHOD mapFromItem
-   METHOD mapToItem
-   METHOD parentItem
-   METHOD setBaselineOffset
-   METHOD setClip
-   METHOD setKeepMouseGrab
-   METHOD setParentItem
-   METHOD setSmooth
-   METHOD setTransformOrigin
-   METHOD smooth
-   METHOD transformOrigin
+$addMethods
 
 $endClass
 

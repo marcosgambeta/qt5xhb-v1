@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD classBegin
-   METHOD componentComplete
+$addMethods
 
 $endClass
 

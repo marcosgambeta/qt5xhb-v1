@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD column
-   METHOD description
-   METHOD isValid
-   METHOD line
-   METHOD setColumn
-   METHOD setDescription
-   METHOD setLine
-   METHOD setUrl
-   METHOD toString
-   METHOD url
+$addMethods
 
 $endClass
 

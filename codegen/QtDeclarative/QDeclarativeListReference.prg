@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD append
-   METHOD at
-   METHOD canAppend
-   METHOD canAt
-   METHOD canClear
-   METHOD canCount
-   METHOD clear
-   METHOD count
-   METHOD isValid
-   METHOD object
+$addMethods
 
 $endClass
 

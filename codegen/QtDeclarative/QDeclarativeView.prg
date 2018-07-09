@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsView
 
-   METHOD new
-   METHOD delete
-   METHOD engine
-   METHOD errors
-   METHOD initialSize
-   METHOD resizeMode
-   METHOD rootContext
-   METHOD rootObject
-   METHOD setResizeMode
-   METHOD setSource
-   METHOD source
-   METHOD status
+$addMethods
 
 $addSignals
 

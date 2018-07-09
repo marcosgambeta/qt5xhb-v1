@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD context
-   METHOD scopeObject
-   METHOD script
-   METHOD setContext
-   METHOD setScopeObject
-   METHOD setScript
+$addMethods
 
 $endClass
 
