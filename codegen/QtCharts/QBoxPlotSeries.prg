@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSeries
 
-   METHOD new
-   METHOD delete
-
-   METHOD append
-   METHOD boxOutlineVisible
-   METHOD boxSets
-   METHOD boxWidth
-   METHOD brush
-   METHOD clear
-   METHOD count
-   METHOD insert
-   METHOD pen
-   METHOD remove
-   METHOD setBoxOutlineVisible
-   METHOD setBoxWidth
-   METHOD setBrush
-   METHOD setPen
-   METHOD take
-   METHOD type
+$addMethods
 
 $addSignals
 

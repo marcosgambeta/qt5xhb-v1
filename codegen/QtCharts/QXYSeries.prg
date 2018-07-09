@@ -12,37 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSeries
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD append
-   METHOD at
-   METHOD brush
-   METHOD clear
-   METHOD color
-   METHOD count
-   METHOD insert
-   METHOD pen
-   METHOD pointLabelsClipping
-   METHOD pointLabelsColor
-   METHOD pointLabelsFont
-   METHOD pointLabelsFormat
-   METHOD pointLabelsVisible
-   METHOD points
-   METHOD pointsVector
-   METHOD pointsVisible
-   METHOD remove
-   METHOD removePoints
-   METHOD replace
-   METHOD setBrush
-   METHOD setColor
-   METHOD setPen
-   METHOD setPointLabelsClipping
-   METHOD setPointLabelsColor
-   METHOD setPointLabelsFont
-   METHOD setPointLabelsFormat
-   METHOD setPointLabelsVisible
-   METHOD setPointsVisible
+$addMethods
 
 $addSignals
 

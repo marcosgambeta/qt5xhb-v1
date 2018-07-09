@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QXYSeries
 
-   METHOD new
-   METHOD delete
-
-   METHOD borderColor
-   METHOD brush
-   METHOD color
-   METHOD markerShape
-   METHOD markerSize
-   METHOD setBorderColor
-   METHOD setBrush
-   METHOD setColor
-   METHOD setMarkerShape
-   METHOD setMarkerSize
-   METHOD setPen
-   METHOD type
+$addMethods
 
 $addSignals
 

@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD brush
-   METHOD close
-   METHOD high
-   METHOD low
-   METHOD open
-   METHOD pen
-   METHOD setBrush
-   METHOD setClose
-   METHOD setHigh
-   METHOD setLow
-   METHOD setOpen
-   METHOD setPen
-   METHOD setTimestamp
-   METHOD timestamp
+$addMethods
 
 $addSignals
 

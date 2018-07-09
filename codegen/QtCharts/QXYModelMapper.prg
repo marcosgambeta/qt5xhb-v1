@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-%%   METHOD delete
-
-%%   METHOD count
-%%   METHOD first
-%%   METHOD model
-%%   METHOD orientation
-%%   METHOD series
-%%   METHOD setCount
-%%   METHOD setFirst
-%%   METHOD setModel
-%%   METHOD setOrientation
-%%   METHOD setSeries
-%%   METHOD setXSection
-%%   METHOD setYSection
-%%   METHOD xSection
-%%   METHOD ySection
+$addMethods
 
 $endClass
 

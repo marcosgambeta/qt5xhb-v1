@@ -12,32 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD append
-   METHOD at
-   METHOD borderColor
-   METHOD brush
-   METHOD color
-   METHOD count
-   METHOD insert
-   METHOD label
-   METHOD labelBrush
-   METHOD labelColor
-   METHOD labelFont
-   METHOD pen
-   METHOD remove
-   METHOD replace
-   METHOD setBorderColor
-   METHOD setBrush
-   METHOD setColor
-   METHOD setLabel
-   METHOD setLabelBrush
-   METHOD setLabelColor
-   METHOD setLabelFont
-   METHOD setPen
-   METHOD sum
+$addMethods
 
 $addSignals
 

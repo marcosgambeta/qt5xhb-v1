@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsView
 
-   METHOD new
-   METHOD delete
-
-   METHOD chart
-   METHOD rubberBand
-   METHOD setChart
-%%   METHOD setRubberBand
+$addMethods
 
 $endClass
 

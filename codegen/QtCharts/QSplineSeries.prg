@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QLineSeries
 
-   METHOD new
-   METHOD delete
-   METHOD type
+$addMethods
 
 $endClass
 

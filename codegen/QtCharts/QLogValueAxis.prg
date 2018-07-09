@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractAxis
 
-   METHOD new
-   METHOD delete
-
-   METHOD base
-   METHOD labelFormat
-   METHOD max
-   METHOD min
-   METHOD minorTickCount
-   METHOD setBase
-   METHOD setLabelFormat
-   METHOD setMax
-   METHOD setMin
-   METHOD setMinorTickCount
-   METHOD setRange
-   METHOD tickCount
-   METHOD type
+$addMethods
 
 $addSignals
 

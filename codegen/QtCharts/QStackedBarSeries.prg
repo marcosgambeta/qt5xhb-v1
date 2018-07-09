@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractBarSeries
 
-   METHOD new
-   METHOD delete
-
-   METHOD type
+$addMethods
 
 $endClass
 

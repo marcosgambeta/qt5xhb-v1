@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QXYModelMapper
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD firstRow
-   METHOD model
-   METHOD rowCount
-   METHOD series
-   METHOD setFirstRow
-   METHOD setModel
-   METHOD setRowCount
-   METHOD setSeries
-   METHOD setXColumn
-   METHOD setYColumn
-   METHOD xColumn
-   METHOD yColumn
+$addMethods
 
 $addSignals
 

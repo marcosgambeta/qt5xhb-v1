@@ -12,38 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsWidget
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD alignment
-   METHOD attachToChart
-   METHOD borderColor
-   METHOD brush
-   METHOD color
-   METHOD detachFromChart
-   METHOD font
-   METHOD isAttachedToChart
-   METHOD isBackgroundVisible
-   METHOD labelBrush
-   METHOD labelColor
-   METHOD markers
-   METHOD markerShape
-   METHOD paint
-   METHOD pen
-   METHOD reverseMarkers
-   METHOD setAlignment
-   METHOD setBackgroundVisible
-   METHOD setBorderColor
-   METHOD setBrush
-   METHOD setColor
-   METHOD setFont
-   METHOD setLabelBrush
-   METHOD setLabelColor
-   METHOD setMarkerShape
-   METHOD setPen
-   METHOD setReverseMarkers
-   METHOD setShowToolTips
-   METHOD showToolTips
+$addMethods
 
 $addSignals
 

@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QLegendMarker
 
-   METHOD new
-   METHOD delete
-
-   METHOD series
-   METHOD slice
-   METHOD type
+$addMethods
 
 $endClass
 

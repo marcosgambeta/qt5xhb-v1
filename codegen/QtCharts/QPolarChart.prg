@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QChart
 
-   METHOD new
-   METHOD delete
-
-   METHOD addAxis
-%%   METHOD axes
-   METHOD axisPolarOrientation
+$addMethods
 
 $endClass
 

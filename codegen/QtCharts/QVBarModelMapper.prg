@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QBarModelMapper
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD firstBarSetColumn
-   METHOD firstRow
-   METHOD lastBarSetColumn
-   METHOD model
-   METHOD rowCount
-   METHOD series
-   METHOD setFirstBarSetColumn
-   METHOD setFirstRow
-   METHOD setLastBarSetColumn
-   METHOD setModel
-   METHOD setRowCount
-   METHOD setSeries
+$addMethods
 
 $addSignals
 

@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QValueAxis
 
-   METHOD new
-   METHOD delete
-
-   METHOD append
-   METHOD categoriesLabels
-   METHOD count
-   METHOD endValue
-   METHOD labelsPosition
-   METHOD remove
-   METHOD replaceLabel
-   METHOD setLabelsPosition
-   METHOD setStartValue
-   METHOD startValue
-   METHOD type
+$addMethods
 
 $addSignals
 

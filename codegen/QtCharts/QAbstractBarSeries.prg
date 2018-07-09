@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSeries
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD append
-   METHOD barSets
-   METHOD barWidth
-   METHOD clear
-   METHOD count
-   METHOD insert
-   METHOD isLabelsVisible
-   METHOD labelsAngle
-   METHOD labelsFormat
-   METHOD labelsPosition
-   METHOD remove
-   METHOD setBarWidth
-   METHOD setLabelsAngle
-   METHOD setLabelsFormat
-   METHOD setLabelsPosition
-   METHOD setLabelsVisible
-   METHOD take
+$addMethods
 
 $addSignals
 

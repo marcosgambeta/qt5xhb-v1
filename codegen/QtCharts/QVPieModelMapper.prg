@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QPieModelMapper
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD firstRow
-   METHOD labelsColumn
-   METHOD model
-   METHOD rowCount
-   METHOD series
-   METHOD setFirstRow
-   METHOD setLabelsColumn
-   METHOD setModel
-   METHOD setRowCount
-   METHOD setSeries
-   METHOD setValuesColumn
-   METHOD valuesColumn
+$addMethods
 
 $addSignals
 

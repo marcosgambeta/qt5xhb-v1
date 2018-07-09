@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QXYSeries
 
-   METHOD new
-   METHOD delete
-
-   METHOD type
+$addMethods
 
 $endClass
 

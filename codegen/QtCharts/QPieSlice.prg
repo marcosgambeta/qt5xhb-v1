@@ -12,43 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD angleSpan
-   METHOD borderColor
-   METHOD borderWidth
-   METHOD brush
-   METHOD color
-   METHOD explodeDistanceFactor
-   METHOD isExploded
-   METHOD isLabelVisible
-   METHOD label
-   METHOD labelArmLengthFactor
-   METHOD labelBrush
-   METHOD labelColor
-   METHOD labelFont
-   METHOD labelPosition
-   METHOD pen
-   METHOD percentage
-   METHOD series
-   METHOD setBorderColor
-   METHOD setBorderWidth
-   METHOD setBrush
-   METHOD setColor
-   METHOD setExploded
-   METHOD setExplodeDistanceFactor
-   METHOD setLabel
-   METHOD setLabelArmLengthFactor
-   METHOD setLabelBrush
-   METHOD setLabelColor
-   METHOD setLabelFont
-   METHOD setLabelPosition
-   METHOD setLabelVisible
-   METHOD setPen
-   METHOD setValue
-   METHOD startAngle
-   METHOD value
+$addMethods
 
 $addSignals
 

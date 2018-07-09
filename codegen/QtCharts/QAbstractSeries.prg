@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD attachAxis
-   METHOD attachedAxes
-   METHOD chart
-   METHOD detachAxis
-   METHOD hide
-   METHOD isVisible
-   METHOD name
-   METHOD opacity
-   METHOD setName
-   METHOD setOpacity
-   METHOD setUseOpenGL
-   METHOD setVisible
-   METHOD show
-   METHOD type
-   METHOD useOpenGL
+$addMethods
 
 $addSignals
 

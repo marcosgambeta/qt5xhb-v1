@@ -12,37 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSeries
 
-   METHOD new
-   METHOD delete
-
-   METHOD append
-   METHOD bodyOutlineVisible
-   METHOD bodyWidth
-   METHOD brush
-   METHOD capsVisible
-   METHOD capsWidth
-   METHOD clear
-   METHOD count
-   METHOD decreasingColor
-   METHOD increasingColor
-   METHOD insert
-   METHOD maximumColumnWidth
-   METHOD minimumColumnWidth
-   METHOD pen
-   METHOD remove
-   METHOD setBodyOutlineVisible
-   METHOD setBodyWidth
-   METHOD setBrush
-   METHOD setCapsVisible
-   METHOD setCapsWidth
-   METHOD setDecreasingColor
-   METHOD setIncreasingColor
-   METHOD setMaximumColumnWidth
-   METHOD setMinimumColumnWidth
-   METHOD setPen
-   METHOD sets
-   METHOD take
-   METHOD type
+$addMethods
 
 $addSignals
 

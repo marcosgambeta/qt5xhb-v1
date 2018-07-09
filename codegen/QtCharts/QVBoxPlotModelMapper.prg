@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QBoxPlotModelMapper
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD firstBoxSetColumn
-   METHOD firstRow
-   METHOD lastBoxSetColumn
-   METHOD model
-   METHOD rowCount
-   METHOD series
-   METHOD setFirstBoxSetColumn
-   METHOD setFirstRow
-   METHOD setLastBoxSetColumn
-   METHOD setModel
-   METHOD setRowCount
-   METHOD setSeries
+$addMethods
 
 $addSignals
 

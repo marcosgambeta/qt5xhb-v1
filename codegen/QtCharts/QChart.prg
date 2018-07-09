@@ -12,68 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsWidget
 
-   METHOD new
-   METHOD delete
-
-   METHOD addAxis
-   METHOD addSeries
-   METHOD animationDuration
-   METHOD animationEasingCurve
-   METHOD animationOptions
-   METHOD axes
-   METHOD axisX // DEPRECATED
-   METHOD axisY // DEPRECATED
-   METHOD backgroundBrush
-   METHOD backgroundPen
-   METHOD backgroundRoundness
-   METHOD chartType
-   METHOD createDefaultAxes
-   METHOD isBackgroundVisible
-   METHOD isDropShadowEnabled
-   METHOD isPlotAreaBackgroundVisible
-   METHOD isZoomed
-   METHOD legend
-   METHOD locale
-   METHOD localizeNumbers
-   METHOD mapToPosition
-   METHOD mapToValue
-   METHOD margins
-   METHOD plotArea
-   METHOD plotAreaBackgroundBrush
-   METHOD plotAreaBackgroundPen
-   METHOD removeAllSeries
-   METHOD removeAxis
-   METHOD removeSeries
-   METHOD scroll
-   METHOD series
-   METHOD setAnimationDuration
-   METHOD setAnimationEasingCurve
-   METHOD setAnimationOptions
-   METHOD setAxisX // DEPRECATED
-   METHOD setAxisY // DEPRECATED
-   METHOD setBackgroundBrush
-   METHOD setBackgroundPen
-   METHOD setBackgroundRoundness
-   METHOD setBackgroundVisible
-   METHOD setDropShadowEnabled
-   METHOD setLocale
-   METHOD setLocalizeNumbers
-   METHOD setMargins
-   METHOD setPlotAreaBackgroundBrush
-   METHOD setPlotAreaBackgroundPen
-   METHOD setPlotAreaBackgroundVisible
-   METHOD setTheme
-   METHOD setTitle
-   METHOD setTitleBrush
-   METHOD setTitleFont
-   METHOD theme
-   METHOD title
-   METHOD titleBrush
-   METHOD titleFont
-   METHOD zoom
-   METHOD zoomIn
-   METHOD zoomOut
-   METHOD zoomReset
+$addMethods
 
 $addSignals
 

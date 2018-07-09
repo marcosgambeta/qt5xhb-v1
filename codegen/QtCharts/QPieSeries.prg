@@ -12,33 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSeries
 
-   METHOD new
-   METHOD delete
-
-   METHOD append
-   METHOD clear
-   METHOD count
-   METHOD holeSize
-   METHOD horizontalPosition
-   METHOD insert
-   METHOD isEmpty
-   METHOD pieEndAngle
-   METHOD pieSize
-   METHOD pieStartAngle
-   METHOD remove
-   METHOD setHoleSize
-   METHOD setHorizontalPosition
-   METHOD setLabelsPosition
-   METHOD setLabelsVisible
-   METHOD setPieEndAngle
-   METHOD setPieSize
-   METHOD setPieStartAngle
-   METHOD setVerticalPosition
-   METHOD slices
-   METHOD sum
-   METHOD take
-   METHOD type
-   METHOD verticalPosition
+$addMethods
 
 $addSignals
 

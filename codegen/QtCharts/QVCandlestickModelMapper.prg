@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QCandlestickModelMapper
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD closeRow
-   METHOD firstSetColumn
-   METHOD highRow
-   METHOD lastSetColumn
-   METHOD lowRow
-   METHOD openRow
-   METHOD orientation
-   METHOD setCloseRow
-   METHOD setFirstSetColumn
-   METHOD setHighRow
-   METHOD setLastSetColumn
-   METHOD setLowRow
-   METHOD setOpenRow
-   METHOD setTimestampRow
-   METHOD timestampRow
+$addMethods
 
 $addSignals
 
