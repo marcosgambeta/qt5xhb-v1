@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD cancelCapture
-   METHOD capture
-   METHOD driveMode
-   METHOD isReadyForCapture
-   METHOD setDriveMode
+$addMethods
 
 $addSignals
 

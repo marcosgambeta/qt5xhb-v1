@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD applySettings
-   METHOD duration
-   METHOD isMuted
-   METHOD outputLocation
-   METHOD setOutputLocation
-   METHOD state
-   METHOD status
-   METHOD volume
-   METHOD setMuted
-   METHOD setState
-   METHOD setVolume
+$addMethods
 
 $addSignals
 

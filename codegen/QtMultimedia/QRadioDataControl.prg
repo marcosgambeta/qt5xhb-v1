@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD error
-   METHOD errorString
-   METHOD isAlternativeFrequenciesEnabled
-   METHOD programType
-   METHOD programTypeName
-   METHOD radioText
-   METHOD setAlternativeFrequenciesEnabled
-   METHOD stationId
-   METHOD stationName
+$addMethods
 
 $addSignals
 

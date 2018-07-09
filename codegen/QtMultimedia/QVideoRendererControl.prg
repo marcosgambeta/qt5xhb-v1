@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD setSurface
-   METHOD surface
+$addMethods
 
 $endClass
 

@@ -12,16 +12,7 @@ $addRequests
 
 $beginClass
 
-   METHOD new
-   METHOD delete
-
-   METHOD availableCameras
-   METHOD defaultCamera
-   METHOD description
-   METHOD deviceName
-   METHOD isNull
-   METHOD orientation
-   METHOD position
+$addMethods
 
 $endClass
 

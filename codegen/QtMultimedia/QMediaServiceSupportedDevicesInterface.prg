@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-
-   METHOD deviceDescription
-   METHOD devices
+$addMethods
 
 $endClass
 

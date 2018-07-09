@@ -12,10 +12,7 @@ $addRequests
 
 $beginClass
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD run
+$addMethods
 
 $endClass
 

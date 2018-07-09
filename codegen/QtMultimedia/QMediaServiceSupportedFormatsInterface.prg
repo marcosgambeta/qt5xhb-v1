@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-
-   METHOD hasSupport
-   METHOD supportedMimeTypes
+$addMethods
 
 $endClass
 

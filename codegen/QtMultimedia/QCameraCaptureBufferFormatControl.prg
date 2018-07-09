@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD bufferFormat
-   METHOD setBufferFormat
-   METHOD supportedBufferFormats
+$addMethods
 
 $addSignals
 

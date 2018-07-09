@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD availablePlaybackRanges
-   METHOD bufferStatus
-   METHOD duration
-   METHOD isAudioAvailable
-   METHOD isMuted
-   METHOD isSeekable
-   METHOD isVideoAvailable
-   METHOD media
-   METHOD mediaStatus
-   METHOD mediaStream
-   METHOD pause
-   METHOD play
-   METHOD playbackRate
-   METHOD position
-   METHOD setMedia
-   METHOD setMuted
-   METHOD setPlaybackRate
-   METHOD setPosition
-   METHOD setVolume
-   METHOD state
-   METHOD stop
-   METHOD volume
+$addMethods
 
 $addSignals
 

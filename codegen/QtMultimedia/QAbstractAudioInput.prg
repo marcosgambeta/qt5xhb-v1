@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD start
-   METHOD stop
-   METHOD reset
-   METHOD suspend
-   METHOD resume
-   METHOD bytesReady
-   METHOD periodSize
-   METHOD setBufferSize
-   METHOD bufferSize
-   METHOD setNotifyInterval
-   METHOD notifyInterval
-   METHOD processedUSecs
-   METHOD elapsedUSecs
-   METHOD error
-   METHOD state
-   METHOD setFormat
-   METHOD format
-   METHOD setVolume
-   METHOD volume
+$addMethods
 
 $addSignals
 

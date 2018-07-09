@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD customFocusPoint
-   METHOD digitalZoom
-   METHOD focusMode
-   METHOD focusPointMode
-   METHOD focusZones
-   METHOD isAvailable
-   METHOD isFocusModeSupported
-   METHOD isFocusPointModeSupported
-   METHOD maximumDigitalZoom
-   METHOD maximumOpticalZoom
-   METHOD opticalZoom
-   METHOD setCustomFocusPoint
-   METHOD setFocusMode
-   METHOD setFocusPointMode
-   METHOD zoomTo
+$addMethods
 
 $addSignals
 

@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD handle
-   METHOD handleType
-%%   METHOD map
-   METHOD mapMode
-   METHOD unmap
-   METHOD release
+$addMethods
 
 $endClass
 

@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD category
-   METHOD isLoaded
-   METHOD isMuted
-   METHOD isPlaying
-   METHOD loopCount
-   METHOD loopsRemaining
-   METHOD play
-   METHOD setCategory
-   METHOD setLoopCount
-   METHOD setMuted
-   METHOD setSource
-   METHOD setVolume
-   METHOD source
-   METHOD status
-   METHOD stop
-   METHOD supportedMimeTypes
-   METHOD volume
+$addMethods
 
 $addSignals
 

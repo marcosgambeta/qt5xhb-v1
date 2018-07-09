@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-
-   METHOD delete
-   METHOD addInterval
-   METHOD addTimeRange
-   METHOD clear
-   METHOD contains
-   METHOD earliestTime
-   METHOD intervals
-   METHOD isContinuous
-   METHOD isEmpty
-   METHOD latestTime
-   METHOD removeInterval
-   METHOD removeTimeRange
+$addMethods
 
 $endClass
 

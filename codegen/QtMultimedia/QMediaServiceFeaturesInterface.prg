@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD supportedFeatures
+$addMethods
 
 $endClass
 

@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD byteCount
-%%   METHOD constData
-   METHOD data
-   METHOD duration
-   METHOD format
-   METHOD frameCount
-   METHOD isValid
-   METHOD sampleCount
-   METHOD startTime
+$addMethods
 
 $endClass
 

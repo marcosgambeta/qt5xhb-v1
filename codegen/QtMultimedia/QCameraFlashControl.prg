@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD flashMode
-   METHOD isFlashModeSupported
-   METHOD isFlashReady
-   METHOD setFlashMode
+$addMethods
 
 $addSignals
 

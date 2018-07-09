@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD isEventFeedbackEnabled
-   METHOD isEventFeedbackLocked
-   METHOD resetEventFeedback
-   METHOD setEventFeedbackEnabled
-   METHOD setEventFeedbackSound
+$addMethods
 
 $endClass
 

@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD preferredFormat
-   METHOD isFormatSupported
-   METHOD deviceName
-   METHOD supportedCodecs
-   METHOD supportedSampleRates
-   METHOD supportedChannelCounts
-   METHOD supportedSampleSizes
-   METHOD supportedByteOrders
-   METHOD supportedSampleTypes
+$addMethods
 
 $endClass
 

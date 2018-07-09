@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD availability
-   METHOD availableMetaData
-   METHOD bind
-   METHOD isAvailable
-   METHOD isMetaDataAvailable
-   METHOD metaData
-   METHOD notifyInterval
-   METHOD service
-   METHOD setNotifyInterval
-   METHOD unbind
+$addMethods
 
 $addSignals
 

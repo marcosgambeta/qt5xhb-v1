@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD containerDescription
-   METHOD containerFormat
-   METHOD setContainerFormat
-   METHOD supportedContainers
+$addMethods
 
 $endClass
 

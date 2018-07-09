@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QMediaBindableInterface
 
-   METHOD new
-   METHOD delete
-
-   METHOD availability
-   METHOD mediaObject
-   METHOD stationId
-   METHOD programType
-   METHOD programTypeName
-   METHOD stationName
-   METHOD radioText
-   METHOD isAlternativeFrequenciesEnabled
-   METHOD error
-   METHOD errorString
-   METHOD setAlternativeFrequenciesEnabled
+$addMethods
 
 $addSignals
 

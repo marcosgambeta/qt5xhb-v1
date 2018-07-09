@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD isActive
-   METHOD setSource
+$addMethods
 
 $addSignals
 

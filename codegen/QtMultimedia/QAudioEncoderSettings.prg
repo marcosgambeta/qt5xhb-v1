@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD bitRate
-   METHOD channelCount
-   METHOD codec
-   METHOD encodingMode
-   METHOD encodingOption
-   METHOD isNull
-   METHOD quality
-   METHOD sampleRate
-   METHOD setBitRate
-   METHOD setChannelCount
-   METHOD setCodec
-   METHOD setEncodingMode
-   METHOD setEncodingOption
-   METHOD setQuality
-   METHOD setSampleRate
+$addMethods
 
 $endClass
 

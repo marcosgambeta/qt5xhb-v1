@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD captureDestination
-   METHOD isCaptureDestinationSupported
-   METHOD setCaptureDestination
+$addMethods
 
 $addSignals
 

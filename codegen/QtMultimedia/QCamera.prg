@@ -12,38 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD availability
-   METHOD availableDevices
-   METHOD captureMode
-   METHOD deviceDescription
-   METHOD error
-   METHOD errorString
-   METHOD exposure
-   METHOD focus
-   METHOD imageProcessing
-   METHOD isCaptureModeSupported
-   METHOD load
-   METHOD lockStatus
-   METHOD requestedLocks
-   METHOD searchAndLock
-   METHOD setCaptureMode
-   METHOD setViewFinder
-   METHOD setViewfinderSettings
-   METHOD start
-   METHOD state
-   METHOD status
-   METHOD stop
-   METHOD supportedLocks
-%%   METHOD supportedViewfinderFrameRateRanges
-   METHOD supportedViewfinderPixelFormats
-   METHOD supportedViewfinderResolutions
-   METHOD supportedViewfinderSettings
-   METHOD unload
-   METHOD unlock
-   METHOD viewfinderSettings
+$addMethods
 
 $addSignals
 

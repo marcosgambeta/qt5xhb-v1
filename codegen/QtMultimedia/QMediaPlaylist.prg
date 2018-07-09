@@ -12,33 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QMediaBindableInterface
 
-   METHOD new
-   METHOD delete
-
-   METHOD addMedia
-   METHOD clear
-   METHOD currentIndex
-   METHOD currentMedia
-   METHOD error
-   METHOD errorString
-   METHOD insertMedia
-   METHOD isEmpty
-   METHOD isReadOnly
-   METHOD load
-   METHOD media
-   METHOD mediaCount
-   METHOD mediaObject
-   METHOD moveMedia
-   METHOD next
-   METHOD nextIndex
-   METHOD playbackMode
-   METHOD previous
-   METHOD previousIndex
-   METHOD removeMedia
-   METHOD save
-   METHOD setCurrentIndex
-   METHOD setPlaybackMode
-   METHOD shuffle
+$addMethods
 
 $addSignals
 

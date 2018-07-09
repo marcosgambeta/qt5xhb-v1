@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD crossfadeTime
-   METHOD isCrossfadeSupported
-   METHOD nextMedia
-   METHOD setCrossfadeTime
-   METHOD setNextMedia
+$addMethods
 
 $addSignals
 

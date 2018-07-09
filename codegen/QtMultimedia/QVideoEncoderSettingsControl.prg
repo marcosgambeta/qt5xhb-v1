@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD setVideoSettings
-   METHOD supportedFrameRates
-   METHOD supportedResolutions
-   METHOD supportedVideoCodecs
-   METHOD videoCodecDescription
-   METHOD videoSettings
+$addMethods
 
 $endClass
 

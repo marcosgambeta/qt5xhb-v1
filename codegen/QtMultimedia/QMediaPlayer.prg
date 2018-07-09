@@ -12,43 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaObject
 
-   METHOD new
-   METHOD delete
-   METHOD bufferStatus
-   METHOD currentMedia
-   METHOD currentNetworkConfiguration
-   METHOD duration
-   METHOD error
-   METHOD errorString
-   METHOD isAudioAvailable
-   METHOD isMuted
-   METHOD isSeekable
-   METHOD isVideoAvailable
-   METHOD media
-   METHOD mediaStatus
-   METHOD mediaStream
-   METHOD playbackRate
-   METHOD playlist
-   METHOD position
-   METHOD setVideoOutput
-   METHOD state
-   METHOD volume
-   METHOD availability
-   METHOD pause
-   METHOD play
-   METHOD setMedia
-   METHOD setMuted
-   METHOD setNetworkConfigurations
-   METHOD setPlaybackRate
-   METHOD setPlaylist
-   METHOD setPosition
-   METHOD setVolume
-   METHOD stop
-   METHOD hasSupport
-   METHOD supportedAudioRoles
-   METHOD supportedMimeTypes
-   METHOD audioRole
-   METHOD setAudioRole
+$addMethods
 
 $addSignals
 

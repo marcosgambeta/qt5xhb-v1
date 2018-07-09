@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QAudioSystemFactoryInterface
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD availableDevices
-   METHOD createInput
-   METHOD createOutput
-   METHOD createDeviceInfo
+$addMethods
 
 $endClass
 

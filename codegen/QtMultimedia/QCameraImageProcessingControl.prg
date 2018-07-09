@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD isParameterSupported
-   METHOD isParameterValueSupported
-   METHOD parameter
-   METHOD setParameter
+$addMethods
 
 $endClass
 

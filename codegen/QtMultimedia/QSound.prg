@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD loops
-   METHOD loopsRemaining
-   METHOD setLoops
-   METHOD fileName
-   METHOD isFinished
-   METHOD stop
-   METHOD play
+$addMethods
 
 $endClass
 

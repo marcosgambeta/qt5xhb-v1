@@ -12,21 +12,7 @@ $addRequests
 
 $beginClass
 
-   METHOD new
-   METHOD delete
-
-   METHOD isNull
-   METHOD maximumFrameRate
-   METHOD minimumFrameRate
-   METHOD pixelAspectRatio
-   METHOD pixelFormat
-   METHOD resolution
-   METHOD setMaximumFrameRate
-   METHOD setMinimumFrameRate
-   METHOD setPixelAspectRatio
-   METHOD setPixelFormat
-   METHOD setResolution
-   METHOD swap
+$addMethods
 
 $endClass
 

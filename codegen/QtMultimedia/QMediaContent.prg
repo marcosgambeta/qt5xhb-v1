@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD canonicalRequest
-   METHOD canonicalResource
-   METHOD canonicalUrl
-   METHOD isNull
-   METHOD playlist
-   METHOD resources
+$addMethods
 
 $endClass
 

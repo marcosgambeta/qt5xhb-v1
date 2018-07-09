@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new
-   METHOD delete
-
-   METHOD cameraPosition
-   METHOD codecs
-   METHOD device
-   METHOD features
-   METHOD isNull
-   METHOD mimeType
-   METHOD type
+$addMethods
 
 $endClass
 

@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD audioSettings
-   METHOD codecDescription
-   METHOD setAudioSettings
-   METHOD supportedAudioCodecs
-   METHOD supportedSampleRates
+$addMethods
 
 $endClass
 

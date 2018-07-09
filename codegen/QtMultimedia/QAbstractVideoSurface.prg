@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD error
-   METHOD isActive
-   METHOD isFormatSupported
-   METHOD nativeResolution
-   METHOD nearestFormat
-   METHOD present
-   METHOD start
-   METHOD stop
-   METHOD surfaceFormat
+$addMethods
 
 %%   METHOD onActiveChanged
 %%   METHOD onNativeResolutionChanged

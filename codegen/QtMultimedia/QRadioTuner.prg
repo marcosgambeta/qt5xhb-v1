@@ -12,36 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD availability
-   METHOD band
-   METHOD cancelSearch
-   METHOD error
-   METHOD errorString
-   METHOD frequency
-   METHOD frequencyStep
-   METHOD isAntennaConnected
-   METHOD isBandSupported
-   METHOD isMuted
-   METHOD isSearching
-   METHOD isStereo
-   METHOD radioData
-   METHOD searchAllStations
-   METHOD searchBackward
-   METHOD searchForward
-   METHOD setBand
-   METHOD setFrequency
-   METHOD setMuted
-   METHOD setStereoMode
-   METHOD setVolume
-   METHOD signalStrength
-   METHOD start
-   METHOD state
-   METHOD stereoMode
-   METHOD stop
-   METHOD volume
+$addMethods
 
 $addSignals
 

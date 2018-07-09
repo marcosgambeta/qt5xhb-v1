@@ -31,31 +31,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD audioBitRate
-   METHOD audioCodec
-   METHOD channelCount
-   METHOD dataSize
-   METHOD isNull
-   METHOD language
-   METHOD mimeType
-   METHOD request
-   METHOD resolution
-   METHOD sampleRate
-   METHOD setAudioBitRate
-   METHOD setAudioCodec
-   METHOD setChannelCount
-   METHOD setDataSize
-   METHOD setLanguage
-   METHOD setResolution
-   METHOD setSampleRate
-   METHOD setVideoBitRate
-   METHOD setVideoCodec
-   METHOD url
-   METHOD videoBitRate
-   METHOD videoCodec
+$addMethods
 
 $endClass
 

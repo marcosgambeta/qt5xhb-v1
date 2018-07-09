@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD currentDigitalZoom
-   METHOD currentOpticalZoom
-   METHOD maximumDigitalZoom
-   METHOD maximumOpticalZoom
-   METHOD requestedDigitalZoom
-   METHOD requestedOpticalZoom
-   METHOD zoomTo
+$addMethods
 
 $addSignals
 

@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD isNull
-   METHOD codec
-   METHOD setCodec
-   METHOD resolution
-   METHOD setResolution
-   METHOD quality
-   METHOD setQuality
-   METHOD encodingOption
-%%   METHOD encodingOptions
-   METHOD setEncodingOption
-%%   METHOD setEncodingOptions
+$addMethods
 
 $endClass
 

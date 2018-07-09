@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaRecorder
 
-   METHOD new
-   METHOD delete
-   METHOD audioInput
-   METHOD audioInputDescription
-   METHOD audioInputs
-   METHOD defaultAudioInput
-   METHOD setAudioInput
+$addMethods
 
 $addSignals
 

@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD aspectRatioMode
-   METHOD brightness
-   METHOD contrast
-   METHOD displayRect
-   METHOD hue
-   METHOD isFullScreen
-   METHOD nativeSize
-   METHOD repaint
-   METHOD saturation
-   METHOD setAspectRatioMode
-   METHOD setBrightness
-   METHOD setContrast
-   METHOD setDisplayRect
-   METHOD setFullScreen
-   METHOD setHue
-   METHOD setSaturation
-   METHOD setWinId
-   METHOD winId
+$addMethods
 
 $addSignals
 

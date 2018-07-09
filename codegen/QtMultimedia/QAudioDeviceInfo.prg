@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD deviceName
-   METHOD isFormatSupported
-   METHOD isNull
-   METHOD nearestFormat
-   METHOD preferredFormat
-   METHOD supportedByteOrders
-   METHOD supportedChannelCounts
-   METHOD supportedCodecs
-   METHOD supportedSampleRates
-   METHOD supportedSampleSizes
-   METHOD supportedSampleTypes
-   METHOD availableDevices
-   METHOD defaultInputDevice
-   METHOD defaultOutputDevice
+$addMethods
 
 $endClass
 

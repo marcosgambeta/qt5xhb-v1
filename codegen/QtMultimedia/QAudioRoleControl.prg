@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD audioRole
-   METHOD setAudioRole
-   METHOD supportedAudioRoles
+$addMethods
 
 %%   METHOD onAudioRoleChanged
 

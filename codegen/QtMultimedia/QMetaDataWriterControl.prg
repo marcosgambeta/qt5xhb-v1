@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD isWritable
-   METHOD isMetaDataAvailable
-   METHOD metaData
-   METHOD setMetaData
-   METHOD availableMetaData
+$addMethods
 
 $addSignals
 

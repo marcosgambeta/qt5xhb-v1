@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD lockStatus
-   METHOD searchAndLock
-   METHOD supportedLocks
-   METHOD unlock
+$addMethods
 
 $addSignals
 

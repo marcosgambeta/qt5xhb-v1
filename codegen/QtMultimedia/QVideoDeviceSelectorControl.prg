@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD defaultDevice
-   METHOD deviceCount
-   METHOD deviceDescription
-   METHOD deviceName
-   METHOD selectedDevice
-   METHOD setSelectedDevice
+$addMethods
 
 $addSignals
 

@@ -12,30 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD frameHeight
-   METHOD frameRate
-   METHOD frameSize
-   METHOD frameWidth
-   METHOD handleType
-   METHOD isValid
-   METHOD pixelAspectRatio
-   METHOD pixelFormat
-   METHOD property
-   METHOD propertyNames
-   METHOD scanLineDirection
-   METHOD setFrameRate
-   METHOD setFrameSize
-   METHOD setPixelAspectRatio
-   METHOD setProperty
-   METHOD setScanLineDirection
-   METHOD setViewport
-   METHOD setYCbCrColorSpace
-   METHOD sizeHint
-   METHOD viewport
-   METHOD yCbCrColorSpace
+$addMethods
 
 $endClass
 

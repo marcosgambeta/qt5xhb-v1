@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractVideoBuffer
 
-%%   METHOD new
-   METHOD delete
-
-%%   METHOD map
+$addMethods
 
 $endClass
 

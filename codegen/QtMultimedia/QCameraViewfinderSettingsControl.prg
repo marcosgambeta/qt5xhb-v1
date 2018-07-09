@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD isViewfinderParameterSupported
-   METHOD setViewfinderParameter
-   METHOD viewfinderParameter
+$addMethods
 
 $endClass
 

@@ -12,48 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QMediaBindableInterface
 
-   METHOD new
-   METHOD delete
-
-   METHOD actualLocation
-   METHOD audioCodecDescription
-   METHOD audioSettings
-   METHOD availability
-   METHOD availableMetaData
-   METHOD containerDescription
-   METHOD containerFormat
-   METHOD duration
-   METHOD error
-   METHOD errorString
-   METHOD isAvailable
-   METHOD isMetaDataAvailable
-   METHOD isMetaDataWritable
-   METHOD isMuted
-   METHOD metaData
-   METHOD outputLocation
-   METHOD setAudioSettings
-   METHOD setContainerFormat
-   METHOD setEncodingSettings
-   METHOD setMetaData
-   METHOD setOutputLocation
-   METHOD setVideoSettings
-   METHOD state
-   METHOD status
-   METHOD supportedAudioCodecs
-   METHOD supportedAudioSampleRates
-   METHOD supportedContainers
-   METHOD supportedFrameRates
-   METHOD supportedResolutions
-   METHOD supportedVideoCodecs
-   METHOD videoCodecDescription
-   METHOD videoSettings
-   METHOD volume
-   METHOD mediaObject
-   METHOD pause
-   METHOD record
-   METHOD setMuted
-   METHOD setVolume
-   METHOD stop
+$addMethods
 
 $addSignals
 

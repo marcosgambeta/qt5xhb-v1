@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD audioFormat
-   METHOD bufferAvailable
-   METHOD duration
-   METHOD error
-   METHOD errorString
-   METHOD hasSupport
-   METHOD position
-   METHOD read
-   METHOD setAudioFormat
-   METHOD setSourceDevice
-   METHOD setSourceFilename
-   METHOD sourceDevice
-   METHOD sourceFilename
-   METHOD start
-   METHOD state
-   METHOD stop
+$addMethods
 
 $addSignals
 

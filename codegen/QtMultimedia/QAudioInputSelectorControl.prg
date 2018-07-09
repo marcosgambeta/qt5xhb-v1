@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD activeInput
-   METHOD availableInputs
-   METHOD defaultInput
-   METHOD inputDescription
-   METHOD setActiveInput
+$addMethods
 
 $addSignals
 

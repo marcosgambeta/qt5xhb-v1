@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QMediaServiceProviderFactoryInterface
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD create
-   METHOD release
+$addMethods
 
 $endClass
 

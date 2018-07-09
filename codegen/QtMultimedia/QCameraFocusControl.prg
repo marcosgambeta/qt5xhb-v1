@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD customFocusPoint
-   METHOD focusMode
-   METHOD focusPointMode
-   METHOD focusZones
-   METHOD isFocusModeSupported
-   METHOD isFocusPointModeSupported
-   METHOD setCustomFocusPoint
-   METHOD setFocusMode
-   METHOD setFocusPointMode
+$addMethods
 
 $addSignals
 

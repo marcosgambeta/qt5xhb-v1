@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD supportedImageCodecs
-   METHOD imageCodecDescription
-   METHOD supportedResolutions
-   METHOD imageSettings
-   METHOD setImageSettings
+$addMethods
 
 $endClass
 

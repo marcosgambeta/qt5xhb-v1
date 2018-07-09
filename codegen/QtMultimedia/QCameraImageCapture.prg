@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QMediaBindableInterface
 
-   METHOD new
-   METHOD delete
-
-   METHOD availability
-   METHOD bufferFormat
-   METHOD captureDestination
-   METHOD encodingSettings
-   METHOD error
-   METHOD errorString
-   METHOD imageCodecDescription
-   METHOD isAvailable
-   METHOD isCaptureDestinationSupported
-   METHOD isReadyForCapture
-   METHOD mediaObject
-   METHOD setBufferFormat
-   METHOD setCaptureDestination
-   METHOD setEncodingSettings
-   METHOD supportedBufferFormats
-   METHOD supportedImageCodecs
-   METHOD supportedResolutions
-   METHOD cancelCapture
-   METHOD capture
+$addMethods
 
 $addSignals
 

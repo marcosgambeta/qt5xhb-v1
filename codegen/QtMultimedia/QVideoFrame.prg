@@ -12,41 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-%%   METHOD bits1
-%%   METHOD bits2
-%%   METHOD bits3
-%%   METHOD bits4
-%%   METHOD bits
-   METHOD bytesPerLine
-   METHOD endTime
-   METHOD fieldType
-   METHOD handle
-   METHOD handleType
-   METHOD height
-   METHOD isMapped
-   METHOD isReadable
-   METHOD isValid
-   METHOD isWritable
-   METHOD map
-   METHOD mapMode
-   METHOD mappedBytes
-   METHOD pixelFormat
-   METHOD setEndTime
-   METHOD setFieldType
-   METHOD setStartTime
-   METHOD size
-   METHOD startTime
-   METHOD unmap
-   METHOD width
-   METHOD imageFormatFromPixelFormat
-   METHOD pixelFormatFromImageFormat
-   METHOD planeCount
-%%   METHOD availableMetaData
-   METHOD metaData
-   METHOD setMetaData
+$addMethods
 
 $endClass
 

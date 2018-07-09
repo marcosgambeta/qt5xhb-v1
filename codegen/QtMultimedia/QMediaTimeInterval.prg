@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD contains
-   METHOD end
-   METHOD isNormal
-   METHOD normalized
-   METHOD start
-   METHOD translated
+$addMethods
 
 $endClass
 
