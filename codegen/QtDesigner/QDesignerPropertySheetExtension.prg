@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD count
-   METHOD hasReset
-   METHOD indexOf
-   METHOD isAttribute
-   METHOD isChanged
-   METHOD isVisible
-   METHOD property
-   METHOD propertyGroup
-   METHOD propertyName
-   METHOD reset
-   METHOD setAttribute
-   METHOD setChanged
-   METHOD setProperty
-   METHOD setPropertyGroup
-   METHOD setVisible
+$addMethods
 
 $endClass
 

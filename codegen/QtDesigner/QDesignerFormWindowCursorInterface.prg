@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD current
-   METHOD formWindow
-   METHOD hasSelection
-   METHOD isWidgetSelected
-   METHOD movePosition
-   METHOD position
-   METHOD selectedWidget
-   METHOD selectedWidgetCount
-   METHOD setPosition
-   METHOD widget
-   METHOD widgetCount
+$addMethods
 
 $endClass
 

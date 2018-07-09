@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD addWidget
-   METHOD count
-   METHOD currentIndex
-   METHOD insertWidget
-   METHOD remove
-   METHOD setCurrentIndex
-   METHOD widget
+$addMethods
 
 $endClass
 

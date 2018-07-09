@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD actionEditor
-   METHOD extensionManager
-   METHOD formWindowManager
-   METHOD objectInspector
-   METHOD propertyEditor
-   METHOD setActionEditor
-   METHOD setObjectInspector
-   METHOD setPropertyEditor
-   METHOD setWidgetBox
-   METHOD topLevel
-   METHOD widgetBox
+$addMethods
 
 $endClass
 

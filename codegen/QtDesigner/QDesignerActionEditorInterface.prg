@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD delete
-   METHOD core
-   METHOD manageAction
-   METHOD setFormWindow
+$addMethods
 
 $endClass
 

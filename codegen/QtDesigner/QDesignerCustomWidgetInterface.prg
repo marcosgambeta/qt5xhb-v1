@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD codeTemplate
-   METHOD createWidget
-   METHOD domXml
-   METHOD group
-   METHOD icon
-   METHOD includeFile
-   METHOD initialize
-   METHOD isContainer
-   METHOD isInitialized
-   METHOD name
-   METHOD toolTip
-   METHOD whatsThis
+$addMethods
 
 $endClass
 

@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD load
-   METHOD save
-   METHOD setWorkingDirectory
-   METHOD workingDirectory
+$addMethods
 
 $endClass
 

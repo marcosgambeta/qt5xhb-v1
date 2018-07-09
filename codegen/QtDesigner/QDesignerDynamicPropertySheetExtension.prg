@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD addDynamicProperty
-   METHOD canAddDynamicProperty
-   METHOD dynamicPropertiesAllowed
-   METHOD isDynamicProperty
-   METHOD removeDynamicProperty
+$addMethods
 
 $endClass
 

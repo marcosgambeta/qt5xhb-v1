@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD count
-   METHOD declaredInClass
-   METHOD indexOf
-   METHOD inheritedFromWidget
-   METHOD isSignal
-   METHOD isSlot
-   METHOD isVisible
-   METHOD memberGroup
-   METHOD memberName
-   METHOD parameterNames
-   METHOD parameterTypes
-   METHOD setMemberGroup
-   METHOD setVisible
-   METHOD signature
+$addMethods
 
 $endClass
 

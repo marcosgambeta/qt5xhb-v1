@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD preferredEditAction
-   METHOD taskActions
+$addMethods
 
 $endClass
 

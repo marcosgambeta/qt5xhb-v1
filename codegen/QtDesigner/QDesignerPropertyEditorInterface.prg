@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD delete
-   METHOD core
-   METHOD currentPropertyName
-   METHOD isReadOnly
-   METHOD object
-   METHOD setObject
-   METHOD setPropertyValue
-   METHOD setReadOnly
+$addMethods
 
 $addSignals
 

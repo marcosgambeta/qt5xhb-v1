@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD extension
-   METHOD registerExtensions
-   METHOD unregisterExtensions
+$addMethods
 
 $endClass
 

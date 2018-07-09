@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QAbstractExtensionFactory
 
-   METHOD new
-   METHOD delete
-   METHOD extensionManager
-   METHOD extension
+$addMethods
 
 $endClass
 

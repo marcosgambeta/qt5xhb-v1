@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractFormBuilder
 
-   METHOD new
-   METHOD delete
-   METHOD addPluginPath
-   METHOD clearPluginPaths
-   METHOD customWidgets
-   METHOD pluginPaths
-   METHOD setPluginPath
+$addMethods
 
 $endClass
 
