@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=Qt3DCore::QComponent
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD isRunning
-   METHOD channelMapper
-   METHOD loopCount
-   METHOD clock
-   METHOD setRunning
-   METHOD setChannelMapper
-   METHOD setLoopCount
-   METHOD setClock
-   METHOD start
-   METHOD stop
+$addMethods
 
 $addSignals
 

@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=Qt3DCore::QNodeCreatedChangeBase
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=Qt3DAnimation::QAbstractClipBlendNode
 
-   METHOD new
-   METHOD delete
-
-   METHOD clip
-   METHOD setClip
+$addMethods
 
 $addSignals
 

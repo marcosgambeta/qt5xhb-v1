@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractAnimation
 
-   METHOD new
-   METHOD delete
-
-   METHOD addMorphTarget
-   METHOD easing
-   METHOD getWeights
-   METHOD interpolator
-   METHOD method
-   METHOD morphTargetList
-   METHOD removeMorphTarget
-   METHOD setEasing
-   METHOD setMethod
-   METHOD setMorphTargets
-   METHOD setTarget
-   METHOD setTargetName
-   METHOD setTargetPositions
-   METHOD setWeights
-   METHOD target
-   METHOD targetName
-   METHOD targetPositions
+$addMethods
 
 $addSignals
 

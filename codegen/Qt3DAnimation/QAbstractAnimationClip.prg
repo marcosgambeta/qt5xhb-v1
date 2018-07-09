@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=Qt3DCore::QNode
 
-   METHOD new
-   METHOD delete
-
-   METHOD duration
+$addMethods
 
 $addSignals
 

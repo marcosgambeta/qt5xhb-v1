@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD coordinates
-   METHOD interpolationType
-   METHOD leftControlPoint
-   METHOD rightControlPoint
-   METHOD setCoordinates
-   METHOD setInterpolationType
-   METHOD setLeftControlPoint
-   METHOD setRightControlPoint
+$addMethods
 
 $endClass
 

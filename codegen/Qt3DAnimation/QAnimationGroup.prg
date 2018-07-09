@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD addAnimation
-   METHOD animationList
-   METHOD duration
-   METHOD name
-   METHOD position
-   METHOD removeAnimation
-   METHOD setAnimations
-   METHOD setName
-   METHOD setPosition
+$addMethods
 
 $addSignals
 

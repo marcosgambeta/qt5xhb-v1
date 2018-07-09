@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractAnimation
 
-   METHOD new
-   METHOD delete
-
-   METHOD addKeyframe
-   METHOD easing
-   METHOD endMode
-   METHOD framePositions
-   METHOD keyframeList
-   METHOD removeKeyframe
-   METHOD setEasing
-   METHOD setEndMode
-   METHOD setFramePositions
-   METHOD setKeyframes
-   METHOD setStartMode
-   METHOD setTarget
-   METHOD setTargetName
-   METHOD startMode
-   METHOD target
-   METHOD targetName
+$addMethods
 
 $addSignals
 

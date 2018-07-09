@@ -26,18 +26,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD appendChannelComponent
-   METHOD channelComponentCount
-   METHOD clearChannelComponents
-   METHOD insertChannelComponent
-   METHOD jointIndex
-   METHOD name
-   METHOD removeChannelComponent
-   METHOD setJointIndex
-   METHOD setName
+$addMethods
 
 $endClass
 

@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=Qt3DCore::QNode
 
-   METHOD new
-   METHOD delete
-
-   METHOD playbackRate
-   METHOD setPlaybackRate
+$addMethods
 
 $addSignals
 

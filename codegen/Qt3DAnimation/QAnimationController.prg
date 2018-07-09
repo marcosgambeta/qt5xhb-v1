@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD activeAnimationGroup
-   METHOD addAnimationGroup
-   METHOD animationGroupList
-   METHOD entity
-   METHOD getAnimationIndex
-   METHOD getGroup
-   METHOD position
-   METHOD positionOffset
-   METHOD positionScale
-   METHOD recursive
-   METHOD removeAnimationGroup
-   METHOD setActiveAnimationGroup
-   METHOD setAnimationGroups
-   METHOD setEntity
-   METHOD setPosition
-   METHOD setPositionOffset
-   METHOD setPositionScale
-   METHOD setRecursive
+$addMethods
 
 $addSignals
 

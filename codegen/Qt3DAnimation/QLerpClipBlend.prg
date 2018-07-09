@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractClipBlendNode
 
-   METHOD new
-   METHOD delete
-
-   METHOD blendFactor
-   METHOD startClip
-   METHOD endClip
-   METHOD setBlendFactor
-   METHOD setStartClip
-   METHOD setEndClip
+$addMethods
 
 $addSignals
 

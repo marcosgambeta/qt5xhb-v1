@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractChannelMapping
 
-   METHOD new
-   METHOD delete
-
-   METHOD skeleton
-   METHOD setSkeleton
+$addMethods
 
 $addSignals
 

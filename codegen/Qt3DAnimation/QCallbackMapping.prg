@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractChannelMapping
 
-   METHOD new
-   METHOD delete
-
-   METHOD callback
-   METHOD channelName
-   METHOD setCallback
-   METHOD setChannelName
+$addMethods
 
 $addSignals
 

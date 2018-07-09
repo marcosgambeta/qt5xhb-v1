@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD addAttribute
-   METHOD attributeList
-   METHOD attributeNames
-   METHOD fromGeometry
-   METHOD removeAttribute
-   METHOD setAttributes
+$addMethods
 
 $addSignals
 

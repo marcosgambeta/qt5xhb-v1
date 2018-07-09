@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractAnimation
 
-   METHOD new
-   METHOD delete
-
-   METHOD addMorphTarget
-   METHOD interpolator
-   METHOD morphTargetList
-   METHOD removeMorphTarget
-   METHOD setMorphTargets
-   METHOD setTarget
-   METHOD setTargetName
-   METHOD setTargetPositions
-   METHOD target
-   METHOD targetName
-   METHOD targetPositions
-   METHOD updateAnimation
+$addMethods
 
 $addSignals
 

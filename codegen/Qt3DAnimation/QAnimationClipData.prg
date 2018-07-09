@@ -26,17 +26,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD appendChannel
-   METHOD channelCount
-   METHOD clearChannels
-   METHOD insertChannel
-   METHOD isValid
-   METHOD name
-   METHOD removeChannel
-   METHOD setName
+$addMethods
 
 $endClass
 

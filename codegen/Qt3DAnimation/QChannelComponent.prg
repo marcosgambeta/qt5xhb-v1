@@ -26,16 +26,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD appendKeyFrame
-   METHOD clearKeyFrames
-   METHOD insertKeyFrame
-   METHOD keyFrameCount
-   METHOD name
-   METHOD removeKeyFrame
-   METHOD setName
+$addMethods
 
 $endClass
 
