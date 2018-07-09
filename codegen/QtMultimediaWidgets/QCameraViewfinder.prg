@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QVideoWidget
 
-   METHOD new
-   METHOD delete
-   METHOD mediaObject
+$addMethods
 
 $endClass
 

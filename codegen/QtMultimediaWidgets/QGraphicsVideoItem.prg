@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsObject,QMediaBindableInterface
 
-   METHOD new
-   METHOD delete
-   METHOD mediaObject
-   METHOD aspectRatioMode
-   METHOD setAspectRatioMode
-   METHOD offset
-   METHOD setOffset
-   METHOD size
-   METHOD setSize
-   METHOD nativeSize
-   METHOD boundingRect
-   METHOD paint
+$addMethods
 
 $addSignals
 

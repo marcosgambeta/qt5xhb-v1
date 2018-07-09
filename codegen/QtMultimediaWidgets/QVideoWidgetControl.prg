@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QMediaControl
 
-   METHOD delete
-   METHOD videoWidget
-   METHOD aspectRatioMode
-   METHOD setAspectRatioMode
-   METHOD isFullScreen
-   METHOD setFullScreen
-   METHOD brightness
-   METHOD setBrightness
-   METHOD contrast
-   METHOD setContrast
-   METHOD hue
-   METHOD setHue
-   METHOD saturation
-   METHOD setSaturation
+$addMethods
 
 $addSignals
 

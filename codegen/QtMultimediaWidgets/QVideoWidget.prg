@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget,QMediaBindableInterface
 
-   METHOD new
-   METHOD delete
-   METHOD mediaObject
-   METHOD isFullScreen
-   METHOD aspectRatioMode
-   METHOD brightness
-   METHOD contrast
-   METHOD hue
-   METHOD saturation
-   METHOD sizeHint
-   METHOD setFullScreen
-   METHOD setAspectRatioMode
-   METHOD setBrightness
-   METHOD setContrast
-   METHOD setHue
-   METHOD setSaturation
+$addMethods
 
 $addSignals
 
