@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget,QAxBase
 
-   METHOD new
-   METHOD delete
-   METHOD createAggregate
-   METHOD doVerb
-   METHOD clear
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD asVariant
-   METHOD control
-   METHOD disableClassInfo
-   METHOD disableEventSink
-   METHOD disableMetaObject
-   METHOD dynamicCall
-   METHOD generateDocumentation
-   METHOD isNull
-   METHOD propertyWritable
-   METHOD querySubObject
-   METHOD setControl
-   METHOD setPropertyWritable
-   METHOD verbs
+$addMethods
 
 $addSignals
 

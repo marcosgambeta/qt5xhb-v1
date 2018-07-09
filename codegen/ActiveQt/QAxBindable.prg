@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD createAggregate
-   METHOD readData
-   METHOD reportError
-   METHOD writeData
+$addMethods
 
 $endClass
 

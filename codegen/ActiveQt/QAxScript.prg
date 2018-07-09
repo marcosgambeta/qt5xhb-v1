@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD call
-   METHOD functions
-   METHOD load
-   METHOD scriptCode
-   METHOD scriptEngine
-   METHOD scriptName
+$addMethods
 
 $addSignals
 

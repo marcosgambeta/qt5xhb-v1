@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QAxBase
 
-   METHOD new
-   METHOD delete
-   METHOD doVerb
-   METHOD asVariant
-   METHOD clear
-   METHOD control
-   METHOD disableClassInfo
-   METHOD disableEventSink
-   METHOD disableMetaObject
-   METHOD dynamicCall
-   METHOD generateDocumentation
-   METHOD isNull
-   METHOD propertyWritable
-   METHOD querySubObject
-   METHOD setControl
-   METHOD setPropertyWritable
-   METHOD verbs
+$addMethods
 
 $addSignals
 

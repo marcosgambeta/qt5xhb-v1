@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD appID
-   METHOD classID
-   METHOD createObject
-   METHOD eventsID
-   METHOD exposeToSuperClass
-   METHOD featureList
-   METHOD hasStockEvents
-   METHOD interfaceID
-   METHOD isService
-   METHOD metaObject
-   METHOD registerClass
-   METHOD stayTopLevel
-   METHOD typeLibID
-   METHOD unregisterClass
-   METHOD validateLicenseKey
-   METHOD isServer
-   METHOD registerActiveObject
-   METHOD serverDirPath
-   METHOD serverFilePath
-   METHOD startServer
-   METHOD stopServer
+$addMethods
 
 $endClass
 

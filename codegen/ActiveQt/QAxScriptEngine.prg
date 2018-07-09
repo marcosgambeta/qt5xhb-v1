@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QAxObject
 
-   METHOD new
-   METHOD delete
-   METHOD addItem
-   METHOD hasIntrospection
-   METHOD isValid
-   METHOD scriptLanguage
-   METHOD setState
-   METHOD state
+$addMethods
 
 $endClass
 

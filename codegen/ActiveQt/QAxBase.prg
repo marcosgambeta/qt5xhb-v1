@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD asVariant
-   METHOD clear
-   METHOD control
-   METHOD disableClassInfo
-   METHOD disableEventSink
-   METHOD disableMetaObject
-   METHOD dynamicCall
-   METHOD generateDocumentation
-   METHOD isNull
-   METHOD propertyWritable
-   METHOD querySubObject
-   METHOD setControl
-   METHOD setPropertyWritable
-   METHOD verbs
+$addMethods
 
 %%   METHOD onException
 %%   METHOD onPropertyChanged
