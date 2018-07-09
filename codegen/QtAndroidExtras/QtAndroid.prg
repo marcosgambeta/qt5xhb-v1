@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD androidActivity
-   METHOD androidSdkVersion
-   METHOD startIntentSender
-   METHOD startActivity
+$addMethods
 
 $endClass
 

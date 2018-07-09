@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD callObjectMethod
-   METHOD getObjectField
-   METHOD toString
-   METHOD isValid
-   METHOD callStaticObjectMethod
-   METHOD getStaticObjectField
-   METHOD fromString
-   METHOD isClassAvailable
+$addMethods
 
 $endClass
 

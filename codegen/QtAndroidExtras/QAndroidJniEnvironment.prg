@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD javaVM
+$addMethods
 
 $endClass
 

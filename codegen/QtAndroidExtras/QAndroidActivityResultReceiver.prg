@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD handleActivityResult
+$addMethods
 
 $endClass
 
