@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD clear
-   METHOD image
-   METHOD mimeData
-   METHOD ownsClipboard
-   METHOD ownsFindBuffer
-   METHOD ownsSelection
-   METHOD pixmap
-   METHOD setImage
-   METHOD setMimeData
-   METHOD setPixmap
-   METHOD setText
-   METHOD supportsFindBuffer
-   METHOD supportsSelection
-   METHOD text
+$addMethods
 
 $addSignals
 

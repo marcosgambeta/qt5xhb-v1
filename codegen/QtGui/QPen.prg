@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD brush
-   METHOD capStyle
-   METHOD color
-   METHOD dashOffset
-   METHOD isCosmetic
-   METHOD isSolid
-   METHOD joinStyle
-   METHOD miterLimit
-   METHOD setBrush
-   METHOD setCapStyle
-   METHOD setColor
-   METHOD setCosmetic
-   METHOD setDashOffset
-   METHOD setJoinStyle
-   METHOD setMiterLimit
-   METHOD setStyle
-   METHOD setWidth
-   METHOD setWidthF
-   METHOD style
-   METHOD width
-   METHOD widthF
+$addMethods
 
 $endClass
 

@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD shares
-   METHOD currentContextGroup
+$addMethods
 
 $endClass
 

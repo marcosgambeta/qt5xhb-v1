@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD selection
-   METHOD selectionCount
-   METHOD addSelection
-   METHOD removeSelection
-   METHOD setSelection
-   METHOD cursorPosition
-   METHOD setCursorPosition
-   METHOD text
-   METHOD characterCount
-   METHOD characterRect
-   METHOD offsetAtPoint
-   METHOD scrollToSubstring
-   METHOD attributes
+$addMethods
 
 $endClass
 

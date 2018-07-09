@@ -12,7 +12,7 @@ $addRequests
 
 $beginClassFrom=QAccessibleEvent
 
-   METHOD delete
+$addMethods
 
 $endClass
 

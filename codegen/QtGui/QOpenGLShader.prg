@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD shaderType
-   METHOD compileSourceCode1
-   METHOD compileSourceCode2
-   METHOD compileSourceCode3
-   METHOD compileSourceCode
-   METHOD compileSourceFile
-   METHOD sourceCode
-   METHOD isCompiled
-   METHOD log
-   METHOD shaderId
-   METHOD hasOpenGLShaders
+$addMethods
 
 $endClass
 

@@ -12,39 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD alternateBase
-   METHOD base
-   METHOD brightText
-   METHOD brush
-   METHOD button
-   METHOD buttonText
-   METHOD cacheKey
-   METHOD color
-   METHOD currentColorGroup
-   METHOD dark
-   METHOD highlight
-   METHOD highlightedText
-   METHOD isBrushSet
-   METHOD isCopyOf
-   METHOD isEqual
-   METHOD light
-   METHOD link
-   METHOD linkVisited
-   METHOD mid
-   METHOD midlight
-   METHOD resolve
-   METHOD setBrush
-   METHOD setColor
-   METHOD setColorGroup
-   METHOD setCurrentColorGroup
-   METHOD shadow
-   METHOD text
-   METHOD toolTipBase
-   METHOD toolTipText
-   METHOD window
-   METHOD windowText
+$addMethods
 
 $endClass
 

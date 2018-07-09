@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD setSamples
-   METHOD samples
-   METHOD setMipmap
-   METHOD mipmap
-   METHOD setAttachment
-   METHOD attachment
-   METHOD setTextureTarget
-   METHOD textureTarget
-   METHOD setInternalTextureFormat
-   METHOD internalTextureFormat
+$addMethods
 
 $endClass
 

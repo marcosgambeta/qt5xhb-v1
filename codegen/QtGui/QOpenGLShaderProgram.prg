@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD addShader
-   METHOD removeShader
-   METHOD shaders
-   METHOD addShaderFromSourceCode1
-   METHOD addShaderFromSourceCode2
-   METHOD addShaderFromSourceCode3
-   METHOD addShaderFromSourceCode
-   METHOD addShaderFromSourceFile
-   METHOD removeAllShaders
-   METHOD link
-   METHOD isLinked
-   METHOD log
-   METHOD bind
-   METHOD release
-   METHOD programId
-   METHOD maxGeometryOutputVertices
-   METHOD setPatchVertexCount
-   METHOD patchVertexCount
-   METHOD hasOpenGLShaderPrograms
+$addMethods
 
 $endClass
 

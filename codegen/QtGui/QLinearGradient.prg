@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QGradient
 
-   METHOD new
-   METHOD delete
-   METHOD finalStop
-   METHOD setFinalStop
-   METHOD setStart
-   METHOD start
+$addMethods
 
 $endClass
 

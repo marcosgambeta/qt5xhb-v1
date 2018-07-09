@@ -12,30 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isNull
-   METHOD isIdentity
-   METHOD vector
-   METHOD setVector
-   METHOD x
-   METHOD y
-   METHOD z
-   METHOD scalar
-   METHOD setX
-   METHOD setY
-   METHOD setZ
-   METHOD setScalar
-   METHOD length
-   METHOD lengthSquared
-   METHOD normalized
-   METHOD normalize
-   METHOD conjugate
-   METHOD rotatedVector
-   METHOD toVector4D
-   METHOD fromAxisAndAngle
-   METHOD slerp
-   METHOD nlerp
+$addMethods
 
 $endClass
 

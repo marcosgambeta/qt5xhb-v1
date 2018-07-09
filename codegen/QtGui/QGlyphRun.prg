@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD overline
-   METHOD rawFont
-   METHOD setOverline
-%%   METHOD setRawData
-   METHOD setRawFont
-   METHOD setStrikeOut
-   METHOD setUnderline
-   METHOD strikeOut
-   METHOD underline
+$addMethods
 
 $endClass
 

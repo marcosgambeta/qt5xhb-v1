@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QSurface
 
-   METHOD new
-   METHOD delete
-   METHOD surfaceType
-   METHOD create
-   METHOD destroy
-   METHOD isValid
-   METHOD setFormat
-   METHOD format
-   METHOD requestedFormat
-   METHOD size
-   METHOD screen
-   METHOD setScreen
-%%   METHOD handle
+$addMethods
 
 $addSignals
 

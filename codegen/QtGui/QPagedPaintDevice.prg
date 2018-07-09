@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QPaintDevice
 
-   METHOD delete
-   METHOD newPage
-   METHOD pageSize
-   METHOD setPageSize
-   METHOD pageSizeMM
-   METHOD setPageSizeMM
-   METHOD pageLayout
-   METHOD setPageLayout
-   METHOD setPageOrientation
-   METHOD setPageMargins
+$addMethods
 
 $endClass
 

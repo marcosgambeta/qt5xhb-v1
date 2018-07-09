@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QValidator
 
-   METHOD new
-   METHOD delete
-   METHOD regExp
-   METHOD setRegExp
-   METHOD validate
+$addMethods
 
 $endClass
 

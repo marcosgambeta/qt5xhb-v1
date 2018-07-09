@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QEvent
 
-   METHOD new
-   METHOD delete
-   METHOD contentPos
-   METHOD overshootDistance
-   METHOD scrollState
+$addMethods
 
 $endClass
 

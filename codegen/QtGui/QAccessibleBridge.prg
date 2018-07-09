@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD setRootObject
-   METHOD notifyAccessibilityUpdate
+$addMethods
 
 $endClass
 

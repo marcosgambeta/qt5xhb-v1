@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QPixmap
 
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD transformed
-   METHOD fromData
-   METHOD fromImage
-   METHOD toVariant
-   METHOD fromVariant
+$addMethods
 
 $endClass
 

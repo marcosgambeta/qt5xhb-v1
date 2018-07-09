@@ -12,44 +12,7 @@ $addRequests
 
 $beginClassFrom=QCoreApplication
 
-   METHOD new
-   METHOD delete
-   METHOD notify
-   METHOD allWindows
-   METHOD applicationDisplayName
-   METHOD changeOverrideCursor
-   METHOD clipboard
-   METHOD desktopSettingsAware
-   METHOD exec
-   METHOD focusObject
-   METHOD focusWindow
-   METHOD font
-   METHOD inputMethod
-   METHOD isLeftToRight
-   METHOD isRightToLeft
-   METHOD keyboardModifiers
-   METHOD layoutDirection
-   METHOD modalWindow
-   METHOD mouseButtons
-   METHOD overrideCursor
-   METHOD palette
-   METHOD platformName
-%%   METHOD platformNativeInterface
-   METHOD primaryScreen
-   METHOD queryKeyboardModifiers
-   METHOD quitOnLastWindowClosed
-   METHOD restoreOverrideCursor
-   METHOD screens
-   METHOD setApplicationDisplayName
-   METHOD setDesktopSettingsAware
-   METHOD setFont
-   METHOD setLayoutDirection
-   METHOD setOverrideCursor
-   METHOD setPalette
-   METHOD setQuitOnLastWindowClosed
-   METHOD styleHints
-   METHOD topLevelAt
-   METHOD topLevelWindows
+$addMethods
 
 $addSignals
 

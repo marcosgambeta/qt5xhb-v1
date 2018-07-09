@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD anchorAt
-   METHOD blockBoundingRect
-   METHOD document
-   METHOD documentSize
-   METHOD frameBoundingRect
-   METHOD handlerForObject
-   METHOD hitTest
-   METHOD pageCount
-   METHOD paintDevice
-   METHOD registerHandler
-   METHOD setPaintDevice
+$addMethods
 
 $addSignals
 

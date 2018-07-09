@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QValidator
 
-   METHOD new
-   METHOD delete
-   METHOD bottom
-   METHOD fixup
-   METHOD locale
-   METHOD setBottom
-   METHOD setLocale
-   METHOD setRange
-   METHOD setTop
-   METHOD top
-   METHOD validate
+$addMethods
 
 $addSignals
 

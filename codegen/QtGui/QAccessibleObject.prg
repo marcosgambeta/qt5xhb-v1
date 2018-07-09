@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QAccessibleInterface
 
-   METHOD isValid
-   METHOD object
-   METHOD rect
-   METHOD setText
-   METHOD childAt
+$addMethods
 
 $endClass
 

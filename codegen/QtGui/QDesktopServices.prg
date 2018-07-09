@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD openUrl
-   METHOD setUrlHandler
-   METHOD unsetUrlHandler
+$addMethods
 
 $endClass
 

@@ -12,78 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD clone
-   METHOD isEmpty
-   METHOD clear
-   METHOD setUndoRedoEnabled
-   METHOD isUndoRedoEnabled
-   METHOD isUndoAvailable
-   METHOD isRedoAvailable
-   METHOD availableUndoSteps
-   METHOD availableRedoSteps
-   METHOD revision
-   METHOD setDocumentLayout
-   METHOD documentLayout
-   METHOD setMetaInformation
-   METHOD metaInformation
-   METHOD toHtml
-   METHOD setHtml
-   METHOD toPlainText
-   METHOD setPlainText
-   METHOD characterAt
-   METHOD find
-   METHOD frameAt
-   METHOD rootFrame
-   METHOD object
-   METHOD objectForFormat
-   METHOD findBlock
-   METHOD findBlockByNumber
-   METHOD findBlockByLineNumber
-   METHOD begin
-   METHOD end
-   METHOD firstBlock
-   METHOD lastBlock
-   METHOD setPageSize
-   METHOD pageSize
-   METHOD setDefaultFont
-   METHOD defaultFont
-   METHOD pageCount
-   METHOD isModified
-   METHOD print
-   METHOD resource
-   METHOD addResource
-   METHOD markContentsDirty
-   METHOD setUseDesignMetrics
-   METHOD useDesignMetrics
-   METHOD drawContents
-   METHOD setTextWidth
-   METHOD textWidth
-   METHOD idealWidth
-   METHOD indentWidth
-   METHOD setIndentWidth
-   METHOD documentMargin
-   METHOD setDocumentMargin
-   METHOD adjustSize
-   METHOD size
-   METHOD blockCount
-   METHOD lineCount
-   METHOD characterCount
-   METHOD setDefaultStyleSheet
-   METHOD defaultStyleSheet
-   METHOD clearUndoRedoStacks
-   METHOD maximumBlockCount
-   METHOD setMaximumBlockCount
-   METHOD defaultTextOption
-   METHOD setDefaultTextOption
-   METHOD defaultCursorMoveStyle
-   METHOD setDefaultCursorMoveStyle
-   METHOD undo
-   METHOD redo
-%%   METHOD appendUndoItem
-   METHOD setModified
-%%   METHOD docHandle
+$addMethods
 
 $addSignals
 

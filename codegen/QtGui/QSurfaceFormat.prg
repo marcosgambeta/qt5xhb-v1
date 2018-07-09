@@ -12,37 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD setDepthBufferSize
-   METHOD depthBufferSize
-   METHOD setStencilBufferSize
-   METHOD stencilBufferSize
-   METHOD setRedBufferSize
-   METHOD redBufferSize
-   METHOD setGreenBufferSize
-   METHOD greenBufferSize
-   METHOD setBlueBufferSize
-   METHOD blueBufferSize
-   METHOD setAlphaBufferSize
-   METHOD alphaBufferSize
-   METHOD setSamples
-   METHOD samples
-   METHOD setSwapBehavior
-   METHOD swapBehavior
-   METHOD hasAlpha
-   METHOD setProfile
-   METHOD profile
-   METHOD setRenderableType
-   METHOD renderableType
-   METHOD setMajorVersion
-   METHOD majorVersion
-   METHOD setMinorVersion
-   METHOD minorVersion
-   METHOD stereo
-   METHOD setStereo
-   METHOD setOption
-   METHOD testOption
+$addMethods
 
 $endClass
 

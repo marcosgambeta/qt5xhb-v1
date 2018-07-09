@@ -12,47 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addEllipse
-   METHOD addPath
-   METHOD addPolygon
-   METHOD addRect
-   METHOD addRegion
-   METHOD addRoundedRect
-   METHOD addText
-   METHOD angleAtPercent
-   METHOD arcMoveTo
-   METHOD arcTo
-   METHOD boundingRect
-   METHOD closeSubpath
-   METHOD connectPath
-   METHOD contains
-   METHOD controlPointRect
-   METHOD cubicTo
-   METHOD currentPosition
-   METHOD elementCount
-   METHOD fillRule
-   METHOD intersected
-   METHOD intersects
-   METHOD isEmpty
-   METHOD length
-   METHOD lineTo
-   METHOD moveTo
-   METHOD percentAtLength
-   METHOD pointAtPercent
-   METHOD quadTo
-   METHOD setElementPositionAt
-   METHOD setFillRule
-   METHOD simplified
-   METHOD slopeAtPercent
-   METHOD subtracted
-   METHOD swap
-   METHOD toFillPolygon
-   METHOD toReversed
-   METHOD translate
-   METHOD translated
-   METHOD united
+$addMethods
 
 $endClass
 

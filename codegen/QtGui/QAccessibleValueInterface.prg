@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD currentValue
-   METHOD setCurrentValue
-   METHOD maximumValue
-   METHOD minimumValue
-   METHOD minimumStepSize
+$addMethods
 
 $endClass
 

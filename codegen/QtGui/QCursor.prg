@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD bitmap
-   METHOD hotSpot
-   METHOD mask
-   METHOD pixmap
-   METHOD setShape
-   METHOD shape
-   METHOD pos
-   METHOD setPos
+$addMethods
 
 $endClass
 

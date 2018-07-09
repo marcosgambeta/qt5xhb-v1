@@ -12,67 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD bold
-   METHOD capitalization
-   METHOD defaultFamily
-   METHOD exactMatch
-   METHOD family
-   METHOD fixedPitch
-   METHOD fromString
-   METHOD isCopyOf
-   METHOD italic
-   METHOD kerning
-   METHOD key
-   METHOD lastResortFamily
-   METHOD lastResortFont
-   METHOD letterSpacing
-   METHOD letterSpacingType
-   METHOD overline
-   METHOD pixelSize
-   METHOD pointSize
-   METHOD pointSizeF
-   METHOD rawMode
-   METHOD rawName
-   METHOD resolve
-   METHOD setBold
-   METHOD setCapitalization
-   METHOD setFamily
-   METHOD setFixedPitch
-   METHOD setItalic
-   METHOD setKerning
-   METHOD setLetterSpacing
-   METHOD setOverline
-   METHOD setPixelSize
-   METHOD setPointSize
-   METHOD setPointSizeF
-   METHOD setRawMode
-   METHOD setRawName
-   METHOD setStretch
-   METHOD setStrikeOut
-   METHOD setStyle
-   METHOD setStyleHint
-   METHOD setStyleStrategy
-   METHOD setUnderline
-   METHOD setWeight
-   METHOD setWordSpacing
-   METHOD stretch
-   METHOD strikeOut
-   METHOD style
-   METHOD styleHint
-   METHOD styleStrategy
-   METHOD toString
-   METHOD underline
-   METHOD weight
-   METHOD wordSpacing
-   METHOD insertSubstitution
-   METHOD insertSubstitutions
-   METHOD substitute
-   METHOD substitutes
-   METHOD substitutions
-   METHOD toVariant
-   METHOD fromVariant
+$addMethods
 
 $endClass
 

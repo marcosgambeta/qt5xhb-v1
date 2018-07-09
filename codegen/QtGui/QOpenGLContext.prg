@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD create
-   METHOD defaultFramebufferObject
-   METHOD doneCurrent
-   METHOD format
-   METHOD functions
-%%   METHOD getProcAddress
-   METHOD hasExtension
-   METHOD isValid
-   METHOD makeCurrent
-   METHOD screen
-   METHOD setFormat
-   METHOD setScreen
-   METHOD setShareContext
-   METHOD shareContext
-   METHOD shareGroup
-   METHOD surface
-   METHOD swapBuffers
-   METHOD areSharing
-   METHOD currentContext
+$addMethods
 
 $addSignals
 

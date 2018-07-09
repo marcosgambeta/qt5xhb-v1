@@ -12,35 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD column
-   METHOD setColumn
-   METHOD row
-   METHOD setRow
-   METHOD isAffine
-   METHOD isIdentity
-   METHOD setToIdentity
-   METHOD fill
-   METHOD determinant
-   METHOD inverted
-   METHOD transposed
-   METHOD normalMatrix
-   METHOD scale
-   METHOD translate
-   METHOD rotate
-   METHOD ortho
-   METHOD frustum
-   METHOD perspective
-   METHOD lookAt
-   METHOD viewport
-   METHOD flipCoordinates
-   METHOD toAffine
-   METHOD toTransform
-   METHOD map
-   METHOD mapVector
-   METHOD mapRect
-   METHOD optimize
+$addMethods
 
 $endClass
 

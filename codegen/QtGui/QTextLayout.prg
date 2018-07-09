@@ -12,43 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD setFont
-   METHOD font
-   METHOD setRawFont
-   METHOD setText
-   METHOD text
-   METHOD setTextOption
-   METHOD textOption
-   METHOD setPreeditArea
-   METHOD preeditAreaPosition
-   METHOD preeditAreaText
-   METHOD clearAdditionalFormats
-   METHOD setCacheEnabled
-   METHOD cacheEnabled
-   METHOD setCursorMoveStyle
-   METHOD cursorMoveStyle
-   METHOD beginLayout
-   METHOD endLayout
-   METHOD clearLayout
-   METHOD createLine
-   METHOD lineCount
-   METHOD lineAt
-   METHOD lineForTextPosition
-   METHOD isValidCursorPosition
-   METHOD nextCursorPosition
-   METHOD previousCursorPosition
-   METHOD leftCursorPosition
-   METHOD rightCursorPosition
-   METHOD drawCursor
-   METHOD position
-   METHOD setPosition
-   METHOD boundingRect
-   METHOD minimumWidth
-   METHOD maximumWidth
-%%   METHOD engine
-   METHOD setFlags
+$addMethods
 
 $endClass
 

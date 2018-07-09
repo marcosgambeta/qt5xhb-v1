@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD backgroundBrush
-   METHOD backgroundMode
-   METHOD brush
-   METHOD brushNeedsResolving
-   METHOD brushOrigin
-   METHOD clipOperation
-   METHOD clipPath
-   METHOD clipRegion
-   METHOD compositionMode
-   METHOD font
-   METHOD isClipEnabled
-   METHOD opacity
-   METHOD painter
-   METHOD pen
-   METHOD penNeedsResolving
-   METHOD renderHints
-   METHOD state
-   METHOD transform
+$addMethods
 
 $endClass
 

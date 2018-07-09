@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD isEquivalentTo
-   METHOD isValid
-   METHOD key
-   METHOD name
-   METHOD id
-   METHOD windowsId
-   METHOD definitionSize
-   METHOD definitionUnits
-   METHOD size
-   METHOD sizePoints
-   METHOD sizePixels
-   METHOD rect
-   METHOD rectPoints
-   METHOD rectPixels
+$addMethods
 
 $endClass
 

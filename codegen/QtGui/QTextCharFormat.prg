@@ -12,67 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextFormat
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD setFont
-   METHOD font
-   METHOD setFontFamily
-   METHOD fontFamily
-   METHOD setFontPointSize
-   METHOD fontPointSize
-   METHOD setFontWeight
-   METHOD fontWeight
-   METHOD setFontItalic
-   METHOD fontItalic
-   METHOD setFontCapitalization
-   METHOD fontCapitalization
-   METHOD setFontLetterSpacingType
-   METHOD fontLetterSpacingType
-   METHOD setFontLetterSpacing
-   METHOD fontLetterSpacing
-   METHOD setFontWordSpacing
-   METHOD fontWordSpacing
-   METHOD setFontUnderline
-   METHOD fontUnderline
-   METHOD setFontOverline
-   METHOD fontOverline
-   METHOD setFontStrikeOut
-   METHOD fontStrikeOut
-   METHOD setUnderlineColor
-   METHOD underlineColor
-   METHOD setFontFixedPitch
-   METHOD fontFixedPitch
-   METHOD setFontStretch
-   METHOD fontStretch
-   METHOD setFontStyleHint
-   METHOD setFontStyleStrategy
-   METHOD fontStyleHint
-   METHOD fontStyleStrategy
-   METHOD setFontHintingPreference
-   METHOD fontHintingPreference
-   METHOD setFontKerning
-   METHOD fontKerning
-   METHOD setUnderlineStyle
-   METHOD underlineStyle
-   METHOD setVerticalAlignment
-   METHOD verticalAlignment
-   METHOD setTextOutline
-   METHOD textOutline
-   METHOD setToolTip
-   METHOD toolTip
-   METHOD setAnchor
-   METHOD isAnchor
-   METHOD setAnchorHref
-   METHOD anchorHref
-   METHOD setAnchorName
-   METHOD anchorName
-   METHOD setAnchorNames
-   METHOD anchorNames
-   METHOD setTableCellRowSpan
-   METHOD tableCellRowSpan
-   METHOD setTableCellColumnSpan
-   METHOD tableCellColumnSpan
+$addMethods
 
 $endClass
 

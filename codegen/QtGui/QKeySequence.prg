@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD count
-   METHOD isEmpty
-   METHOD matches
-   METHOD toString
-   METHOD fromString
-   METHOD keyBindings
-   METHOD mnemonic
+$addMethods
 
 $endClass
 

@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD color
-   METHOD gradient
-   METHOD isOpaque
-   METHOD matrix
-   METHOD setColor
-   METHOD setMatrix
-   METHOD setStyle
-   METHOD setTexture
-   METHOD setTextureImage
-   METHOD setTransform
-   METHOD style
-   METHOD texture
-   METHOD textureImage
-   METHOD transform
-   METHOD toVariant
-   METHOD fromVariant
+$addMethods
 
 $endClass
 

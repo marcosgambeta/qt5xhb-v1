@@ -14,12 +14,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-   METHOD setDocument
-   METHOD document
-   METHOD rehighlight
-   METHOD rehighlightBlock
+$addMethods
 
 $endClass
 

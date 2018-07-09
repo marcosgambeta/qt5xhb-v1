@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QEvent
 
-   METHOD new
-   METHOD delete
-   METHOD startPos
-   METHOD viewportSize
-   METHOD contentPosRange
-   METHOD contentPos
-   METHOD setViewportSize
-   METHOD setContentPosRange
-   METHOD setContentPos
+$addMethods
 
 $endClass
 

@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD setText
-   METHOD text
-   METHOD setTextFormat
-   METHOD textFormat
-   METHOD setTextWidth
-   METHOD textWidth
-   METHOD setTextOption
-   METHOD textOption
-   METHOD size
-   METHOD prepare
-   METHOD setPerformanceHint
-   METHOD performanceHint
+$addMethods
 
 $endClass
 

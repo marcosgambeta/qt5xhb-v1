@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD setAlignment
-   METHOD alignment
-   METHOD setSkipImages
-   METHOD skipImages
-   METHOD setSkipRows
-   METHOD skipRows
-   METHOD setSkipPixels
-   METHOD skipPixels
-   METHOD setImageHeight
-   METHOD imageHeight
-   METHOD setRowLength
-   METHOD rowLength
-   METHOD setLeastSignificantByteFirst
-   METHOD isLeastSignificantBitFirst
-   METHOD setSwapBytesEnabled
-   METHOD isSwapBytesEnabled
+$addMethods
 
 $endClass
 

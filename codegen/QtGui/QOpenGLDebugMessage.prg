@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD source
-   METHOD type
-   METHOD severity
-   METHOD id
-   METHOD message
-   METHOD createApplicationMessage
-   METHOD createThirdPartyMessage
+$addMethods
 
 $endClass
 

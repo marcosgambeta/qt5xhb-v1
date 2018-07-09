@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD actionNames
-   METHOD localizedActionName
-   METHOD localizedActionDescription
-   METHOD doAction
-   METHOD keyBindingsForAction
-   METHOD pressAction
-   METHOD increaseAction
-   METHOD decreaseAction
-   METHOD showMenuAction
-   METHOD setFocusAction
-   METHOD toggleAction
+$addMethods
 
 $endClass
 

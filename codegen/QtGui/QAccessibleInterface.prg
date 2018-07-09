@@ -12,30 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD isValid
-   METHOD object
-   METHOD window
-   METHOD focusChild
-   METHOD childAt
-   METHOD parent
-   METHOD child
-   METHOD childCount
-   METHOD indexOfChild
-   METHOD text
-   METHOD setText
-   METHOD rect
-   METHOD role
-   METHOD foregroundColor
-   METHOD backgroundColor
-   METHOD textInterface
-   METHOD editableTextInterface
-   METHOD valueInterface
-   METHOD actionInterface
-   METHOD imageInterface
-   METHOD tableInterface
-   METHOD tableCellInterface
-   METHOD virtual_hook
-   METHOD interface_cast
+$addMethods
 
 $endClass
 

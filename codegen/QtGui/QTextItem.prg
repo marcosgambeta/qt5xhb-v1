@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD descent
-   METHOD ascent
-   METHOD width
-   METHOD renderFlags
-   METHOD text
-   METHOD font
+$addMethods
 
 $endClass
 

@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QPagedPaintDevice
 
-   METHOD new
-   METHOD delete
-   METHOD title
-   METHOD setTitle
-   METHOD creator
-   METHOD setCreator
-   METHOD newPage
-   METHOD setPageSize
-   METHOD setPageSizeMM
-   METHOD resolution
-   METHOD setResolution
-   METHOD pageLayout
-   METHOD pdfVersion
-   METHOD setPageLayout
-   METHOD setPageMargins
-   METHOD setPageOrientation
-   METHOD setPdfVersion
+$addMethods
 
 $endClass
 

@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD setFormat
-   METHOD format
-   METHOD setDevice
-   METHOD device
-   METHOD setFileName
-   METHOD fileName
-   METHOD write
-   METHOD setCodec
-   METHOD codec
+$addMethods
 
 $endClass
 

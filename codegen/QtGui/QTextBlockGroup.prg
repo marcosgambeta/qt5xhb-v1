@@ -12,6 +12,8 @@ $addRequests
 
 $beginClassFrom=QTextObject
 
+$addMethods
+
 $endClass
 
 $destructor

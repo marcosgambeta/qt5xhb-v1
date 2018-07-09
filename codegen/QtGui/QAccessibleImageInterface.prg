@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD imageDescription
-   METHOD imageSize
+$addMethods
 
 $endClass
 

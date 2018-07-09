@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QDropEvent
 
-   METHOD new
-   METHOD delete
-   METHOD accept
-   METHOD answerRect
-   METHOD ignore
+$addMethods
 
 $endClass
 

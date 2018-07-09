@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QAccessibleEvent
 
-   METHOD new
-   METHOD delete
-   METHOD setCursorPosition
-   METHOD cursorPosition
+$addMethods
 
 $endClass
 

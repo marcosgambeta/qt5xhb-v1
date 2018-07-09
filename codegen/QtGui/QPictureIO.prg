@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD picture
-   METHOD status
-   METHOD format
-   METHOD ioDevice
-   METHOD fileName
-   METHOD quality
-   METHOD description
-   METHOD parameters
-   METHOD gamma
-   METHOD setPicture
-   METHOD setStatus
-   METHOD setFormat
-   METHOD setIODevice
-   METHOD setFileName
-   METHOD setQuality
-   METHOD setDescription
-   METHOD setParameters
-   METHOD setGamma
-   METHOD read
-   METHOD write
-   METHOD pictureFormat
-   METHOD inputFormats
-   METHOD outputFormats
+$addMethods
 
 $endClass
 

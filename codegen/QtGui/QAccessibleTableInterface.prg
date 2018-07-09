@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD cellAt
-   METHOD caption
-   METHOD columnDescription
-   METHOD columnCount
-   METHOD rowCount
-   METHOD selectedCellCount
-   METHOD selectedColumnCount
-   METHOD selectedRowCount
-   METHOD rowDescription
-   METHOD selectedCells
-   METHOD selectedColumns
-   METHOD selectedRows
-   METHOD summary
-   METHOD isColumnSelected
-   METHOD isRowSelected
-   METHOD selectRow
-   METHOD selectColumn
-   METHOD unselectRow
-   METHOD unselectColumn
+$addMethods
 
 $endClass
 

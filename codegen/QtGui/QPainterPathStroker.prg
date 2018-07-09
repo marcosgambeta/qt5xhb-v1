@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD capStyle
-   METHOD createStroke
-   METHOD curveThreshold
-   METHOD dashOffset
-   METHOD dashPattern
-   METHOD joinStyle
-   METHOD miterLimit
-   METHOD setCapStyle
-   METHOD setCurveThreshold
-   METHOD setDashOffset
-   METHOD setDashPattern
-   METHOD setJoinStyle
-   METHOD setMiterLimit
-   METHOD setWidth
-   METHOD width
+$addMethods
 
 $endClass
 

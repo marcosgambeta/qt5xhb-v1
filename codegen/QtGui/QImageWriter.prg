@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD canWrite
-   METHOD compression
-   METHOD device
-   METHOD error
-   METHOD errorString
-   METHOD fileName
-   METHOD format
-   METHOD gamma
-   METHOD quality
-   METHOD setCompression
-   METHOD setDevice
-   METHOD setFileName
-   METHOD setFormat
-   METHOD setGamma
-   METHOD setQuality
-   METHOD setText
-   METHOD supportsOption
-   METHOD write
-   METHOD supportedImageFormats
+$addMethods
 
 $endClass
 

@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD create
-   METHOD destroy
-   METHOD isCreated
-   METHOD objectId
-   METHOD begin
-   METHOD end
-   METHOD waitForTimestamp
-   METHOD recordTimestamp
-   METHOD isResultAvailable
-   METHOD waitForResult
+$addMethods
 
 $endClass
 

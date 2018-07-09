@@ -12,39 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD isValid
-   METHOD position
-   METHOD length
-   METHOD contains
-   METHOD layout
-   METHOD clearLayout
-   METHOD blockFormat
-   METHOD blockFormatIndex
-   METHOD charFormat
-   METHOD charFormatIndex
-   METHOD textDirection
-   METHOD text
-   METHOD document
-   METHOD textList
-   METHOD userData
-   METHOD setUserData
-   METHOD userState
-   METHOD setUserState
-   METHOD revision
-   METHOD setRevision
-   METHOD isVisible
-   METHOD setVisible
-   METHOD blockNumber
-   METHOD firstLineNumber
-   METHOD setLineCount
-   METHOD lineCount
-   METHOD next
-   METHOD previous
-%%   METHOD docHandle
-   METHOD fragmentIndex
+$addMethods
 
 $endClass
 

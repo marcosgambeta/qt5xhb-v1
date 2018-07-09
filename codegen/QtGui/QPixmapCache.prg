@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD cacheLimit
-   METHOD setCacheLimit
-   METHOD find1
-   METHOD find2
-   METHOD find3
-   METHOD find
-   METHOD insert1
-   METHOD insert
-   METHOD remove1
-   METHOD remove
-   METHOD clear
+$addMethods
 
 $endClass
 

@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QPaintDevice
 
-   METHOD new
-   METHOD delete
-   METHOD devType
-   METHOD paintEngine
-   METHOD context
-   METHOD size
-   METHOD setSize
-   METHOD setDevicePixelRatio
-   METHOD dotsPerMeterX
-   METHOD dotsPerMeterY
-   METHOD setDotsPerMeterX
-   METHOD setDotsPerMeterY
-   METHOD setPaintFlipped
-   METHOD paintFlipped
-   METHOD ensureActiveTarget
+$addMethods
 
 $endClass
 

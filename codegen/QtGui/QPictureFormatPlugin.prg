@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD loadPicture
-   METHOD savePicture
-   METHOD installIOHandler
+$addMethods
 
 $endClass
 

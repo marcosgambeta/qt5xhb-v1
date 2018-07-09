@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD allocate
-   METHOD bind
-   METHOD bufferId
-   METHOD create
-   METHOD destroy
-   METHOD isCreated
-   METHOD map
-   METHOD read
-   METHOD release
-   METHOD setUsagePattern
-   METHOD size
-   METHOD type
-   METHOD unmap
-   METHOD usagePattern
-   METHOD write
+$addMethods
 
 $endClass
 

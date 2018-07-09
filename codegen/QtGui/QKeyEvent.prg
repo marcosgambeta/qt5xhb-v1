@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QInputEvent
 
-   METHOD new
-   METHOD delete
-   METHOD count
-   METHOD isAutoRepeat
-   METHOD key
-   METHOD matches
-   METHOD modifiers
-   METHOD nativeModifiers
-   METHOD nativeScanCode
-   METHOD nativeVirtualKey
-   METHOD text
+$addMethods
 
 $endClass
 

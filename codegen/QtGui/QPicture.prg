@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QPaintDevice
 
-   METHOD new
-   METHOD delete
-   METHOD boundingRect
-   METHOD data
-   METHOD isNull
-   METHOD load
-   METHOD play
-   METHOD save
-   METHOD setBoundingRect
-   METHOD setData
-   METHOD size
-   METHOD swap
+$addMethods
 
 $endClass
 

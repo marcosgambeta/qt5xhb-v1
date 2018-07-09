@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD canRead
-   METHOD currentImageNumber
-   METHOD currentImageRect
-   METHOD device
-   METHOD format
-   METHOD imageCount
-   METHOD jumpToImage
-   METHOD jumpToNextImage
-   METHOD loopCount
-   METHOD nextImageDelay
-   METHOD option
-   METHOD read
-   METHOD setDevice
-   METHOD setFormat
-   METHOD setOption
-   METHOD supportsOption
-   METHOD write
+$addMethods
 
 $endClass
 

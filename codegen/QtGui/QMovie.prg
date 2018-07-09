@@ -12,36 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD backgroundColor
-   METHOD cacheMode
-   METHOD currentFrameNumber
-   METHOD currentImage
-   METHOD currentPixmap
-   METHOD device
-   METHOD fileName
-   METHOD format
-   METHOD frameCount
-   METHOD frameRect
-   METHOD isValid
-   METHOD jumpToFrame
-   METHOD loopCount
-   METHOD nextFrameDelay
-   METHOD scaledSize
-   METHOD setBackgroundColor
-   METHOD setCacheMode
-   METHOD setDevice
-   METHOD setFileName
-   METHOD setFormat
-   METHOD setScaledSize
-   METHOD speed
-   METHOD state
-   METHOD jumpToNextFrame
-   METHOD setPaused
-   METHOD setSpeed
-   METHOD start
-   METHOD stop
+$addMethods
 
 $addSignals
 

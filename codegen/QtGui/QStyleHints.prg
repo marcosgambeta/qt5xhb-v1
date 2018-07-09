@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD mouseDoubleClickInterval
-   METHOD startDragDistance
-   METHOD startDragTime
-   METHOD startDragVelocity
-   METHOD keyboardInputInterval
-   METHOD keyboardAutoRepeatRate
-   METHOD cursorFlashTime
-   METHOD showIsFullScreen
-   METHOD passwordMaskDelay
-   METHOD fontSmoothingGamma
-   METHOD useRtlExtensions
+$addMethods
 
 $endClass
 

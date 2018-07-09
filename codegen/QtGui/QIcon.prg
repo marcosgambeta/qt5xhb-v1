@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD actualSize
-   METHOD addFile
-   METHOD addPixmap
-   METHOD availableSizes
-   METHOD cacheKey
-   METHOD isNull
-   METHOD name
-   METHOD paint
-   METHOD pixmap
-   METHOD fromTheme
-   METHOD hasThemeIcon
-   METHOD setThemeName
-   METHOD setThemeSearchPaths
-   METHOD themeName
-   METHOD themeSearchPaths
-   METHOD toVariant
-   METHOD fromVariant
+$addMethods
 
 $endClass
 

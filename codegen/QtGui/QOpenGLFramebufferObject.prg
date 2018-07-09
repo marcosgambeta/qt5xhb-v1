@@ -12,33 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
-   METHOD new8
-   METHOD new
-   METHOD delete
-   METHOD format
-   METHOD isValid
-   METHOD isBound
-   METHOD bind
-   METHOD release
-   METHOD width
-   METHOD height
-   METHOD texture
-   METHOD size
-   METHOD toImage
-   METHOD attachment
-   METHOD setAttachment
-   METHOD handle
-   METHOD bindDefault
-   METHOD hasOpenGLFramebufferObjects
-   METHOD hasOpenGLFramebufferBlit
-   METHOD blitFramebuffer
+$addMethods
 
 $endClass
 

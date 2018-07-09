@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD fixup
-   METHOD locale
-   METHOD setLocale
-   METHOD validate
+$addMethods
 
 $endClass
 

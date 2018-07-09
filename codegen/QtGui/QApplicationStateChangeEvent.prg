@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QEvent
 
-   METHOD new
-   METHOD applicationState
+$addMethods
 
 $endClass
 

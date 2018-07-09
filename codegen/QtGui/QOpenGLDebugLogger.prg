@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD initialize
-   METHOD isLogging
-   METHOD loggingMode
-   METHOD maximumMessageLength
-   METHOD pushGroup
-   METHOD popGroup
-   METHOD logMessage
-   METHOD startLogging
-   METHOD stopLogging
+$addMethods
 
 $addSignals
 

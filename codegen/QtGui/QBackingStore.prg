@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD beginPaint
-   METHOD endPaint
-   METHOD flush
-%%   METHOD handle
-   METHOD hasStaticContents
-   METHOD paintDevice
-   METHOD resize
-   METHOD scroll
-   METHOD setStaticContents
-   METHOD size
-   METHOD staticContents
-   METHOD window
+$addMethods
 
 $endClass
 

@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QInputEvent
 
-   METHOD new
-   METHOD delete
-   METHOD gestureType
-   METHOD value
-   METHOD pos
-   METHOD globalPos
-   METHOD localPos
-   METHOD windowPos
-   METHOD screenPos
+$addMethods
 
 $endClass
 

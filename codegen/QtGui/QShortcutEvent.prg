@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QEvent
 
-   METHOD new
-   METHOD delete
-   METHOD key
-   METHOD shortcutId
-   METHOD isAmbiguous
+$addMethods
 
 $endClass
 

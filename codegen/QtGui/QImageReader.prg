@@ -12,46 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD autoDetectImageFormat
-   METHOD backgroundColor
-   METHOD canRead
-   METHOD clipRect
-   METHOD currentImageNumber
-   METHOD currentImageRect
-   METHOD decideFormatFromContent
-   METHOD device
-   METHOD error
-   METHOD errorString
-   METHOD fileName
-   METHOD format
-   METHOD imageCount
-   METHOD jumpToImage
-   METHOD jumpToNextImage
-   METHOD loopCount
-   METHOD nextImageDelay
-   METHOD quality
-   METHOD read
-   METHOD scaledClipRect
-   METHOD scaledSize
-   METHOD setAutoDetectImageFormat
-   METHOD setBackgroundColor
-   METHOD setClipRect
-   METHOD setDecideFormatFromContent
-   METHOD setDevice
-   METHOD setFileName
-   METHOD setFormat
-   METHOD setQuality
-   METHOD setScaledClipRect
-   METHOD setScaledSize
-   METHOD size
-   METHOD supportsAnimation
-   METHOD supportsOption
-   METHOD text
-   METHOD textKeys
-   METHOD imageFormat
-   METHOD supportedImageFormats
+$addMethods
 
 $endClass
 

@@ -12,35 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD isEquivalentTo
-   METHOD isValid
-   METHOD mode
-   METHOD setMode
-   METHOD pageSize
-   METHOD orientation
-   METHOD setOrientation
-   METHOD units
-   METHOD setUnits
-   METHOD setMargins
-   METHOD setLeftMargin
-   METHOD setRightMargin
-   METHOD setTopMargin
-   METHOD setBottomMargin
-   METHOD margins
-   METHOD marginsPoints
-   METHOD marginsPixels
-   METHOD setMinimumMargins
-   METHOD minimumMargins
-   METHOD maximumMargins
-   METHOD fullRect
-   METHOD fullRectPoints
-   METHOD fullRectPixels
-   METHOD paintRect
-   METHOD paintRectPoints
-   METHOD paintRectPixels
+$addMethods
 
 $endClass
 

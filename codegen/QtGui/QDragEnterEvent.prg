@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QDragMoveEvent
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

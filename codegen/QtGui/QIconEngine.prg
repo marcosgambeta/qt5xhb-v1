@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD actualSize
-   METHOD addFile
-   METHOD addPixmap
-   METHOD availableSizes
-   METHOD clone
-   METHOD iconName
-   METHOD key
-   METHOD paint
-   METHOD pixmap
-   METHOD read
-   METHOD virtual_hook
-   METHOD write
+$addMethods
 
 $endClass
 

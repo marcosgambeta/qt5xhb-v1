@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QAccessibleTextCursorEvent
 
-   METHOD new
-   METHOD delete
-   METHOD textRemoved
-   METHOD changePosition
+$addMethods
 
 $endClass
 

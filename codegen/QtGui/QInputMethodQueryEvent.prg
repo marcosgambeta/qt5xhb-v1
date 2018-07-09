@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QEvent
 
-   METHOD new
-   METHOD delete
-   METHOD queries
-   METHOD setValue
-   METHOD value
+$addMethods
 
 $endClass
 

@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD setMatrix
-   METHOD m11
-   METHOD m12
-   METHOD m21
-   METHOD m22
-   METHOD dx
-   METHOD dy
-   METHOD map1
-   METHOD map2
-   METHOD map
-   METHOD mapRect
-   METHOD mapToPolygon
-   METHOD reset
-   METHOD isIdentity
-   METHOD translate
-   METHOD scale
-   METHOD shear
-   METHOD rotate
-   METHOD isInvertible
-   METHOD determinant
-   METHOD inverted
+$addMethods
 
 $endClass
 

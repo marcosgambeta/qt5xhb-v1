@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD translate
-   METHOD translated
-   METHOD toPolygon
-   METHOD isClosed
-   METHOD boundingRect
-   METHOD containsPoint
-   METHOD united
-   METHOD intersected
-   METHOD subtracted
+$addMethods
 
 $endClass
 

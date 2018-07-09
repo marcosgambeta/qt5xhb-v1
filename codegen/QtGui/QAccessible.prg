@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD queryAccessibleInterface
-   METHOD updateAccessibility
-   METHOD isActive
-   METHOD setRootObject
-   METHOD cleanup
+$addMethods
 
 $endClass
 
