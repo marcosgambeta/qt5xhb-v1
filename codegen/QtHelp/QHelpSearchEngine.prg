@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD hitCount
-   METHOD query
-   METHOD queryWidget
-   METHOD resultWidget
-   METHOD cancelIndexing
-   METHOD cancelSearching
-   METHOD reindexDocumentation
-   METHOD search
+$addMethods
 
 $addSignals
 

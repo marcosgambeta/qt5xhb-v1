@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD query
+$addMethods
 
 $addSignals
 

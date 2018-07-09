@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QHelpEngineCore
 
-   METHOD new
-   METHOD delete
-   METHOD contentModel
-   METHOD contentWidget
-   METHOD indexModel
-   METHOD indexWidget
-   METHOD searchEngine
+$addMethods
 
 $endClass
 

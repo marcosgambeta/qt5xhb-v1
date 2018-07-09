@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemModel
 
-   METHOD delete
-   METHOD contentItemAt
-   METHOD createContents
-   METHOD isCreatingContents
-   METHOD columnCount
-   METHOD data
-   METHOD index
-   METHOD parent
-   METHOD rowCount
+$addMethods
 
 $addSignals
 

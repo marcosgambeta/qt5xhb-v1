@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD child
-   METHOD childCount
-   METHOD childPosition
-   METHOD parent
-   METHOD row
-   METHOD title
-   METHOD url
+$addMethods
 
 $endClass
 

@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QStringListModel
 
-   METHOD createIndex
-   METHOD filter
-   METHOD isCreatingIndex
+$addMethods
 
 $addSignals
 
