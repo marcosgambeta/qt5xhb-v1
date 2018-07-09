@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD convertorName
-   METHOD canConvert
-   METHOD mimeFor
-   METHOD flavorFor
-   METHOD convertToMime
-   METHOD convertFromMime
-   METHOD count
+$addMethods
 
 $endClass
 
