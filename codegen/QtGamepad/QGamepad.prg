@@ -12,35 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD axisLeftX
-   METHOD axisLeftY
-   METHOD axisRightX
-   METHOD axisRightY
-   METHOD buttonA
-   METHOD buttonB
-   METHOD buttonCenter
-   METHOD buttonDown
-   METHOD buttonGuide
-   METHOD buttonL1
-   METHOD buttonL2
-   METHOD buttonL3
-   METHOD buttonLeft
-   METHOD buttonR1
-   METHOD buttonR2
-   METHOD buttonR3
-   METHOD buttonRight
-   METHOD buttonSelect
-   METHOD buttonStart
-   METHOD buttonUp
-   METHOD buttonX
-   METHOD buttonY
-   METHOD deviceId
-   METHOD isConnected
-   METHOD name
-   METHOD setDeviceId
+$addMethods
 
 $addSignals
 

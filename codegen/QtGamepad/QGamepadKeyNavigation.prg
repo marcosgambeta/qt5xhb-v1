@@ -12,47 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD active
-   METHOD buttonAKey
-   METHOD buttonBKey
-   METHOD buttonGuideKey
-   METHOD buttonL1Key
-   METHOD buttonL2Key
-   METHOD buttonL3Key
-   METHOD buttonR1Key
-   METHOD buttonR2Key
-   METHOD buttonR3Key
-   METHOD buttonSelectKey
-   METHOD buttonStartKey
-   METHOD buttonXKey
-   METHOD buttonYKey
-   METHOD downKey
-   METHOD gamepad
-   METHOD leftKey
-   METHOD rightKey
-   METHOD setActive
-   METHOD setButtonAKey
-   METHOD setButtonBKey
-   METHOD setButtonGuideKey
-   METHOD setButtonL1Key
-   METHOD setButtonL2Key
-   METHOD setButtonL3Key
-   METHOD setButtonR1Key
-   METHOD setButtonR2Key
-   METHOD setButtonR3Key
-   METHOD setButtonSelectKey
-   METHOD setButtonStartKey
-   METHOD setButtonXKey
-   METHOD setButtonYKey
-   METHOD setDownKey
-   METHOD setGamepad
-   METHOD setLeftKey
-   METHOD setRightKey
-   METHOD setUpKey
-   METHOD upKey
+$addMethods
 
 $addSignals
 

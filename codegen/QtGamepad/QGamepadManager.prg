@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-%%   METHOD delete
-
-   METHOD configureAxis
-   METHOD configureButton
-%%   METHOD connectedGamepads
-   METHOD instance
-   METHOD isConfigurationNeeded
-   METHOD isGamepadConnected
-   METHOD resetConfiguration
-   METHOD setCancelConfigureButton
-   METHOD setSettingsFile
+$addMethods
 
 $addSignals
 
