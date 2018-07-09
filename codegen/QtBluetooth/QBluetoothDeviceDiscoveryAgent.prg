@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD inquiryType
-   METHOD setInquiryType
-   METHOD isActive
-   METHOD error
-   METHOD errorString
-   METHOD discoveredDevices
-   METHOD start
-   METHOD stop
+$addMethods
 
 $addSignals
 

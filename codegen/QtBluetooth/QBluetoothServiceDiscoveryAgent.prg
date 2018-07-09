@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD isActive
-   METHOD error
-   METHOD errorString
-   METHOD discoveredServices
-   METHOD setUuidFilter
-   METHOD uuidFilter
-   METHOD setRemoteAddress
-   METHOD remoteAddress
-   METHOD start
-   METHOD stop
-   METHOD clear
+$addMethods
 
 $addSignals
 

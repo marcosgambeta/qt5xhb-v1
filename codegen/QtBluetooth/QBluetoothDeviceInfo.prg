@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD isCached
-   METHOD setCached
-   METHOD address
-   METHOD name
-   METHOD serviceClasses
-   METHOD majorDeviceClass
-   METHOD minorDeviceClass
-   METHOD rssi
-   METHOD setRssi
-   METHOD setServiceUuids
-%%   METHOD serviceUuids
-   METHOD serviceUuidsCompleteness
+$addMethods
 
 $endClass
 

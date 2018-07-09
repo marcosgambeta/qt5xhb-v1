@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QUuid
 
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
-%%   METHOD new6
-   METHOD new
-   METHOD delete
-   METHOD minimumSize
-   METHOD toUInt16
-   METHOD toUInt32
+$addMethods
 
 $endClass
 

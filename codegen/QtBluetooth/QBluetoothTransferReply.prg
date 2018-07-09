@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD isFinished
-   METHOD isRunning
-   METHOD manager
-   METHOD error
-   METHOD errorString
-   METHOD request
-   METHOD abort
+$addMethods
 
 $addSignals
 

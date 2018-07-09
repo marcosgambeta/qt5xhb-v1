@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD close
-   METHOD listen
-   METHOD isListening
-   METHOD setMaxPendingConnections
-   METHOD maxPendingConnections
-   METHOD hasPendingConnections
-   METHOD nextPendingConnection
-   METHOD serverAddress
-   METHOD serverPort
-   METHOD setSecurityFlags
-   METHOD securityFlags
-   METHOD serverType
-   METHOD error
+$addMethods
 
 $addSignals
 

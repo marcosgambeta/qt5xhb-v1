@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isNull
-   METHOD clear
-   METHOD toUInt64
-   METHOD toString
+$addMethods
 
 $endClass
 

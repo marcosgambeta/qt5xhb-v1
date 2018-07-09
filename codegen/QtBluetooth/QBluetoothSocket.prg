@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=QIODevice
 
-   METHOD new
-   METHOD delete
-   METHOD abort
-   METHOD close
-   METHOD isSequential
-   METHOD bytesAvailable
-   METHOD bytesToWrite
-   METHOD canReadLine
-   METHOD connectToService
-   METHOD disconnectFromService
-   METHOD localName
-   METHOD localAddress
-   METHOD localPort
-   METHOD peerName
-   METHOD peerAddress
-   METHOD peerPort
-   METHOD setSocketDescriptor
-   METHOD socketDescriptor
-   METHOD socketType
-   METHOD state
-   METHOD error
-   METHOD errorString
+$addMethods
 
 $addSignals
 

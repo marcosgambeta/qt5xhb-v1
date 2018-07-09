@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD requestPairing
-   METHOD pairingStatus
-   METHOD setHostMode
-   METHOD hostMode
-   METHOD powerOn
-   METHOD name
-   METHOD address
-   METHOD pairingConfirmation
-   METHOD allDevices
+$addMethods
 
 $addSignals
 

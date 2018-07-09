@@ -12,34 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD isComplete
-   METHOD setDevice
-   METHOD device
-   METHOD setAttribute
-   METHOD attribute
-   METHOD attributes
-   METHOD contains
-   METHOD removeAttribute
-   METHOD setServiceName
-   METHOD serviceName
-   METHOD setServiceDescription
-   METHOD serviceDescription
-   METHOD setServiceProvider
-   METHOD serviceProvider
-   METHOD socketProtocol
-   METHOD protocolServiceMultiplexer
-   METHOD serverChannel
-   METHOD setServiceAvailability
-   METHOD serviceAvailability
-   METHOD setServiceUuid
-   METHOD serviceUuid
-   METHOD serviceClassUuids
-   METHOD isRegistered
-   METHOD registerService
-   METHOD unregisterService
+$addMethods
 
 $endClass
 
