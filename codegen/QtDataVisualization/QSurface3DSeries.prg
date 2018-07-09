@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstract3DSeries
 
-   METHOD new
-   METHOD delete
-
-   METHOD dataProxy
-   METHOD drawMode
-   METHOD invalidSelectionPosition
-   METHOD isFlatShadingEnabled
-   METHOD isFlatShadingSupported
-   METHOD selectedPoint
-   METHOD setDataProxy
-   METHOD setDrawMode
-   METHOD setFlatShadingEnabled
-   METHOD setSelectedPoint
-   METHOD setTexture
-   METHOD setTextureFile
-   METHOD texture
-   METHOD textureFile
+$addMethods
 
 $addSignals
 

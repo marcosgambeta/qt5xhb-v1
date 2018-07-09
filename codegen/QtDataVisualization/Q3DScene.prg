@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD activeCamera
-   METHOD activeLight
-   METHOD devicePixelRatio
-   METHOD graphPositionQuery
-   METHOD invalidSelectionPoint
-   METHOD isPointInPrimarySubView
-   METHOD isPointInSecondarySubView
-   METHOD isSecondarySubviewOnTop
-   METHOD isSlicingActive
-   METHOD primarySubViewport
-   METHOD secondarySubViewport
-   METHOD selectionQueryPosition
-   METHOD setActiveCamera
-   METHOD setActiveLight
-   METHOD setDevicePixelRatio
-   METHOD setGraphPositionQuery
-   METHOD setPrimarySubViewport
-   METHOD setSecondarySubviewOnTop
-   METHOD setSecondarySubViewport
-   METHOD setSelectionQueryPosition
-   METHOD setSlicingActive
-   METHOD viewport
+$addMethods
 
 $addSignals
 

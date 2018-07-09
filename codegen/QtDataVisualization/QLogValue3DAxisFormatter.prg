@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QValue3DAxisFormatter
 
-   METHOD new
-   METHOD delete
-
-   METHOD autoSubGrid
-   METHOD base
-   METHOD setAutoSubGrid
-   METHOD setBase
-   METHOD setShowEdgeLabels
-   METHOD showEdgeLabels
+$addMethods
 
 $addSignals
 

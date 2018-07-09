@@ -12,42 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD baseColor
-   METHOD baseGradient
-   METHOD colorStyle
-   METHOD isItemLabelVisible
-   METHOD isMeshSmooth
-   METHOD isVisible
-   METHOD itemLabel
-   METHOD itemLabelFormat
-   METHOD mesh
-   METHOD meshRotation
-   METHOD multiHighlightColor
-   METHOD multiHighlightGradient
-   METHOD name
-   METHOD setBaseColor
-   METHOD setBaseGradient
-   METHOD setColorStyle
-   METHOD setItemLabelFormat
-   METHOD setItemLabelVisible
-   METHOD setMesh
-   METHOD setMeshAxisAndAngle
-   METHOD setMeshRotation
-   METHOD setMeshSmooth
-   METHOD setMultiHighlightColor
-   METHOD setMultiHighlightGradient
-   METHOD setName
-   METHOD setSingleHighlightColor
-   METHOD setSingleHighlightGradient
-   METHOD setUserDefinedMesh
-   METHOD setVisible
-   METHOD singleHighlightColor
-   METHOD singleHighlightGradient
-   METHOD type
-   METHOD userDefinedMesh
+$addMethods
 
 $addSignals
 

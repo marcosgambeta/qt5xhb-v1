@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=Q3DObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD isAutoPosition
-   METHOD setAutoPosition
+$addMethods
 
 $addSignals
 

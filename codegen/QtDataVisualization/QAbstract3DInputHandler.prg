@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD inputPosition
-   METHOD inputView
-%%   METHOD mouseDoubleClickEvent
-%%   METHOD mouseMoveEvent
-%%   METHOD mousePressEvent
-%%   METHOD mouseReleaseEvent
-   METHOD scene
-   METHOD setInputPosition
-   METHOD setInputView
-   METHOD setScene
-%%   METHOD touchEvent
-%%   METHOD wheelEvent
+$addMethods
 
 $addSignals
 

@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QSurfaceDataProxy
 
-   METHOD new
-   METHOD delete
-
-   METHOD heightMap
-   METHOD heightMapFile
-   METHOD maxXValue
-   METHOD maxZValue
-   METHOD minXValue
-   METHOD minZValue
-   METHOD setHeightMap
-   METHOD setHeightMapFile
-   METHOD setMaxXValue
-   METHOD setMaxZValue
-   METHOD setMinXValue
-   METHOD setMinZValue
-   METHOD setValueRanges
+$addMethods
 
 $addSignals
 

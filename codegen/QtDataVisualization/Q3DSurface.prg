@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstract3DGraph
 
-   METHOD new
-   METHOD delete
-
-   METHOD addAxis
-   METHOD addSeries
-   METHOD axes
-   METHOD axisX
-   METHOD axisY
-   METHOD axisZ
-   METHOD flipHorizontalGrid
-   METHOD releaseAxis
-   METHOD removeSeries
-   METHOD selectedSeries
-   METHOD seriesList
-   METHOD setAxisX
-   METHOD setAxisY
-   METHOD setAxisZ
-   METHOD setFlipHorizontalGrid
+$addMethods
 
 $addSignals
 

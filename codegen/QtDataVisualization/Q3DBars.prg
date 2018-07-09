@@ -12,35 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstract3DGraph
 
-   METHOD new
-   METHOD delete
-
-   METHOD addAxis
-   METHOD addSeries
-   METHOD axes
-   METHOD barSpacing
-   METHOD barThickness
-   METHOD columnAxis
-   METHOD floorLevel
-   METHOD insertSeries
-   METHOD isBarSpacingRelative
-   METHOD isMultiSeriesUniform
-   METHOD primarySeries
-   METHOD releaseAxis
-   METHOD removeSeries
-   METHOD rowAxis
-   METHOD selectedSeries
-   METHOD seriesList
-   METHOD setBarSpacing
-   METHOD setBarSpacingRelative
-   METHOD setBarThickness
-   METHOD setColumnAxis
-   METHOD setFloorLevel
-   METHOD setMultiSeriesUniform
-   METHOD setPrimarySeries
-   METHOD setRowAxis
-   METHOD setValueAxis
-   METHOD valueAxis
+$addMethods
 
 $addSignals
 

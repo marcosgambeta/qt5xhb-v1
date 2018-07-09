@@ -12,56 +12,7 @@ $addRequests
 
 $beginClassFrom=QSurfaceDataProxy
 
-   METHOD new
-   METHOD delete
-
-   METHOD autoColumnCategories
-   METHOD autoRowCategories
-   METHOD columnCategories
-   METHOD columnCategoryIndex
-   METHOD columnRole
-   METHOD columnRolePattern
-   METHOD columnRoleReplace
-   METHOD itemModel
-   METHOD multiMatchBehavior
-   METHOD remap
-   METHOD rowCategories
-   METHOD rowCategoryIndex
-   METHOD rowRole
-   METHOD rowRolePattern
-   METHOD rowRoleReplace
-   METHOD setAutoColumnCategories
-   METHOD setAutoRowCategories
-   METHOD setColumnCategories
-   METHOD setColumnRole
-   METHOD setColumnRolePattern
-   METHOD setColumnRoleReplace
-   METHOD setItemModel
-   METHOD setMultiMatchBehavior
-   METHOD setRowCategories
-   METHOD setRowRole
-   METHOD setRowRolePattern
-   METHOD setRowRoleReplace
-   METHOD setUseModelCategories
-   METHOD setXPosRole
-   METHOD setXPosRolePattern
-   METHOD setXPosRoleReplace
-   METHOD setYPosRole
-   METHOD setYPosRolePattern
-   METHOD setYPosRoleReplace
-   METHOD setZPosRole
-   METHOD setZPosRolePattern
-   METHOD setZPosRoleReplace
-   METHOD useModelCategories
-   METHOD xPosRole
-   METHOD xPosRolePattern
-   METHOD xPosRoleReplace
-   METHOD yPosRole
-   METHOD yPosRolePattern
-   METHOD yPosRoleReplace
-   METHOD zPosRole
-   METHOD zPosRolePattern
-   METHOD zPosRoleReplace
+$addMethods
 
 $addSignals
 

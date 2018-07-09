@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstract3DInputHandler
 
-   METHOD new
-   METHOD delete
-
-   METHOD isRotationEnabled
-   METHOD isSelectionEnabled
-   METHOD isZoomAtTargetEnabled
-   METHOD isZoomEnabled
-%%   METHOD mouseMoveEvent
-%%   METHOD mousePressEvent
-%%   METHOD mouseReleaseEvent
-   METHOD setRotationEnabled
-   METHOD setSelectionEnabled
-   METHOD setZoomAtTargetEnabled
-   METHOD setZoomEnabled
-%%   METHOD wheelEvent
+$addMethods
 
 $addSignals
 

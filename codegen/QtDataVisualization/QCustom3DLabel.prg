@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QCustom3DItem
 
-   METHOD new
-   METHOD delete
-
-   METHOD backgroundColor
-   METHOD font
-   METHOD isBackgroundEnabled
-   METHOD isBorderEnabled
-   METHOD isFacingCamera
-   METHOD setBackgroundColor
-   METHOD setBackgroundEnabled
-   METHOD setBorderEnabled
-   METHOD setFacingCamera
-   METHOD setFont
-   METHOD setText
-   METHOD setTextColor
-   METHOD text
-   METHOD textColor
+$addMethods
 
 $addSignals
 

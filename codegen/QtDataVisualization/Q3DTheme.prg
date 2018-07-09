@@ -12,53 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD ambientLightStrength
-   METHOD backgroundColor
-   METHOD baseColors
-   METHOD baseGradients
-   METHOD colorStyle
-   METHOD font
-   METHOD gridLineColor
-   METHOD highlightLightStrength
-   METHOD isBackgroundEnabled
-   METHOD isGridEnabled
-   METHOD isLabelBackgroundEnabled
-   METHOD isLabelBorderEnabled
-   METHOD labelBackgroundColor
-   METHOD labelTextColor
-   METHOD lightColor
-   METHOD lightStrength
-   METHOD multiHighlightColor
-   METHOD multiHighlightGradient
-   METHOD setAmbientLightStrength
-   METHOD setBackgroundColor
-   METHOD setBackgroundEnabled
-   METHOD setBaseColors
-   METHOD setBaseGradients
-   METHOD setColorStyle
-   METHOD setFont
-   METHOD setGridEnabled
-   METHOD setGridLineColor
-   METHOD setHighlightLightStrength
-   METHOD setLabelBackgroundColor
-   METHOD setLabelBackgroundEnabled
-   METHOD setLabelBorderEnabled
-   METHOD setLabelTextColor
-   METHOD setLightColor
-   METHOD setLightStrength
-   METHOD setMultiHighlightColor
-   METHOD setMultiHighlightGradient
-   METHOD setSingleHighlightColor
-   METHOD setSingleHighlightGradient
-   METHOD setType
-   METHOD setWindowColor
-   METHOD singleHighlightColor
-   METHOD singleHighlightGradient
-   METHOD type
-   METHOD windowColor
+$addMethods
 
 $addSignals
 

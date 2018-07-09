@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractDataProxy
 
-   METHOD new
-   METHOD delete
-
-   METHOD addItem
-%%   METHOD addItems
-%%   METHOD array
-   METHOD insertItem
-%%   METHOD insertItems
-   METHOD itemAt
-   METHOD itemCount
-   METHOD removeItems
-%%   METHOD resetArray
-   METHOD series
-   METHOD setItem
-%%   METHOD setItems
+$addMethods
 
 $addSignals
 

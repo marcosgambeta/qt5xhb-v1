@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstract3DAxis
 
-   METHOD new
-   METHOD delete
-
-   METHOD labels
-   METHOD setLabels
+$addMethods
 
 $addSignals
 

@@ -12,36 +12,7 @@ $addRequests
 
 $beginClassFrom=QScatterDataProxy
 
-   METHOD new
-   METHOD delete
-
-   METHOD itemModel
-   METHOD remap
-   METHOD rotationRole
-   METHOD rotationRolePattern
-   METHOD rotationRoleReplace
-   METHOD setItemModel
-   METHOD setRotationRole
-   METHOD setRotationRolePattern
-   METHOD setRotationRoleReplace
-   METHOD setXPosRole
-   METHOD setXPosRolePattern
-   METHOD setXPosRoleReplace
-   METHOD setYPosRole
-   METHOD setYPosRolePattern
-   METHOD setYPosRoleReplace
-   METHOD setZPosRole
-   METHOD setZPosRolePattern
-   METHOD setZPosRoleReplace
-   METHOD xPosRole
-   METHOD xPosRolePattern
-   METHOD xPosRoleReplace
-   METHOD yPosRole
-   METHOD yPosRolePattern
-   METHOD yPosRoleReplace
-   METHOD zPosRole
-   METHOD zPosRolePattern
-   METHOD zPosRoleReplace
+$addMethods
 
 $addSignals
 

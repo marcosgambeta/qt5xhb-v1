@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstract3DAxis
 
-   METHOD new
-   METHOD delete
-
-   METHOD formatter
-   METHOD labelFormat
-   METHOD reversed
-   METHOD segmentCount
-   METHOD setFormatter
-   METHOD setLabelFormat
-   METHOD setReversed
-   METHOD setSegmentCount
-   METHOD setSubSegmentCount
-   METHOD subSegmentCount
+$addMethods
 
 %%   METHOD onFormatterChanged
 %%   METHOD onLabelFormatChanged

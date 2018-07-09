@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD isPositionAbsolute
-   METHOD isScalingAbsolute
-   METHOD isShadowCasting
-   METHOD isVisible
-   METHOD meshFile
-   METHOD position
-   METHOD rotation
-   METHOD scaling
-   METHOD setMeshFile
-   METHOD setPosition
-   METHOD setPositionAbsolute
-   METHOD setRotation
-   METHOD setRotationAxisAndAngle
-   METHOD setScaling
-   METHOD setScalingAbsolute
-   METHOD setShadowCasting
-   METHOD setTextureFile
-   METHOD setTextureImage
-   METHOD setVisible
-   METHOD textureFile
+$addMethods
 
 $addSignals
 

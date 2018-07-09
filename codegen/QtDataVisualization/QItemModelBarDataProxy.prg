@@ -12,50 +12,7 @@ $addRequests
 
 $beginClassFrom=QBarDataProxy
 
-   METHOD new
-   METHOD delete
-
-   METHOD autoColumnCategories
-   METHOD autoRowCategories
-   METHOD columnCategories
-   METHOD columnCategoryIndex
-   METHOD columnRole
-   METHOD columnRolePattern
-   METHOD columnRoleReplace
-   METHOD itemModel
-   METHOD multiMatchBehavior
-   METHOD remap
-   METHOD rotationRole
-   METHOD rotationRolePattern
-   METHOD rotationRoleReplace
-   METHOD rowCategories
-   METHOD rowCategoryIndex
-   METHOD rowRole
-   METHOD rowRolePattern
-   METHOD rowRoleReplace
-   METHOD setAutoColumnCategories
-   METHOD setAutoRowCategories
-   METHOD setColumnCategories
-   METHOD setColumnRole
-   METHOD setColumnRolePattern
-   METHOD setColumnRoleReplace
-   METHOD setItemModel
-   METHOD setMultiMatchBehavior
-   METHOD setRotationRole
-   METHOD setRotationRolePattern
-   METHOD setRotationRoleReplace
-   METHOD setRowCategories
-   METHOD setRowRole
-   METHOD setRowRolePattern
-   METHOD setRowRoleReplace
-   METHOD setUseModelCategories
-   METHOD setValueRole
-   METHOD setValueRolePattern
-   METHOD setValueRoleReplace
-   METHOD useModelCategories
-   METHOD valueRole
-   METHOD valueRolePattern
-   METHOD valueRoleReplace
+$addMethods
 
 $addSignals
 

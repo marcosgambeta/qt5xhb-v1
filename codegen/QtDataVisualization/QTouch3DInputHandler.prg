@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=Q3DInputHandler
 
-   METHOD new
-   METHOD delete
-
-   METHOD touchEvent
+$addMethods
 
 $endClass
 

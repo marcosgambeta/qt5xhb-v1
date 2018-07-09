@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD copyValuesFrom
-   METHOD parentScene
-   METHOD position
-   METHOD setPosition
+$addMethods
 
 $addSignals
 

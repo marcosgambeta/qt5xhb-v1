@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstract3DSeries
 
-   METHOD new
-   METHOD delete
-
-   METHOD dataProxy
-   METHOD invalidSelectionIndex
-   METHOD itemSize
-   METHOD selectedItem
-   METHOD setDataProxy
-   METHOD setItemSize
-   METHOD setSelectedItem
+$addMethods
 
 $addSignals
 

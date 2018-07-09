@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD isAutoAdjustRange
-   METHOD isTitleFixed
-   METHOD isTitleVisible
-   METHOD labelAutoRotation
-   METHOD labels
-   METHOD max
-   METHOD min
-   METHOD orientation
-   METHOD setAutoAdjustRange
-   METHOD setLabelAutoRotation
-   METHOD setLabels
-   METHOD setMax
-   METHOD setMin
-   METHOD setRange
-   METHOD setTitle
-   METHOD setTitleFixed
-   METHOD setTitleVisible
-   METHOD title
-   METHOD type
+$addMethods
 
 $addSignals
 

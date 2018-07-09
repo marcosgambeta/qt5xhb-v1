@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=Q3DObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD cameraPreset
-   METHOD copyValuesFrom
-   METHOD maxZoomLevel
-   METHOD minZoomLevel
-   METHOD setCameraPosition
-   METHOD setCameraPreset
-   METHOD setMaxZoomLevel
-   METHOD setMinZoomLevel
-   METHOD setTarget
-   METHOD setWrapXRotation
-   METHOD setWrapYRotation
-   METHOD setXRotation
-   METHOD setYRotation
-   METHOD setZoomLevel
-   METHOD target
-   METHOD wrapXRotation
-   METHOD wrapYRotation
-   METHOD xRotation
-   METHOD yRotation
-   METHOD zoomLevel
+$addMethods
 
 $addSignals
 
