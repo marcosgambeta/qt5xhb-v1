@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QAnimationGroup
 
-   METHOD new
-   METHOD delete
-   METHOD duration
+$addMethods
 
 $endClass
 

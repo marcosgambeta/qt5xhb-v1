@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD colorData
-   METHOD data
-   METHOD formats
-   METHOD hasColor
-   METHOD hasFormat
-   METHOD hasHtml
-   METHOD hasImage
-   METHOD hasText
-   METHOD hasUrls
-   METHOD html
-   METHOD imageData
-   METHOD removeFormat
-   METHOD setColorData
-   METHOD setData
-   METHOD setHtml
-   METHOD setImageData
-   METHOD setText
-   METHOD setUrls
-   METHOD text
-   METHOD urls
+$addMethods
 
 $endClass
 

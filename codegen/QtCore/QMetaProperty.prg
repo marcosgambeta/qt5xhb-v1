@@ -12,36 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD name
-   METHOD typeName
-   METHOD type
-   METHOD userType
-   METHOD propertyIndex
-   METHOD isReadable
-   METHOD isWritable
-   METHOD isResettable
-   METHOD isDesignable
-   METHOD isScriptable
-   METHOD isStored
-   METHOD isEditable
-   METHOD isUser
-   METHOD isConstant
-   METHOD isFinal
-   METHOD isFlagType
-   METHOD isEnumType
-   METHOD enumerator
-   METHOD hasNotifySignal
-   METHOD notifySignal
-   METHOD notifySignalIndex
-   METHOD revision
-   METHOD read
-   METHOD write
-   METHOD reset
-   METHOD hasStdCppSet
-   METHOD isValid
-   METHOD enclosingMetaObject
+$addMethods
 
 $endClass
 

@@ -12,38 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD allKeys
-   METHOD applicationName
-   METHOD beginGroup
-   METHOD beginReadArray
-   METHOD beginWriteArray
-   METHOD childGroups
-   METHOD childKeys
-   METHOD clear
-   METHOD contains
-   METHOD endArray
-   METHOD endGroup
-   METHOD fallbacksEnabled
-   METHOD fileName
-   METHOD format
-   METHOD group
-   METHOD iniCodec
-   METHOD isWritable
-   METHOD organizationName
-   METHOD remove
-   METHOD scope
-   METHOD setArrayIndex
-   METHOD setFallbacksEnabled
-   METHOD setIniCodec
-   METHOD setValue
-   METHOD status
-   METHOD sync
-   METHOD value
-   METHOD defaultFormat
-   METHOD setDefaultFormat
-   METHOD setPath
+$addMethods
 
 $endClass
 

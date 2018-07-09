@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD setMapping
-   METHOD removeMappings
-   METHOD mapping
-   METHOD map
+$addMethods
 
 $addSignals
 

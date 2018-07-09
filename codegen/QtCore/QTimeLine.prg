@@ -12,36 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD currentFrame
-   METHOD currentTime
-   METHOD currentValue
-   METHOD curveShape
-   METHOD direction
-   METHOD duration
-   METHOD endFrame
-   METHOD frameForTime
-   METHOD loopCount
-   METHOD setCurveShape
-   METHOD setDirection
-   METHOD setDuration
-   METHOD setEasingCurve
-   METHOD setEndFrame
-   METHOD setFrameRange
-   METHOD setLoopCount
-   METHOD setStartFrame
-   METHOD setUpdateInterval
-   METHOD startFrame
-   METHOD state
-   METHOD updateInterval
-   METHOD valueForTime
-   METHOD resume
-   METHOD setCurrentTime
-   METHOD setPaused
-   METHOD start
-   METHOD stop
-   METHOD toggleDirection
+$addMethods
 
 $addSignals
 

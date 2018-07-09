@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isDefault
-   METHOD name
-   METHOD namespaceUri
-   METHOD prefix
-   METHOD qualifiedName
-   METHOD value
+$addMethods
 
 $endClass
 

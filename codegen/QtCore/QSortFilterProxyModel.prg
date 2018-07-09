@@ -12,60 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractProxyModel
 
-   METHOD new
-   METHOD delete
-   METHOD setSourceModel
-   METHOD mapToSource
-   METHOD mapFromSource
-   METHOD mapSelectionToSource
-   METHOD mapSelectionFromSource
-   METHOD filterRegExp
-   METHOD setFilterRegExp
-   METHOD filterKeyColumn
-   METHOD setFilterKeyColumn
-   METHOD filterCaseSensitivity
-   METHOD setFilterCaseSensitivity
-   METHOD sortCaseSensitivity
-   METHOD setSortCaseSensitivity
-   METHOD isSortLocaleAware
-   METHOD setSortLocaleAware
-   METHOD sortColumn
-   METHOD sortOrder
-   METHOD dynamicSortFilter
-   METHOD setDynamicSortFilter
-   METHOD sortRole
-   METHOD setSortRole
-   METHOD filterRole
-   METHOD setFilterRole
-   METHOD setFilterWildcard
-   METHOD setFilterFixedString
-   METHOD clear
-   METHOD invalidate
-   METHOD parent
-   METHOD index
-   METHOD sibling
-   METHOD rowCount
-   METHOD columnCount
-   METHOD hasChildren
-   METHOD data
-   METHOD setData
-   METHOD headerData
-   METHOD setHeaderData
-   METHOD mimeData
-   METHOD dropMimeData
-   METHOD insertRows
-   METHOD insertColumns
-   METHOD removeRows
-   METHOD removeColumns
-   METHOD fetchMore
-   METHOD canFetchMore
-   METHOD flags
-   METHOD buddy
-   METHOD match
-   METHOD span
-   METHOD sort
-   METHOD mimeTypes
-   METHOD supportedDropActions
+$addMethods
 
 $endClass
 

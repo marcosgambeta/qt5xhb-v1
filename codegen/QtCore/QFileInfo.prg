@@ -12,52 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD absoluteDir
-   METHOD absoluteFilePath
-   METHOD absolutePath
-   METHOD baseName
-   METHOD bundleName
-   METHOD caching
-   METHOD canonicalFilePath
-   METHOD canonicalPath
-   METHOD completeBaseName
-   METHOD completeSuffix
-   METHOD created
-   METHOD dir
-   METHOD exists
-   METHOD fileName
-   METHOD filePath
-   METHOD group
-   METHOD groupId
-   METHOD isAbsolute
-   METHOD isBundle
-   METHOD isDir
-   METHOD isExecutable
-   METHOD isFile
-   METHOD isHidden
-   METHOD isNativePath
-   METHOD isReadable
-   METHOD isRelative
-   METHOD isRoot
-   METHOD isSymLink
-   METHOD isWritable
-   METHOD lastModified
-   METHOD lastRead
-   METHOD makeAbsolute
-   METHOD owner
-   METHOD ownerId
-   METHOD path
-   METHOD permission
-   METHOD permissions
-   METHOD refresh
-   METHOD setCaching
-   METHOD setFile
-   METHOD size
-   METHOD suffix
-   METHOD swap
-   METHOD symLinkTarget
+$addMethods
 
 $endClass
 

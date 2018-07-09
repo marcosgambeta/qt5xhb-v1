@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD type
-   METHOD isNull
-   METHOD isBool
-   METHOD isDouble
-   METHOD isString
-   METHOD isArray
-   METHOD isObject
-   METHOD isUndefined
-   METHOD toBool
-   METHOD toInt
-   METHOD toDouble
-   METHOD toString
-   METHOD toArray
-   METHOD toObject
+$addMethods
 
 $endClass
 

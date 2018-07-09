@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isNull
-   METHOD left
-   METHOD top
-   METHOD right
-   METHOD bottom
-   METHOD setLeft
-   METHOD setTop
-   METHOD setRight
-   METHOD setBottom
+$addMethods
 
 $endClass
 

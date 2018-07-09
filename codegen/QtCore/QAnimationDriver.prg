@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD advance
-   METHOD install
-   METHOD uninstall
-   METHOD isRunning
-   METHOD elapsed
-   METHOD setStartTime
-   METHOD startTime
+$addMethods
 
 $addSignals
 

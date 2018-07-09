@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD lock
-   METHOD tryLock
-   METHOD unlock
-   METHOD setStaleLockTime
-   METHOD staleLockTime
-   METHOD isLocked
-%%   METHOD getLockInfo
-   METHOD removeStaleLockFile
+$addMethods
 
 $endClass
 

@@ -12,73 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new2
-   METHOD new7
-   METHOD new8
-   METHOD new9
-   METHOD new10
-   METHOD new12
-   METHOD new13
-   METHOD new14
-   METHOD new17
-   METHOD new19
-   METHOD new24
-   METHOD new25
-   METHOD new26
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD type
-   METHOD userType
-   METHOD typeName
-   METHOD canConvert
-   METHOD convert
-   METHOD isValid
-   METHOD isNull
-   METHOD clear
-   METHOD detach
-   METHOD isDetached
-   METHOD toInt
-   METHOD toUInt
-   METHOD toLongLong
-   METHOD toULongLong
-   METHOD toBool
-   METHOD toDouble
-   METHOD toFloat
-   METHOD toReal
-   METHOD toByteArray
-   METHOD toBitArray
-   METHOD toString
-   METHOD toStringList
-   METHOD toChar
-   METHOD toDate
-   METHOD toTime
-   METHOD toDateTime
-   METHOD toList
-   METHOD toPoint
-   METHOD toPointF
-   METHOD toRect
-   METHOD toRectF
-   METHOD toSize
-   METHOD toSizeF
-   METHOD toLine
-   METHOD toLineF
-   METHOD toLocale
-   METHOD toRegExp
-   METHOD toRegularExpression
-   METHOD toUrl
-   METHOD toEasingCurve
-   METHOD toUuid
-   METHOD toModelIndex
-   METHOD toJsonValue
-   METHOD toJsonObject
-   METHOD toJsonArray
-   METHOD toJsonDocument
-   METHOD load
-   METHOD save
-   METHOD data
-   METHOD typeToName
-   METHOD nameToType
+$addMethods
 
 $endClass
 

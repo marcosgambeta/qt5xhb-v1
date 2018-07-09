@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD space
-   METHOD nospace
-   METHOD maybeSpace
-   METHOD autoInsertSpaces
-   METHOD setAutoInsertSpaces
+$addMethods
 
 $endClass
 

@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD select
-   METHOD extraSelectors
-   METHOD setExtraSelectors
-   METHOD allSelectors
+$addMethods
 
 $endClass
 

@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD addAnimation
-   METHOD animations
-   METHOD machine
-   METHOD removeAnimation
-   METHOD setTargetState
-   METHOD setTargetStates
-   METHOD sourceState
-   METHOD targetState
-   METHOD targetStates
+$addMethods
 
 $addSignals
 

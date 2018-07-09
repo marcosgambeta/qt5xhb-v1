@@ -12,39 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD buddy
-   METHOD canFetchMore
-   METHOD columnCount
-   METHOD data
-   METHOD dropMimeData
-   METHOD fetchMore
-   METHOD flags
-   METHOD hasChildren
-   METHOD hasIndex
-   METHOD headerData
-   METHOD index
-   METHOD insertColumn
-   METHOD insertColumns
-   METHOD insertRow
-   METHOD insertRows
-   METHOD match
-   METHOD mimeTypes
-   METHOD parent
-   METHOD removeColumn
-   METHOD removeColumns
-   METHOD removeRow
-   METHOD removeRows
-   METHOD rowCount
-   METHOD setData
-   METHOD setHeaderData
-   METHOD sibling
-   METHOD sort
-   METHOD span
-   METHOD supportedDragActions
-   METHOD supportedDropActions
-   METHOD revert
-   METHOD submit
+$addMethods
 
 $addSignals
 

@@ -12,6 +12,8 @@ $addRequests
 
 $beginClassFrom=
 
+$addMethods
+
 $endClass
 
 $destructor

@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD exec
-   METHOD exit
-   METHOD isRunning
-   METHOD processEvents
-   METHOD wakeUp
-   METHOD quit
+$addMethods
 
 $endClass
 

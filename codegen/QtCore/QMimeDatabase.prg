@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD mimeTypeForName
-   METHOD mimeTypeForFile
-   METHOD mimeTypesForFileName
-   METHOD mimeTypeForData
-   METHOD mimeTypeForUrl
-   METHOD mimeTypeForFileNameAndData
-   METHOD suffixForFileName
-   METHOD allMimeTypes
+$addMethods
 
 $endClass
 

@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD name
-   METHOD value
-   METHOD enclosingMetaObject
+$addMethods
 
 $endClass
 

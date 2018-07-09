@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD start
-   METHOD tryStart
-   METHOD expiryTimeout
-   METHOD setExpiryTimeout
-   METHOD maxThreadCount
-   METHOD setMaxThreadCount
-   METHOD activeThreadCount
-   METHOD reserveThread
-   METHOD releaseThread
-   METHOD waitForDone
-   METHOD clear
-   METHOD globalInstance
+$addMethods
 
 $endClass
 

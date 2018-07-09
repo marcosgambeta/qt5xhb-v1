@@ -12,43 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD notify
-   METHOD quit
-   METHOD addLibraryPath
-   METHOD applicationDirPath
-   METHOD applicationFilePath
-   METHOD applicationName
-   METHOD applicationPid
-   METHOD applicationVersion
-   METHOD arguments
-   METHOD closingDown
-   METHOD exec
-   METHOD exit
-   METHOD flush
-   METHOD hasPendingEvents
-   METHOD installTranslator
-   METHOD instance
-   METHOD libraryPaths
-   METHOD organizationDomain
-   METHOD organizationName
-   METHOD postEvent
-   METHOD processEvents
-   METHOD removeLibraryPath
-   METHOD removePostedEvents
-   METHOD removeTranslator
-   METHOD sendEvent
-   METHOD sendPostedEvents
-   METHOD setApplicationName
-   METHOD setApplicationVersion
-   METHOD setAttribute
-   METHOD setLibraryPaths
-   METHOD setOrganizationDomain
-   METHOD setOrganizationName
-   METHOD startingUp
-   METHOD testAttribute
-   METHOD translate
+$addMethods
 
 $addSignals
 

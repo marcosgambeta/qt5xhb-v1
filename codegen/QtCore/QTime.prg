@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addMSecs
-   METHOD addSecs
-   METHOD elapsed
-   METHOD hour
-   METHOD isNull
-   METHOD isValid
-   METHOD minute
-   METHOD msec
-   METHOD msecsTo
-   METHOD restart
-   METHOD second
-   METHOD secsTo
-   METHOD setHMS
-   METHOD start
-   METHOD toString
-   METHOD currentTime
-   METHOD fromString
+$addMethods
 
 $endClass
 

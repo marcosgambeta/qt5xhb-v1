@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isNull
-   METHOD isEmpty
-   METHOD isValid
-   METHOD width
-   METHOD height
-   METHOD setWidth
-   METHOD setHeight
-   METHOD transpose
-   METHOD transposed
-   METHOD scale
-   METHOD scaled
-   METHOD expandedTo
-   METHOD boundedTo
-   METHOD toSize
+$addMethods
 
 $endClass
 

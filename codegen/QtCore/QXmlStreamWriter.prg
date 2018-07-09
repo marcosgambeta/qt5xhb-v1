@@ -12,34 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD autoFormatting
-   METHOD autoFormattingIndent
-   METHOD codec
-   METHOD device
-   METHOD hasError
-   METHOD setAutoFormatting
-   METHOD setAutoFormattingIndent
-   METHOD setCodec
-   METHOD setDevice
-   METHOD writeAttribute
-   METHOD writeAttributes
-   METHOD writeCDATA
-   METHOD writeCharacters
-   METHOD writeComment
-   METHOD writeCurrentToken
-   METHOD writeDTD
-   METHOD writeDefaultNamespace
-   METHOD writeEmptyElement
-   METHOD writeEndDocument
-   METHOD writeEndElement
-   METHOD writeEntityReference
-   METHOD writeNamespace
-   METHOD writeProcessingInstruction
-   METHOD writeStartDocument
-   METHOD writeStartElement
-   METHOD writeTextElement
+$addMethods
 
 $endClass
 

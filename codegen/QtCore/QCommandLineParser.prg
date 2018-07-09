@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD setSingleDashWordOptionMode
-   METHOD addOption
-   METHOD addVersionOption
-   METHOD addHelpOption
-   METHOD setApplicationDescription
-   METHOD applicationDescription
-   METHOD addPositionalArgument
-   METHOD clearPositionalArguments
-   METHOD process
-   METHOD parse
-   METHOD errorText
-   METHOD isSet
-   METHOD value
-   METHOD values
-   METHOD positionalArguments
-   METHOD optionNames
-   METHOD unknownOptionNames
-   METHOD showHelp
-   METHOD helpText
+$addMethods
 
 $endClass
 

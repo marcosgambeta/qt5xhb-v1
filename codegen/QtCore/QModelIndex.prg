@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD child
-   METHOD column
-   METHOD data
-   METHOD flags
-   METHOD internalId
-   METHOD internalPointer
-   METHOD isValid
-   METHOD model
-   METHOD parent
-   METHOD row
-   METHOD sibling
+$addMethods
 
 $endClass
 

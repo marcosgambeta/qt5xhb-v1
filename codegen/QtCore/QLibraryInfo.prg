@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD licensee
-   METHOD licensedProducts
-   METHOD buildDate
-   METHOD isDebugBuild
-   METHOD location
+$addMethods
 
 $endClass
 

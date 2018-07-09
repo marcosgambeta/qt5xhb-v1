@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD machine
-   METHOD parentState
+$addMethods
 
 $addSignals
 

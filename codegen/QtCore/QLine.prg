@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD p1
-   METHOD p2
-   METHOD x1
-   METHOD x2
-   METHOD y1
-   METHOD y2
-   METHOD dx
-   METHOD dy
-   METHOD isNull
-   METHOD setP1
-   METHOD setP2
-   METHOD setLine
-   METHOD setPoints
-   METHOD translate
-   METHOD translated
+$addMethods
 
 $endClass
 

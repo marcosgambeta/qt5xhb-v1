@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addQueryItem
-   METHOD allQueryItemValues
-   METHOD clear
-   METHOD hasQueryItem
-   METHOD isEmpty
-   METHOD query
-   METHOD queryItemValue
-   METHOD queryPairDelimiter
-   METHOD queryValueDelimiter
-   METHOD removeAllQueryItems
-   METHOD removeQueryItem
-   METHOD setQuery
-   METHOD swap
-   METHOD toString
-   METHOD defaultQueryPairDelimiter
-   METHOD defaultQueryValueDelimiter
+$addMethods
 
 $endClass
 

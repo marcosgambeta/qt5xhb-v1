@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD socket
-   METHOD type
-   METHOD isEnabled
-   METHOD setEnabled
+$addMethods
 
 $endClass
 

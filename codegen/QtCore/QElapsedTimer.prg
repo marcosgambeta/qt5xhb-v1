@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD elapsed
-   METHOD hasExpired
-   METHOD invalidate
-   METHOD isValid
-   METHOD msecsSinceReference
-   METHOD msecsTo
-   METHOD nsecsElapsed
-   METHOD restart
-   METHOD secsTo
-   METHOD start
-   METHOD clockType
-   METHOD isMonotonic
+$addMethods
 
 $endClass
 

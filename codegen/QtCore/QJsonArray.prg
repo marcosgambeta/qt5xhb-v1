@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD append
-   METHOD at
-   METHOD contains
-   METHOD count
-   METHOD empty
-   METHOD first
-   METHOD insert
-   METHOD isEmpty
-   METHOD last
-   METHOD pop_back
-   METHOD pop_front
-   METHOD prepend
-   METHOD push_back
-   METHOD push_front
-   METHOD removeAt
-   METHOD removeFirst
-   METHOD removeLast
-   METHOD replace
-   METHOD size
-   METHOD takeAt
-   METHOD toVariantList
-   METHOD fromStringList
-   METHOD fromVariantList
+$addMethods
 
 $endClass
 

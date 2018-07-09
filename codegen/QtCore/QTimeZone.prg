@@ -12,30 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD isValid
-   METHOD id
-   METHOD country
-   METHOD comment
-   METHOD displayName
-   METHOD abbreviation
-   METHOD offsetFromUtc
-   METHOD standardTimeOffset
-   METHOD daylightTimeOffset
-   METHOD hasDaylightTime
-   METHOD isDaylightTime
-   METHOD hasTransitions
-   METHOD systemTimeZoneId
-   METHOD isTimeZoneIdAvailable
-   METHOD availableTimeZoneIds1
-   METHOD availableTimeZoneIds2
-   METHOD availableTimeZoneIds3
-   METHOD availableTimeZoneIds
-   METHOD ianaIdToWindowsId
-   METHOD windowsIdToDefaultIanaId
-   METHOD windowsIdToIanaIds
+$addMethods
 
 $endClass
 

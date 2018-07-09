@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractAnimation
 
-   METHOD delete
-   METHOD currentValue
-   METHOD easingCurve
-   METHOD endValue
-   METHOD keyValueAt
-   METHOD setDuration
-   METHOD setEasingCurve
-   METHOD setEndValue
-   METHOD setKeyValueAt
-   METHOD setStartValue
-   METHOD startValue
+$addMethods
 
 $addSignals
 

@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QState
 
-   METHOD new
-   METHOD delete
-   METHOD addState
-   METHOD removeState
-   METHOD error
-   METHOD errorString
-   METHOD clearError
-   METHOD isRunning
-   METHOD isAnimated
-   METHOD setAnimated
-   METHOD addDefaultAnimation
-   METHOD defaultAnimations
-   METHOD removeDefaultAnimation
-   METHOD globalRestorePolicy
-   METHOD setGlobalRestorePolicy
-   METHOD postEvent
-   METHOD postDelayedEvent
-   METHOD cancelDelayedEvent
-   METHOD eventFilter
-   METHOD start
-   METHOD stop
+$addMethods
 
 $addSignals
 

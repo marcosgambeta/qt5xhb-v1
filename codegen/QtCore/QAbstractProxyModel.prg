@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemModel
 
-   METHOD delete
-   METHOD dropMimeData
-   METHOD index
+$addMethods
 
 $endClass
 

@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractProxyModel
 
-   METHOD new
-   METHOD delete
-   METHOD columnCount
-   METHOD index
-   METHOD mapFromSource
-   METHOD mapToSource
-   METHOD parent
-   METHOD rowCount
-   METHOD headerData
-   METHOD dropMimeData
-   METHOD sibling
-   METHOD mapSelectionFromSource
-   METHOD mapSelectionToSource
-   METHOD match
-   METHOD setSourceModel
-   METHOD insertColumns
-   METHOD insertRows
-   METHOD removeColumns
-   METHOD removeRows
+$addMethods
 
 $endClass
 

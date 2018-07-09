@@ -12,62 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD absoluteFilePath
-   METHOD absolutePath
-   METHOD canonicalPath
-   METHOD cd
-   METHOD cdUp
-   METHOD count
-   METHOD dirName
-   METHOD entryInfoList
-   METHOD entryList
-   METHOD exists
-   METHOD filePath
-   METHOD filter
-   METHOD isAbsolute
-   METHOD isReadable
-   METHOD isRelative
-   METHOD isRoot
-   METHOD makeAbsolute
-   METHOD mkdir
-   METHOD mkpath
-   METHOD nameFilters
-   METHOD path
-   METHOD refresh
-   METHOD relativeFilePath
-   METHOD remove
-   METHOD removeRecursively
-   METHOD rename
-   METHOD rmdir
-   METHOD rmpath
-   METHOD setFilter
-   METHOD setNameFilters
-   METHOD setPath
-   METHOD setSorting
-   METHOD sorting
-   METHOD swap
-   METHOD addSearchPath
-   METHOD cleanPath
-   METHOD current
-   METHOD currentPath
-   METHOD drives
-   METHOD fromNativeSeparators
-   METHOD home
-   METHOD homePath
-   METHOD isAbsolutePath
-   METHOD isRelativePath
-   METHOD match
-   METHOD root
-   METHOD rootPath
-   METHOD searchPaths
-   METHOD separator
-   METHOD setCurrent
-   METHOD setSearchPaths
-   METHOD temp
-   METHOD tempPath
-   METHOD toNativeSeparators
+$addMethods
 
 $endClass
 

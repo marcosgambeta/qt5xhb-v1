@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD nativeEventFilter
+$addMethods
 
 $endClass
 

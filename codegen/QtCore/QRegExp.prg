@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD cap
-   METHOD captureCount
-   METHOD capturedTexts
-   METHOD caseSensitivity
-   METHOD errorString
-   METHOD exactMatch
-   METHOD indexIn
-   METHOD isEmpty
-   METHOD isMinimal
-   METHOD isValid
-   METHOD lastIndexIn
-   METHOD matchedLength
-   METHOD pattern
-   METHOD patternSyntax
-   METHOD pos
-   METHOD setCaseSensitivity
-   METHOD setMinimal
-   METHOD setPattern
-   METHOD setPatternSyntax
-   METHOD escape
+$addMethods
 
 $endClass
 

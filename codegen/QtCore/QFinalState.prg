@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractState
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

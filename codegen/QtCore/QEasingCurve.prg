@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addCubicBezierSegment
-   METHOD addTCBSegment
-   METHOD amplitude
-   METHOD overshoot
-   METHOD period
-   METHOD setAmplitude
-   METHOD setOvershoot
-   METHOD setPeriod
-   METHOD setType
-   METHOD swap
-   METHOD toCubicSpline
-   METHOD type
-   METHOD valueForProgress
+$addMethods
 
 $endClass
 

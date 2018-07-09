@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD at
-   METHOD clear
-   METHOD clearBit
-   METHOD count
-   METHOD fill
-   METHOD isEmpty
-   METHOD isNull
-   METHOD resize
-   METHOD setBit
-   METHOD size
-   METHOD testBit
-   METHOD toggleBit
-   METHOD truncate
+$addMethods
 
 $endClass
 

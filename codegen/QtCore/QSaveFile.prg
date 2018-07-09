@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QFileDevice
 
-   METHOD new
-   METHOD delete
-   METHOD fileName
-   METHOD setFileName
-   METHOD open
-   METHOD commit
-   METHOD cancelWriting
-   METHOD setDirectWriteFallback
-   METHOD directWriteFallback
+$addMethods
 
 $endClass
 

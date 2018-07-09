@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD load
-   METHOD unload
-   METHOD isLoaded
-   METHOD setFileName
-   METHOD fileName
-   METHOD setFileNameAndVersion
-   METHOD errorString
-   METHOD setLoadHints
-   METHOD loadHints
-   METHOD resolve
-   METHOD isLibrary
+$addMethods
 
 $endClass
 

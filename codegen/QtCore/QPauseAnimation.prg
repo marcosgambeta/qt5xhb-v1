@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractAnimation
 
-   METHOD new
-   METHOD delete
-   METHOD setDuration
-   METHOD duration
+$addMethods
 
 $endClass
 

@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD isValid
-   METHOD isDefault
-   METHOD name
-   METHOD comment
-   METHOD genericIconName
-   METHOD iconName
-   METHOD globPatterns
-   METHOD parentMimeTypes
-   METHOD allAncestors
-   METHOD aliases
-   METHOD suffixes
-   METHOD preferredSuffix
-   METHOD inherits
-   METHOD filterString
+$addMethods
 
 $endClass
 

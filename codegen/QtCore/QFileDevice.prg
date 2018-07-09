@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QIODevice
 
-   METHOD delete
-   METHOD error
-   METHOD fileName
-   METHOD flush
-   METHOD handle
-   METHOD permissions
-   METHOD resize
-   METHOD setPermissions
-   METHOD unsetError
-   METHOD atEnd
-   METHOD close
-   METHOD isSequential
-   METHOD pos
-   METHOD seek
-   METHOD size
+$addMethods
 
 $endClass
 

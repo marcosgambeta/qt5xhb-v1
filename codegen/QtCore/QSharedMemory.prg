@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD setKey
-   METHOD key
-   METHOD setNativeKey
-   METHOD nativeKey
-   METHOD create
-   METHOD size
-   METHOD attach
-   METHOD isAttached
-   METHOD detach
-   METHOD data
-   METHOD lock
-   METHOD unlock
-   METHOD error
-   METHOD errorString
+$addMethods
 
 $endClass
 

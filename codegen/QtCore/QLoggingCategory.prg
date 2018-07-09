@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isEnabled
-   METHOD setEnabled
-   METHOD isDebugEnabled
-   METHOD isWarningEnabled
-   METHOD isCriticalEnabled
-   METHOD categoryName
-   METHOD defaultCategory
-   METHOD setFilterRules
+$addMethods
 
 $endClass
 

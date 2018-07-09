@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD accept
-   METHOD ignore
-   METHOD isAccepted
-   METHOD setAccepted
-   METHOD spontaneous
-   METHOD type
-   METHOD registerEventType
+$addMethods
 
 $endClass
 

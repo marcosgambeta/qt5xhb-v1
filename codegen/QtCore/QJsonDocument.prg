@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD array
-   METHOD isArray
-   METHOD isEmpty
-   METHOD isNull
-   METHOD isObject
-   METHOD object
-   METHOD rawData
-   METHOD setArray
-   METHOD setObject
-   METHOD toBinaryData
-   METHOD toJson
-   METHOD toVariant
-   METHOD fromBinaryData
-   METHOD fromJson
-   METHOD fromRawData
-   METHOD fromVariant
+$addMethods
 
 $endClass
 

@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD unlock
-   METHOD relock
-   METHOD readWriteLock
+$addMethods
 
 $endClass
 

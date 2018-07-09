@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD setPath
-   METHOD rootPath
-   METHOD device
-   METHOD fileSystemType
-   METHOD name
-   METHOD displayName
-   METHOD bytesTotal
-   METHOD bytesFree
-   METHOD bytesAvailable
-   METHOD isRoot
-   METHOD isReadOnly
-   METHOD isReady
-   METHOD isValid
-   METHOD refresh
-   METHOD mountedVolumes
-   METHOD root
+$addMethods
 
 $endClass
 

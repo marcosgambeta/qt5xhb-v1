@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD captureCount
-   METHOD errorString
-   METHOD globalMatch
-   METHOD isValid
-   METHOD match
-   METHOD pattern
-   METHOD patternErrorOffset
-   METHOD patternOptions
-   METHOD setPattern
-   METHOD setPatternOptions
-   METHOD swap
-   METHOD escape
+$addMethods
 
 $endClass
 

@@ -12,34 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addDays
-   METHOD addMonths
-   METHOD addYears
-   METHOD day
-   METHOD dayOfWeek
-   METHOD dayOfYear
-   METHOD daysInMonth
-   METHOD daysInYear
-   METHOD daysTo
-   METHOD getDate
-   METHOD isNull
-   METHOD month
-   METHOD setDate
-   METHOD toJulianDay
-   METHOD toString
-   METHOD weekNumber
-   METHOD year
-   METHOD currentDate
-   METHOD fromJulianDay
-   METHOD fromString
-   METHOD isLeapYear
-   METHOD isValid
-   METHOD longDayName
-   METHOD longMonthName
-   METHOD shortDayName
-   METHOD shortMonthName
+$addMethods
 
 $endClass
 

@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD addPath
-   METHOD addPaths
-   METHOD directories
-   METHOD files
-   METHOD removePath
-   METHOD removePaths
+$addMethods
 
 $addSignals
 

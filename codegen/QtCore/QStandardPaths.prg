@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD writableLocation
-   METHOD standardLocations
-   METHOD locate
-   METHOD locateAll
-   METHOD displayName
-   METHOD findExecutable
-   METHOD setTestModeEnabled
-   METHOD isTestModeEnabled
+$addMethods
 
 $endClass
 

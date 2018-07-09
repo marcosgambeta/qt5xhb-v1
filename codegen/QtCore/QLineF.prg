@@ -12,34 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD p1
-   METHOD p2
-   METHOD x1
-   METHOD x2
-   METHOD y1
-   METHOD y2
-   METHOD angle
-   METHOD angleTo
-   METHOD dx
-   METHOD dy
-   METHOD intersect
-   METHOD isNull
-   METHOD length
-   METHOD normalVector
-   METHOD pointAt
-   METHOD setP1
-   METHOD setP2
-   METHOD setAngle
-   METHOD setLength
-   METHOD setLine
-   METHOD setPoints
-   METHOD toLine
-   METHOD translate
-   METHOD translated
-   METHOD unitVector
-   METHOD fromPolar
+$addMethods
 
 $endClass
 

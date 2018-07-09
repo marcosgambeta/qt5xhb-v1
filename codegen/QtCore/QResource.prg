@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD absoluteFilePath
-   METHOD data
-   METHOD fileName
-   METHOD isCompressed
-   METHOD isValid
-   METHOD locale
-   METHOD setFileName
-   METHOD setLocale
-   METHOD size
-   METHOD registerResource
-   METHOD unregisterResource
+$addMethods
 
 $endClass
 

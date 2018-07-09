@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD acquire
-   METHOD tryAcquire
-   METHOD release
-   METHOD available
+$addMethods
 
 $endClass
 

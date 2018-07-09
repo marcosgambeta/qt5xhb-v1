@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractState
 
-   METHOD new
-   METHOD delete
-   METHOD addTransition
-   METHOD assignProperty
-   METHOD childMode
-   METHOD errorState
-   METHOD initialState
-   METHOD removeTransition
-   METHOD setChildMode
-   METHOD setErrorState
-   METHOD setInitialState
-   METHOD transitions
+$addMethods
 
 $addSignals
 

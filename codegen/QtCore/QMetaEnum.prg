@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD name
-   METHOD isFlag
-   METHOD keyCount
-   METHOD key
-   METHOD value
-   METHOD scope
-   METHOD keyToValue
-   METHOD valueToKey
-   METHOD keysToValue
-   METHOD valueToKeys
-   METHOD enclosingMetaObject
-   METHOD isValid
+$addMethods
 
 $endClass
 

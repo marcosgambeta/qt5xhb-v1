@@ -12,37 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD classInfo
-   METHOD classInfoCount
-   METHOD classInfoOffset
-   METHOD className
-   METHOD constructor
-   METHOD constructorCount
-   METHOD enumerator
-   METHOD enumeratorCount
-   METHOD enumeratorOffset
-   METHOD indexOfClassInfo
-   METHOD indexOfConstructor
-   METHOD indexOfEnumerator
-   METHOD indexOfMethod
-   METHOD indexOfProperty
-   METHOD indexOfSignal
-   METHOD indexOfSlot
-   METHOD method
-   METHOD methodCount
-   METHOD methodOffset
-%%   METHOD newInstance
-   METHOD property
-   METHOD propertyCount
-   METHOD propertyOffset
-   METHOD superClass
-   METHOD userProperty
-   METHOD checkConnectArgs
-   METHOD connectSlotsByName
-   METHOD invokeMethod
-   METHOD normalizedSignature
-   METHOD normalizedType
+$addMethods
 
 $endClass
 

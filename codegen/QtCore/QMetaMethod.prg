@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD typeName
-   METHOD parameterTypes
-   METHOD parameterNames
-   METHOD tag
-   METHOD access
-   METHOD methodType
-   METHOD attributes
-   METHOD methodIndex
-   METHOD revision
-   METHOD enclosingMetaObject
-   METHOD invoke
-   METHOD methodSignature
-   METHOD name
-   METHOD returnType
-   METHOD parameterCount
-   METHOD parameterType
-   METHOD getParameterTypes
-   METHOD isValid
+$addMethods
 
 $endClass
 

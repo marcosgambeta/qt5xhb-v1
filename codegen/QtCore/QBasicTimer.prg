@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isActive
-   METHOD start
-   METHOD stop
-   METHOD timerId
+$addMethods
 
 $endClass
 

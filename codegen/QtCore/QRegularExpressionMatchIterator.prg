@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD hasNext
-   METHOD isValid
-   METHOD matchOptions
-   METHOD matchType
-   METHOD next
-   METHOD peekNext
-   METHOD regularExpression
-   METHOD swap
+$addMethods
 
 $endClass
 

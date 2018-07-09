@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD setLocale
-   METHOD locale
-   METHOD caseSensitivity
-   METHOD setCaseSensitivity
-   METHOD setNumericMode
-   METHOD numericMode
-   METHOD setIgnorePunctuation
-   METHOD ignorePunctuation
-   METHOD sortKey
+$addMethods
 
 $endClass
 

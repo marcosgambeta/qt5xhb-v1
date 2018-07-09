@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractTransition
 
-   METHOD new
-   METHOD delete
-   METHOD senderObject
-   METHOD setSenderObject
-   METHOD signal
-   METHOD setSignal
+$addMethods
 
 $endClass
 

@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD type
-   METHOD string
-   METHOD toStart
-   METHOD toEnd
-   METHOD position
-   METHOD setPosition
-   METHOD toNextBoundary
-   METHOD toPreviousBoundary
-   METHOD isAtBoundary
-   METHOD boundaryReasons
+$addMethods
 
 $endClass
 

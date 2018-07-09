@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD indexIn
-   METHOD pattern
-   METHOD setPattern
+$addMethods
 
 $endClass
 

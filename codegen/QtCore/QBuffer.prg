@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QIODevice
 
-   METHOD new
-   METHOD delete
-   METHOD buffer1
-   METHOD buffer2
-   METHOD buffer
-   METHOD data
-   METHOD setBuffer
-   METHOD setData
-   METHOD atEnd
-   METHOD canReadLine
-   METHOD close
-   METHOD open
-   METHOD pos
-   METHOD seek
-   METHOD size
+$addMethods
 
 $endClass
 

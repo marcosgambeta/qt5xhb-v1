@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD interval
-   METHOD isActive
-   METHOD isSingleShot
-   METHOD setInterval
-   METHOD setSingleShot
-   METHOD timerId
-   METHOD start
-   METHOD stop
-   METHOD singleShot
+$addMethods
 
 $addSignals
 

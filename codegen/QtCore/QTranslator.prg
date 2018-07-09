@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD isEmpty
-   METHOD load
-   METHOD translate
+$addMethods
 
 $endClass
 

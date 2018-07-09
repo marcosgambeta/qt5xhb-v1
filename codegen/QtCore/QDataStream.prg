@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD device
-   METHOD setDevice
-   METHOD unsetDevice
-   METHOD atEnd
-   METHOD status
-   METHOD setStatus
-   METHOD resetStatus
-   METHOD floatingPointPrecision
-   METHOD setFloatingPointPrecision
-   METHOD byteOrder
-   METHOD setByteOrder
-   METHOD version
-   METHOD setVersion
-   METHOD readBytes
-   METHOD readRawData
-   METHOD writeBytes
-   METHOD writeRawData
-   METHOD skipRawData
+$addMethods
 
 $endClass
 
