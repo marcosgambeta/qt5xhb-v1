@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QPlaceSearchResult
 
-   METHOD new
-   METHOD delete
-   METHOD searchRequest
-   METHOD setSearchRequest
+$addMethods
 
 $endClass
 

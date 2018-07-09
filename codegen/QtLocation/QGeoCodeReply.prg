@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD isFinished
-   METHOD error
-   METHOD errorString
-   METHOD viewport
-   METHOD locations
-   METHOD limit
-   METHOD offset
-   METHOD abort
+$addMethods
 
 $addSignals
 

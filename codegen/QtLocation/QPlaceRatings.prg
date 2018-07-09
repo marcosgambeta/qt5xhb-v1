@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD average
-   METHOD setAverage
-   METHOD count
-   METHOD setCount
-   METHOD maximum
-   METHOD setMaximum
-   METHOD isEmpty
+$addMethods
 
 $endClass
 

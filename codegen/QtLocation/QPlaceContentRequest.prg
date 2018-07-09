@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD contentType
-   METHOD setContentType
-   METHOD placeId
-   METHOD setPlaceId
-   METHOD contentContext
-   METHOD setContentContext
-   METHOD limit
-   METHOD setLimit
-   METHOD clear
+$addMethods
 
 $endClass
 

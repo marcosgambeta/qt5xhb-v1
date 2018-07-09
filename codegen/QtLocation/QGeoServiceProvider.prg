@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD availableServiceProviders
-   METHOD routingFeatures
-   METHOD geocodingFeatures
-   METHOD mappingFeatures
-   METHOD placesFeatures
-   METHOD geocodingManager
-%%   METHOD mappingManager
-   METHOD routingManager
-   METHOD placeManager
-   METHOD error
-   METHOD errorString
-   METHOD setLocale
-   METHOD setAllowExperimental
+$addMethods
 
 $endClass
 

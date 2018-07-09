@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QPlaceContent
 
-   METHOD new
-   METHOD delete
-   METHOD dateTime
-   METHOD setDateTime
-   METHOD text
-   METHOD setText
-   METHOD language
-   METHOD setLanguage
-   METHOD rating
-   METHOD setRating
-   METHOD reviewId
-   METHOD setReviewId
-   METHOD title
-   METHOD setTitle
+$addMethods
 
 $endClass
 

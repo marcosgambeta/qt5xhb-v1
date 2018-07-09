@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QPlaceSearchResult
 
-   METHOD new
-   METHOD delete
-   METHOD distance
-   METHOD setDistance
-   METHOD place
-   METHOD setPlace
-   METHOD isSponsored
-   METHOD setSponsored
+$addMethods
 
 $endClass
 

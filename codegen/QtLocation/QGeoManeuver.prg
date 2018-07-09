@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD setPosition
-   METHOD position
-   METHOD setInstructionText
-   METHOD instructionText
-   METHOD setDirection
-   METHOD direction
-   METHOD setTimeToNextInstruction
-   METHOD timeToNextInstruction
-   METHOD setDistanceToNextInstruction
-   METHOD distanceToNextInstruction
-   METHOD setWaypoint
-   METHOD waypoint
+$addMethods
 
 $endClass
 

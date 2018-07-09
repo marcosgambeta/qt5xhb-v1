@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD managerName
-   METHOD managerVersion
-   METHOD geocode
-   METHOD reverseGeocode
-   METHOD setLocale
-   METHOD locale
+$addMethods
 
 $addSignals
 

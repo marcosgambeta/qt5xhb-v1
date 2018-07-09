@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD setWaypoints
-   METHOD waypoints
-   METHOD setExcludeAreas
-   METHOD excludeAreas
-   METHOD setNumberAlternativeRoutes
-   METHOD numberAlternativeRoutes
-   METHOD setTravelModes
-   METHOD travelModes
-   METHOD setFeatureWeight
-   METHOD featureWeight
-   METHOD featureTypes
-   METHOD setRouteOptimization
-   METHOD routeOptimization
-   METHOD setSegmentDetail
-   METHOD segmentDetail
-   METHOD setManeuverDetail
-   METHOD maneuverDetail
+$addMethods
 
 $endClass
 

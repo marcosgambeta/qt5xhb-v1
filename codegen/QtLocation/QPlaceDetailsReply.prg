@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QPlaceReply
 
-   METHOD new
-   METHOD delete
-   METHOD type
-   METHOD place
+$addMethods
 
 $endClass
 

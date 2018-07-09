@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD setNextRouteSegment
-   METHOD nextRouteSegment
-   METHOD setTravelTime
-   METHOD travelTime
-   METHOD setDistance
-   METHOD distance
-   METHOD setPath
-   METHOD path
-   METHOD setManeuver
-   METHOD maneuver
+$addMethods
 
 $endClass
 

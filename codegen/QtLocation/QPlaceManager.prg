@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD managerName
-   METHOD managerVersion
-   METHOD getPlaceDetails
-   METHOD getPlaceContent
-   METHOD search
-   METHOD searchSuggestions
-   METHOD savePlace
-   METHOD removePlace
-   METHOD saveCategory
-   METHOD removeCategory
-   METHOD initializeCategories
-   METHOD parentCategoryId
-   METHOD childCategoryIds
-   METHOD category
-   METHOD childCategories
-   METHOD locales
-   METHOD setLocales
-   METHOD setLocale
-   METHOD compatiblePlace
-   METHOD matchingPlaces
+$addMethods
 
 $addSignals
 

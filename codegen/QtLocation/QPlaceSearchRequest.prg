@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD searchTerm
-   METHOD setSearchTerm
-   METHOD categories
-   METHOD setCategory
-   METHOD setCategories
-   METHOD searchArea
-   METHOD setSearchArea
-   METHOD recommendationId
-   METHOD setRecommendationId
-   METHOD searchContext
-   METHOD setSearchContext
-   METHOD visibilityScope
-   METHOD setVisibilityScope
-   METHOD relevanceHint
-   METHOD setRelevanceHint
-   METHOD limit
-   METHOD setLimit
-   METHOD clear
+$addMethods
 
 $endClass
 

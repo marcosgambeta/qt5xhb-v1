@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD managerName
-   METHOD managerVersion
-   METHOD calculateRoute
-   METHOD updateRoute
-   METHOD supportedTravelModes
-   METHOD supportedFeatureTypes
-   METHOD supportedFeatureWeights
-   METHOD supportedRouteOptimizations
-   METHOD supportedSegmentDetails
-   METHOD supportedManeuverDetails
-   METHOD setLocale
-   METHOD locale
-   METHOD setMeasurementSystem
-   METHOD measurementSystem
+$addMethods
 
 $addSignals
 

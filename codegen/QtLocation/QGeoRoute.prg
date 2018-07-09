@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD setRouteId
-   METHOD routeId
-   METHOD setRequest
-   METHOD request
-   METHOD setBounds
-   METHOD bounds
-   METHOD setFirstRouteSegment
-   METHOD firstRouteSegment
-   METHOD setTravelTime
-   METHOD travelTime
-   METHOD setDistance
-   METHOD distance
-   METHOD setTravelMode
-   METHOD travelMode
-   METHOD setPath
-   METHOD path
+$addMethods
 
 $endClass
 

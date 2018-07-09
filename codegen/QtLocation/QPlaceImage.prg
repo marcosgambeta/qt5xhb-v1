@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QPlaceContent
 
-   METHOD new
-   METHOD delete
-   METHOD url
-   METHOD setUrl
-   METHOD imageId
-   METHOD setImageId
-   METHOD mimeType
-   METHOD setMimeType
+$addMethods
 
 $endClass
 

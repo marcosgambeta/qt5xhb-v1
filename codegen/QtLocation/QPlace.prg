@@ -12,45 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD categories
-   METHOD setCategories
-   METHOD setCategory
-   METHOD location
-   METHOD setLocation
-   METHOD ratings
-   METHOD setRatings
-   METHOD supplier
-   METHOD setSupplier
-   METHOD attribution
-   METHOD setAttribution
-   METHOD icon
-   METHOD setIcon
-   METHOD totalContentCount
-   METHOD setTotalContentCount
-   METHOD name
-   METHOD setName
-   METHOD placeId
-   METHOD setPlaceId
-   METHOD primaryPhone
-   METHOD primaryFax
-   METHOD primaryEmail
-   METHOD primaryWebsite
-   METHOD detailsFetched
-   METHOD setDetailsFetched
-   METHOD extendedAttributeTypes
-   METHOD extendedAttribute
-   METHOD setExtendedAttribute
-   METHOD removeExtendedAttribute
-   METHOD contactTypes
-   METHOD contactDetails
-   METHOD setContactDetails
-   METHOD appendContactDetail
-   METHOD removeContactDetails
-   METHOD visibility
-   METHOD setVisibility
-   METHOD isEmpty
+$addMethods
 
 $endClass
 
