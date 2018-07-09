@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD expiry
-   METHOD host
-   METHOD includesSubDomains
-   METHOD isExpired
-   METHOD setExpiry
-   METHOD setHost
-   METHOD setIncludesSubDomains
-   METHOD swap
+$addMethods
 
 $endClass
 

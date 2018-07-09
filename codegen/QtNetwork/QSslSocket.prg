@@ -16,82 +16,23 @@ $addRequests
 
 $beginClassFrom=QTcpSocket
 
-   METHOD new
-   METHOD delete
-
-   METHOD abort
-   METHOD atEnd
-   METHOD bytesAvailable
-   METHOD bytesToWrite
-   METHOD canReadLine
-   METHOD close
-   METHOD connectToHost
-   METHOD connectToHostEncrypted
-   METHOD disconnectFromHost
-   METHOD encryptedBytesAvailable
-   METHOD encryptedBytesToWrite
-   METHOD flush
-   METHOD isEncrypted
-   METHOD localCertificate
-   METHOD localCertificateChain
-   METHOD mode
-   METHOD peerCertificate
-   METHOD peerCertificateChain
-   METHOD peerVerifyDepth
-   METHOD peerVerifyMode
-   METHOD peerVerifyName
-   METHOD privateKey
-   METHOD protocol
-   METHOD resume
-   METHOD sessionCipher
-   METHOD sessionProtocol
-   METHOD setLocalCertificate
-   METHOD setLocalCertificateChain
-   METHOD setPeerVerifyDepth
-   METHOD setPeerVerifyMode
-   METHOD setPeerVerifyName
-   METHOD setPrivateKey
-   METHOD setProtocol
-   METHOD setReadBufferSize
-   METHOD setSocketDescriptor
-   METHOD setSocketOption
-   METHOD setSslConfiguration
-   METHOD socketOption
-   METHOD sslConfiguration
+$addMethods
 %% #if QT_DEPRECATED_SINCE(5, 5)
-   METHOD ciphers
-   METHOD defaultCiphers
-   METHOD setCiphers
-   METHOD setDefaultCiphers
-   METHOD supportedCiphers
+%%   METHOD ciphers
+%%   METHOD defaultCiphers
+%%   METHOD setCiphers
+%%   METHOD setDefaultCiphers
+%%   METHOD supportedCiphers
 %% #endif // QT_DEPRECATED_SINCE(5, 5)
-   METHOD addCaCertificate
-   METHOD addCaCertificates
 %% #if QT_DEPRECATED_SINCE(5, 5)
-   METHOD caCertificates
-   METHOD setCaCertificates
+%%   METHOD caCertificates
+%%   METHOD setCaCertificates
 %% #endif // QT_DEPRECATED_SINCE(5, 5)
-   METHOD addDefaultCaCertificate
-   METHOD addDefaultCaCertificates
 %% #if QT_DEPRECATED_SINCE(5, 5)
-   METHOD defaultCaCertificates
-   METHOD setDefaultCaCertificates
-   METHOD systemCaCertificates
+%%   METHOD defaultCaCertificates
+%%   METHOD setDefaultCaCertificates
+%%   METHOD systemCaCertificates
 %% #endif // QT_DEPRECATED_SINCE(5, 5)
-   METHOD ignoreSslErrors
-   METHOD sslErrors
-   METHOD sslLibraryBuildVersionNumber
-   METHOD sslLibraryBuildVersionString
-   METHOD sslLibraryVersionNumber
-   METHOD sslLibraryVersionString
-   METHOD startClientEncryption
-   METHOD startServerEncryption
-   METHOD supportsSsl
-   METHOD waitForBytesWritten
-   METHOD waitForConnected
-   METHOD waitForDisconnected
-   METHOD waitForEncrypted
-   METHOD waitForReadyRead
 
 $addSignals
 

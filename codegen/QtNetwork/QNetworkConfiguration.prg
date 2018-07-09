@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD bearerType
-   METHOD bearerTypeFamily
-   METHOD bearerTypeName
-   METHOD children
-   METHOD connectTimeout
-   METHOD identifier
-   METHOD isRoamingAvailable
-   METHOD isValid
-   METHOD name
-   METHOD purpose
-   METHOD setConnectTimeout
-   METHOD state
-   METHOD swap
-   METHOD type
+$addMethods
 
 $endClass
 

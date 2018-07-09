@@ -15,36 +15,16 @@ $addRequests
 
 $beginClassFrom=QIODevice
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD abort
-   METHOD attribute
-   METHOD close
-   METHOD error
-   METHOD hasRawHeader
-   METHOD header
+$addMethods
 %% #ifndef QT_NO_SSL
-   METHOD ignoreSslErrors
-%% #endif
-   METHOD isFinished
-   METHOD isRunning
-   METHOD isSequential
-   METHOD manager
-   METHOD operation
-   METHOD rawHeader
-   METHOD rawHeaderList
-%%   METHOD rawHeaderPairs
-   METHOD readBufferSize
-   METHOD request
-   METHOD setReadBufferSize
-%% #ifndef QT_NO_SSL
-   METHOD setSslConfiguration
+%%   METHOD ignoreSslErrors
 %% #endif
 %% #ifndef QT_NO_SSL
-   METHOD sslConfiguration
+%%   METHOD setSslConfiguration
 %% #endif
-   METHOD url
+%% #ifndef QT_NO_SSL
+%%   METHOD sslConfiguration
+%% #endif
 
 $addSignals
 

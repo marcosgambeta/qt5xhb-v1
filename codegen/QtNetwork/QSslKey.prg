@@ -16,18 +16,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD algorithm
-   METHOD clear
-   METHOD handle
-   METHOD isNull
-   METHOD length
-   METHOD swap
-   METHOD toDer
-   METHOD toPem
-   METHOD type
+$addMethods
 
 $endClass
 

@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD detach
-   METHOD isNull
-   METHOD option
-%%   METHOD options
-   METHOD password
-   METHOD realm
-   METHOD setOption
-   METHOD setPassword
-   METHOD setRealm
-   METHOD setUser
-   METHOD user
+$addMethods
 
 $endClass
 

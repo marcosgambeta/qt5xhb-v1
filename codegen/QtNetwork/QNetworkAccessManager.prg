@@ -12,48 +12,23 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD supportedSchemes
-   METHOD clearAccessCache
-   METHOD clearConnectionCache
+$addMethods
 %% #ifndef QT_NO_NETWORKPROXY
-   METHOD proxy
-   METHOD setProxy
-   METHOD proxyFactory
-   METHOD setProxyFactory
+%%   METHOD proxy
+%%   METHOD setProxy
+%%   METHOD proxyFactory
+%%   METHOD setProxyFactory
 %% #endif
-   METHOD cache
-   METHOD setCache
-   METHOD cookieJar
-   METHOD setCookieJar
-   METHOD setStrictTransportSecurityEnabled
-   METHOD isStrictTransportSecurityEnabled
-   METHOD enableStrictTransportSecurityStore
-   METHOD isStrictTransportSecurityStoreEnabled
-   METHOD addStrictTransportSecurityHosts
-   METHOD strictTransportSecurityHosts
-   METHOD head
-   METHOD get
-   METHOD post
-   METHOD put
-   METHOD deleteResource
-   METHOD sendCustomRequest
 %% #ifndef QT_NO_BEARERMANAGEMENT
-   METHOD setConfiguration
-   METHOD configuration
-   METHOD activeConfiguration
-   METHOD setNetworkAccessible
-   METHOD networkAccessible
+%%   METHOD setConfiguration
+%%   METHOD configuration
+%%   METHOD activeConfiguration
+%%   METHOD setNetworkAccessible
+%%   METHOD networkAccessible
 %% #endif
 %% #ifndef QT_NO_SSL
-   METHOD connectToHostEncrypted
+%%   METHOD connectToHostEncrypted
 %% #endif
-   METHOD connectToHost
-   METHOD setRedirectPolicy
-   METHOD redirectPolicy
-%%   METHOD createRequest
 
 $addSignals
 

@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD cookiesForUrl
-   METHOD deleteCookie
-   METHOD insertCookie
-   METHOD setCookiesFromUrl
-   METHOD updateCookie
+$addMethods
 
 $endClass
 

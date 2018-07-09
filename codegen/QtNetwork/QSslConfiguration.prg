@@ -16,52 +16,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD allowedNextProtocols
-   METHOD caCertificates
-   METHOD ciphers
-   METHOD defaultConfiguration
-%%   METHOD diffieHellmanParameters
-%%   METHOD ellipticCurves
-   METHOD ephemeralServerKey
-   METHOD isNull
-   METHOD localCertificate
-   METHOD localCertificateChain
-   METHOD nextNegotiatedProtocol
-   METHOD nextProtocolNegotiationStatus
-   METHOD peerCertificate
-   METHOD peerCertificateChain
-   METHOD peerVerifyDepth
-   METHOD peerVerifyMode
-   METHOD preSharedKeyIdentityHint
-   METHOD privateKey
-   METHOD protocol
-   METHOD sessionCipher
-   METHOD sessionProtocol
-   METHOD sessionTicket
-   METHOD sessionTicketLifeTimeHint
-   METHOD setAllowedNextProtocols
-   METHOD setCaCertificates
-   METHOD setCiphers
-   METHOD setDefaultConfiguration
-%%   METHOD setDiffieHellmanParameters
-%%   METHOD setEllipticCurves
-   METHOD setLocalCertificate
-   METHOD setLocalCertificateChain
-   METHOD setPeerVerifyDepth
-   METHOD setPeerVerifyMode
-   METHOD setPreSharedKeyIdentityHint
-   METHOD setPrivateKey
-   METHOD setProtocol
-   METHOD setSessionTicket
-   METHOD setSslOption
-   METHOD supportedCiphers
-%%   METHOD supportedEllipticCurves
-   METHOD swap
-   METHOD systemCaCertificates
-   METHOD testSslOption
+$addMethods
 
 $endClass
 

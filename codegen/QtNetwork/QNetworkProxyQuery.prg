@@ -16,25 +16,10 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD localPort
-   METHOD peerHostName
-   METHOD peerPort
-   METHOD protocolTag
-   METHOD queryType
-   METHOD setLocalPort
-   METHOD setPeerHostName
-   METHOD setPeerPort
-   METHOD setProtocolTag
-   METHOD setQueryType
-   METHOD setUrl
-   METHOD url
-   METHOD swap
+$addMethods
 %% #if !defined(QT_NO_BEARERMANAGEMENT) && QT_DEPRECATED_SINCE(5, 10)
-   METHOD networkConfiguration
-   METHOD setNetworkConfiguration
+%%   METHOD networkConfiguration
+%%   METHOD setNetworkConfiguration
 %% #endif
 
 $endClass

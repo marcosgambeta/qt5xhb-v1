@@ -17,23 +17,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-%%   METHOD attributes
-   METHOD expirationDate
-   METHOD isValid
-   METHOD lastModified
-%%   METHOD rawHeaders
-   METHOD saveToDisk
-%%   METHOD setAttributes
-   METHOD setExpirationDate
-   METHOD setLastModified
-%%   METHOD setRawHeaders
-   METHOD setSaveToDisk
-   METHOD setUrl
-   METHOD swap
-   METHOD url
+$addMethods
 
 $endClass
 

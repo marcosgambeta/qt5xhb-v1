@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD setBody
-   METHOD setBodyDevice
-   METHOD setHeader
-   METHOD setRawHeader
-   METHOD swap
+$addMethods
 
 $endClass
 

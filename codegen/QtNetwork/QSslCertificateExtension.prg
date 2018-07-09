@@ -16,15 +16,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD isCritical
-   METHOD isSupported
-   METHOD name
-   METHOD oid
-   METHOD swap
-   METHOD value
+$addMethods
 
 $endClass
 

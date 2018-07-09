@@ -16,32 +16,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD applicationProxy
-   METHOD capabilities
-   METHOD hasRawHeader
-   METHOD header
-   METHOD hostName
-   METHOD isCachingProxy
-   METHOD isTransparentProxy
-   METHOD password
-   METHOD port
-   METHOD rawHeader
-   METHOD rawHeaderList
-   METHOD setApplicationProxy
-   METHOD setCapabilities
-   METHOD setHeader
-   METHOD setHostName
-   METHOD setPassword
-   METHOD setPort
-   METHOD setRawHeader
-   METHOD setType
-   METHOD setUser
-   METHOD swap
-   METHOD type
-   METHOD user
+$addMethods
 
 $endClass
 

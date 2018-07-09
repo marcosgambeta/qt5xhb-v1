@@ -16,13 +16,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD certificate
-   METHOD error
-   METHOD errorString
-   METHOD swap
+$addMethods
 
 $endClass
 

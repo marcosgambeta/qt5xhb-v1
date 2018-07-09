@@ -16,26 +16,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD clear
-   METHOD data
-   METHOD destinationAddress
-   METHOD destinationPort
-   METHOD hopLimit
-   METHOD interfaceIndex
-   METHOD isNull
-   METHOD isValid
-   METHOD makeReply
-   METHOD senderAddress
-   METHOD senderPort
-   METHOD setData
-   METHOD setDestination
-   METHOD setHopLimit
-   METHOD setInterfaceIndex
-   METHOD setSender
-   METHOD swap
+$addMethods
 
 $endClass
 

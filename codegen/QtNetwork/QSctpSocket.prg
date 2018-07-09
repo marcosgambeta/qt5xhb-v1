@@ -16,16 +16,7 @@ $addRequests
 
 $beginClassFrom=QTcpSocket
 
-   METHOD new
-   METHOD delete
-
-   METHOD close
-   METHOD disconnectFromHost
-   METHOD isInDatagramMode
-   METHOD maximumChannelCount
-   METHOD readDatagram
-   METHOD setMaximumChannelCount
-   METHOD writeDatagram
+$addMethods
 
 $endClass
 

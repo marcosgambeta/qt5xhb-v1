@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD name
-   METHOD port
-   METHOD priority
-   METHOD swap
-   METHOD target
-   METHOD timeToLive
-   METHOD weight
+$addMethods
 
 $endClass
 

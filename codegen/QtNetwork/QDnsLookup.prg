@@ -12,27 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD abort
-   METHOD canonicalNameRecords
-   METHOD error
-   METHOD errorString
-   METHOD hostAddressRecords
-   METHOD isFinished
-   METHOD lookup
-   METHOD mailExchangeRecords
-   METHOD name
-   METHOD nameserver
-   METHOD nameServerRecords
-   METHOD pointerRecords
-   METHOD serviceRecords
-   METHOD setName
-   METHOD setNameserver
-   METHOD setType
-   METHOD textRecords
-   METHOD type
+$addMethods
 
 $addSignals
 

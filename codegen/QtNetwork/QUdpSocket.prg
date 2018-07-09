@@ -16,20 +16,13 @@ $addRequests
 
 $beginClassFrom=QAbstractSocket
 
-   METHOD new
-   METHOD delete
-
+$addMethods
 %% #ifndef QT_NO_NETWORKINTERFACE
-   METHOD joinMulticastGroup
-   METHOD leaveMulticastGroup
-   METHOD multicastInterface
-   METHOD setMulticastInterface
+%%   METHOD joinMulticastGroup
+%%   METHOD leaveMulticastGroup
+%%   METHOD multicastInterface
+%%   METHOD setMulticastInterface
 %% #endif
-   METHOD hasPendingDatagrams
-   METHOD pendingDatagramSize
-   METHOD receiveDatagram
-%%   METHOD readDatagram
-   METHOD writeDatagram
 
 $endClass
 

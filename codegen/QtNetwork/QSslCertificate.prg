@@ -15,41 +15,13 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD swap
-   METHOD isNull
+$addMethods
 %% #if QT_DEPRECATED_SINCE(5,0)
-   METHOD isValid
+%%   METHOD isValid
 %% #endif
-   METHOD isBlacklisted
-   METHOD isSelfSigned
-   METHOD clear
-   METHOD version
-   METHOD serialNumber
-   METHOD digest
-   METHOD issuerInfo
-   METHOD subjectInfo
-   METHOD subjectInfoAttributes
-   METHOD issuerInfoAttributes
 %% #if QT_DEPRECATED_SINCE(5,0)
 %%   METHOD alternateSubjectNames
 %% #endif
-%%   METHOD subjectAlternativeNames
-   METHOD effectiveDate
-   METHOD expiryDate
-   METHOD publicKey
-   METHOD extensions
-   METHOD toPem
-   METHOD toDer
-   METHOD toText
-   METHOD fromPath
-   METHOD fromDevice
-   METHOD fromData
-   METHOD verify
-%%   METHOD importPkcs12
-   METHOD handle
 
 $endClass
 

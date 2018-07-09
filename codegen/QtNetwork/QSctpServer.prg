@@ -16,12 +16,7 @@ $addRequests
 
 $beginClassFrom=QTcpServer
 
-   METHOD new
-   METHOD delete
-
-   METHOD maximumChannelCount
-   METHOD nextPendingDatagramConnection
-   METHOD setMaximumChannelCount
+$addMethods
 
 $endClass
 

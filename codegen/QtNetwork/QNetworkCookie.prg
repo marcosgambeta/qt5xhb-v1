@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD domain
-   METHOD expirationDate
-   METHOD hasSameIdentifier
-   METHOD isHttpOnly
-   METHOD isSecure
-   METHOD isSessionCookie
-   METHOD name
-   METHOD normalize
-   METHOD parseCookies
-   METHOD path
-   METHOD setDomain
-   METHOD setExpirationDate
-   METHOD setHttpOnly
-   METHOD setName
-   METHOD setPath
-   METHOD setSecure
-   METHOD setValue
-   METHOD swap
-   METHOD toRawForm
-   METHOD value
+$addMethods
 
 $endClass
 

@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSocket
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

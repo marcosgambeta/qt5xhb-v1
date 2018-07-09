@@ -16,31 +16,10 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD accept
-   METHOD activeTime
-   METHOD bytesReceived
-   METHOD bytesWritten
-   METHOD close
-   METHOD configuration
-   METHOD error
-   METHOD errorString
-   METHOD ignore
+$addMethods
 %% #ifndef QT_NO_NETWORKINTERFACE
-   METHOD interface
+%%   METHOD interface
 %% #endif
-   METHOD isOpen
-   METHOD migrate
-   METHOD open
-   METHOD reject
-   METHOD sessionProperty
-   METHOD setSessionProperty
-   METHOD state
-   METHOD stop
-   METHOD usagePolicies
-   METHOD waitForOpened
 
 $addSignals
 
