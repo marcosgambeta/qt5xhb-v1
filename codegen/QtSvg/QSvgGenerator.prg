@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QPaintDevice
 
-   METHOD new
-   METHOD delete
-
-   METHOD description
-   METHOD fileName
-   METHOD outputDevice
-   METHOD resolution
-   METHOD setDescription
-   METHOD setFileName
-   METHOD setOutputDevice
-   METHOD setResolution
-   METHOD setSize
-   METHOD setTitle
-   METHOD setViewBox
-   METHOD size
-   METHOD title
-   METHOD viewBox
-   METHOD viewBoxF
+$addMethods
 
 $endClass
 
