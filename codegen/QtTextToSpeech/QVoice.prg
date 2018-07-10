@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD age
-   METHOD ageName
-   METHOD gender
-   METHOD genderName
-   METHOD name
+$addMethods
 
 $endClass
 
