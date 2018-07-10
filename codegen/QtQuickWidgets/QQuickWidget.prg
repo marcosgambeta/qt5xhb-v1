@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD source
-   METHOD setSource
-   METHOD engine
-   METHOD rootContext
-   METHOD rootObject
-   METHOD resizeMode
-   METHOD setResizeMode
-   METHOD status
-   METHOD errors
-   METHOD sizeHint
-   METHOD initialSize
-   METHOD setContent
-   METHOD format
-   METHOD setFormat
+$addMethods
 
 $addSignals
 
