@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD registerObject
-   METHOD deregisterObject
-   METHOD blockUpdates
-   METHOD setBlockUpdates
-   METHOD connectTo
-   METHOD disconnectFrom
+$addMethods
 
 $addSignals
 

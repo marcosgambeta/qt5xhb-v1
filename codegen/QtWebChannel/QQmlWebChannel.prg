@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QWebChannel
 
-   METHOD new
-   METHOD delete
-%%   METHOD registerObjects
-%%   METHOD registeredObjects
-%%   METHOD transports
-%%   METHOD qmlAttachedProperties
-   METHOD connectTo
-   METHOD disconnectFrom
+$addMethods
 
 $endClass
 

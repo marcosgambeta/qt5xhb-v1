@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-   METHOD sendMessage
+$addMethods
 
 $addSignals
 
