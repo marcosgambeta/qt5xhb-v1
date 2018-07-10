@@ -12,47 +12,7 @@ $addRequests
 
 $beginClassFrom=QIODevice
 
-   METHOD new
-   METHOD delete
-   METHOD setPortName
-   METHOD portName
-   METHOD setPort
-   METHOD open
-   METHOD close
-   METHOD setSettingsRestoredOnClose
-   METHOD settingsRestoredOnClose
-   METHOD setBaudRate
-   METHOD baudRate
-   METHOD setDataBits
-   METHOD dataBits
-   METHOD setParity
-   METHOD parity
-   METHOD setStopBits
-   METHOD stopBits
-   METHOD setFlowControl
-   METHOD flowControl
-   METHOD setDataTerminalReady
-   METHOD isDataTerminalReady
-   METHOD setRequestToSend
-   METHOD isRequestToSend
-   METHOD pinoutSignals
-   METHOD flush
-   METHOD clear
-   METHOD atEnd
-   METHOD setDataErrorPolicy
-   METHOD dataErrorPolicy
-   METHOD error
-   METHOD clearError
-   METHOD readBufferSize
-   METHOD setReadBufferSize
-   METHOD isSequential
-   METHOD bytesAvailable
-   METHOD bytesToWrite
-   METHOD canReadLine
-   METHOD waitForReadyRead
-   METHOD waitForBytesWritten
-   METHOD sendBreak
-   METHOD setBreakEnabled
+$addMethods
 
 $addSignals
 

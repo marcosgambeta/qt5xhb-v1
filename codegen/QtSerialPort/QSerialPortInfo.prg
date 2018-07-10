@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD portName
-   METHOD systemLocation
-   METHOD description
-   METHOD manufacturer
-   METHOD vendorIdentifier
-   METHOD productIdentifier
-   METHOD hasVendorIdentifier
-   METHOD hasProductIdentifier
-   METHOD isNull
-   METHOD isBusy
-   METHOD isValid
-   METHOD standardBaudRates
-   METHOD availablePorts
+$addMethods
 
 $endClass
 
