@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD setCookie
-   METHOD deleteCookie
-   METHOD deleteSessionCookies
-   METHOD deleteAllCookies
-   METHOD loadAllCookies
+$addMethods
 
 %%   METHOD onCookieAdded
 %%   METHOD onCookieRemoved

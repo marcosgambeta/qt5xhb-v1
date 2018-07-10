@@ -12,18 +12,7 @@ $addRequests
 
 $beginClass
 
-%%   METHOD new
-%%   METHOD delete
-
-   METHOD block
-   METHOD changed
-   METHOD firstPartyUrl
-   METHOD navigationType
-   METHOD redirect
-   METHOD requestMethod
-   METHOD requestUrl
-   METHOD resourceType
-   METHOD setHttpHeader
+$addMethods
 
 $endClass
 

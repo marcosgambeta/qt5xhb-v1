@@ -12,22 +12,7 @@ $addRequests
 
 $beginClass
 
-   METHOD new
-   METHOD delete
-
-   METHOD hasHeader
-   METHOD header
-   METHOD headers
-   METHOD method
-   METHOD postData
-%%   METHOD postRequest
-   METHOD setHeader
-   METHOD setMethod
-   METHOD setPostData
-   METHOD setUrl
-   METHOD swap
-   METHOD unsetHeader
-   METHOD url
+$addMethods
 
 $endClass
 
