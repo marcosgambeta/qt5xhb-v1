@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD swap
-   METHOD origin
-   METHOD allowed
-   METHOD setAllowed
+$addMethods
 
 $endClass
 

@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD listen
-   METHOD close
-   METHOD isListening
-   METHOD maxPendingConnections
-   METHOD setMaxPendingConnections
-   METHOD serverPort
-   METHOD serverAddress
-   METHOD secureMode
-   METHOD socketDescriptor
-   METHOD setSocketDescriptor
-   METHOD hasPendingConnections
-   METHOD nextPendingConnection
-   METHOD error
-   METHOD errorString
-   METHOD pauseAccepting
-   METHOD resumeAccepting
-   METHOD serverName
-   METHOD setServerName
-   METHOD proxy
-   METHOD setProxy
-   METHOD setSslConfiguration
-   METHOD sslConfiguration
-   METHOD supportedVersions
+$addMethods
 
 $addSignals
 

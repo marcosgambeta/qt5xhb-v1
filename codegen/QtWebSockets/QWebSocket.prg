@@ -12,42 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD abort
-   METHOD error
-   METHOD errorString
-   METHOD flush
-   METHOD isValid
-   METHOD localAddress
-   METHOD localPort
-   METHOD pauseMode
-   METHOD peerAddress
-   METHOD peerName
-   METHOD peerPort
-   METHOD proxy
-   METHOD setProxy
-   METHOD maskGenerator
-   METHOD setMaskGenerator
-   METHOD readBufferSize
-   METHOD setReadBufferSize
-   METHOD resume
-   METHOD setPauseMode
-   METHOD state
-   METHOD version
-   METHOD resourceName
-   METHOD requestUrl
-   METHOD origin
-   METHOD closeCode
-   METHOD closeReason
-   METHOD sendTextMessage
-   METHOD sendBinaryMessage
-   METHOD ignoreSslErrors
-   METHOD sslConfiguration
-   METHOD setSslConfiguration
-   METHOD close
-   METHOD open
-   METHOD ping
+$addMethods
 
 $addSignals
 
