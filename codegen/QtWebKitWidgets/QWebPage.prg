@@ -12,57 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD action
-   METHOD bytesReceived
-   METHOD createStandardContextMenu
-   METHOD currentFrame
-   METHOD event
-   //METHOD extension
-   METHOD findText
-   METHOD focusNextPrevChild
-   METHOD forwardUnsupportedContent
-   METHOD frameAt
-   METHOD hasSelection
-   METHOD history
-   METHOD inputMethodQuery
-   METHOD isContentEditable
-   METHOD isModified
-   METHOD linkDelegationPolicy
-   METHOD mainFrame
-   METHOD networkAccessManager
-   METHOD palette
-   METHOD pluginFactory
-   METHOD preferredContentsSize
-   METHOD selectedHtml
-   METHOD selectedText
-   METHOD setActualVisibleContentRect
-   METHOD setContentEditable
-   METHOD setFeaturePermission
-   METHOD setForwardUnsupportedContent
-   METHOD setLinkDelegationPolicy
-   METHOD setNetworkAccessManager
-   METHOD setPalette
-   METHOD setPluginFactory
-   METHOD setPreferredContentsSize
-   METHOD settings
-   METHOD setView
-   METHOD setViewportSize
-   METHOD setVisibilityState
-   METHOD shouldInterruptJavaScript
-   METHOD supportedContentTypes
-   METHOD supportsContentType
-   //METHOD supportsExtension
-   METHOD swallowContextMenuEvent
-   METHOD totalBytes
-   METHOD triggerAction
-   METHOD undoStack
-   METHOD updatePositionDependentActions
-   METHOD view
-   METHOD viewportSize
-   METHOD visibilityState
+$addMethods
 
 $addSignals
 

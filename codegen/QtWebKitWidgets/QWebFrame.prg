@@ -12,51 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD addToJavaScriptWindowObject
-   METHOD baseUrl
-   METHOD childFrames
-   METHOD contentsSize
-   METHOD documentElement
-   METHOD evaluateJavaScript
-   METHOD event
-   METHOD findAllElements
-   METHOD findFirstElement
-   METHOD frameName
-   METHOD geometry
-   METHOD hasFocus
-   METHOD hitTestContent
-   METHOD icon
-   METHOD load
-   METHOD page
-   METHOD parentFrame
-   METHOD pos
-   METHOD print
-   METHOD render
-   METHOD requestedUrl
-   METHOD scroll
-   METHOD scrollBarGeometry
-   METHOD scrollBarMaximum
-   METHOD scrollBarMinimum
-   METHOD scrollBarPolicy
-   METHOD scrollBarValue
-   METHOD scrollPosition
-   METHOD scrollToAnchor
-   METHOD securityOrigin
-   METHOD setContent
-   METHOD setFocus
-   METHOD setHtml
-   METHOD setScrollBarPolicy
-   METHOD setScrollBarValue
-   METHOD setScrollPosition
-   METHOD setTextSizeMultiplier
-   METHOD setUrl
-   METHOD setZoomFactor
-   METHOD textSizeMultiplier
-   METHOD title
-   METHOD toHtml
-   METHOD toPlainText
-   METHOD url
-   METHOD zoomFactor
+$addMethods
 
 $addSignals
 

@@ -14,44 +14,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsWidget
 
-   METHOD new
-   METHOD delete
-
-   METHOD back
-   METHOD event
-   METHOD findText
-   METHOD forward
-   METHOD history
-   METHOD icon
-   METHOD inputMethodQuery
-   METHOD isModified
-   METHOD isTiledBackingStoreFrozen
-   METHOD itemChange
-   METHOD load
-   METHOD page
-   METHOD pageAction
-   METHOD paint
-   METHOD reload
-   METHOD renderHints
-   METHOD resizesToContents
-   METHOD setContent
-   METHOD setGeometry
-   METHOD setHtml
-   METHOD setPage
-   METHOD setRenderHint
-   METHOD setRenderHints
-   METHOD setResizesToContents
-   METHOD setTiledBackingStoreFrozen
-   METHOD settings
-   METHOD setUrl
-   METHOD setZoomFactor
-   METHOD sizeHint
-   METHOD stop
-   METHOD title
-   METHOD triggerPageAction
-   METHOD updateGeometry
-   METHOD url
-   METHOD zoomFactor
+$addMethods
 
 $addSignals
 
