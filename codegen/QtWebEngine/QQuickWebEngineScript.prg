@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD injectionPoint
-   METHOD name
-   METHOD runOnSubframes
-   METHOD setInjectionPoint
-   METHOD setName
-   METHOD setRunOnSubframes
-   METHOD setSourceCode
-   METHOD setSourceUrl
-   METHOD setWorldId
-   METHOD sourceCode
-   METHOD sourceUrl
-   METHOD toString
-   METHOD worldId
+$addMethods
 
 $addSignals
 

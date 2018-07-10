@@ -12,41 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD cachePath
-   METHOD clearHttpCache
-   METHOD cookieStore
-   METHOD defaultProfile
-   METHOD httpAcceptLanguage
-   METHOD httpCacheMaximumSize
-   METHOD httpCacheType
-   METHOD httpUserAgent
-   METHOD installUrlSchemeHandler
-   METHOD isOffTheRecord
-   METHOD isSpellCheckEnabled
-   METHOD persistentCookiesPolicy
-   METHOD persistentStoragePath
-   METHOD removeAllUrlSchemeHandlers
-   METHOD removeUrlScheme
-   METHOD removeUrlSchemeHandler
-   METHOD setCachePath
-   METHOD setHttpAcceptLanguage
-   METHOD setHttpCacheMaximumSize
-   METHOD setHttpCacheType
-   METHOD setHttpUserAgent
-   METHOD setOffTheRecord
-   METHOD setPersistentCookiesPolicy
-   METHOD setPersistentStoragePath
-   METHOD setRequestInterceptor
-   METHOD setSpellCheckEnabled
-   METHOD setSpellCheckLanguages
-   METHOD setStorageName
-   METHOD spellCheckLanguages
-   METHOD storageName
-   METHOD urlSchemeHandler
-%%   METHOD userScripts
+$addMethods
 
 $addSignals
 

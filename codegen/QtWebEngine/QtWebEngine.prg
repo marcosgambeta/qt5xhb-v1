@@ -12,7 +12,7 @@ $addRequests
 
 $beginClass
 
-   METHOD initialize
+$addMethods
 
 $endClass
 
