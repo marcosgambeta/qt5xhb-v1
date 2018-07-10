@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD error
-   METHOD url
-   METHOD isOverridable
-   METHOD errorDescription
+$addMethods
 
 $endClass
 

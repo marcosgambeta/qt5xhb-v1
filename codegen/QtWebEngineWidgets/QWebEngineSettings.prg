@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD globalSettings
-   METHOD fontFamily
-   METHOD setFontFamily
-   METHOD resetFontFamily
-   METHOD fontSize
-   METHOD setFontSize
-   METHOD resetFontSize
-   METHOD setAttribute
-   METHOD testAttribute
-   METHOD resetAttribute
-   METHOD defaultTextEncoding
-   METHOD setDefaultTextEncoding
+$addMethods
 
 $endClass
 

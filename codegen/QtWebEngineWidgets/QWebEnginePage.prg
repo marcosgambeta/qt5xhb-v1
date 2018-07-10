@@ -12,33 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD history
-   METHOD view
-   METHOD setView
-   METHOD hasSelection
-   METHOD selectedText
-   METHOD action
-   METHOD triggerAction
-   METHOD event
-%%   METHOD findText
-   METHOD createStandardContextMenu
-   METHOD setFeaturePermission
-   METHOD load
-   METHOD setHtml
-   METHOD setContent
-%%   METHOD toHtml
-%%   METHOD toPlainText
-   METHOD title
-   METHOD url
-   METHOD setUrl
-   METHOD requestedUrl
-   METHOD iconUrl
-   METHOD zoomFactor
-   METHOD setZoomFactor
-   METHOD runJavaScript
-   METHOD settings
+$addMethods
 
 $addSignals
 
