@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractPrintDialog
 
-   METHOD new
-   METHOD delete
-   METHOD open
-   METHOD options
-   METHOD printer
-   METHOD setOption
-   METHOD setOptions
-   METHOD testOption
-   METHOD done
-   METHOD exec
-   METHOD setVisible
+$addMethods
 
 $addSignals
 

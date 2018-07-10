@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD currentPage
-   METHOD orientation
-   METHOD pageCount
-   METHOD viewMode
-   METHOD zoomFactor
-   METHOD zoomMode
-   METHOD setVisible
-   METHOD fitInView
-   METHOD fitToWidth
-   METHOD print
-   METHOD setAllPagesViewMode
-   METHOD setCurrentPage
-   METHOD setFacingPagesViewMode
-   METHOD setLandscapeOrientation
-   METHOD setOrientation
-   METHOD setPortraitOrientation
-   METHOD setSinglePageViewMode
-   METHOD setViewMode
-   METHOD setZoomFactor
-   METHOD setZoomMode
-   METHOD updatePreview
-   METHOD zoomIn
-   METHOD zoomOut
+$addMethods
 
 $addSignals
 

@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD abort
-   METHOD metric
-   METHOD newPage
-   METHOD printerState
-   METHOD property
-   METHOD setProperty
+$addMethods
 
 $endClass
 

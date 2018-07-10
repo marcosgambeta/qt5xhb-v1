@@ -12,30 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isDefault
-   METHOD isNull
-   METHOD printerName
-   METHOD supportedPaperSizes
-   METHOD availablePrinters
-   METHOD defaultPrinter
-   METHOD description
-   METHOD location
-   METHOD makeAndModel
-   METHOD isRemote
-   METHOD state
-   METHOD supportedPageSizes
-   METHOD defaultPageSize
-   METHOD supportsCustomPageSizes
-   METHOD minimumPhysicalPageSize
-   METHOD maximumPhysicalPageSize
-   METHOD supportedResolutions
-   METHOD availablePrinterNames
-   METHOD defaultPrinterName
-   METHOD printerInfo
-   METHOD defaultDuplexMode
-   METHOD supportedDuplexModes
+$addMethods
 
 $endClass
 
