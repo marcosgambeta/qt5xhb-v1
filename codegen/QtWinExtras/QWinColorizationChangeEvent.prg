@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QWinEvent
 
-   METHOD new
-   METHOD delete
-   METHOD color
-   METHOD opaqueBlend
+$addMethods
 
 $endClass
 

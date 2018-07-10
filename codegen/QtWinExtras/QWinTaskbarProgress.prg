@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD value
-   METHOD setValue
-   METHOD minimum
-   METHOD setMinimum
-   METHOD maximum
-   METHOD setMaximum
-   METHOD isVisible
-   METHOD setVisible
-   METHOD isPaused
-   METHOD setPaused
-   METHOD isStopped
-   METHOD setRange
-   METHOD reset
-   METHOD show
-   METHOD hide
-   METHOD pause
-   METHOD resume
-   METHOD stop
+$addMethods
 
 $addSignals
 

@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD identifier
-   METHOD setIdentifier
-   METHOD recent
-   METHOD frequent
-   METHOD tasks
-   METHOD categories
-   METHOD addCategory
-   METHOD clear
+$addMethods
 
 $endClass
 

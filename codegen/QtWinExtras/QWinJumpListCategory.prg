@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD type
-   METHOD isVisible
-   METHOD setVisible
-   METHOD title
-   METHOD setTitle
-   METHOD count
-   METHOD isEmpty
-   METHOD items
-   METHOD addItem
-   METHOD addDestination
-   METHOD addLink
-   METHOD addSeparator
-   METHOD clear
+$addMethods
 
 $endClass
 

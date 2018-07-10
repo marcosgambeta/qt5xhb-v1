@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD toolTip
-   METHOD setToolTip
-   METHOD icon
-   METHOD setIcon
-   METHOD isEnabled
-   METHOD setEnabled
-   METHOD isInteractive
-   METHOD setInteractive
-   METHOD isVisible
-   METHOD setVisible
-   METHOD dismissOnClick
-   METHOD setDismissOnClick
-   METHOD isFlat
-   METHOD setFlat
-   METHOD click
+$addMethods
 
 $addSignals
 

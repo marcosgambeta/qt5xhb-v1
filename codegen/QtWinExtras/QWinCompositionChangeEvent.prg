@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QWinEvent
 
-   METHOD new
-   METHOD delete
-   METHOD isCompositionEnabled
+$addMethods
 
 $endClass
 

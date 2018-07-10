@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD window
-   METHOD setWindow
-   METHOD overlayIcon
-   METHOD setOverlayIcon
-   METHOD clearOverlayIcon
-   METHOD overlayAccessibleDescription
-   METHOD setOverlayAccessibleDescription
-   METHOD progress
-   METHOD eventFilter
+$addMethods
 
 $endClass
 

@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD type
-   METHOD setType
-   METHOD filePath
-   METHOD setFilePath
-   METHOD workingDirectory
-   METHOD setWorkingDirectory
-   METHOD icon
-   METHOD setIcon
-   METHOD title
-   METHOD setTitle
-   METHOD description
-   METHOD setDescription
-   METHOD arguments
-   METHOD setArguments
+$addMethods
 
 $endClass
 
