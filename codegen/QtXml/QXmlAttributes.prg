@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD append
-   METHOD clear
-   METHOD count
-   METHOD index
-   METHOD length
-   METHOD localName
-   METHOD qName
-   METHOD type
-   METHOD uri
-   METHOD value
+$addMethods
 
 $endClass
 

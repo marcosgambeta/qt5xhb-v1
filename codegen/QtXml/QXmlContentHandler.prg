@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD characters
-   METHOD endDocument
-   METHOD endElement
-   METHOD endPrefixMapping
-   METHOD errorString
-   METHOD ignorableWhitespace
-   METHOD processingInstruction
-   METHOD setDocumentLocator
-   METHOD skippedEntity
-   METHOD startDocument
-   METHOD startElement
-   METHOD startPrefixMapping
+$addMethods
 
 $endClass
 

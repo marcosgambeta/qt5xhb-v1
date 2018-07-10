@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QDomNode
 
-   METHOD new
-   METHOD delete
-   METHOD nodeType
+$addMethods
 
 $endClass
 

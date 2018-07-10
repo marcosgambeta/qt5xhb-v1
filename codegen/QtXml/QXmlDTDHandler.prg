@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD errorString
-   METHOD notationDecl
-   METHOD unparsedEntityDecl
+$addMethods
 
 $endClass
 

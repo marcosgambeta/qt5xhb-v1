@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QXmlReader
 
-   METHOD new
-   METHOD delete
-   METHOD parse
-   METHOD parseContinue
+$addMethods
 
 $endClass
 

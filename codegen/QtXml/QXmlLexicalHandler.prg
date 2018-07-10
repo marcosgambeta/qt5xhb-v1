@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD comment
-   METHOD endCDATA
-   METHOD endDTD
-   METHOD endEntity
-   METHOD errorString
-   METHOD startCDATA
-   METHOD startDTD
-   METHOD startEntity
+$addMethods
 
 $endClass
 

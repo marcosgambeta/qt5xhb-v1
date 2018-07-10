@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD createDocument
-   METHOD createDocumentType
-   METHOD hasFeature
-   METHOD isNull
-   METHOD invalidDataPolicy
-   METHOD setInvalidDataPolicy
+$addMethods
 
 $endClass
 

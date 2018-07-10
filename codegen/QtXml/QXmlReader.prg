@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD DTDHandler
-   METHOD contentHandler
-   METHOD declHandler
-   METHOD entityResolver
-   METHOD errorHandler
-   METHOD feature
-   METHOD hasFeature
-   METHOD hasProperty
-   METHOD lexicalHandler
-   METHOD parse
-   METHOD property
-   METHOD setContentHandler
-   METHOD setDTDHandler
-   METHOD setDeclHandler
-   METHOD setEntityResolver
-   METHOD setErrorHandler
-   METHOD setFeature
-   METHOD setLexicalHandler
-   METHOD setProperty
+$addMethods
 
 $endClass
 

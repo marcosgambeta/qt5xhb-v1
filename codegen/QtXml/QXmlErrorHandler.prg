@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD error
-   METHOD errorString
-   METHOD fatalError
-   METHOD warning
+$addMethods
 
 $endClass
 

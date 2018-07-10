@@ -12,41 +12,7 @@ $addRequests
 
 $beginClassFrom=QDomNode
 
-   METHOD new
-   METHOD delete
-   METHOD attribute
-   METHOD attributeNS
-   METHOD attributeNode
-   METHOD attributeNodeNS
-   METHOD attributes
-   METHOD elementsByTagName
-   METHOD elementsByTagNameNS
-   METHOD hasAttribute
-   METHOD hasAttributeNS
-   METHOD nodeType
-   METHOD removeAttribute
-   METHOD removeAttributeNS
-   METHOD removeAttributeNode
-   METHOD setAttribute1
-   METHOD setAttribute2
-   METHOD setAttribute3
-   METHOD setAttribute4
-   METHOD setAttribute5
-   METHOD setAttribute6
-   METHOD setAttribute7
-   METHOD setAttribute
-   METHOD setAttributeNS1
-   METHOD setAttributeNS2
-   METHOD setAttributeNS3
-   METHOD setAttributeNS4
-   METHOD setAttributeNS5
-   METHOD setAttributeNS6
-   METHOD setAttributeNS
-   METHOD setAttributeNode
-   METHOD setAttributeNodeNS
-   METHOD setTagName
-   METHOD tagName
-   METHOD text
+$addMethods
 
 $endClass
 

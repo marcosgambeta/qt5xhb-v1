@@ -12,70 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD appendChild
-   METHOD attributes
-   METHOD childNodes
-   METHOD clear
-   METHOD cloneNode
-   METHOD columnNumber
-   METHOD firstChild
-   METHOD firstChildElement
-   METHOD hasAttributes
-   METHOD hasChildNodes
-   METHOD insertAfter
-   METHOD insertBefore
-   METHOD isAttr
-   METHOD isCDATASection
-   METHOD isCharacterData
-   METHOD isComment
-   METHOD isDocument
-   METHOD isDocumentFragment
-   METHOD isDocumentType
-   METHOD isElement
-   METHOD isEntity
-   METHOD isEntityReference
-   METHOD isNotation
-   METHOD isNull
-   METHOD isProcessingInstruction
-   METHOD isSupported
-   METHOD isText
-   METHOD lastChild
-   METHOD lastChildElement
-   METHOD lineNumber
-   METHOD localName
-   METHOD namedItem
-   METHOD namespaceURI
-   METHOD nextSibling
-   METHOD nextSiblingElement
-   METHOD nodeName
-   METHOD nodeType
-   METHOD nodeValue
-   METHOD normalize
-   METHOD ownerDocument
-   METHOD parentNode
-   METHOD prefix
-   METHOD previousSibling
-   METHOD previousSiblingElement
-   METHOD removeChild
-   METHOD replaceChild
-   METHOD save
-   METHOD setNodeValue
-   METHOD setPrefix
-   METHOD toAttr
-   METHOD toCDATASection
-   METHOD toCharacterData
-   METHOD toComment
-   METHOD toDocument
-   METHOD toDocumentFragment
-   METHOD toDocumentType
-   METHOD toElement
-   METHOD toEntity
-   METHOD toEntityReference
-   METHOD toNotation
-   METHOD toProcessingInstruction
-   METHOD toText
+$addMethods
 
 $endClass
 

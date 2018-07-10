@@ -12,35 +12,7 @@ $addRequests
 
 $beginClassFrom=QXmlContentHandler,QXmlErrorHandler,QXmlDTDHandler,QXmlEntityResolver,QXmlLexicalHandler,QXmlDeclHandler
 
-   METHOD new
-   METHOD delete
-   METHOD attributeDecl
-   METHOD characters
-   METHOD comment
-   METHOD endCDATA
-   METHOD endDTD
-   METHOD endDocument
-   METHOD endElement
-   METHOD endEntity
-   METHOD endPrefixMapping
-   METHOD error
-   METHOD errorString
-   METHOD externalEntityDecl
-   METHOD fatalError
-   METHOD ignorableWhitespace
-   METHOD internalEntityDecl
-   METHOD notationDecl
-   METHOD processingInstruction
-   METHOD setDocumentLocator
-   METHOD skippedEntity
-   METHOD startCDATA
-   METHOD startDTD
-   METHOD startDocument
-   METHOD startElement
-   METHOD startEntity
-   METHOD startPrefixMapping
-   METHOD unparsedEntityDecl
-   METHOD warning
+$addMethods
 
 $endClass
 

@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD columnNumber
-   METHOD lineNumber
+$addMethods
 
 $endClass
 

@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD popContext
-   METHOD prefix
-   METHOD prefixes
-   METHOD processName
-   METHOD pushContext
-   METHOD reset
-   METHOD setPrefix
-   METHOD splitName
-   METHOD uri
+$addMethods
 
 $endClass
 
