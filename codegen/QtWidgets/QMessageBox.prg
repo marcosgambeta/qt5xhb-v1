@@ -12,51 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD new
-   METHOD delete
-   METHOD addButton
-   METHOD button
-   METHOD buttonRole
-   METHOD buttons
-   METHOD clickedButton
-   METHOD defaultButton
-   METHOD detailedText
-   METHOD setDetailedText
-   METHOD escapeButton
-   METHOD icon
-   METHOD setIcon
-   METHOD iconPixmap
-   METHOD setIconPixmap
-   METHOD informativeText
-   METHOD setInformativeText
-   METHOD open
-   METHOD removeButton
-   METHOD setDefaultButton
-   METHOD setEscapeButton
-   METHOD setWindowModality
-   METHOD setWindowTitle
-   METHOD standardButton
-   METHOD standardButtons
-   METHOD setStandardButtons
-   METHOD text
-   METHOD setText
-   METHOD textFormat
-   METHOD setTextFormat
-   METHOD setVisible
-   METHOD exec
-   METHOD about
-   METHOD aboutQt
-   METHOD critical
-   METHOD information
-   METHOD question
-   METHOD warning
-   METHOD textInteractionFlags
-   METHOD setTextInteractionFlags
-   METHOD checkBox
-   METHOD setCheckBox
-   METHOD standardIcon
-   METHOD buttonText
-   METHOD setButtonText
+$addMethods
 
 $addSignals
 

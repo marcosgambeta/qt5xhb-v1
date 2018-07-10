@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsEffect
 
-   METHOD new
-   METHOD delete
-   METHOD opacity
-   METHOD opacityMask
-   METHOD setOpacity
-   METHOD setOpacityMask
+$addMethods
 
 $addSignals
 

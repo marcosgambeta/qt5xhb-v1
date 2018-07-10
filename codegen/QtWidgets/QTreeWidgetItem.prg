@@ -12,68 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD addChild
-   METHOD addChildren
-   METHOD background
-   METHOD checkState
-   METHOD child
-   METHOD childCount
-   METHOD childIndicatorPolicy
-   METHOD clone
-   METHOD columnCount
-   METHOD data
-   METHOD flags
-   METHOD font
-   METHOD foreground
-   METHOD icon
-   METHOD indexOfChild
-   METHOD insertChild
-   METHOD insertChildren
-   METHOD isDisabled
-   METHOD isExpanded
-   METHOD isFirstColumnSpanned
-   METHOD isHidden
-   METHOD isSelected
-   METHOD parent
-   METHOD read
-   METHOD removeChild
-   METHOD setBackground
-   METHOD setCheckState
-   METHOD setChildIndicatorPolicy
-   METHOD setData
-   METHOD setDisabled
-   METHOD setExpanded
-   METHOD setFirstColumnSpanned
-   METHOD setFlags
-   METHOD setFont
-   METHOD setForeground
-   METHOD setHidden
-   METHOD setIcon
-   METHOD setSelected
-   METHOD setSizeHint
-   METHOD setStatusTip
-   METHOD setText
-   METHOD setTextAlignment
-   METHOD setToolTip
-   METHOD setWhatsThis
-   METHOD sizeHint
-   METHOD sortChildren
-   METHOD statusTip
-   METHOD takeChild
-   METHOD takeChildren
-   METHOD text
-   METHOD textAlignment
-   METHOD toolTip
-   METHOD treeWidget
-   METHOD type
-   METHOD whatsThis
-   METHOD write
-   METHOD backgroundColor
-   METHOD setBackgroundColor
-   METHOD textColor
-   METHOD setTextColor
+$addMethods
 
 $endClass
 

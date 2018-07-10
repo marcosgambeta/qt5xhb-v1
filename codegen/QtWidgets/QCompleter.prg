@@ -12,41 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD caseSensitivity
-   METHOD completionColumn
-   METHOD completionCount
-   METHOD completionMode
-   METHOD completionModel
-   METHOD completionPrefix
-   METHOD completionRole
-   METHOD currentCompletion
-   METHOD currentIndex
-   METHOD currentRow
-   METHOD maxVisibleItems
-   METHOD model
-   METHOD modelSorting
-   METHOD pathFromIndex
-   METHOD popup
-   METHOD setCaseSensitivity
-   METHOD setCompletionColumn
-   METHOD setCompletionMode
-   METHOD setCompletionRole
-   METHOD setCurrentRow
-   METHOD setMaxVisibleItems
-   METHOD setModel
-   METHOD setModelSorting
-   METHOD setPopup
-   METHOD setWidget
-   METHOD splitPath
-   METHOD widget
-   METHOD wrapAround
-   METHOD complete
-   METHOD setCompletionPrefix
-   METHOD setWrapAround
-   METHOD setFilterMode
-   METHOD filterMode
+$addMethods
 
 $addSignals
 

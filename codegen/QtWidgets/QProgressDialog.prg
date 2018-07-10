@@ -12,32 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD new
-   METHOD delete
-   METHOD autoClose
-   METHOD setAutoClose
-   METHOD autoReset
-   METHOD setAutoReset
-   METHOD labelText
-   METHOD setLabelText
-   METHOD maximum
-   METHOD setMaximum
-   METHOD minimum
-   METHOD setMinimum
-   METHOD minimumDuration
-   METHOD setMinimumDuration
-   METHOD open
-   METHOD setBar
-   METHOD setCancelButton
-   METHOD setLabel
-   METHOD value
-   METHOD setValue
-   METHOD wasCanceled
-   METHOD sizeHint
-   METHOD cancel
-   METHOD reset
-   METHOD setCancelButtonText
-   METHOD setRange
+$addMethods
 
 $addSignals
 

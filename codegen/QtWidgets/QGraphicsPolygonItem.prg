@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractGraphicsShapeItem
 
-   METHOD new
-   METHOD delete
-   METHOD fillRule
-   METHOD polygon
-   METHOD setFillRule
-   METHOD setPolygon
-   METHOD boundingRect
-   METHOD contains
-   METHOD isObscuredBy
-   METHOD opaqueArea
-   METHOD paint
-   METHOD shape
-   METHOD type
+$addMethods
 
 $endClass
 

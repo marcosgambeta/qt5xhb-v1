@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD createEditor
-   METHOD editorEvent
-   METHOD paint
-   METHOD setEditorData
-   METHOD setModelData
-   METHOD sizeHint
-   METHOD updateEditorGeometry
-   METHOD helpEvent
-   METHOD destroyEditor
-   METHOD elidedText
-   METHOD paintingRoles
+$addMethods
 
 $addSignals
 

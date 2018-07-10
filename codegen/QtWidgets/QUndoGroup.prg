@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD activeStack
-   METHOD addStack
-   METHOD canRedo
-   METHOD canUndo
-   METHOD createRedoAction
-   METHOD createUndoAction
-   METHOD isClean
-   METHOD redoText
-   METHOD removeStack
-   METHOD stacks
-   METHOD undoText
-   METHOD redo
-   METHOD setActiveStack
-   METHOD undo
+$addMethods
 
 $addSignals
 

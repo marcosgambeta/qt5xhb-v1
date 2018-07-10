@@ -12,51 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsLayout
 
-   METHOD new
-   METHOD delete
-   METHOD addItem
-   METHOD alignment
-   METHOD columnAlignment
-   METHOD columnCount
-   METHOD columnMaximumWidth
-   METHOD columnMinimumWidth
-   METHOD columnPreferredWidth
-   METHOD columnSpacing
-   METHOD columnStretchFactor
-   METHOD horizontalSpacing
-   METHOD itemAt
-   METHOD removeItem
-   METHOD rowAlignment
-   METHOD rowCount
-   METHOD rowMaximumHeight
-   METHOD rowMinimumHeight
-   METHOD rowPreferredHeight
-   METHOD rowSpacing
-   METHOD rowStretchFactor
-   METHOD setAlignment
-   METHOD setColumnAlignment
-   METHOD setColumnFixedWidth
-   METHOD setColumnMaximumWidth
-   METHOD setColumnMinimumWidth
-   METHOD setColumnPreferredWidth
-   METHOD setColumnSpacing
-   METHOD setColumnStretchFactor
-   METHOD setHorizontalSpacing
-   METHOD setRowAlignment
-   METHOD setRowFixedHeight
-   METHOD setRowMaximumHeight
-   METHOD setRowMinimumHeight
-   METHOD setRowPreferredHeight
-   METHOD setRowSpacing
-   METHOD setRowStretchFactor
-   METHOD setSpacing
-   METHOD setVerticalSpacing
-   METHOD verticalSpacing
-   METHOD count
-   METHOD invalidate
-   METHOD removeAt
-   METHOD setGeometry
-   METHOD sizeHint
+$addMethods
 
 $endClass
 

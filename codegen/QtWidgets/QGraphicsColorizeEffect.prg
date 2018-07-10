@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsEffect
 
-   METHOD new
-   METHOD delete
-   METHOD color
-   METHOD strength
-   METHOD setColor
-   METHOD setStrength
+$addMethods
 
 $addSignals
 

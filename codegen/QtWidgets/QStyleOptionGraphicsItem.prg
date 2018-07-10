@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD levelOfDetailFromTransform
-
-   METHOD exposedRect
-   METHOD matrix
-   METHOD levelOfDetail
-
-   METHOD setExposedRect
-   METHOD setMatrix
-   METHOD setLevelOfDetail
+$addMethods
 
 $endClass
 

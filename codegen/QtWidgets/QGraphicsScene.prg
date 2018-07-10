@@ -12,66 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD activePanel
-   METHOD activeWindow
-   METHOD addEllipse
-   METHOD addItem
-   METHOD addLine
-   METHOD addPath
-   METHOD addPixmap
-   METHOD addPolygon
-   METHOD addRect
-   METHOD addSimpleText
-   METHOD addText
-   METHOD addWidget
-   METHOD backgroundBrush
-   METHOD bspTreeDepth
-   METHOD clearFocus
-   METHOD createItemGroup
-   METHOD destroyItemGroup
-   METHOD focusItem
-   METHOD font
-   METHOD foregroundBrush
-   METHOD hasFocus
-   METHOD height
-   METHOD inputMethodQuery
-   METHOD invalidate
-   METHOD isActive
-   METHOD isSortCacheEnabled
-   METHOD itemAt
-   METHOD itemIndexMethod
-   METHOD itemsBoundingRect
-   METHOD mouseGrabberItem
-   METHOD palette
-   METHOD removeItem
-   METHOD render
-   METHOD sceneRect
-   METHOD selectionArea
-   METHOD sendEvent
-   METHOD setActivePanel
-   METHOD setActiveWindow
-   METHOD setBackgroundBrush
-   METHOD setBspTreeDepth
-   METHOD setFocus
-   METHOD setFocusItem
-   METHOD setFont
-   METHOD setForegroundBrush
-   METHOD setItemIndexMethod
-   METHOD setPalette
-   METHOD setSceneRect
-   METHOD setSelectionArea
-   METHOD setSortCacheEnabled
-   METHOD setStickyFocus
-   METHOD setStyle
-   METHOD stickyFocus
-   METHOD style
-   METHOD update
-   METHOD width
-   METHOD advance
-   METHOD clear
-   METHOD clearSelection
+$addMethods
 
 $addSignals
 

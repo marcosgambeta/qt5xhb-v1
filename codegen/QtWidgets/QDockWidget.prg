@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD allowedAreas
-   METHOD features
-   METHOD isAreaAllowed
-   METHOD isFloating
-   METHOD setAllowedAreas
-   METHOD setFeatures
-   METHOD setFloating
-   METHOD setTitleBarWidget
-   METHOD setWidget
-   METHOD titleBarWidget
-   METHOD toggleViewAction
-   METHOD widget
+$addMethods
 
 $addSignals
 

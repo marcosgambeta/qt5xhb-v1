@@ -12,52 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD addDockWidget
-   METHOD addToolBar
-   METHOD addToolBarBreak
-   METHOD centralWidget
-   METHOD corner
-   METHOD createPopupMenu
-   METHOD dockOptions
-   METHOD dockWidgetArea
-   METHOD documentMode
-   METHOD iconSize
-   METHOD insertToolBar
-   METHOD insertToolBarBreak
-   METHOD isAnimated
-   METHOD isDockNestingEnabled
-   METHOD menuBar
-   METHOD menuWidget
-   METHOD removeDockWidget
-   METHOD removeToolBar
-   METHOD removeToolBarBreak
-   METHOD restoreDockWidget
-   METHOD restoreState
-   METHOD saveState
-   METHOD setCentralWidget
-   METHOD setCorner
-   METHOD setDockOptions
-   METHOD setDocumentMode
-   METHOD setIconSize
-   METHOD setMenuBar
-   METHOD setMenuWidget
-   METHOD setStatusBar
-   METHOD setTabPosition
-   METHOD setTabShape
-   METHOD setToolButtonStyle
-   METHOD splitDockWidget
-   METHOD statusBar
-   METHOD tabPosition
-   METHOD tabShape
-   METHOD tabifyDockWidget
-   METHOD toolBarArea
-   METHOD toolBarBreak
-   METHOD toolButtonStyle
-   METHOD setAnimated
-   METHOD setDockNestingEnabled
-   METHOD takeCentralWidget
+$addMethods
 
 $addSignals
 

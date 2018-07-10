@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractScrollArea
 
-   METHOD new
-   METHOD delete
-   METHOD alignment
-   METHOD ensureVisible
-   METHOD ensureWidgetVisible
-   METHOD setAlignment
-   METHOD setWidget
-   METHOD setWidgetResizable
-   METHOD takeWidget
-   METHOD widget
-   METHOD widgetResizable
-   METHOD focusNextPrevChild
-   METHOD sizeHint
+$addMethods
 
 $endClass
 

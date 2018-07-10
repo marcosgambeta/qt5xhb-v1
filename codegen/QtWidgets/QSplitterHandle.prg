@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD opaqueResize
-   METHOD orientation
-   METHOD setOrientation
-   METHOD splitter
-   METHOD sizeHint
+$addMethods
 
 $endClass
 

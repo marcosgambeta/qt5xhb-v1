@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QAction
 
-   METHOD new
-   METHOD delete
-   METHOD defaultWidget
-   METHOD releaseWidget
-   METHOD requestWidget
-   METHOD setDefaultWidget
+$addMethods
 
 $endClass
 

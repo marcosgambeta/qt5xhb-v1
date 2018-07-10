@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsTransform
 
-   METHOD new
-   METHOD delete
-   METHOD origin
-   METHOD setOrigin
-   METHOD setXScale
-   METHOD setYScale
-   METHOD setZScale
-   METHOD xScale
-   METHOD yScale
-   METHOD zScale
-   METHOD applyTo
+$addMethods
 
 $addSignals
 

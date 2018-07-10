@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=QFrame
 
-   METHOD new
-   METHOD delete
-   METHOD addWidget
-   METHOD childrenCollapsible
-   METHOD count
-   METHOD getRange
-   METHOD handle
-   METHOD handleWidth
-   METHOD indexOf
-   METHOD insertWidget
-   METHOD isCollapsible
-   METHOD opaqueResize
-   METHOD orientation
-   METHOD refresh
-   METHOD restoreState
-   METHOD saveState
-   METHOD setChildrenCollapsible
-   METHOD setCollapsible
-   METHOD setHandleWidth
-   METHOD setOpaqueResize
-   METHOD setOrientation
-   METHOD setStretchFactor
-   METHOD widget
-   METHOD minimumSizeHint
-   METHOD sizeHint
+$addMethods
 
 $addSignals
 

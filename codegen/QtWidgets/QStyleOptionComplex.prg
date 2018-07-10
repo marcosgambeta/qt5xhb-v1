@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-   METHOD delete
-
-   METHOD subControls
-   METHOD activeSubControls
-
-   METHOD setSubControls
-   METHOD setActiveSubControls
+$addMethods
 
 $endClass
 

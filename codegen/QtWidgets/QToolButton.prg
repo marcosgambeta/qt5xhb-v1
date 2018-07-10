@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractButton
 
-   METHOD new
-   METHOD delete
-   METHOD arrowType
-   METHOD autoRaise
-   METHOD defaultAction
-   METHOD menu
-   METHOD popupMode
-   METHOD setArrowType
-   METHOD setAutoRaise
-   METHOD setMenu
-   METHOD setPopupMode
-   METHOD toolButtonStyle
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD setDefaultAction
-   METHOD setToolButtonStyle
-   METHOD showMenu
+$addMethods
 
 $addSignals
 

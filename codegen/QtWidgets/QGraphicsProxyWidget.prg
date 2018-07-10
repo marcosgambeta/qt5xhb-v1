@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsWidget
 
-   METHOD new
-   METHOD delete
-   METHOD createProxyForChildWidget
-   METHOD setWidget
-   METHOD subWidgetRect
-   METHOD widget
-   METHOD paint
-   METHOD setGeometry
-   METHOD type
+$addMethods
 
 $endClass
 

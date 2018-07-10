@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD setSizePolicy
-   METHOD setSpacing
-   METHOD sizePolicy
-   METHOD spacing
-   METHOD unsetSpacing
+$addMethods
 
 $endClass
 

@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD font
-   METHOD hideText
-   METHOD isVisible
-   METHOD palette
-   METHOD setFont
-   METHOD setPalette
-   METHOD showText
-   METHOD text
+$addMethods
 
 $endClass
 

@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD bottomRow
-   METHOD columnCount
-   METHOD leftColumn
-   METHOD rightColumn
-   METHOD rowCount
-   METHOD topRow
+$addMethods
 
 $endClass
 

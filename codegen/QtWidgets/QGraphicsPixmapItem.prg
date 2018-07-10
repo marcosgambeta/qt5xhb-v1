@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsItem
 
-   METHOD new
-   METHOD delete
-   METHOD offset
-   METHOD pixmap
-   METHOD setOffset
-   METHOD setPixmap
-   METHOD setShapeMode
-   METHOD setTransformationMode
-   METHOD shapeMode
-   METHOD transformationMode
-   METHOD boundingRect
-   METHOD contains
-   METHOD isObscuredBy
-   METHOD opaqueArea
-   METHOD paint
-   METHOD shape
-   METHOD type
+$addMethods
 
 $endClass
 

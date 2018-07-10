@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyle
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

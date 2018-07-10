@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD createWidget
-   METHOD valuePropertyName
+$addMethods
 
 $endClass
 

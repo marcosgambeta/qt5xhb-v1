@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD controlType
-   METHOD expandingDirections
-   METHOD hasHeightForWidth
-   METHOD hasWidthForHeight
-   METHOD horizontalPolicy
-   METHOD horizontalStretch
-   METHOD setControlType
-   METHOD setHeightForWidth
-   METHOD setHorizontalPolicy
-   METHOD setHorizontalStretch
-   METHOD setVerticalPolicy
-   METHOD setVerticalStretch
-   METHOD setWidthForHeight
-   METHOD transpose
-   METHOD verticalPolicy
-   METHOD verticalStretch
+$addMethods
 
 $endClass
 

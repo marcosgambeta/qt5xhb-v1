@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOptionComplex
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD features
-   METHOD icon
-   METHOD iconSize
-   METHOD text
-   METHOD arrowType
-   METHOD toolButtonStyle
-   METHOD pos
-   METHOD font
-
-   METHOD setFeatures
-   METHOD setIcon
-   METHOD setIconSize
-   METHOD setText
-   METHOD setArrowType
-   METHOD setToolButtonStyle
-   METHOD setPos
-   METHOD setFont
+$addMethods
 
 $endClass
 

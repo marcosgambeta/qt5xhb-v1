@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemDelegate
 
-   METHOD new
-   METHOD delete
-   METHOD hasClipping
-   METHOD itemEditorFactory
-   METHOD setClipping
-   METHOD setItemEditorFactory
+$addMethods
 
 $endClass
 

@@ -16,34 +16,7 @@ $addRequests
 
 $beginClassFrom=QStyleOptionComplex
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD orientation
-   METHOD minimum
-   METHOD maximum
-   METHOD tickPosition
-   METHOD tickInterval
-   METHOD upsideDown
-   METHOD sliderPosition
-   METHOD sliderValue
-   METHOD singleStep
-   METHOD pageStep
-   METHOD notchTarget
-   METHOD dialWrapping
-
-   METHOD setOrientation
-   METHOD setMinimum
-   METHOD setMaximum
-   METHOD setTickPosition
-   METHOD setTickInterval
-   METHOD setUpsideDown
-   METHOD setSliderPosition
-   METHOD setSliderValue
-   METHOD setSingleStep
-   METHOD setPageStep
-   METHOD setNotchTarget
-   METHOD setDialWrapping
+$addMethods
 
 $endClass
 

@@ -12,44 +12,7 @@ $addRequests
 
 $beginClassFrom=QLayout
 
-   METHOD new
-   METHOD delete
-   METHOD addItem
-   METHOD addLayout
-   METHOD addWidget
-   METHOD cellRect
-   METHOD columnCount
-   METHOD columnMinimumWidth
-   METHOD columnStretch
-   METHOD getItemPosition
-   METHOD horizontalSpacing
-   METHOD itemAtPosition
-   METHOD originCorner
-   METHOD rowCount
-   METHOD rowMinimumHeight
-   METHOD rowStretch
-   METHOD setColumnMinimumWidth
-   METHOD setColumnStretch
-   METHOD setHorizontalSpacing
-   METHOD setOriginCorner
-   METHOD setRowMinimumHeight
-   METHOD setRowStretch
-   METHOD setSpacing
-   METHOD setVerticalSpacing
-   METHOD spacing
-   METHOD verticalSpacing
-   METHOD count
-   METHOD expandingDirections
-   METHOD hasHeightForWidth
-   METHOD heightForWidth
-   METHOD invalidate
-   METHOD itemAt
-   METHOD maximumSize
-   METHOD minimumHeightForWidth
-   METHOD minimumSize
-   METHOD setGeometry
-   METHOD sizeHint
-   METHOD takeAt
+$addMethods
 
 $endClass
 

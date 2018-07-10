@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=QFrame
 
-   METHOD new
-   METHOD delete
-   METHOD checkOverflow
-   METHOD digitCount
-   METHOD intValue
-   METHOD mode
-   METHOD segmentStyle
-   METHOD setDigitCount
-   METHOD setMode
-   METHOD setSegmentStyle
-   METHOD smallDecimalPoint
-   METHOD value
-   METHOD sizeHint
-   METHOD display
-   METHOD setBinMode
-   METHOD setDecMode
-   METHOD setHexMode
-   METHOD setOctMode
-   METHOD setSmallDecimalPoint
+$addMethods
 
 $addSignals
 

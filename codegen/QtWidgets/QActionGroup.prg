@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD addAction
-   METHOD checkedAction
-   METHOD isEnabled
-   METHOD isExclusive
-   METHOD isVisible
-   METHOD removeAction
-   METHOD setDisabled
-   METHOD setEnabled
-   METHOD setExclusive
-   METHOD setVisible
+$addMethods
 
 $addSignals
 

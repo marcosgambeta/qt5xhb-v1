@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsLayout
 
-   METHOD new
-   METHOD delete
-   METHOD addItem
-   METHOD addStretch
-   METHOD alignment
-   METHOD insertItem
-   METHOD insertStretch
-   METHOD itemSpacing
-   METHOD orientation
-   METHOD removeItem
-   METHOD setAlignment
-   METHOD setItemSpacing
-   METHOD setOrientation
-   METHOD setSpacing
-   METHOD setStretchFactor
-   METHOD spacing
-   METHOD stretchFactor
-   METHOD count
-   METHOD invalidate
-   METHOD itemAt
-   METHOD removeAt
-   METHOD setGeometry
-   METHOD sizeHint
+$addMethods
 
 $endClass
 

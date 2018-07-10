@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD autoRepeat
-   METHOD context
-   METHOD id
-   METHOD isEnabled
-   METHOD key
-   METHOD parentWidget
-   METHOD setAutoRepeat
-   METHOD setContext
-   METHOD setEnabled
-   METHOD setKey
-   METHOD setWhatsThis
-   METHOD whatsThis
+$addMethods
 
 $addSignals
 

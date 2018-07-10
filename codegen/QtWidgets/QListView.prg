@@ -12,40 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemView
 
-   METHOD new
-   METHOD delete
-   METHOD batchSize
-   METHOD clearPropertyFlags
-   METHOD flow
-   METHOD gridSize
-   METHOD isRowHidden
-   METHOD isSelectionRectVisible
-   METHOD isWrapping
-   METHOD layoutMode
-   METHOD modelColumn
-   METHOD movement
-   METHOD resizeMode
-   METHOD setBatchSize
-   METHOD setFlow
-   METHOD setGridSize
-   METHOD setLayoutMode
-   METHOD setModelColumn
-   METHOD setMovement
-   METHOD setResizeMode
-   METHOD setRowHidden
-   METHOD setSelectionRectVisible
-   METHOD setSpacing
-   METHOD setUniformItemSizes
-   METHOD setViewMode
-   METHOD setWordWrap
-   METHOD setWrapping
-   METHOD spacing
-   METHOD uniformItemSizes
-   METHOD viewMode
-   METHOD wordWrap
-   METHOD indexAt
-   METHOD scrollTo
-   METHOD visualRect
+$addMethods
 
 $addSignals
 

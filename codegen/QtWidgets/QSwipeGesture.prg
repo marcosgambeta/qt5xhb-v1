@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QGesture
 
-   METHOD delete
-   METHOD horizontalDirection
-   METHOD setSwipeAngle
-   METHOD swipeAngle
-   METHOD verticalDirection
+$addMethods
 
 $endClass
 

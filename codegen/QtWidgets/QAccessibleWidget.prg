@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QAccessibleObject,QAccessibleActionInterface
 
-   METHOD new
-   METHOD isValid
-   METHOD window
-   METHOD childCount
-   METHOD indexOfChild
-   METHOD focusChild
-   METHOD rect
-   METHOD parent
-   METHOD child
-   METHOD text
-   METHOD role
-   METHOD foregroundColor
-   METHOD backgroundColor
-   METHOD interface_cast
-   METHOD actionNames
-   METHOD doAction
-   METHOD keyBindingsForAction
+$addMethods
 
 $endClass
 

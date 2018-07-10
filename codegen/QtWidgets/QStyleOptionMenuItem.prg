@@ -12,30 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD menuItemType
-   METHOD checkType
-   METHOD checked
-   METHOD menuHasCheckableItems
-   METHOD menuRect
-   METHOD text
-   METHOD icon
-   METHOD maxIconWidth
-   METHOD tabWidth
-   METHOD font
-
-   METHOD setMenuItemType
-   METHOD setCheckType
-   METHOD setChecked
-   METHOD setMenuHasCheckableItems
-   METHOD setMenuRect
-   METHOD setText
-   METHOD setIcon
-   METHOD setMaxIconWidth
-   METHOD setTabWidth
-   METHOD setFont
+$addMethods
 
 $endClass
 

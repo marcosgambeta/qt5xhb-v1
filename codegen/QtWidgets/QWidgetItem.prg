@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QLayoutItem
 
-   METHOD new
-   METHOD delete
-   METHOD controlTypes
-   METHOD expandingDirections
-   METHOD geometry
-   METHOD hasHeightForWidth
-   METHOD heightForWidth
-   METHOD isEmpty
-   METHOD maximumSize
-   METHOD minimumSize
-   METHOD setGeometry
-   METHOD sizeHint
-   METHOD widget
+$addMethods
 
 $endClass
 

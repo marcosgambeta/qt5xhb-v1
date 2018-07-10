@@ -12,26 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD finalPosition
-   METHOD handleInput
-   METHOD pixelPerMeter
-   METHOD scrollerProperties
-   METHOD setSnapPositionsX
-   METHOD setSnapPositionsY
-   METHOD state
-   METHOD stop
-   METHOD target
-   METHOD velocity
-   METHOD ensureVisible
-   METHOD resendPrepareEvent
-   METHOD scrollTo
-   METHOD setScrollerProperties
-   METHOD activeScrollers
-   METHOD grabGesture
-   METHOD grabbedGesture
-   METHOD hasScroller
-   METHOD scroller
-   METHOD ungrabGesture
+$addMethods
 
 $addSignals
 

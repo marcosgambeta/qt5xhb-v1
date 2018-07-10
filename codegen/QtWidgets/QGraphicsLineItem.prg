@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsItem
 
-   METHOD new
-   METHOD delete
-   METHOD line
-   METHOD pen
-   METHOD setLine
-   METHOD setPen
-   METHOD boundingRect
-   METHOD contains
-   METHOD isObscuredBy
-   METHOD opaqueArea
-   METHOD paint
-   METHOD shape
-   METHOD type
+$addMethods
 
 $endClass
 

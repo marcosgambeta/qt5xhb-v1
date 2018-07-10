@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractItemView
 
-   METHOD new
-   METHOD delete
-   METHOD columnWidths
-   METHOD previewWidget
-   METHOD resizeGripsVisible
-   METHOD setColumnWidths
-   METHOD setPreviewWidget
-   METHOD setResizeGripsVisible
-   METHOD indexAt
-   METHOD scrollTo
-   METHOD selectAll
-   METHOD setModel
-   METHOD setRootIndex
-   METHOD setSelectionModel
-   METHOD sizeHint
-   METHOD visualRect
+$addMethods
 
 $addSignals
 

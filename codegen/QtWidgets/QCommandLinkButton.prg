@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QPushButton
 
-   METHOD new
-   METHOD delete
-   METHOD description
-   METHOD setDescription
-   METHOD isFlat
-   METHOD setFlat
+$addMethods
 
 $endClass
 

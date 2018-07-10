@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD format
-   METHOD setFormat
-   METHOD isValid
-   METHOD makeCurrent
-   METHOD doneCurrent
-   METHOD context
-   METHOD defaultFramebufferObject
-   METHOD grabFramebuffer
+$addMethods
 
 $addSignals
 

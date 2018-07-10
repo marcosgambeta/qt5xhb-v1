@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOptionComplex
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD features
-   METHOD text
-   METHOD textAlignment
-   METHOD textColor
-   METHOD lineWidth
-   METHOD midLineWidth
-
-   METHOD setFeatures
-   METHOD setText
-   METHOD setTextAlignment
-   METHOD setTextColor
-   METHOD setLineWidth
-   METHOD setMidLineWidth
+$addMethods
 
 $endClass
 

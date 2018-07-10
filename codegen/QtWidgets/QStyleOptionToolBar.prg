@@ -16,22 +16,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD positionOfLine
-   METHOD positionWithinLine
-   METHOD toolBarArea
-   METHOD features
-   METHOD lineWidth
-   METHOD midLineWidth
-
-   METHOD setPositionOfLine
-   METHOD setPositionWithinLine
-   METHOD setToolBarArea
-   METHOD setFeatures
-   METHOD setLineWidth
-   METHOD setMidLineWidth
+$addMethods
 
 $endClass
 

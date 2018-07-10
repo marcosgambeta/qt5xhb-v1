@@ -12,50 +12,7 @@ $addRequests
 
 $beginClassFrom=QTableView
 
-   METHOD new
-   METHOD delete
-   METHOD cellWidget
-   METHOD closePersistentEditor
-   METHOD column
-   METHOD columnCount
-   METHOD currentColumn
-   METHOD currentItem
-   METHOD currentRow
-   METHOD editItem
-   METHOD horizontalHeaderItem
-   METHOD item
-   METHOD itemAt
-   METHOD openPersistentEditor
-   METHOD removeCellWidget
-   METHOD row
-   METHOD rowCount
-   METHOD setCellWidget
-   METHOD setColumnCount
-   METHOD setCurrentCell
-   METHOD setCurrentItem
-   METHOD setHorizontalHeaderItem
-   METHOD setHorizontalHeaderLabels
-   METHOD setItem
-   METHOD setItemPrototype
-   METHOD setRangeSelected
-   METHOD setRowCount
-   METHOD setVerticalHeaderItem
-   METHOD setVerticalHeaderLabels
-   METHOD sortItems
-   METHOD takeHorizontalHeaderItem
-   METHOD takeItem
-   METHOD takeVerticalHeaderItem
-   METHOD verticalHeaderItem
-   METHOD visualColumn
-   METHOD visualItemRect
-   METHOD visualRow
-   METHOD clear
-   METHOD clearContents
-   METHOD insertColumn
-   METHOD insertRow
-   METHOD removeColumn
-   METHOD removeRow
-   METHOD scrollToItem
+$addMethods
 
 $addSignals
 

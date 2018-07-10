@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject,QGraphicsItem
 
-   METHOD delete
-   METHOD grabGesture
-   METHOD ungrabGesture
+$addMethods
 
 $addSignals
 

@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSlider
 
-   METHOD new
-   METHOD delete
-   METHOD event
-   METHOD sizeHint
+$addMethods
 
 $endClass
 

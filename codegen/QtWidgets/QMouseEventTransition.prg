@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QEventTransition
 
-   METHOD new
-   METHOD delete
-   METHOD button
-   METHOD hitTestPath
-   METHOD modifierMask
-   METHOD setButton
-   METHOD setHitTestPath
-   METHOD setModifierMask
+$addMethods
 
 $endClass
 

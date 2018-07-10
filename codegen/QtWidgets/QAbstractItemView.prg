@@ -12,73 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractScrollArea
 
-   METHOD delete
-   METHOD alternatingRowColors
-   METHOD setAlternatingRowColors
-   METHOD autoScrollMargin
-   METHOD setAutoScrollMargin
-   METHOD currentIndex
-   METHOD setCurrentIndex
-   METHOD defaultDropAction
-   METHOD setDefaultDropAction
-   METHOD dragDropMode
-   METHOD setDragDropMode
-   METHOD dragDropOverwriteMode
-   METHOD setDragDropOverwriteMode
-   METHOD dragEnabled
-   METHOD setDragEnabled
-   METHOD editTriggers
-   METHOD setEditTriggers
-   METHOD hasAutoScroll
-   METHOD setAutoScroll
-   METHOD horizontalScrollMode
-   METHOD setHorizontalScrollMode
-   METHOD iconSize
-   METHOD setIconSize
-   METHOD indexWidget
-   METHOD setIndexWidget
-   METHOD closePersistentEditor
-   METHOD indexAt
-   METHOD itemDelegate
-   METHOD setItemDelegate
-   METHOD itemDelegateForColumn
-   METHOD setItemDelegateForColumn
-   METHOD itemDelegateForRow
-   METHOD setItemDelegateForRow
-   METHOD keyboardSearch
-   METHOD model
-   METHOD setModel
-   METHOD openPersistentEditor
-   METHOD rootIndex
-   METHOD setRootIndex
-   METHOD scrollTo
-   METHOD selectionBehavior
-   METHOD setSelectionBehavior
-   METHOD selectionMode
-   METHOD setSelectionMode
-   METHOD selectionModel
-   METHOD setSelectionModel
-   METHOD showDropIndicator
-   METHOD setDropIndicatorShown
-   METHOD tabKeyNavigation
-   METHOD setTabKeyNavigation
-   METHOD textElideMode
-   METHOD setTextElideMode
-   METHOD verticalScrollMode
-   METHOD setVerticalScrollMode
-   METHOD sizeHintForColumn
-   METHOD sizeHintForIndex
-   METHOD sizeHintForRow
-   METHOD visualRect
-   METHOD inputMethodQuery
-   METHOD clearSelection
-   METHOD edit
-   METHOD reset
-   METHOD scrollToBottom
-   METHOD scrollToTop
-   METHOD selectAll
-   METHOD update
-   METHOD doItemsLayout
+$addMethods
 
 $addSignals
 

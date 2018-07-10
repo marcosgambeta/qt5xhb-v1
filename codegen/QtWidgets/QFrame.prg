@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD frameRect
-   METHOD frameShadow
-   METHOD frameShape
-   METHOD frameStyle
-   METHOD frameWidth
-   METHOD lineWidth
-   METHOD midLineWidth
-   METHOD setFrameRect
-   METHOD setFrameShadow
-   METHOD setFrameShape
-   METHOD setFrameStyle
-   METHOD setLineWidth
-   METHOD setMidLineWidth
-   METHOD sizeHint
+$addMethods
 
 $endClass
 

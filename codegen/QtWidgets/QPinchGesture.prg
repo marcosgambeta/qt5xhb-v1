@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=QGesture
 
-   METHOD delete
-   METHOD centerPoint
-   METHOD changeFlags
-   METHOD lastCenterPoint
-   METHOD lastRotationAngle
-   METHOD lastScaleFactor
-   METHOD rotationAngle
-   METHOD scaleFactor
-   METHOD setCenterPoint
-   METHOD setChangeFlags
-   METHOD setLastCenterPoint
-   METHOD setLastRotationAngle
-   METHOD setLastScaleFactor
-   METHOD setRotationAngle
-   METHOD setScaleFactor
-   METHOD setStartCenterPoint
-   METHOD setTotalChangeFlags
-   METHOD setTotalRotationAngle
-   METHOD setTotalScaleFactor
-   METHOD startCenterPoint
-   METHOD totalChangeFlags
-   METHOD totalRotationAngle
-   METHOD totalScaleFactor
+$addMethods
 
 $endClass
 

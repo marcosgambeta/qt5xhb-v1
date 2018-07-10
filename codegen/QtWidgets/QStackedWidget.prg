@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QFrame
 
-   METHOD new
-   METHOD delete
-   METHOD addWidget
-   METHOD count
-   METHOD currentIndex
-   METHOD currentWidget
-   METHOD indexOf
-   METHOD insertWidget
-   METHOD removeWidget
-   METHOD widget
-   METHOD setCurrentIndex
-   METHOD setCurrentWidget
+$addMethods
 
 $addSignals
 

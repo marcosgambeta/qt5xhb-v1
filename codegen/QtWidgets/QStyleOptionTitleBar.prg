@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOptionComplex
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD text
-   METHOD icon
-   METHOD titleBarState
-   METHOD titleBarFlags
-
-   METHOD setText
-   METHOD setIcon
-   METHOD setTitleBarState
-   METHOD setTitleBarFlags
+$addMethods
 
 $endClass
 

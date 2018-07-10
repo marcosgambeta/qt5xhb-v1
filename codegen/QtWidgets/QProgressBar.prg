@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD alignment
-   METHOD format
-   METHOD invertedAppearance
-   METHOD isTextVisible
-   METHOD maximum
-   METHOD minimum
-   METHOD orientation
-   METHOD setAlignment
-   METHOD setFormat
-   METHOD setInvertedAppearance
-   METHOD setTextDirection
-   METHOD setTextVisible
-   METHOD text
-   METHOD textDirection
-   METHOD value
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD reset
-   METHOD setMaximum
-   METHOD setMinimum
-   METHOD setOrientation
-   METHOD setRange
-   METHOD setValue
+$addMethods
 
 $addSignals
 

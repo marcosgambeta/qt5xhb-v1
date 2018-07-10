@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOptionComplex
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD corner
-
-   METHOD setCorner
+$addMethods
 
 $endClass
 

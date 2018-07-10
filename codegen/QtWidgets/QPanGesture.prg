@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QGesture
 
-   METHOD delete
-   METHOD acceleration
-   METHOD delta
-   METHOD lastOffset
-   METHOD offset
-   METHOD setAcceleration
-   METHOD setLastOffset
-   METHOD setOffset
+$addMethods
 
 $endClass
 

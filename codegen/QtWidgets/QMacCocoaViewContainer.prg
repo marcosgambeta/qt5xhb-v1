@@ -12,6 +12,8 @@ $addRequests
 
 $beginClassFrom=QWidget
 
+$addMethods
+
 $endClass
 
 $destructor

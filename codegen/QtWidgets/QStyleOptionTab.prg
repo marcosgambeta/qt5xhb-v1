@@ -16,34 +16,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD shape
-   METHOD text
-   METHOD icon
-   METHOD row
-   METHOD position
-   METHOD selectedPosition
-   METHOD cornerWidgets
-   METHOD iconSize
-   METHOD documentMode
-   METHOD leftButtonSize
-   METHOD rightButtonSize
-   METHOD features
-
-   METHOD setShape
-   METHOD setText
-   METHOD setIcon
-   METHOD setRow
-   METHOD setPosition
-   METHOD setSelectedPosition
-   METHOD setCornerWidgets
-   METHOD setIconSize
-   METHOD setDocumentMode
-   METHOD setLeftButtonSize
-   METHOD setRightButtonSize
-   METHOD setFeatures
+$addMethods
 
 $endClass
 

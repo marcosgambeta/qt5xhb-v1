@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QDateTimeEdit
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

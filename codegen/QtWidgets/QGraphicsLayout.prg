@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsLayoutItem
 
-   METHOD delete
-   METHOD activate
-   METHOD count
-   METHOD invalidate
-   METHOD isActivated
-   METHOD itemAt
-   METHOD removeAt
-   METHOD setContentsMargins
-   METHOD widgetEvent
-   METHOD getContentsMargins
-   METHOD updateGeometry
-   METHOD instantInvalidatePropagation
-   METHOD setInstantInvalidatePropagation
+$addMethods
 
 $endClass
 

@@ -12,34 +12,7 @@ $addRequests
 
 $beginClassFrom=QListView
 
-   METHOD new
-   METHOD delete
-   METHOD addItem
-   METHOD addItems
-   METHOD closePersistentEditor
-   METHOD count
-   METHOD currentItem
-   METHOD currentRow
-   METHOD editItem
-   METHOD insertItem
-   METHOD insertItems
-   METHOD isSortingEnabled
-   METHOD item
-   METHOD itemAt
-   METHOD itemWidget
-   METHOD openPersistentEditor
-   METHOD removeItemWidget
-   METHOD row
-   METHOD setCurrentItem
-   METHOD setCurrentRow
-   METHOD setItemWidget
-   METHOD setSortingEnabled
-   METHOD sortItems
-   METHOD takeItem
-   METHOD visualItemRect
-   METHOD dropEvent
-   METHOD clear
-   METHOD scrollToItem
+$addMethods
 
 $addSignals
 

@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidgetItem
 
-   METHOD new
-   METHOD delete
-   METHOD sizeHint
-   METHOD minimumSize
-   METHOD maximumSize
-   METHOD heightForWidth
+$addMethods
 
 $endClass
 

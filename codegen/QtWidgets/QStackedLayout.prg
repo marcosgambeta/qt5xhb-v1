@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QLayout
 
-   METHOD new
-   METHOD delete
-   METHOD addWidget
-   METHOD currentIndex
-   METHOD currentWidget
-   METHOD insertWidget
-   METHOD setStackingMode
-   METHOD stackingMode
-   METHOD widget
-   METHOD setCurrentIndex
-   METHOD setCurrentWidget
+$addMethods
 
 $addSignals
 

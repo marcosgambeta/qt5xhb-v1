@@ -14,42 +14,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD displayAlignment
-   METHOD decorationAlignment
-   METHOD textElideMode
-   METHOD decorationPosition
-   METHOD decorationSize
-   METHOD font
-   METHOD showDecorationSelected
-   METHOD features
-   METHOD locale
-   METHOD widget
-   METHOD index
-   METHOD checkState
-   METHOD icon
-   METHOD text
-   METHOD viewItemPosition
-   METHOD backgroundBrush
-
-   METHOD setDisplayAlignment
-   METHOD setDecorationAlignment
-   METHOD setTextElideMode
-   METHOD setDecorationPosition
-   METHOD setDecorationSize
-   METHOD setFont
-   METHOD setShowDecorationSelected
-   METHOD setFeatures
-   METHOD setLocale
-   METHOD setWidget
-   METHOD setIndex
-   METHOD setCheckState
-   METHOD setIcon
-   METHOD setText
-   METHOD setViewItemPosition
-   METHOD setBackgroundBrush
+$addMethods
 
 $endClass
 

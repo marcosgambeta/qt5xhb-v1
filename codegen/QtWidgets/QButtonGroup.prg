@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD addButton
-   METHOD button
-   METHOD buttons
-   METHOD checkedButton
-   METHOD checkedId
-   METHOD exclusive
-   METHOD id
-   METHOD removeButton
-   METHOD setExclusive
-   METHOD setId
+$addMethods
 
 $addSignals
 

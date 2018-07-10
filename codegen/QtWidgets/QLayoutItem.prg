@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD alignment
-   METHOD controlTypes
-   METHOD expandingDirections
-   METHOD geometry
-   METHOD hasHeightForWidth
-   METHOD heightForWidth
-   METHOD invalidate
-   METHOD isEmpty
-   METHOD layout
-   METHOD maximumSize
-   METHOD minimumHeightForWidth
-   METHOD minimumSize
-   METHOD setAlignment
-   METHOD setGeometry
-   METHOD sizeHint
-   METHOD spacerItem
-   METHOD widget
+$addMethods
 
 $endClass
 

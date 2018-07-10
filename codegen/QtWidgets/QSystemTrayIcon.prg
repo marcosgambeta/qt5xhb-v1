@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD contextMenu
-   METHOD geometry
-   METHOD icon
-   METHOD isVisible
-   METHOD setContextMenu
-   METHOD setIcon
-   METHOD setToolTip
-   METHOD showMessage
-   METHOD toolTip
-   METHOD hide
-   METHOD setVisible
-   METHOD show
-   METHOD isSystemTrayAvailable
-   METHOD supportsMessages
+$addMethods
 
 $addSignals
 

@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD init
-   METHOD initFrom
-
-   METHOD version
-   METHOD type
-   METHOD state
-   METHOD direction
-   METHOD rect
-   METHOD fontMetrics
-   METHOD palette
-   METHOD styleObject
-
-   METHOD setVersion
-   METHOD setType
-   METHOD setState
-   METHOD setDirection
-   METHOD setRect
-   METHOD setFontMetrics
-   METHOD setPalette
-   METHOD setStyleObject
+$addMethods
 
 $endClass
 

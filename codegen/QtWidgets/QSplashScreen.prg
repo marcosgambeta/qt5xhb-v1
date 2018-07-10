@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD finish
-   METHOD pixmap
-   METHOD setPixmap
-   METHOD repaint
-   METHOD clearMessage
-   METHOD showMessage
+$addMethods
 
 $addSignals
 

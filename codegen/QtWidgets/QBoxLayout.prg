@@ -12,39 +12,7 @@ $addRequests
 
 $beginClassFrom=QLayout
 
-   METHOD new
-   METHOD delete
-   METHOD addLayout
-   METHOD addSpacerItem
-   METHOD addSpacing
-   METHOD addStretch
-   METHOD addStrut
-   METHOD addWidget
-   METHOD direction
-   METHOD insertLayout
-   METHOD insertSpacerItem
-   METHOD insertSpacing
-   METHOD insertStretch
-   METHOD insertWidget
-   METHOD setDirection
-   METHOD setSpacing
-   METHOD setStretch
-   METHOD setStretchFactor
-   METHOD spacing
-   METHOD stretch
-   METHOD addItem
-   METHOD count
-   METHOD expandingDirections
-   METHOD hasHeightForWidth
-   METHOD heightForWidth
-   METHOD invalidate
-   METHOD itemAt
-   METHOD maximumSize
-   METHOD minimumHeightForWidth
-   METHOD minimumSize
-   METHOD setGeometry
-   METHOD sizeHint
-   METHOD takeAt
+$addMethods
 
 $endClass
 

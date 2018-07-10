@@ -12,63 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractScrollArea
 
-   METHOD new
-   METHOD delete
-   METHOD alignment
-   METHOD backgroundBrush
-   METHOD cacheMode
-   METHOD centerOn
-   METHOD dragMode
-   METHOD ensureVisible
-   METHOD fitInView
-   METHOD foregroundBrush
-   METHOD isInteractive
-   METHOD isTransformed
-   METHOD itemAt
-   METHOD mapFromScene
-   METHOD mapToScene
-   METHOD matrix
-   METHOD optimizationFlags
-   METHOD render
-   METHOD renderHints
-   METHOD resetCachedContent
-   METHOD resetMatrix
-   METHOD resetTransform
-   METHOD resizeAnchor
-   METHOD rotate
-   METHOD rubberBandSelectionMode
-   METHOD scale
-   METHOD scene
-   METHOD sceneRect
-   METHOD setAlignment
-   METHOD setBackgroundBrush
-   METHOD setCacheMode
-   METHOD setDragMode
-   METHOD setForegroundBrush
-   METHOD setInteractive
-   METHOD setMatrix
-   METHOD setOptimizationFlag
-   METHOD setOptimizationFlags
-   METHOD setRenderHint
-   METHOD setRenderHints
-   METHOD setResizeAnchor
-   METHOD setRubberBandSelectionMode
-   METHOD setScene
-   METHOD setSceneRect
-   METHOD setTransform
-   METHOD setTransformationAnchor
-   METHOD setViewportUpdateMode
-   METHOD shear
-   METHOD transform
-   METHOD transformationAnchor
-   METHOD translate
-   METHOD viewportTransform
-   METHOD viewportUpdateMode
-   METHOD inputMethodQuery
-   METHOD sizeHint
-   METHOD invalidateScene
-   METHOD updateScene
-   METHOD updateSceneRect
+$addMethods
 
 $endClass
 

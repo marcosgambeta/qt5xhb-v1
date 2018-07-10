@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD addButton
-   METHOD button
-   METHOD buttonRole
-   METHOD centerButtons
-   METHOD clear
-   METHOD orientation
-   METHOD removeButton
-   METHOD setCenterButtons
-   METHOD setOrientation
-   METHOD setStandardButtons
-   METHOD standardButton
-   METHOD standardButtons
+$addMethods
 
 $addSignals
 

@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD keySequence
-   METHOD setKeySequence
-   METHOD clear
+$addMethods
 
 $addSignals
 

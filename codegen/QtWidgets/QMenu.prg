@@ -12,43 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD actionAt
-   METHOD actionGeometry
-   METHOD activeAction
-   METHOD setActiveAction
-   METHOD addAction
-   METHOD addMenu
-   METHOD addSeparator
-   METHOD clear
-   METHOD defaultAction
-   METHOD setDefaultAction
-   METHOD exec
-   METHOD hideTearOffMenu
-   METHOD icon
-   METHOD setIcon
-   METHOD insertMenu
-   METHOD insertSeparator
-   METHOD isEmpty
-   METHOD isTearOffEnabled
-   METHOD setTearOffEnabled
-   METHOD isTearOffMenuVisible
-   METHOD menuAction
-   METHOD popup
-   METHOD separatorsCollapsible
-   METHOD setSeparatorsCollapsible
-   METHOD title
-   METHOD setTitle
-   METHOD sizeHint
-   METHOD wceMenu
-   METHOD addSection
-   METHOD insertSection
-   METHOD setNoReplayFor
-   METHOD setAsDockMenu
-   METHOD toolTipsVisible
-   METHOD setToolTipsVisible
-   METHOD toNSMenu
+$addMethods
 
 $addSignals
 

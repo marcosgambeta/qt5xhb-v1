@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=QTextEdit
 
-   METHOD new
-   METHOD delete
-   METHOD backwardHistoryCount
-   METHOD clearHistory
-   METHOD forwardHistoryCount
-   METHOD historyTitle
-   METHOD historyUrl
-   METHOD isBackwardAvailable
-   METHOD isForwardAvailable
-   METHOD openExternalLinks
-   METHOD openLinks
-   METHOD searchPaths
-   METHOD setOpenExternalLinks
-   METHOD setOpenLinks
-   METHOD setSearchPaths
-   METHOD source
-   METHOD loadResource
-   METHOD backward
-   METHOD forward
-   METHOD home
-   METHOD reload
-   METHOD setSource
+$addMethods
 
 $addSignals
 

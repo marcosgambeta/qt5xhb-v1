@@ -16,26 +16,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD lineWidth
-   METHOD midLineWidth
-   METHOD shape
-   METHOD tabBarSize
-   METHOD rightCornerWidgetSize
-   METHOD leftCornerWidgetSize
-   METHOD tabBarRect
-   METHOD selectedTabRect
-
-   METHOD setLineWidth
-   METHOD setMidLineWidth
-   METHOD setShape
-   METHOD setTabBarSize
-   METHOD setRightCornerWidgetSize
-   METHOD setLeftCornerWidgetSize
-   METHOD setTabBarRect
-   METHOD setSelectedTabRect
+$addMethods
 
 $endClass
 

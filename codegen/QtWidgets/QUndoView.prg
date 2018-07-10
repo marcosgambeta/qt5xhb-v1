@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD cleanIcon
-   METHOD emptyLabel
-   METHOD group
-   METHOD setCleanIcon
-   METHOD setEmptyLabel
-   METHOD stack
-   METHOD setGroup
-   METHOD setStack
+$addMethods
 
 $endClass
 

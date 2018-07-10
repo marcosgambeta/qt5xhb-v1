@@ -12,32 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD beginMacro
-   METHOD canRedo
-   METHOD canUndo
-   METHOD cleanIndex
-   METHOD clear
-   METHOD command
-   METHOD count
-   METHOD createRedoAction
-   METHOD createUndoAction
-   METHOD endMacro
-   METHOD index
-   METHOD isActive
-   METHOD isClean
-   METHOD push
-   METHOD redoText
-   METHOD setUndoLimit
-   METHOD text
-   METHOD undoLimit
-   METHOD undoText
-   METHOD redo
-   METHOD setActive
-   METHOD setClean
-   METHOD setIndex
-   METHOD undo
+$addMethods
 
 $addSignals
 

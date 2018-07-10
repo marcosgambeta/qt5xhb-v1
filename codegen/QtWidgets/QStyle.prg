@@ -12,33 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD drawComplexControl
-   METHOD drawControl
-   METHOD drawItemPixmap
-   METHOD drawItemText
-   METHOD drawPrimitive
-   METHOD generatedIconPixmap
-   METHOD hitTestComplexControl
-   METHOD itemPixmapRect
-   METHOD itemTextRect
-   METHOD layoutSpacing
-   METHOD pixelMetric
-   METHOD polish
-   METHOD proxy
-   METHOD sizeFromContents
-   METHOD standardIcon
-   METHOD standardPalette
-   METHOD styleHint
-   METHOD subControlRect
-   METHOD subElementRect
-   METHOD unpolish
-   METHOD alignedRect
-   METHOD sliderPositionFromValue
-   METHOD sliderValueFromPosition
-   METHOD visualAlignment
-   METHOD visualPos
-   METHOD visualRect
+$addMethods
 
 $addSignals
 

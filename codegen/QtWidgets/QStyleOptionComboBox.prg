@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOptionComplex
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD editable
-   METHOD popupRect
-   METHOD frame
-   METHOD currentText
-   METHOD currentIcon
-   METHOD iconSize
-
-   METHOD setEditable
-   METHOD setPopupRect
-   METHOD setFrame
-   METHOD setCurrentText
-   METHOD setCurrentIcon
-   METHOD setIconSize
+$addMethods
 
 $endClass
 

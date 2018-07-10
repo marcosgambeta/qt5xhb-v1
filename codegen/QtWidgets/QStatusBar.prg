@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD addPermanentWidget
-   METHOD addWidget
-   METHOD currentMessage
-   METHOD insertPermanentWidget
-   METHOD insertWidget
-   METHOD isSizeGripEnabled
-   METHOD removeWidget
-   METHOD setSizeGripEnabled
-   METHOD clearMessage
-   METHOD showMessage
+$addMethods
 
 $addSignals
 

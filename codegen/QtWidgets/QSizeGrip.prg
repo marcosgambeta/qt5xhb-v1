@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD setVisible
-   METHOD sizeHint
+$addMethods
 
 $endClass
 

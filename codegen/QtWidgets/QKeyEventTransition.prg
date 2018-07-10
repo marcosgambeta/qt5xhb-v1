@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QEventTransition
 
-   METHOD new
-   METHOD delete
-   METHOD key
-   METHOD modifierMask
-   METHOD setKey
-   METHOD setModifierMask
+$addMethods
 
 $endClass
 

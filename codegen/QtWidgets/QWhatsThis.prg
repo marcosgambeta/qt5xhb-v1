@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD createAction
-   METHOD enterWhatsThisMode
-   METHOD hideText
-   METHOD inWhatsThisMode
-   METHOD leaveWhatsThisMode
-   METHOD showText
+$addMethods
 
 $endClass
 

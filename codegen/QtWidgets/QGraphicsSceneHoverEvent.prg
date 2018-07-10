@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsSceneEvent
 
-   METHOD delete
-   METHOD lastPos
-   METHOD lastScenePos
-   METHOD lastScreenPos
-   METHOD modifiers
-   METHOD pos
-   METHOD scenePos
-   METHOD screenPos
+$addMethods
 
 $endClass
 

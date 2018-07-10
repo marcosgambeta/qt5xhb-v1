@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD boundingRect
-   METHOD boundingRectFor
-   METHOD isEnabled
-   METHOD setEnabled
-   METHOD update
+$addMethods
 
 $addSignals
 

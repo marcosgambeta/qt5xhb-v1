@@ -12,36 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsObject
 
-   METHOD new
-   METHOD delete
-   METHOD adjustSize
-   METHOD defaultTextColor
-   METHOD document
-   METHOD font
-   METHOD openExternalLinks
-   METHOD setDefaultTextColor
-   METHOD setDocument
-   METHOD setFont
-   METHOD setHtml
-   METHOD setOpenExternalLinks
-   METHOD setPlainText
-   METHOD setTabChangesFocus
-   METHOD setTextCursor
-   METHOD setTextInteractionFlags
-   METHOD setTextWidth
-   METHOD tabChangesFocus
-   METHOD textCursor
-   METHOD textInteractionFlags
-   METHOD textWidth
-   METHOD toHtml
-   METHOD toPlainText
-   METHOD boundingRect
-   METHOD contains
-   METHOD isObscuredBy
-   METHOD opaqueArea
-   METHOD paint
-   METHOD shape
-   METHOD type
+$addMethods
 
 $addSignals
 

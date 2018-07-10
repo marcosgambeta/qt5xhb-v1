@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QBoxLayout
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

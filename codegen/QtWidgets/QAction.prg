@@ -12,61 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD actionGroup
-   METHOD activate
-   METHOD associatedGraphicsWidgets
-   METHOD associatedWidgets
-   METHOD autoRepeat
-   METHOD data
-   METHOD font
-   METHOD icon
-   METHOD iconText
-   METHOD isCheckable
-   METHOD isChecked
-   METHOD isEnabled
-   METHOD isIconVisibleInMenu
-   METHOD isSeparator
-   METHOD isVisible
-   METHOD menu
-   METHOD menuRole
-   METHOD parentWidget
-   METHOD priority
-   METHOD setActionGroup
-   METHOD setAutoRepeat
-   METHOD setCheckable
-   METHOD setData
-   METHOD setFont
-   METHOD setIcon
-   METHOD setIconText
-   METHOD setIconVisibleInMenu
-   METHOD setMenu
-   METHOD setMenuRole
-   METHOD setPriority
-   METHOD setSeparator
-   METHOD setShortcut
-   METHOD setShortcutContext
-   METHOD setShortcuts
-   METHOD setStatusTip
-   METHOD setText
-   METHOD setToolTip
-   METHOD setWhatsThis
-   METHOD shortcut
-   METHOD shortcutContext
-   METHOD shortcuts
-   METHOD showStatusText
-   METHOD statusTip
-   METHOD text
-   METHOD toolTip
-   METHOD whatsThis
-   METHOD hover
-   METHOD setChecked
-   METHOD setDisabled
-   METHOD setEnabled
-   METHOD setVisible
-   METHOD toggle
-   METHOD trigger
+$addMethods
 
 $addSignals
 

@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsWidget
 
-   METHOD new
-   METHOD delete
-   METHOD blurHints
-   METHOD blurRadius
-   METHOD boundingRectFor
-   METHOD setBlurHints
-   METHOD setBlurRadius
+$addMethods
 
 $addSignals
 

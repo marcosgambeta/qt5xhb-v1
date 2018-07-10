@@ -12,24 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD isShaded
-   METHOD keyboardPageStep
-   METHOD keyboardSingleStep
-   METHOD mdiArea
-   METHOD setKeyboardPageStep
-   METHOD setKeyboardSingleStep
-   METHOD setOption
-   METHOD setSystemMenu
-   METHOD setWidget
-   METHOD systemMenu
-   METHOD testOption
-   METHOD widget
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD showShaded
-   METHOD showSystemMenu
+$addMethods
 
 $addSignals
 

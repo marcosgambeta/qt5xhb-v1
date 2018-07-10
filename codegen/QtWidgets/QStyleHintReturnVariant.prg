@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleHintReturn
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD scrollMetric
-   METHOD setScrollMetric
-   METHOD setDefaultScrollerProperties
-   METHOD unsetDefaultScrollerProperties
+$addMethods
 
 $endClass
 

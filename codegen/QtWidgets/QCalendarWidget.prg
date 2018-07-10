@@ -12,49 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD dateEditAcceptDelay
-   METHOD dateTextFormat2
-   METHOD dateTextFormat
-   METHOD firstDayOfWeek
-   METHOD headerTextFormat
-   METHOD horizontalHeaderFormat
-   METHOD isDateEditEnabled
-   METHOD isGridVisible
-   METHOD isNavigationBarVisible
-   METHOD maximumDate
-   METHOD minimumDate
-   METHOD monthShown
-   METHOD selectedDate
-   METHOD selectionMode
-   METHOD setDateEditAcceptDelay
-   METHOD setDateEditEnabled
-   METHOD setDateTextFormat
-   METHOD setFirstDayOfWeek
-   METHOD setHeaderTextFormat
-   METHOD setHorizontalHeaderFormat
-   METHOD setMaximumDate
-   METHOD setMinimumDate
-   METHOD setSelectionMode
-   METHOD setVerticalHeaderFormat
-   METHOD setWeekdayTextFormat
-   METHOD verticalHeaderFormat
-   METHOD weekdayTextFormat
-   METHOD yearShown
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD setCurrentPage
-   METHOD setDateRange
-   METHOD setGridVisible
-   METHOD setNavigationBarVisible
-   METHOD setSelectedDate
-   METHOD showNextMonth
-   METHOD showNextYear
-   METHOD showPreviousMonth
-   METHOD showPreviousYear
-   METHOD showSelectedDate
-   METHOD showToday
+$addMethods
 
 $addSignals
 

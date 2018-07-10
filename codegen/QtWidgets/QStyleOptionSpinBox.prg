@@ -16,16 +16,7 @@ $addRequests
 
 $beginClassFrom=QStyleOptionComplex
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD buttonSymbols
-   METHOD stepEnabled
-   METHOD frame
-
-   METHOD setButtonSymbols
-   METHOD setStepEnabled
-   METHOD setFrame
+$addMethods
 
 $endClass
 

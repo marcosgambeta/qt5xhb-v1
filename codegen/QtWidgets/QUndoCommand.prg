@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD actionText
-   METHOD child
-   METHOD childCount
-   METHOD id
-   METHOD mergeWith
-   METHOD redo
-   METHOD setText
-   METHOD text
-   METHOD undo
+$addMethods
 
 $endClass
 

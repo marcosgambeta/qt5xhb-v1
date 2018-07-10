@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsEffect
 
-   METHOD new
-   METHOD delete
-   METHOD blurRadius
-   METHOD color
-   METHOD offset
-   METHOD xOffset
-   METHOD yOffset
-   METHOD boundingRectFor
-   METHOD setBlurRadius
-   METHOD setColor
-   METHOD setOffset
-   METHOD setXOffset
-   METHOD setYOffset
+$addMethods
 
 $addSignals
 

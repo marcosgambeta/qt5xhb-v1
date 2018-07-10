@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD create
-   METHOD recognize
-   METHOD reset
-   METHOD registerRecognizer
-   METHOD unregisterRecognizer
+$addMethods
 
 $endClass
 

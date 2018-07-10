@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD gestureCancelPolicy
-   METHOD gestureType
-   METHOD hasHotSpot
-   METHOD hotSpot
-   METHOD setGestureCancelPolicy
-   METHOD setHotSpot
-   METHOD state
-   METHOD unsetHotSpot
+$addMethods
 
 $endClass
 

@@ -12,72 +12,7 @@ $addRequests
 
 $beginClassFrom=QGuiApplication
 
-   METHOD new
-   METHOD delete
-   METHOD isSessionRestored
-   METHOD sessionId
-   METHOD sessionKey
-   METHOD styleSheet
-   METHOD notify
-   METHOD aboutQt
-   METHOD closeAllWindows
-   METHOD setStyleSheet
-   METHOD activeModalWidget
-   METHOD activePopupWidget
-   METHOD activeWindow
-   METHOD alert
-   METHOD allWidgets
-   METHOD beep
-   METHOD changeOverrideCursor
-   METHOD clipboard
-   METHOD colorSpec
-   METHOD cursorFlashTime
-   METHOD desktop
-   METHOD desktopSettingsAware
-   METHOD doubleClickInterval
-   METHOD exec
-   METHOD focusWidget
-   METHOD font
-   METHOD fontMetrics
-   METHOD globalStrut
-   METHOD isEffectEnabled
-   METHOD isLeftToRight
-   METHOD isRightToLeft
-   METHOD keyboardInputInterval
-   METHOD keyboardModifiers
-   METHOD layoutDirection
-   METHOD mouseButtons
-   METHOD overrideCursor
-   METHOD palette
-   METHOD queryKeyboardModifiers
-   METHOD quitOnLastWindowClosed
-   METHOD restoreOverrideCursor
-   METHOD setActiveWindow
-   METHOD setColorSpec
-   METHOD setCursorFlashTime
-   METHOD setDesktopSettingsAware
-   METHOD setDoubleClickInterval
-   METHOD setEffectEnabled
-   METHOD setFont
-   METHOD setGlobalStrut
-   METHOD setKeyboardInputInterval
-   METHOD setLayoutDirection
-   METHOD setOverrideCursor
-   METHOD setPalette
-   METHOD setQuitOnLastWindowClosed
-   METHOD setStartDragDistance
-   METHOD setStartDragTime
-   METHOD setStyle
-   METHOD setWheelScrollLines
-   METHOD setWindowIcon
-   METHOD startDragDistance
-   METHOD startDragTime
-   METHOD style
-   METHOD topLevelAt
-   METHOD topLevelWidgets
-   METHOD wheelScrollLines
-   METHOD widgetAt
-   METHOD windowIcon
+$addMethods
 
 $addSignals
 

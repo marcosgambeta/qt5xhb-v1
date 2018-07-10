@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD buttonText
-   METHOD setButtonText
-   METHOD cleanupPage
-   METHOD initializePage
-   METHOD isCommitPage
-   METHOD setCommitPage
-   METHOD isComplete
-   METHOD isFinalPage
-   METHOD setFinalPage
-   METHOD nextId
-   METHOD pixmap
-   METHOD setPixmap
-   METHOD subTitle
-   METHOD setSubTitle
-   METHOD title
-   METHOD setTitle
-   METHOD validatePage
+$addMethods
 
 $addSignals
 

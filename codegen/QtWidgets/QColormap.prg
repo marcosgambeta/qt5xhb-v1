@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD colorAt
-   METHOD colormap
-   METHOD depth
-   METHOD mode
-   METHOD pixel
-   METHOD size
-   METHOD instance
+$addMethods
 
 $endClass
 

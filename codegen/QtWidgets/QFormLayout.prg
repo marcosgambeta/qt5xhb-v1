@@ -12,40 +12,7 @@ $addRequests
 
 $beginClassFrom=QLayout
 
-   METHOD new
-   METHOD delete
-   METHOD addRow
-   METHOD fieldGrowthPolicy
-   METHOD formAlignment
-   METHOD horizontalSpacing
-   METHOD insertRow
-   METHOD itemAt
-   METHOD labelAlignment
-   METHOD labelForField
-   METHOD rowCount
-   METHOD rowWrapPolicy
-   METHOD setFieldGrowthPolicy
-   METHOD setFormAlignment
-   METHOD setHorizontalSpacing
-   METHOD setItem
-   METHOD setLabelAlignment
-   METHOD setLayout
-   METHOD setRowWrapPolicy
-   METHOD setSpacing
-   METHOD setVerticalSpacing
-   METHOD setWidget
-   METHOD spacing
-   METHOD verticalSpacing
-   METHOD addItem
-   METHOD count
-   METHOD expandingDirections
-   METHOD hasHeightForWidth
-   METHOD heightForWidth
-   METHOD invalidate
-   METHOD minimumSize
-   METHOD setGeometry
-   METHOD sizeHint
-   METHOD takeAt
+$addMethods
 
 $endClass
 

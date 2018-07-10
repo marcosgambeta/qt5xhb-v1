@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QComboBox
 
-   METHOD new
-   METHOD delete
-   METHOD currentFont
-   METHOD fontFilters
-   METHOD setFontFilters
-   METHOD setWritingSystem
-   METHOD writingSystem
-   METHOD sizeHint
-   METHOD setCurrentFont
+$addMethods
 
 $addSignals
 

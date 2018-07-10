@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QPainter
 
-   METHOD new
-   //METHOD delete
-
-   METHOD begin
-   METHOD drawPrimitive
-   METHOD drawControl
-   METHOD drawComplexControl
-   METHOD drawItemText
-   METHOD drawItemPixmap
-   METHOD style
+$addMethods
 
 $endClass
 

@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractSlider
 
-   METHOD new
-   METHOD delete
-   METHOD notchSize
-   METHOD notchTarget
-   METHOD notchesVisible
-   METHOD setNotchTarget
-   METHOD wrapping
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD setNotchesVisible
-   METHOD setWrapping
+$addMethods
 
 $endClass
 

@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD new
-   METHOD delete
-   METHOD currentFont
-   METHOD setCurrentFont
-   METHOD open
-   METHOD options
-   METHOD setOptions
-   METHOD selectedFont
-   METHOD setOption
-   METHOD testOption
-   METHOD setVisible
-   METHOD getFont
+$addMethods
 
 $addSignals
 

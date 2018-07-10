@@ -8,85 +8,11 @@ $header
 
 #include "hbclass.ch"
 
-#ifndef QT5XHB_NO_REQUESTS
-REQUEST QCOMPLETER
-REQUEST QMENU
-REQUEST QSIZE
-REQUEST QVALIDATOR
-REQUEST QMARGINS
-REQUEST QVARIANT
-REQUEST QACTION
-#endif
+$addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD alignment
-   METHOD setAlignment
-   METHOD backspace
-   METHOD completer
-   METHOD setCompleter
-   METHOD createStandardContextMenu
-   METHOD cursorBackward
-   METHOD cursorForward
-   METHOD cursorPosition
-   METHOD setCursorPosition
-   METHOD cursorPositionAt
-   METHOD cursorWordBackward
-   METHOD cursorWordForward
-   METHOD del
-   METHOD deselect
-   METHOD displayText
-   METHOD dragEnabled
-   METHOD setDragEnabled
-   METHOD echoMode
-   METHOD setEchoMode
-   METHOD end
-   METHOD getTextMargins
-   METHOD hasAcceptableInput
-   METHOD hasSelectedText
-   METHOD home
-   METHOD inputMask
-   METHOD setInputMask
-   METHOD insert
-   METHOD isModified
-   METHOD setModified
-   METHOD isReadOnly
-   METHOD setReadOnly
-   METHOD isRedoAvailable
-   METHOD isUndoAvailable
-   METHOD maxLength
-   METHOD setMaxLength
-   METHOD placeholderText
-   METHOD setPlaceholderText
-   METHOD minimumSizeHint
-   METHOD selectedText
-   METHOD selectionStart
-   METHOD hasFrame
-   METHOD setFrame
-   METHOD setSelection
-   METHOD setTextMargins
-   METHOD setValidator
-   METHOD validator
-   METHOD sizeHint
-   METHOD text
-   METHOD setText
-   METHOD textMargins
-   METHOD event
-   METHOD inputMethodQuery
-   METHOD copy
-   METHOD cut
-   METHOD paste
-   METHOD redo
-   METHOD selectAll
-   METHOD undo
-   METHOD setCursorMoveStyle
-   METHOD cursorMoveStyle
-   METHOD clear
-   METHOD addAction
-   METHOD setClearButtonEnabled
-   METHOD isClearButtonEnabled
+$addMethods
 
 $addSignals
 

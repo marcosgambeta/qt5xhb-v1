@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QStyleOption
 
-   METHOD new
-%%   METHOD delete
-
-   METHOD backgroundColor
-
-   METHOD setBackgroundColor
+$addMethods
 
 $endClass
 

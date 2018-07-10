@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QDialog
 
-   METHOD new
-   METHOD delete
-   METHOD showMessage
-   METHOD qtHandler
+$addMethods
 
 $endClass
 

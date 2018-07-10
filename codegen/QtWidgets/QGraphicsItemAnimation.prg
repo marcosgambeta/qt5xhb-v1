@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD horizontalScaleAt
-   METHOD horizontalShearAt
-   METHOD item
-   METHOD matrixAt
-   METHOD posAt
-   METHOD rotationAt
-   METHOD setItem
-   METHOD setPosAt
-   METHOD setRotationAt
-   METHOD setScaleAt
-   METHOD setShearAt
-   METHOD setTimeLine
-   METHOD setTranslationAt
-   METHOD timeLine
-   METHOD verticalScaleAt
-   METHOD verticalShearAt
-   METHOD xTranslationAt
-   METHOD yTranslationAt
-   METHOD setStep
+$addMethods
 
 $endClass
 

@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QGraphicsTransform
 
-   METHOD new
-   METHOD delete
-   METHOD angle
-   METHOD axis
-   METHOD origin
-   METHOD setAngle
-   METHOD setAxis
-   METHOD setOrigin
-   METHOD applyTo
+$addMethods
 
 $addSignals
 

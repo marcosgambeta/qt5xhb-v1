@@ -12,33 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD activeAction
-   METHOD addAction
-   METHOD addMenu
-   METHOD addSeparator
-   METHOD clear
-   METHOD insertMenu
-   METHOD insertSeparator
-   METHOD isDefaultUp
-   METHOD setDefaultUp
-   METHOD isNativeMenuBar
-   METHOD setNativeMenuBar
-   METHOD setActiveAction
-   METHOD heightForWidth
-   METHOD minimumSizeHint
-   METHOD sizeHint
-   METHOD setVisible
-   METHOD actionGeometry
-   METHOD actionAt
-   METHOD cornerWidget
-   METHOD setCornerWidget
-   METHOD setDefaultAction
-   METHOD defaultAction
-   METHOD wceCommands
-   METHOD wceRefresh
-   METHOD toNSMenu
+$addMethods
 
 $addSignals
 

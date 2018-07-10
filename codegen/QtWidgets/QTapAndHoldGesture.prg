@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QGesture
 
-   METHOD delete
-   METHOD position
-   METHOD setPosition
-   METHOD setTimeout
-   METHOD timeout
+$addMethods
 
 $endClass
 
