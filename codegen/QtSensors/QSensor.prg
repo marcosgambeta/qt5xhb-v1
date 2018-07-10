@@ -12,50 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD identifier
-   METHOD setIdentifier
-   METHOD type
-   METHOD connectToBackend
-   METHOD isConnectedToBackend
-   METHOD isBusy
-   METHOD setActive
-   METHOD isActive
-   METHOD isAlwaysOn
-   METHOD setAlwaysOn
-   METHOD skipDuplicates
-   METHOD setSkipDuplicates
-%%   METHOD availableDataRates
-   METHOD dataRate
-   METHOD setDataRate
-%%   METHOD outputRanges
-   METHOD outputRange
-   METHOD setOutputRange
-   METHOD description
-   METHOD error
-   METHOD addFilter
-   METHOD removeFilter
-%%   METHOD filters
-   METHOD reading
-   METHOD isFeatureSupported
-   METHOD axesOrientationMode
-   METHOD setAxesOrientationMode
-   METHOD currentOrientation
-   METHOD setCurrentOrientation
-   METHOD userOrientation
-   METHOD setUserOrientation
-   METHOD maxBufferSize
-   METHOD setMaxBufferSize
-   METHOD efficientBufferSize
-   METHOD setEfficientBufferSize
-   METHOD bufferSize
-   METHOD setBufferSize
-   METHOD start
-   METHOD stop
-   METHOD sensorTypes
-   METHOD sensorsForType
-   METHOD defaultSensorForType
+$addMethods
 
 $addSignals
 

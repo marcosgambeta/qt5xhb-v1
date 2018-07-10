@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD registerSensorGestureRecognizer
-   METHOD gestureIds
-   METHOD recognizerSignals
-   METHOD sensorGestureRecognizer
+$addMethods
 
 $addSignals
 

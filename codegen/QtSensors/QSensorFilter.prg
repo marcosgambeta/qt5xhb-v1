@@ -12,7 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD filter
+$addMethods
 
 $endClass
 

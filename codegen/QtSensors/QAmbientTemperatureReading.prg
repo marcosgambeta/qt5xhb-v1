@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QSensorReading
 
-   METHOD delete
-   METHOD temperature
-   METHOD setTemperature
+$addMethods
 
 $endClass
 

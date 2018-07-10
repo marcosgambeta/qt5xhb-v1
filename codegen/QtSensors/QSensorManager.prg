@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD registerBackend
-   METHOD unregisterBackend
-   METHOD isBackendRegistered
-   METHOD createBackend
-   METHOD setDefaultBackend
+$addMethods
 
 $endClass
 

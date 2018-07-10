@@ -10,8 +10,7 @@ $header
 
 $beginClassFrom=QSensorFilter
 
-   METHOD delete
-   METHOD filter
+$addMethods
 
 $endClass
 

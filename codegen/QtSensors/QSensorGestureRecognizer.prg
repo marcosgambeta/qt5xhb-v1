@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD id
-   METHOD isActive
-   METHOD startBackend
-   METHOD stopBackend
-   METHOD createBackend
-   METHOD gestureSignals
+$addMethods
 
 $addSignals
 

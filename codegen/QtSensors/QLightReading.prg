@@ -10,9 +10,7 @@ $header
 
 $beginClassFrom=QSensorReading
 
-   METHOD delete
-   METHOD lux
-   METHOD setLux
+$addMethods
 
 $endClass
 

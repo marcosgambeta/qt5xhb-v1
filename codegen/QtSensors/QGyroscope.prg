@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QSensor
 
-   METHOD new
-   METHOD delete
-   METHOD reading
+$addMethods
 
 $endClass
 

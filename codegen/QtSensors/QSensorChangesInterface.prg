@@ -12,7 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD sensorsChanged
+$addMethods
 
 $endClass
 

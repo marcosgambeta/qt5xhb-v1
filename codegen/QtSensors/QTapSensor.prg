@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QSensor
 
-   METHOD new
-   METHOD delete
-   METHOD reading
-   METHOD returnDoubleTapEvents
-   METHOD setReturnDoubleTapEvents
+$addMethods
 
 $addSignals
 

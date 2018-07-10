@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QSensorReading
 
-   METHOD delete
-   METHOD x
-   METHOD setX
-   METHOD y
-   METHOD setY
-   METHOD z
-   METHOD setZ
+$addMethods
 
 $endClass
 

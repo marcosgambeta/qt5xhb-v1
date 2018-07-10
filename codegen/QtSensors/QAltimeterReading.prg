@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=QSensorReading
 
-   METHOD delete
-   METHOD altitude
-   METHOD setAltitude
+$addMethods
 
 $endClass
 

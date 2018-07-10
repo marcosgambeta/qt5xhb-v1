@@ -14,11 +14,7 @@ REQUEST QLIGHTREADING
 
 $beginClassFrom=QSensor
 
-   METHOD new
-   METHOD delete
-   METHOD reading
-   METHOD fieldOfView
-   METHOD setFieldOfView
+$addMethods
 
 $addSignals
 

@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QSensorReading
 
-   METHOD delete
-   METHOD x
-   METHOD y
-   METHOD z
-   METHOD setFromEuler
+$addMethods
 
 $endClass
 

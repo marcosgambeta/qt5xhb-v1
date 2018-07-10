@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD createRecognizers
-   METHOD supportedIds
-   METHOD name
+$addMethods
 
 $endClass
 

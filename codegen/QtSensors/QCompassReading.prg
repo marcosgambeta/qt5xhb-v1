@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QSensorReading
 
-   METHOD delete
-   METHOD azimuth
-   METHOD setAzimuth
-   METHOD calibrationLevel
-   METHOD setCalibrationLevel
+$addMethods
 
 $endClass
 

@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QSensor
 
-   METHOD new
-   METHOD delete
-   METHOD reading
-   METHOD calibrate
+$addMethods
 
 $endClass
 

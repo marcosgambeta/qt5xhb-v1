@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QSensorReading
 
-   METHOD delete
-   METHOD tapDirection
-   METHOD setTapDirection
-   METHOD isDoubleTap
-   METHOD setDoubleTap
+$addMethods
 
 $endClass
 

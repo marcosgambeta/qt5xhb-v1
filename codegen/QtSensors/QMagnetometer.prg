@@ -14,11 +14,7 @@ REQUEST QMAGNETOMETERREADING
 
 $beginClassFrom=QSensor
 
-   METHOD new
-   METHOD delete
-   METHOD reading
-   METHOD returnGeoValues
-   METHOD setReturnGeoValues
+$addMethods
 
 $addSignals
 

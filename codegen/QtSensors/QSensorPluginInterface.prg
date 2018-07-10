@@ -12,7 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD registerSensors
+$addMethods
 
 $endClass
 

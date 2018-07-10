@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD timestamp
-   METHOD setTimestamp
-   METHOD valueCount
-   METHOD value
+$addMethods
 
 $endClass
 

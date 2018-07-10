@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD start
-   METHOD stop
-   METHOD isFeatureSupported
-   METHOD addDataRate
-   METHOD setDataRates
-   METHOD addOutputRange
-   METHOD setDescription
-   METHOD reading
-   METHOD sensor
-   METHOD newReadingAvailable
-   METHOD sensorStopped
-   METHOD sensorBusy
-   METHOD sensorError
+$addMethods
 
 $endClass
 
