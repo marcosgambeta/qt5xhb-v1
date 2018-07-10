@@ -12,35 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD clear
-   METHOD defaultValue
-   METHOD isAutoValue
-   METHOD isGenerated
-   METHOD isNull
-   METHOD isReadOnly
-   METHOD isValid
-   METHOD length
-   METHOD name
-   METHOD precision
-   METHOD requiredStatus
-   METHOD setAutoValue
-   METHOD setDefaultValue
-   METHOD setGenerated
-   METHOD setLength
-   METHOD setName
-   METHOD setPrecision
-   METHOD setReadOnly
-   METHOD setRequired
-   METHOD setRequiredStatus
-   METHOD setSqlType
-   METHOD setType
-   METHOD setValue
-   METHOD type
-   METHOD typeID
-   METHOD value
+$addMethods
 
 $endClass
 

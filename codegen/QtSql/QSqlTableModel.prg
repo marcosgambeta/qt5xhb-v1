@@ -12,40 +12,7 @@ $addRequests
 
 $beginClassFrom=QSqlQueryModel
 
-   METHOD new
-   METHOD delete
-
-   METHOD clear
-   METHOD data
-   METHOD database
-   METHOD editStrategy
-   METHOD fieldIndex
-   METHOD filter
-   METHOD flags
-   METHOD headerData
-   METHOD insertRecord
-   METHOD insertRows
-   METHOD isDirty
-   METHOD primaryKey
-   METHOD record
-   METHOD removeColumns
-   METHOD removeRows
-   METHOD revert
-   METHOD revertAll
-   METHOD revertRow
-   METHOD rowCount
-   METHOD select
-   METHOD selectRow
-   METHOD setData
-   METHOD setEditStrategy
-   METHOD setFilter
-   METHOD setRecord
-   METHOD setSort
-   METHOD setTable
-   METHOD sort
-   METHOD submit
-   METHOD submitAll
-   METHOD tableName
+$addMethods
 
 $addSignals
 

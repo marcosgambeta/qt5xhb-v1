@@ -12,6 +12,8 @@ $addRequests
 
 $beginClassFrom=QSqlDriverCreatorBase
 
+$addMethods
+
 $endClass
 
 $destructor

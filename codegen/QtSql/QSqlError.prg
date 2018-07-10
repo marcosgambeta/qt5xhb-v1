@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD databaseText
-   METHOD driverText
-   METHOD isValid
-   METHOD nativeErrorCode
-   METHOD number
-   METHOD setDatabaseText
-   METHOD setDriverText
-   METHOD setNumber
-   METHOD setType
-   METHOD text
-   METHOD type
-   METHOD swap
+$addMethods
 
 $endClass
 

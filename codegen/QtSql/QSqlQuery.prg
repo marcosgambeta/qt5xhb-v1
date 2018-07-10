@@ -12,42 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD addBindValue
-   METHOD at
-   METHOD bindValue
-   METHOD boundValue
-   METHOD clear
-   METHOD driver
-   METHOD exec
-   METHOD execBatch
-   METHOD executedQuery
-   METHOD finish
-   METHOD first
-   METHOD isActive
-   METHOD isForwardOnly
-   METHOD isNull
-   METHOD isSelect
-   METHOD isValid
-   METHOD last
-   METHOD lastError
-   METHOD lastInsertId
-   METHOD lastQuery
-   METHOD next
-   METHOD nextResult
-   METHOD numericalPrecisionPolicy
-   METHOD numRowsAffected
-   METHOD prepare
-   METHOD previous
-   METHOD record
-   METHOD result
-   METHOD seek
-   METHOD setForwardOnly
-   METHOD setNumericalPrecisionPolicy
-   METHOD size
-   METHOD value
+$addMethods
 
 $endClass
 

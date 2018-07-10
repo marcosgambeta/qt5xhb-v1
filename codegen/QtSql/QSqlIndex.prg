@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QSqlRecord
 
-   METHOD new
-   METHOD delete
-
-   METHOD append
-   METHOD cursorName
-   METHOD isDescending
-   METHOD name
-   METHOD setCursorName
-   METHOD setDescending
-   METHOD setName
+$addMethods
 
 $endClass
 
