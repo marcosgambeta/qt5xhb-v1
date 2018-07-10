@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QPaintDevice
 
-   METHOD new
-   METHOD delete
-   METHOD attachment
-   METHOD bind
-   METHOD drawTexture
-   METHOD format
-   METHOD handle
-   METHOD isBound
-   METHOD isValid
-   METHOD release
-   METHOD size
-   METHOD texture
-   METHOD toImage
-   METHOD paintEngine
-   METHOD blitFramebuffer
-   METHOD hasOpenGLFramebufferBlit
-   METHOD hasOpenGLFramebufferObjects
+$addMethods
 
 $endClass
 

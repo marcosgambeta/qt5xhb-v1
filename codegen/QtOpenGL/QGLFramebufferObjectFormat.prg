@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD attachment
-   METHOD internalTextureFormat
-   METHOD samples
-   METHOD setAttachment
-   METHOD setInternalTextureFormat
-   METHOD setSamples
-   METHOD setTextureTarget
-   METHOD textureTarget
+$addMethods
 
 $endClass
 

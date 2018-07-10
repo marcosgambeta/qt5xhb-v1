@@ -12,31 +12,7 @@ $addRequests
 
 $beginClassFrom=QWidget
 
-   METHOD new
-   METHOD delete
-   METHOD bindTexture
-   METHOD colormap
-   METHOD context
-   METHOD deleteTexture
-   METHOD doneCurrent
-   METHOD doubleBuffer
-   METHOD drawTexture
-   METHOD format
-   METHOD grabFrameBuffer
-   METHOD isSharing
-   METHOD isValid
-   METHOD makeCurrent
-   METHOD makeOverlayCurrent
-   METHOD overlayContext
-   METHOD qglClearColor
-   METHOD qglColor
-   METHOD renderPixmap
-   METHOD setColormap
-   METHOD setMouseTracking
-   METHOD swapBuffers
-   METHOD updateGL
-   METHOD updateOverlayGL
-   METHOD convertToGLFormat
+$addMethods
 
 $endClass
 

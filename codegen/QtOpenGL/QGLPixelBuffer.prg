@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=QPaintDevice
 
-   METHOD new
-   METHOD delete
-   METHOD bindTexture
-   METHOD bindToDynamicTexture
-   METHOD deleteTexture
-   METHOD doneCurrent
-   METHOD drawTexture
-   METHOD format
-   METHOD generateDynamicTexture
-   METHOD isValid
-   METHOD makeCurrent
-   METHOD releaseFromDynamicTexture
-   METHOD size
-   METHOD toImage
-   METHOD updateDynamicTexture
-   METHOD paintEngine
-   METHOD hasOpenGLPbuffers
+$addMethods
 
 $endClass
 

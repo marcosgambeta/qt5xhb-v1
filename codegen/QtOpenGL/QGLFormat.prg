@@ -12,62 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD accum
-   METHOD accumBufferSize
-   METHOD alpha
-   METHOD alphaBufferSize
-   METHOD blueBufferSize
-   METHOD depth
-   METHOD depthBufferSize
-   METHOD directRendering
-   METHOD doubleBuffer
-   METHOD greenBufferSize
-   METHOD hasOverlay
-   METHOD majorVersion
-   METHOD minorVersion
-   METHOD plane
-   METHOD profile
-   METHOD redBufferSize
-   METHOD rgba
-   METHOD sampleBuffers
-   METHOD samples
-   METHOD setAccum
-   METHOD setAccumBufferSize
-   METHOD setAlpha
-   METHOD setAlphaBufferSize
-   METHOD setBlueBufferSize
-   METHOD setDepth
-   METHOD setDepthBufferSize
-   METHOD setDirectRendering
-   METHOD setDoubleBuffer
-   METHOD setGreenBufferSize
-   METHOD setOption
-   METHOD setOverlay
-   METHOD setPlane
-   METHOD setProfile
-   METHOD setRedBufferSize
-   METHOD setRgba
-   METHOD setSampleBuffers
-   METHOD setSamples
-   METHOD setStencil
-   METHOD setStencilBufferSize
-   METHOD setStereo
-   METHOD setSwapInterval
-   METHOD setVersion
-   METHOD stencil
-   METHOD stencilBufferSize
-   METHOD stereo
-   METHOD swapInterval
-   METHOD testOption
-   METHOD defaultFormat
-   METHOD defaultOverlayFormat
-   METHOD hasOpenGL
-   METHOD hasOpenGLOverlays
-   METHOD openGLVersionFlags
-   METHOD setDefaultFormat
-   METHOD setDefaultOverlayFormat
+$addMethods
 
 $endClass
 
