@@ -12,41 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD clearIconDatabase
-   METHOD clearMemoryCaches
-   METHOD defaultTextEncoding
-   METHOD enablePersistentStorage
-   METHOD fontFamily
-   METHOD fontSize
-   METHOD globalSettings
-   METHOD iconDatabasePath
-   METHOD iconForUrl
-   METHOD localStoragePath
-   METHOD maximumPagesInCache
-   METHOD offlineStorageDefaultQuota
-   METHOD offlineStoragePath
-   METHOD offlineWebApplicationCachePath
-   METHOD offlineWebApplicationCacheQuota
-   METHOD resetAttribute
-   METHOD resetFontFamily
-   METHOD resetFontSize
-   METHOD setAttribute
-   METHOD setDefaultTextEncoding
-   METHOD setFontFamily
-   METHOD setFontSize
-   METHOD setIconDatabasePath
-   METHOD setLocalStoragePath
-   METHOD setMaximumPagesInCache
-   METHOD setObjectCacheCapacities
-   METHOD setOfflineStorageDefaultQuota
-   METHOD setOfflineStoragePath
-   METHOD setOfflineWebApplicationCachePath
-   METHOD setOfflineWebApplicationCacheQuota
-   METHOD setUserStyleSheetUrl
-   METHOD setWebGraphic
-   METHOD testAttribute
-   METHOD userStyleSheetUrl
-   METHOD webGraphic
+$addMethods
 
 $endClass
 

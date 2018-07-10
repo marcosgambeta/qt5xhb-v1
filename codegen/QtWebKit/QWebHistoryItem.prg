@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD icon
-   METHOD isValid
-   METHOD lastVisited
-   METHOD originalUrl
-   METHOD setUserData
-   METHOD title
-   METHOD url
-   METHOD userData
+$addMethods
 
 $endClass
 

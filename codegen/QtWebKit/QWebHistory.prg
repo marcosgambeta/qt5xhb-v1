@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD back
-   METHOD backItem
-   METHOD backItems
-   METHOD canGoBack
-   METHOD canGoForward
-   METHOD clear
-   METHOD count
-   METHOD currentItem
-   METHOD currentItemIndex
-   METHOD forward
-   METHOD forwardItem
-   METHOD forwardItems
-   METHOD goToItem
-   METHOD itemAt
-   METHOD items
-   METHOD maximumItemCount
-   METHOD setMaximumItemCount
+$addMethods
 
 $endClass
 

@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-
-   METHOD addHistoryEntry
-   METHOD defaultInterface
-   METHOD historyContains
-   METHOD setDefaultInterface
+$addMethods
 
 $endClass
 

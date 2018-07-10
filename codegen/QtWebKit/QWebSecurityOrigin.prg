@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD addLocalScheme
-   METHOD allOrigins
-   METHOD databaseQuota
-   METHOD databases
-   METHOD databaseUsage
-   METHOD host
-   METHOD localSchemes
-   METHOD port
-   METHOD removeLocalScheme
-   METHOD scheme
-   METHOD setDatabaseQuota
+$addMethods
 
 $endClass
 
