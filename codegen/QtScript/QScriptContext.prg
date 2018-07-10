@@ -12,23 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD activationObject
-   METHOD argument
-   METHOD argumentCount
-   METHOD argumentsObject
-   METHOD backtrace
-   METHOD callee
-   METHOD engine
-   METHOD isCalledAsConstructor
-   METHOD parentContext
-   METHOD setActivationObject
-   METHOD setThisObject
-   METHOD state
-   METHOD thisObject
-   METHOD throwError
-   METHOD throwValue
-   METHOD toString
+$addMethods
 
 $endClass
 

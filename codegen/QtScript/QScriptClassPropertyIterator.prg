@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD flags
-   METHOD hasNext
-   METHOD hasPrevious
-   METHOD id
-   METHOD name
-   METHOD next
-   METHOD object
-   METHOD previous
-   METHOD toBack
-   METHOD toFront
+$addMethods
 
 $endClass
 

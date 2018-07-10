@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD argument
-   METHOD argumentCount
-   METHOD context
-   METHOD engine
-   METHOD thisObject
+$addMethods
 
 $endClass
 

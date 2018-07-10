@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD fileName
-   METHOD firstLineNumber
-   METHOD isNull
-   METHOD sourceCode
+$addMethods
 
 $endClass
 

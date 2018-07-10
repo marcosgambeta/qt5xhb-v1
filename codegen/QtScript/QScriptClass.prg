@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD engine
-   METHOD extension
-   METHOD name
-   METHOD newIterator
-   METHOD property
-   METHOD propertyFlags
-   METHOD prototype
-   METHOD queryProperty
-   METHOD setProperty
-   METHOD supportsExtension
+$addMethods
 
 $endClass
 

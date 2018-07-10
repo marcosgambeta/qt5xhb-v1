@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD fileName
-   METHOD functionEndLineNumber
-   METHOD functionMetaIndex
-   METHOD functionName
-   METHOD functionParameterNames
-   METHOD functionStartLineNumber
-   METHOD functionType
-   METHOD isNull
-   METHOD lineNumber
-   METHOD scriptId
+$addMethods
 
 $endClass
 

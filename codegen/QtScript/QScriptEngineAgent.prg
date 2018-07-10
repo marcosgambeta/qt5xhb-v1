@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD contextPop
-   METHOD contextPush
-   METHOD engine
-   METHOD exceptionCatch
-   METHOD exceptionThrow
-   METHOD extension
-   METHOD functionEntry
-   METHOD functionExit
-   METHOD positionChange
-   METHOD scriptLoad
-   METHOD scriptUnload
-   METHOD supportsExtension
+$addMethods
 
 $endClass
 
