@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD baseUrl
-   METHOD contextObject
-   METHOD contextProperty
-   METHOD engine
-   METHOD isValid
-   METHOD nameForObject
-   METHOD parentContext
-   METHOD resolvedUrl
-   METHOD setBaseUrl
-   METHOD setContextObject
-   METHOD setContextProperty
+$addMethods
 
 $endClass
 

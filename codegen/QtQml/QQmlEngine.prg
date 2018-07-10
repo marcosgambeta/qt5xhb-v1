@@ -12,37 +12,7 @@ $addRequests
 
 $beginClassFrom=QJSEngine
 
-   METHOD new
-   METHOD delete
-   METHOD addImageProvider
-   METHOD addImportPath
-   METHOD addNamedBundle
-   METHOD addPluginPath
-   METHOD baseUrl
-   METHOD clearComponentCache
-   METHOD imageProvider
-   METHOD importPathList
-%%   METHOD importPlugin
-   METHOD incubationController
-   METHOD networkAccessManager
-   METHOD networkAccessManagerFactory
-   METHOD offlineStoragePath
-   METHOD outputWarningsToStandardError
-   METHOD pluginPathList
-   METHOD removeImageProvider
-   METHOD rootContext
-   METHOD setBaseUrl
-   METHOD setImportPathList
-   METHOD setIncubationController
-   METHOD setNetworkAccessManagerFactory
-   METHOD setOfflineStoragePath
-   METHOD setOutputWarningsToStandardError
-   METHOD setPluginPathList
-   METHOD trimComponentCache
-   METHOD contextForObject
-   METHOD objectOwnership
-   METHOD setContextForObject
-   METHOD setObjectOwnership
+$addMethods
 
 $addSignals
 

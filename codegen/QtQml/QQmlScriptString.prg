@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD booleanLiteral
-   METHOD isEmpty
-   METHOD isNullLiteral
-   METHOD isUndefinedLiteral
-   METHOD numberLiteral
-   METHOD stringLiteral
+$addMethods
 
 $endClass
 

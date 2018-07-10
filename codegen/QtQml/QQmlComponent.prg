@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD beginCreate
-   METHOD completeCreate
-   METHOD create
-   METHOD creationContext
-   METHOD isError
-   METHOD isLoading
-   METHOD isNull
-   METHOD isReady
-   METHOD progress
-   METHOD status
-   METHOD url
-   METHOD loadUrl
-   METHOD setData
+$addMethods
 
 $addSignals
 

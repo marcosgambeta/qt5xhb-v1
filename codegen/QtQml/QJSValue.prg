@@ -12,44 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new1
-   METHOD new4
-   METHOD new5
-   METHOD new6
-   METHOD new7
-   METHOD new9
-   METHOD new
-   METHOD delete
-   METHOD deleteProperty
-   METHOD equals
-   METHOD hasOwnProperty
-   METHOD hasProperty
-   METHOD isArray
-   METHOD isBool
-   METHOD isCallable
-   METHOD isDate
-   METHOD isError
-   METHOD isNull
-   METHOD isNumber
-   METHOD isObject
-   METHOD isQObject
-   METHOD isRegExp
-   METHOD isString
-   METHOD isUndefined
-   METHOD isVariant
-   METHOD property
-   METHOD prototype
-   METHOD setProperty
-   METHOD setPrototype
-   METHOD strictlyEquals
-   METHOD toBool
-   METHOD toDateTime
-   METHOD toInt
-   METHOD toNumber
-   METHOD toQObject
-   METHOD toString
-   METHOD toUInt
-   METHOD toVariant
+$addMethods
 
 $endClass
 

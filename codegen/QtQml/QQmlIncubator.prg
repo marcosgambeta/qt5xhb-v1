@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD forceCompletion
-   METHOD incubationMode
-   METHOD isError
-   METHOD isLoading
-   METHOD isNull
-   METHOD isReady
-   METHOD object
-   METHOD status
+$addMethods
 
 $endClass
 

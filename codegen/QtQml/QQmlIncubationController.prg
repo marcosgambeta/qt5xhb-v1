@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD engine
-   METHOD incubateFor
-   METHOD incubateWhile
-   METHOD incubatingObjectCount
+$addMethods
 
 $endClass
 

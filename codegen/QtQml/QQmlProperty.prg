@@ -12,29 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD connectNotifySignal
-   METHOD hasNotifySignal
-   METHOD index
-   METHOD isDesignable
-   METHOD isProperty
-   METHOD isResettable
-   METHOD isSignalProperty
-   METHOD isValid
-   METHOD isWritable
-   METHOD method
-   METHOD name
-   METHOD needsNotifySignal
-   METHOD object
-   METHOD property
-   METHOD propertyType
-   METHOD propertyTypeCategory
-   METHOD propertyTypeName
-   METHOD read
-   METHOD reset
-   METHOD type
-   METHOD write
+$addMethods
 
 $endClass
 

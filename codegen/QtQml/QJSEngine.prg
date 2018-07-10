@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD collectGarbage
-   METHOD evaluate
-   METHOD globalObject
-   METHOD newArray
-   METHOD newObject
-   METHOD newQObject
+$addMethods
 
 $endClass
 

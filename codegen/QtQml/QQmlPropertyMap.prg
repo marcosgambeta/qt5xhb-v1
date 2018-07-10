@@ -12,16 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD clear
-   METHOD contains
-   METHOD count
-   METHOD insert
-   METHOD isEmpty
-   METHOD keys
-   METHOD size
-   METHOD value
+$addMethods
 
 $addSignals
 

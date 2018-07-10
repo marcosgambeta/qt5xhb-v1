@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QQmlEngine
 
-   METHOD new
-   METHOD delete
-   METHOD rootObjects
-   METHOD load
-   METHOD loadData
+$addMethods
 
 $addSignals
 
