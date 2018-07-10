@@ -15,11 +15,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD callback
-   METHOD networkReplyFinished
+$addMethods
 
 $addSignals
 

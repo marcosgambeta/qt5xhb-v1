@@ -15,18 +15,7 @@ $addRequests
 
 $beginClassFrom=QOAuthOobReplyHandler
 
-   METHOD new
-   METHOD delete
-
-   METHOD callback
-   METHOD callbackPath
-   METHOD callbackText
-   METHOD close
-   METHOD isListening
-   METHOD listen
-   METHOD port
-   METHOD setCallbackPath
-   METHOD setCallbackText
+$addMethods
 
 $endClass
 

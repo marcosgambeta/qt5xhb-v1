@@ -15,30 +15,7 @@ $addRequests
 
 $beginClassFrom=QAbstractOAuth
 
-   METHOD new
-   METHOD delete
-
-%%   METHOD clientCredentials
-   METHOD clientSharedSecret
-   METHOD continueGrantWithVerifier
-%%   METHOD deleteResource
-%%   METHOD get
-   METHOD grant
-%%   METHOD head
-%%   METHOD post
-%%   METHOD put
-   METHOD setClientCredentials
-   METHOD setClientSharedSecret
-   METHOD setSignatureMethod
-   METHOD setTemporaryCredentialsUrl
-   METHOD setTokenCredentials
-   METHOD setTokenCredentialsUrl
-   METHOD setTokenSecret
-%%   METHOD signatureMethod
-   METHOD temporaryCredentialsUrl
-%%   METHOD tokenCredentials
-   METHOD tokenCredentialsUrl
-   METHOD tokenSecret
+$addMethods
 
 $addSignals
 

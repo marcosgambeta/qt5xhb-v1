@@ -15,13 +15,7 @@ $addRequests
 
 $beginClassFrom=QAbstractOAuth2
 
-   METHOD new
-   METHOD delete
-
-   METHOD accessTokenUrl
-   METHOD grant
-   METHOD refreshAccessToken
-   METHOD setAccessTokenUrl
+$addMethods
 
 $addSignals
 

@@ -15,10 +15,7 @@ $addRequests
 
 $beginClassFrom=QAbstractOAuthReplyHandler
 
-   METHOD new
-   METHOD delete
-
-   METHOD callback
+$addMethods
 
 $endClass
 

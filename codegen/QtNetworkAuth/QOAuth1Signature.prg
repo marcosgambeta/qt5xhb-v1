@@ -15,28 +15,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-
-   METHOD addRequestBody
-   METHOD clientSharedKey
-   METHOD hmacSha1
-%%   METHOD httpRequestMethod
-   METHOD insert
-   METHOD keys
-%%   METHOD parameters
-   METHOD plainText
-   METHOD rsaSha1
-   METHOD setClientSharedKey
-   METHOD setHttpRequestMethod
-%%   METHOD setParameters
-   METHOD setTokenSecret
-   METHOD setUrl
-   METHOD swap
-   METHOD take
-   METHOD tokenSecret
-   METHOD url
-   METHOD value
+$addMethods
 
 $endClass
 

@@ -14,27 +14,7 @@ $addRequests
 
 $beginClassFrom=QAbstractOAuth
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD clientIdentifierSharedKey
-   METHOD createAuthenticatedUrl
-   METHOD deleteResource
-   METHOD expirationAt
-   METHOD get
-   METHOD head
-   METHOD post
-   METHOD put
-   METHOD refreshToken
-   METHOD responseType
-   METHOD scope
-   METHOD setClientIdentifierSharedKey
-   METHOD setRefreshToken
-   METHOD setScope
-   METHOD setState
-   METHOD setUserAgent
-   METHOD state
-   METHOD userAgent
+$addMethods
 
 $addSignals
 

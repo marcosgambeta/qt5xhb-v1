@@ -15,31 +15,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD authorizationUrl
-   METHOD clientIdentifier
-   METHOD contentType
-%%   METHOD deleteResource
-%%   METHOD extraTokens
-%%   METHOD get
-   METHOD grant
-%%   METHOD head
-%%   METHOD modifyParametersFunction
-   METHOD networkAccessManager
-%%   METHOD post
-%%   METHOD put
-   METHOD replyHandler
-   METHOD setAuthorizationUrl
-   METHOD setClientIdentifier
-   METHOD setContentType
-%%   METHOD setModifyParametersFunction
-   METHOD setNetworkAccessManager
-   METHOD setReplyHandler
-   METHOD setToken
-%%   METHOD status
-   METHOD token
+$addMethods
 
 $addSignals
 
