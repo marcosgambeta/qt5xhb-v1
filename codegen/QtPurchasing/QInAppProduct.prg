@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD identifier
-   METHOD productType
-   METHOD price
-   METHOD title
-   METHOD description
-   METHOD purchase
+$addMethods
 
 $endClass
 

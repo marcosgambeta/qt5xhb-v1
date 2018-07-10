@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-
-   METHOD restorePurchases
-   METHOD registerProduct
-   METHOD registeredProduct
-   METHOD setPlatformProperty
+$addMethods
 
 $addSignals
 

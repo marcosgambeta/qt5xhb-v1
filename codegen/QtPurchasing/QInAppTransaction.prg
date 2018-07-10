@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-%%   METHOD new
-   METHOD delete
-
-   METHOD product
-   METHOD orderId
-   METHOD failureReason
-   METHOD errorString
-   METHOD timestamp
-   METHOD finalize
-   METHOD platformProperty
-   METHOD status
+$addMethods
 
 $endClass
 
