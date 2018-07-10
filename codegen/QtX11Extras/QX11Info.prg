@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD isPlatformX11
-   METHOD appDpiX
-   METHOD appDpiY
-   METHOD appRootWindow
-   METHOD appScreen
-   METHOD appTime
-   METHOD appUserTime
-   METHOD setAppTime
-   METHOD setAppUserTime
-   METHOD getTimestamp
-   METHOD display
-   METHOD connection
-   METHOD nextStartupId
-   METHOD setNextStartupId
+$addMethods
 
 $endClass
 
