@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD sourceName
-   METHOD setUpdateInterval
-   METHOD updateInterval
-   METHOD minimumUpdateInterval
-   METHOD error
-   METHOD startUpdates
-   METHOD stopUpdates
-   METHOD requestUpdate
-   METHOD createDefaultSource
-   METHOD createSource
-   METHOD availableSources
+$addMethods
 
 $addSignals
 

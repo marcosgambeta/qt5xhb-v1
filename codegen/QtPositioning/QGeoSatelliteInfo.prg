@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new1
-   METHOD new2
-   METHOD new
-   METHOD delete
-   METHOD setSatelliteSystem
-   METHOD satelliteSystem
-   METHOD setSatelliteIdentifier
-   METHOD satelliteIdentifier
-   METHOD setSignalStrength
-   METHOD signalStrength
-   METHOD setAttribute
-   METHOD attribute
-   METHOD removeAttribute
-   METHOD hasAttribute
+$addMethods
 
 $endClass
 

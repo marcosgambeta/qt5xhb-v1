@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QGeoPositionInfoSource
 
-   METHOD new
-   METHOD delete
-   METHOD updateMode
-   METHOD setDevice
-   METHOD device
-   METHOD setUpdateInterval
-   METHOD lastKnownPosition
-   METHOD supportedPositioningMethods
-   METHOD minimumUpdateInterval
-   METHOD error
-   METHOD startUpdates
-   METHOD stopUpdates
-   METHOD requestUpdate
+$addMethods
 
 $endClass
 

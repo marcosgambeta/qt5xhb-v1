@@ -12,9 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD positionInfoSource
-   METHOD satelliteInfoSource
-   METHOD areaMonitor
+$addMethods
 
 $endClass
 

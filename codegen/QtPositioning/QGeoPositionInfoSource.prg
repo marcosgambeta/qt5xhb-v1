@@ -12,22 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD setUpdateInterval
-   METHOD updateInterval
-   METHOD setPreferredPositioningMethods
-   METHOD preferredPositioningMethods
-   METHOD lastKnownPosition
-   METHOD supportedPositioningMethods
-   METHOD minimumUpdateInterval
-   METHOD sourceName
-   METHOD error
-   METHOD startUpdates
-   METHOD stopUpdates
-   METHOD requestUpdate
-   METHOD createDefaultSource
-   METHOD createSource
-   METHOD availableSources
+$addMethods
 
 $addSignals
 

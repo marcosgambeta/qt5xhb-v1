@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new1
-   METHOD new2
-   METHOD new
-   METHOD delete
-   METHOD address
-   METHOD setAddress
-   METHOD coordinate
-   METHOD setCoordinate
-   METHOD boundingBox
-   METHOD setBoundingBox
-   METHOD isEmpty
+$addMethods
 
 $endClass
 

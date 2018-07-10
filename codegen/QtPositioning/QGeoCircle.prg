@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QGeoShape
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new
-   METHOD delete
-   METHOD setCenter
-   METHOD center
-   METHOD setRadius
-   METHOD radius
-   METHOD translate
-   METHOD translated
+$addMethods
 
 $endClass
 

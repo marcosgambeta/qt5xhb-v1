@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD setPositionInfoSource
-   METHOD positionInfoSource
-   METHOD sourceName
-   METHOD error
-   METHOD supportedAreaMonitorFeatures
-   METHOD startMonitoring
-   METHOD stopMonitoring
-   METHOD requestUpdate
-   METHOD activeMonitors
-   METHOD createDefaultSource
-   METHOD createSource
-   METHOD availableSources
+$addMethods
 
 $addSignals
 

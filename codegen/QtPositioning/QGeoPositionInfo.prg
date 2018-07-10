@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD setTimestamp
-   METHOD timestamp
-   METHOD setCoordinate
-   METHOD coordinate
-   METHOD setAttribute
-   METHOD attribute
-   METHOD removeAttribute
-   METHOD hasAttribute
+$addMethods
 
 $endClass
 

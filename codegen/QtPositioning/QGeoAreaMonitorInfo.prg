@@ -12,20 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new1
-   METHOD new2
-   METHOD new
-   METHOD delete
-   METHOD name
-   METHOD setName
-   METHOD identifier
-   METHOD isValid
-   METHOD area
-   METHOD setArea
-   METHOD expiration
-   METHOD setExpiration
-   METHOD isPersistent
-   METHOD setPersistent
+$addMethods
 
 $endClass
 
