@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD documentUri
-   METHOD isValid
-   METHOD load
-   METHOD messageHandler
-   METHOD namePool
-   METHOD networkAccessManager
-   METHOD setMessageHandler
-   METHOD setNetworkAccessManager
-   METHOD setUriResolver
-   METHOD uriResolver
+$addMethods
 
 $endClass
 

@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QAbstractXmlNodeModel
 
-   METHOD delete
-   METHOD namePool
-   METHOD baseUri
-   METHOD elementById
-   METHOD namespaceBindings
-   METHOD nodesByIdref
-   METHOD stringValue
+$addMethods
 
 $endClass
 

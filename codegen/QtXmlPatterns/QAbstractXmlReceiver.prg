@@ -12,19 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD atomicValue
-   METHOD attribute
-   METHOD characters
-   METHOD comment
-   METHOD endDocument
-   METHOD endElement
-   METHOD endOfSequence
-   METHOD namespaceBinding
-   METHOD processingInstruction
-   METHOD startDocument
-   METHOD startElement
-   METHOD startOfSequence
+$addMethods
 
 $endClass
 

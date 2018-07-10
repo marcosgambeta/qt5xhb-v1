@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isAtomicValue
-   METHOD isNode
-   METHOD isNull
-   METHOD toAtomicValue
-   METHOD toNodeModelIndex
+$addMethods
 
 $endClass
 

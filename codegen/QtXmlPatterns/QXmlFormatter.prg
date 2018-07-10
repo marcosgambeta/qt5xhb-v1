@@ -12,21 +12,7 @@ $addRequests
 
 $beginClassFrom=QXmlSerializer
 
-   METHOD new
-   METHOD delete
-   METHOD indentationDepth
-   METHOD setIndentationDepth
-   METHOD atomicValue
-   METHOD attribute
-   METHOD characters
-   METHOD comment
-   METHOD endDocument
-   METHOD endElement
-   METHOD endOfSequence
-   METHOD processingInstruction
-   METHOD startDocument
-   METHOD startElement
-   METHOD startOfSequence
+$addMethods
 
 $endClass
 

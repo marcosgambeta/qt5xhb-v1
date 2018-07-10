@@ -12,15 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isNull
-   METHOD localName
-   METHOD namespaceUri
-   METHOD prefix
-   METHOD toClarkName
-   METHOD fromClarkName
-   METHOD isNCName
+$addMethods
 
 $endClass
 
