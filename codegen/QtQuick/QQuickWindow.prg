@@ -12,32 +12,7 @@ $addRequests
 
 $beginClassFrom=QWindow
 
-   METHOD new
-   METHOD delete
-   METHOD activeFocusItem
-   METHOD clearBeforeRendering
-   METHOD color
-   METHOD contentItem
-   METHOD createTextureFromId
-   METHOD createTextureFromImage
-   METHOD grabWindow
-   METHOD incubationController
-   METHOD isPersistentOpenGLContext
-   METHOD isPersistentSceneGraph
-   METHOD mouseGrabberItem
-   METHOD openglContext
-   METHOD renderTarget
-   METHOD renderTargetId
-   METHOD renderTargetSize
-   METHOD sendEvent
-   METHOD setClearBeforeRendering
-   METHOD setColor
-   METHOD setPersistentOpenGLContext
-   METHOD setPersistentSceneGraph
-   METHOD setRenderTarget
-   METHOD accessibleRoot
-   METHOD releaseResources
-   METHOD update
+$addMethods
 
 $addSignals
 

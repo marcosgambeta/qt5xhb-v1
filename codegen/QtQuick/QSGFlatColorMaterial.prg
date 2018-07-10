@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QSGMaterial
 
-   METHOD new
-   METHOD delete
-   METHOD color
-   METHOD setColor
+$addMethods
 
 $endClass
 

@@ -12,17 +12,7 @@ $addRequests
 
 $beginClassFrom=QQuickWindow
 
-   METHOD new
-   METHOD delete
-   METHOD engine
-   METHOD initialSize
-   METHOD resizeMode
-   METHOD rootContext
-   METHOD rootObject
-   METHOD setResizeMode
-   METHOD source
-   METHOD status
-   METHOD setSource
+$addMethods
 
 $addSignals
 

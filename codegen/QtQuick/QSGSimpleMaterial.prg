@@ -12,6 +12,8 @@ $addRequests
 
 $beginClassFrom=QSGMaterial
 
+$addMethods
+
 $endClass
 
 $destructor

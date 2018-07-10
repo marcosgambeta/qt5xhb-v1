@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=QQuickItem
 
-   METHOD delete
-   METHOD antialiasing
-   METHOD contentsBoundingRect
-   METHOD contentsScale
-   METHOD contentsSize
-   METHOD fillColor
-   METHOD mipmap
-   METHOD opaquePainting
-   METHOD paint
-   METHOD performanceHints
-   METHOD renderTarget
-   METHOD resetContentsSize
-   METHOD setAntialiasing
-   METHOD setContentsScale
-   METHOD setContentsSize
-   METHOD setFillColor
-   METHOD setMipmap
-   METHOD setOpaquePainting
-   METHOD setPerformanceHint
-   METHOD setPerformanceHints
-   METHOD setRenderTarget
-   METHOD update
+$addMethods
 
 $addSignals
 

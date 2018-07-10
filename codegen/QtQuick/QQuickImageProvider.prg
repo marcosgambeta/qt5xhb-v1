@@ -12,13 +12,7 @@ $addRequests
 
 $beginClassFrom=QQmlImageProviderBase
 
-   METHOD new
-   METHOD delete
-   METHOD flags
-   METHOD imageType
-   METHOD requestImage
-   METHOD requestPixmap
-   METHOD requestTexture
+$addMethods
 
 $endClass
 

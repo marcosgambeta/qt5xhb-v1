@@ -12,25 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD bind
-   METHOD convertToNormalizedSourceRect
-   METHOD filtering
-   METHOD hasAlphaChannel
-   METHOD hasMipmaps
-   METHOD horizontalWrapMode
-   METHOD isAtlasTexture
-   METHOD mipmapFiltering
-   METHOD normalizedTextureSubRect
-   METHOD removedFromAtlas
-   METHOD setFiltering
-   METHOD setHorizontalWrapMode
-   METHOD setMipmapFiltering
-   METHOD setVerticalWrapMode
-   METHOD textureId
-   METHOD textureSize
-   METHOD updateBindOptions
-   METHOD verticalWrapMode
+$addMethods
 
 $endClass
 

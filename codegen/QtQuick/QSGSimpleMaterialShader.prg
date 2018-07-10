@@ -12,6 +12,8 @@ $addRequests
 
 $beginClassFrom=QSGMaterialShader
 
+$addMethods
+
 $endClass
 
 $destructor

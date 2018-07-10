@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QSGNode
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QSGBasicGeometryNode
 
-   METHOD new
-   METHOD delete
-   METHOD material
-   METHOD opaqueMaterial
-   METHOD setMaterial
-   METHOD setOpaqueMaterial
+$addMethods
 
 $endClass
 

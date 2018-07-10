@@ -12,11 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD delete
-   METHOD createTexture
-   METHOD image
-   METHOD textureByteCount
-   METHOD textureSize
+$addMethods
 
 $endClass
 

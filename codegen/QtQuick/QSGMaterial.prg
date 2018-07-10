@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD compare
-   METHOD createShader
-   METHOD flags
-   METHOD setFlag
-   METHOD type
+$addMethods
 
 $endClass
 

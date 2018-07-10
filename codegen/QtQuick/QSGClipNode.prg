@@ -12,12 +12,7 @@ $addRequests
 
 $beginClassFrom=QSGBasicGeometryNode
 
-   METHOD new
-   METHOD delete
-   METHOD clipRect
-   METHOD isRectangular
-   METHOD setClipRect
-   METHOD setIsRectangular
+$addMethods
 
 $endClass
 

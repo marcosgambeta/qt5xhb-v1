@@ -12,7 +12,7 @@ $addRequests
 
 $beginClassFrom=QSGTexture
 
-   METHOD updateTexture
+$addMethods
 
 $endClass
 

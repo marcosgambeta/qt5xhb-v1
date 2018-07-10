@@ -12,28 +12,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD appendChildNode
-   METHOD childAtIndex
-   METHOD childCount
-   METHOD firstChild
-   METHOD flags
-   METHOD insertChildNodeAfter
-   METHOD insertChildNodeBefore
-   METHOD isSubtreeBlocked
-   METHOD lastChild
-   METHOD markDirty
-   METHOD nextSibling
-   METHOD parent
-   METHOD prependChildNode
-   METHOD preprocess
-   METHOD previousSibling
-   METHOD removeAllChildNodes
-   METHOD removeChildNode
-   METHOD setFlag
-   METHOD setFlags
-   METHOD type
+$addMethods
 
 $endClass
 

@@ -12,10 +12,7 @@ $addRequests
 
 $beginClassFrom=QSGNode
 
-   METHOD new
-   METHOD delete
-   METHOD opacity
-   METHOD setOpacity
+$addMethods
 
 $endClass
 

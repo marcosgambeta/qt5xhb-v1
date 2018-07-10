@@ -12,8 +12,7 @@ $addRequests
 
 $beginClassFrom=QSGMaterial
 
-   METHOD new
-   METHOD delete
+$addMethods
 
 $endClass
 

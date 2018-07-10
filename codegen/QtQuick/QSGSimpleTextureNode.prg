@@ -12,14 +12,7 @@ $addRequests
 
 $beginClassFrom=QSGGeometryNode
 
-   METHOD new
-   METHOD delete
-   METHOD filtering
-   METHOD rect
-   METHOD setFiltering
-   METHOD setRect
-   METHOD setTexture
-   METHOD texture
+$addMethods
 
 $endClass
 
