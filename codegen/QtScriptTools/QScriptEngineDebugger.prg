@@ -12,18 +12,7 @@ $addRequests
 
 $beginClassFrom=QObject
 
-   METHOD new
-   METHOD delete
-   METHOD action
-   METHOD attachTo
-   METHOD autoShowStandardWindow
-   METHOD createStandardMenu
-   METHOD createStandardToolBar
-   METHOD detach
-   METHOD setAutoShowStandardWindow
-   METHOD standardWindow
-   METHOD state
-   METHOD widget
+$addMethods
 
 $addSignals
 
