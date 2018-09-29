@@ -53,6 +53,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addObject
 
 $prototype=QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 $internalMethod=|QVariant|call,call1|const QString &,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
@@ -78,6 +79,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=call
 
 $prototype=QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 $method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
@@ -106,6 +108,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=load
 
 $prototype=QAxScript * script ( const QString & name ) const
 $method=|QAxScript *|script|const QString &

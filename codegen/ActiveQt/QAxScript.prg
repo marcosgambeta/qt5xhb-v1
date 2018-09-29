@@ -55,6 +55,7 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=call
 
 $prototype=QStringList functions ( FunctionFlags flags = FunctionNames ) const
 $method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
