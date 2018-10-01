@@ -266,6 +266,7 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setSubTextureData
 
 $prototype=void setTextureFormat(QImage::Format format)
 $method=|void|setTextureFormat|QImage::Format

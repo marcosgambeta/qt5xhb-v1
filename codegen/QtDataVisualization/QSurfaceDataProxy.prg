@@ -95,6 +95,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=itemAt
 
 $prototype=void resetArray(QSurfaceDataArray *newArray)
 %% TODO: implementar
@@ -129,6 +130,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setItem
 
 $prototype=int addRow(QSurfaceDataRow *row)
 %% TODO: implementar
