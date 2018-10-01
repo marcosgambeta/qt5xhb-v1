@@ -72,6 +72,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=callObjectMethod
 
 $prototype=QAndroidJniObject getObjectField(const char *fieldName) const
 $method=5,2,0|QAndroidJniObject|getObjectField|const char *
@@ -102,6 +103,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=callStaticObjectMethod
 
 $prototype=static QAndroidJniObject getStaticObjectField(const char *className, const char *fieldName)
 $staticMethod=5,2,0|QAndroidJniObject|getStaticObjectField,getStaticObjectField1|const char *,const char *
@@ -130,6 +132,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=getStaticObjectField
 
 $prototype=static QAndroidJniObject fromString(const QString &string)
 $staticMethod=5,2,0|QAndroidJniObject|fromString|const QString &
