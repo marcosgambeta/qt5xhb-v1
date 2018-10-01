@@ -116,6 +116,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=append
 
 $prototype=bool remove(QBarSet *set)
 $method=5,7,0|bool|remove|QBarSet *

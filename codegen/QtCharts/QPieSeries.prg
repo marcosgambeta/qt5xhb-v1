@@ -145,6 +145,7 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=append
 
 $prototype=bool insert(int index, QPieSlice *slice)
 $method=5,7,0|bool|insert|int,QPieSlice *

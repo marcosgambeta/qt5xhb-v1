@@ -259,6 +259,7 @@ HB_FUNC_STATIC( QCHART_ZOOMIN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=zoomIn
 
 $prototype=void zoomOut()
 $method=5,7,0|void|zoomOut|

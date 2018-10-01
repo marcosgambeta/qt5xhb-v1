@@ -169,6 +169,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=append
 
 $prototype=bool remove(QCandlestickSet *set)
 $internalMethod=5,8,0|bool|remove,remove1|QCandlestickSet *
@@ -194,6 +195,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=remove
 
 $prototype=bool insert(int index, QCandlestickSet *set)
 $method=5,8,0|bool|insert|int,QCandlestickSet *

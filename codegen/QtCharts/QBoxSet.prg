@@ -102,6 +102,7 @@ HB_FUNC_STATIC( QBOXSET_APPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=append
 
 $prototype=void clear()
 $method=5,7,0|void|clear|
