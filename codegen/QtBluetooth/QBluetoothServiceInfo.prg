@@ -93,6 +93,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETATTRIBUTE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setAttribute
 
 $prototype=QVariant attribute(quint16 attributeId) const
 $method=5,2,0|QVariant|attribute|quint16
