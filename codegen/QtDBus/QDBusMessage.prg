@@ -52,6 +52,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
 {
   // TODO: implementar
 }
+$addMethod=createReply
 
 $prototype=QDBusMessage createErrorReply(const QString name, const QString &msg) const
 $internalMethod=|QDBusMessage|createErrorReply,createErrorReply1|const QString &,const QString &
@@ -70,6 +71,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 {
   // TODO: implementar
 }
+$addMethod=createErrorReply
 
 $prototype=QString service() const
 $method=|QString|service|
@@ -139,6 +141,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
 {
   // TODO: implementar
 }
+$addMethod=createError
 
 $extraMethods
 

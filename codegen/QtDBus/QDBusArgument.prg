@@ -57,6 +57,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 {
   // TODO: implementar
 }
+$addMethod=beginArray
 
 $prototype=void endArray()
 $method=|void|endArray|
@@ -74,6 +75,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 {
   // TODO: implementar
 }
+$addMethod=beginMap
 
 $prototype=void endMap()
 $method=|void|endMap|

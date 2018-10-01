@@ -57,6 +57,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 {
   // TODO: implementar
 }
+$addMethod=sendErrorReply
 
 $extraMethods
 
