@@ -148,6 +148,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toArray
 
 $prototype=bool toBool(bool defaultValue = false) const
 $method=|bool|toBool|bool=false
@@ -179,6 +180,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toObject
 
 $prototype=QString toString(const QString & defaultValue = QString()) const
 $method=|QString|toString|const QString &=QString()

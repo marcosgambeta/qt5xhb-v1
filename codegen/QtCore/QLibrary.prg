@@ -104,6 +104,7 @@ HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setFileNameAndVersion
 
 $prototype=QString errorString() const
 $method=|QString|errorString|
@@ -156,6 +157,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%  }
 }
+$addMethod=resolve
 
 $prototype=static bool isLibrary(const QString &fileName)
 $staticMethod=|bool|isLibrary|const QString &

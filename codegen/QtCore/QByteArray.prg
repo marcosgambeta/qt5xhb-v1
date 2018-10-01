@@ -127,6 +127,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=append
 
 $prototype=char at ( int i ) const
 $method=|char|at|int
@@ -175,6 +176,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=contains
 
 $prototype=int count ( const QByteArray & ba ) const
 $internalMethod=|int|count,count1|const QByteArray &
@@ -216,6 +218,7 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=count
 
 $prototype=const char * data () const
 $method=|const char *|data,data2|
@@ -228,6 +231,7 @@ HB_FUNC_STATIC( QBYTEARRAY_DATA )
 {
   HB_FUNC_EXEC( QBYTEARRAY_DATA2 );
 }
+$addMethod=data
 
 $prototype=bool endsWith ( const QByteArray & ba ) const
 $internalMethod=|bool|endsWith,endsWith1|const QByteArray &
@@ -261,6 +265,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=endsWith
 
 $prototype=QByteArray & fill ( char ch, int size = -1 )
 $method=|QByteArray &|fill|char,int=-1
@@ -306,6 +311,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=indexOf
 
 $prototype=QByteArray & insert ( int i, const QByteArray & ba )
 $method=|QByteArray &|insert,insert1|int,const QByteArray &
@@ -352,6 +358,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insert
 
 $prototype=bool isEmpty () const
 $method=|bool|isEmpty|
@@ -400,6 +407,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=lastIndexOf
 
 $prototype=QByteArray left ( int len ) const
 $method=|QByteArray|left|int
@@ -453,6 +461,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=prepend
 
 $prototype=void push_back ( const QByteArray & other )
 $internalMethod=|void|push_back,push_back1|const QByteArray &
@@ -487,6 +496,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=push_back
 
 $prototype=void push_front ( const QByteArray & other )
 $internalMethod=|void|push_front,push_front1|const QByteArray &
@@ -521,6 +531,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=push_front
 
 $prototype=QByteArray & remove ( int pos, int len )
 $method=|QByteArray &|remove|int,int
@@ -649,6 +660,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=replace
 
 $prototype=void reserve ( int size )
 $method=|void|reserve|int
@@ -707,6 +719,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setNum
 
 $prototype=QByteArray & setRawData ( const char * data, uint size )
 $method=|QByteArray &|setRawData|const char *,uint
@@ -756,6 +769,7 @@ HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=startsWith
 
 $prototype=QByteArray toBase64 () const
 $method=|QByteArray|toBase64|
@@ -832,67 +846,22 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fromPercentEncoding
 
 $prototype=static QByteArray fromRawData ( const char * data, int size )
 $staticMethod=|QByteArray|fromRawData|const char *,int
 
 $prototype=static QByteArray number ( int n, int base = 10 )
-HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
-{
-  if( ISNUM(1) && ISOPTNUM(2) )
-  {
-    QByteArray * ptr = new QByteArray( QByteArray::number ( PINT(1), OPINT(2,10) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QByteArray|number,number1|int,int=10
 
 $prototype=static QByteArray number ( uint n, int base = 10 )
-HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
-{
-  if( ISNUM(1) && ISOPTNUM(2) )
-  {
-    QByteArray * ptr = new QByteArray( QByteArray::number ( (uint) hb_parni(1), OPINT(2,10) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QByteArray|number,number2|uint,int=10
 
 $prototype=static QByteArray number ( qlonglong n, int base = 10 )
-HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
-{
-  if( ISNUM(1) && ISOPTNUM(2) )
-  {
-    qlonglong par1 = hb_parnl(1);
-    QByteArray * ptr = new QByteArray( QByteArray::number ( par1, OPINT(2,10) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QByteArray|number,number3|qlonglong,int=10
 
 $prototype=static QByteArray number ( qulonglong n, int base = 10 )
-HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
-{
-  if( ISNUM(1) && ISOPTNUM(2) )
-  {
-    qulonglong par1 = hb_parnl(1);
-    QByteArray * ptr = new QByteArray( QByteArray::number ( par1, OPINT(2,10) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
+$staticMethod=|QByteArray|number,number4|qulonglong,int=10
 
 $prototype=static QByteArray number ( double n, char f = 'g', int prec = 6 )
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
@@ -943,6 +912,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=number
 
 $extraMethods
 

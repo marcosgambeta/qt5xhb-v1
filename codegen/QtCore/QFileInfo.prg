@@ -225,6 +225,7 @@ HB_FUNC_STATIC( QFILEINFO_SETFILE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setFile
 
 $prototype=qint64 size() const
 $method=|qint64|size|

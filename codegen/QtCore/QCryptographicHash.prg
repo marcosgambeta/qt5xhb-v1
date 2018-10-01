@@ -62,6 +62,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addData
 
 $prototype=QByteArray result() const
 $method=|QByteArray|result|

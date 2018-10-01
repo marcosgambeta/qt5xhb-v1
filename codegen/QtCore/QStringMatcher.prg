@@ -95,6 +95,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=indexIn
 
 $prototype=QString pattern() const
 $method=|QString|pattern|

@@ -102,6 +102,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=entryInfoList
 
 $prototype=QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
 $internalMethod=|QStringList|entryList,entryList1|const QStringList &,QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
@@ -127,6 +128,7 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=entryList
 
 $prototype=bool exists(const QString & name) const
 $internalMethod=|bool|exists,exists1|const QString &
@@ -152,6 +154,7 @@ HB_FUNC_STATIC( QDIR_EXISTS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=exists
 
 $prototype=QString filePath(const QString & fileName) const
 $method=|QString|filePath|const QString &
@@ -279,6 +282,7 @@ HB_FUNC_STATIC( QDIR_MATCH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=match
 
 $prototype=static QDir root()
 $staticMethod=|QDir|root|

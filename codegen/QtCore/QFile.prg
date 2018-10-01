@@ -89,6 +89,7 @@ HB_FUNC_STATIC( QFILE_COPY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=copy
 
 $prototype=FileError error () const
 $method=|QFileDevice::FileError|error|
@@ -117,6 +118,7 @@ HB_FUNC_STATIC( QFILE_EXISTS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=exists
 
 $prototype=QString fileName () const
 $method=|QString|fileName|
@@ -151,6 +153,7 @@ HB_FUNC_STATIC( QFILE_LINK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=link
 
 $prototype=uchar * map ( qint64 offset, qint64 size, MemoryMapFlags flags = NoOptions )
 %% TODO: implementar
@@ -188,6 +191,7 @@ HB_FUNC_STATIC( QFILE_OPEN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=open
 
 $prototype=Permissions permissions () const
 $internalMethod=|QFile::Permissions|permissions,permissions1|
@@ -213,6 +217,7 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=permissions
 
 $prototype=bool remove ()
 $internalMethod=|bool|remove,remove1|
@@ -238,6 +243,7 @@ HB_FUNC_STATIC( QFILE_REMOVE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=remove
 
 $prototype=bool rename ( const QString & newName )
 $internalMethod=|bool|rename,rename1|const QString &
@@ -263,6 +269,7 @@ HB_FUNC_STATIC( QFILE_RENAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=rename
 
 $prototype=bool resize ( qint64 sz )
 $internalMethod=|bool|resize,resize1|qint64
@@ -288,6 +295,7 @@ HB_FUNC_STATIC( QFILE_RESIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=resize
 
 $prototype=void setFileName ( const QString & name )
 $method=|void|setFileName|const QString &
@@ -316,6 +324,7 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setPermissions
 
 $prototype=QString symLinkTarget () const
 $internalMethod=|QString|symLinkTarget,symLinkTarget1|
@@ -341,6 +350,7 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=symLinkTarget
 
 $prototype=bool unmap ( uchar * address )
 $method=|bool|unmap|uchar *
@@ -390,6 +400,7 @@ HB_FUNC_STATIC( QFILE_DECODENAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=decodeName
 
 $prototype=static QByteArray encodeName ( const QString & fileName )
 $staticMethod=|QByteArray|encodeName|const QString &
@@ -418,5 +429,6 @@ HB_FUNC_STATIC( QFILE_READLINK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=readLink
 
 #pragma ENDDUMP

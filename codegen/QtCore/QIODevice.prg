@@ -109,6 +109,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=peek
 
 $prototype=virtual qint64 pos () const
 $virtualMethod=|qint64|pos|
@@ -141,6 +142,7 @@ HB_FUNC_STATIC( QIODEVICE_READ )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=read
 
 $prototype=QByteArray readAll ()
 $method=|QByteArray|readAll|
@@ -170,6 +172,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=readLine
 
 $prototype=virtual bool reset ()
 $virtualMethod=|bool|reset|
@@ -224,6 +227,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=write
 
 $beginSignals
 $signal=|aboutToClose()

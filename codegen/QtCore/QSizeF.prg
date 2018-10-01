@@ -108,6 +108,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=scale
 
 $prototype=QSizeF scaled(qreal w, qreal h, Qt::AspectRatioMode mode) const
 $internalMethod=|QSizeF|scaled,scaled1|qreal,qreal,Qt::AspectRatioMode
@@ -133,6 +134,7 @@ HB_FUNC_STATIC( QSIZEF_SCALED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=scaled
 
 $prototype=QSizeF expandedTo(const QSizeF &) const
 $method=|QSizeF|expandedTo|const QSizeF &

@@ -64,6 +64,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER )
 {
   HB_FUNC_EXEC( QBUFFER_BUFFER1 );
 }
+$addMethod=buffer
 
 $prototype=const QByteArray & data () const
 $method=|const QByteArray &|data|
@@ -95,6 +96,7 @@ HB_FUNC_STATIC( QBUFFER_SETDATA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setData
 
 $prototype=virtual bool atEnd () const
 $virtualMethod=|bool|atEnd|

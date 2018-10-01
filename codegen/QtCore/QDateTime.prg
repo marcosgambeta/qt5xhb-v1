@@ -149,6 +149,7 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toString
 
 $prototype=QDateTime toTimeSpec ( Qt::TimeSpec specification ) const
 $method=|QDateTime|toTimeSpec|Qt::TimeSpec
@@ -195,6 +196,7 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fromString
 
 $prototype=static QDateTime fromTime_t ( uint seconds )
 $staticMethod=|QDateTime|fromTime_t|uint

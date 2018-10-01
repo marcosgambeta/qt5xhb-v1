@@ -154,6 +154,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INVOKEMETHOD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 %%   }
 }
+$addMethod=invokeMethod
 
 $prototype=static QByteArray normalizedSignature ( const char * method )
 $staticMethod=|QByteArray|normalizedSignature|const char *

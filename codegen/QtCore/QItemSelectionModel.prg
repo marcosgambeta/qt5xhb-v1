@@ -114,6 +114,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=select
 
 $prototype=virtual void clear()
 $virtualMethod=|void|clear|

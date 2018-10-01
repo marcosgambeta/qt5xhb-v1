@@ -115,6 +115,7 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toString
 
 $prototype=int weekNumber ( int * yearNumber = 0 ) const
 %% TODO: implementar parametro opcional
@@ -153,6 +154,7 @@ HB_FUNC_STATIC( QDATE_FROMSTRING )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fromString
 
 $prototype=static bool isLeapYear ( int year )
 $staticMethod=|bool|isLeapYear|int
@@ -181,6 +183,7 @@ HB_FUNC_STATIC( QDATE_ISVALID )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=isValid
 
 $prototype=static QString longDayName ( int weekday )
 $internalStaticMethod=|QString|longDayName,longDayName1|int
@@ -206,6 +209,7 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=longDayName
 
 $prototype=static QString longMonthName ( int month )
 $internalStaticMethod=|QString|longMonthName,longMonthName1|int
@@ -231,6 +235,7 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=longMonthName
 
 $prototype=static QString shortDayName ( int weekday )
 $internalStaticMethod=|QString|shortDayName,shortDayName1|int
@@ -256,6 +261,7 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=shortDayName
 
 $prototype=static QString shortMonthName ( int month )
 $internalStaticMethod=|QString|shortMonthName,shortMonthName1|int
@@ -281,6 +287,7 @@ HB_FUNC_STATIC( QDATE_SHORTMONTHNAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=shortMonthName
 
 $extraMethods
 

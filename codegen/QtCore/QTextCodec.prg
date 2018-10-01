@@ -46,6 +46,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=canEncode
 
 $prototype=QString toUnicode(const QByteArray&) const
 $internalMethod=|QString|toUnicode,toUnicode1|const QByteArray &
@@ -72,6 +73,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toUnicode
 
 $prototype=QByteArray fromUnicode(const QString& uc) const
 $internalMethod=|QByteArray|fromUnicode,fromUnicode1|const QString &
@@ -90,6 +92,7 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fromUnicode
 
 $prototype=QTextDecoder* makeDecoder(ConversionFlags flags = DefaultConversion) const
 $method=|QTextDecoder *|makeDecoder|QTextCodec::ConversionFlags=QTextCodec::DefaultConversion
@@ -130,6 +133,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=codecForName
 
 $prototype=static QTextCodec* codecForMib(int mib)
 $staticMethod=|QTextCodec *|codecForMib|int
@@ -138,11 +142,7 @@ $prototype=static QList<QByteArray> availableCodecs()
 $staticMethod=|QList<QByteArray>|availableCodecs|
 
 $prototype=static QList<int> availableMibs()
-HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
-{
-  QList<int> list = QTextCodec::availableMibs ();
-  _qt5xhb_convert_qlist_int_to_array ( list );
-}
+$staticMethod=|QList<int>|availableMibs|
 
 $prototype=static QTextCodec* codecForLocale()
 $staticMethod=|QTextCodec *|codecForLocale|
@@ -174,6 +174,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=codecForHtml
 
 $prototype=static QTextCodec *codecForUtfText(const QByteArray &ba)
 $internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText1|const QByteArray &
@@ -199,6 +200,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=codecForUtfText
 
 $extraMethods
 

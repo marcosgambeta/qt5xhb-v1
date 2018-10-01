@@ -85,6 +85,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addTransition
 
 $prototype=void assignProperty ( QObject * object, const char * name, const QVariant & value )
 $method=|void|assignProperty|QObject *,const char *,const QVariant &

@@ -160,6 +160,7 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING )
 {
   HB_FUNC_EXEC( QLOCALE_QUOTESTRING1 );
 }
+$addMethod=quoteString
 
 $prototype=Script script () const
 $method=|QLocale::Script|script|
@@ -217,6 +218,7 @@ $method=|QString|toCurrencyString,toCurrencyString8|double,const QString &=QStri
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING )
 {
 }
+$addMethod=toCurrencyString
 
 $prototype=QDate toDate ( const QString & string, FormatType format = LongFormat ) const
 $internalMethod=|QDate|toDate,toDate1|const QString &,QLocale::FormatType=QLocale::LongFormat
@@ -242,6 +244,7 @@ HB_FUNC_STATIC( QLOCALE_TODATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toDate
 
 $prototype=QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
 $internalMethod=|QDateTime|toDateTime,toDateTime1|const QString &,QLocale::FormatType=QLocale::LongFormat
@@ -267,6 +270,7 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toDateTime
 
 $prototype=double toDouble ( const QString & s, bool * ok = 0 ) const
 %% TODO: implementar parametro opcional
@@ -373,6 +377,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toString
 
 $prototype=QTime toTime ( const QString & string, FormatType format = LongFormat ) const
 $internalMethod=|QTime|toTime,toTime1|const QString &,QLocale::FormatType=QLocale::LongFormat
@@ -398,6 +403,7 @@ HB_FUNC_STATIC( QLOCALE_TOTIME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toTime
 
 $prototype=QString toUpper ( const QString & str ) const
 $method=|QString|toUpper|const QString &

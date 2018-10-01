@@ -73,6 +73,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setFilterRegExp
 
 $prototype=int filterKeyColumn() const
 $method=|int|filterKeyColumn|
@@ -158,6 +159,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=parent
 
 $prototype=QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
 $method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()

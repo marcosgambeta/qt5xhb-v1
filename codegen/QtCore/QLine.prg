@@ -120,6 +120,7 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translate
 
 $prototype=QLine translated(const QPoint & offset) const
 $internalMethod=|QLine|translated,translated1|const QPoint &
@@ -145,6 +146,7 @@ HB_FUNC_STATIC( QLINE_TRANSLATED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translated
 
 $extraMethods
 

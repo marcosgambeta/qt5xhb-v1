@@ -271,6 +271,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=findChildren
 
 $prototype=bool inherits ( const char * className ) const
 $method=|bool|inherits|const char *
