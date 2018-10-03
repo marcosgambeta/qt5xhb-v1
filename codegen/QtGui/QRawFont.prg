@@ -113,6 +113,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=advancesForGlyphIndexes
 
 $prototype=bool glyphIndexesForChars(const QChar *chars, int numChars, quint32 *glyphIndexes, int *numGlyphs) const
 %% TODO: implementar
@@ -193,6 +194,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=supportsCharacter
 
 $prototype=QList<QFontDatabase::WritingSystem> supportedWritingSystems() const
 $method=|QList<QFontDatabase::WritingSystem>|supportedWritingSystems|

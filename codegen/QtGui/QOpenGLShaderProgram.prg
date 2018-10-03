@@ -53,6 +53,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 {
   // TODO: implementar
 }
+$addMethod=addShaderFromSourceCode
 
 $prototype=bool addShaderFromSourceFile(QOpenGLShader::ShaderType type, const QString& fileName)
 $method=|bool|addShaderFromSourceFile|QOpenGLShader::ShaderType,const QString &

@@ -153,6 +153,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=find
 
 $prototype=QTextFrame *frameAt(int pos) const
 $method=|QTextFrame *|frameAt|int
@@ -313,6 +314,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=undo
 
 $prototype=void redo(QTextCursor *cursor)
 $internalMethod=|void|redo,redo1|QTextCursor *
@@ -338,6 +340,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=redo
 
 $prototype=void appendUndoItem(QAbstractUndoItem *)
 %% TODO: implementar

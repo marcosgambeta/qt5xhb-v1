@@ -114,6 +114,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setWidth
 
 $prototype=QTextLength width() const
 $method=|QTextLength|width|
@@ -142,6 +143,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setHeight
 
 $prototype=QTextLength height() const
 $method=|QTextLength|height|

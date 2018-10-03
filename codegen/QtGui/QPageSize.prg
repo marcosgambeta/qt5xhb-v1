@@ -109,6 +109,7 @@ HB_FUNC_STATIC( QPAGESIZE_KEY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=key
 
 $prototype=QString name() const
 $internalMethod=5,3,0|QString|name,name1|
@@ -134,6 +135,7 @@ HB_FUNC_STATIC( QPAGESIZE_NAME )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=name
 
 $prototype=PageSizeId id() const
 $internalMethod=5,3,0|QPageSize::PageSizeId|id,id1|
@@ -175,6 +177,7 @@ HB_FUNC_STATIC( QPAGESIZE_ID )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=id
 
 $prototype=int windowsId() const
 $internalMethod=5,3,0|int|windowsId,windowsId1|
@@ -200,6 +203,7 @@ HB_FUNC_STATIC( QPAGESIZE_WINDOWSID )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=windowsId
 
 $prototype=QSizeF definitionSize() const
 $internalMethod=5,3,0|QSizeF|definitionSize,definitionSize1|
@@ -225,6 +229,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=definitionSize
 
 $prototype=Unit definitionUnits() const
 $internalMethod=5,3,0|QPageSize::Unit|definitionUnits,definitionUnits1|
@@ -250,6 +255,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONUNITS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=definitionUnits
 
 $prototype=QSizeF size(Unit units) const
 $internalMethod=5,3,0|QSizeF|size,size1|QPageSize::Unit
@@ -275,6 +281,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=size
 
 $prototype=QSize sizePoints() const
 $internalMethod=5,3,0|QSize|sizePoints,sizePoints1|
@@ -300,6 +307,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=sizePoints
 
 $prototype=QSize sizePixels(int resolution) const
 $internalMethod=5,3,0|QSize|sizePixels,sizePixels1|int
@@ -325,6 +333,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=sizePixels
 
 $prototype=QRectF rect(Unit units) const
 $method=5,3,0|QRectF|rect|QPageSize::Unit

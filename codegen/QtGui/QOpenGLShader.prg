@@ -47,6 +47,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE )
 {
   // TODO: implementar
 }
+$addMethod=compileSourceCode
 
 $prototype=bool compileSourceFile(const QString& fileName)
 $method=|bool|compileSourceFile|const QString &

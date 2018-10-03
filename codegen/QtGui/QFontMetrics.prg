@@ -106,6 +106,7 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=boundingRect
 
 $prototype=int descent () const
 $method=|int|descent|
@@ -177,6 +178,7 @@ HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=width
 
 $prototype=int xHeight () const
 $method=|int|xHeight|

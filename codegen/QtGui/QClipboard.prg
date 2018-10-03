@@ -103,6 +103,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=text
 
 $beginSignals
 $signal=|changed(QClipboard::Mode)

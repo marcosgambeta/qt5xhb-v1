@@ -81,6 +81,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=allocate
 
 $prototype=bool bind()
 $method=|bool|bind|
@@ -127,6 +128,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=release
 
 $prototype=void setUsagePattern(QOpenGLBuffer::UsagePattern value)
 $method=|void|setUsagePattern|QOpenGLBuffer::UsagePattern

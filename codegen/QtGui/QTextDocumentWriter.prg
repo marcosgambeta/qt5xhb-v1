@@ -101,6 +101,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=write
 
 $prototype=void setCodec(QTextCodec *codec)
 $method=|void|setCodec|QTextCodec *

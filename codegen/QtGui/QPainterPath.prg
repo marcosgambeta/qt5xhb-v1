@@ -89,6 +89,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addEllipse
 
 $prototype=void addPath ( const QPainterPath & path )
 $method=|void|addPath|const QPainterPath &
@@ -120,6 +121,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addRect
 
 $prototype=void addRegion ( const QRegion & region )
 $method=|void|addRegion|const QRegion &
@@ -148,6 +150,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addRoundedRect
 
 $prototype=void addText ( const QPointF & point, const QFont & font, const QString & text )
 $internalMethod=|void|addText,addText1|const QPointF &,const QFont &,const QString &
@@ -173,6 +176,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addText
 
 $prototype=qreal angleAtPercent ( qreal t ) const
 $method=|qreal|angleAtPercent|qreal
@@ -201,6 +205,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=arcMoveTo
 
 $prototype=void arcTo ( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
 $internalMethod=|void|arcTo,arcTo1|const QRectF &,qreal,qreal
@@ -226,6 +231,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ARCTO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=arcTo
 
 $prototype=QRectF boundingRect () const
 $method=|QRectF|boundingRect|
@@ -268,6 +274,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=contains
 
 $prototype=QRectF controlPointRect () const
 $method=|QRectF|controlPointRect|
@@ -296,6 +303,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CUBICTO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=cubicTo
 
 $prototype=QPointF currentPosition () const
 $method=|QPointF|currentPosition|
@@ -333,6 +341,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=intersects
 
 $prototype=bool isEmpty () const
 $method=|bool|isEmpty|
@@ -364,6 +373,7 @@ HB_FUNC_STATIC( QPAINTERPATH_LINETO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=lineTo
 
 $prototype=void moveTo ( const QPointF & point )
 $internalMethod=|void|moveTo,moveTo1|const QPointF &
@@ -389,6 +399,7 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=moveTo
 
 $prototype=qreal percentAtLength ( qreal len ) const
 $method=|qreal|percentAtLength|qreal
@@ -420,6 +431,7 @@ HB_FUNC_STATIC( QPAINTERPATH_QUADTO )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=quadTo
 
 $prototype=void setElementPositionAt ( int index, qreal x, qreal y )
 $method=|void|setElementPositionAt|int,qreal,qreal
@@ -463,6 +475,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toFillPolygon
 
 $prototype=QPainterPath toReversed () const
 $method=|QPainterPath|toReversed|
@@ -491,6 +504,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translate
 
 $prototype=QPainterPath translated ( qreal dx, qreal dy ) const
 $internalMethod=|QPainterPath|translated,translated1|qreal,qreal
@@ -516,6 +530,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translated
 
 $prototype=QPainterPath united ( const QPainterPath & p ) const
 $method=|QPainterPath|united|const QPainterPath &

@@ -165,6 +165,7 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setColor
 
 $prototype=void setMatrix ( const QMatrix & matrix )
 $method=|void|setMatrix|const QMatrix &

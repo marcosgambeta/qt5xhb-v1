@@ -111,6 +111,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translate
 
 $prototype=QPolygon translated(int dx, int dy) const
 $internalMethod=|QPolygon|translated,translated1|int,int
@@ -136,6 +137,7 @@ HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=translated
 
 $prototype=QRect boundingRect() const
 $method=|QRect|boundingRect|
@@ -164,6 +166,7 @@ HB_FUNC_STATIC( QPOLYGON_POINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=point
 
 $prototype=void setPoint(int index, int x, int y)
 $internalMethod=|void|setPoint,setPoint1|int,int,int
@@ -189,6 +192,7 @@ HB_FUNC_STATIC( QPOLYGON_SETPOINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setPoint
 
 $prototype=void putPoints(int index, int nPoints, const QPolygon & from, int fromIndex=0)
 $method=|void|putPoints|int,int,const QPolygon &,int=0

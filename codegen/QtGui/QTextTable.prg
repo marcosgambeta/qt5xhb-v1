@@ -91,6 +91,7 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mergeCells
 
 $prototype=void splitCell(int row, int col, int numRows, int numCols)
 $method=|void|splitCell|int,int,int,int
@@ -133,6 +134,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=cellAt
 
 $prototype=QTextCursor rowStart(const QTextCursor &c) const
 $method=|QTextCursor|rowStart|const QTextCursor &

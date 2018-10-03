@@ -87,6 +87,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bind
 
 $prototype=void release()
 $internalMethod=5,2,0|void|release,release1|
@@ -112,6 +113,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=release
 
 $prototype=bool isBound() const
 $internalMethod=5,2,0|bool|isBound,isBound2|
@@ -137,6 +139,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=isBind
 
 $prototype=void setFormat(TextureFormat format)
 $method=5,2,0|void|setFormat|QOpenGLTexture::TextureFormat
@@ -222,6 +225,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA ) // TODO: implementar
   //  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   //}
 }
+$addMethod=setData
 
 $prototype=void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 $method=5,2,0|void|setCompressedData,setCompressedData1|int,int,QOpenGLTexture::CubeMapFace,int,void *,const QOpenGLPixelTransferOptions * const=0
@@ -255,6 +259,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA ) // TODO: implementar
   //  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   //}
 }
+$addMethod=setCompressedData
 
 $prototype=void setMipBaseLevel(int baseLevel)
 $method=5,2,0|void|setMipBaseLevel|int
@@ -301,6 +306,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=generateMipMaps
 
 $prototype=void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
 $method=5,2,0|void|setSwizzleMask,setSwizzleMask1|QOpenGLTexture::SwizzleComponent,QOpenGLTexture::SwizzleValue
@@ -326,6 +332,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setSwizzleMask
 
 $prototype=SwizzleValue swizzleMask(SwizzleComponent component) const
 $method=5,2,0|QOpenGLTexture::SwizzleValue|swizzleMask|QOpenGLTexture::SwizzleComponent
@@ -381,6 +388,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setWrapMode
 
 $prototype=WrapMode wrapMode(CoordinateDirection direction) const
 $method=5,2,0|QOpenGLTexture::WrapMode|wrapMode|QOpenGLTexture::CoordinateDirection
@@ -425,6 +433,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR ) // TODO: resolver conflitos entr
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setBorderColor
 
 $prototype=QColor borderColor() const
 $method=5,2,0|QColor|borderColor,borderColor1|
@@ -466,6 +475,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR ) // TODO: resolver conflitos entre c
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=borderColor
 
 $prototype=void setMinimumLevelOfDetail(float value)
 $method=5,2,0|void|setMinimumLevelOfDetail|float
@@ -512,6 +522,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=boundTextureId
 
 $prototype=static bool hasFeature(Feature feature)
 $staticMethod=5,2,0|bool|hasFeature|QOpenGLTexture::Feature

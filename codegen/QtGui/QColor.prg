@@ -299,6 +299,7 @@ HB_FUNC_STATIC( QCOLOR_SETRGB )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setRgb
 
 $prototype=void setRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 $method=|void|setRgbF|qreal,qreal,qreal,qreal=1.0
@@ -378,6 +379,7 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fromRgb
 
 $prototype=static QColor fromRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 $staticMethod=|QColor|fromRgbF|qreal,qreal,qreal,qreal=1.0

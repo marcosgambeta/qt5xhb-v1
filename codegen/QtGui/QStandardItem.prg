@@ -254,6 +254,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setChild
 
 $prototype=void insertRow(int row, const QList<QStandardItem*> &items)
 $internalMethod=|void|insertRow,insertRow1|int,const QList<QStandardItem *> &
@@ -279,6 +280,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertRow
 
 $prototype=void insertColumn(int column, const QList<QStandardItem*> &items)
 $method=|void|insertColumn|int,const QList<QStandardItem *> &
@@ -307,6 +309,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertRows
 
 $prototype=void insertColumns(int column, int count)
 $method=|void|insertColumns|int,int
@@ -347,6 +350,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=appendRow
 
 $prototype=void appendRows(const QList<QStandardItem*> &items)
 $method=|void|appendRows|const QList<QStandardItem *> &

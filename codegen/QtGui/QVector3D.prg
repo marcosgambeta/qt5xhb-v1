@@ -152,6 +152,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=distanceToPlane
 
 $prototype=float distanceToLine(const QVector3D& point, const QVector3D& direction) const
 $method=|float|distanceToLine|const QVector3D &,const QVector3D &
@@ -198,6 +199,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMAL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=normal
 
 $extraMethods
 

@@ -114,6 +114,7 @@ HB_FUNC_STATIC( QICON_PAINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=paint
 
 $prototype=QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
 $internalMethod=|QPixmap|pixmap,pixmap1|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
@@ -147,6 +148,7 @@ HB_FUNC_STATIC( QICON_PIXMAP )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=pixmap
 
 $prototype=static QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
 $staticMethod=|QIcon|fromTheme|const QString &,const QIcon &=QIcon()

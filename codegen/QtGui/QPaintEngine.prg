@@ -51,6 +51,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawEllipse
 
 $prototype=virtual void drawImage ( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $virtualMethod=|void|drawImage|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
@@ -63,6 +64,7 @@ $virtualMethod=|void|drawImage|const QRectF &,const QImage &,const QRectF &,Qt::
 HB_FUNC_STATIC( QPAINTENGINE_DRAWLINES )
 {
 }
+$addMethod=drawLines
 
 $prototype=virtual void drawPath ( const QPainterPath & path )
 $virtualMethod=|void|drawPath|const QPainterPath &
@@ -78,6 +80,7 @@ $virtualMethod=|void|drawPixmap|const QRectF &,const QPixmap &,const QRectF &
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPOINTS )
 {
 }
+$addMethod=drawPoints
 
 %% TODO: implementar reconhecimento de 'const QPointF *' e 'const QPoint *'
 
@@ -87,6 +90,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPOINTS )
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPOLYGON )
 {
 }
+$addMethod=drawPolygon
 
 %% TODO: implementar reconhecimento de 'const QRectF *' e 'const QRect *'
 
@@ -96,6 +100,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPOLYGON )
 HB_FUNC_STATIC( QPAINTENGINE_DRAWRECTS )
 {
 }
+$addMethod=drawRects
 
 $prototype=virtual void drawTextItem ( const QPointF & p, const QTextItem & textItem )
 $virtualMethod=|void|drawTextItem|const QPointF &,const QTextItem &

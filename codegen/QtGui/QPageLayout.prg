@@ -129,6 +129,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=margins
 
 $prototype=QMargins marginsPoints() const
 $method=5,3,0|QMargins|marginsPoints|
@@ -169,6 +170,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fullRect
 
 $prototype=QRect fullRectPoints() const
 $method=5,3,0|QRect|fullRectPoints|
@@ -200,6 +202,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=paintRect
 
 $prototype=QRect paintRectPoints() const
 $method=5,3,0|QRect|paintRectPoints|

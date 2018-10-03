@@ -42,6 +42,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
   o = new QGuiApplication( argc, argv );
   _qt5xhb_returnNewObject( o, false );
 }
+$addMethod=new
 
 $deleteMethod
 

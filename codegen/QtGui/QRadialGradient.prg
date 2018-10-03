@@ -128,6 +128,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setCenter
 
 $prototype=void setCenterRadius(qreal radius)
 $method=|void|setCenterRadius|qreal
@@ -156,6 +157,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setFocalPoint
 
 $prototype=void setFocalRadius(qreal radius)
 $method=|void|setFocalRadius|qreal

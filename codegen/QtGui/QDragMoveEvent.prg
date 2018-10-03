@@ -51,6 +51,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=accept
 
 $prototype=QRect answerRect () const
 $method=|QRect|answerRect|
@@ -79,5 +80,6 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=ignore
 
 #pragma ENDDUMP

@@ -67,6 +67,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND )
 {
   // TODO: implementar
 }
+$addMethod=find
 
 $prototype=static bool insert(const QString &key, const QPixmap &pixmap)
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
@@ -81,6 +82,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_INSERT )
 {
   // TODO: implementar
 }
+$addMethod=insert
 
 $prototype=static void remove(const QString &key)
 HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
@@ -96,6 +98,7 @@ HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE )
 {
   // TODO: implementar
 }
+$addMethod=remove
 
 $prototype=static void clear()
 HB_FUNC_STATIC( QPIXMAPCACHE_CLEAR )
