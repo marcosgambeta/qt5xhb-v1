@@ -23,198 +23,64 @@ $destructor
 $includes=5,2,0
 
 $prototype=static HBITMAP createMask(const QBitmap &bitmap)
-HB_FUNC_STATIC( QTWIN_CREATEMASK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retptr( (HBITMAP) QtWin::createMask ( *PQBITMAP(1) ) );
-#endif
-}
+$staticMethod=5,2,0|HBITMAP|createMask|const QBitmap &
 
 $prototype=static HBITMAP toHBITMAP(const QPixmap &p, HBitmapFormat format = HBitmapNoAlpha)
-HB_FUNC_STATIC( QTWIN_TOHBITMAP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  int par2 = ISNIL(2)? (int) QtWin::HBitmapNoAlpha : hb_parni(2);
-  hb_retptr( (HBITMAP) QtWin::toHBITMAP ( *PQPIXMAP(1), (QtWin::HBitmapFormat) par2 ) );
-#endif
-}
+$staticMethod=5,2,0|HBITMAP|toHBITMAP|const QPixmap &,QtWin::HBitmapFormat=QtWin::HBitmapNoAlpha
 
 $prototype=static QPixmap fromHBITMAP(HBITMAP bitmap, HBitmapFormat format = HBitmapNoAlpha)
-HB_FUNC_STATIC( QTWIN_FROMHBITMAP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  HBITMAP par1 = (HBITMAP) hb_parptr(1);
-  int par2 = ISNIL(2)? (int) QtWin::HBitmapNoAlpha : hb_parni(2);
-  QPixmap * ptr = new QPixmap( QtWin::fromHBITMAP ( par1, (QtWin::HBitmapFormat) par2 ) );
-  _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-#endif
-}
+$staticMethod=5,2,0|QPixmap|fromHBITMAP|HBITMAP,QtWin::HBitmapFormat=QtWin::HBitmapNoAlpha
 
 $prototype=static HICON toHICON(const QPixmap &p)
-HB_FUNC_STATIC( QTWIN_TOHICON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retptr( (HICON) QtWin::toHICON ( *PQPIXMAP(1) ) );
-#endif
-}
+$staticMethod=5,2,0|HICON|toHICON|const QPixmap &
 
 $prototype=static QImage imageFromHBITMAP(HDC hdc, HBITMAP bitmap, int width, int height)
-HB_FUNC_STATIC( QTWIN_IMAGEFROMHBITMAP )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  HDC par1 = (HDC) hb_parptr(1);
-  HBITMAP par2 = (HBITMAP) hb_parptr(2);
-  QImage * ptr = new QImage( QtWin::imageFromHBITMAP ( par1, par2, PINT(3), PINT(4) ) );
-  _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
-#endif
-}
+$staticMethod=5,2,0|QImage|imageFromHBITMAP|HDC,HBITMAP,int,int
 
 $prototype=static QPixmap fromHICON(HICON icon)
-HB_FUNC_STATIC( QTWIN_FROMHICON )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  HICON par1 = (HICON) hb_parptr(1);
-  QPixmap * ptr = new QPixmap( QtWin::fromHICON ( par1 ) );
-  _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
-#endif
-}
+$staticMethod=5,2,0|QPixmap|fromHICON|HICON
 
 $prototype=static HRGN toHRGN(const QRegion &region)
-HB_FUNC_STATIC( QTWIN_TOHRGN )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  hb_retptr( (HRGN) QtWin::toHRGN ( *PQREGION(1) ) );
-#endif
-}
+$staticMethod=5,2,0|HRGN|toHRGN|const QRegion &
 
 $prototype=static QRegion fromHRGN(HRGN hrgn)
-HB_FUNC_STATIC( QTWIN_FROMHRGN )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  HRGN par1 = (HRGN) hb_parptr(1);
-  QRegion * ptr = new QRegion( QtWin::fromHRGN ( par1 ) );
-  _qt5xhb_createReturnClass ( ptr, "QREGION", true );
-#endif
-}
+$staticMethod=5,2,0|QRegion|fromHRGN|HRGN
 
 $prototype=static QString stringFromHresult(HRESULT hresult)
-HB_FUNC_STATIC( QTWIN_STRINGFROMHRESULT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#ifndef Q_OS_WIN64
-  HRESULT par1 = (HRESULT) hb_parptr(1);
-  RQSTRING( QtWin::stringFromHresult ( par1 ) );
-#endif
-#endif
-}
+$staticMethod=5,2,0|QString|stringFromHresult|HRESULT|#ifndef Q_OS_WIN64
 
 $prototype=static QString errorStringFromHresult(HRESULT hresult)
-HB_FUNC_STATIC( QTWIN_ERRORSTRINGFROMHRESULT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#ifndef Q_OS_WIN64
-  HRESULT par1 = (HRESULT) hb_parptr(1);
-  RQSTRING( QtWin::errorStringFromHresult ( par1 ) );
-#endif
-#endif
-}
+$staticMethod=5,2,0|QString|errorStringFromHresult|HRESULT|#ifndef Q_OS_WIN64
 
 $prototype=static QColor colorizationColor(bool *opaqueBlend = 0)
-HB_FUNC_STATIC( QTWIN_COLORIZATIONCOLOR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  bool par1;
-  QColor * ptr = new QColor( QtWin::colorizationColor ( &par1 ) );
-  _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-  hb_storl( par1, 1 );
-#endif
-}
+$staticMethod=5,2,0|QColor|colorizationColor|bool *=0
 
 $prototype=static QColor realColorizationColor()
-HB_FUNC_STATIC( QTWIN_REALCOLORIZATIONCOLOR )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QColor * ptr = new QColor( QtWin::realColorizationColor () );
-  _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
-#endif
-}
+$staticMethod=5,2,0|QColor|realColorizationColor|
 
 $prototype=static void setWindowExcludedFromPeek(QWindow *window, bool exclude)
-HB_FUNC_STATIC( QTWIN_SETWINDOWEXCLUDEDFROMPEEK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::setWindowExcludedFromPeek ( par1, PBOOL(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|setWindowExcludedFromPeek|QWindow *,bool
 
 $prototype=static bool isWindowExcludedFromPeek(QWindow *window)
-HB_FUNC_STATIC( QTWIN_ISWINDOWEXCLUDEDFROMPEEK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  RBOOL( QtWin::isWindowExcludedFromPeek ( par1 ) );
-#endif
-}
+$staticMethod=5,2,0|bool|isWindowExcludedFromPeek|QWindow *
 
 $prototype=static void setWindowDisallowPeek(QWindow *window, bool disallow)
-HB_FUNC_STATIC( QTWIN_SETWINDOWDISALLOWPEEK )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::setWindowDisallowPeek ( par1, PBOOL(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|setWindowDisallowPeek|QWindow *,bool
 
 $prototype=static bool isWindowPeekDisallowed(QWindow *window)
-HB_FUNC_STATIC( QTWIN_ISWINDOWPEEKDISALLOWED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  RBOOL( QtWin::isWindowPeekDisallowed ( par1 ) );
-#endif
-}
+$staticMethod=5,2,0|bool|isWindowPeekDisallowed|QWindow *
 
 $prototype=static void setWindowFlip3DPolicy(QWindow *window, WindowFlip3DPolicy policy)
-HB_FUNC_STATIC( QTWIN_SETWINDOWFLIP3DPOLICY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QtWin::setWindowFlip3DPolicy ( PQWINDOW(1), (QtWin::WindowFlip3DPolicy) hb_parni(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|setWindowFlip3DPolicy|QWindow *,QtWin::WindowFlip3DPolicy
 
 $prototype=static WindowFlip3DPolicy windowFlip3DPolicy(QWindow *)
-HB_FUNC_STATIC( QTWIN_WINDOWFLIP3DPOLICY )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  hb_retni( QtWin::windowFlip3DPolicy ( par1 ) );
-#endif
-}
+$staticMethod=5,2,0|QtWin::WindowFlip3DPolicy|windowFlip3DPolicy|QWindow *
 
 $prototype=static void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
-HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::extendFrameIntoClientArea ( par1, PINT(2), PINT(3), PINT(4), PINT(5) );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|extendFrameIntoClientArea,extendFrameIntoClientArea1|QWindow *,int,int,int,int
 
 $prototype=static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
-HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QMargins * par2 = (QMargins *) _qt5xhb_itemGetPtr(2);
-  QtWin::extendFrameIntoClientArea ( par1, *par2 );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|extendFrameIntoClientArea,extendFrameIntoClientArea2|QWindow *,const QMargins &
 
 //[1]void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
 //[2]void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
@@ -234,36 +100,16 @@ HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=extendFrameIntoClientArea
 
 $prototype=static void resetExtendedFrame(QWindow *window)
-HB_FUNC_STATIC( QTWIN_RESETEXTENDEDFRAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::resetExtendedFrame ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|resetExtendedFrame|QWindow *
 
 $prototype=static void enableBlurBehindWindow(QWindow *window, const QRegion &region)
-HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::enableBlurBehindWindow ( par1, *PQREGION(2) );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|enableBlurBehindWindow,enableBlurBehindWindow1|QWindow *,const QRegion &
 
 $prototype=static void enableBlurBehindWindow(QWindow *window)
-HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::enableBlurBehindWindow ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|enableBlurBehindWindow,enableBlurBehindWindow2|QWindow *
 
 //[1]void enableBlurBehindWindow(QWindow *window, const QRegion &region)
 //[2]void enableBlurBehindWindow(QWindow *window)
@@ -283,100 +129,37 @@ HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=enableBlurBehindWindow
 
 $prototype=static void disableBlurBehindWindow(QWindow *window)
-HB_FUNC_STATIC( QTWIN_DISABLEBLURBEHINDWINDOW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::disableBlurBehindWindow ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|disableBlurBehindWindow|QWindow *
 
 $prototype=static bool isCompositionEnabled()
-HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONENABLED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  RBOOL( QtWin::isCompositionEnabled () );
-#endif
-}
+$staticMethod=5,2,0|bool|isCompositionEnabled|
 
 $prototype=static void setCompositionEnabled(bool enabled)
-HB_FUNC_STATIC( QTWIN_SETCOMPOSITIONENABLED )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QtWin::setCompositionEnabled ( PBOOL(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|setCompositionEnabled|bool
 
 $prototype=static bool isCompositionOpaque()
-HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONOPAQUE )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  RBOOL( QtWin::isCompositionOpaque () );
-#endif
-}
+$staticMethod=5,2,0|bool|isCompositionOpaque|
 
 $prototype=static void setCurrentProcessExplicitAppUserModelID(const QString &id)
-HB_FUNC_STATIC( QTWIN_SETCURRENTPROCESSEXPLICITAPPUSERMODELID )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QtWin::setCurrentProcessExplicitAppUserModelID ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|setCurrentProcessExplicitAppUserModelID|const QString &
 
 $prototype=static void markFullscreenWindow(QWindow *, bool fullscreen = true)
-HB_FUNC_STATIC( QTWIN_MARKFULLSCREENWINDOW )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::markFullscreenWindow ( par1, OPBOOL(2,true) );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|markFullscreenWindow|QWindow *,bool=true
 
 $prototype=static void taskbarActivateTab(QWindow *)
-HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETAB )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::taskbarActivateTab ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|taskbarActivateTab|QWindow *
 
 $prototype=static void taskbarActivateTabAlt(QWindow *)
-HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETABALT )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::taskbarActivateTabAlt ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|taskbarActivateTabAlt|QWindow *
 
 $prototype=static void taskbarAddTab(QWindow *)
-HB_FUNC_STATIC( QTWIN_TASKBARADDTAB )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::taskbarAddTab ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|taskbarAddTab|QWindow *
 
 $prototype=static void taskbarDeleteTab(QWindow *)
-HB_FUNC_STATIC( QTWIN_TASKBARDELETETAB )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWindow * par1 = (QWindow *) _qt5xhb_itemGetPtr(1);
-  QtWin::taskbarDeleteTab ( par1 );
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
+$staticMethod=5,2,0|void|taskbarDeleteTab|QWindow *
 
 $extraMethods
 
