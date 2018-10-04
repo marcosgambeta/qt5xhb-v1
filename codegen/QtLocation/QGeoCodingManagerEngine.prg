@@ -58,6 +58,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=geocode
 
 $prototype=virtual QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds)
 $virtualMethod=5,4,0|QGeoCodeReply *|reverseGeocode|const QGeoCoordinate &,const QGeoShape &
