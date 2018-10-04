@@ -86,6 +86,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setResolution
 
 $prototype=QMultimedia::EncodingQuality quality() const
 $method=|QMultimedia::EncodingQuality|quality|

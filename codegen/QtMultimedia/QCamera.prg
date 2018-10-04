@@ -120,6 +120,7 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=lockStatus
 
 %%
 %%
@@ -178,6 +179,7 @@ HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setViewfinder
 
 $prototype=QCamera::LockTypes supportedLocks() const
 $method=|QCamera::LockTypes|supportedLocks|
@@ -209,6 +211,7 @@ HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=searchAndLock
 
 $prototype=void start()
 $slotMethod=|void|start|
@@ -243,6 +246,7 @@ HB_FUNC_STATIC( QCAMERA_UNLOCK )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=unlock
 
 $prototype=QMultimedia::AvailabilityStatus availability() const override
 $method=|QMultimedia::AvailabilityStatus|availability|

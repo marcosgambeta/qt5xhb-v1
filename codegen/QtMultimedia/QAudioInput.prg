@@ -113,6 +113,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_START )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=start
 
 $prototype=QAudio::State state () const
 $method=|QAudio::State|state|

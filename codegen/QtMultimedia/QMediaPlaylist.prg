@@ -85,6 +85,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addMedia
 
 $prototype=bool clear()
 $method=|bool|clear|
@@ -119,6 +120,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_INSERTMEDIA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertMedia
 
 $prototype=bool isEmpty() const
 $method=|bool|isEmpty|
@@ -158,6 +160,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=load
 
 $prototype=QMediaContent media(int index) const
 $method=|QMediaContent|media|int
@@ -195,6 +198,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=removeMedia
 
 $prototype=bool save(const QUrl & location, const char * format = Q_NULLPTR)
 $internalMethod=|bool|save,save1|const QUrl &,const char *=0
@@ -220,6 +224,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=save
 
 $prototype=virtual QMediaObject *mediaObject() const override
 %% TODO: is virtual ?

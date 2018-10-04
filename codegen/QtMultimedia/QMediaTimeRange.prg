@@ -92,6 +92,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addInterval
 
 $prototype=void addTimeRange(const QMediaTimeRange & range)
 $method=|void|addTimeRange|const QMediaTimeRange &
@@ -141,6 +142,7 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=removeInterval
 
 $prototype=void removeTimeRange(const QMediaTimeRange & range)
 $method=|void|removeTimeRange|const QMediaTimeRange &

@@ -208,6 +208,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setVideoOutput
 
 $prototype=virtual QMultimedia::AvailabilityStatus availability() const override
 $virtualMethod=|QMultimedia::AvailabilityStatus|availability|

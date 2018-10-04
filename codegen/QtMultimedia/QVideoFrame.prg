@@ -135,6 +135,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bytesPerLine
 
 $prototype=qint64 endTime () const
 $method=|qint64|endTime|
