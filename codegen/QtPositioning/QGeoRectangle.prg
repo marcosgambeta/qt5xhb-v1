@@ -138,8 +138,8 @@ HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-
 }
+$addMethod=contains
 
 $prototype=bool intersects(const QGeoRectangle &rectangle) const
 $method=5,2,0|bool|intersects|const QGeoRectangle &

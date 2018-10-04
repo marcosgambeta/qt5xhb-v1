@@ -74,6 +74,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=activeMonitors
 
 $prototype=static QGeoAreaMonitorSource *createDefaultSource(QObject *parent)
 $staticMethod=5,2,0|QGeoAreaMonitorSource *|createDefaultSource|QObject *
