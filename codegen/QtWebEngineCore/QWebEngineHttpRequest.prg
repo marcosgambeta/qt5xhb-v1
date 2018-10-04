@@ -31,8 +31,9 @@ $constructor=|new2|const QWebEngineHttpRequest &
 //[1]explicit QWebEngineHttpRequest(const QUrl &url = QUrl(), const QWebEngineHttpRequest::Method &method = QWebEngineHttpRequest::Get)
 //[2]QWebEngineHttpRequest(const QWebEngineHttpRequest &other)
 
-HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST )
+HB_FUNC_STATIC( QWEBENGINEHTTPREQUEST_NEW )
 {
+%% TODO: implementar
 }
 
 $prototype=~QWebEngineHttpRequest()
