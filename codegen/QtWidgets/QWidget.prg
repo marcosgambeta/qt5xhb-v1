@@ -501,10 +501,10 @@ $prototype=void removeAction ( QAction * action )
 $method=|void|removeAction|QAction *|#ifndef QT_NO_ACTION
 
 $prototype=void render (QPaintDevice *target, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
-$method=|void|render,render1|QPaintDevice *,const QPoint &=QPoint(),const QRegion &=QRegion(),QWidget::RenderFlags=QWidget::RenderFlags(QWidget::DrawWindowBackground OR QWidget::DrawChildren)
+$internalMethod=|void|render,render1|QPaintDevice *,const QPoint &=QPoint(),const QRegion &=QRegion(),QWidget::RenderFlags=QWidget::RenderFlags(QWidget::DrawWindowBackground OR QWidget::DrawChildren)
 
 $prototype=void render (QPainter *painter, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
-$method=|void|render,render2|QPainter *,const QPoint &=QPoint(),const QRegion &=QRegion(),QWidget::RenderFlags=QWidget::RenderFlags(QWidget::DrawWindowBackground OR QWidget::DrawChildren)
+$internalMethod=|void|render,render2|QPainter *,const QPoint &=QPoint(),const QRegion &=QRegion(),QWidget::RenderFlags=QWidget::RenderFlags(QWidget::DrawWindowBackground OR QWidget::DrawChildren)
 
 //[1]void render (QPaintDevice *target, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
 //[2]void render (QPainter *painter, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
@@ -512,13 +512,13 @@ $method=|void|render,render2|QPainter *,const QPoint &=QPoint(),const QRegion &=
 %% TODO: identificar QPaintDevice e QPainter
 HB_FUNC_STATIC( QWIDGET_RENDER )
 {
-  if( ISBETWEEN(1,4) && ISOBJECT(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
+  if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
   {
-    HB_FUNC_EXEC( QWIDGET_RENDER1 );
+    QWidget_render2();
   }
-  else if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
+  else if( ISBETWEEN(1,4) && ISOBJECT(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
   {
-    HB_FUNC_EXEC( QWIDGET_RENDER2 );
+    QWidget_render1();
   }
   else
   {
