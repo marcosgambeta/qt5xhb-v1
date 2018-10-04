@@ -283,10 +283,10 @@ $prototype=bool isAutoMipMapGenerationEnabled() const
 $method=5,2,0|bool|isAutoMipMapGenerationEnabled|
 
 $prototype=void generateMipMaps()
-$method=5,2,0|void|generateMipMaps,generateMipMaps1|
+$internalMethod=5,2,0|void|generateMipMaps,generateMipMaps1|
 
 $prototype=void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
-$method=5,2,0|void|generateMipMaps,generateMipMaps2|int,bool=true
+$internalMethod=5,2,0|void|generateMipMaps,generateMipMaps2|int,bool=true
 
 //[1]void generateMipMaps()
 //[2]void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
@@ -295,11 +295,11 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_GENERATEMIPMAPS1 );
+    QOpenGLTexture_generateMipMaps1();
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_GENERATEMIPMAPS2 );
+    QOpenGLTexture_generateMipMaps2();
   }
   else
   {
@@ -309,10 +309,10 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 $addMethod=generateMipMaps
 
 $prototype=void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
-$method=5,2,0|void|setSwizzleMask,setSwizzleMask1|QOpenGLTexture::SwizzleComponent,QOpenGLTexture::SwizzleValue
+$internalMethod=5,2,0|void|setSwizzleMask,setSwizzleMask1|QOpenGLTexture::SwizzleComponent,QOpenGLTexture::SwizzleValue
 
 $prototype=void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
-$method=5,2,0|void|setSwizzleMask,setSwizzleMask2|QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue
+$internalMethod=5,2,0|void|setSwizzleMask,setSwizzleMask2|QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue,QOpenGLTexture::SwizzleValue
 
 //[1]void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
 //[2]void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
@@ -321,11 +321,11 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_SETSWIZZLEMASK1 );
+    QOpenGLTexture_setSwizzleMask1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_SETSWIZZLEMASK2 );
+    QOpenGLTexture_setSwizzleMask2();
   }
   else
   {
@@ -365,10 +365,10 @@ $prototype=float maximumAnisotropy() const
 $method=5,2,0|float|maximumAnisotropy|
 
 $prototype=void setWrapMode(WrapMode mode)
-$method=5,2,0|void|setWrapMode,setWrapMode1|QOpenGLTexture::WrapMode
+$internalMethod=5,2,0|void|setWrapMode,setWrapMode1|QOpenGLTexture::WrapMode
 
 $prototype=void setWrapMode(CoordinateDirection direction, WrapMode mode)
-$method=5,2,0|void|setWrapMode,setWrapMode2|QOpenGLTexture::CoordinateDirection,QOpenGLTexture::WrapMode
+$internalMethod=5,2,0|void|setWrapMode,setWrapMode2|QOpenGLTexture::CoordinateDirection,QOpenGLTexture::WrapMode
 
 //[1]void setWrapMode(WrapMode mode)
 //[2]void setWrapMode(CoordinateDirection direction, WrapMode mode)
@@ -377,11 +377,11 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_SETWRAPMODE1 );
+    QOpenGLTexture_setWrapMode1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_SETWRAPMODE2 );
+    QOpenGLTexture_setWrapMode2();
   }
   else
   {
@@ -499,10 +499,10 @@ $prototype=float levelofDetailBias() const
 $method=5,2,0|float|levelofDetailBias|
 
 $prototype=static GLuint boundTextureId(BindingTarget target)
-$staticMethod=5,2,0|GLuint|boundTextureId,boundTextureId1|QOpenGLTexture::BindingTarget
+$internalStaticMethod=5,2,0|GLuint|boundTextureId,boundTextureId1|QOpenGLTexture::BindingTarget
 
 $prototype=static GLuint boundTextureId(uint unit, BindingTarget target)
-$staticMethod=5,2,0|GLuint|boundTextureId,boundTextureId2|uint,QOpenGLTexture::BindingTarget
+$internalStaticMethod=5,2,0|GLuint|boundTextureId,boundTextureId2|uint,QOpenGLTexture::BindingTarget
 
 //[1]static GLuint boundTextureId(BindingTarget target)
 //[2]static GLuint boundTextureId(uint unit, BindingTarget target)
@@ -511,11 +511,11 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_BOUNDTEXTUREID1 );
+    QOpenGLTexture_boundTextureId1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QOPENGLTEXTURE_BOUNDTEXTUREID2 );
+    QOpenGLTexture_boundTextureId2();
   }
   else
   {

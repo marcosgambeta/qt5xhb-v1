@@ -28,10 +28,10 @@ $prototype=virtual bool begin ( QPaintDevice * pdev ) = 0
 $virtualMethod=|bool|begin|QPaintDevice *
 
 $prototype=virtual void drawEllipse ( const QRectF & rect )
-$virtualMethod=|void|drawEllipse,drawEllipse1|const QRectF &
+$internalVirtualMethod=|void|drawEllipse,drawEllipse1|const QRectF &
 
 $prototype=virtual void drawEllipse ( const QRect & rect )
-$virtualMethod=|void|drawEllipse,drawEllipse2|const QRect &
+$internalVirtualMethod=|void|drawEllipse,drawEllipse2|const QRect &
 
 //[1]virtual void drawEllipse ( const QRectF & rect )
 //[2]virtual void drawEllipse ( const QRect & rect )
@@ -40,11 +40,11 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QPAINTENGINE_DRAWELLIPSE1 );
+    QPaintEngine_drawEllipse1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTENGINE_DRAWELLIPSE2 );
+    QPaintEngine_drawEllipse2();
   }
   else
   {
