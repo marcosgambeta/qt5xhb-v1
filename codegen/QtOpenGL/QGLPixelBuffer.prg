@@ -81,6 +81,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bindTexture
 
 $prototype=bool bindToDynamicTexture ( GLuint texture_id )
 $method=|bool|bindToDynamicTexture|GLuint
@@ -115,6 +116,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawTexture
 
 $prototype=QGLFormat format () const
 $method=|QGLFormat|format|

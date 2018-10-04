@@ -92,6 +92,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setEntry
 
 $prototype=int size () const
 $method=|int|size|

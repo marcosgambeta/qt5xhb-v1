@@ -111,6 +111,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawTexture
 
 $prototype=QGLFramebufferObjectFormat format () const
 $method=|QGLFramebufferObjectFormat|format|

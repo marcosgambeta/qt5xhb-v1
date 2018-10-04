@@ -105,6 +105,7 @@ HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bindTexture
 
 $prototype=const QGLColormap & colormap () const
 $method=|const QGLColormap &|colormap|
@@ -145,6 +146,7 @@ HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=drawTexture
 
 $prototype=QGLFormat format () const
 $method=|QGLFormat|format|

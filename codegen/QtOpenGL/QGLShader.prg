@@ -77,6 +77,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=compileSourceCode
 
 $prototype=bool compileSourceFile ( const QString & fileName )
 $method=|bool|compileSourceFile|const QString &
