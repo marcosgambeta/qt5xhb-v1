@@ -129,6 +129,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=call
 
 $prototype=QScriptValue construct(const QScriptValueList & args = QScriptValueList())
 $internalMethod=|QScriptValue|construct,construct1|const QScriptValueList &=QScriptValueList()
@@ -154,6 +155,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=construct
 
 $prototype=QScriptValue data() const
 $method=|QScriptValue|data|
@@ -247,6 +249,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=property
 
 $prototype=QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
 $internalMethod=|QScriptValue::PropertyFlags|propertyFlags,propertyFlags1|const QString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
@@ -272,6 +275,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTYFLAGS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=propertyFlags
 
 $prototype=QScriptValue prototype() const
 $method=|QScriptValue|prototype|
@@ -314,6 +318,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETPROPERTY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setProperty
 
 $prototype=void setPrototype(const QScriptValue & prototype)
 $method=|void|setPrototype|const QScriptValue &
