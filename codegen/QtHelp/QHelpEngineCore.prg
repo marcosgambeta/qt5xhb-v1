@@ -85,6 +85,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=filterAttributes
 
 $prototype=QUrl findFile ( const QUrl & url ) const
 $method=|QUrl|findFile|const QUrl &
