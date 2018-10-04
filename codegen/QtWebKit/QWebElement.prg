@@ -78,6 +78,7 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=appendInside
 
 $prototype=void appendOutside ( const QString & markup )
 $internalMethod=|void|appendOutside,appendOutside1|const QString &
@@ -103,6 +104,7 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=appendOutside
 
 $prototype=QString attribute ( const QString & name, const QString & defaultValue = QString() ) const
 $method=|QString|attribute|const QString &,const QString &=QString()
@@ -146,6 +148,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=encloseContentsWith
 
 $prototype=void encloseWith ( const QString & markup )
 $internalMethod=|void|encloseWith,encloseWith1|const QString &
@@ -171,6 +174,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=encloseWith
 
 $prototype=QVariant evaluateJavaScript ( const QString & scriptSource )
 $method=|QVariant|evaluateJavaScript|const QString &
@@ -247,6 +251,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=prependInside
 
 $prototype=void prependOutside ( const QString & markup )
 $internalMethod=|void|prependOutside,prependOutside1|const QString &
@@ -272,6 +277,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=prependOutside
 
 $prototype=QWebElement previousSibling () const
 $method=|QWebElement|previousSibling|
@@ -315,6 +321,7 @@ HB_FUNC_STATIC( QWEBELEMENT_RENDER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=render
 
 $prototype=void replace ( const QString & markup )
 $internalMethod=|void|replace,replace1|const QString &
@@ -340,6 +347,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=replace
 
 $prototype=void setAttribute ( const QString & name, const QString & value )
 $method=|void|setAttribute|const QString &,const QString &
