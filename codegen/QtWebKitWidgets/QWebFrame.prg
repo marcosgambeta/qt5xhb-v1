@@ -185,6 +185,7 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=load
 
 $prototype=QWebPage * page () const
 $method=|QWebPage *|page|
@@ -219,6 +220,7 @@ HB_FUNC_STATIC( QWEBFRAME_RENDER )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=render
 
 $prototype=void scroll ( int dx, int dy )
 $method=|void|scroll|int,int
