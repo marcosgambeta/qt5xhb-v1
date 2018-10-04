@@ -132,6 +132,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=plainText
 
 $prototype=void swap(QOAuth1Signature &other)
 $method=5,10,0|void|swap|QOAuth1Signature &
