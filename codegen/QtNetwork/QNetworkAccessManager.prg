@@ -180,6 +180,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=post
 
 $prototype=QNetworkReply *put(const QNetworkRequest &request, QIODevice *data)
 $internalMethod=|QNetworkReply *|put,put1|const QNetworkRequest &,QIODevice *
@@ -213,6 +214,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=put
 
 $prototype=QNetworkReply *deleteResource(const QNetworkRequest &request)
 $method=|QNetworkReply *|deleteResource|const QNetworkRequest &
@@ -249,6 +251,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=sendCustomRequest
 
 %% #ifndef QT_NO_BEARERMANAGEMENT
 

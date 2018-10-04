@@ -129,6 +129,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setAddress
 
 $prototype=QAbstractSocket::NetworkLayerProtocol protocol() const
 $method=|QAbstractSocket::NetworkLayerProtocol|protocol|
@@ -157,6 +158,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=toIPv4Address
 
 $prototype=Q_IPV6ADDR toIPv6Address() const
 %% TODO: implementar
@@ -204,6 +206,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=isInSubnet
 
 $prototype=bool isLoopback() const
 $method=|bool|isLoopback|

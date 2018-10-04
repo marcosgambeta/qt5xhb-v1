@@ -78,6 +78,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BIND )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bind
 
 $prototype=virtual void connectToHost(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
 $internalVirtualMethod=|void|connectToHost,connectToHost1|const QString &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite,QAbstractSocket::NetworkLayerProtocol=QAbstractSocket::AnyIPProtocol
@@ -103,6 +104,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=connectToHost
 
 $prototype=virtual void disconnectFromHost()
 $virtualMethod=|void|disconnectFromHost|
