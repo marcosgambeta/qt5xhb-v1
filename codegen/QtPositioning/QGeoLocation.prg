@@ -27,10 +27,10 @@ $includes=5,2,0
 #include <QGeoRectangle>
 
 $prototype=QGeoLocation()
-$constructor=5,2,0|new1|
+$internalConstructor=5,2,0|new1|
 
 $prototype=QGeoLocation(const QGeoLocation &other)
-$constructor=5,2,0|new2|const QGeoLocation &
+$internalConstructor=5,2,0|new2|const QGeoLocation &
 
 //[1]QGeoLocation()
 //[2]QGeoLocation(const QGeoLocation &other)
@@ -39,11 +39,11 @@ HB_FUNC_STATIC( QGEOLOCATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOLOCATION_NEW1 );
+    QGeoLocation_new1();
   }
   else if( ISNUMPAR(1) && ISQGEOLOCATION(1) )
   {
-    HB_FUNC_EXEC( QGEOLOCATION_NEW2 );
+    QGeoLocation_new2();
   }
   else
   {

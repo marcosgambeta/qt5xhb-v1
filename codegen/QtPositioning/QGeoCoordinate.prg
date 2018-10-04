@@ -23,16 +23,16 @@ $destructor
 $includes=5,2,0
 
 $prototype=QGeoCoordinate()
-$constructor=5,2,0|new1|
+$internalConstructor=5,2,0|new1|
 
 $prototype=QGeoCoordinate(double latitude, double longitude)
-$constructor=5,2,0|new2|double,double
+$internalConstructor=5,2,0|new2|double,double
 
 $prototype=QGeoCoordinate(double latitude, double longitude, double altitude)
-$constructor=5,2,0|new3|double,double,double
+$internalConstructor=5,2,0|new3|double,double,double
 
 $prototype=QGeoCoordinate(const QGeoCoordinate &other)
-$constructor=5,2,0|new4|const QGeoCoordinate &
+$internalConstructor=5,2,0|new4|const QGeoCoordinate &
 
 //[1]QGeoCoordinate()
 //[2]QGeoCoordinate(double latitude, double longitude)
@@ -43,19 +43,19 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOCOORDINATE_NEW1 );
+    QGeoCoordinate_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGEOCOORDINATE_NEW2 );
+    QGeoCoordinate_new2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QGEOCOORDINATE_NEW3 );
+    QGeoCoordinate_new3();
   }
   else if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
   {
-    HB_FUNC_EXEC( QGEOCOORDINATE_NEW4 );
+    QGeoCoordinate_new4();
   }
   else
   {

@@ -25,10 +25,10 @@ $includes=5,2,0
 #include <QString>
 
 $prototype=QGeoAddress()
-$constructor=5,2,0|new1|
+$internalConstructor=5,2,0|new1|
 
 $prototype=QGeoAddress(const QGeoAddress &other)
-$constructor=5,2,0|new2|const QGeoAddress &
+$internalConstructor=5,2,0|new2|const QGeoAddress &
 
 //[1]QGeoAddress()
 //[2]QGeoAddress(const QGeoAddress &other)
@@ -37,11 +37,11 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOADDRESS_NEW1 );
+    QGeoAddress_new1();
   }
   else if( ISNUMPAR(1) && ISQGEOADDRESS(1) )
   {
-    HB_FUNC_EXEC( QGEOADDRESS_NEW2 );
+    QGeoAddress_new2();
   }
   else
   {

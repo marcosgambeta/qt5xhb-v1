@@ -23,16 +23,16 @@ $destructor
 $includes=5,2,0
 
 $prototype=QGeoCircle()
-$constructor=5,2,0|new1|
+$internalConstructor=5,2,0|new1|
 
 $prototype=QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
-$constructor=5,2,0|new2|const QGeoCoordinate &,qreal=-1.0
+$internalConstructor=5,2,0|new2|const QGeoCoordinate &,qreal=-1.0
 
 $prototype=QGeoCircle(const QGeoCircle &other)
-$constructor=5,2,0|new3|const QGeoCircle &
+$internalConstructor=5,2,0|new3|const QGeoCircle &
 
 $prototype=QGeoCircle(const QGeoShape &other)
-$constructor=5,2,0|new4|const QGeoShape &
+$internalConstructor=5,2,0|new4|const QGeoShape &
 
 //[1]QGeoCircle()
 //[2]QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
@@ -43,19 +43,19 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOCIRCLE_NEW1 );
+    QGeoCircle_new1();
   }
   else if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QGEOCIRCLE_NEW2 );
+    QGeoCircle_new2();
   }
   else if( ISNUMPAR(1) && ISQGEOCIRCLE(1) )
   {
-    HB_FUNC_EXEC( QGEOCIRCLE_NEW3 );
+    QGeoCircle_new3();
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    HB_FUNC_EXEC( QGEOCIRCLE_NEW4 );
+    QGeoCircle_new4();
   }
   else
   {

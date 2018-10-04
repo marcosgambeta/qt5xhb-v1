@@ -23,10 +23,10 @@ $destructor
 $includes=5,2,0
 
 $prototype=QGeoShape()
-$constructor=5,2,0|new1|
+$internalConstructor=5,2,0|new1|
 
 $prototype=QGeoShape(const QGeoShape &other)
-$constructor=5,2,0|new2|const QGeoShape &
+$internalConstructor=5,2,0|new2|const QGeoShape &
 
 //[1]QGeoShape()
 //[2]QGeoShape(const QGeoShape &other)
@@ -35,11 +35,11 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOSHAPE_NEW1 );
+    QGeoShape_new1();
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    HB_FUNC_EXEC( QGEOSHAPE_NEW2 );
+    QGeoShape_new2();
   }
   else
   {

@@ -23,10 +23,10 @@ $destructor
 $includes=5,2,0
 
 $prototype=QGeoSatelliteInfo()
-$constructor=5,2,0|new1|
+$internalConstructor=5,2,0|new1|
 
 $prototype=QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
-$constructor=5,2,0|new2|const QGeoSatelliteInfo &
+$internalConstructor=5,2,0|new2|const QGeoSatelliteInfo &
 
 //[1]QGeoSatelliteInfo()
 //[2]QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
@@ -35,11 +35,11 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOSATELLITEINFO_NEW1 );
+    QGeoSatelliteInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQGEOSATELLITEINFO(1) )
   {
-    HB_FUNC_EXEC( QGEOSATELLITEINFO_NEW2 );
+    QGeoSatelliteInfo_new2();
   }
   else
   {
