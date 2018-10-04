@@ -191,6 +191,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setContent
 
 $prototype=QByteArray toByteArray ( int indent = 1 ) const
 $method=|QByteArray|toByteArray|int=1
