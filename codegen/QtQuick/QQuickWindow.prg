@@ -117,6 +117,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setRenderTarget
 
 $prototype=virtual QAccessibleInterface * accessibleRoot() const
 $virtualMethod=|QAccessibleInterface *|accessibleRoot|
