@@ -172,6 +172,7 @@ HB_FUNC_STATIC( QJSVALUE_PROPERTY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=property
 
 $prototype=QJSValue prototype() const
 $method=|QJSValue|prototype|
@@ -200,6 +201,7 @@ HB_FUNC_STATIC( QJSVALUE_SETPROPERTY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setProperty
 
 $prototype=void setPrototype(const QJSValue & prototype)
 $method=|void|setPrototype|const QJSValue &

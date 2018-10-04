@@ -121,6 +121,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=connectNotifySignal
 
 $prototype=bool hasNotifySignal() const
 $method=|bool|hasNotifySignal|
@@ -210,6 +211,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_READ )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=read
 
 $prototype=bool reset() const
 $method=|bool|reset|
@@ -257,6 +259,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=write
 
 $extraMethods
 

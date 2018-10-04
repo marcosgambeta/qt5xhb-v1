@@ -107,6 +107,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=create
 
 $prototype=QQmlContext * creationContext() const
 $method=|QQmlContext *|creationContext|
@@ -156,6 +157,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=loadUrl
 
 $prototype=void setData(const QByteArray & data, const QUrl & url)
 $method=|void|setData|const QByteArray &,const QUrl &
