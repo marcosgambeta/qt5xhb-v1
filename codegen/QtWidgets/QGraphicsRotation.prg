@@ -65,6 +65,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setAxis
 
 $prototype=void setOrigin ( const QVector3D & point )
 $method=|void|setOrigin|const QVector3D &

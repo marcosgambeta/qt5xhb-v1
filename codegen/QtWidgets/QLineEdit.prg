@@ -214,6 +214,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setTextMargins
 
 $prototype=void setValidator ( const QValidator * v )
 $method=|void|setValidator|const QValidator *=0
@@ -290,6 +291,7 @@ HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addAction
 
 $prototype=void setClearButtonEnabled(bool enable)
 $method=|void|setClearButtonEnabled|bool

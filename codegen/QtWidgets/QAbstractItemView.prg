@@ -128,6 +128,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=itemDelegate
 
 $prototype=void setItemDelegate ( QAbstractItemDelegate * delegate )
 $method=|void|setItemDelegate|QAbstractItemDelegate *
@@ -288,6 +289,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=update
 
 $prototype=virtual void doItemsLayout()
 $virtualMethod=|void|doItemsLayout|

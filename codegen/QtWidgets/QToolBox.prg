@@ -53,6 +53,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addItem
 
 $prototype=int count () const
 $method=|int|count|
@@ -90,6 +91,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertItem
 
 $prototype=bool isItemEnabled ( int index ) const
 $method=|bool|isItemEnabled|int

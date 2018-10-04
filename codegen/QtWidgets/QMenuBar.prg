@@ -64,6 +64,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addAction
 
 $prototype=QAction * addMenu ( QMenu * menu )
 $internalMethod=|QAction *|addMenu,addMenu1|QMenu *
@@ -97,6 +98,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addMenu
 
 $prototype=QAction * addSeparator ()
 $method=|QAction *|addSeparator|

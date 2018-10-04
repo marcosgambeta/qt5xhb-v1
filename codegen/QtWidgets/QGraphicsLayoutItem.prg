@@ -105,6 +105,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setMaximumSize
 
 $prototype=void setMaximumWidth ( qreal width )
 $method=|void|setMaximumWidth|qreal
@@ -136,6 +137,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setMinimumSize
 
 $prototype=void setMinimumWidth ( qreal width )
 $method=|void|setMinimumWidth|qreal
@@ -170,6 +172,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setPreferredSize
 
 $prototype=void setPreferredWidth ( qreal width )
 $method=|void|setPreferredWidth|qreal
@@ -198,6 +201,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setSizePolicy
 
 $prototype=QSizePolicy sizePolicy () const
 $method=|QSizePolicy|sizePolicy|

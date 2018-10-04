@@ -92,6 +92,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=centerOn
 
 $prototype=DragMode dragMode () const
 $method=|QGraphicsView::DragMode|dragMode|
@@ -128,6 +129,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=ensureVisible
 
 $prototype=void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 $internalMethod=|void|fitInView,fitInView1|const QRectF &,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
@@ -161,6 +163,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=fitInView
 
 $prototype=QBrush foregroundBrush () const
 $method=|QBrush|foregroundBrush|
@@ -195,6 +198,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=itemAt
 
 $prototype=QPoint mapFromScene ( const QPointF & point ) const
 $internalMethod=|QPoint|mapFromScene,mapFromScene1|const QPointF &
@@ -252,6 +256,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapFromScene
 
 $prototype=QPointF mapToScene ( const QPoint & point ) const
 $internalMethod=|QPointF|mapToScene,mapToScene1|const QPoint &
@@ -309,6 +314,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=mapToScene
 
 $prototype=QMatrix matrix () const
 $method=|QMatrix|matrix|
@@ -415,6 +421,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setSceneRect
 
 $prototype=void setTransform ( const QTransform & matrix, bool combine = false )
 $method=|void|setTransform|const QTransform &,bool=false

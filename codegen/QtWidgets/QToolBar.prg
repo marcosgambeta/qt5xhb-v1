@@ -78,6 +78,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=actionAt
 
 $prototype=void addAction ( QAction * action )
 $internalMethod=|void|addAction,addAction1|QAction *
@@ -127,6 +128,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addAction
 
 $prototype=QAction * addSeparator ()
 $method=|QAction *|addSeparator|

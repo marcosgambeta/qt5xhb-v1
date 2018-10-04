@@ -51,6 +51,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=move
 
 $prototype=void resize ( int width, int height )
 $internalMethod=|void|resize,resize1|int,int
@@ -76,6 +77,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=resize
 
 $prototype=void setGeometry ( const QRect & rect )
 $internalMethod=|void|setGeometry,setGeometry1|const QRect &
@@ -101,6 +103,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setGeometry
 
 $prototype=Shape shape () const
 $method=|QRubberBand::Shape|shape|

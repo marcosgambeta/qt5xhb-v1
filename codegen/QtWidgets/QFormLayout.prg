@@ -83,6 +83,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addRow
 
 $prototype=FieldGrowthPolicy fieldGrowthPolicy () const
 $method=|QFormLayout::FieldGrowthPolicy|fieldGrowthPolicy|
@@ -149,6 +150,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertRow
 
 $prototype=QLayoutItem * itemAt ( int row, ItemRole role ) const
 $internalMethod=|QLayoutItem *|itemAt,itemAt1|int,QFormLayout::ItemRole
@@ -174,6 +176,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=itemAt
 
 $prototype=Qt::Alignment labelAlignment () const
 $method=|Qt::Alignment|labelAlignment|
@@ -202,6 +205,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=labelForField
 
 $prototype=int rowCount () const
 $method=|int|rowCount|

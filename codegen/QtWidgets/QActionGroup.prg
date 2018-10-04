@@ -61,6 +61,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addAction
 
 $prototype=QAction * checkedAction () const
 $method=|QAction *|checkedAction|

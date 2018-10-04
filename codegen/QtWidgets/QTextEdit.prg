@@ -93,6 +93,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=createStandardContextMenu
 
 $prototype=QTextCharFormat currentCharFormat () const
 $method=|QTextCharFormat|currentCharFormat|
@@ -127,6 +128,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=cursorRect
 
 $prototype=int cursorWidth () const
 $method=|int|cursorWidth|

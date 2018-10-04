@@ -96,6 +96,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setStretchFactor
 
 $prototype=int spacing () const
 $method=|int|spacing|

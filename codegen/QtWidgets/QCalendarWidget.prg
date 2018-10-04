@@ -58,6 +58,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=dateTextFormat
 
 $prototype=Qt::DayOfWeek firstDayOfWeek () const
 $method=|Qt::DayOfWeek|firstDayOfWeek|

@@ -80,6 +80,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=index
 
 $prototype=bool isDir ( const QModelIndex & index ) const
 $method=|bool|isDir|const QModelIndex &

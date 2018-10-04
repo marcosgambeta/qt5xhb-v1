@@ -58,6 +58,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addDockWidget
 
 $prototype=void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
 $internalMethod=|void|addToolBar,addToolBar1|Qt::ToolBarArea,QToolBar *
@@ -91,6 +92,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addToolBar
 
 $prototype=void addToolBarBreak ( Qt::ToolBarArea area = Qt::TopToolBarArea )
 $method=|void|addToolBarBreak|Qt::ToolBarArea=Qt::TopToolBarArea

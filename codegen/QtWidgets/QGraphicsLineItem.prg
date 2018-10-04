@@ -89,6 +89,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setLine
 
 $prototype=void setPen ( const QPen & pen )
 $method=|void|setPen|const QPen &

@@ -84,6 +84,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=setRect
 
 $prototype=void setSpanAngle ( int angle )
 $method=|void|setSpanAngle|int

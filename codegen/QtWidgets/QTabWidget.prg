@@ -55,6 +55,7 @@ HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addTab
 
 $prototype=void clear ()
 $method=|void|clear|
@@ -125,6 +126,7 @@ HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=insertTab
 
 $prototype=bool isMovable () const
 $method=|bool|isMovable|
