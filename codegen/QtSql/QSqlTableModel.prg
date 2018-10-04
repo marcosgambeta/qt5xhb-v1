@@ -76,6 +76,7 @@ HB_FUNC( QSQLTABLEMODEL_ISDIRTY )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=isDirty
 
 $prototype=QSqlIndex primaryKey () const
 $method=|QSqlIndex|primaryKey|
@@ -164,6 +165,7 @@ HB_FUNC( QSQLTABLEMODEL_RECORD )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=record
 
 $prototype=virtual bool selectRow(int row)
 $virtualMethod=|bool|selectRow|int

@@ -100,6 +100,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=bindValue
 
 $prototype=QVariant boundValue ( const QString & placeholder ) const
 $internalMethod=|QVariant|boundValue,boundValue1|const QString &
@@ -125,6 +126,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=boundValue
 
 $prototype=void clear ()
 $method=|void|clear|
@@ -156,6 +158,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=exec
 
 $prototype=bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
 $method=|bool|execBatch|QSqlQuery::BatchExecutionMode=QSqlQuery::ValuesAsRows
@@ -203,6 +206,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=isNull
 
 $prototype=bool isSelect () const
 $method=|bool|isSelect|
@@ -279,6 +283,7 @@ HB_FUNC_STATIC( QSQLQUERY_VALUE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=value
 
 $extraMethods
 

@@ -134,6 +134,7 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=open
 
 $prototype=QString password () const
 $method=|QString|password|
@@ -203,6 +204,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=addDatabase
 
 $prototype=static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connectionName )
 $staticMethod=|QSqlDatabase|cloneDatabase|const QSqlDatabase &,const QString &
@@ -223,6 +225,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=contains
 
 $prototype=static QSqlDatabase database ( const QString & connectionName = QLatin1String( defaultConnection ), bool open = true )
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
@@ -238,6 +241,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=database
 
 $prototype=static QStringList drivers ()
 $staticMethod=|QStringList|drivers|
