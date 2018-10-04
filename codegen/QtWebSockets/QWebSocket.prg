@@ -139,6 +139,7 @@ HB_FUNC_STATIC( QWEBSOCKET_IGNORESSLERRORS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=ignoreSslErrors
 
 $prototype=QSslConfiguration sslConfiguration() const
 $method=5,3,0|QSslConfiguration|sslConfiguration|
