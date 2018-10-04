@@ -77,10 +77,10 @@ $prototype=static WindowFlip3DPolicy windowFlip3DPolicy(QWindow *)
 $staticMethod=5,2,0|QtWin::WindowFlip3DPolicy|windowFlip3DPolicy|QWindow *
 
 $prototype=static void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
-$staticMethod=5,2,0|void|extendFrameIntoClientArea,extendFrameIntoClientArea1|QWindow *,int,int,int,int
+$internalStaticMethod=5,2,0|void|extendFrameIntoClientArea,extendFrameIntoClientArea1|QWindow *,int,int,int,int
 
 $prototype=static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
-$staticMethod=5,2,0|void|extendFrameIntoClientArea,extendFrameIntoClientArea2|QWindow *,const QMargins &
+$internalStaticMethod=5,2,0|void|extendFrameIntoClientArea,extendFrameIntoClientArea2|QWindow *,const QMargins &
 
 //[1]void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
 //[2]void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
@@ -89,11 +89,11 @@ HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA )
 {
   if( ISNUMPAR(5) && ISQWINDOW(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
   {
-    HB_FUNC_EXEC( QTWIN_EXTENDFRAMEINTOCLIENTAREA1 );
+    QtWin_extendFrameIntoClientArea1();
   }
   else if( ISNUMPAR(2) && ISQWINDOW(1) && ISQMARGINS(2) )
   {
-    HB_FUNC_EXEC( QTWIN_EXTENDFRAMEINTOCLIENTAREA2 );
+    QtWin_extendFrameIntoClientArea2();
   }
   else
   {
@@ -106,10 +106,10 @@ $prototype=static void resetExtendedFrame(QWindow *window)
 $staticMethod=5,2,0|void|resetExtendedFrame|QWindow *
 
 $prototype=static void enableBlurBehindWindow(QWindow *window, const QRegion &region)
-$staticMethod=5,2,0|void|enableBlurBehindWindow,enableBlurBehindWindow1|QWindow *,const QRegion &
+$internalStaticMethod=5,2,0|void|enableBlurBehindWindow,enableBlurBehindWindow1|QWindow *,const QRegion &
 
 $prototype=static void enableBlurBehindWindow(QWindow *window)
-$staticMethod=5,2,0|void|enableBlurBehindWindow,enableBlurBehindWindow2|QWindow *
+$internalStaticMethod=5,2,0|void|enableBlurBehindWindow,enableBlurBehindWindow2|QWindow *
 
 //[1]void enableBlurBehindWindow(QWindow *window, const QRegion &region)
 //[2]void enableBlurBehindWindow(QWindow *window)
@@ -118,11 +118,11 @@ HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW )
 {
   if( ISNUMPAR(1) && ISQWINDOW(1) && ISQREGION(2) )
   {
-    HB_FUNC_EXEC( QTWIN_ENABLEBLURBEHINDWINDOW1 );
+    QtWin_enableBlurBehindWindow1();
   }
   else if( ISNUMPAR(1) && ISQWINDOW(1) )
   {
-    HB_FUNC_EXEC( QTWIN_ENABLEBLURBEHINDWINDOW2 );
+    QtWin_enableBlurBehindWindow2();
   }
   else
   {
