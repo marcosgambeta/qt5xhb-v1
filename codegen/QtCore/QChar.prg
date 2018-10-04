@@ -23,11 +23,7 @@ $destructor
 $includes
 
 $prototype=QChar ()
-HB_FUNC_STATIC( QCHAR_NEW1 )
-{
-  QChar * o = new QChar ();
-  _qt5xhb_returnNewObject( o, false );
-}
+$constructor=|new1|
 
 $prototype=QChar ( char ch )
 HB_FUNC_STATIC( QCHAR_NEW2 )
@@ -46,11 +42,7 @@ HB_FUNC_STATIC( QCHAR_NEW3 )
 }
 
 $prototype=QChar ( QLatin1Char ch )
-HB_FUNC_STATIC( QCHAR_NEW4 )
-{
-  QChar * o = new QChar ();
-  _qt5xhb_returnNewObject( o, false );
-}
+$constructor=|new4|QLatin1Char
 
 $prototype=QChar ( uchar cell, uchar row )
 HB_FUNC_STATIC( QCHAR_NEW5 )
@@ -62,42 +54,19 @@ HB_FUNC_STATIC( QCHAR_NEW5 )
 }
 
 $prototype=QChar ( ushort code )
-HB_FUNC_STATIC( QCHAR_NEW6 )
-{
-  ushort par1 = hb_parni(1);
-  QChar * o = new QChar ( par1 );
-  _qt5xhb_returnNewObject( o, false );
-}
+$constructor=|new6|ushort
 
 $prototype=QChar ( short code )
-HB_FUNC_STATIC( QCHAR_NEW7 )
-{
-  short par1 = hb_parni(1);
-  QChar * o = new QChar ( par1 );
-  _qt5xhb_returnNewObject( o, false );
-}
+$constructor=|new7|short
 
 $prototype=QChar ( uint code )
-HB_FUNC_STATIC( QCHAR_NEW8 )
-{
-  uint par1 = hb_parni(1);
-  QChar * o = new QChar ( par1 );
-  _qt5xhb_returnNewObject( o, false );
-}
+$constructor=|new8|uint
 
 $prototype=QChar ( int code )
-HB_FUNC_STATIC( QCHAR_NEW9 )
-{
-  QChar * o = new QChar ( PINT(1) );
-  _qt5xhb_returnNewObject( o, false );
-}
+$constructor=|new9|int
 
 $prototype=QChar ( SpecialCharacter ch )
-HB_FUNC_STATIC( QCHAR_NEW10 )
-{
-  QChar * o = new QChar ( (QChar::SpecialCharacter) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, false );
-}
+$constructor=|new10|QChar::SpecialCharacter
 
 //[01]QChar ()
 //[02]QChar ( char ch )
