@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
 REQUEST QAXSCRIPT
+REQUEST QVARIANT
 #endif
 
 CLASS QAxScriptManager INHERIT QObject
