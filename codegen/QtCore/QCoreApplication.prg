@@ -37,6 +37,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW ) // TODO: implementar(?) outros construtor
   o = new QCoreApplication( argc, argv );
   _qt5xhb_returnNewObject( o, false );
 }
+$addMethod=new
 
 $deleteMethod
 
@@ -108,11 +109,11 @@ $internalStaticMethod=|void|postEvent,postEvent2|QObject *,QEvent *,int
 
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
-  if( ISNUMPAR(2) && ISQOBJECT(1) && ISOBJECT(2) )
+  if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
   {
     QCoreApplication_postEvent1();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISOBJECT(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISQEVENT(2) && ISNUM(3) )
   {
     QCoreApplication_postEvent2();
   }

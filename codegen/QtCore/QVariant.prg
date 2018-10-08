@@ -102,13 +102,7 @@ $prototype=QVariant(float f)
 $constructor=|new13|float
 
 $prototype=QVariant(const char *str)
-HB_FUNC_STATIC( QVARIANT_NEW14 )
-{
-#ifndef QT_NO_CAST_FROM_ASCII
-  QVariant * o = new QVariant ( PCONSTCHAR(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$constructor=|new14|const char *|#ifndef QT_NO_CAST_FROM_ASCII
 
 $prototype=QVariant(const QByteArray &bytearray)
 $internalConstructor=|new15|const QByteArray &
@@ -138,118 +132,46 @@ $prototype=QVariant(const QDateTime &datetime)
 $internalConstructor=|new23|const QDateTime &
 
 $prototype=QVariant(const QList<QVariant> &list)
-HB_FUNC_STATIC( QVARIANT_NEW24 )
-{
-  QVariant * o = new QVariant ( PQVARIANTLIST(1) );
-  _qt5xhb_returnNewObject( o, true );
-}
+$constructor=|new24|const QList<QVariant> &
 
 $prototype=QVariant(const QMap<QString,QVariant> &map)
-HB_FUNC_STATIC( QVARIANT_NEW25 )
-{
-  QVariant * o = new QVariant ();
-  _qt5xhb_returnNewObject( o, true );
-}
+%% TODO: implementar
 
 $prototype=QVariant(const QHash<QString,QVariant> &hash)
-HB_FUNC_STATIC( QVARIANT_NEW26 )
-{
-  QVariant * o = new QVariant ();
-  _qt5xhb_returnNewObject( o, true );
-}
+%% TODO: implementar
 
 $prototype=QVariant(const QSize &size)
-void QVariant_new27 ()
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQSIZE(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new27|const QSize &|#ifndef QT_NO_GEOM_VARIANT
 
 $prototype=QVariant(const QSizeF &size)
-void QVariant_new28 ()
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQSIZEF(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new28|const QSizeF &|#ifndef QT_NO_GEOM_VARIANT
 
 $prototype=QVariant(const QPoint &pt)
-void QVariant_new29 ()
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQPOINT(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new29|const QPoint &|#ifndef QT_NO_GEOM_VARIANT
 
 $prototype=QVariant(const QPointF &pt)
-void QVariant_new30 ()
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQPOINTF(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new30|const QPointF &|#ifndef QT_NO_GEOM_VARIANT
 
 $prototype=QVariant(const QLine &line)
-void QVariant_new31 ()
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQLINE(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new31|const QLine &|#ifndef QT_NO_GEOM_VARIANT
 
 $prototype=QVariant(const QLineF &line)
-void QVariant_new32 ()
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQLINEF(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new32|const QLineF &|#ifndef QT_NO_GEOM_VARIANT
 
 $prototype=QVariant(const QRect &rect)
-void QVariant_new33 ()
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQRECT(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new33|const QRect &|#ifndef QT_NO_GEOM_VARIANT
 
 $prototype=QVariant(const QRectF &rect)
-void QVariant_new34 ()
-{
-#ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQRECTF(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new34|const QRectF &|#ifndef QT_NO_GEOM_VARIANT
 
 $prototype=QVariant(const QLocale &locale)
 $internalConstructor=|new35|const QLocale &
 
 $prototype=QVariant(const QRegExp &regExp)
-void QVariant_new36 ()
-{
-#ifndef QT_NO_REGEXP
-  QVariant * o = new QVariant ( *PQREGEXP(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new36|const QRegExp &|#ifndef QT_NO_REGEXP
 
 $prototype=QVariant(const QRegularExpression &re)
-void QVariant_new37 ()
-{
-#ifndef QT_NO_REGULAREXPRESSION
-  QVariant * o = new QVariant ( *PQREGULAREXPRESSION(1) );
-  _qt5xhb_returnNewObject( o, true );
-#endif
-}
+$internalConstructor=|new37|const QRegularExpression &|#ifndef QT_NO_REGULAREXPRESSION
 
 $prototype=QVariant(const QUrl &url)
 $internalConstructor=|new38|const QUrl &
