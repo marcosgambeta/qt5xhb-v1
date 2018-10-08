@@ -9,6 +9,9 @@ $header
 #include "hbclass.ch"
 
 $addRequests
+$addRequest=QChildEvent
+$addRequest=QEvent
+$addRequest=QTimerEvent
 
 $beginClassFrom=
 
