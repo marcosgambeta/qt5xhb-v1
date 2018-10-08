@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QSignalBlocker
 
    DATA pointer
@@ -19,7 +22,6 @@ CLASS QSignalBlocker
 
    METHOD new
    METHOD delete
-
    METHOD reblock
    METHOD unblock
 

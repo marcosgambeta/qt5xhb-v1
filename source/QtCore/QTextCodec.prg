@@ -428,8 +428,15 @@ static QList<int> availableMibs()
 */
 HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
 {
-  QList<int> list = QTextCodec::availableMibs ();
-  _qt5xhb_convert_qlist_int_to_array ( list );
+    if( ISNUMPAR(0) )
+  {
+      QList<int> list = QTextCodec::availableMibs ();
+      _qt5xhb_convert_qlist_int_to_array ( list );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*

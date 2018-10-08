@@ -13,15 +13,14 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPROCESSENVIRONMENT
 REQUEST QBYTEARRAY
+REQUEST QPROCESSENVIRONMENT
 #endif
 
 CLASS QProcess INHERIT QIODevice
 
    METHOD new
    METHOD delete
-
    METHOD closeReadChannel
    METHOD closeWriteChannel
    METHOD environment
@@ -75,12 +74,12 @@ CLASS QProcess INHERIT QIODevice
    METHOD nullDevice
 
    METHOD onError
-   METHOD onErrorOccurred
    METHOD onFinished
    METHOD onReadyReadStandardError
    METHOD onReadyReadStandardOutput
    METHOD onStarted
    METHOD onStateChanged
+   METHOD onErrorOccurred
 
    DESTRUCTOR destroyObject
 

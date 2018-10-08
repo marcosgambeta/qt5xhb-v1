@@ -13,31 +13,31 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QBYTEARRAY
 REQUEST QBITARRAY
+REQUEST QBYTEARRAY
 REQUEST QCHAR
 REQUEST QDATE
-REQUEST QTIME
 REQUEST QDATETIME
+REQUEST QEASINGCURVE
+REQUEST QJSONARRAY
+REQUEST QJSONDOCUMENT
+REQUEST QJSONOBJECT
+REQUEST QJSONVALUE
+REQUEST QLINE
+REQUEST QLINEF
+REQUEST QLOCALE
+REQUEST QMODELINDEX
 REQUEST QPOINT
 REQUEST QPOINTF
 REQUEST QRECT
 REQUEST QRECTF
-REQUEST QSIZE
-REQUEST QSIZEF
-REQUEST QLINE
-REQUEST QLINEF
-REQUEST QLOCALE
 REQUEST QREGEXP
 REQUEST QREGULAREXPRESSION
+REQUEST QSIZE
+REQUEST QSIZEF
+REQUEST QTIME
 REQUEST QURL
-REQUEST QEASINGCURVE
 REQUEST QUUID
-REQUEST QMODELINDEX
-REQUEST QJSONVALUE
-REQUEST QJSONOBJECT
-REQUEST QJSONARRAY
-REQUEST QJSONDOCUMENT
 #endif
 
 CLASS QVariant
@@ -45,6 +45,7 @@ CLASS QVariant
    DATA pointer
    DATA self_destruction INIT .F.
 
+   METHOD new
    METHOD new2
    METHOD new7
    METHOD new8
@@ -56,9 +57,6 @@ CLASS QVariant
    METHOD new17
    METHOD new19
    METHOD new24
-   METHOD new25
-   METHOD new26
-   METHOD new
    METHOD delete
    METHOD swap
    METHOD type
@@ -395,27 +393,25 @@ QVariant(const QList<QVariant> &list)
 */
 HB_FUNC_STATIC( QVARIANT_NEW24 )
 {
-  QVariant * o = new QVariant ( PQVARIANTLIST(1) );
+      QList<QVariant> par1;
+PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+int i1;
+int nLen1 = hb_arrayLen(aList1);
+for (i1=0;i1<nLen1;i1++)
+{
+  par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+}
+  QVariant * o = new QVariant ( par1 );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QMap<QString,QVariant> &map)
 */
-HB_FUNC_STATIC( QVARIANT_NEW25 )
-{
-  QVariant * o = new QVariant ();
-  _qt5xhb_returnNewObject( o, true );
-}
 
 /*
 QVariant(const QHash<QString,QVariant> &hash)
 */
-HB_FUNC_STATIC( QVARIANT_NEW26 )
-{
-  QVariant * o = new QVariant ();
-  _qt5xhb_returnNewObject( o, true );
-}
 
 /*
 QVariant(const QSize &size)

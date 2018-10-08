@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSTRINGREF
 REQUEST QREGULAREXPRESSION
+REQUEST QSTRINGREF
 #endif
 
 CLASS QRegularExpressionMatch

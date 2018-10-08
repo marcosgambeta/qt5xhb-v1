@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTCODEC
 REQUEST QIODEVICE
+REQUEST QTEXTCODEC
 #endif
 
 CLASS QXmlStreamWriter
