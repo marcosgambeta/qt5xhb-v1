@@ -12,15 +12,19 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST Q3DSCENE
+REQUEST QVECTOR3D
+#endif
+
 CLASS Q3DObject INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD copyValuesFrom
    METHOD parentScene
    METHOD position
    METHOD setPosition
+   METHOD copyValuesFrom
 
    METHOD onPositionChanged
 

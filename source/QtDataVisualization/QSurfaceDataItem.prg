@@ -12,6 +12,10 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QVECTOR3D
+#endif
+
 CLASS QSurfaceDataItem
 
    DATA pointer
@@ -19,9 +23,8 @@ CLASS QSurfaceDataItem
 
    METHOD new
    METHOD delete
-
-   METHOD position
    METHOD setPosition
+   METHOD position
    METHOD setX
    METHOD setY
    METHOD setZ

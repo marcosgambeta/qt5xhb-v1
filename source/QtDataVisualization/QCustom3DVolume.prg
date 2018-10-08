@@ -12,48 +12,53 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QCOLOR
+REQUEST QIMAGE
+REQUEST QVECTOR3D
+#endif
+
 CLASS QCustom3DVolume INHERIT QCustom3DItem
 
    METHOD new
    METHOD delete
-
-   METHOD alphaMultiplier
-   METHOD drawSliceFrames
-   METHOD drawSlices
-   METHOD preserveOpacity
-   METHOD renderSlice
-   METHOD setAlphaMultiplier
-   METHOD setDrawSliceFrames
-   METHOD setDrawSlices
-   METHOD setPreserveOpacity
-   METHOD setSliceFrameColor
-   METHOD setSliceFrameGaps
-   METHOD setSliceFrameThicknesses
-   METHOD setSliceFrameWidths
+   METHOD textureWidth
+   METHOD setTextureWidth
+   METHOD textureHeight
+   METHOD setTextureHeight
+   METHOD textureDepth
+   METHOD setTextureDepth
+   METHOD sliceIndexX
    METHOD setSliceIndexX
+   METHOD sliceIndexY
    METHOD setSliceIndexY
+   METHOD sliceIndexZ
    METHOD setSliceIndexZ
+   METHOD alphaMultiplier
+   METHOD setAlphaMultiplier
+   METHOD preserveOpacity
+   METHOD setPreserveOpacity
+   METHOD useHighDefShader
+   METHOD setUseHighDefShader
+   METHOD drawSlices
+   METHOD setDrawSlices
+   METHOD drawSliceFrames
+   METHOD setDrawSliceFrames
+   METHOD sliceFrameColor
+   METHOD setSliceFrameColor
+   METHOD sliceFrameWidths
+   METHOD setSliceFrameWidths
+   METHOD sliceFrameGaps
+   METHOD setSliceFrameGaps
+   METHOD sliceFrameThicknesses
+   METHOD setSliceFrameThicknesses
+   METHOD setTextureDimensions
+   METHOD textureDataWidth
    METHOD setSliceIndices
    METHOD setSubTextureData
-   METHOD setTextureDepth
-   METHOD setTextureDimensions
    METHOD setTextureFormat
-   METHOD setTextureHeight
-   METHOD setTextureWidth
-   METHOD setUseHighDefShader
-   METHOD sliceFrameColor
-   METHOD sliceFrameGaps
-   METHOD sliceFrameThicknesses
-   METHOD sliceFrameWidths
-   METHOD sliceIndexX
-   METHOD sliceIndexY
-   METHOD sliceIndexZ
-   METHOD textureDataWidth
-   METHOD textureDepth
    METHOD textureFormat
-   METHOD textureHeight
-   METHOD textureWidth
-   METHOD useHighDefShader
+   METHOD renderSlice
 
    METHOD onAlphaMultiplierChanged
    METHOD onColorTableChanged

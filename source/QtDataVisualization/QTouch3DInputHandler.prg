@@ -12,11 +12,13 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QTouch3DInputHandler INHERIT Q3DInputHandler
 
    METHOD new
    METHOD delete
-
    METHOD touchEvent
 
    DESTRUCTOR destroyObject

@@ -12,64 +12,74 @@
 
 #include "hbclass.ch"
 
-CLASS QAbstract3DGraph INHERIT QWindow // protected QOpenGLFunctions
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST Q3DSCENE
+REQUEST Q3DTHEME
+REQUEST QABSTRACT3DAXIS
+REQUEST QABSTRACT3DINPUTHANDLER
+REQUEST QCUSTOM3DITEM
+REQUEST QIMAGE
+REQUEST QLOCALE
+REQUEST QVECTOR3D
+#endif
+
+CLASS QAbstract3DGraph INHERIT QWindow
 
    METHOD delete
-
    METHOD activeInputHandler
+   METHOD setActiveInputHandler
    METHOD activeTheme
-   METHOD addCustomItem
-   METHOD addInputHandler
-   METHOD addTheme
-   METHOD aspectRatio
-   METHOD clearSelection
-   METHOD currentFps
-   METHOD customItems
-   METHOD hasContext
-   METHOD horizontalAspectRatio
-   METHOD inputHandlers
-   METHOD isOrthoProjection
-   METHOD isPolar
-   METHOD isReflection
-   METHOD locale
-   METHOD margin
+   METHOD setActiveTheme
+   METHOD selectionMode
+   METHOD setSelectionMode
+   METHOD shadowQuality
+   METHOD setShadowQuality
+   METHOD scene
    METHOD measureFps
+   METHOD setMeasureFps
+   METHOD currentFps
+   METHOD isOrthoProjection
+   METHOD setOrthoProjection
+   METHOD selectedElement
+   METHOD aspectRatio
+   METHOD setAspectRatio
    METHOD optimizationHints
-   METHOD queriedGraphPosition
+   METHOD setOptimizationHints
+   METHOD isPolar
+   METHOD setPolar
    METHOD radialLabelOffset
+   METHOD setRadialLabelOffset
+   METHOD horizontalAspectRatio
+   METHOD setHorizontalAspectRatio
+   METHOD isReflection
+   METHOD setReflection
    METHOD reflectivity
-   METHOD releaseCustomItem
+   METHOD setReflectivity
+   METHOD locale
+   METHOD setLocale
+   METHOD queriedGraphPosition
+   METHOD margin
+   METHOD setMargin
+   METHOD addInputHandler
    METHOD releaseInputHandler
+   METHOD inputHandlers
+   METHOD addTheme
    METHOD releaseTheme
+   METHOD themes
+   METHOD shadowsSupported
+   METHOD clearSelection
+   METHOD addCustomItem
+   METHOD removeCustomItems
    METHOD removeCustomItem
    METHOD removeCustomItemAt
-   METHOD removeCustomItems
-   METHOD renderToImage
-   METHOD scene
+   METHOD releaseCustomItem
+   METHOD customItems
    METHOD selectedAxis
-   METHOD selectedCustomItem
-   METHOD selectedCustomItemIndex
-   METHOD selectedElement
    METHOD selectedLabelIndex
-   METHOD selectionMode
-   METHOD setActiveInputHandler
-   METHOD setActiveTheme
-   METHOD setAspectRatio
-   METHOD setHorizontalAspectRatio
-   METHOD setLocale
-   METHOD setMargin
-   METHOD setMeasureFps
-   METHOD setOptimizationHints
-   METHOD setOrthoProjection
-   METHOD setPolar
-   METHOD setRadialLabelOffset
-   METHOD setReflection
-   METHOD setReflectivity
-   METHOD setSelectionMode
-   METHOD setShadowQuality
-   METHOD shadowQuality
-   METHOD shadowsSupported
-   METHOD themes
+   METHOD selectedCustomItemIndex
+   METHOD selectedCustomItem
+   METHOD renderToImage
+   METHOD hasContext
 
    METHOD onActiveInputHandlerChanged
    METHOD onActiveThemeChanged

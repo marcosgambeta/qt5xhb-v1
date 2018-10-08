@@ -12,24 +12,28 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QSCATTER3DSERIES
+REQUEST QVALUE3DAXIS
+#endif
+
 CLASS Q3DScatter INHERIT QAbstract3DGraph
 
    METHOD new
    METHOD delete
-
-   METHOD addAxis
-   METHOD addSeries
-   METHOD axes
    METHOD axisX
-   METHOD axisY
-   METHOD axisZ
-   METHOD releaseAxis
-   METHOD removeSeries
-   METHOD selectedSeries
-   METHOD seriesList
    METHOD setAxisX
+   METHOD axisY
    METHOD setAxisY
+   METHOD axisZ
    METHOD setAxisZ
+   METHOD selectedSeries
+   METHOD addSeries
+   METHOD removeSeries
+   METHOD seriesList
+   METHOD addAxis
+   METHOD releaseAxis
+   METHOD axes
 
    METHOD onAxisXChanged
    METHOD onAxisYChanged

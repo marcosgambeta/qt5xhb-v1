@@ -12,27 +12,31 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBAR3DSERIES
+REQUEST QBARDATAITEM
+#endif
+
 CLASS QBarDataProxy INHERIT QAbstractDataProxy
 
    METHOD new
    METHOD delete
-
-   METHOD addRow
-   METHOD addRows
-   METHOD columnLabels
-   METHOD insertRow
-   METHOD insertRows
-   METHOD itemAt
-   METHOD removeRows
-   METHOD resetArray
    METHOD rowCount
    METHOD rowLabels
-   METHOD series
-   METHOD setColumnLabels
-   METHOD setItem
-   METHOD setRow
    METHOD setRowLabels
+   METHOD columnLabels
+   METHOD setColumnLabels
+   METHOD series
+   METHOD itemAt
+   METHOD resetArray
+   METHOD setRow
    METHOD setRows
+   METHOD setItem
+   METHOD addRow
+   METHOD addRows
+   METHOD insertRow
+   METHOD insertRows
+   METHOD removeRows
 
    METHOD onArrayReset
    METHOD onColumnLabelsChanged

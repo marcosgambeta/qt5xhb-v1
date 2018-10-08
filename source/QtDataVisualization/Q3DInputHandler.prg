@@ -12,19 +12,21 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS Q3DInputHandler INHERIT QAbstract3DInputHandler
 
    METHOD new
    METHOD delete
-
    METHOD isRotationEnabled
-   METHOD isSelectionEnabled
-   METHOD isZoomAtTargetEnabled
-   METHOD isZoomEnabled
    METHOD setRotationEnabled
-   METHOD setSelectionEnabled
-   METHOD setZoomAtTargetEnabled
+   METHOD isZoomEnabled
    METHOD setZoomEnabled
+   METHOD isSelectionEnabled
+   METHOD setSelectionEnabled
+   METHOD isZoomAtTargetEnabled
+   METHOD setZoomAtTargetEnabled
 
    METHOD onRotationEnabledChanged
    METHOD onSelectionEnabledChanged

@@ -12,31 +12,34 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QVECTOR3D
+#endif
+
 CLASS Q3DCamera INHERIT Q3DObject
 
    METHOD new
    METHOD delete
-
-   METHOD cameraPreset
-   METHOD copyValuesFrom
-   METHOD maxZoomLevel
-   METHOD minZoomLevel
-   METHOD setCameraPosition
-   METHOD setCameraPreset
-   METHOD setMaxZoomLevel
-   METHOD setMinZoomLevel
-   METHOD setTarget
-   METHOD setWrapXRotation
-   METHOD setWrapYRotation
-   METHOD setXRotation
-   METHOD setYRotation
-   METHOD setZoomLevel
-   METHOD target
-   METHOD wrapXRotation
-   METHOD wrapYRotation
    METHOD xRotation
+   METHOD setXRotation
    METHOD yRotation
+   METHOD setYRotation
    METHOD zoomLevel
+   METHOD setZoomLevel
+   METHOD cameraPreset
+   METHOD setCameraPreset
+   METHOD wrapXRotation
+   METHOD setWrapXRotation
+   METHOD wrapYRotation
+   METHOD setWrapYRotation
+   METHOD target
+   METHOD setTarget
+   METHOD minZoomLevel
+   METHOD setMinZoomLevel
+   METHOD maxZoomLevel
+   METHOD setMaxZoomLevel
+   METHOD copyValuesFrom
+   METHOD setCameraPosition
 
    METHOD onCameraPresetChanged
    METHOD onMaxZoomLevelChanged

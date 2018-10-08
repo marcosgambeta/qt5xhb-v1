@@ -12,11 +12,13 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCategory3DAxis INHERIT QAbstract3DAxis
 
    METHOD new
    METHOD delete
-
    METHOD labels
    METHOD setLabels
 

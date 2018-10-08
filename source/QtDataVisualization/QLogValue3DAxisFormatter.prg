@@ -12,17 +12,19 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QLogValue3DAxisFormatter INHERIT QValue3DAxisFormatter
 
    METHOD new
    METHOD delete
-
-   METHOD autoSubGrid
    METHOD base
-   METHOD setAutoSubGrid
    METHOD setBase
-   METHOD setShowEdgeLabels
+   METHOD autoSubGrid
+   METHOD setAutoSubGrid
    METHOD showEdgeLabels
+   METHOD setShowEdgeLabels
 
    METHOD onAutoSubGridChanged
    METHOD onBaseChanged

@@ -12,52 +12,56 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTITEMMODEL
+REQUEST QREGEXP
+#endif
+
 CLASS QItemModelBarDataProxy INHERIT QBarDataProxy
 
    METHOD new
    METHOD delete
-
-   METHOD autoColumnCategories
-   METHOD autoRowCategories
-   METHOD columnCategories
-   METHOD columnCategoryIndex
-   METHOD columnRole
-   METHOD columnRolePattern
-   METHOD columnRoleReplace
    METHOD itemModel
-   METHOD multiMatchBehavior
-   METHOD remap
-   METHOD rotationRole
-   METHOD rotationRolePattern
-   METHOD rotationRoleReplace
-   METHOD rowCategories
-   METHOD rowCategoryIndex
-   METHOD rowRole
-   METHOD rowRolePattern
-   METHOD rowRoleReplace
-   METHOD setAutoColumnCategories
-   METHOD setAutoRowCategories
-   METHOD setColumnCategories
-   METHOD setColumnRole
-   METHOD setColumnRolePattern
-   METHOD setColumnRoleReplace
    METHOD setItemModel
-   METHOD setMultiMatchBehavior
-   METHOD setRotationRole
-   METHOD setRotationRolePattern
-   METHOD setRotationRoleReplace
-   METHOD setRowCategories
+   METHOD rowRole
    METHOD setRowRole
-   METHOD setRowRolePattern
-   METHOD setRowRoleReplace
-   METHOD setUseModelCategories
-   METHOD setValueRole
-   METHOD setValueRolePattern
-   METHOD setValueRoleReplace
-   METHOD useModelCategories
+   METHOD columnRole
+   METHOD setColumnRole
    METHOD valueRole
+   METHOD setValueRole
+   METHOD rotationRole
+   METHOD setRotationRole
+   METHOD rowCategories
+   METHOD setRowCategories
+   METHOD columnCategories
+   METHOD setColumnCategories
+   METHOD useModelCategories
+   METHOD setUseModelCategories
+   METHOD autoRowCategories
+   METHOD setAutoRowCategories
+   METHOD autoColumnCategories
+   METHOD setAutoColumnCategories
+   METHOD rowRolePattern
+   METHOD setRowRolePattern
+   METHOD columnRolePattern
+   METHOD setColumnRolePattern
    METHOD valueRolePattern
+   METHOD setValueRolePattern
+   METHOD rotationRolePattern
+   METHOD setRotationRolePattern
+   METHOD rowRoleReplace
+   METHOD setRowRoleReplace
+   METHOD columnRoleReplace
+   METHOD setColumnRoleReplace
    METHOD valueRoleReplace
+   METHOD setValueRoleReplace
+   METHOD rotationRoleReplace
+   METHOD setRotationRoleReplace
+   METHOD multiMatchBehavior
+   METHOD setMultiMatchBehavior
+   METHOD remap
+   METHOD rowCategoryIndex
+   METHOD columnCategoryIndex
 
    METHOD onAutoColumnCategoriesChanged
    METHOD onAutoRowCategoriesChanged

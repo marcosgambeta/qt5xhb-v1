@@ -12,21 +12,24 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QVALUE3DAXISFORMATTER
+#endif
+
 CLASS QValue3DAxis INHERIT QAbstract3DAxis
 
    METHOD new
    METHOD delete
-
-   METHOD formatter
-   METHOD labelFormat
-   METHOD reversed
    METHOD segmentCount
-   METHOD setFormatter
-   METHOD setLabelFormat
-   METHOD setReversed
    METHOD setSegmentCount
-   METHOD setSubSegmentCount
    METHOD subSegmentCount
+   METHOD setSubSegmentCount
+   METHOD labelFormat
+   METHOD setLabelFormat
+   METHOD formatter
+   METHOD setFormatter
+   METHOD reversed
+   METHOD setReversed
 
    DESTRUCTOR destroyObject
 

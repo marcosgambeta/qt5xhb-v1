@@ -12,31 +12,35 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QQUATERNION
+REQUEST QVECTOR3D
+#endif
+
 CLASS QCustom3DItem INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD isPositionAbsolute
-   METHOD isScalingAbsolute
-   METHOD isShadowCasting
-   METHOD isVisible
    METHOD meshFile
-   METHOD position
-   METHOD rotation
-   METHOD scaling
    METHOD setMeshFile
-   METHOD setPosition
-   METHOD setPositionAbsolute
-   METHOD setRotation
-   METHOD setRotationAxisAndAngle
-   METHOD setScaling
-   METHOD setScalingAbsolute
-   METHOD setShadowCasting
-   METHOD setTextureFile
-   METHOD setTextureImage
-   METHOD setVisible
    METHOD textureFile
+   METHOD setTextureFile
+   METHOD position
+   METHOD setPosition
+   METHOD isPositionAbsolute
+   METHOD setPositionAbsolute
+   METHOD scaling
+   METHOD setScaling
+   METHOD rotation
+   METHOD setRotation
+   METHOD isVisible
+   METHOD setVisible
+   METHOD isShadowCasting
+   METHOD setShadowCasting
+   METHOD isScalingAbsolute
+   METHOD setScalingAbsolute
+   METHOD setRotationAxisAndAngle
+   METHOD setTextureImage
 
    METHOD onMeshFileChanged
    METHOD onPositionAbsoluteChanged

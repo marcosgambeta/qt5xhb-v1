@@ -12,58 +12,62 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTITEMMODEL
+REQUEST QREGEXP
+#endif
+
 CLASS QItemModelSurfaceDataProxy INHERIT QSurfaceDataProxy
 
    METHOD new
    METHOD delete
-
-   METHOD autoColumnCategories
-   METHOD autoRowCategories
-   METHOD columnCategories
-   METHOD columnCategoryIndex
-   METHOD columnRole
-   METHOD columnRolePattern
-   METHOD columnRoleReplace
    METHOD itemModel
-   METHOD multiMatchBehavior
-   METHOD remap
-   METHOD rowCategories
-   METHOD rowCategoryIndex
-   METHOD rowRole
-   METHOD rowRolePattern
-   METHOD rowRoleReplace
-   METHOD setAutoColumnCategories
-   METHOD setAutoRowCategories
-   METHOD setColumnCategories
-   METHOD setColumnRole
-   METHOD setColumnRolePattern
-   METHOD setColumnRoleReplace
    METHOD setItemModel
-   METHOD setMultiMatchBehavior
-   METHOD setRowCategories
+   METHOD rowRole
    METHOD setRowRole
-   METHOD setRowRolePattern
-   METHOD setRowRoleReplace
-   METHOD setUseModelCategories
-   METHOD setXPosRole
-   METHOD setXPosRolePattern
-   METHOD setXPosRoleReplace
-   METHOD setYPosRole
-   METHOD setYPosRolePattern
-   METHOD setYPosRoleReplace
-   METHOD setZPosRole
-   METHOD setZPosRolePattern
-   METHOD setZPosRoleReplace
-   METHOD useModelCategories
+   METHOD columnRole
+   METHOD setColumnRole
    METHOD xPosRole
-   METHOD xPosRolePattern
-   METHOD xPosRoleReplace
+   METHOD setXPosRole
    METHOD yPosRole
-   METHOD yPosRolePattern
-   METHOD yPosRoleReplace
+   METHOD setYPosRole
    METHOD zPosRole
+   METHOD setZPosRole
+   METHOD rowCategories
+   METHOD setRowCategories
+   METHOD columnCategories
+   METHOD setColumnCategories
+   METHOD useModelCategories
+   METHOD setUseModelCategories
+   METHOD autoRowCategories
+   METHOD setAutoRowCategories
+   METHOD autoColumnCategories
+   METHOD setAutoColumnCategories
+   METHOD rowRolePattern
+   METHOD setRowRolePattern
+   METHOD columnRolePattern
+   METHOD setColumnRolePattern
+   METHOD xPosRolePattern
+   METHOD setXPosRolePattern
+   METHOD yPosRolePattern
+   METHOD setYPosRolePattern
    METHOD zPosRolePattern
+   METHOD setZPosRolePattern
+   METHOD rowRoleReplace
+   METHOD setRowRoleReplace
+   METHOD columnRoleReplace
+   METHOD setColumnRoleReplace
+   METHOD xPosRoleReplace
+   METHOD setXPosRoleReplace
+   METHOD yPosRoleReplace
+   METHOD setYPosRoleReplace
    METHOD zPosRoleReplace
+   METHOD setZPosRoleReplace
+   METHOD multiMatchBehavior
+   METHOD setMultiMatchBehavior
+   METHOD remap
+   METHOD rowCategoryIndex
+   METHOD columnCategoryIndex
 
    METHOD onAutoColumnCategoriesChanged
    METHOD onAutoRowCategoriesChanged

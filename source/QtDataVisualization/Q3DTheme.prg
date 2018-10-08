@@ -12,55 +12,60 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QCOLOR
+REQUEST QFONT
+REQUEST QLINEARGRADIENT
+#endif
+
 CLASS Q3DTheme INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD ambientLightStrength
-   METHOD backgroundColor
-   METHOD baseColors
-   METHOD baseGradients
-   METHOD colorStyle
-   METHOD font
-   METHOD gridLineColor
-   METHOD highlightLightStrength
-   METHOD isBackgroundEnabled
-   METHOD isGridEnabled
-   METHOD isLabelBackgroundEnabled
-   METHOD isLabelBorderEnabled
-   METHOD labelBackgroundColor
-   METHOD labelTextColor
-   METHOD lightColor
-   METHOD lightStrength
-   METHOD multiHighlightColor
-   METHOD multiHighlightGradient
-   METHOD setAmbientLightStrength
-   METHOD setBackgroundColor
-   METHOD setBackgroundEnabled
-   METHOD setBaseColors
-   METHOD setBaseGradients
-   METHOD setColorStyle
-   METHOD setFont
-   METHOD setGridEnabled
-   METHOD setGridLineColor
-   METHOD setHighlightLightStrength
-   METHOD setLabelBackgroundColor
-   METHOD setLabelBackgroundEnabled
-   METHOD setLabelBorderEnabled
-   METHOD setLabelTextColor
-   METHOD setLightColor
-   METHOD setLightStrength
-   METHOD setMultiHighlightColor
-   METHOD setMultiHighlightGradient
-   METHOD setSingleHighlightColor
-   METHOD setSingleHighlightGradient
-   METHOD setType
-   METHOD setWindowColor
-   METHOD singleHighlightColor
-   METHOD singleHighlightGradient
    METHOD type
+   METHOD setType
+   METHOD baseColors
+   METHOD setBaseColors
+   METHOD backgroundColor
+   METHOD setBackgroundColor
    METHOD windowColor
+   METHOD setWindowColor
+   METHOD labelTextColor
+   METHOD setLabelTextColor
+   METHOD labelBackgroundColor
+   METHOD setLabelBackgroundColor
+   METHOD gridLineColor
+   METHOD setGridLineColor
+   METHOD singleHighlightColor
+   METHOD setSingleHighlightColor
+   METHOD multiHighlightColor
+   METHOD setMultiHighlightColor
+   METHOD lightColor
+   METHOD setLightColor
+   METHOD baseGradients
+   METHOD setBaseGradients
+   METHOD singleHighlightGradient
+   METHOD setSingleHighlightGradient
+   METHOD multiHighlightGradient
+   METHOD setMultiHighlightGradient
+   METHOD lightStrength
+   METHOD setLightStrength
+   METHOD ambientLightStrength
+   METHOD setAmbientLightStrength
+   METHOD highlightLightStrength
+   METHOD setHighlightLightStrength
+   METHOD isLabelBorderEnabled
+   METHOD setLabelBorderEnabled
+   METHOD font
+   METHOD setFont
+   METHOD isBackgroundEnabled
+   METHOD setBackgroundEnabled
+   METHOD isGridEnabled
+   METHOD setGridEnabled
+   METHOD isLabelBackgroundEnabled
+   METHOD setLabelBackgroundEnabled
+   METHOD colorStyle
+   METHOD setColorStyle
 
    METHOD onAmbientLightStrengthChanged
    METHOD onBackgroundColorChanged

@@ -12,23 +12,26 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QIMAGE
+#endif
+
 CLASS QHeightMapSurfaceDataProxy INHERIT QSurfaceDataProxy
 
    METHOD new
    METHOD delete
-
    METHOD heightMap
-   METHOD heightMapFile
-   METHOD maxXValue
-   METHOD maxZValue
-   METHOD minXValue
-   METHOD minZValue
    METHOD setHeightMap
+   METHOD heightMapFile
    METHOD setHeightMapFile
-   METHOD setMaxXValue
-   METHOD setMaxZValue
+   METHOD minXValue
    METHOD setMinXValue
+   METHOD maxXValue
+   METHOD setMaxXValue
+   METHOD minZValue
    METHOD setMinZValue
+   METHOD maxZValue
+   METHOD setMaxZValue
    METHOD setValueRanges
 
    METHOD onHeightMapChanged

@@ -12,18 +12,22 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QSCATTER3DSERIES
+REQUEST QSCATTERDATAITEM
+#endif
+
 CLASS QScatterDataProxy INHERIT QAbstractDataProxy
 
    METHOD new
    METHOD delete
-
+   METHOD itemCount
+   METHOD series
+   METHOD itemAt
+   METHOD setItem
    METHOD addItem
    METHOD insertItem
-   METHOD itemAt
-   METHOD itemCount
    METHOD removeItems
-   METHOD series
-   METHOD setItem
 
    METHOD onArrayReset
    METHOD onItemCountChanged

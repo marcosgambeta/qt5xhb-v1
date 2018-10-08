@@ -12,37 +12,44 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACT3DAXIS
+REQUEST QBAR3DSERIES
+REQUEST QCATEGORY3DAXIS
+REQUEST QSIZEF
+REQUEST QVALUE3DAXIS
+#endif
+
 CLASS Q3DBars INHERIT QAbstract3DGraph
 
    METHOD new
    METHOD delete
-
-   METHOD addAxis
-   METHOD addSeries
-   METHOD axes
-   METHOD barSpacing
-   METHOD barThickness
-   METHOD columnAxis
-   METHOD floorLevel
-   METHOD insertSeries
-   METHOD isBarSpacingRelative
    METHOD isMultiSeriesUniform
-   METHOD primarySeries
-   METHOD releaseAxis
-   METHOD removeSeries
-   METHOD rowAxis
-   METHOD selectedSeries
-   METHOD seriesList
-   METHOD setBarSpacing
-   METHOD setBarSpacingRelative
-   METHOD setBarThickness
-   METHOD setColumnAxis
-   METHOD setFloorLevel
    METHOD setMultiSeriesUniform
-   METHOD setPrimarySeries
+   METHOD barThickness
+   METHOD setBarThickness
+   METHOD barSpacing
+   METHOD setBarSpacing
+   METHOD isBarSpacingRelative
+   METHOD setBarSpacingRelative
+   METHOD rowAxis
    METHOD setRowAxis
-   METHOD setValueAxis
+   METHOD columnAxis
+   METHOD setColumnAxis
    METHOD valueAxis
+   METHOD setValueAxis
+   METHOD primarySeries
+   METHOD setPrimarySeries
+   METHOD selectedSeries
+   METHOD floorLevel
+   METHOD setFloorLevel
+   METHOD addSeries
+   METHOD removeSeries
+   METHOD insertSeries
+   METHOD seriesList
+   METHOD addAxis
+   METHOD releaseAxis
+   METHOD axes
 
    METHOD onBarSpacingChanged
    METHOD onBarSpacingRelativeChanged

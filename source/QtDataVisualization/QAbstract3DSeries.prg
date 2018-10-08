@@ -12,43 +12,48 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QCOLOR
+REQUEST QLINEARGRADIENT
+REQUEST QQUATERNION
+#endif
+
 CLASS QAbstract3DSeries INHERIT QObject
 
    METHOD delete
-
-   METHOD baseColor
-   METHOD baseGradient
-   METHOD colorStyle
-   METHOD isItemLabelVisible
-   METHOD isMeshSmooth
-   METHOD isVisible
-   METHOD itemLabel
-   METHOD itemLabelFormat
-   METHOD mesh
-   METHOD meshRotation
-   METHOD multiHighlightColor
-   METHOD multiHighlightGradient
-   METHOD name
-   METHOD setBaseColor
-   METHOD setBaseGradient
-   METHOD setColorStyle
-   METHOD setItemLabelFormat
-   METHOD setItemLabelVisible
-   METHOD setMesh
-   METHOD setMeshAxisAndAngle
-   METHOD setMeshRotation
-   METHOD setMeshSmooth
-   METHOD setMultiHighlightColor
-   METHOD setMultiHighlightGradient
-   METHOD setName
-   METHOD setSingleHighlightColor
-   METHOD setSingleHighlightGradient
-   METHOD setUserDefinedMesh
-   METHOD setVisible
-   METHOD singleHighlightColor
-   METHOD singleHighlightGradient
    METHOD type
+   METHOD itemLabelFormat
+   METHOD setItemLabelFormat
+   METHOD isVisible
+   METHOD setVisible
+   METHOD mesh
+   METHOD setMesh
+   METHOD isMeshSmooth
+   METHOD setMeshSmooth
+   METHOD meshRotation
+   METHOD setMeshRotation
    METHOD userDefinedMesh
+   METHOD setUserDefinedMesh
+   METHOD colorStyle
+   METHOD setColorStyle
+   METHOD baseColor
+   METHOD setBaseColor
+   METHOD baseGradient
+   METHOD setBaseGradient
+   METHOD singleHighlightColor
+   METHOD setSingleHighlightColor
+   METHOD singleHighlightGradient
+   METHOD setSingleHighlightGradient
+   METHOD multiHighlightColor
+   METHOD setMultiHighlightColor
+   METHOD multiHighlightGradient
+   METHOD setMultiHighlightGradient
+   METHOD name
+   METHOD setName
+   METHOD itemLabel
+   METHOD isItemLabelVisible
+   METHOD setItemLabelVisible
+   METHOD setMeshAxisAndAngle
 
    METHOD onBaseColorChanged
    METHOD onBaseGradientChanged

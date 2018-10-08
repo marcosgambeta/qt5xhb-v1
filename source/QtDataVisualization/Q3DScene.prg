@@ -12,33 +12,39 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST Q3DCAMERA
+REQUEST Q3DLIGHT
+REQUEST QPOINT
+REQUEST QRECT
+#endif
+
 CLASS Q3DScene INHERIT QObject
 
    METHOD new
    METHOD delete
-
+   METHOD viewport
+   METHOD primarySubViewport
+   METHOD setPrimarySubViewport
+   METHOD secondarySubViewport
+   METHOD setSecondarySubViewport
+   METHOD selectionQueryPosition
+   METHOD setSelectionQueryPosition
+   METHOD isSecondarySubviewOnTop
+   METHOD setSecondarySubviewOnTop
+   METHOD isSlicingActive
+   METHOD setSlicingActive
    METHOD activeCamera
+   METHOD setActiveCamera
    METHOD activeLight
+   METHOD setActiveLight
    METHOD devicePixelRatio
+   METHOD setDevicePixelRatio
    METHOD graphPositionQuery
-   METHOD invalidSelectionPoint
+   METHOD setGraphPositionQuery
    METHOD isPointInPrimarySubView
    METHOD isPointInSecondarySubView
-   METHOD isSecondarySubviewOnTop
-   METHOD isSlicingActive
-   METHOD primarySubViewport
-   METHOD secondarySubViewport
-   METHOD selectionQueryPosition
-   METHOD setActiveCamera
-   METHOD setActiveLight
-   METHOD setDevicePixelRatio
-   METHOD setGraphPositionQuery
-   METHOD setPrimarySubViewport
-   METHOD setSecondarySubviewOnTop
-   METHOD setSecondarySubViewport
-   METHOD setSelectionQueryPosition
-   METHOD setSlicingActive
-   METHOD viewport
+   METHOD invalidSelectionPoint
 
    METHOD onActiveCameraChanged
    METHOD onActiveLightChanged

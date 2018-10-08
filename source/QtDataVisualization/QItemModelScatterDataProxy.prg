@@ -12,38 +12,42 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTITEMMODEL
+REQUEST QREGEXP
+#endif
+
 CLASS QItemModelScatterDataProxy INHERIT QScatterDataProxy
 
    METHOD new
    METHOD delete
-
    METHOD itemModel
-   METHOD remap
-   METHOD rotationRole
-   METHOD rotationRolePattern
-   METHOD rotationRoleReplace
    METHOD setItemModel
-   METHOD setRotationRole
-   METHOD setRotationRolePattern
-   METHOD setRotationRoleReplace
-   METHOD setXPosRole
-   METHOD setXPosRolePattern
-   METHOD setXPosRoleReplace
-   METHOD setYPosRole
-   METHOD setYPosRolePattern
-   METHOD setYPosRoleReplace
-   METHOD setZPosRole
-   METHOD setZPosRolePattern
-   METHOD setZPosRoleReplace
    METHOD xPosRole
-   METHOD xPosRolePattern
-   METHOD xPosRoleReplace
+   METHOD setXPosRole
    METHOD yPosRole
-   METHOD yPosRolePattern
-   METHOD yPosRoleReplace
+   METHOD setYPosRole
    METHOD zPosRole
+   METHOD setZPosRole
+   METHOD rotationRole
+   METHOD setRotationRole
+   METHOD xPosRolePattern
+   METHOD setXPosRolePattern
+   METHOD yPosRolePattern
+   METHOD setYPosRolePattern
    METHOD zPosRolePattern
+   METHOD setZPosRolePattern
+   METHOD rotationRolePattern
+   METHOD setRotationRolePattern
+   METHOD xPosRoleReplace
+   METHOD setXPosRoleReplace
+   METHOD yPosRoleReplace
+   METHOD setYPosRoleReplace
    METHOD zPosRoleReplace
+   METHOD setZPosRoleReplace
+   METHOD rotationRoleReplace
+   METHOD setRotationRoleReplace
+   METHOD remap
 
    METHOD onItemModelChanged
    METHOD onRotationRoleChanged

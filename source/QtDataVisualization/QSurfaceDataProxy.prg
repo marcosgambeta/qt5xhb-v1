@@ -12,17 +12,21 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QSURFACE3DSERIES
+REQUEST QSURFACEDATAITEM
+#endif
+
 CLASS QSurfaceDataProxy INHERIT QAbstractDataProxy
 
    METHOD new
    METHOD delete
-
-   METHOD columnCount
-   METHOD itemAt
-   METHOD removeRows
    METHOD rowCount
+   METHOD columnCount
    METHOD series
+   METHOD itemAt
    METHOD setItem
+   METHOD removeRows
 
    METHOD onArrayReset
    METHOD onColumnCountChanged

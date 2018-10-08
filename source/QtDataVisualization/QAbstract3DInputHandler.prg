@@ -12,15 +12,19 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST Q3DSCENE
+REQUEST QPOINT
+#endif
+
 CLASS QAbstract3DInputHandler INHERIT QObject
 
    METHOD delete
-
-   METHOD inputPosition
    METHOD inputView
-   METHOD scene
-   METHOD setInputPosition
    METHOD setInputView
+   METHOD inputPosition
+   METHOD setInputPosition
+   METHOD scene
    METHOD setScene
 
    METHOD onInputViewChanged

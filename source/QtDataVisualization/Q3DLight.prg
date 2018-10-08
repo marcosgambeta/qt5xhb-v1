@@ -12,13 +12,15 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS Q3DLight INHERIT Q3DObject
 
    METHOD new
    METHOD delete
-
-   METHOD isAutoPosition
    METHOD setAutoPosition
+   METHOD isAutoPosition
 
    METHOD onAutoPositionChanged
 

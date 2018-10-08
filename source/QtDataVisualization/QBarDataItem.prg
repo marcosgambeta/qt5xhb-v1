@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QBarDataItem
 
    DATA pointer
@@ -19,11 +22,10 @@ CLASS QBarDataItem
 
    METHOD new
    METHOD delete
-
-   METHOD rotation
-   METHOD setRotation
    METHOD setValue
    METHOD value
+   METHOD setRotation
+   METHOD rotation
 
    METHOD newFrom
    METHOD newFromObject

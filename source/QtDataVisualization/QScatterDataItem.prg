@@ -12,6 +12,11 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QQUATERNION
+REQUEST QVECTOR3D
+#endif
+
 CLASS QScatterDataItem
 
    DATA pointer
@@ -19,11 +24,10 @@ CLASS QScatterDataItem
 
    METHOD new
    METHOD delete
-
-   METHOD position
-   METHOD rotation
    METHOD setPosition
+   METHOD position
    METHOD setRotation
+   METHOD rotation
    METHOD setX
    METHOD setY
    METHOD setZ

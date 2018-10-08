@@ -12,25 +12,30 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QIMAGE
+REQUEST QPOINT
+REQUEST QSURFACEDATAPROXY
+#endif
+
 CLASS QSurface3DSeries INHERIT QAbstract3DSeries
 
    METHOD new
    METHOD delete
-
    METHOD dataProxy
-   METHOD drawMode
-   METHOD invalidSelectionPosition
-   METHOD isFlatShadingEnabled
-   METHOD isFlatShadingSupported
-   METHOD selectedPoint
    METHOD setDataProxy
-   METHOD setDrawMode
-   METHOD setFlatShadingEnabled
+   METHOD selectedPoint
    METHOD setSelectedPoint
-   METHOD setTexture
-   METHOD setTextureFile
+   METHOD isFlatShadingEnabled
+   METHOD setFlatShadingEnabled
+   METHOD isFlatShadingSupported
+   METHOD drawMode
+   METHOD setDrawMode
    METHOD texture
+   METHOD setTexture
    METHOD textureFile
+   METHOD setTextureFile
+   METHOD invalidSelectionPosition
 
    METHOD onDataProxyChanged
    METHOD onDrawModeChanged

@@ -12,18 +12,22 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBARDATAPROXY
+REQUEST QPOINT
+#endif
+
 CLASS QBar3DSeries INHERIT QAbstract3DSeries
 
    METHOD new
    METHOD delete
-
    METHOD dataProxy
-   METHOD invalidSelectionPosition
-   METHOD meshAngle
-   METHOD selectedBar
    METHOD setDataProxy
-   METHOD setMeshAngle
+   METHOD selectedBar
    METHOD setSelectedBar
+   METHOD meshAngle
+   METHOD setMeshAngle
+   METHOD invalidSelectionPosition
 
    METHOD onDataProxyChanged
    METHOD onMeshAngleChanged

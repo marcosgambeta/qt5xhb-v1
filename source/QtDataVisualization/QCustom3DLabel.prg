@@ -12,25 +12,29 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QCOLOR
+REQUEST QFONT
+#endif
+
 CLASS QCustom3DLabel INHERIT QCustom3DItem
 
    METHOD new
    METHOD delete
-
-   METHOD backgroundColor
-   METHOD font
-   METHOD isBackgroundEnabled
-   METHOD isBorderEnabled
-   METHOD isFacingCamera
-   METHOD setBackgroundColor
-   METHOD setBackgroundEnabled
-   METHOD setBorderEnabled
-   METHOD setFacingCamera
-   METHOD setFont
-   METHOD setText
-   METHOD setTextColor
    METHOD text
+   METHOD setText
+   METHOD font
+   METHOD setFont
    METHOD textColor
+   METHOD setTextColor
+   METHOD backgroundColor
+   METHOD setBackgroundColor
+   METHOD isBorderEnabled
+   METHOD setBorderEnabled
+   METHOD isBackgroundEnabled
+   METHOD setBackgroundEnabled
+   METHOD isFacingCamera
+   METHOD setFacingCamera
 
    METHOD onBackgroundColorChanged
    METHOD onBackgroundEnabledChanged

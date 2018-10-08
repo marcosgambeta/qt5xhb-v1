@@ -12,29 +12,31 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QAbstract3DAxis INHERIT QObject
 
    METHOD delete
-
-   METHOD isAutoAdjustRange
-   METHOD isTitleFixed
-   METHOD isTitleVisible
-   METHOD labelAutoRotation
-   METHOD labels
-   METHOD max
-   METHOD min
-   METHOD orientation
-   METHOD setAutoAdjustRange
-   METHOD setLabelAutoRotation
-   METHOD setLabels
-   METHOD setMax
-   METHOD setMin
-   METHOD setRange
-   METHOD setTitle
-   METHOD setTitleFixed
-   METHOD setTitleVisible
    METHOD title
+   METHOD setTitle
+   METHOD labels
+   METHOD setLabels
+   METHOD orientation
    METHOD type
+   METHOD min
+   METHOD setMin
+   METHOD max
+   METHOD setMax
+   METHOD isAutoAdjustRange
+   METHOD setAutoAdjustRange
+   METHOD labelAutoRotation
+   METHOD setLabelAutoRotation
+   METHOD isTitleVisible
+   METHOD setTitleVisible
+   METHOD isTitleFixed
+   METHOD setTitleFixed
+   METHOD setRange
 
    METHOD onAutoAdjustRangeChanged
    METHOD onLabelAutoRotationChanged
