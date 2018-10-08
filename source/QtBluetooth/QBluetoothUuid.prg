@@ -12,13 +12,16 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QBluetoothUuid INHERIT QUuid
 
+   METHOD new
    METHOD new2
    METHOD new3
    METHOD new4
    METHOD new5
-   METHOD new
    METHOD delete
    METHOD minimumSize
    METHOD toUInt16
