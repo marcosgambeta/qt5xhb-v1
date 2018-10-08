@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QByteArray
 
    DATA pointer
@@ -2779,10 +2782,10 @@ static QByteArray number ( int n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
 {
-  if( ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
-    QByteArray * ptr = new QByteArray( QByteArray::number ( PINT(1), OPINT(2,10) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+      QByteArray * ptr = new QByteArray( QByteArray::number ( PINT(1), OPINT(2,10) ) );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
   else
   {
@@ -2795,10 +2798,10 @@ static QByteArray number ( uint n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
 {
-  if( ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
-    QByteArray * ptr = new QByteArray( QByteArray::number ( (uint) hb_parni(1), OPINT(2,10) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+      QByteArray * ptr = new QByteArray( QByteArray::number ( PUINT(1), OPINT(2,10) ) );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
   else
   {
@@ -2811,11 +2814,10 @@ static QByteArray number ( qlonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
 {
-  if( ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
-    qlonglong par1 = hb_parnl(1);
-    QByteArray * ptr = new QByteArray( QByteArray::number ( par1, OPINT(2,10) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+      QByteArray * ptr = new QByteArray( QByteArray::number ( PQLONGLONG(1), OPINT(2,10) ) );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
   else
   {
@@ -2828,11 +2830,10 @@ static QByteArray number ( qulonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
 {
-  if( ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
-    qulonglong par1 = hb_parnl(1);
-    QByteArray * ptr = new QByteArray( QByteArray::number ( par1, OPINT(2,10) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+      QByteArray * ptr = new QByteArray( QByteArray::number ( PQULONGLONG(1), OPINT(2,10) ) );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
   else
   {
@@ -2857,7 +2858,6 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
   }
 }
 
-// TODO: resolver conflitos
 //[1]static QByteArray number ( int n, int base = 10 )
 //[2]static QByteArray number ( uint n, int base = 10 )
 //[3]static QByteArray number ( qlonglong n, int base = 10 )

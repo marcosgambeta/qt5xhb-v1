@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDIR
 REQUEST QDATETIME
+REQUEST QDIR
 #endif
 
 CLASS QFileInfo

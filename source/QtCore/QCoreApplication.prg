@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCoreApplication INHERIT QObject
 
    METHOD new
@@ -446,11 +449,11 @@ void QCoreApplication_postEvent2 ()
 
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
-  if( ISNUMPAR(2) && ISQOBJECT(1) && ISOBJECT(2) )
+  if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
   {
     QCoreApplication_postEvent1();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISOBJECT(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISQEVENT(2) && ISNUM(3) )
   {
     QCoreApplication_postEvent2();
   }

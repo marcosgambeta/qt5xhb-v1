@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
 REQUEST QLOCALE
+REQUEST QVARIANT
 #endif
 
 CLASS QBBSystemLocaleData INHERIT QObject
