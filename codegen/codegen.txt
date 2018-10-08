@@ -1642,3 +1642,5 @@ HICON                                                |handle
 HDC                                                  |handle
 HRGN                                                 |handle
 HRESULT                                              |handle
+QChar::SpecialCharacter                              |enum
+ 
