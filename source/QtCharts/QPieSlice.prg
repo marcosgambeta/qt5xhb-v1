@@ -12,45 +12,52 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QCOLOR
+REQUEST QFONT
+REQUEST QPEN
+REQUEST QPIESERIES
+#endif
+
 CLASS QPieSlice INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD angleSpan
-   METHOD borderColor
-   METHOD borderWidth
-   METHOD brush
-   METHOD color
-   METHOD explodeDistanceFactor
-   METHOD isExploded
-   METHOD isLabelVisible
    METHOD label
-   METHOD labelArmLengthFactor
-   METHOD labelBrush
-   METHOD labelColor
-   METHOD labelFont
-   METHOD labelPosition
-   METHOD pen
-   METHOD percentage
-   METHOD series
-   METHOD setBorderColor
-   METHOD setBorderWidth
-   METHOD setBrush
-   METHOD setColor
-   METHOD setExploded
-   METHOD setExplodeDistanceFactor
    METHOD setLabel
-   METHOD setLabelArmLengthFactor
-   METHOD setLabelBrush
-   METHOD setLabelColor
-   METHOD setLabelFont
-   METHOD setLabelPosition
-   METHOD setLabelVisible
-   METHOD setPen
-   METHOD setValue
-   METHOD startAngle
    METHOD value
+   METHOD setValue
+   METHOD isLabelVisible
+   METHOD setLabelVisible
+   METHOD labelPosition
+   METHOD setLabelPosition
+   METHOD isExploded
+   METHOD setExploded
+   METHOD pen
+   METHOD setPen
+   METHOD borderColor
+   METHOD setBorderColor
+   METHOD borderWidth
+   METHOD setBorderWidth
+   METHOD brush
+   METHOD setBrush
+   METHOD color
+   METHOD setColor
+   METHOD labelBrush
+   METHOD setLabelBrush
+   METHOD labelColor
+   METHOD setLabelColor
+   METHOD labelFont
+   METHOD setLabelFont
+   METHOD labelArmLengthFactor
+   METHOD setLabelArmLengthFactor
+   METHOD explodeDistanceFactor
+   METHOD setExplodeDistanceFactor
+   METHOD percentage
+   METHOD startAngle
+   METHOD angleSpan
+   METHOD series
 
    METHOD onAngleSpanChanged
    METHOD onBorderColorChanged

@@ -12,13 +12,18 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTITEMMODEL
+REQUEST QCANDLESTICKSERIES
+#endif
+
 CLASS QCandlestickModelMapper INHERIT QObject
 
    METHOD model
-   METHOD orientation
-   METHOD series
    METHOD setModel
+   METHOD series
    METHOD setSeries
+   METHOD orientation
 
    METHOD onModelReplaced
    METHOD onSeriesReplaced

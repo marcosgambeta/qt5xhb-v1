@@ -12,27 +12,30 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBARSET
+#endif
+
 CLASS QAbstractBarSeries INHERIT QAbstractSeries
 
    METHOD delete
-
-   METHOD append
-   METHOD barSets
    METHOD barWidth
-   METHOD clear
-   METHOD count
-   METHOD insert
-   METHOD isLabelsVisible
-   METHOD labelsAngle
-   METHOD labelsFormat
-   METHOD labelsPosition
-   METHOD remove
    METHOD setBarWidth
-   METHOD setLabelsAngle
-   METHOD setLabelsFormat
-   METHOD setLabelsPosition
+   METHOD count
+   METHOD isLabelsVisible
    METHOD setLabelsVisible
+   METHOD labelsFormat
+   METHOD setLabelsFormat
+   METHOD labelsAngle
+   METHOD setLabelsAngle
+   METHOD labelsPosition
+   METHOD setLabelsPosition
+   METHOD append
+   METHOD remove
    METHOD take
+   METHOD insert
+   METHOD barSets
+   METHOD clear
 
    METHOD onBarsetsAdded
    METHOD onBarsetsRemoved

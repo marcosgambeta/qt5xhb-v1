@@ -12,22 +12,26 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTITEMMODEL
+REQUEST QBOXPLOTSERIES
+#endif
+
 CLASS QHBoxPlotModelMapper INHERIT QBoxPlotModelMapper
 
    METHOD new
-
-   METHOD columnCount
-   METHOD firstBoxSetRow
-   METHOD firstColumn
-   METHOD lastBoxSetRow
-   METHOD model
    METHOD series
-   METHOD setColumnCount
-   METHOD setFirstBoxSetRow
-   METHOD setFirstColumn
-   METHOD setLastBoxSetRow
-   METHOD setModel
    METHOD setSeries
+   METHOD model
+   METHOD setModel
+   METHOD firstBoxSetRow
+   METHOD setFirstBoxSetRow
+   METHOD lastBoxSetRow
+   METHOD setLastBoxSetRow
+   METHOD firstColumn
+   METHOD setFirstColumn
+   METHOD columnCount
+   METHOD setColumnCount
 
    METHOD onColumnCountChanged
    METHOD onFirstBoxSetRowChanged

@@ -12,26 +12,28 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QBarCategoryAxis INHERIT QAbstractAxis
 
    METHOD new
    METHOD delete
-
-   METHOD append
-   METHOD at
    METHOD categories
-   METHOD clear
-   METHOD count
-   METHOD insert
-   METHOD max
-   METHOD min
-   METHOD remove
-   METHOD replace
    METHOD setCategories
-   METHOD setMax
+   METHOD count
+   METHOD min
    METHOD setMin
-   METHOD setRange
+   METHOD max
+   METHOD setMax
    METHOD type
+   METHOD append
+   METHOD remove
+   METHOD insert
+   METHOD replace
+   METHOD clear
+   METHOD at
+   METHOD setRange
 
    METHOD onCategoriesChanged
    METHOD onCountChanged

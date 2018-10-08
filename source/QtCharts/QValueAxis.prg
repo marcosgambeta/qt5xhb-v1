@@ -12,24 +12,26 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QValueAxis INHERIT QAbstractAxis
 
    METHOD new
    METHOD delete
-
-   METHOD applyNiceNumbers
-   METHOD labelFormat
-   METHOD max
-   METHOD min
-   METHOD minorTickCount
-   METHOD setLabelFormat
-   METHOD setMax
-   METHOD setMin
-   METHOD setMinorTickCount
-   METHOD setRange
-   METHOD setTickCount
    METHOD tickCount
+   METHOD setTickCount
+   METHOD min
+   METHOD setMin
+   METHOD max
+   METHOD setMax
+   METHOD labelFormat
+   METHOD setLabelFormat
+   METHOD minorTickCount
+   METHOD setMinorTickCount
    METHOD type
+   METHOD setRange
+   METHOD applyNiceNumbers
 
    METHOD onLabelFormatChanged
    METHOD onMaxChanged

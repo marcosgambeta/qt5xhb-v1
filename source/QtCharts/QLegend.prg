@@ -12,39 +12,46 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QCOLOR
+REQUEST QFONT
+REQUEST QLEGENDMARKER
+REQUEST QPEN
+#endif
+
 CLASS QLegend INHERIT QGraphicsWidget
 
    METHOD delete
-
    METHOD alignment
-   METHOD attachToChart
-   METHOD borderColor
-   METHOD brush
-   METHOD color
-   METHOD detachFromChart
-   METHOD font
-   METHOD isAttachedToChart
    METHOD isBackgroundVisible
-   METHOD labelBrush
-   METHOD labelColor
-   METHOD markers
-   METHOD markerShape
-   METHOD paint
-   METHOD pen
-   METHOD reverseMarkers
-   METHOD setAlignment
    METHOD setBackgroundVisible
-   METHOD setBorderColor
-   METHOD setBrush
+   METHOD color
    METHOD setColor
+   METHOD borderColor
+   METHOD setBorderColor
+   METHOD font
    METHOD setFont
-   METHOD setLabelBrush
+   METHOD labelColor
    METHOD setLabelColor
-   METHOD setMarkerShape
-   METHOD setPen
+   METHOD reverseMarkers
    METHOD setReverseMarkers
-   METHOD setShowToolTips
    METHOD showToolTips
+   METHOD setShowToolTips
+   METHOD markerShape
+   METHOD setMarkerShape
+   METHOD paint
+   METHOD setBrush
+   METHOD brush
+   METHOD setPen
+   METHOD pen
+   METHOD setLabelBrush
+   METHOD labelBrush
+   METHOD setAlignment
+   METHOD detachFromChart
+   METHOD attachToChart
+   METHOD isAttachedToChart
+   METHOD markers
 
    METHOD onBackgroundVisibleChanged
    METHOD onBorderColorChanged

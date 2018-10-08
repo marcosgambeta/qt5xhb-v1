@@ -12,21 +12,24 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QDATETIME
+#endif
+
 CLASS QDateTimeAxis INHERIT QAbstractAxis
 
    METHOD new
    METHOD delete
-
-   METHOD format
-   METHOD max
    METHOD min
-   METHOD setFormat
-   METHOD setMax
    METHOD setMin
-   METHOD setRange
-   METHOD setTickCount
+   METHOD max
+   METHOD setMax
+   METHOD format
+   METHOD setFormat
    METHOD tickCount
+   METHOD setTickCount
    METHOD type
+   METHOD setRange
 
    METHOD onFormatChanged
    METHOD onMaxChanged

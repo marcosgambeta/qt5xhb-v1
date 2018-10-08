@@ -12,13 +12,16 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QCANDLESTICKSERIES
+#endif
+
 CLASS QCandlestickLegendMarker INHERIT QLegendMarker
 
    METHOD new
    METHOD delete
-
-   METHOD series
    METHOD type
+   METHOD series
 
    DESTRUCTOR destroyObject
 

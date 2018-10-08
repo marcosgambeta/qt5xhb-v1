@@ -12,38 +12,45 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QCOLOR
+REQUEST QFONT
+REQUEST QPEN
+REQUEST QPOINTF
+#endif
+
 CLASS QXYSeries INHERIT QAbstractSeries
 
    METHOD delete
-
-   METHOD append
-   METHOD at
-   METHOD brush
-   METHOD clear
-   METHOD color
-   METHOD count
-   METHOD insert
-   METHOD pen
-   METHOD pointLabelsClipping
-   METHOD pointLabelsColor
-   METHOD pointLabelsFont
-   METHOD pointLabelsFormat
-   METHOD pointLabelsVisible
-   METHOD points
-   METHOD pointsVector
    METHOD pointsVisible
+   METHOD setPointsVisible
+   METHOD color
+   METHOD setColor
+   METHOD pointLabelsFormat
+   METHOD setPointLabelsFormat
+   METHOD pointLabelsVisible
+   METHOD setPointLabelsVisible
+   METHOD pointLabelsFont
+   METHOD setPointLabelsFont
+   METHOD pointLabelsColor
+   METHOD setPointLabelsColor
+   METHOD pointLabelsClipping
+   METHOD setPointLabelsClipping
+   METHOD append
+   METHOD replace
    METHOD remove
    METHOD removePoints
-   METHOD replace
-   METHOD setBrush
-   METHOD setColor
+   METHOD insert
+   METHOD clear
+   METHOD count
+   METHOD points
+   METHOD pointsVector
+   METHOD at
    METHOD setPen
-   METHOD setPointLabelsClipping
-   METHOD setPointLabelsColor
-   METHOD setPointLabelsFont
-   METHOD setPointLabelsFormat
-   METHOD setPointLabelsVisible
-   METHOD setPointsVisible
+   METHOD pen
+   METHOD setBrush
+   METHOD brush
 
    METHOD onClicked
    METHOD onColorChanged

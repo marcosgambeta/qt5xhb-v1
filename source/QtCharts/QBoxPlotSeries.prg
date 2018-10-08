@@ -12,26 +12,31 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBOXSET
+REQUEST QBRUSH
+REQUEST QPEN
+#endif
+
 CLASS QBoxPlotSeries INHERIT QAbstractSeries
 
    METHOD new
    METHOD delete
-
-   METHOD append
-   METHOD boxOutlineVisible
-   METHOD boxSets
-   METHOD boxWidth
-   METHOD brush
-   METHOD clear
    METHOD count
-   METHOD insert
-   METHOD pen
-   METHOD remove
+   METHOD boxOutlineVisible
    METHOD setBoxOutlineVisible
+   METHOD boxWidth
    METHOD setBoxWidth
+   METHOD brush
    METHOD setBrush
+   METHOD pen
    METHOD setPen
+   METHOD append
+   METHOD remove
    METHOD take
+   METHOD insert
+   METHOD boxSets
+   METHOD clear
    METHOD type
 
    METHOD onBoxOutlineVisibilityChanged

@@ -12,11 +12,15 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTBARSERIES
+REQUEST QBARSET
+#endif
+
 CLASS QBarLegendMarker INHERIT QLegendMarker
 
    METHOD new
    METHOD delete
-
    METHOD type
    METHOD series
    METHOD barset

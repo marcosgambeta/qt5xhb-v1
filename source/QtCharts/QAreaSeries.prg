@@ -12,36 +12,43 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QCOLOR
+REQUEST QFONT
+REQUEST QLINESERIES
+REQUEST QPEN
+#endif
+
 CLASS QAreaSeries INHERIT QAbstractSeries
 
    METHOD new
    METHOD delete
-
-   METHOD borderColor
-   METHOD brush
-   METHOD color
+   METHOD upperSeries
    METHOD lowerSeries
-   METHOD pen
-   METHOD pointLabelsClipping
-   METHOD pointLabelsColor
-   METHOD pointLabelsFont
-   METHOD pointLabelsFormat
-   METHOD pointLabelsVisible
-   METHOD pointsVisible
-   METHOD setBorderColor
-   METHOD setBrush
+   METHOD color
    METHOD setColor
+   METHOD borderColor
+   METHOD setBorderColor
+   METHOD pointLabelsFormat
+   METHOD setPointLabelsFormat
+   METHOD pointLabelsVisible
+   METHOD setPointLabelsVisible
+   METHOD pointLabelsFont
+   METHOD setPointLabelsFont
+   METHOD pointLabelsColor
+   METHOD setPointLabelsColor
+   METHOD pointLabelsClipping
+   METHOD setPointLabelsClipping
+   METHOD type
+   METHOD setUpperSeries
    METHOD setLowerSeries
    METHOD setPen
-   METHOD setPointLabelsClipping
-   METHOD setPointLabelsColor
-   METHOD setPointLabelsFont
-   METHOD setPointLabelsFormat
-   METHOD setPointLabelsVisible
+   METHOD pen
+   METHOD setBrush
+   METHOD brush
    METHOD setPointsVisible
-   METHOD setUpperSeries
-   METHOD type
-   METHOD upperSeries
+   METHOD pointsVisible
 
    METHOD onBorderColorChanged
    METHOD onClicked

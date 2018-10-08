@@ -12,11 +12,13 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QPolarChart INHERIT QChart
 
    METHOD new
    METHOD delete
-
    METHOD addAxis
    METHOD axisPolarOrientation
 

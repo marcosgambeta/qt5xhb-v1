@@ -12,70 +12,83 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTAXIS
+REQUEST QABSTRACTSERIES
+REQUEST QBRUSH
+REQUEST QEASINGCURVE
+REQUEST QFONT
+REQUEST QLEGEND
+REQUEST QLOCALE
+REQUEST QMARGINS
+REQUEST QPEN
+REQUEST QPOINTF
+REQUEST QRECTF
+#endif
+
 CLASS QChart INHERIT QGraphicsWidget
 
    METHOD new
    METHOD delete
-
-   METHOD addAxis
-   METHOD addSeries
-   METHOD animationDuration
-   METHOD animationEasingCurve
-   METHOD animationOptions
-   METHOD axes
-   METHOD axisX // DEPRECATED
-   METHOD axisY // DEPRECATED
-   METHOD backgroundBrush
-   METHOD backgroundPen
-   METHOD backgroundRoundness
-   METHOD chartType
-   METHOD createDefaultAxes
-   METHOD isBackgroundVisible
-   METHOD isDropShadowEnabled
-   METHOD isPlotAreaBackgroundVisible
-   METHOD isZoomed
-   METHOD legend
-   METHOD locale
-   METHOD localizeNumbers
-   METHOD mapToPosition
-   METHOD mapToValue
-   METHOD margins
-   METHOD plotArea
-   METHOD plotAreaBackgroundBrush
-   METHOD plotAreaBackgroundPen
-   METHOD removeAllSeries
-   METHOD removeAxis
-   METHOD removeSeries
-   METHOD scroll
-   METHOD series
-   METHOD setAnimationDuration
-   METHOD setAnimationEasingCurve
-   METHOD setAnimationOptions
-   METHOD setAxisX // DEPRECATED
-   METHOD setAxisY // DEPRECATED
-   METHOD setBackgroundBrush
-   METHOD setBackgroundPen
-   METHOD setBackgroundRoundness
-   METHOD setBackgroundVisible
-   METHOD setDropShadowEnabled
-   METHOD setLocale
-   METHOD setLocalizeNumbers
-   METHOD setMargins
-   METHOD setPlotAreaBackgroundBrush
-   METHOD setPlotAreaBackgroundPen
-   METHOD setPlotAreaBackgroundVisible
-   METHOD setTheme
-   METHOD setTitle
-   METHOD setTitleBrush
-   METHOD setTitleFont
    METHOD theme
+   METHOD setTheme
    METHOD title
-   METHOD titleBrush
+   METHOD isBackgroundVisible
+   METHOD setBackgroundVisible
+   METHOD isDropShadowEnabled
+   METHOD setDropShadowEnabled
+   METHOD backgroundRoundness
+   METHOD setBackgroundRoundness
+   METHOD animationOptions
+   METHOD setAnimationOptions
+   METHOD animationDuration
+   METHOD setAnimationDuration
+   METHOD animationEasingCurve
+   METHOD setAnimationEasingCurve
+   METHOD margins
+   METHOD setMargins
+   METHOD plotArea
+   METHOD isPlotAreaBackgroundVisible
+   METHOD setPlotAreaBackgroundVisible
+   METHOD localizeNumbers
+   METHOD setLocalizeNumbers
+   METHOD locale
+   METHOD setLocale
+   METHOD chartType
+   METHOD addSeries
+   METHOD removeSeries
+   METHOD removeAllSeries
+   METHOD series
+   METHOD setAxisX
+   METHOD setAxisY
+   METHOD axisX
+   METHOD axisY
+   METHOD addAxis
+   METHOD removeAxis
+   METHOD axes
+   METHOD createDefaultAxes
+   METHOD setTitle
+   METHOD setTitleFont
    METHOD titleFont
-   METHOD zoom
+   METHOD setTitleBrush
+   METHOD titleBrush
+   METHOD setBackgroundBrush
+   METHOD backgroundBrush
+   METHOD setBackgroundPen
+   METHOD backgroundPen
    METHOD zoomIn
    METHOD zoomOut
+   METHOD zoom
    METHOD zoomReset
+   METHOD isZoomed
+   METHOD scroll
+   METHOD legend
+   METHOD setPlotAreaBackgroundBrush
+   METHOD plotAreaBackgroundBrush
+   METHOD setPlotAreaBackgroundPen
+   METHOD plotAreaBackgroundPen
+   METHOD mapToValue
+   METHOD mapToPosition
 
    METHOD onPlotAreaChanged
 

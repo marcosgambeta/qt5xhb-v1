@@ -12,23 +12,27 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QCOLOR
+#endif
+
 CLASS QScatterSeries INHERIT QXYSeries
 
    METHOD new
    METHOD delete
-
-   METHOD borderColor
-   METHOD brush
    METHOD color
-   METHOD markerShape
-   METHOD markerSize
-   METHOD setBorderColor
-   METHOD setBrush
    METHOD setColor
+   METHOD borderColor
+   METHOD setBorderColor
+   METHOD markerShape
    METHOD setMarkerShape
+   METHOD markerSize
    METHOD setMarkerSize
-   METHOD setPen
+   METHOD brush
+   METHOD setBrush
    METHOD type
+   METHOD setPen
 
    METHOD onBorderColorChanged
    METHOD onColorChanged

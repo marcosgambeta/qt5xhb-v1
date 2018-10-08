@@ -12,25 +12,29 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QPEN
+#endif
+
 CLASS QCandlestickSet INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD brush
-   METHOD close
-   METHOD high
-   METHOD low
-   METHOD open
-   METHOD pen
-   METHOD setBrush
-   METHOD setClose
-   METHOD setHigh
-   METHOD setLow
-   METHOD setOpen
-   METHOD setPen
-   METHOD setTimestamp
    METHOD timestamp
+   METHOD setTimestamp
+   METHOD open
+   METHOD setOpen
+   METHOD high
+   METHOD setHigh
+   METHOD low
+   METHOD setLow
+   METHOD close
+   METHOD setClose
+   METHOD brush
+   METHOD setBrush
+   METHOD pen
+   METHOD setPen
 
    METHOD onBrushChanged
    METHOD onClicked

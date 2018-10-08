@@ -12,13 +12,16 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QCHART
+#endif
+
 CLASS QChartView INHERIT QGraphicsView
 
    METHOD new
    METHOD delete
-
-   METHOD chart
    METHOD rubberBand
+   METHOD chart
    METHOD setChart
 
    DESTRUCTOR destroyObject

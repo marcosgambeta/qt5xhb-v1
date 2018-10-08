@@ -12,22 +12,26 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QPEN
+#endif
+
 CLASS QBoxSet INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD append
-   METHOD at
-   METHOD brush
-   METHOD clear
-   METHOD count
-   METHOD label
    METHOD pen
-   METHOD setBrush
-   METHOD setLabel
    METHOD setPen
+   METHOD brush
+   METHOD setBrush
+   METHOD append
+   METHOD clear
+   METHOD setLabel
+   METHOD label
    METHOD setValue
+   METHOD at
+   METHOD count
 
    METHOD onBrushChanged
    METHOD onCleared

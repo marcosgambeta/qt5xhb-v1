@@ -12,26 +12,32 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTSERIES
+REQUEST QBRUSH
+REQUEST QFONT
+REQUEST QPEN
+#endif
+
 CLASS QLegendMarker INHERIT QObject
 
    METHOD delete
-
-   METHOD brush
-   METHOD font
-   METHOD isVisible
    METHOD label
-   METHOD labelBrush
-   METHOD pen
-   METHOD series
-   METHOD setBrush
-   METHOD setFont
    METHOD setLabel
+   METHOD labelBrush
    METHOD setLabelBrush
+   METHOD font
+   METHOD setFont
+   METHOD pen
    METHOD setPen
-   METHOD setShape
+   METHOD brush
+   METHOD setBrush
+   METHOD isVisible
    METHOD setVisible
    METHOD shape
+   METHOD setShape
    METHOD type
+   METHOD series
 
    METHOD onBrushChanged
    METHOD onClicked

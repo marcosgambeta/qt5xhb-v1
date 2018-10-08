@@ -12,13 +12,16 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBOXPLOTSERIES
+#endif
+
 CLASS QBoxPlotLegendMarker INHERIT QLegendMarker
 
    METHOD new
    METHOD delete
-
-   METHOD series
    METHOD type
+   METHOD series
 
    DESTRUCTOR destroyObject
 

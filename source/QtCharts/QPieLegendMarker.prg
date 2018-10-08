@@ -12,14 +12,18 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QPIESERIES
+REQUEST QPIESLICE
+#endif
+
 CLASS QPieLegendMarker INHERIT QLegendMarker
 
    METHOD new
    METHOD delete
-
+   METHOD type
    METHOD series
    METHOD slice
-   METHOD type
 
    DESTRUCTOR destroyObject
 

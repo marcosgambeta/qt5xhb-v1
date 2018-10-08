@@ -12,24 +12,26 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QLogValueAxis INHERIT QAbstractAxis
 
    METHOD new
    METHOD delete
-
-   METHOD base
-   METHOD labelFormat
-   METHOD max
    METHOD min
-   METHOD minorTickCount
-   METHOD setBase
-   METHOD setLabelFormat
-   METHOD setMax
    METHOD setMin
-   METHOD setMinorTickCount
-   METHOD setRange
+   METHOD max
+   METHOD setMax
+   METHOD labelFormat
+   METHOD setLabelFormat
+   METHOD base
+   METHOD setBase
    METHOD tickCount
+   METHOD minorTickCount
+   METHOD setMinorTickCount
    METHOD type
+   METHOD setRange
 
    METHOD onBaseChanged
    METHOD onLabelFormatChanged

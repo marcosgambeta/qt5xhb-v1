@@ -12,22 +12,26 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTITEMMODEL
+REQUEST QXYSERIES
+#endif
+
 CLASS QHXYModelMapper INHERIT QXYModelMapper
 
    METHOD new
-
-   METHOD columnCount
-   METHOD firstColumn
-   METHOD model
    METHOD series
-   METHOD setColumnCount
-   METHOD setFirstColumn
-   METHOD setModel
    METHOD setSeries
-   METHOD setXRow
-   METHOD setYRow
+   METHOD model
+   METHOD setModel
    METHOD xRow
+   METHOD setXRow
    METHOD yRow
+   METHOD setYRow
+   METHOD firstColumn
+   METHOD setFirstColumn
+   METHOD columnCount
+   METHOD setColumnCount
 
    METHOD onColumnCountChanged
    METHOD onFirstColumnChanged

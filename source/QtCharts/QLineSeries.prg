@@ -12,11 +12,13 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QLineSeries INHERIT QXYSeries
 
    METHOD new
    METHOD delete
-
    METHOD type
 
    DESTRUCTOR destroyObject

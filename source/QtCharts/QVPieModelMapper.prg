@@ -12,22 +12,26 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTITEMMODEL
+REQUEST QPIESERIES
+#endif
+
 CLASS QVPieModelMapper INHERIT QPieModelMapper
 
    METHOD new
-
-   METHOD firstRow
-   METHOD labelsColumn
-   METHOD model
-   METHOD rowCount
    METHOD series
-   METHOD setFirstRow
-   METHOD setLabelsColumn
-   METHOD setModel
-   METHOD setRowCount
    METHOD setSeries
-   METHOD setValuesColumn
+   METHOD model
+   METHOD setModel
    METHOD valuesColumn
+   METHOD setValuesColumn
+   METHOD labelsColumn
+   METHOD setLabelsColumn
+   METHOD firstRow
+   METHOD setFirstRow
+   METHOD rowCount
+   METHOD setRowCount
 
    METHOD onFirstRowChanged
    METHOD onLabelsColumnChanged

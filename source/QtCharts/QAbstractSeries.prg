@@ -12,25 +12,29 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTAXIS
+REQUEST QCHART
+#endif
+
 CLASS QAbstractSeries INHERIT QObject
 
    METHOD delete
-
-   METHOD attachAxis
-   METHOD attachedAxes
-   METHOD chart
-   METHOD detachAxis
-   METHOD hide
-   METHOD isVisible
-   METHOD name
-   METHOD opacity
-   METHOD setName
-   METHOD setOpacity
-   METHOD setUseOpenGL
-   METHOD setVisible
-   METHOD show
    METHOD type
+   METHOD name
+   METHOD setName
+   METHOD isVisible
+   METHOD setVisible
+   METHOD opacity
+   METHOD setOpacity
    METHOD useOpenGL
+   METHOD setUseOpenGL
+   METHOD chart
+   METHOD attachAxis
+   METHOD detachAxis
+   METHOD attachedAxes
+   METHOD show
+   METHOD hide
 
    METHOD onNameChanged
    METHOD onOpacityChanged

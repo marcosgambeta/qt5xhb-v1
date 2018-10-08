@@ -12,22 +12,26 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTBARSERIES
+REQUEST QABSTRACTITEMMODEL
+#endif
+
 CLASS QVBarModelMapper INHERIT QBarModelMapper
 
    METHOD new
-
-   METHOD firstBarSetColumn
-   METHOD firstRow
-   METHOD lastBarSetColumn
-   METHOD model
-   METHOD rowCount
    METHOD series
-   METHOD setFirstBarSetColumn
-   METHOD setFirstRow
-   METHOD setLastBarSetColumn
-   METHOD setModel
-   METHOD setRowCount
    METHOD setSeries
+   METHOD model
+   METHOD setModel
+   METHOD firstBarSetColumn
+   METHOD setFirstBarSetColumn
+   METHOD lastBarSetColumn
+   METHOD setLastBarSetColumn
+   METHOD firstRow
+   METHOD setFirstRow
+   METHOD rowCount
+   METHOD setRowCount
 
    METHOD onFirstBarSetColumnChanged
    METHOD onFirstRowChanged

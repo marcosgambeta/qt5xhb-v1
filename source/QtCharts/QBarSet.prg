@@ -12,33 +12,39 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QCOLOR
+REQUEST QFONT
+REQUEST QPEN
+#endif
+
 CLASS QBarSet INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD append
-   METHOD at
-   METHOD borderColor
-   METHOD brush
-   METHOD color
-   METHOD count
-   METHOD insert
    METHOD label
-   METHOD labelBrush
-   METHOD labelColor
-   METHOD labelFont
+   METHOD setLabel
    METHOD pen
+   METHOD setPen
+   METHOD brush
+   METHOD setBrush
+   METHOD labelBrush
+   METHOD setLabelBrush
+   METHOD labelFont
+   METHOD setLabelFont
+   METHOD color
+   METHOD setColor
+   METHOD borderColor
+   METHOD setBorderColor
+   METHOD labelColor
+   METHOD setLabelColor
+   METHOD append
+   METHOD insert
    METHOD remove
    METHOD replace
-   METHOD setBorderColor
-   METHOD setBrush
-   METHOD setColor
-   METHOD setLabel
-   METHOD setLabelBrush
-   METHOD setLabelColor
-   METHOD setLabelFont
-   METHOD setPen
+   METHOD at
+   METHOD count
    METHOD sum
 
    METHOD onBorderColorChanged

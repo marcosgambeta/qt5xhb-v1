@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QPieModelMapper INHERIT QObject
 
    DESTRUCTOR destroyObject

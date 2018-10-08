@@ -12,38 +12,44 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QCANDLESTICKSET
+REQUEST QCOLOR
+REQUEST QPEN
+#endif
+
 CLASS QCandlestickSeries INHERIT QAbstractSeries
 
    METHOD new
    METHOD delete
-
-   METHOD append
-   METHOD bodyOutlineVisible
-   METHOD bodyWidth
-   METHOD brush
-   METHOD capsVisible
-   METHOD capsWidth
-   METHOD clear
    METHOD count
-   METHOD decreasingColor
-   METHOD increasingColor
-   METHOD insert
    METHOD maximumColumnWidth
-   METHOD minimumColumnWidth
-   METHOD pen
-   METHOD remove
-   METHOD setBodyOutlineVisible
-   METHOD setBodyWidth
-   METHOD setBrush
-   METHOD setCapsVisible
-   METHOD setCapsWidth
-   METHOD setDecreasingColor
-   METHOD setIncreasingColor
    METHOD setMaximumColumnWidth
+   METHOD minimumColumnWidth
    METHOD setMinimumColumnWidth
+   METHOD bodyWidth
+   METHOD setBodyWidth
+   METHOD bodyOutlineVisible
+   METHOD setBodyOutlineVisible
+   METHOD capsWidth
+   METHOD setCapsWidth
+   METHOD capsVisible
+   METHOD setCapsVisible
+   METHOD increasingColor
+   METHOD setIncreasingColor
+   METHOD decreasingColor
+   METHOD setDecreasingColor
+   METHOD brush
+   METHOD setBrush
+   METHOD pen
    METHOD setPen
-   METHOD sets
+   METHOD append
+   METHOD remove
+   METHOD insert
    METHOD take
+   METHOD clear
+   METHOD sets
    METHOD type
 
    METHOD onBodyOutlineVisibilityChanged

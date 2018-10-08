@@ -12,11 +12,14 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QAREASERIES
+#endif
+
 CLASS QAreaLegendMarker INHERIT QLegendMarker
 
    METHOD new
    METHOD delete
-
    METHOD type
    METHOD series
 

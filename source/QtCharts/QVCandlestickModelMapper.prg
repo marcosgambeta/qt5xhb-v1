@@ -12,25 +12,27 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QVCandlestickModelMapper INHERIT QCandlestickModelMapper
 
    METHOD new
-
-   METHOD closeRow
-   METHOD firstSetColumn
-   METHOD highRow
-   METHOD lastSetColumn
-   METHOD lowRow
-   METHOD openRow
-   METHOD orientation
-   METHOD setCloseRow
-   METHOD setFirstSetColumn
-   METHOD setHighRow
-   METHOD setLastSetColumn
-   METHOD setLowRow
-   METHOD setOpenRow
-   METHOD setTimestampRow
    METHOD timestampRow
+   METHOD setTimestampRow
+   METHOD openRow
+   METHOD setOpenRow
+   METHOD highRow
+   METHOD setHighRow
+   METHOD lowRow
+   METHOD setLowRow
+   METHOD closeRow
+   METHOD setCloseRow
+   METHOD firstSetColumn
+   METHOD setFirstSetColumn
+   METHOD lastSetColumn
+   METHOD setLastSetColumn
+   METHOD orientation
 
    METHOD onCloseRowChanged
    METHOD onFirstSetColumnChanged

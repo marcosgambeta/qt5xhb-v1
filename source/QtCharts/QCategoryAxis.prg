@@ -12,22 +12,24 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCategoryAxis INHERIT QValueAxis
 
    METHOD new
    METHOD delete
-
-   METHOD append
+   METHOD startValue
+   METHOD setStartValue
    METHOD categoriesLabels
    METHOD count
-   METHOD endValue
    METHOD labelsPosition
+   METHOD setLabelsPosition
+   METHOD type
+   METHOD append
    METHOD remove
    METHOD replaceLabel
-   METHOD setLabelsPosition
-   METHOD setStartValue
-   METHOD startValue
-   METHOD type
+   METHOD endValue
 
    METHOD onCategoriesChanged
    METHOD onLabelsPositionChanged

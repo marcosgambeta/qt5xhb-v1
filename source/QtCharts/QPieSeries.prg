@@ -12,35 +12,38 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QPIESLICE
+#endif
+
 CLASS QPieSeries INHERIT QAbstractSeries
 
    METHOD new
    METHOD delete
-
-   METHOD append
-   METHOD clear
-   METHOD count
-   METHOD holeSize
    METHOD horizontalPosition
-   METHOD insert
-   METHOD isEmpty
-   METHOD pieEndAngle
-   METHOD pieSize
-   METHOD pieStartAngle
-   METHOD remove
-   METHOD setHoleSize
    METHOD setHorizontalPosition
-   METHOD setLabelsPosition
-   METHOD setLabelsVisible
-   METHOD setPieEndAngle
-   METHOD setPieSize
-   METHOD setPieStartAngle
-   METHOD setVerticalPosition
-   METHOD slices
-   METHOD sum
-   METHOD take
-   METHOD type
    METHOD verticalPosition
+   METHOD setVerticalPosition
+   METHOD pieSize
+   METHOD setPieSize
+   METHOD pieStartAngle
+   METHOD setPieStartAngle
+   METHOD pieEndAngle
+   METHOD setPieEndAngle
+   METHOD count
+   METHOD sum
+   METHOD holeSize
+   METHOD setHoleSize
+   METHOD type
+   METHOD append
+   METHOD insert
+   METHOD remove
+   METHOD take
+   METHOD clear
+   METHOD slices
+   METHOD isEmpty
+   METHOD setLabelsVisible
+   METHOD setLabelsPosition
 
    METHOD onAdded
    METHOD onClicked

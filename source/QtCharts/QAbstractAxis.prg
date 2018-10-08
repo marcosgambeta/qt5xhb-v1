@@ -22,65 +22,64 @@ REQUEST QPEN
 CLASS QAbstractAxis INHERIT QObject
 
    METHOD delete
-
-   METHOD alignment
-   METHOD gridLineColor
-   METHOD gridLinePen
-   METHOD hide
-   METHOD isGridLineVisible
-   METHOD isLineVisible
-   METHOD isMinorGridLineVisible
-   METHOD isReverse
-   METHOD isTitleVisible
    METHOD isVisible
-   METHOD labelsAngle
-   METHOD labelsBrush
-   METHOD labelsColor
-   METHOD labelsFont
-   METHOD labelsVisible
-   METHOD linePen
-   METHOD linePenColor
-   METHOD minorGridLineColor
-   METHOD minorGridLinePen
-   METHOD orientation
-   METHOD setGridLineColor
-   METHOD setGridLinePen
-   METHOD setGridLineVisible
-   METHOD setLabelsAngle
-   METHOD setLabelsBrush
-   METHOD setLabelsColor
-   METHOD setLabelsFont
-   METHOD setLabelsVisible
-   METHOD setLinePen
-   METHOD setLinePenColor
-   METHOD setLineVisible
-   METHOD setMax
-   METHOD setMin
-   METHOD setMinorGridLineColor
-   METHOD setMinorGridLinePen
-   METHOD setMinorGridLineVisible
-   METHOD setRange
-   METHOD setReverse
-   METHOD setShadesBorderColor
-   METHOD setShadesBrush
-   METHOD setShadesColor
-   METHOD setShadesPen
-   METHOD setShadesVisible
-   METHOD setTitleBrush
-   METHOD setTitleFont
-   METHOD setTitleText
-   METHOD setTitleVisible
    METHOD setVisible
-   METHOD shadesBorderColor
-   METHOD shadesBrush
-   METHOD shadesColor
-   METHOD shadesPen
-   METHOD shadesVisible
-   METHOD show
+   METHOD isLineVisible
+   METHOD setLineVisible
+   METHOD linePen
+   METHOD setLinePen
+   METHOD linePenColor
+   METHOD setLinePenColor
+   METHOD isGridLineVisible
+   METHOD setGridLineVisible
+   METHOD gridLinePen
+   METHOD setGridLinePen
+   METHOD isMinorGridLineVisible
+   METHOD setMinorGridLineVisible
+   METHOD minorGridLinePen
+   METHOD setMinorGridLinePen
+   METHOD gridLineColor
+   METHOD setGridLineColor
+   METHOD minorGridLineColor
+   METHOD setMinorGridLineColor
+   METHOD labelsVisible
+   METHOD setLabelsVisible
+   METHOD labelsBrush
+   METHOD setLabelsBrush
+   METHOD labelsFont
+   METHOD setLabelsFont
+   METHOD labelsAngle
+   METHOD setLabelsAngle
+   METHOD labelsColor
+   METHOD setLabelsColor
+   METHOD isTitleVisible
+   METHOD setTitleVisible
    METHOD titleBrush
+   METHOD setTitleBrush
    METHOD titleFont
+   METHOD setTitleFont
    METHOD titleText
+   METHOD setTitleText
+   METHOD shadesVisible
+   METHOD setShadesVisible
+   METHOD shadesPen
+   METHOD setShadesPen
+   METHOD shadesBrush
+   METHOD setShadesBrush
+   METHOD shadesColor
+   METHOD setShadesColor
+   METHOD shadesBorderColor
+   METHOD setShadesBorderColor
+   METHOD orientation
+   METHOD alignment
+   METHOD isReverse
+   METHOD setReverse
    METHOD type
+   METHOD show
+   METHOD hide
+   METHOD setMin
+   METHOD setMax
+   METHOD setRange
 
    METHOD onColorChanged
    METHOD onGridLineColorChanged
