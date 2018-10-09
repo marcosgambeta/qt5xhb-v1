@@ -12,15 +12,18 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QGamepadManager INHERIT QObject
 
-   METHOD configureAxis
-   METHOD configureButton
    METHOD instance
-   METHOD isConfigurationNeeded
    METHOD isGamepadConnected
-   METHOD resetConfiguration
+   METHOD isConfigurationNeeded
+   METHOD configureButton
+   METHOD configureAxis
    METHOD setCancelConfigureButton
+   METHOD resetConfiguration
    METHOD setSettingsFile
 
    METHOD onAxisConfigured

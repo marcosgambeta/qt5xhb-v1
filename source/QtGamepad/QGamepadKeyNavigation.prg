@@ -19,45 +19,44 @@ REQUEST QGAMEPAD
 CLASS QGamepadKeyNavigation INHERIT QObject
 
    METHOD new
-
    METHOD active
-   METHOD buttonAKey
-   METHOD buttonBKey
-   METHOD buttonGuideKey
-   METHOD buttonL1Key
-   METHOD buttonL2Key
-   METHOD buttonL3Key
-   METHOD buttonR1Key
-   METHOD buttonR2Key
-   METHOD buttonR3Key
-   METHOD buttonSelectKey
-   METHOD buttonStartKey
-   METHOD buttonXKey
-   METHOD buttonYKey
-   METHOD downKey
-   METHOD gamepad
-   METHOD leftKey
-   METHOD rightKey
    METHOD setActive
-   METHOD setButtonAKey
-   METHOD setButtonBKey
-   METHOD setButtonGuideKey
-   METHOD setButtonL1Key
-   METHOD setButtonL2Key
-   METHOD setButtonL3Key
-   METHOD setButtonR1Key
-   METHOD setButtonR2Key
-   METHOD setButtonR3Key
-   METHOD setButtonSelectKey
-   METHOD setButtonStartKey
-   METHOD setButtonXKey
-   METHOD setButtonYKey
-   METHOD setDownKey
+   METHOD gamepad
    METHOD setGamepad
-   METHOD setLeftKey
-   METHOD setRightKey
-   METHOD setUpKey
    METHOD upKey
+   METHOD setUpKey
+   METHOD downKey
+   METHOD setDownKey
+   METHOD leftKey
+   METHOD setLeftKey
+   METHOD rightKey
+   METHOD setRightKey
+   METHOD buttonAKey
+   METHOD setButtonAKey
+   METHOD buttonBKey
+   METHOD setButtonBKey
+   METHOD buttonXKey
+   METHOD setButtonXKey
+   METHOD buttonYKey
+   METHOD setButtonYKey
+   METHOD buttonSelectKey
+   METHOD setButtonSelectKey
+   METHOD buttonStartKey
+   METHOD setButtonStartKey
+   METHOD buttonGuideKey
+   METHOD setButtonGuideKey
+   METHOD buttonL1Key
+   METHOD setButtonL1Key
+   METHOD buttonR1Key
+   METHOD setButtonR1Key
+   METHOD buttonL2Key
+   METHOD setButtonL2Key
+   METHOD buttonR2Key
+   METHOD setButtonR2Key
+   METHOD buttonL3Key
+   METHOD setButtonL3Key
+   METHOD buttonR3Key
+   METHOD setButtonR3Key
 
    METHOD onActiveChanged
    METHOD onGamepadChanged
