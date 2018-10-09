@@ -1303,10 +1303,10 @@ $prototype=void setViewTransformEnabled ( bool enable )
 $method=|void|setViewTransformEnabled|bool
 
 $prototype=void setViewport ( const QRect & rectangle )
-$internalMethod=|void|setViewport,setViewPort1|const QRect &
+$internalMethod=|void|setViewport,setViewport1|const QRect &
 
 $prototype=void setViewport ( int x, int y, int width, int height )
-$internalMethod=|void|setViewport,setViewPort2|int,int,int,int
+$internalMethod=|void|setViewport,setViewport2|int,int,int,int
 
 //[1]void setViewport ( const QRect & rectangle )
 //[2]void setViewport ( int x, int y, int width, int height )
@@ -1315,18 +1315,18 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QPainter_setViewPort1();
+    QPainter_setViewport1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    QPainter_setViewPort2();
+    QPainter_setViewport2();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-$addMethod=setViewPort
+$addMethod=setViewport
 
 $prototype=void setWindow ( const QRect & rectangle )
 $internalMethod=|void|setWindow,setWindow1|const QRect &

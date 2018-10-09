@@ -25,38 +25,19 @@ $includes
 $deleteMethod
 
 $prototype=static int cacheLimit()
-HB_FUNC_STATIC( QPIXMAPCACHE_CACHELIMIT )
-{
-  RINT( QPixmapCache::cacheLimit () );
-}
+$staticMethod=|int|cacheLimit|
 
 $prototype=static void setCacheLimit(int)
-HB_FUNC_STATIC( QPIXMAPCACHE_SETCACHELIMIT )
-{
-  QPixmapCache::setCacheLimit ( PINT(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|setCacheLimit|int
 
 $prototype=static QPixmap *find(const QString &key)
-HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
-{
-  QPixmap * ptr = QPixmapCache::find ( PQSTRING(1) );
-  _qt5xhb_createReturnClass ( ptr, "QPIXMAP" );
-}
+$staticMethod=|QPixmap *|find,find1|const QString &
 
 $prototype=static bool find(const QString &key, QPixmap &pixmap)
-HB_FUNC_STATIC( QPIXMAPCACHE_FIND2 )
-{
-  QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  RBOOL( QPixmapCache::find ( PQSTRING(1), *par2 ) );
-}
+$staticMethod=|bool|find,find2|const QString &,QPixmap &
 
 $prototype=static bool find(const QString &key, QPixmap *pixmap)
-HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
-{
-  QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  RBOOL( QPixmapCache::find ( PQSTRING(1), par2 ) );
-}
+$staticMethod=|bool|find,find3|const QString &,QPixmap *
 
 //[1]static QPixmap *find(const QString &key)
 //[2]static bool find(const QString &key, QPixmap &pixmap)
@@ -65,47 +46,36 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
 
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND )
 {
-  // TODO: implementar
+%% TODO: implementar
 }
 $addMethod=find
 
 $prototype=static bool insert(const QString &key, const QPixmap &pixmap)
-HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
-{
-  RBOOL( QPixmapCache::insert ( PQSTRING(1), *PQPIXMAP(2) ) );
-}
+$staticMethod=|bool|insert,insert1|const QString &,const QPixmap &
 
 //[1]static bool insert(const QString &key, const QPixmap &pixmap)
 //[2]static Key insert(const QPixmap &pixmap)
 
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT )
 {
-  // TODO: implementar
+%% TODO: implementar
 }
 $addMethod=insert
 
 $prototype=static void remove(const QString &key)
-HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
-{
-  QPixmapCache::remove ( PQSTRING(1) );
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|remove,remove1|const QString &
 
 //[1]static void remove(const QString &key)
 //[2]static void remove(const Key &key)
 
 HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE )
 {
-  // TODO: implementar
+%% TODO: implementar
 }
 $addMethod=remove
 
 $prototype=static void clear()
-HB_FUNC_STATIC( QPIXMAPCACHE_CLEAR )
-{
-  QPixmapCache::clear ();
-  hb_itemReturn( hb_stackSelfItem() );
-}
+$staticMethod=|void|clear|
 
 $extraMethods
 
