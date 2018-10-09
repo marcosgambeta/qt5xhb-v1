@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTOPTION
 REQUEST QSIZEF
+REQUEST QTEXTOPTION
 #endif
 
 CLASS QStaticText

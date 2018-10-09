@@ -24,8 +24,6 @@ CLASS QPaintEngine
 
    METHOD delete
    METHOD begin
-   METHOD drawEllipse1
-   METHOD drawEllipse2
    METHOD drawEllipse
    METHOD drawImage
    METHOD drawLines
@@ -117,20 +115,13 @@ HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
 /*
 virtual void drawEllipse ( const QRectF & rect )
 */
-HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE1 )
+void QPaintEngine_drawEllipse1 ()
 {
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQRECTF(1) )
-    {
       obj->drawEllipse ( *PQRECTF(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -139,20 +130,13 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE1 )
 /*
 virtual void drawEllipse ( const QRect & rect )
 */
-HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE2 )
+void QPaintEngine_drawEllipse2 ()
 {
   QPaintEngine * obj = (QPaintEngine *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQRECT(1) )
-    {
       obj->drawEllipse ( *PQRECT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -165,11 +149,11 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    HB_FUNC_EXEC( QPAINTENGINE_DRAWELLIPSE1 );
+    QPaintEngine_drawEllipse1();
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    HB_FUNC_EXEC( QPAINTENGINE_DRAWELLIPSE2 );
+    QPaintEngine_drawEllipse2();
   }
   else
   {

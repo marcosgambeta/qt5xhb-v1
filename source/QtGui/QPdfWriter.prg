@@ -12,6 +12,10 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QPAGELAYOUT
+#endif
+
 CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
 
    METHOD new
@@ -26,8 +30,8 @@ CLASS QPdfWriter INHERIT QObject,QPagedPaintDevice
    METHOD resolution
    METHOD setResolution
    METHOD pageLayout
-   METHOD pdfVersion
    METHOD setPageLayout
+   METHOD pdfVersion
    METHOD setPageMargins
    METHOD setPageOrientation
    METHOD setPdfVersion

@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZEF
 REQUEST QPAGELAYOUT
+REQUEST QSIZEF
 #endif
 
 CLASS QPagedPaintDevice INHERIT QPaintDevice

@@ -88,7 +88,14 @@ static int cacheLimit()
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_CACHELIMIT )
 {
-  RINT( QPixmapCache::cacheLimit () );
+    if( ISNUMPAR(0) )
+  {
+      RINT( QPixmapCache::cacheLimit () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -96,7 +103,15 @@ static void setCacheLimit(int)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_SETCACHELIMIT )
 {
-  QPixmapCache::setCacheLimit ( PINT(1) );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      QPixmapCache::setCacheLimit ( PINT(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -105,8 +120,15 @@ static QPixmap *find(const QString &key)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND1 )
 {
-  QPixmap * ptr = QPixmapCache::find ( PQSTRING(1) );
-  _qt5xhb_createReturnClass ( ptr, "QPIXMAP" );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      QPixmap * ptr = QPixmapCache::find ( PQSTRING(1) );
+      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -114,8 +136,14 @@ static bool find(const QString &key, QPixmap &pixmap)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND2 )
 {
-  QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  RBOOL( QPixmapCache::find ( PQSTRING(1), *par2 ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISQPIXMAP(2) )
+  {
+      RBOOL( QPixmapCache::find ( PQSTRING(1), *PQPIXMAP(2) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 /*
@@ -123,8 +151,14 @@ static bool find(const QString &key, QPixmap *pixmap)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
 {
-  QPixmap * par2 = (QPixmap *) _qt5xhb_itemGetPtr(2);
-  RBOOL( QPixmapCache::find ( PQSTRING(1), par2 ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISQPIXMAP(2) )
+  {
+      RBOOL( QPixmapCache::find ( PQSTRING(1), PQPIXMAP(2) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]static QPixmap *find(const QString &key)
@@ -134,7 +168,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
 
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND )
 {
-  // TODO: implementar
 }
 
 /*
@@ -142,7 +175,14 @@ static bool insert(const QString &key, const QPixmap &pixmap)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
 {
-  RBOOL( QPixmapCache::insert ( PQSTRING(1), *PQPIXMAP(2) ) );
+    if( ISNUMPAR(2) && ISCHAR(1) && ISQPIXMAP(2) )
+  {
+      RBOOL( QPixmapCache::insert ( PQSTRING(1), *PQPIXMAP(2) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 //[1]static bool insert(const QString &key, const QPixmap &pixmap)
@@ -150,7 +190,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
 
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT )
 {
-  // TODO: implementar
 }
 
 /*
@@ -158,7 +197,15 @@ static void remove(const QString &key)
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
 {
-  QPixmapCache::remove ( PQSTRING(1) );
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+      QPixmapCache::remove ( PQSTRING(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
@@ -167,7 +214,6 @@ HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
 
 HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE )
 {
-  // TODO: implementar
 }
 
 /*
@@ -175,7 +221,15 @@ static void clear()
 */
 HB_FUNC_STATIC( QPIXMAPCACHE_CLEAR )
 {
-  QPixmapCache::clear ();
+    if( ISNUMPAR(0) )
+  {
+      QPixmapCache::clear ();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 }
 
