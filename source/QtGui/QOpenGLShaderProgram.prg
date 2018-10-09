@@ -12,6 +12,10 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QOPENGLSHADER
+#endif
+
 CLASS QOpenGLShaderProgram INHERIT QObject
 
    METHOD new

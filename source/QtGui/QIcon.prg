@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
 REQUEST QPIXMAP
+REQUEST QSIZE
 #endif
 
 CLASS QIcon

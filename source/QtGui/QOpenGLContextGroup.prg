@@ -12,6 +12,10 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QOPENGLCONTEXT
+#endif
+
 CLASS QOpenGLContextGroup INHERIT QObject
 
    METHOD delete

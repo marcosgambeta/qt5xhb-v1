@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QOpenGLDebugLogger INHERIT QObject
 
    METHOD new

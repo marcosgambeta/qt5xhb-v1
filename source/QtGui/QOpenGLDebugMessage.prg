@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QOpenGLDebugMessage
 
    DATA pointer
@@ -77,6 +80,9 @@ void QOpenGLDebugMessage_new2 ()
   QOpenGLDebugMessage * o = new QOpenGLDebugMessage ( *PQOPENGLDEBUGMESSAGE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
+
+//[1]QOpenGLDebugMessage()
+//[2]QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 {

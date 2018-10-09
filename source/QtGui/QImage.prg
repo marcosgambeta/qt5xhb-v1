@@ -13,6 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QCOLOR
+REQUEST QMATRIX
 REQUEST QPOINT
 REQUEST QRECT
 REQUEST QSIZE
@@ -21,9 +23,9 @@ REQUEST QTRANSFORM
 
 CLASS QImage INHERIT QPaintDevice
 
+   METHOD new
    METHOD new9
    METHOD new10
-   METHOD new
    METHOD delete
    METHOD allGray
    METHOD bitPlaneCount
