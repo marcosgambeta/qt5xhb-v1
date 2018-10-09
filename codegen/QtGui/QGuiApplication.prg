@@ -9,6 +9,52 @@ $header
 #include "hbclass.ch"
 
 $addRequests
+$addRequest=QAccessibleEvent
+$addRequest=QAccessibleStateChangeEvent
+$addRequest=QAccessibleTableModelChangeEvent
+$addRequest=QAccessibleTextCursorEvent
+$addRequest=QAccessibleTextInsertEvent
+$addRequest=QAccessibleTextRemoveEvent
+$addRequest=QAccessibleTextSelectionEvent
+$addRequest=QAccessibleTextUpdateEvent
+$addRequest=QAccessibleValueChangeEvent
+$addRequest=QActionEvent
+$addRequest=QApplicationStateChangeEvent
+$addRequest=QCloseEvent
+$addRequest=QContextMenuEvent
+$addRequest=QDragEnterEvent
+$addRequest=QDragLeaveEvent
+$addRequest=QDragMoveEvent
+$addRequest=QDropEvent
+$addRequest=QEnterEvent
+$addRequest=QExposeEvent
+$addRequest=QFileOpenEvent
+$addRequest=QFocusEvent
+$addRequest=QHelpEvent
+$addRequest=QHideEvent
+$addRequest=QHoverEvent
+$addRequest=QIconDragEvent
+$addRequest=QInputEvent
+$addRequest=QInputMethodEvent
+$addRequest=QInputMethodQueryEvent
+$addRequest=QKeyEvent
+$addRequest=QMouseEvent
+$addRequest=QMoveEvent
+$addRequest=QNativeGestureEvent
+$addRequest=QPaintEvent
+$addRequest=QResizeEvent
+$addRequest=QScreenOrientationChangeEvent
+$addRequest=QScrollEvent
+$addRequest=QScrollPrepareEvent
+$addRequest=QShortcutEvent
+$addRequest=QShowEvent
+$addRequest=QStatusTipEvent
+$addRequest=QTabletEvent
+$addRequest=QToolBarChangeEvent
+$addRequest=QTouchEvent
+$addRequest=QWhatsThisClickedEvent
+$addRequest=QWheelEvent
+$addRequest=QWindowStateChangeEvent
 
 $beginClassFrom=QCoreApplication
 
