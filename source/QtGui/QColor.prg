@@ -12,16 +12,19 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QColor
 
    DATA pointer
    DATA self_destruction INIT .F.
 
+   METHOD new
    METHOD new3
    METHOD new4
    METHOD new5
    METHOD new7
-   METHOD new
    METHOD delete
    METHOD alpha
    METHOD alphaF
@@ -164,8 +167,7 @@ QColor ( QRgb color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW3 )
 {
-  QRgb par1 = hb_parni(1);
-  QColor * o = new QColor ( par1 );
+  QColor * o = new QColor ( PQRGB(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 

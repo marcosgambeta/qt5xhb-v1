@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QAccessibleStateChangeEvent INHERIT QAccessibleEvent
 
    METHOD delete

@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWINDOW
 REQUEST QACCESSIBLEINTERFACE
+REQUEST QWINDOW
 #endif
 
 CLASS QAccessibleApplication INHERIT QAccessibleObject
