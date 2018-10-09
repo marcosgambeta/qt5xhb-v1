@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QDBusObjectPath
 
    DATA pointer
@@ -21,7 +24,6 @@ CLASS QDBusObjectPath
    METHOD new2
    METHOD new3
    METHOD new4
-   METHOD new
    METHOD delete
    METHOD path
    METHOD setPath
