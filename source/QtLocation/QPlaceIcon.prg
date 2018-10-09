@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
 REQUEST QPLACEMANAGER
+REQUEST QURL
 #endif
 
 CLASS QPlaceIcon
