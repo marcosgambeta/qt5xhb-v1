@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
 REQUEST QDESIGNERFORMWINDOWINTERFACE
+REQUEST QWIDGET
 #endif
 
 CLASS QDesignerFormWindowCursorInterface

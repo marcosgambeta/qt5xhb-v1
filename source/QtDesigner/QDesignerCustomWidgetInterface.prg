@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
 REQUEST QICON
+REQUEST QWIDGET
 #endif
 
 CLASS QDesignerCustomWidgetInterface
