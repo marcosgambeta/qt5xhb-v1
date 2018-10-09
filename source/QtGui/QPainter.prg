@@ -14,18 +14,18 @@
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QBRUSH
-REQUEST QRECTF
-REQUEST QRECT
-REQUEST QPOINT
-REQUEST QPAINTERPATH
-REQUEST QREGION
-REQUEST QTRANSFORM
-REQUEST QPAINTDEVICE
 REQUEST QFONT
 REQUEST QFONTINFO
 REQUEST QFONTMETRICS
+REQUEST QPAINTDEVICE
 REQUEST QPAINTENGINE
+REQUEST QPAINTERPATH
 REQUEST QPEN
+REQUEST QPOINT
+REQUEST QRECT
+REQUEST QRECTF
+REQUEST QREGION
+REQUEST QTRANSFORM
 #endif
 
 CLASS QPainter
@@ -3624,7 +3624,7 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWTRANSFORMENABLED )
 /*
 void setViewport ( const QRect & rectangle )
 */
-void QPainter_setViewPort1 ()
+void QPainter_setViewport1 ()
 {
   QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -3639,7 +3639,7 @@ void QPainter_setViewPort1 ()
 /*
 void setViewport ( int x, int y, int width, int height )
 */
-void QPainter_setViewPort2 ()
+void QPainter_setViewport2 ()
 {
   QPainter * obj = (QPainter *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -3658,11 +3658,11 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QPainter_setViewPort1();
+    QPainter_setViewport1();
   }
   else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
   {
-    QPainter_setViewPort2();
+    QPainter_setViewport2();
   }
   else
   {
