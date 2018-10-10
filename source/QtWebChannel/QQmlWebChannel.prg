@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QQMLWEBCHANNELATTACHED
 #endif
 
 CLASS QQmlWebChannel INHERIT QWebChannel
