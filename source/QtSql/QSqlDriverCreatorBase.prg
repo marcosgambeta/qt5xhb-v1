@@ -22,7 +22,6 @@ CLASS QSqlDriverCreatorBase
    DATA self_destruction INIT .F.
 
    METHOD delete
-
    METHOD createObject
 
    METHOD newFrom

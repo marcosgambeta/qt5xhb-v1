@@ -20,7 +20,6 @@ CLASS QSqlRelationalDelegate INHERIT QItemDelegate
 
    METHOD new
    METHOD delete
-
    METHOD createEditor
    METHOD setModelData
 

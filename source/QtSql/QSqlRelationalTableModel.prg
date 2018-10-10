@@ -22,18 +22,17 @@ CLASS QSqlRelationalTableModel INHERIT QSqlTableModel
 
    METHOD new
    METHOD delete
-
-   METHOD clear
-   METHOD data
    METHOD relation
    METHOD relationModel
+   METHOD setRelation
+   METHOD clear
+   METHOD data
    METHOD removeColumns
-   METHOD revertRow
    METHOD select
    METHOD setData
-   METHOD setJoinMode
-   METHOD setRelation
    METHOD setTable
+   METHOD revertRow
+   METHOD setJoinMode
 
    DESTRUCTOR destroyObject
 

@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QSqlRelation
 
    DATA pointer
@@ -19,7 +22,6 @@ CLASS QSqlRelation
 
    METHOD new
    METHOD delete
-
    METHOD displayColumn
    METHOD indexColumn
    METHOD isValid

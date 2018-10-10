@@ -27,7 +27,6 @@ CLASS QSqlQuery
 
    METHOD new
    METHOD delete
-
    METHOD addBindValue
    METHOD at
    METHOD bindValue
@@ -41,6 +40,7 @@ CLASS QSqlQuery
    METHOD first
    METHOD isActive
    METHOD isForwardOnly
+   METHOD setForwardOnly
    METHOD isNull
    METHOD isSelect
    METHOD isValid
@@ -50,15 +50,14 @@ CLASS QSqlQuery
    METHOD lastQuery
    METHOD next
    METHOD nextResult
-   METHOD numericalPrecisionPolicy
    METHOD numRowsAffected
+   METHOD numericalPrecisionPolicy
+   METHOD setNumericalPrecisionPolicy
    METHOD prepare
    METHOD previous
    METHOD record
    METHOD result
    METHOD seek
-   METHOD setForwardOnly
-   METHOD setNumericalPrecisionPolicy
    METHOD size
    METHOD value
 

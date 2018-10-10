@@ -12,17 +12,19 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QSqlIndex INHERIT QSqlRecord
 
    METHOD new
    METHOD delete
-
    METHOD append
    METHOD cursorName
-   METHOD isDescending
-   METHOD name
    METHOD setCursorName
+   METHOD isDescending
    METHOD setDescending
+   METHOD name
    METHOD setName
 
    DESTRUCTOR destroyObject

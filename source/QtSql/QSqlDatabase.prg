@@ -27,46 +27,45 @@ CLASS QSqlDatabase
 
    METHOD new
    METHOD delete
-
-   METHOD addDatabase
-   METHOD cloneDatabase
    METHOD close
    METHOD commit
-   METHOD connectionName
-   METHOD connectionNames
    METHOD connectOptions
-   METHOD contains
-   METHOD database
+   METHOD setConnectOptions
+   METHOD connectionName
    METHOD databaseName
+   METHOD setDatabaseName
    METHOD driver
    METHOD driverName
-   METHOD drivers
    METHOD exec
    METHOD hostName
-   METHOD isDriverAvailable
+   METHOD setHostName
    METHOD isOpen
    METHOD isOpenError
    METHOD isValid
    METHOD lastError
    METHOD numericalPrecisionPolicy
+   METHOD setNumericalPrecisionPolicy
    METHOD open
    METHOD password
+   METHOD setPassword
    METHOD port
+   METHOD setPort
    METHOD primaryIndex
    METHOD record
-   METHOD registerSqlDriver
-   METHOD removeDatabase
    METHOD rollback
-   METHOD setConnectOptions
-   METHOD setDatabaseName
-   METHOD setHostName
-   METHOD setNumericalPrecisionPolicy
-   METHOD setPassword
-   METHOD setPort
-   METHOD setUserName
    METHOD tables
    METHOD transaction
    METHOD userName
+   METHOD setUserName
+   METHOD addDatabase
+   METHOD cloneDatabase
+   METHOD connectionNames
+   METHOD contains
+   METHOD database
+   METHOD drivers
+   METHOD isDriverAvailable
+   METHOD registerSqlDriver
+   METHOD removeDatabase
 
    METHOD newFrom
    METHOD newFromObject

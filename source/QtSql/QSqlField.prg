@@ -23,33 +23,32 @@ CLASS QSqlField
 
    METHOD new
    METHOD delete
-
    METHOD clear
    METHOD defaultValue
+   METHOD setDefaultValue
    METHOD isAutoValue
+   METHOD setAutoValue
    METHOD isGenerated
+   METHOD setGenerated
    METHOD isNull
    METHOD isReadOnly
+   METHOD setReadOnly
    METHOD isValid
    METHOD length
-   METHOD name
-   METHOD precision
-   METHOD requiredStatus
-   METHOD setAutoValue
-   METHOD setDefaultValue
-   METHOD setGenerated
    METHOD setLength
+   METHOD name
    METHOD setName
+   METHOD precision
    METHOD setPrecision
-   METHOD setReadOnly
-   METHOD setRequired
+   METHOD requiredStatus
    METHOD setRequiredStatus
-   METHOD setSqlType
-   METHOD setType
-   METHOD setValue
+   METHOD setRequired
    METHOD type
-   METHOD typeID
+   METHOD setType
    METHOD value
+   METHOD setValue
+   METHOD setSqlType
+   METHOD typeID
 
    METHOD newFrom
    METHOD newFromObject

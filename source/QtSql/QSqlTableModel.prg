@@ -23,38 +23,37 @@ CLASS QSqlTableModel INHERIT QSqlQueryModel
 
    METHOD new
    METHOD delete
-
-   METHOD clear
-   METHOD data
    METHOD database
    METHOD editStrategy
+   METHOD setEditStrategy
    METHOD fieldIndex
    METHOD filter
-   METHOD flags
-   METHOD headerData
+   METHOD setFilter
    METHOD insertRecord
-   METHOD insertRows
    METHOD isDirty
    METHOD primaryKey
-   METHOD record
-   METHOD removeColumns
-   METHOD removeRows
-   METHOD revert
-   METHOD revertAll
    METHOD revertRow
-   METHOD rowCount
    METHOD select
-   METHOD selectRow
-   METHOD setData
-   METHOD setEditStrategy
-   METHOD setFilter
    METHOD setRecord
+   METHOD sort
    METHOD setSort
    METHOD setTable
-   METHOD sort
+   METHOD tableName
+   METHOD clear
+   METHOD data
+   METHOD setData
+   METHOD flags
+   METHOD headerData
+   METHOD insertRows
+   METHOD removeColumns
+   METHOD removeRows
+   METHOD rowCount
+   METHOD revert
+   METHOD revertAll
    METHOD submit
    METHOD submitAll
-   METHOD tableName
+   METHOD record
+   METHOD selectRow
 
    METHOD onBeforeDelete
    METHOD onBeforeInsert

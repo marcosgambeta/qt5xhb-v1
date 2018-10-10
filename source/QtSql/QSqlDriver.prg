@@ -23,9 +23,7 @@ REQUEST QVARIANT
 CLASS QSqlDriver INHERIT QObject
 
    METHOD delete
-
    METHOD beginTransaction
-   METHOD cancelQuery
    METHOD close
    METHOD commitTransaction
    METHOD createResult
@@ -45,10 +43,11 @@ CLASS QSqlDriver INHERIT QObject
    METHOD setNumericalPrecisionPolicy
    METHOD sqlStatement
    METHOD stripDelimiters
-   METHOD subscribedToNotifications
    METHOD subscribeToNotification
+   METHOD subscribedToNotifications
    METHOD tables
    METHOD unsubscribeFromNotification
+   METHOD cancelQuery
 
    METHOD onNotification1
    METHOD onNotification2

@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QSqlError
 
    DATA pointer
@@ -19,18 +22,17 @@ CLASS QSqlError
 
    METHOD new
    METHOD delete
-
    METHOD databaseText
-   METHOD driverText
-   METHOD isValid
-   METHOD nativeErrorCode
-   METHOD number
    METHOD setDatabaseText
+   METHOD driverText
    METHOD setDriverText
+   METHOD isValid
+   METHOD number
    METHOD setNumber
-   METHOD setType
    METHOD text
    METHOD type
+   METHOD setType
+   METHOD nativeErrorCode
    METHOD swap
 
    METHOD newFrom
