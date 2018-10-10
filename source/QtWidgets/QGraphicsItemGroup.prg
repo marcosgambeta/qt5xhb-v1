@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QRECTF
 REQUEST QPAINTERPATH
+REQUEST QRECTF
 #endif
 
 CLASS QGraphicsItemGroup INHERIT QGraphicsItem

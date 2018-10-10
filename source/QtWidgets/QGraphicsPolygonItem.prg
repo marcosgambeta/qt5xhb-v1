@@ -13,9 +13,9 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QPAINTERPATH
 REQUEST QPOLYGONF
 REQUEST QRECTF
-REQUEST QPAINTERPATH
 #endif
 
 CLASS QGraphicsPolygonItem INHERIT QAbstractGraphicsShapeItem

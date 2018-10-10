@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPOINTF
 REQUEST QPOINT
+REQUEST QPOINTF
 #endif
 
 CLASS QGraphicsSceneWheelEvent INHERIT QGraphicsSceneEvent
