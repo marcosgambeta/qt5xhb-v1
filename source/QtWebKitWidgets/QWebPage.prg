@@ -31,55 +31,52 @@ CLASS QWebPage INHERIT QObject
 
    METHOD new
    METHOD delete
-
+   METHOD isModified
+   METHOD selectedText
+   METHOD selectedHtml
+   METHOD hasSelection
+   METHOD viewportSize
+   METHOD setViewportSize
+   METHOD preferredContentsSize
+   METHOD setPreferredContentsSize
+   METHOD forwardUnsupportedContent
+   METHOD setForwardUnsupportedContent
+   METHOD linkDelegationPolicy
+   METHOD setLinkDelegationPolicy
+   METHOD palette
+   METHOD setPalette
+   METHOD isContentEditable
+   METHOD setContentEditable
+   METHOD visibilityState
+   METHOD setVisibilityState
    METHOD action
    METHOD bytesReceived
    METHOD createStandardContextMenu
    METHOD currentFrame
-   METHOD event
-   //METHOD extension
    METHOD findText
    METHOD focusNextPrevChild
-   METHOD forwardUnsupportedContent
    METHOD frameAt
-   METHOD hasSelection
    METHOD history
    METHOD inputMethodQuery
-   METHOD isContentEditable
-   METHOD isModified
-   METHOD linkDelegationPolicy
    METHOD mainFrame
    METHOD networkAccessManager
-   METHOD palette
    METHOD pluginFactory
-   METHOD preferredContentsSize
-   METHOD selectedHtml
-   METHOD selectedText
-   METHOD setActualVisibleContentRect
-   METHOD setContentEditable
-   METHOD setFeaturePermission
-   METHOD setForwardUnsupportedContent
-   METHOD setLinkDelegationPolicy
    METHOD setNetworkAccessManager
-   METHOD setPalette
    METHOD setPluginFactory
-   METHOD setPreferredContentsSize
-   METHOD settings
    METHOD setView
-   METHOD setViewportSize
-   METHOD setVisibilityState
-   METHOD shouldInterruptJavaScript
-   METHOD supportedContentTypes
-   METHOD supportsContentType
-   //METHOD supportsExtension
+   METHOD settings
    METHOD swallowContextMenuEvent
    METHOD totalBytes
    METHOD triggerAction
    METHOD undoStack
    METHOD updatePositionDependentActions
    METHOD view
-   METHOD viewportSize
-   METHOD visibilityState
+   METHOD event
+   METHOD shouldInterruptJavaScript
+   METHOD setActualVisibleContentRect
+   METHOD setFeaturePermission
+   METHOD supportedContentTypes
+   METHOD supportsContentType
 
    METHOD onApplicationCacheQuotaExceeded
    METHOD onContentsChanged

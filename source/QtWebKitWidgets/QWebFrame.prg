@@ -28,34 +28,39 @@ REQUEST QWEBSECURITYORIGIN
 
 CLASS QWebFrame INHERIT QObject
 
-   METHOD addToJavaScriptWindowObject
+   METHOD textSizeMultiplier
+   METHOD setTextSizeMultiplier
+   METHOD zoomFactor
+   METHOD setZoomFactor
+   METHOD title
+   METHOD url
+   METHOD setUrl
+   METHOD requestedUrl
    METHOD baseUrl
-   METHOD childFrames
+   METHOD icon
    METHOD contentsSize
+   METHOD scrollPosition
+   METHOD setScrollPosition
+   METHOD hasFocus
+   METHOD addToJavaScriptWindowObject
+   METHOD childFrames
    METHOD documentElement
-   METHOD evaluateJavaScript
-   METHOD event
    METHOD findAllElements
    METHOD findFirstElement
    METHOD frameName
    METHOD geometry
-   METHOD hasFocus
    METHOD hitTestContent
-   METHOD icon
    METHOD load
    METHOD page
    METHOD parentFrame
    METHOD pos
-   METHOD print
    METHOD render
-   METHOD requestedUrl
    METHOD scroll
    METHOD scrollBarGeometry
    METHOD scrollBarMaximum
    METHOD scrollBarMinimum
    METHOD scrollBarPolicy
    METHOD scrollBarValue
-   METHOD scrollPosition
    METHOD scrollToAnchor
    METHOD securityOrigin
    METHOD setContent
@@ -63,16 +68,11 @@ CLASS QWebFrame INHERIT QObject
    METHOD setHtml
    METHOD setScrollBarPolicy
    METHOD setScrollBarValue
-   METHOD setScrollPosition
-   METHOD setTextSizeMultiplier
-   METHOD setUrl
-   METHOD setZoomFactor
-   METHOD textSizeMultiplier
-   METHOD title
    METHOD toHtml
    METHOD toPlainText
-   METHOD url
-   METHOD zoomFactor
+   METHOD evaluateJavaScript
+   METHOD print
+   METHOD event
 
    METHOD onContentsSizeChanged
    METHOD onIconChanged
@@ -81,7 +81,6 @@ CLASS QWebFrame INHERIT QObject
    METHOD onLoadFinished
    METHOD onLoadStarted
    METHOD onPageChanged
-   //METHOD onProvisionalLoad
    METHOD onTitleChanged
    METHOD onUrlChanged
 

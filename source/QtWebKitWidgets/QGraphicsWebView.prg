@@ -15,7 +15,9 @@
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QACTION
 REQUEST QICON
+REQUEST QSIZEF
 REQUEST QURL
+REQUEST QVARIANT
 REQUEST QWEBHISTORY
 REQUEST QWEBPAGE
 REQUEST QWEBSETTINGS
@@ -25,42 +27,41 @@ CLASS QGraphicsWebView INHERIT QGraphicsWidget
 
    METHOD new
    METHOD delete
-
-   METHOD back
-   METHOD event
-   METHOD findText
-   METHOD forward
-   METHOD history
+   METHOD title
    METHOD icon
-   METHOD inputMethodQuery
+   METHOD zoomFactor
+   METHOD setZoomFactor
+   METHOD url
+   METHOD setUrl
    METHOD isModified
+   METHOD resizesToContents
+   METHOD setResizesToContents
    METHOD isTiledBackingStoreFrozen
-   METHOD itemChange
+   METHOD setTiledBackingStoreFrozen
+   METHOD renderHints
+   METHOD setRenderHints
+   METHOD findText
+   METHOD history
    METHOD load
    METHOD page
    METHOD pageAction
-   METHOD paint
-   METHOD reload
-   METHOD renderHints
-   METHOD resizesToContents
    METHOD setContent
-   METHOD setGeometry
    METHOD setHtml
    METHOD setPage
-   METHOD setRenderHint
-   METHOD setRenderHints
-   METHOD setResizesToContents
-   METHOD setTiledBackingStoreFrozen
    METHOD settings
-   METHOD setUrl
-   METHOD setZoomFactor
-   METHOD sizeHint
-   METHOD stop
-   METHOD title
    METHOD triggerPageAction
+   METHOD back
+   METHOD forward
+   METHOD reload
+   METHOD stop
+   METHOD setGeometry
    METHOD updateGeometry
-   METHOD url
-   METHOD zoomFactor
+   METHOD paint
+   METHOD itemChange
+   METHOD event
+   METHOD sizeHint
+   METHOD inputMethodQuery
+   METHOD setRenderHint
 
    METHOD onIconChanged
    METHOD onLinkClicked

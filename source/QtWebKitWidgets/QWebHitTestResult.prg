@@ -28,7 +28,6 @@ CLASS QWebHitTestResult
 
    METHOD new
    METHOD delete
-
    METHOD alternateText
    METHOD boundingRect
    METHOD element
@@ -42,12 +41,12 @@ CLASS QWebHitTestResult
    METHOD linkTargetFrame
    METHOD linkText
    METHOD linkTitle
-   METHOD linkTitleString
    METHOD linkUrl
-   METHOD mediaUrl
    METHOD pixmap
    METHOD pos
    METHOD title
+   METHOD linkTitleString
+   METHOD mediaUrl
 
    METHOD newFrom
    METHOD newFromObject

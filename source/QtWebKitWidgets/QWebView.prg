@@ -15,7 +15,9 @@
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QACTION
 REQUEST QICON
+REQUEST QSIZE
 REQUEST QURL
+REQUEST QVARIANT
 REQUEST QWEBHISTORY
 REQUEST QWEBPAGE
 REQUEST QWEBSETTINGS
@@ -25,40 +27,39 @@ CLASS QWebView INHERIT QWidget
 
    METHOD new
    METHOD delete
-
-   METHOD back
-   METHOD event
-   METHOD findText
-   METHOD forward
-   METHOD hasSelection
-   METHOD history
+   METHOD title
+   METHOD url
+   METHOD setUrl
    METHOD icon
-   METHOD inputMethodQuery
+   METHOD selectedText
+   METHOD selectedHtml
+   METHOD hasSelection
    METHOD isModified
+   METHOD textSizeMultiplier
+   METHOD setTextSizeMultiplier
+   METHOD zoomFactor
+   METHOD setZoomFactor
+   METHOD renderHints
+   METHOD setRenderHints
+   METHOD findText
+   METHOD history
    METHOD load
    METHOD page
    METHOD pageAction
-   METHOD print
-   METHOD reload
-   METHOD renderHints
-   METHOD selectedHtml
-   METHOD selectedText
    METHOD setContent
    METHOD setHtml
    METHOD setPage
    METHOD setRenderHint
-   METHOD setRenderHints
-   METHOD setTextSizeMultiplier
    METHOD settings
-   METHOD setUrl
-   METHOD setZoomFactor
-   METHOD sizeHint
-   METHOD stop
-   METHOD textSizeMultiplier
-   METHOD title
    METHOD triggerPageAction
-   METHOD url
-   METHOD zoomFactor
+   METHOD back
+   METHOD forward
+   METHOD print
+   METHOD reload
+   METHOD stop
+   METHOD inputMethodQuery
+   METHOD sizeHint
+   METHOD event
 
    METHOD onIconChanged
    METHOD onLinkClicked

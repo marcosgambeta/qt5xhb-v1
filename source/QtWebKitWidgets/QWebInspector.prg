@@ -21,10 +21,9 @@ CLASS QWebInspector INHERIT QWidget
 
    METHOD new
    METHOD delete
-
-   METHOD event
    METHOD page
    METHOD setPage
+   METHOD event
    METHOD sizeHint
 
    DESTRUCTOR destroyObject
