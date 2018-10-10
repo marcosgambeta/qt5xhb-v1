@@ -26,13 +26,12 @@ CLASS QWebElement
 
    METHOD new
    METHOD delete
-
    METHOD addClass
    METHOD appendInside
    METHOD appendOutside
    METHOD attribute
-   METHOD attributeNames
    METHOD attributeNS
+   METHOD attributeNames
    METHOD classes
    METHOD clone
    METHOD document
@@ -75,10 +74,10 @@ CLASS QWebElement
    METHOD styleProperty
    METHOD tagName
    METHOD takeFromDocument
-   METHOD toggleClass
    METHOD toInnerXml
    METHOD toOuterXml
    METHOD toPlainText
+   METHOD toggleClass
    METHOD webFrame
 
    METHOD newFrom

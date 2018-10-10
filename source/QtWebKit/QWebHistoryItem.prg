@@ -26,7 +26,6 @@ CLASS QWebHistoryItem
 
    METHOD new
    METHOD delete
-
    METHOD icon
    METHOD isValid
    METHOD lastVisited

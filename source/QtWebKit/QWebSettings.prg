@@ -23,21 +23,10 @@ CLASS QWebSettings
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD clearIconDatabase
-   METHOD clearMemoryCaches
    METHOD defaultTextEncoding
-   METHOD enablePersistentStorage
    METHOD fontFamily
    METHOD fontSize
-   METHOD globalSettings
-   METHOD iconDatabasePath
-   METHOD iconForUrl
    METHOD localStoragePath
-   METHOD maximumPagesInCache
-   METHOD offlineStorageDefaultQuota
-   METHOD offlineStoragePath
-   METHOD offlineWebApplicationCachePath
-   METHOD offlineWebApplicationCacheQuota
    METHOD resetAttribute
    METHOD resetFontFamily
    METHOD resetFontSize
@@ -45,18 +34,29 @@ CLASS QWebSettings
    METHOD setDefaultTextEncoding
    METHOD setFontFamily
    METHOD setFontSize
-   METHOD setIconDatabasePath
    METHOD setLocalStoragePath
+   METHOD setUserStyleSheetUrl
+   METHOD testAttribute
+   METHOD userStyleSheetUrl
+   METHOD clearIconDatabase
+   METHOD clearMemoryCaches
+   METHOD enablePersistentStorage
+   METHOD globalSettings
+   METHOD iconDatabasePath
+   METHOD iconForUrl
+   METHOD maximumPagesInCache
+   METHOD offlineStorageDefaultQuota
+   METHOD offlineStoragePath
+   METHOD offlineWebApplicationCachePath
+   METHOD offlineWebApplicationCacheQuota
+   METHOD setIconDatabasePath
    METHOD setMaximumPagesInCache
    METHOD setObjectCacheCapacities
    METHOD setOfflineStorageDefaultQuota
    METHOD setOfflineStoragePath
    METHOD setOfflineWebApplicationCachePath
    METHOD setOfflineWebApplicationCacheQuota
-   METHOD setUserStyleSheetUrl
    METHOD setWebGraphic
-   METHOD testAttribute
-   METHOD userStyleSheetUrl
    METHOD webGraphic
 
    METHOD newFrom

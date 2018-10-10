@@ -12,13 +12,15 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QWebHistoryInterface INHERIT QObject
 
    METHOD delete
-
    METHOD addHistoryEntry
-   METHOD defaultInterface
    METHOD historyContains
+   METHOD defaultInterface
    METHOD setDefaultInterface
 
    DESTRUCTOR destroyObject
