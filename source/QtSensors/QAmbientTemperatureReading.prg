@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QAmbientTemperatureReading INHERIT QSensorReading
 
    METHOD delete

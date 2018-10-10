@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSENSORBACKEND
 #endif
 
 CLASS QSensorManager
@@ -22,11 +21,6 @@ CLASS QSensorManager
    DATA self_destruction INIT .F.
 
    METHOD delete
-   METHOD registerBackend
-   METHOD unregisterBackend
-   METHOD isBackendRegistered
-   METHOD createBackend
-   METHOD setDefaultBackend
 
    METHOD newFrom
    METHOD newFromObject
