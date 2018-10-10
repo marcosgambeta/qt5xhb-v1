@@ -18,11 +18,6 @@ REQUEST QGEOCOORDINATE
 
 CLASS QGeoRectangle INHERIT QGeoShape
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD setTopLeft
@@ -39,8 +34,6 @@ CLASS QGeoRectangle INHERIT QGeoShape
    METHOD width
    METHOD setHeight
    METHOD height
-   METHOD contains1
-   METHOD contains2
    METHOD contains
    METHOD intersects
    METHOD translate
@@ -80,7 +73,7 @@ RETURN
 /*
 QGeoRectangle()
 */
-HB_FUNC_STATIC( QGEORECTANGLE_NEW1 )
+void QGeoRectangle_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ();
@@ -91,7 +84,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW1 )
 /*
 QGeoRectangle(const QGeoCoordinate &center, double degreesWidth, double degreesHeight)
 */
-HB_FUNC_STATIC( QGEORECTANGLE_NEW2 )
+void QGeoRectangle_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ( *PQGEOCOORDINATE(1), PDOUBLE(2), PDOUBLE(3) );
@@ -102,7 +95,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW2 )
 /*
 QGeoRectangle(const QGeoCoordinate &topLeft, const QGeoCoordinate &bottomRight)
 */
-HB_FUNC_STATIC( QGEORECTANGLE_NEW3 )
+void QGeoRectangle_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
@@ -113,7 +106,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW3 )
 /*
 QGeoRectangle(const QGeoRectangle &other)
 */
-HB_FUNC_STATIC( QGEORECTANGLE_NEW4 )
+void QGeoRectangle_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ( *PQGEORECTANGLE(1) );
@@ -124,7 +117,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW4 )
 /*
 QGeoRectangle(const QGeoShape &other)
 */
-HB_FUNC_STATIC( QGEORECTANGLE_NEW5 )
+void QGeoRectangle_new5 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * o = new QGeoRectangle ( *PQGEOSHAPE(1) );
@@ -142,23 +135,23 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEORECTANGLE_NEW1 );
+    QGeoRectangle_new1();
   }
   else if( ISNUMPAR(3) && ISQGEOCOORDINATE(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QGEORECTANGLE_NEW2 );
+    QGeoRectangle_new2();
   }
   else if( ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOCOORDINATE(2) )
   {
-    HB_FUNC_EXEC( QGEORECTANGLE_NEW3 );
+    QGeoRectangle_new3();
   }
   else if( ISNUMPAR(1) && ISQGEORECTANGLE(1) )
   {
-    HB_FUNC_EXEC( QGEORECTANGLE_NEW4 );
+    QGeoRectangle_new4();
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    HB_FUNC_EXEC( QGEORECTANGLE_NEW5 );
+    QGeoRectangle_new5();
   }
   else
   {
@@ -515,21 +508,14 @@ HB_FUNC_STATIC( QGEORECTANGLE_HEIGHT )
 /*
 bool contains(const QGeoCoordinate &coordinate) const
 */
-HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS1 )
+void QGeoRectangle_contains1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * obj = (QGeoRectangle *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
-    {
       RBOOL( obj->contains ( *PQGEOCOORDINATE(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 #endif
 }
@@ -537,21 +523,14 @@ HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS1 )
 /*
 bool contains(const QGeoRectangle &rectangle) const
 */
-HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS2 )
+void QGeoRectangle_contains2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * obj = (QGeoRectangle *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQGEORECTANGLE(1) )
-    {
       RBOOL( obj->contains ( *PQGEORECTANGLE(1) ) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 #endif
 }
@@ -563,17 +542,16 @@ HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS )
 {
   if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
   {
-    HB_FUNC_EXEC( QGEORECTANGLE_CONTAINS1 );
+    QGeoRectangle_contains1();
   }
   else if( ISNUMPAR(1) && ISQGEORECTANGLE(1) )
   {
-    HB_FUNC_EXEC( QGEORECTANGLE_CONTAINS2 );
+    QGeoRectangle_contains2();
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-
 }
 
 /*

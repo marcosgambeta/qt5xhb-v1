@@ -12,15 +12,14 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QGeoCoordinate
 
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD isValid
@@ -75,7 +74,7 @@ RETURN
 /*
 QGeoCoordinate()
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_NEW1 )
+void QGeoCoordinate_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoCoordinate * o = new QGeoCoordinate ();
@@ -86,7 +85,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEW1 )
 /*
 QGeoCoordinate(double latitude, double longitude)
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_NEW2 )
+void QGeoCoordinate_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoCoordinate * o = new QGeoCoordinate ( PDOUBLE(1), PDOUBLE(2) );
@@ -97,7 +96,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEW2 )
 /*
 QGeoCoordinate(double latitude, double longitude, double altitude)
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_NEW3 )
+void QGeoCoordinate_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoCoordinate * o = new QGeoCoordinate ( PDOUBLE(1), PDOUBLE(2), PDOUBLE(3) );
@@ -108,7 +107,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEW3 )
 /*
 QGeoCoordinate(const QGeoCoordinate &other)
 */
-HB_FUNC_STATIC( QGEOCOORDINATE_NEW4 )
+void QGeoCoordinate_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoCoordinate * o = new QGeoCoordinate ( *PQGEOCOORDINATE(1) );
@@ -125,19 +124,19 @@ HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOCOORDINATE_NEW1 );
+    QGeoCoordinate_new1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QGEOCOORDINATE_NEW2 );
+    QGeoCoordinate_new2();
   }
   else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
-    HB_FUNC_EXEC( QGEOCOORDINATE_NEW3 );
+    QGeoCoordinate_new3();
   }
   else if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
   {
-    HB_FUNC_EXEC( QGEOCOORDINATE_NEW4 );
+    QGeoCoordinate_new4();
   }
   else
   {

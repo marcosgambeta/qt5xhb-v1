@@ -12,13 +12,14 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QGeoAddress
 
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD text
@@ -84,7 +85,7 @@ RETURN
 /*
 QGeoAddress()
 */
-HB_FUNC_STATIC( QGEOADDRESS_NEW1 )
+void QGeoAddress_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAddress * o = new QGeoAddress ();
@@ -95,7 +96,7 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW1 )
 /*
 QGeoAddress(const QGeoAddress &other)
 */
-HB_FUNC_STATIC( QGEOADDRESS_NEW2 )
+void QGeoAddress_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAddress * o = new QGeoAddress ( *PQGEOADDRESS(1) );
@@ -110,11 +111,11 @@ HB_FUNC_STATIC( QGEOADDRESS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOADDRESS_NEW1 );
+    QGeoAddress_new1();
   }
   else if( ISNUMPAR(1) && ISQGEOADDRESS(1) )
   {
-    HB_FUNC_EXEC( QGEOADDRESS_NEW2 );
+    QGeoAddress_new2();
   }
   else
   {

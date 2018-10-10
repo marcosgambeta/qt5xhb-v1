@@ -12,13 +12,14 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QGeoSatelliteInfo
 
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD setSatelliteSystem
@@ -71,7 +72,7 @@ RETURN
 /*
 QGeoSatelliteInfo()
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW1 )
+void QGeoSatelliteInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfo * o = new QGeoSatelliteInfo ();
@@ -82,7 +83,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW1 )
 /*
 QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
 */
-HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW2 )
+void QGeoSatelliteInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfo * o = new QGeoSatelliteInfo ( *PQGEOSATELLITEINFO(1) );
@@ -97,11 +98,11 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOSATELLITEINFO_NEW1 );
+    QGeoSatelliteInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQGEOSATELLITEINFO(1) )
   {
-    HB_FUNC_EXEC( QGEOSATELLITEINFO_NEW2 );
+    QGeoSatelliteInfo_new2();
   }
   else
   {

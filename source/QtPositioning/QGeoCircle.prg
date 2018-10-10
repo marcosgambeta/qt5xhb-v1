@@ -18,10 +18,6 @@ REQUEST QGEOCOORDINATE
 
 CLASS QGeoCircle INHERIT QGeoShape
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
-   METHOD new4
    METHOD new
    METHOD delete
    METHOD setCenter
@@ -64,7 +60,7 @@ RETURN
 /*
 QGeoCircle()
 */
-HB_FUNC_STATIC( QGEOCIRCLE_NEW1 )
+void QGeoCircle_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoCircle * o = new QGeoCircle ();
@@ -75,7 +71,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW1 )
 /*
 QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
 */
-HB_FUNC_STATIC( QGEOCIRCLE_NEW2 )
+void QGeoCircle_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoCircle * o = new QGeoCircle ( *PQGEOCOORDINATE(1), OPQREAL(2,-1.0) );
@@ -86,7 +82,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW2 )
 /*
 QGeoCircle(const QGeoCircle &other)
 */
-HB_FUNC_STATIC( QGEOCIRCLE_NEW3 )
+void QGeoCircle_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoCircle * o = new QGeoCircle ( *PQGEOCIRCLE(1) );
@@ -97,7 +93,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW3 )
 /*
 QGeoCircle(const QGeoShape &other)
 */
-HB_FUNC_STATIC( QGEOCIRCLE_NEW4 )
+void QGeoCircle_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoCircle * o = new QGeoCircle ( *PQGEOSHAPE(1) );
@@ -114,19 +110,19 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOCIRCLE_NEW1 );
+    QGeoCircle_new1();
   }
   else if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && ISOPTNUM(2) )
   {
-    HB_FUNC_EXEC( QGEOCIRCLE_NEW2 );
+    QGeoCircle_new2();
   }
   else if( ISNUMPAR(1) && ISQGEOCIRCLE(1) )
   {
-    HB_FUNC_EXEC( QGEOCIRCLE_NEW3 );
+    QGeoCircle_new3();
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    HB_FUNC_EXEC( QGEOCIRCLE_NEW4 );
+    QGeoCircle_new4();
   }
   else
   {

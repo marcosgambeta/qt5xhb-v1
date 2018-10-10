@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QIODEVICE
 REQUEST QGEOPOSITIONINFO
+REQUEST QIODEVICE
 #endif
 
 CLASS QNmeaPositionInfoSource INHERIT QGeoPositionInfoSource

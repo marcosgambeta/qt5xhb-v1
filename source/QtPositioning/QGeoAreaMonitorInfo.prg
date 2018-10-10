@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QGEOSHAPE
 REQUEST QDATETIME
+REQUEST QGEOSHAPE
 #endif
 
 CLASS QGeoAreaMonitorInfo
@@ -22,8 +22,6 @@ CLASS QGeoAreaMonitorInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD name
@@ -78,7 +76,7 @@ RETURN
 /*
 QGeoAreaMonitorInfo(const QString &name = QString())
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW1 )
+void QGeoAreaMonitorInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAreaMonitorInfo * o = new QGeoAreaMonitorInfo ( OPQSTRING(1,QString()) );
@@ -89,7 +87,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW1 )
 /*
 QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
 */
-HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW2 )
+void QGeoAreaMonitorInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAreaMonitorInfo * o = new QGeoAreaMonitorInfo ( *PQGEOAREAMONITORINFO(1) );
@@ -104,11 +102,11 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
   {
-    HB_FUNC_EXEC( QGEOAREAMONITORINFO_NEW1 );
+    QGeoAreaMonitorInfo_new1();
   }
   else if( ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1) )
   {
-    HB_FUNC_EXEC( QGEOAREAMONITORINFO_NEW2 );
+    QGeoAreaMonitorInfo_new2();
   }
   else
   {

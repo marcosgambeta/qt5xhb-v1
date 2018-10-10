@@ -12,13 +12,14 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QGeoShape
 
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD type
@@ -65,7 +66,7 @@ RETURN
 /*
 QGeoShape()
 */
-HB_FUNC_STATIC( QGEOSHAPE_NEW1 )
+void QGeoShape_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoShape * o = new QGeoShape ();
@@ -76,7 +77,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW1 )
 /*
 QGeoShape(const QGeoShape &other)
 */
-HB_FUNC_STATIC( QGEOSHAPE_NEW2 )
+void QGeoShape_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoShape * o = new QGeoShape ( *PQGEOSHAPE(1) );
@@ -91,11 +92,11 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOSHAPE_NEW1 );
+    QGeoShape_new1();
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    HB_FUNC_EXEC( QGEOSHAPE_NEW2 );
+    QGeoShape_new2();
   }
   else
   {

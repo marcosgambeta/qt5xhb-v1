@@ -23,8 +23,6 @@ CLASS QGeoLocation
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new
    METHOD delete
    METHOD address
@@ -78,7 +76,7 @@ RETURN
 /*
 QGeoLocation()
 */
-HB_FUNC_STATIC( QGEOLOCATION_NEW1 )
+void QGeoLocation_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoLocation * o = new QGeoLocation ();
@@ -89,7 +87,7 @@ HB_FUNC_STATIC( QGEOLOCATION_NEW1 )
 /*
 QGeoLocation(const QGeoLocation &other)
 */
-HB_FUNC_STATIC( QGEOLOCATION_NEW2 )
+void QGeoLocation_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoLocation * o = new QGeoLocation ( *PQGEOLOCATION(1) );
@@ -104,11 +102,11 @@ HB_FUNC_STATIC( QGEOLOCATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOLOCATION_NEW1 );
+    QGeoLocation_new1();
   }
   else if( ISNUMPAR(1) && ISQGEOLOCATION(1) )
   {
-    HB_FUNC_EXEC( QGEOLOCATION_NEW2 );
+    QGeoLocation_new2();
   }
   else
   {

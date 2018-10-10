@@ -22,9 +22,6 @@ CLASS QGeoPositionInfo
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
-   METHOD new3
    METHOD new
    METHOD delete
    METHOD isValid
@@ -76,7 +73,7 @@ RETURN
 /*
 QGeoPositionInfo()
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW1 )
+void QGeoPositionInfo_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * o = new QGeoPositionInfo ();
@@ -87,7 +84,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW1 )
 /*
 QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW2 )
+void QGeoPositionInfo_new2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * o = new QGeoPositionInfo ( *PQGEOCOORDINATE(1), *PQDATETIME(2) );
@@ -98,7 +95,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW2 )
 /*
 QGeoPositionInfo(const QGeoPositionInfo &other)
 */
-HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW3 )
+void QGeoPositionInfo_new3 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfo * o = new QGeoPositionInfo ( *PQGEOPOSITIONINFO(1) );
@@ -114,15 +111,15 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QGEOPOSITIONINFO_NEW1 );
+    QGeoPositionInfo_new1();
   }
   else if( ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQDATETIME(2) )
   {
-    HB_FUNC_EXEC( QGEOPOSITIONINFO_NEW2 );
+    QGeoPositionInfo_new2();
   }
   else if( ISNUMPAR(1) && ISQGEOPOSITIONINFO(1) )
   {
-    HB_FUNC_EXEC( QGEOPOSITIONINFO_NEW3 );
+    QGeoPositionInfo_new3();
   }
   else
   {
