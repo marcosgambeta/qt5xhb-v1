@@ -13,41 +13,40 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QICON
-REQUEST QSIZE
-REQUEST QKEYSEQUENCE
 REQUEST QBUTTONGROUP
+REQUEST QICON
+REQUEST QKEYSEQUENCE
+REQUEST QSIZE
 #endif
 
 CLASS QAbstractButton INHERIT QWidget
 
    METHOD delete
-
-   METHOD animateClick
-   METHOD autoExclusive
-   METHOD autoRepeat
-   METHOD autoRepeatDelay
-   METHOD autoRepeatInterval
-   METHOD click
-   METHOD group
-   METHOD icon
-   METHOD iconSize
-   METHOD isCheckable
-   METHOD isChecked
-   METHOD isDown
-   METHOD setAutoExclusive
-   METHOD setAutoRepeat
-   METHOD setAutoRepeatDelay
-   METHOD setAutoRepeatInterval
-   METHOD setCheckable
-   METHOD setChecked
-   METHOD setDown
-   METHOD setIcon
-   METHOD setIconSize
-   METHOD setShortcut
-   METHOD setText
-   METHOD shortcut
    METHOD text
+   METHOD setText
+   METHOD icon
+   METHOD setIcon
+   METHOD iconSize
+   METHOD setIconSize
+   METHOD shortcut
+   METHOD setShortcut
+   METHOD isCheckable
+   METHOD setCheckable
+   METHOD isChecked
+   METHOD setChecked
+   METHOD autoRepeat
+   METHOD setAutoRepeat
+   METHOD autoExclusive
+   METHOD setAutoExclusive
+   METHOD autoRepeatDelay
+   METHOD setAutoRepeatDelay
+   METHOD autoRepeatInterval
+   METHOD setAutoRepeatInterval
+   METHOD isDown
+   METHOD setDown
+   METHOD group
+   METHOD animateClick
+   METHOD click
    METHOD toggle
 
    METHOD onClicked
