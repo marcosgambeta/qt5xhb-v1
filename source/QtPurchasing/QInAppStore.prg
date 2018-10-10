@@ -12,11 +12,14 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QINAPPPRODUCT
+#endif
+
 CLASS QInAppStore INHERIT QObject
 
    METHOD new
    METHOD delete
-
    METHOD restorePurchases
    METHOD registerProduct
    METHOD registeredProduct

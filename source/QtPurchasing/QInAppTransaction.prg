@@ -12,10 +12,15 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QDATETIME
+REQUEST QINAPPPRODUCT
+#endif
+
 CLASS QInAppTransaction INHERIT QObject
 
    METHOD delete
-
+   METHOD status
    METHOD product
    METHOD orderId
    METHOD failureReason
@@ -23,7 +28,6 @@ CLASS QInAppTransaction INHERIT QObject
    METHOD timestamp
    METHOD finalize
    METHOD platformProperty
-   METHOD status
 
    DESTRUCTOR destroyObject
 

@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QInAppProduct INHERIT QObject
 
    METHOD delete
-
    METHOD identifier
    METHOD productType
    METHOD price
