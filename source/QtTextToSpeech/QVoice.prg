@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QVoice
 
    DATA pointer
@@ -19,12 +22,11 @@ CLASS QVoice
 
    METHOD new
    METHOD delete
-
-   METHOD age
-   METHOD ageName
-   METHOD gender
-   METHOD genderName
    METHOD name
+   METHOD gender
+   METHOD age
+   METHOD genderName
+   METHOD ageName
 
    METHOD newFrom
    METHOD newFromObject

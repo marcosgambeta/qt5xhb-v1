@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTEXTTOSPEECHENGINE
 #endif
 
 CLASS QTextToSpeechPlugin
@@ -21,10 +20,7 @@ CLASS QTextToSpeechPlugin
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new
    METHOD delete
-
-   METHOD createTextToSpeechEngine
 
    METHOD newFrom
    METHOD newFromObject

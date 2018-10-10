@@ -19,26 +19,24 @@ REQUEST QVOICE
 
 CLASS QTextToSpeechEngine INHERIT QObject
 
-   METHOD new
    METHOD delete
-
    METHOD availableLocales
    METHOD availableVoices
-   METHOD locale
-   METHOD pause
-   METHOD pitch
-   METHOD rate
-   METHOD resume
    METHOD say
-   METHOD setLocale
-   METHOD setPitch
-   METHOD setRate
-   METHOD setVoice
-   METHOD setVolume
-   METHOD state
    METHOD stop
-   METHOD voice
+   METHOD pause
+   METHOD resume
+   METHOD rate
+   METHOD setRate
+   METHOD pitch
+   METHOD setPitch
+   METHOD locale
+   METHOD setLocale
    METHOD volume
+   METHOD setVolume
+   METHOD voice
+   METHOD setVoice
+   METHOD state
 
    METHOD onStateChanged
 
