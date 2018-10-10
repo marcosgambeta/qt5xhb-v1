@@ -12,6 +12,10 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QVARIANT
+#endif
+
 CLASS QSslCertificateExtension
 
    DATA pointer
@@ -19,13 +23,12 @@ CLASS QSslCertificateExtension
 
    METHOD new
    METHOD delete
-
+   METHOD swap
+   METHOD oid
+   METHOD name
+   METHOD value
    METHOD isCritical
    METHOD isSupported
-   METHOD name
-   METHOD oid
-   METHOD swap
-   METHOD value
 
    METHOD newFrom
    METHOD newFromObject

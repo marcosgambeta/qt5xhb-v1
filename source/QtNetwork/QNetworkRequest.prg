@@ -13,11 +13,11 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
-REQUEST QOBJECT
 REQUEST QBYTEARRAY
+REQUEST QOBJECT
 REQUEST QSSLCONFIGURATION
 REQUEST QURL
+REQUEST QVARIANT
 #endif
 
 CLASS QNetworkRequest
@@ -27,26 +27,25 @@ CLASS QNetworkRequest
 
    METHOD new
    METHOD delete
-
    METHOD attribute
    METHOD hasRawHeader
    METHOD header
-   METHOD maximumRedirectsAllowed
    METHOD originatingObject
    METHOD priority
    METHOD rawHeader
    METHOD rawHeaderList
    METHOD setAttribute
    METHOD setHeader
-   METHOD setMaximumRedirectsAllowed
    METHOD setOriginatingObject
    METHOD setPriority
    METHOD setRawHeader
    METHOD setSslConfiguration
    METHOD setUrl
    METHOD sslConfiguration
-   METHOD swap
    METHOD url
+   METHOD swap
+   METHOD maximumRedirectsAllowed
+   METHOD setMaximumRedirectsAllowed
 
    METHOD newFrom
    METHOD newFromObject

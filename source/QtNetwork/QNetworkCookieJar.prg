@@ -20,12 +20,11 @@ CLASS QNetworkCookieJar INHERIT QObject
 
    METHOD new
    METHOD delete
-
    METHOD cookiesForUrl
-   METHOD deleteCookie
-   METHOD insertCookie
    METHOD setCookiesFromUrl
+   METHOD insertCookie
    METHOD updateCookie
+   METHOD deleteCookie
 
    DESTRUCTOR destroyObject
 

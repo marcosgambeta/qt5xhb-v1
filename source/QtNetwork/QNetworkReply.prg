@@ -13,38 +13,37 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
-REQUEST QNETWORKACCESSMANAGER
 REQUEST QBYTEARRAY
+REQUEST QNETWORKACCESSMANAGER
 REQUEST QNETWORKREQUEST
 REQUEST QSSLCONFIGURATION
 REQUEST QURL
+REQUEST QVARIANT
 #endif
 
 CLASS QNetworkReply INHERIT QIODevice
 
    METHOD delete
-
-   METHOD abort
-   METHOD attribute
    METHOD close
-   METHOD error
-   METHOD hasRawHeader
-   METHOD header
-   METHOD ignoreSslErrors
-   METHOD isFinished
-   METHOD isRunning
    METHOD isSequential
+   METHOD readBufferSize
+   METHOD setReadBufferSize
    METHOD manager
    METHOD operation
-   METHOD rawHeader
-   METHOD rawHeaderList
-   METHOD readBufferSize
    METHOD request
-   METHOD setReadBufferSize
-   METHOD setSslConfiguration
-   METHOD sslConfiguration
+   METHOD error
+   METHOD isFinished
+   METHOD isRunning
    METHOD url
+   METHOD header
+   METHOD hasRawHeader
+   METHOD rawHeaderList
+   METHOD rawHeader
+   METHOD attribute
+   METHOD sslConfiguration
+   METHOD setSslConfiguration
+   METHOD abort
+   METHOD ignoreSslErrors
 
    METHOD onDownloadProgress
    METHOD onError

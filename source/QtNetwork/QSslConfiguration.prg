@@ -13,6 +13,7 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QBYTEARRAY
 REQUEST QSSLCERTIFICATE
 REQUEST QSSLCIPHER
 REQUEST QSSLKEY
@@ -25,45 +26,44 @@ CLASS QSslConfiguration
 
    METHOD new
    METHOD delete
-
-   METHOD allowedNextProtocols
-   METHOD caCertificates
-   METHOD ciphers
-   METHOD defaultConfiguration
-   METHOD ephemeralServerKey
+   METHOD swap
    METHOD isNull
-   METHOD localCertificate
+   METHOD protocol
+   METHOD setProtocol
+   METHOD peerVerifyMode
+   METHOD setPeerVerifyMode
+   METHOD peerVerifyDepth
+   METHOD setPeerVerifyDepth
    METHOD localCertificateChain
-   METHOD nextNegotiatedProtocol
-   METHOD nextProtocolNegotiationStatus
+   METHOD setLocalCertificateChain
+   METHOD localCertificate
+   METHOD setLocalCertificate
    METHOD peerCertificate
    METHOD peerCertificateChain
-   METHOD peerVerifyDepth
-   METHOD peerVerifyMode
-   METHOD preSharedKeyIdentityHint
-   METHOD privateKey
-   METHOD protocol
    METHOD sessionCipher
    METHOD sessionProtocol
-   METHOD sessionTicket
-   METHOD sessionTicketLifeTimeHint
-   METHOD setAllowedNextProtocols
-   METHOD setCaCertificates
-   METHOD setCiphers
-   METHOD setDefaultConfiguration
-   METHOD setLocalCertificate
-   METHOD setLocalCertificateChain
-   METHOD setPeerVerifyDepth
-   METHOD setPeerVerifyMode
-   METHOD setPreSharedKeyIdentityHint
+   METHOD privateKey
    METHOD setPrivateKey
-   METHOD setProtocol
-   METHOD setSessionTicket
-   METHOD setSslOption
+   METHOD ciphers
+   METHOD setCiphers
    METHOD supportedCiphers
-   METHOD swap
+   METHOD caCertificates
+   METHOD setCaCertificates
    METHOD systemCaCertificates
+   METHOD setSslOption
    METHOD testSslOption
+   METHOD sessionTicket
+   METHOD setSessionTicket
+   METHOD sessionTicketLifeTimeHint
+   METHOD ephemeralServerKey
+   METHOD preSharedKeyIdentityHint
+   METHOD setPreSharedKeyIdentityHint
+   METHOD defaultConfiguration
+   METHOD setDefaultConfiguration
+   METHOD setAllowedNextProtocols
+   METHOD allowedNextProtocols
+   METHOD nextNegotiatedProtocol
+   METHOD nextProtocolNegotiationStatus
 
    METHOD newFrom
    METHOD newFromObject

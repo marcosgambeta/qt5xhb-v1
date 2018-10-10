@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QDnsMailExchangeRecord
 
    DATA pointer
@@ -19,7 +22,6 @@ CLASS QDnsMailExchangeRecord
 
    METHOD new
    METHOD delete
-
    METHOD exchange
    METHOD name
    METHOD preference

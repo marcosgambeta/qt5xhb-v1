@@ -12,14 +12,17 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QSCTPSOCKET
+#endif
+
 CLASS QSctpServer INHERIT QTcpServer
 
    METHOD new
    METHOD delete
-
+   METHOD setMaximumChannelCount
    METHOD maximumChannelCount
    METHOD nextPendingDatagramConnection
-   METHOD setMaximumChannelCount
 
    DESTRUCTOR destroyObject
 

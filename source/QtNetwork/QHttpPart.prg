@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QHttpPart
 
    DATA pointer
@@ -19,7 +22,6 @@ CLASS QHttpPart
 
    METHOD new
    METHOD delete
-
    METHOD setBody
    METHOD setBodyDevice
    METHOD setHeader

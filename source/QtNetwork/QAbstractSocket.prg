@@ -22,42 +22,41 @@ CLASS QAbstractSocket INHERIT QIODevice
 
    METHOD new
    METHOD delete
-
-   METHOD abort
-   METHOD atEnd
+   METHOD resume
+   METHOD pauseMode
+   METHOD setPauseMode
    METHOD bind
+   METHOD connectToHost
+   METHOD disconnectFromHost
+   METHOD isValid
    METHOD bytesAvailable
    METHOD bytesToWrite
    METHOD canReadLine
-   METHOD close
-   METHOD connectToHost
-   METHOD disconnectFromHost
-   METHOD error
-   METHOD flush
-   METHOD isSequential
-   METHOD isValid
-   METHOD localAddress
    METHOD localPort
-   METHOD pauseMode
+   METHOD localAddress
+   METHOD peerPort
    METHOD peerAddress
    METHOD peerName
-   METHOD peerPort
-   METHOD proxy
    METHOD readBufferSize
-   METHOD resume
-   METHOD setPauseMode
-   METHOD setProxy
    METHOD setReadBufferSize
+   METHOD abort
+   METHOD socketDescriptor
    METHOD setSocketDescriptor
    METHOD setSocketOption
-   METHOD socketDescriptor
    METHOD socketOption
    METHOD socketType
    METHOD state
-   METHOD waitForBytesWritten
+   METHOD error
+   METHOD close
+   METHOD isSequential
+   METHOD atEnd
+   METHOD flush
    METHOD waitForConnected
-   METHOD waitForDisconnected
    METHOD waitForReadyRead
+   METHOD waitForBytesWritten
+   METHOD waitForDisconnected
+   METHOD setProxy
+   METHOD proxy
 
    METHOD onConnected
    METHOD onDisconnected

@@ -23,7 +23,6 @@ CLASS QSslError
 
    METHOD new
    METHOD delete
-
    METHOD certificate
    METHOD error
    METHOD errorString

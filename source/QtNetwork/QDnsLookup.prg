@@ -12,29 +12,37 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QDNSDOMAINNAMERECORD
+REQUEST QDNSHOSTADDRESSRECORD
+REQUEST QDNSMAILEXCHANGERECORD
+REQUEST QDNSSERVICERECORD
+REQUEST QDNSTEXTRECORD
+REQUEST QHOSTADDRESS
+#endif
+
 CLASS QDnsLookup INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD abort
-   METHOD canonicalNameRecords
    METHOD error
    METHOD errorString
-   METHOD hostAddressRecords
-   METHOD isFinished
-   METHOD lookup
-   METHOD mailExchangeRecords
    METHOD name
+   METHOD setName
+   METHOD type
+   METHOD setType
    METHOD nameserver
+   METHOD setNameserver
+   METHOD isFinished
+   METHOD canonicalNameRecords
+   METHOD hostAddressRecords
+   METHOD mailExchangeRecords
    METHOD nameServerRecords
    METHOD pointerRecords
    METHOD serviceRecords
-   METHOD setName
-   METHOD setNameserver
-   METHOD setType
    METHOD textRecords
-   METHOD type
+   METHOD abort
+   METHOD lookup
 
    METHOD onFinished
    METHOD onNameChanged

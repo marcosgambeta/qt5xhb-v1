@@ -20,7 +20,6 @@ CLASS QHttpMultiPart INHERIT QObject
 
    METHOD new
    METHOD delete
-
    METHOD append
    METHOD boundary
    METHOD setBoundary

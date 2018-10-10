@@ -22,9 +22,8 @@ CLASS QNetworkProxyFactory
    DATA self_destruction INIT .F.
 
    METHOD delete
-
-   METHOD proxyForQuery
    METHOD queryProxy
+   METHOD proxyForQuery
    METHOD setApplicationProxyFactory
    METHOD setUseSystemConfiguration
    METHOD systemProxyForQuery

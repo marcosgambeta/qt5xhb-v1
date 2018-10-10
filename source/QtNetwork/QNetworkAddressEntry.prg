@@ -23,7 +23,6 @@ CLASS QNetworkAddressEntry
 
    METHOD new
    METHOD delete
-
    METHOD broadcast
    METHOD ip
    METHOD netmask

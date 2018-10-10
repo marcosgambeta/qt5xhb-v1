@@ -23,17 +23,16 @@ CLASS QAuthenticator
 
    METHOD new
    METHOD delete
-
-   METHOD detach
-   METHOD isNull
-   METHOD option
-   METHOD password
-   METHOD realm
-   METHOD setOption
-   METHOD setPassword
-   METHOD setRealm
-   METHOD setUser
    METHOD user
+   METHOD setUser
+   METHOD password
+   METHOD setPassword
+   METHOD realm
+   METHOD setRealm
+   METHOD option
+   METHOD setOption
+   METHOD isNull
+   METHOD detach
 
    METHOD newFrom
    METHOD newFromObject

@@ -12,28 +12,30 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QLocalSocket INHERIT QIODevice
 
    METHOD new
    METHOD delete
-
+   METHOD connectToServer
+   METHOD disconnectFromServer
+   METHOD setServerName
+   METHOD serverName
+   METHOD fullServerName
    METHOD abort
+   METHOD isSequential
    METHOD bytesAvailable
    METHOD bytesToWrite
    METHOD canReadLine
+   METHOD open
    METHOD close
-   METHOD connectToServer
-   METHOD disconnectFromServer
    METHOD error
    METHOD flush
-   METHOD fullServerName
-   METHOD isSequential
    METHOD isValid
-   METHOD open
    METHOD readBufferSize
-   METHOD serverName
    METHOD setReadBufferSize
-   METHOD setServerName
    METHOD setSocketDescriptor
    METHOD socketDescriptor
    METHOD state

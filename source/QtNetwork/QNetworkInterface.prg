@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKADDRESSENTRY
 REQUEST QHOSTADDRESS
+REQUEST QNETWORKADDRESSENTRY
 #endif
 
 CLASS QNetworkInterface
@@ -24,20 +24,19 @@ CLASS QNetworkInterface
 
    METHOD new
    METHOD delete
-
    METHOD addressEntries
-   METHOD allAddresses
-   METHOD allInterfaces
    METHOD flags
    METHOD hardwareAddress
    METHOD humanReadableName
    METHOD index
+   METHOD isValid
+   METHOD name
+   METHOD allAddresses
+   METHOD allInterfaces
    METHOD interfaceFromIndex
    METHOD interfaceFromName
    METHOD interfaceIndexFromName
    METHOD interfaceNameFromIndex
-   METHOD isValid
-   METHOD name
    METHOD swap
 
    METHOD newFrom

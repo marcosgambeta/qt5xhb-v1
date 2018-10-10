@@ -12,17 +12,20 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QNETWORKDATAGRAM
+#endif
+
 CLASS QSctpSocket INHERIT QTcpSocket
 
    METHOD new
    METHOD delete
-
    METHOD close
    METHOD disconnectFromHost
-   METHOD isInDatagramMode
-   METHOD maximumChannelCount
-   METHOD readDatagram
    METHOD setMaximumChannelCount
+   METHOD maximumChannelCount
+   METHOD isInDatagramMode
+   METHOD readDatagram
    METHOD writeDatagram
 
    DESTRUCTOR destroyObject

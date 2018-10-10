@@ -22,27 +22,26 @@ CLASS QNetworkSession INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD accept
    METHOD activeTime
    METHOD bytesReceived
    METHOD bytesWritten
-   METHOD close
    METHOD configuration
    METHOD error
    METHOD errorString
-   METHOD ignore
    METHOD interface
    METHOD isOpen
-   METHOD migrate
-   METHOD open
-   METHOD reject
    METHOD sessionProperty
    METHOD setSessionProperty
    METHOD state
+   METHOD waitForOpened
+   METHOD accept
+   METHOD close
+   METHOD ignore
+   METHOD migrate
+   METHOD open
+   METHOD reject
    METHOD stop
    METHOD usagePolicies
-   METHOD waitForOpened
 
    METHOD onClosed
    METHOD onError

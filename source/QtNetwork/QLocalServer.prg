@@ -20,23 +20,22 @@ CLASS QLocalServer INHERIT QObject
 
    METHOD new
    METHOD delete
-
+   METHOD socketOptions
+   METHOD setSocketOptions
    METHOD close
    METHOD errorString
-   METHOD fullServerName
    METHOD hasPendingConnections
    METHOD isListening
    METHOD listen
    METHOD maxPendingConnections
    METHOD nextPendingConnection
+   METHOD serverName
+   METHOD fullServerName
    METHOD removeServer
    METHOD serverError
-   METHOD serverName
    METHOD setMaxPendingConnections
-   METHOD setSocketOptions
-   METHOD socketDescriptor
-   METHOD socketOptions
    METHOD waitForNewConnection
+   METHOD socketDescriptor
 
    METHOD onNewConnection
 

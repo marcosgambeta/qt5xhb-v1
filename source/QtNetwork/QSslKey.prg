@@ -23,16 +23,15 @@ CLASS QSslKey
 
    METHOD new
    METHOD delete
-
    METHOD algorithm
    METHOD clear
-   METHOD handle
    METHOD isNull
    METHOD length
-   METHOD swap
    METHOD toDer
    METHOD toPem
    METHOD type
+   METHOD swap
+   METHOD handle
 
    METHOD newFrom
    METHOD newFromObject

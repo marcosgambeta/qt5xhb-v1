@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QDATETIME
 REQUEST QBYTEARRAY
+REQUEST QDATETIME
 #endif
 
 CLASS QNetworkCookie
@@ -24,16 +24,12 @@ CLASS QNetworkCookie
 
    METHOD new
    METHOD delete
-
    METHOD domain
    METHOD expirationDate
-   METHOD hasSameIdentifier
    METHOD isHttpOnly
    METHOD isSecure
    METHOD isSessionCookie
    METHOD name
-   METHOD normalize
-   METHOD parseCookies
    METHOD path
    METHOD setDomain
    METHOD setExpirationDate
@@ -42,9 +38,12 @@ CLASS QNetworkCookie
    METHOD setPath
    METHOD setSecure
    METHOD setValue
-   METHOD swap
    METHOD toRawForm
    METHOD value
+   METHOD parseCookies
+   METHOD swap
+   METHOD hasSameIdentifier
+   METHOD normalize
 
    METHOD newFrom
    METHOD newFromObject

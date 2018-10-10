@@ -24,17 +24,16 @@ CLASS QNetworkCacheMetaData
 
    METHOD new
    METHOD delete
-
-   METHOD expirationDate
-   METHOD isValid
-   METHOD lastModified
-   METHOD saveToDisk
-   METHOD setExpirationDate
-   METHOD setLastModified
-   METHOD setSaveToDisk
-   METHOD setUrl
    METHOD swap
+   METHOD isValid
    METHOD url
+   METHOD setUrl
+   METHOD lastModified
+   METHOD setLastModified
+   METHOD expirationDate
+   METHOD setExpirationDate
+   METHOD saveToDisk
+   METHOD setSaveToDisk
 
    METHOD newFrom
    METHOD newFromObject

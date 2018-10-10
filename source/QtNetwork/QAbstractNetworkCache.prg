@@ -20,7 +20,6 @@ REQUEST QNETWORKCACHEMETADATA
 CLASS QAbstractNetworkCache INHERIT QObject
 
    METHOD delete
-
    METHOD cacheSize
    METHOD data
    METHOD insert

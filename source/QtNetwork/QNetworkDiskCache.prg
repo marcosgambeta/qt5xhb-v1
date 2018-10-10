@@ -13,28 +13,27 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKCACHEMETADATA
 REQUEST QIODEVICE
+REQUEST QNETWORKCACHEMETADATA
 #endif
 
 CLASS QNetworkDiskCache INHERIT QAbstractNetworkCache
 
    METHOD new
    METHOD delete
-
    METHOD cacheDirectory
-   METHOD cacheSize
-   METHOD clear
-   METHOD data
-   METHOD fileMetaData
-   METHOD insert
-   METHOD maximumCacheSize
-   METHOD metaData
-   METHOD prepare
-   METHOD remove
    METHOD setCacheDirectory
+   METHOD maximumCacheSize
    METHOD setMaximumCacheSize
+   METHOD cacheSize
+   METHOD metaData
    METHOD updateMetaData
+   METHOD data
+   METHOD remove
+   METHOD prepare
+   METHOD insert
+   METHOD fileMetaData
+   METHOD clear
 
    DESTRUCTOR destroyObject
 

@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QDnsDomainNameRecord
 
    DATA pointer
@@ -19,7 +22,6 @@ CLASS QDnsDomainNameRecord
 
    METHOD new
    METHOD delete
-
    METHOD name
    METHOD swap
    METHOD timeToLive

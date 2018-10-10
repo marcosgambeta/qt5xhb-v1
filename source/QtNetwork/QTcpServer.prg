@@ -13,34 +13,33 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QTCPSOCKET
-REQUEST QNETWORKPROXY
 REQUEST QHOSTADDRESS
+REQUEST QNETWORKPROXY
+REQUEST QTCPSOCKET
 #endif
 
 CLASS QTcpServer INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD close
-   METHOD errorString
-   METHOD hasPendingConnections
-   METHOD isListening
    METHOD listen
-   METHOD maxPendingConnections
-   METHOD nextPendingConnection
-   METHOD pauseAccepting
-   METHOD proxy
-   METHOD resumeAccepting
-   METHOD serverAddress
-   METHOD serverError
-   METHOD serverPort
+   METHOD close
+   METHOD isListening
    METHOD setMaxPendingConnections
-   METHOD setProxy
-   METHOD setSocketDescriptor
+   METHOD maxPendingConnections
+   METHOD serverPort
+   METHOD serverAddress
    METHOD socketDescriptor
+   METHOD setSocketDescriptor
    METHOD waitForNewConnection
+   METHOD hasPendingConnections
+   METHOD nextPendingConnection
+   METHOD serverError
+   METHOD errorString
+   METHOD pauseAccepting
+   METHOD resumeAccepting
+   METHOD setProxy
+   METHOD proxy
 
    METHOD onAcceptError
    METHOD onNewConnection

@@ -15,84 +15,83 @@
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QSSLCERTIFICATE
 REQUEST QSSLCIPHER
-REQUEST QSSLKEY
-REQUEST QVARIANT
 REQUEST QSSLCONFIGURATION
 REQUEST QSSLERROR
+REQUEST QSSLKEY
+REQUEST QVARIANT
 #endif
 
 CLASS QSslSocket INHERIT QTcpSocket
 
    METHOD new
    METHOD delete
-
-   METHOD abort
-   METHOD atEnd
+   METHOD resume
+   METHOD connectToHostEncrypted
+   METHOD setSocketDescriptor
+   METHOD connectToHost
+   METHOD disconnectFromHost
+   METHOD setSocketOption
+   METHOD socketOption
+   METHOD mode
+   METHOD isEncrypted
+   METHOD protocol
+   METHOD setProtocol
+   METHOD peerVerifyMode
+   METHOD setPeerVerifyMode
+   METHOD peerVerifyDepth
+   METHOD setPeerVerifyDepth
+   METHOD peerVerifyName
+   METHOD setPeerVerifyName
    METHOD bytesAvailable
    METHOD bytesToWrite
    METHOD canReadLine
    METHOD close
-   METHOD connectToHost
-   METHOD connectToHostEncrypted
-   METHOD disconnectFromHost
+   METHOD atEnd
+   METHOD flush
+   METHOD abort
+   METHOD setReadBufferSize
    METHOD encryptedBytesAvailable
    METHOD encryptedBytesToWrite
-   METHOD flush
-   METHOD isEncrypted
-   METHOD localCertificate
+   METHOD sslConfiguration
+   METHOD setSslConfiguration
+   METHOD setLocalCertificateChain
    METHOD localCertificateChain
-   METHOD mode
+   METHOD setLocalCertificate
+   METHOD localCertificate
    METHOD peerCertificate
    METHOD peerCertificateChain
-   METHOD peerVerifyDepth
-   METHOD peerVerifyMode
-   METHOD peerVerifyName
-   METHOD privateKey
-   METHOD protocol
-   METHOD resume
    METHOD sessionCipher
    METHOD sessionProtocol
-   METHOD setLocalCertificate
-   METHOD setLocalCertificateChain
-   METHOD setPeerVerifyDepth
-   METHOD setPeerVerifyMode
-   METHOD setPeerVerifyName
    METHOD setPrivateKey
-   METHOD setProtocol
-   METHOD setReadBufferSize
-   METHOD setSocketDescriptor
-   METHOD setSocketOption
-   METHOD setSslConfiguration
-   METHOD socketOption
-   METHOD sslConfiguration
+   METHOD privateKey
    METHOD ciphers
-   METHOD defaultCiphers
    METHOD setCiphers
    METHOD setDefaultCiphers
+   METHOD defaultCiphers
    METHOD supportedCiphers
-   METHOD addCaCertificate
    METHOD addCaCertificates
-   METHOD caCertificates
+   METHOD addCaCertificate
    METHOD setCaCertificates
+   METHOD caCertificates
    METHOD addDefaultCaCertificate
    METHOD addDefaultCaCertificates
-   METHOD defaultCaCertificates
    METHOD setDefaultCaCertificates
+   METHOD defaultCaCertificates
    METHOD systemCaCertificates
-   METHOD ignoreSslErrors
-   METHOD sslErrors
-   METHOD sslLibraryBuildVersionNumber
-   METHOD sslLibraryBuildVersionString
-   METHOD sslLibraryVersionNumber
-   METHOD sslLibraryVersionString
-   METHOD startClientEncryption
-   METHOD startServerEncryption
-   METHOD supportsSsl
-   METHOD waitForBytesWritten
    METHOD waitForConnected
-   METHOD waitForDisconnected
    METHOD waitForEncrypted
    METHOD waitForReadyRead
+   METHOD waitForBytesWritten
+   METHOD waitForDisconnected
+   METHOD sslErrors
+   METHOD supportsSsl
+   METHOD sslLibraryVersionNumber
+   METHOD sslLibraryVersionString
+   METHOD sslLibraryBuildVersionNumber
+   METHOD sslLibraryBuildVersionString
+   METHOD ignoreSslErrors
+   METHOD startClientEncryption
+   METHOD startServerEncryption
 
    METHOD onEncrypted
    METHOD onEncryptedBytesWritten

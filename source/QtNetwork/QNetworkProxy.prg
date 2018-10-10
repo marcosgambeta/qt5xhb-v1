@@ -12,6 +12,11 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBYTEARRAY
+REQUEST QVARIANT
+#endif
+
 CLASS QNetworkProxy
 
    DATA pointer
@@ -19,30 +24,29 @@ CLASS QNetworkProxy
 
    METHOD new
    METHOD delete
-
-   METHOD applicationProxy
+   METHOD setType
+   METHOD type
+   METHOD setCapabilities
    METHOD capabilities
-   METHOD hasRawHeader
-   METHOD header
-   METHOD hostName
    METHOD isCachingProxy
    METHOD isTransparentProxy
-   METHOD password
-   METHOD port
-   METHOD rawHeader
-   METHOD rawHeaderList
-   METHOD setApplicationProxy
-   METHOD setCapabilities
-   METHOD setHeader
-   METHOD setHostName
-   METHOD setPassword
-   METHOD setPort
-   METHOD setRawHeader
-   METHOD setType
    METHOD setUser
-   METHOD swap
-   METHOD type
    METHOD user
+   METHOD setPassword
+   METHOD password
+   METHOD setHostName
+   METHOD hostName
+   METHOD setPort
+   METHOD port
+   METHOD setApplicationProxy
+   METHOD applicationProxy
+   METHOD header
+   METHOD setHeader
+   METHOD hasRawHeader
+   METHOD rawHeaderList
+   METHOD rawHeader
+   METHOD setRawHeader
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject

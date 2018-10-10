@@ -13,19 +13,21 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QNETWORKCONFIGURATION
 REQUEST QABSTRACTNETWORKCACHE
+REQUEST QHSTSPOLICY
+REQUEST QNETWORKCONFIGURATION
 REQUEST QNETWORKCOOKIEJAR
-REQUEST QNETWORKREPLY
 REQUEST QNETWORKPROXY
 REQUEST QNETWORKPROXYFACTORY
+REQUEST QNETWORKREPLY
 #endif
 
 CLASS QNetworkAccessManager INHERIT QObject
 
    METHOD new
    METHOD delete
-
+   METHOD networkAccessible
+   METHOD setNetworkAccessible
    METHOD supportedSchemes
    METHOD clearAccessCache
    METHOD clearConnectionCache
@@ -52,8 +54,6 @@ CLASS QNetworkAccessManager INHERIT QObject
    METHOD setConfiguration
    METHOD configuration
    METHOD activeConfiguration
-   METHOD setNetworkAccessible
-   METHOD networkAccessible
    METHOD connectToHostEncrypted
    METHOD connectToHost
    METHOD setRedirectPolicy

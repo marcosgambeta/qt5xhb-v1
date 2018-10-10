@@ -13,6 +13,7 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QNETWORKCONFIGURATION
 REQUEST QURL
 #endif
 
@@ -23,7 +24,6 @@ CLASS QNetworkProxyQuery
 
    METHOD new
    METHOD delete
-
    METHOD localPort
    METHOD peerHostName
    METHOD peerPort

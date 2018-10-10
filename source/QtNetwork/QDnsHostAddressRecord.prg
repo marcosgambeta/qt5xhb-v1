@@ -23,7 +23,6 @@ CLASS QDnsHostAddressRecord
 
    METHOD new
    METHOD delete
-
    METHOD name
    METHOD swap
    METHOD timeToLive

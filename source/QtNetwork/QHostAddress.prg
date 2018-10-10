@@ -27,20 +27,19 @@ CLASS QHostAddress
    METHOD new9
    METHOD new
    METHOD delete
-
-   METHOD clear
+   METHOD swap
+   METHOD setAddress
+   METHOD protocol
+   METHOD toIPv4Address
+   METHOD toString
+   METHOD scopeId
+   METHOD setScopeId
    METHOD isEqual
+   METHOD isNull
+   METHOD clear
    METHOD isInSubnet
    METHOD isLoopback
    METHOD isMulticast
-   METHOD isNull
-   METHOD protocol
-   METHOD scopeId
-   METHOD setAddress
-   METHOD setScopeId
-   METHOD swap
-   METHOD toIPv4Address
-   METHOD toString
 
    METHOD newFrom
    METHOD newFromObject

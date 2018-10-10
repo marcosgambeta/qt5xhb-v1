@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QSslCipher
 
    DATA pointer
@@ -19,7 +22,6 @@ CLASS QSslCipher
 
    METHOD new
    METHOD delete
-
    METHOD authenticationMethod
    METHOD encryptionMethod
    METHOD isNull
@@ -28,8 +30,8 @@ CLASS QSslCipher
    METHOD protocol
    METHOD protocolString
    METHOD supportedBits
-   METHOD swap
    METHOD usedBits
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject

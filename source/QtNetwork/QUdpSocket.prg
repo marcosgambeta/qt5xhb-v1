@@ -12,11 +12,15 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QNETWORKDATAGRAM
+REQUEST QNETWORKINTERFACE
+#endif
+
 CLASS QUdpSocket INHERIT QAbstractSocket
 
    METHOD new
    METHOD delete
-
    METHOD joinMulticastGroup
    METHOD leaveMulticastGroup
    METHOD multicastInterface

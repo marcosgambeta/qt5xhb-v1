@@ -12,6 +12,11 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBYTEARRAY
+REQUEST QHOSTADDRESS
+#endif
+
 CLASS QNetworkDatagram
 
    DATA pointer
@@ -19,24 +24,23 @@ CLASS QNetworkDatagram
 
    METHOD new
    METHOD delete
-
-   METHOD clear
-   METHOD data
-   METHOD destinationAddress
-   METHOD destinationPort
-   METHOD hopLimit
-   METHOD interfaceIndex
-   METHOD isNull
-   METHOD isValid
-   METHOD makeReply
-   METHOD senderAddress
-   METHOD senderPort
-   METHOD setData
-   METHOD setDestination
-   METHOD setHopLimit
-   METHOD setInterfaceIndex
-   METHOD setSender
    METHOD swap
+   METHOD clear
+   METHOD isValid
+   METHOD isNull
+   METHOD interfaceIndex
+   METHOD setInterfaceIndex
+   METHOD senderAddress
+   METHOD destinationAddress
+   METHOD senderPort
+   METHOD destinationPort
+   METHOD setSender
+   METHOD setDestination
+   METHOD hopLimit
+   METHOD setHopLimit
+   METHOD data
+   METHOD setData
+   METHOD makeReply
 
    METHOD newFrom
    METHOD newFromObject

@@ -20,7 +20,6 @@ CLASS QNetworkConfigurationManager INHERIT QObject
 
    METHOD new
    METHOD delete
-
    METHOD allConfigurations
    METHOD capabilities
    METHOD configurationFromIdentifier

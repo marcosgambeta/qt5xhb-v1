@@ -12,6 +12,10 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QDATETIME
+#endif
+
 CLASS QHstsPolicy
 
    DATA pointer
@@ -19,15 +23,14 @@ CLASS QHstsPolicy
 
    METHOD new
    METHOD delete
-
-   METHOD expiry
+   METHOD swap
+   METHOD setHost
    METHOD host
+   METHOD setExpiry
+   METHOD expiry
+   METHOD setIncludesSubDomains
    METHOD includesSubDomains
    METHOD isExpired
-   METHOD setExpiry
-   METHOD setHost
-   METHOD setIncludesSubDomains
-   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject
