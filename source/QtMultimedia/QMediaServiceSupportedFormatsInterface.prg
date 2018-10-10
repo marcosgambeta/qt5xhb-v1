@@ -12,13 +12,15 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QMediaServiceSupportedFormatsInterface
 
    DATA pointer
    DATA self_destruction INIT .F.
 
    METHOD delete
-
    METHOD hasSupport
    METHOD supportedMimeTypes
 

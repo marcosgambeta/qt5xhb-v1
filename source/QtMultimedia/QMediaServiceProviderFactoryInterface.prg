@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIASERVICE
 #endif
 
 CLASS QMediaServiceProviderFactoryInterface
@@ -22,7 +21,6 @@ CLASS QMediaServiceProviderFactoryInterface
    DATA self_destruction INIT .F.
 
    METHOD delete
-
    METHOD release
 
    METHOD newFrom

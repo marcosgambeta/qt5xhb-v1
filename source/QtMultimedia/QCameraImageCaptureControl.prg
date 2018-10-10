@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCameraImageCaptureControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD cancelCapture
    METHOD capture
    METHOD driveMode

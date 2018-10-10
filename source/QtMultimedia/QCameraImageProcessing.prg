@@ -12,19 +12,17 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCameraImageProcessing INHERIT QObject
 
-   METHOD brightness
-   METHOD colorFilter
    METHOD contrast
    METHOD denoisingLevel
    METHOD isAvailable
-   METHOD isColorFilterSupported
    METHOD isWhiteBalanceModeSupported
    METHOD manualWhiteBalance
    METHOD saturation
-   METHOD setBrightness
-   METHOD setColorFilter
    METHOD setContrast
    METHOD setDenoisingLevel
    METHOD setManualWhiteBalance
@@ -33,6 +31,11 @@ CLASS QCameraImageProcessing INHERIT QObject
    METHOD setWhiteBalanceMode
    METHOD sharpeningLevel
    METHOD whiteBalanceMode
+   METHOD brightness
+   METHOD setBrightness
+   METHOD colorFilter
+   METHOD setColorFilter
+   METHOD isColorFilterSupported
 
    DESTRUCTOR destroyObject
 

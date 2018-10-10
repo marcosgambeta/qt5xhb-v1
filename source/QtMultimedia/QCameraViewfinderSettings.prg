@@ -12,6 +12,10 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QSIZE
+#endif
+
 CLASS QCameraViewfinderSettings
 
    DATA pointer
@@ -19,19 +23,24 @@ CLASS QCameraViewfinderSettings
 
    METHOD new
    METHOD delete
-
-   METHOD isNull
-   METHOD maximumFrameRate
-   METHOD minimumFrameRate
-   METHOD pixelAspectRatio
-   METHOD pixelFormat
-   METHOD resolution
-   METHOD setMaximumFrameRate
-   METHOD setMinimumFrameRate
-   METHOD setPixelAspectRatio
-   METHOD setPixelFormat
-   METHOD setResolution
    METHOD swap
+   METHOD isNull
+   METHOD resolution
+   METHOD setResolution
+   METHOD minimumFrameRate
+   METHOD setMinimumFrameRate
+   METHOD maximumFrameRate
+   METHOD setMaximumFrameRate
+   METHOD pixelFormat
+   METHOD setPixelFormat
+   METHOD pixelAspectRatio
+   METHOD setPixelAspectRatio
+
+   METHOD newFrom
+   METHOD newFromObject
+   METHOD newFromPointer
+   METHOD selfDestruction
+   METHOD setSelfDestruction
 
    DESTRUCTOR destroyObject
 

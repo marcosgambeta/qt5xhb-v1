@@ -12,13 +12,16 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QCAMERAVIEWFINDERSETTINGS
+#endif
+
 CLASS QCameraViewfinderSettingsControl2 INHERIT QMediaControl
 
    METHOD delete
-
-   METHOD setViewfinderSettings
    METHOD supportedViewfinderSettings
    METHOD viewfinderSettings
+   METHOD setViewfinderSettings
 
    DESTRUCTOR destroyObject
 

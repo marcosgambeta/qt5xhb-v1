@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCameraZoomControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD currentDigitalZoom
    METHOD currentOpticalZoom
    METHOD maximumDigitalZoom

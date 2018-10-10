@@ -19,7 +19,6 @@ REQUEST QVARIANT
 CLASS QMediaStreamsControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD isActive
    METHOD metaData
    METHOD setActive

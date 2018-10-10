@@ -24,7 +24,6 @@ CLASS QImageEncoderSettings
 
    METHOD new
    METHOD delete
-
    METHOD isNull
    METHOD codec
    METHOD setCodec

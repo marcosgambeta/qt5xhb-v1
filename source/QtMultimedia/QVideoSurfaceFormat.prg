@@ -13,10 +13,10 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
-REQUEST QVARIANT
 REQUEST QBYTEARRAY
 REQUEST QRECT
+REQUEST QSIZE
+REQUEST QVARIANT
 #endif
 
 CLASS QVideoSurfaceFormat
@@ -26,7 +26,6 @@ CLASS QVideoSurfaceFormat
 
    METHOD new
    METHOD delete
-
    METHOD frameHeight
    METHOD frameRate
    METHOD frameSize

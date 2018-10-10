@@ -12,27 +12,29 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QRadioDataControl INHERIT QMediaControl
 
    METHOD delete
-
-   METHOD error
-   METHOD errorString
-   METHOD isAlternativeFrequenciesEnabled
+   METHOD stationId
    METHOD programType
    METHOD programTypeName
+   METHOD stationName
    METHOD radioText
    METHOD setAlternativeFrequenciesEnabled
-   METHOD stationId
-   METHOD stationName
+   METHOD isAlternativeFrequenciesEnabled
+   METHOD error
+   METHOD errorString
 
-   METHOD onAlternativeFrequenciesEnabledChanged
-   METHOD onError
+   METHOD onStationIdChanged
    METHOD onProgramTypeChanged
    METHOD onProgramTypeNameChanged
-   METHOD onRadioTextChanged
-   METHOD onStationIdChanged
    METHOD onStationNameChanged
+   METHOD onRadioTextChanged
+   METHOD onAlternativeFrequenciesEnabledChanged
+   METHOD onError
 
    DESTRUCTOR destroyObject
 

@@ -22,7 +22,7 @@ CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
-
+   METHOD isReadyForCapture
    METHOD availability
    METHOD bufferFormat
    METHOD captureDestination
@@ -32,7 +32,6 @@ CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
    METHOD imageCodecDescription
    METHOD isAvailable
    METHOD isCaptureDestinationSupported
-   METHOD isReadyForCapture
    METHOD mediaObject
    METHOD setBufferFormat
    METHOD setCaptureDestination

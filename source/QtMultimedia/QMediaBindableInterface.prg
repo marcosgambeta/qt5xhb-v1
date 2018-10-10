@@ -22,7 +22,6 @@ CLASS QMediaBindableInterface
    DATA self_destruction INIT .F.
 
    METHOD delete
-
    METHOD mediaObject
 
    METHOD newFrom

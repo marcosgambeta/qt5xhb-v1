@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCameraFeedbackControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD isEventFeedbackEnabled
    METHOD isEventFeedbackLocked
    METHOD resetEventFeedback

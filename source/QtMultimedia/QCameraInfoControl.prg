@@ -12,12 +12,14 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCameraInfoControl INHERIT QMediaControl
 
    METHOD delete
-
-   METHOD cameraOrientation
    METHOD cameraPosition
+   METHOD cameraOrientation
 
    DESTRUCTOR destroyObject
 

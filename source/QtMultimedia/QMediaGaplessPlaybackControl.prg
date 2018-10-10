@@ -19,7 +19,6 @@ REQUEST QMEDIACONTENT
 CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD crossfadeTime
    METHOD isCrossfadeSupported
    METHOD nextMedia

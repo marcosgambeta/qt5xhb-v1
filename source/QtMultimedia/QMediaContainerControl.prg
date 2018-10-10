@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QMediaContainerControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD containerDescription
    METHOD containerFormat
    METHOD setContainerFormat

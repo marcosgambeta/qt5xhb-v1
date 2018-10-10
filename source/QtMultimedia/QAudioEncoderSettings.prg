@@ -23,7 +23,6 @@ CLASS QAudioEncoderSettings
 
    METHOD new
    METHOD delete
-
    METHOD bitRate
    METHOD channelCount
    METHOD codec

@@ -23,8 +23,8 @@ CLASS QCameraFocusZone
 
    METHOD new
    METHOD delete
-   METHOD area
    METHOD isValid
+   METHOD area
    METHOD status
 
    METHOD newFrom

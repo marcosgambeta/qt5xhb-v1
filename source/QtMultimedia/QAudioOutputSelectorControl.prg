@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QAudioOutputSelectorControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD activeOutput
    METHOD availableOutputs
    METHOD defaultOutput

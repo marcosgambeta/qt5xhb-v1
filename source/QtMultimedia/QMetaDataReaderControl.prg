@@ -19,14 +19,13 @@ REQUEST QVARIANT
 CLASS QMetaDataReaderControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD isMetaDataAvailable
    METHOD metaData
    METHOD availableMetaData
 
-   METHOD onMetaDataAvailableChanged
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
+   METHOD onMetaDataAvailableChanged
 
    DESTRUCTOR destroyObject
 

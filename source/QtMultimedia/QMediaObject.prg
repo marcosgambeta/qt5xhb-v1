@@ -13,22 +13,22 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
 REQUEST QMEDIASERVICE
+REQUEST QVARIANT
 #endif
 
 CLASS QMediaObject INHERIT QObject
 
    METHOD delete
+   METHOD notifyInterval
+   METHOD setNotifyInterval
    METHOD availability
    METHOD availableMetaData
    METHOD bind
    METHOD isAvailable
    METHOD isMetaDataAvailable
    METHOD metaData
-   METHOD notifyInterval
    METHOD service
-   METHOD setNotifyInterval
    METHOD unbind
 
    METHOD onAvailabilityChanged1

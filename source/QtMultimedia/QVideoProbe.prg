@@ -12,11 +12,13 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QVideoProbe INHERIT QObject
 
    METHOD new
    METHOD delete
-
    METHOD isActive
    METHOD setSource
 

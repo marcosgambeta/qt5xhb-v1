@@ -19,7 +19,6 @@ REQUEST QURL
 CLASS QMediaRecorderControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD applySettings
    METHOD duration
    METHOD isMuted

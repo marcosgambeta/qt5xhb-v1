@@ -25,7 +25,6 @@ CLASS QMediaResource
 
    METHOD new
    METHOD delete
-
    METHOD audioBitRate
    METHOD audioCodec
    METHOD channelCount

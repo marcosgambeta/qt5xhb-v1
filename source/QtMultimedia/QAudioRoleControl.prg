@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QAudioRoleControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD audioRole
    METHOD setAudioRole
    METHOD supportedAudioRoles

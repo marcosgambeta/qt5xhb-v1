@@ -20,34 +20,33 @@ CLASS QSoundEffect INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD category
-   METHOD isLoaded
-   METHOD isMuted
-   METHOD isPlaying
-   METHOD loopCount
-   METHOD loopsRemaining
-   METHOD play
-   METHOD setCategory
-   METHOD setLoopCount
-   METHOD setMuted
-   METHOD setSource
-   METHOD setVolume
    METHOD source
+   METHOD setSource
+   METHOD loopCount
+   METHOD setLoopCount
+   METHOD loopsRemaining
+   METHOD volume
+   METHOD setVolume
+   METHOD isMuted
+   METHOD setMuted
+   METHOD isPlaying
    METHOD status
+   METHOD category
+   METHOD setCategory
+   METHOD isLoaded
+   METHOD play
    METHOD stop
    METHOD supportedMimeTypes
-   METHOD volume
 
-   METHOD onCategoryChanged
-   METHOD onLoadedChanged
+   METHOD onSourceChanged
    METHOD onLoopCountChanged
    METHOD onLoopsRemainingChanged
-   METHOD onMutedChanged
-   METHOD onPlayingChanged
-   METHOD onSourceChanged
-   METHOD onStatusChanged
    METHOD onVolumeChanged
+   METHOD onMutedChanged
+   METHOD onLoadedChanged
+   METHOD onPlayingChanged
+   METHOD onStatusChanged
+   METHOD onCategoryChanged
 
    DESTRUCTOR destroyObject
 

@@ -23,7 +23,6 @@ CLASS QAudioBuffer
 
    METHOD new
    METHOD delete
-
    METHOD byteCount
    METHOD data
    METHOD duration

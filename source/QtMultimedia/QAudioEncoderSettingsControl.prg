@@ -19,7 +19,6 @@ REQUEST QAUDIOENCODERSETTINGS
 CLASS QAudioEncoderSettingsControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD audioSettings
    METHOD codecDescription
    METHOD setAudioSettings

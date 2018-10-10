@@ -20,26 +20,25 @@ CLASS QRadioData INHERIT QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
-
-   METHOD availability
-   METHOD mediaObject
    METHOD stationId
    METHOD programType
    METHOD programTypeName
    METHOD stationName
    METHOD radioText
    METHOD isAlternativeFrequenciesEnabled
+   METHOD setAlternativeFrequenciesEnabled
+   METHOD availability
+   METHOD mediaObject
    METHOD error
    METHOD errorString
-   METHOD setAlternativeFrequenciesEnabled
 
-   METHOD onAlternativeFrequenciesEnabledChanged
-   METHOD onError
+   METHOD onStationIdChanged
    METHOD onProgramTypeChanged
    METHOD onProgramTypeNameChanged
-   METHOD onRadioTextChanged
-   METHOD onStationIdChanged
    METHOD onStationNameChanged
+   METHOD onRadioTextChanged
+   METHOD onAlternativeFrequenciesEnabledChanged
+   METHOD onError
 
    DESTRUCTOR destroyObject
 

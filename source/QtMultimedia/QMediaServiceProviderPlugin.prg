@@ -19,7 +19,6 @@ REQUEST QMEDIASERVICE
 CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryInterface
 
    METHOD delete
-
    METHOD create
    METHOD release
 

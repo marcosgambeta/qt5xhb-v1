@@ -12,15 +12,18 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QAudioRecorder INHERIT QMediaRecorder
 
    METHOD new
    METHOD delete
    METHOD audioInput
+   METHOD setAudioInput
    METHOD audioInputDescription
    METHOD audioInputs
    METHOD defaultAudioInput
-   METHOD setAudioInput
 
    METHOD onAudioInputChanged
    METHOD onAvailableAudioInputsChanged

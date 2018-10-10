@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QAudioFormat
 
    DATA pointer
@@ -19,17 +22,9 @@ CLASS QAudioFormat
 
    METHOD new
    METHOD delete
-
    METHOD byteOrder
-   METHOD bytesForDuration
-   METHOD bytesForFrames
-   METHOD bytesPerFrame
    METHOD channelCount
    METHOD codec
-   METHOD durationForBytes
-   METHOD durationForFrames
-   METHOD framesForBytes
-   METHOD framesForDuration
    METHOD isValid
    METHOD sampleRate
    METHOD sampleSize
@@ -40,6 +35,13 @@ CLASS QAudioFormat
    METHOD setSampleRate
    METHOD setSampleSize
    METHOD setSampleType
+   METHOD bytesForDuration
+   METHOD durationForBytes
+   METHOD bytesForFrames
+   METHOD framesForBytes
+   METHOD framesForDuration
+   METHOD durationForFrames
+   METHOD bytesPerFrame
 
    METHOD newFrom
    METHOD newFromObject

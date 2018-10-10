@@ -21,7 +21,6 @@ CLASS QAudioOutput INHERIT QObject
 
    METHOD new
    METHOD delete
-
    METHOD bufferSize
    METHOD bytesFree
    METHOD category

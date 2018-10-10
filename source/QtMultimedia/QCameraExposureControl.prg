@@ -19,7 +19,6 @@ REQUEST QVARIANT
 CLASS QCameraExposureControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD actualValue
    METHOD isParameterSupported
    METHOD requestedValue

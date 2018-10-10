@@ -12,14 +12,23 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QVIDEOFRAME
+#endif
+
 CLASS QVideoFilterRunnable
 
    DATA pointer
    DATA self_destruction INIT .F.
 
    METHOD delete
-
    METHOD run
+
+   METHOD newFrom
+   METHOD newFromObject
+   METHOD newFromPointer
+   METHOD selfDestruction
+   METHOD setSelfDestruction
 
    DESTRUCTOR destroyObject
 

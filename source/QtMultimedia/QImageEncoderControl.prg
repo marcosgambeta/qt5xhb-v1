@@ -13,14 +13,13 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSIZE
 REQUEST QIMAGEENCODERSETTINGS
+REQUEST QSIZE
 #endif
 
 CLASS QImageEncoderControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD supportedImageCodecs
    METHOD imageCodecDescription
    METHOD supportedResolutions

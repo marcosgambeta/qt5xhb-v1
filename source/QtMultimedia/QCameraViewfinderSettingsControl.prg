@@ -19,7 +19,6 @@ REQUEST QVARIANT
 CLASS QCameraViewfinderSettingsControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD isViewfinderParameterSupported
    METHOD setViewfinderParameter
    METHOD viewfinderParameter

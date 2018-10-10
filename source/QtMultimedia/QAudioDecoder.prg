@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QAUDIOFORMAT
 REQUEST QAUDIOBUFFER
+REQUEST QAUDIOFORMAT
 REQUEST QIODEVICE
 #endif
 
@@ -22,23 +22,22 @@ CLASS QAudioDecoder INHERIT QMediaObject
 
    METHOD new
    METHOD delete
-
-   METHOD audioFormat
+   METHOD sourceFilename
+   METHOD setSourceFilename
+   METHOD state
+   METHOD errorString
    METHOD bufferAvailable
+   METHOD audioFormat
+   METHOD setAudioFormat
    METHOD duration
    METHOD error
-   METHOD errorString
-   METHOD hasSupport
    METHOD position
    METHOD read
-   METHOD setAudioFormat
-   METHOD setSourceDevice
-   METHOD setSourceFilename
    METHOD sourceDevice
-   METHOD sourceFilename
+   METHOD setSourceDevice
    METHOD start
-   METHOD state
    METHOD stop
+   METHOD hasSupport
 
    METHOD onBufferAvailableChanged
    METHOD onBufferReady

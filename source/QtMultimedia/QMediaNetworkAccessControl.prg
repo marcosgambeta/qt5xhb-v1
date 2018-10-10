@@ -19,7 +19,6 @@ REQUEST QNETWORKCONFIGURATION
 CLASS QMediaNetworkAccessControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD currentConfiguration
    METHOD setConfigurations
 

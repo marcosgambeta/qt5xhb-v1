@@ -19,7 +19,6 @@ REQUEST QVARIANT
 CLASS QCameraImageProcessingControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD isParameterSupported
    METHOD isParameterValueSupported
    METHOD parameter

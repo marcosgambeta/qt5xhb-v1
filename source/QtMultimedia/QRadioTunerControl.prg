@@ -12,47 +12,49 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QRadioTunerControl INHERIT QMediaControl
 
    METHOD delete
-
+   METHOD state
    METHOD band
-   METHOD cancelSearch
-   METHOD error
-   METHOD errorString
+   METHOD setBand
+   METHOD isBandSupported
    METHOD frequency
    METHOD frequencyStep
-   METHOD isAntennaConnected
-   METHOD isBandSupported
-   METHOD isMuted
-   METHOD isSearching
-   METHOD isStereo
-   METHOD searchAllStations
-   METHOD searchBackward
-   METHOD searchForward
-   METHOD setBand
    METHOD setFrequency
-   METHOD setMuted
-   METHOD setStereoMode
-   METHOD setVolume
-   METHOD signalStrength
-   METHOD start
-   METHOD state
+   METHOD isStereo
    METHOD stereoMode
-   METHOD stop
+   METHOD setStereoMode
+   METHOD signalStrength
    METHOD volume
+   METHOD setVolume
+   METHOD isMuted
+   METHOD setMuted
+   METHOD isSearching
+   METHOD isAntennaConnected
+   METHOD searchForward
+   METHOD searchBackward
+   METHOD searchAllStations
+   METHOD cancelSearch
+   METHOD start
+   METHOD stop
+   METHOD error
+   METHOD errorString
 
-   METHOD onAntennaConnectedChanged
+   METHOD onStateChanged
    METHOD onBandChanged
-   METHOD onError
    METHOD onFrequencyChanged
-   METHOD onMutedChanged
+   METHOD onStereoStatusChanged
    METHOD onSearchingChanged
    METHOD onSignalStrengthChanged
-   METHOD onStateChanged
-   METHOD onStationFound
-   METHOD onStereoStatusChanged
    METHOD onVolumeChanged
+   METHOD onMutedChanged
+   METHOD onError
+   METHOD onStationFound
+   METHOD onAntennaConnectedChanged
 
    DESTRUCTOR destroyObject
 

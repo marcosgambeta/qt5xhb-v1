@@ -19,17 +19,16 @@ REQUEST QVARIANT
 CLASS QMetaDataWriterControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD isWritable
    METHOD isMetaDataAvailable
    METHOD metaData
    METHOD setMetaData
    METHOD availableMetaData
 
-   METHOD onMetaDataAvailableChanged
    METHOD onMetaDataChanged1
    METHOD onMetaDataChanged2
    METHOD onWritableChanged
+   METHOD onMetaDataAvailableChanged
 
    DESTRUCTOR destroyObject
 

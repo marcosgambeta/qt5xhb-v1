@@ -23,7 +23,6 @@ CLASS QAudioDeviceInfo
 
    METHOD new
    METHOD delete
-
    METHOD deviceName
    METHOD isFormatSupported
    METHOD isNull

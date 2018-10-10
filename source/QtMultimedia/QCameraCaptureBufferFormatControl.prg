@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCameraCaptureBufferFormatControl INHERIT QMediaObject
 
    METHOD delete
-
    METHOD bufferFormat
    METHOD setBufferFormat
    METHOD supportedBufferFormats

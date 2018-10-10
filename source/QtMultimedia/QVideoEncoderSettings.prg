@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
 REQUEST QSIZE
+REQUEST QVARIANT
 #endif
 
 CLASS QVideoEncoderSettings
@@ -24,7 +24,6 @@ CLASS QVideoEncoderSettings
 
    METHOD new
    METHOD delete
-
    METHOD bitRate
    METHOD codec
    METHOD encodingMode

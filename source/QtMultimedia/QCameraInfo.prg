@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCameraInfo
 
    DATA pointer
@@ -19,14 +22,19 @@ CLASS QCameraInfo
 
    METHOD new
    METHOD delete
-
-   METHOD availableCameras
-   METHOD defaultCamera
-   METHOD description
-   METHOD deviceName
    METHOD isNull
-   METHOD orientation
+   METHOD deviceName
+   METHOD description
    METHOD position
+   METHOD orientation
+   METHOD defaultCamera
+   METHOD availableCameras
+
+   METHOD newFrom
+   METHOD newFromObject
+   METHOD newFromPointer
+   METHOD selfDestruction
+   METHOD setSelfDestruction
 
    DESTRUCTOR destroyObject
 

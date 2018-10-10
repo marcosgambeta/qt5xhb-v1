@@ -13,26 +13,26 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QCAMERAFOCUSZONE
 REQUEST QPOINTF
-REQUEST QCAMERAFOCUSZONELIST
 #endif
 
 CLASS QCameraFocus INHERIT QObject
 
-   METHOD customFocusPoint
-   METHOD digitalZoom
    METHOD focusMode
+   METHOD setFocusMode
    METHOD focusPointMode
+   METHOD setFocusPointMode
+   METHOD customFocusPoint
+   METHOD setCustomFocusPoint
    METHOD focusZones
+   METHOD opticalZoom
+   METHOD digitalZoom
    METHOD isAvailable
    METHOD isFocusModeSupported
    METHOD isFocusPointModeSupported
    METHOD maximumDigitalZoom
    METHOD maximumOpticalZoom
-   METHOD opticalZoom
-   METHOD setCustomFocusPoint
-   METHOD setFocusMode
-   METHOD setFocusPointMode
    METHOD zoomTo
 
    METHOD onDigitalZoomChanged

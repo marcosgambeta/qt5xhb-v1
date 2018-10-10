@@ -13,17 +13,17 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QSIZE
 REQUEST QVIDEOSURFACEFORMAT
 #endif
 
 CLASS QAbstractVideoSurface INHERIT QObject
 
    METHOD delete
-
+   METHOD nativeResolution
    METHOD error
    METHOD isActive
    METHOD isFormatSupported
-   METHOD nativeResolution
    METHOD nearestFormat
    METHOD present
    METHOD start

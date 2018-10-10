@@ -19,21 +19,25 @@ REQUEST QPOINTF
 CLASS QCameraExposure INHERIT QObject
 
    METHOD aperture
+   METHOD shutterSpeed
+   METHOD isoSensitivity
    METHOD exposureCompensation
-   METHOD exposureMode
+   METHOD setExposureCompensation
+   METHOD isFlashReady
    METHOD flashMode
+   METHOD setFlashMode
+   METHOD exposureMode
+   METHOD setExposureMode
+   METHOD meteringMode
+   METHOD setMeteringMode
    METHOD isAvailable
    METHOD isExposureModeSupported
    METHOD isFlashModeSupported
-   METHOD isFlashReady
    METHOD isMeteringModeSupported
-   METHOD isoSensitivity
-   METHOD meteringMode
    METHOD requestedAperture
    METHOD requestedIsoSensitivity
    METHOD requestedShutterSpeed
    METHOD setSpotMeteringPoint
-   METHOD shutterSpeed
    METHOD spotMeteringPoint
    METHOD supportedApertures
    METHOD supportedIsoSensitivities
@@ -41,13 +45,9 @@ CLASS QCameraExposure INHERIT QObject
    METHOD setAutoAperture
    METHOD setAutoIsoSensitivity
    METHOD setAutoShutterSpeed
-   METHOD setExposureCompensation
-   METHOD setExposureMode
-   METHOD setFlashMode
    METHOD setManualAperture
    METHOD setManualIsoSensitivity
    METHOD setManualShutterSpeed
-   METHOD setMeteringMode
 
    METHOD onApertureChanged
    METHOD onApertureRangeChanged

@@ -29,14 +29,13 @@ CLASS QMediaServiceProviderHint
    METHOD new6
    METHOD new
    METHOD delete
-
-   METHOD cameraPosition
+   METHOD isNull
+   METHOD type
+   METHOD mimeType
    METHOD codecs
    METHOD device
    METHOD features
-   METHOD isNull
-   METHOD mimeType
-   METHOD type
+   METHOD cameraPosition
 
    METHOD newFrom
    METHOD newFromObject

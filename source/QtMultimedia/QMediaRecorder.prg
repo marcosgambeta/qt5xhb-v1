@@ -13,43 +13,45 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QURL
 REQUEST QAUDIOENCODERSETTINGS
-REQUEST QVARIANT
-REQUEST QSIZE
-REQUEST QVIDEOENCODERSETTINGS
 REQUEST QMEDIAOBJECT
+REQUEST QSIZE
+REQUEST QURL
+REQUEST QVARIANT
+REQUEST QVIDEOENCODERSETTINGS
 #endif
 
 CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
-
+   METHOD state
+   METHOD status
+   METHOD duration
+   METHOD outputLocation
+   METHOD setOutputLocation
    METHOD actualLocation
+   METHOD isMuted
+   METHOD setMuted
+   METHOD volume
+   METHOD setVolume
+   METHOD isMetaDataAvailable
+   METHOD isMetaDataWritable
    METHOD audioCodecDescription
    METHOD audioSettings
    METHOD availability
    METHOD availableMetaData
    METHOD containerDescription
    METHOD containerFormat
-   METHOD duration
    METHOD error
    METHOD errorString
    METHOD isAvailable
-   METHOD isMetaDataAvailable
-   METHOD isMetaDataWritable
-   METHOD isMuted
    METHOD metaData
-   METHOD outputLocation
    METHOD setAudioSettings
    METHOD setContainerFormat
    METHOD setEncodingSettings
    METHOD setMetaData
-   METHOD setOutputLocation
    METHOD setVideoSettings
-   METHOD state
-   METHOD status
    METHOD supportedAudioCodecs
    METHOD supportedAudioSampleRates
    METHOD supportedContainers
@@ -58,12 +60,9 @@ CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
    METHOD supportedVideoCodecs
    METHOD videoCodecDescription
    METHOD videoSettings
-   METHOD volume
    METHOD mediaObject
    METHOD pause
    METHOD record
-   METHOD setMuted
-   METHOD setVolume
    METHOD stop
 
    METHOD onActualLocationChanged

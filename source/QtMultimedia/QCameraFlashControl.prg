@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCameraFlashControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD flashMode
    METHOD isFlashModeSupported
    METHOD isFlashReady

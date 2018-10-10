@@ -22,7 +22,6 @@ CLASS QMediaServiceSupportedDevicesInterface
    DATA self_destruction INIT .F.
 
    METHOD delete
-
    METHOD deviceDescription
    METHOD devices
 

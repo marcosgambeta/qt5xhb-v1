@@ -13,52 +13,53 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QBYTEARRAY
 REQUEST QCAMERAEXPOSURE
 REQUEST QCAMERAFOCUS
 REQUEST QCAMERAIMAGEPROCESSING
-REQUEST QBYTEARRAY
+REQUEST QCAMERAVIEWFINDERSETTINGS
+REQUEST QSIZE
 #endif
 
 CLASS QCamera INHERIT QMediaObject
 
    METHOD new
    METHOD delete
-
-   METHOD availability
-   METHOD availableDevices
+   METHOD state
+   METHOD status
    METHOD captureMode
-   METHOD deviceDescription
+   METHOD setCaptureMode
+   METHOD lockStatus
    METHOD error
    METHOD errorString
    METHOD exposure
    METHOD focus
    METHOD imageProcessing
    METHOD isCaptureModeSupported
-   METHOD load
-   METHOD lockStatus
    METHOD requestedLocks
-   METHOD searchAndLock
-   METHOD setCaptureMode
-   METHOD setViewFinder
-   METHOD setViewfinderSettings
-   METHOD start
-   METHOD state
-   METHOD status
-   METHOD stop
+   METHOD setViewfinder
    METHOD supportedLocks
-   METHOD supportedViewfinderPixelFormats
-   METHOD supportedViewfinderResolutions
-   METHOD supportedViewfinderSettings
+   METHOD load
+   METHOD searchAndLock
+   METHOD start
+   METHOD stop
    METHOD unload
    METHOD unlock
+   METHOD availability
    METHOD viewfinderSettings
+   METHOD setViewfinderSettings
+   METHOD supportedViewfinderSettings
+   METHOD supportedViewfinderResolutions
+   METHOD supportedViewfinderPixelFormats
+   METHOD availableDevices
+   METHOD deviceDescription
 
    METHOD onCaptureModeChanged
    METHOD onError
-   METHOD onLocked
    METHOD onLockFailed
    METHOD onLockStatusChanged1
    METHOD onLockStatusChanged2
+   METHOD onLocked
    METHOD onStateChanged
    METHOD onStatusChanged
 

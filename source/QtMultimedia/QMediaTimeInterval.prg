@@ -12,6 +12,9 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QMediaTimeInterval
 
    DATA pointer
@@ -19,7 +22,6 @@ CLASS QMediaTimeInterval
 
    METHOD new
    METHOD delete
-
    METHOD contains
    METHOD end
    METHOD isNormal

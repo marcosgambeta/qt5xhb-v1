@@ -13,9 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST UCHAR
-REQUEST QVARIANT
 REQUEST QSIZE
+REQUEST QVARIANT
 #endif
 
 CLASS QVideoFrame
@@ -25,7 +24,6 @@ CLASS QVideoFrame
 
    METHOD new
    METHOD delete
-
    METHOD bytesPerLine
    METHOD endTime
    METHOD fieldType
@@ -47,11 +45,11 @@ CLASS QVideoFrame
    METHOD startTime
    METHOD unmap
    METHOD width
-   METHOD imageFormatFromPixelFormat
-   METHOD pixelFormatFromImageFormat
    METHOD planeCount
    METHOD metaData
    METHOD setMetaData
+   METHOD imageFormatFromPixelFormat
+   METHOD pixelFormatFromImageFormat
 
    METHOD newFrom
    METHOD newFromObject

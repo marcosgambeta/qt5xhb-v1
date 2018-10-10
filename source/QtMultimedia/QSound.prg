@@ -12,11 +12,13 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QSound INHERIT QObject
 
    METHOD new
    METHOD delete
-
    METHOD loops
    METHOD loopsRemaining
    METHOD setLoops

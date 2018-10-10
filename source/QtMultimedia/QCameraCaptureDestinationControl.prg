@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QCameraCaptureDestinationControl INHERIT QMediaObject
 
    METHOD delete
-
    METHOD captureDestination
    METHOD isCaptureDestinationSupported
    METHOD setCaptureDestination

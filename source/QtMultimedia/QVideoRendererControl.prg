@@ -19,7 +19,6 @@ REQUEST QABSTRACTVIDEOSURFACE
 CLASS QVideoRendererControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD setSurface
    METHOD surface
 

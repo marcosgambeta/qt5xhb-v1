@@ -20,46 +20,45 @@ CLASS QRadioTuner INHERIT QMediaObject
 
    METHOD new
    METHOD delete
-
-   METHOD availability
+   METHOD state
    METHOD band
-   METHOD cancelSearch
+   METHOD setBand
+   METHOD frequency
+   METHOD setFrequency
+   METHOD isStereo
+   METHOD stereoMode
+   METHOD setStereoMode
+   METHOD signalStrength
+   METHOD volume
+   METHOD setVolume
+   METHOD isMuted
+   METHOD setMuted
+   METHOD isSearching
+   METHOD isAntennaConnected
+   METHOD radioData
+   METHOD availability
+   METHOD isBandSupported
+   METHOD frequencyStep
    METHOD error
    METHOD errorString
-   METHOD frequency
-   METHOD frequencyStep
-   METHOD isAntennaConnected
-   METHOD isBandSupported
-   METHOD isMuted
-   METHOD isSearching
-   METHOD isStereo
-   METHOD radioData
-   METHOD searchAllStations
-   METHOD searchBackward
    METHOD searchForward
-   METHOD setBand
-   METHOD setFrequency
-   METHOD setMuted
-   METHOD setStereoMode
-   METHOD setVolume
-   METHOD signalStrength
+   METHOD searchBackward
+   METHOD searchAllStations
+   METHOD cancelSearch
    METHOD start
-   METHOD state
-   METHOD stereoMode
    METHOD stop
-   METHOD volume
 
-   METHOD onAntennaConnectedChanged
+   METHOD onStateChanged
    METHOD onBandChanged
-   METHOD onError
    METHOD onFrequencyChanged
-   METHOD onMutedChanged
+   METHOD onStereoStatusChanged
    METHOD onSearchingChanged
    METHOD onSignalStrengthChanged
-   METHOD onStateChanged
-   METHOD onStationFound
-   METHOD onStereoStatusChanged
    METHOD onVolumeChanged
+   METHOD onMutedChanged
+   METHOD onStationFound
+   METHOD onAntennaConnectedChanged
+   METHOD onError
 
    DESTRUCTOR destroyObject
 

@@ -20,7 +20,6 @@ REQUEST QVIDEOENCODERSETTINGS
 CLASS QVideoEncoderSettingsControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD setVideoSettings
    METHOD supportedFrameRates
    METHOD supportedResolutions

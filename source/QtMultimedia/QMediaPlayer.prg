@@ -13,51 +13,51 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIACONTENT
-REQUEST QNETWORKCONFIGURATION
 REQUEST QIODEVICE
+REQUEST QMEDIACONTENT
 REQUEST QMEDIAPLAYLIST
+REQUEST QNETWORKCONFIGURATION
 #endif
 
 CLASS QMediaPlayer INHERIT QMediaObject
 
    METHOD new
    METHOD delete
-   METHOD bufferStatus
-   METHOD currentMedia
-   METHOD currentNetworkConfiguration
-   METHOD duration
-   METHOD error
-   METHOD errorString
-   METHOD isAudioAvailable
-   METHOD isMuted
-   METHOD isSeekable
-   METHOD isVideoAvailable
    METHOD media
-   METHOD mediaStatus
-   METHOD mediaStream
-   METHOD playbackRate
+   METHOD setMedia
+   METHOD currentMedia
    METHOD playlist
+   METHOD setPlaylist
+   METHOD duration
    METHOD position
-   METHOD setVideoOutput
-   METHOD state
+   METHOD setPosition
    METHOD volume
+   METHOD setVolume
+   METHOD isMuted
+   METHOD setMuted
+   METHOD bufferStatus
+   METHOD isAudioAvailable
+   METHOD isVideoAvailable
+   METHOD isSeekable
+   METHOD playbackRate
+   METHOD state
+   METHOD mediaStatus
+   METHOD audioRole
+   METHOD setAudioRole
+   METHOD errorString
+   METHOD currentNetworkConfiguration
+   METHOD error
+   METHOD mediaStream
+   METHOD setVideoOutput
    METHOD availability
    METHOD pause
    METHOD play
-   METHOD setMedia
-   METHOD setMuted
    METHOD setNetworkConfigurations
    METHOD setPlaybackRate
-   METHOD setPlaylist
-   METHOD setPosition
-   METHOD setVolume
    METHOD stop
    METHOD hasSupport
-   METHOD supportedAudioRoles
    METHOD supportedMimeTypes
-   METHOD audioRole
-   METHOD setAudioRole
+   METHOD supportedAudioRoles
 
    METHOD onAudioAvailableChanged
    METHOD onAudioRoleChanged

@@ -21,7 +21,6 @@ CLASS QAudioInput INHERIT QObject
 
    METHOD new
    METHOD delete
-
    METHOD bufferSize
    METHOD bytesReady
    METHOD elapsedUSecs
@@ -34,11 +33,11 @@ CLASS QAudioInput INHERIT QObject
    METHOD resume
    METHOD setBufferSize
    METHOD setNotifyInterval
-   METHOD setVolume
    METHOD start
    METHOD state
    METHOD stop
    METHOD suspend
+   METHOD setVolume
    METHOD volume
 
    DESTRUCTOR destroyObject

@@ -13,24 +13,23 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QAUDIOFORMAT
 REQUEST QAUDIOBUFFER
+REQUEST QAUDIOFORMAT
 REQUEST QIODEVICE
 #endif
 
 CLASS QAudioDecoderControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD audioFormat
    METHOD bufferAvailable
    METHOD duration
    METHOD position
    METHOD read
    METHOD setAudioFormat
+   METHOD sourceDevice
    METHOD setSourceDevice
    METHOD setSourceFilename
-   METHOD sourceDevice
    METHOD sourceFilename
    METHOD start
    METHOD state

@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QVideoDeviceSelectorControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD defaultDevice
    METHOD deviceCount
    METHOD deviceDescription

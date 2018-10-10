@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QAudioInputSelectorControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD activeInput
    METHOD availableInputs
    METHOD defaultInput

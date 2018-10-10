@@ -20,32 +20,31 @@ REQUEST QSIZE
 CLASS QVideoWindowControl INHERIT QMediaControl
 
    METHOD delete
-
-   METHOD aspectRatioMode
-   METHOD brightness
-   METHOD contrast
    METHOD displayRect
-   METHOD hue
-   METHOD isFullScreen
-   METHOD nativeSize
-   METHOD repaint
-   METHOD saturation
-   METHOD setAspectRatioMode
-   METHOD setBrightness
-   METHOD setContrast
    METHOD setDisplayRect
+   METHOD isFullScreen
    METHOD setFullScreen
+   METHOD repaint
+   METHOD nativeSize
+   METHOD aspectRatioMode
+   METHOD setAspectRatioMode
+   METHOD brightness
+   METHOD setBrightness
+   METHOD contrast
+   METHOD setContrast
+   METHOD hue
    METHOD setHue
+   METHOD saturation
    METHOD setSaturation
-   METHOD setWinId
    METHOD winId
+   METHOD setWinId
 
+   METHOD onFullScreenChanged
    METHOD onBrightnessChanged
    METHOD onContrastChanged
-   METHOD onFullScreenChanged
    METHOD onHueChanged
-   METHOD onNativeSizeChanged
    METHOD onSaturationChanged
+   METHOD onNativeSizeChanged
 
    DESTRUCTOR destroyObject
 

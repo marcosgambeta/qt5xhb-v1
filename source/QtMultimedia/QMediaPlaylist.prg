@@ -21,11 +21,13 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
 
    METHOD new
    METHOD delete
-
+   METHOD playbackMode
+   METHOD setPlaybackMode
+   METHOD currentMedia
+   METHOD currentIndex
+   METHOD setCurrentIndex
    METHOD addMedia
    METHOD clear
-   METHOD currentIndex
-   METHOD currentMedia
    METHOD error
    METHOD errorString
    METHOD insertMedia
@@ -34,23 +36,20 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
    METHOD load
    METHOD media
    METHOD mediaCount
-   METHOD mediaObject
-   METHOD moveMedia
-   METHOD next
    METHOD nextIndex
-   METHOD playbackMode
-   METHOD previous
    METHOD previousIndex
    METHOD removeMedia
    METHOD save
-   METHOD setCurrentIndex
-   METHOD setPlaybackMode
+   METHOD mediaObject
+   METHOD next
+   METHOD previous
    METHOD shuffle
+   METHOD moveMedia
 
    METHOD onCurrentIndexChanged
    METHOD onCurrentMediaChanged
-   METHOD onLoaded
    METHOD onLoadFailed
+   METHOD onLoaded
    METHOD onMediaAboutToBeInserted
    METHOD onMediaAboutToBeRemoved
    METHOD onMediaChanged

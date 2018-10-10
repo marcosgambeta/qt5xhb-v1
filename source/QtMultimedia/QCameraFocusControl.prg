@@ -13,14 +13,13 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QCAMERAFOCUSZONE
 REQUEST QPOINTF
-REQUEST QCAMERAFOCUSZONELIST
 #endif
 
 CLASS QCameraFocusControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD customFocusPoint
    METHOD focusMode
    METHOD focusPointMode

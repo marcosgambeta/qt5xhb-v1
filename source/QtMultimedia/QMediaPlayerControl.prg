@@ -13,15 +13,14 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QMEDIATIMERANGE
-REQUEST QMEDIACONTENT
 REQUEST QIODEVICE
+REQUEST QMEDIACONTENT
+REQUEST QMEDIATIMERANGE
 #endif
 
 CLASS QMediaPlayerControl INHERIT QMediaControl
 
    METHOD delete
-
    METHOD availablePlaybackRanges
    METHOD bufferStatus
    METHOD duration
