@@ -24,12 +24,12 @@ CLASS QJSValue
    DATA self_destruction INIT .F.
 
    METHOD new1
+   METHOD new
    METHOD new4
    METHOD new5
    METHOD new6
    METHOD new7
    METHOD new9
-   METHOD new
    METHOD delete
    METHOD deleteProperty
    METHOD equals

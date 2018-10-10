@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QOBJECT
 REQUEST QMETAOBJECT
+REQUEST QOBJECT
 #endif
 
 CLASS QQmlListReference
