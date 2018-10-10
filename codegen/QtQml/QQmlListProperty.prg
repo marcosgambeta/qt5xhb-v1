@@ -35,6 +35,7 @@ $prototype=QQmlListProperty(QObject * object, void * data, AppendFunction append
 HB_FUNC_STATIC( QQMLLISTPROPERTY_NEW )
 {
 }
+$addMethod=new
 
 $extraMethods
 
