@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QVARIANT
 REQUEST QBYTEARRAY
+REQUEST QVARIANT
 #endif
 
 CLASS QMacPasteboardMime
