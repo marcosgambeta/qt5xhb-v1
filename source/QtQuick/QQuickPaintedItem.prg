@@ -13,9 +13,9 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QCOLOR
 REQUEST QRECTF
 REQUEST QSIZE
-REQUEST QCOLOR
 #endif
 
 CLASS QQuickPaintedItem INHERIT QQuickItem
