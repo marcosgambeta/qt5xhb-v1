@@ -12,20 +12,22 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QOAuthHttpServerReplyHandler INHERIT QOAuthOobReplyHandler
 
    METHOD new
    METHOD delete
-
    METHOD callback
    METHOD callbackPath
+   METHOD setCallbackPath
    METHOD callbackText
+   METHOD setCallbackText
+   METHOD port
+   METHOD listen
    METHOD close
    METHOD isListening
-   METHOD listen
-   METHOD port
-   METHOD setCallbackPath
-   METHOD setCallbackText
 
    DESTRUCTOR destroyObject
 

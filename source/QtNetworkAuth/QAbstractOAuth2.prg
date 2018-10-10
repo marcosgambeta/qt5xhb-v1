@@ -12,28 +12,25 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QDATETIME
+#endif
+
 CLASS QAbstractOAuth2 INHERIT QAbstractOAuth
 
    METHOD delete
-
-   METHOD clientIdentifierSharedKey
-   METHOD createAuthenticatedUrl
-   METHOD deleteResource
-   METHOD expirationAt
-   METHOD get
-   METHOD head
-   METHOD post
-   METHOD put
-   METHOD refreshToken
-   METHOD responseType
    METHOD scope
-   METHOD setClientIdentifierSharedKey
-   METHOD setRefreshToken
    METHOD setScope
-   METHOD setState
-   METHOD setUserAgent
-   METHOD state
    METHOD userAgent
+   METHOD setUserAgent
+   METHOD clientIdentifierSharedKey
+   METHOD setClientIdentifierSharedKey
+   METHOD state
+   METHOD setState
+   METHOD expirationAt
+   METHOD responseType
+   METHOD refreshToken
+   METHOD setRefreshToken
 
    METHOD onClientIdentifierSharedKeyChanged
    METHOD onError

@@ -12,24 +12,27 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QURL
+#endif
+
 CLASS QOAuth1 INHERIT QAbstractOAuth
 
    METHOD new
    METHOD delete
-
    METHOD clientSharedSecret
-   METHOD continueGrantWithVerifier
-   METHOD grant
-   METHOD setClientCredentials
    METHOD setClientSharedSecret
-   METHOD setSignatureMethod
-   METHOD setTemporaryCredentialsUrl
-   METHOD setTokenCredentials
-   METHOD setTokenCredentialsUrl
-   METHOD setTokenSecret
-   METHOD temporaryCredentialsUrl
-   METHOD tokenCredentialsUrl
+   METHOD setClientCredentials
    METHOD tokenSecret
+   METHOD setTokenSecret
+   METHOD setTokenCredentials
+   METHOD temporaryCredentialsUrl
+   METHOD setTemporaryCredentialsUrl
+   METHOD tokenCredentialsUrl
+   METHOD setTokenCredentialsUrl
+   METHOD setSignatureMethod
+   METHOD grant
+   METHOD continueGrantWithVerifier
 
    METHOD onClientSharedSecretChanged
    METHOD onSignatureMethodChanged

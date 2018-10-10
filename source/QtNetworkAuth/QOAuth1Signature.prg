@@ -12,6 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBYTEARRAY
+REQUEST QURL
+REQUEST QVARIANT
+#endif
+
 CLASS QOAuth1Signature
 
    DATA pointer
@@ -19,23 +25,22 @@ CLASS QOAuth1Signature
 
    METHOD new
    METHOD delete
-
+   METHOD setHttpRequestMethod
+   METHOD url
+   METHOD setUrl
    METHOD addRequestBody
-   METHOD clientSharedKey
-   METHOD hmacSha1
    METHOD insert
    METHOD keys
-   METHOD plainText
-   METHOD rsaSha1
-   METHOD setClientSharedKey
-   METHOD setHttpRequestMethod
-   METHOD setTokenSecret
-   METHOD setUrl
-   METHOD swap
    METHOD take
-   METHOD tokenSecret
-   METHOD url
    METHOD value
+   METHOD clientSharedKey
+   METHOD setClientSharedKey
+   METHOD tokenSecret
+   METHOD setTokenSecret
+   METHOD hmacSha1
+   METHOD rsaSha1
+   METHOD plainText
+   METHOD swap
 
    METHOD newFrom
    METHOD newFromObject

@@ -12,23 +12,27 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QABSTRACTOAUTHREPLYHANDLER
+REQUEST QNETWORKACCESSMANAGER
+REQUEST QURL
+#endif
+
 CLASS QAbstractOAuth INHERIT QObject
 
    METHOD delete
-
-   METHOD authorizationUrl
    METHOD clientIdentifier
-   METHOD contentType
-   METHOD grant
-   METHOD networkAccessManager
-   METHOD replyHandler
-   METHOD setAuthorizationUrl
    METHOD setClientIdentifier
-   METHOD setContentType
-   METHOD setNetworkAccessManager
-   METHOD setReplyHandler
-   METHOD setToken
    METHOD token
+   METHOD setToken
+   METHOD authorizationUrl
+   METHOD setAuthorizationUrl
+   METHOD setContentType
+   METHOD networkAccessManager
+   METHOD setNetworkAccessManager
+   METHOD replyHandler
+   METHOD setReplyHandler
+   METHOD grant
 
    METHOD onAuthorizationUrlChanged
    METHOD onAuthorizeWithBrowser

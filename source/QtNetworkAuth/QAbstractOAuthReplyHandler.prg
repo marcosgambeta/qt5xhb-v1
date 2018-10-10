@@ -12,10 +12,12 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QAbstractOAuthReplyHandler INHERIT QObject
 
    METHOD delete
-
    METHOD callback
    METHOD networkReplyFinished
 

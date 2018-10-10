@@ -12,15 +12,18 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QURL
+#endif
+
 CLASS QOAuth2AuthorizationCodeFlow INHERIT QAbstractOAuth2
 
    METHOD new
    METHOD delete
-
    METHOD accessTokenUrl
+   METHOD setAccessTokenUrl
    METHOD grant
    METHOD refreshAccessToken
-   METHOD setAccessTokenUrl
 
    METHOD onAccessTokenUrlChanged
 
