@@ -12,42 +12,46 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QWEBENGINECOOKIESTORE
+REQUEST QWEBENGINEURLSCHEMEHANDLER
+#endif
+
 CLASS QQuickWebEngineProfile INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD cachePath
-   METHOD clearHttpCache
-   METHOD cookieStore
-   METHOD defaultProfile
-   METHOD httpAcceptLanguage
-   METHOD httpCacheMaximumSize
-   METHOD httpCacheType
-   METHOD httpUserAgent
-   METHOD installUrlSchemeHandler
+   METHOD storageName
+   METHOD setStorageName
    METHOD isOffTheRecord
-   METHOD isSpellCheckEnabled
-   METHOD persistentCookiesPolicy
+   METHOD setOffTheRecord
    METHOD persistentStoragePath
-   METHOD removeAllUrlSchemeHandlers
+   METHOD setPersistentStoragePath
+   METHOD cachePath
+   METHOD setCachePath
+   METHOD httpUserAgent
+   METHOD setHttpUserAgent
+   METHOD httpCacheType
+   METHOD setHttpCacheType
+   METHOD httpAcceptLanguage
+   METHOD setHttpAcceptLanguage
+   METHOD persistentCookiesPolicy
+   METHOD setPersistentCookiesPolicy
+   METHOD httpCacheMaximumSize
+   METHOD setHttpCacheMaximumSize
+   METHOD spellCheckLanguages
+   METHOD setSpellCheckLanguages
+   METHOD isSpellCheckEnabled
+   METHOD setSpellCheckEnabled
+   METHOD cookieStore
+   METHOD setRequestInterceptor
+   METHOD urlSchemeHandler
+   METHOD installUrlSchemeHandler
    METHOD removeUrlScheme
    METHOD removeUrlSchemeHandler
-   METHOD setCachePath
-   METHOD setHttpAcceptLanguage
-   METHOD setHttpCacheMaximumSize
-   METHOD setHttpCacheType
-   METHOD setHttpUserAgent
-   METHOD setOffTheRecord
-   METHOD setPersistentCookiesPolicy
-   METHOD setPersistentStoragePath
-   METHOD setRequestInterceptor
-   METHOD setSpellCheckEnabled
-   METHOD setSpellCheckLanguages
-   METHOD setStorageName
-   METHOD spellCheckLanguages
-   METHOD storageName
-   METHOD urlSchemeHandler
+   METHOD removeAllUrlSchemeHandlers
+   METHOD clearHttpCache
+   METHOD defaultProfile
 
    METHOD onCachePathChanged
    METHOD onHttpAcceptLanguageChanged

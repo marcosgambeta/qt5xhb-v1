@@ -12,12 +12,21 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QtWebEngine
 
    DATA pointer
    DATA self_destruction INIT .F.
 
    METHOD initialize
+
+   METHOD newFrom
+   METHOD newFromObject
+   METHOD newFromPointer
+   METHOD selfDestruction
+   METHOD setSelfDestruction
 
    DESTRUCTOR destroyObject
 

@@ -12,24 +12,27 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QURL
+#endif
+
 CLASS QQuickWebEngineScript INHERIT QObject
 
    METHOD new
    METHOD delete
-
-   METHOD injectionPoint
    METHOD name
-   METHOD runOnSubframes
-   METHOD setInjectionPoint
    METHOD setName
-   METHOD setRunOnSubframes
-   METHOD setSourceCode
-   METHOD setSourceUrl
-   METHOD setWorldId
-   METHOD sourceCode
    METHOD sourceUrl
-   METHOD toString
+   METHOD setSourceUrl
+   METHOD sourceCode
+   METHOD setSourceCode
+   METHOD injectionPoint
+   METHOD setInjectionPoint
    METHOD worldId
+   METHOD setWorldId
+   METHOD runOnSubframes
+   METHOD setRunOnSubframes
+   METHOD toString
 
    METHOD onInjectionPointChanged
    METHOD onNameChanged
