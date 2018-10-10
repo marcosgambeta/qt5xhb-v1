@@ -23,7 +23,6 @@ CLASS QSvgGenerator INHERIT QPaintDevice
 
    METHOD new
    METHOD delete
-
    METHOD description
    METHOD fileName
    METHOD outputDevice

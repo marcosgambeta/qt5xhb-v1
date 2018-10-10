@@ -22,15 +22,14 @@ CLASS QGraphicsSvgItem INHERIT QGraphicsObject
 
    METHOD new
    METHOD delete
-
-   METHOD boundingRect
    METHOD elementId
    METHOD maximumCacheSize
-   METHOD paint
    METHOD renderer
    METHOD setElementId
    METHOD setMaximumCacheSize
    METHOD setSharedRenderer
+   METHOD boundingRect
+   METHOD paint
    METHOD type
 
    DESTRUCTOR destroyObject
