@@ -9,6 +9,15 @@ $header
 #include "hbclass.ch"
 
 $addRequests
+$addRequest=QGraphicsSceneContextMenuEvent
+$addRequest=QGraphicsSceneDragDropEvent
+$addRequest=QGraphicsSceneEvent
+$addRequest=QGraphicsSceneHelpEvent
+$addRequest=QGraphicsSceneHoverEvent
+$addRequest=QGraphicsSceneMouseEvent
+$addRequest=QGraphicsSceneMoveEvent
+$addRequest=QGraphicsSceneResizeEvent
+$addRequest=QGraphicsSceneWheelEvent
 
 $beginClassFrom=QObject
 
