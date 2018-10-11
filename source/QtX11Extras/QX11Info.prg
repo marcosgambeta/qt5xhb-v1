@@ -98,7 +98,14 @@ static bool isPlatformX11()
 HB_FUNC_STATIC( QX11INFO_ISPLATFORMX11 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  RBOOL( QX11Info::isPlatformX11 () );
+    if( ISNUMPAR(0) )
+  {
+      RBOOL( QX11Info::isPlatformX11 () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -108,7 +115,14 @@ static int appDpiX(int screen=-1)
 HB_FUNC_STATIC( QX11INFO_APPDPIX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  RINT( QX11Info::appDpiX ( OPINT(1,-1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  {
+      RINT( QX11Info::appDpiX ( OPINT(1,-1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -118,7 +132,14 @@ static int appDpiY(int screen=-1)
 HB_FUNC_STATIC( QX11INFO_APPDPIY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  RINT( QX11Info::appDpiY ( OPINT(1,-1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  {
+      RINT( QX11Info::appDpiY ( OPINT(1,-1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -128,7 +149,14 @@ static unsigned long appRootWindow(int screen=-1)
 HB_FUNC_STATIC( QX11INFO_APPROOTWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retnl( QX11Info::appRootWindow ( OPINT(1,-1) ) );
+    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  {
+      RUNSIGNEDLONG( QX11Info::appRootWindow ( OPINT(1,-1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -138,7 +166,14 @@ static int appScreen()
 HB_FUNC_STATIC( QX11INFO_APPSCREEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  RINT( QX11Info::appScreen () );
+    if( ISNUMPAR(0) )
+  {
+      RINT( QX11Info::appScreen () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -148,7 +183,14 @@ static unsigned long appTime()
 HB_FUNC_STATIC( QX11INFO_APPTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retnl( QX11Info::appTime () );
+    if( ISNUMPAR(0) )
+  {
+      RUNSIGNEDLONG( QX11Info::appTime () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -158,7 +200,14 @@ static unsigned long appUserTime()
 HB_FUNC_STATIC( QX11INFO_APPUSERTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retnl( QX11Info::appUserTime () );
+    if( ISNUMPAR(0) )
+  {
+      RUNSIGNEDLONG( QX11Info::appUserTime () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -168,8 +217,15 @@ static void setAppTime(unsigned long time)
 HB_FUNC_STATIC( QX11INFO_SETAPPTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  unsigned long par1 = hb_parnl(1);
-  QX11Info::setAppTime ( par1 );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      QX11Info::setAppTime ( PUNSIGNEDLONG(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -180,8 +236,15 @@ static void setAppUserTime(unsigned long time)
 HB_FUNC_STATIC( QX11INFO_SETAPPUSERTIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  unsigned long par1 = hb_parnl(1);
-  QX11Info::setAppUserTime ( par1 );
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      QX11Info::setAppUserTime ( PUNSIGNEDLONG(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -192,7 +255,14 @@ static unsigned long getTimestamp()
 HB_FUNC_STATIC( QX11INFO_GETTIMESTAMP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retnl( QX11Info::getTimestamp () );
+    if( ISNUMPAR(0) )
+  {
+      RUNSIGNEDLONG( QX11Info::getTimestamp () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -202,7 +272,14 @@ static Display *display()
 HB_FUNC_STATIC( QX11INFO_DISPLAY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retptr( (Display *) QX11Info::display () );
+    if( ISNUMPAR(0) )
+  {
+      hb_retptr( (Display *) QX11Info::display () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -212,7 +289,14 @@ static xcb_connection_t *connection()
 HB_FUNC_STATIC( QX11INFO_CONNECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  hb_retptr( (xcb_connection_t *) QX11Info::connection () );
+    if( ISNUMPAR(0) )
+  {
+      hb_retptr( (xcb_connection_t *) QX11Info::connection () );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -222,8 +306,15 @@ static QByteArray nextStartupId()
 HB_FUNC_STATIC( QX11INFO_NEXTSTARTUPID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QByteArray * ptr = new QByteArray( QX11Info::nextStartupId () );
-  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    if( ISNUMPAR(0) )
+  {
+      QByteArray * ptr = new QByteArray( QX11Info::nextStartupId () );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -233,7 +324,15 @@ static void setNextStartupId(const QByteArray &id)
 HB_FUNC_STATIC( QX11INFO_SETNEXTSTARTUPID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QX11Info::setNextStartupId ( *PQBYTEARRAY(1) );
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  {
+      QX11Info::setNextStartupId ( *PQBYTEARRAY(1) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
