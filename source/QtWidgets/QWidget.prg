@@ -14,30 +14,29 @@
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QACTION
-REQUEST QSIZE
-REQUEST QRECT
-REQUEST QREGION
-REQUEST QMARGINS
+REQUEST QBACKINGSTORE
+REQUEST QBYTEARRAY
 REQUEST QCURSOR
 REQUEST QFONT
 REQUEST QFONTINFO
 REQUEST QFONTMETRICS
 REQUEST QGRAPHICSEFFECT
 REQUEST QGRAPHICSPROXYWIDGET
-REQUEST QVARIANT
+REQUEST QICON
 REQUEST QLAYOUT
 REQUEST QLOCALE
-REQUEST QPOINT
+REQUEST QMARGINS
+REQUEST QPAINTENGINE
 REQUEST QPALETTE
-REQUEST QBYTEARRAY
+REQUEST QPIXMAP
+REQUEST QPOINT
+REQUEST QRECT
+REQUEST QREGION
+REQUEST QSIZE
 REQUEST QSIZEPOLICY
 REQUEST QSTYLE
-REQUEST QICON
-REQUEST QPAINTENGINE
-REQUEST QPIXMAP
-REQUEST QBACKINGSTORE
+REQUEST QVARIANT
 REQUEST QWINDOW
-REQUEST QGESTUREEVENT
 #endif
 
 CLASS QWidget INHERIT QObject
@@ -159,8 +158,6 @@ CLASS QWidget INHERIT QObject
    METHOD releaseMouse
    METHOD releaseShortcut
    METHOD removeAction
-   METHOD render1
-   METHOD render2
    METHOD render
    METHOD repaint
    METHOD resize
@@ -279,7 +276,7 @@ CLASS QWidget INHERIT QObject
 
    METHOD onWindowTitleChanged
    METHOD onWindowIconChanged
-   METHOD onWindowIconTextChanged // TODO: verificar se ainda é valido no Qt 5
+   METHOD onWindowIconTextChanged
    METHOD onCustomContextMenuRequested
 
    DESTRUCTOR destroyObject
@@ -3003,20 +3000,13 @@ HB_FUNC_STATIC( QWIDGET_REMOVEACTION )
 /*
 void render (QPaintDevice *target, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
 */
-HB_FUNC_STATIC( QWIDGET_RENDER1 )
+void QWidget_render1 ()
 {
   QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISBETWEEN(1,4) && ISQPAINTDEVICE(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
-    {
       obj->render ( PQPAINTDEVICE(1), ISNIL(2)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QWidget::RenderFlags) QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren) : (QWidget::RenderFlags) hb_parni(4) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3025,20 +3015,13 @@ HB_FUNC_STATIC( QWIDGET_RENDER1 )
 /*
 void render (QPainter *painter, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
 */
-HB_FUNC_STATIC( QWIDGET_RENDER2 )
+void QWidget_render2 ()
 {
   QWidget * obj = (QWidget *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
-    {
       obj->render ( PQPAINTER(1), ISNIL(2)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QWidget::RenderFlags) QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren) : (QWidget::RenderFlags) hb_parni(4) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3049,13 +3032,13 @@ HB_FUNC_STATIC( QWIDGET_RENDER2 )
 
 HB_FUNC_STATIC( QWIDGET_RENDER )
 {
-  if( ISBETWEEN(1,4) && ISOBJECT(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
+  if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
   {
-    HB_FUNC_EXEC( QWIDGET_RENDER1 );
+    QWidget_render2();
   }
-  else if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
+  else if( ISBETWEEN(1,4) && ISOBJECT(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
   {
-    HB_FUNC_EXEC( QWIDGET_RENDER2 );
+    QWidget_render1();
   }
   else
   {
