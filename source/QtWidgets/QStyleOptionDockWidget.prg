@@ -12,20 +12,21 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionDockWidget INHERIT QStyleOption
 
    METHOD new
-
    METHOD title
-   METHOD closable
-   METHOD movable
-   METHOD floatable
-   METHOD verticalTitleBar
-
    METHOD setTitle
-   METHOD setClosable
+   METHOD closable
+   METHOD SetClosable
+   METHOD movable
    METHOD setMovable
+   METHOD floatable
    METHOD setFloatable
+   METHOD verticalTitleBar
    METHOD setVerticalTitleBar
 
    DESTRUCTOR destroyObject

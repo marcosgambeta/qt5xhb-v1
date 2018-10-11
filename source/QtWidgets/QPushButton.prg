@@ -14,6 +14,7 @@
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QMENU
+REQUEST QSIZE
 #endif
 
 CLASS QPushButton INHERIT QAbstractButton

@@ -12,12 +12,13 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionSizeGrip INHERIT QStyleOptionComplex
 
    METHOD new
-
    METHOD corner
-
    METHOD setCorner
 
    DESTRUCTOR destroyObject

@@ -12,15 +12,16 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionComplex INHERIT QStyleOption
 
    METHOD new
    METHOD delete
-
    METHOD subControls
-   METHOD activeSubControls
-
    METHOD setSubControls
+   METHOD activeSubControls
    METHOD setActiveSubControls
 
    DESTRUCTOR destroyObject

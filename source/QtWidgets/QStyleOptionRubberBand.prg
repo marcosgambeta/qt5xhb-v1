@@ -12,14 +12,15 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionRubberBand INHERIT QStyleOption
 
    METHOD new
-
    METHOD shape
-   METHOD opaque
-
    METHOD setShape
+   METHOD opaque
    METHOD setOpaque
 
    DESTRUCTOR destroyObject

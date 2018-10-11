@@ -12,12 +12,14 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QCOLOR
+#endif
+
 CLASS QStyleOptionFocusRect INHERIT QStyleOption
 
    METHOD new
-
    METHOD backgroundColor
-
    METHOD setBackgroundColor
 
    DESTRUCTOR destroyObject

@@ -12,34 +12,35 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionSlider INHERIT QStyleOptionComplex
 
    METHOD new
-
    METHOD orientation
-   METHOD minimum
-   METHOD maximum
-   METHOD tickPosition
-   METHOD tickInterval
-   METHOD upsideDown
-   METHOD sliderPosition
-   METHOD sliderValue
-   METHOD singleStep
-   METHOD pageStep
-   METHOD notchTarget
-   METHOD dialWrapping
-
    METHOD setOrientation
+   METHOD minimum
    METHOD setMinimum
+   METHOD maximum
    METHOD setMaximum
+   METHOD tickPosition
    METHOD setTickPosition
+   METHOD tickInterval
    METHOD setTickInterval
+   METHOD upsideDown
    METHOD setUpsideDown
+   METHOD sliderPosition
    METHOD setSliderPosition
+   METHOD sliderValue
    METHOD setSliderValue
+   METHOD singleStep
    METHOD setSingleStep
+   METHOD pageStep
    METHOD setPageStep
+   METHOD notchTarget
    METHOD setNotchTarget
+   METHOD dialWrapping
    METHOD setDialWrapping
 
    DESTRUCTOR destroyObject

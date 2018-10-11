@@ -12,18 +12,20 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QMATRIX
+REQUEST QRECTF
+#endif
+
 CLASS QStyleOptionGraphicsItem INHERIT QStyleOption
 
    METHOD new
-
    METHOD levelOfDetailFromTransform
-
    METHOD exposedRect
-   METHOD matrix
-   METHOD levelOfDetail
-
    METHOD setExposedRect
+   METHOD matrix
    METHOD setMatrix
+   METHOD levelOfDetail
    METHOD setLevelOfDetail
 
    DESTRUCTOR destroyObject

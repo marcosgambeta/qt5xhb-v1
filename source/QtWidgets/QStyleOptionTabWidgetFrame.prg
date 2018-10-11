@@ -12,26 +12,29 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QRECT
+REQUEST QSIZE
+#endif
+
 CLASS QStyleOptionTabWidgetFrame INHERIT QStyleOption
 
    METHOD new
-
    METHOD lineWidth
-   METHOD midLineWidth
-   METHOD shape
-   METHOD tabBarSize
-   METHOD rightCornerWidgetSize
-   METHOD leftCornerWidgetSize
-   METHOD tabBarRect
-   METHOD selectedTabRect
-
    METHOD setLineWidth
+   METHOD midLineWidth
    METHOD setMidLineWidth
+   METHOD shape
    METHOD setShape
+   METHOD tabBarSize
    METHOD setTabBarSize
+   METHOD rightCornerWidgetSize
    METHOD setRightCornerWidgetSize
+   METHOD leftCornerWidgetSize
    METHOD setLeftCornerWidgetSize
+   METHOD tabBarRect
    METHOD setTabBarRect
+   METHOD selectedTabRect
    METHOD setSelectedTabRect
 
    DESTRUCTOR destroyObject

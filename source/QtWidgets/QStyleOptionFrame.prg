@@ -12,18 +12,19 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionFrame INHERIT QStyleOption
 
    METHOD new
-
    METHOD lineWidth
-   METHOD midLineWidth
-   METHOD features
-   METHOD frameShape
-
    METHOD setLineWidth
+   METHOD midLineWidth
    METHOD setMidLineWidth
+   METHOD features
    METHOD setFeatures
+   METHOD frameShape
    METHOD setFrameShape
 
    DESTRUCTOR destroyObject

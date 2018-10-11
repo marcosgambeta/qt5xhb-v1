@@ -12,30 +12,34 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QFONT
+REQUEST QICON
+REQUEST QRECT
+#endif
+
 CLASS QStyleOptionMenuItem INHERIT QStyleOption
 
    METHOD new
-
    METHOD menuItemType
-   METHOD checkType
-   METHOD checked
-   METHOD menuHasCheckableItems
-   METHOD menuRect
-   METHOD text
-   METHOD icon
-   METHOD maxIconWidth
-   METHOD tabWidth
-   METHOD font
-
    METHOD setMenuItemType
+   METHOD checkType
    METHOD setCheckType
+   METHOD checked
    METHOD setChecked
+   METHOD menuHasCheckableItems
    METHOD setMenuHasCheckableItems
+   METHOD menuRect
    METHOD setMenuRect
+   METHOD text
    METHOD setText
+   METHOD icon
    METHOD setIcon
+   METHOD maxIconWidth
    METHOD setMaxIconWidth
+   METHOD tabWidth
    METHOD setTabWidth
+   METHOD font
    METHOD setFont
 
    DESTRUCTOR destroyObject

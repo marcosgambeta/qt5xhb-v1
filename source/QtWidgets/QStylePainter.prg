@@ -19,8 +19,6 @@ REQUEST QSTYLE
 CLASS QStylePainter INHERIT QPainter
 
    METHOD new
-   //METHOD delete
-
    METHOD begin
    METHOD drawPrimitive
    METHOD drawControl

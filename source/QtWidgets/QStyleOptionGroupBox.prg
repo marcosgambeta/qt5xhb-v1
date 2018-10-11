@@ -12,22 +12,24 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QCOLOR
+#endif
+
 CLASS QStyleOptionGroupBox INHERIT QStyleOptionComplex
 
    METHOD new
-
    METHOD features
-   METHOD text
-   METHOD textAlignment
-   METHOD textColor
-   METHOD lineWidth
-   METHOD midLineWidth
-
    METHOD setFeatures
+   METHOD text
    METHOD setText
+   METHOD textAlignment
    METHOD setTextAlignment
+   METHOD textColor
    METHOD setTextColor
+   METHOD lineWidth
    METHOD setLineWidth
+   METHOD midLineWidth
    METHOD setMidLineWidth
 
    DESTRUCTOR destroyObject

@@ -12,6 +12,13 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QFONTMETRICS
+REQUEST QOBJECT
+REQUEST QPALETTE
+REQUEST QRECT
+#endif
+
 CLASS QStyleOption
 
    DATA pointer
@@ -21,23 +28,21 @@ CLASS QStyleOption
    METHOD delete
    METHOD init
    METHOD initFrom
-
    METHOD version
-   METHOD type
-   METHOD state
-   METHOD direction
-   METHOD rect
-   METHOD fontMetrics
-   METHOD palette
-   METHOD styleObject
-
    METHOD setVersion
+   METHOD type
    METHOD setType
+   METHOD state
    METHOD setState
+   METHOD direction
    METHOD setDirection
+   METHOD rect
    METHOD setRect
+   METHOD fontMetrics
    METHOD setFontMetrics
+   METHOD palette
    METHOD setPalette
+   METHOD styleObject
    METHOD setStyleObject
 
    METHOD newFrom

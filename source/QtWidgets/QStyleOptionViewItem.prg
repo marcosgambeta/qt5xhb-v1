@@ -12,42 +12,50 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QBRUSH
+REQUEST QFONT
+REQUEST QICON
+REQUEST QLOCALE
+REQUEST QMODELINDEX
+REQUEST QSIZE
+REQUEST QWIDGET
+#endif
+
 CLASS QStyleOptionViewItem INHERIT QStyleOption
 
    METHOD new
-
    METHOD displayAlignment
-   METHOD decorationAlignment
-   METHOD textElideMode
-   METHOD decorationPosition
-   METHOD decorationSize
-   METHOD font
-   METHOD showDecorationSelected
-   METHOD features
-   METHOD locale
-   METHOD widget
-   METHOD index
-   METHOD checkState
-   METHOD icon
-   METHOD text
-   METHOD viewItemPosition
-   METHOD backgroundBrush
-
    METHOD setDisplayAlignment
+   METHOD decorationAlignment
    METHOD setDecorationAlignment
+   METHOD textElideMode
    METHOD setTextElideMode
+   METHOD decorationPosition
    METHOD setDecorationPosition
+   METHOD decorationSize
    METHOD setDecorationSize
+   METHOD font
    METHOD setFont
+   METHOD showDecorationSelected
    METHOD setShowDecorationSelected
+   METHOD features
    METHOD setFeatures
+   METHOD locale
    METHOD setLocale
+   METHOD widget
    METHOD setWidget
+   METHOD index
    METHOD setIndex
+   METHOD checkState
    METHOD setCheckState
+   METHOD icon
    METHOD setIcon
+   METHOD text
    METHOD setText
+   METHOD viewItemPosition
    METHOD setViewItemPosition
+   METHOD backgroundBrush
    METHOD setBackgroundBrush
 
    DESTRUCTOR destroyObject

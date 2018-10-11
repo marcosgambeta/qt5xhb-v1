@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QWIDGET
 REQUEST QSIZE
+REQUEST QWIDGET
 #endif
 
 CLASS QScrollArea INHERIT QAbstractScrollArea

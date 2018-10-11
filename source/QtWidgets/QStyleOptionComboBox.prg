@@ -12,23 +12,27 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QICON
+REQUEST QRECT
+REQUEST QSIZE
+#endif
+
 CLASS QStyleOptionComboBox INHERIT QStyleOptionComplex
 
    METHOD new
-
    METHOD editable
-   METHOD popupRect
-   METHOD frame
-   METHOD currentText
-   METHOD currentIcon
-   METHOD iconSize
-
    METHOD setEditable
+   METHOD popupRect
    METHOD setPopupRect
+   METHOD frame
    METHOD setFrame
+   METHOD currentText
    METHOD setCurrentText
+   METHOD currentIcon
    METHOD setCurrentIcon
-   METHOD setIconSize
+   METHOD iconSize
+   METHOD seticonSize
 
    DESTRUCTOR destroyObject
 

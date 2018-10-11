@@ -12,18 +12,20 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QRECT
+#endif
+
 CLASS QStyleOptionTabBarBase INHERIT QStyleOption
 
    METHOD new
-
    METHOD shape
-   METHOD tabBarRect
-   METHOD selectedTabRect
-   METHOD documentMode
-
    METHOD setShape
+   METHOD tabBarRect
    METHOD setTabBarRect
+   METHOD selectedTabRect
    METHOD setSelectedTabRect
+   METHOD documentMode
    METHOD setDocumentMode
 
    DESTRUCTOR destroyObject

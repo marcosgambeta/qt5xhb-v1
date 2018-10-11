@@ -12,22 +12,23 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionToolBar INHERIT QStyleOption
 
    METHOD new
-
    METHOD positionOfLine
-   METHOD positionWithinLine
-   METHOD toolBarArea
-   METHOD features
-   METHOD lineWidth
-   METHOD midLineWidth
-
    METHOD setPositionOfLine
+   METHOD positionWithinLine
    METHOD setPositionWithinLine
+   METHOD toolBarArea
    METHOD setToolBarArea
+   METHOD features
    METHOD setFeatures
+   METHOD lineWidth
    METHOD setLineWidth
+   METHOD midLineWidth
    METHOD setMidLineWidth
 
    DESTRUCTOR destroyObject

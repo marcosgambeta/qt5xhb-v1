@@ -12,18 +12,21 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QICON
+REQUEST QSIZE
+#endif
+
 CLASS QStyleOptionButton INHERIT QStyleOption
 
    METHOD new
-
    METHOD features
-   METHOD text
-   METHOD icon
-   METHOD iconSize
-
    METHOD setFeatures
+   METHOD text
    METHOD setText
+   METHOD icon
    METHOD setIcon
+   METHOD iconSize
    METHOD setIconSize
 
    DESTRUCTOR destroyObject

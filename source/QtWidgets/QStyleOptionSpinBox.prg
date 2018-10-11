@@ -12,16 +12,17 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+#endif
+
 CLASS QStyleOptionSpinBox INHERIT QStyleOptionComplex
 
    METHOD new
-
    METHOD buttonSymbols
-   METHOD stepEnabled
-   METHOD frame
-
    METHOD setButtonSymbols
+   METHOD stepEnabled
    METHOD setStepEnabled
+   METHOD frame
    METHOD setFrame
 
    DESTRUCTOR destroyObject

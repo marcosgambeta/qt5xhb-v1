@@ -12,18 +12,20 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QICON
+#endif
+
 CLASS QStyleOptionTitleBar INHERIT QStyleOptionComplex
 
    METHOD new
-
    METHOD text
-   METHOD icon
-   METHOD titleBarState
-   METHOD titleBarFlags
-
    METHOD setText
+   METHOD icon
    METHOD setIcon
+   METHOD titleBarState
    METHOD setTitleBarState
+   METHOD titleBarFlags
    METHOD setTitleBarFlags
 
    DESTRUCTOR destroyObject

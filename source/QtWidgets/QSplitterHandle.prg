@@ -13,8 +13,8 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QSPLITTER
 REQUEST QSIZE
+REQUEST QSPLITTER
 #endif
 
 CLASS QSplitterHandle INHERIT QWidget

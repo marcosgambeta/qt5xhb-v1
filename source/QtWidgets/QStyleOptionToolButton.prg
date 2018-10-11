@@ -12,26 +12,31 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QFONT
+REQUEST QICON
+REQUEST QPOINT
+REQUEST QSIZE
+#endif
+
 CLASS QStyleOptionToolButton INHERIT QStyleOptionComplex
 
    METHOD new
-
    METHOD features
-   METHOD icon
-   METHOD iconSize
-   METHOD text
-   METHOD arrowType
-   METHOD toolButtonStyle
-   METHOD pos
-   METHOD font
-
    METHOD setFeatures
+   METHOD icon
    METHOD setIcon
+   METHOD iconSize
    METHOD setIconSize
+   METHOD text
    METHOD setText
+   METHOD arrowType
    METHOD setArrowType
+   METHOD toolButtonStyle
    METHOD setToolButtonStyle
+   METHOD pos
    METHOD setPos
+   METHOD font
    METHOD setFont
 
    DESTRUCTOR destroyObject

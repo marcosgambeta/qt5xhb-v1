@@ -12,18 +12,20 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QICON
+#endif
+
 CLASS QStyleOptionToolBox INHERIT QStyleOption
 
    METHOD new
-
    METHOD text
-   METHOD icon
-   METHOD position
-   METHOD selectedPosition
-
    METHOD setText
+   METHOD icon
    METHOD setIcon
+   METHOD position
    METHOD setPosition
+   METHOD selectedPosition
    METHOD setSelectedPosition
 
    DESTRUCTOR destroyObject

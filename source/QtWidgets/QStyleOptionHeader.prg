@@ -12,28 +12,30 @@
 
 #include "hbclass.ch"
 
+#ifndef QT5XHB_NO_REQUESTS
+REQUEST QICON
+#endif
+
 CLASS QStyleOptionHeader INHERIT QStyleOption
 
    METHOD new
-
    METHOD section
-   METHOD text
-   METHOD textAlignment
-   METHOD icon
-   METHOD iconAlignment
-   METHOD position
-   METHOD selectedPosition
-   METHOD sortIndicator
-   METHOD orientation
-
    METHOD setSection
+   METHOD text
    METHOD setText
+   METHOD textAlignment
    METHOD setTextAlignment
+   METHOD icon
    METHOD setIcon
+   METHOD iconAlignment
    METHOD setIconAlignment
+   METHOD position
    METHOD setPosition
+   METHOD selectedPosition
    METHOD setSelectedPosition
+   METHOD sortIndicator
    METHOD setSortIndicator
+   METHOD orientation
    METHOD setOrientation
 
    DESTRUCTOR destroyObject
