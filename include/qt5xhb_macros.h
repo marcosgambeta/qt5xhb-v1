@@ -159,6 +159,7 @@
 #define RDOUBLE(x)                                          hb_retnd(x)
 #define RLONG(x)                                            hb_retnl(x)
 #define RULONG(x)                                           hb_retnl(x)
+#define RUNSIGNEDLONG(x)                                    hb_retnl(x)
 #define RQLONGLONG(x)                                       hb_retnll(x)
 #define RQULONGLONG(x)                                      hb_retnll(x)
 #define RQREAL(x )                                          hb_retnd(x)
