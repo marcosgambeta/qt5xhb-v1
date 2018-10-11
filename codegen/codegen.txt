@@ -233,6 +233,7 @@ QChar::Category                                      |enum
 QChar::Decomposition                                 |enum
 QChar::Direction                                     |enum
 QChar::Joining                                       |enum
+QChar::SpecialCharacter                              |enum
 QChar::UnicodeVersion                                |enum
 QChart                                               |QObject
 QChart::AnimationOptions                             |enum
@@ -1481,6 +1482,8 @@ QTreeWidgetItem                                      |item
 QTreeWidgetItem::ChildIndicatorPolicy                |enum
 QTreeWidgetItemIterator                              |object
 QTreeWidgetItemIterator::IteratorFlags               |enum
+QtWin::HBitmapFormat                                 |enum
+QtWin::WindowFlip3DPolicy                            |enum
 QUndoCommand                                         |item
 QUndoGroup                                           |QObject
 QUndoStack                                           |QObject
@@ -1635,12 +1638,8 @@ QXmlStreamReader::TokenType                          |enum
 QXmlStreamWriter                                     |object
 QXYSeries                                            |QObject
 VirtualObjectRegisterOption                          |enum
-QtWin::HBitmapFormat                                 |enum
-QtWin::WindowFlip3DPolicy                            |enum
 HBITMAP                                              |handle
-HICON                                                |handle
 HDC                                                  |handle
-HRGN                                                 |handle
+HICON                                                |handle
 HRESULT                                              |handle
-QChar::SpecialCharacter                              |enum
- 
+HRGN                                                 |handle
