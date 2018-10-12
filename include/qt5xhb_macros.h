@@ -36,6 +36,7 @@
 #include "qt5xhb_macros_qtscript.h"
 #include "qt5xhb_macros_qtscripttools.h"
 #include "qt5xhb_macros_qtsensors.h"
+#include "qt5xhb_macros_qtserialbus.h"
 #include "qt5xhb_macros_qtserialport.h"
 #include "qt5xhb_macros_qtsql.h"
 #include "qt5xhb_macros_qtsvg.h"
