@@ -158,3 +158,21 @@ enum QBluetoothDeviceInfo::DataCompleteness
 #define QBluetoothDeviceInfo_DataComplete                            0
 #define QBluetoothDeviceInfo_DataIncomplete                          1
 #define QBluetoothDeviceInfo_DataUnavailable                         2
+
+/*
+enum class QBluetoothDeviceInfo::Field
+flags class QBluetoothDeviceInfo::Fields
+*/
+#define QBluetoothDeviceInfo_None                                    0x0000
+#define QBluetoothDeviceInfo_RSSI                                    0x0001
+#define QBluetoothDeviceInfo_ManufacturerData                        0x0002
+#define QBluetoothDeviceInfo_All                                     0x7fff
+
+/*
+enum QBluetoothDeviceInfo::CoreConfiguration
+flags QBluetoothDeviceInfo::CoreConfigurations
+*/
+#define QBluetoothDeviceInfo_UnknownCoreConfiguration                0x0
+#define QBluetoothDeviceInfo_LowEnergyCoreConfiguration              0x01
+#define QBluetoothDeviceInfo_BaseRateCoreConfiguration               0x02
+#define QBluetoothDeviceInfo_BaseRateAndLowEnergyCoreConfiguration   0x03

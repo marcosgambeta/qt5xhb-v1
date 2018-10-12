@@ -14,6 +14,8 @@
 
 #ifndef QT5XHB_NO_REQUESTS
 REQUEST QBLUETOOTHADDRESS
+REQUEST QBLUETOOTHUUID
+REQUEST QBYTEARRAY
 #endif
 
 CLASS QBluetoothDeviceInfo
@@ -35,6 +37,13 @@ CLASS QBluetoothDeviceInfo
    METHOD setRssi
    METHOD setServiceUuids
    METHOD serviceUuidsCompleteness
+   METHOD coreConfigurations
+   METHOD setCoreConfigurations
+   METHOD deviceUuid
+   METHOD setDeviceUuid
+   METHOD manufacturerData
+   METHOD setManufacturerData
+   METHOD manufacturerIds
 
    METHOD newFrom
    METHOD newFromObject
@@ -98,9 +107,20 @@ void QBluetoothDeviceInfo_new2 ()
 }
 
 /*
-QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
 */
 void QBluetoothDeviceInfo_new3 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+  QBluetoothDeviceInfo * o = new QBluetoothDeviceInfo ( *PQBLUETOOTHUUID(1), PQSTRING(2), PQUINT32(3) );
+  _qt5xhb_returnNewObject( o, true );
+#endif
+}
+
+/*
+QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+*/
+void QBluetoothDeviceInfo_new4 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceInfo * o = new QBluetoothDeviceInfo ( *PQBLUETOOTHDEVICEINFO(1) );
@@ -110,7 +130,8 @@ void QBluetoothDeviceInfo_new3 ()
 
 //[1]QBluetoothDeviceInfo()
 //[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
-//[3]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+//[3]QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
+//[4]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
 
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 {
@@ -122,9 +143,15 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
   {
     QBluetoothDeviceInfo_new2();
   }
-  else if( ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+  else if( ISNUMPAR(3) && ISQBLUETOOTHUUID(1) && ISCHAR(2) && ISNUM(3) )
   {
     QBluetoothDeviceInfo_new3();
+  }
+#endif
+  else if( ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1) )
+  {
+    QBluetoothDeviceInfo_new4();
   }
   else
   {
@@ -425,6 +452,179 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SERVICEUUIDSCOMPLETENESS )
     if( ISNUMPAR(0) )
     {
       RENUM( obj->serviceUuidsCompleteness () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+QBluetoothDeviceInfo::CoreConfigurations coreConfigurations() const
+*/
+HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_CORECONFIGURATIONS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->coreConfigurations () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+void setCoreConfigurations(QBluetoothDeviceInfo::CoreConfigurations coreConfigs)
+*/
+HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETCORECONFIGURATIONS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+  QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setCoreConfigurations ( (QBluetoothDeviceInfo::CoreConfigurations) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+QBluetoothUuid deviceUuid() const
+*/
+HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_DEVICEUUID )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+  QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QBluetoothUuid * ptr = new QBluetoothUuid( obj->deviceUuid () );
+      _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHUUID", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+void setDeviceUuid(const QBluetoothUuid &uuid)
+*/
+HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETDEVICEUUID )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+  QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQBLUETOOTHUUID(1) )
+    {
+      obj->setDeviceUuid ( *PQBLUETOOTHUUID(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+QByteArray manufacturerData(quint16 manufacturerId) const
+*/
+HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MANUFACTURERDATA )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      QByteArray * ptr = new QByteArray( obj->manufacturerData ( PQUINT16(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+QHash<quint16, QByteArray> manufacturerData() const
+*/
+
+/*
+bool setManufacturerData(quint16 manufacturerId, const QByteArray &data)
+*/
+HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_SETMANUFACTURERDATA )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(2) && ISNUM(1) && ISQBYTEARRAY(2) )
+    {
+      RBOOL( obj->setManufacturerData ( PQUINT16(1), *PQBYTEARRAY(2) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+QVector<quint16> manufacturerIds() const
+*/
+HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_MANUFACTURERIDS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  QBluetoothDeviceInfo * obj = (QBluetoothDeviceInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QVector<quint16> list = obj->manufacturerIds ();
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
+      {
+        PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
+        hb_arrayAddForward( pArray, pItem );
+        hb_itemRelease(pItem);
+      }
+      hb_itemReturnRelease(pArray);
     }
     else
     {

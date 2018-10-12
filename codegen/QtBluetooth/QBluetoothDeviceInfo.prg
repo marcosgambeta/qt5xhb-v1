@@ -33,12 +33,16 @@ $internalConstructor=5,2,0|new1|
 $prototype=QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
 $internalConstructor=5,2,0|new2|const QBluetoothAddress &,const QString &,quint32
 
+$prototype=QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
+$internalConstructor=5,5,0|new3|const QBluetoothUuid &,const QString &,quint32
+
 $prototype=QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
-$internalConstructor=5,2,0|new3|const QBluetoothDeviceInfo &
+$internalConstructor=5,2,0|new4|const QBluetoothDeviceInfo &
 
 //[1]QBluetoothDeviceInfo()
 //[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
-//[3]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+//[3]QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
+//[4]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
 
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 {
@@ -50,9 +54,15 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
   {
     QBluetoothDeviceInfo_new2();
   }
-  else if( ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1) )
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+  else if( ISNUMPAR(3) && ISQBLUETOOTHUUID(1) && ISCHAR(2) && ISNUM(3) )
   {
     QBluetoothDeviceInfo_new3();
+  }
+#endif
+  else if( ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1) )
+  {
+    QBluetoothDeviceInfo_new4();
   }
   else
   {
@@ -101,6 +111,30 @@ $prototype=QList<QBluetoothUuid> serviceUuids(DataCompleteness *completeness = 0
 
 $prototype=DataCompleteness serviceUuidsCompleteness() const
 $method=5,2,0|QBluetoothDeviceInfo::DataCompleteness|serviceUuidsCompleteness|
+
+$prototype=QBluetoothDeviceInfo::CoreConfigurations coreConfigurations() const
+$method=5,4,0|QBluetoothDeviceInfo::CoreConfigurations|coreConfigurations|
+
+$prototype=void setCoreConfigurations(QBluetoothDeviceInfo::CoreConfigurations coreConfigs)
+$method=5,4,0|void|setCoreConfigurations|QBluetoothDeviceInfo::CoreConfigurations
+
+$prototype=QBluetoothUuid deviceUuid() const
+$method=5,5,0|QBluetoothUuid|deviceUuid|
+
+$prototype=void setDeviceUuid(const QBluetoothUuid &uuid)
+$method=5,5,0|void|setDeviceUuid|const QBluetoothUuid &
+
+$prototype=QByteArray manufacturerData(quint16 manufacturerId) const
+$method=5,12,0|QByteArray|manufacturerData|quint16
+
+$prototype=QHash<quint16, QByteArray> manufacturerData() const
+%% TODO: implementar (Qt 5.12.0)
+
+$prototype=bool setManufacturerData(quint16 manufacturerId, const QByteArray &data)
+$method=5,12,0|bool|setManufacturerData|quint16,const QByteArray &
+
+$prototype=QVector<quint16> manufacturerIds() const
+$method=5,12,0|QVector<quint16>|manufacturerIds|
 
 $extraMethods
 

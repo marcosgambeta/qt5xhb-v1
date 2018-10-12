@@ -156,6 +156,7 @@ QBluetoothAddress                                    |object
 QBluetoothDeviceDiscoveryAgent::Error                |enum
 QBluetoothDeviceDiscoveryAgent::InquiryType          |enum
 QBluetoothDeviceInfo                                 |object
+QBluetoothDeviceInfo::CoreConfigurations             |enum
 QBluetoothDeviceInfo::DataCompleteness               |enum
 QBluetoothDeviceInfo::MajorDeviceClass               |enum
 QBluetoothDeviceInfo::ServiceClasses                 |enum
