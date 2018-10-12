@@ -1652,3 +1652,12 @@ HDC                                                  |handle
 HICON                                                |handle
 HRESULT                                              |handle
 HRGN                                                 |handle
+QCanBus                                              |QObject
+QCanBusDevice                                        |QObject
+QCanBusDevice::CanBusDeviceState                     |enum
+QCanBusDevice::CanBusError                           |enum
+QCanBusDeviceInfo                                    |object
+QCanBusFrame                                         |object
+QModbusDataUnit::RegisterType                        |enum
+QModbusDevice::Error                                 |enum
+QModbusDevice::State                                 |enum
