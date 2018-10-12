@@ -115,7 +115,13 @@ QAmbientLightReading                                 |QObject
 QAmbientLightReading::LightLevel                     |enum
 QAmbientTemperatureReading                           |QObject
 QAndroidActivityResultReceiver                       |object
+QAndroidBinder                                       |object
+QAndroidBinder::CallType                             |enum
+QAndroidIntent                                       |object
+QAndroidJniExceptionCleaner::OutputMode              |enum
 QAndroidJniObject                                    |object
+QAndroidParcel                                       |object
+QAndroidServiceConnection                            |object
 QAnimationGroup                                      |QObject
 QApplication                                         |QObject
 QApplicationStateChangeEvent                         |QEvent
@@ -1462,6 +1468,8 @@ QTimerEvent                                          |QEvent
 QTimeZone                                            |object
 QTimeZone::NameType                                  |enum
 QTimeZone::TimeType                                  |enum
+QtAndroid::BindFlags                                 |enum
+QtAndroid::PermissionResult                          |enum
 QtMsgType                                            |enum
 QtMultimedia::AvailabilityStatus                     |enum
 QToolBar                                             |QWidget
