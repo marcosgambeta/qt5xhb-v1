@@ -6,11 +6,11 @@
 
 $header
 
-$includes
+$includes=5,8,0
 
 $beginSlotsClass
-$slot=|errorOccurred( QCanBusDevice::CanBusError )
-$slot=|framesReceived()
-$slot=|framesWritten( qint64 framesCount )
-$slot=|stateChanged( QCanBusDevice::CanBusDeviceState state )
+$slot=5,8,0|errorOccurred( QCanBusDevice::CanBusError )
+$slot=5,8,0|framesReceived()
+$slot=5,8,0|framesWritten( qint64 framesCount )
+$slot=5,8,0|stateChanged( QCanBusDevice::CanBusDeviceState state )
 $endSlotsClass

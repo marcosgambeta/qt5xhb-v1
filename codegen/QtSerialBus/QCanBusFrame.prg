@@ -39,7 +39,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
 $prototype=explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_NEW )
 {
 }
 
-$deleteMethod
+$deleteMethod=5,8,0
 
 $prototype=bool isValid() const Q_DECL_NOTHROW
 

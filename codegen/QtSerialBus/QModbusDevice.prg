@@ -22,13 +22,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=explicit QModbusDevice(QObject *parent = nullptr)
 $prototype=QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) (protected)
 
 $prototype=~QModbusDevice()
-$deleteMethod
+$deleteMethod=5,8,0
 
 $prototype=QVariant connectionParameter(int parameter) const
 
@@ -53,8 +53,8 @@ $prototype=virtual bool open() = 0 (protected)
 $prototype=virtual void close() = 0 (protected)
 
 $beginSignals
-$signal=|errorOccurred(QModbusDevice::Error)
-$signal=|stateChanged(QModbusDevice::State)
+$signal=5,8,0|errorOccurred(QModbusDevice::Error)
+$signal=5,8,0|stateChanged(QModbusDevice::State)
 $endSignals
 
 #pragma ENDDUMP

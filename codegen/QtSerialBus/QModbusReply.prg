@@ -22,7 +22,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=QModbusReply(ReplyType type, int serverAddress, QObject *parent = nullptr)
 
@@ -51,8 +51,8 @@ $prototype=void setFinished(bool isFinished)
 $prototype=void setError(QModbusDevice::Error error, const QString &errorText)
 
 $beginSignals
-$signal=|finished()
-$signal=|errorOccurred(QModbusDevice::Error)
+$signal=5,8,0|finished()
+$signal=5,8,0|errorOccurred(QModbusDevice::Error)
 $endSignals
 
 #pragma ENDDUMP

@@ -22,13 +22,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=QCanBusDeviceInfo() = delete
-$internalConstructor=|new1|
+$internalConstructor=5,8,0|new1|
 
 $prototype=QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
-$internalConstructor=|new2|const QCanBusDeviceInfo &
+$internalConstructor=5,8,0|new2|const QCanBusDeviceInfo &
 
 $prototype=explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) (private)
 
@@ -41,18 +41,18 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 }
 
 $prototype=~QCanBusDeviceInfo()
-$deleteMethod
+$deleteMethod=5,8,0
 
 $prototype=void swap(QCanBusDeviceInfo &other) Q_DECL_NOTHROW
-$method=|void|swap|QCanBusDeviceInfo &
+$method=5,8,0|void|swap|QCanBusDeviceInfo &
 
 $prototype=QString name() const
-$method=|QString|name|
+$method=5,8,0|QString|name|
 
 $prototype=bool hasFlexibleDataRate() const
-$method=|bool|hasFlexibleDataRate|
+$method=5,8,0|bool|hasFlexibleDataRate|
 
 $prototype=bool isVirtual() const
-$method=|bool|isVirtual|
+$method=5,8,0|bool|isVirtual|
 
 #pragma ENDDUMP

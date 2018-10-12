@@ -6,9 +6,9 @@
 
 $header
 
-$includes
+$includes=5,8,0
 
 $beginSlotsClass
-$signal=|finished()
-$signal=|errorOccurred( QModbusDevice::Error error )
+$signal=5,8,0|finished()
+$signal=5,8,0|errorOccurred( QModbusDevice::Error error )
 $endSlotsClass

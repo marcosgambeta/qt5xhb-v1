@@ -22,13 +22,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=explicit QModbusRtuSerialMaster(QObject *parent = nullptr)
 $prototype=QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *parent = nullptr) (protected)
 
 $prototype=~QModbusRtuSerialMaster()
-$deleteMethod
+$deleteMethod=5,8,0
 
 $prototype=int interFrameDelay() const
 

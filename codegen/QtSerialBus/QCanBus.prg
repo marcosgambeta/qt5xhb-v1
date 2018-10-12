@@ -22,22 +22,22 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=QCanBus(QObject *parent = nullptr) (private)
 
 %% $deleteMethod
 
 $prototype=static QCanBus *instance()
-$staticMethod=|QCanBus *|instance|
+$staticMethod=5,8,0|QCanBus *|instance|
 
 $prototype=QStringList plugins() const
-$method=|QStringList|plugins|
+$method=5,8,0|QStringList|plugins|
 
 $prototype=QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString *errorMessage = nullptr) const
-$method=|QList<QCanBusDeviceInfo>|availableDevices|const QString &,QString *=nullptr
+$method=5,8,0|QList<QCanBusDeviceInfo>|availableDevices|const QString &,QString *=nullptr
 
 $prototype=QCanBusDevice *createDevice(const QString &plugin, const QString &interfaceName, QString *errorMessage = nullptr) const
-$method=|QCanBusDevice *|createDevice|const QString &,const QString &,QString *=nullptr
+$method=5,8,0|QCanBusDevice *|createDevice|const QString &,const QString &,QString *=nullptr
 
 #pragma ENDDUMP

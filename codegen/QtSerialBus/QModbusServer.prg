@@ -22,13 +22,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=explicit QModbusServer(QObject *parent = nullptr)
 $prototype=QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) (protected)
 
 $prototype=~QModbusServer()
-$deleteMethod
+$deleteMethod=5,8,0
 
 $prototype=int serverAddress() const
 
@@ -59,7 +59,7 @@ $prototype=virtual QModbusResponse processRequest(const QModbusPdu &request) (pr
 $prototype=virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) (protected)
 
 $beginSignals
-$signal=|dataWritten(QModbusDataUnit::RegisterType,int,int)
+$signal=5,8,0|dataWritten(QModbusDataUnit::RegisterType,int,int)
 $endSignals
 
 #pragma ENDDUMP

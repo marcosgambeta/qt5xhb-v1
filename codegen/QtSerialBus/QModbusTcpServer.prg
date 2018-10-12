@@ -22,15 +22,15 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=explicit QModbusTcpServer(QObject *parent = nullptr)
-$constructor=|new|QObject *=nullptr
+$constructor=5,8,0|new|QObject *=nullptr
 
 $prototype=QModbusTcpServer(QModbusTcpServerPrivate &dd, QObject *parent = nullptr) (protected)
 
 $prototype=~QModbusTcpServer()
-$deleteMethod
+$deleteMethod=5,8,0
 
 $prototype=bool open() override (protected)
 

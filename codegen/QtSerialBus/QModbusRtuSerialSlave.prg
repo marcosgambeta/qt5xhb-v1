@@ -22,13 +22,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=explicit QModbusRtuSerialSlave(QObject *parent = nullptr)
 $prototype=QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullptr) (protected)
 
 $prototype=~QModbusRtuSerialSlave()
-$deleteMethod
+$deleteMethod=5,8,0
 
 $prototype=bool processesBroadcast() const override
 

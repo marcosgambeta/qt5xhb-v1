@@ -6,8 +6,8 @@
 
 $header
 
-$includes
+$includes=5,8,0
 
 $beginSlotsClass
-$slot=|timeoutChanged( int newTimeout )
+$slot=5,8,0|timeoutChanged( int newTimeout )
 $endSlotsClass

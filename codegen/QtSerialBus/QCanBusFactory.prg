@@ -34,7 +34,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes=5,8,0
 
 $prototype=virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
 

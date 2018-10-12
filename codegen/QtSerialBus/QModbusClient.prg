@@ -22,13 +22,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes
+$includes5,8,0
 
 $prototype=explicit QModbusClient(QObject *parent = nullptr)
 $prototype=QModbusClient(QModbusClientPrivate &dd, QObject *parent = nullptr) (protected)
 
 $prototype=~QModbusClient()
-$deleteMethod
+$deleteMethod=5,8,0
 
 %%
 %% Q_PROPERTY(int timeout READ timeout WRITE setTimeout NOTIFY timeoutChanged)
@@ -51,7 +51,7 @@ $prototype=virtual bool processResponse(const QModbusResponse &response, QModbus
 $prototype=virtual bool processPrivateResponse(const QModbusResponse &response, QModbusDataUnit *data) (protected)
 
 $beginSignals
-$signal=|timeoutChanged(int)
+$signal=5,8,0|timeoutChanged(int)
 $endSignals
 
 #pragma ENDDUMP

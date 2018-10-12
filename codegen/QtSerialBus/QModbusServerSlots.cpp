@@ -6,8 +6,8 @@
 
 $header
 
-$includes
+$includes=5,8,0
 
 $beginSlotsClass
-$slot=|dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
+$slot=5,8,0|dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
 $endSlotsClass

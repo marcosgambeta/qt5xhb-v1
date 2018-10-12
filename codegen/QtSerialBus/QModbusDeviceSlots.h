@@ -6,9 +6,9 @@
 
 $header
 
-$includes
+$includes=5,8,0
 
 $beginSlotsClass
-$signal=|errorOccurred( QModbusDevice::Error error )
-$signal=|stateChanged( QModbusDevice::State state )
+$signal=5,8,0|errorOccurred( QModbusDevice::Error error )
+$signal=5,8,0|stateChanged( QModbusDevice::State state )
 $endSlotsClass
