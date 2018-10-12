@@ -22,17 +22,15 @@ $destructor
 
 #include <Qt>
 
-%% TODO: 5.2.0 ou 5.3.0 ?
-
-$includes=5,2,0
+$includes=5,3,0
 
 $prototype=QAndroidActivityResultReceiver()
 
 $prototype=virtual ~QAndroidActivityResultReceiver()
-$deleteMethod=5,2,0
+$deleteMethod=5,3,0
 
 $prototype=virtual void handleActivityResult(int receiverRequestCode, int resultCode, const QAndroidJniObject &data) = 0
-$virtualMethod=5,2,0|void|handleActivityResult|int,int,const QAndroidJniObject &
+$virtualMethod=5,3,0|void|handleActivityResult|int,int,const QAndroidJniObject &
 
 $extraMethods
 

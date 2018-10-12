@@ -7,7 +7,13 @@
 $header
 
 REQUEST QAndroidActivityResultReceiver
+REQUEST QAndroidBinder
+REQUEST QAndroidIntent
 REQUEST QAndroidJniEnvironment
+REQUEST QAndroidJniExceptionCleaner
 REQUEST QAndroidJniObject
+REQUEST QAndroidParcel
+REQUEST QAndroidService
+REQUEST QAndroidServiceConnection
 REQUEST QtAndroid
 REQUEST QtAndroidExtrasVersion

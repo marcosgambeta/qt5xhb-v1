@@ -14,26 +14,24 @@ $beginClassFrom=
 
 $addMethods
 
+$addSignals
+
 $endClass
 
 $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,2,0
+$includes=5,10,0
 
-$prototype=QAndroidJniEnvironment()
-$constructor=5,2,0|new|
+$prototype=explicit QAndroidJniExceptionCleaner(OutputMode outputMode = OutputMode::Silent)
+$constructor=5,10,0|new|QAndroidJniExceptionCleaner::OutputMode=QAndroidJniExceptionCleaner::Silent
 
-$prototype=~QAndroidJniEnvironment()
-$deleteMethod=5,2,0
+$prototype=~QAndroidJniExceptionCleaner()
+$deleteMethod=5,10,0
 
-$prototype=static JavaVM *javaVM()
-$staticMethod=5,2,0|JavaVM *|javaVM|
-
-$prototype=jclass findClass(const char *className)
-%% TODO: implementar
-%% $method=5,12,0|jclass|findClass|const char *
+$prototype=void clean()
+$method=5,10,0|void|clean|
 
 $extraMethods
 

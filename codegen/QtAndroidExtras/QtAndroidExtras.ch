@@ -5,3 +5,7 @@
 %%
 
 $header
+
+#include "QtAndroid.ch"
+#include "QAndroidBinder.ch"
+#include "QAndroidJniExceptionCleaner.ch"
