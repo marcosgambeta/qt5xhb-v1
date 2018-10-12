@@ -77,6 +77,8 @@
 #include "QCameraImageProcessing.ch"
 #include "QCameraImageProcessingControl.ch"
 #include "QCameraViewfinderSettingsControl.ch"
+#include "QCanBusDevice.ch"
+#include "QCanBusFrame.ch"
 #include "QCategoryAxis.ch"
 #include "QChar.ch"
 #include "QChart.ch"
@@ -238,6 +240,9 @@
 #include "QMetaMethod.ch"
 #include "QMetaType.ch"
 #include "QMimeDatabase.ch"
+#include "QModbusDevice.ch"
+#include "QModbusReply.ch"
+#include "QModbusServer.ch"
 #include "QMovie.ch"
 #include "QMultimedia.ch"
 
