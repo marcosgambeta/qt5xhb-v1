@@ -1661,3 +1661,6 @@ QCanBusFrame                                         |object
 QModbusDataUnit::RegisterType                        |enum
 QModbusDevice::Error                                 |enum
 QModbusDevice::State                                 |enum
+QCanBusDevice::Directions                            |enum
+QCanBusFrame::FrameType                              |enum
+QCanBusFrame::FrameErrors                            |enum
