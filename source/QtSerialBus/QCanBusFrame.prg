@@ -13,6 +13,7 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QBYTEARRAY
 #endif
 
 CLASS QCanBusFrame
@@ -20,7 +21,28 @@ CLASS QCanBusFrame
    DATA pointer
    DATA self_destruction INIT .F.
 
+   METHOD new
    METHOD delete
+   METHOD isValid
+   METHOD frameType
+   METHOD setFrameType
+   METHOD hasExtendedFrameFormat
+   METHOD setExtendedFrameFormat
+   METHOD frameId
+   METHOD setFrameId
+   METHOD setPayload
+   METHOD payload
+   METHOD error
+   METHOD setError
+   METHOD toString
+   METHOD hasFlexibleDataRateFormat
+   METHOD setFlexibleDataRateFormat
+   METHOD hasBitrateSwitch
+   METHOD setBitrateSwitch
+   METHOD hasErrorStateIndicator
+   METHOD setErrorStateIndicator
+   METHOD hasLocalEcho
+   METHOD setLocalEcho
 
    METHOD newFrom
    METHOD newFromObject
@@ -61,15 +83,42 @@ RETURN
 /*
 explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
 */
+void QCanBusFrame_new1 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * o = new QCanBusFrame ( ISNIL(1)? (QCanBusFrame::FrameType) QCanBusFrame::DataFrame : (QCanBusFrame::FrameType) hb_parni(1) );
+  _qt5xhb_returnNewObject( o, true );
+#endif
+}
+
 /*
 explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
 */
+void QCanBusFrame_new2 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * o = new QCanBusFrame ( PQUINT32(1), *PQBYTEARRAY(2) );
+  _qt5xhb_returnNewObject( o, true );
+#endif
+}
 
 //[1]explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
 //[2]explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
 
 HB_FUNC_STATIC( QCANBUSFRAME_NEW )
 {
+  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  {
+    QCanBusFrame_new1();
+  }
+  else if( ISNUMPAR(2) && ISNUM(1) && ISQBYTEARRAY(2) )
+  {
+    QCanBusFrame_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QCANBUSFRAME_DELETE )
@@ -94,34 +143,186 @@ HB_FUNC_STATIC( QCANBUSFRAME_DELETE )
 /*
 bool isValid() const Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_ISVALID )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isValid () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 FrameType frameType() const Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_FRAMETYPE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->frameType () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 void setFrameType(FrameType newFormat) Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_SETFRAMETYPE )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setFrameType ( (QCanBusFrame::FrameType) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
 bool hasExtendedFrameFormat() const Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_HASEXTENDEDFRAMEFORMAT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasExtendedFrameFormat () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 void setExtendedFrameFormat(bool isExtended) Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_SETEXTENDEDFRAMEFORMAT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setExtendedFrameFormat ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
 quint32 frameId() const Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_FRAMEID )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQUINT32( obj->frameId () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 void setFrameId(quint32 newFrameId)
 */
+HB_FUNC_STATIC( QCANBUSFRAME_SETFRAMEID )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setFrameId ( PQUINT32(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
 void setPayload(const QByteArray &data)
 */
+HB_FUNC_STATIC( QCANBUSFRAME_SETPAYLOAD )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    {
+      obj->setPayload ( *PQBYTEARRAY(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
 void setTimeStamp(TimeStamp ts) Q_DECL_NOTHROW
@@ -130,6 +331,25 @@ void setTimeStamp(TimeStamp ts) Q_DECL_NOTHROW
 /*
 QByteArray payload() const
 */
+HB_FUNC_STATIC( QCANBUSFRAME_PAYLOAD )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QByteArray * ptr = new QByteArray( obj->payload () );
+      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 TimeStamp timeStamp() const Q_DECL_NOTHROW
@@ -138,46 +358,254 @@ TimeStamp timeStamp() const Q_DECL_NOTHROW
 /*
 FrameErrors error() const Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_ERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->error () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 void setError(FrameErrors e)
 */
+HB_FUNC_STATIC( QCANBUSFRAME_SETERROR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->setError ( (QCanBusFrame::FrameErrors) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
 QString toString() const
 */
+HB_FUNC_STATIC( QCANBUSFRAME_TOSTRING )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RQSTRING( obj->toString () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 bool hasFlexibleDataRateFormat() const Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_HASFLEXIBLEDATARATEFORMAT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasFlexibleDataRateFormat () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 void setFlexibleDataRateFormat(bool isFlexibleData) Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_SETFLEXIBLEDATARATEFORMAT )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setFlexibleDataRateFormat ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
 bool hasBitrateSwitch() const Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_HASBITRATESWITCH )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasBitrateSwitch () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 void setBitrateSwitch(bool bitrateSwitch) Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_SETBITRATESWITCH )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setBitrateSwitch ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
 bool hasErrorStateIndicator() const Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_HASERRORSTATEINDICATOR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasErrorStateIndicator () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 void setErrorStateIndicator(bool errorStateIndicator) Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_SETERRORSTATEINDICATOR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setErrorStateIndicator ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 /*
 bool hasLocalEcho() const Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_HASLOCALECHO )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->hasLocalEcho () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
 
 /*
 void setLocalEcho(bool localEcho) Q_DECL_NOTHROW
 */
+HB_FUNC_STATIC( QCANBUSFRAME_SETLOCALECHO )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QCanBusFrame * obj = (QCanBusFrame *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setLocalEcho ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
 
 HB_FUNC_STATIC( QCANBUSFRAME_NEWFROM )
 {

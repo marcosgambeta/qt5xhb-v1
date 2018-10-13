@@ -103,7 +103,7 @@ QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString *errorM
 */
 HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )

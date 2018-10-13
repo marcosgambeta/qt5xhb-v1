@@ -35,6 +35,8 @@ CLASS QCanBusDevice INHERIT QObject
    METHOD error
    METHOD errorString
    METHOD interpretErrorFrame
+   METHOD clear
+   METHOD readAllFrames
 
    METHOD onErrorOccurred
    METHOD onFramesReceived
@@ -425,6 +427,81 @@ HB_FUNC_STATIC( QCANBUSDEVICE_INTERPRETERRORFRAME )
     if( ISNUMPAR(1) && ISQCANBUSFRAME(1) )
     {
       RQSTRING( obj->interpretErrorFrame ( *PQCANBUSFRAME(1) ) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+void QCanBusDevice::clear(QCanBusDevice::Directions direction)
+*/
+HB_FUNC_STATIC( QCANBUSDEVICE_CLEAR )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  QCanBusDevice * obj = (QCanBusDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+      obj->clear ( (QCanBusDevice::Directions) hb_parni(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+QVector<QCanBusFrame> QCanBusDevice::readAllFrames()
+*/
+HB_FUNC_STATIC( QCANBUSDEVICE_READALLFRAMES )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  QCanBusDevice * obj = (QCanBusDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QVector<QCanBusFrame> list = obj->readAllFrames ();
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QCANBUSFRAME" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      int i;
+      for(i=0;i<list.count();i++)
+      {
+        if( pDynSym )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QCanBusFrame *) new QCanBusFrame ( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+        else
+        {
+          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCANBUSFRAME", HB_ERR_ARGS_BASEPARAMS );
+        }
+      }
+      hb_itemReturnRelease(pArray);
     }
     else
     {
