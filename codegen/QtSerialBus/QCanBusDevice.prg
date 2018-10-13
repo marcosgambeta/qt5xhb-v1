@@ -74,6 +74,12 @@ $method=5,8,0|QString|errorString|
 $prototype=virtual QString interpretErrorFrame(const QCanBusFrame &errorFrame) = 0
 $virtualMethod=5,8,0|QString|interpretErrorFrame|const QCanBusFrame &
 
+$prototype=void QCanBusDevice::clear(QCanBusDevice::Directions direction)
+$method=5,12,0|void|clear|QCanBusDevice::Directions
+
+$prototype=QVector<QCanBusFrame> QCanBusDevice::readAllFrames()
+$method=5,12,0|QVector<QCanBusFrame>|readAllFrames|
+
 $beginSignals
 $signal=5,8,0|errorOccurred(QCanBusDevice::CanBusError)
 $signal=5,8,0|framesReceived()

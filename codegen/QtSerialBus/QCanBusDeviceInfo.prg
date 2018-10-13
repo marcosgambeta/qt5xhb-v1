@@ -22,13 +22,13 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes=5,9,0
 
 $prototype=QCanBusDeviceInfo() = delete
-$internalConstructor=5,8,0|new1|
+$internalConstructor=5,9,0|new1|
 
 $prototype=QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
-$internalConstructor=5,8,0|new2|const QCanBusDeviceInfo &
+$internalConstructor=5,9,0|new2|const QCanBusDeviceInfo &
 
 $prototype=explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) (private)
 
@@ -37,22 +37,42 @@ $prototype=explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) (private)
 
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 {
-%% TODO: implementar
+  if( ISNUMPAR(0) )
+  {
+    QCanBusDeviceInfo_new1();
+  }
+  else if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
+  {
+    QCanBusDeviceInfo_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $prototype=~QCanBusDeviceInfo()
-$deleteMethod=5,8,0
+$deleteMethod=5,9,0
 
 $prototype=void swap(QCanBusDeviceInfo &other) Q_DECL_NOTHROW
-$method=5,8,0|void|swap|QCanBusDeviceInfo &
+$method=5,9,0|void|swap|QCanBusDeviceInfo &
 
 $prototype=QString name() const
-$method=5,8,0|QString|name|
+$method=5,9,0|QString|name|
 
 $prototype=bool hasFlexibleDataRate() const
-$method=5,8,0|bool|hasFlexibleDataRate|
+$method=5,9,0|bool|hasFlexibleDataRate|
 
 $prototype=bool isVirtual() const
-$method=5,8,0|bool|isVirtual|
+$method=5,9,0|bool|isVirtual|
+
+$prototype=int QCanBusDeviceInfo::channel() const
+$method=5,11,0|int|channel|
+
+$prototype=QString QCanBusDeviceInfo::description() const
+$method=5,11,0|QString|description|
+
+$prototype=QString QCanBusDeviceInfo::serialNumber() const
+$method=5,11,0|QString|serialNumber|
 
 #pragma ENDDUMP

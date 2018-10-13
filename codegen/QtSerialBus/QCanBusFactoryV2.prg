@@ -22,7 +22,7 @@ $destructor
 
 #pragma BEGINDUMP
 
-$includes=5,8,0
+$includes=5,9,0
 
 $prototype=virtual ~QCanBusFactoryV2() (protected)
 %% $deleteMethod

@@ -35,3 +35,11 @@ enum QCanBusDevice::ConfigurationKey
 #define QCanBusDevice_CanFdKey                                       5
 #define QCanBusDevice_DataBitRateKey                                 6
 #define QCanBusDevice_UserKey                                        30
+
+/*
+enum QCanBusDevice::Direction
+flags QCanBusDevice::Directions
+*/
+#define QCanBusDevice_Input                                          1
+#define QCanBusDevice_Output                                         2
+#define QCanBusDevice_AllDirections                                  hb_bitor(QCanBusDevice_Input, QCanBusDevice_Output)

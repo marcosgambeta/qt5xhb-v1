@@ -35,7 +35,7 @@ $prototype=QStringList plugins() const
 $method=5,8,0|QStringList|plugins|
 
 $prototype=QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString *errorMessage = nullptr) const
-$method=5,8,0|QList<QCanBusDeviceInfo>|availableDevices|const QString &,QString *=nullptr
+$method=5,9,0|QList<QCanBusDeviceInfo>|availableDevices|const QString &,QString *=nullptr
 
 $prototype=QCanBusDevice *createDevice(const QString &plugin, const QString &interfaceName, QString *errorMessage = nullptr) const
 $method=5,8,0|QCanBusDevice *|createDevice|const QString &,const QString &,QString *=nullptr
