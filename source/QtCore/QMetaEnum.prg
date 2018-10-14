@@ -36,6 +36,8 @@ CLASS QMetaEnum
    METHOD valueToKeys
    METHOD enclosingMetaObject
    METHOD isValid
+   METHOD enumName
+   METHOD isScoped
 
    METHOD newFrom
    METHOD newFromObject
@@ -342,6 +344,54 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
+}
+
+/*
+const char *QMetaEnum::enumName() const
+*/
+HB_FUNC_STATIC( QMETAENUM_ENUMNAME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      hb_retc( (const char *) obj->enumName () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+static QMetaEnum QMetaEnum::fromType()
+*/
+
+/*
+bool QMetaEnum::isScoped() const
+*/
+HB_FUNC_STATIC( QMETAENUM_ISSCOPED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+  QMetaEnum * obj = (QMetaEnum *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isScoped () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
 }
 
 HB_FUNC_STATIC( QMETAENUM_NEWFROM )
