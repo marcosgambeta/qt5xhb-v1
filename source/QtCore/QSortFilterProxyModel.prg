@@ -18,6 +18,7 @@ REQUEST QMIMEDATA
 REQUEST QMODELINDEX
 REQUEST QOBJECT
 REQUEST QREGEXP
+REQUEST QREGULAREXPRESSION
 REQUEST QSIZE
 REQUEST QVARIANT
 #endif
@@ -26,29 +27,33 @@ CLASS QSortFilterProxyModel INHERIT QAbstractProxyModel
 
    METHOD new
    METHOD delete
-   METHOD setSourceModel
-   METHOD mapToSource
-   METHOD mapFromSource
-   METHOD mapSelectionToSource
-   METHOD mapSelectionFromSource
    METHOD filterRegExp
    METHOD setFilterRegExp
+   METHOD filterRegularExpression
+   METHOD setFilterRegularExpression
    METHOD filterKeyColumn
    METHOD setFilterKeyColumn
+   METHOD dynamicSortFilter
+   METHOD setDynamicSortFilter
    METHOD filterCaseSensitivity
    METHOD setFilterCaseSensitivity
    METHOD sortCaseSensitivity
    METHOD setSortCaseSensitivity
    METHOD isSortLocaleAware
    METHOD setSortLocaleAware
-   METHOD sortColumn
-   METHOD sortOrder
-   METHOD dynamicSortFilter
-   METHOD setDynamicSortFilter
    METHOD sortRole
    METHOD setSortRole
    METHOD filterRole
    METHOD setFilterRole
+   METHOD isRecursiveFilteringEnabled
+   METHOD setRecursiveFilteringEnabled
+   METHOD setSourceModel
+   METHOD mapToSource
+   METHOD mapFromSource
+   METHOD mapSelectionToSource
+   METHOD mapSelectionFromSource
+   METHOD sortColumn
+   METHOD sortOrder
    METHOD setFilterWildcard
    METHOD setFilterFixedString
    METHOD clear
@@ -110,7 +115,7 @@ RETURN
 #include <QMimeData>
 
 /*
-QSortFilterProxyModel(QObject *parent = 0)
+explicit QSortFilterProxyModel(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
 {
@@ -125,6 +130,9 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
   }
 }
 
+/*
+~QSortFilterProxyModel()
+*/
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DELETE )
 {
   QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -140,112 +148,6 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DELETE )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setSourceModel(QAbstractItemModel *sourceModel)
-*/
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSOURCEMODEL )
-{
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
-    {
-      obj->setSourceModel ( PQABSTRACTITEMMODEL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-QModelIndex mapToSource(const QModelIndex &proxyIndex) const
-*/
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPTOSOURCE )
-{
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->mapToSource ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
-*/
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPFROMSOURCE )
-{
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
-    {
-      QModelIndex * ptr = new QModelIndex( obj->mapFromSource ( *PQMODELINDEX(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
-*/
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE )
-{
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQITEMSELECTION(1) )
-    {
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource ( *PQITEMSELECTION(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
-*/
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE )
-{
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISQITEMSELECTION(1) )
-    {
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource ( *PQITEMSELECTION(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION", true );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
 }
 
 /*
@@ -270,7 +172,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
 }
 
 /*
-void setFilterRegExp(const QRegExp &regExp)
+void setFilterRegExp(const QRegExp &regExp) [slot]
 */
 void QSortFilterProxyModel_setFilterRegExp1 ()
 {
@@ -285,7 +187,7 @@ void QSortFilterProxyModel_setFilterRegExp1 ()
 }
 
 /*
-void setFilterRegExp(const QString &pattern)
+void setFilterRegExp(const QString &pattern) [slot]
 */
 void QSortFilterProxyModel_setFilterRegExp2 ()
 {
@@ -311,6 +213,88 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QSortFilterProxyModel_setFilterRegExp2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
+
+/*
+QRegularExpression filterRegularExpression() const
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGULAREXPRESSION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#if QT_CONFIG(regularexpression)
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      QRegularExpression * ptr = new QRegularExpression( obj->filterRegularExpression () );
+      _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+#endif
+}
+
+/*
+void setFilterRegularExpression(const QString &pattern) [slot]
+*/
+void QSortFilterProxyModel_setFilterRegularExpression1 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#if QT_CONFIG(regularexpression)
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+      obj->setFilterRegularExpression ( PQSTRING(1) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+#endif
+}
+
+/*
+void setFilterRegularExpression(const QRegularExpression &regularExpression) [slot]
+*/
+void QSortFilterProxyModel_setFilterRegularExpression2 ()
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#if QT_CONFIG(regularexpression)
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+      obj->setFilterRegularExpression ( *PQREGULAREXPRESSION(1) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+#endif
+}
+
+//[1]void setFilterRegularExpression(const QString &pattern);
+//[2]void setFilterRegularExpression(const QRegularExpression &regularExpression);
+
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION )
+{
+  if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+    QSortFilterProxyModel_setFilterRegularExpression1();
+  }
+  else if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
+  {
+    QSortFilterProxyModel_setFilterRegularExpression2();
   }
   else
   {
@@ -350,6 +334,48 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
       obj->setFilterKeyColumn ( PINT(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+bool dynamicSortFilter() const
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
+{
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->dynamicSortFilter () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setDynamicSortFilter(bool enable)
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
+{
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setDynamicSortFilter ( PBOOL(1) );
     }
     else
     {
@@ -487,88 +513,6 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE )
 }
 
 /*
-int sortColumn() const
-*/
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
-{
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->sortColumn () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-Qt::SortOrder sortOrder() const
-*/
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
-{
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RENUM( obj->sortOrder () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-bool dynamicSortFilter() const
-*/
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
-{
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RBOOL( obj->dynamicSortFilter () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-}
-
-/*
-void setDynamicSortFilter(bool enable)
-*/
-HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
-{
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISLOG(1) )
-    {
-      obj->setDynamicSortFilter ( PBOOL(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
 int sortRole() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTROLE )
@@ -653,7 +597,199 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERROLE )
 }
 
 /*
-void setFilterWildcard(const QString &pattern)
+bool isRecursiveFilteringEnabled() const
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ISRECURSIVEFILTERINGENABLED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RBOOL( obj->isRecursiveFilteringEnabled () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+#endif
+}
+
+/*
+void setRecursiveFilteringEnabled(bool recursive)
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETRECURSIVEFILTERINGENABLED )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISLOG(1) )
+    {
+      obj->setRecursiveFilteringEnabled ( PBOOL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+#endif
+}
+
+/*
+void setSourceModel(QAbstractItemModel *sourceModel)
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSOURCEMODEL )
+{
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    {
+      obj->setSourceModel ( PQABSTRACTITEMMODEL(1) );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+QModelIndex mapToSource(const QModelIndex &proxyIndex) const
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPTOSOURCE )
+{
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->mapToSource ( *PQMODELINDEX(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QModelIndex mapFromSource(const QModelIndex &sourceIndex) const
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPFROMSOURCE )
+{
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->mapFromSource ( *PQMODELINDEX(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QItemSelection mapSelectionToSource(const QItemSelection &proxySelection) const
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE )
+{
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQITEMSELECTION(1) )
+    {
+      QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource ( *PQITEMSELECTION(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+QItemSelection mapSelectionFromSource(const QItemSelection &sourceSelection) const
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE )
+{
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(1) && ISQITEMSELECTION(1) )
+    {
+      QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource ( *PQITEMSELECTION(1) ) );
+      _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION", true );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+int sortColumn() const
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
+{
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RINT( obj->sortColumn () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+Qt::SortOrder sortOrder() const
+*/
+HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
+{
+  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    if( ISNUMPAR(0) )
+    {
+      RENUM( obj->sortOrder () );
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+  }
+}
+
+/*
+void setFilterWildcard(const QString &pattern) [slot]
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
 {
@@ -675,7 +811,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
 }
 
 /*
-void setFilterFixedString(const QString &pattern)
+void setFilterFixedString(const QString &pattern) [slot]
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
 {
@@ -697,7 +833,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
 }
 
 /*
-void clear()
+void clear() [slot]
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CLEAR )
 {
@@ -719,7 +855,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CLEAR )
 }
 
 /*
-void invalidate()
+void invalidate() [slot]
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INVALIDATE )
 {
@@ -1314,5 +1450,25 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
     }
   }
 }
+
+/*
+virtual bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const [protected]
+*/
+
+/*
+virtual bool filterAcceptsColumn(int source_column, const QModelIndex &source_parent) const [protected]
+*/
+
+/*
+virtual bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const [protected]
+*/
+
+/*
+QT_DEPRECATED_X("Use QSortFilterProxyModel::invalidateFilter") void filterChanged() [protected]
+*/
+
+/*
+void invalidateFilter() [protected]
+*/
 
 #pragma ENDDUMP
