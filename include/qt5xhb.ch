@@ -63,6 +63,7 @@
 #include "QBluetoothUuid.ch"
 #include "QBoxLayout.ch"
 #include "QBoxSet.ch"
+#include "QByteArray.ch"
 
 // C
 #include "QCalendarWidget.ch"

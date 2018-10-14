@@ -15,6 +15,7 @@
 
 #include "QAbstractAnimation.ch"
 #include "QAbstractItemModel.ch"
+#include "QByteArray.ch"
 #include "QChar.ch"
 #include "QCommandLineParser.ch"
 #include "QCoreApplication.ch"
