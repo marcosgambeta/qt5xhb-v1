@@ -42,11 +42,11 @@ $method=|QInAppProduct *|registeredProduct|const QString &
 $prototype=Q_INVOKABLE void setPlatformProperty(const QString &propertyName, const QString &value)
 $method=|void|setPlatformProperty|const QString &,const QString &
 
-$prototype=void registerPendingProducts() (private) (slot)
+$prototype=void registerPendingProducts() [private] (slot)
 
-$prototype=void registerProduct(QInAppProduct *) (private) (slot)
+$prototype=void registerProduct(QInAppProduct *) [private] (slot)
 
-$prototype=void setupBackend() (private)
+$prototype=void setupBackend() [private]
 
 $beginSignals
 $signal=|productRegistered(QInAppProduct*)

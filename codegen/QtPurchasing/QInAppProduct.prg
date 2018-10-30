@@ -22,7 +22,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QInAppProduct(const QString &price, const QString &title, const QString &description, ProductType productType, const QString &identifier, QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QInAppProduct(const QString &price, const QString &title, const QString &description, ProductType productType, const QString &identifier, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QInAppProduct()
 $deleteMethod
