@@ -27,15 +27,15 @@ $includes=5,8,0
 $prototype=explicit QModbusTcpServer(QObject *parent = nullptr)
 $constructor=5,8,0|new|QObject *=nullptr
 
-$prototype=QModbusTcpServer(QModbusTcpServerPrivate &dd, QObject *parent = nullptr) (protected)
+$prototype=QModbusTcpServer(QModbusTcpServerPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusTcpServer()
 $deleteMethod=5,8,0
 
-$prototype=bool open() override (protected)
+$prototype=bool open() override [protected]
 
-$prototype=void close() override (protected)
+$prototype=void close() override [protected]
 
-$prototype=QModbusResponse processRequest(const QModbusPdu &request) override (protected)
+$prototype=QModbusResponse processRequest(const QModbusPdu &request) override [protected]
 
 #pragma ENDDUMP

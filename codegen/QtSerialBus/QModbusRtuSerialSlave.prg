@@ -25,17 +25,17 @@ $destructor
 $includes=5,8,0
 
 $prototype=explicit QModbusRtuSerialSlave(QObject *parent = nullptr)
-$prototype=QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullptr) (protected)
+$prototype=QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusRtuSerialSlave()
 $deleteMethod=5,8,0
 
 $prototype=bool processesBroadcast() const override
 
-$prototype=bool open() override (protected)
+$prototype=bool open() override [protected]
 
-$prototype=void close() override (protected)
+$prototype=void close() override [protected]
 
-$prototype=QModbusResponse processRequest(const QModbusPdu &request) override (protected)
+$prototype=QModbusResponse processRequest(const QModbusPdu &request) override [protected]
 
 #pragma ENDDUMP

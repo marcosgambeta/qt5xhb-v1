@@ -24,7 +24,7 @@ $destructor
 
 $includes=5,8,0
 
-$prototype=QCanBus(QObject *parent = nullptr) (private)
+$prototype=QCanBus(QObject *parent = nullptr) [private]
 
 %% $deleteMethod
 

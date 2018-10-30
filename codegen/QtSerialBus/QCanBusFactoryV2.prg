@@ -24,7 +24,7 @@ $destructor
 
 $includes=5,9,0
 
-$prototype=virtual ~QCanBusFactoryV2() (protected)
+$prototype=virtual ~QCanBusFactoryV2() [protected]
 %% $deleteMethod
 
 $prototype=virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0

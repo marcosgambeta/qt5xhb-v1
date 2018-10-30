@@ -25,7 +25,7 @@ $destructor
 $includes=5,8,0
 
 $prototype=explicit QModbusDevice(QObject *parent = nullptr)
-$prototype=QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) (protected)
+$prototype=QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusDevice()
 $deleteMethod=5,8,0
@@ -44,13 +44,13 @@ $prototype=Error error() const
 
 $prototype=QString errorString() const
 
-$prototype=void setState(QModbusDevice::State newState) (protected)
+$prototype=void setState(QModbusDevice::State newState) [protected]
 
-$prototype=void setError(const QString &errorText, QModbusDevice::Error error) (protected)
+$prototype=void setError(const QString &errorText, QModbusDevice::Error error) [protected]
 
-$prototype=virtual bool open() = 0 (protected)
+$prototype=virtual bool open() = 0 [protected]
 
-$prototype=virtual void close() = 0 (protected)
+$prototype=virtual void close() = 0 [protected]
 
 $beginSignals
 $signal=5,8,0|errorOccurred(QModbusDevice::Error)

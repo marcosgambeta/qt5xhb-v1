@@ -30,7 +30,7 @@ $internalConstructor=5,9,0|new1|
 $prototype=QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
 $internalConstructor=5,9,0|new2|const QCanBusDeviceInfo &
 
-$prototype=explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) (private)
+$prototype=explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) [private]
 
 //[1]QCanBusDeviceInfo() = delete
 //[2]QCanBusDeviceInfo(const QCanBusDeviceInfo &other)

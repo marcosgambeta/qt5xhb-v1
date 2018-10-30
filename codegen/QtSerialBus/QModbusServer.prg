@@ -25,7 +25,7 @@ $destructor
 $includes=5,8,0
 
 $prototype=explicit QModbusServer(QObject *parent = nullptr)
-$prototype=QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) (protected)
+$prototype=QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusServer()
 $deleteMethod=5,8,0
@@ -50,13 +50,13 @@ $prototype=bool setData(QModbusDataUnit::RegisterType table, quint16 address, qu
 
 $prototype=bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) const
 
-$prototype=virtual bool writeData(const QModbusDataUnit &unit) (protected)
+$prototype=virtual bool writeData(const QModbusDataUnit &unit) [protected]
 
-$prototype=virtual bool readData(QModbusDataUnit *newData) const (protected)
+$prototype=virtual bool readData(QModbusDataUnit *newData) const [protected]
 
-$prototype=virtual QModbusResponse processRequest(const QModbusPdu &request) (protected)
+$prototype=virtual QModbusResponse processRequest(const QModbusPdu &request) [protected]
 
-$prototype=virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) (protected)
+$prototype=virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) [protected]
 
 $beginSignals
 $signal=5,8,0|dataWritten(QModbusDataUnit::RegisterType,int,int)
