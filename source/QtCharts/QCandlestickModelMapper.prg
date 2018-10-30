@@ -81,15 +81,19 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QAbstractItemModel * ptr = obj->model ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -104,14 +108,18 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
+#endif
       obj->setModel ( PQABSTRACTITEMMODEL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -128,15 +136,19 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QCandlestickSeries * ptr = obj->series ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QCANDLESTICKSERIES" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -151,14 +163,18 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCANDLESTICKSERIES(1) )
     {
+#endif
       obj->setSeries ( PQCANDLESTICKSERIES(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -175,72 +191,76 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->orientation () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
 
 /*
-void setTimestamp(int timestamp) (protected)
+void setTimestamp(int timestamp) [protected]
 */
 
 /*
-int timestamp() const (protected)
+int timestamp() const [protected]
 */
 
 /*
-void setOpen(int open) (protected)
+void setOpen(int open) [protected]
 */
 
 /*
-int open() const (protected)
+int open() const [protected]
 */
 
 /*
-void setHigh(int high) (protected)
+void setHigh(int high) [protected]
 */
 
 /*
-int high() const (protected)
+int high() const [protected]
 */
 
 /*
-void setLow(int low) (protected)
+void setLow(int low) [protected]
 */
 
 /*
-int low() const (protected)
+int low() const [protected]
 */
 
 /*
-void setClose(int close) (protected)
+void setClose(int close) [protected]
 */
 
 /*
-int close() const (protected)
+int close() const [protected]
 */
 
 /*
-void setFirstSetSection(int firstSetSection) (protected)
+void setFirstSetSection(int firstSetSection) [protected]
 */
 
 /*
-int firstSetSection() const (protected)
+int firstSetSection() const [protected]
 */
 
 /*
-void setLastSetSection(int lastSetSection) (protected)
+void setLastSetSection(int lastSetSection) [protected]
 */
 
 /*
-int lastSetSection() const (protected)
+int lastSetSection() const [protected]
 */
 
 void QCandlestickModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );

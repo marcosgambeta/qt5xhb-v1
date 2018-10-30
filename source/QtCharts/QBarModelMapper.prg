@@ -50,63 +50,63 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBarModelMapper(QObject *parent = Q_NULLPTR) (protected)
+explicit QBarModelMapper(QObject *parent = Q_NULLPTR) [protected]
 */
 
 /*
-QAbstractItemModel *model() const  (protected)
+QAbstractItemModel *model() const  [protected]
 */
 
 /*
-void setModel(QAbstractItemModel *model) (protected)
+void setModel(QAbstractItemModel *model) [protected]
 */
 
 /*
-QAbstractBarSeries *series() const (protected)
+QAbstractBarSeries *series() const [protected]
 */
 
 /*
-void setSeries(QAbstractBarSeries *series) (protected)
+void setSeries(QAbstractBarSeries *series) [protected]
 */
 
 /*
-int first() const (protected)
+int first() const [protected]
 */
 
 /*
-void setFirst(int first) (protected)
+void setFirst(int first) [protected]
 */
 
 /*
-int count() const (protected)
+int count() const [protected]
 */
 
 /*
-void setCount(int count) (protected)
+void setCount(int count) [protected]
 */
 
 /*
-int firstBarSetSection() const (protected)
+int firstBarSetSection() const [protected]
 */
 
 /*
-void setFirstBarSetSection(int firstBarSetSection) (protected)
+void setFirstBarSetSection(int firstBarSetSection) [protected]
 */
 
 /*
-int lastBarSetSection() const (protected)
+int lastBarSetSection() const [protected]
 */
 
 /*
-void setLastBarSetSection(int lastBarSetSection) (protected)
+void setLastBarSetSection(int lastBarSetSection) [protected]
 */
 
 /*
-Qt::Orientation orientation() const (protected)
+Qt::Orientation orientation() const [protected]
 */
 
 /*
-void setOrientation(Qt::Orientation orientation) (protected)
+void setOrientation(Qt::Orientation orientation) [protected]
 */
 
 #pragma ENDDUMP

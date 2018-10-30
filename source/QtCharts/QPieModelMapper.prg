@@ -50,63 +50,63 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPieModelMapper(QObject *parent = Q_NULLPTR) (protected)
+explicit QPieModelMapper(QObject *parent = Q_NULLPTR) [protected]
 */
 
 /*
-QAbstractItemModel *model() const (protected)
+QAbstractItemModel *model() const [protected]
 */
 
 /*
-void setModel(QAbstractItemModel *model) (protected)
+void setModel(QAbstractItemModel *model) [protected]
 */
 
 /*
-QPieSeries *series() const (protected)
+QPieSeries *series() const [protected]
 */
 
 /*
-void setSeries(QPieSeries *series) (protected)
+void setSeries(QPieSeries *series) [protected]
 */
 
 /*
-int first() const (protected)
+int first() const [protected]
 */
 
 /*
-void setFirst(int first) (protected)
+void setFirst(int first) [protected]
 */
 
 /*
-int count() const (protected)
+int count() const [protected]
 */
 
 /*
-void setCount(int count) (protected)
+void setCount(int count) [protected]
 */
 
 /*
-int valuesSection() const (protected)
+int valuesSection() const [protected]
 */
 
 /*
-void setValuesSection(int valuesSection) (protected)
+void setValuesSection(int valuesSection) [protected]
 */
 
 /*
-int labelsSection() const (protected)
+int labelsSection() const [protected]
 */
 
 /*
-void setLabelsSection(int labelsSection) (protected)
+void setLabelsSection(int labelsSection) [protected]
 */
 
 /*
-Qt::Orientation orientation() const (protected)
+Qt::Orientation orientation() const [protected]
 */
 
 /*
-void setOrientation(Qt::Orientation orientation) (protected)
+void setOrientation(Qt::Orientation orientation) [protected]
 */
 
 #pragma ENDDUMP

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 }
 
 /*
-QPieLegendMarker(QPieLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) (protected)
+QPieLegendMarker(QPieLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
 */
 
 /*
@@ -111,14 +111,18 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->type () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -133,15 +137,19 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QPieSeries * ptr = obj->series ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QPIESERIES" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -156,15 +164,19 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QPieSlice * ptr = obj->slice ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QPIESLICE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }

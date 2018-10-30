@@ -50,63 +50,63 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QBoxPlotModelMapper(QObject *parent = Q_NULLPTR) (protected)
+explicit QBoxPlotModelMapper(QObject *parent = Q_NULLPTR) [protected]
 */
 
 /*
-QAbstractItemModel *model() const (protected)
+QAbstractItemModel *model() const [protected]
 */
 
 /*
-void setModel(QAbstractItemModel *model) (protected)
+void setModel(QAbstractItemModel *model) [protected]
 */
 
 /*
-QBoxPlotSeries *series() const (protected)
+QBoxPlotSeries *series() const [protected]
 */
 
 /*
-void setSeries(QBoxPlotSeries *series) (protected)
+void setSeries(QBoxPlotSeries *series) [protected]
 */
 
 /*
-int first() const (protected)
+int first() const [protected]
 */
 
 /*
-void setFirst(int first) (protected)
+void setFirst(int first) [protected]
 */
 
 /*
-int count() const (protected)
+int count() const [protected]
 */
 
 /*
-void setCount(int count) (protected)
+void setCount(int count) [protected]
 */
 
 /*
-int firstBoxSetSection() const (protected)
+int firstBoxSetSection() const [protected]
 */
 
 /*
-void setFirstBoxSetSection(int firstBoxSetSection) (protected)
+void setFirstBoxSetSection(int firstBoxSetSection) [protected]
 */
 
 /*
-int lastBoxSetSection() const (protected)
+int lastBoxSetSection() const [protected]
 */
 
 /*
-void setLastBoxSetSection(int lastBoxSetSection) (protected)
+void setLastBoxSetSection(int lastBoxSetSection) [protected]
 */
 
 /*
-Qt::Orientation orientation() const (protected)
+Qt::Orientation orientation() const [protected]
 */
 
 /*
-void setOrientation(Qt::Orientation orientation) (protected)
+void setOrientation(Qt::Orientation orientation) [protected]
 */
 
 #pragma ENDDUMP
