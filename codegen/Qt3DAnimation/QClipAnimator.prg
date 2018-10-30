@@ -25,7 +25,7 @@ $destructor
 $includes
 
 $prototype=explicit QClipAnimator(Qt3DCore::QNode *parent = nullptr)
-$prototype=QClipAnimator(QClipAnimatorPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=QClipAnimator(QClipAnimatorPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QClipAnimator()
 $deleteMethod
@@ -41,8 +41,8 @@ $prototype=void setClip(Qt3DAnimation::QAbstractAnimationClip *clip) (slot)
 %%
 %%
 
-$prototype=void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override (protected)
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) override [protected]
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|clipChanged(Qt3DAnimation::QAbstractAnimationClip*)

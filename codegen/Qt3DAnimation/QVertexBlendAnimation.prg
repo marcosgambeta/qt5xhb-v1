@@ -63,7 +63,7 @@ $prototype=void setMorphTargets(const QVector<Qt3DAnimation::QMorphTarget *> &ta
 $prototype=void addMorphTarget(Qt3DAnimation::QMorphTarget *target)
 $prototype=void removeMorphTarget(Qt3DAnimation::QMorphTarget *target)
 $prototype=QVector<Qt3DAnimation::QMorphTarget *> morphTargetList()
-$prototype=void updateAnimation(float position) (private)
+$prototype=void updateAnimation(float position) [private]
 
 $beginSignals
 $signal=|targetPositionsChanged(QVector<float>)

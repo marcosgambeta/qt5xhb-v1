@@ -25,7 +25,7 @@ $destructor
 $includes
 
 $prototype=explicit QLerpClipBlend(Qt3DCore::QNode *parent = nullptr)
-$prototype=explicit QLerpClipBlend(QLerpClipBlendPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QLerpClipBlend(QLerpClipBlendPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QLerpClipBlend()
 $deleteMethod
@@ -55,7 +55,7 @@ $prototype=void setBlendFactor(float blendFactor) (slot)
 %%
 %%
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|blendFactorChanged(float)

@@ -26,7 +26,7 @@ $includes
 
 $prototype=explicit QClipBlendValue(Qt3DCore::QNode *parent = nullptr)
 $prototype=explicit QClipBlendValue(Qt3DAnimation::QAbstractAnimationClip *clip, Qt3DCore::QNode *parent = nullptr)
-$prototype=explicit QClipBlendValue(QClipBlendValuePrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QClipBlendValue(QClipBlendValuePrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QClipBlendValue()
 $deleteMethod
@@ -42,7 +42,7 @@ $prototype=void setClip(Qt3DAnimation::QAbstractAnimationClip *clip) (slot)
 %%
 %%
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|clipChanged(Qt3DAnimation::QAbstractAnimationClip*)

@@ -26,7 +26,7 @@ $includes
 
 $prototype=explicit QAdditiveClipBlend(Qt3DCore::QNode *parent = nullptr)
 
-$prototype=explicit QAdditiveClipBlend(QAdditiveClipBlendPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QAdditiveClipBlend(QAdditiveClipBlendPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QAdditiveClipBlend()
 $deleteMethod
@@ -59,7 +59,7 @@ $prototype=void setAdditiveFactor(float additiveFactor) (slot)
 %%
 %%
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=additiveFactorChanged(float)

@@ -24,7 +24,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QAbstractAnimation(QAbstractAnimationPrivate &dd, QObject *parent = nullptr) (protected)
+$prototype=explicit QAbstractAnimation(QAbstractAnimationPrivate &dd, QObject *parent = nullptr) [protected]
 
 %% $deleteMethod
 
@@ -66,7 +66,7 @@ $method=|float|duration|
 %%
 %%
 
-$prototype=void setDuration(float duration) (protected)
+$prototype=void setDuration(float duration) [protected]
 
 $beginSignals
 $signal=|animationNameChanged(QString)

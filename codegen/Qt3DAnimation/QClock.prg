@@ -25,7 +25,7 @@ $destructor
 $includes
 
 $prototype=explicit QClock(Qt3DCore::QNode *parent = nullptr)
-$prototype=QClock(QClockPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=QClock(QClockPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QClock()
 $deleteMethod
@@ -41,7 +41,7 @@ $prototype=void setPlaybackRate(double playbackRate)
 %%
 %%
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|playbackRateChanged(double)

@@ -24,7 +24,7 @@ $includes
 
 $prototype=explicit QAnimationClip(Qt3DCore::QNode *parent = nullptr)
 
-$prototype=QAnimationClip(QAnimationClipPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=QAnimationClip(QAnimationClipPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QAnimationClip()
 $deleteMethod
@@ -41,7 +41,7 @@ $prototype=void setClipData(const Qt3DAnimation::QAnimationClipData &clipData) (
 %%
 %%
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|clipDataChanged|Qt3DAnimation::QAnimationClipData

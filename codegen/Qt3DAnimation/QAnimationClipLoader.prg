@@ -28,7 +28,7 @@ $prototype=explicit QAnimationClipLoader(Qt3DCore::QNode *parent = nullptr)
 
 $prototype=explicit QAnimationClipLoader(const QUrl &source, Qt3DCore::QNode *parent = nullptr)
 
-$prototype=explicit QAnimationClipLoader(QAnimationClipLoaderPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QAnimationClipLoader(QAnimationClipLoaderPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QAnimationClipLoader()
 $deleteMethod
@@ -51,9 +51,9 @@ $prototype=Status status() const
 %%
 %%
 
-$prototype=void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE (protected)
+$prototype=void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE [protected]
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|sourceChanged(QUrl)

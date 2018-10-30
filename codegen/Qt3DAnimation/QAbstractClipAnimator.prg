@@ -24,9 +24,9 @@ $destructor
 
 $includes
 
-$prototype=explicit QAbstractClipAnimator(Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QAbstractClipAnimator(Qt3DCore::QNode *parent = nullptr) [protected]
 
-$prototype=QAbstractClipAnimator(QAbstractClipAnimatorPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=QAbstractClipAnimator(QAbstractClipAnimatorPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QAbstractClipAnimator()
 $deleteMethod

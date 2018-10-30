@@ -22,7 +22,7 @@ $destructor
 
 $includes
 
-$prototype=QAbstractChannelMapping(QAbstractChannelMappingPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=QAbstractChannelMapping(QAbstractChannelMappingPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QAbstractChannelMapping()
 $deleteMethod

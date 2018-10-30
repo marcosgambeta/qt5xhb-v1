@@ -22,9 +22,9 @@ $destructor
 
 $includes
 
-$prototype=explicit QAbstractClipBlendNode(Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QAbstractClipBlendNode(Qt3DCore::QNode *parent = nullptr) [protected]
 
-$prototype=explicit QAbstractClipBlendNode(QAbstractClipBlendNodePrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QAbstractClipBlendNode(QAbstractClipBlendNodePrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QAbstractClipBlendNode()
 $deleteMethod

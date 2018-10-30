@@ -25,7 +25,7 @@ $destructor
 $includes
 
 $prototype=explicit QSkeletonMapping(Qt3DCore::QNode *parent = nullptr)
-$prototype=QSkeletonMapping(QSkeletonMappingPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=QSkeletonMapping(QSkeletonMappingPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QSkeletonMapping()
 $deleteMethod
@@ -41,7 +41,7 @@ $prototype=void setSkeleton(Qt3DCore::QAbstractSkeleton *skeleton) (slot)
 %%
 %%
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|skeletonChanged(Qt3DCore::QAbstractSkeleton*)

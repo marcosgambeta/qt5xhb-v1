@@ -24,7 +24,7 @@ $destructor
 
 $includes
 
-$prototype=QAbstractAnimationClip(QAbstractAnimationClipPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=QAbstractAnimationClip(QAbstractAnimationClipPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QAbstractAnimationClip()
 $deleteMethod
@@ -40,7 +40,7 @@ $method=|float|duration|
 %%
 %%
 
-$prototype=void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE (protected)
+$prototype=void sceneChangeEvent(const Qt3DCore::QSceneChangePtr &change) Q_DECL_OVERRIDE [protected]
 
 $beginSignals
 $signal=|durationChanged(float)

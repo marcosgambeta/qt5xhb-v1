@@ -24,11 +24,11 @@ $includes
 
 $prototype=explicit QAnimationAspect(QObject *parent = nullptr)
 
-$prototype=explicit QAnimationAspect(QAnimationAspectPrivate &dd, QObject *parent) (private)
+$prototype=explicit QAnimationAspect(QAnimationAspectPrivate &dd, QObject *parent) [private]
 
 $prototype=~QAnimationAspect()
 $deleteMethod
 
-$prototype=QVector<Qt3DCore::QAspectJobPtr> jobsToExecute(qint64 time) Q_DECL_OVERRIDE (private)
+$prototype=QVector<Qt3DCore::QAspectJobPtr> jobsToExecute(qint64 time) Q_DECL_OVERRIDE [private]
 
 #pragma ENDDUMP

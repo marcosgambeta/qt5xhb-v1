@@ -25,7 +25,7 @@ $destructor
 $includes
 
 $prototype=explicit QCallbackMapping(Qt3DCore::QNode *parent = nullptr)
-$prototype=explicit QCallbackMapping(QCallbackMappingPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QCallbackMapping(QCallbackMappingPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QCallbackMapping()
 $deleteMethod
@@ -46,7 +46,7 @@ $prototype=QAnimationCallback *callback() const
 
 $prototype=void setCallback(int type, QAnimationCallback *callback, QAnimationCallback::Flags flags = QAnimationCallback::OnOwningThread)
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|channelNameChanged(QString)

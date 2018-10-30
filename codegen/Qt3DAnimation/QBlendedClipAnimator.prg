@@ -25,7 +25,7 @@ $destructor
 $includes
 
 $prototype=explicit QBlendedClipAnimator(Qt3DCore::QNode *parent = nullptr)
-$prototype=explicit QBlendedClipAnimator(QBlendedClipAnimatorPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QBlendedClipAnimator(QBlendedClipAnimatorPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QBlendedClipAnimator()
 $deleteMethod
@@ -42,7 +42,7 @@ $prototype=void setBlendTree(QAbstractClipBlendNode * blendTree) (slot)
 %%
 %%
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|blendTreeChanged(QAbstractClipBlendNode*)

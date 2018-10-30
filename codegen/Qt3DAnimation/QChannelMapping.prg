@@ -25,7 +25,7 @@ $destructor
 $includes
 
 $prototype=explicit QChannelMapping(Qt3DCore::QNode *parent = nullptr)
-$prototype=explicit QChannelMapping(QChannelMappingPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=explicit QChannelMapping(QChannelMappingPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QChannelMapping()
 $deleteMethod
@@ -58,7 +58,7 @@ $prototype=void setProperty(const QString &property) (slot)
 %%
 %%
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|channelNameChanged(QString)
