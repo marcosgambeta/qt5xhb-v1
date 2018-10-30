@@ -22,9 +22,9 @@ $destructor
 
 $includes
 
-$prototype=QCameraImageProcessing(QCamera *camera) (private)
+$prototype=QCameraImageProcessing(QCamera *camera) [private]
 
-$prototype=~QCameraImageProcessing() (private)
+$prototype=~QCameraImageProcessing() [private]
 
 $prototype=qreal contrast() const
 $method=|qreal|contrast|

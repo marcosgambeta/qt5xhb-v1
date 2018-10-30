@@ -24,7 +24,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QMediaVideoProbeControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QMediaVideoProbeControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QMediaVideoProbeControl()
 $deleteMethod

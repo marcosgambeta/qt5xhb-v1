@@ -22,7 +22,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QAudioEncoderSettingsControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QAudioEncoderSettingsControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QAudioEncoderSettingsControl()
 $deleteMethod

@@ -29,7 +29,7 @@ $includes
 $prototype=explicit QMediaRecorder(QMediaObject * mediaObject, QObject * parent = Q_NULLPTR)
 $constructor=|new|QMediaObject *,QObject *=0
 
-$prototype=QMediaRecorder(QMediaRecorderPrivate &dd, QMediaObject *mediaObject, QObject *parent = Q_NULLPTR) (protected)
+$prototype=QMediaRecorder(QMediaRecorderPrivate &dd, QMediaObject *mediaObject, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QMediaRecorder()
 $deleteMethod
@@ -192,7 +192,7 @@ $slotMethod=|void|record|
 $prototype=void stop()
 $slotMethod=|void|stop|
 
-$prototype=bool setMediaObject(QMediaObject *object) override (protected)
+$prototype=bool setMediaObject(QMediaObject *object) override [protected]
 
 $beginSignals
 $signal=|actualLocationChanged(QUrl)

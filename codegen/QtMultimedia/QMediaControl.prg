@@ -22,9 +22,9 @@ $destructor
 
 $includes
 
-$prototype=explicit QMediaControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QMediaControl(QObject *parent = Q_NULLPTR) [protected]
 
-$prototype=explicit QMediaControl(QMediaControlPrivate &dd, QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QMediaControl(QMediaControlPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QMediaControl()
 $deleteMethod

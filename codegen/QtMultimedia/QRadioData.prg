@@ -91,7 +91,7 @@ $method=|QRadioData::Error|error|
 $prototype=QString errorString() const
 $method=|QString|errorString|
 
-$prototype=bool setMediaObject(QMediaObject *) override (protected)
+$prototype=bool setMediaObject(QMediaObject *) override [protected]
 
 $beginSignals
 $signal=|stationIdChanged(QString)

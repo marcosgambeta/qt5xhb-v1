@@ -72,6 +72,6 @@ HB_FUNC_STATIC( QSOUND_PLAY )
 }
 $addMethod=play
 
-$prototype=void deleteOnComplete() (slot) (private)
+$prototype=void deleteOnComplete() (slot) [private]
 
 #pragma ENDDUMP

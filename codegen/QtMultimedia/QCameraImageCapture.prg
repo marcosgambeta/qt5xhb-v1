@@ -97,7 +97,7 @@ $slotMethod=|void|cancelCapture|
 $prototype=int capture(const QString & location = QString())
 $slotMethod=|int|capture|const QString &=QString()
 
-$prototype=bool setMediaObject(QMediaObject *) override (protected)
+$prototype=bool setMediaObject(QMediaObject *) override [protected]
 
 $beginSignals
 $signal=|bufferFormatChanged(QVideoFrame::PixelFormat)

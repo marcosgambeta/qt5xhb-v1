@@ -24,7 +24,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QCameraZoomControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QCameraZoomControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QCameraZoomControl()
 $deleteMethod

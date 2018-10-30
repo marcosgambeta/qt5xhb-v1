@@ -27,9 +27,9 @@ $includes
 #include <QVariant>
 #include <QMediaService>
 
-$prototype=QMediaObject(QObject *parent, QMediaService *service) (protected)
+$prototype=QMediaObject(QObject *parent, QMediaService *service) [protected]
 
-$prototype=QMediaObject(QMediaObjectPrivate &dd, QObject *parent, QMediaService *service) (protected)
+$prototype=QMediaObject(QMediaObjectPrivate &dd, QObject *parent, QMediaService *service) [protected]
 
 $prototype=~QMediaObject()
 $deleteMethod
@@ -72,11 +72,11 @@ $virtualMethod=|QMediaService *|service|
 $prototype=virtual void unbind(QObject * object)
 $virtualMethod=|void|unbind|QObject *
 
-$prototype=void addPropertyWatch(QByteArray const &name) (protected)
+$prototype=void addPropertyWatch(QByteArray const &name) [protected]
 
-$prototype=void removePropertyWatch(QByteArray const &name) (protected)
+$prototype=void removePropertyWatch(QByteArray const &name) [protected]
 
-$prototype=void setupControls() (private)
+$prototype=void setupControls() [private]
 
 $beginSignals
 $beginGroup

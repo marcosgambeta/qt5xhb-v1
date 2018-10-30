@@ -22,7 +22,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QVideoEncoderSettingsControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QVideoEncoderSettingsControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QVideoEncoderSettingsControl()
 $deleteMethod

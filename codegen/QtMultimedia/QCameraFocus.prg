@@ -24,9 +24,9 @@ $destructor
 
 $includes
 
-$prototype=QCameraFocus(QCamera *camera) (private)
+$prototype=QCameraFocus(QCamera *camera) [private]
 
-$prototype=~QCameraFocus() (private)
+$prototype=~QCameraFocus() [private]
 
 %%
 %% Q_PROPERTY(FocusModes focusMode READ focusMode WRITE setFocusMode)

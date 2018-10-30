@@ -24,7 +24,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QVideoWindowControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QVideoWindowControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QVideoWindowControl()
 $deleteMethod

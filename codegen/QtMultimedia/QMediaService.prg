@@ -22,9 +22,9 @@ $destructor
 
 $includes
 
-$prototype=QMediaService(QObject* parent) (protected)
+$prototype=QMediaService(QObject* parent) [protected]
 
-$prototype=QMediaService(QMediaServicePrivate &dd, QObject *parent) (protected)
+$prototype=QMediaService(QMediaServicePrivate &dd, QObject *parent) [protected]
 
 $prototype=~QMediaService()
 $deleteMethod

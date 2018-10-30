@@ -24,7 +24,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QMediaAvailabilityControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QMediaAvailabilityControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QMediaAvailabilityControl()
 $deleteMethod

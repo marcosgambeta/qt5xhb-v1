@@ -24,7 +24,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QMetaDataReaderControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QMetaDataReaderControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QMetaDataReaderControl()
 $deleteMethod

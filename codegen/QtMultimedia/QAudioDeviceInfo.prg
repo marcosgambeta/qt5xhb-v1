@@ -28,7 +28,7 @@ $internalConstructor=|new1|
 $prototype=QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 $internalConstructor=|new2|const QAudioDeviceInfo &
 
-$prototype=QAudioDeviceInfo(const QString &realm, const QByteArray &handle, QAudio::Mode mode) (private)
+$prototype=QAudioDeviceInfo(const QString &realm, const QByteArray &handle, QAudio::Mode mode) [private]
 
 //[1]QAudioDeviceInfo ()
 //[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
@@ -94,11 +94,11 @@ $staticMethod=|QAudioDeviceInfo|defaultInputDevice|
 $prototype=static QAudioDeviceInfo defaultOutputDevice ()
 $staticMethod=|QAudioDeviceInfo|defaultOutputDevice|
 
-$prototype=QString realm() const (private)
+$prototype=QString realm() const [private]
 
-$prototype=QByteArray handle() const (private)
+$prototype=QByteArray handle() const [private]
 
-$prototype=QAudio::Mode mode() const (private)
+$prototype=QAudio::Mode mode() const [private]
 
 $extraMethods
 

@@ -24,7 +24,7 @@ $destructor
 
 $includes=5,6,0
 
-$prototype=explicit QAudioRoleControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QAudioRoleControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QAudioRoleControl()
 $deleteMethod=5,6,0

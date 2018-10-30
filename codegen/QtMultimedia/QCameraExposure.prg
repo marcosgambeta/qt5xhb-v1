@@ -26,9 +26,9 @@ $includes
 
 #include <QPointF>
 
-$prototype=explicit QCameraExposure(QCamera *parent = Q_NULLPTR) (private)
+$prototype=explicit QCameraExposure(QCamera *parent = Q_NULLPTR) [private]
 
-$prototype=virtual ~QCameraExposure() (private)
+$prototype=virtual ~QCameraExposure() [private]
 
 %%
 %% Q_PROPERTY(qreal aperture READ aperture NOTIFY apertureChanged)

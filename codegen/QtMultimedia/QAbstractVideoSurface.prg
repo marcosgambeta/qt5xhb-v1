@@ -72,9 +72,9 @@ $method=|QVideoSurfaceFormat|surfaceFormat|
 $prototype=virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats( QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle) const = 0
 %% TODO: is pure virtual ?
 
-$prototype=void setError(Error error) (protected)
+$prototype=void setError(Error error) [protected]
 
-$prototype=void setNativeResolution(const QSize &resolution) (protected)
+$prototype=void setNativeResolution(const QSize &resolution) [protected]
 
 #pragma ENDDUMP
 

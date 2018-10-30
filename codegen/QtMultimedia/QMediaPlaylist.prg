@@ -242,7 +242,7 @@ $slotMethod=|void|shuffle|
 $prototype=bool moveMedia(int from, int to)
 $method=5,7,0|bool|moveMedia|int,int
 
-$prototype=bool setMediaObject(QMediaObject *object) override (protected)
+$prototype=bool setMediaObject(QMediaObject *object) override [protected]
 
 $beginSignals
 $signal=|currentIndexChanged(int)

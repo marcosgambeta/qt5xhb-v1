@@ -24,7 +24,7 @@ $includes
 
 #include <QAbstractVideoSurface>
 
-$prototype=explicit QVideoRendererControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QVideoRendererControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QVideoRendererControl()
 $deleteMethod

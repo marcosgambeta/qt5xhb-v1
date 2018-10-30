@@ -26,7 +26,7 @@ $includes
 
 #include <QUrl>
 
-$prototype=explicit QMediaRecorderControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QMediaRecorderControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QMediaRecorderControl()
 $deleteMethod

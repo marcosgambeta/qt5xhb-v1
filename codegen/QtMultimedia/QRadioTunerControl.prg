@@ -24,7 +24,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QRadioTunerControl(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QRadioTunerControl(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QRadioTunerControl()
 $deleteMethod
