@@ -33,7 +33,18 @@ $internalConstructor=|new2|const QDBusMessage &
 
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
 {
-  // TODO: implementar
+  if( ISNUMPAR(0) )
+  {
+    QDBusMessage_new1();
+  }
+  else if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
+  {
+    QDBusMessage_new2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 $deleteMethod
@@ -50,7 +61,18 @@ $internalMethod=|QDBusMessage|createReply,createReply2|const QVariant &
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
 {
-  // TODO: implementar
+%%  if( ISNUMPAR(1) && ISARRAY(1) )
+%%  {
+%%    QDBusMessage_createReply1();
+%%  }
+  if( ISNUMPAR(1) && ISQVARIANT(1) )
+  {
+    QDBusMessage_createReply2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 $addMethod=createReply
 
@@ -69,7 +91,22 @@ $internalMethod=|QDBusMessage|createErrorReply,createErrorReply3|QDBusError::Err
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 {
-  // TODO: implementar
+  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  {
+    QDBusMessage_createErrorReply1();
+  }
+  else if( ISNUMPAR(1) && ISQDBUSERROR(1) )
+  {
+    QDBusMessage_createErrorReply2();
+  }
+  else if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+  {
+    QDBusMessage_createErrorReply3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 $addMethod=createErrorReply
 
@@ -139,9 +176,30 @@ $internalStaticMethod=|QDBusMessage|createError,createError3|QDBusError::ErrorTy
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
 {
-  // TODO: implementar
+  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  {
+    QDBusMessage_createError1();
+  }
+  else if( ISNUMPAR(1) && ISQDBUSERROR(1) )
+  {
+    QDBusMessage_createError2();
+  }
+  else if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+  {
+    QDBusMessage_createError3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 $addMethod=createError
+
+$prototype=bool QDBusMessage::isInteractiveAuthorizationAllowed() const
+$method=5,12,0|bool|isInteractiveAuthorizationAllowed|
+
+$prototype=void QDBusMessage::setInteractiveAuthorizationAllowed(bool enable)
+$method=5,12,0|void|setInteractiveAuthorizationAllowed|bool
 
 $extraMethods
 

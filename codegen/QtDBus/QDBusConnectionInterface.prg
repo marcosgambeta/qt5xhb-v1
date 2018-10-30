@@ -24,10 +24,10 @@ $destructor
 
 $includes
 
-$prototype=QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent) (private)
+$prototype=QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent) [private]
 %% $constructor=|new|const QDBusConnection &,QObject *
 
-%% $deleteMethod (private)
+%% $deleteMethod [private]
 
 $prototype=QDBusReply<QStringList> registeredServiceNames() const
 %% TODO: implementar
