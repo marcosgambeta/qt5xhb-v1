@@ -116,4 +116,10 @@ $method=|void|setPageBreakPolicy|QTextBlockFormat::PageBreakFlags
 $prototype=PageBreakFlags pageBreakPolicy() const
 $method=|QTextBlockFormat::PageBreakFlags|pageBreakPolicy|
 
+$prototype=int QTextBlockFormat::headingLevel() const
+$method=5,12,0|int|headingLevel|
+
+$prototype=void QTextBlockFormat::setHeadingLevel(int level)
+$method=5,12,0|void|setHeadingLevel|int
+
 #pragma ENDDUMP

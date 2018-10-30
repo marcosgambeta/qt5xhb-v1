@@ -168,6 +168,12 @@ $staticMethod=|QString|themeName|
 $prototype=static QStringList themeSearchPaths ()
 $staticMethod=|QStringList|themeSearchPaths|
 
+$prototype=static QString QIcon::fallbackThemeName()
+$staticMethod=5,12,0|QString|fallbackThemeName|
+
+$prototype=static void QIcon::setFallbackThemeName(const QString &name)
+$staticMethod=5,12,0|void|setFallbackThemeName|const QString &
+
 $variantMethods
 
 $extraMethods

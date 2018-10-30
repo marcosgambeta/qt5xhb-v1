@@ -48,4 +48,10 @@ $method=|void|setHeight|qreal
 $prototype=qreal height() const
 $method=|qreal|height|
 
+$prototype=int QTextImageFormat::quality() const
+$method=5,12,0|int|quality|
+
+$prototype=void QTextImageFormat::setQuality(int quality = ...)
+$method=5,12,0|void|setQuality|int=100
+
 #pragma ENDDUMP

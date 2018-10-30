@@ -320,6 +320,9 @@ $method=|QMimeData *|mimeData|const QModelIndexList &
 $prototype=bool dropMimeData (const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
 $method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
+$prototype=bool QStandardItemModel::clearItemData(const QModelIndex &index)
+$method=5,12,0|bool|clearItemData|const QModelIndex &
+
 $beginSignals
 $signal=|itemChanged(QStandardItem*)
 $endSignals

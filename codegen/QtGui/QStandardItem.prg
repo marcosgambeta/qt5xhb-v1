@@ -382,6 +382,9 @@ $virtualMethod=|void|read|QDataStream &
 $prototype=virtual void write(QDataStream &out) const
 $virtualMethod=|void|write|QDataStream &
 
+$prototype=void QStandardItem::clearData()
+$method=5,12,0|void|clearData|
+
 $extraMethods
 
 #pragma ENDDUMP

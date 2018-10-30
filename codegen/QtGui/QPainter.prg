@@ -1020,6 +1020,16 @@ $internalMethod=|void|fillRect,fillRect11|const QRect &,Qt::GlobalColor
 $prototype=void fillRect ( const QRectF & rectangle, Qt::GlobalColor color )
 $internalMethod=|void|fillRect,fillRect12|const QRectF &,Qt::GlobalColor
 
+$prototype=void fillRect(int x, int y, int width, int height, QGradient::Preset preset)
+$internalMethod=5,12,0|void|fillRect,fillRect13|int,int,int,int,QGradient::Preset
+
+$prototype=void fillRect ( const QRect &rectangle, QGradient::Preset preset)
+$internalMethod=5,12,0|void|fillRect,fillRect14|const QRect &,QGradient::Preset
+
+$prototype=void fillRect(const QRectF &rectangle, QGradient::Preset preset)
+$internalMethod=5,12,0|void|fillRect,fillRect15|const QRectF &,QGradient::Preset
+
+%% TODO: resolver conflitos
 //[ 1]void fillRect ( const QRectF & rectangle, const QBrush & brush )
 //[ 2]void fillRect ( int x, int y, int width, int height, Qt::BrushStyle style )
 //[ 3]void fillRect ( const QRect & rectangle, Qt::BrushStyle style )
@@ -1032,6 +1042,9 @@ $internalMethod=|void|fillRect,fillRect12|const QRectF &,Qt::GlobalColor
 //[10]void fillRect ( int x, int y, int width, int height, Qt::GlobalColor color )
 //[11]void fillRect ( const QRect & rectangle, Qt::GlobalColor color )
 //[12]void fillRect ( const QRectF & rectangle, Qt::GlobalColor color )
+//[13]void fillRect ( int x, int y, int width, int height, QGradient::Preset preset )
+//[14]void fillRect ( const QRect &rectangle, QGradient::Preset preset )
+//[15]void fillRect ( const QRectF &rectangle, QGradient::Preset preset )
 
 HB_FUNC_STATIC( QPAINTER_FILLRECT )
 {
@@ -1082,6 +1095,18 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
   else if( ISNUMPAR(2) && ISQRECTF(1) && ISNUM(2) )
   {
     QPainter_fillRect12();
+  }
+  else if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+  {
+    QPainter_fillRect13();
+  }
+  else if( ISNUMPAR(2) && ISQRECT(1) && ISNUM(2) )
+  {
+    QPainter_fillRect14();
+  }
+  else if( ISNUMPAR(2) && ISQRECTF(1) && ISNUM(2) )
+  {
+    QPainter_fillRect15();
   }
   else
   {

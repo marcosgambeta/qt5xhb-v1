@@ -266,6 +266,9 @@ $method=|const QBrush &|window|
 $prototype=const QBrush & windowText () const
 $method=|const QBrush &|windowText|
 
+$prototype=const QBrush &QPalette::placeholderText() const
+$method=5,12,0|const QBrush &|placeholderText|
+
 $extraMethods
 
 #pragma ENDDUMP

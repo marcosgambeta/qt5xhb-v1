@@ -114,6 +114,9 @@ $method=|bool|write|const QImage &
 $prototype=static QList<QByteArray> supportedImageFormats ()
 $staticMethod=|QList<QByteArray>|supportedImageFormats|
 
+$prototype=static QList<QByteArray> QImageWriter::imageFormatsForMimeType(const QByteArray &mimeType)
+$staticMethod=5,12,0|QList<QByteArray>|imageFormatsForMimeType|const QByteArray &
+
 $extraMethods
 
 #pragma ENDDUMP
