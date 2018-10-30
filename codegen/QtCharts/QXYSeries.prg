@@ -26,7 +26,7 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QXYSeries()
 $deleteMethod=5,7,0

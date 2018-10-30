@@ -26,7 +26,7 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
+$prototype=QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QAbstractAxis()
 $deleteMethod=5,7,0

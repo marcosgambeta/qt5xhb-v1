@@ -65,12 +65,12 @@ $method=5,7,0|QChart *|chart|
 $prototype=void setChart(QChart *chart)
 $method=5,7,0|void|setChart|QChart *
 
-$prototype=void resizeEvent(QResizeEvent *event) (protected)
+$prototype=void resizeEvent(QResizeEvent *event) [protected]
 
-$prototype=void mousePressEvent(QMouseEvent *event) (protected)
+$prototype=void mousePressEvent(QMouseEvent *event) [protected]
 
-$prototype=void mouseMoveEvent(QMouseEvent *event) (protected)
+$prototype=void mouseMoveEvent(QMouseEvent *event) [protected]
 
-$prototype=void mouseReleaseEvent(QMouseEvent *event) (protected)
+$prototype=void mouseReleaseEvent(QMouseEvent *event) [protected]
 
 #pragma ENDDUMP

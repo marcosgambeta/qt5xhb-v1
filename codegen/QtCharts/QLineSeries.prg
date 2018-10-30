@@ -27,7 +27,7 @@ using namespace QtCharts;
 $prototype=explicit QLineSeries(QObject *parent = Q_NULLPTR)
 $constructor=5,7,0|new|QObject *=Q_NULLPTR
 
-$prototype=QLineSeries(QLineSeriesPrivate &d, QObject *parent = Q_NULLPTR) (protected)
+$prototype=QLineSeries(QLineSeriesPrivate &d, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QLineSeries()
 $deleteMethod=5,7,0

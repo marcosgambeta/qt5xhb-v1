@@ -26,7 +26,7 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QLegend(QChart *chart) (private)
+$prototype=explicit QLegend(QChart *chart) [private]
 
 $prototype=~QLegend()
 $deleteMethod=5,7,0
@@ -158,9 +158,9 @@ $method=5,7,0|bool|isAttachedToChart|
 $prototype=QList <QLegendMarker*> markers(QAbstractSeries *series = Q_NULLPTR) const
 $method=5,7,0|QList<QLegendMarker *>|markers|QAbstractSeries *=Q_NULLPTR
 
-$prototype=void hideEvent(QHideEvent *event) (protected)
+$prototype=void hideEvent(QHideEvent *event) [protected]
 
-$prototype=void showEvent(QShowEvent *event) (protected)
+$prototype=void showEvent(QShowEvent *event) [protected]
 
 $beginSignals
 $signal=5,7,0|backgroundVisibleChanged(bool)

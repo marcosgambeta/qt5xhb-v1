@@ -32,7 +32,7 @@ using namespace QtCharts;
 $prototype=explicit QChart(QGraphicsItem *parent = Q_NULLPTR, Qt::WindowFlags wFlags = Qt::WindowFlags())
 $constructor=5,7,0|new|QGraphicsItem *=Q_NULLPTR,Qt::WindowFlags=Qt::WindowFlags()
 
-$prototype=explicit QChart(QChart::ChartType type, QGraphicsItem *parent, Qt::WindowFlags wFlags) (protected)
+$prototype=explicit QChart(QChart::ChartType type, QGraphicsItem *parent, Qt::WindowFlags wFlags) [protected]
 
 $prototype=~QChart()
 $deleteMethod=5,7,0

@@ -28,7 +28,7 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) (protected)
+$prototype=QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=~QAbstractSeries()
 $deleteMethod=5,7,0

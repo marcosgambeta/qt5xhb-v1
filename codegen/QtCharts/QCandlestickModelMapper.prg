@@ -65,33 +65,33 @@ $method=5,8,0|void|setSeries|QCandlestickSeries *
 $prototype=virtual Qt::Orientation orientation() const = 0
 $virtualMethod=5,8,0|Qt::Orientation|orientation|
 
-$prototype=void setTimestamp(int timestamp) (protected)
+$prototype=void setTimestamp(int timestamp) [protected]
 
-$prototype=int timestamp() const (protected)
+$prototype=int timestamp() const [protected]
 
-$prototype=void setOpen(int open) (protected)
+$prototype=void setOpen(int open) [protected]
 
-$prototype=int open() const (protected)
+$prototype=int open() const [protected]
 
-$prototype=void setHigh(int high) (protected)
+$prototype=void setHigh(int high) [protected]
 
-$prototype=int high() const (protected)
+$prototype=int high() const [protected]
 
-$prototype=void setLow(int low) (protected)
+$prototype=void setLow(int low) [protected]
 
-$prototype=int low() const (protected)
+$prototype=int low() const [protected]
 
-$prototype=void setClose(int close) (protected)
+$prototype=void setClose(int close) [protected]
 
-$prototype=int close() const (protected)
+$prototype=int close() const [protected]
 
-$prototype=void setFirstSetSection(int firstSetSection) (protected)
+$prototype=void setFirstSetSection(int firstSetSection) [protected]
 
-$prototype=int firstSetSection() const (protected)
+$prototype=int firstSetSection() const [protected]
 
-$prototype=void setLastSetSection(int lastSetSection) (protected)
+$prototype=void setLastSetSection(int lastSetSection) [protected]
 
-$prototype=int lastSetSection() const (protected)
+$prototype=int lastSetSection() const [protected]
 
 $beginSignals
 $signal=5,8,0|modelReplaced()

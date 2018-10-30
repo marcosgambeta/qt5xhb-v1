@@ -29,7 +29,7 @@ using namespace QtCharts;
 $prototype=explicit QCategoryAxis(QObject *parent = Q_NULLPTR)
 $constructor=5,7,0|new|QObject *=Q_NULLPTR
 
-$prototype=QCategoryAxis(QCategoryAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
+$prototype=QCategoryAxis(QCategoryAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QCategoryAxis()
 $deleteMethod=5,7,0

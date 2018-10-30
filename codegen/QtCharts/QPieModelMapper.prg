@@ -24,36 +24,36 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QPieModelMapper(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QPieModelMapper(QObject *parent = Q_NULLPTR) [protected]
 
 %% $deleteMethod=5,7,0
 
-$prototype=QAbstractItemModel *model() const (protected)
+$prototype=QAbstractItemModel *model() const [protected]
 
-$prototype=void setModel(QAbstractItemModel *model) (protected)
+$prototype=void setModel(QAbstractItemModel *model) [protected]
 
-$prototype=QPieSeries *series() const (protected)
+$prototype=QPieSeries *series() const [protected]
 
-$prototype=void setSeries(QPieSeries *series) (protected)
+$prototype=void setSeries(QPieSeries *series) [protected]
 
-$prototype=int first() const (protected)
+$prototype=int first() const [protected]
 
-$prototype=void setFirst(int first) (protected)
+$prototype=void setFirst(int first) [protected]
 
-$prototype=int count() const (protected)
+$prototype=int count() const [protected]
 
-$prototype=void setCount(int count) (protected)
+$prototype=void setCount(int count) [protected]
 
-$prototype=int valuesSection() const (protected)
+$prototype=int valuesSection() const [protected]
 
-$prototype=void setValuesSection(int valuesSection) (protected)
+$prototype=void setValuesSection(int valuesSection) [protected]
 
-$prototype=int labelsSection() const (protected)
+$prototype=int labelsSection() const [protected]
 
-$prototype=void setLabelsSection(int labelsSection) (protected)
+$prototype=void setLabelsSection(int labelsSection) [protected]
 
-$prototype=Qt::Orientation orientation() const (protected)
+$prototype=Qt::Orientation orientation() const [protected]
 
-$prototype=void setOrientation(Qt::Orientation orientation) (protected)
+$prototype=void setOrientation(Qt::Orientation orientation) [protected]
 
 #pragma ENDDUMP

@@ -24,36 +24,36 @@ $includes=5,7,0
 
 using namespace QtCharts;
 
-$prototype=explicit QBoxPlotModelMapper(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QBoxPlotModelMapper(QObject *parent = Q_NULLPTR) [protected]
 
 %% $deleteMethod
 
-$prototype=QAbstractItemModel *model() const (protected)
+$prototype=QAbstractItemModel *model() const [protected]
 
-$prototype=void setModel(QAbstractItemModel *model) (protected)
+$prototype=void setModel(QAbstractItemModel *model) [protected]
 
-$prototype=QBoxPlotSeries *series() const (protected)
+$prototype=QBoxPlotSeries *series() const [protected]
 
-$prototype=void setSeries(QBoxPlotSeries *series) (protected)
+$prototype=void setSeries(QBoxPlotSeries *series) [protected]
 
-$prototype=int first() const (protected)
+$prototype=int first() const [protected]
 
-$prototype=void setFirst(int first) (protected)
+$prototype=void setFirst(int first) [protected]
 
-$prototype=int count() const (protected)
+$prototype=int count() const [protected]
 
-$prototype=void setCount(int count) (protected)
+$prototype=void setCount(int count) [protected]
 
-$prototype=int firstBoxSetSection() const (protected)
+$prototype=int firstBoxSetSection() const [protected]
 
-$prototype=void setFirstBoxSetSection(int firstBoxSetSection) (protected)
+$prototype=void setFirstBoxSetSection(int firstBoxSetSection) [protected]
 
-$prototype=int lastBoxSetSection() const (protected)
+$prototype=int lastBoxSetSection() const [protected]
 
-$prototype=void setLastBoxSetSection(int lastBoxSetSection) (protected)
+$prototype=void setLastBoxSetSection(int lastBoxSetSection) [protected]
 
-$prototype=Qt::Orientation orientation() const (protected)
+$prototype=Qt::Orientation orientation() const [protected]
 
-$prototype=void setOrientation(Qt::Orientation orientation) (protected)
+$prototype=void setOrientation(Qt::Orientation orientation) [protected]
 
 #pragma ENDDUMP

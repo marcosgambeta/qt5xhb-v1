@@ -29,7 +29,7 @@ using namespace QtCharts;
 $prototype=explicit QLogValueAxis(QObject *parent = Q_NULLPTR)
 $constructor=5,7,0|new|QObject *=Q_NULLPTR
 
-$prototype=QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = Q_NULLPTR) (protected)
+$prototype=QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=~QLogValueAxis()
 $deleteMethod=5,7,0
