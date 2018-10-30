@@ -33,8 +33,8 @@ $deleteMethod=5,10,0
 $prototype=QString callback() const override
 $method=5,10,0|QString|callback|
 
-$prototype=void networkReplyFinished(QNetworkReply *reply) override (protected)
+$prototype=void networkReplyFinished(QNetworkReply *reply) override [protected]
 
-$prototype=QVariantMap parseResponse(const QByteArray &response) (private)
+$prototype=QVariantMap parseResponse(const QByteArray &response) [private]
 
 #pragma ENDDUMP

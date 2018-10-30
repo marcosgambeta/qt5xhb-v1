@@ -30,7 +30,7 @@ $includes=5,10,0
 $prototype=explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstract)
 %% $constructor=|new|QObject *=nullptr
 
-$prototype=QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullptr) (protected)
+$prototype=QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullptr) [protected]
 
 $prototype=virtual ~QAbstractOAuthReplyHandler()
 $deleteMethod=5,10,0

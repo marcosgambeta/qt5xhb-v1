@@ -123,15 +123,15 @@ $method=5,10,0|void|grant|
 $prototype=void continueGrantWithVerifier(const QString &verifier) (slot)
 $method=5,10,0|void|continueGrantWithVerifier|const QString &
 
-$prototype=QNetworkReply *requestTemporaryCredentials(QNetworkAccessManager::Operation operation, const QUrl &url, const QVariantMap &parameters = QVariantMap()) (protected)
+$prototype=QNetworkReply *requestTemporaryCredentials(QNetworkAccessManager::Operation operation, const QUrl &url, const QVariantMap &parameters = QVariantMap()) [protected]
 
-$prototype=QNetworkReply *requestTokenCredentials(QNetworkAccessManager::Operation operation, const QUrl &url, const QPair<QString, QString> &temporaryToken, const QVariantMap &parameters = QVariantMap()) (protected)
+$prototype=QNetworkReply *requestTokenCredentials(QNetworkAccessManager::Operation operation, const QUrl &url, const QPair<QString, QString> &temporaryToken, const QVariantMap &parameters = QVariantMap()) [protected]
 
-$prototype=void setup(QNetworkRequest *request, const QVariantMap &signingParameters, QNetworkAccessManager::Operation operation) (protected)
+$prototype=void setup(QNetworkRequest *request, const QVariantMap &signingParameters, QNetworkAccessManager::Operation operation) [protected]
 
-$prototype=static QByteArray nonce() (protected)
+$prototype=static QByteArray nonce() [protected]
 
-$prototype=static QByteArray generateAuthorizationHeader(const QVariantMap &oauthParams) (protected)
+$prototype=static QByteArray generateAuthorizationHeader(const QVariantMap &oauthParams) [protected]
 
 $beginSignals
 $signal=5,10,0|clientSharedSecretChanged(QString)

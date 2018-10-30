@@ -99,11 +99,11 @@ $method=5,10,0|void|grant|
 $prototype=void refreshAccessToken() (slot)
 $method=5,10,0|void|refreshAccessToken|
 
-$prototype=QUrl buildAuthenticateUrl(const QVariantMap &parameters = QVariantMap()) (protected)
+$prototype=QUrl buildAuthenticateUrl(const QVariantMap &parameters = QVariantMap()) [protected]
 
-$prototype=void requestAccessToken(const QString &code) (protected)
+$prototype=void requestAccessToken(const QString &code) [protected]
 
-$prototype=void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override (protected)
+$prototype=void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override [protected]
 
 $beginSignals
 $signal=5,10,0|accessTokenUrlChanged(QUrl)
