@@ -40,7 +40,7 @@ $includes
 $prototype=QAbstractSocket ( SocketType socketType, QObject * parent )
 $constructor=|new|QAbstractSocket::SocketType,QObject *
 
-$prototype=QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QObject *parent = Q_NULLPTR) (protected)
+$prototype=QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QAbstractSocket()
 $deleteMethod
@@ -200,25 +200,25 @@ $method=|QNetworkProxy|proxy|
 
 %% #endif
 
-$prototype=qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE (protected)
+$prototype=qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
 
-$prototype=qint64 readLineData(char *data, qint64 maxlen) Q_DECL_OVERRIDE (protected)
+$prototype=qint64 readLineData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
 
-$prototype=qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE (protected)
+$prototype=qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
 
-$prototype=void setSocketState(SocketState state) (protected)
+$prototype=void setSocketState(SocketState state) [protected]
 
-$prototype=void setSocketError(SocketError socketError) (protected)
+$prototype=void setSocketError(SocketError socketError) [protected]
 
-$prototype=void setLocalPort(quint16 port) (protected)
+$prototype=void setLocalPort(quint16 port) [protected]
 
-$prototype=void setLocalAddress(const QHostAddress &address) (protected)
+$prototype=void setLocalAddress(const QHostAddress &address) [protected]
 
-$prototype=void setPeerPort(quint16 port) (protected)
+$prototype=void setPeerPort(quint16 port) [protected]
 
-$prototype=void setPeerAddress(const QHostAddress &address) (protected)
+$prototype=void setPeerAddress(const QHostAddress &address) [protected]
 
-$prototype=void setPeerName(const QString &name) (protected)
+$prototype=void setPeerName(const QString &name) [protected]
 
 $beginSignals
 $signal=|connected()

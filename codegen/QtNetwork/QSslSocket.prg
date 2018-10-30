@@ -422,9 +422,9 @@ $method=|void|startClientEncryption|
 $prototype=void startServerEncryption() (slot)
 $method=|void|startServerEncryption|
 
-$prototype=qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE (protected)
+$prototype=qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
 
-$prototype=qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE (protected)
+$prototype=qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
 
 $beginSignals
 $signal=|encrypted()

@@ -36,7 +36,7 @@ $includes
 $prototype=explicit QTcpServer(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0
 
-$prototype=QTcpServer(QAbstractSocket::SocketType socketType, QTcpServerPrivate &dd, QObject *parent = Q_NULLPTR) (protected)
+$prototype=QTcpServer(QAbstractSocket::SocketType socketType, QTcpServerPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QTcpServer()
 $deleteMethod
@@ -99,9 +99,9 @@ $method=|QNetworkProxy|proxy|
 
 %% #endif
 
-$prototype=virtual void incomingConnection(qintptr handle) (protected)
+$prototype=virtual void incomingConnection(qintptr handle) [protected]
 
-$prototype=void addPendingConnection(QTcpSocket* socket) (protected)
+$prototype=void addPendingConnection(QTcpSocket* socket) [protected]
 
 $beginSignals
 $signal=|acceptError(QAbstractSocket::SocketError)

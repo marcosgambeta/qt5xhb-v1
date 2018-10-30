@@ -35,7 +35,7 @@ $internalConstructor=5,8,0|new2|const QByteArray &,const QHostAddress &=QHostAdd
 $prototype=QNetworkDatagram(const QNetworkDatagram &other)
 $internalConstructor=5,8,0|new3|const QNetworkDatagram &
 
-$prototype=explicit QNetworkDatagram(QNetworkDatagramPrivate &dd) (private)
+$prototype=explicit QNetworkDatagram(QNetworkDatagramPrivate &dd) [private]
 
 //[1]QNetworkDatagram()
 //[2]QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port = 0) (implicit)
@@ -115,11 +115,11 @@ $method=5,8,0|void|setData|const QByteArray &
 $prototype=QNetworkDatagram makeReply(const QByteArray &paylaod) const
 $method=5,8,0|QNetworkDatagram|makeReply|const QByteArray &
 
-$prototype=QNetworkDatagram makeReply_helper(const QByteArray &data) const (private)
+$prototype=QNetworkDatagram makeReply_helper(const QByteArray &data) const [private]
 
-$prototype=void makeReply_helper_inplace(const QByteArray &data) (private)
+$prototype=void makeReply_helper_inplace(const QByteArray &data) [private]
 
-$prototype=static void destroy(QNetworkDatagramPrivate *d) (private)
+$prototype=static void destroy(QNetworkDatagramPrivate *d) [private]
 
 $extraMethods
 

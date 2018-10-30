@@ -45,10 +45,10 @@ $virtualMethod=|bool|updateCookie|const QNetworkCookie &
 $prototype=virtual bool deleteCookie(const QNetworkCookie &cookie)
 $virtualMethod=|bool|deleteCookie|const QNetworkCookie &
 
-$prototype=QList<QNetworkCookie> allCookies() const (protected)
+$prototype=QList<QNetworkCookie> allCookies() const [protected]
 
-$prototype=void setAllCookies(const QList<QNetworkCookie> &cookieList) (protected)
+$prototype=void setAllCookies(const QList<QNetworkCookie> &cookieList) [protected]
 
-$prototype=virtual bool validateCookie(const QNetworkCookie &cookie, const QUrl &url) const (protected)
+$prototype=virtual bool validateCookie(const QNetworkCookie &cookie, const QUrl &url) const protected]
 
 #pragma ENDDUMP

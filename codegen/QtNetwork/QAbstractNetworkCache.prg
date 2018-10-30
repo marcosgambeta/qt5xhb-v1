@@ -24,9 +24,9 @@ $includes
 
 #include <QIODevice>
 
-$prototype=explicit QAbstractNetworkCache(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QAbstractNetworkCache(QObject *parent = Q_NULLPTR) [protected]
 
-$prototype=QAbstractNetworkCache(QAbstractNetworkCachePrivate &dd, QObject *parent) (protected)
+$prototype=QAbstractNetworkCache(QAbstractNetworkCachePrivate &dd, QObject *parent) [protected]
 
 $prototype=virtual ~QAbstractNetworkCache()
 $deleteMethod

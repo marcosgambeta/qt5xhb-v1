@@ -69,6 +69,6 @@ $method=|QNetworkCacheMetaData|fileMetaData|const QString &
 $prototype=void clear() Q_DECL_OVERRIDE (slot)
 $slotMethod=|void|clear|
 
-$prototype=virtual qint64 expire() (protected)
+$prototype=virtual qint64 expire() [protected]
 
 #pragma ENDDUMP

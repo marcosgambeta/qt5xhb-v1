@@ -98,7 +98,7 @@ $staticMethod=|QString|localHostName|
 $prototype=static QString localDomainName()
 $staticMethod=|QString|localDomainName|
 
-$prototype=static int lookupHostImpl(const QString &name, const QObject *receiver, QtPrivate::QSlotObjectBase *slotObj) (private)
+$prototype=static int lookupHostImpl(const QString &name, const QObject *receiver, QtPrivate::QSlotObjectBase *slotObj) [private]
 
 $extraMethods
 

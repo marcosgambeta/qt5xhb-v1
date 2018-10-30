@@ -125,9 +125,9 @@ $method=|bool|waitForDisconnected|int=30000
 $prototype=bool waitForReadyRead(int msecs = 30000) Q_DECL_OVERRIDE
 $method=|bool|waitForReadyRead|int=30000
 
-$prototype=virtual qint64 readData(char*, qint64) Q_DECL_OVERRIDE (protected)
+$prototype=virtual qint64 readData(char*, qint64) Q_DECL_OVERRIDE [protected]
 
-$prototype=virtual qint64 writeData(const char*, qint64) Q_DECL_OVERRIDE (protected)
+$prototype=virtual qint64 writeData(const char*, qint64) Q_DECL_OVERRIDE [protected]
 
 $beginSignals
 $signal=|connected()

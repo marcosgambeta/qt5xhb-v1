@@ -99,9 +99,9 @@ $method=|void|stop|
 $prototype=QNetworkSession::UsagePolicies usagePolicies() const
 $method=|QNetworkSession::UsagePolicies|usagePolicies|
 
-$prototype=virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE (protected)
+$prototype=virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE [protected]
 
-$prototype=virtual void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE (protected)
+$prototype=virtual void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE [protected]
 
 $beginSignals
 $signal=|closed()

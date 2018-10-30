@@ -282,9 +282,9 @@ $method=5,9,0|void|setRedirectPolicy|QNetworkRequest::RedirectPolicy
 $prototype=QNetworkRequest::RedirectPolicy redirectPolicy() const
 $method=5,9,0|QNetworkRequest::RedirectPolicy|redirectPolicy|
 
-$prototype=virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData = Q_NULLPTR) (protected)
+$prototype=virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData = Q_NULLPTR) [protected]
 
-$prototype=QStringList supportedSchemesImplementation() const (protected) (slot) (5,2,0)
+$prototype=QStringList supportedSchemesImplementation() const [protected] (slot) (5,2,0)
 
 $beginSignals
 %% #ifndef QT_NO_NETWORKPROXY

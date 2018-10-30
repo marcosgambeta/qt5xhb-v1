@@ -44,9 +44,9 @@ $includes
 
 #include <QSslConfiguration>
 
-$prototype=explicit QNetworkReply(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QNetworkReply(QObject *parent = Q_NULLPTR) [protected]
 
-$prototype=QNetworkReply(QNetworkReplyPrivate &dd, QObject *parent) (protected)
+$prototype=QNetworkReply(QNetworkReplyPrivate &dd, QObject *parent) [protected]
 
 $prototype=~QNetworkReply()
 $deleteMethod
@@ -144,29 +144,29 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 }
 $addMethod=ignoreSslErrors
 
-$prototype=virtual qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE (protected)
+$prototype=virtual qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
 
-$prototype=void setOperation(QNetworkAccessManager::Operation operation) (protected)
+$prototype=void setOperation(QNetworkAccessManager::Operation operation) [protected]
 
-$prototype=void setRequest(const QNetworkRequest &request) (protected)
+$prototype=void setRequest(const QNetworkRequest &request) [protected]
 
-$prototype=void setError(NetworkError errorCode, const QString &errorString) (protected)
+$prototype=void setError(NetworkError errorCode, const QString &errorString) [protected]
 
-$prototype=void setFinished(bool) (protected)
+$prototype=void setFinished(bool) [protected]
 
-$prototype=void setUrl(const QUrl &url) (protected)
+$prototype=void setUrl(const QUrl &url) [protected]
 
-$prototype=void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value) (protected)
+$prototype=void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value) [protected]
 
-$prototype=void setRawHeader(const QByteArray &headerName, const QByteArray &value) (protected)
+$prototype=void setRawHeader(const QByteArray &headerName, const QByteArray &value) [protected]
 
-$prototype=void setAttribute(QNetworkRequest::Attribute code, const QVariant &value) (protected)
+$prototype=void setAttribute(QNetworkRequest::Attribute code, const QVariant &value) [protected]
 
-$prototype=virtual void sslConfigurationImplementation(QSslConfiguration &) const (protected)
+$prototype=virtual void sslConfigurationImplementation(QSslConfiguration &) const [protected]
 
-$prototype=virtual void setSslConfigurationImplementation(const QSslConfiguration &) (protected)
+$prototype=virtual void setSslConfigurationImplementation(const QSslConfiguration &) [protected]
 
-$prototype=virtual void ignoreSslErrorsImplementation(const QList<QSslError> &) (protected)
+$prototype=virtual void ignoreSslErrorsImplementation(const QList<QSslError> &) [protected]
 
 $beginSignals
 $signal=|downloadProgress(qint64,qint64)

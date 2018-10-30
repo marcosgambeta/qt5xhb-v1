@@ -111,7 +111,7 @@ $method=|bool|waitForNewConnection|int=0,bool *=0
 $prototype=qintptr socketDescriptor() const
 $method=5,10,0|qintptr|socketDescriptor|
 
-$prototype=virtual void incomingConnection(quintptr socketDescriptor) (protected)
+$prototype=virtual void incomingConnection(quintptr socketDescriptor) [protected]
 
 $beginSignals
 $signal=|newConnection()

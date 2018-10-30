@@ -47,6 +47,6 @@ $method=5,8,0|int|maximumChannelCount||#if !defined(QT_NO_SCTP)
 $prototype=QSctpSocket *nextPendingDatagramConnection()
 $method=5,8,0|QSctpSocket *|nextPendingDatagramConnection||#if !defined(QT_NO_SCTP)
 
-$prototype=void incomingConnection(qintptr handle) Q_DECL_OVERRIDE (protected)
+$prototype=void incomingConnection(qintptr handle) Q_DECL_OVERRIDE [protected]
 
 #pragma ENDDUMP
