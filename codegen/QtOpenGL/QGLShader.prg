@@ -97,7 +97,7 @@ $method=|QGLShader::ShaderType|shaderType|
 $prototype=QByteArray sourceCode () const
 $method=|QByteArray|sourceCode|
 
-$prototype=static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 ) (private)
+$prototype=static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 ) [private]
 %% $staticMethod=|bool|hasOpenGLShaders|QGLShader::ShaderType,const QGLContext *=0
 
 #pragma ENDDUMP
