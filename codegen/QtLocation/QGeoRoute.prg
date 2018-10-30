@@ -100,6 +100,12 @@ $method=5,4,0|void|setPath|const QList<QGeoCoordinate> &
 $prototype=QList<QGeoCoordinate> path() const
 $method=5,4,0|QList<QGeoCoordinate>|path|
 
+$prototype=QList<QGeoRouteLeg> QGeoRoute::routeLegs() const
+$method=5,12,0|QList<QGeoRouteLeg>|routeLegs|
+
+$prototype=void QGeoRoute::setRouteLegs(const QList<QGeoRouteLeg> &legs)
+$method=5,12,0|void|setRouteLegs|const QList<QGeoRouteLeg> &
+
 $extraMethods
 
 #pragma ENDDUMP

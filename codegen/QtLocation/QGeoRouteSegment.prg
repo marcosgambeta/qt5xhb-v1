@@ -85,6 +85,9 @@ $method=5,4,0|void|setManeuver|const QGeoManeuver &
 $prototype=QGeoManeuver maneuver() const
 $method=5,4,0|QGeoManeuver|maneuver|
 
+$prototype=bool QGeoRouteSegment::isLegLastSegment() const
+$method=5,12,0|bool|isLegLastSegment|
+
 $extraMethods
 
 #pragma ENDDUMP
