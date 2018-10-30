@@ -102,15 +102,19 @@ HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QAxAggregated * ptr = obj->createAggregate ();
       _qt5xhb_createReturnClass ( ptr, "QAXAGGREGATED", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -123,14 +127,18 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQIODEVICE(1) && ISCHAR(2) )
     {
+#endif
       RBOOL( obj->readData ( PQIODEVICE(1), PQSTRING(2) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -143,14 +151,18 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(3,4) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
     {
+#endif
       obj->reportError ( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -165,14 +177,18 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
+#endif
       RBOOL( obj->writeData ( PQIODEVICE(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
