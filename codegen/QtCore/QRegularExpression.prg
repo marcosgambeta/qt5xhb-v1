@@ -93,6 +93,12 @@ $method=|void|swap|QRegularExpression &
 $prototype=static QString escape(const QString & str)
 $staticMethod=|QString|escape|const QString &
 
+$prototype=static QString QRegularExpression::anchoredPattern(const QString &expression)
+$staticMethod=5,12,0|QString|anchoredPattern|const QString &
+
+$prototype=static QString QRegularExpression::wildcardToRegularExpression(const QString &pattern)
+$staticMethod=5,12,0|QString|wildcardToRegularExpression|const QString &
+
 $extraMethods
 
 #pragma ENDDUMP

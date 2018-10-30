@@ -45,6 +45,13 @@ void QByteArray_new4 ()
 $prototype=QByteArray ( const QByteArray & other )
 $internalConstructor=|new5|const QByteArray &
 
+%% TODO: reimplementar ?
+%% QByteArray()
+%% QByteArray(const char *data, int size = -1)
+%% QByteArray(int size, char ch)
+%% QByteArray(const QByteArray &other)
+%% QByteArray(QByteArray &&other)
+
 //[1]QByteArray ()
 //[2]QByteArray ( const char * str )
 //[3]QByteArray ( const char * data, int size )
@@ -96,6 +103,9 @@ $method=|QByteArray &|append,append4|const char *,int
 $prototype=QByteArray & append ( char ch )
 $method=|QByteArray &|append,append5|char
 
+$prototype=QByteArray &QByteArray::append(int count, char ch)
+$method=5,7,0|QByteArray &|append,append6|int,char
+
 %% TODO: resolver conflito entre [2] e [3]
 
 //[1]QByteArray & append ( const QByteArray & ba )
@@ -103,6 +113,7 @@ $method=|QByteArray &|append,append5|char
 //[3]QByteArray & append ( const char * str )
 //[4]QByteArray & append ( const char * str, int len )
 //[5]QByteArray & append ( char ch )
+//[6]QByteArray & append ( int count, char ch )
 
 HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 {
@@ -121,6 +132,10 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND )
   else if( ISNUMPAR(1) && ISNUM(1) )
   {
     HB_FUNC_EXEC( QBYTEARRAY_APPEND5 );
+  }
+  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  {
+    HB_FUNC_EXEC( QBYTEARRAY_APPEND6 );
   }
   else
   {
@@ -829,6 +844,9 @@ $method=|void|truncate|int
 $prototype=static QByteArray fromBase64 ( const QByteArray & base64 )
 $staticMethod=|QByteArray|fromBase64|const QByteArray &
 
+$prototype=static QByteArray fromBase64(const QByteArray &base64, QByteArray::Base64Options options)
+%% TODO: implementar
+
 $prototype=static QByteArray fromHex ( const QByteArray & hexEncoded )
 $staticMethod=|QByteArray|fromHex|const QByteArray &
 
@@ -914,6 +932,29 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER )
   }
 }
 $addMethod=number
+
+$prototype=char QByteArray::back() const
+%% TODO: implementar
+%% $method=5,10,0|char|back|
+
+$prototype=QByteRef QByteArray::back()
+%% TODO: implementar
+%% $method=5,10,0|QByteRef|back|
+
+$prototype=QByteArray QByteArray::chopped(int len) const
+$method=5,10,0|QByteArray|chopped|int
+
+$prototype=int QByteArray::compare(const char *c, Qt::CaseSensitivity cs = ...) const
+%% TODO: $method=5,12,0|int|compare|const char *,Qt::CaseSensitivity=
+
+$prototype=int QByteArray::compare(const QByteArray &a, Qt::CaseSensitivity cs = ...) const
+%% TODO: $method=5,12,0|int|compare|const QByteArray &,Qt::CaseSensitivity=
+
+$prototype=bool QByteArray::isLower() const
+$method=5,12,0|bool|isLower|
+
+$prototype=bool QByteArray::isUpper() const
+$method=5,12,0|bool|isUpper|
 
 $extraMethods
 

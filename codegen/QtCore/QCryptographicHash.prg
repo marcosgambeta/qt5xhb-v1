@@ -70,6 +70,9 @@ $method=|QByteArray|result|
 $prototype=static QByteArray hash(const QByteArray &data, Algorithm method)
 $staticMethod=|QByteArray|hash|const QByteArray &,QCryptographicHash::Algorithm
 
+$prototype=static int QCryptographicHash::hashLength(QCryptographicHash::Algorithm method)
+$staticMethod=5,12,0|int|hashLength|QCryptographicHash::Algorithm
+
 $extraMethods
 
 #pragma ENDDUMP
