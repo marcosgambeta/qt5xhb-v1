@@ -24,9 +24,9 @@ $destructor
 
 $includes=5,9,0
 
-$prototype=QGamepadManager() (private)
+$prototype=QGamepadManager() [private]
 
-$prototype=~QGamepadManager() (private)
+$prototype=~QGamepadManager() [private]
 %% $deleteMethod
 
 %%
