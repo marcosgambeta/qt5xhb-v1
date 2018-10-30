@@ -26,7 +26,7 @@ $includes
 
 using namespace QtDataVisualization;
 
-$prototype=explicit QAbstract3DInputHandler(QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QAbstract3DInputHandler(QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QAbstract3DInputHandler()
 $deleteMethod
@@ -79,13 +79,13 @@ $prototype=virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePo
 $prototype=virtual void wheelEvent(QWheelEvent *event)
 %% #endif
 
-$prototype=void setPrevDistance(int distance) (protected)
+$prototype=void setPrevDistance(int distance) [protected]
 
-$prototype=int prevDistance() const (protected)
+$prototype=int prevDistance() const [protected]
 
-$prototype=void setPreviousInputPos(const QPoint &position) (protected)
+$prototype=void setPreviousInputPos(const QPoint &position) [protected]
 
-$prototype=QPoint previousInputPos() const (protected)
+$prototype=QPoint previousInputPos() const [protected]
 
 $beginSignals
 $signal=|inputViewChanged(QAbstract3DInputHandler::InputView)

@@ -37,7 +37,7 @@ using namespace QtDataVisualization;
 $prototype=explicit QScatterDataProxy(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=Q_NULLPTR
 
-$prototype=explicit QScatterDataProxy(QScatterDataProxyPrivate *d, QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QScatterDataProxy(QScatterDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
 
 $prototype=virtual ~QScatterDataProxy()
 $deleteMethod

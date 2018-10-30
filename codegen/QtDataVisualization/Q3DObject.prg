@@ -58,9 +58,9 @@ $method=|void|setPosition|const QVector3D &
 $prototype=virtual void copyValuesFrom(const Q3DObject &source)
 $virtualMethod=|void|copyValuesFrom|const Q3DObject &
 
-$prototype=void setDirty(bool dirty) (protected)
+$prototype=void setDirty(bool dirty) [protected]
 
-$prototype=bool isDirty() const (protected)
+$prototype=bool isDirty() const [protected]
 
 $beginSignals
 $signal=|positionChanged(QVector3D)

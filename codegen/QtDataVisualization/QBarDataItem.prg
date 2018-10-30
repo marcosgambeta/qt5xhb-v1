@@ -80,7 +80,7 @@ $method=|void|setRotation|float
 $prototype=float rotation() const
 $method=|float|rotation|
 
-$prototype=void createExtraData() (protected)
+$prototype=void createExtraData() [protected]
 
 $extraMethods
 

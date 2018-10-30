@@ -32,7 +32,7 @@ $internalConstructor=|new1|QObject *=Q_NULLPTR
 $prototype=explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = Q_NULLPTR)
 $internalConstructor=|new2|const QString &,const QVector3D &,const QVector3D &,const QQuaternion &,const QImage &,QObject *=Q_NULLPTR
 
-$prototype=QCustom3DItem(QCustom3DItemPrivate *d, QObject *parent = Q_NULLPTR) (protected)
+$prototype=QCustom3DItem(QCustom3DItemPrivate *d, QObject *parent = Q_NULLPTR) [protected]
 
 //[1]explicit QCustom3DItem(QObject *parent = Q_NULLPTR)
 //[2]explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = Q_NULLPTR)

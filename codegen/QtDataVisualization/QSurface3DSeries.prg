@@ -32,7 +32,7 @@ $internalConstructor=|new1|QObject *=Q_NULLPTR
 $prototype=explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
 $internalConstructor=|new2|QSurfaceDataProxy *,QObject *=Q_NULLPTR
 
-$prototype=explicit QSurface3DSeries(QSurface3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) (protected)
+$prototype=explicit QSurface3DSeries(QSurface3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) [protected]
 
 //[1]explicit QSurface3DSeries(QObject *parent = Q_NULLPTR)
 //[2]explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = Q_NULLPTR)

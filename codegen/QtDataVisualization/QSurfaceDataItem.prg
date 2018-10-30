@@ -84,7 +84,7 @@ $method=|float|y|
 $prototype=float z() const
 $method=|float|z|
 
-$prototype=void createExtraData() (protected)
+$prototype=void createExtraData() [protected]
 
 $extraMethods
 
