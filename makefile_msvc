@@ -52,6 +52,8 @@ CFLAGS += -DQT_THREAD_SUPPORT
 ifeq ($(HBCOMP),xharbour)
    CFLAGS += -DNOMINMAX
 endif
+# ative a linha abaixo para compilar sem checagem de parametros
+# CFLAGS += -DQT5XHB_DONT_CHECK_PARAMETERS
 include mak/modules3.mak
 
 # CINCLUDES

@@ -56,6 +56,8 @@ CFLAGS =
 CFLAGS += -c -Wno-psabi -march=armv5te -mtune=xscale -msoft-float -ffunction-sections -funwind-tables -fstack-protector -fno-short-enums -DANDROID -Wa,--noexecstack -std=gnu++0x -O2 -Os -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -Wall -Wno-psabi -W -D_REENTRANT -fPIE
 CFLAGS += -DQT_OS_ANDROID_GCC_48_WORKAROUND
 CFLAGS += -DQT_NO_DEBUG
+# ative a linha abaixo para compilar sem checagem de parametros
+# CFLAGS += -DQT5XHB_DONT_CHECK_PARAMETERS
 include mak/modules3.mak
 
 CINCLUDES =

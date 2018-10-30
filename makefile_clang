@@ -67,6 +67,8 @@ CFLAGS += -c -O2 -frtti -fexceptions -mthreads -Wall -DUNICODE
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
 CFLAGS += -DQT_THREAD_SUPPORT
+# ative a linha abaixo para compilar sem checagem de parametros
+# CFLAGS += -DQT5XHB_DONT_CHECK_PARAMETERS
 include mak/modules3.mak
 
 # CINCLUDES
