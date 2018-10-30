@@ -126,7 +126,7 @@ $method=|QVector<QJoint *>|childJoints|
 $prototype=void setToIdentity() (slot)
 $slotMethod=|void|setToIdentity|
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override [private]
 
 $beginSignals
 $signal=|scaleChanged(QVector3D)

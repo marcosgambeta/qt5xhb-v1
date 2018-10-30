@@ -27,7 +27,7 @@ $includes
 $prototype=QAspectJob()
 $constructor=|new|
 
-$prototype=explicit QAspectJob(QAspectJobPrivate &dd) (protected)
+$prototype=explicit QAspectJob(QAspectJobPrivate &dd) [protected]
 
 $prototype=virtual ~QAspectJob()
 $deleteMethod

@@ -27,7 +27,7 @@ $includes
 $prototype=explicit QDynamicPropertyUpdatedChange(QNodeId subjectId)
 $constructor=|new|QNodeId
 
-$prototype=QDynamicPropertyUpdatedChange(QDynamicPropertyUpdatedChangePrivate &dd, QNodeId subjectId) (protected)
+$prototype=QDynamicPropertyUpdatedChange(QDynamicPropertyUpdatedChangePrivate &dd, QNodeId subjectId) [protected]
 
 $prototype=~QDynamicPropertyUpdatedChange()
 $deleteMethod

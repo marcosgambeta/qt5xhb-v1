@@ -25,7 +25,7 @@ $includes
 $prototype=explicit QAbstractAspect(QObject *parent = nullptr)
 $constructor=|new|QObject *=nullptr
 
-$prototype=explicit QAbstractAspect(QAbstractAspectPrivate &dd, QObject *parent = nullptr) (protected)
+$prototype=explicit QAbstractAspect(QAbstractAspectPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QAbstractAspect()
 $deleteMethod
@@ -33,26 +33,26 @@ $deleteMethod
 $prototype=void scheduleSingleShotJob(const Qt3DCore::QAspectJobPtr &job)
 $method=|void|scheduleSingleShotJob|const Qt3DCore::QAspectJobPtr &
 
-$prototype=QNodeId rootEntityId() const Q_DECL_NOEXCEPT (protected)
+$prototype=QNodeId rootEntityId() const Q_DECL_NOEXCEPT [protected]
 
-$prototype=void registerBackendType(const QBackendNodeMapperPtr &functor) (protected)
+$prototype=void registerBackendType(const QBackendNodeMapperPtr &functor) [protected]
 
-$prototype=void registerBackendType(const QMetaObject &, const QBackendNodeMapperPtr &functor) (protected)
+$prototype=void registerBackendType(const QMetaObject &, const QBackendNodeMapperPtr &functor) [protected]
 
-$prototype=void unregisterBackendType() (protected)
+$prototype=void unregisterBackendType() [protected]
 
-$prototype=void unregisterBackendType(const QMetaObject &) (protected)
+$prototype=void unregisterBackendType(const QMetaObject &) [protected]
 
-$prototype=virtual QVariant executeCommand(const QStringList &args) (private)
+$prototype=virtual QVariant executeCommand(const QStringList &args) [private]
 
-$prototype=virtual QVector<QAspectJobPtr> jobsToExecute(qint64 time) (private)
+$prototype=virtual QVector<QAspectJobPtr> jobsToExecute(qint64 time) [private]
 
-$prototype=virtual void onRegistered() (private)
+$prototype=virtual void onRegistered() [private]
 
-$prototype=virtual void onUnregistered() (private)
+$prototype=virtual void onUnregistered() [private]
 
-$prototype=virtual void onEngineStartup() (private)
+$prototype=virtual void onEngineStartup() [private]
 
-$prototype=virtual void onEngineShutdown() (private)
+$prototype=virtual void onEngineShutdown() [private]
 
 #pragma ENDDUMP

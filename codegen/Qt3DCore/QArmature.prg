@@ -27,7 +27,7 @@ $includes
 $prototype=explicit QArmature(Qt3DCore::QNode *parent = nullptr)
 $constuctor=|new|Qt3DCore::QNode *=nullptr
 
-$prototype=QArmature(QArmaturePrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=QArmature(QArmaturePrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
 $prototype=~QArmature()
 $deleteMethod
@@ -46,7 +46,7 @@ $slotMethod=|void|setSkeleton|Qt3DCore::QAbstractSkeleton *
 %%
 %%
 
-$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override (private)
+$prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const override [private]
 
 $beginSignals
 $signal=|skeletonChanged(Qt3DCore::QAbstractSkeleton*)

@@ -38,9 +38,9 @@ $method=|int|jointCount|
 %%
 %%
 
-$prototype=QAbstractSkeleton(QAbstractSkeletonPrivate &dd, Qt3DCore::QNode *parent = nullptr) (protected)
+$prototype=QAbstractSkeleton(QAbstractSkeletonPrivate &dd, Qt3DCore::QNode *parent = nullptr) [protected]
 
-$prototype=void sceneChangeEvent(const QSceneChangePtr &change) override (protected)
+$prototype=void sceneChangeEvent(const QSceneChangePtr &change) override [protected]
 
 $beginSignals
 $signal=|jointCountChanged(int)

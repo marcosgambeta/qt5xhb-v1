@@ -34,7 +34,7 @@ $includes
 $prototype=explicit QNodeCommand(QNodeId id)
 $constructor=|new|QNodeId
 
-$prototype=explicit QNodeCommand(QNodeCommandPrivate &dd, QNodeId id) (protected)
+$prototype=explicit QNodeCommand(QNodeCommandPrivate &dd, QNodeId id) [protected]
 
 $prototype=~QNodeCommand()
 $deleteMethod

@@ -27,7 +27,7 @@ $includes
 $prototype=explicit QTransform(QNode *parent = nullptr)
 $constructor=|new|QNode *=nullptr
 
-$prototype=explicit QTransform(QTransformPrivate &dd, QNode *parent = nullptr) (protected)
+$prototype=explicit QTransform(QTransformPrivate &dd, QNode *parent = nullptr) [protected]
 
 $prototype=~QTransform()
 $deleteMethod
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTRANSFORM_FROMEULERANGLES )
 $prototype=Q_INVOKABLE static QMatrix4x4 rotateAround(const QVector3D &point, float angle, const QVector3D &axis)
 $staticMethod=|QMatrix4x4|rotateAround|const QVector3D &,float,const QVector3D &
 
-$prototype=QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
 $signal=|scaleChanged(float)

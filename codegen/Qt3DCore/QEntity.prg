@@ -27,7 +27,7 @@ $includes
 $prototype=explicit QEntity(QNode *parent = nullptr)
 $constructor=|new|QNode *=nullptr
 
-$prototype=explicit QEntity(QEntityPrivate &dd, QNode *parent = nullptr) (protected)
+$prototype=explicit QEntity(QEntityPrivate &dd, QNode *parent = nullptr) [protected]
 
 $prototype=virtual ~QEntity()
 $deleteMethod
@@ -44,6 +44,6 @@ $method=|void|removeComponent|QComponent *
 $prototype=QEntity *parentEntity() const
 $method=|QEntity *|parentEntity|
 
-$prototype=QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE (private)
+$prototype=QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 #pragma ENDDUMP

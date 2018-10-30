@@ -27,7 +27,7 @@ $includes
 $prototype=explicit QNode(QNode *parent = nullptr)
 $constructor=|new|QNode *=nullptr
 
-$prototype=explicit QNode(QNodePrivate &dd, QNode *parent = nullptr) (protected)
+$prototype=explicit QNode(QNodePrivate &dd, QNode *parent = nullptr) [protected]
 
 $prototype=virtual ~QNode()
 $deleteMethod
@@ -96,15 +96,15 @@ $method=|QNodeCommand::CommandId|sendCommand|const QString &,const QVariant &=QV
 $prototype=void sendReply(const QNodeCommandPtr &command)
 $method=|void|sendReply|const QNodeCommandPtr &
 
-$prototype=void notifyObservers(const QSceneChangePtr &change) (protected)
+$prototype=void notifyObservers(const QSceneChangePtr &change) [protected]
 
-$prototype=virtual void sceneChangeEvent(const QSceneChangePtr &change) (protected)
+$prototype=virtual void sceneChangeEvent(const QSceneChangePtr &change) [protected]
 
-$prototype=virtual QNodeCreatedChangeBasePtr createNodeCreationChange() const (private)
+$prototype=virtual QNodeCreatedChangeBasePtr createNodeCreationChange() const [private]
 
-$prototype=void setParent(QObject *) Q_DECL_EQ_DELETE (private)
+$prototype=void setParent(QObject *) Q_DECL_EQ_DELETE [private]
 
-$prototype=QNodeId qIdForNode(QNode *node) (private)
+$prototype=QNodeId qIdForNode(QNode *node) [private]
 
 $beginSignals
 $signal=|parentChanged(QObject*)

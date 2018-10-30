@@ -27,7 +27,7 @@ $includes
 $prototype=explicit QComponent(QNode *parent = nullptr)
 $constructor=|new|QNode *=nullptr
 
-$prototype=explicit QComponent(QComponentPrivate &dd, QNode *parent = nullptr) (protected)
+$prototype=explicit QComponent(QComponentPrivate &dd, QNode *parent = nullptr) [protected]
 
 $prototype=~QComponent()
 $deleteMethod
