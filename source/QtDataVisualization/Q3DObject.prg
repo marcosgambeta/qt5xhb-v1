@@ -103,15 +103,19 @@ HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       Q3DScene * ptr = obj->parentScene ();
       _qt5xhb_createReturnQObjectClass ( ptr, "Q3DSCENE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -124,15 +128,19 @@ HB_FUNC_STATIC( Q3DOBJECT_POSITION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QVector3D * ptr = new QVector3D( obj->position () );
       _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -145,14 +153,18 @@ HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
+#endif
       obj->setPosition ( *PQVECTOR3D(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -167,25 +179,29 @@ HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DOBJECT(1) )
     {
+#endif
       obj->copyValuesFrom ( *PQ3DOBJECT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void setDirty(bool dirty) (protected)
+void setDirty(bool dirty) [protected]
 */
 
 /*
-bool isDirty() const (protected)
+bool isDirty() const [protected]
 */
 
 void Q3DObjectSlots_connect_signal ( const QString & signal, const QString & slot );

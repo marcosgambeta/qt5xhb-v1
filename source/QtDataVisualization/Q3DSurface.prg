@@ -116,15 +116,19 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISX )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QValue3DAxis * ptr = obj->axisX ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QVALUE3DAXIS" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -137,14 +141,18 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISX )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
+#endif
       obj->setAxisX ( PQVALUE3DAXIS(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -159,15 +167,19 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISY )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QValue3DAxis * ptr = obj->axisY ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QVALUE3DAXIS" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -180,14 +192,18 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISY )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
+#endif
       obj->setAxisY ( PQVALUE3DAXIS(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -202,15 +218,19 @@ HB_FUNC_STATIC( Q3DSURFACE_AXISZ )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QValue3DAxis * ptr = obj->axisZ ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QVALUE3DAXIS" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -223,14 +243,18 @@ HB_FUNC_STATIC( Q3DSURFACE_SETAXISZ )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
+#endif
       obj->setAxisZ ( PQVALUE3DAXIS(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -245,15 +269,19 @@ HB_FUNC_STATIC( Q3DSURFACE_SELECTEDSERIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QSurface3DSeries * ptr = obj->selectedSeries ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QSURFACE3DSERIES" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -266,14 +294,18 @@ HB_FUNC_STATIC( Q3DSURFACE_FLIPHORIZONTALGRID )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->flipHorizontalGrid () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -286,14 +318,18 @@ HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
     {
+#endif
       obj->setFlipHorizontalGrid ( PBOOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -308,14 +344,18 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDSERIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACE3DSERIES(1) )
     {
+#endif
       obj->addSeries ( PQSURFACE3DSERIES(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -330,14 +370,18 @@ HB_FUNC_STATIC( Q3DSURFACE_REMOVESERIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQSURFACE3DSERIES(1) )
     {
+#endif
       obj->removeSeries ( PQSURFACE3DSERIES(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -352,8 +396,10 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QSurface3DSeries *> list = obj->seriesList ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSURFACE3DSERIES" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -380,11 +426,13 @@ HB_FUNC_STATIC( Q3DSURFACE_SERIESLIST )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -397,14 +445,18 @@ HB_FUNC_STATIC( Q3DSURFACE_ADDAXIS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
+#endif
       obj->addAxis ( PQVALUE3DAXIS(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -419,14 +471,18 @@ HB_FUNC_STATIC( Q3DSURFACE_RELEASEAXIS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVALUE3DAXIS(1) )
     {
+#endif
       obj->releaseAxis ( PQVALUE3DAXIS(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -441,8 +497,10 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QValue3DAxis *> list = obj->axes ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QVALUE3DAXIS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -469,11 +527,13 @@ HB_FUNC_STATIC( Q3DSURFACE_AXES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

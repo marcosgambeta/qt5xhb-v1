@@ -60,7 +60,7 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DInputHandler(QObject *parent = Q_NULLPTR) (protected)
+explicit QAbstract3DInputHandler(QObject *parent = Q_NULLPTR) [protected]
 */
 
 /*
@@ -92,14 +92,18 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->inputView () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -112,14 +116,18 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setInputView ( (QAbstract3DInputHandler::InputView) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -134,15 +142,19 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QPoint * ptr = new QPoint( obj->inputPosition () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -155,14 +167,18 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
+#endif
       obj->setInputPosition ( *PQPOINT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -177,15 +193,19 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       Q3DScene * ptr = obj->scene ();
       _qt5xhb_createReturnQObjectClass ( ptr, "Q3DSCENE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -198,14 +218,18 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQ3DSCENE(1) )
     {
+#endif
       obj->setScene ( PQ3DSCENE(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -236,19 +260,19 @@ virtual void wheelEvent(QWheelEvent *event)
 */
 
 /*
-void setPrevDistance(int distance) (protected)
+void setPrevDistance(int distance) [protected]
 */
 
 /*
-int prevDistance() const (protected)
+int prevDistance() const [protected]
 */
 
 /*
-void setPreviousInputPos(const QPoint &position) (protected)
+void setPreviousInputPos(const QPoint &position) [protected]
 */
 
 /*
-QPoint previousInputPos() const (protected)
+QPoint previousInputPos() const [protected]
 */
 
 void QAbstract3DInputHandlerSlots_connect_signal ( const QString & signal, const QString & slot );
