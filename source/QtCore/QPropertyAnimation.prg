@@ -115,15 +115,19 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QByteArray * ptr = new QByteArray( obj->propertyName () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -136,14 +140,18 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
+#endif
       obj->setPropertyName ( *PQBYTEARRAY(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -158,14 +166,18 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
+#endif
       obj->setTargetObject ( PQOBJECT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -180,15 +192,19 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QObject * ptr = obj->targetObject ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

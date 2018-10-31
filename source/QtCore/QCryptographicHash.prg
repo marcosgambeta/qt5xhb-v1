@@ -27,6 +27,7 @@ CLASS QCryptographicHash
    METHOD addData
    METHOD result
    METHOD hash
+   METHOD hashLength
 
    METHOD newFrom
    METHOD newFromObject
@@ -102,14 +103,18 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->reset ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -191,15 +196,19 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QByteArray * ptr = new QByteArray( obj->result () );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -217,6 +226,23 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+}
+
+/*
+static int QCryptographicHash::hashLength(QCryptographicHash::Algorithm method)
+*/
+HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASHLENGTH )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+    if( ISNUMPAR(1) && ISNUM(1) )
+  {
+      RINT( QCryptographicHash::hashLength ( (QCryptographicHash::Algorithm) hb_parni(1) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
 }
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEWFROM )

@@ -106,15 +106,19 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORNAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       QMimeType * ptr = new QMimeType( obj->mimeTypeForName ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -174,8 +178,10 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       QList<QMimeType> list = obj->mimeTypesForFileName ( PQSTRING(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMIMETYPE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -206,11 +212,13 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -270,15 +278,19 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORURL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
     {
+#endif
       QMimeType * ptr = new QMimeType( obj->mimeTypeForUrl ( *PQURL(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QMIMETYPE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -338,14 +350,18 @@ HB_FUNC_STATIC( QMIMEDATABASE_SUFFIXFORFILENAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RQSTRING( obj->suffixForFileName ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -358,8 +374,10 @@ HB_FUNC_STATIC( QMIMEDATABASE_ALLMIMETYPES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QMimeType> list = obj->allMimeTypes ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMIMETYPE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -390,11 +408,13 @@ HB_FUNC_STATIC( QMIMEDATABASE_ALLMIMETYPES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

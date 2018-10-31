@@ -90,14 +90,18 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
     {
+#endif
       obj->addAnimation ( PQABSTRACTANIMATION(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -112,8 +116,10 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QAbstractAnimation *> list = obj->animations ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -140,11 +146,13 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -157,15 +165,19 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QStateMachine * ptr = obj->machine ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QSTATEMACHINE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -178,14 +190,18 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
     {
+#endif
       obj->removeAnimation ( PQABSTRACTANIMATION(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -200,14 +216,18 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTSTATE(1) )
     {
+#endif
       obj->setTargetState ( PQABSTRACTSTATE(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -222,8 +242,10 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
+#endif
       QList<QAbstractState *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -233,11 +255,13 @@ for (i1=0;i1<nLen1;i1++)
   par1 << (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
       obj->setTargetStates ( par1 );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,15 +276,19 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QState * ptr = obj->sourceState ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QSTATE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -273,15 +301,19 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QAbstractState * ptr = obj->targetState ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTSTATE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -294,8 +326,10 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QAbstractState *> list = obj->targetStates ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTSTATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -322,11 +356,13 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

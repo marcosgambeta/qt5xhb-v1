@@ -124,15 +124,19 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QStringRef * ptr = new QStringRef( obj->name () );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -145,15 +149,19 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QStringRef * ptr = new QStringRef( obj->notationName () );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -166,15 +174,19 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QStringRef * ptr = new QStringRef( obj->publicId () );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -187,15 +199,19 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QStringRef * ptr = new QStringRef( obj->systemId () );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -208,15 +224,19 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QStringRef * ptr = new QStringRef( obj->value () );
       _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

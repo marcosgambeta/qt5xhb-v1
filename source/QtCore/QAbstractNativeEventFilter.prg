@@ -72,16 +72,20 @@ HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_NATIVEEVENTFILTER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISPOINTER(2) && ISNUM(3) )
     {
+#endif
       long par3;
       RBOOL( obj->nativeEventFilter ( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
       hb_stornl( par3, 3 );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
