@@ -74,14 +74,18 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISQPICTURE(3) )
     {
+#endif
       RBOOL( obj->loadPicture ( PQSTRING(1), PQSTRING(2), PQPICTURE(3) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -94,14 +98,18 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISQPICTURE(3) )
     {
+#endif
       RBOOL( obj->savePicture ( PQSTRING(1), PQSTRING(2), *PQPICTURE(3) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -114,14 +122,18 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->installIOHandler ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

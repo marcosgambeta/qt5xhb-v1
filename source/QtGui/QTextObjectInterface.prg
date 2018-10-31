@@ -83,15 +83,19 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQTEXTDOCUMENT(1) && ISNUM(2) && ISQTEXTFORMAT(3) )
     {
+#endif
       QSizeF * ptr = new QSizeF( obj->intrinsicSize ( PQTEXTDOCUMENT(1), PINT(2), *PQTEXTFORMAT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -104,14 +108,18 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(5) && ISQPAINTER(1) && ISQRECTF(2) && ISQTEXTDOCUMENT(3) && ISNUM(4) && ISQTEXTFORMAT(5) )
     {
+#endif
       obj->drawObject ( PQPAINTER(1), *PQRECTF(2), PQTEXTDOCUMENT(3), PINT(4), *PQTEXTFORMAT(5) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );

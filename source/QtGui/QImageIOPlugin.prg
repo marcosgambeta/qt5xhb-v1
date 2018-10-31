@@ -74,14 +74,18 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
     {
+#endif
       RENUM( obj->capabilities ( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -94,15 +98,19 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
     {
+#endif
       QImageIOHandler * ptr = obj->create ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
       _qt5xhb_createReturnClass ( ptr, "QIMAGEIOHANDLER", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
