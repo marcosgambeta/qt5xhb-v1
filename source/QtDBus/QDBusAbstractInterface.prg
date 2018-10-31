@@ -90,14 +90,18 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ISVALID )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isValid () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -110,15 +114,19 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CONNECTION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDBusConnection * ptr = new QDBusConnection( obj->connection () );
       _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -131,14 +139,18 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SERVICE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->service () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -151,14 +163,18 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_PATH )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->path () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -171,14 +187,18 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_INTERFACE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->interface () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -191,15 +211,19 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_LASTERROR )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDBusError * ptr = new QDBusError( obj->lastError () );
       _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -212,14 +236,18 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SETTIMEOUT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setTimeout ( PINT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -234,14 +262,18 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_TIMEOUT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->timeout () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -290,8 +322,10 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISNUM(1) && ISCHAR(2) && ISARRAY(3) )
     {
+#endif
       QList<QVariant> par3;
 PHB_ITEM aList3 = hb_param(3, HB_IT_ARRAY);
 int i3;
@@ -302,11 +336,13 @@ for (i3=0;i3<nLen3;i3++)
 }
       QDBusMessage * ptr = new QDBusMessage( obj->callWithArgumentList ( (QDBus::CallMode) hb_parni(1), PQSTRING(2), par3 ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -369,15 +405,19 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
     {
+#endif
       QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(9) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -390,8 +430,10 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
     {
+#endif
       QList<QVariant> par2;
 PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
 int i2;
@@ -402,11 +444,13 @@ for (i2=0;i2<nLen2;i2++)
 }
       QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCallWithArgumentList ( PQSTRING(1), par2 ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

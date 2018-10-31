@@ -46,7 +46,7 @@ RETURN
 #endif
 
 /*
-QDBusAbstractAdaptor(QObject *parent) (protected)
+QDBusAbstractAdaptor(QObject *parent) [protected]
 */
 
 HB_FUNC_STATIC( QDBUSABSTRACTADAPTOR_DELETE )

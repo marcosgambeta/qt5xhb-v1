@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent) (private)
+QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent) [private]
 */
 
 /*

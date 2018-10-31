@@ -144,14 +144,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_ISCONNECTED )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isConnected () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -164,14 +168,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_BASESERVICE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->baseService () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -184,15 +192,19 @@ HB_FUNC_STATIC( QDBUSCONNECTION_LASTERROR )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDBusError * ptr = new QDBusError( obj->lastError () );
       _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -205,14 +217,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_NAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->name () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -225,14 +241,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTIONCAPABILITIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->connectionCapabilities () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -245,14 +265,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_SEND )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
     {
+#endif
       RBOOL( obj->send ( *PQDBUSMESSAGE(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -299,15 +323,19 @@ HB_FUNC_STATIC( QDBUSCONNECTION_CALL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISQDBUSMESSAGE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
+#endif
       QDBusMessage * ptr = new QDBusMessage( obj->call ( *PQDBUSMESSAGE(1), ISNIL(2)? (QDBus::CallMode) QDBus::Block : (QDBus::CallMode) hb_parni(2), OPINT(3,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSMESSAGE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -320,15 +348,19 @@ HB_FUNC_STATIC( QDBUSCONNECTION_ASYNCCALL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQDBUSMESSAGE(1) && ISOPTNUM(2) )
     {
+#endif
       QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall ( *PQDBUSMESSAGE(1), OPINT(2,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -437,14 +469,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_REGISTEROBJECT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISCHAR(1) && ISQOBJECT(2) && ISOPTNUM(3) )
     {
+#endif
       RBOOL( obj->registerObject ( PQSTRING(1), PQOBJECT(2), ISNIL(3)? (QDBusConnection::RegisterOptions) QDBusConnection::ExportAdaptors : (QDBusConnection::RegisterOptions) hb_parni(3) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -457,14 +493,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTEROBJECT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
     {
+#endif
       obj->unregisterObject ( PQSTRING(1), ISNIL(2)? (QDBusConnection::UnregisterMode) QDBusConnection::UnregisterNode : (QDBusConnection::UnregisterMode) hb_parni(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -479,15 +519,19 @@ HB_FUNC_STATIC( QDBUSCONNECTION_OBJECTREGISTEREDAT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       QObject * ptr = obj->objectRegisteredAt ( PQSTRING(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -504,14 +548,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_REGISTERSERVICE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->registerService ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -524,14 +572,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_UNREGISTERSERVICE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RBOOL( obj->unregisterService ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -544,15 +596,19 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERFACE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDBusConnectionInterface * ptr = obj->interface ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QDBUSCONNECTIONINTERFACE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -565,14 +621,18 @@ HB_FUNC_STATIC( QDBUSCONNECTION_INTERNALPOINTER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       hb_retptr( (void *) obj->internalPointer () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

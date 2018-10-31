@@ -44,19 +44,19 @@ RETURN
 #endif
 
 /*
-QDBusPendingReplyData() (protected)
+QDBusPendingReplyData() [protected]
 */
 
 /*
-void assign(const QDBusPendingCall &call) (protected)
+void assign(const QDBusPendingCall &call) [protected]
 */
 
 /*
-void assign(const QDBusMessage &message) (protected)
+void assign(const QDBusMessage &message) [protected]
 */
 
 /*
-QVariant argumentAt(int index) const (protected)
+QVariant argumentAt(int index) const [protected]
 */
 
 /*
