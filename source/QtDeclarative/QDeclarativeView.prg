@@ -133,15 +133,19 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDeclarativeEngine * ptr = obj->engine ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QDECLARATIVEENGINE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -154,8 +158,10 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QDeclarativeError> list = obj->errors ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -186,11 +192,13 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -203,15 +211,19 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QSize * ptr = new QSize( obj->initialSize () );
       _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -224,14 +236,18 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->resizeMode () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -244,15 +260,19 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QDeclarativeContext * ptr = obj->rootContext ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QDECLARATIVECONTEXT" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -265,15 +285,19 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QGraphicsObject * ptr = obj->rootObject ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QGRAPHICSOBJECT" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -286,14 +310,18 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setResizeMode ( (QDeclarativeView::ResizeMode) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -308,14 +336,18 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
     {
+#endif
       obj->setSource ( *PQURL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -330,15 +362,19 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QUrl * ptr = new QUrl( obj->source () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -351,14 +387,18 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->status () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
