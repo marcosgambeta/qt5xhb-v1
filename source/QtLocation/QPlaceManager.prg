@@ -120,14 +120,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_MANAGERNAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->managerName () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -142,14 +146,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_MANAGERVERSION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->managerVersion () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -164,15 +172,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_GETPLACEDETAILS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       QPlaceDetailsReply * ptr = obj->getPlaceDetails ( PQSTRING(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEDETAILSREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -187,15 +199,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_GETPLACECONTENT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1) )
     {
+#endif
       QPlaceContentReply * ptr = obj->getPlaceContent ( *PQPLACECONTENTREQUEST(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACECONTENTREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -210,15 +226,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_SEARCH )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
     {
+#endif
       QPlaceSearchReply * ptr = obj->search ( *PQPLACESEARCHREQUEST(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACESEARCHREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -233,15 +253,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_SEARCHSUGGESTIONS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACESEARCHREQUEST(1) )
     {
+#endif
       QPlaceSearchSuggestionReply * ptr = obj->searchSuggestions ( *PQPLACESEARCHREQUEST(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACESEARCHSUGGESTIONREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -256,15 +280,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVEPLACE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACE(1) )
     {
+#endif
       QPlaceIdReply * ptr = obj->savePlace ( *PQPLACE(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEIDREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -279,15 +307,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_REMOVEPLACE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       QPlaceIdReply * ptr = obj->removePlace ( PQSTRING(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEIDREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -302,15 +334,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVECATEGORY )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQPLACECATEGORY(1) && ISOPTCHAR(2) )
     {
+#endif
       QPlaceIdReply * ptr = obj->saveCategory ( *PQPLACECATEGORY(1), OPQSTRING(2,QString()) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEIDREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -325,15 +361,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_REMOVECATEGORY )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       QPlaceIdReply * ptr = obj->removeCategory ( PQSTRING(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEIDREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -348,15 +388,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_INITIALIZECATEGORIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QPlaceReply * ptr = obj->initializeCategories ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -371,14 +415,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_PARENTCATEGORYID )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       RQSTRING( obj->parentCategoryId ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -393,14 +441,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORYIDS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
+#endif
       RQSTRINGLIST( obj->childCategoryIds ( OPQSTRING(1,QString()) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -415,15 +467,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_CATEGORY )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       QPlaceCategory * ptr = new QPlaceCategory( obj->category ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPLACECATEGORY", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -438,8 +494,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
+#endif
       QList<QPlaceCategory> list = obj->childCategories ( OPQSTRING(1,QString()) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACECATEGORY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -470,11 +528,13 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -489,8 +549,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_LOCALES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QLocale> list = obj->locales ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QLOCALE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -521,11 +583,13 @@ HB_FUNC_STATIC( QPLACEMANAGER_LOCALES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -540,8 +604,10 @@ HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
+#endif
       QList<QLocale> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -551,11 +617,13 @@ for (i1=0;i1<nLen1;i1++)
   par1 << *(QLocale *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
       obj->setLocales ( par1 );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -572,14 +640,18 @@ HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQLOCALE(1) )
     {
+#endif
       obj->setLocale ( *PQLOCALE(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -596,15 +668,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_COMPATIBLEPLACE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACE(1) )
     {
+#endif
       QPlace * ptr = new QPlace( obj->compatiblePlace ( *PQPLACE(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPLACE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -619,15 +695,19 @@ HB_FUNC_STATIC( QPLACEMANAGER_MATCHINGPLACES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPLACEMATCHREQUEST(1) )
     {
+#endif
       QPlaceMatchReply * ptr = obj->matchingPlaces ( *PQPLACEMATCHREQUEST(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEMATCHREPLY" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
