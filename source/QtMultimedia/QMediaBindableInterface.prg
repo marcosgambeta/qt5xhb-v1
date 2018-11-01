@@ -85,20 +85,24 @@ HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_MEDIAOBJECT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QMediaObject * ptr = obj->mediaObject ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
 /*
-virtual bool setMediaObject(QMediaObject *object) = 0 (protected)
+virtual bool setMediaObject(QMediaObject *object) = 0 [protected]
 */
 
 HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_NEWFROM )
