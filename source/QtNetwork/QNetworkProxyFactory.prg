@@ -94,8 +94,10 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && (ISQNETWORKPROXYQUERY(1)||ISNIL(1)) )
     {
+#endif
       QList<QNetworkProxy> list = obj->queryProxy ( ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -126,11 +128,13 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

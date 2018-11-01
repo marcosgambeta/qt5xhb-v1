@@ -63,11 +63,11 @@ HB_FUNC_STATIC( QTCPSOCKET_NEW )
 }
 
 /*
-QTcpSocket(QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) (protected)
+QTcpSocket(QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
 */
 
 /*
-QTcpSocket(QAbstractSocket::SocketType socketType, QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) (protected)
+QTcpSocket(QAbstractSocket::SocketType socketType, QTcpSocketPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
 */
 
 /*
