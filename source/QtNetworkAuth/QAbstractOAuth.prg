@@ -78,7 +78,7 @@ RETURN
 #include <QAbstractOAuthReplyHandler>
 
 /*
-explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) (protected)
+explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -113,14 +113,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_CLIENTIDENTIFIER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->clientIdentifier () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -135,14 +139,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCLIENTIDENTIFIER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       obj->setClientIdentifier ( PQSTRING(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -159,14 +167,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_TOKEN )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->token () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -181,14 +193,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETTOKEN )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       obj->setToken ( PQSTRING(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -209,15 +225,19 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_AUTHORIZATIONURL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QUrl * ptr = new QUrl( obj->authorizationUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -232,14 +252,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETAUTHORIZATIONURL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
     {
+#endif
       obj->setAuthorizationUrl ( *PQURL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -264,14 +288,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCONTENTTYPE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setContentType ( (QAbstractOAuth::ContentType) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -288,15 +316,19 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_NETWORKACCESSMANAGER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QNetworkAccessManager * ptr = obj->networkAccessManager ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKACCESSMANAGER" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -311,14 +343,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETNETWORKACCESSMANAGER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1) )
     {
+#endif
       obj->setNetworkAccessManager ( PQNETWORKACCESSMANAGER(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -335,15 +371,19 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_REPLYHANDLER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QAbstractOAuthReplyHandler * ptr = obj->replyHandler ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTOAUTHREPLYHANDLER" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -358,14 +398,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETREPLYHANDLER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTOAUTHREPLYHANDLER(1) )
     {
+#endif
       obj->setReplyHandler ( PQABSTRACTOAUTHREPLYHANDLER(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -410,14 +454,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->grant ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -425,19 +473,19 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
 }
 
 /*
-void setStatus(Status status) (protected)
+void setStatus(Status status) [protected]
 */
 
 /*
-QString callback() const (protected)
+QString callback() const [protected]
 */
 
 /*
-virtual void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters) (protected)
+virtual void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters) [protected]
 */
 
 /*
-static QByteArray generateRandomString(quint8 length) (protected)
+static QByteArray generateRandomString(quint8 length) [protected]
 */
 
 void QAbstractOAuthSlots_connect_signal ( const QString & signal, const QString & slot );

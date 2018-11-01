@@ -178,15 +178,19 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QUrl * ptr = new QUrl( obj->accessTokenUrl () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -201,14 +205,18 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
     {
+#endif
       obj->setAccessTokenUrl ( *PQURL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -225,14 +233,18 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->grant ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -249,14 +261,18 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->refreshAccessToken ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -264,15 +280,15 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
 }
 
 /*
-QUrl buildAuthenticateUrl(const QVariantMap &parameters = QVariantMap()) (protected)
+QUrl buildAuthenticateUrl(const QVariantMap &parameters = QVariantMap()) [protected]
 */
 
 /*
-void requestAccessToken(const QString &code) (protected)
+void requestAccessToken(const QString &code) [protected]
 */
 
 /*
-void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override (protected)
+void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override [protected]
 */
 
 void QOAuth2AuthorizationCodeFlowSlots_connect_signal ( const QString & signal, const QString & slot );

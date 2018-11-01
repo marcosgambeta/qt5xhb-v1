@@ -98,24 +98,28 @@ HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_CALLBACK )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->callback () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
 
 /*
-void networkReplyFinished(QNetworkReply *reply) override (protected)
+void networkReplyFinished(QNetworkReply *reply) override [protected]
 */
 
 /*
-QVariantMap parseResponse(const QByteArray &response) (private)
+QVariantMap parseResponse(const QByteArray &response) [private]
 */
 
 #pragma ENDDUMP

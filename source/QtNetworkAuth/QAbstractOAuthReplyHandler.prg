@@ -59,7 +59,7 @@ explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstract)
 */
 
 /*
-QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullptr) (protected)
+QAbstractOAuthReplyHandler(QObjectPrivate &d, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -94,14 +94,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->callback () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -116,14 +120,18 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKREPLY(1) )
     {
+#endif
       obj->networkReplyFinished ( PQNETWORKREPLY(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
