@@ -115,14 +115,18 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
+#endif
       obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -137,15 +141,19 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QPrinter * ptr = obj->printer ();
       _qt5xhb_createReturnClass ( ptr, "QPRINTER", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -158,14 +166,18 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
     {
+#endif
       obj->setVisible ( PBOOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -180,14 +192,18 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->exec () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -200,14 +216,18 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->done ( PINT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );

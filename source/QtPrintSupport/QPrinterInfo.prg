@@ -157,14 +157,18 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isDefault () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -177,14 +181,18 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isNull () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -197,14 +205,18 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->printerName () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -217,8 +229,10 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
@@ -229,11 +243,13 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -306,14 +322,18 @@ HB_FUNC_STATIC( QPRINTERINFO_DESCRIPTION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->description () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -326,14 +346,18 @@ HB_FUNC_STATIC( QPRINTERINFO_LOCATION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->location () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -346,14 +370,18 @@ HB_FUNC_STATIC( QPRINTERINFO_MAKEANDMODEL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->makeAndModel () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -367,14 +395,18 @@ HB_FUNC_STATIC( QPRINTERINFO_ISREMOTE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isRemote () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -389,14 +421,18 @@ HB_FUNC_STATIC( QPRINTERINFO_STATE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->state () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -411,8 +447,10 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QPageSize> list = obj->supportedPageSizes ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPAGESIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -443,11 +481,13 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -462,15 +502,19 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QPageSize * ptr = new QPageSize( obj->defaultPageSize () );
       _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -485,14 +529,18 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->supportsCustomPageSizes () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -507,15 +555,19 @@ HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QPageSize * ptr = new QPageSize( obj->minimumPhysicalPageSize () );
       _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -530,15 +582,19 @@ HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QPageSize * ptr = new QPageSize( obj->maximumPhysicalPageSize () );
       _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -553,15 +609,19 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<int> list = obj->supportedResolutions ();
       _qt5xhb_convert_qlist_int_to_array ( list );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -626,14 +686,18 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTDUPLEXMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->defaultDuplexMode () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -648,8 +712,10 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDDUPLEXMODES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QPrinter::DuplexMode> list = obj->supportedDuplexModes ();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       int i;
@@ -660,11 +726,13 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDDUPLEXMODES )
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }

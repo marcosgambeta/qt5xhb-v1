@@ -87,14 +87,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->exec () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -107,14 +111,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->fromPage () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -127,14 +135,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->maxPage () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -147,14 +159,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->minPage () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -167,14 +183,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->printRange () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -187,15 +207,19 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QPrinter * ptr = obj->printer ();
       _qt5xhb_createReturnClass ( ptr, "QPRINTER", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -208,14 +232,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETFROMTO )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
+#endif
       obj->setFromTo ( PINT(1), PINT(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -230,14 +258,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETMINMAX )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
+#endif
       obj->setMinMax ( PINT(1), PINT(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,8 +284,10 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETOPTIONTABS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
+#endif
       QList<QWidget *> par1;
 PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
 int i1;
@@ -263,11 +297,13 @@ for (i1=0;i1<nLen1;i1++)
   par1 << (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
 }
       obj->setOptionTabs ( par1 );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -282,14 +318,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setPrintRange ( (QAbstractPrintDialog::PrintRange) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -304,14 +344,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->toPage () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -324,14 +368,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ADDENABLEDOPTION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->addEnabledOption ( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -346,14 +394,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setEnabledOptions ( (QAbstractPrintDialog::PrintDialogOptions) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -368,14 +420,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ENABLEDOPTIONS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->enabledOptions () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -388,14 +444,18 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ISOPTIONENABLED )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       RBOOL( obj->isOptionEnabled ( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

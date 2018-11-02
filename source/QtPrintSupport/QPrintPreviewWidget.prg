@@ -135,14 +135,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->currentPage () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -155,14 +159,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->orientation () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -175,14 +183,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->pageCount () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -195,14 +207,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->viewMode () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -215,14 +231,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQREAL( obj->zoomFactor () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -235,14 +255,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->zoomMode () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -255,14 +279,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVISIBLE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
     {
+#endif
       obj->setVisible ( PBOOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -277,14 +305,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->fitInView ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -299,14 +331,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->fitToWidth ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -321,14 +357,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->print ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -343,14 +383,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->setAllPagesViewMode ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -365,14 +409,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETCURRENTPAGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setCurrentPage ( PINT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -387,14 +435,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->setFacingPagesViewMode ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -409,14 +461,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->setLandscapeOrientation ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -431,14 +487,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETORIENTATION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setOrientation ( (QPrinter::Orientation) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -453,14 +513,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->setPortraitOrientation ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -475,14 +539,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->setSinglePageViewMode ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -497,14 +565,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setViewMode ( (QPrintPreviewWidget::ViewMode) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -519,14 +591,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setZoomFactor ( PQREAL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -541,14 +617,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMMODE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       obj->setZoomMode ( (QPrintPreviewWidget::ZoomMode) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -563,14 +643,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->updatePreview ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -585,14 +669,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
+#endif
       obj->zoomIn ( OPQREAL(1,1.1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -607,14 +695,18 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
+#endif
       obj->zoomOut ( OPQREAL(1,1.1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
