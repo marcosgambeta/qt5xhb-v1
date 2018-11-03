@@ -83,12 +83,12 @@ void QVoice_new2 ()
 }
 
 /*
-QVoice(const QString &name, Gender gender, Age age, const QVariant &data) (private)
+QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
 */
 
 //[1]QVoice()
 //[2]QVoice(const QVoice &other)
-//[3]QVoice(const QString &name, Gender gender, Age age, const QVariant &data) (private)
+//[3]QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
 
 HB_FUNC_STATIC( QVOICE_NEW )
 {
@@ -138,14 +138,18 @@ HB_FUNC_STATIC( QVOICE_NAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->name () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -160,14 +164,18 @@ HB_FUNC_STATIC( QVOICE_GENDER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->gender () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -182,14 +190,18 @@ HB_FUNC_STATIC( QVOICE_AGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RENUM( obj->age () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -229,23 +241,23 @@ HB_FUNC_STATIC( QVOICE_AGENAME )
 }
 
 /*
-void setName(const QString &name) (private)
+void setName(const QString &name) [private]
 */
 
 /*
-void setGender(Gender gender) (private)
+void setGender(Gender gender) [private]
 */
 
 /*
-void setAge(Age age) (private)
+void setAge(Age age) [private]
 */
 
 /*
-void setData(const QVariant &data) (private)
+void setData(const QVariant &data) [private]
 */
 
 /*
-QVariant data() const (private)
+QVariant data() const [private]
 */
 
 HB_FUNC_STATIC( QVOICE_NEWFROM )
