@@ -89,7 +89,7 @@ void QCanBusDeviceInfo_new2 ()
 }
 
 /*
-explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) (private)
+explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) [private]
 */
 
 //[1]QCanBusDeviceInfo() = delete
@@ -143,14 +143,18 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_SWAP )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
     {
+#endif
       obj->swap ( *PQCANBUSDEVICEINFO(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -167,14 +171,18 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_NAME )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->name () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -189,14 +197,18 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_HASFLEXIBLEDATARATE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->hasFlexibleDataRate () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -211,14 +223,18 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_ISVIRTUAL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isVirtual () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -233,14 +249,18 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_CHANNEL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->channel () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -255,14 +275,18 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_DESCRIPTION )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->description () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -277,14 +301,18 @@ HB_FUNC_STATIC( QCANBUSDEVICEINFO_SERIALNUMBER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRING( obj->serialNumber () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }

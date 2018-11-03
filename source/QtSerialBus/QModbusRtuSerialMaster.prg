@@ -53,7 +53,7 @@ RETURN
 explicit QModbusRtuSerialMaster(QObject *parent = nullptr)
 */
 /*
-QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *parent = nullptr) (protected)
+QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -87,11 +87,11 @@ void setInterFrameDelay(int microseconds)
 */
 
 /*
-void close() override (protected)
+void close() override [protected]
 */
 
 /*
-bool open() override (protected)
+bool open() override [protected]
 */
 
 #pragma ENDDUMP

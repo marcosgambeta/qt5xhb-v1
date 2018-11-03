@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QMODBUSTCPSERVER_NEW )
 }
 
 /*
-QModbusTcpServer(QModbusTcpServerPrivate &dd, QObject *parent = nullptr) (protected)
+QModbusTcpServer(QModbusTcpServerPrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -95,15 +95,15 @@ HB_FUNC_STATIC( QMODBUSTCPSERVER_DELETE )
 }
 
 /*
-bool open() override (protected)
+bool open() override [protected]
 */
 
 /*
-void close() override (protected)
+void close() override [protected]
 */
 
 /*
-QModbusResponse processRequest(const QModbusPdu &request) override (protected)
+QModbusResponse processRequest(const QModbusPdu &request) override [protected]
 */
 
 #pragma ENDDUMP

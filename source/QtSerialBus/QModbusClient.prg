@@ -55,7 +55,7 @@ RETURN
 explicit QModbusClient(QObject *parent = nullptr)
 */
 /*
-QModbusClient(QModbusClientPrivate &dd, QObject *parent = nullptr) (protected)
+QModbusClient(QModbusClientPrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -106,10 +106,10 @@ int numberOfRetries() const
 void setNumberOfRetries(int number)
 */
 /*
-virtual bool processResponse(const QModbusResponse &response, QModbusDataUnit *data) (protected)
+virtual bool processResponse(const QModbusResponse &response, QModbusDataUnit *data) [protected]
 */
 /*
-virtual bool processPrivateResponse(const QModbusResponse &response, QModbusDataUnit *data) (protected)
+virtual bool processPrivateResponse(const QModbusResponse &response, QModbusDataUnit *data) [protected]
 */
 
 void QModbusClientSlots_connect_signal ( const QString & signal, const QString & slot );

@@ -53,7 +53,7 @@ RETURN
 explicit QModbusRtuSerialSlave(QObject *parent = nullptr)
 */
 /*
-QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullptr) (protected)
+QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -83,15 +83,15 @@ bool processesBroadcast() const override
 */
 
 /*
-bool open() override (protected)
+bool open() override [protected]
 */
 
 /*
-void close() override (protected)
+void close() override [protected]
 */
 
 /*
-QModbusResponse processRequest(const QModbusPdu &request) override (protected)
+QModbusResponse processRequest(const QModbusPdu &request) override [protected]
 */
 
 #pragma ENDDUMP

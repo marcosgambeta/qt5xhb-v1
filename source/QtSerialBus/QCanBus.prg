@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QCanBus(QObject *parent = nullptr) (private)
+QCanBus(QObject *parent = nullptr) [private]
 */
 
 /*
@@ -86,14 +86,18 @@ HB_FUNC_STATIC( QCANBUS_PLUGINS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RQSTRINGLIST( obj->plugins () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -108,8 +112,10 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
+#endif
       QList<QCanBusDeviceInfo> list = obj->availableDevices ( PQSTRING(1), NULL );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCANBUSDEVICEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -140,11 +146,13 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }
@@ -159,15 +167,19 @@ HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
     {
+#endif
       QCanBusDevice * ptr = obj->createDevice ( PQSTRING(1), PQSTRING(2), NULL );
       _qt5xhb_createReturnQObjectClass ( ptr, "QCANBUSDEVICE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 #endif
 }

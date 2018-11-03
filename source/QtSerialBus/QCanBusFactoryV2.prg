@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-virtual ~QCanBusFactoryV2() (protected)
+virtual ~QCanBusFactoryV2() [protected]
 */
 
 /*

@@ -56,7 +56,7 @@ RETURN
 explicit QModbusDevice(QObject *parent = nullptr)
 */
 /*
-QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) (protected)
+QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -110,19 +110,19 @@ QString errorString() const
 */
 
 /*
-void setState(QModbusDevice::State newState) (protected)
+void setState(QModbusDevice::State newState) [protected]
 */
 
 /*
-void setError(const QString &errorText, QModbusDevice::Error error) (protected)
+void setError(const QString &errorText, QModbusDevice::Error error) [protected]
 */
 
 /*
-virtual bool open() = 0 (protected)
+virtual bool open() = 0 [protected]
 */
 
 /*
-virtual void close() = 0 (protected)
+virtual void close() = 0 [protected]
 */
 
 void QModbusDeviceSlots_connect_signal ( const QString & signal, const QString & slot );

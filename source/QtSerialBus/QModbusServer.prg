@@ -55,7 +55,7 @@ RETURN
 explicit QModbusServer(QObject *parent = nullptr)
 */
 /*
-QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) (protected)
+QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) [protected]
 */
 
 /*
@@ -121,19 +121,19 @@ bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) c
 */
 
 /*
-virtual bool writeData(const QModbusDataUnit &unit) (protected)
+virtual bool writeData(const QModbusDataUnit &unit) [protected]
 */
 
 /*
-virtual bool readData(QModbusDataUnit *newData) const (protected)
+virtual bool readData(QModbusDataUnit *newData) const [protected]
 */
 
 /*
-virtual QModbusResponse processRequest(const QModbusPdu &request) (protected)
+virtual QModbusResponse processRequest(const QModbusPdu &request) [protected]
 */
 
 /*
-virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) (protected)
+virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) [protected]
 */
 
 void QModbusServerSlots_connect_signal ( const QString & signal, const QString & slot );

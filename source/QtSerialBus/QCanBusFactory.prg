@@ -61,7 +61,7 @@ virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *error
 */
 
 /*
-virtual ~QCanBusFactory() (protected)
+virtual ~QCanBusFactory() [protected]
 */
 
 HB_FUNC_STATIC( QCANBUSFACTORY_NEWFROM )
