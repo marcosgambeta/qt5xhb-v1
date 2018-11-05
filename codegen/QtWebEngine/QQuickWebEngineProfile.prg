@@ -34,7 +34,7 @@ $includes=5,6,0
 $prototype=QQuickWebEngineProfile(QObject *parent = Q_NULLPTR)
 $constructor=5,6,0|new|QObject *=Q_NULLPTR
 
-$prototype=QQuickWebEngineProfile(QQuickWebEngineProfilePrivate *, QObject *parent = Q_NULLPTR) (private)
+$prototype=QQuickWebEngineProfile(QQuickWebEngineProfilePrivate *, QObject *parent = Q_NULLPTR) [private]
 
 $prototype=~QQuickWebEngineProfile()
 $deleteMethod=5,6,0
@@ -191,9 +191,9 @@ $method=5,7,0|void|clearHttpCache|
 $prototype=static QQuickWebEngineProfile *defaultProfile()
 $staticMethod=5,6,0|QQuickWebEngineProfile *|defaultProfile|
 
-$prototype=void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot) (private)
+$prototype=void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot) [private]
 
-$prototype=QQuickWebEngineSettings *settings() const (private)
+$prototype=QQuickWebEngineSettings *settings() const [private]
 
 $beginSignals
 $signal=|cachePathChanged()
