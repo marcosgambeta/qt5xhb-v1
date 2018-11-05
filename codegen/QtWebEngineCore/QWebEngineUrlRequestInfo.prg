@@ -22,9 +22,9 @@ $destructor
 
 $includes
 
-$prototype=QWebEngineUrlRequestInfo(QWebEngineUrlRequestInfoPrivate *p) (private)
+$prototype=QWebEngineUrlRequestInfo(QWebEngineUrlRequestInfoPrivate *p) [private]
 
-$prototype=~QWebEngineUrlRequestInfo() (private)
+$prototype=~QWebEngineUrlRequestInfo() [private]
 %% $deleteMethod
 
 $prototype=ResourceType resourceType() const

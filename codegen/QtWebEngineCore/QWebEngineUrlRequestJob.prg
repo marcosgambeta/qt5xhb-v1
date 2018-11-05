@@ -22,7 +22,7 @@ $destructor
 
 $includes
 
-$prototype=QWebEngineUrlRequestJob(QtWebEngineCore::URLRequestCustomJobDelegate *) (private)
+$prototype=QWebEngineUrlRequestJob(QtWebEngineCore::URLRequestCustomJobDelegate *) [private]
 
 $prototype=~QWebEngineUrlRequestJob()
 $deleteMethod

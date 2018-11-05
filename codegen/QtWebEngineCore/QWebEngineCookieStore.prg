@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-$prototype=explicit QWebEngineCookieStore(QObject *parent = Q_NULLPTR) (private)
+$prototype=explicit QWebEngineCookieStore(QObject *parent = Q_NULLPTR) [private]
 
 $prototype=virtual ~QWebEngineCookieStore()
 $deleteMethod
