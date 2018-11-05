@@ -72,14 +72,18 @@ HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && (ISQURL(3)||ISNIL(3)) && (ISQSOURCELOCATION(4)||ISNIL(4)) )
     {
+#endif
       obj->message ( (QtMsgType) hb_parni(1), PQSTRING(2), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), ISNIL(4)? QSourceLocation() : *(QSourceLocation *) _qt5xhb_itemGetPtr(4) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -137,15 +137,19 @@ HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QUrl * ptr = new QUrl( obj->documentUri () );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -158,14 +162,18 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RBOOL( obj->isValid () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -241,15 +249,19 @@ HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QAbstractMessageHandler * ptr = obj->messageHandler ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTMESSAGEHANDLER" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -262,15 +274,19 @@ HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QXmlNamePool * ptr = new QXmlNamePool( obj->namePool () );
       _qt5xhb_createReturnClass ( ptr, "QXMLNAMEPOOL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -283,15 +299,19 @@ HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QNetworkAccessManager * ptr = obj->networkAccessManager ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKACCESSMANAGER" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -304,14 +324,18 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTMESSAGEHANDLER(1) )
     {
+#endif
       obj->setMessageHandler ( PQABSTRACTMESSAGEHANDLER(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -326,14 +350,18 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1) )
     {
+#endif
       obj->setNetworkAccessManager ( PQNETWORKACCESSMANAGER(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -348,14 +376,18 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQABSTRACTURIRESOLVER(1) )
     {
+#endif
       obj->setUriResolver ( PQABSTRACTURIRESOLVER(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -370,15 +402,19 @@ HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       const QAbstractUriResolver * ptr = obj->uriResolver ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTURIRESOLVER" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
