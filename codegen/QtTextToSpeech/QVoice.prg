@@ -28,11 +28,11 @@ $internalConstructor=5,10,0|new1|
 $prototype=QVoice(const QVoice &other)
 $internalConstructor=5,10,0|new2|const QVoice &
 
-$prototype=QVoice(const QString &name, Gender gender, Age age, const QVariant &data) (private)
+$prototype=QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
 
 //[1]QVoice()
 //[2]QVoice(const QVoice &other)
-//[3]QVoice(const QString &name, Gender gender, Age age, const QVariant &data) (private)
+//[3]QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
 
 HB_FUNC_STATIC( QVOICE_NEW )
 {
@@ -68,15 +68,15 @@ $staticMethod=5,10,0|QString|genderName|QVoice::Gender
 $prototype=static QString ageName(QVoice::Age age)
 $staticMethod=5,10,0|QString|ageName|QVoice::Age
 
-$prototype=void setName(const QString &name) (private)
+$prototype=void setName(const QString &name) [private]
 
-$prototype=void setGender(Gender gender) (private)
+$prototype=void setGender(Gender gender) [private]
 
-$prototype=void setAge(Age age) (private)
+$prototype=void setAge(Age age) [private]
 
-$prototype=void setData(const QVariant &data) (private)
+$prototype=void setData(const QVariant &data) [private]
 
-$prototype=QVariant data() const (private)
+$prototype=QVariant data() const [private]
 
 $extraMethods
 

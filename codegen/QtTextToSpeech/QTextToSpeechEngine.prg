@@ -85,9 +85,9 @@ $virtualMethod=5,10,0|bool|setVoice|const QVoice &
 $prototype=virtual QTextToSpeech::State state() const = 0
 $virtualMethod=5,10,0|QTextToSpeech::State|state|
 
-$prototype=static QVoice createVoice(const QString &name, QVoice::Gender gender, QVoice::Age age, const QVariant &data) (protected)
+$prototype=static QVoice createVoice(const QString &name, QVoice::Gender gender, QVoice::Age age, const QVariant &data) [protected]
 
-$prototype=static QVariant voiceData(const QVoice &voice) (protected)
+$prototype=static QVariant voiceData(const QVoice &voice) [protected]
 
 $beginSignals
 $signal=5,10,0|stateChanged(QTextToSpeech::State)
