@@ -19,6 +19,7 @@ flags QRegularExpression::MatchOptions
 */
 #define QRegularExpression_NoMatchOption                             0x0000
 #define QRegularExpression_AnchoredMatchOption                       0x0001
+#define QRegularExpression_DontCheckSubjectStringMatchOption         0x0002
 
 /*
 enum QRegularExpression::MatchType
@@ -26,6 +27,7 @@ enum QRegularExpression::MatchType
 #define QRegularExpression_NormalMatch                               0
 #define QRegularExpression_PartialPreferCompleteMatch                1
 #define QRegularExpression_PartialPreferFirstMatch                   2
+#define QRegularExpression_NoMatch                                   3
 
 /*
 enum QRegularExpression::PatternOption
@@ -39,5 +41,7 @@ flags QRegularExpression::PatternOptions
 #define QRegularExpression_InvertedGreedinessOption                  0x0010
 #define QRegularExpression_DontCaptureOption                         0x0020
 #define QRegularExpression_UseUnicodePropertiesOption                0x0040
+#define QRegularExpression_OptimizeOnFirstUsageOption                0x0080
+#define QRegularExpression_DontAutomaticallyOptimizeOption           0x0100
 
 #endif /* QREGULAREXPRESSION_CH */

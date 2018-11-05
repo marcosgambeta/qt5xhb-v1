@@ -36,5 +36,3 @@ flags QRegularExpression::PatternOptions
 #define QRegularExpression_UseUnicodePropertiesOption                0x0040
 #define QRegularExpression_OptimizeOnFirstUsageOption                0x0080
 #define QRegularExpression_DontAutomaticallyOptimizeOption           0x0100
-
-
