@@ -32,11 +32,11 @@ $internalConstructor=|new1|
 $prototype=QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
 $internalConstructor=|new2|const QStyleOptionTabBarBase &
 
-$prototype=QStyleOptionTabBarBase(int version) (protected)
+$prototype=QStyleOptionTabBarBase(int version) [protected]
 
 //[1]QStyleOptionTabBarBase()
 //[2]QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
-//[3]QStyleOptionTabBarBase(int version) (protected)
+//[3]QStyleOptionTabBarBase(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
 {

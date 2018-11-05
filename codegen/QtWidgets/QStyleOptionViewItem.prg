@@ -30,11 +30,11 @@ $internalConstructor=|new1|
 $prototype=QStyleOptionViewItem(const QStyleOptionViewItem &other)
 $internalConstructor=|new2|const QStyleOptionViewItem &
 
-$prototype=QStyleOptionViewItem(int version) (protected)
+$prototype=QStyleOptionViewItem(int version) [protected]
 
 //[1]QStyleOptionViewItem()
 //[2]QStyleOptionViewItem(const QStyleOptionViewItem &other) : QStyleOption(Version, Type)
-//[3]QStyleOptionViewItem(int version) (protected)
+//[3]QStyleOptionViewItem(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
 {

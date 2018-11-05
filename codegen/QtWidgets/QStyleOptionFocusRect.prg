@@ -28,11 +28,11 @@ $internalConstructor=|new1|
 $prototype=QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
 $internalConstructor=|new2|const QStyleOptionFocusRect &
 
-$prototype=QStyleOptionFocusRect(int version) (protected)
+$prototype=QStyleOptionFocusRect(int version) [protected]
 
 //[1]QStyleOptionFocusRect()
 //[2]QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
-//[3]QStyleOptionFocusRect(int version) (protected)
+//[3]QStyleOptionFocusRect(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {

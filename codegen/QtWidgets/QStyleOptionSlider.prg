@@ -32,11 +32,11 @@ $internalConstructor=|new1|
 $prototype=QStyleOptionSlider(const QStyleOptionSlider &other)
 $internalConstructor=|new2|const QStyleOptionSlider &
 
-$prototype=QStyleOptionSlider(int version) (protected)
+$prototype=QStyleOptionSlider(int version) [protected]
 
 //[1]QStyleOptionSlider()
 //[2]QStyleOptionSlider(const QStyleOptionSlider &other)
-//[3]QStyleOptionSlider(int version) (protected)
+//[3]QStyleOptionSlider(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NEW )
 {

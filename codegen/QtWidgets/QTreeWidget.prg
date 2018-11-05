@@ -24,19 +24,38 @@ $destructor
 
 $includes
 
-$prototype=QTreeWidget ( QWidget * parent = 0 )
+$prototype=explicit QTreeWidget(QWidget *parent = nullptr)
 $constructor=|new|QWidget *=0
 
+$prototype=~QTreeWidget()
 $deleteMethod
+
+%%
+%% Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount)
+%%
+
+$prototype=int columnCount () const
+$method=|int|columnCount|
+
+$prototype=void setColumnCount ( int columns )
+$method=|void|setColumnCount|int
+
+%%
+%% Q_PROPERTY(int topLevelItemCount READ topLevelItemCount)
+%%
+
+$prototype=int topLevelItemCount () const
+$method=|int|topLevelItemCount|
+
+%%
+%%
+%%
 
 $prototype=void addTopLevelItem ( QTreeWidgetItem * item )
 $method=|void|addTopLevelItem|QTreeWidgetItem *
 
 $prototype=void closePersistentEditor ( QTreeWidgetItem * item, int column = 0 )
 $method=|void|closePersistentEditor|QTreeWidgetItem *,int=0
-
-$prototype=int columnCount () const
-$method=|int|columnCount|
 
 $prototype=int currentColumn () const
 $method=|int|currentColumn|
@@ -103,9 +122,6 @@ $method=|void|openPersistentEditor|QTreeWidgetItem *,int=0
 $prototype=void removeItemWidget ( QTreeWidgetItem * item, int column )
 $method=|void|removeItemWidget|QTreeWidgetItem *,int
 
-$prototype=void setColumnCount ( int columns )
-$method=|void|setColumnCount|int
-
 $prototype=void setCurrentItem ( QTreeWidgetItem * item )
 $internalMethod=|void|setCurrentItem,setCurrentItem1|QTreeWidgetItem *
 
@@ -166,9 +182,6 @@ $method=|QTreeWidgetItem *|takeTopLevelItem|int
 
 $prototype=QTreeWidgetItem *  topLevelItem ( int index ) const
 $method=|QTreeWidgetItem *|topLevelItem|int
-
-$prototype=int topLevelItemCount () const
-$method=|int|topLevelItemCount|
 
 $prototype=QRect visualItemRect ( const QTreeWidgetItem * item ) const
 $method=|QRect|visualItemRect|const QTreeWidgetItem *

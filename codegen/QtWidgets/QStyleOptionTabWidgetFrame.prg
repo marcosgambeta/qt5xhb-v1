@@ -32,11 +32,11 @@ $internalConstructor=|new1|
 $prototype=QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame &other)
 $internalConstructor=|new2|const QStyleOptionTabWidgetFrame &
 
-$prototype=QStyleOptionTabWidgetFrame(int version) (protected)
+$prototype=QStyleOptionTabWidgetFrame(int version) [protected]
 
 //[1]QStyleOptionTabWidgetFrame()
 //[2]QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame &other)
-//[3]QStyleOptionTabWidgetFrame(int version) (protected)
+//[3]QStyleOptionTabWidgetFrame(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_NEW )
 {

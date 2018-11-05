@@ -28,11 +28,11 @@ $internalConstructor=|new1|
 $prototype=QStyleOptionToolBox(const QStyleOptionToolBox &other)
 $internalConstructor=|new2|const QStyleOptionToolBox &
 
-$prototype=QStyleOptionToolBox(int version) (protected)
+$prototype=QStyleOptionToolBox(int version) [protected]
 
 //[1]QStyleOptionToolBox()
 //[2]QStyleOptionToolBox(const QStyleOptionToolBox &other)
-//[3]QStyleOptionToolBox(int version) (protected)
+//[3]QStyleOptionToolBox(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
 {

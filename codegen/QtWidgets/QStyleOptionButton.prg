@@ -28,11 +28,11 @@ $internalConstructor=|new1|
 $prototype=QStyleOptionButton(const QStyleOptionButton &other)
 $internalConstructor=|new2|const QStyleOptionButton &
 
-$prototype=QStyleOptionButton(int version) (protected)
+$prototype=QStyleOptionButton(int version) [protected]
 
 //[1]QStyleOptionButton()
 //[2]QStyleOptionButton(const QStyleOptionButton &other) : QStyleOption(Version, Type)
-//[3]QStyleOptionButton(int version) (protected)
+//[3]QStyleOptionButton(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )
 {

@@ -28,7 +28,7 @@ $includes
 
 $prototype=explicit QAbstractButton(QWidget *parent = Q_NULLPTR) (abstract)
 
-$prototype=QAbstractButton(QAbstractButtonPrivate &dd, QWidget* parent = Q_NULLPTR) (protected)
+$prototype=QAbstractButton(QAbstractButtonPrivate &dd, QWidget* parent = Q_NULLPTR) [protected]
 
 $prototype=~QAbstractButton()
 $deleteMethod
@@ -163,33 +163,33 @@ $method=|void|click|
 $prototype=void toggle () (slot)
 $method=|void|toggle|
 
-$prototype=void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE = 0 (protected)
+$prototype=void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE = 0 [protected]
 
-$prototype=virtual bool hitButton(const QPoint &pos) const (protected)
+$prototype=virtual bool hitButton(const QPoint &pos) const [protected]
 
-$prototype=virtual void checkStateSet() (protected)
+$prototype=virtual void checkStateSet() [protected]
 
-$prototype=virtual void nextCheckState() (protected)
+$prototype=virtual void nextCheckState() [protected]
 
-$prototype=bool event(QEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=bool event(QEvent *e) Q_DECL_OVERRIDE [protected]
 
-$prototype=void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE [protected]
 
-$prototype=void keyReleaseEvent(QKeyEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=void keyReleaseEvent(QKeyEvent *e) Q_DECL_OVERRIDE [protected]
 
-$prototype=void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE [protected]
 
-$prototype=void mouseReleaseEvent(QMouseEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=void mouseReleaseEvent(QMouseEvent *e) Q_DECL_OVERRIDE [protected]
 
-$prototype=void mouseMoveEvent(QMouseEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=void mouseMoveEvent(QMouseEvent *e) Q_DECL_OVERRIDE [protected]
 
-$prototype=void focusInEvent(QFocusEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=void focusInEvent(QFocusEvent *e) Q_DECL_OVERRIDE [protected]
 
-$prototype=void focusOutEvent(QFocusEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=void focusOutEvent(QFocusEvent *e) Q_DECL_OVERRIDE [protected]
 
-$prototype=void changeEvent(QEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=void changeEvent(QEvent *e) Q_DECL_OVERRIDE [protected]
 
-$prototype=void timerEvent(QTimerEvent *e) Q_DECL_OVERRIDE (protected)
+$prototype=void timerEvent(QTimerEvent *e) Q_DECL_OVERRIDE [protected]
 
 $beginSignals
 $signal=|clicked(bool)
