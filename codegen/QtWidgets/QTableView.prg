@@ -151,7 +151,10 @@ $prototype=void setColumnHidden(int column, bool hide)
 $method=|void|setColumnHidden|int,bool
 
 $prototype=QRect visualRect(const QModelIndex &index) const override
-void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) override
+$method=|QRect|visualRect|const QModelIndex &
+
+$prototype=void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) override
+$method=|void|scrollTo|const QModelIndex &,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
 
 $prototype=QModelIndex indexAt(const QPoint &p) const override
 $virtualMethod=|QModelIndex|indexAt|const QPoint &
