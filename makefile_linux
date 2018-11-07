@@ -75,6 +75,10 @@ endif
 ifneq (,$(findstring 5.11,$(shell qmake -v)))
     CFLAGS += -std=c++11
 endif
+# Qt 5.12.x require C++11
+ifneq (,$(findstring 5.12,$(shell qmake -v)))
+    CFLAGS += -std=c++11
+endif
 CFLAGS += -c -O2 -frtti -fexceptions -Wall -DUNICODE -fPIC
 CFLAGS += -DQT_DLL
 CFLAGS += -DQT_NO_DEBUG
