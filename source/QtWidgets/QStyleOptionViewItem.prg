@@ -103,12 +103,12 @@ void QStyleOptionViewItem_new2 ()
 }
 
 /*
-QStyleOptionViewItem(int version) (protected)
+QStyleOptionViewItem(int version) [protected]
 */
 
 //[1]QStyleOptionViewItem()
 //[2]QStyleOptionViewItem(const QStyleOptionViewItem &other) : QStyleOption(Version, Type)
-//[3]QStyleOptionViewItem(int version) (protected)
+//[3]QStyleOptionViewItem(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
 {

@@ -22,9 +22,11 @@ CLASS QTreeWidget INHERIT QTreeView
 
    METHOD new
    METHOD delete
+   METHOD columnCount
+   METHOD setColumnCount
+   METHOD topLevelItemCount
    METHOD addTopLevelItem
    METHOD closePersistentEditor
-   METHOD columnCount
    METHOD currentColumn
    METHOD currentItem
    METHOD editItem
@@ -39,7 +41,6 @@ CLASS QTreeWidget INHERIT QTreeView
    METHOD itemWidget
    METHOD openPersistentEditor
    METHOD removeItemWidget
-   METHOD setColumnCount
    METHOD setCurrentItem
    METHOD setFirstItemColumnSpanned
    METHOD setHeaderItem
@@ -50,7 +51,6 @@ CLASS QTreeWidget INHERIT QTreeView
    METHOD sortItems
    METHOD takeTopLevelItem
    METHOD topLevelItem
-   METHOD topLevelItemCount
    METHOD visualItemRect
    METHOD setSelectionModel
    METHOD clear
@@ -96,7 +96,7 @@ RETURN
 #endif
 
 /*
-QTreeWidget ( QWidget * parent = 0 )
+explicit QTreeWidget(QWidget *parent = nullptr)
 */
 HB_FUNC_STATIC( QTREEWIDGET_NEW )
 {
@@ -111,6 +111,9 @@ HB_FUNC_STATIC( QTREEWIDGET_NEW )
   }
 }
 
+/*
+~QTreeWidget()
+*/
 HB_FUNC_STATIC( QTREEWIDGET_DELETE )
 {
   QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -129,6 +132,80 @@ HB_FUNC_STATIC( QTREEWIDGET_DELETE )
 }
 
 /*
+int columnCount () const
+*/
+HB_FUNC_STATIC( QTREEWIDGET_COLUMNCOUNT )
+{
+  QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RINT( obj->columnCount () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
+/*
+void setColumnCount ( int columns )
+*/
+HB_FUNC_STATIC( QTREEWIDGET_SETCOLUMNCOUNT )
+{
+  QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISNUM(1) )
+    {
+#endif
+      obj->setColumnCount ( PINT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+int topLevelItemCount () const
+*/
+HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEMCOUNT )
+{
+  QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RINT( obj->topLevelItemCount () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
+/*
 void addTopLevelItem ( QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEM )
@@ -137,14 +214,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
+#endif
       obj->addTopLevelItem ( PQTREEWIDGETITEM(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -159,37 +240,21 @@ HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && ISOPTNUM(2) )
     {
+#endif
       obj->closePersistentEditor ( PQTREEWIDGETITEM(1), OPINT(2,0) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-int columnCount () const
-*/
-HB_FUNC_STATIC( QTREEWIDGET_COLUMNCOUNT )
-{
-  QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->columnCount () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-  }
 }
 
 /*
@@ -201,14 +266,18 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTCOLUMN )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->currentColumn () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -221,15 +290,19 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QTreeWidgetItem * ptr = obj->currentItem ();
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -242,14 +315,18 @@ HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && ISOPTNUM(2) )
     {
+#endif
       obj->editItem ( PQTREEWIDGETITEM(1), OPINT(2,0) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -264,15 +341,19 @@ HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QTreeWidgetItem * ptr = obj->headerItem ();
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -285,14 +366,18 @@ HB_FUNC_STATIC( QTREEWIDGET_INDEXOFTOPLEVELITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
+#endif
       RINT( obj->indexOfTopLevelItem ( PQTREEWIDGETITEM(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -305,14 +390,18 @@ HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISQTREEWIDGETITEM(2) )
     {
+#endif
       obj->insertTopLevelItem ( PINT(1), PQTREEWIDGETITEM(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -327,15 +416,19 @@ HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QTreeWidgetItem * ptr = obj->invisibleRootItem ();
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -348,14 +441,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ISFIRSTITEMCOLUMNSPANNED )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
+#endif
       RBOOL( obj->isFirstItemColumnSpanned ( PQTREEWIDGETITEM(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -368,15 +465,19 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
+#endif
       QTreeWidgetItem * ptr = obj->itemAbove ( PQTREEWIDGETITEM(1) );
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -436,15 +537,19 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMBELOW )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
+#endif
       QTreeWidgetItem * ptr = obj->itemBelow ( PQTREEWIDGETITEM(1) );
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -457,15 +562,19 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQTREEWIDGETITEM(1) && ISNUM(2) )
     {
+#endif
       QWidget * ptr = obj->itemWidget ( PQTREEWIDGETITEM(1), PINT(2) );
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -478,14 +587,18 @@ HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && ISOPTNUM(2) )
     {
+#endif
       obj->openPersistentEditor ( PQTREEWIDGETITEM(1), OPINT(2,0) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -500,36 +613,18 @@ HB_FUNC_STATIC( QTREEWIDGET_REMOVEITEMWIDGET )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQTREEWIDGETITEM(1) && ISNUM(2) )
     {
+#endif
       obj->removeItemWidget ( PQTREEWIDGETITEM(1), PINT(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setColumnCount ( int columns )
-*/
-HB_FUNC_STATIC( QTREEWIDGET_SETCOLUMNCOUNT )
-{
-  QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-      obj->setColumnCount ( PINT(1) );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -613,14 +708,18 @@ HB_FUNC_STATIC( QTREEWIDGET_SETFIRSTITEMCOLUMNSPANNED )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQTREEWIDGETITEM(1) && ISLOG(2) )
     {
+#endif
       obj->setFirstItemColumnSpanned ( PQTREEWIDGETITEM(1), PBOOL(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -635,14 +734,18 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
+#endif
       obj->setHeaderItem ( PQTREEWIDGETITEM(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -657,14 +760,18 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABEL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
+#endif
       obj->setHeaderLabel ( PQSTRING(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -679,14 +786,18 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABELS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
+#endif
       obj->setHeaderLabels ( PQSTRINGLIST(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -701,14 +812,18 @@ HB_FUNC_STATIC( QTREEWIDGET_SETITEMWIDGET )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQTREEWIDGETITEM(1) && ISNUM(2) && ISQWIDGET(3) )
     {
+#endif
       obj->setItemWidget ( PQTREEWIDGETITEM(1), PINT(2), PQWIDGET(3) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -723,14 +838,18 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTCOLUMN )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       RINT( obj->sortColumn () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -743,14 +862,18 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
+#endif
       obj->sortItems ( PINT(1), (Qt::SortOrder) hb_parni(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -765,15 +888,19 @@ HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       QTreeWidgetItem * ptr = obj->takeTopLevelItem ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -786,35 +913,19 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       QTreeWidgetItem * ptr = obj->topLevelItem ( PINT(1) );
       _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
-  }
-}
-
-/*
-int topLevelItemCount () const
-*/
-HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEMCOUNT )
-{
-  QTreeWidget * obj = (QTreeWidget *) _qt5xhb_itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    if( ISNUMPAR(0) )
-    {
-      RINT( obj->topLevelItemCount () );
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
+#endif
   }
 }
 
@@ -827,15 +938,19 @@ HB_FUNC_STATIC( QTREEWIDGET_VISUALITEMRECT )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
+#endif
       QRect * ptr = new QRect( obj->visualItemRect ( PQTREEWIDGETITEM(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -848,14 +963,18 @@ HB_FUNC_STATIC( QTREEWIDGET_SETSELECTIONMODEL )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1) )
     {
+#endif
       obj->setSelectionModel ( PQITEMSELECTIONMODEL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -870,14 +989,18 @@ HB_FUNC_STATIC( QTREEWIDGET_CLEAR )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       obj->clear ();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -892,14 +1015,18 @@ HB_FUNC_STATIC( QTREEWIDGET_COLLAPSEITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
+#endif
       obj->collapseItem ( PQTREEWIDGETITEM(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -914,14 +1041,18 @@ HB_FUNC_STATIC( QTREEWIDGET_EXPANDITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
+#endif
       obj->expandItem ( PQTREEWIDGETITEM(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -936,14 +1067,18 @@ HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && ISOPTNUM(2) )
     {
+#endif
       obj->scrollToItem ( PQTREEWIDGETITEM(1), ISNIL(2)? (QAbstractItemView::ScrollHint) QAbstractItemView::EnsureVisible : (QAbstractItemView::ScrollHint) hb_parni(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );

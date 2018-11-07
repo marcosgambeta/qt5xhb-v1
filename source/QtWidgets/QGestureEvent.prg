@@ -178,8 +178,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QGesture *> list = obj->activeGestures ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -206,11 +208,13 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -223,8 +227,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QGesture *> list = obj->canceledGestures ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -251,11 +257,13 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -268,15 +276,19 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
     {
+#endif
       QGesture * ptr = obj->gesture ( (Qt::GestureType) hb_parni(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QGESTURE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -289,8 +301,10 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QList<QGesture *> list = obj->gestures ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -317,11 +331,13 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -466,15 +482,19 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
+#endif
       QPointF * ptr = new QPointF( obj->mapToGraphicsScene ( *PQPOINTF(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 
@@ -556,15 +576,19 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
 
   if( obj )
   {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
     {
+#endif
       QWidget * ptr = obj->widget ();
       _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
+#endif
   }
 }
 

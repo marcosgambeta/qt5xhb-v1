@@ -82,12 +82,12 @@ void QStyleOptionProgressBar_new2 ()
 }
 
 /*
-QStyleOptionProgressBar(int version) (protected)
+QStyleOptionProgressBar(int version) [protected]
 */
 
 //[1]QStyleOptionProgressBar()
 //[2]QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
-//[3]QStyleOptionProgressBar(int version) (protected)
+//[3]QStyleOptionProgressBar(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {

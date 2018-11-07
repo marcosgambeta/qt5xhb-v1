@@ -73,12 +73,12 @@ void QStyleOptionToolBox_new2 ()
 }
 
 /*
-QStyleOptionToolBox(int version) (protected)
+QStyleOptionToolBox(int version) [protected]
 */
 
 //[1]QStyleOptionToolBox()
 //[2]QStyleOptionToolBox(const QStyleOptionToolBox &other)
-//[3]QStyleOptionToolBox(int version) (protected)
+//[3]QStyleOptionToolBox(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
 {

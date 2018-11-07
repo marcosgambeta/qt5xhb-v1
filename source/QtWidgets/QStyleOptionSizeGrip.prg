@@ -66,12 +66,12 @@ void QStyleOptionSizeGrip_new2 ()
 }
 
 /*
-QStyleOptionSizeGrip(int version) (protected)
+QStyleOptionSizeGrip(int version) [protected]
 */
 
 //[1]QStyleOptionSizeGrip()
 //[2]QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
-//[3]QStyleOptionSizeGrip(int version) (protected)
+//[3]QStyleOptionSizeGrip(int version) [protected]
 
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 {
