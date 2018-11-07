@@ -22,6 +22,8 @@ $destructor
 
 $includes=5,1,0
 
+#include <QSensorBackend>
+
 $deleteMethod=5,1,0
 
 $prototype=static void registerBackend(const QByteArray &type, const QByteArray &identifier, QSensorBackendFactory *factory)

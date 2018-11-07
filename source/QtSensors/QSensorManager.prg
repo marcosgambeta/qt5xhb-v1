@@ -13,6 +13,7 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QSENSORBACKEND
 #endif
 
 CLASS QSensorManager
@@ -21,6 +22,11 @@ CLASS QSensorManager
    DATA self_destruction INIT .F.
 
    METHOD delete
+   METHOD registerBackend
+   METHOD unregisterBackend
+   METHOD isBackendRegistered
+   METHOD createBackend
+   METHOD setDefaultBackend
 
    METHOD newFrom
    METHOD newFromObject
@@ -58,6 +64,8 @@ RETURN
 #endif
 #endif
 
+#include <QSensorBackend>
+
 HB_FUNC_STATIC( QSENSORMANAGER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
@@ -83,8 +91,15 @@ static void registerBackend(const QByteArray &type, const QByteArray &identifier
 HB_FUNC_STATIC( QSENSORMANAGER_REGISTERBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorBackendFactory * par3 = (QSensorBackendFactory *) _qt5xhb_itemGetPtr(3);
-  QSensorManager::registerBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2), par3 );
+    if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && ISQSENSORBACKENDFACTORY(3) )
+  {
+      QSensorManager::registerBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2), PQSENSORBACKENDFACTORY(3) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -95,7 +110,15 @@ static void unregisterBackend(const QByteArray &type, const QByteArray &identifi
 HB_FUNC_STATIC( QSENSORMANAGER_UNREGISTERBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorManager::unregisterBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+  {
+      QSensorManager::unregisterBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
@@ -106,7 +129,14 @@ static bool isBackendRegistered(const QByteArray &type, const QByteArray &identi
 HB_FUNC_STATIC( QSENSORMANAGER_ISBACKENDREGISTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  RBOOL( QSensorManager::isBackendRegistered ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
+    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+  {
+      RBOOL( QSensorManager::isBackendRegistered ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -116,9 +146,15 @@ static QSensorBackend *createBackend(QSensor *sensor)
 HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensor * par1 = (QSensor *) _qt5xhb_itemGetPtr(1);
-  QSensorBackend * ptr = QSensorManager::createBackend ( par1 );
-  _qt5xhb_createReturnClass ( ptr, "QSENSORBACKEND" );
+    if( ISNUMPAR(1) && ISQSENSOR(1) )
+  {
+      QSensorBackend * ptr = QSensorManager::createBackend ( PQSENSOR(1) );
+      _qt5xhb_createReturnQObjectClass ( ptr, "QSENSORBACKEND" );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 #endif
 }
 
@@ -128,7 +164,15 @@ static void setDefaultBackend(const QByteArray &type, const QByteArray &identifi
 HB_FUNC_STATIC( QSENSORMANAGER_SETDEFAULTBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorManager::setDefaultBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
+  {
+      QSensorManager::setDefaultBackend ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
