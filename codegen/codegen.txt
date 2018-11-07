@@ -1092,6 +1092,7 @@ QSensor                                              |QObject
 QSensor::AxesOrientationMode                         |enum
 QSensor::Feature                                     |enum
 QSensorBackend                                       |QObject
+QSensorBackendFactory                                |object
 QSensorFilter                                        |object
 QSensorGestureRecognizer                             |QObject
 QSensorReading                                       |QObject
