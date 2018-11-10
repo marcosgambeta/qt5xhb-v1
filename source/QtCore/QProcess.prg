@@ -1209,14 +1209,18 @@ static QStringList systemEnvironment ()
 */
 HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRINGLIST( QProcess::systemEnvironment () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1483,14 +1487,18 @@ static QString nullDevice()
 HB_FUNC_STATIC( QPROCESS_NULLDEVICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QProcess::nullDevice () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 

@@ -582,15 +582,19 @@ static QDate currentDate ()
 */
 HB_FUNC_STATIC( QDATE_CURRENTDATE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QDate * ptr = new QDate( QDate::currentDate () );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -598,15 +602,19 @@ static QDate fromJulianDay ( int jd )
 */
 HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       QDate * ptr = new QDate( QDate::fromJulianDay ( PINT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QDATE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -653,14 +661,18 @@ static bool isLeapYear ( int year )
 */
 HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       RBOOL( QDate::isLeapYear ( PINT(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*

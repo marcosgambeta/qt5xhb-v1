@@ -349,14 +349,18 @@ static ClockType clockType()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RENUM( QElapsedTimer::clockType () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -364,14 +368,18 @@ static bool isMonotonic()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QElapsedTimer::isMonotonic () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROM )

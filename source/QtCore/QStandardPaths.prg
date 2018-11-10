@@ -66,14 +66,18 @@ static QString writableLocation(StandardLocation type)
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_WRITABLELOCATION )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       RQSTRING( QStandardPaths::writableLocation ( (QStandardPaths::StandardLocation) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -81,14 +85,18 @@ static QStringList standardLocations(StandardLocation type)
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_STANDARDLOCATIONS )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       RQSTRINGLIST( QStandardPaths::standardLocations ( (QStandardPaths::StandardLocation) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -96,14 +104,18 @@ static QString locate(StandardLocation type, const QString &fileName, LocateOpti
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
+#endif
       RQSTRING( QStandardPaths::locate ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -111,14 +123,18 @@ static QStringList locateAll(StandardLocation type, const QString &fileName, Loc
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
+#endif
       RQSTRINGLIST( QStandardPaths::locateAll ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -126,14 +142,18 @@ static QString displayName(StandardLocation type)
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_DISPLAYNAME )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       RQSTRING( QStandardPaths::displayName ( (QStandardPaths::StandardLocation) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -141,14 +161,18 @@ static QString findExecutable(const QString &executableName, const QStringList &
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTARRAY(2) )
   {
+#endif
       RQSTRING( QStandardPaths::findExecutable ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -156,14 +180,18 @@ static void setTestModeEnabled(bool testMode)
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_SETTESTMODEENABLED )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISLOG(1) )
   {
+#endif
       QStandardPaths::setTestModeEnabled ( PBOOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -173,14 +201,18 @@ static bool isTestModeEnabled()
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_ISTESTMODEENABLED )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QStandardPaths::isTestModeEnabled () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QSTANDARDPATHS_NEWFROM )

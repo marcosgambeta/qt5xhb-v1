@@ -613,15 +613,19 @@ static QJsonValue fromVariant(const QVariant & variant)
 */
 HB_FUNC_STATIC( QJSONVALUE_FROMVARIANT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
+#endif
       QJsonValue * ptr = new QJsonValue( QJsonValue::fromVariant ( *PQVARIANT(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QJSONVALUE_NEWFROM )

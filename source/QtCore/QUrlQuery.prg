@@ -511,15 +511,19 @@ static QChar defaultQueryPairDelimiter()
 */
 HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYPAIRDELIMITER )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QChar * ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -527,15 +531,19 @@ static QChar defaultQueryValueDelimiter()
 */
 HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYVALUEDELIMITER )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QChar * ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter () );
       _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QURLQUERY_NEWFROM )

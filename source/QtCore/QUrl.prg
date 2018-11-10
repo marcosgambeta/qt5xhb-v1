@@ -1073,14 +1073,18 @@ static QString fromAce ( const QByteArray & domain )
 */
 HB_FUNC_STATIC( QURL_FROMACE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
+#endif
       RQSTRING( QUrl::fromAce ( *PQBYTEARRAY(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1127,15 +1131,19 @@ static QUrl fromLocalFile ( const QString & localFile )
 */
 HB_FUNC_STATIC( QURL_FROMLOCALFILE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QUrl * ptr = new QUrl( QUrl::fromLocalFile ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1143,14 +1151,18 @@ static QString fromPercentEncoding ( const QByteArray & input )
 */
 HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
+#endif
       RQSTRING( QUrl::fromPercentEncoding ( *PQBYTEARRAY(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1158,15 +1170,19 @@ static QUrl fromUserInput ( const QString & userInput )
 */
 HB_FUNC_STATIC( QURL_FROMUSERINPUT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QUrl * ptr = new QUrl( QUrl::fromUserInput ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QURL", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1174,14 +1190,18 @@ static void setIdnWhitelist ( const QStringList & list )
 */
 HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISARRAY(1) )
   {
+#endif
       QUrl::setIdnWhitelist ( PQSTRINGLIST(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1191,15 +1211,19 @@ static QByteArray toAce ( const QString & domain )
 */
 HB_FUNC_STATIC( QURL_TOACE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QByteArray * ptr = new QByteArray( QUrl::toAce ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1207,15 +1231,19 @@ static QByteArray toPercentEncoding ( const QString & input, const QByteArray & 
 */
 HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
+#endif
       QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QURL_NEWFROM )

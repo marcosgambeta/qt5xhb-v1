@@ -573,8 +573,10 @@ static QList<QStorageInfo> mountedVolumes()
 HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QList<QStorageInfo> list = QStorageInfo::mountedVolumes ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSTORAGEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -605,11 +607,13 @@ HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 
@@ -619,15 +623,19 @@ static QStorageInfo root()
 HB_FUNC_STATIC( QSTORAGEINFO_ROOT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QStorageInfo * ptr = new QStorageInfo( QStorageInfo::root () );
       _qt5xhb_createReturnClass ( ptr, "QSTORAGEINFO", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 

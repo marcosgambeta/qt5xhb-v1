@@ -416,25 +416,12 @@ static QString escape(const QString & str)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSION_ESCAPE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RQSTRING( QRegularExpression::escape ( PQSTRING(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
-static QString QRegularExpression::anchoredPattern(const QString &expression)
-*/
-HB_FUNC_STATIC( QREGULAREXPRESSION_ANCHOREDPATTERN )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-    if( ISNUMPAR(1) && ISCHAR(1) )
-  {
-      RQSTRING( QRegularExpression::anchoredPattern ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
@@ -444,19 +431,44 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_ANCHOREDPATTERN )
 }
 
 /*
-static QString QRegularExpression::wildcardToRegularExpression(const QString &pattern)
+static QString QRegularExpression::anchoredPattern(const QString &expression)
 */
-HB_FUNC_STATIC( QREGULAREXPRESSION_WILDCARDTOREGULAREXPRESSION )
+HB_FUNC_STATIC( QREGULAREXPRESSION_ANCHOREDPATTERN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
-      RQSTRING( QRegularExpression::wildcardToRegularExpression ( PQSTRING(1) ) );
+#endif
+      RQSTRING( QRegularExpression::anchoredPattern ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
+#endif
+}
+
+/*
+static QString QRegularExpression::wildcardToRegularExpression(const QString &pattern)
+*/
+HB_FUNC_STATIC( QREGULAREXPRESSION_WILDCARDTOREGULAREXPRESSION )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+#endif
+      RQSTRING( QRegularExpression::wildcardToRegularExpression ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
 #endif
 }
 

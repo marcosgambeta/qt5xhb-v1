@@ -1164,14 +1164,18 @@ static QString tr ( const char * sourceText, const char * disambiguation = 0, in
 */
 HB_FUNC_STATIC( QOBJECT_TR )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
   {
+#endif
       RQSTRING( QObject::tr ( PCONSTCHAR(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
