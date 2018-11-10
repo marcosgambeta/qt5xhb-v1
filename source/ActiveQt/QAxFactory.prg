@@ -462,14 +462,18 @@ static bool isServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVER )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAxFactory::isServer () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -477,14 +481,18 @@ static bool registerActiveObject ( QObject * object )
 */
 HB_FUNC_STATIC( QAXFACTORY_REGISTERACTIVEOBJECT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
+#endif
       RBOOL( QAxFactory::registerActiveObject ( PQOBJECT(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -492,14 +500,18 @@ static QString serverDirPath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERDIRPATH )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QAxFactory::serverDirPath () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -507,14 +519,18 @@ static QString serverFilePath ()
 */
 HB_FUNC_STATIC( QAXFACTORY_SERVERFILEPATH )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QAxFactory::serverFilePath () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -522,14 +538,18 @@ static bool startServer ( ServerType type = MultipleInstances )
 */
 HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
+#endif
       RBOOL( QAxFactory::startServer ( ISNIL(1)? (QAxFactory::ServerType) QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -537,14 +557,18 @@ static bool stopServer ()
 */
 HB_FUNC_STATIC( QAXFACTORY_STOPSERVER )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QAxFactory::stopServer () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 #pragma ENDDUMP
