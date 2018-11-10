@@ -84,15 +84,19 @@ static QGamepadManager* instance()
 HB_FUNC_STATIC( QGAMEPADMANAGER_INSTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QGamepadManager * ptr = QGamepadManager::instance ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QGAMEPADMANAGER" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 
