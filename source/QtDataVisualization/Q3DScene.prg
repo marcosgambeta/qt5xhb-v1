@@ -655,15 +655,19 @@ static QPoint invalidSelectionPoint()
 */
 HB_FUNC_STATIC( Q3DSCENE_INVALIDSELECTIONPOINT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QPoint * ptr = new QPoint( Q3DScene::invalidSelectionPoint () );
       _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 void Q3DSceneSlots_connect_signal ( const QString & signal, const QString & slot );
