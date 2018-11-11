@@ -484,105 +484,13 @@ static QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() 
 */
 HB_FUNC_STATIC( QICON_FROMTHEME )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQICON(2)||ISNIL(2)) )
   {
+#endif
       QIcon * ptr = new QIcon( QIcon::fromTheme ( PQSTRING(1), ISNIL(2)? QIcon() : *(QIcon *) _qt5xhb_itemGetPtr(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QICON", true );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
-static bool hasThemeIcon ( const QString & name )
-*/
-HB_FUNC_STATIC( QICON_HASTHEMEICON )
-{
-    if( ISNUMPAR(1) && ISCHAR(1) )
-  {
-      RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
-static void setThemeName ( const QString & name )
-*/
-HB_FUNC_STATIC( QICON_SETTHEMENAME )
-{
-    if( ISNUMPAR(1) && ISCHAR(1) )
-  {
-      QIcon::setThemeName ( PQSTRING(1) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-static void setThemeSearchPaths ( const QStringList & paths )
-*/
-HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
-{
-    if( ISNUMPAR(1) && ISARRAY(1) )
-  {
-      QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-static QString themeName ()
-*/
-HB_FUNC_STATIC( QICON_THEMENAME )
-{
-    if( ISNUMPAR(0) )
-  {
-      RQSTRING( QIcon::themeName () );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
-static QStringList themeSearchPaths ()
-*/
-HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
-{
-    if( ISNUMPAR(0) )
-  {
-      RQSTRINGLIST( QIcon::themeSearchPaths () );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
-static QString QIcon::fallbackThemeName()
-*/
-HB_FUNC_STATIC( QICON_FALLBACKTHEMENAME )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-    if( ISNUMPAR(0) )
-  {
-      RQSTRING( QIcon::fallbackThemeName () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
@@ -592,19 +500,143 @@ HB_FUNC_STATIC( QICON_FALLBACKTHEMENAME )
 }
 
 /*
-static void QIcon::setFallbackThemeName(const QString &name)
+static bool hasThemeIcon ( const QString & name )
 */
-HB_FUNC_STATIC( QICON_SETFALLBACKTHEMENAME )
+HB_FUNC_STATIC( QICON_HASTHEMEICON )
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
-      QIcon::setFallbackThemeName ( PQSTRING(1) );
+#endif
+      RBOOL( QIcon::hasThemeIcon ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
+}
+
+/*
+static void setThemeName ( const QString & name )
+*/
+HB_FUNC_STATIC( QICON_SETTHEMENAME )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+#endif
+      QIcon::setThemeName ( PQSTRING(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+static void setThemeSearchPaths ( const QStringList & paths )
+*/
+HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISARRAY(1) )
+  {
+#endif
+      QIcon::setThemeSearchPaths ( PQSTRINGLIST(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+/*
+static QString themeName ()
+*/
+HB_FUNC_STATIC( QICON_THEMENAME )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      RQSTRING( QIcon::themeName () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
+
+/*
+static QStringList themeSearchPaths ()
+*/
+HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
+{
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      RQSTRINGLIST( QIcon::themeSearchPaths () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
+
+/*
+static QString QIcon::fallbackThemeName()
+*/
+HB_FUNC_STATIC( QICON_FALLBACKTHEMENAME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+  {
+#endif
+      RQSTRING( QIcon::fallbackThemeName () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+#endif
+}
+
+/*
+static void QIcon::setFallbackThemeName(const QString &name)
+*/
+HB_FUNC_STATIC( QICON_SETFALLBACKTHEMENAME )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+#endif
+      QIcon::setFallbackThemeName ( PQSTRING(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 #endif

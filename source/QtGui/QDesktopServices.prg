@@ -79,14 +79,18 @@ static bool openUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQURL(1) )
   {
+#endif
       RBOOL( QDesktopServices::openUrl ( *PQURL(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -94,14 +98,18 @@ static void setUrlHandler ( const QString & scheme, QObject * receiver, const ch
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_SETURLHANDLER )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
   {
+#endif
       QDesktopServices::setUrlHandler ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -111,14 +119,18 @@ static void unsetUrlHandler ( const QString & scheme )
 */
 HB_FUNC_STATIC( QDESKTOPSERVICES_UNSETURLHANDLER )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QDesktopServices::unsetUrlHandler ( PQSTRING(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }

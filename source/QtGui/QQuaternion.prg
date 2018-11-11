@@ -701,15 +701,19 @@ static QQuaternion slerp(const QQuaternion& q1, const QQuaternion& q2, float t)
 */
 HB_FUNC_STATIC( QQUATERNION_SLERP )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && ISNUM(3) )
   {
+#endif
       QQuaternion * ptr = new QQuaternion( QQuaternion::slerp ( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -717,15 +721,19 @@ static QQuaternion nlerp(const QQuaternion& q1, const QQuaternion& q2, float t)
 */
 HB_FUNC_STATIC( QQUATERNION_NLERP )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(3) && ISQQUATERNION(1) && ISQQUATERNION(2) && ISNUM(3) )
   {
+#endif
       QQuaternion * ptr = new QQuaternion( QQuaternion::nlerp ( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
       _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QQUATERNION_NEWFROM )

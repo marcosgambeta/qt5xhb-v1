@@ -515,14 +515,18 @@ static bool areSharing(QOpenGLContext * first, QOpenGLContext * second)
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_ARESHARING )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOPENGLCONTEXT(1) && ISQOPENGLCONTEXT(2) )
   {
+#endif
       RBOOL( QOpenGLContext::areSharing ( PQOPENGLCONTEXT(1), PQOPENGLCONTEXT(2) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -530,15 +534,19 @@ static QOpenGLContext * currentContext()
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QOpenGLContext * ptr = QOpenGLContext::currentContext ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLCONTEXT" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 void QOpenGLContextSlots_connect_signal ( const QString & signal, const QString & slot );
