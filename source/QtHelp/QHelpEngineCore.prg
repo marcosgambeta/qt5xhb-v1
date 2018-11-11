@@ -676,15 +676,19 @@ static QVariant metaData ( const QString & documentationFileName, const QString 
 */
 HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
   {
+#endif
       QVariant * ptr = new QVariant( QHelpEngineCore::metaData ( PQSTRING(1), PQSTRING(2) ) );
       _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -692,14 +696,18 @@ static QString namespaceName ( const QString & documentationFileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       RQSTRING( QHelpEngineCore::namespaceName ( PQSTRING(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 void QHelpEngineCoreSlots_connect_signal ( const QString & signal, const QString & slot );
