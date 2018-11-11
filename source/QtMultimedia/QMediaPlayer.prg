@@ -997,14 +997,18 @@ static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QS
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTARRAY(2) && ISOPTNUM(3) )
   {
+#endif
       RENUM( QMediaPlayer::hasSupport ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()), ISNIL(3)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(3) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1012,14 +1016,18 @@ static QStringList supportedMimeTypes(Flags flags = Flags())
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDMIMETYPES )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
+#endif
       RQSTRINGLIST( QMediaPlayer::supportedMimeTypes ( ISNIL(1)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*

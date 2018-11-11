@@ -824,14 +824,18 @@ static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       RENUM( QVideoFrame::imageFormatFromPixelFormat ( (QVideoFrame::PixelFormat) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -839,14 +843,18 @@ static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       RENUM( QVideoFrame::pixelFormatFromImageFormat ( (QImage::Format) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QVIDEOFRAME_NEWFROM )

@@ -489,14 +489,18 @@ static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const Q
 */
 HB_FUNC_STATIC( QAUDIODECODER_HASSUPPORT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTARRAY(2) )
   {
+#endif
       RENUM( QAudioDecoder::hasSupport ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*

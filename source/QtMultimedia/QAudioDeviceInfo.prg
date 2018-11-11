@@ -423,8 +423,10 @@ static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices ( (QAudio::Mode) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QAUDIODEVICEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -455,11 +457,13 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -467,15 +471,19 @@ static QAudioDeviceInfo defaultInputDevice ()
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTINPUTDEVICE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultInputDevice () );
       _qt5xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -483,15 +491,19 @@ static QAudioDeviceInfo defaultOutputDevice ()
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTOUTPUTDEVICE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultOutputDevice () );
       _qt5xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
