@@ -1129,8 +1129,10 @@ static QList<QByteArray> sensorTypes()
 */
 HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QList<QByteArray> list = QSensor::sensorTypes ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -1161,11 +1163,13 @@ HB_FUNC_STATIC( QSENSOR_SENSORTYPES )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1173,8 +1177,10 @@ static QList<QByteArray> sensorsForType(const QByteArray &type)
 */
 HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
+#endif
       QList<QByteArray> list = QSensor::sensorsForType ( *PQBYTEARRAY(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -1205,11 +1211,13 @@ HB_FUNC_STATIC( QSENSOR_SENSORSFORTYPE )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1218,15 +1226,19 @@ static QByteArray defaultSensorForType(const QByteArray &type)
 HB_FUNC_STATIC( QSENSOR_DEFAULTSENSORFORTYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
+#endif
       QByteArray * ptr = new QByteArray( QSensor::defaultSensorForType ( *PQBYTEARRAY(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 
