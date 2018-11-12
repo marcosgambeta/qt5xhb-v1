@@ -258,8 +258,10 @@ static QList<QPrinterInfo> availablePrinters ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -290,11 +292,13 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -302,15 +306,19 @@ static QPrinterInfo defaultPrinter ()
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
       _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -632,14 +640,18 @@ static QStringList availablePrinterNames()
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERNAMES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRINGLIST( QPrinterInfo::availablePrinterNames () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 
@@ -649,14 +661,18 @@ static QString defaultPrinterName()
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRING( QPrinterInfo::defaultPrinterName () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 
@@ -665,15 +681,19 @@ static QPrinterInfo printerInfo(const QString &printerName)
 */
 HB_FUNC_STATIC( QPRINTERINFO_PRINTERINFO )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( PQSTRING(1) ) );
       _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
