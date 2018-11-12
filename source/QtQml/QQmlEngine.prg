@@ -736,15 +736,19 @@ static QQmlContext * contextForObject(const QObject * object)
 */
 HB_FUNC_STATIC( QQMLENGINE_CONTEXTFOROBJECT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
+#endif
       QQmlContext * ptr = QQmlEngine::contextForObject ( PQOBJECT(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QQMLCONTEXT" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -752,14 +756,18 @@ static ObjectOwnership objectOwnership(QObject * object)
 */
 HB_FUNC_STATIC( QQMLENGINE_OBJECTOWNERSHIP )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
+#endif
       RENUM( QQmlEngine::objectOwnership ( PQOBJECT(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -767,14 +775,18 @@ static void setContextForObject(QObject * object, QQmlContext * context)
 */
 HB_FUNC_STATIC( QQMLENGINE_SETCONTEXTFOROBJECT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2) )
   {
+#endif
       QQmlEngine::setContextForObject ( PQOBJECT(1), PQQMLCONTEXT(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -784,14 +796,18 @@ static void setObjectOwnership(QObject * object, ObjectOwnership ownership)
 */
 HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
+#endif
       QQmlEngine::setObjectOwnership ( PQOBJECT(1), (QQmlEngine::ObjectOwnership) hb_parni(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
