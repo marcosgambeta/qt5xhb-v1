@@ -212,14 +212,18 @@ static QString genderName(QVoice::Gender gender)
 HB_FUNC_STATIC( QVOICE_GENDERNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       RQSTRING( QVoice::genderName ( (QVoice::Gender) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 
@@ -229,14 +233,18 @@ static QString ageName(QVoice::Age age)
 HB_FUNC_STATIC( QVOICE_AGENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       RQSTRING( QVoice::ageName ( (QVoice::Age) hb_parni(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 
