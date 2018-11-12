@@ -75,15 +75,19 @@ static QWebEngineSettings *globalSettings()
 HB_FUNC_STATIC( QWEBENGINESETTINGS_GLOBALSETTINGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QWebEngineSettings * ptr = QWebEngineSettings::globalSettings ();
       _qt5xhb_createReturnClass ( ptr, "QWEBENGINESETTINGS", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 
