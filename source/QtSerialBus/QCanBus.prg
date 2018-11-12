@@ -64,15 +64,19 @@ static QCanBus *instance()
 HB_FUNC_STATIC( QCANBUS_INSTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QCanBus * ptr = QCanBus::instance ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QCANBUS" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 
