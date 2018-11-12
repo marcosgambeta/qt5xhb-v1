@@ -121,15 +121,19 @@ static QWebHistoryInterface * defaultInterface ()
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface ();
       _qt5xhb_createReturnQObjectClass ( ptr, "QWEBHISTORYINTERFACE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -137,14 +141,18 @@ static void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQWEBHISTORYINTERFACE(1) )
   {
+#endif
       QWebHistoryInterface::setDefaultInterface ( PQWEBHISTORYINTERFACE(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
