@@ -570,14 +570,18 @@ static bool areSharing ( const QGLContext * context1, const QGLContext * context
 */
 HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(2) && ISQGLCONTEXT(1) && ISQGLCONTEXT(2) )
   {
+#endif
       RBOOL( QGLContext::areSharing ( PQGLCONTEXT(1), PQGLCONTEXT(2) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -585,15 +589,19 @@ static const QGLContext * currentContext ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       const QGLContext * ptr = QGLContext::currentContext ();
       _qt5xhb_createReturnClass ( ptr, "QGLCONTEXT", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -601,14 +609,18 @@ static void setTextureCacheLimit ( int size )
 */
 HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISNUM(1) )
   {
+#endif
       QGLContext::setTextureCacheLimit ( PINT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -618,14 +630,18 @@ static int textureCacheLimit ()
 */
 HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RINT( QGLContext::textureCacheLimit () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QGLCONTEXT_NEWFROM )

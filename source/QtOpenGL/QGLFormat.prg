@@ -1356,15 +1356,19 @@ static QGLFormat defaultFormat ()
 */
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTFORMAT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QGLFormat * ptr = new QGLFormat( QGLFormat::defaultFormat () );
       _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1372,15 +1376,19 @@ static QGLFormat defaultOverlayFormat ()
 */
 HB_FUNC_STATIC( QGLFORMAT_DEFAULTOVERLAYFORMAT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QGLFormat * ptr = new QGLFormat( QGLFormat::defaultOverlayFormat () );
       _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1388,14 +1396,18 @@ static bool hasOpenGL ()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGL )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QGLFormat::hasOpenGL () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1403,14 +1415,18 @@ static bool hasOpenGLOverlays ()
 */
 HB_FUNC_STATIC( QGLFORMAT_HASOPENGLOVERLAYS )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RBOOL( QGLFormat::hasOpenGLOverlays () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1418,14 +1434,18 @@ static OpenGLVersionFlags openGLVersionFlags ()
 */
 HB_FUNC_STATIC( QGLFORMAT_OPENGLVERSIONFLAGS )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RENUM( QGLFormat::openGLVersionFlags () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -1433,14 +1453,18 @@ static void setDefaultFormat ( const QGLFormat & f )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTFORMAT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
+#endif
       QGLFormat::setDefaultFormat ( *PQGLFORMAT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1450,14 +1474,18 @@ static void setDefaultOverlayFormat ( const QGLFormat & f )
 */
 HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
+#endif
       QGLFormat::setDefaultOverlayFormat ( *PQGLFORMAT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }
