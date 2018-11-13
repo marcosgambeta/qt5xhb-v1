@@ -10,7 +10,7 @@ $header
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QtSerialBusVersion>
+#include <QtVirtualKeyboardVersion>
 #endif
 #endif
 
@@ -20,7 +20,7 @@ $header
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QtSerialBusVersion>
+#include <QtVirtualKeyboardVersion>
 #endif
 #endif
 
