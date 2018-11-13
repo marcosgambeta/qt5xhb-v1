@@ -176,15 +176,19 @@ static const QItemEditorFactory *defaultFactory()
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_DEFAULTFACTORY )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory ();
       _qt5xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY", false );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -192,14 +196,18 @@ static void setDefaultFactory(QItemEditorFactory *factory)
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_SETDEFAULTFACTORY )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQITEMEDITORFACTORY(1) )
   {
+#endif
       QItemEditorFactory::setDefaultFactory ( PQITEMEDITORFACTORY(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 
   hb_itemReturn( hb_stackSelfItem() );
 }

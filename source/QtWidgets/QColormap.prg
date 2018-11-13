@@ -277,15 +277,19 @@ static QColormap instance ( int screen = -1 )
 */
 HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
+#endif
       QColormap * ptr = new QColormap( QColormap::instance ( OPINT(1,-1) ) );
       _qt5xhb_createReturnClass ( ptr, "QCOLORMAP", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QCOLORMAP_NEWFROM )

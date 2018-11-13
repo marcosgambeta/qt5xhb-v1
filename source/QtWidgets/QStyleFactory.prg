@@ -81,15 +81,19 @@ static QStyle * create(const QString & key)
 */
 HB_FUNC_STATIC( QSTYLEFACTORY_CREATE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
+#endif
       QStyle * ptr = QStyleFactory::create ( PQSTRING(1) );
       _qt5xhb_createReturnQObjectClass ( ptr, "QSTYLE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -97,14 +101,18 @@ static QStringList keys()
 */
 HB_FUNC_STATIC( QSTYLEFACTORY_KEYS )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       RQSTRINGLIST( QStyleFactory::keys () );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 HB_FUNC_STATIC( QSTYLEFACTORY_NEWFROM )

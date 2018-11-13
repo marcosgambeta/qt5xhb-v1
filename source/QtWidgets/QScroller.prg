@@ -542,8 +542,10 @@ static QList<QScroller *> activeScrollers()
 */
 HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(0) )
   {
+#endif
       QList<QScroller *> list = QScroller::activeScrollers ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSCROLLER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
@@ -570,11 +572,13 @@ HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
         }
       }
       hb_itemReturnRelease(pArray);
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -582,14 +586,18 @@ static Qt::GestureType grabGesture(QObject * target, ScrollerGestureType scrollG
 */
 HB_FUNC_STATIC( QSCROLLER_GRABGESTURE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTNUM(2) )
   {
+#endif
       RENUM( QScroller::grabGesture ( PQOBJECT(1), ISNIL(2)? (QScroller::ScrollerGestureType) QScroller::TouchGesture : (QScroller::ScrollerGestureType) hb_parni(2) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -597,14 +605,18 @@ static Qt::GestureType grabbedGesture(QObject * target)
 */
 HB_FUNC_STATIC( QSCROLLER_GRABBEDGESTURE )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
+#endif
       RENUM( QScroller::grabbedGesture ( PQOBJECT(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
@@ -612,14 +624,18 @@ static bool hasScroller(QObject * target)
 */
 HB_FUNC_STATIC( QSCROLLER_HASSCROLLER )
 {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
     if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
+#endif
       RBOOL( QScroller::hasScroller ( PQOBJECT(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 }
 
 /*
