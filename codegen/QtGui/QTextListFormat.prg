@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtGui
+
 $header
 
 #include "hbclass.ch"
@@ -12,17 +15,7 @@ $addRequests
 
 $beginClassFrom=QTextFormat
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD setStyle
-   METHOD style
-   METHOD setIndent
-   METHOD indent
-   METHOD setNumberPrefix
-   METHOD numberPrefix
-   METHOD setNumberSuffix
-   METHOD numberSuffix
+$addMethods
 
 $endClass
 

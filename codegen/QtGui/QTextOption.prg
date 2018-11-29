@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtGui
+
 $header
 
 #include "hbclass.ch"
@@ -12,22 +15,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD setAlignment
-   METHOD alignment
-   METHOD setTextDirection
-   METHOD textDirection
-   METHOD setWrapMode
-   METHOD wrapMode
-   METHOD setFlags
-   METHOD flags
-   METHOD setTabStop
-   METHOD tabStop
-   METHOD setTabArray
-   METHOD tabArray
-   METHOD setUseDesignMetrics
-   METHOD useDesignMetrics
+$addMethods
 
 $endClass
 

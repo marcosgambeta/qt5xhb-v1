@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtGui
+
 $header
 
 #include "hbclass.ch"
@@ -12,9 +15,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD delete
-   METHOD intrinsicSize
-   METHOD drawObject
+$addMethods
 
 $endClass
 

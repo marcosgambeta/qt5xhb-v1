@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtGui
+
 $header
 
 %% TODO: class under #ifndef QT_NO_SYNTAXHIGHLIGHTER

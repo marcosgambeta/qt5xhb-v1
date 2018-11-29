@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtGui
+
 $header
 
 #include "hbclass.ch"
@@ -12,32 +15,7 @@ $addRequests
 
 $beginClassFrom=
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD rect
-   METHOD x
-   METHOD y
-   METHOD width
-   METHOD ascent
-   METHOD descent
-   METHOD height
-   METHOD leading
-   METHOD setLeadingIncluded
-   METHOD leadingIncluded
-   METHOD naturalTextWidth
-   METHOD horizontalAdvance
-   METHOD naturalTextRect
-   METHOD cursorToX
-   METHOD xToCursor
-   METHOD setLineWidth
-   METHOD setNumColumns
-   METHOD setPosition
-   METHOD position
-   METHOD textStart
-   METHOD textLength
-   METHOD lineNumber
-%%   METHOD draw
+$addMethods
 
 $endClass
 

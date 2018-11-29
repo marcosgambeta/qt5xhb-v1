@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtGui
+
 $header
 
 #include "hbclass.ch"
@@ -12,18 +15,7 @@ $addRequests
 
 $beginClassFrom=QTextBlockGroup
 
-   METHOD new
-   METHOD delete
-   METHOD count
-   METHOD isEmpty
-   METHOD item
-   METHOD itemNumber
-   METHOD itemText
-   METHOD removeItem
-   METHOD remove
-   METHOD add
-   METHOD setFormat
-   METHOD format
+$addMethods
 
 $endClass
 

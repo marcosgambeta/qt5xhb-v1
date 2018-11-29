@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtGui
+
 $header
 
 #include "hbclass.ch"
@@ -12,18 +15,7 @@ $addRequests
 
 $beginClassFrom=QTextCharFormat
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD setTopPadding
-   METHOD topPadding
-   METHOD setBottomPadding
-   METHOD bottomPadding
-   METHOD setLeftPadding
-   METHOD leftPadding
-   METHOD setRightPadding
-   METHOD rightPadding
-   METHOD setPadding
+$addMethods
 
 $endClass
 

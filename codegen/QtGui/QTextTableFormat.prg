@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtGui
+
 $header
 
 #include "hbclass.ch"
@@ -12,22 +15,7 @@ $addRequests
 
 $beginClassFrom=QTextFrameFormat
 
-   METHOD new
-   METHOD delete
-   METHOD isValid
-   METHOD columns
-   METHOD setColumns
-   METHOD setColumnWidthConstraints
-   METHOD columnWidthConstraints
-   METHOD clearColumnWidthConstraints
-   METHOD cellSpacing
-   METHOD setCellSpacing
-   METHOD cellPadding
-   METHOD setCellPadding
-   METHOD setAlignment
-   METHOD alignment
-   METHOD setHeaderRowCount
-   METHOD headerRowCount
+$addMethods
 
 $endClass
 
