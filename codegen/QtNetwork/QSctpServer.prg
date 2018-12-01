@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtNetwork
+
 %% TODO: class under condition
 %% #if !defined(QT_NO_SCTP) || defined(Q_CLANG_QDOC)
 %% #endif // QT_NO_SCTP
