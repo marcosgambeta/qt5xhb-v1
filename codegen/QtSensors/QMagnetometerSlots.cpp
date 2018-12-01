@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtSensors
+
 $header
 
 $includes=5,1,0
