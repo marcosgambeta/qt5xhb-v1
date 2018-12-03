@@ -6,6 +6,9 @@
 
 */
 
+$project=Qt5xHb
+$module=QtWinExtras
+
 #include <Qt>
 
 #ifndef __XHARBOUR__
