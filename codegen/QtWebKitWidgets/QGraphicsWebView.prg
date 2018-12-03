@@ -4,6 +4,9 @@
 %% Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 %%
 
+$project=Qt5xHb
+$module=QtWebKitWidgets
+
 %% TODO: implementar condicao #if !defined(QT_NO_GRAPHICSVIEW)
 
 $header
