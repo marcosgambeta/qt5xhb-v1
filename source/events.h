@@ -11,6 +11,7 @@
 
 #include <QObject>
 #include <QEvent>
+#include <QVector>
 #include <QList>
 #include <QCoreApplication>
 #include <QMetaEnum>
@@ -37,10 +38,10 @@ class Events: public QObject
   public:
   Events(QObject *parent = 0);
   ~Events();
-  QList<QObject*> list1;     // armazena ponteiro do objeto
-  QList<QEvent::Type> list2; // armazena tipo de evento
-  QList<PHB_ITEM> list3;     // armazena codeblock
-  QList<bool> list4;         // ativo (true) ou liberado (false)
+  QVector<QObject*> list1;     // armazena ponteiro do objeto
+  QVector<QEvent::Type> list2; // armazena tipo de evento
+  QVector<PHB_ITEM> list3;     // armazena codeblock
+  QVector<bool> list4;         // ativo (true) ou liberado (false)
 
   protected:
   bool eventFilter(QObject *obj, QEvent *event);
