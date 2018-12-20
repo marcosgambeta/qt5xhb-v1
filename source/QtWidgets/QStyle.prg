@@ -51,10 +51,6 @@ CLASS QStyle INHERIT QObject
    METHOD visualPos
    METHOD visualRect
 
-   METHOD onCurrentChanged
-   METHOD onTabCloseRequested
-   METHOD onTabMoved
-
    DESTRUCTOR destroyObject
 
 END CLASS
@@ -782,23 +778,6 @@ HB_FUNC_STATIC( QSTYLE_VISUALRECT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 #endif
-}
-
-void QStyleSlots_connect_signal ( const QString & signal, const QString & slot );
-
-HB_FUNC_STATIC( QSTYLE_ONCURRENTCHANGED )
-{
-  QStyleSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
-}
-
-HB_FUNC_STATIC( QSTYLE_ONTABCLOSEREQUESTED )
-{
-  QStyleSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
-}
-
-HB_FUNC_STATIC( QSTYLE_ONTABMOVED )
-{
-  QStyleSlots_connect_signal( "tabMoved(int,int)", "tabMoved(int,int)" );
 }
 
 #pragma ENDDUMP

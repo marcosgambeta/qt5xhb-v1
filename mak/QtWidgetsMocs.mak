@@ -132,8 +132,6 @@ $(QT5XHB_OBJ_DIR)/QStackedWidgetSlotsMoc.cpp            : $(QT5XHB_SRC_DIR)/QtWi
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QStatusBarSlotsMoc.cpp                : $(QT5XHB_SRC_DIR)/QtWidgets/QStatusBarSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
-$(QT5XHB_OBJ_DIR)/QStyleSlotsMoc.cpp                    : $(QT5XHB_SRC_DIR)/QtWidgets/QStyleSlots.h
-	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QSystemTrayIconSlotsMoc.cpp           : $(QT5XHB_SRC_DIR)/QtWidgets/QSystemTrayIconSlots.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/QTabBarSlotsMoc.cpp                   : $(QT5XHB_SRC_DIR)/QtWidgets/QTabBarSlots.h
