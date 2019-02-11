@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 $prototype=QAxScript ( const QString & name, QAxScriptManager * manager )
 $constructor=|new|const QString &,QAxScriptManager *
