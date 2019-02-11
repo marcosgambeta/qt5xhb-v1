@@ -23,8 +23,6 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
 $includes=5,3,0
 
 $prototype=QAndroidActivityResultReceiver()
