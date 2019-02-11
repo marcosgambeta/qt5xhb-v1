@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,8,0
 
-#include <QBoxPlotSeries>
-#include <QAbstractItemModel>
+#include <QtCharts/QBoxPlotSeries>
+#include <QtCore/QAbstractItemModel>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 using namespace QtCharts;

@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,7,0
 
-#include <QEasingCurve>
-#include <QLocale>
+#include <QtCore/QEasingCurve>
+#include <QtCore/QLocale>
 
 using namespace QtCharts;
 

@@ -27,7 +27,7 @@ $destructor
 
 $includes=5,7,0
 
-#include <QAbstractSeries>
+#include <QtCharts/QAbstractSeries>
 
 using namespace QtCharts;
 

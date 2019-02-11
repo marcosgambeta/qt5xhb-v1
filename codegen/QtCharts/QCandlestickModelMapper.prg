@@ -27,9 +27,9 @@ $destructor
 
 $includes=5,8,0
 
-#include <QAbstractItemModel>
+#include <QtCore/QAbstractItemModel>
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QCandlestickSeries>
+#include <QtCharts/QCandlestickSeries>
 #endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))

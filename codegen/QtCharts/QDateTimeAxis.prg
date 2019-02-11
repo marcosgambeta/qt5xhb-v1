@@ -27,7 +27,7 @@ $destructor
 
 $includes=5,7,0
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 using namespace QtCharts;
 
