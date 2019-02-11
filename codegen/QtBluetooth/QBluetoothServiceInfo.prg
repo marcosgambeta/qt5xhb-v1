@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,2,0
 
-#include <QBluetoothDeviceInfo>
+#include <QtBluetooth/QBluetoothDeviceInfo>
 
 $prototype=QBluetoothServiceInfo()
 $internalConstructor=5,2,0|new1|

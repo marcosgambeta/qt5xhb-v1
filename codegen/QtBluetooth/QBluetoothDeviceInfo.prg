@@ -25,8 +25,8 @@ $destructor
 
 $includes=5,2,0
 
-#include <QBluetoothAddress>
-#include <QBluetoothUuid>
+#include <QtBluetooth/QBluetoothAddress>
+#include <QtBluetooth/QBluetoothUuid>
 
 %% void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> list );
 

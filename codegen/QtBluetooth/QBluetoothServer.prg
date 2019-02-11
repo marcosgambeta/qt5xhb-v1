@@ -25,8 +25,6 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
 $includes=5,2,0
 
 $prototype=QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = 0)
