@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QMediaService>
+#include <QtMultimedia/QMediaService>
 
 $deleteMethod
 

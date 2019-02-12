@@ -30,7 +30,7 @@ $destructor
 
 $includes
 
-#include <QVideoSurfaceFormat>
+#include <QtMultimedia/QVideoSurfaceFormat>
 
 $prototype=explicit QAbstractVideoSurface(QObject *parent = Q_NULLPTR)
 

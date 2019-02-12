@@ -44,7 +44,7 @@ $destructor
 
 $includes
 
-#include <QSize>
+#include <QtCore/QSize>
 
 $prototype=QMediaResource()
 $internalConstructor=|new1|

@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QRadioData>
+#include <QtMultimedia/QRadioData>
 
 $prototype=explicit QRadioTuner(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0

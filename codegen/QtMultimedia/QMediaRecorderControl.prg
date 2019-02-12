@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QUrl>
+#include <QtCore/QUrl>
 
 $prototype=explicit QMediaRecorderControl(QObject *parent = Q_NULLPTR) [protected]
 

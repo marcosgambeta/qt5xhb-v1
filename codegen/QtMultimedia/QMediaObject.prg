@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QVariant>
-#include <QMediaService>
+#include <QtCore/QVariant>
+#include <QtMultimedia/QMediaService>
 
 $prototype=QMediaObject(QObject *parent, QMediaService *service) [protected]
 

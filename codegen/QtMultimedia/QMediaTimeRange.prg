@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QList>
+#include <QtCore/QList>
 
 $prototype=QMediaTimeRange()
 $internalConstructor=|new1|

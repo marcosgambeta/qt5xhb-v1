@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 $prototype=explicit QMediaContainerControl(QObject *parent = Q_NULLPTR) [protected]
 

@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QAbstractVideoSurface>
+#include <QtMultimedia/QAbstractVideoSurface>
 
 $prototype=explicit QVideoRendererControl(QObject *parent = Q_NULLPTR) [protected]
 

@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QIODevice>
+#include <QtCore/QIODevice>
 
 $deleteMethod
 

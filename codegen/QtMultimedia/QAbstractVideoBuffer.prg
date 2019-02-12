@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 $prototype=QAbstractVideoBuffer(HandleType type) (abstract)
 %% $constructor=|new|QAbstractVideoBuffer::HandleType
