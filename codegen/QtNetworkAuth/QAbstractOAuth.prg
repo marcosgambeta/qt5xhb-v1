@@ -30,8 +30,8 @@ $destructor
 
 $includes=5,10,0
 
-#include <QNetworkAccessManager>
-#include <QAbstractOAuthReplyHandler>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 
 $prototype=explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) [protected]
 
