@@ -27,7 +27,7 @@ $destructor
 
 $includes=5,9,0
 
-#include <QGamepad>
+#include <QtGamepad/QGamepad>
 
 $prototype=explicit QGamepadKeyNavigation(QObject *parent = nullptr)
 $constructor=5,9,0|new|QObject *=nullptr
