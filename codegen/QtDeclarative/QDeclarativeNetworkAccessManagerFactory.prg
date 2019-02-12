@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QNetworkAccessManager>
+#include <QtNetwork/QNetworkAccessManager>
 
 $deleteMethod
 

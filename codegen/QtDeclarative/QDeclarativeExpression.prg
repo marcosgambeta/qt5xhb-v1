@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QDeclarativeContext>
-#include <QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeContext>
+#include <QtDeclarative/QDeclarativeEngine>
 
 $prototype=QDeclarativeExpression ()
 $internalConstructor=|new1|
