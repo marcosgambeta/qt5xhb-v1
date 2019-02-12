@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 $prototype=QPrinterInfo ()
 $internalConstructor=|new1|
