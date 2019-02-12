@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QVector>
+#include <QtCore/QVector>
 
 $deleteMethod
 

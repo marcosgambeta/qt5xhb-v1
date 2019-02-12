@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QXmlItem>
+#include <QtXmlPatterns/QXmlItem>
 
 $prototype=QXmlResultItems ()
 $constructor=|new|

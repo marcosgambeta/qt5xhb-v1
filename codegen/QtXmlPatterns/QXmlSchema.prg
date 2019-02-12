@@ -25,9 +25,9 @@ $destructor
 
 $includes
 
-#include <QAbstractMessageHandler>
-#include <QNetworkAccessManager>
-#include <QAbstractUriResolver>
+#include <QtXmlPatterns/QAbstractMessageHandler>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtXmlPatterns/QAbstractUriResolver>
 
 $prototype=QXmlSchema ()
 $internalConstructor=|new1|

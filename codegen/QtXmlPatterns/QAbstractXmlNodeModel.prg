@@ -25,10 +25,10 @@ $destructor
 
 $includes
 
-#include <QVariant>
-#include <QUrl>
-#include <QVector>
-#include <QSourceLocation>
+#include <QtCore/QVariant>
+#include <QtCore/QUrl>
+#include <QtCore/QVector>
+#include <QtXmlPatterns/QSourceLocation>
 
 $deleteMethod
 

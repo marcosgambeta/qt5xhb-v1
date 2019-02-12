@@ -25,10 +25,10 @@ $destructor
 
 $includes
 
-#include <QXmlSchema>
-#include <QAbstractMessageHandler>
-#include <QNetworkAccessManager>
-#include <QAbstractUriResolver>
+#include <QtXmlPatterns/QXmlSchema>
+#include <QtXmlPatterns/QAbstractMessageHandler>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtXmlPatterns/QAbstractUriResolver>
 
 $prototype=QXmlSchemaValidator ()
 $internalConstructor=|new1|
