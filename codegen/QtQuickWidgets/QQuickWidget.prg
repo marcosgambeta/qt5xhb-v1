@@ -27,10 +27,10 @@ $destructor
 
 $includes=5,3,0
 
-#include <QQmlError>
-#include <QQmlEngine>
-#include <QQmlContext>
-#include <QQuickItem>
+#include <QtQml/QQmlError>
+#include <QtQml/QQmlEngine>
+#include <QtQml/QQmlContext>
+#include <QtQuick/QQuickItem>
 
 $prototype=explicit QQuickWidget(QWidget *parent = 0)
 $internalConstructor=5,3,0|new1|QWidget *=0
