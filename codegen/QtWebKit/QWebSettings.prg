@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QUrl>
+#include <QtCore/QUrl>
 
 $prototype=QString defaultTextEncoding () const
 $method=|QString|defaultTextEncoding|

@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 $prototype=QWebHistoryItem ( const QWebHistoryItem & other )
 $constructor=|new|const QWebHistoryItem &

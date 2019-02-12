@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QWebSecurityOrigin>
+#include <QtWebKit/QWebSecurityOrigin>
 
 $prototype=QWebDatabase ( const QWebDatabase & other )
 $constructor=|new|const QWebDatabase &

@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QStringList>
-#include <QWebDatabase>
+#include <QtCore/QStringList>
+#include <QtWebKit/QWebDatabase>
 
 $prototype=QWebSecurityOrigin ( const QWebSecurityOrigin & other )
 $constructor=|new|const QWebSecurityOrigin &

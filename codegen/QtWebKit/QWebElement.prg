@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QWebFrame>
+#include <QtWebKitWidgets/QWebFrame>
 
 $prototype=QWebElement ()
 $internalConstructor=|new1|
