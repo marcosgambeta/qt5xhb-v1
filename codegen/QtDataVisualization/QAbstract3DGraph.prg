@@ -28,8 +28,8 @@ $destructor
 
 $includes
 
-#include <QAbstract3DAxis>
-#include <QCustom3DItem>
+#include <QtDataVisualization/QAbstract3DAxis>
+#include <QtDataVisualization/QCustom3DItem>
 
 using namespace QtDataVisualization;
 

@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <Q3DScene>
+#include <QtDataVisualization/Q3DScene>
 
 using namespace QtDataVisualization;
 

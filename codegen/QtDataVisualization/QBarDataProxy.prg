@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QBar3DSeries>
+#include <QtDataVisualization/QBar3DSeries>
 
 using namespace QtDataVisualization;
 

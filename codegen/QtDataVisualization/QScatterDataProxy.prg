@@ -33,7 +33,7 @@ $destructor
 
 $includes
 
-#include <QScatter3DSeries>
+#include <QtDataVisualization/QScatter3DSeries>
 
 using namespace QtDataVisualization;
 

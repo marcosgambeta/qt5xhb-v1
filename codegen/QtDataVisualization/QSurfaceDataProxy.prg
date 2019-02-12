@@ -34,7 +34,7 @@ $destructor
 
 $includes
 
-#include <QSurface3DSeries>
+#include <QtDataVisualization/QSurface3DSeries>
 
 using namespace QtDataVisualization;
 
