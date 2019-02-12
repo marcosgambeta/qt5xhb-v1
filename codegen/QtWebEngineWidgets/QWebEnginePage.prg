@@ -27,8 +27,8 @@ $destructor
 
 $includes=5,4,0
 
-#include <QAction>
-#include <QMenu>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
 
 $prototype=explicit QWebEnginePage(QObject *parent = 0)
 $constructor=5,4,0|new|QObject *=0
