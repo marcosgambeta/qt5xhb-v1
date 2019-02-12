@@ -28,10 +28,10 @@ $destructor
 $includes=5,6,0
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QWebEngineCookieStore>
+#include <QtWebEngine/QWebEngineCookieStore>
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QWebEngineUrlSchemeHandler>
+#include <QtWebEngine/QWebEngineUrlSchemeHandler>
 #endif
 
 $prototype=QQuickWebEngineProfile(QObject *parent = Q_NULLPTR)
