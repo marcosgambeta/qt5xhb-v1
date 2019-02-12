@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QQmlEngine>
+#include <QtQml/QQmlEngine>
 
 $prototype=QQmlIncubationController()
 $constructor=|new|

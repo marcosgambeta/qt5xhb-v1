@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QQmlContext>
-#include <QQmlEngine>
+#include <QtQml/QQmlContext>
+#include <QtQml/QQmlEngine>
 
 $prototype=QQmlExpression()
 $internalConstructor=|new1|

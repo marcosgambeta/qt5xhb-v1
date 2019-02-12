@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QQmlEngine>
+#include <QtQml/QQmlEngine>
 
 $prototype=QQmlContext(QQmlEngine * engine, QObject * parent = 0)
 $internalConstructor=|new1|QQmlEngine *,QObject *=0

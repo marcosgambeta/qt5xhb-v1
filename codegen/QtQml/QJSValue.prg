@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QDateTime>
-#include <QVariant>
+#include <QtCore/QDateTime>
+#include <QtCore/QVariant>
 
 $prototype=QJSValue(SpecialValue value = UndefinedValue)
 $constructor=|new1|QJSValue::SpecialValue=QJSValue::UndefinedValue
