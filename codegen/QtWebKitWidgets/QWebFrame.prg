@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QWebElement>
-#include <QWebPage>
-#include <QWebSecurityOrigin>
+#include <QtWebKit/QWebElement>
+#include <QtWebKitWidgets/QWebPage>
+#include <QtWebKit/QWebSecurityOrigin>
 
 $prototype=QWebFrame(QWebPage *parentPage) PRIVATE
 

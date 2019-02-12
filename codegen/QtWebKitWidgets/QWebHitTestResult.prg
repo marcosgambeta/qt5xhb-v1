@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QWebElement>
+#include <QtWebKit/QWebElement>
 
 $prototype=QWebHitTestResult ()
 $internalConstructor=|new1|
