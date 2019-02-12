@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,2,0
 
-#include <QString>
+#include <QtCore/QString>
 
 $prototype=QGeoAddress()
 $internalConstructor=5,2,0|new1|

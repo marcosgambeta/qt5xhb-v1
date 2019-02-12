@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,2,0
 
-#include <QIODevice>
+#include <QtCore/QIODevice>
 
 $prototype=QNmeaPositionInfoSource(UpdateMode updateMode, QObject *parent = 0)
 $constructor=5,2,0|new|QNmeaPositionInfoSource::UpdateMode,QObject *=0

@@ -27,7 +27,7 @@ $destructor
 
 $includes=5,2,0
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 $deleteMethod=5,2,0
 

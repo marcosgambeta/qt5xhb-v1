@@ -25,9 +25,9 @@ $destructor
 
 $includes=5,2,0
 
-#include <QGeoAddress>
-#include <QGeoCoordinate>
-#include <QGeoRectangle>
+#include <QtPositioning/QGeoAddress>
+#include <QtPositioning/QGeoCoordinate>
+#include <QtPositioning/QGeoRectangle>
 
 $prototype=QGeoLocation()
 $internalConstructor=5,2,0|new1|

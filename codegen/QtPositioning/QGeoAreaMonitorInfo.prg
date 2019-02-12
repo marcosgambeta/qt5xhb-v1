@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,2,0
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 $prototype=QGeoAreaMonitorInfo(const QString &name = QString())
 $internalConstructor=5,2,0|new1|const QString &=QString()
