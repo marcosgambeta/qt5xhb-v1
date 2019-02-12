@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QScriptValue>
-#include <QScriptEngine>
+#include <QtScript/QScriptValue>
+#include <QtScript/QScriptEngine>
 
 $deleteMethod
 
