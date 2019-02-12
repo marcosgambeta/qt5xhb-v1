@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QQuickItem>
-#include <QSGTexture>
-#include <QOpenGLContext>
+#include <QtQuick/QQuickItem>
+#include <QtQuick/QSGTexture>
+#include <QtGui/QOpenGLContext>
 
 $prototype=QQuickWindow(QWindow * parent = 0)
 $constructor=|new|QWindow *=0

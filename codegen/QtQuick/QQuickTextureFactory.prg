@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QSGTexture>
+#include <QtQuick/QSGTexture>
 
 $deleteMethod
 
