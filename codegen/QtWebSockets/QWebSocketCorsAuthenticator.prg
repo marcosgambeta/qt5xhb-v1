@@ -25,8 +25,8 @@ $destructor
 
 $includes=5,3,0
 
-#include <QString>
-#include <QLatin1String>
+#include <QtCore/QString>
+#include <QtCore/QLatin1String>
 
 $prototype=explicit QWebSocketCorsAuthenticator(const QString &origin)
 $internalConstructor=5,3,0|new1|const QString &
