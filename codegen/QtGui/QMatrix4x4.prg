@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QMatrix>
-#include <QTransform>
+#include <QtGui/QMatrix>
+#include <QtGui/QTransform>
 
 $prototype=QMatrix4x4()
 $internalConstructor=|new1|

@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,3,0
 
-#include <QRect>
+#include <QtCore/QRect>
 
 $prototype=QPageLayout()
 $internalConstructor=5,3,0|new1|

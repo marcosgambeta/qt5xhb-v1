@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 $prototype=QBrush ()
 $internalConstructor=|new1|

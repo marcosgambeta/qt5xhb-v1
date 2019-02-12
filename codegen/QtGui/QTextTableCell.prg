@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QTextCursor>
+#include <QtGui/QTextCursor>
 
 $prototype=QTextTableCell()
 $internalConstructor=|new1|

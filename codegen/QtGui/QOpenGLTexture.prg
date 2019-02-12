@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,2,0
 
-#include <QColor>
+#include <QtGui/QColor>
 
 $prototype=QOpenGLTexture(Target target)
 $internalConstructor=5,2,0|new1|QOpenGLTexture::Target

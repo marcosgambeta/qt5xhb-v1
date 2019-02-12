@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QList>
-#include <QWindow>
+#include <QtCore/QList>
+#include <QtGui/QWindow>
 
 $deleteMethod
 

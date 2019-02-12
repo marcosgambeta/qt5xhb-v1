@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QRect>
-#include <QVariant>
+#include <QtCore/QRect>
+#include <QtCore/QVariant>
 
 $deleteMethod
 

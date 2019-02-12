@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QColor>
+#include <QtGui/QColor>
 
 $prototype=QImageReader ()
 $internalConstructor=|new1|

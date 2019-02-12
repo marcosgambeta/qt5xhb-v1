@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 $prototype=QColor ()
 $internalConstructor=|new1|

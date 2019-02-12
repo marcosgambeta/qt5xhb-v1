@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QPoint>
-#include <QPixmap>
-#include <QMimeData>
+#include <QtCore/QPoint>
+#include <QtGui/QPixmap>
+#include <QtCore/QMimeData>
 
 $prototype=QDrag(QObject * dragSource)
 $constructor=|new|QObject *

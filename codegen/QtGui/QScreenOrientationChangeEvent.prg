@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QScreen>
+#include <QtGui/QScreen>
 
 $prototype=QScreenOrientationChangeEvent(QScreen *screen, Qt::ScreenOrientation orientation)
 $constructor=|new|QScreen *,Qt::ScreenOrientation

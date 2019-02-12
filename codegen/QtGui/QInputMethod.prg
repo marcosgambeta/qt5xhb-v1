@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QRectF>
-#include <QTransform>
-#include <QLocale>
+#include <QtCore/QRectF>
+#include <QtGui/QTransform>
+#include <QtCore/QLocale>
 
 $prototype=QRectF cursorRectangle() const
 $method=|QRectF|cursorRectangle|

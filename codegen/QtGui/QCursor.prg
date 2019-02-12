@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QPixmap>
+#include <QtGui/QPixmap>
 
 $prototype=QCursor ()
 $internalConstructor=|new1|

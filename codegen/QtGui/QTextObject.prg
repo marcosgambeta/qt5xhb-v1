@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 
 $prototype=QTextFormat format() const
 $method=|QTextFormat|format|

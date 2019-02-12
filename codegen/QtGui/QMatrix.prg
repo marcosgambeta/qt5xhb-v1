@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QPainterPath>
+#include <QtGui/QPainterPath>
 
 $prototype=QMatrix(Qt::Initialization)
 $internalConstructor=|new1|Qt::Initialization

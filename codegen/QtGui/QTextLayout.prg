@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QTextCursor>
-#include <QTextBlock>
+#include <QtGui/QTextCursor>
+#include <QtGui/QTextBlock>
 
 $prototype=QTextLayout()
 $internalConstructor=|new1|

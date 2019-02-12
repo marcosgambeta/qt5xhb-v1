@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QScreen>
+#include <QtGui/QScreen>
 
 $prototype=QOpenGLContext(QObject * parent = 0)
 $constructor=|new|QObject *=0

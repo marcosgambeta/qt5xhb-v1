@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,1,0
 
-#include <QVector>
+#include <QtCore/QVector>
 
 $prototype=explicit QOpenGLTimeMonitor(QObject *parent = 0)
 $constructor=5,1,0|new|QObject *=0|#if !defined(QT_NO_OPENGL) && !defined(QT_OPENGL_ES_2)

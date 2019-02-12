@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QColor>
-#include <QPixmap>
+#include <QtGui/QColor>
+#include <QtGui/QPixmap>
 
 $prototype=QMovie ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0

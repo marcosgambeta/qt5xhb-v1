@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QIODevice>
+#include <QtCore/QIODevice>
 
 $prototype=QTextDocumentWriter()
 $internalConstructor=|new1|

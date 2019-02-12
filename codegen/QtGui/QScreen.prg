@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QPixmap>
+#include <QtGui/QPixmap>
 
 $deleteMethod
 

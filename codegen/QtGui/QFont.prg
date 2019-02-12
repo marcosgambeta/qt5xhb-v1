@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QStringList>
-#include <QVariant>
+#include <QtCore/QStringList>
+#include <QtCore/QVariant>
 
 $prototype=QFont ()
 $internalConstructor=|new1|

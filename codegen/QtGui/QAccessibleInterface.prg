@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QWindow>
+#include <QtGui/QWindow>
 
 $prototype=virtual bool isValid() const = 0
 $virtualMethod=|bool|isValid|

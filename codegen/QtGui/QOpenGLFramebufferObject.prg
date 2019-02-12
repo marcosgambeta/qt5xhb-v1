@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QImage>
+#include <QtGui/QImage>
 
 $prototype=QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
 $constructor=|new1|const QSize &,GLenum=GL_TEXTURE_2D

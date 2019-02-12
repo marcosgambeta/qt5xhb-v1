@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 
 $prototype=explicit QSyntaxHighlighter(QObject *parent)
 %% TODO: abstract

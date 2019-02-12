@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QVector2D>
-#include <QVector4D>
+#include <QtGui/QVector2D>
+#include <QtGui/QVector4D>
 
 $prototype=QVector3D()
 $internalConstructor=|new1|

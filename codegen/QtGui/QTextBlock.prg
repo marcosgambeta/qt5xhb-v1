@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QTextDocument>
-#include <QTextList>
+#include <QtGui/QTextDocument>
+#include <QtGui/QTextList>
 
 $prototype=QTextBlock(QTextDocumentPrivate *priv, int b)
 %% TODO: implementar ?

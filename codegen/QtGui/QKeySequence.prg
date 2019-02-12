@@ -23,11 +23,9 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
 $includes
 
-#include <QList>
+#include <QtCore/QList>
 
 $prototype=QKeySequence ()
 $internalConstructor=|new1|

@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QImage>
-#include <QMimeData>
-#include <QPixmap>
+#include <QtGui/QImage>
+#include <QtCore/QMimeData>
+#include <QtGui/QPixmap>
 
 $prototype=void clear ( Mode mode = Clipboard )
 $method=|void|clear|QClipboard::Mode=QClipboard::Clipboard
