@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,1,0
 
-#include <QString>
+#include <QtCore/QString>
 
 $prototype=QSerialPortInfo()
 $internalConstructor=5,1,0|new1|
