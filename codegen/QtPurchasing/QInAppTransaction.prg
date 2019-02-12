@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QInAppProduct>
+#include <QtPurchasing/QInAppProduct>
 
 $prototype=explicit QInAppTransaction(TransactionStatus status, QInAppProduct *product, QObject *parent = Q_NULLPTR) [protected]
 
