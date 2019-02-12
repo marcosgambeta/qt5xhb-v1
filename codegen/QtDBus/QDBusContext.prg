@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QDBusConnection>
+#include <QtDBus/QDBusConnection>
 
 $prototype=QDBusContext()
 $constructor=|new|

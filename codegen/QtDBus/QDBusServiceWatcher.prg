@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QDBusConnection>
+#include <QtDBus/QDBusConnection>
 
 $prototype=explicit QDBusServiceWatcher(QObject *parent = 0)
 $internalConstructor=|new1|QObject *=0

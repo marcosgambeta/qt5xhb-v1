@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QDBusPendingCall>
+#include <QtDBus/QDBusPendingCall>
 
 $deleteMethod
 
