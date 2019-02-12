@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 $prototype=QUrlQuery()
 $internalConstructor=|new1|

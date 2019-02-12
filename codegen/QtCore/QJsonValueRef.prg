@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QJsonArray>
-#include <QJsonObject>
+#include <QtCore/QJsonArray>
+#include <QtCore/QJsonObject>
 
 $prototype=QJsonValueRef(QJsonArray *array, int idx)
 $internalConstructor=|new1|QJsonArray *,int

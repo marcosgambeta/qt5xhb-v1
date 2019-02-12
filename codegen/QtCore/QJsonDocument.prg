@@ -25,9 +25,9 @@ $destructor
 
 $includes
 
-#include <QJsonArray>
-#include <QJsonObject>
-#include <QVariant>
+#include <QtCore/QJsonArray>
+#include <QtCore/QJsonObject>
+#include <QtCore/QVariant>
 
 $prototype=QJsonDocument()
 $internalConstructor=|new1|

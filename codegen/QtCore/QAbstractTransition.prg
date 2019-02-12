@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QStateMachine>
-#include <QState>
-#include <QAbstractState>
+#include <QtCore/QStateMachine>
+#include <QtCore/QState>
+#include <QtCore/QAbstractState>
 
 $deleteMethod
 

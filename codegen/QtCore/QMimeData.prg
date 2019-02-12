@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QStringList>
-#include <QUrl>
+#include <QtCore/QStringList>
+#include <QtCore/QUrl>
 
 $prototype=QMimeData ()
 $constructor=|new|

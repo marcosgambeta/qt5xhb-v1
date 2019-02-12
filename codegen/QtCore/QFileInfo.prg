@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QDir>
-#include <QDateTime>
+#include <QtCore/QDir>
+#include <QtCore/QDateTime>
 
 $prototype=QFileInfo()
 $internalConstructor=|new1|

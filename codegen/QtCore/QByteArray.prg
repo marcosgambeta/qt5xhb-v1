@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QString>
-#include <QList>
+#include <QtCore/QString>
+#include <QtCore/QList>
 
 $prototype=QByteArray ()
 $internalConstructor=|new1|

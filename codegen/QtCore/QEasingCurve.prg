@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QPointF>
+#include <QtCore/QPointF>
 
 $prototype=QEasingCurve ( Type type = Linear )
 $internalConstructor=|new1|QEasingCurve::Type=QEasingCurve::Linear

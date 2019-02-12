@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QDate>
-#include <QStringList>
+#include <QtCore/QDate>
+#include <QtCore/QStringList>
 
 $prototype=QLocale ()
 $internalConstructor=|new1|

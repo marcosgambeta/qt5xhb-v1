@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 $prototype=QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 $internalConstructor=|new1|const QString &,const QString &=QString(),QObject *=0

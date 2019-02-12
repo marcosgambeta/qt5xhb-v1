@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QVariantList>
-#include <QStringList>
+#include <QtCore/QVariantList>
+#include <QtCore/QStringList>
 
 $prototype=QJsonArray()
 $internalConstructor=|new1|

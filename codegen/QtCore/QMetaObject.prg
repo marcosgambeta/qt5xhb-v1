@@ -25,11 +25,11 @@ $destructor
 
 $includes
 
-#include <QMetaClassInfo>
-#include <QMetaMethod>
-#include <QMetaEnum>
-#include <QMetaProperty>
-#include <QByteArray>
+#include <QtCore/QMetaClassInfo>
+#include <QtCore/QMetaMethod>
+#include <QtCore/QMetaEnum>
+#include <QtCore/QMetaProperty>
+#include <QtCore/QByteArray>
 
 $deleteMethod
 

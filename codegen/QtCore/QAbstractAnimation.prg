@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QAnimationGroup>
+#include <QtCore/QAnimationGroup>
 
 $deleteMethod
 
