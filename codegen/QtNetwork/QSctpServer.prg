@@ -31,7 +31,7 @@ $includes=5,8,0
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-#include <QSctpSocket>
+#include <QtNetwork/QSctpSocket>
 #endif
 #endif
 

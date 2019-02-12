@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QIODevice>
+#include <QtCore/QIODevice>
 
 $prototype=explicit QNetworkDiskCache(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0

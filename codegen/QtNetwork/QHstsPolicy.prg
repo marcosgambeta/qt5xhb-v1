@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,9,0
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 $prototype=QHstsPolicy()
 $internalConstructor=5,9,0|new1|

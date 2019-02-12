@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QLocalSocket>
+#include <QtNetwork/QLocalSocket>
 
 $prototype=explicit QLocalServer(QObject *parent = Q_NULLPTR)
 $constructor=|new|QObject *=0

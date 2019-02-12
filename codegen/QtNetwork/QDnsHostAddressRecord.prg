@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QHostAddress>
+#include <QtNetwork/QHostAddress>
 
 $prototype=QDnsHostAddressRecord()
 $internalConstructor=|new1|

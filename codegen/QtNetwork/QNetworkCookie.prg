@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 $prototype=explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
 $internalConstructor=|new1|const QByteArray &=QByteArray(),const QByteArray &=QByteArray()

@@ -45,7 +45,7 @@ $destructor
 
 $includes
 
-#include <QSslConfiguration>
+#include <QtNetwork/QSslConfiguration>
 
 $prototype=explicit QNetworkReply(QObject *parent = Q_NULLPTR) [protected]
 
