@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QGeoRectangle>
+#include <QtPositioning/QGeoRectangle>
 
 $prototype=explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
 void QGeoRouteRequest_new1 ()

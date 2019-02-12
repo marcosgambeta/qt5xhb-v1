@@ -25,8 +25,8 @@ $destructor
 
 $includes=5,4,0
 
-#include <QGeoShape>
-#include <QVariant>
+#include <QtPositioning/QGeoShape>
+#include <QtCore/QVariant>
 
 $prototype=QPlaceSearchRequest()
 $internalConstructor=5,4,0|new1|

@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QPlaceSearchRequest>
+#include <QtLocation/QPlaceSearchRequest>
 
 $prototype=QPlaceProposedSearchResult()
 $constructor=5,4,0|new|

@@ -27,7 +27,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QPlaceSearchReply>
+#include <QtLocation/QPlaceSearchReply>
 
 $deleteMethod=5,4,0
 

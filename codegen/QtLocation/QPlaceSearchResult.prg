@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QPlaceIcon>
+#include <QtLocation/QPlaceIcon>
 
 $prototype=QPlaceSearchResult()
 $internalConstructor=5,4,0|new1|

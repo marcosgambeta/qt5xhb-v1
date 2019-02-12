@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QPlaceManager>
+#include <QtLocation/QPlaceManager>
 
 $prototype=QPlaceIcon()
 $internalConstructor=5,4,0|new1|

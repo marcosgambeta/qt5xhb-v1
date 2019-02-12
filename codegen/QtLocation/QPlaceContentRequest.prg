@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QVariant>
+#include <QtCore/QVariant>
 
 $prototype=QPlaceContentRequest()
 $internalConstructor=5,4,0|new1|

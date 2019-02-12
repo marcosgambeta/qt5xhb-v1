@@ -27,7 +27,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QLocale>
+#include <QtCore/QLocale>
 
 $deleteMethod=5,4,0
 

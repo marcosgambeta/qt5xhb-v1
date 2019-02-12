@@ -27,7 +27,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QGeoShape>
+#include <QtPositioning/QGeoShape>
 
 $prototype=QGeoCodeReply(Error error, const QString &errorString, QObject *parent = 0)
 $constructor=5,4,0|new|QGeoCodeReply::Error,const QString &,QObject *=0

@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 $prototype=QPlaceReview()
 $constructor=5,4,0|new|

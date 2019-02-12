@@ -25,8 +25,8 @@ $destructor
 
 $includes=5,4,0
 
-#include <QPlaceSupplier>
-#include <QPlaceUser>
+#include <QtLocation/QPlaceSupplier>
+#include <QtLocation/QPlaceUser>
 
 $prototype=QPlaceContent()
 $internalConstructor=5,4,0|new1|

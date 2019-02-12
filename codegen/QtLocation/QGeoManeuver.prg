@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QGeoCoordinate>
+#include <QtPositioning/QGeoCoordinate>
 
 $prototype=QGeoManeuver()
 $internalConstructor=5,4,0|new1|
