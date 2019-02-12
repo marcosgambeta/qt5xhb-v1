@@ -23,8 +23,6 @@ $destructor
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
 $includes=5,1,0
 
 $deleteMethod=5,1,0

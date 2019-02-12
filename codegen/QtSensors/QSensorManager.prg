@@ -25,7 +25,7 @@ $destructor
 
 $includes=5,1,0
 
-#include <QSensorBackend>
+#include <QtSensors/QSensorBackend>
 
 $deleteMethod=5,1,0
 
