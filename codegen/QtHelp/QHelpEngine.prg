@@ -25,9 +25,9 @@ $destructor
 
 $includes
 
-#include <QHelpContentModel>
-#include <QHelpIndexModel>
-#include <QHelpSearchEngine>
+#include <QtHelp/QHelpContentModel>
+#include <QtHelp/QHelpIndexModel>
+#include <QtHelp/QHelpSearchEngine>
 
 $prototype=QHelpEngine ( const QString & collectionFile, QObject * parent = 0 )
 $constructor=|new|const QString &,QObject *=0

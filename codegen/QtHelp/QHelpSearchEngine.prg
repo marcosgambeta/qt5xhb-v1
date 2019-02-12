@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QHelpSearchQueryWidget>
-#include <QHelpSearchResultWidget>
+#include <QtHelp/QHelpSearchQueryWidget>
+#include <QtHelp/QHelpSearchResultWidget>
 
 $prototype=QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 $constructor=|new|QHelpEngineCore *,QObject *=0

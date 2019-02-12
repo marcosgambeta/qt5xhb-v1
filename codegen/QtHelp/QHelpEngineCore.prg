@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 $prototype=QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )
 $constructor=|new|const QString &,QObject *=0
