@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QMenu>
+#include <QtWidgets/QMenu>
 
 $prototype=explicit QPushButton ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

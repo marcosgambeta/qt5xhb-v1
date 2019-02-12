@@ -35,9 +35,9 @@ $destructor
 
 $includes
 
-#include <QCompleter>
-#include <QLineEdit>
-#include <QAbstractItemView>
+#include <QtWidgets/QCompleter>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QAbstractItemView>
 
 $prototype=QComboBox ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0

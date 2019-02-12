@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QMenu>
+#include <QtWidgets/QMenu>
 
 $prototype=QAction ( QObject * parent )
 $internalConstructor=|new1|QObject *

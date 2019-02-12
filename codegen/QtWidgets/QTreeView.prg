@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QHeaderView>
+#include <QtWidgets/QHeaderView>
 
 $prototype=QTreeView ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0

@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QFont>
-#include <QTextCursor>
-#include <QTextDocument>
+#include <QtGui/QFont>
+#include <QtGui/QTextCursor>
+#include <QtGui/QTextDocument>
 
 $prototype=QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0

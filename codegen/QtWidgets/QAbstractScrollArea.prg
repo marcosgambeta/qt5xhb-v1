@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QScrollBar>
+#include <QtWidgets/QScrollBar>
 
 $deleteMethod
 

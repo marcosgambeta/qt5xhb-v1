@@ -25,10 +25,10 @@ $destructor
 
 $includes
 
-#include <QCursor>
-#include <QGraphicsEffect>
-#include <QGraphicsWidget>
-#include <QGraphicsScene>
+#include <QtGui/QCursor>
+#include <QtWidgets/QGraphicsEffect>
+#include <QtWidgets/QGraphicsWidget>
+#include <QtWidgets/QGraphicsScene>
 
 $deleteMethod
 

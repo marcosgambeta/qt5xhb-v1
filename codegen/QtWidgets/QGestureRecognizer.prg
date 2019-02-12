@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QGesture>
+#include <QtWidgets/QGesture>
 
 $deleteMethod
 

@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QMimeData>
+#include <QtCore/QMimeData>
 
 $deleteMethod
 

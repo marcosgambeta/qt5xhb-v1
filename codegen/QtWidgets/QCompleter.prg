@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QStringList>
-#include <QAbstractItemView>
+#include <QtCore/QStringList>
+#include <QtWidgets/QAbstractItemView>
 
 $prototype=QCompleter ( QObject * parent = 0 )
 $internalConstructor=|new1|QObject *=0

@@ -25,9 +25,9 @@ $destructor
 
 $includes
 
-#include <QMatrix>
-#include <QPointF>
-#include <QTimeLine>
+#include <QtGui/QMatrix>
+#include <QtCore/QPointF>
+#include <QtCore/QTimeLine>
 
 $prototype=QGraphicsItemAnimation ( QObject * parent = 0 )
 $constructor=|new|QObject *=0

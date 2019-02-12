@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QPen>
+#include <QtGui/QPen>
 
 $prototype=QGraphicsLineItem ( QGraphicsItem * parent = 0 )
 $internalConstructor=|new1|QGraphicsItem *=0

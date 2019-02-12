@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QCalendarWidget>
+#include <QtWidgets/QCalendarWidget>
 
 $prototype=QDateTimeEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

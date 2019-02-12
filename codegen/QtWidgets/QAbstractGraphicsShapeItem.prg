@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QBrush>
-#include <QPen>
+#include <QtGui/QBrush>
+#include <QtGui/QPen>
 
 $deleteMethod
 

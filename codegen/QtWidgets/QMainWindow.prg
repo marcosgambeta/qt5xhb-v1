@@ -27,10 +27,10 @@ $destructor
 
 $includes
 
-#include <QToolBar>
-#include <QMenu>
-#include <QMenuBar>
-#include <QStatusBar>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QStatusBar>
 
 $prototype=QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $constructor=|new|QWidget *=0,Qt::WindowFlags=0

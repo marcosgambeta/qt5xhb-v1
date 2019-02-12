@@ -27,8 +27,8 @@ $destructor
 
 $includes
 
-#include <QPrinter>
-#include <QMenu>
+#include <QtPrintSupport/QPrinter>
+#include <QtWidgets/QMenu>
 
 $prototype=QTextEdit ( QWidget * parent = 0 )
 $internalConstructor=|new1|QWidget *=0

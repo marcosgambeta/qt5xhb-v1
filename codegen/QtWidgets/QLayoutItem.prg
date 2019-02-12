@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QLayout>
+#include <QtWidgets/QLayout>
 
 $deleteMethod
 

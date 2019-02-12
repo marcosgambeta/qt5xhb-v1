@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QButtonGroup>
+#include <QtWidgets/QButtonGroup>
 
 $prototype=explicit QAbstractButton(QWidget *parent = Q_NULLPTR) (abstract)
 

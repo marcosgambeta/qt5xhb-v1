@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QTextCharFormat>
+#include <QtGui/QTextCharFormat>
 
 $prototype=QCalendarWidget ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0

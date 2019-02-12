@@ -27,7 +27,7 @@ $destructor
 
 $includes=5,4,0
 
-#include <QOpenGLContext>
+#include <QtGui/QOpenGLContext>
 
 $prototype=explicit QOpenGLWidget(QWidget* parent = 0, Qt::WindowFlags f = 0)
 $constructor=5,4,0|new|QWidget *=0,Qt::WindowFlags=0|#ifndef QT_NO_OPENGL

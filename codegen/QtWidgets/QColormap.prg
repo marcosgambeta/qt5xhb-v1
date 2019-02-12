@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QColor>
+#include <QtGui/QColor>
 
 $prototype=QColormap ( const QColormap & colormap )
 $constructor=|new|const QColormap &
