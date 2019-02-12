@@ -25,7 +25,7 @@ $destructor
 
 $includes
 
-#include <QSqlDriver>
+#include <QtSql/QSqlDriver>
 
 $deleteMethod
 

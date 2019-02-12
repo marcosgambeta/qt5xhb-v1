@@ -27,7 +27,7 @@ $destructor
 
 $includes
 
-#include <QSqlIndex>
+#include <QtSql/QSqlIndex>
 
 $prototype=explicit QSqlTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
 $constructor=|new|QObject *=0,QSqlDatabase=QSqlDatabase()

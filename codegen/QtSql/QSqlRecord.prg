@@ -25,8 +25,8 @@ $destructor
 
 $includes
 
-#include <QSqlField>
-#include <QVariant>
+#include <QtSql/QSqlField>
+#include <QtCore/QVariant>
 
 $prototype=QSqlRecord ()
 $internalConstructor=|new1|

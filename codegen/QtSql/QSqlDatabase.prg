@@ -25,12 +25,12 @@ $destructor
 
 $includes
 
-#include <QSqlDriver>
-#include <QSqlError>
-#include <QSqlIndex>
-#include <QSqlQuery>
-#include <QSqlRecord>
-#include <QStringList>
+#include <QtSql/QSqlDriver>
+#include <QtSql/QSqlError>
+#include <QtSql/QSqlIndex>
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlRecord>
+#include <QtCore/QStringList>
 
 $prototype=QSqlDatabase ()
 $internalConstructor=|new1|
