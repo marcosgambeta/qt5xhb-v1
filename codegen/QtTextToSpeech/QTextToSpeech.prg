@@ -27,9 +27,9 @@ $destructor
 
 $includes
 
-#include <QVector>
-#include <QLocale>
-#include <QVoice>
+#include <QtCore/QVector>
+#include <QtCore/QLocale>
+#include <QtTextToSpeech/QVoice>
 
 $prototype=explicit QTextToSpeech(QObject *parent = nullptr)
 $internalConstructor=5,10,0|new1|QObject *=nullptr
