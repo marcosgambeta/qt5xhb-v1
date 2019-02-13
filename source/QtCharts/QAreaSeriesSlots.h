@@ -13,12 +13,12 @@
 #ifndef QAREASERIESSLOTS_H
 #define QAREASERIESSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QAreaSeries>
+#include <QtCharts/QAreaSeries>
 #endif
 
 #include "qt5xhb_common.h"

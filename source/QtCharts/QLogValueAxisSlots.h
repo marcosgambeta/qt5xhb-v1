@@ -13,12 +13,12 @@
 #ifndef QLOGVALUEAXISSLOTS_H
 #define QLOGVALUEAXISSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QLogValueAxis>
+#include <QtCharts/QLogValueAxis>
 #endif
 
 #include "qt5xhb_common.h"

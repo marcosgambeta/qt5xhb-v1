@@ -13,12 +13,12 @@
 #ifndef QPIESLICESLOTS_H
 #define QPIESLICESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QPieSlice>
+#include <QtCharts/QPieSlice>
 #endif
 
 #include "qt5xhb_common.h"

@@ -13,12 +13,12 @@
 #ifndef QPIESERIESSLOTS_H
 #define QPIESERIESSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QPieSeries>
+#include <QtCharts/QPieSeries>
 #endif
 
 #include "qt5xhb_common.h"

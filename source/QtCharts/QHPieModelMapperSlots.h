@@ -13,12 +13,12 @@
 #ifndef QHPIEMODELMAPPERSLOTS_H
 #define QHPIEMODELMAPPERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QHPieModelMapper>
+#include <QtCharts/QHPieModelMapper>
 #endif
 
 #include "qt5xhb_common.h"

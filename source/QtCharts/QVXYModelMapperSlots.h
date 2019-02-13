@@ -13,12 +13,12 @@
 #ifndef QVXYMODELMAPPERSLOTS_H
 #define QVXYMODELMAPPERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-#include <QVXYModelMapper>
+#include <QtCharts/QVXYModelMapper>
 #endif
 
 #include "qt5xhb_common.h"

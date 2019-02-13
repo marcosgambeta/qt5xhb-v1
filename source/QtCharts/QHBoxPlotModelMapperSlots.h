@@ -13,12 +13,12 @@
 #ifndef QHBOXPLOTMODELMAPPERSLOTS_H
 #define QHBOXPLOTMODELMAPPERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QHBoxPlotModelMapper>
+#include <QtCharts/QHBoxPlotModelMapper>
 #endif
 
 #include "qt5xhb_common.h"

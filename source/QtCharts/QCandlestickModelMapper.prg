@@ -40,11 +40,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QCandlestickModelMapper>
+#include <QtCharts/QCandlestickModelMapper>
 #endif
 #endif
 
@@ -54,13 +54,13 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QCandlestickModelMapper>
+#include <QtCharts/QCandlestickModelMapper>
 #endif
 #endif
 
-#include <QAbstractItemModel>
+#include <QtCore/QAbstractItemModel>
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QCandlestickSeries>
+#include <QtCharts/QCandlestickSeries>
 #endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
