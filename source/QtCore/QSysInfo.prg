@@ -38,10 +38,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSysInfo>
+#include <QtCore/QSysInfo>
 #endif
 
 #include "qt5xhb_common.h"
@@ -49,7 +49,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSysInfo>
+#include <QtCore/QSysInfo>
 #endif
 
 HB_FUNC_STATIC( QSYSINFO_NEWFROM )

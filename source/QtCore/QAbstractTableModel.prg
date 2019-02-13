@@ -34,10 +34,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAbstractTableModel>
+#include <QtCore/QAbstractTableModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -45,7 +45,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QAbstractTableModel>
+#include <QtCore/QAbstractTableModel>
 #endif
 
 HB_FUNC_STATIC( QABSTRACTTABLEMODEL_DELETE )

@@ -55,10 +55,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QThread>
+#include <QtCore/QThread>
 #endif
 
 #include "qt5xhb_common.h"
@@ -66,10 +66,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QThread>
+#include <QtCore/QThread>
 #endif
 
-#include <QAbstractEventDispatcher>
+#include <QtCore/QAbstractEventDispatcher>
 
 /*
 QThread(QObject * parent = 0)

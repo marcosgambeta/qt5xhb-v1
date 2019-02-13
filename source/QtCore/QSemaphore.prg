@@ -45,10 +45,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSemaphore>
+#include <QtCore/QSemaphore>
 #endif
 
 #include "qt5xhb_common.h"
@@ -56,7 +56,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSemaphore>
+#include <QtCore/QSemaphore>
 #endif
 
 /*

@@ -13,11 +13,11 @@
 #ifndef QABSTRACTTRANSITIONSLOTS_H
 #define QABSTRACTTRANSITIONSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstractTransition>
+#include <QtCore/QAbstractTransition>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

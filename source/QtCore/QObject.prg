@@ -251,10 +251,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QObject>
+#include <QtCore/QObject>
 #endif
 
 #include "qt5xhb_common.h"
@@ -262,13 +262,13 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QObject>
+#include <QtCore/QObject>
 #endif
 
-#include <QWidget>
-#include <QVariant>
-#include <QEvent>
-#include <QThread>
+#include <QtWidgets/QWidget>
+#include <QtCore/QVariant>
+#include <QtCore/QEvent>
+#include <QtCore/QThread>
 
 bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
 bool Events_disconnect_event ( QObject * object, int type );

@@ -69,10 +69,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QCoreApplication>
+#include <QtCore/QCoreApplication>
 #endif
 
 #include "qt5xhb_common.h"
@@ -80,10 +80,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QCoreApplication>
+#include <QtCore/QCoreApplication>
 #endif
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 /*
 QCoreApplication ( int & argc, char ** argv )

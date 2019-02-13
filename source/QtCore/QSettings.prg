@@ -64,10 +64,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSettings>
+#include <QtCore/QSettings>
 #endif
 
 #include "qt5xhb_common.h"
@@ -75,10 +75,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSettings>
+#include <QtCore/QSettings>
 #endif
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 /*
 QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )

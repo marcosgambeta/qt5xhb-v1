@@ -13,11 +13,11 @@
 #ifndef QIODEVICESLOTS_H
 #define QIODEVICESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QIODevice>
+#include <QtCore/QIODevice>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

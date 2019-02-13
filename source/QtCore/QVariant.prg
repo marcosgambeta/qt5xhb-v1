@@ -129,10 +129,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QVariant>
+#include <QtCore/QVariant>
 #endif
 
 #include "qt5xhb_common.h"
@@ -140,41 +140,41 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QVariant>
+#include <QtCore/QVariant>
 #endif
 
-#include <QDataStream>
-#include <QByteArray>
-#include <QBitArray>
-#include <QString>
-#include <QLatin1String>
-#include <QStringList>
-#include <QChar>
-#include <QDate>
-#include <QTime>
-#include <QDateTime>
-#include <QList>
-#include <QMap>
-#include <QHash>
-#include <QSize>
-#include <QSizeF>
-#include <QPoint>
-#include <QPointF>
-#include <QLine>
-#include <QLineF>
-#include <QRect>
-#include <QRectF>
-#include <QLocale>
-#include <QRegExp>
-#include <QRegularExpression>
-#include <QUrl>
-#include <QEasingCurve>
-#include <QUuid>
-#include <QModelIndex>
-#include <QJsonValue>
-#include <QJsonObject>
-#include <QJsonArray>
-#include <QJsonDocument>
+#include <QtCore/QDataStream>
+#include <QtCore/QByteArray>
+#include <QtCore/QBitArray>
+#include <QtCore/QString>
+#include <QtCore/QLatin1String>
+#include <QtCore/QStringList>
+#include <QtCore/QChar>
+#include <QtCore/QDate>
+#include <QtCore/QTime>
+#include <QtCore/QDateTime>
+#include <QtCore/QList>
+#include <QtCore/QMap>
+#include <QtCore/QHash>
+#include <QtCore/QSize>
+#include <QtCore/QSizeF>
+#include <QtCore/QPoint>
+#include <QtCore/QPointF>
+#include <QtCore/QLine>
+#include <QtCore/QLineF>
+#include <QtCore/QRect>
+#include <QtCore/QRectF>
+#include <QtCore/QLocale>
+#include <QtCore/QRegExp>
+#include <QtCore/QRegularExpression>
+#include <QtCore/QUrl>
+#include <QtCore/QEasingCurve>
+#include <QtCore/QUuid>
+#include <QtCore/QModelIndex>
+#include <QtCore/QJsonValue>
+#include <QtCore/QJsonObject>
+#include <QtCore/QJsonArray>
+#include <QtCore/QJsonDocument>
 
 /*
 QVariant()

@@ -96,10 +96,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSortFilterProxyModel>
+#include <QtCore/QSortFilterProxyModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -107,12 +107,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSortFilterProxyModel>
+#include <QtCore/QSortFilterProxyModel>
 #endif
 
-#include <QItemSelection>
-#include <QSize>
-#include <QMimeData>
+#include <QtCore/QItemSelection>
+#include <QtCore/QSize>
+#include <QtCore/QMimeData>
 
 /*
 explicit QSortFilterProxyModel(QObject *parent = nullptr)

@@ -13,11 +13,11 @@
 #ifndef QTIMELINESLOTS_H
 #define QTIMELINESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QTimeLine>
+#include <QtCore/QTimeLine>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

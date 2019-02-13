@@ -46,10 +46,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAbstractTransition>
+#include <QtCore/QAbstractTransition>
 #endif
 
 #include "qt5xhb_common.h"
@@ -57,12 +57,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QAbstractTransition>
+#include <QtCore/QAbstractTransition>
 #endif
 
-#include <QStateMachine>
-#include <QState>
-#include <QAbstractState>
+#include <QtCore/QStateMachine>
+#include <QtCore/QState>
+#include <QtCore/QAbstractState>
 
 HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 {

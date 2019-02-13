@@ -48,10 +48,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QState>
+#include <QtCore/QState>
 #endif
 
 #include "qt5xhb_common.h"
@@ -59,10 +59,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QState>
+#include <QtCore/QState>
 #endif
 
-#include <QAbstractTransition>
+#include <QtCore/QAbstractTransition>
 
 /*
 QState ( QState * parent = 0 )

@@ -13,11 +13,11 @@
 #ifndef QABSTRACTEVENTDISPATCHERSLOTS_H
 #define QABSTRACTEVENTDISPATCHERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstractEventDispatcher>
+#include <QtCore/QAbstractEventDispatcher>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
