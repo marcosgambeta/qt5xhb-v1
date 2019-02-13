@@ -90,11 +90,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-#include <QGamepadKeyNavigation>
+#include <QtGamepad/QGamepadKeyNavigation>
 #endif
 #endif
 
@@ -104,11 +104,11 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-#include <QGamepadKeyNavigation>
+#include <QtGamepad/QGamepadKeyNavigation>
 #endif
 #endif
 
-#include <QGamepad>
+#include <QtGamepad/QGamepad>
 
 /*
 explicit QGamepadKeyNavigation(QObject *parent = nullptr)
