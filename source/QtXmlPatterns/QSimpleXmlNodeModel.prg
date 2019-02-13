@@ -41,10 +41,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSimpleXmlNodeModel>
+#include <QtXmlPatterns/QSimpleXmlNodeModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -52,10 +52,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSimpleXmlNodeModel>
+#include <QtXmlPatterns/QSimpleXmlNodeModel>
 #endif
 
-#include <QVector>
+#include <QtCore/QVector>
 
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_DELETE )
 {
