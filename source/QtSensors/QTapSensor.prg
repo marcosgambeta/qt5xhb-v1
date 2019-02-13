@@ -38,11 +38,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#include <QTapSensor>
+#include <QtSensors/QTapSensor>
 #endif
 #endif
 
@@ -52,7 +52,7 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#include <QTapSensor>
+#include <QtSensors/QTapSensor>
 #endif
 #endif
 

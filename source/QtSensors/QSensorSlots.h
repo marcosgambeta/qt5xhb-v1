@@ -13,12 +13,12 @@
 #ifndef QSENSORSLOTS_H
 #define QSENSORSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#include <QSensor>
+#include <QtSensors/QSensor>
 #endif
 
 #include "qt5xhb_common.h"

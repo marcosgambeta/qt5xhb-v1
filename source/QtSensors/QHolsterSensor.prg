@@ -34,13 +34,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#include <QHolsterSensor>
+#include <QtSensors/QHolsterSensor>
 #endif
 #endif
 
@@ -50,7 +48,7 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#include <QHolsterSensor>
+#include <QtSensors/QHolsterSensor>
 #endif
 #endif
 

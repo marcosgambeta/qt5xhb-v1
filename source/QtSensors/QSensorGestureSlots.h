@@ -13,12 +13,12 @@
 #ifndef QSENSORGESTURESLOTS_H
 #define QSENSORGESTURESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#include <QSensorGesture>
+#include <QtSensors/QSensorGesture>
 #endif
 
 #include "qt5xhb_common.h"
