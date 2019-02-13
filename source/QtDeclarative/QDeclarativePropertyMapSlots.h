@@ -13,11 +13,11 @@
 #ifndef QDECLARATIVEPROPERTYMAPSLOTS_H
 #define QDECLARATIVEPROPERTYMAPSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDeclarativePropertyMap>
+#include <QtDeclarative/QDeclarativePropertyMap>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

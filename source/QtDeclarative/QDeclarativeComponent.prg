@@ -53,10 +53,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDeclarativeComponent>
+#include <QtDeclarative/QDeclarativeComponent>
 #endif
 
 #include "qt5xhb_common.h"
@@ -64,10 +64,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QDeclarativeComponent>
+#include <QtDeclarative/QDeclarativeComponent>
 #endif
 
-#include <QDeclarativeContext>
+#include <QtDeclarative/QDeclarativeContext>
 
 /*
 QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )

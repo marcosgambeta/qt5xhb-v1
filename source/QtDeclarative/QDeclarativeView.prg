@@ -51,10 +51,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDeclarativeView>
+#include <QtDeclarative/QDeclarativeView>
 #endif
 
 #include "qt5xhb_common.h"
@@ -62,13 +62,13 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QDeclarativeView>
+#include <QtDeclarative/QDeclarativeView>
 #endif
 
-#include <QDeclarativeError>
-#include <QDeclarativeEngine>
-#include <QDeclarativeContext>
-#include <QGraphicsObject>
+#include <QtDeclarative/QDeclarativeError>
+#include <QtDeclarative/QDeclarativeEngine>
+#include <QtDeclarative/QDeclarativeContext>
+#include <QtWidgets/QGraphicsObject>
 
 /*
 QDeclarativeView ( QWidget * parent = 0 )
