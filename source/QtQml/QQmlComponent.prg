@@ -51,10 +51,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QQmlComponent>
+#include <QtQml/QQmlComponent>
 #endif
 
 #include "qt5xhb_common.h"
@@ -62,10 +62,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QQmlComponent>
+#include <QtQml/QQmlComponent>
 #endif
 
-#include <QQmlContext>
+#include <QtQml/QQmlContext>
 
 /*
 QQmlComponent(QQmlEngine * engine, QObject * parent = 0)

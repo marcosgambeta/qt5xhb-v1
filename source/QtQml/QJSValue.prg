@@ -80,10 +80,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QJSValue>
+#include <QtQml/QJSValue>
 #endif
 
 #include "qt5xhb_common.h"
@@ -91,11 +91,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QJSValue>
+#include <QtQml/QJSValue>
 #endif
 
-#include <QDateTime>
-#include <QVariant>
+#include <QtCore/QDateTime>
+#include <QtCore/QVariant>
 
 /*
 QJSValue(SpecialValue value = UndefinedValue)
