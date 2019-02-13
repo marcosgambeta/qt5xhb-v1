@@ -47,10 +47,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QPrintEngine>
+#include <QtPrintSupport/QPrintEngine>
 #endif
 
 #include "qt5xhb_common.h"
@@ -58,7 +58,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QPrintEngine>
+#include <QtPrintSupport/QPrintEngine>
 #endif
 
 HB_FUNC_STATIC( QPRINTENGINE_DELETE )
