@@ -13,12 +13,12 @@
 #ifndef QQUICKWIDGETSLOTS_H
 #define QQUICKWIDGETSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QQuickWidget>
+#include <QtQuickWidgets/QQuickWidget>
 #endif
 
 #include "qt5xhb_common.h"

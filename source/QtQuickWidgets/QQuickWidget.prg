@@ -56,11 +56,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QQuickWidget>
+#include <QtQuickWidgets/QQuickWidget>
 #endif
 #endif
 
@@ -70,14 +70,14 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QQuickWidget>
+#include <QtQuickWidgets/QQuickWidget>
 #endif
 #endif
 
-#include <QQmlError>
-#include <QQmlEngine>
-#include <QQmlContext>
-#include <QQuickItem>
+#include <QtQml/QQmlError>
+#include <QtQml/QQmlEngine>
+#include <QtQml/QQmlContext>
+#include <QtQuick/QQuickItem>
 
 /*
 explicit QQuickWidget(QWidget *parent = 0)
