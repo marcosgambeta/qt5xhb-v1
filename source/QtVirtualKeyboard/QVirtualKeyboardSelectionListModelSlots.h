@@ -13,11 +13,11 @@
 #ifndef QVIRTUALKEYBOARDSELECTIONLISTMODELSLOTS_H
 #define QVIRTUALKEYBOARDSELECTIONLISTMODELSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QVirtualKeyboardSelectionListModel>
+#include <QtVirtualKeyboard/QVirtualKeyboardSelectionListModel>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

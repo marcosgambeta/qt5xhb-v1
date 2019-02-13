@@ -13,11 +13,11 @@
 #ifndef QVIRTUALKEYBOARDINPUTCONTEXTSLOTS_H
 #define QVIRTUALKEYBOARDINPUTCONTEXTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QVirtualKeyboardInputContext>
+#include <QtVirtualKeyboard/QVirtualKeyboardInputContext>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
