@@ -34,10 +34,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QWebPluginFactory>
+#include <QtWebKit/QWebPluginFactory>
 #endif
 
 #include "qt5xhb_common.h"
@@ -45,7 +45,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QWebPluginFactory>
+#include <QtWebKit/QWebPluginFactory>
 #endif
 
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
