@@ -50,10 +50,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QButtonGroup>
+#include <QtWidgets/QButtonGroup>
 #endif
 
 #include "qt5xhb_common.h"
@@ -61,10 +61,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QButtonGroup>
+#include <QtWidgets/QButtonGroup>
 #endif
 
-#include <QAbstractButton>
+#include <QtWidgets/QAbstractButton>
 
 /*
 QButtonGroup ( QObject * parent = 0 )

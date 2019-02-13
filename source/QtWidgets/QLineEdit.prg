@@ -111,10 +111,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QLineEdit>
+#include <QtWidgets/QLineEdit>
 #endif
 
 #include "qt5xhb_common.h"
@@ -122,15 +122,15 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QLineEdit>
+#include <QtWidgets/QLineEdit>
 #endif
 
-#include <QVariant>
-#include <QIcon>
-#include <QCompleter>
-#include <QValidator>
-#include <QAction>
-#include <QMenu>
+#include <QtCore/QVariant>
+#include <QtGui/QIcon>
+#include <QtWidgets/QCompleter>
+#include <QtGui/QValidator>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
 
 /*
 explicit QLineEdit ( QWidget * parent = 0 )

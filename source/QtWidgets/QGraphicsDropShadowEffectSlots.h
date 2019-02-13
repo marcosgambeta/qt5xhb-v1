@@ -13,11 +13,11 @@
 #ifndef QGRAPHICSDROPSHADOWEFFECTSLOTS_H
 #define QGRAPHICSDROPSHADOWEFFECTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QGraphicsDropShadowEffect>
+#include <QtWidgets/QGraphicsDropShadowEffect>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

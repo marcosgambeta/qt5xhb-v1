@@ -13,11 +13,11 @@
 #ifndef QABSTRACTSPINBOXSLOTS_H
 #define QABSTRACTSPINBOXSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstractSpinBox>
+#include <QtWidgets/QAbstractSpinBox>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

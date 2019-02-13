@@ -122,10 +122,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QGraphicsScene>
+#include <QtWidgets/QGraphicsScene>
 #endif
 
 #include "qt5xhb_common.h"
@@ -133,14 +133,14 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QGraphicsScene>
+#include <QtWidgets/QGraphicsScene>
 #endif
 
-#include <QVariant>
-#include <QPalette>
-#include <QGraphicsWidget>
-#include <QGraphicsProxyWidget>
-#include <QStyle>
+#include <QtCore/QVariant>
+#include <QtGui/QPalette>
+#include <QtWidgets/QGraphicsWidget>
+#include <QtWidgets/QGraphicsProxyWidget>
+#include <QtWidgets/QStyle>
 
 /*
 QGraphicsScene ( QObject * parent = 0 )

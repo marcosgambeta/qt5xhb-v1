@@ -13,11 +13,11 @@
 #ifndef QDOUBLESPINBOXSLOTS_H
 #define QDOUBLESPINBOXSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDoubleSpinBox>
+#include <QtWidgets/QDoubleSpinBox>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

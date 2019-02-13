@@ -64,10 +64,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDataWidgetMapper>
+#include <QtWidgets/QDataWidgetMapper>
 #endif
 
 #include "qt5xhb_common.h"
@@ -75,11 +75,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QDataWidgetMapper>
+#include <QtWidgets/QDataWidgetMapper>
 #endif
 
-#include <QModelIndex>
-#include <QAbstractItemDelegate>
+#include <QtCore/QModelIndex>
+#include <QtWidgets/QAbstractItemDelegate>
 
 /*
 QDataWidgetMapper ( QObject * parent = 0 )

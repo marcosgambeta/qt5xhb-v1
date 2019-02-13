@@ -13,11 +13,11 @@
 #ifndef QGRAPHICSEFFECTSLOTS_H
 #define QGRAPHICSEFFECTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QGraphicsEffect>
+#include <QtWidgets/QGraphicsEffect>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

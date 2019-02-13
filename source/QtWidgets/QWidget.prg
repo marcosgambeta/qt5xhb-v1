@@ -291,10 +291,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QWidget>
+#include <QtWidgets/QWidget>
 #endif
 
 #include "qt5xhb_common.h"
@@ -302,17 +302,17 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QWidget>
+#include <QtWidgets/QWidget>
 #endif
 
-#include <QIcon>
-#include <QVariant>
-#include <QLocale>
-#include <QGraphicsEffect>
-#include <QGraphicsProxyWidget>
-#include <QLayout>
-#include <QStyle>
-#include <QWindow>
+#include <QtGui/QIcon>
+#include <QtCore/QVariant>
+#include <QtCore/QLocale>
+#include <QtWidgets/QGraphicsEffect>
+#include <QtWidgets/QGraphicsProxyWidget>
+#include <QtWidgets/QLayout>
+#include <QtWidgets/QStyle>
+#include <QtGui/QWindow>
 
 /*
 explicit QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )

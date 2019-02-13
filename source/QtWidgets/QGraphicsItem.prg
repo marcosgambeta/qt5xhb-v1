@@ -182,10 +182,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QGraphicsItem>
+#include <QtWidgets/QGraphicsItem>
 #endif
 
 #include "qt5xhb_common.h"
@@ -193,13 +193,13 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QGraphicsItem>
+#include <QtWidgets/QGraphicsItem>
 #endif
 
-#include <QCursor>
-#include <QGraphicsEffect>
-#include <QGraphicsWidget>
-#include <QGraphicsScene>
+#include <QtGui/QCursor>
+#include <QtWidgets/QGraphicsEffect>
+#include <QtWidgets/QGraphicsWidget>
+#include <QtWidgets/QGraphicsScene>
 
 HB_FUNC_STATIC( QGRAPHICSITEM_DELETE )
 {

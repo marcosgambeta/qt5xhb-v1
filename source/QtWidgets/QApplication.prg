@@ -114,10 +114,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #endif
 
 #include "qt5xhb_common.h"
@@ -125,18 +125,18 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #endif
 
-#include <QFont>
-#include <QLocale>
-#include <QIcon>
-#include <QSessionManager>
-#include <QFontMetrics>
-#include <QPalette>
-#include <QClipboard>
-#include <QStyle>
-#include <QDesktopWidget>
+#include <QtGui/QFont>
+#include <QtCore/QLocale>
+#include <QtGui/QIcon>
+#include <QtGui/QSessionManager>
+#include <QtGui/QFontMetrics>
+#include <QtGui/QPalette>
+#include <QtGui/QClipboard>
+#include <QtWidgets/QStyle>
+#include <QtWidgets/QDesktopWidget>
 
 //QApplication ( int & argc, char ** argv )
 //QApplication ( int & argc, char ** argv, bool GUIenabled )

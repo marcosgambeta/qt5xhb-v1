@@ -13,11 +13,11 @@
 #ifndef QGRAPHICSBLUREFFECTSLOTS_H
 #define QGRAPHICSBLUREFFECTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QGraphicsBlurEffect>
+#include <QtWidgets/QGraphicsBlurEffect>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

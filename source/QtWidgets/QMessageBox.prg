@@ -81,10 +81,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 #endif
 
 #include "qt5xhb_common.h"
@@ -92,12 +92,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 #endif
 
-#include <QPushButton>
-#include <QAbstractButton>
-#include <QCheckBox>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QAbstractButton>
+#include <QtWidgets/QCheckBox>
 
 /*
 explicit QMessageBox ( QWidget * parent = 0 )

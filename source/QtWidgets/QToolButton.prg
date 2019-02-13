@@ -52,10 +52,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QToolButton>
+#include <QtWidgets/QToolButton>
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,11 +63,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QToolButton>
+#include <QtWidgets/QToolButton>
 #endif
 
-#include <QAction>
-#include <QMenu>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
 
 /*
 explicit QToolButton ( QWidget * parent = 0 )

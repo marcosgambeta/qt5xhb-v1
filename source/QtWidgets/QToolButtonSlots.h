@@ -13,11 +13,11 @@
 #ifndef QTOOLBUTTONSLOTS_H
 #define QTOOLBUTTONSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QToolButton>
+#include <QtWidgets/QToolButton>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

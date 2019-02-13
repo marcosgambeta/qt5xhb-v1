@@ -47,10 +47,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QWhatsThis>
+#include <QtWidgets/QWhatsThis>
 #endif
 
 #include "qt5xhb_common.h"
@@ -58,10 +58,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QWhatsThis>
+#include <QtWidgets/QWhatsThis>
 #endif
 
-#include <QAction>
+#include <QtWidgets/QAction>
 
 HB_FUNC_STATIC( QWHATSTHIS_DELETE )
 {

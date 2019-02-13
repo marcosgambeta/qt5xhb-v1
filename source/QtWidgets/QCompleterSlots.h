@@ -13,11 +13,11 @@
 #ifndef QCOMPLETERSLOTS_H
 #define QCOMPLETERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QCompleter>
+#include <QtWidgets/QCompleter>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

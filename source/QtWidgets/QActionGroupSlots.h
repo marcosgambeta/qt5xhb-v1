@@ -13,11 +13,11 @@
 #ifndef QACTIONGROUPSLOTS_H
 #define QACTIONGROUPSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QActionGroup>
+#include <QtWidgets/QActionGroup>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

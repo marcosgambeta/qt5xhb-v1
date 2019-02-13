@@ -13,11 +13,11 @@
 #ifndef QCOLUMNVIEWSLOTS_H
 #define QCOLUMNVIEWSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QColumnView>
+#include <QtWidgets/QColumnView>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

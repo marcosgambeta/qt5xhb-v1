@@ -82,10 +82,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QTableView>
+#include <QtWidgets/QTableView>
 #endif
 
 #include "qt5xhb_common.h"
@@ -93,10 +93,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QTableView>
+#include <QtWidgets/QTableView>
 #endif
 
-#include <QHeaderView>
+#include <QtWidgets/QHeaderView>
 
 /*
 explicit QTableView(QWidget *parent = nullptr)

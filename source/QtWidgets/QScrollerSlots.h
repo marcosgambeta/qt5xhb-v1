@@ -13,11 +13,11 @@
 #ifndef QSCROLLERSLOTS_H
 #define QSCROLLERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QScroller>
+#include <QtWidgets/QScroller>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

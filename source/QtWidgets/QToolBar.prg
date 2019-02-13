@@ -67,10 +67,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QToolBar>
+#include <QtWidgets/QToolBar>
 #endif
 
 #include "qt5xhb_common.h"
@@ -78,11 +78,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QToolBar>
+#include <QtWidgets/QToolBar>
 #endif
 
-#include <QIcon>
-#include <QAction>
+#include <QtGui/QIcon>
+#include <QtWidgets/QAction>
 
 /*
 QToolBar ( const QString & title, QWidget * parent = 0 )

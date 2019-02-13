@@ -13,11 +13,11 @@
 #ifndef QTOOLBOXSLOTS_H
 #define QTOOLBOXSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QToolBox>
+#include <QtWidgets/QToolBox>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

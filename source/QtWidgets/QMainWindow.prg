@@ -86,10 +86,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 #endif
 
 #include "qt5xhb_common.h"
@@ -97,13 +97,13 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 #endif
 
-#include <QToolBar>
-#include <QMenu>
-#include <QMenuBar>
-#include <QStatusBar>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QStatusBar>
 
 /*
 QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )

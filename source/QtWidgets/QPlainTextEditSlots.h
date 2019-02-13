@@ -13,11 +13,11 @@
 #ifndef QPLAINTEXTEDITSLOTS_H
 #define QPLAINTEXTEDITSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QPlainTextEdit>
+#include <QtWidgets/QPlainTextEdit>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

@@ -118,10 +118,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QComboBox>
+#include <QtWidgets/QComboBox>
 #endif
 
 #include "qt5xhb_common.h"
@@ -129,12 +129,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QComboBox>
+#include <QtWidgets/QComboBox>
 #endif
 
-#include <QCompleter>
-#include <QLineEdit>
-#include <QAbstractItemView>
+#include <QtWidgets/QCompleter>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QAbstractItemView>
 
 /*
 QComboBox ( QWidget * parent = 0 )

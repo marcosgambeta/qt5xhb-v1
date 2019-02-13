@@ -46,10 +46,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QGraphicsSimpleTextItem>
+#include <QtWidgets/QGraphicsSimpleTextItem>
 #endif
 
 #include "qt5xhb_common.h"
@@ -57,10 +57,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QGraphicsSimpleTextItem>
+#include <QtWidgets/QGraphicsSimpleTextItem>
 #endif
 
-#include <QFont>
+#include <QtGui/QFont>
 
 /*
 QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )

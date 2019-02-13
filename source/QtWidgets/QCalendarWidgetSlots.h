@@ -13,11 +13,11 @@
 #ifndef QCALENDARWIDGETSLOTS_H
 #define QCALENDARWIDGETSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QCalendarWidget>
+#include <QtWidgets/QCalendarWidget>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

@@ -13,11 +13,11 @@
 #ifndef QWIZARDPAGESLOTS_H
 #define QWIZARDPAGESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QWizardPage>
+#include <QtWidgets/QWizardPage>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

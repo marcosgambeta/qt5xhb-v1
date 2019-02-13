@@ -13,11 +13,11 @@
 #ifndef QDATETIMEEDITSLOTS_H
 #define QDATETIMEEDITSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDateTimeEdit>
+#include <QtWidgets/QDateTimeEdit>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

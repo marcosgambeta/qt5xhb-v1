@@ -13,11 +13,11 @@
 #ifndef QDESKTOPWIDGETSLOTS_H
 #define QDESKTOPWIDGETSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDesktopWidget>
+#include <QtWidgets/QDesktopWidget>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

@@ -52,10 +52,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDockWidget>
+#include <QtWidgets/QDockWidget>
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,10 +63,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QDockWidget>
+#include <QtWidgets/QDockWidget>
 #endif
 
-#include <QAction>
+#include <QtWidgets/QAction>
 
 /*
 QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )

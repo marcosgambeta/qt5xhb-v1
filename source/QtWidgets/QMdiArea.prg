@@ -69,10 +69,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMdiArea>
+#include <QtWidgets/QMdiArea>
 #endif
 
 #include "qt5xhb_common.h"
@@ -80,10 +80,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QMdiArea>
+#include <QtWidgets/QMdiArea>
 #endif
 
-#include <QMdiSubWindow>
+#include <QtWidgets/QMdiSubWindow>
 
 /*
 QMdiArea ( QWidget * parent = 0 )

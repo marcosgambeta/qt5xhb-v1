@@ -88,10 +88,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QFileSystemModel>
+#include <QtWidgets/QFileSystemModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -99,11 +99,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QFileSystemModel>
+#include <QtWidgets/QFileSystemModel>
 #endif
 
-#include <QDateTime>
-#include <QMimeData>
+#include <QtCore/QDateTime>
+#include <QtCore/QMimeData>
 
 /*
 explicit QFileSystemModel(QObject * parent = 0)

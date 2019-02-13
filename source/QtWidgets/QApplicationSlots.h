@@ -13,11 +13,11 @@
 #ifndef QAPPLICATIONSLOTS_H
 #define QAPPLICATIONSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

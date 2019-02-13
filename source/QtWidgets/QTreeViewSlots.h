@@ -13,11 +13,11 @@
 #ifndef QTREEVIEWSLOTS_H
 #define QTREEVIEWSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QTreeView>
+#include <QtWidgets/QTreeView>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

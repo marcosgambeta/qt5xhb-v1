@@ -87,10 +87,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QTabWidget>
+#include <QtWidgets/QTabWidget>
 #endif
 
 #include "qt5xhb_common.h"
@@ -98,10 +98,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QTabWidget>
+#include <QtWidgets/QTabWidget>
 #endif
 
-#include <QTabBar>
+#include <QtWidgets/QTabBar>
 
 /*
 explicit QTabWidget ( QWidget * parent = 0 )
