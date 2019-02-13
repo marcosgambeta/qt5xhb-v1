@@ -37,10 +37,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSvgWidget>
+#include <QtSvg/QSvgWidget>
 #endif
 
 #include "qt5xhb_common.h"
@@ -48,10 +48,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSvgWidget>
+#include <QtSvg/QSvgWidget>
 #endif
 
-#include <QSvgRenderer>
+#include <QtSvg/QSvgRenderer>
 
 /*
 QSvgWidget ( QWidget * parent = 0 )
