@@ -13,11 +13,11 @@
 #ifndef QDBUSPENDINGCALLWATCHERSLOTS_H
 #define QDBUSPENDINGCALLWATCHERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDBusPendingCallWatcher>
+#include <QtDBus/QDBusPendingCallWatcher>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

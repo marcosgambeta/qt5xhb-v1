@@ -13,11 +13,11 @@
 #ifndef QDBUSCONNECTIONINTERFACESLOTS_H
 #define QDBUSCONNECTIONINTERFACESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDBusConnectionInterface>
+#include <QtDBus/QDBusConnectionInterface>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
