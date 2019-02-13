@@ -34,10 +34,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDesignerObjectInspectorInterface>
+#include <QtDesigner/QDesignerObjectInspectorInterface>
 #endif
 
 #include "qt5xhb_common.h"
@@ -45,10 +45,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QDesignerObjectInspectorInterface>
+#include <QtDesigner/QDesignerObjectInspectorInterface>
 #endif
 
-#include <QDesignerFormEditorInterface>
+#include <QtDesigner/QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 {

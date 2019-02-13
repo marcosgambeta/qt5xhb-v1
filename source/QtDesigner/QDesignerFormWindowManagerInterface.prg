@@ -64,10 +64,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDesignerFormWindowManagerInterface>
+#include <QtDesigner/QDesignerFormWindowManagerInterface>
 #endif
 
 #include "qt5xhb_common.h"
@@ -75,11 +75,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QDesignerFormWindowManagerInterface>
+#include <QtDesigner/QDesignerFormWindowManagerInterface>
 #endif
 
-#include <QAction>
-#include <QDesignerFormEditorInterface>
+#include <QtWidgets/QAction>
+#include <QtDesigner/QDesignerFormEditorInterface>
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_DELETE )
 {
