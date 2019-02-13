@@ -52,10 +52,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QScriptClassPropertyIterator>
+#include <QtScript/QScriptClassPropertyIterator>
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,10 +63,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QScriptClassPropertyIterator>
+#include <QtScript/QScriptClassPropertyIterator>
 #endif
 
-#include <QScriptString>
+#include <QtScript/QScriptString>
 
 HB_FUNC_STATIC( QSCRIPTCLASSPROPERTYITERATOR_DELETE )
 {

@@ -13,11 +13,11 @@
 #ifndef QSCRIPTENGINESLOTS_H
 #define QSCRIPTENGINESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QScriptEngine>
+#include <QtScript/QScriptEngine>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

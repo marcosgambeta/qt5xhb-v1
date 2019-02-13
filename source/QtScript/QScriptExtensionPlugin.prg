@@ -35,10 +35,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QScriptExtensionPlugin>
+#include <QtScript/QScriptExtensionPlugin>
 #endif
 
 #include "qt5xhb_common.h"
@@ -46,10 +46,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QScriptExtensionPlugin>
+#include <QtScript/QScriptExtensionPlugin>
 #endif
 
-#include <QScriptValue>
+#include <QtScript/QScriptValue>
 
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
 {
