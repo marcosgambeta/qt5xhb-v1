@@ -38,10 +38,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QQuickTextureFactory>
+#include <QtQuick/QQuickTextureFactory>
 #endif
 
 #include "qt5xhb_common.h"
@@ -49,10 +49,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QQuickTextureFactory>
+#include <QtQuick/QQuickTextureFactory>
 #endif
 
-#include <QSGTexture>
+#include <QtQuick/QSGTexture>
 
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_DELETE )
 {

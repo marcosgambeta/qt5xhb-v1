@@ -13,11 +13,11 @@
 #ifndef QQUICKVIEWSLOTS_H
 #define QQUICKVIEWSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QQuickView>
+#include <QtQuick/QQuickView>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

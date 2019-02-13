@@ -122,10 +122,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QQuickItem>
+#include <QtQuick/QQuickItem>
 #endif
 
 #include "qt5xhb_common.h"
@@ -133,12 +133,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QQuickItem>
+#include <QtQuick/QQuickItem>
 #endif
 
-#include <QCursor>
-#include <QSGTextureProvider>
-#include <QQuickWindow>
+#include <QtGui/QCursor>
+#include <QtQuick/QSGTextureProvider>
+#include <QtQuick/QQuickWindow>
 
 /*
 QQuickItem(QQuickItem * parent = 0)
