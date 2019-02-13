@@ -75,11 +75,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QWebEnginePage>
+#include <QtWebEngineWidgets/QWebEnginePage>
 #endif
 #endif
 
@@ -89,12 +89,12 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QWebEnginePage>
+#include <QtWebEngineWidgets/QWebEnginePage>
 #endif
 #endif
 
-#include <QAction>
-#include <QMenu>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
 
 /*
 explicit QWebEnginePage(QObject *parent = 0)

@@ -13,12 +13,12 @@
 #ifndef QWEBENGINEVIEWSLOTS_H
 #define QWEBENGINEVIEWSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QWebEngineView>
+#include <QtWebEngineWidgets/QWebEngineView>
 #endif
 
 #include "qt5xhb_common.h"
