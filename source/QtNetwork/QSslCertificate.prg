@@ -71,10 +71,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSslCertificate>
+#include <QtNetwork/QSslCertificate>
 #endif
 
 #include "qt5xhb_common.h"
@@ -82,14 +82,14 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSslCertificate>
+#include <QtNetwork/QSslCertificate>
 #endif
 
-#include <QDateTime>
-#include <QSslKey>
-#include <QStringList>
-#include <QSslCertificateExtension>
-#include <QSslError>
+#include <QtCore/QDateTime>
+#include <QtNetwork/QSslKey>
+#include <QtCore/QStringList>
+#include <QtNetwork/QSslCertificateExtension>
+#include <QtNetwork/QSslError>
 
 /*
 explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )

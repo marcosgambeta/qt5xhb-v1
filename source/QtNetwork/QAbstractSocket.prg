@@ -77,10 +77,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAbstractSocket>
+#include <QtNetwork/QAbstractSocket>
 #endif
 
 #include "qt5xhb_common.h"
@@ -88,11 +88,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QAbstractSocket>
+#include <QtNetwork/QAbstractSocket>
 #endif
 
-#include <QHostAddress>
-#include <QNetworkProxy>
+#include <QtNetwork/QHostAddress>
+#include <QtNetwork/QNetworkProxy>
 
 /*
 QAbstractSocket ( SocketType socketType, QObject * parent )

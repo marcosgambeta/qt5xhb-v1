@@ -83,10 +83,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSslConfiguration>
+#include <QtNetwork/QSslConfiguration>
 #endif
 
 #include "qt5xhb_common.h"
@@ -94,11 +94,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSslConfiguration>
+#include <QtNetwork/QSslConfiguration>
 #endif
 
-#include <QSslKey>
-#include <QSslCipher>
+#include <QtNetwork/QSslKey>
+#include <QtNetwork/QSslCipher>
 
 /*
 QSslConfiguration()

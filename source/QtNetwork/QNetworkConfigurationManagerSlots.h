@@ -13,11 +13,11 @@
 #ifndef QNETWORKCONFIGURATIONMANAGERSLOTS_H
 #define QNETWORKCONFIGURATIONMANAGERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QNetworkConfigurationManager>
+#include <QtNetwork/QNetworkConfigurationManager>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

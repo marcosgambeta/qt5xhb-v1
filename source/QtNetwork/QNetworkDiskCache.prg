@@ -47,10 +47,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QNetworkDiskCache>
+#include <QtNetwork/QNetworkDiskCache>
 #endif
 
 #include "qt5xhb_common.h"
@@ -58,10 +58,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QNetworkDiskCache>
+#include <QtNetwork/QNetworkDiskCache>
 #endif
 
-#include <QIODevice>
+#include <QtCore/QIODevice>
 
 /*
 explicit QNetworkDiskCache(QObject *parent = Q_NULLPTR)

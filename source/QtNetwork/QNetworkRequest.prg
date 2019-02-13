@@ -65,10 +65,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QNetworkRequest>
+#include <QtNetwork/QNetworkRequest>
 #endif
 
 #include "qt5xhb_common.h"
@@ -76,10 +76,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QNetworkRequest>
+#include <QtNetwork/QNetworkRequest>
 #endif
 
-#include <QSslConfiguration>
+#include <QtNetwork/QSslConfiguration>
 
 /*
 explicit QNetworkRequest ( const QUrl & url = QUrl() )

@@ -63,10 +63,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QNetworkCookie>
+#include <QtNetwork/QNetworkCookie>
 #endif
 
 #include "qt5xhb_common.h"
@@ -74,10 +74,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QNetworkCookie>
+#include <QtNetwork/QNetworkCookie>
 #endif
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 /*
 explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())

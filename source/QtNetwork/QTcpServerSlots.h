@@ -13,11 +13,11 @@
 #ifndef QTCPSERVERSLOTS_H
 #define QTCPSERVERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QTcpServer>
+#include <QtNetwork/QTcpServer>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

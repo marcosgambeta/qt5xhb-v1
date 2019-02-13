@@ -13,11 +13,11 @@
 #ifndef QDNSLOOKUPSLOTS_H
 #define QDNSLOOKUPSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QDnsLookup>
+#include <QtNetwork/QDnsLookup>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

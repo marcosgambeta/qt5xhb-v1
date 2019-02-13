@@ -36,11 +36,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QSctpServer>
+#include <QtNetwork/QSctpServer>
 #endif
 #endif
 
@@ -50,13 +50,13 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QSctpServer>
+#include <QtNetwork/QSctpServer>
 #endif
 #endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 #if !defined(QT_NO_SCTP)
-#include <QSctpSocket>
+#include <QtNetwork/QSctpSocket>
 #endif
 #endif
 

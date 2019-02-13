@@ -112,10 +112,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSslSocket>
+#include <QtNetwork/QSslSocket>
 #endif
 
 #include "qt5xhb_common.h"
@@ -123,12 +123,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSslSocket>
+#include <QtNetwork/QSslSocket>
 #endif
 
-#include <QSslKey>
-#include <QSslCipher>
-#include <QSslConfiguration>
+#include <QtNetwork/QSslKey>
+#include <QtNetwork/QSslCipher>
+#include <QtNetwork/QSslConfiguration>
 
 /*
 explicit QSslSocket(QObject *parent = Q_NULLPTR)
