@@ -100,10 +100,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QFont>
+#include <QtGui/QFont>
 #endif
 
 #include "qt5xhb_common.h"
@@ -111,11 +111,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QFont>
+#include <QtGui/QFont>
 #endif
 
-#include <QStringList>
-#include <QVariant>
+#include <QtCore/QStringList>
+#include <QtCore/QVariant>
 
 /*
 QFont ()

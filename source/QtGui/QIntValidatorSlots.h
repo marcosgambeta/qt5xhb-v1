@@ -13,11 +13,11 @@
 #ifndef QINTVALIDATORSLOTS_H
 #define QINTVALIDATORSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QIntValidator>
+#include <QtGui/QIntValidator>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

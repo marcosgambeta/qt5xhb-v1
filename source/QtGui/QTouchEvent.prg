@@ -38,10 +38,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QTouchEvent>
+#include <QtGui/QTouchEvent>
 #endif
 
 #include "qt5xhb_common.h"
@@ -49,11 +49,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QTouchEvent>
+#include <QtGui/QTouchEvent>
 #endif
 
-#include <QList>
-#include <QWindow>
+#include <QtCore/QList>
+#include <QtGui/QWindow>
 
 HB_FUNC_STATIC( QTOUCHEVENT_DELETE )
 {

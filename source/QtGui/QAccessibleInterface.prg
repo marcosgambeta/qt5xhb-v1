@@ -74,10 +74,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAccessibleInterface>
+#include <QtGui/QAccessibleInterface>
 #endif
 
 #include "qt5xhb_common.h"
@@ -85,10 +85,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QAccessibleInterface>
+#include <QtGui/QAccessibleInterface>
 #endif
 
-#include <QWindow>
+#include <QtGui/QWindow>
 
 /*
 virtual bool isValid() const = 0

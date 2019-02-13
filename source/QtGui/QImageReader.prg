@@ -86,10 +86,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QImageReader>
+#include <QtGui/QImageReader>
 #endif
 
 #include "qt5xhb_common.h"
@@ -97,10 +97,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QImageReader>
+#include <QtGui/QImageReader>
 #endif
 
-#include <QColor>
+#include <QtGui/QColor>
 
 /*
 QImageReader ()

@@ -43,10 +43,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QDropEvent>
+#include <QtGui/QDropEvent>
 #endif
 
 #include "qt5xhb_common.h"
@@ -54,10 +54,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QDropEvent>
+#include <QtGui/QDropEvent>
 #endif
 
-#include <QMimeData>
+#include <QtCore/QMimeData>
 
 /*
 QDropEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = Drop )

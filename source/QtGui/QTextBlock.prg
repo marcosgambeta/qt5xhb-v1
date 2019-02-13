@@ -76,10 +76,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QTextBlock>
+#include <QtGui/QTextBlock>
 #endif
 
 #include "qt5xhb_common.h"
@@ -87,11 +87,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QTextBlock>
+#include <QtGui/QTextBlock>
 #endif
 
-#include <QTextDocument>
-#include <QTextList>
+#include <QtGui/QTextDocument>
+#include <QtGui/QTextList>
 
 /*
 QTextBlock(QTextDocumentPrivate *priv, int b)

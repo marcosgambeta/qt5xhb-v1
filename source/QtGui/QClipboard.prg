@@ -52,10 +52,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QClipboard>
+#include <QtGui/QClipboard>
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,12 +63,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QClipboard>
+#include <QtGui/QClipboard>
 #endif
 
-#include <QImage>
-#include <QMimeData>
-#include <QPixmap>
+#include <QtGui/QImage>
+#include <QtCore/QMimeData>
+#include <QtGui/QPixmap>
 
 /*
 void clear ( Mode mode = Clipboard )

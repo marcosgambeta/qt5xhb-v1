@@ -13,11 +13,11 @@
 #ifndef QTEXTDOCUMENTSLOTS_H
 #define QTEXTDOCUMENTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QTextDocument>
+#include <QtGui/QTextDocument>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

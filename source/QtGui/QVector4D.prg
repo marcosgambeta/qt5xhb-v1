@@ -65,10 +65,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QVector4D>
+#include <QtGui/QVector4D>
 #endif
 
 #include "qt5xhb_common.h"
@@ -76,11 +76,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QVector4D>
+#include <QtGui/QVector4D>
 #endif
 
-#include <QVector2D>
-#include <QVector3D>
+#include <QtGui/QVector2D>
+#include <QtGui/QVector3D>
 
 /*
 QVector4D()

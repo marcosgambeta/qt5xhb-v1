@@ -97,10 +97,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QImage>
+#include <QtGui/QImage>
 #endif
 
 #include "qt5xhb_common.h"
@@ -108,12 +108,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QImage>
+#include <QtGui/QImage>
 #endif
 
-#include <QStringList>
-#include <QColor>
-#include <QVariant>
+#include <QtCore/QStringList>
+#include <QtGui/QColor>
+#include <QtCore/QVariant>
 
 /*
 QImage ()

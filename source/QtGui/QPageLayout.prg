@@ -73,11 +73,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QPageLayout>
+#include <QtGui/QPageLayout>
 #endif
 #endif
 
@@ -87,11 +87,11 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QPageLayout>
+#include <QtGui/QPageLayout>
 #endif
 #endif
 
-#include <QRect>
+#include <QtCore/QRect>
 
 /*
 QPageLayout()

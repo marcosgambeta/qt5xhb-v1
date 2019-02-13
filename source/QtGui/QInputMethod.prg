@@ -55,10 +55,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QInputMethod>
+#include <QtGui/QInputMethod>
 #endif
 
 #include "qt5xhb_common.h"
@@ -66,12 +66,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QInputMethod>
+#include <QtGui/QInputMethod>
 #endif
 
-#include <QRectF>
-#include <QTransform>
-#include <QLocale>
+#include <QtCore/QRectF>
+#include <QtGui/QTransform>
+#include <QtCore/QLocale>
 
 /*
 QRectF cursorRectangle() const

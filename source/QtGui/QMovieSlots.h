@@ -13,11 +13,11 @@
 #ifndef QMOVIESLOTS_H
 #define QMOVIESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QMovie>
+#include <QtGui/QMovie>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

@@ -35,10 +35,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QScreenOrientationChangeEvent>
+#include <QtGui/QScreenOrientationChangeEvent>
 #endif
 
 #include "qt5xhb_common.h"
@@ -46,10 +46,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QScreenOrientationChangeEvent>
+#include <QtGui/QScreenOrientationChangeEvent>
 #endif
 
-#include <QScreen>
+#include <QtGui/QScreen>
 
 /*
 QScreenOrientationChangeEvent(QScreen *screen, Qt::ScreenOrientation orientation)

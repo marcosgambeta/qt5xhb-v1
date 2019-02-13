@@ -13,11 +13,11 @@
 #ifndef QINPUTMETHODSLOTS_H
 #define QINPUTMETHODSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QInputMethod>
+#include <QtGui/QInputMethod>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

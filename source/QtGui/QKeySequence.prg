@@ -48,12 +48,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
-
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QKeySequence>
+#include <QtGui/QKeySequence>
 #endif
 
 #include "qt5xhb_common.h"
@@ -61,10 +59,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QKeySequence>
+#include <QtGui/QKeySequence>
 #endif
 
-#include <QList>
+#include <QtCore/QList>
 
 /*
 QKeySequence ()

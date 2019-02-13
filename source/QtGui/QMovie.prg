@@ -75,10 +75,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMovie>
+#include <QtGui/QMovie>
 #endif
 
 #include "qt5xhb_common.h"
@@ -86,11 +86,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QMovie>
+#include <QtGui/QMovie>
 #endif
 
-#include <QColor>
-#include <QPixmap>
+#include <QtGui/QColor>
+#include <QtGui/QPixmap>
 
 /*
 QMovie ( QObject * parent = 0 )

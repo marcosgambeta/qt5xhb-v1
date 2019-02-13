@@ -13,11 +13,11 @@
 #ifndef QWINDOWSLOTS_H
 #define QWINDOWSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QWindow>
+#include <QtGui/QWindow>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
