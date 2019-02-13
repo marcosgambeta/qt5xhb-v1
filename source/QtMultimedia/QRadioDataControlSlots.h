@@ -13,11 +13,11 @@
 #ifndef QRADIODATACONTROLSLOTS_H
 #define QRADIODATACONTROLSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QRadioDataControl>
+#include <QtMultimedia/QRadioDataControl>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

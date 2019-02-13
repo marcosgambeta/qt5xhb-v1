@@ -13,11 +13,11 @@
 #ifndef QAUDIOINPUTSELECTORCONTROLSLOTS_H
 #define QAUDIOINPUTSELECTORCONTROLSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAudioInputSelectorControl>
+#include <QtMultimedia/QAudioInputSelectorControl>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

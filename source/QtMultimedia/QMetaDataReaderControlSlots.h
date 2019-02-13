@@ -13,11 +13,11 @@
 #ifndef QMETADATAREADERCONTROLSLOTS_H
 #define QMETADATAREADERCONTROLSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QMetaDataReaderControl>
+#include <QtMultimedia/QMetaDataReaderControl>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

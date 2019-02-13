@@ -35,10 +35,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMediaContainerControl>
+#include <QtMultimedia/QMediaContainerControl>
 #endif
 
 #include "qt5xhb_common.h"
@@ -46,10 +46,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QMediaContainerControl>
+#include <QtMultimedia/QMediaContainerControl>
 #endif
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 /*
 explicit QMediaContainerControl(QObject *parent = Q_NULLPTR) [protected]

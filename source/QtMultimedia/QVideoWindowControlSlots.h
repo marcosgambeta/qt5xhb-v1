@@ -13,11 +13,11 @@
 #ifndef QVIDEOWINDOWCONTROLSLOTS_H
 #define QVIDEOWINDOWCONTROLSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QVideoWindowControl>
+#include <QtMultimedia/QVideoWindowControl>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

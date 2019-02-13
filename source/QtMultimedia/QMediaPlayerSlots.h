@@ -13,11 +13,11 @@
 #ifndef QMEDIAPLAYERSLOTS_H
 #define QMEDIAPLAYERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QMediaPlayer>
+#include <QtMultimedia/QMediaPlayer>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

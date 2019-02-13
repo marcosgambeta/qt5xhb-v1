@@ -13,11 +13,11 @@
 #ifndef QVIDEODEVICESELECTORCONTROLSLOTS_H
 #define QVIDEODEVICESELECTORCONTROLSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QVideoDeviceSelectorControl>
+#include <QtMultimedia/QVideoDeviceSelectorControl>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

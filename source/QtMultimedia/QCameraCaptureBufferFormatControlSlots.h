@@ -13,11 +13,11 @@
 #ifndef QCAMERACAPTUREBUFFERFORMATCONTROLSLOTS_H
 #define QCAMERACAPTUREBUFFERFORMATCONTROLSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QCameraCaptureBufferFormatControl>
+#include <QtMultimedia/QCameraCaptureBufferFormatControl>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

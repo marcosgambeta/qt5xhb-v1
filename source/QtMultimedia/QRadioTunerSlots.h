@@ -13,11 +13,11 @@
 #ifndef QRADIOTUNERSLOTS_H
 #define QRADIOTUNERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QRadioTuner>
+#include <QtMultimedia/QRadioTuner>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

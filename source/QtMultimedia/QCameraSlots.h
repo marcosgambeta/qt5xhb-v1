@@ -13,11 +13,11 @@
 #ifndef QCAMERASLOTS_H
 #define QCAMERASLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QCamera>
+#include <QtMultimedia/QCamera>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

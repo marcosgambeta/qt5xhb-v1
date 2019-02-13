@@ -13,11 +13,11 @@
 #ifndef QCAMERALOCKSCONTROLSLOTS_H
 #define QCAMERALOCKSCONTROLSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QCameraLocksControl>
+#include <QtMultimedia/QCameraLocksControl>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

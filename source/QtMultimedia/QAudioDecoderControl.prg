@@ -57,10 +57,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAudioDecoderControl>
+#include <QtMultimedia/QAudioDecoderControl>
 #endif
 
 #include "qt5xhb_common.h"
@@ -68,7 +68,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QAudioDecoderControl>
+#include <QtMultimedia/QAudioDecoderControl>
 #endif
 
 /*

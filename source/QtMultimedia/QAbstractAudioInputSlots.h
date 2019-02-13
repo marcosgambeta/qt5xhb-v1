@@ -13,11 +13,11 @@
 #ifndef QABSTRACTAUDIOINPUTSLOTS_H
 #define QABSTRACTAUDIOINPUTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstractAudioInput>
+#include <QtMultimedia/QAbstractAudioInput>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

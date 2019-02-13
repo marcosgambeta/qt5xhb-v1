@@ -13,11 +13,11 @@
 #ifndef QCAMERAEXPOSURECONTROLSLOTS_H
 #define QCAMERAEXPOSURECONTROLSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QCameraExposureControl>
+#include <QtMultimedia/QCameraExposureControl>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

@@ -34,10 +34,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QMediaServiceProviderPlugin>
+#include <QtMultimedia/QMediaServiceProviderPlugin>
 #endif
 
 #include "qt5xhb_common.h"
@@ -45,10 +45,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QMediaServiceProviderPlugin>
+#include <QtMultimedia/QMediaServiceProviderPlugin>
 #endif
 
-#include <QMediaService>
+#include <QtMultimedia/QMediaService>
 
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_DELETE )
 {
