@@ -50,10 +50,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QScriptEngineDebugger>
+#include <QtScriptTools/QScriptEngineDebugger>
 #endif
 
 #include "qt5xhb_common.h"
@@ -61,13 +61,13 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QScriptEngineDebugger>
+#include <QtScriptTools/QScriptEngineDebugger>
 #endif
 
-#include <QAction>
-#include <QMenu>
-#include <QToolBar>
-#include <QMainWindow>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QToolBar>
+#include <QtWidgets/QMainWindow>
 
 /*
 QScriptEngineDebugger(QObject * parent = 0)
