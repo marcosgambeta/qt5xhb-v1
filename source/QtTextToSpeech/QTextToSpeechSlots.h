@@ -13,12 +13,12 @@
 #ifndef QTEXTTOSPEECHSLOTS_H
 #define QTEXTTOSPEECHSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-#include <QTextToSpeech>
+#include <QtTextToSpeech/QTextToSpeech>
 #endif
 
 #include "qt5xhb_common.h"

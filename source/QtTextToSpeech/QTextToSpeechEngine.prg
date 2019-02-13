@@ -52,10 +52,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QTextToSpeechEngine>
+#include <QtTextToSpeech/QTextToSpeechEngine>
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,12 +63,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QTextToSpeechEngine>
+#include <QtTextToSpeech/QTextToSpeechEngine>
 #endif
 
-#include <QVector>
-#include <QLocale>
-#include <QVoice>
+#include <QtCore/QVector>
+#include <QtCore/QLocale>
+#include <QtTextToSpeech/QVoice>
 
 /*
 explicit QTextToSpeechEngine(QObject *parent = nullptr) (abstract)
