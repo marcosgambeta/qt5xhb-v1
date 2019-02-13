@@ -56,11 +56,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-#include <QAbstractOAuth>
+#include <QtNetworkAuth/QAbstractOAuth>
 #endif
 #endif
 
@@ -70,12 +70,12 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-#include <QAbstractOAuth>
+#include <QtNetworkAuth/QAbstractOAuth>
 #endif
 #endif
 
-#include <QNetworkAccessManager>
-#include <QAbstractOAuthReplyHandler>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 
 /*
 explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) [protected]

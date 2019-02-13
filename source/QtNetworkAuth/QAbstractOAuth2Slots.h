@@ -13,12 +13,12 @@
 #ifndef QABSTRACTOAUTH2SLOTS_H
 #define QABSTRACTOAUTH2SLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-#include <QAbstractOAuth2>
+#include <QtNetworkAuth/QAbstractOAuth2>
 #endif
 
 #include "qt5xhb_common.h"

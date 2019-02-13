@@ -13,12 +13,12 @@
 #ifndef QOAUTH2AUTHORIZATIONCODEFLOWSLOTS_H
 #define QOAUTH2AUTHORIZATIONCODEFLOWSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-#include <QOAuth2AuthorizationCodeFlow>
+#include <QtNetworkAuth/QOAuth2AuthorizationCodeFlow>
 #endif
 
 #include "qt5xhb_common.h"

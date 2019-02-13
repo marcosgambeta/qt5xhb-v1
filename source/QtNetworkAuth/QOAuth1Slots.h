@@ -13,12 +13,12 @@
 #ifndef QOAUTH1SLOTS_H
 #define QOAUTH1SLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-#include <QOAuth1>
+#include <QtNetworkAuth/QOAuth1>
 #endif
 
 #include "qt5xhb_common.h"
