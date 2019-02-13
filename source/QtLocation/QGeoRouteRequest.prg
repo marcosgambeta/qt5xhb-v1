@@ -60,11 +60,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QGeoRouteRequest>
+#include <QtLocation/QGeoRouteRequest>
 #endif
 #endif
 
@@ -74,11 +74,11 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QGeoRouteRequest>
+#include <QtLocation/QGeoRouteRequest>
 #endif
 #endif
 
-#include <QGeoRectangle>
+#include <QtPositioning/QGeoRectangle>
 
 /*
 explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())

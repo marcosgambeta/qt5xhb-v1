@@ -13,12 +13,12 @@
 #ifndef QGEOCODINGMANAGERSLOTS_H
 #define QGEOCODINGMANAGERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QGeoCodingManager>
+#include <QtLocation/QGeoCodingManager>
 #endif
 
 #include "qt5xhb_common.h"

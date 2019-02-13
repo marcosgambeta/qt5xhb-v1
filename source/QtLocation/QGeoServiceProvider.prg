@@ -46,11 +46,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QGeoServiceProvider>
+#include <QtLocation/QGeoServiceProvider>
 #endif
 #endif
 
@@ -60,13 +60,13 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QGeoServiceProvider>
+#include <QtLocation/QGeoServiceProvider>
 #endif
 #endif
 
-#include <QGeoCodingManager>
-#include <QGeoRoutingManager>
-#include <QPlaceManager>
+#include <QtLocation/QGeoCodingManager>
+#include <QtLocation/QGeoRoutingManager>
+#include <QtLocation/QPlaceManager>
 
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_DELETE )
 {

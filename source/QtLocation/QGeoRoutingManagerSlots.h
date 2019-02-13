@@ -13,12 +13,12 @@
 #ifndef QGEOROUTINGMANAGERSLOTS_H
 #define QGEOROUTINGMANAGERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QGeoRoutingManager>
+#include <QtLocation/QGeoRoutingManager>
 #endif
 
 #include "qt5xhb_common.h"

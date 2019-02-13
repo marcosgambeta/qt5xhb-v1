@@ -13,12 +13,12 @@
 #ifndef QPLACEREPLYSLOTS_H
 #define QPLACEREPLYSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QPlaceReply>
+#include <QtLocation/QPlaceReply>
 #endif
 
 #include "qt5xhb_common.h"
