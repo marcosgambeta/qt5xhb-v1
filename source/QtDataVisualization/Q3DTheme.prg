@@ -102,10 +102,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <Q3DTheme>
+#include <QtDataVisualization/Q3DTheme>
 #endif
 
 #include "qt5xhb_common.h"
@@ -113,7 +113,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <Q3DTheme>
+#include <QtDataVisualization/Q3DTheme>
 #endif
 
 using namespace QtDataVisualization;

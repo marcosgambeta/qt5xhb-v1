@@ -13,11 +13,11 @@
 #ifndef QABSTRACT3DGRAPHSLOTS_H
 #define QABSTRACT3DGRAPHSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstract3DGraph>
+#include <QtDataVisualization/QAbstract3DGraph>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

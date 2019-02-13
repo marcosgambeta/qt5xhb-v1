@@ -49,10 +49,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QScatterDataProxy>
+#include <QtDataVisualization/QScatterDataProxy>
 #endif
 
 #include "qt5xhb_common.h"
@@ -60,10 +60,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QScatterDataProxy>
+#include <QtDataVisualization/QScatterDataProxy>
 #endif
 
-#include <QScatter3DSeries>
+#include <QtDataVisualization/QScatter3DSeries>
 
 using namespace QtDataVisualization;
 

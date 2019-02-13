@@ -13,11 +13,11 @@
 #ifndef QBAR3DSERIESSLOTS_H
 #define QBAR3DSERIESSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QBar3DSeries>
+#include <QtDataVisualization/QBar3DSeries>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

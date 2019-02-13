@@ -13,11 +13,11 @@
 #ifndef QABSTRACT3DAXISSLOTS_H
 #define QABSTRACT3DAXISSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstract3DAxis>
+#include <QtDataVisualization/QAbstract3DAxis>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

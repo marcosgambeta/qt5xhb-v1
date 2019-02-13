@@ -61,10 +61,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QBarDataProxy>
+#include <QtDataVisualization/QBarDataProxy>
 #endif
 
 #include "qt5xhb_common.h"
@@ -72,10 +72,10 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QBarDataProxy>
+#include <QtDataVisualization/QBarDataProxy>
 #endif
 
-#include <QBar3DSeries>
+#include <QtDataVisualization/QBar3DSeries>
 
 using namespace QtDataVisualization;
 

@@ -13,11 +13,11 @@
 #ifndef QCUSTOM3DITEMSLOTS_H
 #define QCUSTOM3DITEMSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QCustom3DItem>
+#include <QtDataVisualization/QCustom3DItem>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

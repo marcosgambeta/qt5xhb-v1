@@ -13,11 +13,11 @@
 #ifndef Q3DINPUTHANDLERSLOTS_H
 #define Q3DINPUTHANDLERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <Q3DInputHandler>
+#include <QtDataVisualization/Q3DInputHandler>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

@@ -13,11 +13,11 @@
 #ifndef QCUSTOM3DVOLUMESLOTS_H
 #define QCUSTOM3DVOLUMESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QCustom3DVolume>
+#include <QtDataVisualization/QCustom3DVolume>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

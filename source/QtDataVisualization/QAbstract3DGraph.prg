@@ -112,10 +112,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAbstract3DGraph>
+#include <QtDataVisualization/QAbstract3DGraph>
 #endif
 
 #include "qt5xhb_common.h"
@@ -123,11 +123,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QAbstract3DGraph>
+#include <QtDataVisualization/QAbstract3DGraph>
 #endif
 
-#include <QAbstract3DAxis>
-#include <QCustom3DItem>
+#include <QtDataVisualization/QAbstract3DAxis>
+#include <QtDataVisualization/QCustom3DItem>
 
 using namespace QtDataVisualization;
 

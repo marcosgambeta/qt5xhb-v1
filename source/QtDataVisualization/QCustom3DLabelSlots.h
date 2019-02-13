@@ -13,11 +13,11 @@
 #ifndef QCUSTOM3DLABELSLOTS_H
 #define QCUSTOM3DLABELSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QCustom3DLabel>
+#include <QtDataVisualization/QCustom3DLabel>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

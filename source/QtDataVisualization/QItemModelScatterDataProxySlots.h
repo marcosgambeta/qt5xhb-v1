@@ -13,11 +13,11 @@
 #ifndef QITEMMODELSCATTERDATAPROXYSLOTS_H
 #define QITEMMODELSCATTERDATAPROXYSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QItemModelScatterDataProxy>
+#include <QtDataVisualization/QItemModelScatterDataProxy>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

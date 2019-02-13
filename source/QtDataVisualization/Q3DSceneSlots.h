@@ -13,11 +13,11 @@
 #ifndef Q3DSCENESLOTS_H
 #define Q3DSCENESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <Q3DScene>
+#include <QtDataVisualization/Q3DScene>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

@@ -13,11 +13,11 @@
 #ifndef QITEMMODELBARDATAPROXYSLOTS_H
 #define QITEMMODELBARDATAPROXYSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QItemModelBarDataProxy>
+#include <QtDataVisualization/QItemModelBarDataProxy>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

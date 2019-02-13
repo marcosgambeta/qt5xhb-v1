@@ -13,11 +13,11 @@
 #ifndef QLOGVALUE3DAXISFORMATTERSLOTS_H
 #define QLOGVALUE3DAXISFORMATTERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QLogValue3DAxisFormatter>
+#include <QtDataVisualization/QLogValue3DAxisFormatter>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

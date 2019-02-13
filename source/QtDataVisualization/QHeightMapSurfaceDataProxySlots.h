@@ -13,11 +13,11 @@
 #ifndef QHEIGHTMAPSURFACEDATAPROXYSLOTS_H
 #define QHEIGHTMAPSURFACEDATAPROXYSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QHeightMapSurfaceDataProxy>
+#include <QtDataVisualization/QHeightMapSurfaceDataProxy>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

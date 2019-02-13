@@ -13,11 +13,11 @@
 #ifndef Q3DOBJECTSLOTS_H
 #define Q3DOBJECTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <Q3DObject>
+#include <QtDataVisualization/Q3DObject>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

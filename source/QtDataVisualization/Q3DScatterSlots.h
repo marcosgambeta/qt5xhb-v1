@@ -13,11 +13,11 @@
 #ifndef Q3DSCATTERSLOTS_H
 #define Q3DSCATTERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <Q3DScatter>
+#include <QtDataVisualization/Q3DScatter>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

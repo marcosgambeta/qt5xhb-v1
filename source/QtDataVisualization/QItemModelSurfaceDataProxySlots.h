@@ -13,11 +13,11 @@
 #ifndef QITEMMODELSURFACEDATAPROXYSLOTS_H
 #define QITEMMODELSURFACEDATAPROXYSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QItemModelSurfaceDataProxy>
+#include <QtDataVisualization/QItemModelSurfaceDataProxy>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

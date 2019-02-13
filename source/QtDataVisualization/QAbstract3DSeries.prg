@@ -84,10 +84,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QAbstract3DSeries>
+#include <QtDataVisualization/QAbstract3DSeries>
 #endif
 
 #include "qt5xhb_common.h"
@@ -95,7 +95,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QAbstract3DSeries>
+#include <QtDataVisualization/QAbstract3DSeries>
 #endif
 
 using namespace QtDataVisualization;

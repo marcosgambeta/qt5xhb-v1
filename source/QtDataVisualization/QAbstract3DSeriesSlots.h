@@ -13,11 +13,11 @@
 #ifndef QABSTRACT3DSERIESSLOTS_H
 #define QABSTRACT3DSERIESSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QAbstract3DSeries>
+#include <QtDataVisualization/QAbstract3DSeries>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
