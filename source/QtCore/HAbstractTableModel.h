@@ -9,14 +9,14 @@
 #ifndef HABSTRACTTABLEMODEL_H
 #define HABSTRACTTABLEMODEL_H
 
-#include <QAbstractTableModel>
-#include <QIcon>
-#include <QPixmap>
-#include <QFont>
-#include <QColor>
-#include <QBrush>
-#include <QSize>
-#include <QDate>
+#include <QtCore/QAbstractTableModel>
+#include <QtGui/QIcon>
+#include <QtGui/QPixmap>
+#include <QtGui/QFont>
+#include <QtGui/QColor>
+#include <QtGui/QBrush>
+#include <QtCore/QSize>
+#include <QtCore/QDate>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

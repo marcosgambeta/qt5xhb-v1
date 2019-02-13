@@ -9,13 +9,13 @@
 #ifndef HABSTRACTLISTMODEL_H
 #define HABSTRACTLISTMODEL_H
 
-#include <QAbstractListModel>
-#include <QIcon>
-#include <QPixmap>
-#include <QFont>
-#include <QColor>
-#include <QBrush>
-#include <QSize>
+#include <QtCore/QAbstractListModel>
+#include <QtGui/QIcon>
+#include <QtGui/QPixmap>
+#include <QtGui/QFont>
+#include <QtGui/QColor>
+#include <QtGui/QBrush>
+#include <QtCore/QSize>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

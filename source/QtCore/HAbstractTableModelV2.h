@@ -9,7 +9,7 @@
 #ifndef HABSTRACTTABLEMODELV2_H
 #define HABSTRACTTABLEMODELV2_H
 
-#include <QAbstractTableModel>
+#include <QtCore/QAbstractTableModel>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
