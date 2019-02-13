@@ -9,7 +9,7 @@
 #ifndef HCODEBLOCKVALIDATOR_H
 #define HCODEBLOCKVALIDATOR_H
 
-#include <QValidator>
+#include <QtGui/QValidator>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

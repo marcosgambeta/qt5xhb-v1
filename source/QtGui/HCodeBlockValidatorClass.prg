@@ -27,7 +27,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <HCodeBlockValidator.h>
+#include "HCodeBlockValidator.h"
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
