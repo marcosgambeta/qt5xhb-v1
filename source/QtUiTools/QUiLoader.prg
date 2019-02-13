@@ -51,10 +51,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QUiLoader>
+#include <QtUiTools/QUiLoader>
 #endif
 
 #include "qt5xhb_common.h"
@@ -62,14 +62,14 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QUiLoader>
+#include <QtUiTools/QUiLoader>
 #endif
 
-#include <QStringList>
-#include <QDir>
-#include <QAction>
-#include <QActionGroup>
-#include <QLayout>
+#include <QtCore/QStringList>
+#include <QtCore/QDir>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QActionGroup>
+#include <QtWidgets/QLayout>
 
 /*
 QUiLoader ( QObject * parent = 0 )
