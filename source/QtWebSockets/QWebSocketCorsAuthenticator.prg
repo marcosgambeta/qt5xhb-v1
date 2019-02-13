@@ -45,11 +45,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QWebSocketCorsAuthenticator>
+#include <QtWebSockets/QWebSocketCorsAuthenticator>
 #endif
 #endif
 
@@ -59,12 +59,12 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QWebSocketCorsAuthenticator>
+#include <QtWebSockets/QWebSocketCorsAuthenticator>
 #endif
 #endif
 
-#include <QString>
-#include <QLatin1String>
+#include <QtCore/QString>
+#include <QtCore/QLatin1String>
 
 /*
 explicit QWebSocketCorsAuthenticator(const QString &origin)

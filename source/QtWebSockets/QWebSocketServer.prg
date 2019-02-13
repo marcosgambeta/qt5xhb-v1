@@ -67,11 +67,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QWebSocketServer>
+#include <QtWebSockets/QWebSocketServer>
 #endif
 #endif
 
@@ -81,12 +81,12 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QWebSocketServer>
+#include <QtWebSockets/QWebSocketServer>
 #endif
 #endif
 
-#include <QNetworkProxy>
-#include <QWebSocket>
+#include <QtNetwork/QNetworkProxy>
+#include <QtWebSockets/QWebSocket>
 
 /*
 explicit QWebSocketServer(const QString &serverName, SslMode secureMode, QObject *parent = Q_NULLPTR)

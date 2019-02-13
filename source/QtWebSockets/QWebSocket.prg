@@ -86,11 +86,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QWebSocket>
+#include <QtWebSockets/QWebSocket>
 #endif
 #endif
 
@@ -100,11 +100,11 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-#include <QWebSocket>
+#include <QtWebSockets/QWebSocket>
 #endif
 #endif
 
-#include <QMaskGenerator>
+#include <QtWebSockets/QMaskGenerator>
 
 /*
 explicit QWebSocket(const QString &origin = QString(),QWebSocketProtocol::Version version = QWebSocketProtocol::VersionLatest,QObject *parent = Q_NULLPTR)
