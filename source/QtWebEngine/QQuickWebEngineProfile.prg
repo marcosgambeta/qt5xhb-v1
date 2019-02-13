@@ -77,11 +77,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QQuickWebEngineProfile>
+#include <QtWebEngine/QQuickWebEngineProfile>
 #endif
 #endif
 
@@ -91,15 +91,15 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QQuickWebEngineProfile>
+#include <QtWebEngine/QQuickWebEngineProfile>
 #endif
 #endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QWebEngineCookieStore>
+#include <QtWebEngine/QWebEngineCookieStore>
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QWebEngineUrlSchemeHandler>
+#include <QtWebEngine/QWebEngineUrlSchemeHandler>
 #endif
 
 /*
