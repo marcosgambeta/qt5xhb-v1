@@ -13,12 +13,12 @@
 #ifndef QWINTHUMBNAILTOOLBUTTONSLOTS_H
 #define QWINTHUMBNAILTOOLBUTTONSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QWinThumbnailToolButton>
+#include <QtWinExtras/QWinThumbnailToolButton>
 #endif
 
 #include "qt5xhb_common.h"
