@@ -31,11 +31,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QModbusRtuSerialMaster>
+#include <QtSerialBus/QModbusRtuSerialMaster>
 #endif
 #endif
 
@@ -45,7 +45,7 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QModbusRtuSerialMaster>
+#include <QtSerialBus/QModbusRtuSerialMaster>
 #endif
 #endif
 

@@ -13,12 +13,12 @@
 #ifndef QCANBUSDEVICESLOTS_H
 #define QCANBUSDEVICESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#include <QCanBusDevice>
+#include <QtSerialBus/QCanBusDevice>
 #endif
 
 #include "qt5xhb_common.h"
