@@ -37,7 +37,7 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <HStyledItemDelegate.h>
+#include "HStyledItemDelegate.h"
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

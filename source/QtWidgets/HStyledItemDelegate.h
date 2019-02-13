@@ -9,7 +9,7 @@
 #ifndef HSTYLEDITEMDELEGATE_H
 #define HSTYLEDITEMDELEGATE_H
 
-#include <QStyledItemDelegate>
+#include <QtWidgets/QStyledItemDelegate>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
