@@ -52,10 +52,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QXmlContentHandler>
+#include <QtXml/QXmlContentHandler>
 #endif
 
 #include "qt5xhb_common.h"
@@ -63,7 +63,7 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QXmlContentHandler>
+#include <QtXml/QXmlContentHandler>
 #endif
 
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_DELETE )
