@@ -118,10 +118,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QWebPage>
+#include <QtWebKitWidgets/QWebPage>
 #endif
 
 #include "qt5xhb_common.h"
@@ -129,16 +129,16 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QWebPage>
+#include <QtWebKitWidgets/QWebPage>
 #endif
 
-#include <QAction>
-#include <QNetworkAccessManager>
-#include <QUndoStack>
-#include <QVariant>
-#include <QWebFrame>
-#include <QWebPluginFactory>
-#include <QMenu>
+#include <QtWidgets/QAction>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtWidgets/QUndoStack>
+#include <QtCore/QVariant>
+#include <QtWebKitWidgets/QWebFrame>
+#include <QtWebKit/QWebPluginFactory>
+#include <QtWidgets/QMenu>
 
 /*
 explicit QWebPage ( QObject * parent = 0 )

@@ -13,11 +13,11 @@
 #ifndef QWEBPAGESLOTS_H
 #define QWEBPAGESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QWebPage>
+#include <QtWebKitWidgets/QWebPage>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

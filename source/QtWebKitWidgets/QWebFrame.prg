@@ -96,10 +96,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QWebFrame>
+#include <QtWebKitWidgets/QWebFrame>
 #endif
 
 #include "qt5xhb_common.h"
@@ -107,12 +107,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QWebFrame>
+#include <QtWebKitWidgets/QWebFrame>
 #endif
 
-#include <QWebElement>
-#include <QWebPage>
-#include <QWebSecurityOrigin>
+#include <QtWebKit/QWebElement>
+#include <QtWebKitWidgets/QWebPage>
+#include <QtWebKit/QWebSecurityOrigin>
 
 /*
 QWebFrame(QWebPage *parentPage) PRIVATE
