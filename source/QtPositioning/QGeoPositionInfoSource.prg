@@ -51,11 +51,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QGeoPositionInfoSource>
+#include <QtPositioning/QGeoPositionInfoSource>
 #endif
 #endif
 
@@ -65,11 +65,11 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QGeoPositionInfoSource>
+#include <QtPositioning/QGeoPositionInfoSource>
 #endif
 #endif
 
-#include <QStringList>
+#include <QtCore/QStringList>
 
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_DELETE )
 {

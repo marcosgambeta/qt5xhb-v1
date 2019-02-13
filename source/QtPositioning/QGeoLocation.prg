@@ -51,11 +51,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QGeoLocation>
+#include <QtPositioning/QGeoLocation>
 #endif
 #endif
 
@@ -65,13 +65,13 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QGeoLocation>
+#include <QtPositioning/QGeoLocation>
 #endif
 #endif
 
-#include <QGeoAddress>
-#include <QGeoCoordinate>
-#include <QGeoRectangle>
+#include <QtPositioning/QGeoAddress>
+#include <QtPositioning/QGeoCoordinate>
+#include <QtPositioning/QGeoRectangle>
 
 /*
 QGeoLocation()

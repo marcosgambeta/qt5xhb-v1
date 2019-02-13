@@ -13,12 +13,12 @@
 #ifndef QGEOPOSITIONINFOSOURCESLOTS_H
 #define QGEOPOSITIONINFOSOURCESLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QGeoPositionInfoSource>
+#include <QtPositioning/QGeoPositionInfoSource>
 #endif
 
 #include "qt5xhb_common.h"

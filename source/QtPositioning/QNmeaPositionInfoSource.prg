@@ -45,11 +45,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QNmeaPositionInfoSource>
+#include <QtPositioning/QNmeaPositionInfoSource>
 #endif
 #endif
 
@@ -59,11 +59,11 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QNmeaPositionInfoSource>
+#include <QtPositioning/QNmeaPositionInfoSource>
 #endif
 #endif
 
-#include <QIODevice>
+#include <QtCore/QIODevice>
 
 /*
 QNmeaPositionInfoSource(UpdateMode updateMode, QObject *parent = 0)
