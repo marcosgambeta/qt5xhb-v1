@@ -79,10 +79,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSqlQuery>
+#include <QtSql/QSqlQuery>
 #endif
 
 #include "qt5xhb_common.h"
@@ -90,13 +90,13 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSqlQuery>
+#include <QtSql/QSqlQuery>
 #endif
 
-#include <QSqlDriver>
-#include <QSqlError>
-#include <QSqlRecord>
-#include <QVariant>
+#include <QtSql/QSqlDriver>
+#include <QtSql/QSqlError>
+#include <QtSql/QSqlRecord>
+#include <QtCore/QVariant>
 
 /*
 explicit QSqlQuery ( QSqlResult * result )

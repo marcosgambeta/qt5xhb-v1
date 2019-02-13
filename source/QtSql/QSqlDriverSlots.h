@@ -13,11 +13,11 @@
 #ifndef QSQLDRIVERSLOTS_H
 #define QSQLDRIVERSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QSqlDriver>
+#include <QtSql/QSqlDriver>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"

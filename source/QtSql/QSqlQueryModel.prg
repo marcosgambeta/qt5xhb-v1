@@ -50,10 +50,10 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QSqlQueryModel>
+#include <QtSql/QSqlQueryModel>
 #endif
 
 #include "qt5xhb_common.h"
@@ -61,12 +61,12 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QSqlQueryModel>
+#include <QtSql/QSqlQueryModel>
 #endif
 
-#include <QSqlError>
-#include <QSqlQuery>
-#include <QSqlRecord>
+#include <QtSql/QSqlError>
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlRecord>
 
 /*
 explicit QSqlQueryModel ( QObject * parent = 0 )

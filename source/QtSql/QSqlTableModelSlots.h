@@ -13,11 +13,11 @@
 #ifndef QSQLTABLEMODELSLOTS_H
 #define QSQLTABLEMODELSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
-#include <QSqlTableModel>
+#include <QtSql/QSqlTableModel>
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
