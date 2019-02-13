@@ -63,11 +63,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QBluetoothDeviceInfo>
+#include <QtBluetooth/QBluetoothDeviceInfo>
 #endif
 #endif
 
@@ -77,12 +77,12 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QBluetoothDeviceInfo>
+#include <QtBluetooth/QBluetoothDeviceInfo>
 #endif
 #endif
 
-#include <QBluetoothAddress>
-#include <QBluetoothUuid>
+#include <QtBluetooth/QBluetoothAddress>
+#include <QtBluetooth/QBluetoothUuid>
 
 /*
 QBluetoothDeviceInfo()

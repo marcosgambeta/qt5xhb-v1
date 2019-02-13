@@ -43,11 +43,11 @@ RETURN
 
 #pragma BEGINDUMP
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QBluetoothTransferReply>
+#include <QtBluetooth/QBluetoothTransferReply>
 #endif
 #endif
 
@@ -57,7 +57,7 @@ RETURN
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QBluetoothTransferReply>
+#include <QtBluetooth/QBluetoothTransferReply>
 #endif
 #endif
 

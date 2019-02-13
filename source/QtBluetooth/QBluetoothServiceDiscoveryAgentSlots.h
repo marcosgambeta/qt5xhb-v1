@@ -13,12 +13,12 @@
 #ifndef QBLUETOOTHSERVICEDISCOVERYAGENTSLOTS_H
 #define QBLUETOOTHSERVICEDISCOVERYAGENTSLOTS_H
 
-#include <QObject>
-#include <QCoreApplication>
-#include <QString>
+#include <QtCore/QObject>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QString>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QBluetoothServiceDiscoveryAgent>
+#include <QtBluetooth/QBluetoothServiceDiscoveryAgent>
 #endif
 
 #include "qt5xhb_common.h"
