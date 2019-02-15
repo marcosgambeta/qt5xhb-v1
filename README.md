@@ -70,6 +70,12 @@ Harbour 3.2.0dev para Qt 5.5.1 e MinGW 4.9.2 (32-bit)
 
 http://www.mediafire.com/file/82yql0w5t6a388u/harbour320dev-qt551-mingw492-32bit-20170225-0002.7z
 
+## Alternative version
+
+The version below use C++11 resources (lambda functions, nullptr, ...):
+
+https://github.com/marcosgambeta/qt5xhb-cpp11
+
 ## To contact the developer
 
 Send you message to: marcosgambeta AT outlook DOT com
