@@ -28,7 +28,7 @@ void QBluetoothTransferReplySlots::finished( QBluetoothTransferReply * r )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHTRANSFERREPLY" );
     PHB_ITEM pr = Signals_return_qobject( (QObject *) r, "QBLUETOOTHTRANSFERREPLY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pr );
+    hb_vmEvalBlockV( cb, 2, psender, pr );
     hb_itemRelease( psender );
     hb_itemRelease( pr );
   }
@@ -44,7 +44,7 @@ void QBluetoothTransferReplySlots::transferProgress( qint64 bytesTransferred, qi
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHTRANSFERREPLY" );
     PHB_ITEM pbytesTransferred = hb_itemPutNLL( NULL, bytesTransferred );
     PHB_ITEM pbytesTotal = hb_itemPutNLL( NULL, bytesTotal );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pbytesTransferred, pbytesTotal );
+    hb_vmEvalBlockV( cb, 3, psender, pbytesTransferred, pbytesTotal );
     hb_itemRelease( psender );
     hb_itemRelease( pbytesTransferred );
     hb_itemRelease( pbytesTotal );
