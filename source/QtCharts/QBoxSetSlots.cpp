@@ -27,7 +27,7 @@ void QBoxSetSlots::brushChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -40,7 +40,7 @@ void QBoxSetSlots::cleared()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -53,7 +53,7 @@ void QBoxSetSlots::clicked()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -66,7 +66,7 @@ void QBoxSetSlots::doubleClicked()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -80,7 +80,7 @@ void QBoxSetSlots::hovered( bool status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
@@ -94,7 +94,7 @@ void QBoxSetSlots::penChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -107,7 +107,7 @@ void QBoxSetSlots::pressed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -120,7 +120,7 @@ void QBoxSetSlots::released()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -134,7 +134,7 @@ void QBoxSetSlots::valueChanged( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -148,7 +148,7 @@ void QBoxSetSlots::valuesChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

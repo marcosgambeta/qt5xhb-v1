@@ -28,7 +28,7 @@ void QAreaSeriesSlots::borderColorChanged( QColor color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -43,7 +43,7 @@ void QAreaSeriesSlots::clicked( const QPointF & point )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppoint );
+    hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
@@ -58,7 +58,7 @@ void QAreaSeriesSlots::colorChanged( QColor color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -73,7 +73,7 @@ void QAreaSeriesSlots::doubleClicked( const QPointF & point )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppoint );
+    hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
@@ -89,7 +89,7 @@ void QAreaSeriesSlots::hovered( const QPointF & point, bool state )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
     PHB_ITEM pstate = hb_itemPutL( NULL, state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, ppoint, pstate );
+    hb_vmEvalBlockV( cb, 3, psender, ppoint, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
     hb_itemRelease( pstate );
@@ -105,7 +105,7 @@ void QAreaSeriesSlots::pointLabelsClippingChanged( bool clipping )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pclipping = hb_itemPutL( NULL, clipping );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pclipping );
+    hb_vmEvalBlockV( cb, 2, psender, pclipping );
     hb_itemRelease( psender );
     hb_itemRelease( pclipping );
   }
@@ -120,7 +120,7 @@ void QAreaSeriesSlots::pointLabelsColorChanged( const QColor & color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -135,7 +135,7 @@ void QAreaSeriesSlots::pointLabelsFontChanged( const QFont & font )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfont );
+    hb_vmEvalBlockV( cb, 2, psender, pfont );
     hb_itemRelease( psender );
     hb_itemRelease( pfont );
   }
@@ -150,7 +150,7 @@ void QAreaSeriesSlots::pointLabelsFormatChanged( const QString & format )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
+    hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
@@ -165,7 +165,7 @@ void QAreaSeriesSlots::pointLabelsVisibilityChanged( bool visible )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
+    hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
@@ -180,7 +180,7 @@ void QAreaSeriesSlots::pressed( const QPointF & point )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppoint );
+    hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
@@ -195,7 +195,7 @@ void QAreaSeriesSlots::released( const QPointF & point )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppoint );
+    hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
@@ -209,7 +209,7 @@ void QAreaSeriesSlots::selected()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAREASERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

@@ -51,7 +51,7 @@ void QAbstractBarSeriesSlots::barsetsAdded( QList<QBarSet*> sets )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBARSET", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psets );
+    hb_vmEvalBlockV( cb, 2, psender, psets );
     hb_itemRelease( psender );
     hb_itemRelease( psets );
   }
@@ -89,7 +89,7 @@ void QAbstractBarSeriesSlots::barsetsRemoved( QList<QBarSet*> sets )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBARSET", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psets );
+    hb_vmEvalBlockV( cb, 2, psender, psets );
     hb_itemRelease( psender );
     hb_itemRelease( psets );
   }
@@ -105,7 +105,7 @@ void QAbstractBarSeriesSlots::clicked( int index, QBarSet * barset )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pbarset );
+    hb_vmEvalBlockV( cb, 3, psender, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
     hb_itemRelease( pbarset );
@@ -120,7 +120,7 @@ void QAbstractBarSeriesSlots::countChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -135,7 +135,7 @@ void QAbstractBarSeriesSlots::doubleClicked( int index, QBarSet * barset )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pbarset );
+    hb_vmEvalBlockV( cb, 3, psender, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
     hb_itemRelease( pbarset );
@@ -153,7 +153,7 @@ void QAbstractBarSeriesSlots::hovered( bool status, int index, QBarSet * barset 
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pstatus, pindex, pbarset );
+    hb_vmEvalBlockV( cb, 4, psender, pstatus, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
     hb_itemRelease( pindex );
@@ -170,7 +170,7 @@ void QAbstractBarSeriesSlots::labelsAngleChanged( qreal angle )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pangle );
+    hb_vmEvalBlockV( cb, 2, psender, pangle );
     hb_itemRelease( psender );
     hb_itemRelease( pangle );
   }
@@ -185,7 +185,7 @@ void QAbstractBarSeriesSlots::labelsFormatChanged( const QString & format )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
+    hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
@@ -200,7 +200,7 @@ void QAbstractBarSeriesSlots::labelsPositionChanged( QAbstractBarSeries::LabelsP
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pposition = hb_itemPutNI( NULL, (int) position );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
+    hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
@@ -214,7 +214,7 @@ void QAbstractBarSeriesSlots::labelsVisibleChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -229,7 +229,7 @@ void QAbstractBarSeriesSlots::pressed( int index, QBarSet * barset )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pbarset );
+    hb_vmEvalBlockV( cb, 3, psender, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
     hb_itemRelease( pbarset );
@@ -246,7 +246,7 @@ void QAbstractBarSeriesSlots::released( int index, QBarSet * barset )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pbarset );
+    hb_vmEvalBlockV( cb, 3, psender, pindex, pbarset );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
     hb_itemRelease( pbarset );

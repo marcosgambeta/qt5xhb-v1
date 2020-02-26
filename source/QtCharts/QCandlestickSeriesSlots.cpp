@@ -27,7 +27,7 @@ void QCandlestickSeriesSlots::bodyOutlineVisibilityChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -40,7 +40,7 @@ void QCandlestickSeriesSlots::bodyWidthChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -53,7 +53,7 @@ void QCandlestickSeriesSlots::brushChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -90,7 +90,7 @@ void QCandlestickSeriesSlots::candlestickSetsAdded( const QList<QCandlestickSet*
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCANDLESTICKSET", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psets );
+    hb_vmEvalBlockV( cb, 2, psender, psets );
     hb_itemRelease( psender );
     hb_itemRelease( psets );
   }
@@ -128,7 +128,7 @@ void QCandlestickSeriesSlots::candlestickSetsRemoved( const QList<QCandlestickSe
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCANDLESTICKSET", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psets );
+    hb_vmEvalBlockV( cb, 2, psender, psets );
     hb_itemRelease( psender );
     hb_itemRelease( psets );
   }
@@ -142,7 +142,7 @@ void QCandlestickSeriesSlots::capsVisibilityChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -155,7 +155,7 @@ void QCandlestickSeriesSlots::capsWidthChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -169,7 +169,7 @@ void QCandlestickSeriesSlots::clicked( QCandlestickSet * set )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pset );
+    hb_vmEvalBlockV( cb, 2, psender, pset );
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }
@@ -183,7 +183,7 @@ void QCandlestickSeriesSlots::countChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -196,7 +196,7 @@ void QCandlestickSeriesSlots::decreasingColorChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -210,7 +210,7 @@ void QCandlestickSeriesSlots::doubleClicked( QCandlestickSet * set )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pset );
+    hb_vmEvalBlockV( cb, 2, psender, pset );
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }
@@ -226,7 +226,7 @@ void QCandlestickSeriesSlots::hovered( bool status, QCandlestickSet * set )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstatus, pset );
+    hb_vmEvalBlockV( cb, 3, psender, pstatus, pset );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
     hb_itemRelease( pset );
@@ -241,7 +241,7 @@ void QCandlestickSeriesSlots::increasingColorChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -254,7 +254,7 @@ void QCandlestickSeriesSlots::maximumColumnWidthChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -267,7 +267,7 @@ void QCandlestickSeriesSlots::minimumColumnWidthChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -280,7 +280,7 @@ void QCandlestickSeriesSlots::penChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -294,7 +294,7 @@ void QCandlestickSeriesSlots::pressed( QCandlestickSet * set )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pset );
+    hb_vmEvalBlockV( cb, 2, psender, pset );
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }
@@ -309,7 +309,7 @@ void QCandlestickSeriesSlots::released( QCandlestickSet * set )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pset );
+    hb_vmEvalBlockV( cb, 2, psender, pset );
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }

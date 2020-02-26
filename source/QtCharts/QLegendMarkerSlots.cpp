@@ -27,7 +27,7 @@ void QLegendMarkerSlots::brushChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGENDMARKER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -40,7 +40,7 @@ void QLegendMarkerSlots::clicked()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGENDMARKER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -53,7 +53,7 @@ void QLegendMarkerSlots::fontChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGENDMARKER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -67,7 +67,7 @@ void QLegendMarkerSlots::hovered( bool status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGENDMARKER" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
@@ -81,7 +81,7 @@ void QLegendMarkerSlots::labelBrushChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGENDMARKER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -94,7 +94,7 @@ void QLegendMarkerSlots::labelChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGENDMARKER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -107,7 +107,7 @@ void QLegendMarkerSlots::penChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGENDMARKER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -120,7 +120,7 @@ void QLegendMarkerSlots::shapeChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGENDMARKER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -133,7 +133,7 @@ void QLegendMarkerSlots::visibleChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGENDMARKER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

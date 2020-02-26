@@ -28,7 +28,7 @@ void QDateTimeAxisSlots::formatChanged( QString format )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM pformat = hb_itemPutC( NULL, (const char *) format.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
+    hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
@@ -43,7 +43,7 @@ void QDateTimeAxisSlots::maxChanged( QDateTime max )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM pmax = Signals_return_object( (void *) &max, "QDATETIME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmax );
+    hb_vmEvalBlockV( cb, 2, psender, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmax );
   }
@@ -58,7 +58,7 @@ void QDateTimeAxisSlots::minChanged( QDateTime min )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM pmin = Signals_return_object( (void *) &min, "QDATETIME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmin );
+    hb_vmEvalBlockV( cb, 2, psender, pmin );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
   }
@@ -74,7 +74,7 @@ void QDateTimeAxisSlots::rangeChanged( QDateTime min, QDateTime max )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM pmin = Signals_return_object( (void *) &min, "QDATETIME" );
     PHB_ITEM pmax = Signals_return_object( (void *) &max, "QDATETIME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
+    hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
     hb_itemRelease( pmax );
@@ -90,7 +90,7 @@ void QDateTimeAxisSlots::tickCountChanged( int tick )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM ptick = hb_itemPutNI( NULL, tick );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptick );
+    hb_vmEvalBlockV( cb, 2, psender, ptick );
     hb_itemRelease( psender );
     hb_itemRelease( ptick );
   }

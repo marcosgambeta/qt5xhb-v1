@@ -27,7 +27,7 @@ void QBarCategoryAxisSlots::categoriesChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -40,7 +40,7 @@ void QBarCategoryAxisSlots::countChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -54,7 +54,7 @@ void QBarCategoryAxisSlots::maxChanged( const QString & max )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmax = hb_itemPutC( NULL, QSTRINGTOSTRING(max) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmax );
+    hb_vmEvalBlockV( cb, 2, psender, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmax );
   }
@@ -69,7 +69,7 @@ void QBarCategoryAxisSlots::minChanged( const QString & min )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmin = hb_itemPutC( NULL, QSTRINGTOSTRING(min) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmin );
+    hb_vmEvalBlockV( cb, 2, psender, pmin );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
   }
@@ -85,7 +85,7 @@ void QBarCategoryAxisSlots::rangeChanged( const QString & min, const QString & m
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmin = hb_itemPutC( NULL, QSTRINGTOSTRING(min) );
     PHB_ITEM pmax = hb_itemPutC( NULL, QSTRINGTOSTRING(max) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
+    hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
     hb_itemRelease( pmax );

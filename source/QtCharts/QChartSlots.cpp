@@ -28,7 +28,7 @@ void QChartSlots::plotAreaChanged( const QRectF & plotArea )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCHART" );
     PHB_ITEM pplotArea = Signals_return_object( (void *) &plotArea, "QRECTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pplotArea );
+    hb_vmEvalBlockV( cb, 2, psender, pplotArea );
     hb_itemRelease( psender );
     hb_itemRelease( pplotArea );
   }

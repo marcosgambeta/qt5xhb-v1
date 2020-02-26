@@ -28,7 +28,7 @@ void QBarSetSlots::borderColorChanged( QColor color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -42,7 +42,7 @@ void QBarSetSlots::brushChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -56,7 +56,7 @@ void QBarSetSlots::clicked( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -71,7 +71,7 @@ void QBarSetSlots::colorChanged( QColor color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -86,7 +86,7 @@ void QBarSetSlots::doubleClicked( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -102,7 +102,7 @@ void QBarSetSlots::hovered( bool status, int index )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstatus, pindex );
+    hb_vmEvalBlockV( cb, 3, psender, pstatus, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
     hb_itemRelease( pindex );
@@ -117,7 +117,7 @@ void QBarSetSlots::labelBrushChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -130,7 +130,7 @@ void QBarSetSlots::labelChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -144,7 +144,7 @@ void QBarSetSlots::labelColorChanged( QColor color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -158,7 +158,7 @@ void QBarSetSlots::labelFontChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -171,7 +171,7 @@ void QBarSetSlots::penChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -185,7 +185,7 @@ void QBarSetSlots::pressed( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -200,7 +200,7 @@ void QBarSetSlots::released( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -215,7 +215,7 @@ void QBarSetSlots::valueChanged( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -231,7 +231,7 @@ void QBarSetSlots::valuesAdded( int index, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pindex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
     hb_itemRelease( pcount );
@@ -248,7 +248,7 @@ void QBarSetSlots::valuesRemoved( int index, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pindex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
     hb_itemRelease( pcount );

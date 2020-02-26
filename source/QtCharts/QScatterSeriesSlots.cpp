@@ -28,7 +28,7 @@ void QScatterSeriesSlots::borderColorChanged( QColor color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -43,7 +43,7 @@ void QScatterSeriesSlots::colorChanged( QColor color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -58,7 +58,7 @@ void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape 
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM pshape = hb_itemPutNI( NULL, (int) shape );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pshape );
+    hb_vmEvalBlockV( cb, 2, psender, pshape );
     hb_itemRelease( psender );
     hb_itemRelease( pshape );
   }
@@ -73,7 +73,7 @@ void QScatterSeriesSlots::markerSizeChanged( qreal size )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM psize = hb_itemPutND( NULL, size );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
+    hb_vmEvalBlockV( cb, 2, psender, psize );
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }

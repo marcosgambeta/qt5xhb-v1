@@ -28,7 +28,7 @@ void QLogValueAxisSlots::baseChanged( qreal base )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUEAXIS" );
     PHB_ITEM pbase = hb_itemPutND( NULL, base );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbase );
+    hb_vmEvalBlockV( cb, 2, psender, pbase );
     hb_itemRelease( psender );
     hb_itemRelease( pbase );
   }
@@ -43,7 +43,7 @@ void QLogValueAxisSlots::labelFormatChanged( const QString & format )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUEAXIS" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
+    hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
@@ -58,7 +58,7 @@ void QLogValueAxisSlots::maxChanged( qreal max )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUEAXIS" );
     PHB_ITEM pmax = hb_itemPutND( NULL, max );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmax );
+    hb_vmEvalBlockV( cb, 2, psender, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmax );
   }
@@ -73,7 +73,7 @@ void QLogValueAxisSlots::minChanged( qreal min )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUEAXIS" );
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmin );
+    hb_vmEvalBlockV( cb, 2, psender, pmin );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
   }
@@ -88,7 +88,7 @@ void QLogValueAxisSlots::minorTickCountChanged( int minorTickCount )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUEAXIS" );
     PHB_ITEM pminorTickCount = hb_itemPutNI( NULL, minorTickCount );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pminorTickCount );
+    hb_vmEvalBlockV( cb, 2, psender, pminorTickCount );
     hb_itemRelease( psender );
     hb_itemRelease( pminorTickCount );
   }
@@ -104,7 +104,7 @@ void QLogValueAxisSlots::rangeChanged( qreal min, qreal max )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUEAXIS" );
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
     PHB_ITEM pmax = hb_itemPutND( NULL, max );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
+    hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
     hb_itemRelease( pmax );
@@ -120,7 +120,7 @@ void QLogValueAxisSlots::tickCountChanged( int tickCount )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUEAXIS" );
     PHB_ITEM ptickCount = hb_itemPutNI( NULL, tickCount );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptickCount );
+    hb_vmEvalBlockV( cb, 2, psender, ptickCount );
     hb_itemRelease( psender );
     hb_itemRelease( ptickCount );
   }

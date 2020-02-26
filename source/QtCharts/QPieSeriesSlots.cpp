@@ -51,7 +51,7 @@ void QPieSeriesSlots::added( QList<QPieSlice*> slices )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pslices );
+    hb_vmEvalBlockV( cb, 2, psender, pslices );
     hb_itemRelease( psender );
     hb_itemRelease( pslices );
   }
@@ -66,7 +66,7 @@ void QPieSeriesSlots::clicked( QPieSlice * slice )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPIESERIES" );
     PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pslice );
+    hb_vmEvalBlockV( cb, 2, psender, pslice );
     hb_itemRelease( psender );
     hb_itemRelease( pslice );
   }
@@ -80,7 +80,7 @@ void QPieSeriesSlots::countChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPIESERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -94,7 +94,7 @@ void QPieSeriesSlots::doubleClicked( QPieSlice * slice )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPIESERIES" );
     PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pslice );
+    hb_vmEvalBlockV( cb, 2, psender, pslice );
     hb_itemRelease( psender );
     hb_itemRelease( pslice );
   }
@@ -110,7 +110,7 @@ void QPieSeriesSlots::hovered( QPieSlice * slice, bool state )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPIESERIES" );
     PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
     PHB_ITEM pstate = hb_itemPutL( NULL, state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pslice, pstate );
+    hb_vmEvalBlockV( cb, 3, psender, pslice, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pslice );
     hb_itemRelease( pstate );
@@ -126,7 +126,7 @@ void QPieSeriesSlots::pressed( QPieSlice * slice )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPIESERIES" );
     PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pslice );
+    hb_vmEvalBlockV( cb, 2, psender, pslice );
     hb_itemRelease( psender );
     hb_itemRelease( pslice );
   }
@@ -141,7 +141,7 @@ void QPieSeriesSlots::released( QPieSlice * slice )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPIESERIES" );
     PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pslice );
+    hb_vmEvalBlockV( cb, 2, psender, pslice );
     hb_itemRelease( psender );
     hb_itemRelease( pslice );
   }
@@ -179,7 +179,7 @@ void QPieSeriesSlots::removed( QList<QPieSlice*> slices )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pslices );
+    hb_vmEvalBlockV( cb, 2, psender, pslices );
     hb_itemRelease( psender );
     hb_itemRelease( pslices );
   }
@@ -193,7 +193,7 @@ void QPieSeriesSlots::sumChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPIESERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

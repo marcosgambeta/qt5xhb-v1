@@ -28,7 +28,7 @@ void QXYSeriesSlots::clicked( const QPointF & point )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppoint );
+    hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
@@ -43,7 +43,7 @@ void QXYSeriesSlots::colorChanged( QColor color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -58,7 +58,7 @@ void QXYSeriesSlots::doubleClicked( const QPointF & point )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppoint );
+    hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
@@ -74,7 +74,7 @@ void QXYSeriesSlots::hovered( const QPointF & point, bool state )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
     PHB_ITEM pstate = hb_itemPutL( NULL, state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, ppoint, pstate );
+    hb_vmEvalBlockV( cb, 3, psender, ppoint, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
     hb_itemRelease( pstate );
@@ -90,7 +90,7 @@ void QXYSeriesSlots::penChanged( const QPen & pen )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppen = Signals_return_object( (void *) &pen, "QPEN" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppen );
+    hb_vmEvalBlockV( cb, 2, psender, ppen );
     hb_itemRelease( psender );
     hb_itemRelease( ppen );
   }
@@ -105,7 +105,7 @@ void QXYSeriesSlots::pointAdded( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -120,7 +120,7 @@ void QXYSeriesSlots::pointLabelsClippingChanged( bool clipping )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pclipping = hb_itemPutL( NULL, clipping );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pclipping );
+    hb_vmEvalBlockV( cb, 2, psender, pclipping );
     hb_itemRelease( psender );
     hb_itemRelease( pclipping );
   }
@@ -135,7 +135,7 @@ void QXYSeriesSlots::pointLabelsColorChanged( const QColor & color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -150,7 +150,7 @@ void QXYSeriesSlots::pointLabelsFontChanged( const QFont & font )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfont );
+    hb_vmEvalBlockV( cb, 2, psender, pfont );
     hb_itemRelease( psender );
     hb_itemRelease( pfont );
   }
@@ -165,7 +165,7 @@ void QXYSeriesSlots::pointLabelsFormatChanged( const QString & format )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
+    hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
@@ -180,7 +180,7 @@ void QXYSeriesSlots::pointLabelsVisibilityChanged( bool visible )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
+    hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
@@ -195,7 +195,7 @@ void QXYSeriesSlots::pointRemoved( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -210,7 +210,7 @@ void QXYSeriesSlots::pointReplaced( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -226,7 +226,7 @@ void QXYSeriesSlots::pointsRemoved( int index, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pindex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pindex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
     hb_itemRelease( pcount );
@@ -241,7 +241,7 @@ void QXYSeriesSlots::pointsReplaced()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -255,7 +255,7 @@ void QXYSeriesSlots::pressed( const QPointF & point )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppoint );
+    hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
@@ -270,7 +270,7 @@ void QXYSeriesSlots::released( const QPointF & point )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppoint );
+    hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
