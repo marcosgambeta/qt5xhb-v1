@@ -27,7 +27,7 @@ void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPRINTPREVIEWDIALOG" );
     PHB_ITEM pprinter = Signals_return_object( (void *) printer, "QPRINTER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprinter );
+    hb_vmEvalBlockV( cb, 2, psender, pprinter );
     hb_itemRelease( psender );
     hb_itemRelease( pprinter );
   }
