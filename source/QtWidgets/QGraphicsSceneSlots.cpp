@@ -50,7 +50,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pregion );
+    hb_vmEvalBlockV( cb, 2, psender, pregion );
     hb_itemRelease( psender );
     hb_itemRelease( pregion );
   }
@@ -63,7 +63,7 @@ void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prect );
+    hb_vmEvalBlockV( cb, 2, psender, prect );
     hb_itemRelease( psender );
     hb_itemRelease( prect );
   }
@@ -75,7 +75,7 @@ void QGraphicsSceneSlots::selectionChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

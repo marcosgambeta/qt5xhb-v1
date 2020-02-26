@@ -27,7 +27,7 @@ void QMainWindowSlots::iconSizeChanged( const QSize & iconSize )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMAINWINDOW" );
     PHB_ITEM piconSize = Signals_return_object( (void *) &iconSize, "QSIZE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, piconSize );
+    hb_vmEvalBlockV( cb, 2, psender, piconSize );
     hb_itemRelease( psender );
     hb_itemRelease( piconSize );
   }
@@ -40,7 +40,7 @@ void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonSty
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMAINWINDOW" );
     PHB_ITEM ptoolButtonStyle = hb_itemPutNI( NULL, (int) toolButtonStyle );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptoolButtonStyle );
+    hb_vmEvalBlockV( cb, 2, psender, ptoolButtonStyle );
     hb_itemRelease( psender );
     hb_itemRelease( ptoolButtonStyle );
   }

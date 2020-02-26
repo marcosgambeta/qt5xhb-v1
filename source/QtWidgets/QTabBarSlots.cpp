@@ -27,7 +27,7 @@ void QTabBarSlots::currentChanged( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -40,7 +40,7 @@ void QTabBarSlots::tabCloseRequested( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -54,7 +54,7 @@ void QTabBarSlots::tabMoved( int from, int to )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABBAR" );
     PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
     PHB_ITEM pto = hb_itemPutNI( NULL, to );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pfrom, pto );
+    hb_vmEvalBlockV( cb, 3, psender, pfrom, pto );
     hb_itemRelease( psender );
     hb_itemRelease( pfrom );
     hb_itemRelease( pto );

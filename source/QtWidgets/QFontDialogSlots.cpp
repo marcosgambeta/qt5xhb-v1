@@ -27,7 +27,7 @@ void QFontDialogSlots::currentFontChanged( const QFont & font )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFONTDIALOG" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfont );
+    hb_vmEvalBlockV( cb, 2, psender, pfont );
     hb_itemRelease( psender );
     hb_itemRelease( pfont );
   }
@@ -40,7 +40,7 @@ void QFontDialogSlots::fontSelected( const QFont & font )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFONTDIALOG" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfont );
+    hb_vmEvalBlockV( cb, 2, psender, pfont );
     hb_itemRelease( psender );
     hb_itemRelease( pfont );
   }

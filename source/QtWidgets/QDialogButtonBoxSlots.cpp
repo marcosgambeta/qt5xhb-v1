@@ -26,7 +26,7 @@ void QDialogButtonBoxSlots::accepted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDIALOGBUTTONBOX" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDIALOGBUTTONBOX" );
     PHB_ITEM pbutton = Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbutton );
+    hb_vmEvalBlockV( cb, 2, psender, pbutton );
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }
@@ -50,7 +50,7 @@ void QDialogButtonBoxSlots::helpRequested()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDIALOGBUTTONBOX" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -61,7 +61,7 @@ void QDialogButtonBoxSlots::rejected()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDIALOGBUTTONBOX" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

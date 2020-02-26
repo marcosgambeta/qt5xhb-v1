@@ -26,7 +26,7 @@ void QMenuSlots::aboutToHide()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENU" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -37,7 +37,7 @@ void QMenuSlots::aboutToShow()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENU" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -49,7 +49,7 @@ void QMenuSlots::hovered( QAction * action )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENU" );
     PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
+    hb_vmEvalBlockV( cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
@@ -62,7 +62,7 @@ void QMenuSlots::triggered( QAction * action )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENU" );
     PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
+    hb_vmEvalBlockV( cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }

@@ -27,7 +27,7 @@ void QDoubleSpinBoxSlots::valueChanged( double d )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOUBLESPINBOX" );
     PHB_ITEM pd = hb_itemPutND( NULL, d );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pd );
+    hb_vmEvalBlockV( cb, 2, psender, pd );
     hb_itemRelease( psender );
     hb_itemRelease( pd );
   }
@@ -40,7 +40,7 @@ void QDoubleSpinBoxSlots::valueChanged( const QString & text )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOUBLESPINBOX" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
+    hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }

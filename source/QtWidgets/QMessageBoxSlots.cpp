@@ -27,7 +27,7 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMESSAGEBOX" );
     PHB_ITEM pbutton = Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbutton );
+    hb_vmEvalBlockV( cb, 2, psender, pbutton );
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }

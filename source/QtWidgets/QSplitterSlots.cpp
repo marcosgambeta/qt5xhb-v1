@@ -28,7 +28,7 @@ void QSplitterSlots::splitterMoved( int pos, int index )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSPLITTER" );
     PHB_ITEM ppos = hb_itemPutNI( NULL, pos );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, ppos, pindex );
+    hb_vmEvalBlockV( cb, 3, psender, ppos, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( ppos );
     hb_itemRelease( pindex );

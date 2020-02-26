@@ -27,7 +27,7 @@ void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMDIAREA" );
     PHB_ITEM pwindow = Signals_return_qobject( (QObject *) window, "QMDISUBWINDOW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwindow );
+    hb_vmEvalBlockV( cb, 2, psender, pwindow );
     hb_itemRelease( psender );
     hb_itemRelease( pwindow );
   }

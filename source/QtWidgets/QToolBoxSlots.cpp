@@ -27,7 +27,7 @@ void QToolBoxSlots::currentChanged( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBOX" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }

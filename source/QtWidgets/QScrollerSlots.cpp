@@ -27,7 +27,7 @@ void QScrollerSlots::scrollerPropertiesChanged( const QScrollerProperties & newP
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCROLLER" );
     PHB_ITEM pnewProperties = Signals_return_object( (void *) &newProperties, "QSCROLLERPROPERTIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewProperties );
+    hb_vmEvalBlockV( cb, 2, psender, pnewProperties );
     hb_itemRelease( psender );
     hb_itemRelease( pnewProperties );
   }
@@ -40,7 +40,7 @@ void QScrollerSlots::stateChanged( QScroller::State newState )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCROLLER" );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewState );
+    hb_vmEvalBlockV( cb, 2, psender, pnewState );
     hb_itemRelease( psender );
     hb_itemRelease( pnewState );
   }

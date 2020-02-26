@@ -27,7 +27,7 @@ void QStatusBarSlots::messageChanged( const QString & message )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSTATUSBAR" );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmessage );
+    hb_vmEvalBlockV( cb, 2, psender, pmessage );
     hb_itemRelease( psender );
     hb_itemRelease( pmessage );
   }

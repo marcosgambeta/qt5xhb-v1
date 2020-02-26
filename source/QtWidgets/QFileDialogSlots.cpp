@@ -27,7 +27,7 @@ void QFileDialogSlots::currentChanged( const QString & path )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
+    hb_vmEvalBlockV( cb, 2, psender, ppath );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }
@@ -40,7 +40,7 @@ void QFileDialogSlots::directoryEntered( const QString & directory )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_ITEM pdirectory = hb_itemPutC( NULL, QSTRINGTOSTRING(directory) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdirectory );
+    hb_vmEvalBlockV( cb, 2, psender, pdirectory );
     hb_itemRelease( psender );
     hb_itemRelease( pdirectory );
   }
@@ -53,7 +53,7 @@ void QFileDialogSlots::fileSelected( const QString & file )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_ITEM pfile = hb_itemPutC( NULL, QSTRINGTOSTRING(file) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfile );
+    hb_vmEvalBlockV( cb, 2, psender, pfile );
     hb_itemRelease( psender );
     hb_itemRelease( pfile );
   }
@@ -73,7 +73,7 @@ void QFileDialogSlots::filesSelected( const QStringList & selected )
       hb_arrayAddForward( pselected, pTempItem );
       hb_itemRelease(pTempItem);
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pselected );
+    hb_vmEvalBlockV( cb, 2, psender, pselected );
     hb_itemRelease( psender );
     hb_itemRelease( pselected );
   }
@@ -86,7 +86,7 @@ void QFileDialogSlots::filterSelected( const QString & filter )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_ITEM pfilter = hb_itemPutC( NULL, QSTRINGTOSTRING(filter) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfilter );
+    hb_vmEvalBlockV( cb, 2, psender, pfilter );
     hb_itemRelease( psender );
     hb_itemRelease( pfilter );
   }
@@ -99,7 +99,7 @@ void QFileDialogSlots::urlSelected( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -135,7 +135,7 @@ void QFileDialogSlots::urlsSelected( const QList<QUrl> & urls )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purls );
+    hb_vmEvalBlockV( cb, 2, psender, purls );
     hb_itemRelease( psender );
     hb_itemRelease( purls );
   }
@@ -148,7 +148,7 @@ void QFileDialogSlots::currentUrlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -161,7 +161,7 @@ void QFileDialogSlots::directoryUrlEntered( const QUrl & directory )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_ITEM pdirectory = Signals_return_object( (void *) &directory, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdirectory );
+    hb_vmEvalBlockV( cb, 2, psender, pdirectory );
     hb_itemRelease( psender );
     hb_itemRelease( pdirectory );
   }

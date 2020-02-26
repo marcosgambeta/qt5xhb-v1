@@ -26,7 +26,7 @@ void QActionSlots::changed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -37,7 +37,7 @@ void QActionSlots::hovered()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -49,7 +49,7 @@ void QActionSlots::toggled( bool checked )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
+    hb_vmEvalBlockV( cb, 2, psender, pchecked );
     hb_itemRelease( psender );
     hb_itemRelease( pchecked );
   }
@@ -62,7 +62,7 @@ void QActionSlots::triggered( bool checked )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pchecked );
+    hb_vmEvalBlockV( cb, 2, psender, pchecked );
     hb_itemRelease( psender );
     hb_itemRelease( pchecked );
   }

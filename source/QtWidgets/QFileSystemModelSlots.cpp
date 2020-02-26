@@ -27,7 +27,7 @@ void QFileSystemModelSlots::directoryLoaded( const QString & path )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMMODEL" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
+    hb_vmEvalBlockV( cb, 2, psender, ppath );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }
@@ -42,7 +42,7 @@ void QFileSystemModelSlots::fileRenamed( const QString & path, const QString & o
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     PHB_ITEM poldName = hb_itemPutC( NULL, QSTRINGTOSTRING(oldName) );
     PHB_ITEM pnewName = hb_itemPutC( NULL, QSTRINGTOSTRING(newName) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, ppath, poldName, pnewName );
+    hb_vmEvalBlockV( cb, 4, psender, ppath, poldName, pnewName );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
     hb_itemRelease( poldName );
@@ -57,7 +57,7 @@ void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMMODEL" );
     PHB_ITEM pnewPath = hb_itemPutC( NULL, QSTRINGTOSTRING(newPath) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewPath );
+    hb_vmEvalBlockV( cb, 2, psender, pnewPath );
     hb_itemRelease( psender );
     hb_itemRelease( pnewPath );
   }

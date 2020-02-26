@@ -27,7 +27,7 @@ void QCompleterSlots::activated( const QString & text )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCOMPLETER" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
+    hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
@@ -40,7 +40,7 @@ void QCompleterSlots::activated( const QModelIndex & index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCOMPLETER" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -53,7 +53,7 @@ void QCompleterSlots::highlighted( const QString & text )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCOMPLETER" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
+    hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
@@ -66,7 +66,7 @@ void QCompleterSlots::highlighted( const QModelIndex & index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCOMPLETER" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }

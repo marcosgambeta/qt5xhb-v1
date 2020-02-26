@@ -27,7 +27,7 @@ void QAbstractSliderSlots::actionTriggered( int action )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     PHB_ITEM paction = hb_itemPutNI( NULL, action );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
+    hb_vmEvalBlockV( cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
@@ -41,7 +41,7 @@ void QAbstractSliderSlots::rangeChanged( int min, int max )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     PHB_ITEM pmin = hb_itemPutNI( NULL, min );
     PHB_ITEM pmax = hb_itemPutNI( NULL, max );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
+    hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
     hb_itemRelease( pmax );
@@ -55,7 +55,7 @@ void QAbstractSliderSlots::sliderMoved( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -67,7 +67,7 @@ void QAbstractSliderSlots::sliderPressed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -78,7 +78,7 @@ void QAbstractSliderSlots::sliderReleased()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -90,7 +90,7 @@ void QAbstractSliderSlots::valueChanged( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSLIDER" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }

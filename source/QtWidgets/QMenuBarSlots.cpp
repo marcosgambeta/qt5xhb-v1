@@ -27,7 +27,7 @@ void QMenuBarSlots::hovered( QAction * action )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENUBAR" );
     PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
+    hb_vmEvalBlockV( cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
@@ -40,7 +40,7 @@ void QMenuBarSlots::triggered( QAction * action )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMENUBAR" );
     PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
+    hb_vmEvalBlockV( cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }

@@ -27,7 +27,7 @@ void QDockWidgetSlots::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM pallowedAreas = hb_itemPutNI( NULL, (int) allowedAreas );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pallowedAreas );
+    hb_vmEvalBlockV( cb, 2, psender, pallowedAreas );
     hb_itemRelease( psender );
     hb_itemRelease( pallowedAreas );
   }
@@ -40,7 +40,7 @@ void QDockWidgetSlots::dockLocationChanged( Qt::DockWidgetArea area )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM parea = hb_itemPutNI( NULL, (int) area );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parea );
+    hb_vmEvalBlockV( cb, 2, psender, parea );
     hb_itemRelease( psender );
     hb_itemRelease( parea );
   }
@@ -53,7 +53,7 @@ void QDockWidgetSlots::featuresChanged( QDockWidget::DockWidgetFeatures features
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM pfeatures = hb_itemPutNI( NULL, (int) features );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfeatures );
+    hb_vmEvalBlockV( cb, 2, psender, pfeatures );
     hb_itemRelease( psender );
     hb_itemRelease( pfeatures );
   }
@@ -66,7 +66,7 @@ void QDockWidgetSlots::topLevelChanged( bool topLevel )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM ptopLevel = hb_itemPutL( NULL, topLevel );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptopLevel );
+    hb_vmEvalBlockV( cb, 2, psender, ptopLevel );
     hb_itemRelease( psender );
     hb_itemRelease( ptopLevel );
   }
@@ -79,7 +79,7 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
+    hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }

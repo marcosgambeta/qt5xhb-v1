@@ -27,7 +27,7 @@ void QGraphicsTextItemSlots::linkActivated( const QString & link )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSTEXTITEM" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
+    hb_vmEvalBlockV( cb, 2, psender, plink );
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
@@ -40,7 +40,7 @@ void QGraphicsTextItemSlots::linkHovered( const QString & link )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSTEXTITEM" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
+    hb_vmEvalBlockV( cb, 2, psender, plink );
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }

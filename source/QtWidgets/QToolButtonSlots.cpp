@@ -27,7 +27,7 @@ void QToolButtonSlots::triggered( QAction * action )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBUTTON" );
     PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paction );
+    hb_vmEvalBlockV( cb, 2, psender, paction );
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }

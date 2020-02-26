@@ -28,7 +28,7 @@ void QLineEditSlots::cursorPositionChanged( int iold, int inew )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLINEEDIT" );
     PHB_ITEM piold = hb_itemPutNI( NULL, iold );
     PHB_ITEM pinew = hb_itemPutNI( NULL, inew );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, piold, pinew );
+    hb_vmEvalBlockV( cb, 3, psender, piold, pinew );
     hb_itemRelease( psender );
     hb_itemRelease( piold );
     hb_itemRelease( pinew );
@@ -41,7 +41,7 @@ void QLineEditSlots::editingFinished()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLINEEDIT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -52,7 +52,7 @@ void QLineEditSlots::returnPressed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLINEEDIT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -63,7 +63,7 @@ void QLineEditSlots::selectionChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLINEEDIT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -75,7 +75,7 @@ void QLineEditSlots::textChanged( const QString & text )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLINEEDIT" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
+    hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
@@ -88,7 +88,7 @@ void QLineEditSlots::textEdited( const QString & text )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLINEEDIT" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
+    hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }

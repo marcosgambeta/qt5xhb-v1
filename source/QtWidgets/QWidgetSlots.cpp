@@ -28,7 +28,7 @@ void QWidgetSlots::windowTitleChanged( const QString & title )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIDGET" );
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptitle );
+    hb_vmEvalBlockV( cb, 2, psender, ptitle );
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
   }
@@ -43,7 +43,7 @@ void QWidgetSlots::windowIconChanged( const QIcon & icon )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIDGET" );
     PHB_ITEM picon = Signals_return_object( (void *) &icon, "QICON" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, picon );
+    hb_vmEvalBlockV( cb, 2, psender, picon );
     hb_itemRelease( psender );
     hb_itemRelease( picon );
   }
@@ -57,7 +57,7 @@ void QWidgetSlots::windowIconTextChanged( const QString & iconText )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIDGET" );
     PHB_ITEM piconText = hb_itemPutC( NULL, QSTRINGTOSTRING(iconText) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, piconText );
+    hb_vmEvalBlockV( cb, 2, psender, piconText );
     hb_itemRelease( psender );
     hb_itemRelease( piconText );
   }
@@ -70,7 +70,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIDGET" );
     PHB_ITEM ppos = Signals_return_object( (void *) &pos, "QPOINT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppos );
+    hb_vmEvalBlockV( cb, 2, psender, ppos );
     hb_itemRelease( psender );
     hb_itemRelease( ppos );
   }

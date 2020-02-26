@@ -27,7 +27,7 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSEFFECT" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
+    hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }

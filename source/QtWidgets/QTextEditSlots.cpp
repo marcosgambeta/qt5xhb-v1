@@ -27,7 +27,7 @@ void QTextEditSlots::copyAvailable( bool yes )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     PHB_ITEM pyes = hb_itemPutL( NULL, yes );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pyes );
+    hb_vmEvalBlockV( cb, 2, psender, pyes );
     hb_itemRelease( psender );
     hb_itemRelease( pyes );
   }
@@ -40,7 +40,7 @@ void QTextEditSlots::currentCharFormatChanged( const QTextCharFormat & f )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     PHB_ITEM pf = Signals_return_object( (void *) &f, "QTEXTCHARFORMAT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pf );
+    hb_vmEvalBlockV( cb, 2, psender, pf );
     hb_itemRelease( psender );
     hb_itemRelease( pf );
   }
@@ -52,7 +52,7 @@ void QTextEditSlots::cursorPositionChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -64,7 +64,7 @@ void QTextEditSlots::redoAvailable( bool available )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
@@ -76,7 +76,7 @@ void QTextEditSlots::selectionChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -87,7 +87,7 @@ void QTextEditSlots::textChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -99,7 +99,7 @@ void QTextEditSlots::undoAvailable( bool available )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTEDIT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }

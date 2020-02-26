@@ -27,7 +27,7 @@ void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSCOLORIZEEFFECT" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -40,7 +40,7 @@ void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSCOLORIZEEFFECT" );
     PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstrength );
+    hb_vmEvalBlockV( cb, 2, psender, pstrength );
     hb_itemRelease( psender );
     hb_itemRelease( pstrength );
   }
