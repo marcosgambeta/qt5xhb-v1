@@ -27,7 +27,7 @@ void QSqlTableModelSlots::beforeDelete( int row )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prow );
+    hb_vmEvalBlockV( cb, 2, psender, prow );
     hb_itemRelease( psender );
     hb_itemRelease( prow );
   }
@@ -40,7 +40,7 @@ void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSQLTABLEMODEL" );
     PHB_ITEM precord = Signals_return_object( (void *) &record, "QSQLRECORD" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, precord );
+    hb_vmEvalBlockV( cb, 2, psender, precord );
     hb_itemRelease( psender );
     hb_itemRelease( precord );
   }
@@ -54,7 +54,7 @@ void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM precord = Signals_return_object( (void *) &record, "QSQLRECORD" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, precord );
+    hb_vmEvalBlockV( cb, 3, psender, prow, precord );
     hb_itemRelease( psender );
     hb_itemRelease( prow );
     hb_itemRelease( precord );
@@ -69,7 +69,7 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM precord = Signals_return_object( (void *) &record, "QSQLRECORD" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prow, precord );
+    hb_vmEvalBlockV( cb, 3, psender, prow, precord );
     hb_itemRelease( psender );
     hb_itemRelease( prow );
     hb_itemRelease( precord );
