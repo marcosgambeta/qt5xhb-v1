@@ -28,7 +28,7 @@ void QWebSocketServerSlots::acceptError( QAbstractSocket::SocketError socketErro
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKETSERVER" );
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocketError );
+    hb_vmEvalBlockV( cb, 2, psender, psocketError );
     hb_itemRelease( psender );
     hb_itemRelease( psocketError );
   }
@@ -43,7 +43,7 @@ void QWebSocketServerSlots::serverError( QWebSocketProtocol::CloseCode closeCode
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKETSERVER" );
     PHB_ITEM pcloseCode = hb_itemPutNI( NULL, (int) closeCode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcloseCode );
+    hb_vmEvalBlockV( cb, 2, psender, pcloseCode );
     hb_itemRelease( psender );
     hb_itemRelease( pcloseCode );
   }
@@ -58,7 +58,7 @@ void QWebSocketServerSlots::originAuthenticationRequired( QWebSocketCorsAuthenti
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKETSERVER" );
     PHB_ITEM ppAuthenticator = Signals_return_object( (void *) pAuthenticator, "QWEBSOCKETCORSAUTHENTICATOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppAuthenticator );
+    hb_vmEvalBlockV( cb, 2, psender, ppAuthenticator );
     hb_itemRelease( psender );
     hb_itemRelease( ppAuthenticator );
   }
@@ -72,7 +72,7 @@ void QWebSocketServerSlots::newConnection()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKETSERVER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -86,7 +86,7 @@ void QWebSocketServerSlots::peerVerifyError( const QSslError & error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKETSERVER" );
     PHB_ITEM perror = Signals_return_object( (void *) &error, "QSSLERROR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -124,7 +124,7 @@ void QWebSocketServerSlots::sslErrors( const QList<QSslError> & errors )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perrors );
+    hb_vmEvalBlockV( cb, 2, psender, perrors );
     hb_itemRelease( psender );
     hb_itemRelease( perrors );
   }
@@ -138,7 +138,7 @@ void QWebSocketServerSlots::closed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBSOCKETSERVER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
