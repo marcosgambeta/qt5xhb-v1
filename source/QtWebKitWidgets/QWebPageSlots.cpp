@@ -29,7 +29,7 @@ void QWebPageSlots::applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, 
     PHB_ITEM porigin = Signals_return_object( (void *) origin, "QWEBSECURITYORIGIN" );
     PHB_ITEM pdefaultOriginQuota = hb_itemPutNLL( NULL, defaultOriginQuota );
     PHB_ITEM ptotalSpaceNeeded = hb_itemPutNLL( NULL, totalSpaceNeeded );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, porigin, pdefaultOriginQuota, ptotalSpaceNeeded );
+    hb_vmEvalBlockV( cb, 4, psender, porigin, pdefaultOriginQuota, ptotalSpaceNeeded );
     hb_itemRelease( psender );
     hb_itemRelease( porigin );
     hb_itemRelease( pdefaultOriginQuota );
@@ -43,7 +43,7 @@ void QWebPageSlots::contentsChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -56,7 +56,7 @@ void QWebPageSlots::databaseQuotaExceeded( QWebFrame * frame, QString databaseNa
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
     PHB_ITEM pdatabaseName = hb_itemPutC( NULL, (const char *) databaseName.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pdatabaseName );
+    hb_vmEvalBlockV( cb, 3, psender, pframe, pdatabaseName );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
     hb_itemRelease( pdatabaseName );
@@ -70,7 +70,7 @@ void QWebPageSlots::downloadRequested( const QNetworkRequest & request )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM prequest = Signals_return_object( (void *) &request, "QNETWORKREQUEST" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prequest );
+    hb_vmEvalBlockV( cb, 2, psender, prequest );
     hb_itemRelease( psender );
     hb_itemRelease( prequest );
   }
@@ -84,7 +84,7 @@ void QWebPageSlots::featurePermissionRequestCanceled( QWebFrame * frame, QWebPag
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pfeature );
+    hb_vmEvalBlockV( cb, 3, psender, pframe, pfeature );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
     hb_itemRelease( pfeature );
@@ -99,7 +99,7 @@ void QWebPageSlots::featurePermissionRequested( QWebFrame * frame, QWebPage::Fea
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pfeature );
+    hb_vmEvalBlockV( cb, 3, psender, pframe, pfeature );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
     hb_itemRelease( pfeature );
@@ -113,7 +113,7 @@ void QWebPageSlots::frameCreated( QWebFrame * frame )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pframe );
+    hb_vmEvalBlockV( cb, 2, psender, pframe );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
@@ -126,7 +126,7 @@ void QWebPageSlots::geometryChangeRequested( const QRect & geom )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pgeom = Signals_return_object( (void *) &geom, "QRECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pgeom );
+    hb_vmEvalBlockV( cb, 2, psender, pgeom );
     hb_itemRelease( psender );
     hb_itemRelease( pgeom );
   }
@@ -139,7 +139,7 @@ void QWebPageSlots::linkClicked( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -154,7 +154,7 @@ void QWebPageSlots::linkHovered( const QString & link, const QString & title, co
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
     PHB_ITEM ptextContent = hb_itemPutC( NULL, QSTRINGTOSTRING(textContent) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, plink, ptitle, ptextContent );
+    hb_vmEvalBlockV( cb, 4, psender, plink, ptitle, ptextContent );
     hb_itemRelease( psender );
     hb_itemRelease( plink );
     hb_itemRelease( ptitle );
@@ -169,7 +169,7 @@ void QWebPageSlots::loadFinished( bool ok )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pok );
+    hb_vmEvalBlockV( cb, 2, psender, pok );
     hb_itemRelease( psender );
     hb_itemRelease( pok );
   }
@@ -182,7 +182,7 @@ void QWebPageSlots::loadProgress( int progress )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogress );
+    hb_vmEvalBlockV( cb, 2, psender, pprogress );
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
@@ -194,7 +194,7 @@ void QWebPageSlots::loadStarted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -206,7 +206,7 @@ void QWebPageSlots::menuBarVisibilityChangeRequested( bool visible )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
+    hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
@@ -218,7 +218,7 @@ void QWebPageSlots::microFocusChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -230,7 +230,7 @@ void QWebPageSlots::printRequested( QWebFrame * frame )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pframe );
+    hb_vmEvalBlockV( cb, 2, psender, pframe );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
@@ -243,7 +243,7 @@ void QWebPageSlots::repaintRequested( const QRect & dirtyRect )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pdirtyRect = Signals_return_object( (void *) &dirtyRect, "QRECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdirtyRect );
+    hb_vmEvalBlockV( cb, 2, psender, pdirtyRect );
     hb_itemRelease( psender );
     hb_itemRelease( pdirtyRect );
   }
@@ -256,7 +256,7 @@ void QWebPageSlots::restoreFrameStateRequested( QWebFrame * frame )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pframe );
+    hb_vmEvalBlockV( cb, 2, psender, pframe );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
@@ -270,7 +270,7 @@ void QWebPageSlots::saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem 
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
     PHB_ITEM pitem = Signals_return_object( (void *) item, "QWEBHISTORYITEM" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pframe, pitem );
+    hb_vmEvalBlockV( cb, 3, psender, pframe, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
     hb_itemRelease( pitem );
@@ -286,7 +286,7 @@ void QWebPageSlots::scrollRequested( int dx, int dy, const QRect & rectToScroll 
     PHB_ITEM pdx = hb_itemPutNI( NULL, dx );
     PHB_ITEM pdy = hb_itemPutNI( NULL, dy );
     PHB_ITEM prectToScroll = Signals_return_object( (void *) &rectToScroll, "QRECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pdx, pdy, prectToScroll );
+    hb_vmEvalBlockV( cb, 4, psender, pdx, pdy, prectToScroll );
     hb_itemRelease( psender );
     hb_itemRelease( pdx );
     hb_itemRelease( pdy );
@@ -300,7 +300,7 @@ void QWebPageSlots::selectionChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -312,7 +312,7 @@ void QWebPageSlots::statusBarMessage( const QString & text )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
+    hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
@@ -325,7 +325,7 @@ void QWebPageSlots::statusBarVisibilityChangeRequested( bool visible )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
+    hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
@@ -338,7 +338,7 @@ void QWebPageSlots::toolBarVisibilityChangeRequested( bool visible )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
+    hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
@@ -351,7 +351,7 @@ void QWebPageSlots::unsupportedContent( QNetworkReply * reply )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QNETWORKREPLY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
+    hb_vmEvalBlockV( cb, 2, psender, preply );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
   }
@@ -363,7 +363,7 @@ void QWebPageSlots::viewportChangeRequested()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -374,7 +374,7 @@ void QWebPageSlots::windowCloseRequested()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBPAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

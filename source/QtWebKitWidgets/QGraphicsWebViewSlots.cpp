@@ -26,7 +26,7 @@ void QGraphicsWebViewSlots::iconChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSWEBVIEW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QGraphicsWebViewSlots::linkClicked( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSWEBVIEW" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -51,7 +51,7 @@ void QGraphicsWebViewSlots::loadFinished( bool ok )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSWEBVIEW" );
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pok );
+    hb_vmEvalBlockV( cb, 2, psender, pok );
     hb_itemRelease( psender );
     hb_itemRelease( pok );
   }
@@ -64,7 +64,7 @@ void QGraphicsWebViewSlots::loadProgress( int progress )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSWEBVIEW" );
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogress );
+    hb_vmEvalBlockV( cb, 2, psender, pprogress );
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
@@ -76,7 +76,7 @@ void QGraphicsWebViewSlots::loadStarted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSWEBVIEW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -88,7 +88,7 @@ void QGraphicsWebViewSlots::statusBarMessage( const QString & text )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSWEBVIEW" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptext );
+    hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
@@ -101,7 +101,7 @@ void QGraphicsWebViewSlots::titleChanged( const QString & title )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSWEBVIEW" );
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptitle );
+    hb_vmEvalBlockV( cb, 2, psender, ptitle );
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
   }
@@ -114,7 +114,7 @@ void QGraphicsWebViewSlots::urlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSWEBVIEW" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }

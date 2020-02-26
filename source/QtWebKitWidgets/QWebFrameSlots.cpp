@@ -27,7 +27,7 @@ void QWebFrameSlots::contentsSizeChanged( const QSize & size )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBFRAME" );
     PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
+    hb_vmEvalBlockV( cb, 2, psender, psize );
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
@@ -39,7 +39,7 @@ void QWebFrameSlots::iconChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -50,7 +50,7 @@ void QWebFrameSlots::initialLayoutCompleted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -61,7 +61,7 @@ void QWebFrameSlots::javaScriptWindowObjectCleared()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -73,7 +73,7 @@ void QWebFrameSlots::loadFinished( bool ok )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBFRAME" );
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pok );
+    hb_vmEvalBlockV( cb, 2, psender, pok );
     hb_itemRelease( psender );
     hb_itemRelease( pok );
   }
@@ -85,7 +85,7 @@ void QWebFrameSlots::loadStarted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -96,7 +96,7 @@ void QWebFrameSlots::pageChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -108,7 +108,7 @@ void QWebFrameSlots::titleChanged( const QString & title )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBFRAME" );
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptitle );
+    hb_vmEvalBlockV( cb, 2, psender, ptitle );
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
   }
@@ -121,7 +121,7 @@ void QWebFrameSlots::urlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBFRAME" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
