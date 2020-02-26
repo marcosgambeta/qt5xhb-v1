@@ -30,7 +30,7 @@ void QModbusServerSlots::dataWritten( QModbusDataUnit::RegisterType table, int a
     PHB_ITEM ptable = hb_itemPutNI( NULL, (int) table );
     PHB_ITEM paddress = hb_itemPutNI( NULL, address );
     PHB_ITEM psize = hb_itemPutNI( NULL, size );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, ptable, paddress, psize );
+    hb_vmEvalBlockV( cb, 4, psender, ptable, paddress, psize );
     hb_itemRelease( psender );
     hb_itemRelease( ptable );
     hb_itemRelease( paddress );

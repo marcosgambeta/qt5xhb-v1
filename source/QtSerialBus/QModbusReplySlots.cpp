@@ -27,7 +27,7 @@ void QModbusReplySlots::finished()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMODBUSREPLY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -41,7 +41,7 @@ void QModbusReplySlots::errorOccurred( QModbusDevice::Error error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMODBUSREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }

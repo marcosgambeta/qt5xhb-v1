@@ -28,7 +28,7 @@ void QModbusDeviceSlots::errorOccurred( QModbusDevice::Error error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMODBUSDEVICE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -43,7 +43,7 @@ void QModbusDeviceSlots::stateChanged( QModbusDevice::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMODBUSDEVICE" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
