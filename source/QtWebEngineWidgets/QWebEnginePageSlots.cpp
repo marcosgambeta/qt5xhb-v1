@@ -27,7 +27,7 @@ void QWebEnginePageSlots::loadStarted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -41,7 +41,7 @@ void QWebEnginePageSlots::loadProgress( int progress )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogress );
+    hb_vmEvalBlockV( cb, 2, psender, pprogress );
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
@@ -56,7 +56,7 @@ void QWebEnginePageSlots::loadFinished( bool ok )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pok );
+    hb_vmEvalBlockV( cb, 2, psender, pok );
     hb_itemRelease( psender );
     hb_itemRelease( pok );
   }
@@ -71,7 +71,7 @@ void QWebEnginePageSlots::linkHovered( const QString & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM purl = hb_itemPutC( NULL, QSTRINGTOSTRING(url) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -85,7 +85,7 @@ void QWebEnginePageSlots::selectionChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -99,7 +99,7 @@ void QWebEnginePageSlots::geometryChangeRequested( const QRect & geom )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM pgeom = Signals_return_object( (void *) &geom, "QRECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pgeom );
+    hb_vmEvalBlockV( cb, 2, psender, pgeom );
     hb_itemRelease( psender );
     hb_itemRelease( pgeom );
   }
@@ -113,7 +113,7 @@ void QWebEnginePageSlots::windowCloseRequested()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -128,7 +128,7 @@ void QWebEnginePageSlots::featurePermissionRequested( const QUrl & securityOrigi
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM psecurityOrigin = Signals_return_object( (void *) &securityOrigin, "QURL" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, psecurityOrigin, pfeature );
+    hb_vmEvalBlockV( cb, 3, psender, psecurityOrigin, pfeature );
     hb_itemRelease( psender );
     hb_itemRelease( psecurityOrigin );
     hb_itemRelease( pfeature );
@@ -145,7 +145,7 @@ void QWebEnginePageSlots::featurePermissionRequestCanceled( const QUrl & securit
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM psecurityOrigin = Signals_return_object( (void *) &securityOrigin, "QURL" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, psecurityOrigin, pfeature );
+    hb_vmEvalBlockV( cb, 3, psender, psecurityOrigin, pfeature );
     hb_itemRelease( psender );
     hb_itemRelease( psecurityOrigin );
     hb_itemRelease( pfeature );
@@ -162,7 +162,7 @@ void QWebEnginePageSlots::authenticationRequired( const QUrl & requestUrl, QAuth
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM prequestUrl = Signals_return_object( (void *) &requestUrl, "QURL" );
     PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prequestUrl, pauthenticator );
+    hb_vmEvalBlockV( cb, 3, psender, prequestUrl, pauthenticator );
     hb_itemRelease( psender );
     hb_itemRelease( prequestUrl );
     hb_itemRelease( pauthenticator );
@@ -180,7 +180,7 @@ void QWebEnginePageSlots::proxyAuthenticationRequired( const QUrl & requestUrl, 
     PHB_ITEM prequestUrl = Signals_return_object( (void *) &requestUrl, "QURL" );
     PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
     PHB_ITEM pproxyHost = hb_itemPutC( NULL, QSTRINGTOSTRING(proxyHost) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, prequestUrl, pauthenticator, pproxyHost );
+    hb_vmEvalBlockV( cb, 4, psender, prequestUrl, pauthenticator, pproxyHost );
     hb_itemRelease( psender );
     hb_itemRelease( prequestUrl );
     hb_itemRelease( pauthenticator );
@@ -197,7 +197,7 @@ void QWebEnginePageSlots::titleChanged( const QString & title )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptitle );
+    hb_vmEvalBlockV( cb, 2, psender, ptitle );
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
   }
@@ -212,7 +212,7 @@ void QWebEnginePageSlots::urlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -227,7 +227,7 @@ void QWebEnginePageSlots::iconUrlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEPAGE" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }

@@ -27,7 +27,7 @@ void QWebEngineViewSlots::loadStarted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEVIEW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -41,7 +41,7 @@ void QWebEngineViewSlots::loadProgress( int progress )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEVIEW" );
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogress );
+    hb_vmEvalBlockV( cb, 2, psender, pprogress );
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
@@ -56,7 +56,7 @@ void QWebEngineViewSlots::loadFinished( bool b )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEVIEW" );
     PHB_ITEM pb = hb_itemPutL( NULL, b );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pb );
+    hb_vmEvalBlockV( cb, 2, psender, pb );
     hb_itemRelease( psender );
     hb_itemRelease( pb );
   }
@@ -71,7 +71,7 @@ void QWebEngineViewSlots::titleChanged( const QString & title )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEVIEW" );
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptitle );
+    hb_vmEvalBlockV( cb, 2, psender, ptitle );
     hb_itemRelease( psender );
     hb_itemRelease( ptitle );
   }
@@ -85,7 +85,7 @@ void QWebEngineViewSlots::selectionChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEVIEW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -99,7 +99,7 @@ void QWebEngineViewSlots::urlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEVIEW" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -114,7 +114,7 @@ void QWebEngineViewSlots::iconUrlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBENGINEVIEW" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
