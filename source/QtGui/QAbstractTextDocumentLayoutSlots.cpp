@@ -27,7 +27,7 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewSize = Signals_return_object( (void *) &newSize, "QSIZEF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewSize );
+    hb_vmEvalBlockV( cb, 2, psender, pnewSize );
     hb_itemRelease( psender );
     hb_itemRelease( pnewSize );
   }
@@ -40,7 +40,7 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewPages = hb_itemPutNI( NULL, newPages );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewPages );
+    hb_vmEvalBlockV( cb, 2, psender, pnewPages );
     hb_itemRelease( psender );
     hb_itemRelease( pnewPages );
   }
@@ -53,7 +53,7 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prect );
+    hb_vmEvalBlockV( cb, 2, psender, prect );
     hb_itemRelease( psender );
     hb_itemRelease( prect );
   }
@@ -66,7 +66,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pblock = Signals_return_object( (void *) &block, "QTEXTBLOCK" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pblock );
+    hb_vmEvalBlockV( cb, 2, psender, pblock );
     hb_itemRelease( psender );
     hb_itemRelease( pblock );
   }

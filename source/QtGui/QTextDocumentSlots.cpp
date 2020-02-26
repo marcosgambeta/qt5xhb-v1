@@ -29,7 +29,7 @@ void QTextDocumentSlots::contentsChange( int from, int charsRemoves, int charsAd
     PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
     PHB_ITEM pcharsRemoves = hb_itemPutNI( NULL, charsRemoves );
     PHB_ITEM pcharsAdded = hb_itemPutNI( NULL, charsAdded );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pfrom, pcharsRemoves, pcharsAdded );
+    hb_vmEvalBlockV( cb, 4, psender, pfrom, pcharsRemoves, pcharsAdded );
     hb_itemRelease( psender );
     hb_itemRelease( pfrom );
     hb_itemRelease( pcharsRemoves );
@@ -43,7 +43,7 @@ void QTextDocumentSlots::contentsChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTDOCUMENT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -55,7 +55,7 @@ void QTextDocumentSlots::undoAvailable( bool b )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTDOCUMENT" );
     PHB_ITEM pb = hb_itemPutL( NULL, b );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pb );
+    hb_vmEvalBlockV( cb, 2, psender, pb );
     hb_itemRelease( psender );
     hb_itemRelease( pb );
   }
@@ -68,7 +68,7 @@ void QTextDocumentSlots::redoAvailable( bool b )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTDOCUMENT" );
     PHB_ITEM pb = hb_itemPutL( NULL, b );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pb );
+    hb_vmEvalBlockV( cb, 2, psender, pb );
     hb_itemRelease( psender );
     hb_itemRelease( pb );
   }
@@ -80,7 +80,7 @@ void QTextDocumentSlots::undoCommandAdded()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTDOCUMENT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -92,7 +92,7 @@ void QTextDocumentSlots::modificationChanged( bool m )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTDOCUMENT" );
     PHB_ITEM pm = hb_itemPutL( NULL, m );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pm );
+    hb_vmEvalBlockV( cb, 2, psender, pm );
     hb_itemRelease( psender );
     hb_itemRelease( pm );
   }
@@ -105,7 +105,7 @@ void QTextDocumentSlots::cursorPositionChanged( const QTextCursor & cursor )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTDOCUMENT" );
     PHB_ITEM pcursor = Signals_return_object( (void *) &cursor, "QTEXTCURSOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcursor );
+    hb_vmEvalBlockV( cb, 2, psender, pcursor );
     hb_itemRelease( psender );
     hb_itemRelease( pcursor );
   }
@@ -118,7 +118,7 @@ void QTextDocumentSlots::blockCountChanged( int newBlockCount )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTDOCUMENT" );
     PHB_ITEM pnewBlockCount = hb_itemPutNI( NULL, newBlockCount );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewBlockCount );
+    hb_vmEvalBlockV( cb, 2, psender, pnewBlockCount );
     hb_itemRelease( psender );
     hb_itemRelease( pnewBlockCount );
   }
@@ -130,7 +130,7 @@ void QTextDocumentSlots::documentLayoutChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTDOCUMENT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

@@ -27,7 +27,7 @@ void QOpenGLDebugLoggerSlots::messageLogged( const QOpenGLDebugMessage & debugMe
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLDEBUGLOGGER" );
     PHB_ITEM pdebugMessage = Signals_return_object( (void *) &debugMessage, "QOPENGLDEBUGMESSAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdebugMessage );
+    hb_vmEvalBlockV( cb, 2, psender, pdebugMessage );
     hb_itemRelease( psender );
     hb_itemRelease( pdebugMessage );
   }

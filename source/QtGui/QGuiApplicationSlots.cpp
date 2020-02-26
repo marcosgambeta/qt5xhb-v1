@@ -27,7 +27,7 @@ void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
     PHB_ITEM pfocusObject = Signals_return_qobject( (QObject *) focusObject, "QOBJECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfocusObject );
+    hb_vmEvalBlockV( cb, 2, psender, pfocusObject );
     hb_itemRelease( psender );
     hb_itemRelease( pfocusObject );
   }
@@ -40,7 +40,7 @@ void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
     PHB_ITEM pfocusWindow = Signals_return_qobject( (QObject *) focusWindow, "QWINDOW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfocusWindow );
+    hb_vmEvalBlockV( cb, 2, psender, pfocusWindow );
     hb_itemRelease( psender );
     hb_itemRelease( pfocusWindow );
   }
@@ -52,7 +52,7 @@ void QGuiApplicationSlots::fontDatabaseChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -63,7 +63,7 @@ void QGuiApplicationSlots::lastWindowClosed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -75,7 +75,7 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
     PHB_ITEM pscreen = Signals_return_qobject( (QObject *) screen, "QSCREEN" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscreen );
+    hb_vmEvalBlockV( cb, 2, psender, pscreen );
     hb_itemRelease( psender );
     hb_itemRelease( pscreen );
   }

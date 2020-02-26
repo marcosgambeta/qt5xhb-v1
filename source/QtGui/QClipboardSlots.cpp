@@ -27,7 +27,7 @@ void QClipboardSlots::changed( QClipboard::Mode mode )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCLIPBOARD" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
+    hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
@@ -39,7 +39,7 @@ void QClipboardSlots::dataChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCLIPBOARD" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -50,7 +50,7 @@ void QClipboardSlots::findBufferChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCLIPBOARD" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -61,7 +61,7 @@ void QClipboardSlots::selectionChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCLIPBOARD" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

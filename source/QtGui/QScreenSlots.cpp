@@ -27,7 +27,7 @@ void QScreenSlots::geometryChanged( const QRect & geometry )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
     PHB_ITEM pgeometry = Signals_return_object( (void *) &geometry, "QRECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pgeometry );
+    hb_vmEvalBlockV( cb, 2, psender, pgeometry );
     hb_itemRelease( psender );
     hb_itemRelease( pgeometry );
   }
@@ -40,7 +40,7 @@ void QScreenSlots::physicalSizeChanged( const QSizeF & size )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
     PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZEF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
+    hb_vmEvalBlockV( cb, 2, psender, psize );
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
@@ -53,7 +53,7 @@ void QScreenSlots::physicalDotsPerInchChanged( qreal dpi )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
     PHB_ITEM pdpi = hb_itemPutND( NULL, dpi );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdpi );
+    hb_vmEvalBlockV( cb, 2, psender, pdpi );
     hb_itemRelease( psender );
     hb_itemRelease( pdpi );
   }
@@ -66,7 +66,7 @@ void QScreenSlots::logicalDotsPerInchChanged( qreal dpi )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
     PHB_ITEM pdpi = hb_itemPutND( NULL, dpi );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdpi );
+    hb_vmEvalBlockV( cb, 2, psender, pdpi );
     hb_itemRelease( psender );
     hb_itemRelease( pdpi );
   }
@@ -79,7 +79,7 @@ void QScreenSlots::virtualGeometryChanged( const QRect & rect )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prect );
+    hb_vmEvalBlockV( cb, 2, psender, prect );
     hb_itemRelease( psender );
     hb_itemRelease( prect );
   }
@@ -92,7 +92,7 @@ void QScreenSlots::primaryOrientationChanged( Qt::ScreenOrientation orientation 
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, porientation );
+    hb_vmEvalBlockV( cb, 2, psender, porientation );
     hb_itemRelease( psender );
     hb_itemRelease( porientation );
   }
@@ -105,7 +105,7 @@ void QScreenSlots::orientationChanged( Qt::ScreenOrientation orientation )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, porientation );
+    hb_vmEvalBlockV( cb, 2, psender, porientation );
     hb_itemRelease( psender );
     hb_itemRelease( porientation );
   }
@@ -118,7 +118,7 @@ void QScreenSlots::refreshRateChanged( qreal refreshRate )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
     PHB_ITEM prefreshRate = hb_itemPutND( NULL, refreshRate );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prefreshRate );
+    hb_vmEvalBlockV( cb, 2, psender, prefreshRate );
     hb_itemRelease( psender );
     hb_itemRelease( prefreshRate );
   }

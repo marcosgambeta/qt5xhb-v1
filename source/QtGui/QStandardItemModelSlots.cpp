@@ -27,7 +27,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSTANDARDITEMMODEL" );
     PHB_ITEM pitem = Signals_return_object( (void *) item, "QSTANDARDITEM" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitem );
+    hb_vmEvalBlockV( cb, 2, psender, pitem );
     hb_itemRelease( psender );
     hb_itemRelease( pitem );
   }

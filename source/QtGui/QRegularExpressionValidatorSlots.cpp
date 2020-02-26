@@ -27,7 +27,7 @@ void QRegularExpressionValidatorSlots::regularExpressionChanged( const QRegularE
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QREGULAREXPRESSIONVALIDATOR" );
     PHB_ITEM pre = Signals_return_object( (void *) &re, "QREGULAREXPRESSION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pre );
+    hb_vmEvalBlockV( cb, 2, psender, pre );
     hb_itemRelease( psender );
     hb_itemRelease( pre );
   }
