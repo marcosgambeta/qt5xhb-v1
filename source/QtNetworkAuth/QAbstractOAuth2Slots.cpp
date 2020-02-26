@@ -28,7 +28,7 @@ void QAbstractOAuth2Slots::clientIdentifierSharedKeyChanged( const QString & cli
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM pclientIdentifierSharedKey = hb_itemPutC( NULL, QSTRINGTOSTRING(clientIdentifierSharedKey) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pclientIdentifierSharedKey );
+    hb_vmEvalBlockV( cb, 2, psender, pclientIdentifierSharedKey );
     hb_itemRelease( psender );
     hb_itemRelease( pclientIdentifierSharedKey );
   }
@@ -45,7 +45,7 @@ void QAbstractOAuth2Slots::error( const QString & error, const QString & errorDe
     PHB_ITEM perror = hb_itemPutC( NULL, QSTRINGTOSTRING(error) );
     PHB_ITEM perrorDescription = hb_itemPutC( NULL, QSTRINGTOSTRING(errorDescription) );
     PHB_ITEM puri = Signals_return_object( (void *) &uri, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, perror, perrorDescription, puri );
+    hb_vmEvalBlockV( cb, 4, psender, perror, perrorDescription, puri );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
     hb_itemRelease( perrorDescription );
@@ -62,7 +62,7 @@ void QAbstractOAuth2Slots::expirationAtChanged( const QDateTime & expiration )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM pexpiration = Signals_return_object( (void *) &expiration, "QDATETIME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pexpiration );
+    hb_vmEvalBlockV( cb, 2, psender, pexpiration );
     hb_itemRelease( psender );
     hb_itemRelease( pexpiration );
   }
@@ -77,7 +77,7 @@ void QAbstractOAuth2Slots::responseTypeChanged( const QString & responseType )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM presponseType = hb_itemPutC( NULL, QSTRINGTOSTRING(responseType) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, presponseType );
+    hb_vmEvalBlockV( cb, 2, psender, presponseType );
     hb_itemRelease( psender );
     hb_itemRelease( presponseType );
   }
@@ -92,7 +92,7 @@ void QAbstractOAuth2Slots::scopeChanged( const QString & scope )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM pscope = hb_itemPutC( NULL, QSTRINGTOSTRING(scope) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscope );
+    hb_vmEvalBlockV( cb, 2, psender, pscope );
     hb_itemRelease( psender );
     hb_itemRelease( pscope );
   }
@@ -107,7 +107,7 @@ void QAbstractOAuth2Slots::stateChanged( const QString & state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM pstate = hb_itemPutC( NULL, QSTRINGTOSTRING(state) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
@@ -122,7 +122,7 @@ void QAbstractOAuth2Slots::userAgentChanged( const QString & userAgent )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM puserAgent = hb_itemPutC( NULL, QSTRINGTOSTRING(userAgent) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, puserAgent );
+    hb_vmEvalBlockV( cb, 2, psender, puserAgent );
     hb_itemRelease( psender );
     hb_itemRelease( puserAgent );
   }

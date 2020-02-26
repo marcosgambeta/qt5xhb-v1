@@ -28,7 +28,7 @@ void QOAuth1Slots::clientSharedSecretChanged( const QString & credential )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
     PHB_ITEM pcredential = hb_itemPutC( NULL, QSTRINGTOSTRING(credential) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcredential );
+    hb_vmEvalBlockV( cb, 2, psender, pcredential );
     hb_itemRelease( psender );
     hb_itemRelease( pcredential );
   }
@@ -43,7 +43,7 @@ void QOAuth1Slots::signatureMethodChanged( QOAuth1::SignatureMethod method )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
     PHB_ITEM pmethod = hb_itemPutNI( NULL, (int) method );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmethod );
+    hb_vmEvalBlockV( cb, 2, psender, pmethod );
     hb_itemRelease( psender );
     hb_itemRelease( pmethod );
   }
@@ -58,7 +58,7 @@ void QOAuth1Slots::temporaryCredentialsUrlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -73,7 +73,7 @@ void QOAuth1Slots::tokenCredentialsUrlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -88,7 +88,7 @@ void QOAuth1Slots::tokenSecretChanged( const QString & token )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH1" );
     PHB_ITEM ptoken = hb_itemPutC( NULL, QSTRINGTOSTRING(token) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptoken );
+    hb_vmEvalBlockV( cb, 2, psender, ptoken );
     hb_itemRelease( psender );
     hb_itemRelease( ptoken );
   }

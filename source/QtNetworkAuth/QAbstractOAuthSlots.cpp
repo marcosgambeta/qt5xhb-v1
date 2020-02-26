@@ -28,7 +28,7 @@ void QAbstractOAuthSlots::authorizationUrlChanged( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -43,7 +43,7 @@ void QAbstractOAuthSlots::authorizeWithBrowser( const QUrl & url )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, purl );
+    hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
     hb_itemRelease( purl );
   }
@@ -58,7 +58,7 @@ void QAbstractOAuthSlots::clientIdentifierChanged( const QString & clientIdentif
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM pclientIdentifier = hb_itemPutC( NULL, QSTRINGTOSTRING(clientIdentifier) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pclientIdentifier );
+    hb_vmEvalBlockV( cb, 2, psender, pclientIdentifier );
     hb_itemRelease( psender );
     hb_itemRelease( pclientIdentifier );
   }
@@ -73,7 +73,7 @@ void QAbstractOAuthSlots::contentTypeChanged( QAbstractOAuth::ContentType conten
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM pcontentType = hb_itemPutNI( NULL, (int) contentType );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcontentType );
+    hb_vmEvalBlockV( cb, 2, psender, pcontentType );
     hb_itemRelease( psender );
     hb_itemRelease( pcontentType );
   }
@@ -88,7 +88,7 @@ void QAbstractOAuthSlots::finished( QNetworkReply * reply )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QNETWORKREPLY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
+    hb_vmEvalBlockV( cb, 2, psender, preply );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
   }
@@ -102,7 +102,7 @@ void QAbstractOAuthSlots::granted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -116,7 +116,7 @@ void QAbstractOAuthSlots::replyDataReceived( const QByteArray & data )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM pdata = Signals_return_object( (void *) &data, "QBYTEARRAY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdata );
+    hb_vmEvalBlockV( cb, 2, psender, pdata );
     hb_itemRelease( psender );
     hb_itemRelease( pdata );
   }
@@ -131,7 +131,7 @@ void QAbstractOAuthSlots::statusChanged( QAbstractOAuth::Status status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
@@ -146,7 +146,7 @@ void QAbstractOAuthSlots::tokenChanged( const QString & token )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM ptoken = hb_itemPutC( NULL, QSTRINGTOSTRING(token) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptoken );
+    hb_vmEvalBlockV( cb, 2, psender, ptoken );
     hb_itemRelease( psender );
     hb_itemRelease( ptoken );
   }

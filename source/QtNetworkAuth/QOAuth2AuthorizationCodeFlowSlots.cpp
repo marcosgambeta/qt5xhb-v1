@@ -28,7 +28,7 @@ void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged( const QUrl & acce
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH2AUTHORIZATIONCODEFLOW" );
     PHB_ITEM paccessTokenUrl = Signals_return_object( (void *) &accessTokenUrl, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paccessTokenUrl );
+    hb_vmEvalBlockV( cb, 2, psender, paccessTokenUrl );
     hb_itemRelease( psender );
     hb_itemRelease( paccessTokenUrl );
   }
