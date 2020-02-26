@@ -27,7 +27,7 @@ void QPlaceReplySlots::finished()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEREPLY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -42,7 +42,7 @@ void QPlaceReplySlots::error( QPlaceReply::Error error, const QString & errorStr
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, perrorString );
+    hb_vmEvalBlockV( cb, 3, psender, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );

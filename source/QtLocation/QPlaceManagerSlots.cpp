@@ -28,7 +28,7 @@ void QPlaceManagerSlots::finished( QPlaceReply * reply )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
+    hb_vmEvalBlockV( cb, 2, psender, preply );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
   }
@@ -45,7 +45,7 @@ void QPlaceManagerSlots::error( QPlaceReply * reply, QPlaceReply::Error error, c
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, preply, perror, perrorString );
+    hb_vmEvalBlockV( cb, 4, psender, preply, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
     hb_itemRelease( perror );
@@ -62,7 +62,7 @@ void QPlaceManagerSlots::placeAdded( const QString & placeId )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pplaceId );
+    hb_vmEvalBlockV( cb, 2, psender, pplaceId );
     hb_itemRelease( psender );
     hb_itemRelease( pplaceId );
   }
@@ -77,7 +77,7 @@ void QPlaceManagerSlots::placeUpdated( const QString & placeId )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pplaceId );
+    hb_vmEvalBlockV( cb, 2, psender, pplaceId );
     hb_itemRelease( psender );
     hb_itemRelease( pplaceId );
   }
@@ -92,7 +92,7 @@ void QPlaceManagerSlots::placeRemoved( const QString & placeId )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pplaceId );
+    hb_vmEvalBlockV( cb, 2, psender, pplaceId );
     hb_itemRelease( psender );
     hb_itemRelease( pplaceId );
   }
@@ -108,7 +108,7 @@ void QPlaceManagerSlots::categoryAdded( const QPlaceCategory & category, const Q
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pcategory = Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcategory, pparentId );
+    hb_vmEvalBlockV( cb, 3, psender, pcategory, pparentId );
     hb_itemRelease( psender );
     hb_itemRelease( pcategory );
     hb_itemRelease( pparentId );
@@ -125,7 +125,7 @@ void QPlaceManagerSlots::categoryUpdated( const QPlaceCategory & category, const
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pcategory = Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcategory, pparentId );
+    hb_vmEvalBlockV( cb, 3, psender, pcategory, pparentId );
     hb_itemRelease( psender );
     hb_itemRelease( pcategory );
     hb_itemRelease( pparentId );
@@ -142,7 +142,7 @@ void QPlaceManagerSlots::categoryRemoved( const QString & categoryId, const QStr
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pcategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(categoryId) );
     PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcategoryId, pparentId );
+    hb_vmEvalBlockV( cb, 3, psender, pcategoryId, pparentId );
     hb_itemRelease( psender );
     hb_itemRelease( pcategoryId );
     hb_itemRelease( pparentId );
@@ -157,7 +157,7 @@ void QPlaceManagerSlots::dataChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

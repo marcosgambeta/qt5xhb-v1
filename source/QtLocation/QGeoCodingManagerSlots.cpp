@@ -28,7 +28,7 @@ void QGeoCodingManagerSlots::finished( QGeoCodeReply * reply )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOCODINGMANAGER" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOCODEREPLY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preply );
+    hb_vmEvalBlockV( cb, 2, psender, preply );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
   }
@@ -45,7 +45,7 @@ void QGeoCodingManagerSlots::error( QGeoCodeReply * reply, QGeoCodeReply::Error 
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOCODEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, (const char *) errorString.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, preply, perror, perrorString );
+    hb_vmEvalBlockV( cb, 4, psender, preply, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( preply );
     hb_itemRelease( perror );
