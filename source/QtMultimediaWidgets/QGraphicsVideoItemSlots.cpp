@@ -27,7 +27,7 @@ void QGraphicsVideoItemSlots::nativeSizeChanged( const QSizeF & size )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSVIDEOITEM" );
     PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZEF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
+    hb_vmEvalBlockV( cb, 2, psender, psize );
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
