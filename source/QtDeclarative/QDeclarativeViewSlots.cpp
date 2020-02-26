@@ -27,7 +27,7 @@ void QDeclarativeViewSlots::sceneResized( QSize size )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEVIEW" );
     PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
+    hb_vmEvalBlockV( cb, 2, psender, psize );
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
@@ -40,7 +40,7 @@ void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEVIEW" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }

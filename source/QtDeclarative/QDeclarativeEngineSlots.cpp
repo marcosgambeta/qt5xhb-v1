@@ -26,7 +26,7 @@ void QDeclarativeEngineSlots::quit()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEENGINE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -61,7 +61,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwarnings );
+    hb_vmEvalBlockV( cb, 2, psender, pwarnings );
     hb_itemRelease( psender );
     hb_itemRelease( pwarnings );
   }
