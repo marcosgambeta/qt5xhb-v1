@@ -28,7 +28,7 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPINDEXWIDGET" );
     PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
     PHB_ITEM pkeyword = hb_itemPutC( NULL, QSTRINGTOSTRING(keyword) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, plink, pkeyword );
+    hb_vmEvalBlockV( cb, 3, psender, plink, pkeyword );
     hb_itemRelease( psender );
     hb_itemRelease( plink );
     hb_itemRelease( pkeyword );

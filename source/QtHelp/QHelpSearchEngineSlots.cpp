@@ -26,7 +26,7 @@ void QHelpSearchEngineSlots::indexingFinished()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHENGINE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -37,7 +37,7 @@ void QHelpSearchEngineSlots::indexingStarted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHENGINE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -49,7 +49,7 @@ void QHelpSearchEngineSlots::searchingFinished( int hits )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHENGINE" );
     PHB_ITEM phits = hb_itemPutNI( NULL, hits );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, phits );
+    hb_vmEvalBlockV( cb, 2, psender, phits );
     hb_itemRelease( psender );
     hb_itemRelease( phits );
   }
@@ -61,7 +61,7 @@ void QHelpSearchEngineSlots::searchingStarted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHENGINE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

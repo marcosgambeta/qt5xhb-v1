@@ -27,7 +27,7 @@ void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPENGINECORE" );
     PHB_ITEM pnewFilter = hb_itemPutC( NULL, QSTRINGTOSTRING(newFilter) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewFilter );
+    hb_vmEvalBlockV( cb, 2, psender, pnewFilter );
     hb_itemRelease( psender );
     hb_itemRelease( pnewFilter );
   }
@@ -39,7 +39,7 @@ void QHelpEngineCoreSlots::setupFinished()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPENGINECORE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -50,7 +50,7 @@ void QHelpEngineCoreSlots::setupStarted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPENGINECORE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -62,7 +62,7 @@ void QHelpEngineCoreSlots::warning( const QString & msg )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPENGINECORE" );
     PHB_ITEM pmsg = hb_itemPutC( NULL, QSTRINGTOSTRING(msg) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmsg );
+    hb_vmEvalBlockV( cb, 2, psender, pmsg );
     hb_itemRelease( psender );
     hb_itemRelease( pmsg );
   }

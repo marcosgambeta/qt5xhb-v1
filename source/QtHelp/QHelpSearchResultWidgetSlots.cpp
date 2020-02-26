@@ -27,7 +27,7 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHRESULTWIDGET" );
     PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plink );
+    hb_vmEvalBlockV( cb, 2, psender, plink );
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
