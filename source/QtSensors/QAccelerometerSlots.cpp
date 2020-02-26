@@ -28,7 +28,7 @@ void QAccelerometerSlots::accelerationModeChanged( QAccelerometer::AccelerationM
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACCELEROMETER" );
     PHB_ITEM paccelerationMode = hb_itemPutNI( NULL, (int) accelerationMode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paccelerationMode );
+    hb_vmEvalBlockV( cb, 2, psender, paccelerationMode );
     hb_itemRelease( psender );
     hb_itemRelease( paccelerationMode );
   }

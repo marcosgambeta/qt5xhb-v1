@@ -27,7 +27,7 @@ void QSensorSlots::busyChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -40,7 +40,7 @@ void QSensorSlots::activeChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -53,7 +53,7 @@ void QSensorSlots::readingChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -67,7 +67,7 @@ void QSensorSlots::sensorError( int error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -81,7 +81,7 @@ void QSensorSlots::availableSensorsChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -94,7 +94,7 @@ void QSensorSlots::alwaysOnChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -107,7 +107,7 @@ void QSensorSlots::dataRateChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -121,7 +121,7 @@ void QSensorSlots::skipDuplicatesChanged( bool skipDuplicates )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
     PHB_ITEM pskipDuplicates = hb_itemPutL( NULL, skipDuplicates );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pskipDuplicates );
+    hb_vmEvalBlockV( cb, 2, psender, pskipDuplicates );
     hb_itemRelease( psender );
     hb_itemRelease( pskipDuplicates );
   }
@@ -136,7 +136,7 @@ void QSensorSlots::axesOrientationModeChanged( QSensor::AxesOrientationMode axes
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
     PHB_ITEM paxesOrientationMode = hb_itemPutNI( NULL, (int) axesOrientationMode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxesOrientationMode );
+    hb_vmEvalBlockV( cb, 2, psender, paxesOrientationMode );
     hb_itemRelease( psender );
     hb_itemRelease( paxesOrientationMode );
   }
@@ -151,7 +151,7 @@ void QSensorSlots::currentOrientationChanged( int currentOrientation )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
     PHB_ITEM pcurrentOrientation = hb_itemPutNI( NULL, currentOrientation );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrentOrientation );
+    hb_vmEvalBlockV( cb, 2, psender, pcurrentOrientation );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrentOrientation );
   }
@@ -166,7 +166,7 @@ void QSensorSlots::userOrientationChanged( int userOrientation )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
     PHB_ITEM puserOrientation = hb_itemPutNI( NULL, userOrientation );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, puserOrientation );
+    hb_vmEvalBlockV( cb, 2, psender, puserOrientation );
     hb_itemRelease( psender );
     hb_itemRelease( puserOrientation );
   }
@@ -181,7 +181,7 @@ void QSensorSlots::maxBufferSizeChanged( int maxBufferSize )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
     PHB_ITEM pmaxBufferSize = hb_itemPutNI( NULL, maxBufferSize );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmaxBufferSize );
+    hb_vmEvalBlockV( cb, 2, psender, pmaxBufferSize );
     hb_itemRelease( psender );
     hb_itemRelease( pmaxBufferSize );
   }
@@ -196,7 +196,7 @@ void QSensorSlots::efficientBufferSizeChanged( int efficientBufferSize )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
     PHB_ITEM pefficientBufferSize = hb_itemPutNI( NULL, efficientBufferSize );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pefficientBufferSize );
+    hb_vmEvalBlockV( cb, 2, psender, pefficientBufferSize );
     hb_itemRelease( psender );
     hb_itemRelease( pefficientBufferSize );
   }
@@ -211,7 +211,7 @@ void QSensorSlots::bufferSizeChanged( int bufferSize )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSOR" );
     PHB_ITEM pbufferSize = hb_itemPutNI( NULL, bufferSize );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbufferSize );
+    hb_vmEvalBlockV( cb, 2, psender, pbufferSize );
     hb_itemRelease( psender );
     hb_itemRelease( pbufferSize );
   }

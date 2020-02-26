@@ -28,7 +28,7 @@ void QSensorGestureSlots::detected( QString s )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSORGESTURE" );
     PHB_ITEM ps = hb_itemPutC( NULL, (const char *) s.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ps );
+    hb_vmEvalBlockV( cb, 2, psender, ps );
     hb_itemRelease( psender );
     hb_itemRelease( ps );
   }

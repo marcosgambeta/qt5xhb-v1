@@ -28,7 +28,7 @@ void QRotationSensorSlots::hasZChanged( bool hasZ )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QROTATIONSENSOR" );
     PHB_ITEM phasZ = hb_itemPutL( NULL, hasZ );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, phasZ );
+    hb_vmEvalBlockV( cb, 2, psender, phasZ );
     hb_itemRelease( psender );
     hb_itemRelease( phasZ );
   }

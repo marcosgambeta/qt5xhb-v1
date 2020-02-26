@@ -28,7 +28,7 @@ void QTapSensorSlots::returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTAPSENSOR" );
     PHB_ITEM preturnDoubleTapEvents = hb_itemPutL( NULL, returnDoubleTapEvents );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preturnDoubleTapEvents );
+    hb_vmEvalBlockV( cb, 2, psender, preturnDoubleTapEvents );
     hb_itemRelease( psender );
     hb_itemRelease( preturnDoubleTapEvents );
   }
