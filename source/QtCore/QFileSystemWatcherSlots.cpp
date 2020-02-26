@@ -27,7 +27,7 @@ void QFileSystemWatcherSlots::directoryChanged( const QString & path )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
+    hb_vmEvalBlockV( cb, 2, psender, ppath );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }
@@ -40,7 +40,7 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppath );
+    hb_vmEvalBlockV( cb, 2, psender, ppath );
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }

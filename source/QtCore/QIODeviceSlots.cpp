@@ -26,7 +26,7 @@ void QIODeviceSlots::aboutToClose()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QIODEVICE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QIODeviceSlots::bytesWritten( qint64 bytes )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QIODEVICE" );
     PHB_ITEM pbytes = hb_itemPutNLL( NULL, bytes );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbytes );
+    hb_vmEvalBlockV( cb, 2, psender, pbytes );
     hb_itemRelease( psender );
     hb_itemRelease( pbytes );
   }
@@ -50,7 +50,7 @@ void QIODeviceSlots::readChannelFinished()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QIODEVICE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -61,7 +61,7 @@ void QIODeviceSlots::readyRead()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QIODEVICE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

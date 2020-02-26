@@ -28,7 +28,7 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMSELECTIONMODEL" );
     PHB_ITEM pselected = Signals_return_object( (void *) &selected, "QITEMSELECTION" );
     PHB_ITEM pdeselected = Signals_return_object( (void *) &deselected, "QITEMSELECTION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pselected, pdeselected );
+    hb_vmEvalBlockV( cb, 3, psender, pselected, pdeselected );
     hb_itemRelease( psender );
     hb_itemRelease( pselected );
     hb_itemRelease( pdeselected );
@@ -43,7 +43,7 @@ void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, cons
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMSELECTIONMODEL" );
     PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcurrent, pprevious );
+    hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
@@ -58,7 +58,7 @@ void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, c
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMSELECTIONMODEL" );
     PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcurrent, pprevious );
+    hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );
@@ -73,7 +73,7 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMSELECTIONMODEL" );
     PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pcurrent, pprevious );
+    hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrent );
     hb_itemRelease( pprevious );

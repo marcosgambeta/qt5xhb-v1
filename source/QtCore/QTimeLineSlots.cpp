@@ -26,7 +26,7 @@ void QTimeLineSlots::finished()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMELINE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QTimeLineSlots::frameChanged( int frame )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMELINE" );
     PHB_ITEM pframe = hb_itemPutNI( NULL, frame );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pframe );
+    hb_vmEvalBlockV( cb, 2, psender, pframe );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }
@@ -51,7 +51,7 @@ void QTimeLineSlots::stateChanged( QTimeLine::State newState )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMELINE" );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewState );
+    hb_vmEvalBlockV( cb, 2, psender, pnewState );
     hb_itemRelease( psender );
     hb_itemRelease( pnewState );
   }
@@ -64,7 +64,7 @@ void QTimeLineSlots::valueChanged( qreal value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMELINE" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }

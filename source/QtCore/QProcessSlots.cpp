@@ -27,7 +27,7 @@ void QProcessSlots::error( QProcess::ProcessError error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -41,7 +41,7 @@ void QProcessSlots::finished( int exitCode, QProcess::ExitStatus exitStatus )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     PHB_ITEM pexitCode = hb_itemPutNI( NULL, exitCode );
     PHB_ITEM pexitStatus = hb_itemPutNI( NULL, (int) exitStatus );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pexitCode, pexitStatus );
+    hb_vmEvalBlockV( cb, 3, psender, pexitCode, pexitStatus );
     hb_itemRelease( psender );
     hb_itemRelease( pexitCode );
     hb_itemRelease( pexitStatus );
@@ -54,7 +54,7 @@ void QProcessSlots::readyReadStandardError()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -65,7 +65,7 @@ void QProcessSlots::readyReadStandardOutput()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -76,7 +76,7 @@ void QProcessSlots::started()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -88,7 +88,7 @@ void QProcessSlots::stateChanged( QProcess::ProcessState newState )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewState );
+    hb_vmEvalBlockV( cb, 2, psender, pnewState );
     hb_itemRelease( psender );
     hb_itemRelease( pnewState );
   }
@@ -102,7 +102,7 @@ void QProcessSlots::errorOccurred( QProcess::ProcessError error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROCESS" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }

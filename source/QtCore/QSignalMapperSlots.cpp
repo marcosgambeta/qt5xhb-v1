@@ -27,7 +27,7 @@ void QSignalMapperSlots::mapped( int arg )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = hb_itemPutNI( NULL, arg );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parg );
+    hb_vmEvalBlockV( cb, 2, psender, parg );
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
@@ -40,7 +40,7 @@ void QSignalMapperSlots::mapped( const QString & arg )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = hb_itemPutC( NULL, QSTRINGTOSTRING(arg) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parg );
+    hb_vmEvalBlockV( cb, 2, psender, parg );
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
@@ -53,7 +53,7 @@ void QSignalMapperSlots::mapped( QWidget * arg )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = Signals_return_qobject( (QObject *) arg, "QWIDGET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parg );
+    hb_vmEvalBlockV( cb, 2, psender, parg );
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }
@@ -66,7 +66,7 @@ void QSignalMapperSlots::mapped( QObject * arg )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = Signals_return_qobject( (QObject *) arg, "QOBJECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, parg );
+    hb_vmEvalBlockV( cb, 2, psender, parg );
     hb_itemRelease( psender );
     hb_itemRelease( parg );
   }

@@ -27,7 +27,7 @@ void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTANIMATION" );
     PHB_ITEM pcurrentLoop = hb_itemPutNI( NULL, currentLoop );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcurrentLoop );
+    hb_vmEvalBlockV( cb, 2, psender, pcurrentLoop );
     hb_itemRelease( psender );
     hb_itemRelease( pcurrentLoop );
   }
@@ -40,7 +40,7 @@ void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction ne
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTANIMATION" );
     PHB_ITEM pnewDirection = hb_itemPutNI( NULL, (int) newDirection );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewDirection );
+    hb_vmEvalBlockV( cb, 2, psender, pnewDirection );
     hb_itemRelease( psender );
     hb_itemRelease( pnewDirection );
   }
@@ -52,7 +52,7 @@ void QAbstractAnimationSlots::finished()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTANIMATION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -65,7 +65,7 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTANIMATION" );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
     PHB_ITEM poldState = hb_itemPutNI( NULL, (int) oldState );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pnewState, poldState );
+    hb_vmEvalBlockV( cb, 3, psender, pnewState, poldState );
     hb_itemRelease( psender );
     hb_itemRelease( pnewState );
     hb_itemRelease( poldState );
