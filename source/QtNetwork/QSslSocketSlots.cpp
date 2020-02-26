@@ -26,7 +26,7 @@ void QSslSocketSlots::encrypted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QSslSocketSlots::encryptedBytesWritten( qint64 written )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
     PHB_ITEM pwritten = hb_itemPutNLL( NULL, written );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwritten );
+    hb_vmEvalBlockV( cb, 2, psender, pwritten );
     hb_itemRelease( psender );
     hb_itemRelease( pwritten );
   }
@@ -51,7 +51,7 @@ void QSslSocketSlots::modeChanged( QSslSocket::SslMode mode )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
+    hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
@@ -64,7 +64,7 @@ void QSslSocketSlots::peerVerifyError( const QSslError & error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
     PHB_ITEM perror = Signals_return_object( (void *) &error, "QSSLERROR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -78,7 +78,7 @@ void QSslSocketSlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthen
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSSLSOCKET" );
     PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QSSLPRESHAREDKEYAUTHENTICATOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pauthenticator );
+    hb_vmEvalBlockV( cb, 2, psender, pauthenticator );
     hb_itemRelease( psender );
     hb_itemRelease( pauthenticator );
   }
@@ -115,7 +115,7 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perrors );
+    hb_vmEvalBlockV( cb, 2, psender, perrors );
     hb_itemRelease( psender );
     hb_itemRelease( perrors );
   }

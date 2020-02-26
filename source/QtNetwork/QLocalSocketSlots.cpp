@@ -26,7 +26,7 @@ void QLocalSocketSlots::connected()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOCALSOCKET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -37,7 +37,7 @@ void QLocalSocketSlots::disconnected()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOCALSOCKET" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -49,7 +49,7 @@ void QLocalSocketSlots::error( QLocalSocket::LocalSocketError socketError )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOCALSOCKET" );
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocketError );
+    hb_vmEvalBlockV( cb, 2, psender, psocketError );
     hb_itemRelease( psender );
     hb_itemRelease( psocketError );
   }
@@ -62,7 +62,7 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOCALSOCKET" );
     PHB_ITEM psocketState = hb_itemPutNI( NULL, (int) socketState );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psocketState );
+    hb_vmEvalBlockV( cb, 2, psender, psocketState );
     hb_itemRelease( psender );
     hb_itemRelease( psocketState );
   }

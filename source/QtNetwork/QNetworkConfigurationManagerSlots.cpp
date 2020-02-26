@@ -27,7 +27,7 @@ void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfig
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconfig );
+    hb_vmEvalBlockV( cb, 2, psender, pconfig );
     hb_itemRelease( psender );
     hb_itemRelease( pconfig );
   }
@@ -40,7 +40,7 @@ void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConf
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconfig );
+    hb_vmEvalBlockV( cb, 2, psender, pconfig );
     hb_itemRelease( psender );
     hb_itemRelease( pconfig );
   }
@@ -53,7 +53,7 @@ void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConf
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconfig );
+    hb_vmEvalBlockV( cb, 2, psender, pconfig );
     hb_itemRelease( psender );
     hb_itemRelease( pconfig );
   }
@@ -66,7 +66,7 @@ void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pisOnline = hb_itemPutL( NULL, isOnline );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pisOnline );
+    hb_vmEvalBlockV( cb, 2, psender, pisOnline );
     hb_itemRelease( psender );
     hb_itemRelease( pisOnline );
   }
@@ -78,7 +78,7 @@ void QNetworkConfigurationManagerSlots::updateCompleted()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

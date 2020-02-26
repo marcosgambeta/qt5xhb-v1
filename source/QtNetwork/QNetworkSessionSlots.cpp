@@ -26,7 +26,7 @@ void QNetworkSessionSlots::closed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QNetworkSessionSlots::error( QNetworkSession::SessionError error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -50,7 +50,7 @@ void QNetworkSessionSlots::newConfigurationActivated()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -61,7 +61,7 @@ void QNetworkSessionSlots::opened()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -74,7 +74,7 @@ void QNetworkSessionSlots::preferredConfigurationChanged( const QNetworkConfigur
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
     PHB_ITEM pisSeamless = hb_itemPutL( NULL, isSeamless );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pconfig, pisSeamless );
+    hb_vmEvalBlockV( cb, 3, psender, pconfig, pisSeamless );
     hb_itemRelease( psender );
     hb_itemRelease( pconfig );
     hb_itemRelease( pisSeamless );
@@ -88,7 +88,7 @@ void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
@@ -101,7 +101,7 @@ void QNetworkSessionSlots::usagePoliciesChanged( QNetworkSession::UsagePolicies 
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKSESSION" );
     PHB_ITEM pusagePolicies = hb_itemPutNI( NULL, (int) usagePolicies );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pusagePolicies );
+    hb_vmEvalBlockV( cb, 2, psender, pusagePolicies );
     hb_itemRelease( psender );
     hb_itemRelease( pusagePolicies );
   }
