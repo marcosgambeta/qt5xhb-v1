@@ -28,7 +28,7 @@ void QGamepadSlots::axisLeftXChanged( double value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -43,7 +43,7 @@ void QGamepadSlots::axisLeftYChanged( double value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -58,7 +58,7 @@ void QGamepadSlots::axisRightXChanged( double value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -73,7 +73,7 @@ void QGamepadSlots::axisRightYChanged( double value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -88,7 +88,7 @@ void QGamepadSlots::buttonAChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -103,7 +103,7 @@ void QGamepadSlots::buttonBChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -118,7 +118,7 @@ void QGamepadSlots::buttonCenterChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -133,7 +133,7 @@ void QGamepadSlots::buttonDownChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -148,7 +148,7 @@ void QGamepadSlots::buttonGuideChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -163,7 +163,7 @@ void QGamepadSlots::buttonL1Changed( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -178,7 +178,7 @@ void QGamepadSlots::buttonL2Changed( double value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -193,7 +193,7 @@ void QGamepadSlots::buttonL3Changed( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -208,7 +208,7 @@ void QGamepadSlots::buttonLeftChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -223,7 +223,7 @@ void QGamepadSlots::buttonR1Changed( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -238,7 +238,7 @@ void QGamepadSlots::buttonR2Changed( double value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -253,7 +253,7 @@ void QGamepadSlots::buttonR3Changed( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -268,7 +268,7 @@ void QGamepadSlots::buttonRightChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -283,7 +283,7 @@ void QGamepadSlots::buttonSelectChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -298,7 +298,7 @@ void QGamepadSlots::buttonStartChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -313,7 +313,7 @@ void QGamepadSlots::buttonUpChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -328,7 +328,7 @@ void QGamepadSlots::buttonXChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -343,7 +343,7 @@ void QGamepadSlots::buttonYChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -358,7 +358,7 @@ void QGamepadSlots::connectedChanged( bool value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutL( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -373,7 +373,7 @@ void QGamepadSlots::deviceIdChanged( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -388,7 +388,7 @@ void QGamepadSlots::nameChanged( QString value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPAD" );
     PHB_ITEM pvalue = hb_itemPutC( NULL, (const char *) value.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }

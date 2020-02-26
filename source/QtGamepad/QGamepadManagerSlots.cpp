@@ -29,7 +29,7 @@ void QGamepadManagerSlots::axisConfigured( int deviceId, QGamepadManager::Gamepa
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADMANAGER" );
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
     PHB_ITEM paxis = hb_itemPutNI( NULL, (int) axis );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pdeviceId, paxis );
+    hb_vmEvalBlockV( cb, 3, psender, pdeviceId, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( pdeviceId );
     hb_itemRelease( paxis );
@@ -46,7 +46,7 @@ void QGamepadManagerSlots::buttonConfigured( int deviceId, QGamepadManager::Game
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADMANAGER" );
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
     PHB_ITEM pbutton = hb_itemPutNI( NULL, (int) button );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pdeviceId, pbutton );
+    hb_vmEvalBlockV( cb, 3, psender, pdeviceId, pbutton );
     hb_itemRelease( psender );
     hb_itemRelease( pdeviceId );
     hb_itemRelease( pbutton );
@@ -62,7 +62,7 @@ void QGamepadManagerSlots::configurationCanceled( int deviceId )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADMANAGER" );
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdeviceId );
+    hb_vmEvalBlockV( cb, 2, psender, pdeviceId );
     hb_itemRelease( psender );
     hb_itemRelease( pdeviceId );
   }
@@ -76,7 +76,7 @@ void QGamepadManagerSlots::connectedGamepadsChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADMANAGER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -92,7 +92,7 @@ void QGamepadManagerSlots::gamepadAxisEvent( int deviceId, QGamepadManager::Game
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
     PHB_ITEM paxis = hb_itemPutNI( NULL, (int) axis );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pdeviceId, paxis, pvalue );
+    hb_vmEvalBlockV( cb, 4, psender, pdeviceId, paxis, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pdeviceId );
     hb_itemRelease( paxis );
@@ -111,7 +111,7 @@ void QGamepadManagerSlots::gamepadButtonPressEvent( int deviceId, QGamepadManage
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
     PHB_ITEM pbutton = hb_itemPutNI( NULL, (int) button );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pdeviceId, pbutton, pvalue );
+    hb_vmEvalBlockV( cb, 4, psender, pdeviceId, pbutton, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pdeviceId );
     hb_itemRelease( pbutton );
@@ -129,7 +129,7 @@ void QGamepadManagerSlots::gamepadButtonReleaseEvent( int deviceId, QGamepadMana
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADMANAGER" );
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
     PHB_ITEM pbutton = hb_itemPutNI( NULL, (int) button );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pdeviceId, pbutton );
+    hb_vmEvalBlockV( cb, 3, psender, pdeviceId, pbutton );
     hb_itemRelease( psender );
     hb_itemRelease( pdeviceId );
     hb_itemRelease( pbutton );
@@ -145,7 +145,7 @@ void QGamepadManagerSlots::gamepadConnected( int deviceId )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADMANAGER" );
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdeviceId );
+    hb_vmEvalBlockV( cb, 2, psender, pdeviceId );
     hb_itemRelease( psender );
     hb_itemRelease( pdeviceId );
   }
@@ -160,7 +160,7 @@ void QGamepadManagerSlots::gamepadDisconnected( int deviceId )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADMANAGER" );
     PHB_ITEM pdeviceId = hb_itemPutNI( NULL, deviceId );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdeviceId );
+    hb_vmEvalBlockV( cb, 2, psender, pdeviceId );
     hb_itemRelease( psender );
     hb_itemRelease( pdeviceId );
   }
