@@ -28,7 +28,7 @@ void QQmlPropertyMapSlots::valueChanged( const QString & key, const QVariant & v
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQMLPROPERTYMAP" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pkey, pvalue );
+    hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );

@@ -29,7 +29,7 @@ void QQmlApplicationEngineSlots::objectCreated( QObject * obj, const QUrl & url 
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQMLAPPLICATIONENGINE" );
     PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pobj, purl );
+    hb_vmEvalBlockV( cb, 3, psender, pobj, purl );
     hb_itemRelease( psender );
     hb_itemRelease( pobj );
     hb_itemRelease( purl );

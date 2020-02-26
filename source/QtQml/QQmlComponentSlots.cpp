@@ -27,7 +27,7 @@ void QQmlComponentSlots::progressChanged( qreal progress )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQMLCOMPONENT" );
     PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogress );
+    hb_vmEvalBlockV( cb, 2, psender, pprogress );
     hb_itemRelease( psender );
     hb_itemRelease( pprogress );
   }
@@ -40,7 +40,7 @@ void QQmlComponentSlots::statusChanged( QQmlComponent::Status status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQMLCOMPONENT" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
