@@ -29,7 +29,7 @@ void QGeoAreaMonitorSourceSlots::areaEntered( const QGeoAreaMonitorInfo & monito
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOAREAMONITORSOURCE" );
     PHB_ITEM pmonitor = Signals_return_object( (void *) &monitor, "QGEOAREAMONITORINFO" );
     PHB_ITEM pupdate = Signals_return_object( (void *) &update, "QGEOPOSITIONINFO" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmonitor, pupdate );
+    hb_vmEvalBlockV( cb, 3, psender, pmonitor, pupdate );
     hb_itemRelease( psender );
     hb_itemRelease( pmonitor );
     hb_itemRelease( pupdate );
@@ -46,7 +46,7 @@ void QGeoAreaMonitorSourceSlots::areaExited( const QGeoAreaMonitorInfo & monitor
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOAREAMONITORSOURCE" );
     PHB_ITEM pmonitor = Signals_return_object( (void *) &monitor, "QGEOAREAMONITORINFO" );
     PHB_ITEM pupdate = Signals_return_object( (void *) &update, "QGEOPOSITIONINFO" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmonitor, pupdate );
+    hb_vmEvalBlockV( cb, 3, psender, pmonitor, pupdate );
     hb_itemRelease( psender );
     hb_itemRelease( pmonitor );
     hb_itemRelease( pupdate );
@@ -62,7 +62,7 @@ void QGeoAreaMonitorSourceSlots::monitorExpired( const QGeoAreaMonitorInfo & mon
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOAREAMONITORSOURCE" );
     PHB_ITEM pmonitor = Signals_return_object( (void *) &monitor, "QGEOAREAMONITORINFO" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmonitor );
+    hb_vmEvalBlockV( cb, 2, psender, pmonitor );
     hb_itemRelease( psender );
     hb_itemRelease( pmonitor );
   }
@@ -77,7 +77,7 @@ void QGeoAreaMonitorSourceSlots::error( QGeoAreaMonitorSource::Error error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOAREAMONITORSOURCE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }

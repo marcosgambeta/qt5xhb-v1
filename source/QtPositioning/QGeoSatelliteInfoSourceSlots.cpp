@@ -51,7 +51,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psatellites );
+    hb_vmEvalBlockV( cb, 2, psender, psatellites );
     hb_itemRelease( psender );
     hb_itemRelease( psatellites );
   }
@@ -89,7 +89,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psatellites );
+    hb_vmEvalBlockV( cb, 2, psender, psatellites );
     hb_itemRelease( psender );
     hb_itemRelease( psatellites );
   }
@@ -103,7 +103,7 @@ void QGeoSatelliteInfoSourceSlots::requestTimeout()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -117,7 +117,7 @@ void QGeoSatelliteInfoSourceSlots::error( QGeoSatelliteInfoSource::Error error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
