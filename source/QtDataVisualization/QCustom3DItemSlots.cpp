@@ -27,7 +27,7 @@ void QCustom3DItemSlots::meshFileChanged( const QString & meshFile )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pmeshFile = hb_itemPutC( NULL, QSTRINGTOSTRING(meshFile) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmeshFile );
+    hb_vmEvalBlockV( cb, 2, psender, pmeshFile );
     hb_itemRelease( psender );
     hb_itemRelease( pmeshFile );
   }
@@ -40,7 +40,7 @@ void QCustom3DItemSlots::positionAbsoluteChanged( bool positionAbsolute )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM ppositionAbsolute = hb_itemPutL( NULL, positionAbsolute );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppositionAbsolute );
+    hb_vmEvalBlockV( cb, 2, psender, ppositionAbsolute );
     hb_itemRelease( psender );
     hb_itemRelease( ppositionAbsolute );
   }
@@ -53,7 +53,7 @@ void QCustom3DItemSlots::positionChanged( const QVector3D & position )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QVECTOR3D" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
+    hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
@@ -66,7 +66,7 @@ void QCustom3DItemSlots::rotationChanged( const QQuaternion & rotation )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM protation = Signals_return_object( (void *) &rotation, "QQUATERNION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, protation );
+    hb_vmEvalBlockV( cb, 2, psender, protation );
     hb_itemRelease( psender );
     hb_itemRelease( protation );
   }
@@ -79,7 +79,7 @@ void QCustom3DItemSlots::scalingAbsoluteChanged( bool scalingAbsolute )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pscalingAbsolute = hb_itemPutL( NULL, scalingAbsolute );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscalingAbsolute );
+    hb_vmEvalBlockV( cb, 2, psender, pscalingAbsolute );
     hb_itemRelease( psender );
     hb_itemRelease( pscalingAbsolute );
   }
@@ -92,7 +92,7 @@ void QCustom3DItemSlots::scalingChanged( const QVector3D & scaling )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pscaling = Signals_return_object( (void *) &scaling, "QVECTOR3D" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscaling );
+    hb_vmEvalBlockV( cb, 2, psender, pscaling );
     hb_itemRelease( psender );
     hb_itemRelease( pscaling );
   }
@@ -105,7 +105,7 @@ void QCustom3DItemSlots::shadowCastingChanged( bool shadowCasting )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pshadowCasting = hb_itemPutL( NULL, shadowCasting );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pshadowCasting );
+    hb_vmEvalBlockV( cb, 2, psender, pshadowCasting );
     hb_itemRelease( psender );
     hb_itemRelease( pshadowCasting );
   }
@@ -118,7 +118,7 @@ void QCustom3DItemSlots::textureFileChanged( const QString & textureFile )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM ptextureFile = hb_itemPutC( NULL, QSTRINGTOSTRING(textureFile) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptextureFile );
+    hb_vmEvalBlockV( cb, 2, psender, ptextureFile );
     hb_itemRelease( psender );
     hb_itemRelease( ptextureFile );
   }
@@ -131,7 +131,7 @@ void QCustom3DItemSlots::visibleChanged( bool visible )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
+    hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }

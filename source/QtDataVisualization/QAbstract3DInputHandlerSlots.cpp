@@ -27,7 +27,7 @@ void QAbstract3DInputHandlerSlots::inputViewChanged( QAbstract3DInputHandler::In
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pview = hb_itemPutNI( NULL, (int) view );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pview );
+    hb_vmEvalBlockV( cb, 2, psender, pview );
     hb_itemRelease( psender );
     hb_itemRelease( pview );
   }
@@ -40,7 +40,7 @@ void QAbstract3DInputHandlerSlots::positionChanged( const QPoint & position )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
+    hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
@@ -53,7 +53,7 @@ void QAbstract3DInputHandlerSlots::sceneChanged( Q3DScene * scene )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pscene = Signals_return_qobject( (QObject *) scene, "Q3DSCENE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pscene );
+    hb_vmEvalBlockV( cb, 2, psender, pscene );
     hb_itemRelease( psender );
     hb_itemRelease( pscene );
   }

@@ -27,7 +27,7 @@ void Q3DObjectSlots::positionChanged( const QVector3D & position )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DOBJECT" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QVECTOR3D" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
+    hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }

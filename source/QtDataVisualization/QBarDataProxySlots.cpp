@@ -26,7 +26,7 @@ void QBarDataProxySlots::arrayReset()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -37,7 +37,7 @@ void QBarDataProxySlots::columnLabelsChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -50,7 +50,7 @@ void QBarDataProxySlots::itemChanged( int rowIndex, int columnIndex )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM prowIndex = hb_itemPutNI( NULL, rowIndex );
     PHB_ITEM pcolumnIndex = hb_itemPutNI( NULL, columnIndex );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prowIndex, pcolumnIndex );
+    hb_vmEvalBlockV( cb, 3, psender, prowIndex, pcolumnIndex );
     hb_itemRelease( psender );
     hb_itemRelease( prowIndex );
     hb_itemRelease( pcolumnIndex );
@@ -64,7 +64,7 @@ void QBarDataProxySlots::rowCountChanged( int count )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
+    hb_vmEvalBlockV( cb, 2, psender, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pcount );
   }
@@ -76,7 +76,7 @@ void QBarDataProxySlots::rowLabelsChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -89,7 +89,7 @@ void QBarDataProxySlots::rowsAdded( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -104,7 +104,7 @@ void QBarDataProxySlots::rowsChanged( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -119,7 +119,7 @@ void QBarDataProxySlots::rowsInserted( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -134,7 +134,7 @@ void QBarDataProxySlots::rowsRemoved( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -148,7 +148,7 @@ void QBarDataProxySlots::seriesChanged( QBar3DSeries * series )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QBAR3DSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseries );
+    hb_vmEvalBlockV( cb, 2, psender, pseries );
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }

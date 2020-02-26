@@ -27,7 +27,7 @@ void QItemModelSurfaceDataProxySlots::autoColumnCategoriesChanged( bool enable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
+    hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
@@ -40,7 +40,7 @@ void QItemModelSurfaceDataProxySlots::autoRowCategoriesChanged( bool enable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
+    hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
@@ -52,7 +52,7 @@ void QItemModelSurfaceDataProxySlots::columnCategoriesChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -64,7 +64,7 @@ void QItemModelSurfaceDataProxySlots::columnRoleChanged( const QString & role )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
+    hb_vmEvalBlockV( cb, 2, psender, prole );
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
@@ -77,7 +77,7 @@ void QItemModelSurfaceDataProxySlots::columnRolePatternChanged( const QRegExp & 
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
+    hb_vmEvalBlockV( cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
   }
@@ -90,7 +90,7 @@ void QItemModelSurfaceDataProxySlots::columnRoleReplaceChanged( const QString & 
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
+    hb_vmEvalBlockV( cb, 2, psender, preplace );
     hb_itemRelease( psender );
     hb_itemRelease( preplace );
   }
@@ -103,7 +103,7 @@ void QItemModelSurfaceDataProxySlots::itemModelChanged( const QAbstractItemModel
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM pitemModel = Signals_return_qobject( (QObject *) itemModel, "QABSTRACTITEMMODEL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pitemModel );
+    hb_vmEvalBlockV( cb, 2, psender, pitemModel );
     hb_itemRelease( psender );
     hb_itemRelease( pitemModel );
   }
@@ -116,7 +116,7 @@ void QItemModelSurfaceDataProxySlots::multiMatchBehaviorChanged( QItemModelSurfa
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM pbehavior = hb_itemPutNI( NULL, (int) behavior );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbehavior );
+    hb_vmEvalBlockV( cb, 2, psender, pbehavior );
     hb_itemRelease( psender );
     hb_itemRelease( pbehavior );
   }
@@ -128,7 +128,7 @@ void QItemModelSurfaceDataProxySlots::rowCategoriesChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -140,7 +140,7 @@ void QItemModelSurfaceDataProxySlots::rowRoleChanged( const QString & role )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
+    hb_vmEvalBlockV( cb, 2, psender, prole );
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
@@ -153,7 +153,7 @@ void QItemModelSurfaceDataProxySlots::rowRolePatternChanged( const QRegExp & pat
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
+    hb_vmEvalBlockV( cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
   }
@@ -166,7 +166,7 @@ void QItemModelSurfaceDataProxySlots::rowRoleReplaceChanged( const QString & rep
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
+    hb_vmEvalBlockV( cb, 2, psender, preplace );
     hb_itemRelease( psender );
     hb_itemRelease( preplace );
   }
@@ -179,7 +179,7 @@ void QItemModelSurfaceDataProxySlots::useModelCategoriesChanged( bool enable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
+    hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
@@ -192,7 +192,7 @@ void QItemModelSurfaceDataProxySlots::xPosRoleChanged( const QString & role )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
+    hb_vmEvalBlockV( cb, 2, psender, prole );
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
@@ -205,7 +205,7 @@ void QItemModelSurfaceDataProxySlots::xPosRolePatternChanged( const QRegExp & pa
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
+    hb_vmEvalBlockV( cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
   }
@@ -218,7 +218,7 @@ void QItemModelSurfaceDataProxySlots::xPosRoleReplaceChanged( const QString & re
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
+    hb_vmEvalBlockV( cb, 2, psender, preplace );
     hb_itemRelease( psender );
     hb_itemRelease( preplace );
   }
@@ -231,7 +231,7 @@ void QItemModelSurfaceDataProxySlots::yPosRoleChanged( const QString & role )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
+    hb_vmEvalBlockV( cb, 2, psender, prole );
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
@@ -244,7 +244,7 @@ void QItemModelSurfaceDataProxySlots::yPosRolePatternChanged( const QRegExp & pa
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
+    hb_vmEvalBlockV( cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
   }
@@ -257,7 +257,7 @@ void QItemModelSurfaceDataProxySlots::yPosRoleReplaceChanged( const QString & re
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
+    hb_vmEvalBlockV( cb, 2, psender, preplace );
     hb_itemRelease( psender );
     hb_itemRelease( preplace );
   }
@@ -270,7 +270,7 @@ void QItemModelSurfaceDataProxySlots::zPosRoleChanged( const QString & role )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
+    hb_vmEvalBlockV( cb, 2, psender, prole );
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
@@ -283,7 +283,7 @@ void QItemModelSurfaceDataProxySlots::zPosRolePatternChanged( const QRegExp & pa
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppattern );
+    hb_vmEvalBlockV( cb, 2, psender, ppattern );
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
   }
@@ -296,7 +296,7 @@ void QItemModelSurfaceDataProxySlots::zPosRoleReplaceChanged( const QString & re
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, preplace );
+    hb_vmEvalBlockV( cb, 2, psender, preplace );
     hb_itemRelease( psender );
     hb_itemRelease( preplace );
   }

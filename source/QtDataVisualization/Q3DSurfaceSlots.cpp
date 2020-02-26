@@ -27,7 +27,7 @@ void Q3DSurfaceSlots::axisXChanged( QValue3DAxis * axis )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
     PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxis );
+    hb_vmEvalBlockV( cb, 2, psender, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
   }
@@ -40,7 +40,7 @@ void Q3DSurfaceSlots::axisYChanged( QValue3DAxis * axis )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
     PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxis );
+    hb_vmEvalBlockV( cb, 2, psender, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
   }
@@ -53,7 +53,7 @@ void Q3DSurfaceSlots::axisZChanged( QValue3DAxis * axis )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
     PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, paxis );
+    hb_vmEvalBlockV( cb, 2, psender, paxis );
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
   }
@@ -66,7 +66,7 @@ void Q3DSurfaceSlots::flipHorizontalGridChanged( bool flip )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
     PHB_ITEM pflip = hb_itemPutL( NULL, flip );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pflip );
+    hb_vmEvalBlockV( cb, 2, psender, pflip );
     hb_itemRelease( psender );
     hb_itemRelease( pflip );
   }
@@ -79,7 +79,7 @@ void Q3DSurfaceSlots::selectedSeriesChanged( QSurface3DSeries * series )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSURFACE" );
     PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSURFACE3DSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseries );
+    hb_vmEvalBlockV( cb, 2, psender, pseries );
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }

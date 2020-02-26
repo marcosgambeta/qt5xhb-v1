@@ -27,7 +27,7 @@ void Q3DInputHandlerSlots::rotationEnabledChanged( bool enable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
+    hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
@@ -40,7 +40,7 @@ void Q3DInputHandlerSlots::selectionEnabledChanged( bool enable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
+    hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
@@ -53,7 +53,7 @@ void Q3DInputHandlerSlots::zoomAtTargetEnabledChanged( bool enable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
+    hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
@@ -66,7 +66,7 @@ void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
+    hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }

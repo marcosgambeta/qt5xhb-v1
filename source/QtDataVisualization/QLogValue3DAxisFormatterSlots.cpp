@@ -27,7 +27,7 @@ void QLogValue3DAxisFormatterSlots::autoSubGridChanged( bool enabled )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
+    hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }
@@ -40,7 +40,7 @@ void QLogValue3DAxisFormatterSlots::baseChanged( qreal base )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM pbase = hb_itemPutND( NULL, base );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbase );
+    hb_vmEvalBlockV( cb, 2, psender, pbase );
     hb_itemRelease( psender );
     hb_itemRelease( pbase );
   }
@@ -53,7 +53,7 @@ void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged( bool enabled )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
+    hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }

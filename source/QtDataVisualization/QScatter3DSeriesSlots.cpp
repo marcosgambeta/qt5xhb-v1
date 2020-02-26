@@ -27,7 +27,7 @@ void QScatter3DSeriesSlots::dataProxyChanged( QScatterDataProxy * proxy )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTER3DSERIES" );
     PHB_ITEM pproxy = Signals_return_qobject( (QObject *) proxy, "QSCATTERDATAPROXY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pproxy );
+    hb_vmEvalBlockV( cb, 2, psender, pproxy );
     hb_itemRelease( psender );
     hb_itemRelease( pproxy );
   }
@@ -40,7 +40,7 @@ void QScatter3DSeriesSlots::itemSizeChanged( float size )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTER3DSERIES" );
     PHB_ITEM psize = hb_itemPutND( NULL, size );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psize );
+    hb_vmEvalBlockV( cb, 2, psender, psize );
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }
@@ -53,7 +53,7 @@ void QScatter3DSeriesSlots::selectedItemChanged( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTER3DSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }

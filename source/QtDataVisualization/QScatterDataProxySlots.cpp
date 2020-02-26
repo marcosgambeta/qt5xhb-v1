@@ -26,7 +26,7 @@ void QScatterDataProxySlots::arrayReset()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QScatterDataProxySlots::itemCountChanged( int count )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
+    hb_vmEvalBlockV( cb, 2, psender, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pcount );
   }
@@ -52,7 +52,7 @@ void QScatterDataProxySlots::itemsAdded( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -67,7 +67,7 @@ void QScatterDataProxySlots::itemsChanged( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -82,7 +82,7 @@ void QScatterDataProxySlots::itemsInserted( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -97,7 +97,7 @@ void QScatterDataProxySlots::itemsRemoved( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -111,7 +111,7 @@ void QScatterDataProxySlots::seriesChanged( QScatter3DSeries * series )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERDATAPROXY" );
     PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSCATTER3DSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseries );
+    hb_vmEvalBlockV( cb, 2, psender, pseries );
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }

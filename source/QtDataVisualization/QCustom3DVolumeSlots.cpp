@@ -27,7 +27,7 @@ void QCustom3DVolumeSlots::alphaMultiplierChanged( float mult )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pmult = hb_itemPutND( NULL, mult );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmult );
+    hb_vmEvalBlockV( cb, 2, psender, pmult );
     hb_itemRelease( psender );
     hb_itemRelease( pmult );
   }
@@ -39,7 +39,7 @@ void QCustom3DVolumeSlots::colorTableChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -51,7 +51,7 @@ void QCustom3DVolumeSlots::drawSliceFramesChanged( bool enabled )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
+    hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }
@@ -64,7 +64,7 @@ void QCustom3DVolumeSlots::drawSlicesChanged( bool enabled )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
+    hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }
@@ -77,7 +77,7 @@ void QCustom3DVolumeSlots::preserveOpacityChanged( bool enabled )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
+    hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }
@@ -90,7 +90,7 @@ void QCustom3DVolumeSlots::sliceFrameColorChanged( const QColor & color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -103,7 +103,7 @@ void QCustom3DVolumeSlots::sliceFrameGapsChanged( const QVector3D & values )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalues = Signals_return_object( (void *) &values, "QVECTOR3D" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalues );
+    hb_vmEvalBlockV( cb, 2, psender, pvalues );
     hb_itemRelease( psender );
     hb_itemRelease( pvalues );
   }
@@ -116,7 +116,7 @@ void QCustom3DVolumeSlots::sliceFrameThicknessesChanged( const QVector3D & value
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalues = Signals_return_object( (void *) &values, "QVECTOR3D" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalues );
+    hb_vmEvalBlockV( cb, 2, psender, pvalues );
     hb_itemRelease( psender );
     hb_itemRelease( pvalues );
   }
@@ -129,7 +129,7 @@ void QCustom3DVolumeSlots::sliceFrameWidthsChanged( const QVector3D & values )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalues = Signals_return_object( (void *) &values, "QVECTOR3D" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalues );
+    hb_vmEvalBlockV( cb, 2, psender, pvalues );
     hb_itemRelease( psender );
     hb_itemRelease( pvalues );
   }
@@ -142,7 +142,7 @@ void QCustom3DVolumeSlots::sliceIndexXChanged( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -155,7 +155,7 @@ void QCustom3DVolumeSlots::sliceIndexYChanged( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -168,7 +168,7 @@ void QCustom3DVolumeSlots::sliceIndexZChanged( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -181,7 +181,7 @@ void QCustom3DVolumeSlots::textureDepthChanged( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -194,7 +194,7 @@ void QCustom3DVolumeSlots::textureFormatChanged( QImage::Format format )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pformat = hb_itemPutNI( NULL, (int) format );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
+    hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
@@ -207,7 +207,7 @@ void QCustom3DVolumeSlots::textureHeightChanged( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -220,7 +220,7 @@ void QCustom3DVolumeSlots::textureWidthChanged( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -233,7 +233,7 @@ void QCustom3DVolumeSlots::useHighDefShaderChanged( bool enabled )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DVOLUME" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
+    hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }

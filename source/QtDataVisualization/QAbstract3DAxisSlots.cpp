@@ -27,7 +27,7 @@ void QAbstract3DAxisSlots::autoAdjustRangeChanged( bool autoAdjust )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pautoAdjust = hb_itemPutL( NULL, autoAdjust );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pautoAdjust );
+    hb_vmEvalBlockV( cb, 2, psender, pautoAdjust );
     hb_itemRelease( psender );
     hb_itemRelease( pautoAdjust );
   }
@@ -40,7 +40,7 @@ void QAbstract3DAxisSlots::labelAutoRotationChanged( float angle )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pangle );
+    hb_vmEvalBlockV( cb, 2, psender, pangle );
     hb_itemRelease( psender );
     hb_itemRelease( pangle );
   }
@@ -52,7 +52,7 @@ void QAbstract3DAxisSlots::labelsChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -64,7 +64,7 @@ void QAbstract3DAxisSlots::maxChanged( float value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -77,7 +77,7 @@ void QAbstract3DAxisSlots::minChanged( float value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -90,7 +90,7 @@ void QAbstract3DAxisSlots::orientationChanged( QAbstract3DAxis::AxisOrientation 
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, porientation );
+    hb_vmEvalBlockV( cb, 2, psender, porientation );
     hb_itemRelease( psender );
     hb_itemRelease( porientation );
   }
@@ -104,7 +104,7 @@ void QAbstract3DAxisSlots::rangeChanged( float min, float max )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
     PHB_ITEM pmax = hb_itemPutND( NULL, max );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pmin, pmax );
+    hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
     hb_itemRelease( pmax );
@@ -118,7 +118,7 @@ void QAbstract3DAxisSlots::titleChanged( const QString & newTitle )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pnewTitle = hb_itemPutC( NULL, QSTRINGTOSTRING(newTitle) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pnewTitle );
+    hb_vmEvalBlockV( cb, 2, psender, pnewTitle );
     hb_itemRelease( psender );
     hb_itemRelease( pnewTitle );
   }
@@ -131,7 +131,7 @@ void QAbstract3DAxisSlots::titleFixedChanged( bool fixed )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pfixed = hb_itemPutL( NULL, fixed );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfixed );
+    hb_vmEvalBlockV( cb, 2, psender, pfixed );
     hb_itemRelease( psender );
     hb_itemRelease( pfixed );
   }
@@ -144,7 +144,7 @@ void QAbstract3DAxisSlots::titleVisibilityChanged( bool visible )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
+    hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }

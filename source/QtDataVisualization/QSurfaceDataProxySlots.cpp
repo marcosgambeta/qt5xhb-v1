@@ -26,7 +26,7 @@ void QSurfaceDataProxySlots::arrayReset()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QSurfaceDataProxySlots::columnCountChanged( int count )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
+    hb_vmEvalBlockV( cb, 2, psender, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pcount );
   }
@@ -52,7 +52,7 @@ void QSurfaceDataProxySlots::itemChanged( int rowIndex, int columnIndex )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM prowIndex = hb_itemPutNI( NULL, rowIndex );
     PHB_ITEM pcolumnIndex = hb_itemPutNI( NULL, columnIndex );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, prowIndex, pcolumnIndex );
+    hb_vmEvalBlockV( cb, 3, psender, prowIndex, pcolumnIndex );
     hb_itemRelease( psender );
     hb_itemRelease( prowIndex );
     hb_itemRelease( pcolumnIndex );
@@ -66,7 +66,7 @@ void QSurfaceDataProxySlots::rowCountChanged( int count )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcount );
+    hb_vmEvalBlockV( cb, 2, psender, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pcount );
   }
@@ -80,7 +80,7 @@ void QSurfaceDataProxySlots::rowsAdded( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -95,7 +95,7 @@ void QSurfaceDataProxySlots::rowsChanged( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -110,7 +110,7 @@ void QSurfaceDataProxySlots::rowsInserted( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -125,7 +125,7 @@ void QSurfaceDataProxySlots::rowsRemoved( int startIndex, int count )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstartIndex, pcount );
+    hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
@@ -139,7 +139,7 @@ void QSurfaceDataProxySlots::seriesChanged( QSurface3DSeries * series )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSURFACE3DSERIES" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseries );
+    hb_vmEvalBlockV( cb, 2, psender, pseries );
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }

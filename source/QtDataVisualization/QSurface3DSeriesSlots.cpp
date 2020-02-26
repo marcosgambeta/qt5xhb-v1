@@ -27,7 +27,7 @@ void QSurface3DSeriesSlots::dataProxyChanged( QSurfaceDataProxy * proxy )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACE3DSERIES" );
     PHB_ITEM pproxy = Signals_return_qobject( (QObject *) proxy, "QSURFACEDATAPROXY" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pproxy );
+    hb_vmEvalBlockV( cb, 2, psender, pproxy );
     hb_itemRelease( psender );
     hb_itemRelease( pproxy );
   }
@@ -40,7 +40,7 @@ void QSurface3DSeriesSlots::drawModeChanged( QSurface3DSeries::DrawFlags mode )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACE3DSERIES" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
+    hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
@@ -53,7 +53,7 @@ void QSurface3DSeriesSlots::flatShadingEnabledChanged( bool enable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACE3DSERIES" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
+    hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
@@ -66,7 +66,7 @@ void QSurface3DSeriesSlots::flatShadingSupportedChanged( bool enable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACE3DSERIES" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penable );
+    hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
@@ -79,7 +79,7 @@ void QSurface3DSeriesSlots::selectedPointChanged( const QPoint & position )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACE3DSERIES" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
+    hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
@@ -92,7 +92,7 @@ void QSurface3DSeriesSlots::textureChanged( const QImage & image )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACE3DSERIES" );
     PHB_ITEM pimage = Signals_return_object( (void *) &image, "QIMAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pimage );
+    hb_vmEvalBlockV( cb, 2, psender, pimage );
     hb_itemRelease( psender );
     hb_itemRelease( pimage );
   }
@@ -105,7 +105,7 @@ void QSurface3DSeriesSlots::textureFileChanged( const QString & filename )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACE3DSERIES" );
     PHB_ITEM pfilename = hb_itemPutC( NULL, QSTRINGTOSTRING(filename) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfilename );
+    hb_vmEvalBlockV( cb, 2, psender, pfilename );
     hb_itemRelease( psender );
     hb_itemRelease( pfilename );
   }
