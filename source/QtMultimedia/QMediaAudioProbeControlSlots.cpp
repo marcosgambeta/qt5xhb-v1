@@ -27,7 +27,7 @@ void QMediaAudioProbeControlSlots::audioBufferProbed( const QAudioBuffer & buffe
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
     PHB_ITEM pbuffer = Signals_return_object( (void *) &buffer, "QAUDIOBUFFER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbuffer );
+    hb_vmEvalBlockV( cb, 2, psender, pbuffer );
     hb_itemRelease( psender );
     hb_itemRelease( pbuffer );
   }
@@ -39,7 +39,7 @@ void QMediaAudioProbeControlSlots::flush()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

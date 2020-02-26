@@ -27,7 +27,7 @@ void QRadioTunerSlots::stateChanged( QRadioTuner::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
@@ -40,7 +40,7 @@ void QRadioTunerSlots::bandChanged( QRadioTuner::Band band )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM pband = hb_itemPutNI( NULL, (int) band );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pband );
+    hb_vmEvalBlockV( cb, 2, psender, pband );
     hb_itemRelease( psender );
     hb_itemRelease( pband );
   }
@@ -53,7 +53,7 @@ void QRadioTunerSlots::frequencyChanged( int frequency )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfrequency );
+    hb_vmEvalBlockV( cb, 2, psender, pfrequency );
     hb_itemRelease( psender );
     hb_itemRelease( pfrequency );
   }
@@ -66,7 +66,7 @@ void QRadioTunerSlots::stereoStatusChanged( bool stereo )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM pstereo = hb_itemPutL( NULL, stereo );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstereo );
+    hb_vmEvalBlockV( cb, 2, psender, pstereo );
     hb_itemRelease( psender );
     hb_itemRelease( pstereo );
   }
@@ -79,7 +79,7 @@ void QRadioTunerSlots::searchingChanged( bool searching )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM psearching = hb_itemPutL( NULL, searching );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psearching );
+    hb_vmEvalBlockV( cb, 2, psender, psearching );
     hb_itemRelease( psender );
     hb_itemRelease( psearching );
   }
@@ -92,7 +92,7 @@ void QRadioTunerSlots::signalStrengthChanged( int signalStrength )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM psignalStrength = hb_itemPutNI( NULL, signalStrength );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psignalStrength );
+    hb_vmEvalBlockV( cb, 2, psender, psignalStrength );
     hb_itemRelease( psender );
     hb_itemRelease( psignalStrength );
   }
@@ -105,7 +105,7 @@ void QRadioTunerSlots::volumeChanged( int volume )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvolume );
+    hb_vmEvalBlockV( cb, 2, psender, pvolume );
     hb_itemRelease( psender );
     hb_itemRelease( pvolume );
   }
@@ -118,7 +118,7 @@ void QRadioTunerSlots::mutedChanged( bool muted )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmuted );
+    hb_vmEvalBlockV( cb, 2, psender, pmuted );
     hb_itemRelease( psender );
     hb_itemRelease( pmuted );
   }
@@ -132,7 +132,7 @@ void QRadioTunerSlots::stationFound( int frequency, QString stationId )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
     PHB_ITEM pstationId = hb_itemPutC( NULL, (const char *) stationId.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pfrequency, pstationId );
+    hb_vmEvalBlockV( cb, 3, psender, pfrequency, pstationId );
     hb_itemRelease( psender );
     hb_itemRelease( pfrequency );
     hb_itemRelease( pstationId );
@@ -146,7 +146,7 @@ void QRadioTunerSlots::antennaConnectedChanged( bool connectionStatus )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM pconnectionStatus = hb_itemPutL( NULL, connectionStatus );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconnectionStatus );
+    hb_vmEvalBlockV( cb, 2, psender, pconnectionStatus );
     hb_itemRelease( psender );
     hb_itemRelease( pconnectionStatus );
   }
@@ -159,7 +159,7 @@ void QRadioTunerSlots::error( QRadioTuner::Error error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNER" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }

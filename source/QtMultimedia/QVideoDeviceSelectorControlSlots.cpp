@@ -26,7 +26,7 @@ void QVideoDeviceSelectorControlSlots::devicesChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEODEVICESELECTORCONTROL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( int index )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEODEVICESELECTORCONTROL" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
@@ -51,7 +51,7 @@ void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( const QString & na
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEODEVICESELECTORCONTROL" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pname );
+    hb_vmEvalBlockV( cb, 2, psender, pname );
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }

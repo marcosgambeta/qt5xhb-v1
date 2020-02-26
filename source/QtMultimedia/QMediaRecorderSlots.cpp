@@ -27,7 +27,7 @@ void QMediaRecorderSlots::actualLocationChanged( const QUrl & location )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM plocation = Signals_return_object( (void *) &location, "QURL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plocation );
+    hb_vmEvalBlockV( cb, 2, psender, plocation );
     hb_itemRelease( psender );
     hb_itemRelease( plocation );
   }
@@ -40,7 +40,7 @@ void QMediaRecorderSlots::availabilityChanged( bool available )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
@@ -53,7 +53,7 @@ void QMediaRecorderSlots::availabilityChanged( QMultimedia::AvailabilityStatus a
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailability );
+    hb_vmEvalBlockV( cb, 2, psender, pavailability );
     hb_itemRelease( psender );
     hb_itemRelease( pavailability );
   }
@@ -66,7 +66,7 @@ void QMediaRecorderSlots::durationChanged( qint64 duration )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pduration );
+    hb_vmEvalBlockV( cb, 2, psender, pduration );
     hb_itemRelease( psender );
     hb_itemRelease( pduration );
   }
@@ -79,7 +79,7 @@ void QMediaRecorderSlots::error( QMediaRecorder::Error error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -92,7 +92,7 @@ void QMediaRecorderSlots::metaDataAvailableChanged( bool available )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
@@ -104,7 +104,7 @@ void QMediaRecorderSlots::metaDataChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -117,7 +117,7 @@ void QMediaRecorderSlots::metaDataChanged( const QString & key, const QVariant &
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pkey, pvalue );
+    hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
@@ -131,7 +131,7 @@ void QMediaRecorderSlots::metaDataWritableChanged( bool writable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pwritable = hb_itemPutL( NULL, writable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwritable );
+    hb_vmEvalBlockV( cb, 2, psender, pwritable );
     hb_itemRelease( psender );
     hb_itemRelease( pwritable );
   }
@@ -144,7 +144,7 @@ void QMediaRecorderSlots::mutedChanged( bool muted )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmuted );
+    hb_vmEvalBlockV( cb, 2, psender, pmuted );
     hb_itemRelease( psender );
     hb_itemRelease( pmuted );
   }
@@ -157,7 +157,7 @@ void QMediaRecorderSlots::stateChanged( QMediaRecorder::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
@@ -170,7 +170,7 @@ void QMediaRecorderSlots::statusChanged( QMediaRecorder::Status status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
@@ -183,7 +183,7 @@ void QMediaRecorderSlots::volumeChanged( qreal volume )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pvolume = hb_itemPutND( NULL, volume );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvolume );
+    hb_vmEvalBlockV( cb, 2, psender, pvolume );
     hb_itemRelease( psender );
     hb_itemRelease( pvolume );
   }

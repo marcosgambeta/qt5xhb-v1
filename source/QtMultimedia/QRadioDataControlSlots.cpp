@@ -27,7 +27,7 @@ void QRadioDataControlSlots::stationIdChanged( QString stationId )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIODATACONTROL" );
     PHB_ITEM pstationId = hb_itemPutC( NULL, (const char *) stationId.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstationId );
+    hb_vmEvalBlockV( cb, 2, psender, pstationId );
     hb_itemRelease( psender );
     hb_itemRelease( pstationId );
   }
@@ -40,7 +40,7 @@ void QRadioDataControlSlots::programTypeChanged( QRadioData::ProgramType program
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIODATACONTROL" );
     PHB_ITEM pprogramType = hb_itemPutNI( NULL, (int) programType );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogramType );
+    hb_vmEvalBlockV( cb, 2, psender, pprogramType );
     hb_itemRelease( psender );
     hb_itemRelease( pprogramType );
   }
@@ -53,7 +53,7 @@ void QRadioDataControlSlots::programTypeNameChanged( QString programTypeName )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIODATACONTROL" );
     PHB_ITEM pprogramTypeName = hb_itemPutC( NULL, (const char *) programTypeName.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pprogramTypeName );
+    hb_vmEvalBlockV( cb, 2, psender, pprogramTypeName );
     hb_itemRelease( psender );
     hb_itemRelease( pprogramTypeName );
   }
@@ -66,7 +66,7 @@ void QRadioDataControlSlots::stationNameChanged( QString stationName )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIODATACONTROL" );
     PHB_ITEM pstationName = hb_itemPutC( NULL, (const char *) stationName.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstationName );
+    hb_vmEvalBlockV( cb, 2, psender, pstationName );
     hb_itemRelease( psender );
     hb_itemRelease( pstationName );
   }
@@ -79,7 +79,7 @@ void QRadioDataControlSlots::radioTextChanged( QString radioText )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIODATACONTROL" );
     PHB_ITEM pradioText = hb_itemPutC( NULL, (const char *) radioText.toLatin1().data() );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pradioText );
+    hb_vmEvalBlockV( cb, 2, psender, pradioText );
     hb_itemRelease( psender );
     hb_itemRelease( pradioText );
   }
@@ -92,7 +92,7 @@ void QRadioDataControlSlots::alternativeFrequenciesEnabledChanged( bool enabled 
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIODATACONTROL" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, penabled );
+    hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }
@@ -105,7 +105,7 @@ void QRadioDataControlSlots::error( QRadioData::Error err )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIODATACONTROL" );
     PHB_ITEM perr = hb_itemPutNI( NULL, (int) err );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perr );
+    hb_vmEvalBlockV( cb, 2, psender, perr );
     hb_itemRelease( psender );
     hb_itemRelease( perr );
   }

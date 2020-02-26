@@ -26,7 +26,7 @@ void QMetaDataWriterControlSlots::metaDataChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMETADATAWRITERCONTROL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -39,7 +39,7 @@ void QMetaDataWriterControlSlots::metaDataChanged( const QString & key, const QV
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pkey, pvalue );
+    hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
@@ -53,7 +53,7 @@ void QMetaDataWriterControlSlots::writableChanged( bool writable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pwritable = hb_itemPutL( NULL, writable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pwritable );
+    hb_vmEvalBlockV( cb, 2, psender, pwritable );
     hb_itemRelease( psender );
     hb_itemRelease( pwritable );
   }
@@ -66,7 +66,7 @@ void QMetaDataWriterControlSlots::metaDataAvailableChanged( bool available )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }

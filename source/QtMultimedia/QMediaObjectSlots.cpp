@@ -27,7 +27,7 @@ void QMediaObjectSlots::availabilityChanged( bool available )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
@@ -40,7 +40,7 @@ void QMediaObjectSlots::availabilityChanged( QMultimedia::AvailabilityStatus ava
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailability );
+    hb_vmEvalBlockV( cb, 2, psender, pavailability );
     hb_itemRelease( psender );
     hb_itemRelease( pavailability );
   }
@@ -53,7 +53,7 @@ void QMediaObjectSlots::metaDataAvailableChanged( bool available )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
@@ -65,7 +65,7 @@ void QMediaObjectSlots::metaDataChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -78,7 +78,7 @@ void QMediaObjectSlots::metaDataChanged( const QString & key, const QVariant & v
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pkey, pvalue );
+    hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
@@ -92,7 +92,7 @@ void QMediaObjectSlots::notifyIntervalChanged( int milliseconds )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pmilliseconds = hb_itemPutNI( NULL, milliseconds );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmilliseconds );
+    hb_vmEvalBlockV( cb, 2, psender, pmilliseconds );
     hb_itemRelease( psender );
     hb_itemRelease( pmilliseconds );
   }

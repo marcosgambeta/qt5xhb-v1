@@ -27,7 +27,7 @@ void QCameraCaptureDestinationControlSlots::captureDestinationChanged( QCameraIm
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACAPTUREDESTINATIONCONTROL" );
     PHB_ITEM pdestination = hb_itemPutNI( NULL, (int) destination );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdestination );
+    hb_vmEvalBlockV( cb, 2, psender, pdestination );
     hb_itemRelease( psender );
     hb_itemRelease( pdestination );
   }

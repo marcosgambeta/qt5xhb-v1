@@ -29,7 +29,7 @@ void QCameraLocksControlSlots::lockStatusChanged( QCamera::LockType lock, QCamer
     PHB_ITEM plock = hb_itemPutNI( NULL, (int) lock );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, plock, pstatus, preason );
+    hb_vmEvalBlockV( cb, 4, psender, plock, pstatus, preason );
     hb_itemRelease( psender );
     hb_itemRelease( plock );
     hb_itemRelease( pstatus );

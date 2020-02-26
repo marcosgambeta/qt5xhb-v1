@@ -27,7 +27,7 @@ void QMediaPlaylistSlots::currentIndexChanged( int position )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
     PHB_ITEM pposition = hb_itemPutNI( NULL, position );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
+    hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
@@ -40,7 +40,7 @@ void QMediaPlaylistSlots::currentMediaChanged( const QMediaContent & content )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
     PHB_ITEM pcontent = Signals_return_object( (void *) &content, "QMEDIACONTENT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcontent );
+    hb_vmEvalBlockV( cb, 2, psender, pcontent );
     hb_itemRelease( psender );
     hb_itemRelease( pcontent );
   }
@@ -52,7 +52,7 @@ void QMediaPlaylistSlots::loadFailed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -63,7 +63,7 @@ void QMediaPlaylistSlots::loaded()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -76,7 +76,7 @@ void QMediaPlaylistSlots::mediaAboutToBeInserted( int start, int end )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstart, pend );
+    hb_vmEvalBlockV( cb, 3, psender, pstart, pend );
     hb_itemRelease( psender );
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
@@ -91,7 +91,7 @@ void QMediaPlaylistSlots::mediaAboutToBeRemoved( int start, int end )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstart, pend );
+    hb_vmEvalBlockV( cb, 3, psender, pstart, pend );
     hb_itemRelease( psender );
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
@@ -106,7 +106,7 @@ void QMediaPlaylistSlots::mediaChanged( int start, int end )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstart, pend );
+    hb_vmEvalBlockV( cb, 3, psender, pstart, pend );
     hb_itemRelease( psender );
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
@@ -121,7 +121,7 @@ void QMediaPlaylistSlots::mediaInserted( int start, int end )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstart, pend );
+    hb_vmEvalBlockV( cb, 3, psender, pstart, pend );
     hb_itemRelease( psender );
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
@@ -136,7 +136,7 @@ void QMediaPlaylistSlots::mediaRemoved( int start, int end )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstart, pend );
+    hb_vmEvalBlockV( cb, 3, psender, pstart, pend );
     hb_itemRelease( psender );
     hb_itemRelease( pstart );
     hb_itemRelease( pend );
@@ -150,7 +150,7 @@ void QMediaPlaylistSlots::playbackModeChanged( QMediaPlaylist::PlaybackMode mode
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYLIST" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
+    hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }

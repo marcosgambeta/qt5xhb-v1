@@ -27,7 +27,7 @@ void QCameraFocusControlSlots::customFocusPointChanged( const QPointF & point )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUSCONTROL" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppoint );
+    hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
@@ -40,7 +40,7 @@ void QCameraFocusControlSlots::focusModeChanged( QCameraFocus::FocusModes mode )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUSCONTROL" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
+    hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
@@ -53,7 +53,7 @@ void QCameraFocusControlSlots::focusPointModeChanged( QCameraFocus::FocusPointMo
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUSCONTROL" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
+    hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
@@ -65,7 +65,7 @@ void QCameraFocusControlSlots::focusZonesChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUSCONTROL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

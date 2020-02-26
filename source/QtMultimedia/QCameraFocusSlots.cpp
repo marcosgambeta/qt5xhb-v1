@@ -27,7 +27,7 @@ void QCameraFocusSlots::digitalZoomChanged( qreal value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUS" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -39,7 +39,7 @@ void QCameraFocusSlots::focusZonesChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUS" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -51,7 +51,7 @@ void QCameraFocusSlots::maximumDigitalZoomChanged( qreal zoom )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUS" );
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pzoom );
+    hb_vmEvalBlockV( cb, 2, psender, pzoom );
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
@@ -64,7 +64,7 @@ void QCameraFocusSlots::maximumOpticalZoomChanged( qreal zoom )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUS" );
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pzoom );
+    hb_vmEvalBlockV( cb, 2, psender, pzoom );
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
@@ -77,7 +77,7 @@ void QCameraFocusSlots::opticalZoomChanged( qreal value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUS" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }

@@ -26,7 +26,7 @@ void QMediaGaplessPlaybackControlSlots::advancedToNextMedia()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QMediaGaplessPlaybackControlSlots::crossfadeTimeChanged( qreal crossfadeTim
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
     PHB_ITEM pcrossfadeTime = hb_itemPutND( NULL, crossfadeTime );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcrossfadeTime );
+    hb_vmEvalBlockV( cb, 2, psender, pcrossfadeTime );
     hb_itemRelease( psender );
     hb_itemRelease( pcrossfadeTime );
   }
@@ -51,7 +51,7 @@ void QMediaGaplessPlaybackControlSlots::nextMediaChanged( const QMediaContent & 
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
     PHB_ITEM pmedia = Signals_return_object( (void *) &media, "QMEDIACONTENT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmedia );
+    hb_vmEvalBlockV( cb, 2, psender, pmedia );
     hb_itemRelease( psender );
     hb_itemRelease( pmedia );
   }

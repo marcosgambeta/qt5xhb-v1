@@ -27,7 +27,7 @@ void QCameraSlots::captureModeChanged( QCamera::CaptureModes mode )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERA" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
+    hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
@@ -40,7 +40,7 @@ void QCameraSlots::error( QCamera::Error value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERA" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, (int) value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -52,7 +52,7 @@ void QCameraSlots::lockFailed()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERA" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -65,7 +65,7 @@ void QCameraSlots::lockStatusChanged( QCamera::LockStatus status, QCamera::LockC
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERA" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pstatus, preason );
+    hb_vmEvalBlockV( cb, 3, psender, pstatus, preason );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
     hb_itemRelease( preason );
@@ -81,7 +81,7 @@ void QCameraSlots::lockStatusChanged( QCamera::LockType lock, QCamera::LockStatu
     PHB_ITEM plock = hb_itemPutNI( NULL, (int) lock );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, plock, pstatus, preason );
+    hb_vmEvalBlockV( cb, 4, psender, plock, pstatus, preason );
     hb_itemRelease( psender );
     hb_itemRelease( plock );
     hb_itemRelease( pstatus );
@@ -95,7 +95,7 @@ void QCameraSlots::locked()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERA" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -107,7 +107,7 @@ void QCameraSlots::stateChanged( QCamera::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERA" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
@@ -120,7 +120,7 @@ void QCameraSlots::statusChanged( QCamera::Status status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERA" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }

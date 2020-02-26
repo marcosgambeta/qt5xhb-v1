@@ -27,7 +27,7 @@ void QCameraControlSlots::captureModeChanged( QCamera::CaptureModes mode )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACONTROL" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmode );
+    hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
@@ -41,7 +41,7 @@ void QCameraControlSlots::error( int error, const QString & errorString )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACONTROL" );
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, perrorString );
+    hb_vmEvalBlockV( cb, 3, psender, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );
@@ -55,7 +55,7 @@ void QCameraControlSlots::stateChanged( QCamera::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACONTROL" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
@@ -68,7 +68,7 @@ void QCameraControlSlots::statusChanged( QCamera::Status status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACONTROL" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }

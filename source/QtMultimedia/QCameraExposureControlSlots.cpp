@@ -27,7 +27,7 @@ void QCameraExposureControlSlots::actualValueChanged( int parameter )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pparameter );
+    hb_vmEvalBlockV( cb, 2, psender, pparameter );
     hb_itemRelease( psender );
     hb_itemRelease( pparameter );
   }
@@ -40,7 +40,7 @@ void QCameraExposureControlSlots::parameterRangeChanged( int parameter )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pparameter );
+    hb_vmEvalBlockV( cb, 2, psender, pparameter );
     hb_itemRelease( psender );
     hb_itemRelease( pparameter );
   }
@@ -53,7 +53,7 @@ void QCameraExposureControlSlots::requestedValueChanged( int parameter )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pparameter );
+    hb_vmEvalBlockV( cb, 2, psender, pparameter );
     hb_itemRelease( psender );
     hb_itemRelease( pparameter );
   }

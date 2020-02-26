@@ -27,7 +27,7 @@ void QCameraCaptureBufferFormatControlSlots::bufferFormatChanged( QVideoFrame::P
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACAPTUREBUFFERFORMATCONTROL" );
     PHB_ITEM pformat = hb_itemPutNI( NULL, (int) format );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
+    hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }

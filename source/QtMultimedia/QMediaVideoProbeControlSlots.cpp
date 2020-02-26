@@ -26,7 +26,7 @@ void QMediaVideoProbeControlSlots::flush()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAVIDEOPROBECONTROL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -38,7 +38,7 @@ void QMediaVideoProbeControlSlots::videoFrameProbed( const QVideoFrame & frame )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAVIDEOPROBECONTROL" );
     PHB_ITEM pframe = Signals_return_object( (void *) &frame, "QVIDEOFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pframe );
+    hb_vmEvalBlockV( cb, 2, psender, pframe );
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }

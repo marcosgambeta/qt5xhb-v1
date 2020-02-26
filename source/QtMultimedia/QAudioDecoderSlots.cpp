@@ -27,7 +27,7 @@ void QAudioDecoderSlots::bufferAvailableChanged( bool available )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIODECODER" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
@@ -39,7 +39,7 @@ void QAudioDecoderSlots::bufferReady()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIODECODER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -51,7 +51,7 @@ void QAudioDecoderSlots::durationChanged( qint64 duration )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIODECODER" );
     PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pduration );
+    hb_vmEvalBlockV( cb, 2, psender, pduration );
     hb_itemRelease( psender );
     hb_itemRelease( pduration );
   }
@@ -64,7 +64,7 @@ void QAudioDecoderSlots::error( QAudioDecoder::Error error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIODECODER" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -76,7 +76,7 @@ void QAudioDecoderSlots::finished()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIODECODER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -88,7 +88,7 @@ void QAudioDecoderSlots::formatChanged( const QAudioFormat & format )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIODECODER" );
     PHB_ITEM pformat = Signals_return_object( (void *) &format, "QAUDIOFORMAT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
+    hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
@@ -101,7 +101,7 @@ void QAudioDecoderSlots::positionChanged( qint64 position )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIODECODER" );
     PHB_ITEM pposition = hb_itemPutNLL( NULL, position );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
+    hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
@@ -113,7 +113,7 @@ void QAudioDecoderSlots::sourceChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIODECODER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -125,7 +125,7 @@ void QAudioDecoderSlots::stateChanged( QAudioDecoder::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIODECODER" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }

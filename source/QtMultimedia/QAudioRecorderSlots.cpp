@@ -27,7 +27,7 @@ void QAudioRecorderSlots::audioInputChanged( const QString & name )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIORECORDER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pname );
+    hb_vmEvalBlockV( cb, 2, psender, pname );
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
@@ -39,7 +39,7 @@ void QAudioRecorderSlots::availableAudioInputsChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIORECORDER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

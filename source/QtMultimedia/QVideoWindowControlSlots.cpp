@@ -27,7 +27,7 @@ void QVideoWindowControlSlots::fullScreenChanged( bool fullScreen )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM pfullScreen = hb_itemPutL( NULL, fullScreen );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pfullScreen );
+    hb_vmEvalBlockV( cb, 2, psender, pfullScreen );
     hb_itemRelease( psender );
     hb_itemRelease( pfullScreen );
   }
@@ -40,7 +40,7 @@ void QVideoWindowControlSlots::brightnessChanged( int brightness )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM pbrightness = hb_itemPutNI( NULL, brightness );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pbrightness );
+    hb_vmEvalBlockV( cb, 2, psender, pbrightness );
     hb_itemRelease( psender );
     hb_itemRelease( pbrightness );
   }
@@ -53,7 +53,7 @@ void QVideoWindowControlSlots::contrastChanged( int contrast )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM pcontrast = hb_itemPutNI( NULL, contrast );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcontrast );
+    hb_vmEvalBlockV( cb, 2, psender, pcontrast );
     hb_itemRelease( psender );
     hb_itemRelease( pcontrast );
   }
@@ -66,7 +66,7 @@ void QVideoWindowControlSlots::hueChanged( int hue )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM phue = hb_itemPutNI( NULL, hue );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, phue );
+    hb_vmEvalBlockV( cb, 2, psender, phue );
     hb_itemRelease( psender );
     hb_itemRelease( phue );
   }
@@ -79,7 +79,7 @@ void QVideoWindowControlSlots::saturationChanged( int saturation )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM psaturation = hb_itemPutNI( NULL, saturation );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, psaturation );
+    hb_vmEvalBlockV( cb, 2, psender, psaturation );
     hb_itemRelease( psender );
     hb_itemRelease( psaturation );
   }
@@ -91,7 +91,7 @@ void QVideoWindowControlSlots::nativeSizeChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

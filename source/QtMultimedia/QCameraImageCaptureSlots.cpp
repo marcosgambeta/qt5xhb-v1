@@ -27,7 +27,7 @@ void QCameraImageCaptureSlots::bufferFormatChanged( QVideoFrame::PixelFormat for
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pformat = hb_itemPutNI( NULL, (int) format );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformat );
+    hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
@@ -40,7 +40,7 @@ void QCameraImageCaptureSlots::captureDestinationChanged( QCameraImageCapture::C
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pdestination = hb_itemPutNI( NULL, (int) destination );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdestination );
+    hb_vmEvalBlockV( cb, 2, psender, pdestination );
     hb_itemRelease( psender );
     hb_itemRelease( pdestination );
   }
@@ -55,7 +55,7 @@ void QCameraImageCaptureSlots::error( int id, QCameraImageCapture::Error error, 
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pid, perror, perrorString );
+    hb_vmEvalBlockV( cb, 4, psender, pid, perror, perrorString );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( perror );
@@ -71,7 +71,7 @@ void QCameraImageCaptureSlots::imageAvailable( int id, const QVideoFrame & buffe
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM pbuffer = Signals_return_object( (void *) &buffer, "QVIDEOFRAME" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pid, pbuffer );
+    hb_vmEvalBlockV( cb, 3, psender, pid, pbuffer );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( pbuffer );
@@ -86,7 +86,7 @@ void QCameraImageCaptureSlots::imageCaptured( int id, const QImage & preview )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM ppreview = Signals_return_object( (void *) &preview, "QIMAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pid, ppreview );
+    hb_vmEvalBlockV( cb, 3, psender, pid, ppreview );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( ppreview );
@@ -100,7 +100,7 @@ void QCameraImageCaptureSlots::imageExposed( int id )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pid );
+    hb_vmEvalBlockV( cb, 2, psender, pid );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
   }
@@ -115,7 +115,7 @@ void QCameraImageCaptureSlots::imageMetadataAvailable( int id, const QString & k
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pid, pkey, pvalue );
+    hb_vmEvalBlockV( cb, 4, psender, pid, pkey, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( pkey );
@@ -131,7 +131,7 @@ void QCameraImageCaptureSlots::imageSaved( int id, const QString & fileName )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM pfileName = hb_itemPutC( NULL, QSTRINGTOSTRING(fileName) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pid, pfileName );
+    hb_vmEvalBlockV( cb, 3, psender, pid, pfileName );
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( pfileName );
@@ -145,7 +145,7 @@ void QCameraImageCaptureSlots::readyForCaptureChanged( bool ready )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pready = hb_itemPutL( NULL, ready );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pready );
+    hb_vmEvalBlockV( cb, 2, psender, pready );
     hb_itemRelease( psender );
     hb_itemRelease( pready );
   }

@@ -27,7 +27,7 @@ void QMediaPlayerSlots::audioAvailableChanged( bool available )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, psender, pavailable );
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
@@ -41,7 +41,7 @@ void QMediaPlayerSlots::audioRoleChanged( QAudio::Role role )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM prole = hb_itemPutNI( NULL, (int) role );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prole );
+    hb_vmEvalBlockV( cb, 2, psender, prole );
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
@@ -55,7 +55,7 @@ void QMediaPlayerSlots::bufferStatusChanged( int percentFilled )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM ppercentFilled = hb_itemPutNI( NULL, percentFilled );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppercentFilled );
+    hb_vmEvalBlockV( cb, 2, psender, ppercentFilled );
     hb_itemRelease( psender );
     hb_itemRelease( ppercentFilled );
   }
@@ -68,7 +68,7 @@ void QMediaPlayerSlots::currentMediaChanged( const QMediaContent & media )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pmedia = Signals_return_object( (void *) &media, "QMEDIACONTENT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmedia );
+    hb_vmEvalBlockV( cb, 2, psender, pmedia );
     hb_itemRelease( psender );
     hb_itemRelease( pmedia );
   }
@@ -81,7 +81,7 @@ void QMediaPlayerSlots::durationChanged( qint64 duration )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pduration );
+    hb_vmEvalBlockV( cb, 2, psender, pduration );
     hb_itemRelease( psender );
     hb_itemRelease( pduration );
   }
@@ -94,7 +94,7 @@ void QMediaPlayerSlots::error( QMediaPlayer::Error error )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
@@ -107,7 +107,7 @@ void QMediaPlayerSlots::mediaChanged( const QMediaContent & media )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pmedia = Signals_return_object( (void *) &media, "QMEDIACONTENT" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmedia );
+    hb_vmEvalBlockV( cb, 2, psender, pmedia );
     hb_itemRelease( psender );
     hb_itemRelease( pmedia );
   }
@@ -120,7 +120,7 @@ void QMediaPlayerSlots::mediaStatusChanged( QMediaPlayer::MediaStatus status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
@@ -133,7 +133,7 @@ void QMediaPlayerSlots::mutedChanged( bool muted )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmuted );
+    hb_vmEvalBlockV( cb, 2, psender, pmuted );
     hb_itemRelease( psender );
     hb_itemRelease( pmuted );
   }
@@ -146,7 +146,7 @@ void QMediaPlayerSlots::networkConfigurationChanged( const QNetworkConfiguration
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pconfiguration = Signals_return_object( (void *) &configuration, "QNETWORKCONFIGURATION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconfiguration );
+    hb_vmEvalBlockV( cb, 2, psender, pconfiguration );
     hb_itemRelease( psender );
     hb_itemRelease( pconfiguration );
   }
@@ -159,7 +159,7 @@ void QMediaPlayerSlots::playbackRateChanged( qreal rate )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM prate = hb_itemPutND( NULL, rate );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prate );
+    hb_vmEvalBlockV( cb, 2, psender, prate );
     hb_itemRelease( psender );
     hb_itemRelease( prate );
   }
@@ -172,7 +172,7 @@ void QMediaPlayerSlots::positionChanged( qint64 position )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pposition = hb_itemPutNLL( NULL, position );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pposition );
+    hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
@@ -185,7 +185,7 @@ void QMediaPlayerSlots::seekableChanged( bool seekable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pseekable = hb_itemPutL( NULL, seekable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pseekable );
+    hb_vmEvalBlockV( cb, 2, psender, pseekable );
     hb_itemRelease( psender );
     hb_itemRelease( pseekable );
   }
@@ -198,7 +198,7 @@ void QMediaPlayerSlots::stateChanged( QMediaPlayer::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
@@ -211,7 +211,7 @@ void QMediaPlayerSlots::videoAvailableChanged( bool videoAvailable )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pvideoAvailable = hb_itemPutL( NULL, videoAvailable );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvideoAvailable );
+    hb_vmEvalBlockV( cb, 2, psender, pvideoAvailable );
     hb_itemRelease( psender );
     hb_itemRelease( pvideoAvailable );
   }
@@ -224,7 +224,7 @@ void QMediaPlayerSlots::volumeChanged( int volume )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAPLAYER" );
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvolume );
+    hb_vmEvalBlockV( cb, 2, psender, pvolume );
     hb_itemRelease( psender );
     hb_itemRelease( pvolume );
   }

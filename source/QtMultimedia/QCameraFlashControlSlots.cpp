@@ -27,7 +27,7 @@ void QCameraFlashControlSlots::flashReady( bool ready )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFLASHCONTROL" );
     PHB_ITEM pready = hb_itemPutL( NULL, ready );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pready );
+    hb_vmEvalBlockV( cb, 2, psender, pready );
     hb_itemRelease( psender );
     hb_itemRelease( pready );
   }
