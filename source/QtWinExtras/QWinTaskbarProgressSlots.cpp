@@ -28,7 +28,7 @@ void QWinTaskbarProgressSlots::valueChanged( int value )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWINTASKBARPROGRESS" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
@@ -43,7 +43,7 @@ void QWinTaskbarProgressSlots::minimumChanged( int minimum )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWINTASKBARPROGRESS" );
     PHB_ITEM pminimum = hb_itemPutNI( NULL, minimum );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pminimum );
+    hb_vmEvalBlockV( cb, 2, psender, pminimum );
     hb_itemRelease( psender );
     hb_itemRelease( pminimum );
   }
@@ -58,7 +58,7 @@ void QWinTaskbarProgressSlots::maximumChanged( int maximum )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWINTASKBARPROGRESS" );
     PHB_ITEM pmaximum = hb_itemPutNI( NULL, maximum );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pmaximum );
+    hb_vmEvalBlockV( cb, 2, psender, pmaximum );
     hb_itemRelease( psender );
     hb_itemRelease( pmaximum );
   }
@@ -73,7 +73,7 @@ void QWinTaskbarProgressSlots::visibilityChanged( bool visible )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWINTASKBARPROGRESS" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvisible );
+    hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
@@ -88,7 +88,7 @@ void QWinTaskbarProgressSlots::pausedChanged( bool paused )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWINTASKBARPROGRESS" );
     PHB_ITEM ppaused = hb_itemPutL( NULL, paused );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppaused );
+    hb_vmEvalBlockV( cb, 2, psender, ppaused );
     hb_itemRelease( psender );
     hb_itemRelease( ppaused );
   }
@@ -103,7 +103,7 @@ void QWinTaskbarProgressSlots::stoppedChanged( bool stopped )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWINTASKBARPROGRESS" );
     PHB_ITEM pstopped = hb_itemPutL( NULL, stopped );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstopped );
+    hb_vmEvalBlockV( cb, 2, psender, pstopped );
     hb_itemRelease( psender );
     hb_itemRelease( pstopped );
   }
