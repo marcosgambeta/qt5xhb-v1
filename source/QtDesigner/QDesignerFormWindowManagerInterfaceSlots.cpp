@@ -27,7 +27,7 @@ void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesigne
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
     PHB_ITEM pformWindow = Signals_return_qobject( (QObject *) formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformWindow );
+    hb_vmEvalBlockV( cb, 2, psender, pformWindow );
     hb_itemRelease( psender );
     hb_itemRelease( pformWindow );
   }
@@ -40,7 +40,7 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWin
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
     PHB_ITEM pformWindow = Signals_return_qobject( (QObject *) formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformWindow );
+    hb_vmEvalBlockV( cb, 2, psender, pformWindow );
     hb_itemRelease( psender );
     hb_itemRelease( pformWindow );
   }
@@ -53,7 +53,7 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormW
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
     PHB_ITEM pformWindow = Signals_return_qobject( (QObject *) formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pformWindow );
+    hb_vmEvalBlockV( cb, 2, psender, pformWindow );
     hb_itemRelease( psender );
     hb_itemRelease( pformWindow );
   }
