@@ -29,7 +29,7 @@ void QSerialPortSlots::baudRateChanged( qint32 baudRate, QSerialPort::Directions
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pbaudRate = hb_itemPutNI( NULL, baudRate );
     PHB_ITEM pdir = hb_itemPutNI( NULL, (int) dir );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, pbaudRate, pdir );
+    hb_vmEvalBlockV( cb, 3, psender, pbaudRate, pdir );
     hb_itemRelease( psender );
     hb_itemRelease( pbaudRate );
     hb_itemRelease( pdir );
@@ -45,7 +45,7 @@ void QSerialPortSlots::dataBitsChanged( QSerialPort::DataBits dataBits )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pdataBits = hb_itemPutNI( NULL, (int) dataBits );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pdataBits );
+    hb_vmEvalBlockV( cb, 2, psender, pdataBits );
     hb_itemRelease( psender );
     hb_itemRelease( pdataBits );
   }
@@ -60,7 +60,7 @@ void QSerialPortSlots::parityChanged( QSerialPort::Parity parity )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pparity = hb_itemPutNI( NULL, (int) parity );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pparity );
+    hb_vmEvalBlockV( cb, 2, psender, pparity );
     hb_itemRelease( psender );
     hb_itemRelease( pparity );
   }
@@ -75,7 +75,7 @@ void QSerialPortSlots::stopBitsChanged( QSerialPort::StopBits stopBits )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pstopBits = hb_itemPutNI( NULL, (int) stopBits );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstopBits );
+    hb_vmEvalBlockV( cb, 2, psender, pstopBits );
     hb_itemRelease( psender );
     hb_itemRelease( pstopBits );
   }
@@ -90,7 +90,7 @@ void QSerialPortSlots::flowControlChanged( QSerialPort::FlowControl flow )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pflow = hb_itemPutNI( NULL, (int) flow );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pflow );
+    hb_vmEvalBlockV( cb, 2, psender, pflow );
     hb_itemRelease( psender );
     hb_itemRelease( pflow );
   }
@@ -105,7 +105,7 @@ void QSerialPortSlots::dataErrorPolicyChanged( QSerialPort::DataErrorPolicy poli
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM ppolicy = hb_itemPutNI( NULL, (int) policy );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppolicy );
+    hb_vmEvalBlockV( cb, 2, psender, ppolicy );
     hb_itemRelease( psender );
     hb_itemRelease( ppolicy );
   }
@@ -120,7 +120,7 @@ void QSerialPortSlots::dataTerminalReadyChanged( bool set )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pset = hb_itemPutL( NULL, set );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pset );
+    hb_vmEvalBlockV( cb, 2, psender, pset );
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }
@@ -135,7 +135,7 @@ void QSerialPortSlots::requestToSendChanged( bool set )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pset = hb_itemPutL( NULL, set );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pset );
+    hb_vmEvalBlockV( cb, 2, psender, pset );
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }
@@ -150,7 +150,7 @@ void QSerialPortSlots::error( QSerialPort::SerialPortError serialPortError )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pserialPortError = hb_itemPutNI( NULL, (int) serialPortError );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pserialPortError );
+    hb_vmEvalBlockV( cb, 2, psender, pserialPortError );
     hb_itemRelease( psender );
     hb_itemRelease( pserialPortError );
   }
@@ -165,7 +165,7 @@ void QSerialPortSlots::settingsRestoredOnCloseChanged( bool restore )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM prestore = hb_itemPutL( NULL, restore );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prestore );
+    hb_vmEvalBlockV( cb, 2, psender, prestore );
     hb_itemRelease( psender );
     hb_itemRelease( prestore );
   }
