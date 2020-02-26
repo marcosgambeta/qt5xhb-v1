@@ -27,7 +27,7 @@ void QVirtualKeyboardAbstractInputMethodSlots::selectionListChanged( QVirtualKey
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ptype );
+    hb_vmEvalBlockV( cb, 2, psender, ptype );
     hb_itemRelease( psender );
     hb_itemRelease( ptype );
   }
@@ -41,7 +41,7 @@ void QVirtualKeyboardAbstractInputMethodSlots::selectionListActiveItemChanged( Q
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, ptype, pindex );
+    hb_vmEvalBlockV( cb, 3, psender, ptype, pindex );
     hb_itemRelease( psender );
     hb_itemRelease( ptype );
     hb_itemRelease( pindex );
@@ -54,7 +54,7 @@ void QVirtualKeyboardAbstractInputMethodSlots::selectionListsChanged()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
