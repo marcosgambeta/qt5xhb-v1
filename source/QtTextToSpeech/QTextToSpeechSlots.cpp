@@ -28,7 +28,7 @@ void QTextToSpeechSlots::localeChanged( const QLocale & locale )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM plocale = Signals_return_object( (void *) &locale, "QLOCALE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, plocale );
+    hb_vmEvalBlockV( cb, 2, psender, plocale );
     hb_itemRelease( psender );
     hb_itemRelease( plocale );
   }
@@ -43,7 +43,7 @@ void QTextToSpeechSlots::pitchChanged( double pitch )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM ppitch = hb_itemPutND( NULL, pitch );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, ppitch );
+    hb_vmEvalBlockV( cb, 2, psender, ppitch );
     hb_itemRelease( psender );
     hb_itemRelease( ppitch );
   }
@@ -58,7 +58,7 @@ void QTextToSpeechSlots::rateChanged( double rate )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM prate = hb_itemPutND( NULL, rate );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, prate );
+    hb_vmEvalBlockV( cb, 2, psender, prate );
     hb_itemRelease( psender );
     hb_itemRelease( prate );
   }
@@ -73,7 +73,7 @@ void QTextToSpeechSlots::stateChanged( QTextToSpeech::State state )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
@@ -88,7 +88,7 @@ void QTextToSpeechSlots::voiceChanged( const QVoice & voice )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM pvoice = Signals_return_object( (void *) &voice, "QVOICE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvoice );
+    hb_vmEvalBlockV( cb, 2, psender, pvoice );
     hb_itemRelease( psender );
     hb_itemRelease( pvoice );
   }
@@ -103,7 +103,7 @@ void QTextToSpeechSlots::volumeChanged( int volume )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pvolume );
+    hb_vmEvalBlockV( cb, 2, psender, pvolume );
     hb_itemRelease( psender );
     hb_itemRelease( pvolume );
   }
