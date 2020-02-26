@@ -26,7 +26,7 @@ void QQuickWindowSlots::afterRendering()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKWINDOW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -37,7 +37,7 @@ void QQuickWindowSlots::beforeRendering()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKWINDOW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -48,7 +48,7 @@ void QQuickWindowSlots::beforeSynchronizing()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKWINDOW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -60,7 +60,7 @@ void QQuickWindowSlots::colorChanged( const QColor & color )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKWINDOW" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
@@ -72,7 +72,7 @@ void QQuickWindowSlots::frameSwapped()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKWINDOW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -83,7 +83,7 @@ void QQuickWindowSlots::sceneGraphInitialized()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKWINDOW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
@@ -94,7 +94,7 @@ void QQuickWindowSlots::sceneGraphInvalidated()
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKWINDOW" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }

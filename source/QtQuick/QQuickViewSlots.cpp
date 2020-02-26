@@ -27,7 +27,7 @@ void QQuickViewSlots::statusChanged( QQuickView::Status status )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKVIEW" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
