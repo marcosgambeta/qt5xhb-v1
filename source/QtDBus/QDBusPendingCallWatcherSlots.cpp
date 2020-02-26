@@ -27,7 +27,7 @@ void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSPENDINGCALLWATCHER" );
     PHB_ITEM pself = Signals_return_qobject( (QObject *) self, "QDBUSPENDINGCALLWATCHER" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pself );
+    hb_vmEvalBlockV( cb, 2, psender, pself );
     hb_itemRelease( psender );
     hb_itemRelease( pself );
   }

@@ -27,7 +27,7 @@ void QDBusServerSlots::newConnection( const QDBusConnection & connection )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSSERVER" );
     PHB_ITEM pconnection = Signals_return_object( (void *) &connection, "QDBUSCONNECTION" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pconnection );
+    hb_vmEvalBlockV( cb, 2, psender, pconnection );
     hb_itemRelease( psender );
     hb_itemRelease( pconnection );
   }

@@ -27,7 +27,7 @@ void QDBusServiceWatcherSlots::serviceRegistered( const QString & service )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSSERVICEWATCHER" );
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
+    hb_vmEvalBlockV( cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
@@ -40,7 +40,7 @@ void QDBusServiceWatcherSlots::serviceUnregistered( const QString & service )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSSERVICEWATCHER" );
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
+    hb_vmEvalBlockV( cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
@@ -55,7 +55,7 @@ void QDBusServiceWatcherSlots::serviceOwnerChanged( const QString & service, con
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
     PHB_ITEM poldOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(oldOwner) );
     PHB_ITEM pnewOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(newOwner) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pservice, poldOwner, pnewOwner );
+    hb_vmEvalBlockV( cb, 4, psender, pservice, poldOwner, pnewOwner );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
     hb_itemRelease( poldOwner );

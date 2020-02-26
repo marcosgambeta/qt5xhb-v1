@@ -27,7 +27,7 @@ void QDBusConnectionInterfaceSlots::serviceRegistered( const QString & service )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
+    hb_vmEvalBlockV( cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
@@ -40,7 +40,7 @@ void QDBusConnectionInterfaceSlots::serviceUnregistered( const QString & service
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pservice );
+    hb_vmEvalBlockV( cb, 2, psender, pservice );
     hb_itemRelease( psender );
     hb_itemRelease( pservice );
   }
@@ -55,7 +55,7 @@ void QDBusConnectionInterfaceSlots::serviceOwnerChanged( const QString & name, c
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM poldOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(oldOwner) );
     PHB_ITEM pnewOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(newOwner) );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 4, psender, pname, poldOwner, pnewOwner );
+    hb_vmEvalBlockV( cb, 4, psender, pname, poldOwner, pnewOwner );
     hb_itemRelease( psender );
     hb_itemRelease( pname );
     hb_itemRelease( poldOwner );
@@ -71,7 +71,7 @@ void QDBusConnectionInterfaceSlots::callWithCallbackFailed( const QDBusError & e
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM perror = Signals_return_object( (void *) &error, "QDBUSERROR" );
     PHB_ITEM pcall = Signals_return_object( (void *) &call, "QDBUSMESSAGE" );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 3, psender, perror, pcall );
+    hb_vmEvalBlockV( cb, 3, psender, perror, pcall );
     hb_itemRelease( psender );
     hb_itemRelease( perror );
     hb_itemRelease( pcall );
