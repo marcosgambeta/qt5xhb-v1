@@ -28,7 +28,7 @@ void QWebChannelSlots::blockUpdatesChanged( bool block )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBCHANNEL" );
     PHB_ITEM pblock = hb_itemPutL( NULL, block );
-    hb_vmEvalBlockV( (PHB_ITEM) cb, 2, psender, pblock );
+    hb_vmEvalBlockV( cb, 2, psender, pblock );
     hb_itemRelease( psender );
     hb_itemRelease( pblock );
   }
