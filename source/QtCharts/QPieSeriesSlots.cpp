@@ -29,10 +29,9 @@ void QPieSeriesSlots::added( QList<QPieSlice*> slices )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPIESERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
     PHB_ITEM pslices = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<slices.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < slices.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -46,10 +45,10 @@ void QPieSeriesSlots::added( QList<QPieSlice*> slices )
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, pslices );
     hb_itemRelease( psender );
@@ -157,10 +156,9 @@ void QPieSeriesSlots::removed( QList<QPieSlice*> slices )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPIESERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
     PHB_ITEM pslices = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<slices.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < slices.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -174,10 +172,10 @@ void QPieSeriesSlots::removed( QList<QPieSlice*> slices )
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPIESLICE", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, pslices );
     hb_itemRelease( psender );

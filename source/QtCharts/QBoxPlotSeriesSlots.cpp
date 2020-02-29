@@ -42,10 +42,9 @@ void QBoxPlotSeriesSlots::boxsetsAdded( QList<QBoxSet*> sets )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<sets.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < sets.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -59,10 +58,10 @@ void QBoxPlotSeriesSlots::boxsetsAdded( QList<QBoxSet*> sets )
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, psets );
     hb_itemRelease( psender );
@@ -80,10 +79,9 @@ void QBoxPlotSeriesSlots::boxsetsRemoved( QList<QBoxSet*> sets )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<sets.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < sets.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -97,10 +95,10 @@ void QBoxPlotSeriesSlots::boxsetsRemoved( QList<QBoxSet*> sets )
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBOXSET", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, psets );
     hb_itemRelease( psender );

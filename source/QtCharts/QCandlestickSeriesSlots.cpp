@@ -68,10 +68,9 @@ void QCandlestickSeriesSlots::candlestickSetsAdded( const QList<QCandlestickSet*
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<sets.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < sets.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -85,10 +84,10 @@ void QCandlestickSeriesSlots::candlestickSetsAdded( const QList<QCandlestickSet*
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCANDLESTICKSET", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCANDLESTICKSET", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, psets );
     hb_itemRelease( psender );
@@ -106,10 +105,9 @@ void QCandlestickSeriesSlots::candlestickSetsRemoved( const QList<QCandlestickSe
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QCANDLESTICKSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<sets.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < sets.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -123,10 +121,10 @@ void QCandlestickSeriesSlots::candlestickSetsRemoved( const QList<QCandlestickSe
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCANDLESTICKSET", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCANDLESTICKSET", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, psets );
     hb_itemRelease( psender );
