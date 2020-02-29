@@ -224,10 +224,9 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES )
       QList<QBluetoothServiceInfo> list = obj->discoveredServices ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBLUETOOTHSERVICEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -245,10 +244,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBLUETOOTHSERVICEINFO", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBLUETOOTHSERVICEINFO", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -340,10 +339,9 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_UUIDFILTER )
       QList<QBluetoothUuid> list = obj->uuidFilter ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -361,10 +359,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_UUIDFILTER )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBLUETOOTHUUID", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBLUETOOTHUUID", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
