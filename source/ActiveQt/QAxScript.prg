@@ -56,6 +56,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <ActiveQt/QAxScript>
@@ -85,6 +87,8 @@ HB_FUNC_STATIC( QAXSCRIPT_DELETE )
 
   if( obj )
   {
+    Events_disconnect_all_events (obj, true);
+    Signals_disconnect_all_signals (obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
