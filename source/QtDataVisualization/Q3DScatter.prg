@@ -350,10 +350,9 @@ HB_FUNC_STATIC( Q3DSCATTER_SERIESLIST )
       QList<QScatter3DSeries *> list = obj->seriesList ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSCATTER3DSERIES" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -367,10 +366,10 @@ HB_FUNC_STATIC( Q3DSCATTER_SERIESLIST )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSCATTER3DSERIES", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSCATTER3DSERIES", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -451,10 +450,9 @@ HB_FUNC_STATIC( Q3DSCATTER_AXES )
       QList<QValue3DAxis *> list = obj->axes ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QVALUE3DAXIS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -468,10 +466,10 @@ HB_FUNC_STATIC( Q3DSCATTER_AXES )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVALUE3DAXIS", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVALUE3DAXIS", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

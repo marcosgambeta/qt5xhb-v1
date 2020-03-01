@@ -67,10 +67,9 @@ void Q3DThemeSlots::baseColorsChanged( const QList<QColor> & colors )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DTHEME" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QCOLOR" );
     PHB_ITEM pcolors = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<colors.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < colors.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -84,10 +83,10 @@ void Q3DThemeSlots::baseColorsChanged( const QList<QColor> & colors )
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCOLOR", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCOLOR", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, pcolors );
     hb_itemRelease( psender );
@@ -103,10 +102,9 @@ void Q3DThemeSlots::baseGradientsChanged( const QList<QLinearGradient> & gradien
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DTHEME" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QLINEARGRADIENT" );
     PHB_ITEM pgradients = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<gradients.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < gradients.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -120,10 +118,10 @@ void Q3DThemeSlots::baseGradientsChanged( const QList<QLinearGradient> & gradien
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QLINEARGRADIENT", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QLINEARGRADIENT", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, pgradients );
     hb_itemRelease( psender );
