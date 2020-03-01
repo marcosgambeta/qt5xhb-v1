@@ -307,8 +307,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_KEYS )
 #endif
       QList<QString> list = obj->keys ();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutC( NULL, (const char *) list[i].toLatin1().data() );
         hb_arrayAddForward( pArray, pItem );
