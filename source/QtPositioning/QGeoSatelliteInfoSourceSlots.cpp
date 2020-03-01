@@ -29,10 +29,9 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
     PHB_ITEM psatellites = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<satellites.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < satellites.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -46,10 +45,10 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, psatellites );
     hb_itemRelease( psender );
@@ -67,10 +66,9 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
     PHB_ITEM psatellites = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<satellites.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < satellites.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -84,10 +82,10 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, psatellites );
     hb_itemRelease( psender );
