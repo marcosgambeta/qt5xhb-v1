@@ -106,10 +106,9 @@ void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QNETWORKREPLY" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
     PHB_ITEM perrors = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<errors.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < errors.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -123,10 +122,10 @@ void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, perrors );
     hb_itemRelease( psender );
