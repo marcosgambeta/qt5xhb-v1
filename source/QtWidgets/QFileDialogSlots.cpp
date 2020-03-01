@@ -66,8 +66,7 @@ void QFileDialogSlots::filesSelected( const QStringList & selected )
   {
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_ITEM pselected = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<selected.count();i++)
+    for( int i = 0; i < selected.count(); i++ )
     {
       PHB_ITEM pTempItem = hb_itemPutC( NULL, QSTRINGTOSTRING(selected [i]) );
       hb_arrayAddForward( pselected, pTempItem );
@@ -113,10 +112,9 @@ void QFileDialogSlots::urlsSelected( const QList<QUrl> & urls )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILEDIALOG" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
     PHB_ITEM purls = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<urls.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < urls.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -130,10 +128,10 @@ void QFileDialogSlots::urlsSelected( const QList<QUrl> & urls )
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, purls );
     hb_itemRelease( psender );

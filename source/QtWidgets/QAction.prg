@@ -107,6 +107,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtWidgets/QAction>
@@ -171,6 +173,8 @@ HB_FUNC_STATIC( QACTION_DELETE )
 
   if( obj )
   {
+    Events_disconnect_all_events (obj, true);
+    Signals_disconnect_all_signals (obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -249,10 +253,9 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
       QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -266,10 +269,10 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGRAPHICSWIDGET", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGRAPHICSWIDGET", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -298,10 +301,9 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
       QList<QWidget *> list = obj->associatedWidgets ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -315,10 +317,10 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -1286,10 +1288,9 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
       QList<QKeySequence> list = obj->shortcuts ();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      if( pDynSym )
       {
-        if( pDynSym )
+        for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
@@ -1307,10 +1308,10 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
           hb_arrayAddForward( pArray, pObject );
           hb_itemRelease( pObject );
         }
-        else
-        {
-          hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QKEYSEQUENCE", HB_ERR_ARGS_BASEPARAMS );
-        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QKEYSEQUENCE", HB_ERR_ARGS_BASEPARAMS );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

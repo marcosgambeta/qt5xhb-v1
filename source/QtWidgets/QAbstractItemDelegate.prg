@@ -57,6 +57,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtWidgets/QAbstractItemDelegate>
@@ -68,6 +70,8 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 
   if( obj )
   {
+    Events_disconnect_all_events (obj, true);
+    Signals_disconnect_all_signals (obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -341,8 +345,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
 #endif
       QVector<int> list = obj->paintingRoles ();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      int i;
-      for(i=0;i<list.count();i++)
+      for( int i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, list[i] );
         hb_arrayAddForward( pArray, pItem );

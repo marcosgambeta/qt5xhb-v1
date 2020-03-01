@@ -28,10 +28,9 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
     PHB_ITEM pregion = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<region.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < region.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -45,10 +44,10 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, pregion );
     hb_itemRelease( psender );
