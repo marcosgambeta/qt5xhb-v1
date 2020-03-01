@@ -39,10 +39,9 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
     PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEENGINE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
     PHB_ITEM pwarnings = hb_itemArrayNew(0);
-    int i;
-    for(i=0;i<warnings.count();i++)
+    if( pDynSym )
     {
-      if( pDynSym )
+      for( int i = 0; i < warnings.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
@@ -56,10 +55,10 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
-      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
     }
     hb_vmEvalBlockV( cb, 2, psender, pwarnings );
     hb_itemRelease( psender );
