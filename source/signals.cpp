@@ -49,7 +49,7 @@ bool Signals_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblo
   int found = -1;
   for (i = 0; i < s_signals->list1.size(); ++i)
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
     {
       found = i;
       //hb_itemRelease( codeblock );
@@ -61,14 +61,13 @@ bool Signals_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblo
   if( found == -1 )
   {
     // procura por posição livre
-    i = s_signals->list4.indexOf( false );
+    i = s_signals->list1.indexOf( NULL );
     if( i == -1 ) // nao encontrou posicao livre
     {
       // adiciona sinal na lista de sinais
       s_signals->list1 << object;
       s_signals->list2 << signal;
       s_signals->list3 << codeblock;
-      s_signals->list4 << true;
     }
     else // encontrou posicao livre
     {
@@ -76,7 +75,6 @@ bool Signals_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblo
       s_signals->list1[i] = object;
       s_signals->list2[i] = signal;
       s_signals->list3[i] = codeblock;
-      s_signals->list4[i] = true;
     }
     ret = true;
   }
@@ -108,13 +106,12 @@ bool Signals_disconnect_signal ( QObject * object, QString signal )
   {
     if( (QObject *) s_signals->list1.at(i) == (QObject *) object )
     {
-      if( ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+      if( s_signals->list2.at(i) == signal )
       {
         hb_itemRelease( (PHB_ITEM) s_signals->list3.at(i) );
         s_signals->list1[i] = NULL;
         s_signals->list2[i] = "";
         s_signals->list3[i] = NULL;
-        s_signals->list4[i] = false;
         ret = true;
       }
     }
@@ -146,7 +143,7 @@ bool Signals_is_signal_connected ( QObject * object, QString signal )
   //int i;
   for (int i = 0; i < s_signals->list1.size(); ++i)
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
     {
       found = true;
       break;
@@ -171,7 +168,7 @@ PHB_ITEM Signals_return_codeblock ( QObject * object, QString signal )
   // localiza sinal na lista de sinais
   for (i = 0; i < s_signals->list1.size(); ++i)
   {
-    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) && ( (bool) s_signals->list4.at(i) == true ) )
+    if( ( (QObject *) s_signals->list1.at(i) == (QObject *) object ) && ( s_signals->list2.at(i) == signal ) )
     {
       found = i;
       break;
@@ -198,13 +195,12 @@ void Signals_release_codeblocks ()
   {
     for (int i = 0; i < s_signals->list1.size(); ++i)
     {
-      if( (bool) s_signals->list4.at(i) == true )
+      if( s_signals->list1.at(i) )
       {
         hb_itemRelease((PHB_ITEM) s_signals->list3.at(i) );
         s_signals->list1[i] = NULL;
         s_signals->list2[i] = "";
         s_signals->list3[i] = NULL;
-        s_signals->list4[i] = false;
       }
     }
   }
@@ -256,14 +252,12 @@ void Signals_disconnect_all_signals (QObject * obj, bool children)
       {
         // elimina sinais ativos (true) ligados ao objeto (obj)
         if( ( (QObject *) s_signals->list1.at(i) == (QObject *) obj ) &&
-            ( s_signals->list2.at(i) != "destroyed(QObject*)" ) &&
-            ( (bool) s_signals->list4.at(i) == true ) )
+            ( s_signals->list2.at(i) != "destroyed(QObject*)" ) )
         {
           hb_itemRelease( (PHB_ITEM) s_signals->list3.at(i) );
           s_signals->list1[i] = NULL;
           s_signals->list2[i] = "";
           s_signals->list3[i] = NULL;
-          s_signals->list4[i] = false;
         }
       }
     }
@@ -281,14 +275,12 @@ void Signals_disconnect_all_signals (QObject * obj, bool children)
         {
           // elimina sinais ativos (true) ligados ao objeto list.at(i)
           if( ( (QObject *) s_signals->list1.at(ii) == (QObject *) list.at(i) ) &&
-              ( s_signals->list2.at(ii) != "destroyed(QObject*)" ) &&
-              ( (bool) s_signals->list4.at(ii) == true ) )
+              ( s_signals->list2.at(ii) != "destroyed(QObject*)" ) )
           {
             hb_itemRelease( (PHB_ITEM) s_signals->list3.at(ii) );
             s_signals->list1[ii] = NULL;
             s_signals->list2[ii] = "";
             s_signals->list3[ii] = NULL;
-            s_signals->list4[ii] = false;
           }
         }
       }
@@ -388,7 +380,7 @@ HB_FUNC( QTXHB_SIGNALS_SIZE_ACTIVE )
     // percorre toda a lista de sinais
     for (int i = 0; i < s_signals->list1.size(); ++i)
     {
-      if( s_signals->list4.at(i) )
+      if( s_signals->list1.at(i) )
       {
         ++count;
       }
