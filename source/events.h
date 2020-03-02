@@ -41,7 +41,6 @@ class Events: public QObject
   QVector<QObject*> list1;     // armazena ponteiro do objeto
   QVector<QEvent::Type> list2; // armazena tipo de evento
   QVector<PHB_ITEM> list3;     // armazena codeblock
-  QVector<bool> list4;         // ativo (true) ou liberado (false)
 
   protected:
   bool eventFilter(QObject *obj, QEvent *event);
