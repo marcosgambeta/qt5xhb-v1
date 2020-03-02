@@ -2,6 +2,10 @@
 
 Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
+For Qt 5.7 or upper, you can use the project below:
+
+https://github.com/marcosgambeta/qt5xhb-cpp11
+
 ## Basic steps
 
 1. Install the Qt Framework 5 of your choice.
