@@ -289,7 +289,7 @@ void QCamera_lockStatus1 ()
 
   if( obj )
   {
-      RENUM( obj->lockStatus () );
+    RENUM( obj->lockStatus () );
   }
 }
 
@@ -302,7 +302,7 @@ void QCamera_lockStatus2 ()
 
   if( obj )
   {
-      RENUM( obj->lockStatus ( (QCamera::LockType) hb_parni(1) ) );
+    RENUM( obj->lockStatus ( (QCamera::LockType) hb_parni(1) ) );
   }
 }
 
@@ -505,7 +505,7 @@ void QCamera_setViewfinder1 ()
 
   if( obj )
   {
-      obj->setViewfinder ( PQVIDEOWIDGET(1) );
+    obj->setViewfinder ( PQVIDEOWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -520,7 +520,7 @@ void QCamera_setViewfinder2 ()
 
   if( obj )
   {
-      obj->setViewfinder ( PQGRAPHICSVIDEOITEM(1) );
+    obj->setViewfinder ( PQGRAPHICSVIDEOITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -535,7 +535,7 @@ void QCamera_setViewfinder3 ()
 
   if( obj )
   {
-      obj->setViewfinder ( PQABSTRACTVIDEOSURFACE(1) );
+    obj->setViewfinder ( PQABSTRACTVIDEOSURFACE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -624,7 +624,7 @@ void QCamera_searchAndLock1 ()
 
   if( obj )
   {
-      obj->searchAndLock ();
+    obj->searchAndLock ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -639,7 +639,7 @@ void QCamera_searchAndLock2 ()
 
   if( obj )
   {
-      obj->searchAndLock ( (QCamera::LockTypes) hb_parni(1) );
+    obj->searchAndLock ( (QCamera::LockTypes) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -751,7 +751,7 @@ void QCamera_unlock1 ()
 
   if( obj )
   {
-      obj->unlock ();
+    obj->unlock ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -766,7 +766,7 @@ void QCamera_unlock2 ()
 
   if( obj )
   {
-      obj->unlock ( (QCamera::LockTypes) hb_parni(1) );
+    obj->unlock ( (QCamera::LockTypes) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1022,38 +1022,38 @@ static QList<QByteArray> availableDevices()
 HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QList<QByteArray> list = QCamera::availableDevices ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+    QList<QByteArray> list = QCamera::availableDevices ();
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
       {
-        for( int i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1069,10 +1069,10 @@ static QString deviceDescription(const QByteArray & device)
 HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-      RQSTRING( QCamera::deviceDescription ( *PQBYTEARRAY(1) ) );
+    RQSTRING( QCamera::deviceDescription ( *PQBYTEARRAY(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -257,7 +257,7 @@ void QMediaPlaylist_addMedia1 ()
 
   if( obj )
   {
-      RBOOL( obj->addMedia ( *PQMEDIACONTENT(1) ) );
+    RBOOL( obj->addMedia ( *PQMEDIACONTENT(1) ) );
   }
 }
 
@@ -270,15 +270,15 @@ void QMediaPlaylist_addMedia2 ()
 
   if( obj )
   {
-       QList<QMediaContent> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      RBOOL( obj->addMedia ( par1 ) );
+    QList<QMediaContent> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    RBOOL( obj->addMedia ( par1 ) );
   }
 }
 
@@ -382,7 +382,7 @@ void QMediaPlaylist_insertMedia1 ()
 
   if( obj )
   {
-      RBOOL( obj->insertMedia ( PINT(1), *PQMEDIACONTENT(2) ) );
+    RBOOL( obj->insertMedia ( PINT(1), *PQMEDIACONTENT(2) ) );
   }
 }
 
@@ -395,15 +395,15 @@ void QMediaPlaylist_insertMedia2 ()
 
   if( obj )
   {
-       QList<QMediaContent> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-  par2 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-}
-      RBOOL( obj->insertMedia ( PINT(1), par2 ) );
+    QList<QMediaContent> par2;
+    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+    int i2;
+    int nLen2 = hb_arrayLen(aList2);
+    for (i2=0;i2<nLen2;i2++)
+    {
+      par2 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+    }
+    RBOOL( obj->insertMedia ( PINT(1), par2 ) );
   }
 }
 
@@ -483,7 +483,7 @@ void QMediaPlaylist_load1 ()
 
   if( obj )
   {
-      obj->load ( *PQNETWORKREQUEST(1), OPCONSTCHAR(2,0) );
+    obj->load ( *PQNETWORKREQUEST(1), OPCONSTCHAR(2,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -498,7 +498,7 @@ void QMediaPlaylist_load2 ()
 
   if( obj )
   {
-      obj->load ( *PQURL(1), OPCONSTCHAR(2,0) );
+    obj->load ( *PQURL(1), OPCONSTCHAR(2,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -513,7 +513,7 @@ void QMediaPlaylist_load3 ()
 
   if( obj )
   {
-      obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) );
+    obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -649,7 +649,7 @@ void QMediaPlaylist_removeMedia1 ()
 
   if( obj )
   {
-      RBOOL( obj->removeMedia ( PINT(1) ) );
+    RBOOL( obj->removeMedia ( PINT(1) ) );
   }
 }
 
@@ -662,7 +662,7 @@ void QMediaPlaylist_removeMedia2 ()
 
   if( obj )
   {
-      RBOOL( obj->removeMedia ( PINT(1), PINT(2) ) );
+    RBOOL( obj->removeMedia ( PINT(1), PINT(2) ) );
   }
 }
 
@@ -694,7 +694,7 @@ void QMediaPlaylist_save1 ()
 
   if( obj )
   {
-      RBOOL( obj->save ( *PQURL(1), OPCONSTCHAR(2,0) ) );
+    RBOOL( obj->save ( *PQURL(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -707,7 +707,7 @@ void QMediaPlaylist_save2 ()
 
   if( obj )
   {
-      RBOOL( obj->save ( PQIODEVICE(1), PCONSTCHAR(2) ) );
+    RBOOL( obj->save ( PQIODEVICE(1), PCONSTCHAR(2) ) );
   }
 }
 

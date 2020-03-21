@@ -429,7 +429,7 @@ void QAudioInput_start1 ()
 
   if( obj )
   {
-      obj->start ( PQIODEVICE(1) );
+    obj->start ( PQIODEVICE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -444,8 +444,8 @@ void QAudioInput_start2 ()
 
   if( obj )
   {
-      QIODevice * ptr = obj->start ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
+    QIODevice * ptr = obj->start ();
+    _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
   }
 }
 

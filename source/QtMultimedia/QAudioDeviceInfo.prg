@@ -422,38 +422,38 @@ static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
 HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices ( (QAudio::Mode) hb_parni(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QAUDIODEVICEINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+    QList<QAudioDeviceInfo> list = QAudioDeviceInfo::availableDevices ( (QAudio::Mode) hb_parni(1) );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QAUDIODEVICEINFO" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
       {
-        for( int i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QAudioDeviceInfo *) new QAudioDeviceInfo ( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QAudioDeviceInfo *) new QAudioDeviceInfo ( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QAUDIODEVICEINFO", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QAUDIODEVICEINFO", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -469,11 +469,11 @@ static QAudioDeviceInfo defaultInputDevice ()
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTINPUTDEVICE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultInputDevice () );
-      _qt5xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
+    QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultInputDevice () );
+    _qt5xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -489,11 +489,11 @@ static QAudioDeviceInfo defaultOutputDevice ()
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTOUTPUTDEVICE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultOutputDevice () );
-      _qt5xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
+    QAudioDeviceInfo * ptr = new QAudioDeviceInfo( QAudioDeviceInfo::defaultOutputDevice () );
+    _qt5xhb_createReturnClass ( ptr, "QAUDIODEVICEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

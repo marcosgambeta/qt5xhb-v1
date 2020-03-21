@@ -548,7 +548,7 @@ void QMediaResource_setResolution1 ()
 
   if( obj )
   {
-      obj->setResolution ( *PQSIZE(1) );
+    obj->setResolution ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -563,7 +563,7 @@ void QMediaResource_setResolution2 ()
 
   if( obj )
   {
-      obj->setResolution ( PINT(1), PINT(2) );
+    obj->setResolution ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

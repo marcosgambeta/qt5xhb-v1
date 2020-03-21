@@ -515,10 +515,10 @@ static QStringList supportedMimeTypes()
 HB_FUNC_STATIC( QSOUNDEFFECT_SUPPORTEDMIMETYPES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QSoundEffect::supportedMimeTypes () );
+    RQSTRINGLIST( QSoundEffect::supportedMimeTypes () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

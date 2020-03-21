@@ -226,7 +226,7 @@ void QCameraViewfinderSettings_setResolution1 ()
 
   if( obj )
   {
-      obj->setResolution ( *PQSIZE(1) );
+    obj->setResolution ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -243,7 +243,7 @@ void QCameraViewfinderSettings_setResolution2 ()
 
   if( obj )
   {
-      obj->setResolution ( PINT(1), PINT(2) );
+    obj->setResolution ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -468,7 +468,7 @@ void QCameraViewfinderSettings_setPixelAspectRatio1 ()
 
   if( obj )
   {
-      obj->setPixelAspectRatio ( *PQSIZE(1) );
+    obj->setPixelAspectRatio ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -485,7 +485,7 @@ void QCameraViewfinderSettings_setPixelAspectRatio2 ()
 
   if( obj )
   {
-      obj->setPixelAspectRatio ( PINT(1), PINT(2) );
+    obj->setPixelAspectRatio ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

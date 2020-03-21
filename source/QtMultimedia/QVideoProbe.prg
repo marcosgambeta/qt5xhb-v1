@@ -120,7 +120,7 @@ void QVideoProbe_setSource1 ()
 
   if( obj )
   {
-      RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
+    RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
   }
 }
 
@@ -133,7 +133,7 @@ void QVideoProbe_setSource2 ()
 
   if( obj )
   {
-      RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
+    RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
   }
 }
 

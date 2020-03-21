@@ -246,7 +246,7 @@ void QSound_play1 ()
 
   if( obj )
   {
-      obj->play ();
+    obj->play ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -258,7 +258,7 @@ static void play(const QString& filename)
 void QSound_play2 ()
 {
 
-      QSound::play ( PQSTRING(1) );
+  QSound::play ( PQSTRING(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
