@@ -295,7 +295,7 @@ void QTextTable_mergeCells1 ()
 
   if( obj )
   {
-      obj->mergeCells ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->mergeCells ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -310,7 +310,7 @@ void QTextTable_mergeCells2 ()
 
   if( obj )
   {
-      obj->mergeCells ( *PQTEXTCURSOR(1) );
+    obj->mergeCells ( *PQTEXTCURSOR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -418,8 +418,8 @@ void QTextTable_cellAt1 ()
 
   if( obj )
   {
-      QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL", true );
+    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( PINT(1), PINT(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL", true );
   }
 }
 
@@ -432,8 +432,8 @@ void QTextTable_cellAt2 ()
 
   if( obj )
   {
-      QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL", true );
+    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL", true );
   }
 }
 
@@ -446,8 +446,8 @@ void QTextTable_cellAt3 ()
 
   if( obj )
   {
-      QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( *PQTEXTCURSOR(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL", true );
+    QTextTableCell * ptr = new QTextTableCell( obj->cellAt ( *PQTEXTCURSOR(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTEXTTABLECELL", true );
   }
 }
 

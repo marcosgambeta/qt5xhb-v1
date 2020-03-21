@@ -368,7 +368,7 @@ void QSessionManager_setManagerProperty1 ()
 
   if( obj )
   {
-      obj->setManagerProperty ( PQSTRING(1), PQSTRING(2) );
+    obj->setManagerProperty ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -383,7 +383,7 @@ void QSessionManager_setManagerProperty2 ()
 
   if( obj )
   {
-      obj->setManagerProperty ( PQSTRING(1), PQSTRINGLIST(2) );
+    obj->setManagerProperty ( PQSTRING(1), PQSTRINGLIST(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

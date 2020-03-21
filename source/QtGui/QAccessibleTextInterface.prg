@@ -99,10 +99,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_SELECTION )
     {
 #endif
       int par2;
-int par3;
+      int par3;
       obj->selection ( PINT(1), &par2, &par3 );
       hb_storni( par2, 2 );
-hb_storni( par3, 3 );
+      hb_storni( par3, 3 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,10 +404,10 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINTERFACE_ATTRIBUTES )
     {
 #endif
       int par2;
-int par3;
+      int par3;
       RQSTRING( obj->attributes ( PINT(1), &par2, &par3 ) );
       hb_storni( par2, 2 );
-hb_storni( par3, 3 );
+      hb_storni( par3, 3 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

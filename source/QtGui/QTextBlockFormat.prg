@@ -512,7 +512,7 @@ void QTextBlockFormat_lineHeight1 ()
 
   if( obj )
   {
-      RQREAL( obj->lineHeight ( PQREAL(1), PQREAL(2) ) );
+    RQREAL( obj->lineHeight ( PQREAL(1), PQREAL(2) ) );
   }
 }
 
@@ -525,7 +525,7 @@ void QTextBlockFormat_lineHeight2 ()
 
   if( obj )
   {
-      RQREAL( obj->lineHeight () );
+    RQREAL( obj->lineHeight () );
   }
 }
 

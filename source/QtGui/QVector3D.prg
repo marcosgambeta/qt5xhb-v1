@@ -513,7 +513,7 @@ void QVector3D_distanceToPlane1 ()
 
   if( obj )
   {
-      RFLOAT( obj->distanceToPlane ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+    RFLOAT( obj->distanceToPlane ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
   }
 }
 
@@ -526,7 +526,7 @@ void QVector3D_distanceToPlane2 ()
 
   if( obj )
   {
-      RFLOAT( obj->distanceToPlane ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
+    RFLOAT( obj->distanceToPlane ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
   }
 }
 
@@ -679,10 +679,10 @@ static float dotProduct(const QVector3D& v1, const QVector3D& v2)
 HB_FUNC_STATIC( QVECTOR3D_DOTPRODUCT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
+  if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
   {
 #endif
-      RFLOAT( QVector3D::dotProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+    RFLOAT( QVector3D::dotProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -698,11 +698,11 @@ static QVector3D crossProduct(const QVector3D& v1, const QVector3D& v2)
 HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
+  if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
   {
 #endif
-      QVector3D * ptr = new QVector3D( QVector3D::crossProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+    QVector3D * ptr = new QVector3D( QVector3D::crossProduct ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -718,8 +718,8 @@ static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
 void QVector3D_normal1 ()
 {
 
-      QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+  QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 }
 
 /*
@@ -728,8 +728,8 @@ static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3
 void QVector3D_normal2 ()
 {
 
-      QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+  QVector3D * ptr = new QVector3D( QVector3D::normal ( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
+  _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
 }
 
 //[1]static QVector3D normal(const QVector3D& v1, const QVector3D& v2)

@@ -571,10 +571,10 @@ static bool bindDefault()
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BINDDEFAULT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QOpenGLFramebufferObject::bindDefault () );
+    RBOOL( QOpenGLFramebufferObject::bindDefault () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -590,10 +590,10 @@ static bool hasOpenGLFramebufferObjects()
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QOpenGLFramebufferObject::hasOpenGLFramebufferObjects () );
+    RBOOL( QOpenGLFramebufferObject::hasOpenGLFramebufferObjects () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -609,10 +609,10 @@ static bool hasOpenGLFramebufferBlit()
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QOpenGLFramebufferObject::hasOpenGLFramebufferBlit () );
+    RBOOL( QOpenGLFramebufferObject::hasOpenGLFramebufferBlit () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -628,7 +628,7 @@ static void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targe
 void QOpenGLFramebufferObject_blitFramebuffer1 ()
 {
 
-      QOpenGLFramebufferObject::blitFramebuffer ( PQOPENGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQOPENGLFRAMEBUFFEROBJECT(3), *PQRECT(4), OPGLBITFIELD(5,GL_COLOR_BUFFER_BIT), OPGLENUM(6,GL_NEAREST) );
+  QOpenGLFramebufferObject::blitFramebuffer ( PQOPENGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQOPENGLFRAMEBUFFEROBJECT(3), *PQRECT(4), OPGLBITFIELD(5,GL_COLOR_BUFFER_BIT), OPGLENUM(6,GL_NEAREST) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -639,7 +639,7 @@ static void blitFramebuffer(QOpenGLFramebufferObject *target,QOpenGLFramebufferO
 void QOpenGLFramebufferObject_blitFramebuffer2 ()
 {
 
-      QOpenGLFramebufferObject::blitFramebuffer ( PQOPENGLFRAMEBUFFEROBJECT(1), PQOPENGLFRAMEBUFFEROBJECT(2), OPGLBITFIELD(3,GL_COLOR_BUFFER_BIT), OPGLENUM(4,GL_NEAREST) );
+  QOpenGLFramebufferObject::blitFramebuffer ( PQOPENGLFRAMEBUFFEROBJECT(1), PQOPENGLFRAMEBUFFEROBJECT(2), OPGLBITFIELD(3,GL_COLOR_BUFFER_BIT), OPGLENUM(4,GL_NEAREST) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }

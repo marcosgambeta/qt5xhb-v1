@@ -354,10 +354,10 @@ HB_FUNC_STATIC( QMATRIX_MAP1 )
     {
 #endif
       int par3;
-int par4;
+      int par4;
       obj->map ( PINT(1), PINT(2), &par3, &par4 );
       hb_storni( par3, 3 );
-hb_storni( par4, 4 );
+      hb_storni( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,10 +384,10 @@ HB_FUNC_STATIC( QMATRIX_MAP2 )
     {
 #endif
       qreal par3;
-qreal par4;
+      qreal par4;
       obj->map ( PQREAL(1), PQREAL(2), &par3, &par4 );
       hb_stornd( par3, 3 );
-hb_stornd( par4, 4 );
+      hb_stornd( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,8 +409,8 @@ void QMatrix_map3 ()
 
   if( obj )
   {
-      QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -423,8 +423,8 @@ void QMatrix_map4 ()
 
   if( obj )
   {
-      QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+    QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -437,8 +437,8 @@ void QMatrix_map5 ()
 
   if( obj )
   {
-      QLine * ptr = new QLine( obj->map ( *PQLINE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QLINE", true );
+    QLine * ptr = new QLine( obj->map ( *PQLINE(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QLINE", true );
   }
 }
 
@@ -451,8 +451,8 @@ void QMatrix_map6 ()
 
   if( obj )
   {
-      QLineF * ptr = new QLineF( obj->map ( *PQLINEF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
+    QLineF * ptr = new QLineF( obj->map ( *PQLINEF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
 
@@ -465,8 +465,8 @@ void QMatrix_map7 ()
 
   if( obj )
   {
-      QPolygon * ptr = new QPolygon( obj->map ( *PQPOLYGON(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    QPolygon * ptr = new QPolygon( obj->map ( *PQPOLYGON(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -479,8 +479,8 @@ void QMatrix_map8 ()
 
   if( obj )
   {
-      QPolygonF * ptr = new QPolygonF( obj->map ( *PQPOLYGONF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    QPolygonF * ptr = new QPolygonF( obj->map ( *PQPOLYGONF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -493,8 +493,8 @@ void QMatrix_map9 ()
 
   if( obj )
   {
-      QRegion * ptr = new QRegion( obj->map ( *PQREGION(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QREGION", true );
+    QRegion * ptr = new QRegion( obj->map ( *PQREGION(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QREGION", true );
   }
 }
 
@@ -507,8 +507,8 @@ void QMatrix_map10 ()
 
   if( obj )
   {
-      QPainterPath * ptr = new QPainterPath( obj->map ( *PQPAINTERPATH(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    QPainterPath * ptr = new QPainterPath( obj->map ( *PQPAINTERPATH(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -580,8 +580,8 @@ void QMatrix_mapRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -594,8 +594,8 @@ void QMatrix_mapRect2 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

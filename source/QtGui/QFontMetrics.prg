@@ -202,8 +202,8 @@ void QFontMetrics_boundingRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->boundingRect ( *PQCHAR(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->boundingRect ( *PQCHAR(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -216,8 +216,8 @@ void QFontMetrics_boundingRect2 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->boundingRect ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->boundingRect ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -623,7 +623,7 @@ void QFontMetrics_width1 ()
 
   if( obj )
   {
-      RINT( obj->width ( PQSTRING(1), OPINT(2,-1) ) );
+    RINT( obj->width ( PQSTRING(1), OPINT(2,-1) ) );
   }
 }
 
@@ -636,7 +636,7 @@ void QFontMetrics_width2 ()
 
   if( obj )
   {
-      RINT( obj->width ( *PQCHAR(1) ) );
+    RINT( obj->width ( *PQCHAR(1) ) );
   }
 }
 

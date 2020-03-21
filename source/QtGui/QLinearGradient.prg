@@ -153,7 +153,7 @@ void QLinearGradient_setFinalStop1 ()
 
   if( obj )
   {
-      obj->setFinalStop ( *PQPOINTF(1) );
+    obj->setFinalStop ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -168,7 +168,7 @@ void QLinearGradient_setFinalStop2 ()
 
   if( obj )
   {
-      obj->setFinalStop ( PQREAL(1), PQREAL(2) );
+    obj->setFinalStop ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -202,7 +202,7 @@ void QLinearGradient_setStart1 ()
 
   if( obj )
   {
-      obj->setStart ( *PQPOINTF(1) );
+    obj->setStart ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -217,7 +217,7 @@ void QLinearGradient_setStart2 ()
 
   if( obj )
   {
-      obj->setStart ( PQREAL(1), PQREAL(2) );
+    obj->setStart ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

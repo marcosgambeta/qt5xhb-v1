@@ -406,7 +406,7 @@ void QClipboard_text1 ()
 
   if( obj )
   {
-      RQSTRING( obj->text ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
+    RQSTRING( obj->text ( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
   }
 }
 
@@ -419,9 +419,9 @@ void QClipboard_text2 ()
 
   if( obj )
   {
-      QString par1 = PQSTRING(1);
-      RQSTRING( obj->text ( par1, ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) ) );
-      hb_storc( QSTRINGTOSTRING(par1), 1 );
+    QString par1 = PQSTRING(1);
+    RQSTRING( obj->text ( par1, ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) ) );
+    hb_storc( QSTRINGTOSTRING(par1), 1 );
   }
 }
 

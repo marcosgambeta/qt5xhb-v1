@@ -393,7 +393,7 @@ void QPainterPathStroker_setDashPattern1 ()
 
   if( obj )
   {
-      obj->setDashPattern ( (Qt::PenStyle) hb_parni(1) );
+    obj->setDashPattern ( (Qt::PenStyle) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -408,17 +408,17 @@ void QPainterPathStroker_setDashPattern2 ()
 
   if( obj )
   {
-       QVector<qreal> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-qreal temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-  temp1 = hb_arrayGetND(aList1, i1+1);
-  par1 << temp1;
-}
-      obj->setDashPattern ( par1 );
+    QVector<qreal> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    qreal temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetND(aList1, i1+1);
+      par1 << temp1;
+    }
+    obj->setDashPattern ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

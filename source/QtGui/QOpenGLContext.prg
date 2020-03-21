@@ -520,10 +520,10 @@ static bool areSharing(QOpenGLContext * first, QOpenGLContext * second)
 HB_FUNC_STATIC( QOPENGLCONTEXT_ARESHARING )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOPENGLCONTEXT(1) && ISQOPENGLCONTEXT(2) )
+  if( ISNUMPAR(2) && ISQOPENGLCONTEXT(1) && ISQOPENGLCONTEXT(2) )
   {
 #endif
-      RBOOL( QOpenGLContext::areSharing ( PQOPENGLCONTEXT(1), PQOPENGLCONTEXT(2) ) );
+    RBOOL( QOpenGLContext::areSharing ( PQOPENGLCONTEXT(1), PQOPENGLCONTEXT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -539,11 +539,11 @@ static QOpenGLContext * currentContext()
 HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QOpenGLContext * ptr = QOpenGLContext::currentContext ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLCONTEXT" );
+    QOpenGLContext * ptr = QOpenGLContext::currentContext ();
+    _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

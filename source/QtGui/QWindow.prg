@@ -769,7 +769,7 @@ void QWindow_resize1 ()
 
   if( obj )
   {
-      obj->resize ( *PQSIZE(1) );
+    obj->resize ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -784,7 +784,7 @@ void QWindow_resize2 ()
 
   if( obj )
   {
-      obj->resize ( PINT(1), PINT(2) );
+    obj->resize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -921,7 +921,7 @@ void QWindow_setGeometry1 ()
 
   if( obj )
   {
-      obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -936,7 +936,7 @@ void QWindow_setGeometry2 ()
 
   if( obj )
   {
-      obj->setGeometry ( *PQRECT(1) );
+    obj->setGeometry ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1859,7 +1859,7 @@ void QWindow_setPosition1 ()
 
   if( obj )
   {
-      obj->setPosition ( *PQPOINT(1) );
+    obj->setPosition ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1874,7 +1874,7 @@ void QWindow_setPosition2 ()
 
   if( obj )
   {
-      obj->setPosition ( PINT(1), PINT(2) );
+    obj->setPosition ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -571,8 +571,8 @@ void QPageLayout_margins1 ()
 
   if( obj )
   {
-      QMarginsF * ptr = new QMarginsF( obj->margins () );
-      _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
+    QMarginsF * ptr = new QMarginsF( obj->margins () );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 #endif
 }
@@ -587,8 +587,8 @@ void QPageLayout_margins2 ()
 
   if( obj )
   {
-      QMarginsF * ptr = new QMarginsF( obj->margins ( (QPageLayout::Unit) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
+    QMarginsF * ptr = new QMarginsF( obj->margins ( (QPageLayout::Unit) hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMARGINSF", true );
   }
 #endif
 }
@@ -758,8 +758,8 @@ void QPageLayout_fullRect1 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->fullRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->fullRect () );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 #endif
 }
@@ -774,8 +774,8 @@ void QPageLayout_fullRect2 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->fullRect ( (QPageLayout::Unit) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->fullRect ( (QPageLayout::Unit) hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 #endif
 }
@@ -863,8 +863,8 @@ void QPageLayout_paintRect1 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->paintRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->paintRect () );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 #endif
 }
@@ -879,8 +879,8 @@ void QPageLayout_paintRect2 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->paintRect ( (QPageLayout::Unit) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->paintRect ( (QPageLayout::Unit) hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 #endif
 }

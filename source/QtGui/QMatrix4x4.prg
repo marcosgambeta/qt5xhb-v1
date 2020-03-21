@@ -509,7 +509,7 @@ void QMatrix4x4_scale1 ()
 
   if( obj )
   {
-      obj->scale ( *PQVECTOR3D(1) );
+    obj->scale ( *PQVECTOR3D(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -525,7 +525,7 @@ void QMatrix4x4_scale2 ()
 
   if( obj )
   {
-      obj->scale ( PFLOAT(1), PFLOAT(2) );
+    obj->scale ( PFLOAT(1), PFLOAT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -540,7 +540,7 @@ void QMatrix4x4_scale3 ()
 
   if( obj )
   {
-      obj->scale ( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
+    obj->scale ( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -555,7 +555,7 @@ void QMatrix4x4_scale4 ()
 
   if( obj )
   {
-      obj->scale ( PFLOAT(1) );
+    obj->scale ( PFLOAT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -600,7 +600,7 @@ void QMatrix4x4_translate1 ()
 
   if( obj )
   {
-      obj->translate ( *PQVECTOR3D(1) );
+    obj->translate ( *PQVECTOR3D(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -616,7 +616,7 @@ void QMatrix4x4_translate2 ()
 
   if( obj )
   {
-      obj->translate ( PFLOAT(1), PFLOAT(2) );
+    obj->translate ( PFLOAT(1), PFLOAT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -631,7 +631,7 @@ void QMatrix4x4_translate3 ()
 
   if( obj )
   {
-      obj->translate ( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
+    obj->translate ( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -671,7 +671,7 @@ void QMatrix4x4_rotate1 ()
 
   if( obj )
   {
-      obj->rotate ( PFLOAT(1), *PQVECTOR3D(2) );
+    obj->rotate ( PFLOAT(1), *PQVECTOR3D(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -687,7 +687,7 @@ void QMatrix4x4_rotate2 ()
 
   if( obj )
   {
-      obj->rotate ( PFLOAT(1), PFLOAT(2), PFLOAT(3), OPFLOAT(4,0.0f) );
+    obj->rotate ( PFLOAT(1), PFLOAT(2), PFLOAT(3), OPFLOAT(4,0.0f) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -703,7 +703,7 @@ void QMatrix4x4_rotate3 ()
 
   if( obj )
   {
-      obj->rotate ( *PQQUATERNION(1) );
+    obj->rotate ( *PQQUATERNION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -743,7 +743,7 @@ void QMatrix4x4_ortho1 ()
 
   if( obj )
   {
-      obj->ortho ( *PQRECT(1) );
+    obj->ortho ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -758,7 +758,7 @@ void QMatrix4x4_ortho2 ()
 
   if( obj )
   {
-      obj->ortho ( *PQRECTF(1) );
+    obj->ortho ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -773,7 +773,7 @@ void QMatrix4x4_ortho3 ()
 
   if( obj )
   {
-      obj->ortho ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6) );
+    obj->ortho ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -893,7 +893,7 @@ void QMatrix4x4_viewport1 ()
 
   if( obj )
   {
-      obj->viewport ( *PQRECTF(1) );
+    obj->viewport ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -910,7 +910,7 @@ void QMatrix4x4_viewport2 ()
 
   if( obj )
   {
-      obj->viewport ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), OPFLOAT(5,0.0f), OPFLOAT(6,1.0f) );
+    obj->viewport ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), OPFLOAT(5,0.0f), OPFLOAT(6,1.0f) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -996,8 +996,8 @@ void QMatrix4x4_toTransform1 ()
 
   if( obj )
   {
-      QTransform * ptr = new QTransform( obj->toTransform () );
-      _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    QTransform * ptr = new QTransform( obj->toTransform () );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
 
@@ -1010,8 +1010,8 @@ void QMatrix4x4_toTransform2 ()
 
   if( obj )
   {
-      QTransform * ptr = new QTransform( obj->toTransform ( PFLOAT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
+    QTransform * ptr = new QTransform( obj->toTransform ( PFLOAT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QTRANSFORM", true );
   }
 }
 
@@ -1043,8 +1043,8 @@ void QMatrix4x4_map1 ()
 
   if( obj )
   {
-      QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    QPoint * ptr = new QPoint( obj->map ( *PQPOINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -1057,8 +1057,8 @@ void QMatrix4x4_map2 ()
 
   if( obj )
   {
-      QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+    QPointF * ptr = new QPointF( obj->map ( *PQPOINTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -1072,8 +1072,8 @@ void QMatrix4x4_map3 ()
 
   if( obj )
   {
-      QVector3D * ptr = new QVector3D( obj->map ( *PQVECTOR3D(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+    QVector3D * ptr = new QVector3D( obj->map ( *PQVECTOR3D(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
   }
 #endif
 }
@@ -1088,8 +1088,8 @@ void QMatrix4x4_map4 ()
 
   if( obj )
   {
-      QVector4D * ptr = new QVector4D( obj->map ( *PQVECTOR4D(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR4D", true );
+    QVector4D * ptr = new QVector4D( obj->map ( *PQVECTOR4D(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QVECTOR4D", true );
   }
 #endif
 }
@@ -1159,8 +1159,8 @@ void QMatrix4x4_mapRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->mapRect ( *PQRECT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -1173,8 +1173,8 @@ void QMatrix4x4_mapRect2 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->mapRect ( *PQRECTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 

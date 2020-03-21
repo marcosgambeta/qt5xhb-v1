@@ -390,7 +390,7 @@ void QTextCursor_insertText1 ()
 
   if( obj )
   {
-      obj->insertText ( PQSTRING(1) );
+    obj->insertText ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -405,7 +405,7 @@ void QTextCursor_insertText2 ()
 
   if( obj )
   {
-      obj->insertText ( PQSTRING(1), *PQTEXTCHARFORMAT(2) );
+    obj->insertText ( PQSTRING(1), *PQTEXTCHARFORMAT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -893,14 +893,14 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
     {
 #endif
       int par1;
-int par2;
-int par3;
-int par4;
+      int par2;
+      int par3;
+      int par4;
       obj->selectedTableCells ( &par1, &par2, &par3, &par4 );
       hb_storni( par1, 1 );
-hb_storni( par2, 2 );
-hb_storni( par3, 3 );
-hb_storni( par4, 4 );
+      hb_storni( par2, 2 );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1274,7 +1274,7 @@ void QTextCursor_insertBlock1 ()
 
   if( obj )
   {
-      obj->insertBlock ();
+    obj->insertBlock ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1289,7 +1289,7 @@ void QTextCursor_insertBlock2 ()
 
   if( obj )
   {
-      obj->insertBlock ( *PQTEXTBLOCKFORMAT(1) );
+    obj->insertBlock ( *PQTEXTBLOCKFORMAT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1304,7 +1304,7 @@ void QTextCursor_insertBlock3 ()
 
   if( obj )
   {
-      obj->insertBlock ( *PQTEXTBLOCKFORMAT(1), *PQTEXTCHARFORMAT(2) );
+    obj->insertBlock ( *PQTEXTBLOCKFORMAT(1), *PQTEXTCHARFORMAT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1343,8 +1343,8 @@ void QTextCursor_insertList1 ()
 
   if( obj )
   {
-      QTextList * ptr = obj->insertList ( *PQTEXTLISTFORMAT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+    QTextList * ptr = obj->insertList ( *PQTEXTLISTFORMAT(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1357,8 +1357,8 @@ void QTextCursor_insertList2 ()
 
   if( obj )
   {
-      QTextList * ptr = obj->insertList ( (QTextListFormat::Style) hb_parni(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+    QTextList * ptr = obj->insertList ( (QTextListFormat::Style) hb_parni(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1390,8 +1390,8 @@ void QTextCursor_createList1 ()
 
   if( obj )
   {
-      QTextList * ptr = obj->createList ( *PQTEXTLISTFORMAT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+    QTextList * ptr = obj->createList ( *PQTEXTLISTFORMAT(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1404,8 +1404,8 @@ void QTextCursor_createList2 ()
 
   if( obj )
   {
-      QTextList * ptr = obj->createList ( (QTextListFormat::Style) hb_parni(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
+    QTextList * ptr = obj->createList ( (QTextListFormat::Style) hb_parni(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTLIST" );
   }
 }
 
@@ -1462,8 +1462,8 @@ void QTextCursor_insertTable1 ()
 
   if( obj )
   {
-      QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTTABLE" );
+    QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTTABLE" );
   }
 }
 
@@ -1476,8 +1476,8 @@ void QTextCursor_insertTable2 ()
 
   if( obj )
   {
-      QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTTABLE" );
+    QTextTable * ptr = obj->insertTable ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTTABLE" );
   }
 }
 
@@ -1636,7 +1636,7 @@ void QTextCursor_insertImage1 ()
 
   if( obj )
   {
-      obj->insertImage ( *PQTEXTIMAGEFORMAT(1), (QTextFrameFormat::Position) hb_parni(2) );
+    obj->insertImage ( *PQTEXTIMAGEFORMAT(1), (QTextFrameFormat::Position) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1651,7 +1651,7 @@ void QTextCursor_insertImage2 ()
 
   if( obj )
   {
-      obj->insertImage ( *PQTEXTIMAGEFORMAT(1) );
+    obj->insertImage ( *PQTEXTIMAGEFORMAT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1666,7 +1666,7 @@ void QTextCursor_insertImage3 ()
 
   if( obj )
   {
-      obj->insertImage ( PQSTRING(1) );
+    obj->insertImage ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1681,7 +1681,7 @@ void QTextCursor_insertImage4 ()
 
   if( obj )
   {
-      obj->insertImage ( *PQIMAGE(1), OPQSTRING(2,QString()) );
+    obj->insertImage ( *PQIMAGE(1), OPQSTRING(2,QString()) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -565,10 +565,10 @@ static float dotProduct(const QVector2D& v1, const QVector2D& v2)
 HB_FUNC_STATIC( QVECTOR2D_DOTPRODUCT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQVECTOR2D(1) && ISQVECTOR2D(2) )
+  if( ISNUMPAR(2) && ISQVECTOR2D(1) && ISQVECTOR2D(2) )
   {
 #endif
-      RFLOAT( QVector2D::dotProduct ( *PQVECTOR2D(1), *PQVECTOR2D(2) ) );
+    RFLOAT( QVector2D::dotProduct ( *PQVECTOR2D(1), *PQVECTOR2D(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

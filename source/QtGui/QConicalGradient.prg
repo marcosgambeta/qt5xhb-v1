@@ -203,7 +203,7 @@ void QConicalGradient_setCenter1 ()
 
   if( obj )
   {
-      obj->setCenter ( *PQPOINTF(1) );
+    obj->setCenter ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -218,7 +218,7 @@ void QConicalGradient_setCenter2 ()
 
   if( obj )
   {
-      obj->setCenter ( PQREAL(1), PQREAL(2) );
+    obj->setCenter ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

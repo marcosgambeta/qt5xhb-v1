@@ -558,10 +558,10 @@ static bool hasOpenGLShaderPrograms(QOpenGLContext *context = 0)
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQOPENGLCONTEXT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOPENGLCONTEXT(1)||ISNIL(1)) )
   {
 #endif
-      RBOOL( QOpenGLShaderProgram::hasOpenGLShaderPrograms ( OPQOPENGLCONTEXT(1,0) ) );
+    RBOOL( QOpenGLShaderProgram::hasOpenGLShaderPrograms ( OPQOPENGLCONTEXT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

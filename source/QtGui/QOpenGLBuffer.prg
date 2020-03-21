@@ -138,7 +138,7 @@ void QOpenGLBuffer_allocate1 ()
 
   if( obj )
   {
-      obj->allocate ( (const void *) hb_parptr(1), PINT(2) );
+    obj->allocate ( (const void *) hb_parptr(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -153,7 +153,7 @@ void QOpenGLBuffer_allocate2 ()
 
   if( obj )
   {
-      obj->allocate ( PINT(1) );
+    obj->allocate ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -357,7 +357,7 @@ void QOpenGLBuffer_release1 ()
 
   if( obj )
   {
-      obj->release ();
+    obj->release ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -369,7 +369,7 @@ static void release(QOpenGLBuffer::Type type)
 void QOpenGLBuffer_release2 ()
 {
 
-      QOpenGLBuffer::release ( (QOpenGLBuffer::Type) hb_parni(1) );
+  QOpenGLBuffer::release ( (QOpenGLBuffer::Type) hb_parni(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }

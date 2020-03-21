@@ -360,45 +360,45 @@ void QRawFont_advancesForGlyphIndexes1 ()
 
   if( obj )
   {
-       QVector<quint32> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-quint32 temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-  temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
-  par1 << temp1;
-}
-      QVector<QPointF> list = obj->advancesForGlyphIndexes ( par1 );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+    QVector<quint32> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    quint32 temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
+      par1 << temp1;
+    }
+    QVector<QPointF> list = obj->advancesForGlyphIndexes ( par1 );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
       {
-        for( int i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPointF *) new QPointF ( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QPointF *) new QPointF ( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOINTF", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOINTF", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
   }
 }
 
@@ -851,7 +851,7 @@ void QRawFont_supportsCharacter1 ()
 
   if( obj )
   {
-      RBOOL( obj->supportsCharacter ( PUINT(1) ) );
+    RBOOL( obj->supportsCharacter ( PUINT(1) ) );
   }
 }
 
@@ -864,7 +864,7 @@ void QRawFont_supportsCharacter2 ()
 
   if( obj )
   {
-      RBOOL( obj->supportsCharacter ( *PQCHAR(1) ) );
+    RBOOL( obj->supportsCharacter ( *PQCHAR(1) ) );
   }
 }
 
@@ -950,11 +950,11 @@ static QRawFont fromFont(const QFont &font,QFontDatabase::WritingSystem writingS
 HB_FUNC_STATIC( QRAWFONT_FROMFONT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTNUM(2) )
   {
 #endif
-      QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRAWFONT", true );
+    QRawFont * ptr = new QRawFont( QRawFont::fromFont ( *PQFONT(1), ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRAWFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

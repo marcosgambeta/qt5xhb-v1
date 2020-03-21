@@ -331,10 +331,10 @@ HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
     {
 #endif
       QString par1 = hb_parc(1);
-int par2;
+      int par2;
       RENUM( obj->validate ( par1, par2 ) );
       hb_storc( QSTRINGTOSTRING(par1), 1);
-hb_storni( par2, 2 );
+      hb_storni( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

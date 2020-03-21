@@ -174,7 +174,7 @@ void QPainterPath_addEllipse1 ()
 
   if( obj )
   {
-      obj->addEllipse ( *PQRECTF(1) );
+    obj->addEllipse ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -189,7 +189,7 @@ void QPainterPath_addEllipse2 ()
 
   if( obj )
   {
-      obj->addEllipse ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->addEllipse ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -204,7 +204,7 @@ void QPainterPath_addEllipse3 ()
 
   if( obj )
   {
-      obj->addEllipse ( *PQPOINTF(1), PQREAL(2), PQREAL(3) );
+    obj->addEllipse ( *PQPOINTF(1), PQREAL(2), PQREAL(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -295,7 +295,7 @@ void QPainterPath_addRect1 ()
 
   if( obj )
   {
-      obj->addRect ( *PQRECTF(1) );
+    obj->addRect ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -310,7 +310,7 @@ void QPainterPath_addRect2 ()
 
   if( obj )
   {
-      obj->addRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->addRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -370,7 +370,7 @@ void QPainterPath_addRoundedRect1 ()
 
   if( obj )
   {
-      obj->addRoundedRect ( *PQRECTF(1), PQREAL(2), PQREAL(3), ISNIL(4)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(4) );
+    obj->addRoundedRect ( *PQRECTF(1), PQREAL(2), PQREAL(3), ISNIL(4)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -385,7 +385,7 @@ void QPainterPath_addRoundedRect2 ()
 
   if( obj )
   {
-      obj->addRoundedRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), ISNIL(7)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(7) );
+    obj->addRoundedRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), ISNIL(7)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(7) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -419,7 +419,7 @@ void QPainterPath_addText1 ()
 
   if( obj )
   {
-      obj->addText ( *PQPOINTF(1), *PQFONT(2), PQSTRING(3) );
+    obj->addText ( *PQPOINTF(1), *PQFONT(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -434,7 +434,7 @@ void QPainterPath_addText2 ()
 
   if( obj )
   {
-      obj->addText ( PQREAL(1), PQREAL(2), *PQFONT(3), PQSTRING(4) );
+    obj->addText ( PQREAL(1), PQREAL(2), *PQFONT(3), PQSTRING(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -492,7 +492,7 @@ void QPainterPath_arcMoveTo1 ()
 
   if( obj )
   {
-      obj->arcMoveTo ( *PQRECTF(1), PQREAL(2) );
+    obj->arcMoveTo ( *PQRECTF(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -507,7 +507,7 @@ void QPainterPath_arcMoveTo2 ()
 
   if( obj )
   {
-      obj->arcMoveTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) );
+    obj->arcMoveTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -541,7 +541,7 @@ void QPainterPath_arcTo1 ()
 
   if( obj )
   {
-      obj->arcTo ( *PQRECTF(1), PQREAL(2), PQREAL(3) );
+    obj->arcTo ( *PQRECTF(1), PQREAL(2), PQREAL(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -556,7 +556,7 @@ void QPainterPath_arcTo2 ()
 
   if( obj )
   {
-      obj->arcTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
+    obj->arcTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -667,7 +667,7 @@ void QPainterPath_contains1 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( *PQPOINTF(1) ) );
+    RBOOL( obj->contains ( *PQPOINTF(1) ) );
   }
 }
 
@@ -680,7 +680,7 @@ void QPainterPath_contains2 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( *PQRECTF(1) ) );
+    RBOOL( obj->contains ( *PQRECTF(1) ) );
   }
 }
 
@@ -693,7 +693,7 @@ void QPainterPath_contains3 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( *PQPAINTERPATH(1) ) );
+    RBOOL( obj->contains ( *PQPAINTERPATH(1) ) );
   }
 }
 
@@ -755,7 +755,7 @@ void QPainterPath_cubicTo1 ()
 
   if( obj )
   {
-      obj->cubicTo ( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
+    obj->cubicTo ( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -770,7 +770,7 @@ void QPainterPath_cubicTo2 ()
 
   if( obj )
   {
-      obj->cubicTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
+    obj->cubicTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -902,7 +902,7 @@ void QPainterPath_intersects1 ()
 
   if( obj )
   {
-      RBOOL( obj->intersects ( *PQRECTF(1) ) );
+    RBOOL( obj->intersects ( *PQRECTF(1) ) );
   }
 }
 
@@ -915,7 +915,7 @@ void QPainterPath_intersects2 ()
 
   if( obj )
   {
-      RBOOL( obj->intersects ( *PQPAINTERPATH(1) ) );
+    RBOOL( obj->intersects ( *PQPAINTERPATH(1) ) );
   }
 }
 
@@ -995,7 +995,7 @@ void QPainterPath_lineTo1 ()
 
   if( obj )
   {
-      obj->lineTo ( *PQPOINTF(1) );
+    obj->lineTo ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1010,7 +1010,7 @@ void QPainterPath_lineTo2 ()
 
   if( obj )
   {
-      obj->lineTo ( PQREAL(1), PQREAL(2) );
+    obj->lineTo ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1044,7 +1044,7 @@ void QPainterPath_moveTo1 ()
 
   if( obj )
   {
-      obj->moveTo ( *PQPOINTF(1) );
+    obj->moveTo ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1059,7 +1059,7 @@ void QPainterPath_moveTo2 ()
 
   if( obj )
   {
-      obj->moveTo ( PQREAL(1), PQREAL(2) );
+    obj->moveTo ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1142,7 +1142,7 @@ void QPainterPath_quadTo1 ()
 
   if( obj )
   {
-      obj->quadTo ( *PQPOINTF(1), *PQPOINTF(2) );
+    obj->quadTo ( *PQPOINTF(1), *PQPOINTF(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1157,7 +1157,7 @@ void QPainterPath_quadTo2 ()
 
   if( obj )
   {
-      obj->quadTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->quadTo ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1343,8 +1343,8 @@ void QPainterPath_toFillPolygon1 ()
 
   if( obj )
   {
-      QPolygonF * ptr = new QPolygonF( obj->toFillPolygon ( *PQTRANSFORM(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    QPolygonF * ptr = new QPolygonF( obj->toFillPolygon ( *PQTRANSFORM(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -1357,8 +1357,8 @@ void QPainterPath_toFillPolygon2 ()
 
   if( obj )
   {
-      QPolygonF * ptr = new QPolygonF( obj->toFillPolygon ( ISNIL(1)? QMatrix() : *(QMatrix *) _qt5xhb_itemGetPtr(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    QPolygonF * ptr = new QPolygonF( obj->toFillPolygon ( ISNIL(1)? QMatrix() : *(QMatrix *) _qt5xhb_itemGetPtr(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -1415,7 +1415,7 @@ void QPainterPath_translate1 ()
 
   if( obj )
   {
-      obj->translate ( PQREAL(1), PQREAL(2) );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1430,7 +1430,7 @@ void QPainterPath_translate2 ()
 
   if( obj )
   {
-      obj->translate ( *PQPOINTF(1) );
+    obj->translate ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1464,8 +1464,8 @@ void QPainterPath_translated1 ()
 
   if( obj )
   {
-      QPainterPath * ptr = new QPainterPath( obj->translated ( PQREAL(1), PQREAL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    QPainterPath * ptr = new QPainterPath( obj->translated ( PQREAL(1), PQREAL(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -1478,8 +1478,8 @@ void QPainterPath_translated2 ()
 
   if( obj )
   {
-      QPainterPath * ptr = new QPainterPath( obj->translated ( *PQPOINTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    QPainterPath * ptr = new QPainterPath( obj->translated ( *PQPOINTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 

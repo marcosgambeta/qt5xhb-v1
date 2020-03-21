@@ -1607,7 +1607,7 @@ void QStandardItem_setChild1 ()
 
   if( obj )
   {
-      obj->setChild ( PINT(1), PINT(2), PQSTANDARDITEM(3) );
+    obj->setChild ( PINT(1), PINT(2), PQSTANDARDITEM(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1622,7 +1622,7 @@ void QStandardItem_setChild2 ()
 
   if( obj )
   {
-      obj->setChild ( PINT(1), PQSTANDARDITEM(2) );
+    obj->setChild ( PINT(1), PQSTANDARDITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1656,15 +1656,15 @@ void QStandardItem_insertRow1 ()
 
   if( obj )
   {
-       QList<QStandardItem *> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-  par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-}
-      obj->insertRow ( PINT(1), par2 );
+    QList<QStandardItem *> par2;
+    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+    int i2;
+    int nLen2 = hb_arrayLen(aList2);
+    for (i2=0;i2<nLen2;i2++)
+    {
+      par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+    }
+    obj->insertRow ( PINT(1), par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1679,7 +1679,7 @@ void QStandardItem_insertRow2 ()
 
   if( obj )
   {
-      obj->insertRow ( PINT(1), PQSTANDARDITEM(2) );
+    obj->insertRow ( PINT(1), PQSTANDARDITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1718,13 +1718,13 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
     {
 #endif
       QList<QStandardItem *> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-  par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+      int i2;
+      int nLen2 = hb_arrayLen(aList2);
+      for (i2=0;i2<nLen2;i2++)
+      {
+        par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+      }
       obj->insertColumn ( PINT(1), par2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1747,15 +1747,15 @@ void QStandardItem_insertRows1 ()
 
   if( obj )
   {
-       QList<QStandardItem *> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-  par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-}
-      obj->insertRows ( PINT(1), par2 );
+    QList<QStandardItem *> par2;
+    PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+    int i2;
+    int nLen2 = hb_arrayLen(aList2);
+    for (i2=0;i2<nLen2;i2++)
+    {
+      par2 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+    }
+    obj->insertRows ( PINT(1), par2 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1770,7 +1770,7 @@ void QStandardItem_insertRows2 ()
 
   if( obj )
   {
-      obj->insertRows ( PINT(1), PINT(2) );
+    obj->insertRows ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1934,15 +1934,15 @@ void QStandardItem_appendRow1 ()
 
   if( obj )
   {
-       QList<QStandardItem *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      obj->appendRow ( par1 );
+    QList<QStandardItem *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    obj->appendRow ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1957,7 +1957,7 @@ void QStandardItem_appendRow2 ()
 
   if( obj )
   {
-      obj->appendRow ( PQSTANDARDITEM(1) );
+    obj->appendRow ( PQSTANDARDITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1996,13 +1996,13 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROWS )
     {
 #endif
       QList<QStandardItem *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->appendRows ( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2030,13 +2030,13 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
     {
 #endif
       QList<QStandardItem *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << (QStandardItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->appendColumn ( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
