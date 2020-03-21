@@ -267,7 +267,7 @@ void QBluetoothServiceInfo_setAttribute1 ()
 
   if( obj )
   {
-      obj->setAttribute ( PQUINT16(1), *PQVARIANT(2) );
+    obj->setAttribute ( PQUINT16(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -284,7 +284,7 @@ void QBluetoothServiceInfo_setAttribute2 ()
 
   if( obj )
   {
-      obj->setAttribute ( PQUINT16(1), *PQBLUETOOTHUUID(2) );
+    obj->setAttribute ( PQUINT16(1), *PQBLUETOOTHUUID(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

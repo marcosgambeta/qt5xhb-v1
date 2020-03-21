@@ -144,7 +144,7 @@ void QBluetoothServer_listen1 ()
 
   if( obj )
   {
-      RBOOL( obj->listen ( ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1), OPQUINT16(2,0) ) );
+    RBOOL( obj->listen ( ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) _qt5xhb_itemGetPtr(1), OPQUINT16(2,0) ) );
   }
 #endif
 }
@@ -159,8 +159,8 @@ void QBluetoothServer_listen2 ()
 
   if( obj )
   {
-      QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *PQBLUETOOTHUUID(1), OPQSTRING(2,QString()) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSERVICEINFO", true );
+    QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen ( *PQBLUETOOTHUUID(1), OPQSTRING(2,QString()) ) );
+    _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHSERVICEINFO", true );
   }
 #endif
 }

@@ -271,15 +271,15 @@ void QBluetoothServiceDiscoveryAgent_setUuidFilter1 ()
 
   if( obj )
   {
-       QList<QBluetoothUuid> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QBluetoothUuid *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      obj->setUuidFilter ( par1 );
+    QList<QBluetoothUuid> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QBluetoothUuid *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    obj->setUuidFilter ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -296,7 +296,7 @@ void QBluetoothServiceDiscoveryAgent_setUuidFilter2 ()
 
   if( obj )
   {
-      obj->setUuidFilter ( *PQBLUETOOTHUUID(1) );
+    obj->setUuidFilter ( *PQBLUETOOTHUUID(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

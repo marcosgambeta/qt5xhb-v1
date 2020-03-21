@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
 }
 
 /*
-  convert QList<QBluetoothUuid> to array
+convert QList<QBluetoothUuid> to array
 */
 /*
 void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> & list )
