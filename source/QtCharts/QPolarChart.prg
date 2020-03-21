@@ -132,10 +132,10 @@ static PolarOrientation axisPolarOrientation(QAbstractAxis *axis)
 HB_FUNC_STATIC( QPOLARCHART_AXISPOLARORIENTATION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTAXIS(1) )
+  if( ISNUMPAR(1) && ISQABSTRACTAXIS(1) )
   {
 #endif
-      RENUM( QPolarChart::axisPolarOrientation ( PQABSTRACTAXIS(1) ) );
+    RENUM( QPolarChart::axisPolarOrientation ( PQABSTRACTAXIS(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

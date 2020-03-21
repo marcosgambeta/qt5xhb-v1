@@ -729,15 +729,15 @@ void QCandlestickSeries_append1 ()
 
   if( obj )
   {
-       QList<QCandlestickSet *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      RBOOL( obj->append ( par1 ) );
+    QList<QCandlestickSet *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    RBOOL( obj->append ( par1 ) );
   }
 #endif
 }
@@ -752,15 +752,15 @@ void QCandlestickSeries_append2 ()
 
   if( obj )
   {
-       QList<QCandlestickSet *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      RBOOL( obj->append ( par1 ) );
+    QList<QCandlestickSet *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    RBOOL( obj->append ( par1 ) );
   }
 #endif
 }
@@ -794,7 +794,7 @@ void QCandlestickSeries_remove1 ()
 
   if( obj )
   {
-      RBOOL( obj->remove ( PQCANDLESTICKSET(1) ) );
+    RBOOL( obj->remove ( PQCANDLESTICKSET(1) ) );
   }
 #endif
 }
@@ -809,15 +809,15 @@ void QCandlestickSeries_remove2 ()
 
   if( obj )
   {
-       QList<QCandlestickSet *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      RBOOL( obj->remove ( par1 ) );
+    QList<QCandlestickSet *> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    RBOOL( obj->remove ( par1 ) );
   }
 #endif
 }

@@ -341,7 +341,7 @@ void QBarCategoryAxis_append1 ()
 
   if( obj )
   {
-      obj->append ( PQSTRINGLIST(1) );
+    obj->append ( PQSTRINGLIST(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -358,7 +358,7 @@ void QBarCategoryAxis_append2 ()
 
   if( obj )
   {
-      obj->append ( PQSTRING(1) );
+    obj->append ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

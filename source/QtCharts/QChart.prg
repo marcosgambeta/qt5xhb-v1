@@ -1487,7 +1487,7 @@ void QChart_zoomIn1 ()
 
   if( obj )
   {
-      obj->zoomIn ();
+    obj->zoomIn ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1504,7 +1504,7 @@ void QChart_zoomIn2 ()
 
   if( obj )
   {
-      obj->zoomIn ( *PQRECTF(1) );
+    obj->zoomIn ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

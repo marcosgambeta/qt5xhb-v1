@@ -589,7 +589,7 @@ void QBarSet_append1 ()
 
   if( obj )
   {
-      obj->append ( PQREAL(1) );
+    obj->append ( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -606,17 +606,17 @@ void QBarSet_append2 ()
 
   if( obj )
   {
-       QList<qreal> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-qreal temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-  temp1 = hb_arrayGetND(aList1, i1+1);
-  par1 << temp1;
-}
-      obj->append ( par1 );
+    QList<qreal> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    qreal temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetND(aList1, i1+1);
+      par1 << temp1;
+    }
+    obj->append ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
