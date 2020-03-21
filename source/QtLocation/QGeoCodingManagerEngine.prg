@@ -143,8 +143,8 @@ void QGeoCodingManagerEngine_geocode1 ()
 
   if( obj )
   {
-      QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), *PQGEOSHAPE(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
@@ -159,8 +159,8 @@ void QGeoCodingManagerEngine_geocode2 ()
 
   if( obj )
   {
-      QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), PINT(2), PINT(3), *PQGEOSHAPE(4) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
