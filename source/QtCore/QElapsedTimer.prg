@@ -350,10 +350,10 @@ static ClockType clockType()
 HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RENUM( QElapsedTimer::clockType () );
+    RENUM( QElapsedTimer::clockType () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -369,10 +369,10 @@ static bool isMonotonic()
 HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QElapsedTimer::isMonotonic () );
+    RBOOL( QElapsedTimer::isMonotonic () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -131,7 +131,7 @@ void QState_addTransition1 ()
 
   if( obj )
   {
-      obj->addTransition ( PQABSTRACTTRANSITION(1) );
+    obj->addTransition ( PQABSTRACTTRANSITION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -146,8 +146,8 @@ void QState_addTransition2 ()
 
   if( obj )
   {
-      QSignalTransition * ptr = obj->addTransition ( PQOBJECT(1), PCONSTCHAR(2), PQABSTRACTSTATE(3) );
-      _qt5xhb_createReturnClass ( ptr, "QSIGNALTRANSITION", false );
+    QSignalTransition * ptr = obj->addTransition ( PQOBJECT(1), PCONSTCHAR(2), PQABSTRACTSTATE(3) );
+    _qt5xhb_createReturnClass ( ptr, "QSIGNALTRANSITION", false );
   }
 }
 
@@ -160,8 +160,8 @@ void QState_addTransition3 ()
 
   if( obj )
   {
-      QAbstractTransition * ptr = obj->addTransition ( PQABSTRACTSTATE(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTTRANSITION" );
+    QAbstractTransition * ptr = obj->addTransition ( PQABSTRACTSTATE(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTTRANSITION" );
   }
 }
 

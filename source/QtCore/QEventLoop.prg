@@ -172,7 +172,7 @@ void QEventLoop_processEvents1 ()
 
   if( obj )
   {
-      RBOOL( obj->processEvents ( ISNIL(1)? (QEventLoop::ProcessEventsFlags) QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
+    RBOOL( obj->processEvents ( ISNIL(1)? (QEventLoop::ProcessEventsFlags) QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
   }
 }
 
@@ -185,7 +185,7 @@ void QEventLoop_processEvents2 ()
 
   if( obj )
   {
-      obj->processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
+    obj->processEvents ( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -734,7 +734,7 @@ void QSettings_setIniCodec1 ()
 
   if( obj )
   {
-      obj->setIniCodec ( PQTEXTCODEC(1) );
+    obj->setIniCodec ( PQTEXTCODEC(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -749,7 +749,7 @@ void QSettings_setIniCodec2 ()
 
   if( obj )
   {
-      obj->setIniCodec ( PCONSTCHAR(1) );
+    obj->setIniCodec ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -878,10 +878,10 @@ static Format defaultFormat ()
 HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RENUM( QSettings::defaultFormat () );
+    RENUM( QSettings::defaultFormat () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -897,10 +897,10 @@ static void setDefaultFormat ( Format format )
 HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QSettings::setDefaultFormat ( (QSettings::Format) hb_parni(1) );
+    QSettings::setDefaultFormat ( (QSettings::Format) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -918,10 +918,10 @@ static void setPath ( Format format, Scope scope, const QString & path )
 HB_FUNC_STATIC( QSETTINGS_SETPATH )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
+  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
   {
 #endif
-      QSettings::setPath ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3) );
+    QSettings::setPath ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

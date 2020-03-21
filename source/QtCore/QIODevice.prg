@@ -447,7 +447,7 @@ void QIODevice_peek1 ()
 
   if( obj )
   {
-      RQINT64( obj->peek ( (char *) hb_parc(1), PQINT64(2) ) );
+    RQINT64( obj->peek ( (char *) hb_parc(1), PQINT64(2) ) );
   }
 }
 
@@ -460,8 +460,8 @@ void QIODevice_peek2 ()
 
   if( obj )
   {
-      QByteArray * ptr = new QByteArray( obj->peek ( PQINT64(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( obj->peek ( PQINT64(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -541,7 +541,7 @@ void QIODevice_read1 ()
 
   if( obj )
   {
-      RQINT64( obj->read ( (char *) hb_parc(1), PQINT64(2) ) );
+    RQINT64( obj->read ( (char *) hb_parc(1), PQINT64(2) ) );
   }
 }
 
@@ -554,8 +554,8 @@ void QIODevice_read2 ()
 
   if( obj )
   {
-      QByteArray * ptr = new QByteArray( obj->read ( PQINT64(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( obj->read ( PQINT64(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -612,7 +612,7 @@ void QIODevice_readLine1 ()
 
   if( obj )
   {
-      RQINT64( obj->readLine ( (char *) hb_parc(1), PQINT64(2) ) );
+    RQINT64( obj->readLine ( (char *) hb_parc(1), PQINT64(2) ) );
   }
 }
 
@@ -625,8 +625,8 @@ void QIODevice_readLine2 ()
 
   if( obj )
   {
-      QByteArray * ptr = new QByteArray( obj->readLine ( OPQINT64(1,0) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( obj->readLine ( OPQINT64(1,0) ) );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -830,7 +830,7 @@ void QIODevice_write1 ()
 
   if( obj )
   {
-      RQINT64( obj->write ( PCONSTCHAR(1), PQINT64(2) ) );
+    RQINT64( obj->write ( PCONSTCHAR(1), PQINT64(2) ) );
   }
 }
 
@@ -843,7 +843,7 @@ void QIODevice_write2 ()
 
   if( obj )
   {
-      RQINT64( obj->write ( PCONSTCHAR(1) ) );
+    RQINT64( obj->write ( PCONSTCHAR(1) ) );
   }
 }
 
@@ -856,7 +856,7 @@ void QIODevice_write3 ()
 
   if( obj )
   {
-      RQINT64( obj->write ( *PQBYTEARRAY(1) ) );
+    RQINT64( obj->write ( *PQBYTEARRAY(1) ) );
   }
 }
 

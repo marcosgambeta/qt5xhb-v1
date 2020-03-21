@@ -129,7 +129,7 @@ void QCryptographicHash_addData1 ()
 
   if( obj )
   {
-      obj->addData ( PCONSTCHAR(1), PINT(2) );
+    obj->addData ( PCONSTCHAR(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -144,7 +144,7 @@ void QCryptographicHash_addData2 ()
 
   if( obj )
   {
-      obj->addData ( *PQBYTEARRAY(1) );
+    obj->addData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -159,7 +159,7 @@ void QCryptographicHash_addData3 ()
 
   if( obj )
   {
-      RBOOL( obj->addData ( PQIODEVICE(1) ) );
+    RBOOL( obj->addData ( PQIODEVICE(1) ) );
   }
 }
 
@@ -218,11 +218,11 @@ static QByteArray hash(const QByteArray &data, Algorithm method)
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *PQBYTEARRAY(1), (QCryptographicHash::Algorithm) hb_parni(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QCryptographicHash::hash ( *PQBYTEARRAY(1), (QCryptographicHash::Algorithm) hb_parni(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -239,10 +239,10 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASHLENGTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      RINT( QCryptographicHash::hashLength ( (QCryptographicHash::Algorithm) hb_parni(1) ) );
+    RINT( QCryptographicHash::hashLength ( (QCryptographicHash::Algorithm) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

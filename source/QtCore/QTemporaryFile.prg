@@ -293,8 +293,8 @@ static QTemporaryFile * createNativeFile(QFile & file)
 void QTemporaryFile_createNativeFile1 ()
 {
 
-      QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( *PQFILE(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEMPORARYFILE" );
+  QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( *PQFILE(1) );
+  _qt5xhb_createReturnQObjectClass ( ptr, "QTEMPORARYFILE" );
 }
 
 /*
@@ -303,8 +303,8 @@ static QTemporaryFile * createNativeFile(const QString & fileName)
 void QTemporaryFile_createNativeFile2 ()
 {
 
-      QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEMPORARYFILE" );
+  QTemporaryFile * ptr = QTemporaryFile::createNativeFile ( PQSTRING(1) );
+  _qt5xhb_createReturnQObjectClass ( ptr, "QTEMPORARYFILE" );
 }
 
 //[1]QTemporaryFile * createNativeFile(QFile & file)

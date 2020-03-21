@@ -344,7 +344,7 @@ void QCommandLineParser_process1 ()
 
   if( obj )
   {
-      obj->process ( PQSTRINGLIST(1) );
+    obj->process ( PQSTRINGLIST(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -361,7 +361,7 @@ void QCommandLineParser_process2 ()
 
   if( obj )
   {
-      obj->process ( *PQCOREAPPLICATION(1) );
+    obj->process ( *PQCOREAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -449,7 +449,7 @@ void QCommandLineParser_isSet1 ()
 
   if( obj )
   {
-      RBOOL( obj->isSet ( PQSTRING(1) ) );
+    RBOOL( obj->isSet ( PQSTRING(1) ) );
   }
 #endif
 }
@@ -464,7 +464,7 @@ void QCommandLineParser_isSet2 ()
 
   if( obj )
   {
-      RBOOL( obj->isSet ( *PQCOMMANDLINEOPTION(1) ) );
+    RBOOL( obj->isSet ( *PQCOMMANDLINEOPTION(1) ) );
   }
 #endif
 }
@@ -498,7 +498,7 @@ void QCommandLineParser_value1 ()
 
   if( obj )
   {
-      RQSTRING( obj->value ( PQSTRING(1) ) );
+    RQSTRING( obj->value ( PQSTRING(1) ) );
   }
 #endif
 }
@@ -513,7 +513,7 @@ void QCommandLineParser_value2 ()
 
   if( obj )
   {
-      RQSTRING( obj->value ( *PQCOMMANDLINEOPTION(1) ) );
+    RQSTRING( obj->value ( *PQCOMMANDLINEOPTION(1) ) );
   }
 #endif
 }
@@ -547,7 +547,7 @@ void QCommandLineParser_values1 ()
 
   if( obj )
   {
-      RQSTRINGLIST( obj->values ( PQSTRING(1) ) );
+    RQSTRINGLIST( obj->values ( PQSTRING(1) ) );
   }
 #endif
 }
@@ -562,7 +562,7 @@ void QCommandLineParser_values2 ()
 
   if( obj )
   {
-      RQSTRINGLIST( obj->values ( *PQCOMMANDLINEOPTION(1) ) );
+    RQSTRINGLIST( obj->values ( *PQCOMMANDLINEOPTION(1) ) );
   }
 #endif
 }

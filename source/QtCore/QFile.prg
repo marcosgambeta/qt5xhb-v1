@@ -168,7 +168,7 @@ void QFile_copy1 ()
 
   if( obj )
   {
-      RBOOL( obj->copy ( PQSTRING(1) ) );
+    RBOOL( obj->copy ( PQSTRING(1) ) );
   }
 }
 
@@ -178,7 +178,7 @@ static bool copy ( const QString & fileName, const QString & newName )
 void QFile_copy2 ()
 {
 
-      RBOOL( QFile::copy ( PQSTRING(1), PQSTRING(2) ) );
+  RBOOL( QFile::copy ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 //[1]bool copy ( const QString & newName )
@@ -233,7 +233,7 @@ void QFile_exists1 ()
 
   if( obj )
   {
-      RBOOL( obj->exists () );
+    RBOOL( obj->exists () );
   }
 }
 
@@ -243,7 +243,7 @@ static bool exists ( const QString & fileName )
 void QFile_exists2 ()
 {
 
-      RBOOL( QFile::exists ( PQSTRING(1) ) );
+  RBOOL( QFile::exists ( PQSTRING(1) ) );
 }
 
 //[1]bool exists () const
@@ -346,7 +346,7 @@ void QFile_link1 ()
 
   if( obj )
   {
-      RBOOL( obj->link ( PQSTRING(1) ) );
+    RBOOL( obj->link ( PQSTRING(1) ) );
   }
 }
 
@@ -356,7 +356,7 @@ static bool link ( const QString & fileName, const QString & linkName )
 void QFile_link2 ()
 {
 
-      RBOOL( QFile::link ( PQSTRING(1), PQSTRING(2) ) );
+  RBOOL( QFile::link ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 //[1]bool link ( const QString & linkName )
@@ -391,7 +391,7 @@ void QFile_open1 ()
 
   if( obj )
   {
-      RBOOL( obj->open ( (QFile::OpenMode) hb_parni(1) ) );
+    RBOOL( obj->open ( (QFile::OpenMode) hb_parni(1) ) );
   }
 }
 
@@ -404,7 +404,7 @@ void QFile_open2 ()
 
   if( obj )
   {
-      RBOOL( obj->open ( (FILE *) hb_parptr(1), (QFile::OpenMode) hb_parni(2), ISNIL(3)? (QFile::FileHandleFlags) QFile::DontCloseHandle : (QFile::FileHandleFlags) hb_parni(3) ) );
+    RBOOL( obj->open ( (FILE *) hb_parptr(1), (QFile::OpenMode) hb_parni(2), ISNIL(3)? (QFile::FileHandleFlags) QFile::DontCloseHandle : (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -417,7 +417,7 @@ void QFile_open3 ()
 
   if( obj )
   {
-      RBOOL( obj->open ( PINT(1), (QFile::OpenMode) hb_parni(2), ISNIL(3)? (QFile::FileHandleFlags) QFile::DontCloseHandle : (QFile::FileHandleFlags) hb_parni(3) ) );
+    RBOOL( obj->open ( PINT(1), (QFile::OpenMode) hb_parni(2), ISNIL(3)? (QFile::FileHandleFlags) QFile::DontCloseHandle : (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
 
@@ -454,7 +454,7 @@ void QFile_permissions1 ()
 
   if( obj )
   {
-      RENUM( obj->permissions () );
+    RENUM( obj->permissions () );
   }
 }
 
@@ -464,7 +464,7 @@ static Permissions permissions ( const QString & fileName )
 void QFile_permissions2 ()
 {
 
-      RENUM( QFile::permissions ( PQSTRING(1) ) );
+  RENUM( QFile::permissions ( PQSTRING(1) ) );
 }
 
 //[1]Permissions permissions () const
@@ -495,7 +495,7 @@ void QFile_remove1 ()
 
   if( obj )
   {
-      RBOOL( obj->remove () );
+    RBOOL( obj->remove () );
   }
 }
 
@@ -505,7 +505,7 @@ static bool remove ( const QString & fileName )
 void QFile_remove2 ()
 {
 
-      RBOOL( QFile::remove ( PQSTRING(1) ) );
+  RBOOL( QFile::remove ( PQSTRING(1) ) );
 }
 
 //[1]bool remove ()
@@ -536,7 +536,7 @@ void QFile_rename1 ()
 
   if( obj )
   {
-      RBOOL( obj->rename ( PQSTRING(1) ) );
+    RBOOL( obj->rename ( PQSTRING(1) ) );
   }
 }
 
@@ -546,7 +546,7 @@ static bool rename ( const QString & oldName, const QString & newName )
 void QFile_rename2 ()
 {
 
-      RBOOL( QFile::rename ( PQSTRING(1), PQSTRING(2) ) );
+  RBOOL( QFile::rename ( PQSTRING(1), PQSTRING(2) ) );
 }
 
 //[1]bool rename ( const QString & newName )
@@ -577,7 +577,7 @@ void QFile_resize1 ()
 
   if( obj )
   {
-      RBOOL( obj->resize ( PQINT64(1) ) );
+    RBOOL( obj->resize ( PQINT64(1) ) );
   }
 }
 
@@ -587,7 +587,7 @@ static bool resize ( const QString & fileName, qint64 sz )
 void QFile_resize2 ()
 {
 
-      RBOOL( QFile::resize ( PQSTRING(1), PQINT64(2) ) );
+  RBOOL( QFile::resize ( PQSTRING(1), PQINT64(2) ) );
 }
 
 //[1]bool resize ( qint64 sz )
@@ -644,7 +644,7 @@ void QFile_setPermissions1 ()
 
   if( obj )
   {
-      RBOOL( obj->setPermissions ( (QFile::Permissions) hb_parni(1) ) );
+    RBOOL( obj->setPermissions ( (QFile::Permissions) hb_parni(1) ) );
   }
 }
 
@@ -654,7 +654,7 @@ static bool setPermissions ( const QString & fileName, Permissions permissions )
 void QFile_setPermissions2 ()
 {
 
-      RBOOL( QFile::setPermissions ( PQSTRING(1), (QFile::Permissions) hb_parni(2) ) );
+  RBOOL( QFile::setPermissions ( PQSTRING(1), (QFile::Permissions) hb_parni(2) ) );
 }
 
 //[1]bool setPermissions ( Permissions permissions )
@@ -685,7 +685,7 @@ void QFile_symLinkTarget1 ()
 
   if( obj )
   {
-      RQSTRING( obj->symLinkTarget () );
+    RQSTRING( obj->symLinkTarget () );
   }
 }
 
@@ -695,7 +695,7 @@ static QString symLinkTarget ( const QString & fileName )
 void QFile_symLinkTarget2 ()
 {
 
-      RQSTRING( QFile::symLinkTarget ( PQSTRING(1) ) );
+  RQSTRING( QFile::symLinkTarget ( PQSTRING(1) ) );
 }
 
 //[1]QString symLinkTarget () const
@@ -919,7 +919,7 @@ static QString decodeName ( const QByteArray & localFileName )
 void QFile_decodeName1 ()
 {
 
-      RQSTRING( QFile::decodeName ( *PQBYTEARRAY(1) ) );
+  RQSTRING( QFile::decodeName ( *PQBYTEARRAY(1) ) );
 }
 
 /*
@@ -928,7 +928,7 @@ static QString decodeName ( const char * localFileName )
 void QFile_decodeName2 ()
 {
 
-      RQSTRING( QFile::decodeName ( PCONSTCHAR(1) ) );
+  RQSTRING( QFile::decodeName ( PCONSTCHAR(1) ) );
 }
 
 //[1]QString decodeName ( const QByteArray & localFileName )
@@ -956,11 +956,11 @@ static QByteArray encodeName ( const QString & fileName )
 HB_FUNC_STATIC( QFILE_ENCODENAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QByteArray * ptr = new QByteArray( QFile::encodeName ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QFile::encodeName ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -979,7 +979,7 @@ void QFile_readLink1 ()
 
   if( obj )
   {
-      RQSTRING( obj->readLink () );
+    RQSTRING( obj->readLink () );
   }
 }
 
@@ -989,7 +989,7 @@ static QString readLink(const QString &fileName)
 void QFile_readLink2 ()
 {
 
-      RQSTRING( QFile::readLink ( PQSTRING(1) ) );
+  RQSTRING( QFile::readLink ( PQSTRING(1) ) );
 }
 
 //[1]QString readLink() const

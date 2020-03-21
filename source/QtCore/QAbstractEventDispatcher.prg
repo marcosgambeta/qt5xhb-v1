@@ -301,7 +301,7 @@ void QAbstractEventDispatcher_registerTimer1 ()
 
   if( obj )
   {
-      RINT( obj->registerTimer ( PINT(1), (Qt::TimerType) hb_parni(2), PQOBJECT(3) ) );
+    RINT( obj->registerTimer ( PINT(1), (Qt::TimerType) hb_parni(2), PQOBJECT(3) ) );
   }
 }
 
@@ -314,7 +314,7 @@ void QAbstractEventDispatcher_registerTimer2 ()
 
   if( obj )
   {
-      obj->registerTimer ( PINT(1), PINT(2), (Qt::TimerType) hb_parni(3), PQOBJECT(4) );
+    obj->registerTimer ( PINT(1), PINT(2), (Qt::TimerType) hb_parni(3), PQOBJECT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -523,11 +523,11 @@ static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQTHREAD(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQTHREAD(1)||ISNIL(1)) )
   {
 #endif
-      QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( OPQTHREAD(1,0) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
+    QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance ( OPQTHREAD(1,0) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTEVENTDISPATCHER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

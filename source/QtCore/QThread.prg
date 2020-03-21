@@ -441,11 +441,11 @@ static QThread * currentThread()
 HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QThread * ptr = QThread::currentThread ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTHREAD" );
+    QThread * ptr = QThread::currentThread ();
+    _qt5xhb_createReturnQObjectClass ( ptr, "QTHREAD" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -461,10 +461,10 @@ static int idealThreadCount()
 HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RINT( QThread::idealThreadCount () );
+    RINT( QThread::idealThreadCount () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -480,10 +480,10 @@ static void msleep(unsigned long msecs)
 HB_FUNC_STATIC( QTHREAD_MSLEEP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QThread::msleep ( PUNSIGNEDLONG(1) );
+    QThread::msleep ( PUNSIGNEDLONG(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -501,10 +501,10 @@ static void sleep(unsigned long secs)
 HB_FUNC_STATIC( QTHREAD_SLEEP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QThread::sleep ( PUNSIGNEDLONG(1) );
+    QThread::sleep ( PUNSIGNEDLONG(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -522,10 +522,10 @@ static void usleep(unsigned long usecs)
 HB_FUNC_STATIC( QTHREAD_USLEEP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QThread::usleep ( PUNSIGNEDLONG(1) );
+    QThread::usleep ( PUNSIGNEDLONG(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -543,10 +543,10 @@ static void yieldCurrentThread()
 HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QThread::yieldCurrentThread ();
+    QThread::yieldCurrentThread ();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

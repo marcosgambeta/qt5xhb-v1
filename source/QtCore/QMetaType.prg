@@ -67,10 +67,10 @@ static int registerTypedef(const char *typeName, int aliasId)
 HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
   {
 #endif
-      RINT( QMetaType::registerTypedef ( PCONSTCHAR(1), PINT(2) ) );
+    RINT( QMetaType::registerTypedef ( PCONSTCHAR(1), PINT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -86,10 +86,10 @@ static int type(const char *typeName)
 HB_FUNC_STATIC( QMETATYPE_TYPE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RINT( QMetaType::type ( PCONSTCHAR(1) ) );
+    RINT( QMetaType::type ( PCONSTCHAR(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -105,10 +105,10 @@ static const char *typeName(int type)
 HB_FUNC_STATIC( QMETATYPE_TYPENAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      hb_retc( (const char *) QMetaType::typeName ( PINT(1) ) );
+    hb_retc( (const char *) QMetaType::typeName ( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -124,10 +124,10 @@ static bool isRegistered(int type)
 HB_FUNC_STATIC( QMETATYPE_ISREGISTERED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      RBOOL( QMetaType::isRegistered ( PINT(1) ) );
+    RBOOL( QMetaType::isRegistered ( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -143,10 +143,10 @@ static void *construct(int type, void *where, const void *copy)
 HB_FUNC_STATIC( QMETATYPE_CONSTRUCT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISPOINTER(3) )
+  if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISPOINTER(3) )
   {
 #endif
-      hb_retptr( (void *) QMetaType::construct ( PINT(1), (void *) hb_parptr(2), (const void *) hb_parptr(3) ) );
+    hb_retptr( (void *) QMetaType::construct ( PINT(1), (void *) hb_parptr(2), (const void *) hb_parptr(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -162,10 +162,10 @@ static void destroy(int type, void *data)
 HB_FUNC_STATIC( QMETATYPE_DESTROY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
+  if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
   {
 #endif
-      QMetaType::destroy ( PINT(1), (void *) hb_parptr(2) );
+    QMetaType::destroy ( PINT(1), (void *) hb_parptr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -183,10 +183,10 @@ static bool save(QDataStream &stream, int type, const void *data)
 HB_FUNC_STATIC( QMETATYPE_SAVE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQDATASTREAM(1) && ISNUM(2) && ISPOINTER(3) )
+  if( ISNUMPAR(3) && ISQDATASTREAM(1) && ISNUM(2) && ISPOINTER(3) )
   {
 #endif
-      RBOOL( QMetaType::save ( *PQDATASTREAM(1), PINT(2), (const void *) hb_parptr(3) ) );
+    RBOOL( QMetaType::save ( *PQDATASTREAM(1), PINT(2), (const void *) hb_parptr(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -202,10 +202,10 @@ static bool load(QDataStream &stream, int type, void *data)
 HB_FUNC_STATIC( QMETATYPE_LOAD )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQDATASTREAM(1) && ISNUM(2) && ISPOINTER(3) )
+  if( ISNUMPAR(3) && ISQDATASTREAM(1) && ISNUM(2) && ISPOINTER(3) )
   {
 #endif
-      RBOOL( QMetaType::load ( *PQDATASTREAM(1), PINT(2), (void *) hb_parptr(3) ) );
+    RBOOL( QMetaType::load ( *PQDATASTREAM(1), PINT(2), (void *) hb_parptr(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

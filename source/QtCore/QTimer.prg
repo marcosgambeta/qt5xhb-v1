@@ -251,7 +251,7 @@ void QTimer_start1 ()
 
   if( obj )
   {
-      obj->start ( PINT(1) );
+    obj->start ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -266,7 +266,7 @@ void QTimer_start2 ()
 
   if( obj )
   {
-      obj->start ();
+    obj->start ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -323,10 +323,10 @@ static void singleShot ( int msec, QObject * receiver, const char * member )
 HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISQOBJECT(2) && ISCHAR(3) )
+  if( ISNUMPAR(3) && ISNUM(1) && ISQOBJECT(2) && ISCHAR(3) )
   {
 #endif
-      QTimer::singleShot ( PINT(1), PQOBJECT(2), PCONSTCHAR(3) );
+    QTimer::singleShot ( PINT(1), PQOBJECT(2), PCONSTCHAR(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

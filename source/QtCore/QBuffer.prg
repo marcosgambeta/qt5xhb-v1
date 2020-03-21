@@ -234,7 +234,7 @@ void QBuffer_setData1 ()
 
   if( obj )
   {
-      obj->setData ( *PQBYTEARRAY(1) );
+    obj->setData ( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -249,7 +249,7 @@ void QBuffer_setData2 ()
 
   if( obj )
   {
-      obj->setData ( PCONSTCHAR(1), PINT(2) );
+    obj->setData ( PCONSTCHAR(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

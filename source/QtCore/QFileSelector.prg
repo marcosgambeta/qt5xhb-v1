@@ -99,7 +99,7 @@ void QFileSelector_select1 ()
 
   if( obj )
   {
-      RQSTRING( obj->select ( PQSTRING(1) ) );
+    RQSTRING( obj->select ( PQSTRING(1) ) );
   }
 }
 
@@ -112,8 +112,8 @@ void QFileSelector_select2 ()
 
   if( obj )
   {
-      QUrl * ptr = new QUrl( obj->select ( *PQURL(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    QUrl * ptr = new QUrl( obj->select ( *PQURL(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QURL", true );
   }
 }
 

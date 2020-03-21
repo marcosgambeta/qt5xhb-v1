@@ -701,11 +701,11 @@ static QJsonArray fromStringList(const QStringList & list)
 HB_FUNC_STATIC( QJSONARRAY_FROMSTRINGLIST )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && ISARRAY(1) )
   {
 #endif
-      QJsonArray * ptr = new QJsonArray( QJsonArray::fromStringList ( PQSTRINGLIST(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
+    QJsonArray * ptr = new QJsonArray( QJsonArray::fromStringList ( PQSTRINGLIST(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -721,19 +721,19 @@ static QJsonArray fromVariantList(const QVariantList & list)
 HB_FUNC_STATIC( QJSONARRAY_FROMVARIANTLIST )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && ISARRAY(1) )
   {
 #endif
-     QVariantList par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      QJsonArray * ptr = new QJsonArray( QJsonArray::fromVariantList ( par1 ) );
-      _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
+    QVariantList par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    QJsonArray * ptr = new QJsonArray( QJsonArray::fromVariantList ( par1 ) );
+    _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

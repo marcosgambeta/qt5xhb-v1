@@ -719,7 +719,7 @@ void QLineF_translate1 ()
 
   if( obj )
   {
-      obj->translate ( *PQPOINTF(1) );
+    obj->translate ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -734,7 +734,7 @@ void QLineF_translate2 ()
 
   if( obj )
   {
-      obj->translate ( PQREAL(1), PQREAL(2) );
+    obj->translate ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -768,8 +768,8 @@ void QLineF_translated1 ()
 
   if( obj )
   {
-      QLineF * ptr = new QLineF( obj->translated ( *PQPOINTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
+    QLineF * ptr = new QLineF( obj->translated ( *PQPOINTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
 
@@ -782,8 +782,8 @@ void QLineF_translated2 ()
 
   if( obj )
   {
-      QLineF * ptr = new QLineF( obj->translated ( PQREAL(1), PQREAL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
+    QLineF * ptr = new QLineF( obj->translated ( PQREAL(1), PQREAL(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
   }
 }
 
@@ -837,11 +837,11 @@ static QLineF fromPolar(qreal length, qreal angle)
 HB_FUNC_STATIC( QLINEF_FROMPOLAR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
 #endif
-      QLineF * ptr = new QLineF( QLineF::fromPolar ( PQREAL(1), PQREAL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
+    QLineF * ptr = new QLineF( QLineF::fromPolar ( PQREAL(1), PQREAL(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

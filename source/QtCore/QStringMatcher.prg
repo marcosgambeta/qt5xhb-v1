@@ -203,7 +203,7 @@ void QStringMatcher_indexIn1 ()
 
   if( obj )
   {
-      RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
+    RINT( obj->indexIn ( PQSTRING(1), OPINT(2,0) ) );
   }
 }
 
@@ -216,7 +216,7 @@ void QStringMatcher_indexIn2 ()
 
   if( obj )
   {
-      RINT( obj->indexIn ( PQCHAR(1), PINT(2), OPINT(3,0) ) );
+    RINT( obj->indexIn ( PQCHAR(1), PINT(2), OPINT(3,0) ) );
   }
 }
 

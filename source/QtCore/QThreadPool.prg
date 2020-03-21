@@ -377,11 +377,11 @@ static QThreadPool *globalInstance()
 HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QThreadPool * ptr = QThreadPool::globalInstance ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTHREADPOOL" );
+    QThreadPool * ptr = QThreadPool::globalInstance ();
+    _qt5xhb_createReturnQObjectClass ( ptr, "QTHREADPOOL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

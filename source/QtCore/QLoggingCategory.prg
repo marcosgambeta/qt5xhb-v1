@@ -248,11 +248,11 @@ static QLoggingCategory *defaultCategory()
 HB_FUNC_STATIC( QLOGGINGCATEGORY_DEFAULTCATEGORY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QLoggingCategory * ptr = QLoggingCategory::defaultCategory ();
-      _qt5xhb_createReturnClass ( ptr, "QLOGGINGCATEGORY", false );
+    QLoggingCategory * ptr = QLoggingCategory::defaultCategory ();
+    _qt5xhb_createReturnClass ( ptr, "QLOGGINGCATEGORY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -268,10 +268,10 @@ static void setFilterRules(const QString &rules)
 HB_FUNC_STATIC( QLOGGINGCATEGORY_SETFILTERRULES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QLoggingCategory::setFilterRules ( PQSTRING(1) );
+    QLoggingCategory::setFilterRules ( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

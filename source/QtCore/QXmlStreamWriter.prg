@@ -339,7 +339,7 @@ void QXmlStreamWriter_setCodec1 ()
 
   if( obj )
   {
-      obj->setCodec ( PQTEXTCODEC(1) );
+    obj->setCodec ( PQTEXTCODEC(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -354,7 +354,7 @@ void QXmlStreamWriter_setCodec2 ()
 
   if( obj )
   {
-      obj->setCodec ( PCONSTCHAR(1) );
+    obj->setCodec ( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -414,7 +414,7 @@ void QXmlStreamWriter_writeAttribute1 ()
 
   if( obj )
   {
-      obj->writeAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    obj->writeAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -429,7 +429,7 @@ void QXmlStreamWriter_writeAttribute2 ()
 
   if( obj )
   {
-      obj->writeAttribute ( PQSTRING(1), PQSTRING(2) );
+    obj->writeAttribute ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -444,7 +444,7 @@ void QXmlStreamWriter_writeAttribute3 ()
 
   if( obj )
   {
-      obj->writeAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
+    obj->writeAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -665,7 +665,7 @@ void QXmlStreamWriter_writeEmptyElement1 ()
 
   if( obj )
   {
-      obj->writeEmptyElement ( PQSTRING(1), PQSTRING(2) );
+    obj->writeEmptyElement ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -680,7 +680,7 @@ void QXmlStreamWriter_writeEmptyElement2 ()
 
   if( obj )
   {
-      obj->writeEmptyElement ( PQSTRING(1) );
+    obj->writeEmptyElement ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -844,7 +844,7 @@ void QXmlStreamWriter_writeStartDocument1 ()
 
   if( obj )
   {
-      obj->writeStartDocument ( PQSTRING(1) );
+    obj->writeStartDocument ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -859,7 +859,7 @@ void QXmlStreamWriter_writeStartDocument2 ()
 
   if( obj )
   {
-      obj->writeStartDocument ( PQSTRING(1), PBOOL(2) );
+    obj->writeStartDocument ( PQSTRING(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -874,7 +874,7 @@ void QXmlStreamWriter_writeStartDocument3 ()
 
   if( obj )
   {
-      obj->writeStartDocument ();
+    obj->writeStartDocument ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -913,7 +913,7 @@ void QXmlStreamWriter_writeStartElement1 ()
 
   if( obj )
   {
-      obj->writeStartElement ( PQSTRING(1), PQSTRING(2) );
+    obj->writeStartElement ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -928,7 +928,7 @@ void QXmlStreamWriter_writeStartElement2 ()
 
   if( obj )
   {
-      obj->writeStartElement ( PQSTRING(1) );
+    obj->writeStartElement ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -962,7 +962,7 @@ void QXmlStreamWriter_writeTextElement1 ()
 
   if( obj )
   {
-      obj->writeTextElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    obj->writeTextElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -977,7 +977,7 @@ void QXmlStreamWriter_writeTextElement2 ()
 
   if( obj )
   {
-      obj->writeTextElement ( PQSTRING(1), PQSTRING(2) );
+    obj->writeTextElement ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

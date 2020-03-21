@@ -274,7 +274,7 @@ void QLibrary_setFileNameAndVersion1 ()
 
   if( obj )
   {
-      obj->setFileNameAndVersion ( PQSTRING(1), PINT(2) );
+    obj->setFileNameAndVersion ( PQSTRING(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -289,7 +289,7 @@ void QLibrary_setFileNameAndVersion2 ()
 
   if( obj )
   {
-      obj->setFileNameAndVersion ( PQSTRING(1), PQSTRING(2) );
+    obj->setFileNameAndVersion ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -411,7 +411,7 @@ static QFunctionPointer resolve(const QString &fileName, const QString &version,
 
 HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 }
 
 /*
@@ -420,10 +420,10 @@ static bool isLibrary(const QString &fileName)
 HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QLibrary::isLibrary ( PQSTRING(1) ) );
+    RBOOL( QLibrary::isLibrary ( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
