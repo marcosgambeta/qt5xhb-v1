@@ -660,11 +660,11 @@ static QPoint invalidSelectionPoint()
 HB_FUNC_STATIC( Q3DSCENE_INVALIDSELECTIONPOINT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QPoint * ptr = new QPoint( Q3DScene::invalidSelectionPoint () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    QPoint * ptr = new QPoint( Q3DScene::invalidSelectionPoint () );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

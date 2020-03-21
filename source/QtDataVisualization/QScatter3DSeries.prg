@@ -282,10 +282,10 @@ static int invalidSelectionIndex()
 HB_FUNC_STATIC( QSCATTER3DSERIES_INVALIDSELECTIONINDEX )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RINT( QScatter3DSeries::invalidSelectionIndex () );
+    RINT( QScatter3DSeries::invalidSelectionIndex () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

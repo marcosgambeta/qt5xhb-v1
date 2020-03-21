@@ -1013,7 +1013,7 @@ void QCustom3DVolume_setSubTextureData1 ()
 
   if( obj )
   {
-      obj->setSubTextureData ( (Qt::Axis) hb_parni(1), PINT(2), PCONSTUCHAR(3) );
+    obj->setSubTextureData ( (Qt::Axis) hb_parni(1), PINT(2), PCONSTUCHAR(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1028,7 +1028,7 @@ void QCustom3DVolume_setSubTextureData2 ()
 
   if( obj )
   {
-      obj->setSubTextureData ( (Qt::Axis) hb_parni(1), PINT(2), *PQIMAGE(3) );
+    obj->setSubTextureData ( (Qt::Axis) hb_parni(1), PINT(2), *PQIMAGE(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

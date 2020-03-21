@@ -198,8 +198,8 @@ void QSurfaceDataProxy_itemAt1 ()
 
   if( obj )
   {
-      const QSurfaceDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
+    const QSurfaceDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
   }
 }
 
@@ -212,8 +212,8 @@ void QSurfaceDataProxy_itemAt2 ()
 
   if( obj )
   {
-      const QSurfaceDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
+    const QSurfaceDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
+    _qt5xhb_createReturnClass ( ptr, "QSURFACEDATAITEM", false );
   }
 }
 
@@ -257,7 +257,7 @@ void QSurfaceDataProxy_setItem1 ()
 
   if( obj )
   {
-      obj->setItem ( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
+    obj->setItem ( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -272,7 +272,7 @@ void QSurfaceDataProxy_setItem2 ()
 
   if( obj )
   {
-      obj->setItem ( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
+    obj->setItem ( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -289,8 +289,8 @@ void QBarDataProxy_itemAt1 ()
 
   if( obj )
   {
-      const QBarDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
+    const QBarDataItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
   }
 }
 
@@ -303,8 +303,8 @@ void QBarDataProxy_itemAt2 ()
 
   if( obj )
   {
-      const QBarDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
+    const QBarDataItem * ptr = obj->itemAt ( *PQPOINT(1) );
+    _qt5xhb_createReturnClass ( ptr, "QBARDATAITEM", false );
   }
 }
 
@@ -386,7 +386,7 @@ void QBarDataProxy_setItem1 ()
 
   if( obj )
   {
-      obj->setItem ( PINT(1), PINT(2), *PQBARDATAITEM(3) );
+    obj->setItem ( PINT(1), PINT(2), *PQBARDATAITEM(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -401,7 +401,7 @@ void QBarDataProxy_setItem2 ()
 
   if( obj )
   {
-      obj->setItem ( *PQPOINT(1), *PQBARDATAITEM(2) );
+    obj->setItem ( *PQPOINT(1), *PQBARDATAITEM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
