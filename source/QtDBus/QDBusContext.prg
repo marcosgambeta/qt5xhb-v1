@@ -231,7 +231,7 @@ void QDBusContext_sendErrorReply1 ()
 
   if( obj )
   {
-      obj->sendErrorReply ( PQSTRING(1), OPQSTRING(2,QString()) );
+    obj->sendErrorReply ( PQSTRING(1), OPQSTRING(2,QString()) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -246,7 +246,7 @@ void QDBusContext_sendErrorReply2 ()
 
   if( obj )
   {
-      obj->sendErrorReply ( (QDBusError::ErrorType) hb_parni(1), OPQSTRING(2,QString()) );
+    obj->sendErrorReply ( (QDBusError::ErrorType) hb_parni(1), OPQSTRING(2,QString()) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

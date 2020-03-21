@@ -291,11 +291,11 @@ static QDBusPendingCall fromError(const QDBusError &error)
 HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMERROR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDBUSERROR(1) )
+  if( ISNUMPAR(1) && ISQDBUSERROR(1) )
   {
 #endif
-      QDBusPendingCall * ptr = new QDBusPendingCall( QDBusPendingCall::fromError ( *PQDBUSERROR(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
+    QDBusPendingCall * ptr = new QDBusPendingCall( QDBusPendingCall::fromError ( *PQDBUSERROR(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -311,11 +311,11 @@ static QDBusPendingCall fromCompletedCall(const QDBusMessage &message)
 HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMCOMPLETEDCALL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
+  if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
   {
 #endif
-      QDBusPendingCall * ptr = new QDBusPendingCall( QDBusPendingCall::fromCompletedCall ( *PQDBUSMESSAGE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
+    QDBusPendingCall * ptr = new QDBusPendingCall( QDBusPendingCall::fromCompletedCall ( *PQDBUSMESSAGE(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QDBUSPENDINGCALL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

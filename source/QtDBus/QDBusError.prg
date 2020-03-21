@@ -253,10 +253,10 @@ static QString errorString(ErrorType error)
 HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      RQSTRING( QDBusError::errorString ( (QDBusError::ErrorType) hb_parni(1) ) );
+    RQSTRING( QDBusError::errorString ( (QDBusError::ErrorType) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

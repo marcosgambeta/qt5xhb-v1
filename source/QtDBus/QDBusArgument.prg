@@ -173,7 +173,7 @@ void QDBusArgument_beginArray1 ()
 
   if( obj )
   {
-      obj->beginArray ( PINT(1) );
+    obj->beginArray ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -188,7 +188,7 @@ void QDBusArgument_beginArray2 ()
 
   if( obj )
   {
-      obj->beginArray ();
+    obj->beginArray ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -237,7 +237,7 @@ void QDBusArgument_beginMap1 ()
 
   if( obj )
   {
-      obj->beginMap ( PINT(1), PINT(2) );
+    obj->beginMap ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,7 +252,7 @@ void QDBusArgument_beginMap2 ()
 
   if( obj )
   {
-      obj->beginMap ();
+    obj->beginMap ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
