@@ -357,7 +357,7 @@ void QSvgRenderer_setViewBox1 ()
 
   if( obj )
   {
-      obj->setViewBox ( *PQRECT(1) );
+    obj->setViewBox ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -372,7 +372,7 @@ void QSvgRenderer_setViewBox2 ()
 
   if( obj )
   {
-      obj->setViewBox ( *PQRECTF(1) );
+    obj->setViewBox ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -456,7 +456,7 @@ void QSvgRenderer_load1 ()
 
   if( obj )
   {
-      RBOOL( obj->load ( PQSTRING(1) ) );
+    RBOOL( obj->load ( PQSTRING(1) ) );
   }
 }
 
@@ -469,7 +469,7 @@ void QSvgRenderer_load2 ()
 
   if( obj )
   {
-      RBOOL( obj->load ( *PQBYTEARRAY(1) ) );
+    RBOOL( obj->load ( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -482,7 +482,7 @@ void QSvgRenderer_load3 ()
 
   if( obj )
   {
-      RBOOL( obj->load ( PQXMLSTREAMREADER(1) ) );
+    RBOOL( obj->load ( PQXMLSTREAMREADER(1) ) );
   }
 }
 
@@ -519,7 +519,7 @@ void QSvgRenderer_render1 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTER(1) );
+    obj->render ( PQPAINTER(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -534,7 +534,7 @@ void QSvgRenderer_render2 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTER(1), *PQRECTF(2) );
+    obj->render ( PQPAINTER(1), *PQRECTF(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -549,7 +549,7 @@ void QSvgRenderer_render3 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTER(1), PQSTRING(2), ISNIL(3)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(3) );
+    obj->render ( PQPAINTER(1), PQSTRING(2), ISNIL(3)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
