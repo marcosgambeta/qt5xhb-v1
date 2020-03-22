@@ -118,7 +118,7 @@ void QGLContext_bindTexture1 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
+    RGLUINT( obj->bindTexture ( *PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
   }
 }
 
@@ -131,7 +131,7 @@ void QGLContext_bindTexture2 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
+    RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
   }
 }
 
@@ -144,7 +144,7 @@ void QGLContext_bindTexture3 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
+    RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
   }
 }
 
@@ -157,7 +157,7 @@ void QGLContext_bindTexture4 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
+    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
   }
 }
 
@@ -170,7 +170,7 @@ void QGLContext_bindTexture5 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
+    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
   }
 }
 
@@ -298,7 +298,7 @@ void QGLContext_drawTexture1 ()
 
   if( obj )
   {
-      obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -313,7 +313,7 @@ void QGLContext_drawTexture2 ()
 
   if( obj )
   {
-      obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -571,10 +571,10 @@ static bool areSharing ( const QGLContext * context1, const QGLContext * context
 HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQGLCONTEXT(1) && ISQGLCONTEXT(2) )
+  if( ISNUMPAR(2) && ISQGLCONTEXT(1) && ISQGLCONTEXT(2) )
   {
 #endif
-      RBOOL( QGLContext::areSharing ( PQGLCONTEXT(1), PQGLCONTEXT(2) ) );
+    RBOOL( QGLContext::areSharing ( PQGLCONTEXT(1), PQGLCONTEXT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -590,11 +590,11 @@ static const QGLContext * currentContext ()
 HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      const QGLContext * ptr = QGLContext::currentContext ();
-      _qt5xhb_createReturnClass ( ptr, "QGLCONTEXT", false );
+    const QGLContext * ptr = QGLContext::currentContext ();
+    _qt5xhb_createReturnClass ( ptr, "QGLCONTEXT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -610,10 +610,10 @@ static void setTextureCacheLimit ( int size )
 HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QGLContext::setTextureCacheLimit ( PINT(1) );
+    QGLContext::setTextureCacheLimit ( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -631,10 +631,10 @@ static int textureCacheLimit ()
 HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RINT( QGLContext::textureCacheLimit () );
+    RINT( QGLContext::textureCacheLimit () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

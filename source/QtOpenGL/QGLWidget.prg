@@ -155,7 +155,7 @@ void QGLWidget_bindTexture1 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
+    RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
   }
 }
 
@@ -168,7 +168,7 @@ void QGLWidget_bindTexture2 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
+    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
   }
 }
 
@@ -181,7 +181,7 @@ void QGLWidget_bindTexture3 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
+    RGLUINT( obj->bindTexture ( *PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
   }
 }
 
@@ -194,7 +194,7 @@ void QGLWidget_bindTexture4 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
+    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
   }
 }
 
@@ -207,7 +207,7 @@ void QGLWidget_bindTexture5 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
+    RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
   }
 }
 
@@ -380,7 +380,7 @@ void QGLWidget_drawTexture1 ()
 
   if( obj )
   {
-      obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -395,7 +395,7 @@ void QGLWidget_drawTexture2 ()
 
   if( obj )
   {
-      obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -823,11 +823,11 @@ static QImage convertToGLFormat ( const QImage & img )
 HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIMAGE(1) )
+  if( ISNUMPAR(1) && ISQIMAGE(1) )
   {
 #endif
-      QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *PQIMAGE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    QImage * ptr = new QImage( QGLWidget::convertToGLFormat ( *PQIMAGE(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

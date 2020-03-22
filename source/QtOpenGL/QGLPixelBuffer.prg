@@ -128,7 +128,7 @@ void QGLPixelBuffer_bindTexture1 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
+    RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
   }
 }
 
@@ -141,7 +141,7 @@ void QGLPixelBuffer_bindTexture2 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
+    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
   }
 }
 
@@ -154,7 +154,7 @@ void QGLPixelBuffer_bindTexture3 ()
 
   if( obj )
   {
-      RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
+    RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
   }
 }
 
@@ -265,7 +265,7 @@ void QGLPixelBuffer_drawTexture1 ()
 
   if( obj )
   {
-      obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -280,7 +280,7 @@ void QGLPixelBuffer_drawTexture2 ()
 
   if( obj )
   {
-      obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
