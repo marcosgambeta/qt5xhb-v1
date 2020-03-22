@@ -702,7 +702,7 @@ void QWebEnginePage_runJavaScript1 ()
 
   if( obj )
   {
-      obj->runJavaScript ( PQSTRING(1) );
+    obj->runJavaScript ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
