@@ -250,10 +250,10 @@ static void removeAllDatabases ()
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QWebDatabase::removeAllDatabases ();
+    QWebDatabase::removeAllDatabases ();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -271,10 +271,10 @@ static void removeDatabase ( const QWebDatabase & db )
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
+  if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
   {
 #endif
-      QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
+    QWebDatabase::removeDatabase ( *PQWEBDATABASE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

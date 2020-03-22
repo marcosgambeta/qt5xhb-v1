@@ -307,10 +307,10 @@ static void addLocalScheme ( const QString & scheme )
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QWebSecurityOrigin::addLocalScheme ( PQSTRING(1) );
+    QWebSecurityOrigin::addLocalScheme ( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -328,38 +328,38 @@ static QList<QWebSecurityOrigin> allOrigins ()
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QList<QWebSecurityOrigin> list = QWebSecurityOrigin::allOrigins ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBSECURITYORIGIN" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+    QList<QWebSecurityOrigin> list = QWebSecurityOrigin::allOrigins ();
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBSECURITYORIGIN" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
       {
-        for( int i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QWebSecurityOrigin *) new QWebSecurityOrigin ( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QWebSecurityOrigin *) new QWebSecurityOrigin ( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWEBSECURITYORIGIN", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWEBSECURITYORIGIN", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -375,10 +375,10 @@ static QStringList localSchemes ()
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QWebSecurityOrigin::localSchemes () );
+    RQSTRINGLIST( QWebSecurityOrigin::localSchemes () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -394,10 +394,10 @@ static void removeLocalScheme ( const QString & scheme )
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QWebSecurityOrigin::removeLocalScheme ( PQSTRING(1) );
+    QWebSecurityOrigin::removeLocalScheme ( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
