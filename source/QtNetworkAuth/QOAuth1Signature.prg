@@ -551,8 +551,8 @@ void QOAuth1Signature_plainText1 ()
 
   if( obj )
   {
-      QByteArray * ptr = new QByteArray( obj->plainText () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( obj->plainText () );
+    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
   }
 #endif
 }
@@ -564,8 +564,8 @@ void QOAuth1Signature_plainText2 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 
-      QByteArray * ptr = new QByteArray( QOAuth1Signature::plainText ( PQSTRING(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+  QByteArray * ptr = new QByteArray( QOAuth1Signature::plainText ( PQSTRING(1), PQSTRING(2) ) );
+  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
 #endif
 }
 
