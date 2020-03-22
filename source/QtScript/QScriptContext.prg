@@ -424,8 +424,8 @@ void QScriptContext_throwError1 ()
 
   if( obj )
   {
-      QScriptValue * ptr = new QScriptValue( obj->throwError ( (QScriptContext::Error) hb_parni(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    QScriptValue * ptr = new QScriptValue( obj->throwError ( (QScriptContext::Error) hb_parni(1), PQSTRING(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
@@ -438,8 +438,8 @@ void QScriptContext_throwError2 ()
 
   if( obj )
   {
-      QScriptValue * ptr = new QScriptValue( obj->throwError ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
+    QScriptValue * ptr = new QScriptValue( obj->throwError ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSCRIPTVALUE", true );
   }
 }
 
