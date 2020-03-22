@@ -260,7 +260,7 @@ void QLocalServer_listen1 ()
 
   if( obj )
   {
-      RBOOL( obj->listen ( PQSTRING(1) ) );
+    RBOOL( obj->listen ( PQSTRING(1) ) );
   }
 }
 
@@ -273,7 +273,7 @@ void QLocalServer_listen2 ()
 
   if( obj )
   {
-      RBOOL( obj->listen ( PQINTPTR(1) ) );
+    RBOOL( obj->listen ( PQINTPTR(1) ) );
   }
 }
 
@@ -399,10 +399,10 @@ static bool removeServer(const QString &name)
 HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
+    RBOOL( QLocalServer::removeServer ( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

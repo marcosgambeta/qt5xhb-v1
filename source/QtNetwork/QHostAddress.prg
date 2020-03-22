@@ -225,7 +225,7 @@ void QHostAddress_setAddress1 ()
 
   if( obj )
   {
-      obj->setAddress ( PQUINT32(1) );
+    obj->setAddress ( PQUINT32(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -256,7 +256,7 @@ void QHostAddress_setAddress6 ()
 
   if( obj )
   {
-      RBOOL( obj->setAddress ( PQSTRING(1) ) );
+    RBOOL( obj->setAddress ( PQSTRING(1) ) );
   }
 }
 
@@ -270,7 +270,7 @@ void QHostAddress_setAddress7 ()
 
   if( obj )
   {
-      obj->setAddress ( (QHostAddress::SpecialAddress) hb_parni(1) );
+    obj->setAddress ( (QHostAddress::SpecialAddress) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -334,7 +334,7 @@ void QHostAddress_toIPv4Address1 ()
 
   if( obj )
   {
-      RQUINT32( obj->toIPv4Address () );
+    RQUINT32( obj->toIPv4Address () );
   }
 }
 
@@ -348,9 +348,9 @@ void QHostAddress_toIPv4Address2 ()
 
   if( obj )
   {
-       bool par1;
-      RQUINT32( obj->toIPv4Address ( &par1 ) );
-       hb_storl( par1, 1 );
+    bool par1;
+    RQUINT32( obj->toIPv4Address ( &par1 ) );
+    hb_storl( par1, 1 );
   }
 #endif
 }
@@ -537,7 +537,7 @@ void QHostAddress_isInSubnet1 ()
 
   if( obj )
   {
-      RBOOL( obj->isInSubnet ( *PQHOSTADDRESS(1), PINT(2) ) );
+    RBOOL( obj->isInSubnet ( *PQHOSTADDRESS(1), PINT(2) ) );
   }
 }
 

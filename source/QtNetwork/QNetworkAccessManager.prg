@@ -601,13 +601,13 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ADDSTRICTTRANSPORTSECURITYHOSTS )
     {
 #endif
       QVector<QHstsPolicy> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QHstsPolicy *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QHstsPolicy *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->addStrictTransportSecurityHosts ( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -735,8 +735,8 @@ void QNetworkAccessManager_post1 ()
 
   if( obj )
   {
-      QNetworkReply * ptr = obj->post ( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
+    QNetworkReply * ptr = obj->post ( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 }
 
@@ -749,8 +749,8 @@ void QNetworkAccessManager_post2 ()
 
   if( obj )
   {
-      QNetworkReply * ptr = obj->post ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
+    QNetworkReply * ptr = obj->post ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 }
 
@@ -763,8 +763,8 @@ void QNetworkAccessManager_post3 ()
 
   if( obj )
   {
-      QNetworkReply * ptr = obj->post ( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
+    QNetworkReply * ptr = obj->post ( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 }
 
@@ -801,8 +801,8 @@ void QNetworkAccessManager_put1 ()
 
   if( obj )
   {
-      QNetworkReply * ptr = obj->put ( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
+    QNetworkReply * ptr = obj->put ( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 }
 
@@ -815,8 +815,8 @@ void QNetworkAccessManager_put2 ()
 
   if( obj )
   {
-      QNetworkReply * ptr = obj->put ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
+    QNetworkReply * ptr = obj->put ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 }
 
@@ -829,8 +829,8 @@ void QNetworkAccessManager_put3 ()
 
   if( obj )
   {
-      QNetworkReply * ptr = obj->put ( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
+    QNetworkReply * ptr = obj->put ( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 }
 
@@ -892,8 +892,8 @@ void QNetworkAccessManager_sendCustomRequest1 ()
 
   if( obj )
   {
-      QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3,0) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
+    QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3,0) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 }
 
@@ -907,8 +907,8 @@ void QNetworkAccessManager_sendCustomRequest2 ()
 
   if( obj )
   {
-      QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), *PQBYTEARRAY(3) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
+    QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), *PQBYTEARRAY(3) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 #endif
 }
@@ -923,8 +923,8 @@ void QNetworkAccessManager_sendCustomRequest3 ()
 
   if( obj )
   {
-      QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), PQHTTPMULTIPART(3) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
+    QNetworkReply * ptr = obj->sendCustomRequest ( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), PQHTTPMULTIPART(3) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKREPLY" );
   }
 #endif
 }

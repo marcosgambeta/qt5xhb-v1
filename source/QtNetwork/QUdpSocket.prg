@@ -106,7 +106,7 @@ void QUdpSocket_joinMulticastGroup1 ()
 
   if( obj )
   {
-      RBOOL( obj->joinMulticastGroup ( *PQHOSTADDRESS(1) ) );
+    RBOOL( obj->joinMulticastGroup ( *PQHOSTADDRESS(1) ) );
   }
 }
 
@@ -119,7 +119,7 @@ void QUdpSocket_joinMulticastGroup2 ()
 
   if( obj )
   {
-      RBOOL( obj->joinMulticastGroup ( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
+    RBOOL( obj->joinMulticastGroup ( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
   }
 }
 
@@ -151,7 +151,7 @@ void QUdpSocket_leaveMulticastGroup1 ()
 
   if( obj )
   {
-      RBOOL( obj->leaveMulticastGroup ( *PQHOSTADDRESS(1) ) );
+    RBOOL( obj->leaveMulticastGroup ( *PQHOSTADDRESS(1) ) );
   }
 }
 
@@ -164,7 +164,7 @@ void QUdpSocket_leaveMulticastGroup2 ()
 
   if( obj )
   {
-      RBOOL( obj->leaveMulticastGroup ( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
+    RBOOL( obj->leaveMulticastGroup ( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
   }
 }
 
@@ -327,7 +327,7 @@ void QUdpSocket_writeDatagram1 ()
 
   if( obj )
   {
-      RQINT64( obj->writeDatagram ( *PQNETWORKDATAGRAM(1) ) );
+    RQINT64( obj->writeDatagram ( *PQNETWORKDATAGRAM(1) ) );
   }
 #endif
 }
@@ -341,7 +341,7 @@ void QUdpSocket_writeDatagram2 ()
 
   if( obj )
   {
-      RQINT64( obj->writeDatagram ( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4) ) );
+    RQINT64( obj->writeDatagram ( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4) ) );
   }
 }
 
@@ -354,7 +354,7 @@ void QUdpSocket_writeDatagram3 ()
 
   if( obj )
   {
-      RQINT64( obj->writeDatagram ( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
+    RQINT64( obj->writeDatagram ( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
   }
 }
 

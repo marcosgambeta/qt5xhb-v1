@@ -505,10 +505,10 @@ static void setApplicationProxy ( const QNetworkProxy & proxy )
 HB_FUNC_STATIC( QNETWORKPROXY_SETAPPLICATIONPROXY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
+  if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
   {
 #endif
-      QNetworkProxy::setApplicationProxy ( *PQNETWORKPROXY(1) );
+    QNetworkProxy::setApplicationProxy ( *PQNETWORKPROXY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -526,11 +526,11 @@ static QNetworkProxy applicationProxy ()
 HB_FUNC_STATIC( QNETWORKPROXY_APPLICATIONPROXY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QNetworkProxy * ptr = new QNetworkProxy( QNetworkProxy::applicationProxy () );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+    QNetworkProxy * ptr = new QNetworkProxy( QNetworkProxy::applicationProxy () );
+    _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
