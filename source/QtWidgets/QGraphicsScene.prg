@@ -273,8 +273,8 @@ void QGraphicsScene_addEllipse1 ()
 
   if( obj )
   {
-      QGraphicsEllipseItem * ptr = obj->addEllipse ( *PQRECTF(1), ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(3) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM", false );
+    QGraphicsEllipseItem * ptr = obj->addEllipse ( *PQRECTF(1), ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(3) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM", false );
   }
 }
 
@@ -287,8 +287,8 @@ void QGraphicsScene_addEllipse2 ()
 
   if( obj )
   {
-      QGraphicsEllipseItem * ptr = obj->addEllipse ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(5), ISNIL(6)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(6) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM", false );
+    QGraphicsEllipseItem * ptr = obj->addEllipse ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(5), ISNIL(6)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(6) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSELLIPSEITEM", false );
   }
 }
 
@@ -346,8 +346,8 @@ void QGraphicsScene_addLine1 ()
 
   if( obj )
   {
-      QGraphicsLineItem * ptr = obj->addLine ( *PQLINEF(1), ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM", false );
+    QGraphicsLineItem * ptr = obj->addLine ( *PQLINEF(1), ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM", false );
   }
 }
 
@@ -360,8 +360,8 @@ void QGraphicsScene_addLine2 ()
 
   if( obj )
   {
-      QGraphicsLineItem * ptr = obj->addLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(5) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM", false );
+    QGraphicsLineItem * ptr = obj->addLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(5) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLINEITEM", false );
   }
 }
 
@@ -468,8 +468,8 @@ void QGraphicsScene_addRect1 ()
 
   if( obj )
   {
-      QGraphicsRectItem * ptr = obj->addRect ( *PQRECTF(1), ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(3) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM", false );
+    QGraphicsRectItem * ptr = obj->addRect ( *PQRECTF(1), ISNIL(2)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(3) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM", false );
   }
 }
 
@@ -482,8 +482,8 @@ void QGraphicsScene_addRect2 ()
 
   if( obj )
   {
-      QGraphicsRectItem * ptr = obj->addRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(5), ISNIL(6)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(6) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM", false );
+    QGraphicsRectItem * ptr = obj->addRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? QPen() : *(QPen *) _qt5xhb_itemGetPtr(5), ISNIL(6)? QBrush() : *(QBrush *) _qt5xhb_itemGetPtr(6) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSRECTITEM", false );
   }
 }
 
@@ -670,13 +670,13 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
     {
 #endif
       QList<QGraphicsItem *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << (QGraphicsItem *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       QGraphicsItemGroup * ptr = obj->createItemGroup ( par1 );
       _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEMGROUP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -872,7 +872,7 @@ void QGraphicsScene_invalidate1 ()
 
   if( obj )
   {
-      obj->invalidate ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? (QGraphicsScene::SceneLayers) QGraphicsScene::AllLayers : (QGraphicsScene::SceneLayers) hb_parni(5) );
+    obj->invalidate ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? (QGraphicsScene::SceneLayers) QGraphicsScene::AllLayers : (QGraphicsScene::SceneLayers) hb_parni(5) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -887,7 +887,7 @@ void QGraphicsScene_invalidate2 ()
 
   if( obj )
   {
-      obj->invalidate ( ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (QGraphicsScene::SceneLayers) QGraphicsScene::AllLayers : (QGraphicsScene::SceneLayers) hb_parni(2) );
+    obj->invalidate ( ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (QGraphicsScene::SceneLayers) QGraphicsScene::AllLayers : (QGraphicsScene::SceneLayers) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -969,8 +969,8 @@ void QGraphicsScene_itemAt1 ()
 
   if( obj )
   {
-      QGraphicsItem * ptr = obj->itemAt ( *PQPOINTF(1), *PQTRANSFORM(2) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
+    QGraphicsItem * ptr = obj->itemAt ( *PQPOINTF(1), *PQTRANSFORM(2) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
   }
 }
 
@@ -983,8 +983,8 @@ void QGraphicsScene_itemAt2 ()
 
   if( obj )
   {
-      QGraphicsItem * ptr = obj->itemAt ( PQREAL(1), PQREAL(2), *PQTRANSFORM(3) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
+    QGraphicsItem * ptr = obj->itemAt ( PQREAL(1), PQREAL(2), *PQTRANSFORM(3) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
   }
 }
 
@@ -1501,7 +1501,7 @@ void QGraphicsScene_setSceneRect1 ()
 
   if( obj )
   {
-      obj->setSceneRect ( *PQRECTF(1) );
+    obj->setSceneRect ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1516,7 +1516,7 @@ void QGraphicsScene_setSceneRect2 ()
 
   if( obj )
   {
-      obj->setSceneRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->setSceneRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1550,7 +1550,7 @@ void QGraphicsScene_setSelectionArea1 ()
 
   if( obj )
   {
-      obj->setSelectionArea ( *PQPAINTERPATH(1), *PQTRANSFORM(2) );
+    obj->setSelectionArea ( *PQPAINTERPATH(1), *PQTRANSFORM(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1565,7 +1565,7 @@ void QGraphicsScene_setSelectionArea2 ()
 
   if( obj )
   {
-      obj->setSelectionArea ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) hb_parni(2), *PQTRANSFORM(3) );
+    obj->setSelectionArea ( *PQPAINTERPATH(1), (Qt::ItemSelectionMode) hb_parni(2), *PQTRANSFORM(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1726,7 +1726,7 @@ void QGraphicsScene_update1 ()
 
   if( obj )
   {
-      obj->update ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->update ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1741,7 +1741,7 @@ void QGraphicsScene_update2 ()
 
   if( obj )
   {
-      obj->update ( ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1) );
+    obj->update ( ISNIL(1)? QRectF() : *(QRectF *) _qt5xhb_itemGetPtr(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

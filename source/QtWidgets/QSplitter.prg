@@ -221,10 +221,10 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
     {
 #endif
       int par2;
-int par3;
+      int par3;
       obj->getRange ( PINT(1), &par2, &par3 );
       hb_storni( par2, 2 );
-hb_storni( par3, 3 );
+      hb_storni( par3, 3 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

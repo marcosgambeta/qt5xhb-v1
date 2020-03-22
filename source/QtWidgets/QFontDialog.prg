@@ -352,10 +352,10 @@ static QFont getFont(bool *ok, QWidget *parent = 0)
 void QFontDialog_getFont1 ()
 {
 
-       bool par1;
-      QFont * ptr = new QFont( QFontDialog::getFont ( &par1, OPQWIDGET(2,0) ) );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
-       hb_storl( par1, 1 );
+  bool par1;
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, OPQWIDGET(2,0) ) );
+  _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+  hb_storl( par1, 1 );
 }
 
 /*
@@ -364,10 +364,10 @@ static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0, const 
 void QFontDialog_getFont2 ()
 {
 
-       bool par1;
-      QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), OPQWIDGET(3,0), OPQSTRING(4,QString()), ISNIL(5)? (QFontDialog::FontDialogOptions) 0 : (QFontDialog::FontDialogOptions) hb_parni(5) ) );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
-       hb_storl( par1, 1 );
+  bool par1;
+  QFont * ptr = new QFont( QFontDialog::getFont ( &par1, *PQFONT(2), OPQWIDGET(3,0), OPQSTRING(4,QString()), ISNIL(5)? (QFontDialog::FontDialogOptions) 0 : (QFontDialog::FontDialogOptions) hb_parni(5) ) );
+  _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+  hb_storl( par1, 1 );
 }
 
 //[1]static QFont getFont(bool *ok, QWidget *parent = 0)

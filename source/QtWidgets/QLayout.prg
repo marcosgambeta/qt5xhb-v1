@@ -437,7 +437,7 @@ void QLayout_setAlignment1 ()
 
   if( obj )
   {
-      RBOOL( obj->setAlignment ( PQWIDGET(1), (Qt::Alignment) hb_parni(2) ) );
+    RBOOL( obj->setAlignment ( PQWIDGET(1), (Qt::Alignment) hb_parni(2) ) );
   }
 }
 
@@ -450,7 +450,7 @@ void QLayout_setAlignment2 ()
 
   if( obj )
   {
-      obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
+    obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -465,7 +465,7 @@ void QLayout_setAlignment3 ()
 
   if( obj )
   {
-      RBOOL( obj->setAlignment ( PQLAYOUT(1), (Qt::Alignment) hb_parni(2) ) );
+    RBOOL( obj->setAlignment ( PQLAYOUT(1), (Qt::Alignment) hb_parni(2) ) );
   }
 }
 
@@ -502,7 +502,7 @@ void QLayout_setContentsMargins1 ()
 
   if( obj )
   {
-      obj->setContentsMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setContentsMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -517,7 +517,7 @@ void QLayout_setContentsMargins2 ()
 
   if( obj )
   {
-      obj->setContentsMargins ( *PQMARGINS(1) );
+    obj->setContentsMargins ( *PQMARGINS(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -951,11 +951,11 @@ static QSize closestAcceptableSize ( const QWidget * widget, const QSize & size 
 HB_FUNC_STATIC( QLAYOUT_CLOSESTACCEPTABLESIZE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQWIDGET(1) && ISQSIZE(2) )
+  if( ISNUMPAR(2) && ISQWIDGET(1) && ISQSIZE(2) )
   {
 #endif
-      QSize * ptr = new QSize( QLayout::closestAcceptableSize ( PQWIDGET(1), *PQSIZE(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+    QSize * ptr = new QSize( QLayout::closestAcceptableSize ( PQWIDGET(1), *PQSIZE(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

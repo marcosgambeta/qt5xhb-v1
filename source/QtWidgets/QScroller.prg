@@ -180,17 +180,17 @@ void QScroller_setSnapPositionsX1 ()
 
   if( obj )
   {
-       QList<qreal> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-qreal temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-  temp1 = hb_arrayGetND(aList1, i1+1);
-  par1 << temp1;
-}
-      obj->setSnapPositionsX ( par1 );
+    QList<qreal> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    qreal temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetND(aList1, i1+1);
+      par1 << temp1;
+    }
+    obj->setSnapPositionsX ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -205,7 +205,7 @@ void QScroller_setSnapPositionsX2 ()
 
   if( obj )
   {
-      obj->setSnapPositionsX ( PQREAL(1), PQREAL(2) );
+    obj->setSnapPositionsX ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -239,17 +239,17 @@ void QScroller_setSnapPositionsY1 ()
 
   if( obj )
   {
-       QList<qreal> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-qreal temp1;
-for (i1=0;i1<nLen1;i1++)
-{
-  temp1 = hb_arrayGetND(aList1, i1+1);
-  par1 << temp1;
-}
-      obj->setSnapPositionsY ( par1 );
+    QList<qreal> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    qreal temp1;
+    for (i1=0;i1<nLen1;i1++)
+    {
+      temp1 = hb_arrayGetND(aList1, i1+1);
+      par1 << temp1;
+    }
+    obj->setSnapPositionsY ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -264,7 +264,7 @@ void QScroller_setSnapPositionsY2 ()
 
   if( obj )
   {
-      obj->setSnapPositionsY ( PQREAL(1), PQREAL(2) );
+    obj->setSnapPositionsY ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -398,7 +398,7 @@ void QScroller_ensureVisible1 ()
 
   if( obj )
   {
-      obj->ensureVisible ( *PQRECTF(1), PQREAL(2), PQREAL(3) );
+    obj->ensureVisible ( *PQRECTF(1), PQREAL(2), PQREAL(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -413,7 +413,7 @@ void QScroller_ensureVisible2 ()
 
   if( obj )
   {
-      obj->ensureVisible ( *PQRECTF(1), PQREAL(2), PQREAL(3), PINT(4) );
+    obj->ensureVisible ( *PQRECTF(1), PQREAL(2), PQREAL(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -473,7 +473,7 @@ void QScroller_scrollTo1 ()
 
   if( obj )
   {
-      obj->scrollTo ( *PQPOINTF(1) );
+    obj->scrollTo ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -488,7 +488,7 @@ void QScroller_scrollTo2 ()
 
   if( obj )
   {
-      obj->scrollTo ( *PQPOINTF(1), PINT(2) );
+    obj->scrollTo ( *PQPOINTF(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -545,34 +545,34 @@ static QList<QScroller *> activeScrollers()
 HB_FUNC_STATIC( QSCROLLER_ACTIVESCROLLERS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QList<QScroller *> list = QScroller::activeScrollers ();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSCROLLER" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+    QList<QScroller *> list = QScroller::activeScrollers ();
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSCROLLER" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
       {
-        for( int i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QScroller *) list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QScroller *) list[i] );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
       }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSCROLLER", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSCROLLER", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -588,10 +588,10 @@ static Qt::GestureType grabGesture(QObject * target, ScrollerGestureType scrollG
 HB_FUNC_STATIC( QSCROLLER_GRABGESTURE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTNUM(2) )
   {
 #endif
-      RENUM( QScroller::grabGesture ( PQOBJECT(1), ISNIL(2)? (QScroller::ScrollerGestureType) QScroller::TouchGesture : (QScroller::ScrollerGestureType) hb_parni(2) ) );
+    RENUM( QScroller::grabGesture ( PQOBJECT(1), ISNIL(2)? (QScroller::ScrollerGestureType) QScroller::TouchGesture : (QScroller::ScrollerGestureType) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -607,10 +607,10 @@ static Qt::GestureType grabbedGesture(QObject * target)
 HB_FUNC_STATIC( QSCROLLER_GRABBEDGESTURE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-      RENUM( QScroller::grabbedGesture ( PQOBJECT(1) ) );
+    RENUM( QScroller::grabbedGesture ( PQOBJECT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -626,10 +626,10 @@ static bool hasScroller(QObject * target)
 HB_FUNC_STATIC( QSCROLLER_HASSCROLLER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-      RBOOL( QScroller::hasScroller ( PQOBJECT(1) ) );
+    RBOOL( QScroller::hasScroller ( PQOBJECT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -645,8 +645,8 @@ static QScroller * scroller(QObject * target)
 void QScroller_scroller1 ()
 {
 
-      QScroller * ptr = QScroller::scroller ( PQOBJECT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCROLLER" );
+  QScroller * ptr = QScroller::scroller ( PQOBJECT(1) );
+  _qt5xhb_createReturnQObjectClass ( ptr, "QSCROLLER" );
 }
 
 /*
@@ -655,8 +655,8 @@ static const QScroller * scroller(const QObject * target)
 void QScroller_scroller2 ()
 {
 
-      const QScroller * ptr = QScroller::scroller ( PQOBJECT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCROLLER" );
+  const QScroller * ptr = QScroller::scroller ( PQOBJECT(1) );
+  _qt5xhb_createReturnQObjectClass ( ptr, "QSCROLLER" );
 }
 
 //[1]static QScroller * scroller(QObject * target)

@@ -182,7 +182,7 @@ void QComboBox_addItem1 ()
 
   if( obj )
   {
-      obj->addItem ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) );
+    obj->addItem ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -197,7 +197,7 @@ void QComboBox_addItem2 ()
 
   if( obj )
   {
-      obj->addItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3) );
+    obj->addItem ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -501,7 +501,7 @@ void QComboBox_insertItem1 ()
 
   if( obj )
   {
-      obj->insertItem ( PINT(1), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3) );
+    obj->insertItem ( PINT(1), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -516,7 +516,7 @@ void QComboBox_insertItem2 ()
 
   if( obj )
   {
-      obj->insertItem ( PINT(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3), ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4) );
+    obj->insertItem ( PINT(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3), ISNIL(4)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

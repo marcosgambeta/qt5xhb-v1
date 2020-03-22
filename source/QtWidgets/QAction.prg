@@ -1071,15 +1071,15 @@ void QAction_setShortcuts1 ()
 
   if( obj )
   {
-       QList<QKeySequence> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
-      obj->setShortcuts ( par1 );
+    QList<QKeySequence> par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QKeySequence *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    obj->setShortcuts ( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1094,7 +1094,7 @@ void QAction_setShortcuts2 ()
 
   if( obj )
   {
-      obj->setShortcuts ( (QKeySequence::StandardKey) hb_parni(1) );
+    obj->setShortcuts ( (QKeySequence::StandardKey) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

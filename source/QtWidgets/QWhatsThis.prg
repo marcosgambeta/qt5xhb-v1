@@ -86,11 +86,11 @@ static QAction * createAction(QObject * parent = 0)
 HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
 #endif
-      QAction * ptr = QWhatsThis::createAction ( OPQOBJECT(1,0) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = QWhatsThis::createAction ( OPQOBJECT(1,0) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -106,10 +106,10 @@ static void enterWhatsThisMode()
 HB_FUNC_STATIC( QWHATSTHIS_ENTERWHATSTHISMODE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QWhatsThis::enterWhatsThisMode ();
+    QWhatsThis::enterWhatsThisMode ();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -127,10 +127,10 @@ static void hideText()
 HB_FUNC_STATIC( QWHATSTHIS_HIDETEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QWhatsThis::hideText ();
+    QWhatsThis::hideText ();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -148,10 +148,10 @@ static bool inWhatsThisMode()
 HB_FUNC_STATIC( QWHATSTHIS_INWHATSTHISMODE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QWhatsThis::inWhatsThisMode () );
+    RBOOL( QWhatsThis::inWhatsThisMode () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -167,10 +167,10 @@ static void leaveWhatsThisMode()
 HB_FUNC_STATIC( QWHATSTHIS_LEAVEWHATSTHISMODE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QWhatsThis::leaveWhatsThisMode ();
+    QWhatsThis::leaveWhatsThisMode ();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -188,10 +188,10 @@ static void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
 HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQPOINT(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && ISQPOINT(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
 #endif
-      QWhatsThis::showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
+    QWhatsThis::showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -200,7 +200,7 @@ void QGraphicsRotation_setAxis1 ()
 
   if( obj )
   {
-      obj->setAxis ( *PQVECTOR3D(1) );
+    obj->setAxis ( *PQVECTOR3D(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -215,7 +215,7 @@ void QGraphicsRotation_setAxis2 ()
 
   if( obj )
   {
-      obj->setAxis ( (Qt::Axis) hb_parni(1) );
+    obj->setAxis ( (Qt::Axis) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

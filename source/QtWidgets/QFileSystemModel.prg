@@ -346,8 +346,8 @@ void QFileSystemModel_index1 ()
 
   if( obj )
   {
-      QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -360,8 +360,8 @@ void QFileSystemModel_index2 ()
 
   if( obj )
   {
-      QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -1111,13 +1111,13 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
     {
 #endif
       QModelIndexList par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       QMimeData * ptr = obj->mimeData ( par1 );
       _qt5xhb_createReturnQObjectClass ( ptr, "QMIMEDATA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

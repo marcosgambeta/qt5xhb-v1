@@ -256,7 +256,7 @@ void QGraphicsView_centerOn1 ()
 
   if( obj )
   {
-      obj->centerOn ( *PQPOINTF(1) );
+    obj->centerOn ( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -271,7 +271,7 @@ void QGraphicsView_centerOn2 ()
 
   if( obj )
   {
-      obj->centerOn ( PQREAL(1), PQREAL(2) );
+    obj->centerOn ( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -286,7 +286,7 @@ void QGraphicsView_centerOn3 ()
 
   if( obj )
   {
-      obj->centerOn ( PQGRAPHICSITEM(1) );
+    obj->centerOn ( PQGRAPHICSITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -349,7 +349,7 @@ void QGraphicsView_ensureVisible1 ()
 
   if( obj )
   {
-      obj->ensureVisible ( *PQRECTF(1), OPINT(2,50), OPINT(3,50) );
+    obj->ensureVisible ( *PQRECTF(1), OPINT(2,50), OPINT(3,50) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -364,7 +364,7 @@ void QGraphicsView_ensureVisible2 ()
 
   if( obj )
   {
-      obj->ensureVisible ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5,50), OPINT(6,50) );
+    obj->ensureVisible ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPINT(5,50), OPINT(6,50) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -379,7 +379,7 @@ void QGraphicsView_ensureVisible3 ()
 
   if( obj )
   {
-      obj->ensureVisible ( PQGRAPHICSITEM(1), OPINT(2,50), OPINT(3,50) );
+    obj->ensureVisible ( PQGRAPHICSITEM(1), OPINT(2,50), OPINT(3,50) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -418,7 +418,7 @@ void QGraphicsView_fitInView1 ()
 
   if( obj )
   {
-      obj->fitInView ( *PQRECTF(1), ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2) );
+    obj->fitInView ( *PQRECTF(1), ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -433,7 +433,7 @@ void QGraphicsView_fitInView2 ()
 
   if( obj )
   {
-      obj->fitInView ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(5) );
+    obj->fitInView ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(5) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -448,7 +448,7 @@ void QGraphicsView_fitInView3 ()
 
   if( obj )
   {
-      obj->fitInView ( PQGRAPHICSITEM(1), ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2) );
+    obj->fitInView ( PQGRAPHICSITEM(1), ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -560,8 +560,8 @@ void QGraphicsView_itemAt1 ()
 
   if( obj )
   {
-      QGraphicsItem * ptr = obj->itemAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
+    QGraphicsItem * ptr = obj->itemAt ( *PQPOINT(1) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
   }
 }
 
@@ -574,8 +574,8 @@ void QGraphicsView_itemAt2 ()
 
   if( obj )
   {
-      QGraphicsItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
+    QGraphicsItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSITEM", false );
   }
 }
 
@@ -607,8 +607,8 @@ void QGraphicsView_mapFromScene1 ()
 
   if( obj )
   {
-      QPoint * ptr = new QPoint( obj->mapFromScene ( *PQPOINTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    QPoint * ptr = new QPoint( obj->mapFromScene ( *PQPOINTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -621,8 +621,8 @@ void QGraphicsView_mapFromScene2 ()
 
   if( obj )
   {
-      QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQRECTF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -635,8 +635,8 @@ void QGraphicsView_mapFromScene3 ()
 
   if( obj )
   {
-      QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQPOLYGONF(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    QPolygon * ptr = new QPolygon( obj->mapFromScene ( *PQPOLYGONF(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -649,8 +649,8 @@ void QGraphicsView_mapFromScene4 ()
 
   if( obj )
   {
-      QPainterPath * ptr = new QPainterPath( obj->mapFromScene ( *PQPAINTERPATH(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    QPainterPath * ptr = new QPainterPath( obj->mapFromScene ( *PQPAINTERPATH(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -663,8 +663,8 @@ void QGraphicsView_mapFromScene5 ()
 
   if( obj )
   {
-      QPoint * ptr = new QPoint( obj->mapFromScene ( PQREAL(1), PQREAL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    QPoint * ptr = new QPoint( obj->mapFromScene ( PQREAL(1), PQREAL(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
   }
 }
 
@@ -677,8 +677,8 @@ void QGraphicsView_mapFromScene6 ()
 
   if( obj )
   {
-      QPolygon * ptr = new QPolygon( obj->mapFromScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
+    QPolygon * ptr = new QPolygon( obj->mapFromScene ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGON", true );
   }
 }
 
@@ -730,8 +730,8 @@ void QGraphicsView_mapToScene1 ()
 
   if( obj )
   {
-      QPointF * ptr = new QPointF( obj->mapToScene ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+    QPointF * ptr = new QPointF( obj->mapToScene ( *PQPOINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -744,8 +744,8 @@ void QGraphicsView_mapToScene2 ()
 
   if( obj )
   {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQRECT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQRECT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -758,8 +758,8 @@ void QGraphicsView_mapToScene3 ()
 
   if( obj )
   {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQPOLYGON(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( *PQPOLYGON(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -772,8 +772,8 @@ void QGraphicsView_mapToScene4 ()
 
   if( obj )
   {
-      QPainterPath * ptr = new QPainterPath( obj->mapToScene ( *PQPAINTERPATH(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
+    QPainterPath * ptr = new QPainterPath( obj->mapToScene ( *PQPAINTERPATH(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPAINTERPATH", true );
   }
 }
 
@@ -786,8 +786,8 @@ void QGraphicsView_mapToScene5 ()
 
   if( obj )
   {
-      QPointF * ptr = new QPointF( obj->mapToScene ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+    QPointF * ptr = new QPointF( obj->mapToScene ( PINT(1), PINT(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
   }
 }
 
@@ -800,8 +800,8 @@ void QGraphicsView_mapToScene6 ()
 
   if( obj )
   {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
+    QPolygonF * ptr = new QPolygonF( obj->mapToScene ( PINT(1), PINT(2), PINT(3), PINT(4) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOLYGONF", true );
   }
 }
 
@@ -1544,7 +1544,7 @@ void QGraphicsView_setSceneRect1 ()
 
   if( obj )
   {
-      obj->setSceneRect ( *PQRECTF(1) );
+    obj->setSceneRect ( *PQRECTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1559,7 +1559,7 @@ void QGraphicsView_setSceneRect2 ()
 
   if( obj )
   {
-      obj->setSceneRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->setSceneRect ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1902,13 +1902,13 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
     {
 #endif
       QList<QRectF> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QRectF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->updateScene ( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

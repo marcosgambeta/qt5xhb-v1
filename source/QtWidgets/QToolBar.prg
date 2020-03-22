@@ -151,8 +151,8 @@ void QToolBar_actionAt1 ()
 
   if( obj )
   {
-      QAction * ptr = obj->actionAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->actionAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -165,8 +165,8 @@ void QToolBar_actionAt2 ()
 
   if( obj )
   {
-      QAction * ptr = obj->actionAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->actionAt ( *PQPOINT(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -198,7 +198,7 @@ void QToolBar_addAction1 ()
 
   if( obj )
   {
-      obj->addAction ( PQACTION(1) );
+    obj->addAction ( PQACTION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -213,8 +213,8 @@ void QToolBar_addAction2 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( PQSTRING(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -227,8 +227,8 @@ void QToolBar_addAction3 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -241,8 +241,8 @@ void QToolBar_addAction4 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -255,8 +255,8 @@ void QToolBar_addAction5 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 

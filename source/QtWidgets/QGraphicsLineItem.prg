@@ -190,7 +190,7 @@ void QGraphicsLineItem_setLine1 ()
 
   if( obj )
   {
-      obj->setLine ( *PQLINEF(1) );
+    obj->setLine ( *PQLINEF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -205,7 +205,7 @@ void QGraphicsLineItem_setLine2 ()
 
   if( obj )
   {
-      obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->setLine ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

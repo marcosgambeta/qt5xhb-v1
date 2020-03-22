@@ -810,8 +810,8 @@ void QAbstractItemView_itemDelegate1 ()
 
   if( obj )
   {
-      QAbstractItemDelegate * ptr = obj->itemDelegate ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    QAbstractItemDelegate * ptr = obj->itemDelegate ();
+    _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 
@@ -824,8 +824,8 @@ void QAbstractItemView_itemDelegate2 ()
 
   if( obj )
   {
-      QAbstractItemDelegate * ptr = obj->itemDelegate ( *PQMODELINDEX(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
+    QAbstractItemDelegate * ptr = obj->itemDelegate ( *PQMODELINDEX(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
 
@@ -1795,7 +1795,7 @@ void QAbstractItemView_update1 ()
 
   if( obj )
   {
-      obj->update ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->update ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1810,7 +1810,7 @@ void QAbstractItemView_update2 ()
 
   if( obj )
   {
-      obj->update ( *PQRECT(1) );
+    obj->update ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1825,7 +1825,7 @@ void QAbstractItemView_update3 ()
 
   if( obj )
   {
-      obj->update ( *PQREGION(1) );
+    obj->update ( *PQREGION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1840,7 +1840,7 @@ void QAbstractItemView_update4 ()
 
   if( obj )
   {
-      obj->update ();
+    obj->update ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1855,7 +1855,7 @@ void QAbstractItemView_update5 ()
 
   if( obj )
   {
-      obj->update ( *PQMODELINDEX(1) );
+    obj->update ( *PQMODELINDEX(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

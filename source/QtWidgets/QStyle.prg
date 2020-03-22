@@ -384,7 +384,7 @@ void QStyle_polish1 ()
 
   if( obj )
   {
-      obj->polish ( PQWIDGET(1) );
+    obj->polish ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -399,7 +399,7 @@ void QStyle_polish2 ()
 
   if( obj )
   {
-      obj->polish ( PQAPPLICATION(1) );
+    obj->polish ( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -414,7 +414,7 @@ void QStyle_polish3 ()
 
   if( obj )
   {
-      obj->polish ( *PQPALETTE(1) );
+    obj->polish ( *PQPALETTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -627,7 +627,7 @@ void QStyle_unpolish1 ()
 
   if( obj )
   {
-      obj->unpolish ( PQWIDGET(1) );
+    obj->unpolish ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -642,7 +642,7 @@ void QStyle_unpolish2 ()
 
   if( obj )
   {
-      obj->unpolish ( PQAPPLICATION(1) );
+    obj->unpolish ( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -673,11 +673,11 @@ static QRect alignedRect ( Qt::LayoutDirection direction, Qt::Alignment alignmen
 HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISQSIZE(3) && ISQRECT(4) )
+  if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISQSIZE(3) && ISQRECT(4) )
   {
 #endif
-      QRect * ptr = new QRect( QStyle::alignedRect ( (Qt::LayoutDirection) hb_parni(1), (Qt::Alignment) hb_parni(2), *PQSIZE(3), *PQRECT(4) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( QStyle::alignedRect ( (Qt::LayoutDirection) hb_parni(1), (Qt::Alignment) hb_parni(2), *PQSIZE(3), *PQRECT(4) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -693,10 +693,10 @@ static int sliderPositionFromValue ( int min, int max, int logicalValue, int spa
 HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
+  if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
   {
 #endif
-      RINT( QStyle::sliderPositionFromValue ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
+    RINT( QStyle::sliderPositionFromValue ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -712,10 +712,10 @@ static int sliderValueFromPosition ( int min, int max, int position, int span, b
 HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
+  if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
   {
 #endif
-      RINT( QStyle::sliderValueFromPosition ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
+    RINT( QStyle::sliderValueFromPosition ( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -731,10 +731,10 @@ static Qt::Alignment visualAlignment ( Qt::LayoutDirection direction, Qt::Alignm
 HB_FUNC_STATIC( QSTYLE_VISUALALIGNMENT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
 #endif
-      RENUM( QStyle::visualAlignment ( (Qt::LayoutDirection) hb_parni(1), (Qt::Alignment) hb_parni(2) ) );
+    RENUM( QStyle::visualAlignment ( (Qt::LayoutDirection) hb_parni(1), (Qt::Alignment) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -750,11 +750,11 @@ static QPoint visualPos ( Qt::LayoutDirection direction, const QRect & boundingR
 HB_FUNC_STATIC( QSTYLE_VISUALPOS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISQRECT(2) && ISQPOINT(3) )
+  if( ISNUMPAR(3) && ISNUM(1) && ISQRECT(2) && ISQPOINT(3) )
   {
 #endif
-      QPoint * ptr = new QPoint( QStyle::visualPos ( (Qt::LayoutDirection) hb_parni(1), *PQRECT(2), *PQPOINT(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    QPoint * ptr = new QPoint( QStyle::visualPos ( (Qt::LayoutDirection) hb_parni(1), *PQRECT(2), *PQPOINT(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -770,11 +770,11 @@ static QRect visualRect ( Qt::LayoutDirection direction, const QRect & boundingR
 HB_FUNC_STATIC( QSTYLE_VISUALRECT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISQRECT(2) && ISQRECT(3) )
+  if( ISNUMPAR(3) && ISNUM(1) && ISQRECT(2) && ISQRECT(3) )
   {
 #endif
-      QRect * ptr = new QRect( QStyle::visualRect ( (Qt::LayoutDirection) hb_parni(1), *PQRECT(2), *PQRECT(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( QStyle::visualRect ( (Qt::LayoutDirection) hb_parni(1), *PQRECT(2), *PQRECT(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

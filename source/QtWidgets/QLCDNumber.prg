@@ -133,7 +133,7 @@ void QLCDNumber_checkOverflow1 ()
 
   if( obj )
   {
-      RBOOL( obj->checkOverflow ( PDOUBLE(1) ) );
+    RBOOL( obj->checkOverflow ( PDOUBLE(1) ) );
   }
 }
 
@@ -146,7 +146,7 @@ void QLCDNumber_checkOverflow2 ()
 
   if( obj )
   {
-      RBOOL( obj->checkOverflow ( PINT(1) ) );
+    RBOOL( obj->checkOverflow ( PINT(1) ) );
   }
 }
 
@@ -440,7 +440,7 @@ void QLCDNumber_display1 ()
 
   if( obj )
   {
-      obj->display ( PQSTRING(1) );
+    obj->display ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -455,7 +455,7 @@ void QLCDNumber_display2 ()
 
   if( obj )
   {
-      obj->display ( PDOUBLE(1) );
+    obj->display ( PDOUBLE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -470,7 +470,7 @@ void QLCDNumber_display3 ()
 
   if( obj )
   {
-      obj->display ( PINT(1) );
+    obj->display ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

@@ -106,8 +106,8 @@ void QActionGroup_addAction1 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( PQACTION(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( PQACTION(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -120,8 +120,8 @@ void QActionGroup_addAction2 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( PQSTRING(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -134,8 +134,8 @@ void QActionGroup_addAction3 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 

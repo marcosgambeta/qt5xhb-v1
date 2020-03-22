@@ -177,11 +177,11 @@ static const QItemEditorFactory *defaultFactory()
 HB_FUNC_STATIC( QITEMEDITORFACTORY_DEFAULTFACTORY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory ();
-      _qt5xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY", false );
+    const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory ();
+    _qt5xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -197,10 +197,10 @@ static void setDefaultFactory(QItemEditorFactory *factory)
 HB_FUNC_STATIC( QITEMEDITORFACTORY_SETDEFAULTFACTORY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQITEMEDITORFACTORY(1) )
+  if( ISNUMPAR(1) && ISQITEMEDITORFACTORY(1) )
   {
 #endif
-      QItemEditorFactory::setDefaultFactory ( PQITEMEDITORFACTORY(1) );
+    QItemEditorFactory::setDefaultFactory ( PQITEMEDITORFACTORY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

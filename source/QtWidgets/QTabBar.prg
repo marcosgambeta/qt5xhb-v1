@@ -156,7 +156,7 @@ void QTabBar_addTab1 ()
 
   if( obj )
   {
-      RINT( obj->addTab ( PQSTRING(1) ) );
+    RINT( obj->addTab ( PQSTRING(1) ) );
   }
 }
 
@@ -169,7 +169,7 @@ void QTabBar_addTab2 ()
 
   if( obj )
   {
-      RINT( obj->addTab ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) ) );
+    RINT( obj->addTab ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) ) );
   }
 }
 
@@ -370,7 +370,7 @@ void QTabBar_insertTab1 ()
 
   if( obj )
   {
-      RINT( obj->insertTab ( PINT(1), PQSTRING(2) ) );
+    RINT( obj->insertTab ( PINT(1), PQSTRING(2) ) );
   }
 }
 
@@ -383,7 +383,7 @@ void QTabBar_insertTab2 ()
 
   if( obj )
   {
-      RINT( obj->insertTab ( PINT(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
+    RINT( obj->insertTab ( PINT(1), ISOBJECT(2)? *(QIcon *) _qt5xhb_itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
   }
 }
 

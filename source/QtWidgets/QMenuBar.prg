@@ -150,8 +150,8 @@ void QMenuBar_addAction1 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( PQSTRING(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -164,8 +164,8 @@ void QMenuBar_addAction2 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -178,7 +178,7 @@ void QMenuBar_addAction3 ()
 
   if( obj )
   {
-      obj->addAction ( PQACTION(1) );
+    obj->addAction ( PQACTION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -217,8 +217,8 @@ void QMenuBar_addMenu1 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addMenu ( PQMENU(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addMenu ( PQMENU(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 
@@ -231,8 +231,8 @@ void QMenuBar_addMenu2 ()
 
   if( obj )
   {
-      QMenu * ptr = obj->addMenu ( PQSTRING(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+    QMenu * ptr = obj->addMenu ( PQSTRING(1) );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -245,8 +245,8 @@ void QMenuBar_addMenu3 ()
 
   if( obj )
   {
-      QMenu * ptr = obj->addMenu ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+    QMenu * ptr = obj->addMenu ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -764,10 +764,10 @@ HB_FUNC_STATIC( QMENUBAR_WCECOMMANDS )
 {
 #ifdef Q_OS_WINCE
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      QMenuBar::wceCommands ( PUINT(1) );
+    QMenuBar::wceCommands ( PUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -787,10 +787,10 @@ HB_FUNC_STATIC( QMENUBAR_WCEREFRESH )
 {
 #ifdef Q_OS_WINCE
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QMenuBar::wceRefresh ();
+    QMenuBar::wceRefresh ();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -331,8 +331,8 @@ void QTextEdit_createStandardContextMenu1 ()
 
   if( obj )
   {
-      QMenu * ptr = obj->createStandardContextMenu ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+    QMenu * ptr = obj->createStandardContextMenu ();
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -345,8 +345,8 @@ void QTextEdit_createStandardContextMenu2 ()
 
   if( obj )
   {
-      QMenu * ptr = obj->createStandardContextMenu ( *PQPOINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+    QMenu * ptr = obj->createStandardContextMenu ( *PQPOINT(1) );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
   }
 }
 
@@ -453,8 +453,8 @@ void QTextEdit_cursorRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->cursorRect ( *PQTEXTCURSOR(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -467,8 +467,8 @@ void QTextEdit_cursorRect2 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->cursorRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->cursorRect () );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 

@@ -422,8 +422,8 @@ void QTableWidget_itemAt1 ()
 
   if( obj )
   {
-      QTableWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM", false );
+    QTableWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM", false );
   }
 }
 
@@ -436,8 +436,8 @@ void QTableWidget_itemAt2 ()
 
   if( obj )
   {
-      QTableWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM", false );
+    QTableWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnClass ( ptr, "QTABLEWIDGETITEM", false );
   }
 }
 
@@ -621,7 +621,7 @@ void QTableWidget_setCurrentCell1 ()
 
   if( obj )
   {
-      obj->setCurrentCell ( PINT(1), PINT(2) );
+    obj->setCurrentCell ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -636,7 +636,7 @@ void QTableWidget_setCurrentCell2 ()
 
   if( obj )
   {
-      obj->setCurrentCell ( PINT(1), PINT(2), (QItemSelectionModel::SelectionFlags) hb_parni(3) );
+    obj->setCurrentCell ( PINT(1), PINT(2), (QItemSelectionModel::SelectionFlags) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -670,7 +670,7 @@ void QTableWidget_setCurrentItem1 ()
 
   if( obj )
   {
-      obj->setCurrentItem ( PQTABLEWIDGETITEM(1) );
+    obj->setCurrentItem ( PQTABLEWIDGETITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -685,7 +685,7 @@ void QTableWidget_setCurrentItem2 ()
 
   if( obj )
   {
-      obj->setCurrentItem ( PQTABLEWIDGETITEM(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+    obj->setCurrentItem ( PQTABLEWIDGETITEM(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

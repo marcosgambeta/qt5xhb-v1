@@ -494,8 +494,8 @@ void QTreeWidget_itemAt1 ()
 
   if( obj )
   {
-      QTreeWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
+    QTreeWidgetItem * ptr = obj->itemAt ( *PQPOINT(1) );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
   }
 }
 
@@ -508,8 +508,8 @@ void QTreeWidget_itemAt2 ()
 
   if( obj )
   {
-      QTreeWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
+    QTreeWidgetItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnClass ( ptr, "QTREEWIDGETITEM", false );
   }
 }
 
@@ -643,7 +643,7 @@ void QTreeWidget_setCurrentItem1 ()
 
   if( obj )
   {
-      obj->setCurrentItem ( PQTREEWIDGETITEM(1) );
+    obj->setCurrentItem ( PQTREEWIDGETITEM(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -658,7 +658,7 @@ void QTreeWidget_setCurrentItem2 ()
 
   if( obj )
   {
-      obj->setCurrentItem ( PQTREEWIDGETITEM(1), PINT(2) );
+    obj->setCurrentItem ( PQTREEWIDGETITEM(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -673,7 +673,7 @@ void QTreeWidget_setCurrentItem3 ()
 
   if( obj )
   {
-      obj->setCurrentItem ( PQTREEWIDGETITEM(1), PINT(2), (QItemSelectionModel::SelectionFlags) hb_parni(3) );
+    obj->setCurrentItem ( PQTREEWIDGETITEM(1), PINT(2), (QItemSelectionModel::SelectionFlags) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

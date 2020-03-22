@@ -149,8 +149,8 @@ void QDirModel_index1 ()
 
   if( obj )
   {
-      QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) _qt5xhb_itemGetPtr(3) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 
@@ -163,8 +163,8 @@ void QDirModel_index2 ()
 
   if( obj )
   {
-      QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+    QModelIndex * ptr = new QModelIndex( obj->index ( PQSTRING(1), OPINT(2,0) ) );
+    _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
   }
 }
 

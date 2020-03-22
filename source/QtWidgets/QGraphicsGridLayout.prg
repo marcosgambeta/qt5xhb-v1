@@ -133,7 +133,7 @@ void QGraphicsGridLayout_addItem1 ()
 
   if( obj )
   {
-      obj->addItem ( PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
+    obj->addItem ( PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -148,7 +148,7 @@ void QGraphicsGridLayout_addItem2 ()
 
   if( obj )
   {
-      obj->addItem ( PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
+    obj->addItem ( PQGRAPHICSLAYOUTITEM(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -398,8 +398,8 @@ void QGraphicsGridLayout_itemAt1 ()
 
   if( obj )
   {
-      QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM", false );
+    QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM", false );
   }
 }
 
@@ -412,8 +412,8 @@ void QGraphicsGridLayout_itemAt2 ()
 
   if( obj )
   {
-      QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM", false );
+    QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
+    _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM", false );
   }
 }
 

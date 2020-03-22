@@ -94,7 +94,7 @@ void QErrorMessage_showMessage1 ()
 
   if( obj )
   {
-      obj->showMessage ( PQSTRING(1) );
+    obj->showMessage ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -109,7 +109,7 @@ void QErrorMessage_showMessage2 ()
 
   if( obj )
   {
-      obj->showMessage ( PQSTRING(1), PQSTRING(2) );
+    obj->showMessage ( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -140,11 +140,11 @@ static QErrorMessage * qtHandler ()
 HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QErrorMessage * ptr = QErrorMessage::qtHandler ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QERRORMESSAGE" );
+    QErrorMessage * ptr = QErrorMessage::qtHandler ();
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QERRORMESSAGE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

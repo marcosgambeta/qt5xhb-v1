@@ -292,14 +292,14 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
     {
 #endif
       qreal par1;
-qreal par2;
-qreal par3;
-qreal par4;
+      qreal par2;
+      qreal par3;
+      qreal par4;
       obj->getContentsMargins ( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
-hb_stornd( par2, 2 );
-hb_stornd( par3, 3 );
-hb_stornd( par4, 4 );
+      hb_stornd( par2, 2 );
+      hb_stornd( par3, 3 );
+      hb_stornd( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,10 +344,10 @@ static bool instantInvalidatePropagation ()
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RBOOL( QGraphicsLayout::instantInvalidatePropagation () );
+    RBOOL( QGraphicsLayout::instantInvalidatePropagation () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -363,10 +363,10 @@ static void setInstantInvalidatePropagation ( bool enable )
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR(1) && ISLOG(1) )
   {
 #endif
-      QGraphicsLayout::setInstantInvalidatePropagation ( PBOOL(1) );
+    QGraphicsLayout::setInstantInvalidatePropagation ( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

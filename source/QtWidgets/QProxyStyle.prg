@@ -643,7 +643,7 @@ void QProxyStyle_polish1 ()
 
   if( obj )
   {
-      obj->polish ( PQWIDGET(1) );
+    obj->polish ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -658,7 +658,7 @@ void QProxyStyle_polish2 ()
 
   if( obj )
   {
-      obj->polish ( *PQPALETTE(1) );
+    obj->polish ( *PQPALETTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -673,7 +673,7 @@ void QProxyStyle_polish3 ()
 
   if( obj )
   {
-      obj->polish ( PQAPPLICATION(1) );
+    obj->polish ( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -712,7 +712,7 @@ void QProxyStyle_unpolish1 ()
 
   if( obj )
   {
-      obj->unpolish ( PQWIDGET(1) );
+    obj->unpolish ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -727,7 +727,7 @@ void QProxyStyle_unpolish2 ()
 
   if( obj )
   {
-      obj->unpolish ( PQAPPLICATION(1) );
+    obj->unpolish ( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

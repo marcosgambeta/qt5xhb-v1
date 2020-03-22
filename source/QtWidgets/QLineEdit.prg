@@ -736,14 +736,14 @@ HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
     {
 #endif
       int par1;
-int par2;
-int par3;
-int par4;
+      int par2;
+      int par3;
+      int par4;
       obj->getTextMargins ( &par1, &par2, &par3, &par4 );
       hb_storni( par1, 1 );
-hb_storni( par2, 2 );
-hb_storni( par3, 3 );
-hb_storni( par4, 4 );
+      hb_storni( par2, 2 );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1312,7 +1312,7 @@ void QLineEdit_setTextMargins1 ()
 
   if( obj )
   {
-      obj->setTextMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setTextMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1327,7 +1327,7 @@ void QLineEdit_setTextMargins2 ()
 
   if( obj )
   {
-      obj->setTextMargins ( *PQMARGINS(1) );
+    obj->setTextMargins ( *PQMARGINS(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1793,7 +1793,7 @@ void QLineEdit_addAction1 ()
 
   if( obj )
   {
-      obj->addAction ( PQACTION(1), (QLineEdit::ActionPosition) hb_parni(2) );
+    obj->addAction ( PQACTION(1), (QLineEdit::ActionPosition) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1808,8 +1808,8 @@ void QLineEdit_addAction2 ()
 
   if( obj )
   {
-      QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), (QLineEdit::ActionPosition) hb_parni(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), (QLineEdit::ActionPosition) hb_parni(2) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
   }
 }
 

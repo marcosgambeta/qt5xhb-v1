@@ -907,7 +907,7 @@ void QLabel_setNum1 ()
 
   if( obj )
   {
-      obj->setNum ( PINT(1) );
+    obj->setNum ( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -922,7 +922,7 @@ void QLabel_setNum2 ()
 
   if( obj )
   {
-      obj->setNum ( PDOUBLE(1) );
+    obj->setNum ( PDOUBLE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

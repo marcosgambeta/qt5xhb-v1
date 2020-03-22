@@ -96,7 +96,7 @@ void QRubberBand_move1 ()
 
   if( obj )
   {
-      obj->move ( PINT(1), PINT(2) );
+    obj->move ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -111,7 +111,7 @@ void QRubberBand_move2 ()
 
   if( obj )
   {
-      obj->move ( *PQPOINT(1) );
+    obj->move ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -145,7 +145,7 @@ void QRubberBand_resize1 ()
 
   if( obj )
   {
-      obj->resize ( PINT(1), PINT(2) );
+    obj->resize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -160,7 +160,7 @@ void QRubberBand_resize2 ()
 
   if( obj )
   {
-      obj->resize ( *PQSIZE(1) );
+    obj->resize ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -194,7 +194,7 @@ void QRubberBand_setGeometry1 ()
 
   if( obj )
   {
-      obj->setGeometry ( *PQRECT(1) );
+    obj->setGeometry ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -209,7 +209,7 @@ void QRubberBand_setGeometry2 ()
 
   if( obj )
   {
-      obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

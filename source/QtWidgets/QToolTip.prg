@@ -242,7 +242,7 @@ void QToolTip_showText1 ()
 
   if( obj )
   {
-      obj->showText ( *PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4) );
+    obj->showText ( *PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -257,7 +257,7 @@ void QToolTip_showText2 ()
 
   if( obj )
   {
-      obj->showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
+    obj->showText ( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

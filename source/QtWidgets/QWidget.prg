@@ -628,13 +628,13 @@ HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
     {
 #endif
       QList<QAction *> par1;
-PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-int i1;
-int nLen1 = hb_arrayLen(aList1);
-for (i1=0;i1<nLen1;i1++)
-{
-  par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
       obj->addActions ( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -809,7 +809,7 @@ void QWidget_setBaseSize1 ()
 
   if( obj )
   {
-      obj->setBaseSize ( *PQSIZE(1) );
+    obj->setBaseSize ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -824,7 +824,7 @@ void QWidget_setBaseSize2 ()
 
   if( obj )
   {
-      obj->setBaseSize ( PINT(1), PINT(2) );
+    obj->setBaseSize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -858,8 +858,8 @@ void QWidget_childAt1 ()
 
   if( obj )
   {
-      QWidget * ptr = obj->childAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    QWidget * ptr = obj->childAt ( PINT(1), PINT(2) );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -872,8 +872,8 @@ void QWidget_childAt2 ()
 
   if( obj )
   {
-      QWidget * ptr = obj->childAt ( *PQPOINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    QWidget * ptr = obj->childAt ( *PQPOINT(1) );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
   }
 }
 
@@ -1546,14 +1546,14 @@ HB_FUNC_STATIC( QWIDGET_GETCONTENTSMARGINS )
     {
 #endif
       int par1;
-int par2;
-int par3;
-int par4;
+      int par2;
+      int par3;
+      int par4;
       obj->getContentsMargins ( &par1, &par2, &par3, &par4 );
       hb_storni( par1, 1 );
-hb_storni( par2, 2 );
-hb_storni( par3, 3 );
-hb_storni( par4, 4 );
+      hb_storni( par2, 2 );
+      hb_storni( par3, 3 );
+      hb_storni( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1627,7 +1627,7 @@ void QWidget_grabMouse1 ()
 
   if( obj )
   {
-      obj->grabMouse ();
+    obj->grabMouse ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1643,7 +1643,7 @@ void QWidget_grabMouse2 ()
 
   if( obj )
   {
-      obj->grabMouse ( *PQCURSOR(1) );
+    obj->grabMouse ( *PQCURSOR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2043,13 +2043,13 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
     {
 #endif
       QList<QAction *> par2;
-PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
-int i2;
-int nLen2 = hb_arrayLen(aList2);
-for (i2=0;i2<nLen2;i2++)
-{
-  par2 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
-}
+      PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
+      int i2;
+      int nLen2 = hb_arrayLen(aList2);
+      for (i2=0;i2<nLen2;i2++)
+      {
+        par2 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+      }
       obj->insertActions ( PQACTION(1), par2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -2766,7 +2766,7 @@ void QWidget_setMask1 ()
 
   if( obj )
   {
-      obj->setMask ( *PQBITMAP(1) );
+    obj->setMask ( *PQBITMAP(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2781,7 +2781,7 @@ void QWidget_setMask2 ()
 
   if( obj )
   {
-      obj->setMask ( *PQREGION(1) );
+    obj->setMask ( *PQREGION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3065,7 +3065,7 @@ void QWidget_move1 ()
 
   if( obj )
   {
-      obj->move ( *PQPOINT(1) );
+    obj->move ( *PQPOINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3080,7 +3080,7 @@ void QWidget_move2 ()
 
   if( obj )
   {
-      obj->move ( PINT(1), PINT(2) );
+    obj->move ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3449,7 +3449,7 @@ void QWidget_render1 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTDEVICE(1), ISNIL(2)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QWidget::RenderFlags) QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren) : (QWidget::RenderFlags) hb_parni(4) );
+    obj->render ( PQPAINTDEVICE(1), ISNIL(2)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QWidget::RenderFlags) QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren) : (QWidget::RenderFlags) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3464,7 +3464,7 @@ void QWidget_render2 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTER(1), ISNIL(2)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QWidget::RenderFlags) QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren) : (QWidget::RenderFlags) hb_parni(4) );
+    obj->render ( PQPAINTER(1), ISNIL(2)? QPoint() : *(QPoint *) _qt5xhb_itemGetPtr(2), ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QWidget::RenderFlags) QWidget::RenderFlags(QWidget::DrawWindowBackground | QWidget::DrawChildren) : (QWidget::RenderFlags) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3498,7 +3498,7 @@ void QWidget_repaint1 ()
 
   if( obj )
   {
-      obj->repaint ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->repaint ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3513,7 +3513,7 @@ void QWidget_repaint2 ()
 
   if( obj )
   {
-      obj->repaint ( *PQRECT(1) );
+    obj->repaint ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3528,7 +3528,7 @@ void QWidget_repaint3 ()
 
   if( obj )
   {
-      obj->repaint ( *PQREGION(1) );
+    obj->repaint ( *PQREGION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3543,7 +3543,7 @@ void QWidget_repaint4 ()
 
   if( obj )
   {
-      obj->repaint ();
+    obj->repaint ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3587,7 +3587,7 @@ void QWidget_resize1 ()
 
   if( obj )
   {
-      obj->resize ( *PQSIZE(1) );
+    obj->resize ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3602,7 +3602,7 @@ void QWidget_resize2 ()
 
   if( obj )
   {
-      obj->resize ( PINT(1), PINT(2) );
+    obj->resize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3685,7 +3685,7 @@ void QWidget_scroll1 ()
 
   if( obj )
   {
-      obj->scroll ( PINT(1), PINT(2) );
+    obj->scroll ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3700,7 +3700,7 @@ void QWidget_scroll2 ()
 
   if( obj )
   {
-      obj->scroll ( PINT(1), PINT(2), *PQRECT(3) );
+    obj->scroll ( PINT(1), PINT(2), *PQRECT(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3760,7 +3760,7 @@ void QWidget_setContentsMargins1 ()
 
   if( obj )
   {
-      obj->setContentsMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setContentsMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3775,7 +3775,7 @@ void QWidget_setContentsMargins2 ()
 
   if( obj )
   {
-      obj->setContentsMargins ( *PQMARGINS(1) );
+    obj->setContentsMargins ( *PQMARGINS(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3863,7 +3863,7 @@ void QWidget_setFixedSize1 ()
 
   if( obj )
   {
-      obj->setFixedSize ( *PQSIZE(1) );
+    obj->setFixedSize ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3878,7 +3878,7 @@ void QWidget_setFixedSize2 ()
 
   if( obj )
   {
-      obj->setFixedSize ( PINT(1), PINT(2) );
+    obj->setFixedSize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3938,7 +3938,7 @@ void QWidget_setFocus1 ()
 
   if( obj )
   {
-      obj->setFocus ( (Qt::FocusReason) hb_parni(1) );
+    obj->setFocus ( (Qt::FocusReason) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3953,7 +3953,7 @@ void QWidget_setFocus2 ()
 
   if( obj )
   {
-      obj->setFocus ();
+    obj->setFocus ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4038,7 +4038,7 @@ void QWidget_setGeometry1 ()
 
   if( obj )
   {
-      obj->setGeometry ( *PQRECT(1) );
+    obj->setGeometry ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4053,7 +4053,7 @@ void QWidget_setGeometry2 ()
 
   if( obj )
   {
-      obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setGeometry ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4138,7 +4138,7 @@ void QWidget_setMaximumSize1 ()
 
   if( obj )
   {
-      obj->setMaximumSize ( *PQSIZE(1) );
+    obj->setMaximumSize ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4153,7 +4153,7 @@ void QWidget_setMaximumSize2 ()
 
   if( obj )
   {
-      obj->setMaximumSize ( PINT(1), PINT(2) );
+    obj->setMaximumSize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4212,7 +4212,7 @@ void QWidget_setMinimumSize1 ()
 
   if( obj )
   {
-      obj->setMinimumSize ( *PQSIZE(1) );
+    obj->setMinimumSize ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4227,7 +4227,7 @@ void QWidget_setMinimumSize2 ()
 
   if( obj )
   {
-      obj->setMinimumSize ( PINT(1), PINT(2) );
+    obj->setMinimumSize ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4261,7 +4261,7 @@ void QWidget_setParent1 ()
 
   if( obj )
   {
-      obj->setParent ( PQWIDGET(1) );
+    obj->setParent ( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4276,7 +4276,7 @@ void QWidget_setParent2 ()
 
   if( obj )
   {
-      obj->setParent ( PQWIDGET(1), (Qt::WindowFlags) hb_parni(2) );
+    obj->setParent ( PQWIDGET(1), (Qt::WindowFlags) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4391,7 +4391,7 @@ void QWidget_setSizeIncrement1 ()
 
   if( obj )
   {
-      obj->setSizeIncrement ( *PQSIZE(1) );
+    obj->setSizeIncrement ( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4406,7 +4406,7 @@ void QWidget_setSizeIncrement2 ()
 
   if( obj )
   {
-      obj->setSizeIncrement ( PINT(1), PINT(2) );
+    obj->setSizeIncrement ( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4465,7 +4465,7 @@ void QWidget_setSizePolicy1 ()
 
   if( obj )
   {
-      obj->setSizePolicy ( *PQSIZEPOLICY(1) );
+    obj->setSizePolicy ( *PQSIZEPOLICY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -4480,7 +4480,7 @@ void QWidget_setSizePolicy2 ()
 
   if( obj )
   {
-      obj->setSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2) );
+    obj->setSizePolicy ( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -5039,7 +5039,7 @@ void QWidget_update1 ()
 
   if( obj )
   {
-      obj->update ( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->update ( PINT(1), PINT(2), PINT(3), PINT(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -5054,7 +5054,7 @@ void QWidget_update2 ()
 
   if( obj )
   {
-      obj->update ( *PQRECT(1) );
+    obj->update ( *PQRECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -5069,7 +5069,7 @@ void QWidget_update3 ()
 
   if( obj )
   {
-      obj->update ( *PQREGION(1) );
+    obj->update ( *PQREGION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -5084,7 +5084,7 @@ void QWidget_update4 ()
 
   if( obj )
   {
-      obj->update ();
+    obj->update ();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -6651,11 +6651,11 @@ static QWidget * find ( WId id )
 HB_FUNC_STATIC( QWIDGET_FIND )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISPOINTER(1) )
+  if( ISNUMPAR(1) && ISPOINTER(1) )
   {
 #endif
-      QWidget * ptr = QWidget::find ( (WId) hb_parptr(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    QWidget * ptr = QWidget::find ( (WId) hb_parptr(1) );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6671,11 +6671,11 @@ static QWidget * keyboardGrabber ()
 HB_FUNC_STATIC( QWIDGET_KEYBOARDGRABBER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QWidget * ptr = QWidget::keyboardGrabber ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    QWidget * ptr = QWidget::keyboardGrabber ();
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6691,11 +6691,11 @@ static QWidget * mouseGrabber ()
 HB_FUNC_STATIC( QWIDGET_MOUSEGRABBER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QWidget * ptr = QWidget::mouseGrabber ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    QWidget * ptr = QWidget::mouseGrabber ();
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6711,10 +6711,10 @@ static void setTabOrder ( QWidget * first, QWidget * second )
 HB_FUNC_STATIC( QWIDGET_SETTABORDER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQWIDGET(1) && ISQWIDGET(2) )
+  if( ISNUMPAR(2) && ISQWIDGET(1) && ISQWIDGET(2) )
   {
 #endif
-      QWidget::setTabOrder ( PQWIDGET(1), PQWIDGET(2) );
+    QWidget::setTabOrder ( PQWIDGET(1), PQWIDGET(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6732,11 +6732,11 @@ static QWidget * createWindowContainer (QWindow *window, QWidget *parent=0, Qt::
 HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQWINDOW(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISQWINDOW(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
   {
 #endif
-      QWidget * ptr = QWidget::createWindowContainer ( PQWINDOW(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+    QWidget * ptr = QWidget::createWindowContainer ( PQWINDOW(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+    _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
