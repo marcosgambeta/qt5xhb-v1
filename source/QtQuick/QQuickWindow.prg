@@ -636,7 +636,7 @@ void QQuickWindow_setRenderTarget1 ()
 
   if( obj )
   {
-      obj->setRenderTarget ( PQOPENGLFRAMEBUFFEROBJECT(1) );
+    obj->setRenderTarget ( PQOPENGLFRAMEBUFFEROBJECT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -651,7 +651,7 @@ void QQuickWindow_setRenderTarget2 ()
 
   if( obj )
   {
-      obj->setRenderTarget ( PUINT(1), *PQSIZE(2) );
+    obj->setRenderTarget ( PUINT(1), *PQSIZE(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

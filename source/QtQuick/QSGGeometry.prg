@@ -518,10 +518,10 @@ static void updateRectGeometry(QSGGeometry * g, const QRectF & rect)
 HB_FUNC_STATIC( QSGGEOMETRY_UPDATERECTGEOMETRY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQSGGEOMETRY(1) && ISQRECTF(2) )
+  if( ISNUMPAR(2) && ISQSGGEOMETRY(1) && ISQRECTF(2) )
   {
 #endif
-      QSGGeometry::updateRectGeometry ( PQSGGEOMETRY(1), *PQRECTF(2) );
+    QSGGeometry::updateRectGeometry ( PQSGGEOMETRY(1), *PQRECTF(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -539,10 +539,10 @@ static void updateTexturedRectGeometry(QSGGeometry * g, const QRectF & rect, con
 HB_FUNC_STATIC( QSGGEOMETRY_UPDATETEXTUREDRECTGEOMETRY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSGGEOMETRY(1) && ISQRECTF(2) && ISQRECTF(3) )
+  if( ISNUMPAR(3) && ISQSGGEOMETRY(1) && ISQRECTF(2) && ISQRECTF(3) )
   {
 #endif
-      QSGGeometry::updateTexturedRectGeometry ( PQSGGEOMETRY(1), *PQRECTF(2), *PQRECTF(3) );
+    QSGGeometry::updateTexturedRectGeometry ( PQSGGEOMETRY(1), *PQRECTF(2), *PQRECTF(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
