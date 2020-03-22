@@ -60,10 +60,10 @@ void initialize()
 HB_FUNC_STATIC( QTWEBENGINE_INITIALIZE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      QtWebEngine::initialize ();
+    QtWebEngine::initialize ();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
