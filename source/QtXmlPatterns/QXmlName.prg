@@ -242,11 +242,11 @@ static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & 
 HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQXMLNAMEPOOL(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISQXMLNAMEPOOL(2) )
   {
 #endif
-      QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
+    QXmlName * ptr = new QXmlName( QXmlName::fromClarkName ( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QXMLNAME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -262,10 +262,10 @@ static bool isNCName ( const QString & candidate )
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QXmlName::isNCName ( PQSTRING(1) ) );
+    RBOOL( QXmlName::isNCName ( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

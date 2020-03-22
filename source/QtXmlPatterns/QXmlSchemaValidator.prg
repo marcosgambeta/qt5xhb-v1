@@ -367,7 +367,7 @@ void QXmlSchemaValidator_validate1 ()
 
   if( obj )
   {
-      RBOOL( obj->validate ( *PQURL(1) ) );
+    RBOOL( obj->validate ( *PQURL(1) ) );
   }
 }
 
@@ -380,7 +380,7 @@ void QXmlSchemaValidator_validate2 ()
 
   if( obj )
   {
-      RBOOL( obj->validate ( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) ) );
+    RBOOL( obj->validate ( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) ) );
   }
 }
 
@@ -393,7 +393,7 @@ void QXmlSchemaValidator_validate3 ()
 
   if( obj )
   {
-      RBOOL( obj->validate ( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) ) );
+    RBOOL( obj->validate ( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2) ) );
   }
 }
 
