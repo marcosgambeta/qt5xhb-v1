@@ -710,7 +710,7 @@ void QWebFrame_load1 ()
 
   if( obj )
   {
-      obj->load ( *PQURL(1) );
+    obj->load ( *PQURL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -725,7 +725,7 @@ void QWebFrame_load2 ()
 
   if( obj )
   {
-      obj->load ( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3) );
+    obj->load ( *PQNETWORKREQUEST(1), ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), ISNIL(3)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -834,7 +834,7 @@ void QWebFrame_render1 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTER(1), ISNIL(2)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(2) );
+    obj->render ( PQPAINTER(1), ISNIL(2)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -849,7 +849,7 @@ void QWebFrame_render2 ()
 
   if( obj )
   {
-      obj->render ( PQPAINTER(1), (QWebFrame::RenderLayers) hb_parni(2), ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3) );
+    obj->render ( PQPAINTER(1), (QWebFrame::RenderLayers) hb_parni(2), ISNIL(3)? QRegion() : *(QRegion *) _qt5xhb_itemGetPtr(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
