@@ -571,7 +571,7 @@ void QGeoRectangle_contains1 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( *PQGEOCOORDINATE(1) ) );
+    RBOOL( obj->contains ( *PQGEOCOORDINATE(1) ) );
   }
 #endif
 }
@@ -586,7 +586,7 @@ void QGeoRectangle_contains2 ()
 
   if( obj )
   {
-      RBOOL( obj->contains ( *PQGEORECTANGLE(1) ) );
+    RBOOL( obj->contains ( *PQGEORECTANGLE(1) ) );
   }
 #endif
 }
