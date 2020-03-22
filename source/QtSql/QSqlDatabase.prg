@@ -614,7 +614,7 @@ void QSqlDatabase_open1 ()
 
   if( obj )
   {
-      RBOOL( obj->open () );
+    RBOOL( obj->open () );
   }
 }
 
@@ -627,7 +627,7 @@ void QSqlDatabase_open2 ()
 
   if( obj )
   {
-      RBOOL( obj->open ( PQSTRING(1), PQSTRING(2) ) );
+    RBOOL( obj->open ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -968,11 +968,11 @@ static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & 
 HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQSQLDATABASE(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && ISQSQLDATABASE(1) && ISCHAR(2) )
   {
 #endif
-      QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *PQSQLDATABASE(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase ( *PQSQLDATABASE(1), PQSTRING(2) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -988,10 +988,10 @@ static QStringList connectionNames ()
 HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QSqlDatabase::connectionNames () );
+    RQSTRINGLIST( QSqlDatabase::connectionNames () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1040,10 +1040,10 @@ static QStringList drivers ()
 HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+  if( ISNUMPAR(0) )
   {
 #endif
-      RQSTRINGLIST( QSqlDatabase::drivers () );
+    RQSTRINGLIST( QSqlDatabase::drivers () );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1059,10 +1059,10 @@ static bool isDriverAvailable ( const QString & name )
 HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RBOOL( QSqlDatabase::isDriverAvailable ( PQSTRING(1) ) );
+    RBOOL( QSqlDatabase::isDriverAvailable ( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1078,10 +1078,10 @@ static void registerSqlDriver ( const QString & name, QSqlDriverCreatorBase * cr
 HB_FUNC_STATIC( QSQLDATABASE_REGISTERSQLDRIVER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQSQLDRIVERCREATORBASE(2) )
+  if( ISNUMPAR(2) && ISCHAR(1) && ISQSQLDRIVERCREATORBASE(2) )
   {
 #endif
-      QSqlDatabase::registerSqlDriver ( PQSTRING(1), PQSQLDRIVERCREATORBASE(2) );
+    QSqlDatabase::registerSqlDriver ( PQSTRING(1), PQSQLDRIVERCREATORBASE(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1099,10 +1099,10 @@ static void removeDatabase ( const QString & connectionName )
 HB_FUNC_STATIC( QSQLDATABASE_REMOVEDATABASE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      QSqlDatabase::removeDatabase ( PQSTRING(1) );
+    QSqlDatabase::removeDatabase ( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -239,7 +239,7 @@ void QSqlQuery_bindValue1 ()
 
   if( obj )
   {
-      obj->bindValue ( PQSTRING(1), *PQVARIANT(2), ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
+    obj->bindValue ( PQSTRING(1), *PQVARIANT(2), ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -254,7 +254,7 @@ void QSqlQuery_bindValue2 ()
 
   if( obj )
   {
-      obj->bindValue ( PINT(1), *PQVARIANT(2), ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
+    obj->bindValue ( PINT(1), *PQVARIANT(2), ISNIL(3)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -288,8 +288,8 @@ void QSqlQuery_boundValue1 ()
 
   if( obj )
   {
-      QVariant * ptr = new QVariant( obj->boundValue ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( obj->boundValue ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -302,8 +302,8 @@ void QSqlQuery_boundValue2 ()
 
   if( obj )
   {
-      QVariant * ptr = new QVariant( obj->boundValue ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( obj->boundValue ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -386,7 +386,7 @@ void QSqlQuery_exec1 ()
 
   if( obj )
   {
-      RBOOL( obj->exec ( PQSTRING(1) ) );
+    RBOOL( obj->exec ( PQSTRING(1) ) );
   }
 }
 
@@ -399,7 +399,7 @@ void QSqlQuery_exec2 ()
 
   if( obj )
   {
-      RBOOL( obj->exec () );
+    RBOOL( obj->exec () );
   }
 }
 
@@ -603,7 +603,7 @@ void QSqlQuery_isNull1 ()
 
   if( obj )
   {
-      RBOOL( obj->isNull ( PINT(1) ) );
+    RBOOL( obj->isNull ( PINT(1) ) );
   }
 }
 
@@ -617,7 +617,7 @@ void QSqlQuery_isNull2 ()
 
   if( obj )
   {
-      RBOOL( obj->isNull ( PQSTRING(1) ) );
+    RBOOL( obj->isNull ( PQSTRING(1) ) );
   }
 #endif
 }
@@ -1064,8 +1064,8 @@ void QSqlQuery_value1 ()
 
   if( obj )
   {
-      QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 
@@ -1078,8 +1078,8 @@ void QSqlQuery_value2 ()
 
   if( obj )
   {
-      QVariant * ptr = new QVariant( obj->value ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+    QVariant * ptr = new QVariant( obj->value ( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
   }
 }
 

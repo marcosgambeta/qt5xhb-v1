@@ -190,7 +190,7 @@ void QSqlQueryModel_setQuery1 ()
 
   if( obj )
   {
-      obj->setQuery ( *PQSQLQUERY(1) );
+    obj->setQuery ( *PQSQLQUERY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -205,7 +205,7 @@ void QSqlQueryModel_setQuery2 ()
 
   if( obj )
   {
-      obj->setQuery ( PQSTRING(1), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2) );
+    obj->setQuery ( PQSTRING(1), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) _qt5xhb_itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -239,8 +239,8 @@ void QSqlQueryModel_record1 ()
 
   if( obj )
   {
-      QSqlRecord * ptr = new QSqlRecord( obj->record ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    QSqlRecord * ptr = new QSqlRecord( obj->record ( PINT(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
@@ -253,8 +253,8 @@ void QSqlQueryModel_record2 ()
 
   if( obj )
   {
-      QSqlRecord * ptr = new QSqlRecord( obj->record () );
-      _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
+    QSqlRecord * ptr = new QSqlRecord( obj->record () );
+    _qt5xhb_createReturnClass ( ptr, "QSQLRECORD", true );
   }
 }
 
