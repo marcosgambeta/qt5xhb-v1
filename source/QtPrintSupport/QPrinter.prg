@@ -690,14 +690,14 @@ HB_FUNC_STATIC( QPRINTER_GETPAGEMARGINS )
     {
 #endif
       qreal par1;
-qreal par2;
-qreal par3;
-qreal par4;
+      qreal par2;
+      qreal par3;
+      qreal par4;
       obj->getPageMargins ( &par1, &par2, &par3, &par4, (QPrinter::Unit) hb_parni(5) );
       hb_stornd( par1, 1 );
-hb_stornd( par2, 2 );
-hb_stornd( par3, 3 );
-hb_stornd( par4, 4 );
+      hb_stornd( par2, 2 );
+      hb_stornd( par3, 3 );
+      hb_stornd( par4, 4 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -719,7 +719,7 @@ void QPrinter_setPageMargins1 ()
 
   if( obj )
   {
-      obj->setPageMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (QPrinter::Unit) hb_parni(5) );
+    obj->setPageMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (QPrinter::Unit) hb_parni(5) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -735,7 +735,7 @@ void QPrinter_setPageMargins2 ()
 
   if( obj )
   {
-      RBOOL( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
+    RBOOL( obj->setPageMargins ( *PQMARGINSF(1), (QPageLayout::Unit) hb_parni(2) ) );
   }
 #endif
 }
@@ -1016,8 +1016,8 @@ void QPrinter_pageRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->pageRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->pageRect () );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -1030,8 +1030,8 @@ void QPrinter_pageRect2 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->pageRect ( (QPrinter::Unit) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->pageRect ( (QPrinter::Unit) hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -1063,8 +1063,8 @@ void QPrinter_paperRect1 ()
 
   if( obj )
   {
-      QRect * ptr = new QRect( obj->paperRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+    QRect * ptr = new QRect( obj->paperRect () );
+    _qt5xhb_createReturnClass ( ptr, "QRECT", true );
   }
 }
 
@@ -1077,8 +1077,8 @@ void QPrinter_paperRect2 ()
 
   if( obj )
   {
-      QRectF * ptr = new QRectF( obj->paperRect ( (QPrinter::Unit) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+    QRectF * ptr = new QRectF( obj->paperRect ( (QPrinter::Unit) hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
   }
 }
 
@@ -1110,7 +1110,7 @@ void QPrinter_paperSize1 ()
 
   if( obj )
   {
-      RENUM( obj->paperSize () );
+    RENUM( obj->paperSize () );
   }
 }
 
@@ -1123,8 +1123,8 @@ void QPrinter_paperSize2 ()
 
   if( obj )
   {
-      QSizeF * ptr = new QSizeF( obj->paperSize ( (QPrinter::Unit) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+    QSizeF * ptr = new QSizeF( obj->paperSize ( (QPrinter::Unit) hb_parni(1) ) );
+    _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
   }
 }
 
@@ -1507,7 +1507,7 @@ void QPrinter_setPaperSize1 ()
 
   if( obj )
   {
-      obj->setPaperSize ( (QPrinter::PaperSize) hb_parni(1) );
+    obj->setPaperSize ( (QPrinter::PaperSize) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1522,7 +1522,7 @@ void QPrinter_setPaperSize2 ()
 
   if( obj )
   {
-      obj->setPaperSize ( *PQSIZEF(1), (QPrinter::Unit) hb_parni(2) );
+    obj->setPaperSize ( *PQSIZEF(1), (QPrinter::Unit) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1818,7 +1818,7 @@ void QPrinter_setPageSize1 ()
 
   if( obj )
   {
-      obj->setPageSize ( (QPrinter::PageSize) hb_parni(1) );
+    obj->setPageSize ( (QPrinter::PageSize) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1834,7 +1834,7 @@ void QPrinter_setPageSize2 ()
 
   if( obj )
   {
-      RBOOL( obj->setPageSize ( *PQPAGESIZE(1) ) );
+    RBOOL( obj->setPageSize ( *PQPAGESIZE(1) ) );
   }
 #endif
 }
