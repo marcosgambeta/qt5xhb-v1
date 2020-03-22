@@ -192,7 +192,7 @@ void QQmlApplicationEngine_load1 ()
 
   if( obj )
   {
-      obj->load ( *PQURL(1) );
+    obj->load ( *PQURL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -209,7 +209,7 @@ void QQmlApplicationEngine_load2 ()
 
   if( obj )
   {
-      obj->load ( PQSTRING(1) );
+    obj->load ( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

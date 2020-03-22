@@ -380,7 +380,7 @@ void QQmlContext_setContextProperty1 ()
 
   if( obj )
   {
-      obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
+    obj->setContextProperty ( PQSTRING(1), PQOBJECT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -395,7 +395,7 @@ void QQmlContext_setContextProperty2 ()
 
   if( obj )
   {
-      obj->setContextProperty ( PQSTRING(1), *PQVARIANT(2) );
+    obj->setContextProperty ( PQSTRING(1), *PQVARIANT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

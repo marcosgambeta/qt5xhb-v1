@@ -741,11 +741,11 @@ static QQmlContext * contextForObject(const QObject * object)
 HB_FUNC_STATIC( QQMLENGINE_CONTEXTFOROBJECT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-      QQmlContext * ptr = QQmlEngine::contextForObject ( PQOBJECT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QQMLCONTEXT" );
+    QQmlContext * ptr = QQmlEngine::contextForObject ( PQOBJECT(1) );
+    _qt5xhb_createReturnQObjectClass ( ptr, "QQMLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -761,10 +761,10 @@ static ObjectOwnership objectOwnership(QObject * object)
 HB_FUNC_STATIC( QQMLENGINE_OBJECTOWNERSHIP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-      RENUM( QQmlEngine::objectOwnership ( PQOBJECT(1) ) );
+    RENUM( QQmlEngine::objectOwnership ( PQOBJECT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -780,10 +780,10 @@ static void setContextForObject(QObject * object, QQmlContext * context)
 HB_FUNC_STATIC( QQMLENGINE_SETCONTEXTFOROBJECT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2) )
+  if( ISNUMPAR(2) && ISQOBJECT(1) && ISQQMLCONTEXT(2) )
   {
 #endif
-      QQmlEngine::setContextForObject ( PQOBJECT(1), PQQMLCONTEXT(2) );
+    QQmlEngine::setContextForObject ( PQOBJECT(1), PQQMLCONTEXT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -801,10 +801,10 @@ static void setObjectOwnership(QObject * object, ObjectOwnership ownership)
 HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
 #endif
-      QQmlEngine::setObjectOwnership ( PQOBJECT(1), (QQmlEngine::ObjectOwnership) hb_parni(2) );
+    QQmlEngine::setObjectOwnership ( PQOBJECT(1), (QQmlEngine::ObjectOwnership) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
