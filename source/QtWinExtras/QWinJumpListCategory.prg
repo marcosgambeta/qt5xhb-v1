@@ -411,8 +411,8 @@ void QWinJumpListCategory_addLink1 ()
 
   if( obj )
   {
-      QWinJumpListItem * ptr = obj->addLink ( PQSTRING(1), PQSTRING(2), OPQSTRINGLIST(3,QStringList()) );
-      _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM", false );
+    QWinJumpListItem * ptr = obj->addLink ( PQSTRING(1), PQSTRING(2), OPQSTRINGLIST(3,QStringList()) );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM", false );
   }
 #endif
 }
@@ -427,8 +427,8 @@ void QWinJumpListCategory_addLink2 ()
 
   if( obj )
   {
-      QWinJumpListItem * ptr = obj->addLink ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQSTRING(3), OPQSTRINGLIST(4,QStringList()) );
-      _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM", false );
+    QWinJumpListItem * ptr = obj->addLink ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQSTRING(3), OPQSTRINGLIST(4,QStringList()) );
+    _qt5xhb_createReturnClass ( ptr, "QWINJUMPLISTITEM", false );
   }
 #endif
 }
