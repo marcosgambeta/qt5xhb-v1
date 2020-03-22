@@ -183,7 +183,7 @@ void QXmlAttributes_index1 ()
 
   if( obj )
   {
-      RINT( obj->index ( PQSTRING(1) ) );
+    RINT( obj->index ( PQSTRING(1) ) );
   }
 }
 
@@ -196,7 +196,7 @@ void QXmlAttributes_index2 ()
 
   if( obj )
   {
-      RINT( obj->index ( *PQLATIN1STRING(1) ) );
+    RINT( obj->index ( *PQLATIN1STRING(1) ) );
   }
 }
 
@@ -209,7 +209,7 @@ void QXmlAttributes_index3 ()
 
   if( obj )
   {
-      RINT( obj->index ( PQSTRING(1), PQSTRING(2) ) );
+    RINT( obj->index ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -318,7 +318,7 @@ void QXmlAttributes_type1 ()
 
   if( obj )
   {
-      RQSTRING( obj->type ( PINT(1) ) );
+    RQSTRING( obj->type ( PINT(1) ) );
   }
 }
 
@@ -331,7 +331,7 @@ void QXmlAttributes_type2 ()
 
   if( obj )
   {
-      RQSTRING( obj->type ( PQSTRING(1) ) );
+    RQSTRING( obj->type ( PQSTRING(1) ) );
   }
 }
 
@@ -344,7 +344,7 @@ void QXmlAttributes_type3 ()
 
   if( obj )
   {
-      RQSTRING( obj->type ( PQSTRING(1), PQSTRING(2) ) );
+    RQSTRING( obj->type ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
@@ -405,7 +405,7 @@ void QXmlAttributes_value1 ()
 
   if( obj )
   {
-      RQSTRING( obj->value ( PINT(1) ) );
+    RQSTRING( obj->value ( PINT(1) ) );
   }
 }
 
@@ -418,7 +418,7 @@ void QXmlAttributes_value2 ()
 
   if( obj )
   {
-      RQSTRING( obj->value ( PQSTRING(1) ) );
+    RQSTRING( obj->value ( PQSTRING(1) ) );
   }
 }
 
@@ -431,7 +431,7 @@ void QXmlAttributes_value3 ()
 
   if( obj )
   {
-      RQSTRING( obj->value ( *PQLATIN1STRING(1) ) );
+    RQSTRING( obj->value ( *PQLATIN1STRING(1) ) );
   }
 }
 
@@ -444,7 +444,7 @@ void QXmlAttributes_value4 ()
 
   if( obj )
   {
-      RQSTRING( obj->value ( PQSTRING(1), PQSTRING(2) ) );
+    RQSTRING( obj->value ( PQSTRING(1), PQSTRING(2) ) );
   }
 }
 
