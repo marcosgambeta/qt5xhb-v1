@@ -25,7 +25,7 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
   PHB_ITEM cb = Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewSize = Signals_return_object( (void *) &newSize, "QSIZEF" );
     hb_vmEvalBlockV( cb, 2, psender, pnewSize );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
   PHB_ITEM cb = Signals_return_codeblock( object, "pageCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewPages = hb_itemPutNI( NULL, newPages );
     hb_vmEvalBlockV( cb, 2, psender, pnewPages );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
   PHB_ITEM cb = Signals_return_codeblock( object, "update(QRectF)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
     hb_vmEvalBlockV( cb, 2, psender, prect );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
   PHB_ITEM cb = Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pblock = Signals_return_object( (void *) &block, "QTEXTBLOCK" );
     hb_vmEvalBlockV( cb, 2, psender, pblock );
     hb_itemRelease( psender );
@@ -72,7 +72,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
   }
 }
 
-void QAbstractTextDocumentLayoutSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstractTextDocumentLayoutSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

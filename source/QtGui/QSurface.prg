@@ -38,7 +38,7 @@ CLASS QSurface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSurface
+PROCEDURE destroyObject() CLASS QSurface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACECLASS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->surfaceClass () );
+      RENUM( obj->surfaceClass() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,8 +114,8 @@ HB_FUNC_STATIC( QSURFACE_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT", true );
+      QSurfaceFormat * ptr = new QSurfaceFormat( obj->format() );
+      _qt5xhb_createReturnClass( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSURFACE_SURFACETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->surfaceType () );
+      RENUM( obj->surfaceType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,8 +167,8 @@ HB_FUNC_STATIC( QSURFACE_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->size() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

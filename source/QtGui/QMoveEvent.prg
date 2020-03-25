@@ -27,7 +27,7 @@ CLASS QMoveEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMoveEvent
+PROCEDURE destroyObject() CLASS QMoveEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
-    QMoveEvent * o = new QMoveEvent ( *PQPOINT(1), *PQPOINT(2) );
+    QMoveEvent * o = new QMoveEvent( *PQPOINT(1), *PQPOINT(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -95,8 +95,8 @@ HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->oldPos ();
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", false );
+      const QPoint * ptr = &obj->oldPos();
+      _qt5xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,8 +120,8 @@ HB_FUNC_STATIC( QMOVEEVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPoint * ptr = &obj->pos ();
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", false );
+      const QPoint * ptr = &obj->pos();
+      _qt5xhb_createReturnClass( ptr, "QPOINT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

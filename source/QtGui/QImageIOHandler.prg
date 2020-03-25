@@ -53,7 +53,7 @@ CLASS QImageIOHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QImageIOHandler
+PROCEDURE destroyObject() CLASS QImageIOHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canRead () );
+      RBOOL( obj->canRead() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->currentImageNumber () );
+      RINT( obj->currentImageNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,8 +156,8 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->currentImageRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->currentImageRect() );
+      _qt5xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,8 +181,8 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->device ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
+      QIODevice * ptr = obj->device();
+      _qt5xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,8 +206,8 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->format() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->imageCount () );
+      RINT( obj->imageCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->jumpToImage ( PINT(1) ) );
+      RBOOL( obj->jumpToImage( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->jumpToNextImage () );
+      RBOOL( obj->jumpToNextImage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->loopCount () );
+      RINT( obj->loopCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->nextImageDelay () );
+      RINT( obj->nextImageDelay() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,8 +351,8 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->option ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->option( (QImageIOHandler::ImageOption) hb_parni(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
     if( ISNUMPAR(1) && ISQIMAGE(1) )
     {
 #endif
-      RBOOL( obj->read ( PQIMAGE(1) ) );
+      RBOOL( obj->read( PQIMAGE(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      obj->setDevice ( PQIODEVICE(1) );
+      obj->setDevice( PQIODEVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setFormat ( *PQBYTEARRAY(1) );
+      obj->setFormat( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setOption ( (QImageIOHandler::ImageOption) hb_parni(1), *PQVARIANT(2) );
+      obj->setOption( (QImageIOHandler::ImageOption) hb_parni(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
+      RBOOL( obj->supportsOption( (QImageIOHandler::ImageOption) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
     if( ISNUMPAR(1) && ISQIMAGE(1) )
     {
 #endif
-      RBOOL( obj->write ( *PQIMAGE(1) ) );
+      RBOOL( obj->write( *PQIMAGE(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

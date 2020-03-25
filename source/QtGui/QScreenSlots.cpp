@@ -25,7 +25,7 @@ void QScreenSlots::geometryChanged( const QRect & geometry )
   PHB_ITEM cb = Signals_return_codeblock( object, "geometryChanged(QRect)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCREEN" );
     PHB_ITEM pgeometry = Signals_return_object( (void *) &geometry, "QRECT" );
     hb_vmEvalBlockV( cb, 2, psender, pgeometry );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QScreenSlots::physicalSizeChanged( const QSizeF & size )
   PHB_ITEM cb = Signals_return_codeblock( object, "physicalSizeChanged(QSizeF)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCREEN" );
     PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZEF" );
     hb_vmEvalBlockV( cb, 2, psender, psize );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QScreenSlots::physicalDotsPerInchChanged( qreal dpi )
   PHB_ITEM cb = Signals_return_codeblock( object, "physicalDotsPerInchChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCREEN" );
     PHB_ITEM pdpi = hb_itemPutND( NULL, dpi );
     hb_vmEvalBlockV( cb, 2, psender, pdpi );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QScreenSlots::logicalDotsPerInchChanged( qreal dpi )
   PHB_ITEM cb = Signals_return_codeblock( object, "logicalDotsPerInchChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCREEN" );
     PHB_ITEM pdpi = hb_itemPutND( NULL, dpi );
     hb_vmEvalBlockV( cb, 2, psender, pdpi );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QScreenSlots::virtualGeometryChanged( const QRect & rect )
   PHB_ITEM cb = Signals_return_codeblock( object, "virtualGeometryChanged(QRect)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCREEN" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECT" );
     hb_vmEvalBlockV( cb, 2, psender, prect );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void QScreenSlots::primaryOrientationChanged( Qt::ScreenOrientation orientation 
   PHB_ITEM cb = Signals_return_codeblock( object, "primaryOrientationChanged(Qt::ScreenOrientation)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCREEN" );
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
     hb_vmEvalBlockV( cb, 2, psender, porientation );
     hb_itemRelease( psender );
@@ -103,7 +103,7 @@ void QScreenSlots::orientationChanged( Qt::ScreenOrientation orientation )
   PHB_ITEM cb = Signals_return_codeblock( object, "orientationChanged(Qt::ScreenOrientation)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCREEN" );
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
     hb_vmEvalBlockV( cb, 2, psender, porientation );
     hb_itemRelease( psender );
@@ -116,7 +116,7 @@ void QScreenSlots::refreshRateChanged( qreal refreshRate )
   PHB_ITEM cb = Signals_return_codeblock( object, "refreshRateChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCREEN" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCREEN" );
     PHB_ITEM prefreshRate = hb_itemPutND( NULL, refreshRate );
     hb_vmEvalBlockV( cb, 2, psender, prefreshRate );
     hb_itemRelease( psender );
@@ -124,7 +124,7 @@ void QScreenSlots::refreshRateChanged( qreal refreshRate )
   }
 }
 
-void QScreenSlots_connect_signal ( const QString & signal, const QString & slot )
+void QScreenSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QScreen * obj = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

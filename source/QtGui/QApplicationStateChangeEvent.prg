@@ -24,7 +24,7 @@ CLASS QApplicationStateChangeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QApplicationStateChangeEvent
+PROCEDURE destroyObject() CLASS QApplicationStateChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QApplicationStateChangeEvent * o = new QApplicationStateChangeEvent ( (Qt::ApplicationState) hb_parni(1) );
+    QApplicationStateChangeEvent * o = new QApplicationStateChangeEvent( (Qt::ApplicationState) hb_parni(1) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_APPLICATIONSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->applicationState () );
+      RENUM( obj->applicationState() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

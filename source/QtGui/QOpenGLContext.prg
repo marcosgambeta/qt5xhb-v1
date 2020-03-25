@@ -49,7 +49,7 @@ CLASS QOpenGLContext INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOpenGLContext
+PROCEDURE destroyObject() CLASS QOpenGLContext
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOpenGLContext * o = new QOpenGLContext ( OPQOBJECT(1,0) );
+    QOpenGLContext * o = new QOpenGLContext( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -97,8 +97,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_CREATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->create () );
+      RBOOL( obj->create() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DEFAULTFRAMEBUFFEROBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RGLUINT( obj->defaultFramebufferObject () );
+      RGLUINT( obj->defaultFramebufferObject() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_DONECURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->doneCurrent ();
+      obj->doneCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,8 +197,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurfaceFormat * ptr = new QSurfaceFormat( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QSURFACEFORMAT", true );
+      QSurfaceFormat * ptr = new QSurfaceFormat( obj->format() );
+      _qt5xhb_createReturnClass( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,8 +222,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FUNCTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLFunctions * ptr = obj->functions ();
-      _qt5xhb_createReturnClass ( ptr, "QOPENGLFUNCTIONS", false );
+      QOpenGLFunctions * ptr = obj->functions();
+      _qt5xhb_createReturnClass( ptr, "QOPENGLFUNCTIONS", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_HASEXTENSION )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      RBOOL( obj->hasExtension ( *PQBYTEARRAY(1) ) );
+      RBOOL( obj->hasExtension( *PQBYTEARRAY(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_MAKECURRENT )
     if( ISNUMPAR(1) && ISQSURFACE(1) )
     {
 #endif
-      RBOOL( obj->makeCurrent ( PQSURFACE(1) ) );
+      RBOOL( obj->makeCurrent( PQSURFACE(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,8 +323,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SCREEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScreen * ptr = obj->screen ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCREEN" );
+      QScreen * ptr = obj->screen();
+      _qt5xhb_createReturnQObjectClass( ptr, "QSCREEN" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SETFORMAT )
     if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
     {
 #endif
-      obj->setFormat ( *PQSURFACEFORMAT(1) );
+      obj->setFormat( *PQSURFACEFORMAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SETSCREEN )
     if( ISNUMPAR(1) && ISQSCREEN(1) )
     {
 #endif
-      obj->setScreen ( PQSCREEN(1) );
+      obj->setScreen( PQSCREEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SETSHARECONTEXT )
     if( ISNUMPAR(1) && ISQOPENGLCONTEXT(1) )
     {
 #endif
-      obj->setShareContext ( PQOPENGLCONTEXT(1) );
+      obj->setShareContext( PQOPENGLCONTEXT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,8 +426,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHARECONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLContext * ptr = obj->shareContext ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLCONTEXT" );
+      QOpenGLContext * ptr = obj->shareContext();
+      _qt5xhb_createReturnQObjectClass( ptr, "QOPENGLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,8 +451,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SHAREGROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLContextGroup * ptr = obj->shareGroup ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLCONTEXTGROUP" );
+      QOpenGLContextGroup * ptr = obj->shareGroup();
+      _qt5xhb_createReturnQObjectClass( ptr, "QOPENGLCONTEXTGROUP" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,8 +476,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SURFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSurface * ptr = obj->surface ();
-      _qt5xhb_createReturnClass ( ptr, "QSURFACE", false );
+      QSurface * ptr = obj->surface();
+      _qt5xhb_createReturnClass( ptr, "QSURFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SWAPBUFFERS )
     if( ISNUMPAR(1) && ISQSURFACE(1) )
     {
 #endif
-      obj->swapBuffers ( PQSURFACE(1) );
+      obj->swapBuffers( PQSURFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_ARESHARING )
   if( ISNUMPAR(2) && ISQOPENGLCONTEXT(1) && ISQOPENGLCONTEXT(2) )
   {
 #endif
-    RBOOL( QOpenGLContext::areSharing ( PQOPENGLCONTEXT(1), PQOPENGLCONTEXT(2) ) );
+    RBOOL( QOpenGLContext::areSharing( PQOPENGLCONTEXT(1), PQOPENGLCONTEXT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -542,8 +542,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
   if( ISNUMPAR(0) )
   {
 #endif
-    QOpenGLContext * ptr = QOpenGLContext::currentContext ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLCONTEXT" );
+    QOpenGLContext * ptr = QOpenGLContext::currentContext();
+    _qt5xhb_createReturnQObjectClass( ptr, "QOPENGLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_CURRENTCONTEXT )
 #endif
 }
 
-void QOpenGLContextSlots_connect_signal ( const QString & signal, const QString & slot );
+void QOpenGLContextSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QOPENGLCONTEXT_ONABOUTTOBEDESTROYED )
 {

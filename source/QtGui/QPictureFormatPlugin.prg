@@ -26,7 +26,7 @@ CLASS QPictureFormatPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPictureFormatPlugin
+PROCEDURE destroyObject() CLASS QPictureFormatPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_LOADPICTURE )
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISQPICTURE(3) )
     {
 #endif
-      RBOOL( obj->loadPicture ( PQSTRING(1), PQSTRING(2), PQPICTURE(3) ) );
+      RBOOL( obj->loadPicture( PQSTRING(1), PQSTRING(2), PQPICTURE(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_SAVEPICTURE )
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISQPICTURE(3) )
     {
 #endif
-      RBOOL( obj->savePicture ( PQSTRING(1), PQSTRING(2), *PQPICTURE(3) ) );
+      RBOOL( obj->savePicture( PQSTRING(1), PQSTRING(2), *PQPICTURE(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QPICTUREFORMATPLUGIN_INSTALLIOHANDLER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->installIOHandler ( PQSTRING(1) ) );
+      RBOOL( obj->installIOHandler( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

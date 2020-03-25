@@ -26,7 +26,7 @@ CLASS QWindowStateChangeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWindowStateChangeEvent
+PROCEDURE destroyObject() CLASS QWindowStateChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
   {
-    QWindowStateChangeEvent * o = new QWindowStateChangeEvent ( (Qt::WindowStates) hb_parni(1), OPBOOL(2,false) );
+    QWindowStateChangeEvent * o = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1), OPBOOL(2,false) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->oldState () );
+      RENUM( obj->oldState() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isOverride () );
+      RBOOL( obj->isOverride() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -24,7 +24,7 @@ CLASS QInputEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputEvent
+PROCEDURE destroyObject() CLASS QInputEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->modifiers () );
+      RENUM( obj->modifiers() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -41,7 +41,7 @@ CLASS QAccessibleTableCellInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleTableCellInterface
+PROCEDURE destroyObject() CLASS QAccessibleTableCellInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_COLUMNEXTENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnExtent () );
+      RINT( obj->columnExtent() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_COLUMNHEADERCELLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAccessibleInterface *> list = obj->columnHeaderCells ();
+      QList<QAccessibleInterface *> list = obj->columnHeaderCells();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QACCESSIBLEINTERFACE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_COLUMNINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnIndex () );
+      RINT( obj->columnIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ROWEXTENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rowExtent () );
+      RINT( obj->rowExtent() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ROWHEADERCELLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAccessibleInterface *> list = obj->rowHeaderCells ();
+      QList<QAccessibleInterface *> list = obj->rowHeaderCells();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QACCESSIBLEINTERFACE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ROWINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rowIndex () );
+      RINT( obj->rowIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ISSELECTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSelected () );
+      RBOOL( obj->isSelected() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,8 +309,8 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_TABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->table ();
-      _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      QAccessibleInterface * ptr = obj->table();
+      _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

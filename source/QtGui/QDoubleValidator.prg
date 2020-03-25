@@ -34,7 +34,7 @@ CLASS QDoubleValidator INHERIT QValidator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDoubleValidator
+PROCEDURE destroyObject() CLASS QDoubleValidator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,18 +59,18 @@ RETURN
 /*
 QDoubleValidator ( QObject * parent = 0 )
 */
-void QDoubleValidator_new1 ()
+void QDoubleValidator_new1()
 {
-  QDoubleValidator * o = new QDoubleValidator ( OPQOBJECT(1,0) );
+  QDoubleValidator * o = new QDoubleValidator( OPQOBJECT(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 */
-void QDoubleValidator_new2 ()
+void QDoubleValidator_new2()
 {
-  QDoubleValidator * o = new QDoubleValidator ( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
+  QDoubleValidator * o = new QDoubleValidator( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RDOUBLE( obj->bottom () );
+      RDOUBLE( obj->bottom() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->decimals () );
+      RINT( obj->decimals() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->notation () );
+      RENUM( obj->notation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBottom ( PDOUBLE(1) );
+      obj->setBottom( PDOUBLE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDecimals ( PINT(1) );
+      obj->setDecimals( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setNotation ( (QDoubleValidator::Notation) hb_parni(1) );
+      obj->setNotation( (QDoubleValidator::Notation) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
     if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->setRange ( PDOUBLE(1), PDOUBLE(2), OPINT(3,0) );
+      obj->setRange( PDOUBLE(1), PDOUBLE(2), OPINT(3,0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTop ( PDOUBLE(1) );
+      obj->setTop( PDOUBLE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RDOUBLE( obj->top () );
+      RDOUBLE( obj->top() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM( obj->validate ( par1, par2 ) );
+      RENUM( obj->validate( par1, par2 ) );
       hb_storc( QSTRINGTOSTRING(par1), 1);
       hb_storni( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

@@ -25,7 +25,7 @@ void QDragSlots::actionChanged( Qt::DropAction action )
   PHB_ITEM cb = Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDRAG" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDRAG" );
     PHB_ITEM paction = hb_itemPutNI( NULL, (int) action );
     hb_vmEvalBlockV( cb, 2, psender, paction );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QDragSlots::targetChanged( QObject * newTarget )
   PHB_ITEM cb = Signals_return_codeblock( object, "targetChanged(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDRAG" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDRAG" );
     PHB_ITEM pnewTarget = Signals_return_qobject( (QObject *) newTarget, "QOBJECT" );
     hb_vmEvalBlockV( cb, 2, psender, pnewTarget );
     hb_itemRelease( psender );
@@ -46,7 +46,7 @@ void QDragSlots::targetChanged( QObject * newTarget )
   }
 }
 
-void QDragSlots_connect_signal ( const QString & signal, const QString & slot )
+void QDragSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -25,7 +25,7 @@ void QOpenGLDebugLoggerSlots::messageLogged( const QOpenGLDebugMessage & debugMe
   PHB_ITEM cb = Signals_return_codeblock( object, "messageLogged(QOpenGLDebugMessage)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLDEBUGLOGGER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOPENGLDEBUGLOGGER" );
     PHB_ITEM pdebugMessage = Signals_return_object( (void *) &debugMessage, "QOPENGLDEBUGMESSAGE" );
     hb_vmEvalBlockV( cb, 2, psender, pdebugMessage );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QOpenGLDebugLoggerSlots::messageLogged( const QOpenGLDebugMessage & debugMe
   }
 }
 
-void QOpenGLDebugLoggerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QOpenGLDebugLoggerSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QOpenGLDebugLogger * obj = (QOpenGLDebugLogger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

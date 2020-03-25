@@ -40,7 +40,7 @@ CLASS QKeySequence
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QKeySequence
+PROCEDURE destroyObject() CLASS QKeySequence
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,54 +67,54 @@ RETURN
 /*
 QKeySequence ()
 */
-void QKeySequence_new1 ()
+void QKeySequence_new1()
 {
-  QKeySequence * o = new QKeySequence ();
+  QKeySequence * o = new QKeySequence();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QKeySequence ( const QString & key )
 */
-void QKeySequence_new2 ()
+void QKeySequence_new2()
 {
-  QKeySequence * o = new QKeySequence ( PQSTRING(1) );
+  QKeySequence * o = new QKeySequence( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QKeySequence ( const QString & key, SequenceFormat format )
 */
-void QKeySequence_new3 ()
+void QKeySequence_new3()
 {
-  QKeySequence * o = new QKeySequence ( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
+  QKeySequence * o = new QKeySequence( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
-void QKeySequence_new4 ()
+void QKeySequence_new4()
 {
-  QKeySequence * o = new QKeySequence ( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
+  QKeySequence * o = new QKeySequence( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QKeySequence ( const QKeySequence & keysequence )
 */
-void QKeySequence_new5 ()
+void QKeySequence_new5()
 {
-  QKeySequence * o = new QKeySequence ( *PQKEYSEQUENCE(1) );
+  QKeySequence * o = new QKeySequence( *PQKEYSEQUENCE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QKeySequence ( StandardKey key )
 */
-void QKeySequence_new6 ()
+void QKeySequence_new6()
 {
-  QKeySequence * o = new QKeySequence ( (QKeySequence::StandardKey) hb_parni(1) );
+  QKeySequence * o = new QKeySequence( (QKeySequence::StandardKey) hb_parni(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RUINT( obj->count () );
+      RUINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
     if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
     {
 #endif
-      RENUM( obj->matches ( *PQKEYSEQUENCE(1) ) );
+      RENUM( obj->matches( *PQKEYSEQUENCE(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RQSTRING( obj->toString ( ISNIL(1)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(1) ) );
+      RQSTRING( obj->toString( ISNIL(1)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,8 +279,8 @@ HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
   if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
   {
 #endif
-    QKeySequence * ptr = new QKeySequence( QKeySequence::fromString ( PQSTRING(1), ISNIL(2)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+    QKeySequence * ptr = new QKeySequence( QKeySequence::fromString( PQSTRING(1), ISNIL(2)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(2) ) );
+    _qt5xhb_createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    QList<QKeySequence> list = QKeySequence::keyBindings ( (QKeySequence::StandardKey) hb_parni(1) );
+    QList<QKeySequence> list = QKeySequence::keyBindings( (QKeySequence::StandardKey) hb_parni(1) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QKeySequence *) new QKeySequence ( list[i] ) );
+        hb_itemPutPtr( pItem, (QKeySequence *) new QKeySequence( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -346,8 +346,8 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+    QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -35,7 +35,7 @@ CLASS QPicture INHERIT QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPicture
+PROCEDURE destroyObject() CLASS QPicture
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,18 +60,18 @@ RETURN
 /*
 QPicture ( int formatVersion = -1 )
 */
-void QPicture_new1 ()
+void QPicture_new1()
 {
-  QPicture * o = new QPicture ( OPINT(1,-1) );
+  QPicture * o = new QPicture( OPINT(1,-1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QPicture ( const QPicture & pic )
 */
-void QPicture_new2 ()
+void QPicture_new2()
 {
-  QPicture * o = new QPicture ( *PQPICTURE(1) );
+  QPicture * o = new QPicture( *PQPICTURE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -124,8 +124,8 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->boundingRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->boundingRect() );
+      _qt5xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QPICTURE_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->data () );
+      hb_retc( (const char *) obj->data() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,26 +187,26 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
 /*
 bool load ( const QString & fileName, const char * format = 0 )
 */
-void QPicture_load1 ()
+void QPicture_load1()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->load ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
+    RBOOL( obj->load( PQSTRING(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
 /*
 bool load ( QIODevice * dev, const char * format = 0 )
 */
-void QPicture_load2 ()
+void QPicture_load2()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
+    RBOOL( obj->load( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
     if( ISNUMPAR(1) && ISQPAINTER(1) )
     {
 #endif
-      RBOOL( obj->play ( PQPAINTER(1) ) );
+      RBOOL( obj->play( PQPAINTER(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,26 +256,26 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
 /*
 bool save ( const QString & fileName, const char * format = 0 )
 */
-void QPicture_save1 ()
+void QPicture_save1()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->save ( PQSTRING(1), OPCONSTCHAR(2,0) ) );
+    RBOOL( obj->save( PQSTRING(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
 /*
 bool save ( QIODevice * dev, const char * format = 0 )
 */
-void QPicture_save2 ()
+void QPicture_save2()
 {
   QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->save ( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
+    RBOOL( obj->save( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setBoundingRect ( *PQRECT(1) );
+      obj->setBoundingRect( *PQRECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
     {
 #endif
-      obj->setData ( PCONSTCHAR(1), PUINT(2) );
+      obj->setData( PCONSTCHAR(1), PUINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QPICTURE_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RUINT( obj->size () );
+      RUINT( obj->size() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QPICTURE_SWAP )
     if( ISNUMPAR(1) && ISQPICTURE(1) )
     {
 #endif
-      obj->swap ( *PQPICTURE(1) );
+      obj->swap( *PQPICTURE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

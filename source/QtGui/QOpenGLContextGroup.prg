@@ -26,7 +26,7 @@ CLASS QOpenGLContextGroup INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOpenGLContextGroup
+PROCEDURE destroyObject() CLASS QOpenGLContextGroup
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,8 +56,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QOpenGLContext *> list = obj->shares ();
+      QList<QOpenGLContext *> list = obj->shares();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLCONTEXT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -126,8 +126,8 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
   if( ISNUMPAR(0) )
   {
 #endif
-    QOpenGLContextGroup * ptr = QOpenGLContextGroup::currentContextGroup ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLCONTEXTGROUP" );
+    QOpenGLContextGroup * ptr = QOpenGLContextGroup::currentContextGroup();
+    _qt5xhb_createReturnQObjectClass( ptr, "QOPENGLCONTEXTGROUP" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

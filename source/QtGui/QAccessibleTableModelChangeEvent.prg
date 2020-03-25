@@ -34,7 +34,7 @@ CLASS QAccessibleTableModelChangeEvent INHERIT QAccessibleEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleTableModelChangeEvent
+PROCEDURE destroyObject() CLASS QAccessibleTableModelChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    QAccessibleTableModelChangeEvent * o = new QAccessibleTableModelChangeEvent ( PQOBJECT(1), (QAccessibleTableModelChangeEvent::ModelChangeType) hb_parni(2) );
+    QAccessibleTableModelChangeEvent * o = new QAccessibleTableModelChangeEvent( PQOBJECT(1), (QAccessibleTableModelChangeEvent::ModelChangeType) hb_parni(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setModelChangeType ( (QAccessibleTableModelChangeEvent::ModelChangeType) hb_parni(1) );
+      obj->setModelChangeType( (QAccessibleTableModelChangeEvent::ModelChangeType) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->modelChangeType () );
+      RENUM( obj->modelChangeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFirstRow ( PINT(1) );
+      obj->setFirstRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFirstColumn ( PINT(1) );
+      obj->setFirstColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLastRow ( PINT(1) );
+      obj->setLastRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLastColumn ( PINT(1) );
+      obj->setLastColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->firstRow () );
+      RINT( obj->firstRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_FIRSTCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->firstColumn () );
+      RINT( obj->firstColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_LASTROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lastRow () );
+      RINT( obj->lastRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_LASTCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lastColumn () );
+      RINT( obj->lastColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

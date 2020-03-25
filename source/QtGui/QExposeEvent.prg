@@ -26,7 +26,7 @@ CLASS QExposeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QExposeEvent
+PROCEDURE destroyObject() CLASS QExposeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    QExposeEvent * o = new QExposeEvent ( *PQREGION(1) );
+    QExposeEvent * o = new QExposeEvent( *PQREGION(1) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -94,8 +94,8 @@ HB_FUNC_STATIC( QEXPOSEEVENT_REGION )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QRegion * ptr = &obj->region ();
-      _qt5xhb_createReturnClass ( ptr, "QREGION", false );
+      const QRegion * ptr = &obj->region();
+      _qt5xhb_createReturnClass( ptr, "QREGION", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

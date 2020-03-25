@@ -29,7 +29,7 @@ CLASS QRegularExpressionValidator INHERIT QValidator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRegularExpressionValidator
+PROCEDURE destroyObject() CLASS QRegularExpressionValidator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,18 +54,18 @@ RETURN
 /*
 QRegularExpressionValidator(QObject *parent = 0)
 */
-void QRegularExpressionValidator_new1 ()
+void QRegularExpressionValidator_new1()
 {
-  QRegularExpressionValidator * o = new QRegularExpressionValidator ( OPQOBJECT(1,0) );
+  QRegularExpressionValidator * o = new QRegularExpressionValidator( OPQOBJECT(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
 */
-void QRegularExpressionValidator_new2 ()
+void QRegularExpressionValidator_new2()
 {
-  QRegularExpressionValidator * o = new QRegularExpressionValidator ( *PQREGULAREXPRESSION(1), OPQOBJECT(2,0) );
+  QRegularExpressionValidator * o = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -118,8 +118,8 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegularExpression * ptr = new QRegularExpression( obj->regularExpression () );
-      _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
+      QRegularExpression * ptr = new QRegularExpression( obj->regularExpression() );
+      _qt5xhb_createReturnClass( ptr, "QREGULAREXPRESSION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
     if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
     {
 #endif
-      obj->setRegularExpression ( *PQREGULAREXPRESSION(1) );
+      obj->setRegularExpression( *PQREGULAREXPRESSION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QRegularExpressionValidatorSlots_connect_signal ( const QString & signal, const QString & slot );
+void QRegularExpressionValidatorSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_ONREGULAREXPRESSIONCHANGED )
 {

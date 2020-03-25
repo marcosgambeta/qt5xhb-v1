@@ -44,7 +44,7 @@ CLASS QAbstractTextDocumentLayout INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractTextDocumentLayout
+PROCEDURE destroyObject() CLASS QAbstractTextDocumentLayout
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RQSTRING( obj->anchorAt ( *PQPOINTF(1) ) );
+      RQSTRING( obj->anchorAt( *PQPOINTF(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,8 +124,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
     if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->blockBoundingRect ( *PQTEXTBLOCK(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->blockBoundingRect( *PQTEXTBLOCK(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,8 +149,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextDocument * ptr = obj->document ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
+      QTextDocument * ptr = obj->document();
+      _qt5xhb_createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,8 +174,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->documentSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      QSizeF * ptr = new QSizeF( obj->documentSize() );
+      _qt5xhb_createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,8 +199,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
     if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->frameBoundingRect ( PQTEXTFRAME(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->frameBoundingRect( PQTEXTFRAME(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,8 +224,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QTextObjectInterface * ptr = obj->handlerForObject ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTOBJECTINTERFACE", false );
+      QTextObjectInterface * ptr = obj->handlerForObject( PINT(1) );
+      _qt5xhb_createReturnClass( ptr, "QTEXTOBJECTINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
     if( ISNUMPAR(2) && ISQPOINTF(1) && ISNUM(2) )
     {
 #endif
-      RINT( obj->hitTest ( *PQPOINTF(1), (Qt::HitTestAccuracy) hb_parni(2) ) );
+      RINT( obj->hitTest( *PQPOINTF(1), (Qt::HitTestAccuracy) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->pageCount () );
+      RINT( obj->pageCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,8 +297,8 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintDevice * ptr = obj->paintDevice ();
-      _qt5xhb_createReturnClass ( ptr, "QPAINTDEVICE", false );
+      QPaintDevice * ptr = obj->paintDevice();
+      _qt5xhb_createReturnClass( ptr, "QPAINTDEVICE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
     if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
     {
 #endif
-      obj->registerHandler ( PINT(1), PQOBJECT(2) );
+      obj->registerHandler( PINT(1), PQOBJECT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
     if( ISNUMPAR(1) && ISQPAINTDEVICE(1) )
     {
 #endif
-      obj->setPaintDevice ( PQPAINTDEVICE(1) );
+      obj->setPaintDevice( PQPAINTDEVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QAbstractTextDocumentLayoutSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAbstractTextDocumentLayoutSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
 {

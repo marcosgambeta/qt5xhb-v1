@@ -25,7 +25,7 @@ CLASS QAccessiblePlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessiblePlugin
+PROCEDURE destroyObject() CLASS QAccessiblePlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->create ( PQSTRING(1), PQOBJECT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      QAccessibleInterface * ptr = obj->create( PQSTRING(1), PQOBJECT(2) );
+      _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

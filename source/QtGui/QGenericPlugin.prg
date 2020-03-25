@@ -25,7 +25,7 @@ CLASS QGenericPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGenericPlugin
+PROCEDURE destroyObject() CLASS QGenericPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      QObject * ptr = obj->create ( PQSTRING(1), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->create( PQSTRING(1), PQSTRING(2) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -78,7 +78,7 @@ CLASS QImageReader
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QImageReader
+PROCEDURE destroyObject() CLASS QImageReader
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -105,27 +105,27 @@ RETURN
 /*
 QImageReader ()
 */
-void QImageReader_new1 ()
+void QImageReader_new1()
 {
-  QImageReader * o = new QImageReader ();
+  QImageReader * o = new QImageReader();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 */
-void QImageReader_new2 ()
+void QImageReader_new2()
 {
-  QImageReader * o = new QImageReader ( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
+  QImageReader * o = new QImageReader( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
 */
-void QImageReader_new3 ()
+void QImageReader_new3()
 {
-  QImageReader * o = new QImageReader ( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
+  QImageReader * o = new QImageReader( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QIMAGEREADER_AUTODETECTIMAGEFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoDetectImageFormat () );
+      RBOOL( obj->autoDetectImageFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,8 +207,8 @@ HB_FUNC_STATIC( QIMAGEREADER_BACKGROUNDCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->backgroundColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->backgroundColor() );
+      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CANREAD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canRead () );
+      RBOOL( obj->canRead() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,8 +256,8 @@ HB_FUNC_STATIC( QIMAGEREADER_CLIPRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->clipRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->clipRect() );
+      _qt5xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QIMAGEREADER_CURRENTIMAGENUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->currentImageNumber () );
+      RINT( obj->currentImageNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,8 +305,8 @@ HB_FUNC_STATIC( QIMAGEREADER_CURRENTIMAGERECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->currentImageRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->currentImageRect() );
+      _qt5xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QIMAGEREADER_DECIDEFORMATFROMCONTENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->decideFormatFromContent () );
+      RBOOL( obj->decideFormatFromContent() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,8 +354,8 @@ HB_FUNC_STATIC( QIMAGEREADER_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->device ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
+      QIODevice * ptr = obj->device();
+      _qt5xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QIMAGEREADER_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QIMAGEREADER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QIMAGEREADER_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,8 +451,8 @@ HB_FUNC_STATIC( QIMAGEREADER_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->format() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->imageCount () );
+      RINT( obj->imageCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTOIMAGE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->jumpToImage ( PINT(1) ) );
+      RBOOL( obj->jumpToImage( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QIMAGEREADER_JUMPTONEXTIMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->jumpToNextImage () );
+      RBOOL( obj->jumpToNextImage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QIMAGEREADER_LOOPCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->loopCount () );
+      RINT( obj->loopCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QIMAGEREADER_NEXTIMAGEDELAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->nextImageDelay () );
+      RINT( obj->nextImageDelay() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QIMAGEREADER_QUALITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->quality () );
+      RINT( obj->quality() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -610,27 +610,27 @@ HB_FUNC_STATIC( QIMAGEREADER_QUALITY )
 /*
 QImage read ()
 */
-void QImageReader_read1 ()
+void QImageReader_read1()
 {
   QImageReader * obj = (QImageReader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->read () );
-    _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+    QImage * ptr = new QImage( obj->read() );
+    _qt5xhb_createReturnClass( ptr, "QIMAGE", true );
   }
 }
 
 /*
 bool read ( QImage * image )
 */
-void QImageReader_read2 ()
+void QImageReader_read2()
 {
   QImageReader * obj = (QImageReader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->read ( PQIMAGE(1) ) );
+    RBOOL( obj->read( PQIMAGE(1) ) );
   }
 }
 
@@ -666,8 +666,8 @@ HB_FUNC_STATIC( QIMAGEREADER_SCALEDCLIPRECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->scaledClipRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->scaledClipRect() );
+      _qt5xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -691,8 +691,8 @@ HB_FUNC_STATIC( QIMAGEREADER_SCALEDSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->scaledSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->scaledSize() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETAUTODETECTIMAGEFORMAT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoDetectImageFormat ( PBOOL(1) );
+      obj->setAutoDetectImageFormat( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETBACKGROUNDCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setBackgroundColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBackgroundColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETCLIPRECT )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setClipRect ( *PQRECT(1) );
+      obj->setClipRect( *PQRECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETDECIDEFORMATFROMCONTENT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDecideFormatFromContent ( PBOOL(1) );
+      obj->setDecideFormatFromContent( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETDEVICE )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      obj->setDevice ( PQIODEVICE(1) );
+      obj->setDevice( PQIODEVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETFILENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFileName ( PQSTRING(1) );
+      obj->setFileName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETFORMAT )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setFormat ( *PQBYTEARRAY(1) );
+      obj->setFormat( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETQUALITY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setQuality ( PINT(1) );
+      obj->setQuality( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDCLIPRECT )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setScaledClipRect ( *PQRECT(1) );
+      obj->setScaledClipRect( *PQRECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDSIZE )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      obj->setScaledSize ( *PQSIZE(1) );
+      obj->setScaledSize( *PQSIZE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -976,8 +976,8 @@ HB_FUNC_STATIC( QIMAGEREADER_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->size() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSANIMATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->supportsAnimation () );
+      RBOOL( obj->supportsAnimation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supportsOption ( (QImageIOHandler::ImageOption) hb_parni(1) ) );
+      RBOOL( obj->supportsOption( (QImageIOHandler::ImageOption) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->text ( PQSTRING(1) ) );
+      RQSTRING( obj->text( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXTKEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->textKeys () );
+      RQSTRINGLIST( obj->textKeys() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1087,34 +1087,34 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXTKEYS )
 /*
 QImage::Format imageFormat () const
 */
-void QImageReader_imageFormat1 ()
+void QImageReader_imageFormat1()
 {
   QImageReader * obj = (QImageReader *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RENUM( obj->imageFormat () );
+    RENUM( obj->imageFormat() );
   }
 }
 
 /*
 static QByteArray imageFormat ( const QString & fileName )
 */
-void QImageReader_imageFormat2 ()
+void QImageReader_imageFormat2()
 {
 
-  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( PQSTRING(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+  QByteArray * ptr = new QByteArray( QImageReader::imageFormat( PQSTRING(1) ) );
+  _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 }
 
 /*
 static QByteArray imageFormat ( QIODevice * device )
 */
-void QImageReader_imageFormat3 ()
+void QImageReader_imageFormat3()
 {
 
-  QByteArray * ptr = new QByteArray( QImageReader::imageFormat ( PQIODEVICE(1) ) );
-  _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+  QByteArray * ptr = new QByteArray( QImageReader::imageFormat( PQIODEVICE(1) ) );
+  _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 }
 
 //[1]QImage::Format imageFormat () const
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QByteArray> list = QImageReader::supportedImageFormats ();
+    QList<QByteArray> list = QImageReader::supportedImageFormats();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -1163,7 +1163,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTEDIMAGEFORMATS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1198,7 +1198,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMATSFORMIMETYPE )
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    QList<QByteArray> list = QImageReader::imageFormatsForMimeType ( *PQBYTEARRAY(1) );
+    QList<QByteArray> list = QImageReader::imageFormatsForMimeType( *PQBYTEARRAY(1) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -1211,7 +1211,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMATSFORMIMETYPE )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );

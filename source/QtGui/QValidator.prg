@@ -28,7 +28,7 @@ CLASS QValidator INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QValidator
+PROCEDURE destroyObject() CLASS QValidator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QVALIDATOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QVALIDATOR_FIXUP )
     {
 #endif
       QString par1 = hb_parc(1);
-      obj->fixup ( par1 );
+      obj->fixup( par1 );
       hb_storc( QSTRINGTOSTRING(par1), 1);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QVALIDATOR_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->locale () );
-      _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
+      QLocale * ptr = new QLocale( obj->locale() );
+      _qt5xhb_createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
     if( ISNUMPAR(1) && ISQLOCALE(1) )
     {
 #endif
-      obj->setLocale ( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM( obj->validate ( par1, par2 ) );
+      RENUM( obj->validate( par1, par2 ) );
       hb_storc( QSTRINGTOSTRING(par1), 1);
       hb_storni( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS

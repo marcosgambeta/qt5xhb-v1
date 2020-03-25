@@ -43,7 +43,7 @@ CLASS QGlyphRun
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGlyphRun
+PROCEDURE destroyObject() CLASS QGlyphRun
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,18 +68,18 @@ RETURN
 /*
 QGlyphRun ()
 */
-void QGlyphRun_new1 ()
+void QGlyphRun_new1()
 {
-  QGlyphRun * o = new QGlyphRun ();
+  QGlyphRun * o = new QGlyphRun();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QGlyphRun ( const QGlyphRun & other )
 */
-void QGlyphRun_new2 ()
+void QGlyphRun_new2()
 {
-  QGlyphRun * o = new QGlyphRun ( *PQGLYPHRUN(1) );
+  QGlyphRun * o = new QGlyphRun( *PQGLYPHRUN(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->overline () );
+      RBOOL( obj->overline() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,8 +182,8 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRawFont * ptr = new QRawFont( obj->rawFont () );
-      _qt5xhb_createReturnClass ( ptr, "QRAWFONT", true );
+      QRawFont * ptr = new QRawFont( obj->rawFont() );
+      _qt5xhb_createReturnClass( ptr, "QRAWFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setOverline ( PBOOL(1) );
+      obj->setOverline( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
     if( ISNUMPAR(1) && ISQRAWFONT(1) )
     {
 #endif
-      obj->setRawFont ( *PQRAWFONT(1) );
+      obj->setRawFont( *PQRAWFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setStrikeOut ( PBOOL(1) );
+      obj->setStrikeOut( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setUnderline ( PBOOL(1) );
+      obj->setUnderline( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->strikeOut () );
+      RBOOL( obj->strikeOut() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->underline () );
+      RBOOL( obj->underline() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

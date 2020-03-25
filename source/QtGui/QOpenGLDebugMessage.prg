@@ -41,7 +41,7 @@ CLASS QOpenGLDebugMessage
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOpenGLDebugMessage
+PROCEDURE destroyObject() CLASS QOpenGLDebugMessage
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,18 +66,18 @@ RETURN
 /*
 QOpenGLDebugMessage()
 */
-void QOpenGLDebugMessage_new1 ()
+void QOpenGLDebugMessage_new1()
 {
-  QOpenGLDebugMessage * o = new QOpenGLDebugMessage ();
+  QOpenGLDebugMessage * o = new QOpenGLDebugMessage();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
 */
-void QOpenGLDebugMessage_new2 ()
+void QOpenGLDebugMessage_new2()
 {
-  QOpenGLDebugMessage * o = new QOpenGLDebugMessage ( *PQOPENGLDEBUGMESSAGE(1) );
+  QOpenGLDebugMessage * o = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SWAP )
     if( ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1) )
     {
 #endif
-      obj->swap ( *PQOPENGLDEBUGMESSAGE(1) );
+      obj->swap( *PQOPENGLDEBUGMESSAGE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->source () );
+      RENUM( obj->source() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SEVERITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->severity () );
+      RENUM( obj->severity() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_ID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RGLUINT( obj->id () );
+      RGLUINT( obj->id() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_MESSAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->message () );
+      RQSTRING( obj->message() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,8 +272,8 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE )
   if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
   {
 #endif
-    QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage ( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Severity) QOpenGLDebugMessage::NotificationSeverity : (QOpenGLDebugMessage::Severity) hb_parni(3), ISNIL(4)? (QOpenGLDebugMessage::Type) QOpenGLDebugMessage::OtherType : (QOpenGLDebugMessage::Type) hb_parni(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE", true );
+    QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Severity) QOpenGLDebugMessage::NotificationSeverity : (QOpenGLDebugMessage::Severity) hb_parni(3), ISNIL(4)? (QOpenGLDebugMessage::Type) QOpenGLDebugMessage::OtherType : (QOpenGLDebugMessage::Type) hb_parni(4) ) );
+    _qt5xhb_createReturnClass( ptr, "QOPENGLDEBUGMESSAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -292,8 +292,8 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE )
   if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
   {
 #endif
-    QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage ( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Severity) QOpenGLDebugMessage::NotificationSeverity : (QOpenGLDebugMessage::Severity) hb_parni(3), ISNIL(4)? (QOpenGLDebugMessage::Type) QOpenGLDebugMessage::OtherType : (QOpenGLDebugMessage::Type) hb_parni(4) ) );
-    _qt5xhb_createReturnClass ( ptr, "QOPENGLDEBUGMESSAGE", true );
+    QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Severity) QOpenGLDebugMessage::NotificationSeverity : (QOpenGLDebugMessage::Severity) hb_parni(3), ISNIL(4)? (QOpenGLDebugMessage::Type) QOpenGLDebugMessage::OtherType : (QOpenGLDebugMessage::Type) hb_parni(4) ) );
+    _qt5xhb_createReturnClass( ptr, "QOPENGLDEBUGMESSAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

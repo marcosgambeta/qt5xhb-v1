@@ -35,7 +35,7 @@ CLASS QEnterEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QEnterEvent
+PROCEDURE destroyObject() CLASS QEnterEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QENTEREVENT_NEW )
 {
   if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) )
   {
-    QEnterEvent * o = new QEnterEvent ( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
+    QEnterEvent * o = new QEnterEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QENTEREVENT_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->pos () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->pos() );
+      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,8 +128,8 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->globalPos () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->globalPos() );
+      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QENTEREVENT_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->x () );
+      RINT( obj->x() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QENTEREVENT_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->y () );
+      RINT( obj->y() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->globalX () );
+      RINT( obj->globalX() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->globalY () );
+      RINT( obj->globalY() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,8 +249,8 @@ HB_FUNC_STATIC( QENTEREVENT_LOCALPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPointF * ptr = &obj->localPos ();
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", false );
+      const QPointF * ptr = &obj->localPos();
+      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,8 +274,8 @@ HB_FUNC_STATIC( QENTEREVENT_WINDOWPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPointF * ptr = &obj->windowPos ();
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", false );
+      const QPointF * ptr = &obj->windowPos();
+      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,8 +299,8 @@ HB_FUNC_STATIC( QENTEREVENT_SCREENPOS )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPointF * ptr = &obj->screenPos ();
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", false );
+      const QPointF * ptr = &obj->screenPos();
+      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

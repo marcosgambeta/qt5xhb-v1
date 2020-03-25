@@ -24,7 +24,7 @@ CLASS QIconDragEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QIconDragEvent
+PROCEDURE destroyObject() CLASS QIconDragEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QIconDragEvent * o = new QIconDragEvent ();
+    QIconDragEvent * o = new QIconDragEvent();
     _qt5xhb_returnNewObject( o, false );
   }
   else

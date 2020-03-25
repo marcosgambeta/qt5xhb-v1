@@ -25,7 +25,7 @@ void QRegularExpressionValidatorSlots::regularExpressionChanged( const QRegularE
   PHB_ITEM cb = Signals_return_codeblock( object, "regularExpressionChanged(QRegularExpression)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QREGULAREXPRESSIONVALIDATOR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QREGULAREXPRESSIONVALIDATOR" );
     PHB_ITEM pre = Signals_return_object( (void *) &re, "QREGULAREXPRESSION" );
     hb_vmEvalBlockV( cb, 2, psender, pre );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QRegularExpressionValidatorSlots::regularExpressionChanged( const QRegularE
   }
 }
 
-void QRegularExpressionValidatorSlots_connect_signal ( const QString & signal, const QString & slot )
+void QRegularExpressionValidatorSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QRegularExpressionValidator * obj = (QRegularExpressionValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

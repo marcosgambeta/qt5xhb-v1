@@ -32,7 +32,7 @@ CLASS QTextBlockUserData
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextBlockUserData
+PROCEDURE destroyObject() CLASS QTextBlockUserData
    IF ::self_destruction
       ::delete()
    ENDIF

@@ -34,7 +34,7 @@ CLASS QAbstractUndoItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractUndoItem
+PROCEDURE destroyObject() CLASS QAbstractUndoItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_UNDO )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->undo ();
+      obj->undo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QABSTRACTUNDOITEM_REDO )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->redo ();
+      obj->redo();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

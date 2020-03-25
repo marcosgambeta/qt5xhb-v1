@@ -28,7 +28,7 @@ CLASS QSyntaxHighlighter INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSyntaxHighlighter
+PROCEDURE destroyObject() CLASS QSyntaxHighlighter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
     if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
     {
 #endif
-      obj->setDocument ( PQTEXTDOCUMENT(1) );
+      obj->setDocument( PQTEXTDOCUMENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,8 +119,8 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextDocument * ptr = obj->document ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTEXTDOCUMENT" );
+      QTextDocument * ptr = obj->document();
+      _qt5xhb_createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->rehighlight ();
+      obj->rehighlight();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
     if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
     {
 #endif
-      obj->rehighlightBlock ( *PQTEXTBLOCK(1) );
+      obj->rehighlightBlock( *PQTEXTBLOCK(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -26,7 +26,7 @@ CLASS QAccessibleTextInsertEvent INHERIT QAccessibleTextCursorEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleTextInsertEvent
+PROCEDURE destroyObject() CLASS QAccessibleTextInsertEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_NEW )
 {
   if( ISNUMPAR(3) && ISQOBJECT(1) && ISNUM(2) && ISCHAR(3) )
   {
-    QAccessibleTextInsertEvent * o = new QAccessibleTextInsertEvent ( PQOBJECT(1), PINT(2), PQSTRING(3) );
+    QAccessibleTextInsertEvent * o = new QAccessibleTextInsertEvent( PQOBJECT(1), PINT(2), PQSTRING(3) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_TEXTINSERTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->textInserted () );
+      RQSTRING( obj->textInserted() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTINSERTEVENT_CHANGEPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->changePosition () );
+      RINT( obj->changePosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -56,7 +56,7 @@ CLASS QPen
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPen
+PROCEDURE destroyObject() CLASS QPen
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -81,45 +81,45 @@ RETURN
 /*
 QPen ()
 */
-void QPen_new1 ()
+void QPen_new1()
 {
-  QPen * o = new QPen ();
+  QPen * o = new QPen();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QPen ( Qt::PenStyle style )
 */
-void QPen_new2 ()
+void QPen_new2()
 {
-  QPen * o = new QPen ( (Qt::PenStyle) hb_parni(1) );
+  QPen * o = new QPen( (Qt::PenStyle) hb_parni(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QPen ( const QColor & color )
 */
-void QPen_new3 ()
+void QPen_new3()
 {
-  QPen * o = new QPen ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+  QPen * o = new QPen( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
 */
-void QPen_new4 ()
+void QPen_new4()
 {
-  QPen * o = new QPen ( *PQBRUSH(1), PQREAL(2), ISNIL(3)? (Qt::PenStyle) Qt::SolidLine : (Qt::PenStyle) hb_parni(3), ISNIL(4)? (Qt::PenCapStyle) Qt::SquareCap : (Qt::PenCapStyle) hb_parni(4), ISNIL(5)? (Qt::PenJoinStyle) Qt::BevelJoin : (Qt::PenJoinStyle) hb_parni(5) );
+  QPen * o = new QPen( *PQBRUSH(1), PQREAL(2), ISNIL(3)? (Qt::PenStyle) Qt::SolidLine : (Qt::PenStyle) hb_parni(3), ISNIL(4)? (Qt::PenCapStyle) Qt::SquareCap : (Qt::PenCapStyle) hb_parni(4), ISNIL(5)? (Qt::PenJoinStyle) Qt::BevelJoin : (Qt::PenJoinStyle) hb_parni(5) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QPen ( const QPen & pen )
 */
-void QPen_new5 ()
+void QPen_new5()
 {
-  QPen * o = new QPen ( *PQPEN(1) );
+  QPen * o = new QPen( *PQPEN(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -187,8 +187,8 @@ HB_FUNC_STATIC( QPEN_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      QBrush * ptr = new QBrush( obj->brush() );
+      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QPEN_CAPSTYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->capStyle () );
+      RENUM( obj->capStyle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,8 +236,8 @@ HB_FUNC_STATIC( QPEN_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->color () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->color() );
+      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QPEN_DASHOFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->dashOffset () );
+      RQREAL( obj->dashOffset() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QPEN_ISCOSMETIC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCosmetic () );
+      RBOOL( obj->isCosmetic() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QPEN_ISSOLID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSolid () );
+      RBOOL( obj->isSolid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QPEN_JOINSTYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->joinStyle () );
+      RENUM( obj->joinStyle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QPEN_MITERLIMIT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->miterLimit () );
+      RQREAL( obj->miterLimit() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QPEN_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCapStyle ( (Qt::PenCapStyle) hb_parni(1) );
+      obj->setCapStyle( (Qt::PenCapStyle) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QPEN_SETCOSMETIC )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCosmetic ( PBOOL(1) );
+      obj->setCosmetic( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDashOffset ( PQREAL(1) );
+      obj->setDashOffset( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setJoinStyle ( (Qt::PenJoinStyle) hb_parni(1) );
+      obj->setJoinStyle( (Qt::PenJoinStyle) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMiterLimit ( PQREAL(1) );
+      obj->setMiterLimit( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QPEN_SETSTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStyle ( (Qt::PenStyle) hb_parni(1) );
+      obj->setStyle( (Qt::PenStyle) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QPEN_SETWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWidth ( PINT(1) );
+      obj->setWidth( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QPEN_SETWIDTHF )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWidthF ( PQREAL(1) );
+      obj->setWidthF( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QPEN_STYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->style () );
+      RENUM( obj->style() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QPEN_WIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->width () );
+      RINT( obj->width() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QPEN_WIDTHF )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->widthF () );
+      RQREAL( obj->widthF() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -27,7 +27,7 @@ CLASS QScreenOrientationChangeEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScreenOrientationChangeEvent
+PROCEDURE destroyObject() CLASS QScreenOrientationChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQSCREEN(1) && ISNUM(2) )
   {
-    QScreenOrientationChangeEvent * o = new QScreenOrientationChangeEvent ( PQSCREEN(1), (Qt::ScreenOrientation) hb_parni(2) );
+    QScreenOrientationChangeEvent * o = new QScreenOrientationChangeEvent( PQSCREEN(1), (Qt::ScreenOrientation) hb_parni(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -97,8 +97,8 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScreen * ptr = obj->screen ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCREEN" );
+      QScreen * ptr = obj->screen();
+      _qt5xhb_createReturnQObjectClass( ptr, "QSCREEN" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

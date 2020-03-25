@@ -32,7 +32,7 @@ CLASS QTextFrameLayoutData
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextFrameLayoutData
+PROCEDURE destroyObject() CLASS QTextFrameLayoutData
    IF ::self_destruction
       ::delete()
    ENDIF

@@ -25,7 +25,7 @@ void QOffscreenSurfaceSlots::screenChanged( QScreen * screen )
   PHB_ITEM cb = Signals_return_codeblock( object, "screenChanged(QScreen*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOFFSCREENSURFACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOFFSCREENSURFACE" );
     PHB_ITEM pscreen = Signals_return_qobject( (QObject *) screen, "QSCREEN" );
     hb_vmEvalBlockV( cb, 2, psender, pscreen );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QOffscreenSurfaceSlots::screenChanged( QScreen * screen )
   }
 }
 
-void QOffscreenSurfaceSlots_connect_signal ( const QString & signal, const QString & slot )
+void QOffscreenSurfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QOffscreenSurface * obj = (QOffscreenSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -39,7 +39,7 @@ CLASS QTextTableFormat INHERIT QTextFrameFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextTableFormat
+PROCEDURE destroyObject() CLASS QTextTableFormat
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextTableFormat * o = new QTextTableFormat ();
+    QTextTableFormat * o = new QTextTableFormat();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columns () );
+      RINT( obj->columns() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setColumns ( PINT(1) );
+      obj->setColumns( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
       {
         par1 << *(QTextLength *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setColumnWidthConstraints ( par1 );
+      obj->setColumnWidthConstraints( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector<QTextLength> list = obj->columnWidthConstraints ();
+      QVector<QTextLength> list = obj->columnWidthConstraints();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTLENGTH" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QTextLength *) new QTextLength ( list[i] ) );
+          hb_itemPutPtr( pItem, (QTextLength *) new QTextLength( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearColumnWidthConstraints ();
+      obj->clearColumnWidthConstraints();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->cellSpacing () );
+      RQREAL( obj->cellSpacing() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLSPACING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCellSpacing ( PQREAL(1) );
+      obj->setCellSpacing( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->cellPadding () );
+      RQREAL( obj->cellPadding() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLPADDING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCellPadding ( PQREAL(1) );
+      obj->setCellPadding( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETALIGNMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->alignment () );
+      RENUM( obj->alignment() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETHEADERROWCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHeaderRowCount ( PINT(1) );
+      obj->setHeaderRowCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->headerRowCount () );
+      RINT( obj->headerRowCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
   PHB_ITEM cb = Signals_return_codeblock( object, "focusObjectChanged(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
     PHB_ITEM pfocusObject = Signals_return_qobject( (QObject *) focusObject, "QOBJECT" );
     hb_vmEvalBlockV( cb, 2, psender, pfocusObject );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
   PHB_ITEM cb = Signals_return_codeblock( object, "focusWindowChanged(QWindow*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
     PHB_ITEM pfocusWindow = Signals_return_qobject( (QObject *) focusWindow, "QWINDOW" );
     hb_vmEvalBlockV( cb, 2, psender, pfocusWindow );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QGuiApplicationSlots::fontDatabaseChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "fontDatabaseChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -62,7 +62,7 @@ void QGuiApplicationSlots::lastWindowClosed()
   PHB_ITEM cb = Signals_return_codeblock( object, "lastWindowClosed()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -73,7 +73,7 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
   PHB_ITEM cb = Signals_return_codeblock( object, "screenAdded(QScreen*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
     PHB_ITEM pscreen = Signals_return_qobject( (QObject *) screen, "QSCREEN" );
     hb_vmEvalBlockV( cb, 2, psender, pscreen );
     hb_itemRelease( psender );
@@ -81,7 +81,7 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
   }
 }
 
-void QGuiApplicationSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGuiApplicationSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QGuiApplication * obj = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

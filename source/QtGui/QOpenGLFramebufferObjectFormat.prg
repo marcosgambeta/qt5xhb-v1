@@ -43,7 +43,7 @@ CLASS QOpenGLFramebufferObjectFormat
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOpenGLFramebufferObjectFormat
+PROCEDURE destroyObject() CLASS QOpenGLFramebufferObjectFormat
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,18 +68,18 @@ RETURN
 /*
 QOpenGLFramebufferObjectFormat()
 */
-void QOpenGLFramebufferObjectFormat_new1 ()
+void QOpenGLFramebufferObjectFormat_new1()
 {
-  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ();
+  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
 */
-void QOpenGLFramebufferObjectFormat_new2 ()
+void QOpenGLFramebufferObjectFormat_new2()
 {
-  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat ( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1) );
+  QOpenGLFramebufferObjectFormat * o = new QOpenGLFramebufferObjectFormat( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSamples ( PINT(1) );
+      obj->setSamples( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->samples () );
+      RINT( obj->samples() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETMIPMAP )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setMipmap ( PBOOL(1) );
+      obj->setMipmap( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_MIPMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->mipmap () );
+      RBOOL( obj->mipmap() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAttachment ( (QOpenGLFramebufferObject::Attachment) hb_parni(1) );
+      obj->setAttachment( (QOpenGLFramebufferObject::Attachment) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->attachment () );
+      RENUM( obj->attachment() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTextureTarget ( PGLENUM(1) );
+      obj->setTextureTarget( PGLENUM(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RGLENUM( obj->textureTarget () );
+      RGLENUM( obj->textureTarget() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setInternalTextureFormat ( PGLENUM(1) );
+      obj->setInternalTextureFormat( PGLENUM(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_INTERNALTEXTUREFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RGLENUM( obj->internalTextureFormat () );
+      RGLENUM( obj->internalTextureFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

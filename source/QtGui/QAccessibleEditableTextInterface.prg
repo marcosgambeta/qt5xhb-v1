@@ -35,7 +35,7 @@ CLASS QAccessibleEditableTextInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleEditableTextInterface
+PROCEDURE destroyObject() CLASS QAccessibleEditableTextInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_DELETETEXT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->deleteText ( PINT(1), PINT(2) );
+      obj->deleteText( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_INSERTTEXT )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->insertText ( PINT(1), PQSTRING(2) );
+      obj->insertText( PINT(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QACCESSIBLEEDITABLETEXTINTERFACE_REPLACETEXT )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
     {
 #endif
-      obj->replaceText ( PINT(1), PINT(2), PQSTRING(3) );
+      obj->replaceText( PINT(1), PINT(2), PQSTRING(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

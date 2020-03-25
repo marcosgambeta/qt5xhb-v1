@@ -27,7 +27,7 @@ CLASS QAccessibleValueChangeEvent INHERIT QAccessibleEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleValueChangeEvent
+PROCEDURE destroyObject() CLASS QAccessibleValueChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2) )
   {
-    QAccessibleValueChangeEvent * o = new QAccessibleValueChangeEvent ( PQOBJECT(1), *PQVARIANT(2) );
+    QAccessibleValueChangeEvent * o = new QAccessibleValueChangeEvent( PQOBJECT(1), *PQVARIANT(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_SETVALUE )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setValue ( *PQVARIANT(1) );
+      obj->setValue( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QACCESSIBLEVALUECHANGEEVENT_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->value() );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

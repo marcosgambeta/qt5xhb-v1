@@ -44,7 +44,7 @@ CLASS QOpenGLShaderProgram INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOpenGLShaderProgram
+PROCEDURE destroyObject() CLASS QOpenGLShaderProgram
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOpenGLShaderProgram * o = new QOpenGLShaderProgram ( OPQOBJECT(1,0) );
+    QOpenGLShaderProgram * o = new QOpenGLShaderProgram( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -90,8 +90,8 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADER )
     if( ISNUMPAR(1) && ISQOPENGLSHADER(1) )
     {
 #endif
-      RBOOL( obj->addShader ( PQOPENGLSHADER(1) ) );
+      RBOOL( obj->addShader( PQOPENGLSHADER(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_REMOVESHADER )
     if( ISNUMPAR(1) && ISQOPENGLSHADER(1) )
     {
 #endif
-      obj->removeShader ( PQOPENGLSHADER(1) );
+      obj->removeShader( PQOPENGLSHADER(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SHADERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QOpenGLShader *> list = obj->shaders ();
+      QList<QOpenGLShader *> list = obj->shaders();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOPENGLSHADER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), PCONSTCHAR(2) ) );
+      RBOOL( obj->addShaderFromSourceCode( (QOpenGLShader::ShaderType) hb_parni(1), PCONSTCHAR(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
     if( ISNUMPAR(2) && ISNUM(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      RBOOL( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), *PQBYTEARRAY(2) ) );
+      RBOOL( obj->addShaderFromSourceCode( (QOpenGLShader::ShaderType) hb_parni(1), *PQBYTEARRAY(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->addShaderFromSourceCode ( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
+      RBOOL( obj->addShaderFromSourceCode( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->addShaderFromSourceFile ( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
+      RBOOL( obj->addShaderFromSourceFile( (QOpenGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_REMOVEALLSHADERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->removeAllShaders ();
+      obj->removeAllShaders();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LINK )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->link () );
+      RBOOL( obj->link() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ISLINKED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLinked () );
+      RBOOL( obj->isLinked() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_LOG )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->log () );
+      RQSTRING( obj->log() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_BIND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->bind () );
+      RBOOL( obj->bind() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_RELEASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->release ();
+      obj->release();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PROGRAMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RGLUINT( obj->programId () );
+      RGLUINT( obj->programId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->maxGeometryOutputVertices () );
+      RINT( obj->maxGeometryOutputVertices() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_SETPATCHVERTEXCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPatchVertexCount ( PINT(1) );
+      obj->setPatchVertexCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_PATCHVERTEXCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->patchVertexCount () );
+      RINT( obj->patchVertexCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
   if( ISBETWEEN(0,1) && (ISQOPENGLCONTEXT(1)||ISNIL(1)) )
   {
 #endif
-    RBOOL( QOpenGLShaderProgram::hasOpenGLShaderPrograms ( OPQOPENGLCONTEXT(1,0) ) );
+    RBOOL( QOpenGLShaderProgram::hasOpenGLShaderPrograms( OPQOPENGLCONTEXT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

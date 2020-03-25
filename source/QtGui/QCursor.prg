@@ -44,7 +44,7 @@ CLASS QCursor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCursor
+PROCEDURE destroyObject() CLASS QCursor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,45 +71,45 @@ RETURN
 /*
 QCursor ()
 */
-void QCursor_new1 ()
+void QCursor_new1()
 {
-  QCursor * o = new QCursor ();
+  QCursor * o = new QCursor();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QCursor ( Qt::CursorShape shape )
 */
-void QCursor_new2 ()
+void QCursor_new2()
 {
-  QCursor * o = new QCursor ( (Qt::CursorShape) hb_parni(1) );
+  QCursor * o = new QCursor( (Qt::CursorShape) hb_parni(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
 */
-void QCursor_new3 ()
+void QCursor_new3()
 {
-  QCursor * o = new QCursor ( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
+  QCursor * o = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
-void QCursor_new4 ()
+void QCursor_new4()
 {
-  QCursor * o = new QCursor ( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
+  QCursor * o = new QCursor( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QCursor ( const QCursor & c )
 */
-void QCursor_new5 ()
+void QCursor_new5()
 {
-  QCursor * o = new QCursor ( *PQCURSOR(1) );
+  QCursor * o = new QCursor( *PQCURSOR(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -179,8 +179,8 @@ HB_FUNC_STATIC( QCURSOR_BITMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBitmap * ptr = obj->bitmap ();
-      _qt5xhb_createReturnClass ( ptr, "QBITMAP", false );
+      const QBitmap * ptr = obj->bitmap();
+      _qt5xhb_createReturnClass( ptr, "QBITMAP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,8 +204,8 @@ HB_FUNC_STATIC( QCURSOR_HOTSPOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->hotSpot () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->hotSpot() );
+      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,8 +229,8 @@ HB_FUNC_STATIC( QCURSOR_MASK )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QBitmap * ptr = obj->mask ();
-      _qt5xhb_createReturnClass ( ptr, "QBITMAP", false );
+      const QBitmap * ptr = obj->mask();
+      _qt5xhb_createReturnClass( ptr, "QBITMAP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,8 +254,8 @@ HB_FUNC_STATIC( QCURSOR_PIXMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap () );
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", true );
+      QPixmap * ptr = new QPixmap( obj->pixmap() );
+      _qt5xhb_createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QCURSOR_SETSHAPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setShape ( (Qt::CursorShape) hb_parni(1) );
+      obj->setShape( (Qt::CursorShape) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QCURSOR_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->shape () );
+      RENUM( obj->shape() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,8 +325,8 @@ HB_FUNC_STATIC( QCURSOR_POS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QPoint * ptr = new QPoint( QCursor::pos () );
-    _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+    QPoint * ptr = new QPoint( QCursor::pos() );
+    _qt5xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -339,10 +339,10 @@ HB_FUNC_STATIC( QCURSOR_POS )
 /*
 static void setPos ( int x, int y )
 */
-void QCursor_setPos1 ()
+void QCursor_setPos1()
 {
 
-  QCursor::setPos ( PINT(1), PINT(2) );
+  QCursor::setPos( PINT(1), PINT(2) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -350,10 +350,10 @@ void QCursor_setPos1 ()
 /*
 static void setPos ( const QPoint & p )
 */
-void QCursor_setPos2 ()
+void QCursor_setPos2()
 {
 
-  QCursor::setPos ( *PQPOINT(1) );
+  QCursor::setPos( *PQPOINT(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }

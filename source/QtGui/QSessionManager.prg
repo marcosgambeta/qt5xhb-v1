@@ -37,7 +37,7 @@ CLASS QSessionManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSessionManager
+PROCEDURE destroyObject() CLASS QSessionManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->sessionId () );
+      RQSTRING( obj->sessionId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->sessionKey () );
+      RQSTRING( obj->sessionKey() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->allowsInteraction () );
+      RBOOL( obj->allowsInteraction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->allowsErrorInteraction () );
+      RBOOL( obj->allowsErrorInteraction() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->release ();
+      obj->release();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cancel ();
+      obj->cancel();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRestartHint ( (QSessionManager::RestartHint) hb_parni(1) );
+      obj->setRestartHint( (QSessionManager::RestartHint) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->restartHint () );
+      RENUM( obj->restartHint() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setRestartCommand ( PQSTRINGLIST(1) );
+      obj->setRestartCommand( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->restartCommand () );
+      RQSTRINGLIST( obj->restartCommand() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setDiscardCommand ( PQSTRINGLIST(1) );
+      obj->setDiscardCommand( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->discardCommand () );
+      RQSTRINGLIST( obj->discardCommand() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,13 +362,13 @@ HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
 /*
 void setManagerProperty(const QString& name, const QString& value)
 */
-void QSessionManager_setManagerProperty1 ()
+void QSessionManager_setManagerProperty1()
 {
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setManagerProperty ( PQSTRING(1), PQSTRING(2) );
+    obj->setManagerProperty( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -377,13 +377,13 @@ void QSessionManager_setManagerProperty1 ()
 /*
 void setManagerProperty(const QString& name, const QStringList& value)
 */
-void QSessionManager_setManagerProperty2 ()
+void QSessionManager_setManagerProperty2()
 {
   QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setManagerProperty ( PQSTRING(1), PQSTRINGLIST(2) );
+    obj->setManagerProperty( PQSTRING(1), PQSTRINGLIST(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isPhase2 () );
+      RBOOL( obj->isPhase2() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->requestPhase2 ();
+      obj->requestPhase2();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

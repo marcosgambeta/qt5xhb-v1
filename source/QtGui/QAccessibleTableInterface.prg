@@ -52,7 +52,7 @@ CLASS QAccessibleTableInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccessibleTableInterface
+PROCEDURE destroyObject() CLASS QAccessibleTableInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->cellAt ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      QAccessibleInterface * ptr = obj->cellAt( PINT(1), PINT(2) );
+      _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->caption ();
-      _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      QAccessibleInterface * ptr = obj->caption();
+      _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->columnDescription ( PINT(1) ) );
+      RQSTRING( obj->columnDescription( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnCount () );
+      RINT( obj->columnCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rowCount () );
+      RINT( obj->rowCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->selectedCellCount () );
+      RINT( obj->selectedCellCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->selectedColumnCount () );
+      RINT( obj->selectedColumnCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->selectedRowCount () );
+      RINT( obj->selectedRowCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->rowDescription ( PINT(1) ) );
+      RQSTRING( obj->rowDescription( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAccessibleInterface *> list = obj->selectedCells ();
+      QList<QAccessibleInterface *> list = obj->selectedCells();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QACCESSIBLEINTERFACE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -370,8 +370,8 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->selectedColumns ();
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      QList<int> list = obj->selectedColumns();
+      _qt5xhb_convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,8 +395,8 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->selectedRows ();
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      QList<int> list = obj->selectedRows();
+      _qt5xhb_convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,8 +420,8 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->summary ();
-      _qt5xhb_createReturnClass ( ptr, "QACCESSIBLEINTERFACE", false );
+      QAccessibleInterface * ptr = obj->summary();
+      _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isColumnSelected ( PINT(1) ) );
+      RBOOL( obj->isColumnSelected( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISROWSELECTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isRowSelected ( PINT(1) ) );
+      RBOOL( obj->isRowSelected( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->selectRow ( PINT(1) ) );
+      RBOOL( obj->selectRow( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->selectColumn ( PINT(1) ) );
+      RBOOL( obj->selectColumn( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->unselectRow ( PINT(1) ) );
+      RBOOL( obj->unselectRow( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->unselectColumn ( PINT(1) ) );
+      RBOOL( obj->unselectColumn( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -21,7 +21,7 @@ CLASS QTextBlockGroup INHERIT QTextObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextBlockGroup
+PROCEDURE destroyObject() CLASS QTextBlockGroup
    IF ::self_destruction
       ::delete()
    ENDIF

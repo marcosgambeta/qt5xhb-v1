@@ -25,7 +25,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(QStandardItem*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSTANDARDITEMMODEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTANDARDITEMMODEL" );
     PHB_ITEM pitem = Signals_return_object( (void *) item, "QSTANDARDITEM" );
     hb_vmEvalBlockV( cb, 2, psender, pitem );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
   }
 }
 
-void QStandardItemModelSlots_connect_signal ( const QString & signal, const QString & slot )
+void QStandardItemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

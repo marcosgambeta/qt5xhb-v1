@@ -28,7 +28,7 @@ CLASS QInputMethodQueryEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInputMethodQueryEvent
+PROCEDURE destroyObject() CLASS QInputMethodQueryEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QInputMethodQueryEvent * o = new QInputMethodQueryEvent ( (Qt::InputMethodQueries) hb_parni(1) );
+    QInputMethodQueryEvent * o = new QInputMethodQueryEvent( (Qt::InputMethodQueries) hb_parni(1) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_QUERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->queries () );
+      RENUM( obj->queries() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_SETVALUE )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setValue ( (Qt::InputMethodQuery) hb_parni(1), *PQVARIANT(2) );
+      obj->setValue( (Qt::InputMethodQuery) hb_parni(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,8 +146,8 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_VALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value ( (Qt::InputMethodQuery) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->value( (Qt::InputMethodQuery) hb_parni(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -27,7 +27,7 @@ CLASS QFocusEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFocusEvent
+PROCEDURE destroyObject() CLASS QFocusEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
   {
-    QFocusEvent * o = new QFocusEvent ( (QEvent::Type) hb_parni(1), ISNIL(2)? (Qt::FocusReason) Qt::OtherFocusReason : (Qt::FocusReason) hb_parni(2) );
+    QFocusEvent * o = new QFocusEvent( (QEvent::Type) hb_parni(1), ISNIL(2)? (Qt::FocusReason) Qt::OtherFocusReason : (Qt::FocusReason) hb_parni(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->gotFocus () );
+      RBOOL( obj->gotFocus() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->lostFocus () );
+      RBOOL( obj->lostFocus() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_REASON )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->reason () );
+      RENUM( obj->reason() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
