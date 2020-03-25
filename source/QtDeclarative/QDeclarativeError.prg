@@ -43,7 +43,7 @@ CLASS QDeclarativeError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeError
+PROCEDURE destroyObject() CLASS QDeclarativeError
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,18 +68,18 @@ RETURN
 /*
 QDeclarativeError ()
 */
-void QDeclarativeError_new1 ()
+void QDeclarativeError_new1()
 {
-  QDeclarativeError * o = new QDeclarativeError ();
+  QDeclarativeError * o = new QDeclarativeError();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDeclarativeError ( const QDeclarativeError & other )
 */
-void QDeclarativeError_new2 ()
+void QDeclarativeError_new2()
 {
-  QDeclarativeError * o = new QDeclarativeError ( *PQDECLARATIVEERROR(1) );
+  QDeclarativeError * o = new QDeclarativeError( *PQDECLARATIVEERROR(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->column () );
+      RINT( obj->column() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->description () );
+      RQSTRING( obj->description() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->line () );
+      RINT( obj->line() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setColumn ( PINT(1) );
+      obj->setColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDescription ( PQSTRING(1) );
+      obj->setDescription( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLine ( PINT(1) );
+      obj->setLine( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setUrl ( *PQURL(1) );
+      obj->setUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,8 +339,8 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->url() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

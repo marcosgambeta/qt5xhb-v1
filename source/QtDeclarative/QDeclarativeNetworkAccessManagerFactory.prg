@@ -34,7 +34,7 @@ CLASS QDeclarativeNetworkAccessManagerFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeNetworkAccessManagerFactory
+PROCEDURE destroyObject() CLASS QDeclarativeNetworkAccessManagerFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QDECLARATIVENETWORKACCESSMANAGERFACTORY_CREATE )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QNetworkAccessManager * ptr = obj->create ( PQOBJECT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKACCESSMANAGER" );
+      QNetworkAccessManager * ptr = obj->create( PQOBJECT(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

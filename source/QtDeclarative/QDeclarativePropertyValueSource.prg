@@ -32,7 +32,7 @@ CLASS QDeclarativePropertyValueSource
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativePropertyValueSource
+PROCEDURE destroyObject() CLASS QDeclarativePropertyValueSource
    IF ::self_destruction
       ::delete()
    ENDIF

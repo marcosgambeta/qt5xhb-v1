@@ -25,13 +25,13 @@ void QDeclarativeExpressionSlots::valueChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEEXPRESSION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDECLARATIVEEXPRESSION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QDeclarativeExpressionSlots_connect_signal ( const QString & signal, const QString & slot )
+void QDeclarativeExpressionSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QDeclarativeExpression * obj = (QDeclarativeExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

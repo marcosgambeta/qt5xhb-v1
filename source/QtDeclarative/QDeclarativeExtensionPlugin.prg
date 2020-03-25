@@ -24,7 +24,7 @@ CLASS QDeclarativeExtensionPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDeclarativeExtensionPlugin
+PROCEDURE destroyObject() CLASS QDeclarativeExtensionPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
     if( ISNUMPAR(2) && ISQDECLARATIVEENGINE(1) && ISCHAR(2) )
     {
 #endif
-      obj->initializeEngine ( PQDECLARATIVEENGINE(1), PCONSTCHAR(2) );
+      obj->initializeEngine( PQDECLARATIVEENGINE(1), PCONSTCHAR(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->registerTypes ( PCONSTCHAR(1) );
+      obj->registerTypes( PCONSTCHAR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

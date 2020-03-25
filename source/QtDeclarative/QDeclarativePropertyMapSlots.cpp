@@ -25,7 +25,7 @@ void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVar
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString,QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDECLARATIVEPROPERTYMAP" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDECLARATIVEPROPERTYMAP" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
     hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
@@ -35,7 +35,7 @@ void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVar
   }
 }
 
-void QDeclarativePropertyMapSlots_connect_signal ( const QString & signal, const QString & slot )
+void QDeclarativePropertyMapSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
