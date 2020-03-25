@@ -31,7 +31,7 @@ CLASS QPlaceResult INHERIT QPlaceSearchResult
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceResult
+PROCEDURE destroyObject() CLASS QPlaceResult
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QPLACERESULT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISNUMPAR(0) )
   {
-    QPlaceResult * o = new QPlaceResult ();
+    QPlaceResult * o = new QPlaceResult();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLACERESULT_DISTANCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->distance () );
+      RQREAL( obj->distance() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPLACERESULT_SETDISTANCE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDistance ( PQREAL(1) );
+      obj->setDistance( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,8 +162,8 @@ HB_FUNC_STATIC( QPLACERESULT_PLACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlace * ptr = new QPlace( obj->place () );
-      _qt5xhb_createReturnClass ( ptr, "QPLACE", true );
+      QPlace * ptr = new QPlace( obj->place() );
+      _qt5xhb_createReturnClass( ptr, "QPLACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QPLACERESULT_SETPLACE )
     if( ISNUMPAR(1) && ISQPLACE(1) )
     {
 #endif
-      obj->setPlace ( *PQPLACE(1) );
+      obj->setPlace( *PQPLACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QPLACERESULT_ISSPONSORED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSponsored () );
+      RBOOL( obj->isSponsored() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QPLACERESULT_SETSPONSORED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setSponsored ( PBOOL(1) );
+      obj->setSponsored( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

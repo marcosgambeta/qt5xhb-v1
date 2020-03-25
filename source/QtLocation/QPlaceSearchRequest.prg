@@ -54,7 +54,7 @@ CLASS QPlaceSearchRequest
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceSearchRequest
+PROCEDURE destroyObject() CLASS QPlaceSearchRequest
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,10 +86,10 @@ RETURN
 /*
 QPlaceSearchRequest()
 */
-void QPlaceSearchRequest_new1 ()
+void QPlaceSearchRequest_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * o = new QPlaceSearchRequest ();
+  QPlaceSearchRequest * o = new QPlaceSearchRequest();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -97,10 +97,10 @@ void QPlaceSearchRequest_new1 ()
 /*
 QPlaceSearchRequest(const QPlaceSearchRequest &other)
 */
-void QPlaceSearchRequest_new2 ()
+void QPlaceSearchRequest_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * o = new QPlaceSearchRequest ( *PQPLACESEARCHREQUEST(1) );
+  QPlaceSearchRequest * o = new QPlaceSearchRequest( *PQPLACESEARCHREQUEST(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHTERM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->searchTerm () );
+      RQSTRING( obj->searchTerm() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHTERM )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setSearchTerm ( PQSTRING(1) );
+      obj->setSearchTerm( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CATEGORIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPlaceCategory> list = obj->categories ();
+      QList<QPlaceCategory> list = obj->categories();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACECATEGORY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CATEGORIES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPlaceCategory *) new QPlaceCategory ( list[i] ) );
+          hb_itemPutPtr( pItem, (QPlaceCategory *) new QPlaceCategory( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORY )
     if( ISNUMPAR(1) && ISQPLACECATEGORY(1) )
     {
 #endif
-      obj->setCategory ( *PQPLACECATEGORY(1) );
+      obj->setCategory( *PQPLACECATEGORY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORIES )
       {
         par1 << *(QPlaceCategory *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setCategories ( par1 );
+      obj->setCategories( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,8 +329,8 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHAREA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoShape * ptr = new QGeoShape( obj->searchArea () );
-      _qt5xhb_createReturnClass ( ptr, "QGEOSHAPE", true );
+      QGeoShape * ptr = new QGeoShape( obj->searchArea() );
+      _qt5xhb_createReturnClass( ptr, "QGEOSHAPE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHAREA )
     if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
     {
 #endif
-      obj->setSearchArea ( *PQGEOSHAPE(1) );
+      obj->setSearchArea( *PQGEOSHAPE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_RECOMMENDATIONID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->recommendationId () );
+      RQSTRING( obj->recommendationId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETRECOMMENDATIONID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setRecommendationId ( PQSTRING(1) );
+      obj->setRecommendationId( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -438,8 +438,8 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->searchContext () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->searchContext() );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHCONTEXT )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setSearchContext ( *PQVARIANT(1) );
+      obj->setSearchContext( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_VISIBILITYSCOPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->visibilityScope () );
+      RENUM( obj->visibilityScope() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETVISIBILITYSCOPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setVisibilityScope ( (QLocation::VisibilityScope) hb_parni(1) );
+      obj->setVisibilityScope( (QLocation::VisibilityScope) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_RELEVANCEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->relevanceHint () );
+      RENUM( obj->relevanceHint() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETRELEVANCEHINT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRelevanceHint ( (QPlaceSearchRequest::RelevanceHint) hb_parni(1) );
+      obj->setRelevanceHint( (QPlaceSearchRequest::RelevanceHint) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_LIMIT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->limit () );
+      RINT( obj->limit() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETLIMIT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLimit ( PINT(1) );
+      obj->setLimit( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

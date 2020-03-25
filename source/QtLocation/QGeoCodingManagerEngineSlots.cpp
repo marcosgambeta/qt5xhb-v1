@@ -26,7 +26,7 @@ void QGeoCodingManagerEngineSlots::finished( QGeoCodeReply * reply )
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QGeoCodeReply*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOCODINGMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOCODINGMANAGERENGINE" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOCODEREPLY" );
     hb_vmEvalBlockV( cb, 2, psender, preply );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QGeoCodingManagerEngineSlots::error( QGeoCodeReply * reply, QGeoCodeReply::
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoCodeReply*,QGeoCodeReply::Error,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOCODINGMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOCODINGMANAGERENGINE" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOCODEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, (const char *) errorString.toLatin1().data() );
@@ -54,7 +54,7 @@ void QGeoCodingManagerEngineSlots::error( QGeoCodeReply * reply, QGeoCodeReply::
 }
 #endif
 
-void QGeoCodingManagerEngineSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGeoCodingManagerEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManagerEngine * obj = (QGeoCodingManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

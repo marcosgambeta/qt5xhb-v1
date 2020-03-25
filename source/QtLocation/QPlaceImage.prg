@@ -31,7 +31,7 @@ CLASS QPlaceImage INHERIT QPlaceContent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceImage
+PROCEDURE destroyObject() CLASS QPlaceImage
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,10 +60,10 @@ RETURN
 /*
 QPlaceImage()
 */
-void QPlaceImage_new1 ()
+void QPlaceImage_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * o = new QPlaceImage ();
+  QPlaceImage * o = new QPlaceImage();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -71,10 +71,10 @@ void QPlaceImage_new1 ()
 /*
 QPlaceImage(const QPlaceContent &other)
 */
-void QPlaceImage_new2 ()
+void QPlaceImage_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * o = new QPlaceImage ( *PQPLACECONTENT(1) );
+  QPlaceImage * o = new QPlaceImage( *PQPLACECONTENT(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -131,8 +131,8 @@ HB_FUNC_STATIC( QPLACEIMAGE_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->url() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_SETURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setUrl ( *PQURL(1) );
+      obj->setUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_IMAGEID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->imageId () );
+      RQSTRING( obj->imageId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_SETIMAGEID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setImageId ( PQSTRING(1) );
+      obj->setImageId( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_MIMETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->mimeType () );
+      RQSTRING( obj->mimeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QPLACEIMAGE_SETMIMETYPE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setMimeType ( PQSTRING(1) );
+      obj->setMimeType( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

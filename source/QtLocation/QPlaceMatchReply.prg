@@ -29,7 +29,7 @@ CLASS QPlaceMatchReply INHERIT QPlaceReply
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceMatchReply
+PROCEDURE destroyObject() CLASS QPlaceMatchReply
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QPlaceMatchReply * o = new QPlaceMatchReply ( OPQOBJECT(1,0) );
+    QPlaceMatchReply * o = new QPlaceMatchReply( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -82,8 +82,8 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_PLACES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPlace> list = obj->places ();
+      QList<QPlace> list = obj->places();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_PLACES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPlace *) new QPlace ( list[i] ) );
+          hb_itemPutPtr( pItem, (QPlace *) new QPlace( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -190,8 +190,8 @@ HB_FUNC_STATIC( QPLACEMATCHREPLY_REQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceMatchRequest * ptr = new QPlaceMatchRequest( obj->request () );
-      _qt5xhb_createReturnClass ( ptr, "QPLACEMATCHREQUEST", true );
+      QPlaceMatchRequest * ptr = new QPlaceMatchRequest( obj->request() );
+      _qt5xhb_createReturnClass( ptr, "QPLACEMATCHREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

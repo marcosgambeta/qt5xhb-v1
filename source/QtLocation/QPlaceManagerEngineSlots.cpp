@@ -26,7 +26,7 @@ void QPlaceManagerEngineSlots::finished( QPlaceReply * reply )
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QPlaceReply*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
     hb_vmEvalBlockV( cb, 2, psender, preply );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QPlaceManagerEngineSlots::error( QPlaceReply * reply, QPlaceReply::Error er
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
@@ -60,7 +60,7 @@ void QPlaceManagerEngineSlots::placeAdded( const QString & placeId )
   PHB_ITEM cb = Signals_return_codeblock( object, "placeAdded(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
     hb_vmEvalBlockV( cb, 2, psender, pplaceId );
     hb_itemRelease( psender );
@@ -75,7 +75,7 @@ void QPlaceManagerEngineSlots::placeUpdated( const QString & placeId )
   PHB_ITEM cb = Signals_return_codeblock( object, "placeUpdated(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
     hb_vmEvalBlockV( cb, 2, psender, pplaceId );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void QPlaceManagerEngineSlots::placeRemoved( const QString & placeId )
   PHB_ITEM cb = Signals_return_codeblock( object, "placeRemoved(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
     hb_vmEvalBlockV( cb, 2, psender, pplaceId );
     hb_itemRelease( psender );
@@ -105,7 +105,7 @@ void QPlaceManagerEngineSlots::categoryAdded( const QPlaceCategory & category, c
   PHB_ITEM cb = Signals_return_codeblock( object, "categoryAdded(QPlaceCategory,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
     PHB_ITEM pcategory = Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentCategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentCategoryId) );
     hb_vmEvalBlockV( cb, 3, psender, pcategory, pparentCategoryId );
@@ -122,7 +122,7 @@ void QPlaceManagerEngineSlots::categoryUpdated( const QPlaceCategory & category,
   PHB_ITEM cb = Signals_return_codeblock( object, "categoryUpdated(QPlaceCategory,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
     PHB_ITEM pcategory = Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentCategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentCategoryId) );
     hb_vmEvalBlockV( cb, 3, psender, pcategory, pparentCategoryId );
@@ -139,7 +139,7 @@ void QPlaceManagerEngineSlots::categoryRemoved( const QString & categoryId, cons
   PHB_ITEM cb = Signals_return_codeblock( object, "categoryRemoved(QString,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
     PHB_ITEM pcategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(categoryId) );
     PHB_ITEM pparentCategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentCategoryId) );
     hb_vmEvalBlockV( cb, 3, psender, pcategoryId, pparentCategoryId );
@@ -156,14 +156,14 @@ void QPlaceManagerEngineSlots::dataChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEMANAGERENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QPlaceManagerEngineSlots_connect_signal ( const QString & signal, const QString & slot )
+void QPlaceManagerEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceManagerEngine * obj = (QPlaceManagerEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

@@ -39,7 +39,7 @@ CLASS QPlaceIcon
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceIcon
+PROCEDURE destroyObject() CLASS QPlaceIcon
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,10 +70,10 @@ RETURN
 /*
 QPlaceIcon()
 */
-void QPlaceIcon_new1 ()
+void QPlaceIcon_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * o = new QPlaceIcon ();
+  QPlaceIcon * o = new QPlaceIcon();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -81,10 +81,10 @@ void QPlaceIcon_new1 ()
 /*
 QPlaceIcon(const QPlaceIcon &other)
 */
-void QPlaceIcon_new2 ()
+void QPlaceIcon_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * o = new QPlaceIcon ( *PQPLACEICON(1) );
+  QPlaceIcon * o = new QPlaceIcon( *PQPLACEICON(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -141,8 +141,8 @@ HB_FUNC_STATIC( QPLACEICON_URL )
     if( ISBETWEEN(0,1) && (ISQSIZE(1)||ISNIL(1)) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url ( ISNIL(1)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->url( ISNIL(1)? QSize() : *(QSize *) _qt5xhb_itemGetPtr(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,8 +168,8 @@ HB_FUNC_STATIC( QPLACEICON_MANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceManager * ptr = obj->manager ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QPLACEMANAGER" );
+      QPlaceManager * ptr = obj->manager();
+      _qt5xhb_createReturnQObjectClass( ptr, "QPLACEMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QPLACEICON_SETMANAGER )
     if( ISNUMPAR(1) && ISQPLACEMANAGER(1) )
     {
 #endif
-      obj->setManager ( PQPLACEMANAGER(1) );
+      obj->setManager( PQPLACEMANAGER(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QPLACEICON_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

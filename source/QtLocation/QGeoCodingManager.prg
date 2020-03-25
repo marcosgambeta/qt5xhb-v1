@@ -34,7 +34,7 @@ CLASS QGeoCodingManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoCodingManager
+PROCEDURE destroyObject() CLASS QGeoCodingManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,8 +71,8 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->managerName () );
+      RQSTRING( obj->managerName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERVERSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->managerVersion () );
+      RINT( obj->managerVersion() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,15 +140,15 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_MANAGERVERSION )
 /*
 QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
 */
-void QGeoCodingManager_geocode1 ()
+void QGeoCodingManager_geocode1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QGeoCodeReply * ptr = obj->geocode ( *PQGEOADDRESS(1), ISNIL(2)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(2) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode( *PQGEOADDRESS(1), ISNIL(2)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(2) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
@@ -156,15 +156,15 @@ void QGeoCodingManager_geocode1 ()
 /*
 QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds = QGeoShape())
 */
-void QGeoCodingManager_geocode2 ()
+void QGeoCodingManager_geocode2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QGeoCodingManager * obj = (QGeoCodingManager *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QGeoCodeReply * ptr = obj->geocode ( PQSTRING(1), OPINT(2,-1), OPINT(3,0), ISNIL(4)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(4) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+    QGeoCodeReply * ptr = obj->geocode( PQSTRING(1), OPINT(2,-1), OPINT(3,0), ISNIL(4)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(4) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
   }
 #endif
 }
@@ -202,8 +202,8 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_REVERSEGEOCODE )
     if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && (ISQGEOSHAPE(2)||ISNIL(2)) )
     {
 #endif
-      QGeoCodeReply * ptr = obj->reverseGeocode ( *PQGEOCOORDINATE(1), ISNIL(2)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGEOCODEREPLY" );
+      QGeoCodeReply * ptr = obj->reverseGeocode( *PQGEOCOORDINATE(1), ISNIL(2)? QGeoShape() : *(QGeoShape *) _qt5xhb_itemGetPtr(2) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QGEOCODEREPLY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_SETLOCALE )
     if( ISNUMPAR(1) && ISQLOCALE(1) )
     {
 #endif
-      obj->setLocale ( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,8 +257,8 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_LOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->locale () );
-      _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
+      QLocale * ptr = new QLocale( obj->locale() );
+      _qt5xhb_createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGER_LOCALE )
 #endif
 }
 
-void QGeoCodingManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QGeoCodingManagerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QGEOCODINGMANAGER_ONFINISHED )
 {

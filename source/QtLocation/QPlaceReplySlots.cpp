@@ -26,7 +26,7 @@ void QPlaceReplySlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEREPLY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEREPLY" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QPlaceReplySlots::error( QPlaceReply::Error error, const QString & errorStr
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QPlaceReply::Error,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPLACEREPLY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
     hb_vmEvalBlockV( cb, 3, psender, perror, perrorString );
@@ -50,7 +50,7 @@ void QPlaceReplySlots::error( QPlaceReply::Error error, const QString & errorStr
 }
 #endif
 
-void QPlaceReplySlots_connect_signal ( const QString & signal, const QString & slot )
+void QPlaceReplySlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceReply * obj = (QPlaceReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

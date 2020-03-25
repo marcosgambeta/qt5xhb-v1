@@ -26,7 +26,7 @@ CLASS QPlaceSearchSuggestionReply INHERIT QPlaceReply
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceSearchSuggestionReply
+PROCEDURE destroyObject() CLASS QPlaceSearchSuggestionReply
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QPlaceSearchSuggestionReply * o = new QPlaceSearchSuggestionReply ( OPQOBJECT(1,0) );
+    QPlaceSearchSuggestionReply * o = new QPlaceSearchSuggestionReply( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->suggestions () );
+      RQSTRINGLIST( obj->suggestions() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

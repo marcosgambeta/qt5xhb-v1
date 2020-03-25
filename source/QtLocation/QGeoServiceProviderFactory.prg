@@ -32,7 +32,7 @@ CLASS QGeoServiceProviderFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoServiceProviderFactory
+PROCEDURE destroyObject() CLASS QGeoServiceProviderFactory
    IF ::self_destruction
       ::delete()
    ENDIF

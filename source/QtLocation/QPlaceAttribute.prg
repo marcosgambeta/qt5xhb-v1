@@ -38,7 +38,7 @@ CLASS QPlaceAttribute
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceAttribute
+PROCEDURE destroyObject() CLASS QPlaceAttribute
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,10 +67,10 @@ RETURN
 /*
 QPlaceAttribute()
 */
-void QPlaceAttribute_new1 ()
+void QPlaceAttribute_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * o = new QPlaceAttribute ();
+  QPlaceAttribute * o = new QPlaceAttribute();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -78,10 +78,10 @@ void QPlaceAttribute_new1 ()
 /*
 QPlaceAttribute(const QPlaceAttribute &other)
 */
-void QPlaceAttribute_new2 ()
+void QPlaceAttribute_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceAttribute * o = new QPlaceAttribute ( *PQPLACEATTRIBUTE(1) );
+  QPlaceAttribute * o = new QPlaceAttribute( *PQPLACEATTRIBUTE(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_LABEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->label () );
+      RQSTRING( obj->label() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_SETLABEL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabel ( PQSTRING(1) );
+      obj->setLabel( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

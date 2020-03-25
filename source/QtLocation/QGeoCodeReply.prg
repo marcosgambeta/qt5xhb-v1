@@ -37,7 +37,7 @@ CLASS QGeoCodeReply INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoCodeReply
+PROCEDURE destroyObject() CLASS QGeoCodeReply
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QGeoCodeReply * o = new QGeoCodeReply ( (QGeoCodeReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,0) );
+    QGeoCodeReply * o = new QGeoCodeReply( (QGeoCodeReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -92,8 +92,8 @@ HB_FUNC_STATIC( QGEOCODEREPLY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ISFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinished () );
+      RBOOL( obj->isFinished() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,8 +198,8 @@ HB_FUNC_STATIC( QGEOCODEREPLY_VIEWPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoShape * ptr = new QGeoShape( obj->viewport () );
-      _qt5xhb_createReturnClass ( ptr, "QGEOSHAPE", true );
+      QGeoShape * ptr = new QGeoShape( obj->viewport() );
+      _qt5xhb_createReturnClass( ptr, "QGEOSHAPE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QGeoLocation> list = obj->locations ();
+      QList<QGeoLocation> list = obj->locations();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOLOCATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LOCATIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QGeoLocation *) new QGeoLocation ( list[i] ) );
+          hb_itemPutPtr( pItem, (QGeoLocation *) new QGeoLocation( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_LIMIT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->limit () );
+      RINT( obj->limit() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_OFFSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->offset () );
+      RINT( obj->offset() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ABORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->abort ();
+      obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QGEOCODEREPLY_ABORT )
 #endif
 }
 
-void QGeoCodeReplySlots_connect_signal ( const QString & signal, const QString & slot );
+void QGeoCodeReplySlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QGEOCODEREPLY_ONFINISHED )
 {

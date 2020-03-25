@@ -38,7 +38,7 @@ CLASS QPlaceMatchRequest
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceMatchRequest
+PROCEDURE destroyObject() CLASS QPlaceMatchRequest
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,10 +67,10 @@ RETURN
 /*
 QPlaceMatchRequest()
 */
-void QPlaceMatchRequest_new1 ()
+void QPlaceMatchRequest_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * o = new QPlaceMatchRequest ();
+  QPlaceMatchRequest * o = new QPlaceMatchRequest();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -78,10 +78,10 @@ void QPlaceMatchRequest_new1 ()
 /*
 QPlaceMatchRequest(const QPlaceMatchRequest &other)
 */
-void QPlaceMatchRequest_new2 ()
+void QPlaceMatchRequest_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * o = new QPlaceMatchRequest ( *PQPLACEMATCHREQUEST(1) );
+  QPlaceMatchRequest * o = new QPlaceMatchRequest( *PQPLACEMATCHREQUEST(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPlace> list = obj->places ();
+      QList<QPlace> list = obj->places();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPlace *) new QPlace ( list[i] ) );
+          hb_itemPutPtr( pItem, (QPlace *) new QPlace( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETPLACES )
       {
         par1 << *(QPlace *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setPlaces ( par1 );
+      obj->setPlaces( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETRESULTS )
       {
         par1 << *(QPlaceSearchResult *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setResults ( par1 );
+      obj->setResults( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

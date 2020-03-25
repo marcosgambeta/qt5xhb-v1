@@ -27,7 +27,7 @@ CLASS QPlaceIdReply INHERIT QPlaceReply
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceIdReply
+PROCEDURE destroyObject() CLASS QPlaceIdReply
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QPlaceIdReply * o = new QPlaceIdReply ( (QPlaceIdReply::OperationType) hb_parni(1), OPQOBJECT(2,0) );
+    QPlaceIdReply * o = new QPlaceIdReply( (QPlaceIdReply::OperationType) hb_parni(1), OPQOBJECT(2,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QPLACEIDREPLY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->operationType () );
+      RENUM( obj->operationType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_ID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->id () );
+      RQSTRING( obj->id() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

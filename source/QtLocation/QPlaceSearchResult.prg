@@ -39,7 +39,7 @@ CLASS QPlaceSearchResult
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceSearchResult
+PROCEDURE destroyObject() CLASS QPlaceSearchResult
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,10 +70,10 @@ RETURN
 /*
 QPlaceSearchResult()
 */
-void QPlaceSearchResult_new1 ()
+void QPlaceSearchResult_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * o = new QPlaceSearchResult ();
+  QPlaceSearchResult * o = new QPlaceSearchResult();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -81,10 +81,10 @@ void QPlaceSearchResult_new1 ()
 /*
 QPlaceSearchResult(const QPlaceSearchResult &other)
 */
-void QPlaceSearchResult_new2 ()
+void QPlaceSearchResult_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * o = new QPlaceSearchResult ( *PQPLACESEARCHRESULT(1) );
+  QPlaceSearchResult * o = new QPlaceSearchResult( *PQPLACESEARCHRESULT(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_SETTITLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTitle ( PQSTRING(1) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,8 +221,8 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceIcon * ptr = new QPlaceIcon( obj->icon () );
-      _qt5xhb_createReturnClass ( ptr, "QPLACEICON", true );
+      QPlaceIcon * ptr = new QPlaceIcon( obj->icon() );
+      _qt5xhb_createReturnClass( ptr, "QPLACEICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QPLACESEARCHRESULT_SETICON )
     if( ISNUMPAR(1) && ISQPLACEICON(1) )
     {
 #endif
-      obj->setIcon ( *PQPLACEICON(1) );
+      obj->setIcon( *PQPLACEICON(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -30,7 +30,7 @@ CLASS QPlaceContentReply INHERIT QPlaceReply
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceContentReply
+PROCEDURE destroyObject() CLASS QPlaceContentReply
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QPlaceContentReply * o = new QPlaceContentReply ( OPQOBJECT(1,0) );
+    QPlaceContentReply * o = new QPlaceContentReply( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_TOTALCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->totalCount () );
+      RINT( obj->totalCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,8 +163,8 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_REQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->request () );
-      _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREQUEST", true );
+      QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->request() );
+      _qt5xhb_createReturnClass( ptr, "QPLACECONTENTREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,8 +190,8 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_PREVIOUSPAGEREQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->previousPageRequest () );
-      _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREQUEST", true );
+      QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->previousPageRequest() );
+      _qt5xhb_createReturnClass( ptr, "QPLACECONTENTREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,8 +217,8 @@ HB_FUNC_STATIC( QPLACECONTENTREPLY_NEXTPAGEREQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->nextPageRequest () );
-      _qt5xhb_createReturnClass ( ptr, "QPLACECONTENTREQUEST", true );
+      QPlaceContentRequest * ptr = new QPlaceContentRequest( obj->nextPageRequest() );
+      _qt5xhb_createReturnClass( ptr, "QPLACECONTENTREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

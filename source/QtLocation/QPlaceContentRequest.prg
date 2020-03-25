@@ -43,7 +43,7 @@ CLASS QPlaceContentRequest
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPlaceContentRequest
+PROCEDURE destroyObject() CLASS QPlaceContentRequest
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,10 +74,10 @@ RETURN
 /*
 QPlaceContentRequest()
 */
-void QPlaceContentRequest_new1 ()
+void QPlaceContentRequest_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * o = new QPlaceContentRequest ();
+  QPlaceContentRequest * o = new QPlaceContentRequest();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -85,10 +85,10 @@ void QPlaceContentRequest_new1 ()
 /*
 QPlaceContentRequest(const QPlaceContentRequest &other)
 */
-void QPlaceContentRequest_new2 ()
+void QPlaceContentRequest_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * o = new QPlaceContentRequest ( *PQPLACECONTENTREQUEST(1) );
+  QPlaceContentRequest * o = new QPlaceContentRequest( *PQPLACECONTENTREQUEST(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->contentType () );
+      RENUM( obj->contentType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setContentType ( (QPlaceContent::Type) hb_parni(1) );
+      obj->setContentType( (QPlaceContent::Type) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_PLACEID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->placeId () );
+      RQSTRING( obj->placeId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETPLACEID )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPlaceId ( PQSTRING(1) );
+      obj->setPlaceId( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,8 +253,8 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CONTENTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->contentContext () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->contentContext() );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETCONTENTCONTEXT )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setContentContext ( *PQVARIANT(1) );
+      obj->setContentContext( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_LIMIT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->limit () );
+      RINT( obj->limit() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_SETLIMIT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLimit ( PINT(1) );
+      obj->setLimit( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QPLACECONTENTREQUEST_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
