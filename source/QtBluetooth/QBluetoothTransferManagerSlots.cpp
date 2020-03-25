@@ -26,7 +26,7 @@ void QBluetoothTransferManagerSlots::finished( QBluetoothTransferReply * reply )
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHTRANSFERMANAGER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHTRANSFERMANAGER" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QBLUETOOTHTRANSFERREPLY" );
     hb_vmEvalBlockV( cb, 2, psender, preply );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QBluetoothTransferManagerSlots::finished( QBluetoothTransferReply * reply )
 }
 #endif
 
-void QBluetoothTransferManagerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QBluetoothTransferManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothTransferManager * obj = (QBluetoothTransferManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

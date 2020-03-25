@@ -26,7 +26,7 @@ void QBluetoothServiceDiscoveryAgentSlots::serviceDiscovered( const QBluetoothSe
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceDiscovered(QBluetoothServiceInfo)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
     PHB_ITEM pinfo = Signals_return_object( (void *) &info, "QBLUETOOTHSERVICEINFO" );
     hb_vmEvalBlockV( cb, 2, psender, pinfo );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QBluetoothServiceDiscoveryAgentSlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -54,7 +54,7 @@ void QBluetoothServiceDiscoveryAgentSlots::canceled()
   PHB_ITEM cb = Signals_return_codeblock( object, "canceled()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -67,7 +67,7 @@ void QBluetoothServiceDiscoveryAgentSlots::error( QBluetoothServiceDiscoveryAgen
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothServiceDiscoveryAgent::Error)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -76,7 +76,7 @@ void QBluetoothServiceDiscoveryAgentSlots::error( QBluetoothServiceDiscoveryAgen
 }
 #endif
 
-void QBluetoothServiceDiscoveryAgentSlots_connect_signal ( const QString & signal, const QString & slot )
+void QBluetoothServiceDiscoveryAgentSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServiceDiscoveryAgent * obj = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

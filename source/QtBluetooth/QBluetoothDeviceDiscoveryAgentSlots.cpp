@@ -26,7 +26,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::deviceDiscovered( const QBluetoothDevi
   PHB_ITEM cb = Signals_return_codeblock( object, "deviceDiscovered(QBluetoothDeviceInfo)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
     PHB_ITEM pinfo = Signals_return_object( (void *) &info, "QBLUETOOTHDEVICEINFO" );
     hb_vmEvalBlockV( cb, 2, psender, pinfo );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -54,7 +54,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::error( QBluetoothDeviceDiscoveryAgent:
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothDeviceDiscoveryAgent::Error)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -69,14 +69,14 @@ void QBluetoothDeviceDiscoveryAgentSlots::canceled()
   PHB_ITEM cb = Signals_return_codeblock( object, "canceled()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QBluetoothDeviceDiscoveryAgentSlots_connect_signal ( const QString & signal, const QString & slot )
+void QBluetoothDeviceDiscoveryAgentSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothDeviceDiscoveryAgent * obj = (QBluetoothDeviceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

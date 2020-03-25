@@ -28,7 +28,7 @@ CLASS QBluetoothTransferManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothTransferManager
+PROCEDURE destroyObject() CLASS QBluetoothTransferManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QBluetoothTransferManager * o = new QBluetoothTransferManager ( OPQOBJECT(1,0) );
+    QBluetoothTransferManager * o = new QBluetoothTransferManager( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
     if( ISNUMPAR(2) && ISQBLUETOOTHTRANSFERREQUEST(1) && ISQIODEVICE(2) )
     {
 #endif
-      QBluetoothTransferReply * ptr = obj->put ( *PQBLUETOOTHTRANSFERREQUEST(1), PQIODEVICE(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QBLUETOOTHTRANSFERREPLY" );
+      QBluetoothTransferReply * ptr = obj->put( *PQBLUETOOTHTRANSFERREQUEST(1), PQIODEVICE(2) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QBLUETOOTHTRANSFERREPLY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
 #endif
 }
 
-void QBluetoothTransferManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QBluetoothTransferManagerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_ONFINISHED )
 {

@@ -38,7 +38,7 @@ CLASS QBluetoothHostInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBluetoothHostInfo
+PROCEDURE destroyObject() CLASS QBluetoothHostInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,10 +67,10 @@ RETURN
 /*
 QBluetoothHostInfo()
 */
-void QBluetoothHostInfo_new1 ()
+void QBluetoothHostInfo_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * o = new QBluetoothHostInfo ();
+  QBluetoothHostInfo * o = new QBluetoothHostInfo();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -78,10 +78,10 @@ void QBluetoothHostInfo_new1 ()
 /*
 QBluetoothHostInfo(const QBluetoothHostInfo &other)
 */
-void QBluetoothHostInfo_new2 ()
+void QBluetoothHostInfo_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothHostInfo * o = new QBluetoothHostInfo ( *PQBLUETOOTHHOSTINFO(1) );
+  QBluetoothHostInfo * o = new QBluetoothHostInfo( *PQBLUETOOTHHOSTINFO(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -138,8 +138,8 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_ADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBluetoothAddress * ptr = new QBluetoothAddress( obj->address () );
-      _qt5xhb_createReturnClass ( ptr, "QBLUETOOTHADDRESS", true );
+      QBluetoothAddress * ptr = new QBluetoothAddress( obj->address() );
+      _qt5xhb_createReturnClass( ptr, "QBLUETOOTHADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETADDRESS )
     if( ISNUMPAR(1) && ISQBLUETOOTHADDRESS(1) )
     {
 #endif
-      obj->setAddress ( *PQBLUETOOTHADDRESS(1) );
+      obj->setAddress( *PQBLUETOOTHADDRESS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_SETNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setName ( PQSTRING(1) );
+      obj->setName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

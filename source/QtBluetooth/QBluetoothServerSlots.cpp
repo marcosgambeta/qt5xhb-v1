@@ -26,7 +26,7 @@ void QBluetoothServerSlots::newConnection()
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHSERVER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QBluetoothServerSlots::error( QBluetoothServer::Error error )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothServer::Error)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBLUETOOTHSERVER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVER" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -48,7 +48,7 @@ void QBluetoothServerSlots::error( QBluetoothServer::Error error )
 }
 #endif
 
-void QBluetoothServerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QBluetoothServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothServer * obj = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
