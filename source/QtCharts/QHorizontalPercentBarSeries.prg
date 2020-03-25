@@ -25,7 +25,7 @@ CLASS QHorizontalPercentBarSeries INHERIT QAbstractBarSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHorizontalPercentBarSeries
+PROCEDURE destroyObject() CLASS QHorizontalPercentBarSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QHORIZONTALPERCENTBARSERIES_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QHorizontalPercentBarSeries * o = new QHorizontalPercentBarSeries ( OPQOBJECT(1,Q_NULLPTR) );
+    QHorizontalPercentBarSeries * o = new QHorizontalPercentBarSeries( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QHORIZONTALPERCENTBARSERIES_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

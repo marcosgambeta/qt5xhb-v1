@@ -26,7 +26,7 @@ void QValueAxisSlots::labelFormatChanged( const QString & format )
   PHB_ITEM cb = Signals_return_codeblock( object, "labelFormatChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
     hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QValueAxisSlots::maxChanged( qreal max )
   PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
     PHB_ITEM pmax = hb_itemPutND( NULL, max );
     hb_vmEvalBlockV( cb, 2, psender, pmax );
     hb_itemRelease( psender );
@@ -56,7 +56,7 @@ void QValueAxisSlots::minChanged( qreal min )
   PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
     hb_vmEvalBlockV( cb, 2, psender, pmin );
     hb_itemRelease( psender );
@@ -71,7 +71,7 @@ void QValueAxisSlots::minorTickCountChanged( int tickCount )
   PHB_ITEM cb = Signals_return_codeblock( object, "minorTickCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
     PHB_ITEM ptickCount = hb_itemPutNI( NULL, tickCount );
     hb_vmEvalBlockV( cb, 2, psender, ptickCount );
     hb_itemRelease( psender );
@@ -86,7 +86,7 @@ void QValueAxisSlots::rangeChanged( qreal min, qreal max )
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(qreal,qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
     PHB_ITEM pmax = hb_itemPutND( NULL, max );
     hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
@@ -103,7 +103,7 @@ void QValueAxisSlots::tickCountChanged( int tickCount )
   PHB_ITEM cb = Signals_return_codeblock( object, "tickCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
     PHB_ITEM ptickCount = hb_itemPutNI( NULL, tickCount );
     hb_vmEvalBlockV( cb, 2, psender, ptickCount );
     hb_itemRelease( psender );
@@ -112,7 +112,7 @@ void QValueAxisSlots::tickCountChanged( int tickCount )
 }
 #endif
 
-void QValueAxisSlots_connect_signal ( const QString & signal, const QString & slot )
+void QValueAxisSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

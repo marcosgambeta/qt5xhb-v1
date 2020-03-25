@@ -26,7 +26,7 @@ void QHXYModelMapperSlots::columnCountChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHXYMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHXYMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QHXYModelMapperSlots::firstColumnChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "firstColumnChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHXYMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHXYMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -52,7 +52,7 @@ void QHXYModelMapperSlots::modelReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHXYMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHXYMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -65,7 +65,7 @@ void QHXYModelMapperSlots::seriesReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHXYMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHXYMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -78,7 +78,7 @@ void QHXYModelMapperSlots::xRowChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "xRowChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHXYMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHXYMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -91,14 +91,14 @@ void QHXYModelMapperSlots::yRowChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "yRowChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHXYMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHXYMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QHXYModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
+void QHXYModelMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QHXYModelMapper * obj = (QHXYModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

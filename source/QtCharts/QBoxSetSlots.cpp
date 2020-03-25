@@ -26,7 +26,7 @@ void QBoxSetSlots::brushChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "brushChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QBoxSetSlots::cleared()
   PHB_ITEM cb = Signals_return_codeblock( object, "cleared()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -52,7 +52,7 @@ void QBoxSetSlots::clicked()
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -65,7 +65,7 @@ void QBoxSetSlots::doubleClicked()
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -78,7 +78,7 @@ void QBoxSetSlots::hovered( bool status )
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -93,7 +93,7 @@ void QBoxSetSlots::penChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "penChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -106,7 +106,7 @@ void QBoxSetSlots::pressed()
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -119,7 +119,7 @@ void QBoxSetSlots::released()
   PHB_ITEM cb = Signals_return_codeblock( object, "released()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -132,7 +132,7 @@ void QBoxSetSlots::valueChanged( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -147,14 +147,14 @@ void QBoxSetSlots::valuesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "valuesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBOXSET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXSET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QBoxSetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QBoxSetSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * obj = (QBoxSet *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

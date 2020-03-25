@@ -26,7 +26,7 @@ void QHBoxPlotModelMapperSlots::columnCountChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QHBoxPlotModelMapperSlots::firstBoxSetRowChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "firstBoxSetRowChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -52,7 +52,7 @@ void QHBoxPlotModelMapperSlots::firstColumnChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "firstColumnChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -65,7 +65,7 @@ void QHBoxPlotModelMapperSlots::lastBoxSetRowChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "lastBoxSetRowChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -78,7 +78,7 @@ void QHBoxPlotModelMapperSlots::modelReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -91,14 +91,14 @@ void QHBoxPlotModelMapperSlots::seriesReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHBOXPLOTMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QHBoxPlotModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
+void QHBoxPlotModelMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QHBoxPlotModelMapper * obj = (QHBoxPlotModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

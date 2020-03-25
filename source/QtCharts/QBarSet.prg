@@ -68,7 +68,7 @@ CLASS QBarSet INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBarSet
+PROCEDURE destroyObject() CLASS QBarSet
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QBARSET_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QBarSet * o = new QBarSet ( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
+    QBarSet * o = new QBarSet( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -126,8 +126,8 @@ HB_FUNC_STATIC( QBARSET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QBARSET_LABEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->label () );
+      RQSTRING( obj->label() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QBARSET_SETLABEL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabel ( PQSTRING(1) );
+      obj->setLabel( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,8 +208,8 @@ HB_FUNC_STATIC( QBARSET_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->pen () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      QPen * ptr = new QPen( obj->pen() );
+      _qt5xhb_createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QBARSET_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,8 +263,8 @@ HB_FUNC_STATIC( QBARSET_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      QBrush * ptr = new QBrush( obj->brush() );
+      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QBARSET_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,8 +318,8 @@ HB_FUNC_STATIC( QBARSET_LABELBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->labelBrush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      QBrush * ptr = new QBrush( obj->labelBrush() );
+      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setLabelBrush ( *PQBRUSH(1) );
+      obj->setLabelBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,8 +373,8 @@ HB_FUNC_STATIC( QBARSET_LABELFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->labelFont () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      QFont * ptr = new QFont( obj->labelFont() );
+      _qt5xhb_createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setLabelFont ( *PQFONT(1) );
+      obj->setLabelFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -428,8 +428,8 @@ HB_FUNC_STATIC( QBARSET_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->color () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->color() );
+      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QBARSET_SETCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setColor ( *PQCOLOR(1) );
+      obj->setColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -483,8 +483,8 @@ HB_FUNC_STATIC( QBARSET_BORDERCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->borderColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->borderColor() );
+      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QBARSET_SETBORDERCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setBorderColor ( *PQCOLOR(1) );
+      obj->setBorderColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,8 +538,8 @@ HB_FUNC_STATIC( QBARSET_LABELCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->labelColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->labelColor() );
+      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
     if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
 #endif
-      obj->setLabelColor ( *PQCOLOR(1) );
+      obj->setLabelColor( *PQCOLOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -582,14 +582,14 @@ HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
 /*
 void append(const qreal value)
 */
-void QBarSet_append1 ()
+void QBarSet_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->append ( PQREAL(1) );
+    obj->append( PQREAL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -599,7 +599,7 @@ void QBarSet_append1 ()
 /*
 void append(const QList<qreal> &values)
 */
-void QBarSet_append2 ()
+void QBarSet_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBarSet * obj = (QBarSet *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -616,7 +616,7 @@ void QBarSet_append2 ()
       temp1 = hb_arrayGetND(aList1, i1+1);
       par1 << temp1;
     }
-    obj->append ( par1 );
+    obj->append( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QBARSET_INSERT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->insert ( PINT(1), PQREAL(2) );
+      obj->insert( PINT(1), PQREAL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QBARSET_REMOVE )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->remove ( PINT(1), OPINT(2,1) );
+      obj->remove( PINT(1), OPINT(2,1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QBARSET_REPLACE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->replace ( PINT(1), PQREAL(2) );
+      obj->replace( PINT(1), PQREAL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QBARSET_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQREAL( obj->at ( PINT(1) ) );
+      RQREAL( obj->at( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QBARSET_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QBARSET_SUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->sum () );
+      RQREAL( obj->sum() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QBARSET_SUM )
 #endif
 }
 
-void QBarSetSlots_connect_signal ( const QString & signal, const QString & slot );
+void QBarSetSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QBARSET_ONBORDERCOLORCHANGED )
 {

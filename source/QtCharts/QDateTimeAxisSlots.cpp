@@ -26,7 +26,7 @@ void QDateTimeAxisSlots::formatChanged( QString format )
   PHB_ITEM cb = Signals_return_codeblock( object, "formatChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM pformat = hb_itemPutC( NULL, (const char *) format.toLatin1().data() );
     hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QDateTimeAxisSlots::maxChanged( QDateTime max )
   PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(QDateTime)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM pmax = Signals_return_object( (void *) &max, "QDATETIME" );
     hb_vmEvalBlockV( cb, 2, psender, pmax );
     hb_itemRelease( psender );
@@ -56,7 +56,7 @@ void QDateTimeAxisSlots::minChanged( QDateTime min )
   PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(QDateTime)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM pmin = Signals_return_object( (void *) &min, "QDATETIME" );
     hb_vmEvalBlockV( cb, 2, psender, pmin );
     hb_itemRelease( psender );
@@ -71,7 +71,7 @@ void QDateTimeAxisSlots::rangeChanged( QDateTime min, QDateTime max )
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(QDateTime,QDateTime)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM pmin = Signals_return_object( (void *) &min, "QDATETIME" );
     PHB_ITEM pmax = Signals_return_object( (void *) &max, "QDATETIME" );
     hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
@@ -88,7 +88,7 @@ void QDateTimeAxisSlots::tickCountChanged( int tick )
   PHB_ITEM cb = Signals_return_codeblock( object, "tickCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDATETIMEAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDATETIMEAXIS" );
     PHB_ITEM ptick = hb_itemPutNI( NULL, tick );
     hb_vmEvalBlockV( cb, 2, psender, ptick );
     hb_itemRelease( psender );
@@ -97,7 +97,7 @@ void QDateTimeAxisSlots::tickCountChanged( int tick )
 }
 #endif
 
-void QDateTimeAxisSlots_connect_signal ( const QString & signal, const QString & slot )
+void QDateTimeAxisSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QDateTimeAxis * obj = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

@@ -44,7 +44,7 @@ CLASS QHBoxPlotModelMapper INHERIT QBoxPlotModelMapper
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHBoxPlotModelMapper
+PROCEDURE destroyObject() CLASS QHBoxPlotModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QHBoxPlotModelMapper * o = new QHBoxPlotModelMapper ( OPQOBJECT(1,nullptr) );
+    QHBoxPlotModelMapper * o = new QHBoxPlotModelMapper( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -109,8 +109,8 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBoxPlotSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QBOXPLOTSERIES" );
+      QBoxPlotSeries * ptr = obj->series();
+      _qt5xhb_createReturnQObjectClass( ptr, "QBOXPLOTSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETSERIES )
     if( ISNUMPAR(1) && ISQBOXPLOTSERIES(1) )
     {
 #endif
-      obj->setSeries ( PQBOXPLOTSERIES(1) );
+      obj->setSeries( PQBOXPLOTSERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,8 +164,8 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      QAbstractItemModel * ptr = obj->model();
+      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel ( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTBOXSETROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->firstBoxSetRow () );
+      RINT( obj->firstBoxSetRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTBOXSETROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFirstBoxSetRow ( PINT(1) );
+      obj->setFirstBoxSetRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_LASTBOXSETROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lastBoxSetRow () );
+      RINT( obj->lastBoxSetRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETLASTBOXSETROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLastBoxSetRow ( PINT(1) );
+      obj->setLastBoxSetRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->firstColumn () );
+      RINT( obj->firstColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFirstColumn ( PINT(1) );
+      obj->setFirstColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_COLUMNCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnCount () );
+      RINT( obj->columnCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETCOLUMNCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setColumnCount ( PINT(1) );
+      obj->setColumnCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETCOLUMNCOUNT )
 #endif
 }
 
-void QHBoxPlotModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+void QHBoxPlotModelMapperSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_ONCOLUMNCOUNTCHANGED )
 {

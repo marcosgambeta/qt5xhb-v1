@@ -26,7 +26,7 @@ void QVPieModelMapperSlots::firstRowChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "firstRowChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVPIEMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVPIEMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QVPieModelMapperSlots::labelsColumnChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsColumnChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVPIEMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVPIEMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -52,7 +52,7 @@ void QVPieModelMapperSlots::modelReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVPIEMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVPIEMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -65,7 +65,7 @@ void QVPieModelMapperSlots::rowCountChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCountChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVPIEMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVPIEMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -78,7 +78,7 @@ void QVPieModelMapperSlots::seriesReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVPIEMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVPIEMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -91,14 +91,14 @@ void QVPieModelMapperSlots::valuesColumnChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "valuesColumnChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVPIEMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVPIEMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QVPieModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
+void QVPieModelMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVPieModelMapper * obj = (QVPieModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

@@ -26,7 +26,7 @@ void QChartSlots::plotAreaChanged( const QRectF & plotArea )
   PHB_ITEM cb = Signals_return_codeblock( object, "plotAreaChanged(QRectF)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCHART" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCHART" );
     PHB_ITEM pplotArea = Signals_return_object( (void *) &plotArea, "QRECTF" );
     hb_vmEvalBlockV( cb, 2, psender, pplotArea );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QChartSlots::plotAreaChanged( const QRectF & plotArea )
 }
 #endif
 
-void QChartSlots_connect_signal ( const QString & signal, const QString & slot )
+void QChartSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChart * obj = (QChart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

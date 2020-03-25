@@ -27,7 +27,7 @@ CLASS QAreaLegendMarker INHERIT QLegendMarker
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAreaLegendMarker
+PROCEDURE destroyObject() CLASS QAreaLegendMarker
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(2,3) && ISQAREASERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QAreaLegendMarker * o = new QAreaLegendMarker ( PQAREASERIES(1), PQLEGEND(2), OPQOBJECT(3,Q_NULLPTR) );
+    QAreaLegendMarker * o = new QAreaLegendMarker( PQAREASERIES(1), PQLEGEND(2), OPQOBJECT(3,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,8 +139,8 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAreaSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QAREASERIES" );
+      QAreaSeries * ptr = obj->series();
+      _qt5xhb_createReturnQObjectClass( ptr, "QAREASERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

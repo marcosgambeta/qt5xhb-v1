@@ -25,7 +25,7 @@ CLASS QPercentBarSeries INHERIT QAbstractBarSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPercentBarSeries
+PROCEDURE destroyObject() CLASS QPercentBarSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QPERCENTBARSERIES_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QPercentBarSeries * o = new QPercentBarSeries ( OPQOBJECT(1,Q_NULLPTR) );
+    QPercentBarSeries * o = new QPercentBarSeries( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPERCENTBARSERIES_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

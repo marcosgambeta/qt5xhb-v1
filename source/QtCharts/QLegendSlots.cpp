@@ -26,7 +26,7 @@ void QLegendSlots::backgroundVisibleChanged( bool visible )
   PHB_ITEM cb = Signals_return_codeblock( object, "backgroundVisibleChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLEGEND" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QLegendSlots::borderColorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLEGEND" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -56,7 +56,7 @@ void QLegendSlots::colorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLEGEND" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -71,7 +71,7 @@ void QLegendSlots::fontChanged( QFont font )
   PHB_ITEM cb = Signals_return_codeblock( object, "fontChanged(QFont)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLEGEND" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
     hb_vmEvalBlockV( cb, 2, psender, pfont );
     hb_itemRelease( psender );
@@ -86,7 +86,7 @@ void QLegendSlots::labelColorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "labelColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLEGEND" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -101,7 +101,7 @@ void QLegendSlots::markerShapeChanged( QLegend::MarkerShape shape )
   PHB_ITEM cb = Signals_return_codeblock( object, "markerShapeChanged(QLegend::MarkerShape)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLEGEND" );
     PHB_ITEM pshape = hb_itemPutNI( NULL, (int) shape );
     hb_vmEvalBlockV( cb, 2, psender, pshape );
     hb_itemRelease( psender );
@@ -116,7 +116,7 @@ void QLegendSlots::reverseMarkersChanged( bool reverseMarkers )
   PHB_ITEM cb = Signals_return_codeblock( object, "reverseMarkersChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLEGEND" );
     PHB_ITEM preverseMarkers = hb_itemPutL( NULL, reverseMarkers );
     hb_vmEvalBlockV( cb, 2, psender, preverseMarkers );
     hb_itemRelease( psender );
@@ -131,7 +131,7 @@ void QLegendSlots::showToolTipsChanged( bool showToolTips )
   PHB_ITEM cb = Signals_return_codeblock( object, "showToolTipsChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLEGEND" );
     PHB_ITEM pshowToolTips = hb_itemPutL( NULL, showToolTips );
     hb_vmEvalBlockV( cb, 2, psender, pshowToolTips );
     hb_itemRelease( psender );
@@ -140,7 +140,7 @@ void QLegendSlots::showToolTipsChanged( bool showToolTips )
 }
 #endif
 
-void QLegendSlots_connect_signal ( const QString & signal, const QString & slot )
+void QLegendSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QLegend * obj = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

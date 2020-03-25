@@ -21,7 +21,7 @@ CLASS QPieModelMapper INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPieModelMapper
+PROCEDURE destroyObject() CLASS QPieModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF

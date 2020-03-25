@@ -25,7 +25,7 @@ CLASS QSplineSeries INHERIT QLineSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSplineSeries
+PROCEDURE destroyObject() CLASS QSplineSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSPLINESERIES_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSplineSeries * o = new QSplineSeries ( OPQOBJECT(1,Q_NULLPTR) );
+    QSplineSeries * o = new QSplineSeries( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSPLINESERIES_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -53,7 +53,7 @@ CLASS QCandlestickSet INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCandlestickSet
+PROCEDURE destroyObject() CLASS QCandlestickSet
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,10 +88,10 @@ using namespace QtCharts;
 /*
 explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
 */
-void QCandlestickSet_new1 ()
+void QCandlestickSet_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSet * o = new QCandlestickSet ( OPQREAL(1,0.0), OPQOBJECT(2,nullptr) );
+  QCandlestickSet * o = new QCandlestickSet( OPQREAL(1,0.0), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -99,10 +99,10 @@ void QCandlestickSet_new1 ()
 /*
 explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
 */
-void QCandlestickSet_new2 ()
+void QCandlestickSet_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSet * o = new QCandlestickSet ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,0.0), OPQOBJECT(6,nullptr) );
+  QCandlestickSet * o = new QCandlestickSet( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQREAL(5,0.0), OPQOBJECT(6,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -136,8 +136,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_TIMESTAMP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->timestamp () );
+      RQREAL( obj->timestamp() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETTIMESTAMP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTimestamp ( PQREAL(1) );
+      obj->setTimestamp( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_OPEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->open () );
+      RQREAL( obj->open() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETOPEN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOpen ( PQREAL(1) );
+      obj->setOpen( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_HIGH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->high () );
+      RQREAL( obj->high() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETHIGH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHigh ( PQREAL(1) );
+      obj->setHigh( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_LOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->low () );
+      RQREAL( obj->low() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETLOW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLow ( PQREAL(1) );
+      obj->setLow( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_CLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->close () );
+      RQREAL( obj->close() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETCLOSE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setClose ( PQREAL(1) );
+      obj->setClose( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,8 +434,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      QBrush * ptr = new QBrush( obj->brush() );
+      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,8 +489,8 @@ HB_FUNC_STATIC( QCANDLESTICKSET_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->pen () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      QPen * ptr = new QPen( obj->pen() );
+      _qt5xhb_createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETPEN )
 #endif
 }
 
-void QCandlestickSetSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCandlestickSetSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCANDLESTICKSET_ONBRUSHCHANGED )
 {

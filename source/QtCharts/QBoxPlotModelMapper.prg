@@ -21,7 +21,7 @@ CLASS QBoxPlotModelMapper INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBoxPlotModelMapper
+PROCEDURE destroyObject() CLASS QBoxPlotModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF

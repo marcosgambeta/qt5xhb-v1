@@ -21,7 +21,7 @@ CLASS QXYModelMapper INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXYModelMapper
+PROCEDURE destroyObject() CLASS QXYModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF

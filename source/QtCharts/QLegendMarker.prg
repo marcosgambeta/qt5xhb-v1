@@ -53,7 +53,7 @@ CLASS QLegendMarker INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLegendMarker
+PROCEDURE destroyObject() CLASS QLegendMarker
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -99,8 +99,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->label () );
+      RQSTRING( obj->label() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLabel ( PQSTRING(1) );
+      obj->setLabel( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,8 +181,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_LABELBRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->labelBrush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      QBrush * ptr = new QBrush( obj->labelBrush() );
+      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABELBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setLabelBrush ( *PQBRUSH(1) );
+      obj->setLabelBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,8 +236,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_FONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      QFont * ptr = new QFont( obj->font() );
+      _qt5xhb_createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont ( *PQFONT(1) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,8 +291,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->pen () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      QPen * ptr = new QPen( obj->pen() );
+      _qt5xhb_createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,8 +346,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      QBrush * ptr = new QBrush( obj->brush() );
+      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_ISVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVisible () );
+      RBOOL( obj->isVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->shape () );
+      RENUM( obj->shape() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setShape ( (QLegend::MarkerShape) hb_parni(1) );
+      obj->setShape( (QLegend::MarkerShape) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,8 +535,8 @@ HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTSERIES" );
+      QAbstractSeries * ptr = obj->series();
+      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SERIES )
 #endif
 }
 
-void QLegendMarkerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QLegendMarkerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QLEGENDMARKER_ONBRUSHCHANGED )
 {

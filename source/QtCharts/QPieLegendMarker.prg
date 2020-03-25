@@ -29,7 +29,7 @@ CLASS QPieLegendMarker INHERIT QLegendMarker
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPieLegendMarker
+PROCEDURE destroyObject() CLASS QPieLegendMarker
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(3,4) && ISQPIESERIES(1) && ISQPIESLICE(2) && ISQLEGEND(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
-    QPieLegendMarker * o = new QPieLegendMarker ( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT(4,Q_NULLPTR) );
+    QPieLegendMarker * o = new QPieLegendMarker( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT(4,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,8 +141,8 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPieSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QPIESERIES" );
+      QPieSeries * ptr = obj->series();
+      _qt5xhb_createReturnQObjectClass( ptr, "QPIESERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,8 +168,8 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPieSlice * ptr = obj->slice ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QPIESLICE" );
+      QPieSlice * ptr = obj->slice();
+      _qt5xhb_createReturnQObjectClass( ptr, "QPIESLICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

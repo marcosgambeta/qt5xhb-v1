@@ -27,7 +27,7 @@ CLASS QCandlestickLegendMarker INHERIT QLegendMarker
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCandlestickLegendMarker
+PROCEDURE destroyObject() CLASS QCandlestickLegendMarker
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(2,3) && ISQCANDLESTICKSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QCandlestickLegendMarker * o = new QCandlestickLegendMarker ( PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
+    QCandlestickLegendMarker * o = new QCandlestickLegendMarker( PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,8 +137,8 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCandlestickSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QCANDLESTICKSERIES" );
+      QCandlestickSeries * ptr = obj->series();
+      _qt5xhb_createReturnQObjectClass( ptr, "QCANDLESTICKSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

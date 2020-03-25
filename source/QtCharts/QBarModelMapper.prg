@@ -21,7 +21,7 @@ CLASS QBarModelMapper INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBarModelMapper
+PROCEDURE destroyObject() CLASS QBarModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF

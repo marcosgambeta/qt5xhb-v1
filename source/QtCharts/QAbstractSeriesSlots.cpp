@@ -26,7 +26,7 @@ void QAbstractSeriesSlots::nameChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "nameChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTSERIES" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QAbstractSeriesSlots::opacityChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTSERIES" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -52,7 +52,7 @@ void QAbstractSeriesSlots::useOpenGLChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "useOpenGLChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTSERIES" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -65,14 +65,14 @@ void QAbstractSeriesSlots::visibleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTSERIES" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QAbstractSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstractSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QAbstractSeries * obj = (QAbstractSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

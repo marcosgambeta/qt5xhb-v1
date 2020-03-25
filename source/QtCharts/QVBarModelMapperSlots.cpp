@@ -26,7 +26,7 @@ void QVBarModelMapperSlots::firstBarSetColumnChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "firstBarSetColumnChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVBARMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVBARMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QVBarModelMapperSlots::firstRowChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "firstRowChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVBARMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVBARMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -52,7 +52,7 @@ void QVBarModelMapperSlots::lastBarSetColumnChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "lastBarSetColumnChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVBARMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVBARMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -65,7 +65,7 @@ void QVBarModelMapperSlots::modelReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVBARMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVBARMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -78,7 +78,7 @@ void QVBarModelMapperSlots::rowCountChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCountChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVBARMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVBARMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -91,14 +91,14 @@ void QVBarModelMapperSlots::seriesReplaced()
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVBARMODELMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVBARMODELMAPPER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QVBarModelMapperSlots_connect_signal ( const QString & signal, const QString & slot )
+void QVBarModelMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QVBarModelMapper * obj = (QVBarModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

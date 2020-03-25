@@ -26,7 +26,7 @@ void QScatterSeriesSlots::borderColorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QScatterSeriesSlots::colorChanged( QColor color )
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -56,7 +56,7 @@ void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape 
   PHB_ITEM cb = Signals_return_codeblock( object, "markerShapeChanged(QScatterSeries::MarkerShape)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM pshape = hb_itemPutNI( NULL, (int) shape );
     hb_vmEvalBlockV( cb, 2, psender, pshape );
     hb_itemRelease( psender );
@@ -71,7 +71,7 @@ void QScatterSeriesSlots::markerSizeChanged( qreal size )
   PHB_ITEM cb = Signals_return_codeblock( object, "markerSizeChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCATTERSERIES" );
     PHB_ITEM psize = hb_itemPutND( NULL, size );
     hb_vmEvalBlockV( cb, 2, psender, psize );
     hb_itemRelease( psender );
@@ -80,7 +80,7 @@ void QScatterSeriesSlots::markerSizeChanged( qreal size )
 }
 #endif
 
-void QScatterSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
+void QScatterSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QScatterSeries * obj = (QScatterSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

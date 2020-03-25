@@ -32,7 +32,7 @@ CLASS QCandlestickModelMapper INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCandlestickModelMapper
+PROCEDURE destroyObject() CLASS QCandlestickModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,8 +85,8 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      QAbstractItemModel * ptr = obj->model();
+      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel ( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,8 +140,8 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCandlestickSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QCANDLESTICKSERIES" );
+      QCandlestickSeries * ptr = obj->series();
+      _qt5xhb_createReturnQObjectClass( ptr, "QCANDLESTICKSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
     if( ISNUMPAR(1) && ISQCANDLESTICKSERIES(1) )
     {
 #endif
-      obj->setSeries ( PQCANDLESTICKSERIES(1) );
+      obj->setSeries( PQCANDLESTICKSERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ void setLastSetSection(int lastSetSection) [protected]
 int lastSetSection() const [protected]
 */
 
-void QCandlestickModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCandlestickModelMapperSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ONMODELREPLACED )
 {

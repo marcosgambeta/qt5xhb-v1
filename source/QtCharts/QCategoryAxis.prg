@@ -38,7 +38,7 @@ CLASS QCategoryAxis INHERIT QValueAxis
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCategoryAxis
+PROCEDURE destroyObject() CLASS QCategoryAxis
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QCategoryAxis * o = new QCategoryAxis ( OPQOBJECT(1,Q_NULLPTR) );
+    QCategoryAxis * o = new QCategoryAxis( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
 #endif
-      RQREAL( obj->startValue ( OPQSTRING(1,QString()) ) );
+      RQREAL( obj->startValue( OPQSTRING(1,QString()) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETSTARTVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStartValue ( PQREAL(1) );
+      obj->setStartValue( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_CATEGORIESLABELS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->categoriesLabels () );
+      RQSTRINGLIST( obj->categoriesLabels() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_LABELSPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->labelsPosition () );
+      RENUM( obj->labelsPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLabelsPosition ( (QCategoryAxis::AxisLabelsPosition) hb_parni(1) );
+      obj->setLabelsPosition( (QCategoryAxis::AxisLabelsPosition) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_APPEND )
     if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
     {
 #endif
-      obj->append ( PQSTRING(1), PQREAL(2) );
+      obj->append( PQSTRING(1), PQREAL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REMOVE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->remove ( PQSTRING(1) );
+      obj->remove( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REPLACELABEL )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      obj->replaceLabel ( PQSTRING(1), PQSTRING(2) );
+      obj->replaceLabel( PQSTRING(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQREAL( obj->endValue ( PQSTRING(1) ) );
+      RQREAL( obj->endValue( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
 #endif
 }
 
-void QCategoryAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCategoryAxisSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCATEGORYAXIS_ONCATEGORIESCHANGED )
 {

@@ -44,7 +44,7 @@ CLASS QVXYModelMapper INHERIT QXYModelMapper
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVXYModelMapper
+PROCEDURE destroyObject() CLASS QVXYModelMapper
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QVXYModelMapper * o = new QVXYModelMapper ( OPQOBJECT(1,Q_NULLPTR) );
+    QVXYModelMapper * o = new QVXYModelMapper( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXYSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QXYSERIES" );
+      QXYSeries * ptr = obj->series();
+      _qt5xhb_createReturnQObjectClass( ptr, "QXYSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETSERIES )
     if( ISNUMPAR(1) && ISQXYSERIES(1) )
     {
 #endif
-      obj->setSeries ( PQXYSERIES(1) );
+      obj->setSeries( PQXYSERIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,8 +162,8 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      QAbstractItemModel * ptr = obj->model();
+      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel ( PQABSTRACTITEMMODEL(1) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_XCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->xColumn () );
+      RINT( obj->xColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETXCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setXColumn ( PINT(1) );
+      obj->setXColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_YCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->yColumn () );
+      RINT( obj->yColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETYCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setYColumn ( PINT(1) );
+      obj->setYColumn( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_FIRSTROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->firstRow () );
+      RINT( obj->firstRow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETFIRSTROW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFirstRow ( PINT(1) );
+      obj->setFirstRow( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_ROWCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rowCount () );
+      RINT( obj->rowCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETROWCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRowCount ( PINT(1) );
+      obj->setRowCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QVXYMODELMAPPER_SETROWCOUNT )
 #endif
 }
 
-void QVXYModelMapperSlots_connect_signal ( const QString & signal, const QString & slot );
+void QVXYModelMapperSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QVXYMODELMAPPER_ONFIRSTROWCHANGED )
 {

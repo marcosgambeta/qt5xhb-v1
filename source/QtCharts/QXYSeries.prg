@@ -74,7 +74,7 @@ CLASS QXYSeries INHERIT QAbstractSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXYSeries
+PROCEDURE destroyObject() CLASS QXYSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -118,8 +118,8 @@ HB_FUNC_STATIC( QXYSERIES_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->pointsVisible () );
+      RBOOL( obj->pointsVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setPointsVisible ( OPBOOL(1,true) );
+      obj->setPointsVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,8 +200,8 @@ HB_FUNC_STATIC( QXYSERIES_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->color () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->color() );
+      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->pointLabelsFormat () );
+      RQSTRING( obj->pointLabelsFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFORMAT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPointLabelsFormat ( PQSTRING(1) );
+      obj->setPointLabelsFormat( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->pointLabelsVisible () );
+      RBOOL( obj->pointLabelsVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setPointLabelsVisible ( OPBOOL(1,true) );
+      obj->setPointLabelsVisible( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,8 +363,8 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSFONT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFont * ptr = new QFont( obj->pointLabelsFont () );
-      _qt5xhb_createReturnClass ( ptr, "QFONT", true );
+      QFont * ptr = new QFont( obj->pointLabelsFont() );
+      _qt5xhb_createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFONT )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setPointLabelsFont ( *PQFONT(1) );
+      obj->setPointLabelsFont( *PQFONT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,8 +418,8 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->pointLabelsColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->pointLabelsColor() );
+      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setPointLabelsColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setPointLabelsColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSCLIPPING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->pointLabelsClipping () );
+      RBOOL( obj->pointLabelsClipping() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setPointLabelsClipping ( OPBOOL(1,true) );
+      obj->setPointLabelsClipping( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -516,14 +516,14 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
 /*
 void append(qreal x, qreal y)
 */
-void QXYSeries_append1 ()
+void QXYSeries_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->append ( PQREAL(1), PQREAL(2) );
+    obj->append( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -533,14 +533,14 @@ void QXYSeries_append1 ()
 /*
 void append(const QPointF &point)
 */
-void QXYSeries_append2 ()
+void QXYSeries_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->append ( *PQPOINTF(1) );
+    obj->append( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -550,7 +550,7 @@ void QXYSeries_append2 ()
 /*
 void append(const QList<QPointF> &points)
 */
-void QXYSeries_append3 ()
+void QXYSeries_append3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -565,7 +565,7 @@ void QXYSeries_append3 ()
     {
       par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    obj->append ( par1 );
+    obj->append( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -599,14 +599,14 @@ HB_FUNC_STATIC( QXYSERIES_APPEND )
 /*
 void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
 */
-void QXYSeries_replace1 ()
+void QXYSeries_replace1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->replace ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->replace( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -616,14 +616,14 @@ void QXYSeries_replace1 ()
 /*
 void replace(const QPointF &oldPoint, const QPointF &newPoint)
 */
-void QXYSeries_replace2 ()
+void QXYSeries_replace2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->replace ( *PQPOINTF(1), *PQPOINTF(2) );
+    obj->replace( *PQPOINTF(1), *PQPOINTF(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -633,14 +633,14 @@ void QXYSeries_replace2 ()
 /*
 void replace(int index, qreal newX, qreal newY)
 */
-void QXYSeries_replace3 ()
+void QXYSeries_replace3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->replace ( PINT(1), PQREAL(2), PQREAL(3) );
+    obj->replace( PINT(1), PQREAL(2), PQREAL(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -650,14 +650,14 @@ void QXYSeries_replace3 ()
 /*
 void replace(int index, const QPointF &newPoint)
 */
-void QXYSeries_replace4 ()
+void QXYSeries_replace4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->replace ( PINT(1), *PQPOINTF(2) );
+    obj->replace( PINT(1), *PQPOINTF(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -667,7 +667,7 @@ void QXYSeries_replace4 ()
 /*
 void replace(QList<QPointF> points)
 */
-void QXYSeries_replace5 ()
+void QXYSeries_replace5()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -682,7 +682,7 @@ void QXYSeries_replace5 ()
     {
       par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    obj->replace ( par1 );
+    obj->replace( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -692,7 +692,7 @@ void QXYSeries_replace5 ()
 /*
 void replace(QVector<QPointF> points)
 */
-void QXYSeries_replace6 ()
+void QXYSeries_replace6()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
@@ -707,7 +707,7 @@ void QXYSeries_replace6 ()
     {
       par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    obj->replace ( par1 );
+    obj->replace( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -756,14 +756,14 @@ HB_FUNC_STATIC( QXYSERIES_REPLACE )
 /*
 void remove(qreal x, qreal y)
 */
-void QXYSeries_remove1 ()
+void QXYSeries_remove1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->remove ( PQREAL(1), PQREAL(2) );
+    obj->remove( PQREAL(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -773,14 +773,14 @@ void QXYSeries_remove1 ()
 /*
 void remove(const QPointF &point)
 */
-void QXYSeries_remove2 ()
+void QXYSeries_remove2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->remove ( *PQPOINTF(1) );
+    obj->remove( *PQPOINTF(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -790,14 +790,14 @@ void QXYSeries_remove2 ()
 /*
 void remove(int index)
 */
-void QXYSeries_remove3 ()
+void QXYSeries_remove3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QXYSeries * obj = (QXYSeries *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->remove ( PINT(1) );
+    obj->remove( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QXYSERIES_REMOVEPOINTS )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->removePoints ( PINT(1), PINT(2) );
+      obj->removePoints( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QXYSERIES_INSERT )
     if( ISNUMPAR(2) && ISNUM(1) && ISQPOINTF(2) )
     {
 #endif
-      obj->insert ( PINT(1), *PQPOINTF(2) );
+      obj->insert( PINT(1), *PQPOINTF(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QXYSERIES_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QXYSERIES_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -952,7 +952,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPointF> list = obj->points ();
+      QList<QPointF> list = obj->points();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPointF *) new QPointF ( list[i] ) );
+          hb_itemPutPtr( pItem, (QPointF *) new QPointF( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector<QPointF> list = obj->pointsVector ();
+      QVector<QPointF> list = obj->pointsVector();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPointF *) new QPointF ( list[i] ) );
+          hb_itemPutPtr( pItem, (QPointF *) new QPointF( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1060,8 +1060,8 @@ HB_FUNC_STATIC( QXYSERIES_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      const QPointF * ptr = &obj->at ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", false );
+      const QPointF * ptr = &obj->at( PINT(1) );
+      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPEN )
     if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen ( *PQPEN(1) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1115,8 +1115,8 @@ HB_FUNC_STATIC( QXYSERIES_PEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPen * ptr = new QPen( obj->pen () );
-      _qt5xhb_createReturnClass ( ptr, "QPEN", true );
+      QPen * ptr = new QPen( obj->pen() );
+      _qt5xhb_createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC( QXYSERIES_SETBRUSH )
     if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush ( *PQBRUSH(1) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1170,8 +1170,8 @@ HB_FUNC_STATIC( QXYSERIES_BRUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush () );
-      _qt5xhb_createReturnClass ( ptr, "QBRUSH", true );
+      QBrush * ptr = new QBrush( obj->brush() );
+      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1183,7 +1183,7 @@ HB_FUNC_STATIC( QXYSERIES_BRUSH )
 #endif
 }
 
-void QXYSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+void QXYSeriesSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QXYSERIES_ONCLICKED )
 {
