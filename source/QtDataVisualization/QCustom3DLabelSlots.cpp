@@ -25,7 +25,7 @@ void QCustom3DLabelSlots::backgroundColorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "backgroundColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DLABEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QCustom3DLabelSlots::backgroundEnabledChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "backgroundEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DLABEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QCustom3DLabelSlots::borderEnabledChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "borderEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DLABEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QCustom3DLabelSlots::facingCameraChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "facingCameraChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DLABEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QCustom3DLabelSlots::fontChanged( const QFont & font )
   PHB_ITEM cb = Signals_return_codeblock( object, "fontChanged(QFont)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DLABEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
     hb_vmEvalBlockV( cb, 2, psender, pfont );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void QCustom3DLabelSlots::textChanged( const QString & text )
   PHB_ITEM cb = Signals_return_codeblock( object, "textChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DLABEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
@@ -103,7 +103,7 @@ void QCustom3DLabelSlots::textColorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "textColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCUSTOM3DLABEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -111,7 +111,7 @@ void QCustom3DLabelSlots::textColorChanged( const QColor & color )
   }
 }
 
-void QCustom3DLabelSlots_connect_signal ( const QString & signal, const QString & slot )
+void QCustom3DLabelSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QCustom3DLabel * obj = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

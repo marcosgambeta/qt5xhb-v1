@@ -28,7 +28,7 @@ CLASS QCategory3DAxis INHERIT QAbstract3DAxis
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCategory3DAxis
+PROCEDURE destroyObject() CLASS QCategory3DAxis
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QCategory3DAxis * o = new QCategory3DAxis ( OPQOBJECT(1,Q_NULLPTR) );
+    QCategory3DAxis * o = new QCategory3DAxis( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->labels () );
+      RQSTRINGLIST( obj->labels() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setLabels ( PQSTRINGLIST(1) );
+      obj->setLabels( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCategory3DAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCategory3DAxisSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCATEGORY3DAXIS_ONLABELSCHANGED )
 {

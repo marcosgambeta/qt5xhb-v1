@@ -25,7 +25,7 @@ void QSurfaceDataProxySlots::arrayReset()
   PHB_ITEM cb = Signals_return_codeblock( object, "arrayReset()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QSurfaceDataProxySlots::columnCountChanged( int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "columnCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( cb, 2, psender, pcount );
     hb_itemRelease( psender );
@@ -49,7 +49,7 @@ void QSurfaceDataProxySlots::itemChanged( int rowIndex, int columnIndex )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM prowIndex = hb_itemPutNI( NULL, rowIndex );
     PHB_ITEM pcolumnIndex = hb_itemPutNI( NULL, columnIndex );
     hb_vmEvalBlockV( cb, 3, psender, prowIndex, pcolumnIndex );
@@ -64,7 +64,7 @@ void QSurfaceDataProxySlots::rowCountChanged( int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCountChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( cb, 2, psender, pcount );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QSurfaceDataProxySlots::rowsAdded( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAdded(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
@@ -92,7 +92,7 @@ void QSurfaceDataProxySlots::rowsChanged( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsChanged(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
@@ -107,7 +107,7 @@ void QSurfaceDataProxySlots::rowsInserted( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsInserted(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
@@ -122,7 +122,7 @@ void QSurfaceDataProxySlots::rowsRemoved( int startIndex, int count )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsRemoved(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
     hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
@@ -137,7 +137,7 @@ void QSurfaceDataProxySlots::seriesChanged( QSurface3DSeries * series )
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesChanged(QSurface3DSeries*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSURFACEDATAPROXY" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
     PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSURFACE3DSERIES" );
     hb_vmEvalBlockV( cb, 2, psender, pseries );
     hb_itemRelease( psender );
@@ -145,7 +145,7 @@ void QSurfaceDataProxySlots::seriesChanged( QSurface3DSeries * series )
   }
 }
 
-void QSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot )
+void QSurfaceDataProxySlots_connect_signal( const QString & signal, const QString & slot )
 {
   QSurfaceDataProxy * obj = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

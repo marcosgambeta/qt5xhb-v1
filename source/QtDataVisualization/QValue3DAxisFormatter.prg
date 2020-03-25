@@ -24,7 +24,7 @@ CLASS QValue3DAxisFormatter INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QValue3DAxisFormatter
+PROCEDURE destroyObject() CLASS QValue3DAxisFormatter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QValue3DAxisFormatter * o = new QValue3DAxisFormatter ( OPQOBJECT(1,Q_NULLPTR) );
+    QValue3DAxisFormatter * o = new QValue3DAxisFormatter( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

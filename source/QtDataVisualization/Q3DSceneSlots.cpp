@@ -25,7 +25,7 @@ void Q3DSceneSlots::activeCameraChanged( Q3DCamera * camera )
   PHB_ITEM cb = Signals_return_codeblock( object, "activeCameraChanged(Q3DCamera*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM pcamera = Signals_return_qobject( (QObject *) camera, "Q3DCAMERA" );
     hb_vmEvalBlockV( cb, 2, psender, pcamera );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void Q3DSceneSlots::activeLightChanged( Q3DLight * light )
   PHB_ITEM cb = Signals_return_codeblock( object, "activeLightChanged(Q3DLight*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM plight = Signals_return_qobject( (QObject *) light, "Q3DLIGHT" );
     hb_vmEvalBlockV( cb, 2, psender, plight );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void Q3DSceneSlots::devicePixelRatioChanged( float pixelRatio )
   PHB_ITEM cb = Signals_return_codeblock( object, "devicePixelRatioChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM ppixelRatio = hb_itemPutND( NULL, pixelRatio );
     hb_vmEvalBlockV( cb, 2, psender, ppixelRatio );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void Q3DSceneSlots::graphPositionQueryChanged( const QPoint & position )
   PHB_ITEM cb = Signals_return_codeblock( object, "graphPositionQueryChanged(QPoint)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
     hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void Q3DSceneSlots::primarySubViewportChanged( const QRect & subViewport )
   PHB_ITEM cb = Signals_return_codeblock( object, "primarySubViewportChanged(QRect)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM psubViewport = Signals_return_object( (void *) &subViewport, "QRECT" );
     hb_vmEvalBlockV( cb, 2, psender, psubViewport );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void Q3DSceneSlots::secondarySubviewOnTopChanged( bool isSecondaryOnTop )
   PHB_ITEM cb = Signals_return_codeblock( object, "secondarySubviewOnTopChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM pisSecondaryOnTop = hb_itemPutL( NULL, isSecondaryOnTop );
     hb_vmEvalBlockV( cb, 2, psender, pisSecondaryOnTop );
     hb_itemRelease( psender );
@@ -103,7 +103,7 @@ void Q3DSceneSlots::secondarySubViewportChanged( const QRect & subViewport )
   PHB_ITEM cb = Signals_return_codeblock( object, "secondarySubViewportChanged(QRect)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM psubViewport = Signals_return_object( (void *) &subViewport, "QRECT" );
     hb_vmEvalBlockV( cb, 2, psender, psubViewport );
     hb_itemRelease( psender );
@@ -116,7 +116,7 @@ void Q3DSceneSlots::selectionQueryPositionChanged( const QPoint & position )
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionQueryPositionChanged(QPoint)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
     hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
@@ -129,7 +129,7 @@ void Q3DSceneSlots::slicingActiveChanged( bool isSlicingActive )
   PHB_ITEM cb = Signals_return_codeblock( object, "slicingActiveChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM pisSlicingActive = hb_itemPutL( NULL, isSlicingActive );
     hb_vmEvalBlockV( cb, 2, psender, pisSlicingActive );
     hb_itemRelease( psender );
@@ -142,7 +142,7 @@ void Q3DSceneSlots::viewportChanged( const QRect & viewport )
   PHB_ITEM cb = Signals_return_codeblock( object, "viewportChanged(QRect)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
     PHB_ITEM pviewport = Signals_return_object( (void *) &viewport, "QRECT" );
     hb_vmEvalBlockV( cb, 2, psender, pviewport );
     hb_itemRelease( psender );
@@ -150,7 +150,7 @@ void Q3DSceneSlots::viewportChanged( const QRect & viewport )
   }
 }
 
-void Q3DSceneSlots_connect_signal ( const QString & signal, const QString & slot )
+void Q3DSceneSlots_connect_signal( const QString & signal, const QString & slot )
 {
   Q3DScene * obj = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -56,7 +56,7 @@ CLASS QCustom3DItem INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCustom3DItem
+PROCEDURE destroyObject() CLASS QCustom3DItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,18 +85,18 @@ using namespace QtDataVisualization;
 /*
 explicit QCustom3DItem(QObject *parent = Q_NULLPTR)
 */
-void QCustom3DItem_new1 ()
+void QCustom3DItem_new1()
 {
-  QCustom3DItem * o = new QCustom3DItem ( OPQOBJECT(1,Q_NULLPTR) );
+  QCustom3DItem * o = new QCustom3DItem( OPQOBJECT(1,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = Q_NULLPTR)
 */
-void QCustom3DItem_new2 ()
+void QCustom3DItem_new2()
 {
-  QCustom3DItem * o = new QCustom3DItem ( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,Q_NULLPTR) );
+  QCustom3DItem * o = new QCustom3DItem( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -132,8 +132,8 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_MESHFILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->meshFile () );
+      RQSTRING( obj->meshFile() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETMESHFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setMeshFile ( PQSTRING(1) );
+      obj->setMeshFile( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_TEXTUREFILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->textureFile () );
+      RQSTRING( obj->textureFile() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTextureFile ( PQSTRING(1) );
+      obj->setTextureFile( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,8 +258,8 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->position () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+      QVector3D * ptr = new QVector3D( obj->position() );
+      _qt5xhb_createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITION )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      obj->setPosition ( *PQVECTOR3D(1) );
+      obj->setPosition( *PQVECTOR3D(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISPOSITIONABSOLUTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isPositionAbsolute () );
+      RBOOL( obj->isPositionAbsolute() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITIONABSOLUTE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setPositionAbsolute ( PBOOL(1) );
+      obj->setPositionAbsolute( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,8 +359,8 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SCALING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->scaling () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+      QVector3D * ptr = new QVector3D( obj->scaling() );
+      _qt5xhb_createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALING )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      obj->setScaling ( *PQVECTOR3D(1) );
+      obj->setScaling( *PQVECTOR3D(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,8 +410,8 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuaternion * ptr = new QQuaternion( obj->rotation () );
-      _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
+      QQuaternion * ptr = new QQuaternion( obj->rotation() );
+      _qt5xhb_createReturnClass( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATION )
     if( ISNUMPAR(1) && ISQQUATERNION(1) )
     {
 #endif
-      obj->setRotation ( *PQQUATERNION(1) );
+      obj->setRotation( *PQQUATERNION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVisible () );
+      RBOOL( obj->isVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISSHADOWCASTING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isShadowCasting () );
+      RBOOL( obj->isShadowCasting() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSHADOWCASTING )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setShadowCasting ( PBOOL(1) );
+      obj->setShadowCasting( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_ISSCALINGABSOLUTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isScalingAbsolute () );
+      RBOOL( obj->isScalingAbsolute() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALINGABSOLUTE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setScalingAbsolute ( PBOOL(1) );
+      obj->setScalingAbsolute( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATIONAXISANDANGLE )
     if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISNUM(2) )
     {
 #endif
-      obj->setRotationAxisAndAngle ( *PQVECTOR3D(1), PFLOAT(2) );
+      obj->setRotationAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREIMAGE )
     if( ISNUMPAR(1) && ISQIMAGE(1) )
     {
 #endif
-      obj->setTextureImage ( *PQIMAGE(1) );
+      obj->setTextureImage( *PQIMAGE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREIMAGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCustom3DItemSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCustom3DItemSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCUSTOM3DITEM_ONMESHFILECHANGED )
 {

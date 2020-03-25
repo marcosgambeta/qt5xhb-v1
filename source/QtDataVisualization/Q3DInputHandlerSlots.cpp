@@ -25,7 +25,7 @@ void Q3DInputHandlerSlots::rotationEnabledChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void Q3DInputHandlerSlots::selectionEnabledChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void Q3DInputHandlerSlots::zoomAtTargetEnabledChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "zoomAtTargetEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
   PHB_ITEM cb = Signals_return_codeblock( object, "zoomEnabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DINPUTHANDLER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
     hb_vmEvalBlockV( cb, 2, psender, penable );
     hb_itemRelease( psender );
@@ -72,7 +72,7 @@ void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
   }
 }
 
-void Q3DInputHandlerSlots_connect_signal ( const QString & signal, const QString & slot )
+void Q3DInputHandlerSlots_connect_signal( const QString & signal, const QString & slot )
 {
   Q3DInputHandler * obj = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -25,7 +25,7 @@ void QBar3DSeriesSlots::dataProxyChanged( QBarDataProxy * proxy )
   PHB_ITEM cb = Signals_return_codeblock( object, "dataProxyChanged(QBarDataProxy*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBAR3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBAR3DSERIES" );
     PHB_ITEM pproxy = Signals_return_qobject( (QObject *) proxy, "QBARDATAPROXY" );
     hb_vmEvalBlockV( cb, 2, psender, pproxy );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QBar3DSeriesSlots::meshAngleChanged( float angle )
   PHB_ITEM cb = Signals_return_codeblock( object, "meshAngleChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBAR3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBAR3DSERIES" );
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
     hb_vmEvalBlockV( cb, 2, psender, pangle );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedBarChanged(QPoint)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QBAR3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBAR3DSERIES" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
     hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
@@ -59,7 +59,7 @@ void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
   }
 }
 
-void QBar3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
+void QBar3DSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QBar3DSeries * obj = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

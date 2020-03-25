@@ -25,13 +25,13 @@ void QCategory3DAxisSlots::labelsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCATEGORY3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCATEGORY3DAXIS" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QCategory3DAxisSlots_connect_signal ( const QString & signal, const QString & slot )
+void QCategory3DAxisSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QCategory3DAxis * obj = (QCategory3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -37,7 +37,7 @@ CLASS QBarDataItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBarDataItem
+PROCEDURE destroyObject() CLASS QBarDataItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,36 +64,36 @@ using namespace QtDataVisualization;
 /*
 QBarDataItem()
 */
-void QBarDataItem_new1 ()
+void QBarDataItem_new1()
 {
-  QBarDataItem * o = new QBarDataItem ();
+  QBarDataItem * o = new QBarDataItem();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QBarDataItem(float value)
 */
-void QBarDataItem_new2 ()
+void QBarDataItem_new2()
 {
-  QBarDataItem * o = new QBarDataItem ( PFLOAT(1) );
+  QBarDataItem * o = new QBarDataItem( PFLOAT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QBarDataItem(float value, float angle)
 */
-void QBarDataItem_new3 ()
+void QBarDataItem_new3()
 {
-  QBarDataItem * o = new QBarDataItem ( PFLOAT(1), PFLOAT(2) );
+  QBarDataItem * o = new QBarDataItem( PFLOAT(1), PFLOAT(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QBarDataItem(const QBarDataItem &other)
 */
-void QBarDataItem_new4 ()
+void QBarDataItem_new4()
 {
-  QBarDataItem * o = new QBarDataItem ( *PQBARDATAITEM(1) );
+  QBarDataItem * o = new QBarDataItem( *PQBARDATAITEM(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setValue ( PFLOAT(1) );
+      obj->setValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QBARDATAITEM_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->value () );
+      RFLOAT( obj->value() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRotation ( PFLOAT(1) );
+      obj->setRotation( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->rotation () );
+      RFLOAT( obj->rotation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ void Q3DBarsSlots::barSpacingChanged( const QSizeF & spacing )
   PHB_ITEM cb = Signals_return_codeblock( object, "barSpacingChanged(QSizeF)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM pspacing = Signals_return_object( (void *) &spacing, "QSIZEF" );
     hb_vmEvalBlockV( cb, 2, psender, pspacing );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void Q3DBarsSlots::barSpacingRelativeChanged( bool relative )
   PHB_ITEM cb = Signals_return_codeblock( object, "barSpacingRelativeChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM prelative = hb_itemPutL( NULL, relative );
     hb_vmEvalBlockV( cb, 2, psender, prelative );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void Q3DBarsSlots::barThicknessChanged( float thicknessRatio )
   PHB_ITEM cb = Signals_return_codeblock( object, "barThicknessChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM pthicknessRatio = hb_itemPutND( NULL, thicknessRatio );
     hb_vmEvalBlockV( cb, 2, psender, pthicknessRatio );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void Q3DBarsSlots::columnAxisChanged( QCategory3DAxis * axis )
   PHB_ITEM cb = Signals_return_codeblock( object, "columnAxisChanged(QCategory3DAxis*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QCATEGORY3DAXIS" );
     hb_vmEvalBlockV( cb, 2, psender, paxis );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void Q3DBarsSlots::floorLevelChanged( float level )
   PHB_ITEM cb = Signals_return_codeblock( object, "floorLevelChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM plevel = hb_itemPutND( NULL, level );
     hb_vmEvalBlockV( cb, 2, psender, plevel );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void Q3DBarsSlots::multiSeriesUniformChanged( bool uniform )
   PHB_ITEM cb = Signals_return_codeblock( object, "multiSeriesUniformChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM puniform = hb_itemPutL( NULL, uniform );
     hb_vmEvalBlockV( cb, 2, psender, puniform );
     hb_itemRelease( psender );
@@ -103,7 +103,7 @@ void Q3DBarsSlots::primarySeriesChanged( QBar3DSeries * series )
   PHB_ITEM cb = Signals_return_codeblock( object, "primarySeriesChanged(QBar3DSeries*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QBAR3DSERIES" );
     hb_vmEvalBlockV( cb, 2, psender, pseries );
     hb_itemRelease( psender );
@@ -116,7 +116,7 @@ void Q3DBarsSlots::rowAxisChanged( QCategory3DAxis * axis )
   PHB_ITEM cb = Signals_return_codeblock( object, "rowAxisChanged(QCategory3DAxis*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QCATEGORY3DAXIS" );
     hb_vmEvalBlockV( cb, 2, psender, paxis );
     hb_itemRelease( psender );
@@ -129,7 +129,7 @@ void Q3DBarsSlots::selectedSeriesChanged( QBar3DSeries * series )
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedSeriesChanged(QBar3DSeries*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QBAR3DSERIES" );
     hb_vmEvalBlockV( cb, 2, psender, pseries );
     hb_itemRelease( psender );
@@ -142,7 +142,7 @@ void Q3DBarsSlots::valueAxisChanged( QValue3DAxis * axis )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueAxisChanged(QValue3DAxis*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DBARS" );
     PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
     hb_vmEvalBlockV( cb, 2, psender, paxis );
     hb_itemRelease( psender );
@@ -150,7 +150,7 @@ void Q3DBarsSlots::valueAxisChanged( QValue3DAxis * axis )
   }
 }
 
-void Q3DBarsSlots_connect_signal ( const QString & signal, const QString & slot )
+void Q3DBarsSlots_connect_signal( const QString & signal, const QString & slot )
 {
   Q3DBars * obj = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

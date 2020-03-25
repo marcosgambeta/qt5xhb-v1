@@ -45,7 +45,7 @@ CLASS QHeightMapSurfaceDataProxy INHERIT QSurfaceDataProxy
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHeightMapSurfaceDataProxy
+PROCEDURE destroyObject() CLASS QHeightMapSurfaceDataProxy
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,27 +72,27 @@ using namespace QtDataVisualization;
 /*
 explicit QHeightMapSurfaceDataProxy(QObject *parent = Q_NULLPTR)
 */
-void QHeightMapSurfaceDataProxy_new1 ()
+void QHeightMapSurfaceDataProxy_new1()
 {
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( OPQOBJECT(1,Q_NULLPTR) );
+  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy( OPQOBJECT(1,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = Q_NULLPTR)
 */
-void QHeightMapSurfaceDataProxy_new2 ()
+void QHeightMapSurfaceDataProxy_new2()
 {
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( *PQIMAGE(1), OPQOBJECT(2,Q_NULLPTR) );
+  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy( *PQIMAGE(1), OPQOBJECT(2,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = Q_NULLPTR)
 */
-void QHeightMapSurfaceDataProxy_new3 ()
+void QHeightMapSurfaceDataProxy_new3()
 {
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy ( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
+  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -157,8 +157,8 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->heightMap () );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      QImage * ptr = new QImage( obj->heightMap() );
+      _qt5xhb_createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAP )
     if( ISNUMPAR(1) && ISQIMAGE(1) )
     {
 #endif
-      obj->setHeightMap ( *PQIMAGE(1) );
+      obj->setHeightMap( *PQIMAGE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_HEIGHTMAPFILE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->heightMapFile () );
+      RQSTRING( obj->heightMapFile() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETHEIGHTMAPFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setHeightMapFile ( PQSTRING(1) );
+      obj->setHeightMapFile( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINXVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->minXValue () );
+      RFLOAT( obj->minXValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINXVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinXValue ( PFLOAT(1) );
+      obj->setMinXValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXXVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->maxXValue () );
+      RFLOAT( obj->maxXValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXXVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaxXValue ( PFLOAT(1) );
+      obj->setMaxXValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MINZVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->minZValue () );
+      RFLOAT( obj->minZValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMINZVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinZValue ( PFLOAT(1) );
+      obj->setMinZValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_MAXZVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->maxZValue () );
+      RFLOAT( obj->maxZValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETMAXZVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaxZValue ( PFLOAT(1) );
+      obj->setMaxZValue( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES )
     if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
 #endif
-      obj->setValueRanges ( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
+      obj->setValueRanges( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_SETVALUERANGES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QHeightMapSurfaceDataProxySlots_connect_signal ( const QString & signal, const QString & slot );
+void QHeightMapSurfaceDataProxySlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_ONHEIGHTMAPCHANGED )
 {

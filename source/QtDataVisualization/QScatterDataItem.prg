@@ -45,7 +45,7 @@ CLASS QScatterDataItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScatterDataItem
+PROCEDURE destroyObject() CLASS QScatterDataItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,36 +72,36 @@ using namespace QtDataVisualization;
 /*
 QScatterDataItem()
 */
-void QScatterDataItem_new1 ()
+void QScatterDataItem_new1()
 {
-  QScatterDataItem * o = new QScatterDataItem ();
+  QScatterDataItem * o = new QScatterDataItem();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QScatterDataItem(const QVector3D &position)
 */
-void QScatterDataItem_new2 ()
+void QScatterDataItem_new2()
 {
-  QScatterDataItem * o = new QScatterDataItem ( *PQVECTOR3D(1) );
+  QScatterDataItem * o = new QScatterDataItem( *PQVECTOR3D(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
 */
-void QScatterDataItem_new3 ()
+void QScatterDataItem_new3()
 {
-  QScatterDataItem * o = new QScatterDataItem ( *PQVECTOR3D(1), *PQQUATERNION(2) );
+  QScatterDataItem * o = new QScatterDataItem( *PQVECTOR3D(1), *PQQUATERNION(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QScatterDataItem(const QScatterDataItem &other)
 */
-void QScatterDataItem_new4 ()
+void QScatterDataItem_new4()
 {
-  QScatterDataItem * o = new QScatterDataItem ( *PQSCATTERDATAITEM(1) );
+  QScatterDataItem * o = new QScatterDataItem( *PQSCATTERDATAITEM(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETPOSITION )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      obj->setPosition ( *PQVECTOR3D(1) );
+      obj->setPosition( *PQVECTOR3D(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,8 +193,8 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_POSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->position () );
-      _qt5xhb_createReturnClass ( ptr, "QVECTOR3D", true );
+      QVector3D * ptr = new QVector3D( obj->position() );
+      _qt5xhb_createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETROTATION )
     if( ISNUMPAR(1) && ISQQUATERNION(1) )
     {
 #endif
-      obj->setRotation ( *PQQUATERNION(1) );
+      obj->setRotation( *PQQUATERNION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,8 +244,8 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_ROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuaternion * ptr = new QQuaternion( obj->rotation () );
-      _qt5xhb_createReturnClass ( ptr, "QQUATERNION", true );
+      QQuaternion * ptr = new QQuaternion( obj->rotation() );
+      _qt5xhb_createReturnClass( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setX ( PFLOAT(1) );
+      obj->setX( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setY ( PFLOAT(1) );
+      obj->setY( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETZ )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setZ ( PFLOAT(1) );
+      obj->setZ( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->x () );
+      RFLOAT( obj->x() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->y () );
+      RFLOAT( obj->y() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_Z )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->z () );
+      RFLOAT( obj->z() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -34,7 +34,7 @@ CLASS QLogValue3DAxisFormatter INHERIT QValue3DAxisFormatter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLogValue3DAxisFormatter
+PROCEDURE destroyObject() CLASS QLogValue3DAxisFormatter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QLogValue3DAxisFormatter * o = new QLogValue3DAxisFormatter ( OPQOBJECT(1,Q_NULLPTR) );
+    QLogValue3DAxisFormatter * o = new QLogValue3DAxisFormatter( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->base () );
+      RQREAL( obj->base() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBase ( PQREAL(1) );
+      obj->setBase( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoSubGrid () );
+      RBOOL( obj->autoSubGrid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoSubGrid ( PBOOL(1) );
+      obj->setAutoSubGrid( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->showEdgeLabels () );
+      RBOOL( obj->showEdgeLabels() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setShowEdgeLabels ( PBOOL(1) );
+      obj->setShowEdgeLabels( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ virtual float valueAt(float position) const [protected]
 virtual void populateCopy(QValue3DAxisFormatter &copy) const [protected]
 */
 
-void QLogValue3DAxisFormatterSlots_connect_signal ( const QString & signal, const QString & slot );
+void QLogValue3DAxisFormatterSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_ONAUTOSUBGRIDCHANGED )
 {

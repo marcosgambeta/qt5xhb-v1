@@ -25,7 +25,7 @@ void QAbstract3DAxisSlots::autoAdjustRangeChanged( bool autoAdjust )
   PHB_ITEM cb = Signals_return_codeblock( object, "autoAdjustRangeChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pautoAdjust = hb_itemPutL( NULL, autoAdjust );
     hb_vmEvalBlockV( cb, 2, psender, pautoAdjust );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QAbstract3DAxisSlots::labelAutoRotationChanged( float angle )
   PHB_ITEM cb = Signals_return_codeblock( object, "labelAutoRotationChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
     hb_vmEvalBlockV( cb, 2, psender, pangle );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QAbstract3DAxisSlots::labelsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -62,7 +62,7 @@ void QAbstract3DAxisSlots::maxChanged( float value )
   PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -75,7 +75,7 @@ void QAbstract3DAxisSlots::minChanged( float value )
   PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(float)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -88,7 +88,7 @@ void QAbstract3DAxisSlots::orientationChanged( QAbstract3DAxis::AxisOrientation 
   PHB_ITEM cb = Signals_return_codeblock( object, "orientationChanged(QAbstract3DAxis::AxisOrientation)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
     hb_vmEvalBlockV( cb, 2, psender, porientation );
     hb_itemRelease( psender );
@@ -101,7 +101,7 @@ void QAbstract3DAxisSlots::rangeChanged( float min, float max )
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(float,float)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
     PHB_ITEM pmax = hb_itemPutND( NULL, max );
     hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
@@ -116,7 +116,7 @@ void QAbstract3DAxisSlots::titleChanged( const QString & newTitle )
   PHB_ITEM cb = Signals_return_codeblock( object, "titleChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pnewTitle = hb_itemPutC( NULL, QSTRINGTOSTRING(newTitle) );
     hb_vmEvalBlockV( cb, 2, psender, pnewTitle );
     hb_itemRelease( psender );
@@ -129,7 +129,7 @@ void QAbstract3DAxisSlots::titleFixedChanged( bool fixed )
   PHB_ITEM cb = Signals_return_codeblock( object, "titleFixedChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pfixed = hb_itemPutL( NULL, fixed );
     hb_vmEvalBlockV( cb, 2, psender, pfixed );
     hb_itemRelease( psender );
@@ -142,7 +142,7 @@ void QAbstract3DAxisSlots::titleVisibilityChanged( bool visible )
   PHB_ITEM cb = Signals_return_codeblock( object, "titleVisibilityChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DAXIS" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DAXIS" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
@@ -150,7 +150,7 @@ void QAbstract3DAxisSlots::titleVisibilityChanged( bool visible )
   }
 }
 
-void QAbstract3DAxisSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstract3DAxisSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAbstract3DAxis * obj = (QAbstract3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

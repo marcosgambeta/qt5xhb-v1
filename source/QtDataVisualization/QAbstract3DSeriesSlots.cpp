@@ -25,7 +25,7 @@ void QAbstract3DSeriesSlots::baseColorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "baseColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QAbstract3DSeriesSlots::baseGradientChanged( const QLinearGradient & gradie
   PHB_ITEM cb = Signals_return_codeblock( object, "baseGradientChanged(QLinearGradient)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pgradient = Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
     hb_vmEvalBlockV( cb, 2, psender, pgradient );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QAbstract3DSeriesSlots::colorStyleChanged( Q3DTheme::ColorStyle style )
   PHB_ITEM cb = Signals_return_codeblock( object, "colorStyleChanged(Q3DTheme::ColorStyle)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pstyle = hb_itemPutNI( NULL, (int) style );
     hb_vmEvalBlockV( cb, 2, psender, pstyle );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QAbstract3DSeriesSlots::itemLabelChanged( const QString & label )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemLabelChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM plabel = hb_itemPutC( NULL, QSTRINGTOSTRING(label) );
     hb_vmEvalBlockV( cb, 2, psender, plabel );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QAbstract3DSeriesSlots::itemLabelFormatChanged( const QString & format )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemLabelFormatChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
     hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void QAbstract3DSeriesSlots::itemLabelVisibilityChanged( bool visible )
   PHB_ITEM cb = Signals_return_codeblock( object, "itemLabelVisibilityChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
@@ -103,7 +103,7 @@ void QAbstract3DSeriesSlots::meshChanged( QAbstract3DSeries::Mesh mesh )
   PHB_ITEM cb = Signals_return_codeblock( object, "meshChanged(QAbstract3DSeries::Mesh)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pmesh = hb_itemPutNI( NULL, (int) mesh );
     hb_vmEvalBlockV( cb, 2, psender, pmesh );
     hb_itemRelease( psender );
@@ -116,7 +116,7 @@ void QAbstract3DSeriesSlots::meshRotationChanged( const QQuaternion & rotation )
   PHB_ITEM cb = Signals_return_codeblock( object, "meshRotationChanged(QQuaternion)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM protation = Signals_return_object( (void *) &rotation, "QQUATERNION" );
     hb_vmEvalBlockV( cb, 2, psender, protation );
     hb_itemRelease( psender );
@@ -129,7 +129,7 @@ void QAbstract3DSeriesSlots::meshSmoothChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "meshSmoothChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -142,7 +142,7 @@ void QAbstract3DSeriesSlots::multiHighlightColorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "multiHighlightColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -155,7 +155,7 @@ void QAbstract3DSeriesSlots::multiHighlightGradientChanged( const QLinearGradien
   PHB_ITEM cb = Signals_return_codeblock( object, "multiHighlightGradientChanged(QLinearGradient)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pgradient = Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
     hb_vmEvalBlockV( cb, 2, psender, pgradient );
     hb_itemRelease( psender );
@@ -168,7 +168,7 @@ void QAbstract3DSeriesSlots::nameChanged( const QString & name )
   PHB_ITEM cb = Signals_return_codeblock( object, "nameChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( cb, 2, psender, pname );
     hb_itemRelease( psender );
@@ -181,7 +181,7 @@ void QAbstract3DSeriesSlots::singleHighlightColorChanged( const QColor & color )
   PHB_ITEM cb = Signals_return_codeblock( object, "singleHighlightColorChanged(QColor)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
     hb_itemRelease( psender );
@@ -194,7 +194,7 @@ void QAbstract3DSeriesSlots::singleHighlightGradientChanged( const QLinearGradie
   PHB_ITEM cb = Signals_return_codeblock( object, "singleHighlightGradientChanged(QLinearGradient)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pgradient = Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
     hb_vmEvalBlockV( cb, 2, psender, pgradient );
     hb_itemRelease( psender );
@@ -207,7 +207,7 @@ void QAbstract3DSeriesSlots::userDefinedMeshChanged( const QString & fileName )
   PHB_ITEM cb = Signals_return_codeblock( object, "userDefinedMeshChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pfileName = hb_itemPutC( NULL, QSTRINGTOSTRING(fileName) );
     hb_vmEvalBlockV( cb, 2, psender, pfileName );
     hb_itemRelease( psender );
@@ -220,7 +220,7 @@ void QAbstract3DSeriesSlots::visibilityChanged( bool visible )
   PHB_ITEM cb = Signals_return_codeblock( object, "visibilityChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DSERIES" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
@@ -228,7 +228,7 @@ void QAbstract3DSeriesSlots::visibilityChanged( bool visible )
   }
 }
 
-void QAbstract3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstract3DSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAbstract3DSeries * obj = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

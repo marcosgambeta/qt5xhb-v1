@@ -53,7 +53,7 @@ CLASS QAbstract3DAxis INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstract3DAxis
+PROCEDURE destroyObject() CLASS QAbstract3DAxis
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -92,8 +92,8 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTitle ( PQSTRING(1) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->labels () );
+      RQSTRINGLIST( obj->labels() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELS )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setLabels ( PQSTRINGLIST(1) );
+      obj->setLabels( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_MIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->min () );
+      RFLOAT( obj->min() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMIN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMin ( PFLOAT(1) );
+      obj->setMin( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_MAX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->max () );
+      RFLOAT( obj->max() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMAX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMax ( PFLOAT(1) );
+      obj->setMax( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISAUTOADJUSTRANGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAutoAdjustRange () );
+      RBOOL( obj->isAutoAdjustRange() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETAUTOADJUSTRANGE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoAdjustRange ( PBOOL(1) );
+      obj->setAutoAdjustRange( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_LABELAUTOROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->labelAutoRotation () );
+      RFLOAT( obj->labelAutoRotation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELAUTOROTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLabelAutoRotation ( PFLOAT(1) );
+      obj->setLabelAutoRotation( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isTitleVisible () );
+      RBOOL( obj->isTitleVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setTitleVisible ( PBOOL(1) );
+      obj->setTitleVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_ISTITLEFIXED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isTitleFixed () );
+      RBOOL( obj->isTitleFixed() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEFIXED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setTitleFixed ( PBOOL(1) );
+      obj->setTitleFixed( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETRANGE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setRange ( PFLOAT(1), PFLOAT(2) );
+      obj->setRange( PFLOAT(1), PFLOAT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETRANGE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QAbstract3DAxisSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAbstract3DAxisSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QABSTRACT3DAXIS_ONAUTOADJUSTRANGECHANGED )
 {

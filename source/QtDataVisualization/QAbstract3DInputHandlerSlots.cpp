@@ -25,7 +25,7 @@ void QAbstract3DInputHandlerSlots::inputViewChanged( QAbstract3DInputHandler::In
   PHB_ITEM cb = Signals_return_codeblock( object, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pview = hb_itemPutNI( NULL, (int) view );
     hb_vmEvalBlockV( cb, 2, psender, pview );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QAbstract3DInputHandlerSlots::positionChanged( const QPoint & position )
   PHB_ITEM cb = Signals_return_codeblock( object, "positionChanged(QPoint)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
     hb_vmEvalBlockV( cb, 2, psender, pposition );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QAbstract3DInputHandlerSlots::sceneChanged( Q3DScene * scene )
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneChanged(Q3DScene*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pscene = Signals_return_qobject( (QObject *) scene, "Q3DSCENE" );
     hb_vmEvalBlockV( cb, 2, psender, pscene );
     hb_itemRelease( psender );
@@ -59,7 +59,7 @@ void QAbstract3DInputHandlerSlots::sceneChanged( Q3DScene * scene )
   }
 }
 
-void QAbstract3DInputHandlerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstract3DInputHandlerSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

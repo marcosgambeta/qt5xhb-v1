@@ -24,7 +24,7 @@ CLASS QAbstractDataProxy INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractDataProxy
+PROCEDURE destroyObject() CLASS QAbstractDataProxy
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QABSTRACTDATAPROXY_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -41,7 +41,7 @@ CLASS QScatterDataProxy INHERIT QAbstractDataProxy
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScatterDataProxy
+PROCEDURE destroyObject() CLASS QScatterDataProxy
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QScatterDataProxy * o = new QScatterDataProxy ( OPQOBJECT(1,Q_NULLPTR) );
+    QScatterDataProxy * o = new QScatterDataProxy( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->itemCount () );
+      RINT( obj->itemCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,8 +148,8 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SERIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScatter3DSeries * ptr = obj->series ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCATTER3DSERIES" );
+      QScatter3DSeries * ptr = obj->series();
+      _qt5xhb_createReturnQObjectClass( ptr, "QSCATTER3DSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,8 +177,8 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      const QScatterDataItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QSCATTERDATAITEM", false );
+      const QScatterDataItem * ptr = obj->itemAt( PINT(1) );
+      _qt5xhb_createReturnClass( ptr, "QSCATTERDATAITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SETITEM )
     if( ISNUMPAR(2) && ISNUM(1) && ISQSCATTERDATAITEM(2) )
     {
 #endif
-      obj->setItem ( PINT(1), *PQSCATTERDATAITEM(2) );
+      obj->setItem( PINT(1), *PQSCATTERDATAITEM(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ADDITEM )
     if( ISNUMPAR(1) && ISQSCATTERDATAITEM(1) )
     {
 #endif
-      RINT( obj->addItem ( *PQSCATTERDATAITEM(1) ) );
+      RINT( obj->addItem( *PQSCATTERDATAITEM(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_INSERTITEM )
     if( ISNUMPAR(2) && ISNUM(1) && ISQSCATTERDATAITEM(2) )
     {
 #endif
-      obj->insertItem ( PINT(1), *PQSCATTERDATAITEM(2) );
+      obj->insertItem( PINT(1), *PQSCATTERDATAITEM(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_REMOVEITEMS )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->removeItems ( PINT(1), PINT(2) );
+      obj->removeItems( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_REMOVEITEMS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QScatterDataProxySlots_connect_signal ( const QString & signal, const QString & slot );
+void QScatterDataProxySlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ONARRAYRESET )
 {

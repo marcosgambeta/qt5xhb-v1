@@ -28,7 +28,7 @@ CLASS Q3DLight INHERIT Q3DObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS Q3DLight
+PROCEDURE destroyObject() CLASS Q3DLight
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( Q3DLIGHT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    Q3DLight * o = new Q3DLight ( OPQOBJECT(1,Q_NULLPTR) );
+    Q3DLight * o = new Q3DLight( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( Q3DLIGHT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoPosition ( PBOOL(1) );
+      obj->setAutoPosition( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAutoPosition () );
+      RBOOL( obj->isAutoPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
 #endif
 }
 
-void Q3DLightSlots_connect_signal ( const QString & signal, const QString & slot );
+void Q3DLightSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( Q3DLIGHT_ONAUTOPOSITIONCHANGED )
 {

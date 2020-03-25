@@ -36,7 +36,7 @@ CLASS QScatter3DSeries INHERIT QAbstract3DSeries
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScatter3DSeries
+PROCEDURE destroyObject() CLASS QScatter3DSeries
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ using namespace QtDataVisualization;
 /*
 explicit QScatter3DSeries(QObject *parent = Q_NULLPTR)
 */
-void QScatter3DSeries_new1 ()
+void QScatter3DSeries_new1()
 {
-  QScatter3DSeries * o = new QScatter3DSeries ( OPQOBJECT(1,Q_NULLPTR) );
+  QScatter3DSeries * o = new QScatter3DSeries( OPQOBJECT(1,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
 */
-void QScatter3DSeries_new2 ()
+void QScatter3DSeries_new2()
 {
-  QScatter3DSeries * o = new QScatter3DSeries ( PQSCATTERDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
+  QScatter3DSeries * o = new QScatter3DSeries( PQSCATTERDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -138,8 +138,8 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_DATAPROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QScatterDataProxy * ptr = obj->dataProxy ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCATTERDATAPROXY" );
+      QScatterDataProxy * ptr = obj->dataProxy();
+      _qt5xhb_createReturnQObjectClass( ptr, "QSCATTERDATAPROXY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SETDATAPROXY )
     if( ISNUMPAR(1) && ISQSCATTERDATAPROXY(1) )
     {
 #endif
-      obj->setDataProxy ( PQSCATTERDATAPROXY(1) );
+      obj->setDataProxy( PQSCATTERDATAPROXY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SELECTEDITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->selectedItem () );
+      RINT( obj->selectedItem() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SETSELECTEDITEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSelectedItem ( PINT(1) );
+      obj->setSelectedItem( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_ITEMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RFLOAT( obj->itemSize () );
+      RFLOAT( obj->itemSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_SETITEMSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setItemSize ( PFLOAT(1) );
+      obj->setItemSize( PFLOAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_INVALIDSELECTIONINDEX )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QScatter3DSeries::invalidSelectionIndex () );
+    RINT( QScatter3DSeries::invalidSelectionIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_INVALIDSELECTIONINDEX )
 #endif
 }
 
-void QScatter3DSeriesSlots_connect_signal ( const QString & signal, const QString & slot );
+void QScatter3DSeriesSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSCATTER3DSERIES_ONDATAPROXYCHANGED )
 {
