@@ -33,7 +33,7 @@ CLASS QHelpSearchQuery
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpSearchQuery
+PROCEDURE destroyObject() CLASS QHelpSearchQuery
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,18 +58,18 @@ RETURN
 /*
 QHelpSearchQuery ()
 */
-void QHelpSearchQuery_new1 ()
+void QHelpSearchQuery_new1()
 {
-  QHelpSearchQuery * o = new QHelpSearchQuery ();
+  QHelpSearchQuery * o = new QHelpSearchQuery();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QHelpSearchQuery ( FieldName field, const QStringList & wordList )
 */
-void QHelpSearchQuery_new2 ()
+void QHelpSearchQuery_new2()
 {
-  QHelpSearchQuery * o = new QHelpSearchQuery ( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
+  QHelpSearchQuery * o = new QHelpSearchQuery( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 

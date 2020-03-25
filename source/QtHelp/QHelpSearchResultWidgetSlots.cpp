@@ -25,7 +25,7 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
   PHB_ITEM cb = Signals_return_codeblock( object, "requestShowLink(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHRESULTWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHRESULTWIDGET" );
     PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
     hb_vmEvalBlockV( cb, 2, psender, plink );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
   }
 }
 
-void QHelpSearchResultWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QHelpSearchResultWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

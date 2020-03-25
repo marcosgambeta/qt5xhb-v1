@@ -27,7 +27,7 @@ CLASS QHelpIndexWidget INHERIT QListView
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpIndexWidget
+PROCEDURE destroyObject() CLASS QHelpIndexWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->activateCurrentItem ();
+      obj->activateCurrentItem();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
 #endif
-      obj->filterIndices ( PQSTRING(1), OPQSTRING(2,QString()) );
+      obj->filterIndices( PQSTRING(1), OPQSTRING(2,QString()) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QHelpIndexWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ONLINKACTIVATED )
 {

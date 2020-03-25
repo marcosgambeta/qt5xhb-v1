@@ -27,7 +27,7 @@ CLASS QHelpSearchResultWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpSearchResultWidget
+PROCEDURE destroyObject() CLASS QHelpSearchResultWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->linkAt ( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->linkAt( *PQPOINT(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
   }
 }
 
-void QHelpSearchResultWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+void QHelpSearchResultWidgetSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
 {

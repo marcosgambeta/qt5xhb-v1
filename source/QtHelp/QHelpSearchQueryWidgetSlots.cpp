@@ -25,13 +25,13 @@ void QHelpSearchQueryWidgetSlots::search()
   PHB_ITEM cb = Signals_return_codeblock( object, "search()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHQUERYWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHQUERYWIDGET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QHelpSearchQueryWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QHelpSearchQueryWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QHelpSearchQueryWidget * obj = (QHelpSearchQueryWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

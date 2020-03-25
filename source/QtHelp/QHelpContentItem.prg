@@ -40,7 +40,7 @@ CLASS QHelpContentItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpContentItem
+PROCEDURE destroyObject() CLASS QHelpContentItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -94,8 +94,8 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QHelpContentItem * ptr = obj->child ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM", false );
+      QHelpContentItem * ptr = obj->child( PINT(1) );
+      _qt5xhb_createReturnClass( ptr, "QHELPCONTENTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->childCount () );
+      RINT( obj->childCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
     if( ISNUMPAR(1) && ISQHELPCONTENTITEM(1) )
     {
 #endif
-      RINT( obj->childPosition ( PQHELPCONTENTITEM(1) ) );
+      RINT( obj->childPosition( PQHELPCONTENTITEM(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,8 +167,8 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpContentItem * ptr = obj->parent ();
-      _qt5xhb_createReturnClass ( ptr, "QHELPCONTENTITEM", false );
+      QHelpContentItem * ptr = obj->parent();
+      _qt5xhb_createReturnClass( ptr, "QHELPCONTENTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->row () );
+      RINT( obj->row() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,8 +240,8 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->url() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -29,7 +29,7 @@ CLASS QHelpIndexModel INHERIT QStringListModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpIndexModel
+PROCEDURE destroyObject() CLASS QHelpIndexModel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->createIndex ( PQSTRING(1) );
+      obj->createIndex( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -92,8 +92,8 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->filter ( PQSTRING(1), OPQSTRING(2,QString()) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->filter( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      _qt5xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCreatingIndex () );
+      RBOOL( obj->isCreatingIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
   }
 }
 
-void QHelpIndexModelSlots_connect_signal ( const QString & signal, const QString & slot );
+void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 {

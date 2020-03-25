@@ -25,7 +25,7 @@ void QHelpSearchEngineSlots::indexingFinished()
   PHB_ITEM cb = Signals_return_codeblock( object, "indexingFinished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QHelpSearchEngineSlots::indexingStarted()
   PHB_ITEM cb = Signals_return_codeblock( object, "indexingStarted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -47,7 +47,7 @@ void QHelpSearchEngineSlots::searchingFinished( int hits )
   PHB_ITEM cb = Signals_return_codeblock( object, "searchingFinished(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
     PHB_ITEM phits = hb_itemPutNI( NULL, hits );
     hb_vmEvalBlockV( cb, 2, psender, phits );
     hb_itemRelease( psender );
@@ -60,13 +60,13 @@ void QHelpSearchEngineSlots::searchingStarted()
   PHB_ITEM cb = Signals_return_codeblock( object, "searchingStarted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QHelpSearchEngineSlots_connect_signal ( const QString & signal, const QString & slot )
+void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QHelpSearchEngine * obj = (QHelpSearchEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

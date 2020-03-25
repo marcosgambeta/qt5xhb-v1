@@ -25,7 +25,7 @@ void QHelpIndexModelSlots::indexCreated()
   PHB_ITEM cb = Signals_return_codeblock( object, "indexCreated()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPINDEXMODEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPINDEXMODEL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QHelpIndexModelSlots::indexCreationStarted()
   PHB_ITEM cb = Signals_return_codeblock( object, "indexCreationStarted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPINDEXMODEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPINDEXMODEL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QHelpIndexModelSlots_connect_signal ( const QString & signal, const QString & slot )
+void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

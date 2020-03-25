@@ -25,7 +25,7 @@ void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPCONTENTWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPCONTENTWIDGET" );
     PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
     hb_vmEvalBlockV( cb, 2, psender, plink );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
   }
 }
 
-void QHelpContentWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QHelpContentWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QHelpContentWidget * obj = (QHelpContentWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

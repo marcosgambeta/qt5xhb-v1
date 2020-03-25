@@ -25,7 +25,7 @@ void QHelpContentModelSlots::contentsCreated()
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreated()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPCONTENTMODEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPCONTENTMODEL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QHelpContentModelSlots::contentsCreationStarted()
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreationStarted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QHELPCONTENTMODEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPCONTENTMODEL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QHelpContentModelSlots_connect_signal ( const QString & signal, const QString & slot )
+void QHelpContentModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QHelpContentModel * obj = (QHelpContentModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

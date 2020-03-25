@@ -34,7 +34,7 @@ CLASS QHelpEngine INHERIT QHelpEngineCore
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHelpEngine
+PROCEDURE destroyObject() CLASS QHelpEngine
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QHelpEngine * o = new QHelpEngine ( PQSTRING(1), OPQOBJECT(2,0) );
+    QHelpEngine * o = new QHelpEngine( PQSTRING(1), OPQOBJECT(2,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpContentModel * ptr = obj->contentModel ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QHELPCONTENTMODEL" );
+      QHelpContentModel * ptr = obj->contentModel();
+      _qt5xhb_createReturnQObjectClass( ptr, "QHELPCONTENTMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,8 +131,8 @@ HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpContentWidget * ptr = obj->contentWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QHELPCONTENTWIDGET" );
+      QHelpContentWidget * ptr = obj->contentWidget();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QHELPCONTENTWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,8 +156,8 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpIndexModel * ptr = obj->indexModel ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QHELPINDEXMODEL" );
+      QHelpIndexModel * ptr = obj->indexModel();
+      _qt5xhb_createReturnQObjectClass( ptr, "QHELPINDEXMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,8 +181,8 @@ HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpIndexWidget * ptr = obj->indexWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QHELPINDEXWIDGET" );
+      QHelpIndexWidget * ptr = obj->indexWidget();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QHELPINDEXWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,8 +206,8 @@ HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHelpSearchEngine * ptr = obj->searchEngine ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QHELPSEARCHENGINE" );
+      QHelpSearchEngine * ptr = obj->searchEngine();
+      _qt5xhb_createReturnQObjectClass( ptr, "QHELPSEARCHENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
