@@ -26,7 +26,7 @@ void QGamepadKeyNavigationSlots::activeChanged( bool isActive )
   PHB_ITEM cb = Signals_return_codeblock( object, "activeChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pisActive = hb_itemPutL( NULL, isActive );
     hb_vmEvalBlockV( cb, 2, psender, pisActive );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QGamepadKeyNavigationSlots::gamepadChanged( QGamepad * gamepad )
   PHB_ITEM cb = Signals_return_codeblock( object, "gamepadChanged(QGamepad*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pgamepad = Signals_return_qobject( (QObject *) gamepad, "QGAMEPAD" );
     hb_vmEvalBlockV( cb, 2, psender, pgamepad );
     hb_itemRelease( psender );
@@ -56,7 +56,7 @@ void QGamepadKeyNavigationSlots::upKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "upKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -71,7 +71,7 @@ void QGamepadKeyNavigationSlots::downKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "downKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -86,7 +86,7 @@ void QGamepadKeyNavigationSlots::leftKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "leftKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -101,7 +101,7 @@ void QGamepadKeyNavigationSlots::rightKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "rightKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -116,7 +116,7 @@ void QGamepadKeyNavigationSlots::buttonAKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonAKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -131,7 +131,7 @@ void QGamepadKeyNavigationSlots::buttonBKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonBKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -146,7 +146,7 @@ void QGamepadKeyNavigationSlots::buttonXKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonXKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -161,7 +161,7 @@ void QGamepadKeyNavigationSlots::buttonYKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonYKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -176,7 +176,7 @@ void QGamepadKeyNavigationSlots::buttonSelectKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonSelectKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -191,7 +191,7 @@ void QGamepadKeyNavigationSlots::buttonStartKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonStartKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -206,7 +206,7 @@ void QGamepadKeyNavigationSlots::buttonGuideKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonGuideKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -221,7 +221,7 @@ void QGamepadKeyNavigationSlots::buttonL1KeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonL1KeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -236,7 +236,7 @@ void QGamepadKeyNavigationSlots::buttonR1KeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonR1KeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -251,7 +251,7 @@ void QGamepadKeyNavigationSlots::buttonL2KeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonL2KeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -266,7 +266,7 @@ void QGamepadKeyNavigationSlots::buttonR2KeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonR2KeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -281,7 +281,7 @@ void QGamepadKeyNavigationSlots::buttonL3KeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonL3KeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -296,7 +296,7 @@ void QGamepadKeyNavigationSlots::buttonR3KeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonR3KeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -305,7 +305,7 @@ void QGamepadKeyNavigationSlots::buttonR3KeyChanged( Qt::Key key )
 }
 #endif
 
-void QGamepadKeyNavigationSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGamepadKeyNavigationSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   QGamepadKeyNavigation * obj = (QGamepadKeyNavigation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

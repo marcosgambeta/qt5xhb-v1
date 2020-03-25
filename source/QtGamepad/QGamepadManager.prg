@@ -40,7 +40,7 @@ CLASS QGamepadManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGamepadManager
+PROCEDURE destroyObject() CLASS QGamepadManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,8 +90,8 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_INSTANCE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QGamepadManager * ptr = QGamepadManager::instance ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QGAMEPADMANAGER" );
+    QGamepadManager * ptr = QGamepadManager::instance();
+    _qt5xhb_createReturnQObjectClass( ptr, "QGAMEPADMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ISGAMEPADCONNECTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isGamepadConnected ( PINT(1) ) );
+      RBOOL( obj->isGamepadConnected( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ISCONFIGURATIONNEEDED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isConfigurationNeeded ( PINT(1) ) );
+      RBOOL( obj->isConfigurationNeeded( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREBUTTON )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->configureButton ( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
+      RBOOL( obj->configureButton( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREAXIS )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->configureAxis ( PINT(1), (QGamepadManager::GamepadAxis) hb_parni(2) ) );
+      RBOOL( obj->configureAxis( PINT(1), (QGamepadManager::GamepadAxis) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->setCancelConfigureButton ( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
+      RBOOL( obj->setCancelConfigureButton( PINT(1), (QGamepadManager::GamepadButton) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_RESETCONFIGURATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->resetConfiguration ( PINT(1) );
+      obj->resetConfiguration( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETSETTINGSFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setSettingsFile ( PQSTRING(1) );
+      obj->setSettingsFile( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETSETTINGSFILE )
 #endif
 }
 
-void QGamepadManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QGamepadManagerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QGAMEPADMANAGER_ONAXISCONFIGURED )
 {
