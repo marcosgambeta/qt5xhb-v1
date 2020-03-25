@@ -26,7 +26,7 @@ CLASS QCameraViewfinder INHERIT QVideoWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraViewfinder
+PROCEDURE destroyObject() CLASS QCameraViewfinder
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QCameraViewfinder * o = new QCameraViewfinder ( OPQWIDGET(1,0) );
+    QCameraViewfinder * o = new QCameraViewfinder( OPQWIDGET(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -94,8 +94,8 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDER_MEDIAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      QMediaObject * ptr = obj->mediaObject();
+      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
