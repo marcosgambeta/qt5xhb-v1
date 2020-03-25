@@ -25,7 +25,7 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
   PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDESIGNERPROPERTYEDITORINTERFACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERPROPERTYEDITORINTERFACE" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
     hb_vmEvalBlockV( cb, 3, psender, pname, pvalue );
@@ -35,7 +35,7 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
   }
 }
 
-void QDesignerPropertyEditorInterfaceSlots_connect_signal ( const QString & signal, const QString & slot )
+void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

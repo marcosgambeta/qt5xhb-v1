@@ -34,7 +34,7 @@ CLASS QAbstractExtensionFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractExtensionFactory
+PROCEDURE destroyObject() CLASS QAbstractExtensionFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,8 +86,8 @@ HB_FUNC_STATIC( QABSTRACTEXTENSIONFACTORY_EXTENSION )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
 #endif
-      QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

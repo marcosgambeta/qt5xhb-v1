@@ -34,7 +34,7 @@ CLASS QDesignerCustomWidgetCollectionInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerCustomWidgetCollectionInterface
+PROCEDURE destroyObject() CLASS QDesignerCustomWidgetCollectionInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets ();
+      QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDESIGNERCUSTOMWIDGETINTERFACE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )

@@ -35,7 +35,7 @@ CLASS QDesignerTaskMenuExtension
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerTaskMenuExtension
+PROCEDURE destroyObject() CLASS QDesignerTaskMenuExtension
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_PREFERREDEDITACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->preferredEditAction ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->preferredEditAction();
+      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDESIGNERTASKMENUEXTENSION_TASKACTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAction *> list = obj->taskActions ();
+      QList<QAction *> list = obj->taskActions();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )

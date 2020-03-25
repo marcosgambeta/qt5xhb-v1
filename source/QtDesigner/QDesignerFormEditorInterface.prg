@@ -42,7 +42,7 @@ CLASS QDesignerFormEditorInterface INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDesignerFormEditorInterface
+PROCEDURE destroyObject() CLASS QDesignerFormEditorInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QDesignerFormEditorInterface * o = new QDesignerFormEditorInterface ( OPQOBJECT(1,0) );
+    QDesignerFormEditorInterface * o = new QDesignerFormEditorInterface( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -95,8 +95,8 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_ACTIONEDITOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerActionEditorInterface * ptr = obj->actionEditor ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERACTIONEDITORINTERFACE" );
+      QDesignerActionEditorInterface * ptr = obj->actionEditor();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QDESIGNERACTIONEDITORINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,8 +146,8 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_EXTENSIONMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QExtensionManager * ptr = obj->extensionManager ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QEXTENSIONMANAGER" );
+      QExtensionManager * ptr = obj->extensionManager();
+      _qt5xhb_createReturnQObjectClass( ptr, "QEXTENSIONMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,8 +171,8 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_FORMWINDOWMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerFormWindowManagerInterface * ptr = obj->formWindowManager ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+      QDesignerFormWindowManagerInterface * ptr = obj->formWindowManager();
+      _qt5xhb_createReturnQObjectClass( ptr, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,8 +196,8 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_OBJECTINSPECTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerObjectInspectorInterface * ptr = obj->objectInspector ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNEROBJECTINSPECTORINTERFACE" );
+      QDesignerObjectInspectorInterface * ptr = obj->objectInspector();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QDESIGNEROBJECTINSPECTORINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,8 +221,8 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerPropertyEditorInterface * ptr = obj->propertyEditor ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERPROPERTYEDITORINTERFACE" );
+      QDesignerPropertyEditorInterface * ptr = obj->propertyEditor();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QDESIGNERPROPERTYEDITORINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR )
     if( ISNUMPAR(1) && ISQDESIGNERACTIONEDITORINTERFACE(1) )
     {
 #endif
-      obj->setActionEditor ( PQDESIGNERACTIONEDITORINTERFACE(1) );
+      obj->setActionEditor( PQDESIGNERACTIONEDITORINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR )
     if( ISNUMPAR(1) && ISQDESIGNEROBJECTINSPECTORINTERFACE(1) )
     {
 #endif
-      obj->setObjectInspector ( PQDESIGNEROBJECTINSPECTORINTERFACE(1) );
+      obj->setObjectInspector( PQDESIGNEROBJECTINSPECTORINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR )
     if( ISNUMPAR(1) && ISQDESIGNERPROPERTYEDITORINTERFACE(1) )
     {
 #endif
-      obj->setPropertyEditor ( PQDESIGNERPROPERTYEDITORINTERFACE(1) );
+      obj->setPropertyEditor( PQDESIGNERPROPERTYEDITORINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX )
     if( ISNUMPAR(1) && ISQDESIGNERWIDGETBOXINTERFACE(1) )
     {
 #endif
-      obj->setWidgetBox ( PQDESIGNERWIDGETBOXINTERFACE(1) );
+      obj->setWidgetBox( PQDESIGNERWIDGETBOXINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,8 +350,8 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_TOPLEVEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->topLevel ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->topLevel();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,8 +375,8 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_WIDGETBOX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDesignerWidgetBoxInterface * ptr = obj->widgetBox ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QDESIGNERWIDGETBOXINTERFACE" );
+      QDesignerWidgetBoxInterface * ptr = obj->widgetBox();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QDESIGNERWIDGETBOXINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

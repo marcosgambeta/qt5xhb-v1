@@ -28,7 +28,7 @@ CLASS QExtensionFactory INHERIT QObject,QAbstractExtensionFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QExtensionFactory
+PROCEDURE destroyObject() CLASS QExtensionFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQEXTENSIONMANAGER(1)||ISNIL(1)) )
   {
-    QExtensionFactory * o = new QExtensionFactory ( OPQEXTENSIONMANAGER(1,0) );
+    QExtensionFactory * o = new QExtensionFactory( OPQEXTENSIONMANAGER(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QExtensionManager * ptr = obj->extensionManager ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QEXTENSIONMANAGER" );
+      QExtensionManager * ptr = obj->extensionManager();
+      _qt5xhb_createReturnQObjectClass( ptr, "QEXTENSIONMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,8 +123,8 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
 #endif
-      QObject * ptr = obj->extension ( PQOBJECT(1), PQSTRING(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
