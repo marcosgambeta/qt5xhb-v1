@@ -26,7 +26,7 @@ CLASS QMediaServiceProviderPlugin INHERIT QObject,QMediaServiceProviderFactoryIn
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaServiceProviderPlugin
+PROCEDURE destroyObject() CLASS QMediaServiceProviderPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_CREATE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QMediaService * ptr = obj->create ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIASERVICE" );
+      QMediaService * ptr = obj->create( PQSTRING(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIASERVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERPLUGIN_RELEASE )
     if( ISNUMPAR(1) && ISQMEDIASERVICE(1) )
     {
 #endif
-      obj->release ( PQMEDIASERVICE(1) );
+      obj->release( PQMEDIASERVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

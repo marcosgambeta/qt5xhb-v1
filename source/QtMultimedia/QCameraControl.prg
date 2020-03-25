@@ -35,7 +35,7 @@ CLASS QCameraControl INHERIT QMediaObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraControl
+PROCEDURE destroyObject() CLASS QCameraControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->canChangeProperty ( (QCameraControl::PropertyChangeType) hb_parni(1), (QCamera::Status) hb_parni(2) ) );
+      RBOOL( obj->canChangeProperty( (QCameraControl::PropertyChangeType) hb_parni(1), (QCamera::Status) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->captureMode () );
+      RENUM( obj->captureMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isCaptureModeSupported ( (QCamera::CaptureModes) hb_parni(1) ) );
+      RBOOL( obj->isCaptureModeSupported( (QCamera::CaptureModes) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCaptureMode ( (QCamera::CaptureModes) hb_parni(1) );
+      obj->setCaptureMode( (QCamera::CaptureModes) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setState ( (QCamera::State) hb_parni(1) );
+      obj->setState( (QCamera::State) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_STATUS )
   }
 }
 
-void QCameraControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCameraControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCAMERACONTROL_ONCAPTUREMODECHANGED )
 {

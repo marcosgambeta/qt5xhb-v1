@@ -25,7 +25,7 @@ void QSoundEffectSlots::sourceChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "sourceChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOUNDEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOUNDEFFECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QSoundEffectSlots::loopCountChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "loopCountChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOUNDEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOUNDEFFECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -47,7 +47,7 @@ void QSoundEffectSlots::loopsRemainingChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "loopsRemainingChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOUNDEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOUNDEFFECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -58,7 +58,7 @@ void QSoundEffectSlots::volumeChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "volumeChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOUNDEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOUNDEFFECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -69,7 +69,7 @@ void QSoundEffectSlots::mutedChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "mutedChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOUNDEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOUNDEFFECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -80,7 +80,7 @@ void QSoundEffectSlots::loadedChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "loadedChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOUNDEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOUNDEFFECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -91,7 +91,7 @@ void QSoundEffectSlots::playingChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "playingChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOUNDEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOUNDEFFECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -102,7 +102,7 @@ void QSoundEffectSlots::statusChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOUNDEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOUNDEFFECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -113,13 +113,13 @@ void QSoundEffectSlots::categoryChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "categoryChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSOUNDEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSOUNDEFFECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QSoundEffectSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSoundEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QSoundEffect * obj = (QSoundEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

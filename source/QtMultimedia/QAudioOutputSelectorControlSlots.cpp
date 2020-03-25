@@ -25,7 +25,7 @@ void QAudioOutputSelectorControlSlots::activeOutputChanged( const QString & name
   PHB_ITEM cb = Signals_return_codeblock( object, "activeOutputChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIOOUTPUTSELECTORCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOOUTPUTSELECTORCONTROL" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( cb, 2, psender, pname );
     hb_itemRelease( psender );
@@ -38,13 +38,13 @@ void QAudioOutputSelectorControlSlots::availableOutputsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "availableOutputsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAUDIOOUTPUTSELECTORCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOOUTPUTSELECTORCONTROL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QAudioOutputSelectorControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAudioOutputSelectorControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAudioOutputSelectorControl * obj = (QAudioOutputSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -41,7 +41,7 @@ CLASS QCameraImageProcessing INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraImageProcessing
+PROCEDURE destroyObject() CLASS QCameraImageProcessing
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_CONTRAST )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->contrast () );
+      RQREAL( obj->contrast() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_DENOISINGLEVEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->denoisingLevel () );
+      RQREAL( obj->denoisingLevel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAvailable () );
+      RBOOL( obj->isAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISWHITEBALANCEMODESUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isWhiteBalanceModeSupported ( (QCameraImageProcessing::WhiteBalanceMode) hb_parni(1) ) );
+      RBOOL( obj->isWhiteBalanceModeSupported( (QCameraImageProcessing::WhiteBalanceMode) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_MANUALWHITEBALANCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->manualWhiteBalance () );
+      RQREAL( obj->manualWhiteBalance() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SATURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->saturation () );
+      RQREAL( obj->saturation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETCONTRAST )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setContrast ( PQREAL(1) );
+      obj->setContrast( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETDENOISINGLEVEL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDenoisingLevel ( PQREAL(1) );
+      obj->setDenoisingLevel( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETMANUALWHITEBALANCE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setManualWhiteBalance ( PQREAL(1) );
+      obj->setManualWhiteBalance( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSATURATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSaturation ( PQREAL(1) );
+      obj->setSaturation( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSHARPENINGLEVEL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSharpeningLevel ( PQREAL(1) );
+      obj->setSharpeningLevel( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETWHITEBALANCEMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWhiteBalanceMode ( (QCameraImageProcessing::WhiteBalanceMode) hb_parni(1) );
+      obj->setWhiteBalanceMode( (QCameraImageProcessing::WhiteBalanceMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SHARPENINGLEVEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->sharpeningLevel () );
+      RQREAL( obj->sharpeningLevel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_WHITEBALANCEMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->whiteBalanceMode () );
+      RENUM( obj->whiteBalanceMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_BRIGHTNESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->brightness () );
+      RQREAL( obj->brightness() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETBRIGHTNESS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBrightness ( PQREAL(1) );
+      obj->setBrightness( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_COLORFILTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->colorFilter () );
+      RENUM( obj->colorFilter() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETCOLORFILTER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setColorFilter ( (QCameraImageProcessing::ColorFilter) hb_parni(1) );
+      obj->setColorFilter( (QCameraImageProcessing::ColorFilter) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISCOLORFILTERSUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isColorFilterSupported ( (QCameraImageProcessing::ColorFilter) hb_parni(1) ) );
+      RBOOL( obj->isColorFilterSupported( (QCameraImageProcessing::ColorFilter) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

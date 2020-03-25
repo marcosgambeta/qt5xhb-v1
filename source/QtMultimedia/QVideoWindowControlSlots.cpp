@@ -25,7 +25,7 @@ void QVideoWindowControlSlots::fullScreenChanged( bool fullScreen )
   PHB_ITEM cb = Signals_return_codeblock( object, "fullScreenChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM pfullScreen = hb_itemPutL( NULL, fullScreen );
     hb_vmEvalBlockV( cb, 2, psender, pfullScreen );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QVideoWindowControlSlots::brightnessChanged( int brightness )
   PHB_ITEM cb = Signals_return_codeblock( object, "brightnessChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM pbrightness = hb_itemPutNI( NULL, brightness );
     hb_vmEvalBlockV( cb, 2, psender, pbrightness );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QVideoWindowControlSlots::contrastChanged( int contrast )
   PHB_ITEM cb = Signals_return_codeblock( object, "contrastChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM pcontrast = hb_itemPutNI( NULL, contrast );
     hb_vmEvalBlockV( cb, 2, psender, pcontrast );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QVideoWindowControlSlots::hueChanged( int hue )
   PHB_ITEM cb = Signals_return_codeblock( object, "hueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM phue = hb_itemPutNI( NULL, hue );
     hb_vmEvalBlockV( cb, 2, psender, phue );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QVideoWindowControlSlots::saturationChanged( int saturation )
   PHB_ITEM cb = Signals_return_codeblock( object, "saturationChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     PHB_ITEM psaturation = hb_itemPutNI( NULL, saturation );
     hb_vmEvalBlockV( cb, 2, psender, psaturation );
     hb_itemRelease( psender );
@@ -90,13 +90,13 @@ void QVideoWindowControlSlots::nativeSizeChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "nativeSizeChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QVideoWindowControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QVideoWindowControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QVideoWindowControl * obj = (QVideoWindowControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

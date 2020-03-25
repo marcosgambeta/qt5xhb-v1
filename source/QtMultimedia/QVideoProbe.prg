@@ -29,7 +29,7 @@ CLASS QVideoProbe INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVideoProbe
+PROCEDURE destroyObject() CLASS QVideoProbe
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QVideoProbe * o = new QVideoProbe ( OPQOBJECT(1,0) );
+    QVideoProbe * o = new QVideoProbe( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,26 +114,26 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
 /*
 bool setSource(QMediaObject * source)
 */
-void QVideoProbe_setSource1 ()
+void QVideoProbe_setSource1()
 {
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
+    RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
   }
 }
 
 /*
 bool setSource(QMediaRecorder * source)
 */
-void QVideoProbe_setSource2 ()
+void QVideoProbe_setSource2()
 {
   QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
+    RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
   }
 }
 
-void QVideoProbeSlots_connect_signal ( const QString & signal, const QString & slot );
+void QVideoProbeSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QVIDEOPROBE_ONFLUSH )
 {

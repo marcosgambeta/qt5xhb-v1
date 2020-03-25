@@ -40,7 +40,7 @@ CLASS QRadioDataControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRadioDataControl
+PROCEDURE destroyObject() CLASS QRadioDataControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_STATIONID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->stationId () );
+      RQSTRING( obj->stationId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->programType () );
+      RENUM( obj->programType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_PROGRAMTYPENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->programTypeName () );
+      RQSTRING( obj->programTypeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_STATIONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->stationName () );
+      RQSTRING( obj->stationName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_RADIOTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->radioText () );
+      RQSTRING( obj->radioText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAlternativeFrequenciesEnabled ( PBOOL(1) );
+      obj->setAlternativeFrequenciesEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ISALTERNATIVEFREQUENCIESENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAlternativeFrequenciesEnabled () );
+      RBOOL( obj->isAlternativeFrequenciesEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_ERRORSTRING )
   }
 }
 
-void QRadioDataControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QRadioDataControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QRADIODATACONTROL_ONSTATIONIDCHANGED )
 {

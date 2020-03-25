@@ -23,7 +23,7 @@ CLASS QAbstractPlanarVideoBuffer INHERIT QAbstractVideoBuffer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractPlanarVideoBuffer
+PROCEDURE destroyObject() CLASS QAbstractPlanarVideoBuffer
    IF ::self_destruction
       ::delete()
    ENDIF

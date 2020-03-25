@@ -25,7 +25,7 @@ void QMediaAvailabilityControlSlots::availabilityChanged( QMultimedia::Availabil
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAAVAILABILITYCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAAVAILABILITYCONTROL" );
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
     hb_vmEvalBlockV( cb, 2, psender, pavailability );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QMediaAvailabilityControlSlots::availabilityChanged( QMultimedia::Availabil
   }
 }
 
-void QMediaAvailabilityControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QMediaAvailabilityControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QMediaAvailabilityControl * obj = (QMediaAvailabilityControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

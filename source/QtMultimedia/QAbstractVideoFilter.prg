@@ -27,7 +27,7 @@ CLASS QAbstractVideoFilter INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractVideoFilter
+PROCEDURE destroyObject() CLASS QAbstractVideoFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_SETACTIVE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setActive ( PBOOL(1) );
+      obj->setActive( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,8 +147,8 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVideoFilterRunnable * ptr = obj->createFilterRunnable ();
-      _qt5xhb_createReturnClass ( ptr, "QVIDEOFILTERRUNNABLE", false );
+      QVideoFilterRunnable * ptr = obj->createFilterRunnable();
+      _qt5xhb_createReturnClass( ptr, "QVIDEOFILTERRUNNABLE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

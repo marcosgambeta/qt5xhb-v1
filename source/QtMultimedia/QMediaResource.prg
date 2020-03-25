@@ -58,7 +58,7 @@ CLASS QMediaResource
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaResource
+PROCEDURE destroyObject() CLASS QMediaResource
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,36 +85,36 @@ RETURN
 /*
 QMediaResource()
 */
-void QMediaResource_new1 ()
+void QMediaResource_new1()
 {
-  QMediaResource * o = new QMediaResource ();
+  QMediaResource * o = new QMediaResource();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QMediaResource(const QUrl & url, const QString & mimeType = QString())
 */
-void QMediaResource_new2 ()
+void QMediaResource_new2()
 {
-  QMediaResource * o = new QMediaResource ( *PQURL(1), OPQSTRING(2,QString()) );
+  QMediaResource * o = new QMediaResource( *PQURL(1), OPQSTRING(2,QString()) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QMediaResource(const QNetworkRequest & request, const QString & mimeType = QString())
 */
-void QMediaResource_new3 ()
+void QMediaResource_new3()
 {
-  QMediaResource * o = new QMediaResource ( *PQNETWORKREQUEST(1), OPQSTRING(2,QString()) );
+  QMediaResource * o = new QMediaResource( *PQNETWORKREQUEST(1), OPQSTRING(2,QString()) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QMediaResource(const QMediaResource & other)
 */
-void QMediaResource_new4 ()
+void QMediaResource_new4()
 {
-  QMediaResource * o = new QMediaResource ( *PQMEDIARESOURCE(1) );
+  QMediaResource * o = new QMediaResource( *PQMEDIARESOURCE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_AUDIOBITRATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->audioBitRate () );
+      RINT( obj->audioBitRate() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_AUDIOCODEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->audioCodec () );
+      RQSTRING( obj->audioCodec() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_CHANNELCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->channelCount () );
+      RINT( obj->channelCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_DATASIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->dataSize () );
+      RQINT64( obj->dataSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_LANGUAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->language () );
+      RQSTRING( obj->language() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_MIMETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->mimeType () );
+      RQSTRING( obj->mimeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,8 +348,8 @@ HB_FUNC_STATIC( QMEDIARESOURCE_REQUEST )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkRequest * ptr = new QNetworkRequest( obj->request () );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKREQUEST", true );
+      QNetworkRequest * ptr = new QNetworkRequest( obj->request() );
+      _qt5xhb_createReturnClass( ptr, "QNETWORKREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,8 +373,8 @@ HB_FUNC_STATIC( QMEDIARESOURCE_RESOLUTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->resolution () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->resolution() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SAMPLERATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->sampleRate () );
+      RINT( obj->sampleRate() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOBITRATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAudioBitRate ( PINT(1) );
+      obj->setAudioBitRate( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETAUDIOCODEC )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setAudioCodec ( PQSTRING(1) );
+      obj->setAudioCodec( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETCHANNELCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setChannelCount ( PINT(1) );
+      obj->setChannelCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETDATASIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDataSize ( PQINT64(1) );
+      obj->setDataSize( PQINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETLANGUAGE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setLanguage ( PQSTRING(1) );
+      obj->setLanguage( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -542,13 +542,13 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETLANGUAGE )
 /*
 void setResolution(const QSize & resolution)
 */
-void QMediaResource_setResolution1 ()
+void QMediaResource_setResolution1()
 {
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setResolution ( *PQSIZE(1) );
+    obj->setResolution( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -557,13 +557,13 @@ void QMediaResource_setResolution1 ()
 /*
 void setResolution(int width, int height)
 */
-void QMediaResource_setResolution2 ()
+void QMediaResource_setResolution2()
 {
   QMediaResource * obj = (QMediaResource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setResolution ( PINT(1), PINT(2) );
+    obj->setResolution( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETSAMPLERATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSampleRate ( PINT(1) );
+      obj->setSampleRate( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOBITRATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setVideoBitRate ( PINT(1) );
+      obj->setVideoBitRate( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_SETVIDEOCODEC )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setVideoCodec ( PQSTRING(1) );
+      obj->setVideoCodec( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -679,8 +679,8 @@ HB_FUNC_STATIC( QMEDIARESOURCE_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->url() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_VIDEOBITRATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->videoBitRate () );
+      RINT( obj->videoBitRate() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QMEDIARESOURCE_VIDEOCODEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->videoCodec () );
+      RQSTRING( obj->videoCodec() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ void QCameraCaptureBufferFormatControlSlots::bufferFormatChanged( QVideoFrame::P
   PHB_ITEM cb = Signals_return_codeblock( object, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACAPTUREBUFFERFORMATCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERACAPTUREBUFFERFORMATCONTROL" );
     PHB_ITEM pformat = hb_itemPutNI( NULL, (int) format );
     hb_vmEvalBlockV( cb, 2, psender, pformat );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QCameraCaptureBufferFormatControlSlots::bufferFormatChanged( QVideoFrame::P
   }
 }
 
-void QCameraCaptureBufferFormatControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QCameraCaptureBufferFormatControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

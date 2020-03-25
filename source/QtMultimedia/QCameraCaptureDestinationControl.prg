@@ -28,7 +28,7 @@ CLASS QCameraCaptureDestinationControl INHERIT QMediaObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraCaptureDestinationControl
+PROCEDURE destroyObject() CLASS QCameraCaptureDestinationControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->captureDestination () );
+      RENUM( obj->captureDestination() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isCaptureDestinationSupported ( (QCameraImageCapture::CaptureDestinations) hb_parni(1) ) );
+      RBOOL( obj->isCaptureDestinationSupported( (QCameraImageCapture::CaptureDestinations) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCaptureDestination ( (QCameraImageCapture::CaptureDestinations) hb_parni(1) );
+      obj->setCaptureDestination( (QCameraImageCapture::CaptureDestinations) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCameraCaptureDestinationControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCameraCaptureDestinationControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ONCAPTUREDESTINATIONCHANGED )
 {

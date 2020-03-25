@@ -29,7 +29,7 @@ CLASS QCameraFlashControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraFlashControl
+PROCEDURE destroyObject() CLASS QCameraFlashControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_FLASHMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->flashMode () );
+      RENUM( obj->flashMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isFlashModeSupported ( (QCameraExposure::FlashModes) hb_parni(1) ) );
+      RBOOL( obj->isFlashModeSupported( (QCameraExposure::FlashModes) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHREADY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFlashReady () );
+      RBOOL( obj->isFlashReady() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFlashMode ( (QCameraExposure::FlashModes) hb_parni(1) );
+      obj->setFlashMode( (QCameraExposure::FlashModes) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCameraFlashControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCameraFlashControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ONFLASHREADY )
 {

@@ -61,7 +61,7 @@ CLASS QMediaPlaylist INHERIT QObject,QMediaBindableInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaPlaylist
+PROCEDURE destroyObject() CLASS QMediaPlaylist
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QMediaPlaylist * o = new QMediaPlaylist ( OPQOBJECT(1,0) );
+    QMediaPlaylist * o = new QMediaPlaylist( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -110,8 +110,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PLAYBACKMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->playbackMode () );
+      RENUM( obj->playbackMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SETPLAYBACKMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPlaybackMode ( (QMediaPlaylist::PlaybackMode) hb_parni(1) );
+      obj->setPlaybackMode( (QMediaPlaylist::PlaybackMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,8 +186,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTMEDIA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaContent * ptr = new QMediaContent( obj->currentMedia () );
-      _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT", true );
+      QMediaContent * ptr = new QMediaContent( obj->currentMedia() );
+      _qt5xhb_createReturnClass( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->currentIndex () );
+      RINT( obj->currentIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SETCURRENTINDEX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCurrentIndex ( PINT(1) );
+      obj->setCurrentIndex( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,20 +251,20 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SETCURRENTINDEX )
 /*
 bool addMedia(const QMediaContent & content)
 */
-void QMediaPlaylist_addMedia1 ()
+void QMediaPlaylist_addMedia1()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->addMedia ( *PQMEDIACONTENT(1) ) );
+    RBOOL( obj->addMedia( *PQMEDIACONTENT(1) ) );
   }
 }
 
 /*
 bool addMedia(const QList<QMediaContent> & items)
 */
-void QMediaPlaylist_addMedia2 ()
+void QMediaPlaylist_addMedia2()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -278,7 +278,7 @@ void QMediaPlaylist_addMedia2 ()
     {
       par1 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    RBOOL( obj->addMedia ( par1 ) );
+    RBOOL( obj->addMedia( par1 ) );
   }
 }
 
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->clear () );
+      RBOOL( obj->clear() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,20 +376,20 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ERRORSTRING )
 /*
 bool insertMedia(int pos, const QMediaContent & content)
 */
-void QMediaPlaylist_insertMedia1 ()
+void QMediaPlaylist_insertMedia1()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->insertMedia ( PINT(1), *PQMEDIACONTENT(2) ) );
+    RBOOL( obj->insertMedia( PINT(1), *PQMEDIACONTENT(2) ) );
   }
 }
 
 /*
 bool insertMedia(int pos, const QList<QMediaContent> & items)
 */
-void QMediaPlaylist_insertMedia2 ()
+void QMediaPlaylist_insertMedia2()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -403,7 +403,7 @@ void QMediaPlaylist_insertMedia2 ()
     {
       par2 << *(QMediaContent *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
-    RBOOL( obj->insertMedia ( PINT(1), par2 ) );
+    RBOOL( obj->insertMedia( PINT(1), par2 ) );
   }
 }
 
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ISREADONLY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReadOnly () );
+      RBOOL( obj->isReadOnly() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -477,13 +477,13 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_ISREADONLY )
 /*
 void load(const QNetworkRequest & request, const char * format = Q_NULLPTR)
 */
-void QMediaPlaylist_load1 ()
+void QMediaPlaylist_load1()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->load ( *PQNETWORKREQUEST(1), OPCONSTCHAR(2,0) );
+    obj->load( *PQNETWORKREQUEST(1), OPCONSTCHAR(2,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -492,13 +492,13 @@ void QMediaPlaylist_load1 ()
 /*
 void load(const QUrl & location, const char * format = Q_NULLPTR)
 */
-void QMediaPlaylist_load2 ()
+void QMediaPlaylist_load2()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->load ( *PQURL(1), OPCONSTCHAR(2,0) );
+    obj->load( *PQURL(1), OPCONSTCHAR(2,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -507,13 +507,13 @@ void QMediaPlaylist_load2 ()
 /*
 void load(QIODevice * device, const char * format = Q_NULLPTR)
 */
-void QMediaPlaylist_load3 ()
+void QMediaPlaylist_load3()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->load ( PQIODEVICE(1), OPCONSTCHAR(2,0) );
+    obj->load( PQIODEVICE(1), OPCONSTCHAR(2,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -556,8 +556,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIA )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QMediaContent * ptr = new QMediaContent( obj->media ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT", true );
+      QMediaContent * ptr = new QMediaContent( obj->media( PINT(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIACOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->mediaCount () );
+      RINT( obj->mediaCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXTINDEX )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RINT( obj->nextIndex ( OPINT(1,1) ) );
+      RINT( obj->nextIndex( OPINT(1,1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RINT( obj->previousIndex ( OPINT(1,1) ) );
+      RINT( obj->previousIndex( OPINT(1,1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,26 +643,26 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUSINDEX )
 /*
 bool removeMedia(int pos)
 */
-void QMediaPlaylist_removeMedia1 ()
+void QMediaPlaylist_removeMedia1()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->removeMedia ( PINT(1) ) );
+    RBOOL( obj->removeMedia( PINT(1) ) );
   }
 }
 
 /*
 bool removeMedia(int start, int end)
 */
-void QMediaPlaylist_removeMedia2 ()
+void QMediaPlaylist_removeMedia2()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->removeMedia ( PINT(1), PINT(2) ) );
+    RBOOL( obj->removeMedia( PINT(1), PINT(2) ) );
   }
 }
 
@@ -688,26 +688,26 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA )
 /*
 bool save(const QUrl & location, const char * format = Q_NULLPTR)
 */
-void QMediaPlaylist_save1 ()
+void QMediaPlaylist_save1()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->save ( *PQURL(1), OPCONSTCHAR(2,0) ) );
+    RBOOL( obj->save( *PQURL(1), OPCONSTCHAR(2,0) ) );
   }
 }
 
 /*
 bool save(QIODevice * device, const char * format)
 */
-void QMediaPlaylist_save2 ()
+void QMediaPlaylist_save2()
 {
   QMediaPlaylist * obj = (QMediaPlaylist *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->save ( PQIODEVICE(1), PCONSTCHAR(2) ) );
+    RBOOL( obj->save( PQIODEVICE(1), PCONSTCHAR(2) ) );
   }
 }
 
@@ -743,8 +743,8 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MEDIAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      QMediaObject * ptr = obj->mediaObject();
+      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->next ();
+      obj->next();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_PREVIOUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->previous ();
+      obj->previous();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_SHUFFLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->shuffle ();
+      obj->shuffle();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      RBOOL( obj->moveMedia ( PINT(1), PINT(2) ) );
+      RBOOL( obj->moveMedia( PINT(1), PINT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
 bool setMediaObject(QMediaObject *object) override [protected]
 */
 
-void QMediaPlaylistSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMediaPlaylistSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )
 {

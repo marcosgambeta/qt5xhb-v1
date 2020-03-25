@@ -25,7 +25,7 @@ void QMediaGaplessPlaybackControlSlots::advancedToNextMedia()
   PHB_ITEM cb = Signals_return_codeblock( object, "advancedToNextMedia()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QMediaGaplessPlaybackControlSlots::crossfadeTimeChanged( qreal crossfadeTim
   PHB_ITEM cb = Signals_return_codeblock( object, "crossfadeTimeChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
     PHB_ITEM pcrossfadeTime = hb_itemPutND( NULL, crossfadeTime );
     hb_vmEvalBlockV( cb, 2, psender, pcrossfadeTime );
     hb_itemRelease( psender );
@@ -49,7 +49,7 @@ void QMediaGaplessPlaybackControlSlots::nextMediaChanged( const QMediaContent & 
   PHB_ITEM cb = Signals_return_codeblock( object, "nextMediaChanged(QMediaContent)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
     PHB_ITEM pmedia = Signals_return_object( (void *) &media, "QMEDIACONTENT" );
     hb_vmEvalBlockV( cb, 2, psender, pmedia );
     hb_itemRelease( psender );
@@ -57,7 +57,7 @@ void QMediaGaplessPlaybackControlSlots::nextMediaChanged( const QMediaContent & 
   }
 }
 
-void QMediaGaplessPlaybackControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QMediaGaplessPlaybackControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

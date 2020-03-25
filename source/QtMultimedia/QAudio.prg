@@ -32,7 +32,7 @@ CLASS QAudio
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudio
+PROCEDURE destroyObject() CLASS QAudio
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
   {
 #endif
-    RQREAL( QAudio::convertVolume ( PQREAL(1), (QAudio::VolumeScale) hb_parni(2), (QAudio::VolumeScale) hb_parni(3) ) );
+    RQREAL( QAudio::convertVolume( PQREAL(1), (QAudio::VolumeScale) hb_parni(2), (QAudio::VolumeScale) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

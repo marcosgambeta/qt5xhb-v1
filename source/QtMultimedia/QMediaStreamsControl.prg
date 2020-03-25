@@ -32,7 +32,7 @@ CLASS QMediaStreamsControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaStreamsControl
+PROCEDURE destroyObject() CLASS QMediaStreamsControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isActive ( PINT(1) ) );
+      RBOOL( obj->isActive( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,8 +115,8 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->metaData ( PINT(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->metaData( PINT(1), PQSTRING(2) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_SETACTIVE )
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
     {
 #endif
-      obj->setActive ( PINT(1), PBOOL(2) );
+      obj->setActive( PINT(1), PBOOL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->streamCount () );
+      RINT( obj->streamCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RENUM( obj->streamType ( PINT(1) ) );
+      RENUM( obj->streamType( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
   }
 }
 
-void QMediaStreamsControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMediaStreamsControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ONACTIVESTREAMSCHANGED )
 {

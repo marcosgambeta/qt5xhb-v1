@@ -44,7 +44,7 @@ CLASS QImageEncoderSettings
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QImageEncoderSettings
+PROCEDURE destroyObject() CLASS QImageEncoderSettings
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,18 +69,18 @@ RETURN
 /*
 QImageEncoderSettings()
 */
-void QImageEncoderSettings_new1 ()
+void QImageEncoderSettings_new1()
 {
-  QImageEncoderSettings * o = new QImageEncoderSettings ();
+  QImageEncoderSettings * o = new QImageEncoderSettings();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QImageEncoderSettings(const QImageEncoderSettings& other)
 */
-void QImageEncoderSettings_new2 ()
+void QImageEncoderSettings_new2()
 {
-  QImageEncoderSettings * o = new QImageEncoderSettings ( *PQIMAGEENCODERSETTINGS(1) );
+  QImageEncoderSettings * o = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_CODEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->codec () );
+      RQSTRING( obj->codec() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETCODEC )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCodec ( PQSTRING(1) );
+      obj->setCodec( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,8 +210,8 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->resolution () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->resolution() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,13 +225,13 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
 /*
 void setResolution(const QSize &)
 */
-void QImageEncoderSettings_setResolution1 ()
+void QImageEncoderSettings_setResolution1()
 {
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setResolution ( *PQSIZE(1) );
+    obj->setResolution( *PQSIZE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -240,13 +240,13 @@ void QImageEncoderSettings_setResolution1 ()
 /*
 void setResolution(int width, int height)
 */
-void QImageEncoderSettings_setResolution2 ()
+void QImageEncoderSettings_setResolution2()
 {
   QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setResolution ( PINT(1), PINT(2) );
+    obj->setResolution( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_QUALITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->quality () );
+      RENUM( obj->quality() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETQUALITY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setQuality ( (QMultimedia::EncodingQuality) hb_parni(1) );
+      obj->setQuality( (QMultimedia::EncodingQuality) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,8 +334,8 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ENCODINGOPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->encodingOption ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->encodingOption( PQSTRING(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETENCODINGOPTION )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setEncodingOption ( PQSTRING(1), *PQVARIANT(2) );
+      obj->setEncodingOption( PQSTRING(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

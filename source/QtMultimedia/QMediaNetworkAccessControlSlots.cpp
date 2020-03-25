@@ -25,7 +25,7 @@ void QMediaNetworkAccessControlSlots::configurationChanged( const QNetworkConfig
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIANETWORKACCESSCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIANETWORKACCESSCONTROL" );
     PHB_ITEM pconfiguration = Signals_return_object( (void *) &configuration, "QNETWORKCONFIGURATION" );
     hb_vmEvalBlockV( cb, 2, psender, pconfiguration );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QMediaNetworkAccessControlSlots::configurationChanged( const QNetworkConfig
   }
 }
 
-void QMediaNetworkAccessControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QMediaNetworkAccessControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QMediaNetworkAccessControl * obj = (QMediaNetworkAccessControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

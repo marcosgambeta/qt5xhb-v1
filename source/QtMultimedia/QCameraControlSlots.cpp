@@ -25,7 +25,7 @@ void QCameraControlSlots::captureModeChanged( QCamera::CaptureModes mode )
   PHB_ITEM cb = Signals_return_codeblock( object, "captureModeChanged(QCamera::CaptureModes)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERACONTROL" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
     hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QCameraControlSlots::error( int error, const QString & errorString )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(int,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERACONTROL" );
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
     hb_vmEvalBlockV( cb, 3, psender, perror, perrorString );
@@ -53,7 +53,7 @@ void QCameraControlSlots::stateChanged( QCamera::State state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QCamera::State)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERACONTROL" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
     hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -66,7 +66,7 @@ void QCameraControlSlots::statusChanged( QCamera::Status status )
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QCamera::Status)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERACONTROL" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -74,7 +74,7 @@ void QCameraControlSlots::statusChanged( QCamera::Status status )
   }
 }
 
-void QCameraControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QCameraControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QCameraControl * obj = (QCameraControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

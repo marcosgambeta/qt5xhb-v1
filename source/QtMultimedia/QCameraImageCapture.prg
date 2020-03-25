@@ -56,7 +56,7 @@ CLASS QCameraImageCapture INHERIT QObject,QMediaBindableInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraImageCapture
+PROCEDURE destroyObject() CLASS QCameraImageCapture
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
 {
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QCameraImageCapture * o = new QCameraImageCapture ( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
+    QCameraImageCapture * o = new QCameraImageCapture( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISREADYFORCAPTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReadyForCapture () );
+      RBOOL( obj->isReadyForCapture() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_AVAILABILITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->availability () );
+      RENUM( obj->availability() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_BUFFERFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->bufferFormat () );
+      RENUM( obj->bufferFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTUREDESTINATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->captureDestination () );
+      RENUM( obj->captureDestination() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,8 +223,8 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ENCODINGSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->encodingSettings () );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS", true );
+      QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->encodingSettings() );
+      _qt5xhb_createReturnClass( ptr, "QIMAGEENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->imageCodecDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->imageCodecDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAvailable () );
+      RBOOL( obj->isAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isCaptureDestinationSupported ( (QCameraImageCapture::CaptureDestinations) hb_parni(1) ) );
+      RBOOL( obj->isCaptureDestinationSupported( (QCameraImageCapture::CaptureDestinations) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,8 +368,8 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_MEDIAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      QMediaObject * ptr = obj->mediaObject();
+      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBufferFormat ( (QVideoFrame::PixelFormat) hb_parni(1) );
+      obj->setBufferFormat( (QVideoFrame::PixelFormat) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCaptureDestination ( (QCameraImageCapture::CaptureDestinations) hb_parni(1) );
+      obj->setCaptureDestination( (QCameraImageCapture::CaptureDestinations) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETENCODINGSETTINGS )
     if( ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1) )
     {
 #endif
-      obj->setEncodingSettings ( *PQIMAGEENCODERSETTINGS(1) );
+      obj->setEncodingSettings( *PQIMAGEENCODERSETTINGS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats ();
+      QList<QVideoFrame::PixelFormat> list = obj->supportedBufferFormats();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->supportedImageCodecs () );
+      RQSTRINGLIST( obj->supportedImageCodecs() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions ( ISNIL(1)? QImageEncoderSettings() : *(QImageEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
+      QList<QSize> list = obj->supportedResolutions( ISNIL(1)? QImageEncoderSettings() : *(QImageEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CANCELCAPTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cancelCapture ();
+      obj->cancelCapture();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
     if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
     {
 #endif
-      RINT( obj->capture ( OPQSTRING(1,QString()) ) );
+      RINT( obj->capture( OPQSTRING(1,QString()) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
 bool setMediaObject(QMediaObject *) override [protected]
 */
 
-void QCameraImageCaptureSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCameraImageCaptureSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )
 {

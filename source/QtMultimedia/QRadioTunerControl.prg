@@ -60,7 +60,7 @@ CLASS QRadioTunerControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRadioTunerControl
+PROCEDURE destroyObject() CLASS QRadioTunerControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_BAND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->band () );
+      RENUM( obj->band() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETBAND )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBand ( (QRadioTuner::Band) hb_parni(1) );
+      obj->setBand( (QRadioTuner::Band) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISBANDSUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isBandSupported ( (QRadioTuner::Band) hb_parni(1) ) );
+      RBOOL( obj->isBandSupported( (QRadioTuner::Band) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->frequency () );
+      RINT( obj->frequency() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_FREQUENCYSTEP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->frequencyStep ( (QRadioTuner::Band) hb_parni(1) ) );
+      RINT( obj->frequencyStep( (QRadioTuner::Band) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETFREQUENCY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFrequency ( PINT(1) );
+      obj->setFrequency( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSTEREO )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isStereo () );
+      RBOOL( obj->isStereo() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STEREOMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->stereoMode () );
+      RENUM( obj->stereoMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETSTEREOMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStereoMode ( (QRadioTuner::StereoMode) hb_parni(1) );
+      obj->setStereoMode( (QRadioTuner::StereoMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SIGNALSTRENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->signalStrength () );
+      RINT( obj->signalStrength() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_VOLUME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->volume () );
+      RINT( obj->volume() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETVOLUME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setVolume ( PINT(1) );
+      obj->setVolume( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISMUTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMuted () );
+      RBOOL( obj->isMuted() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SETMUTED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setMuted ( PBOOL(1) );
+      obj->setMuted( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISSEARCHING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSearching () );
+      RBOOL( obj->isSearching() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ISANTENNACONNECTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAntennaConnected () );
+      RBOOL( obj->isAntennaConnected() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHFORWARD )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->searchForward ();
+      obj->searchForward();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHBACKWARD )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->searchBackward ();
+      obj->searchBackward();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_SEARCHALLSTATIONS )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      obj->searchAllStations ( ISNIL(1)? (QRadioTuner::SearchMode) QRadioTuner::SearchFast : (QRadioTuner::SearchMode) hb_parni(1) );
+      obj->searchAllStations( ISNIL(1)? (QRadioTuner::SearchMode) QRadioTuner::SearchFast : (QRadioTuner::SearchMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_CANCELSEARCH )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cancelSearch ();
+      obj->cancelSearch();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_START )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->start ();
+      obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QRADIOTUNERCONTROL_ERRORSTRING )
 virtual QPair<int,int> frequencyRange(QRadioTuner::Band b) const = 0
 */
 
-void QRadioTunerControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QRadioTunerControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_ONSTATECHANGED )
 {

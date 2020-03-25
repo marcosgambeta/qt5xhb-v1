@@ -30,7 +30,7 @@ CLASS QImageEncoderControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QImageEncoderControl
+PROCEDURE destroyObject() CLASS QImageEncoderControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDIMAGECODECS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->supportedImageCodecs () );
+      RQSTRINGLIST( obj->supportedImageCodecs() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGECODECDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->imageCodecDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->imageCodecDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions ( *PQIMAGEENCODERSETTINGS(1), &par2 );
+      QList<QSize> list = obj->supportedResolutions( *PQIMAGEENCODERSETTINGS(1), &par2 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SUPPORTEDRESOLUTIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -191,8 +191,8 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_IMAGESETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->imageSettings () );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGEENCODERSETTINGS", true );
+      QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->imageSettings() );
+      _qt5xhb_createReturnClass( ptr, "QIMAGEENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QIMAGEENCODERCONTROL_SETIMAGESETTINGS )
     if( ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1) )
     {
 #endif
-      obj->setImageSettings ( *PQIMAGEENCODERSETTINGS(1) );
+      obj->setImageSettings( *PQIMAGEENCODERSETTINGS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

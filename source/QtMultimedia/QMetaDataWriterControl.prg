@@ -34,7 +34,7 @@ CLASS QMetaDataWriterControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaDataWriterControl
+PROCEDURE destroyObject() CLASS QMetaDataWriterControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISWRITABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isWritable () );
+      RBOOL( obj->isWritable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ISMETADATAAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMetaDataAvailable () );
+      RBOOL( obj->isMetaDataAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,8 +141,8 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_METADATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->metaData ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_SETMETADATA )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setMetaData ( PQSTRING(1), *PQVARIANT(2) );
+      obj->setMetaData( PQSTRING(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_AVAILABLEMETADATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->availableMetaData () );
+      RQSTRINGLIST( obj->availableMetaData() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_AVAILABLEMETADATA )
   }
 }
 
-void QMetaDataWriterControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMetaDataWriterControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_ONMETADATACHANGED1 )
 {

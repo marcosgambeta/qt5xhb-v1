@@ -25,7 +25,7 @@ void QVideoProbeSlots::flush()
   PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOPROBE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIDEOPROBE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QVideoProbeSlots::videoFrameProbed( const QVideoFrame & frame )
   PHB_ITEM cb = Signals_return_codeblock( object, "videoFrameProbed(QVideoFrame)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIDEOPROBE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIDEOPROBE" );
     PHB_ITEM pframe = Signals_return_object( (void *) &frame, "QVIDEOFRAME" );
     hb_vmEvalBlockV( cb, 2, psender, pframe );
     hb_itemRelease( psender );
@@ -44,7 +44,7 @@ void QVideoProbeSlots::videoFrameProbed( const QVideoFrame & frame )
   }
 }
 
-void QVideoProbeSlots_connect_signal ( const QString & signal, const QString & slot )
+void QVideoProbeSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QVideoProbe * obj = (QVideoProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

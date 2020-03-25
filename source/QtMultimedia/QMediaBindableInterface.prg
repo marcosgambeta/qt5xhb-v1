@@ -34,7 +34,7 @@ CLASS QMediaBindableInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaBindableInterface
+PROCEDURE destroyObject() CLASS QMediaBindableInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_MEDIAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      QMediaObject * ptr = obj->mediaObject();
+      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

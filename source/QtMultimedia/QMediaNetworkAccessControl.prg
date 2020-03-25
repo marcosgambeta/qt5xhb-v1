@@ -28,7 +28,7 @@ CLASS QMediaNetworkAccessControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaNetworkAccessControl
+PROCEDURE destroyObject() CLASS QMediaNetworkAccessControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -87,8 +87,8 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->currentConfiguration () );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->currentConfiguration() );
+      _qt5xhb_createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS )
       {
         par1 << *(QNetworkConfiguration *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setConfigurations ( par1 );
+      obj->setConfigurations( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QMediaNetworkAccessControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMediaNetworkAccessControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_ONCONFIGURATIONCHANGED )
 {

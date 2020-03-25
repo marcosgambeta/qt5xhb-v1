@@ -29,7 +29,7 @@ CLASS QCameraLocksControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraLocksControl
+PROCEDURE destroyObject() CLASS QCameraLocksControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_LOCKSTATUS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RENUM( obj->lockStatus ( (QCamera::LockType) hb_parni(1) ) );
+      RENUM( obj->lockStatus( (QCamera::LockType) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SEARCHANDLOCK )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->searchAndLock ( (QCamera::LockTypes) hb_parni(1) );
+      obj->searchAndLock( (QCamera::LockTypes) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SUPPORTEDLOCKS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->supportedLocks () );
+      RENUM( obj->supportedLocks() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_UNLOCK )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->unlock ( (QCamera::LockTypes) hb_parni(1) );
+      obj->unlock( (QCamera::LockTypes) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_UNLOCK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QCameraLocksControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QCameraLocksControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_ONLOCKSTATUSCHANGED )
 {

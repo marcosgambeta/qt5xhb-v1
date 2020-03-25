@@ -25,7 +25,7 @@ void QCameraFocusControlSlots::customFocusPointChanged( const QPointF & point )
   PHB_ITEM cb = Signals_return_codeblock( object, "customFocusPointChanged(QPointF)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUSCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFOCUSCONTROL" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QCameraFocusControlSlots::focusModeChanged( QCameraFocus::FocusModes mode )
   PHB_ITEM cb = Signals_return_codeblock( object, "focusModeChanged(QCameraFocus::FocusModes)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUSCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFOCUSCONTROL" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
     hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QCameraFocusControlSlots::focusPointModeChanged( QCameraFocus::FocusPointMo
   PHB_ITEM cb = Signals_return_codeblock( object, "focusPointModeChanged(QCameraFocus::FocusPointMode)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUSCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFOCUSCONTROL" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
     hb_vmEvalBlockV( cb, 2, psender, pmode );
     hb_itemRelease( psender );
@@ -64,13 +64,13 @@ void QCameraFocusControlSlots::focusZonesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "focusZonesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFOCUSCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFOCUSCONTROL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QCameraFocusControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QCameraFocusControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QCameraFocusControl * obj = (QCameraFocusControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

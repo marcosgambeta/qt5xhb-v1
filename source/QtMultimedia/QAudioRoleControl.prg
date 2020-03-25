@@ -26,7 +26,7 @@ CLASS QAudioRoleControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudioRoleControl
+PROCEDURE destroyObject() CLASS QAudioRoleControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->audioRole () );
+      RENUM( obj->audioRole() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAudioRole ( (QAudio::Role) hb_parni(1) );
+      obj->setAudioRole( (QAudio::Role) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_SUPPORTEDAUDIOROLES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QAudio::Role> list = obj->supportedAudioRoles ();
+      QList<QAudio::Role> list = obj->supportedAudioRoles();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {

@@ -35,7 +35,7 @@ CLASS QMediaServiceSupportedDevicesInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaServiceSupportedDevicesInterface
+PROCEDURE destroyObject() CLASS QMediaServiceSupportedDevicesInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) )
     {
 #endif
-      RQSTRING( obj->deviceDescription ( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
+      RQSTRING( obj->deviceDescription( *PQBYTEARRAY(1), *PQBYTEARRAY(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      QList<QByteArray> list = obj->devices ( *PQBYTEARRAY(1) );
+      QList<QByteArray> list = obj->devices( *PQBYTEARRAY(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );

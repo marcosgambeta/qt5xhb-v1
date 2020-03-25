@@ -33,7 +33,7 @@ CLASS QMediaServiceProviderFactoryInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaServiceProviderFactoryInterface
+PROCEDURE destroyObject() CLASS QMediaServiceProviderFactoryInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERFACTORYINTERFACE_RELEASE )
     if( ISNUMPAR(1) && ISQMEDIASERVICE(1) )
     {
 #endif
-      obj->release ( PQMEDIASERVICE(1) );
+      obj->release( PQMEDIASERVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

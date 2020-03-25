@@ -31,7 +31,7 @@ CLASS QMetaDataReaderControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaDataReaderControl
+PROCEDURE destroyObject() CLASS QMetaDataReaderControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_ISMETADATAAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMetaDataAvailable () );
+      RBOOL( obj->isMetaDataAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,8 +114,8 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_METADATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->metaData ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->availableMetaData () );
+      RQSTRINGLIST( obj->availableMetaData() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QMETADATAREADERCONTROL_AVAILABLEMETADATA )
   }
 }
 
-void QMetaDataReaderControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMetaDataReaderControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_ONMETADATACHANGED1 )
 {

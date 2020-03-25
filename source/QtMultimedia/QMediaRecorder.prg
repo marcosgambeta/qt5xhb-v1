@@ -83,7 +83,7 @@ CLASS QMediaRecorder INHERIT QObject,QMediaBindableInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaRecorder
+PROCEDURE destroyObject() CLASS QMediaRecorder
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_NEW )
 {
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QMediaRecorder * o = new QMediaRecorder ( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
+    QMediaRecorder * o = new QMediaRecorder( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -138,8 +138,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_DURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->duration () );
+      RQINT64( obj->duration() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,8 +236,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_OUTPUTLOCATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->outputLocation () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->outputLocation() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETOUTPUTLOCATION )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      RBOOL( obj->setOutputLocation ( *PQURL(1) ) );
+      RBOOL( obj->setOutputLocation( *PQURL(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,8 +285,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_ACTUALLOCATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->actualLocation () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->actualLocation() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ISMUTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMuted () );
+      RBOOL( obj->isMuted() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETMUTED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setMuted ( PBOOL(1) );
+      obj->setMuted( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_VOLUME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->volume () );
+      RQREAL( obj->volume() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETVOLUME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setVolume ( PQREAL(1) );
+      obj->setVolume( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ISMETADATAAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMetaDataAvailable () );
+      RBOOL( obj->isMetaDataAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ISMETADATAWRITABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMetaDataWritable () );
+      RBOOL( obj->isMetaDataWritable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AUDIOCODECDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->audioCodecDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->audioCodecDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -482,8 +482,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_AUDIOSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings () );
-      _qt5xhb_createReturnClass ( ptr, "QAUDIOENCODERSETTINGS", true );
+      QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings() );
+      _qt5xhb_createReturnClass( ptr, "QAUDIOENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AVAILABILITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->availability () );
+      RENUM( obj->availability() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AVAILABLEMETADATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->availableMetaData () );
+      RQSTRINGLIST( obj->availableMetaData() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_CONTAINERDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->containerDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->containerDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_CONTAINERFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->containerFormat () );
+      RQSTRING( obj->containerFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ISAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAvailable () );
+      RBOOL( obj->isAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -675,8 +675,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_METADATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->metaData ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETAUDIOSETTINGS )
     if( ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1) )
     {
 #endif
-      obj->setAudioSettings ( *PQAUDIOENCODERSETTINGS(1) );
+      obj->setAudioSettings( *PQAUDIOENCODERSETTINGS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETCONTAINERFORMAT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setContainerFormat ( PQSTRING(1) );
+      obj->setContainerFormat( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETENCODINGSETTINGS )
     if( ISBETWEEN(1,3) && ISQAUDIOENCODERSETTINGS(1) && (ISQVIDEOENCODERSETTINGS(2)||ISNIL(2)) && ISOPTCHAR(3) )
     {
 #endif
-      obj->setEncodingSettings ( *PQAUDIOENCODERSETTINGS(1), ISNIL(2)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(2), OPQSTRING(3,QString()) );
+      obj->setEncodingSettings( *PQAUDIOENCODERSETTINGS(1), ISNIL(2)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(2), OPQSTRING(3,QString()) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETMETADATA )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setMetaData ( PQSTRING(1), *PQVARIANT(2) );
+      obj->setMetaData( PQSTRING(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETVIDEOSETTINGS )
     if( ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1) )
     {
 #endif
-      obj->setVideoSettings ( *PQVIDEOENCODERSETTINGS(1) );
+      obj->setVideoSettings( *PQVIDEOENCODERSETTINGS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDAUDIOCODECS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->supportedAudioCodecs () );
+      RQSTRINGLIST( obj->supportedAudioCodecs() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -855,8 +855,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDAUDIOSAMPLERATES )
     {
 #endif
       bool par2;
-      QList<int> list = obj->supportedAudioSampleRates ( ISNIL(1)? QAudioEncoderSettings() : *(QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      QList<int> list = obj->supportedAudioSampleRates( ISNIL(1)? QAudioEncoderSettings() : *(QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
+      _qt5xhb_convert_qlist_int_to_array( list );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDCONTAINERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->supportedContainers () );
+      RQSTRINGLIST( obj->supportedContainers() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -906,8 +906,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDFRAMERATES )
     {
 #endif
       bool par2;
-      QList<qreal> list = obj->supportedFrameRates ( ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
-      _qt5xhb_convert_qlist_qreal_to_array ( list );
+      QList<qreal> list = obj->supportedFrameRates( ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
+      _qt5xhb_convert_qlist_qreal_to_array( list );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions ( ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
+      QList<QSize> list = obj->supportedResolutions( ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDRESOLUTIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -986,7 +986,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDVIDEOCODECS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->supportedVideoCodecs () );
+      RQSTRINGLIST( obj->supportedVideoCodecs() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_VIDEOCODECDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->videoCodecDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->videoCodecDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1034,8 +1034,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_VIDEOSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings () );
-      _qt5xhb_createReturnClass ( ptr, "QVIDEOENCODERSETTINGS", true );
+      QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings() );
+      _qt5xhb_createReturnClass( ptr, "QVIDEOENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1059,8 +1059,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_MEDIAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaObject * ptr = obj->mediaObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIAOBJECT" );
+      QMediaObject * ptr = obj->mediaObject();
+      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_PAUSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->pause ();
+      obj->pause();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_RECORD )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->record ();
+      obj->record();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1153,7 +1153,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_STOP )
 bool setMediaObject(QMediaObject *object) override [protected]
 */
 
-void QMediaRecorderSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMediaRecorderSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMEDIARECORDER_ONACTUALLOCATIONCHANGED )
 {

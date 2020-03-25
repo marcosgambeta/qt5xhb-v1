@@ -25,7 +25,7 @@ void QCameraCaptureDestinationControlSlots::captureDestinationChanged( QCameraIm
   PHB_ITEM cb = Signals_return_codeblock( object, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERACAPTUREDESTINATIONCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERACAPTUREDESTINATIONCONTROL" );
     PHB_ITEM pdestination = hb_itemPutNI( NULL, (int) destination );
     hb_vmEvalBlockV( cb, 2, psender, pdestination );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QCameraCaptureDestinationControlSlots::captureDestinationChanged( QCameraIm
   }
 }
 
-void QCameraCaptureDestinationControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QCameraCaptureDestinationControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

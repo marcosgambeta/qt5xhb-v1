@@ -25,7 +25,7 @@ void QMediaRecorderControlSlots::actualLocationChanged( const QUrl & location )
   PHB_ITEM cb = Signals_return_codeblock( object, "actualLocationChanged(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
     PHB_ITEM plocation = Signals_return_object( (void *) &location, "QURL" );
     hb_vmEvalBlockV( cb, 2, psender, plocation );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QMediaRecorderControlSlots::durationChanged( qint64 duration )
   PHB_ITEM cb = Signals_return_codeblock( object, "durationChanged(qint64)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
     PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
     hb_vmEvalBlockV( cb, 2, psender, pduration );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QMediaRecorderControlSlots::error( int error, const QString & errorString )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(int,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
     hb_vmEvalBlockV( cb, 3, psender, perror, perrorString );
@@ -66,7 +66,7 @@ void QMediaRecorderControlSlots::mutedChanged( bool muted )
   PHB_ITEM cb = Signals_return_codeblock( object, "mutedChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
     PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
     hb_vmEvalBlockV( cb, 2, psender, pmuted );
     hb_itemRelease( psender );
@@ -79,7 +79,7 @@ void QMediaRecorderControlSlots::stateChanged( QMediaRecorder::State state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QMediaRecorder::State)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
     hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -92,7 +92,7 @@ void QMediaRecorderControlSlots::statusChanged( QMediaRecorder::Status status )
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QMediaRecorder::Status)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -105,7 +105,7 @@ void QMediaRecorderControlSlots::volumeChanged( qreal gain )
   PHB_ITEM cb = Signals_return_codeblock( object, "volumeChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
     PHB_ITEM pgain = hb_itemPutND( NULL, gain );
     hb_vmEvalBlockV( cb, 2, psender, pgain );
     hb_itemRelease( psender );
@@ -113,7 +113,7 @@ void QMediaRecorderControlSlots::volumeChanged( qreal gain )
   }
 }
 
-void QMediaRecorderControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QMediaRecorderControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QMediaRecorderControl * obj = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

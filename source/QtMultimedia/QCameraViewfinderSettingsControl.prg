@@ -27,7 +27,7 @@ CLASS QCameraViewfinderSettingsControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCameraViewfinderSettingsControl
+PROCEDURE destroyObject() CLASS QCameraViewfinderSettingsControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED 
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isViewfinderParameterSupported ( (QCameraViewfinderSettingsControl::ViewfinderParameter) hb_parni(1) ) );
+      RBOOL( obj->isViewfinderParameterSupported( (QCameraViewfinderSettingsControl::ViewfinderParameter) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setViewfinderParameter ( (QCameraViewfinderSettingsControl::ViewfinderParameter) hb_parni(1), *PQVARIANT(2) );
+      obj->setViewfinderParameter( (QCameraViewfinderSettingsControl::ViewfinderParameter) hb_parni(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,8 +136,8 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_VIEWFINDERPARAMETER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->viewfinderParameter ( (QCameraViewfinderSettingsControl::ViewfinderParameter) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->viewfinderParameter( (QCameraViewfinderSettingsControl::ViewfinderParameter) hb_parni(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

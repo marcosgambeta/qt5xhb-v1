@@ -25,7 +25,7 @@ void QMediaAudioProbeControlSlots::audioBufferProbed( const QAudioBuffer & buffe
   PHB_ITEM cb = Signals_return_codeblock( object, "audioBufferProbed(QAudioBuffer)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
     PHB_ITEM pbuffer = Signals_return_object( (void *) &buffer, "QAUDIOBUFFER" );
     hb_vmEvalBlockV( cb, 2, psender, pbuffer );
     hb_itemRelease( psender );
@@ -38,13 +38,13 @@ void QMediaAudioProbeControlSlots::flush()
   PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QMediaAudioProbeControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QMediaAudioProbeControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QMediaAudioProbeControl * obj = (QMediaAudioProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

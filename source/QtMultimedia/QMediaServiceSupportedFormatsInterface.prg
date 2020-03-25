@@ -34,7 +34,7 @@ CLASS QMediaServiceSupportedFormatsInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaServiceSupportedFormatsInterface
+PROCEDURE destroyObject() CLASS QMediaServiceSupportedFormatsInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_HASSUPPORT )
     if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
     {
 #endif
-      RENUM( obj->hasSupport ( PQSTRING(1), PQSTRINGLIST(2) ) );
+      RENUM( obj->hasSupport( PQSTRING(1), PQSTRINGLIST(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_SUPPORTEDMIMETYPES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->supportedMimeTypes () );
+      RQSTRINGLIST( obj->supportedMimeTypes() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

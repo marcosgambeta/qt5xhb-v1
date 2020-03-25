@@ -33,7 +33,7 @@ CLASS QMediaGaplessPlaybackControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaGaplessPlaybackControl
+PROCEDURE destroyObject() CLASS QMediaGaplessPlaybackControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->crossfadeTime () );
+      RQREAL( obj->crossfadeTime() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCrossfadeSupported () );
+      RBOOL( obj->isCrossfadeSupported() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,8 +140,8 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaContent * ptr = new QMediaContent( obj->nextMedia () );
-      _qt5xhb_createReturnClass ( ptr, "QMEDIACONTENT", true );
+      QMediaContent * ptr = new QMediaContent( obj->nextMedia() );
+      _qt5xhb_createReturnClass( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCrossfadeTime ( PQREAL(1) );
+      obj->setCrossfadeTime( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
     if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
     {
 #endif
-      obj->setNextMedia ( *PQMEDIACONTENT(1) );
+      obj->setNextMedia( *PQMEDIACONTENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QMediaGaplessPlaybackControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMediaGaplessPlaybackControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ONADVANCEDTONEXTMEDIA )
 {

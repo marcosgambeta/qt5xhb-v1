@@ -25,7 +25,7 @@ void QCameraFlashControlSlots::flashReady( bool ready )
   PHB_ITEM cb = Signals_return_codeblock( object, "flashReady(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERAFLASHCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFLASHCONTROL" );
     PHB_ITEM pready = hb_itemPutL( NULL, ready );
     hb_vmEvalBlockV( cb, 2, psender, pready );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QCameraFlashControlSlots::flashReady( bool ready )
   }
 }
 
-void QCameraFlashControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QCameraFlashControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QCameraFlashControl * obj = (QCameraFlashControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

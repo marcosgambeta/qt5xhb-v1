@@ -31,7 +31,7 @@ CLASS QVideoEncoderSettingsControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVideoEncoderSettingsControl
+PROCEDURE destroyObject() CLASS QVideoEncoderSettingsControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS )
     if( ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1) )
     {
 #endif
-      obj->setVideoSettings ( *PQVIDEOENCODERSETTINGS(1) );
+      obj->setVideoSettings( *PQVIDEOENCODERSETTINGS(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,8 +117,8 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
     {
 #endif
       bool par2;
-      QList<qreal> list = obj->supportedFrameRates ( *PQVIDEOENCODERSETTINGS(1), &par2 );
-      _qt5xhb_convert_qlist_qreal_to_array ( list );
+      QList<qreal> list = obj->supportedFrameRates( *PQVIDEOENCODERSETTINGS(1), &par2 );
+      _qt5xhb_convert_qlist_qreal_to_array( list );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions ( *PQVIDEOENCODERSETTINGS(1), &par2 );
+      QList<QSize> list = obj->supportedResolutions( *PQVIDEOENCODERSETTINGS(1), &par2 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSize *) new QSize ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->supportedVideoCodecs () );
+      RQSTRINGLIST( obj->supportedVideoCodecs() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->videoCodecDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->videoCodecDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,8 +245,8 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOSETTINGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings () );
-      _qt5xhb_createReturnClass ( ptr, "QVIDEOENCODERSETTINGS", true );
+      QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings() );
+      _qt5xhb_createReturnClass( ptr, "QVIDEOENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

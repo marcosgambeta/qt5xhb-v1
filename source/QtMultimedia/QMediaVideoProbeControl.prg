@@ -26,7 +26,7 @@ CLASS QMediaVideoProbeControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaVideoProbeControl
+PROCEDURE destroyObject() CLASS QMediaVideoProbeControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QMediaVideoProbeControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMediaVideoProbeControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_ONFLUSH )
 {

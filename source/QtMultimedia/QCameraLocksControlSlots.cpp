@@ -25,7 +25,7 @@ void QCameraLocksControlSlots::lockStatusChanged( QCamera::LockType lock, QCamer
   PHB_ITEM cb = Signals_return_codeblock( object, "lockStatusChanged(QCamera::LockType,QCamera::LockStatus,QCamera::LockChangeReason)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCAMERALOCKSCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERALOCKSCONTROL" );
     PHB_ITEM plock = hb_itemPutNI( NULL, (int) lock );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
@@ -37,7 +37,7 @@ void QCameraLocksControlSlots::lockStatusChanged( QCamera::LockType lock, QCamer
   }
 }
 
-void QCameraLocksControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QCameraLocksControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QCameraLocksControl * obj = (QCameraLocksControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

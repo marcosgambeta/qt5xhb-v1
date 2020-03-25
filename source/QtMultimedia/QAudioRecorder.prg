@@ -32,7 +32,7 @@ CLASS QAudioRecorder INHERIT QMediaRecorder
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudioRecorder
+PROCEDURE destroyObject() CLASS QAudioRecorder
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QAudioRecorder * o = new QAudioRecorder ( OPQOBJECT(1,0) );
+    QAudioRecorder * o = new QAudioRecorder( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->audioInput () );
+      RQSTRING( obj->audioInput() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setAudioInput ( PQSTRING(1) );
+      obj->setAudioInput( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->audioInputDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->audioInputDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->audioInputs () );
+      RQSTRINGLIST( obj->audioInputs() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_DEFAULTAUDIOINPUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->defaultAudioInput () );
+      RQSTRING( obj->defaultAudioInput() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_DEFAULTAUDIOINPUT )
   }
 }
 
-void QAudioRecorderSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAudioRecorderSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QAUDIORECORDER_ONAUDIOINPUTCHANGED )
 {

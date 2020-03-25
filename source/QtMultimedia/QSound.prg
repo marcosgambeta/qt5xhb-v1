@@ -31,7 +31,7 @@ CLASS QSound INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSound
+PROCEDURE destroyObject() CLASS QSound
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QSOUND_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QSound * o = new QSound ( PQSTRING(1), OPQOBJECT(2,0) );
+    QSound * o = new QSound( PQSTRING(1), OPQOBJECT(2,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->loops () );
+      RINT( obj->loops() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->loopsRemaining () );
+      RINT( obj->loopsRemaining() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSOUND_SETLOOPS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLoops ( PINT(1) );
+      obj->setLoops( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSOUND_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinished () );
+      RBOOL( obj->isFinished() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSOUND_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,13 +240,13 @@ HB_FUNC_STATIC( QSOUND_STOP )
 /*
 void play()
 */
-void QSound_play1 ()
+void QSound_play1()
 {
   QSound * obj = (QSound *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->play ();
+    obj->play();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -255,10 +255,10 @@ void QSound_play1 ()
 /*
 static void play(const QString& filename)
 */
-void QSound_play2 ()
+void QSound_play2()
 {
 
-  QSound::play ( PQSTRING(1) );
+  QSound::play( PQSTRING(1) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }

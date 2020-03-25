@@ -29,7 +29,7 @@ CLASS QAudioProbe INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudioProbe
+PROCEDURE destroyObject() CLASS QAudioProbe
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QAudioProbe * o = new QAudioProbe ( OPQOBJECT(1,0) );
+    QAudioProbe * o = new QAudioProbe( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,26 +114,26 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
 /*
 bool setSource(QMediaObject * source)
 */
-void QAudioProbe_setSource1 ()
+void QAudioProbe_setSource1()
 {
   QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->setSource ( PQMEDIAOBJECT(1) ) );
+    RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
   }
 }
 
 /*
 bool setSource(QMediaRecorder * source)
 */
-void QAudioProbe_setSource2 ()
+void QAudioProbe_setSource2()
 {
   QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->setSource ( PQMEDIARECORDER(1) ) );
+    RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
   }
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
   }
 }
 
-void QAudioProbeSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAudioProbeSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QAUDIOPROBE_ONAUDIOBUFFERPROBED )
 {

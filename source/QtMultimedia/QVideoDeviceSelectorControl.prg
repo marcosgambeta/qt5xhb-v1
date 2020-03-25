@@ -33,7 +33,7 @@ CLASS QVideoDeviceSelectorControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVideoDeviceSelectorControl
+PROCEDURE destroyObject() CLASS QVideoDeviceSelectorControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEFAULTDEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->defaultDevice () );
+      RINT( obj->defaultDevice() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->deviceCount () );
+      RINT( obj->deviceCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICEDESCRIPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->deviceDescription ( PINT(1) ) );
+      RQSTRING( obj->deviceDescription( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DEVICENAME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->deviceName ( PINT(1) ) );
+      RQSTRING( obj->deviceName( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SELECTEDDEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->selectedDevice () );
+      RINT( obj->selectedDevice() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSelectedDevice ( PINT(1) );
+      obj->setSelectedDevice( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_SETSELECTEDDEVICE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QVideoDeviceSelectorControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QVideoDeviceSelectorControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_ONDEVICESCHANGED )
 {

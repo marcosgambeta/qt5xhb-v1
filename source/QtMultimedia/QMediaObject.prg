@@ -42,7 +42,7 @@ CLASS QMediaObject INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaObject
+PROCEDURE destroyObject() CLASS QMediaObject
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,8 +86,8 @@ HB_FUNC_STATIC( QMEDIAOBJECT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_NOTIFYINTERVAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->notifyInterval () );
+      RINT( obj->notifyInterval() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SETNOTIFYINTERVAL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setNotifyInterval ( PINT(1) );
+      obj->setNotifyInterval( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABILITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->availability () );
+      RENUM( obj->availability() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABLEMETADATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->availableMetaData () );
+      RQSTRINGLIST( obj->availableMetaData() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_BIND )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      RBOOL( obj->bind ( PQOBJECT(1) ) );
+      RBOOL( obj->bind( PQOBJECT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAvailable () );
+      RBOOL( obj->isAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISMETADATAAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMetaDataAvailable () );
+      RBOOL( obj->isMetaDataAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,8 +282,8 @@ HB_FUNC_STATIC( QMEDIAOBJECT_METADATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->metaData ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,8 +307,8 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMediaService * ptr = obj->service ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIASERVICE" );
+      QMediaService * ptr = obj->service();
+      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIASERVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->unbind ( PQOBJECT(1) );
+      obj->unbind( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ void removePropertyWatch(QByteArray const &name) [protected]
 void setupControls() [private]
 */
 
-void QMediaObjectSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMediaObjectSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMEDIAOBJECT_ONAVAILABILITYCHANGED1 )
 {

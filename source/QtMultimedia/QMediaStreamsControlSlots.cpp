@@ -25,7 +25,7 @@ void QMediaStreamsControlSlots::activeStreamsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "activeStreamsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIASTREAMSCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIASTREAMSCONTROL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QMediaStreamsControlSlots::streamsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "streamsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMEDIASTREAMSCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIASTREAMSCONTROL" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QMediaStreamsControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QMediaStreamsControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QMediaStreamsControl * obj = (QMediaStreamsControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

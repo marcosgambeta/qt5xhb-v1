@@ -25,7 +25,7 @@ void QRadioTunerControlSlots::stateChanged( QRadioTuner::State state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QRadioTuner::State)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
     hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QRadioTunerControlSlots::bandChanged( QRadioTuner::Band band )
   PHB_ITEM cb = Signals_return_codeblock( object, "bandChanged(QRadioTuner::Band)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM pband = hb_itemPutNI( NULL, (int) band );
     hb_vmEvalBlockV( cb, 2, psender, pband );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QRadioTunerControlSlots::frequencyChanged( int frequency )
   PHB_ITEM cb = Signals_return_codeblock( object, "frequencyChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
     hb_vmEvalBlockV( cb, 2, psender, pfrequency );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QRadioTunerControlSlots::stereoStatusChanged( bool stereo )
   PHB_ITEM cb = Signals_return_codeblock( object, "stereoStatusChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM pstereo = hb_itemPutL( NULL, stereo );
     hb_vmEvalBlockV( cb, 2, psender, pstereo );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QRadioTunerControlSlots::searchingChanged( bool searching )
   PHB_ITEM cb = Signals_return_codeblock( object, "searchingChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM psearching = hb_itemPutL( NULL, searching );
     hb_vmEvalBlockV( cb, 2, psender, psearching );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void QRadioTunerControlSlots::signalStrengthChanged( int signalStrength )
   PHB_ITEM cb = Signals_return_codeblock( object, "signalStrengthChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM psignalStrength = hb_itemPutNI( NULL, signalStrength );
     hb_vmEvalBlockV( cb, 2, psender, psignalStrength );
     hb_itemRelease( psender );
@@ -103,7 +103,7 @@ void QRadioTunerControlSlots::volumeChanged( int volume )
   PHB_ITEM cb = Signals_return_codeblock( object, "volumeChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
     hb_vmEvalBlockV( cb, 2, psender, pvolume );
     hb_itemRelease( psender );
@@ -116,7 +116,7 @@ void QRadioTunerControlSlots::mutedChanged( bool muted )
   PHB_ITEM cb = Signals_return_codeblock( object, "mutedChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
     hb_vmEvalBlockV( cb, 2, psender, pmuted );
     hb_itemRelease( psender );
@@ -129,7 +129,7 @@ void QRadioTunerControlSlots::error( QRadioTuner::Error err )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QRadioTuner::Error)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM perr = hb_itemPutNI( NULL, (int) err );
     hb_vmEvalBlockV( cb, 2, psender, perr );
     hb_itemRelease( psender );
@@ -142,7 +142,7 @@ void QRadioTunerControlSlots::stationFound( int frequency, QString stationId )
   PHB_ITEM cb = Signals_return_codeblock( object, "stationFound(int,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM pfrequency = hb_itemPutNI( NULL, frequency );
     PHB_ITEM pstationId = hb_itemPutC( NULL, (const char *) stationId.toLatin1().data() );
     hb_vmEvalBlockV( cb, 3, psender, pfrequency, pstationId );
@@ -157,7 +157,7 @@ void QRadioTunerControlSlots::antennaConnectedChanged( bool connectionStatus )
   PHB_ITEM cb = Signals_return_codeblock( object, "antennaConnectedChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QRADIOTUNERCONTROL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QRADIOTUNERCONTROL" );
     PHB_ITEM pconnectionStatus = hb_itemPutL( NULL, connectionStatus );
     hb_vmEvalBlockV( cb, 2, psender, pconnectionStatus );
     hb_itemRelease( psender );
@@ -165,7 +165,7 @@ void QRadioTunerControlSlots::antennaConnectedChanged( bool connectionStatus )
   }
 }
 
-void QRadioTunerControlSlots_connect_signal ( const QString & signal, const QString & slot )
+void QRadioTunerControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QRadioTunerControl * obj = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

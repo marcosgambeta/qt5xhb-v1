@@ -26,7 +26,7 @@ CLASS QMediaService INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaService
+PROCEDURE destroyObject() CLASS QMediaService
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QMEDIASERVICE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QMEDIASERVICE_RELEASECONTROL )
     if( ISNUMPAR(1) && ISQMEDIACONTROL(1) )
     {
 #endif
-      obj->releaseControl ( PQMEDIACONTROL(1) );
+      obj->releaseControl( PQMEDIACONTROL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,8 +119,8 @@ HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QMediaControl * ptr = obj->requestControl ( PCONSTCHAR(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMEDIACONTROL" );
+      QMediaControl * ptr = obj->requestControl( PCONSTCHAR(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIACONTROL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

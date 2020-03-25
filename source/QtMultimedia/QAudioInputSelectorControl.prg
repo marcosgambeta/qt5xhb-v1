@@ -31,7 +31,7 @@ CLASS QAudioInputSelectorControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAudioInputSelectorControl
+PROCEDURE destroyObject() CLASS QAudioInputSelectorControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->activeInput () );
+      RQSTRING( obj->activeInput() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QString> list = obj->availableInputs ();
+      QList<QString> list = obj->availableInputs();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->defaultInput () );
+      RQSTRING( obj->defaultInput() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->inputDescription ( PQSTRING(1) ) );
+      RQSTRING( obj->inputDescription( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setActiveInput ( PQSTRING(1) );
+      obj->setActiveInput( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QAudioInputSelectorControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAudioInputSelectorControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ONACTIVEINPUTCHANGED )
 {

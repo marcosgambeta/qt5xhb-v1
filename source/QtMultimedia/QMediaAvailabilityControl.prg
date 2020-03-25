@@ -26,7 +26,7 @@ CLASS QMediaAvailabilityControl INHERIT QMediaControl
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMediaAvailabilityControl
+PROCEDURE destroyObject() CLASS QMediaAvailabilityControl
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_AVAILABILITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->availability () );
+      RENUM( obj->availability() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_AVAILABILITY )
   }
 }
 
-void QMediaAvailabilityControlSlots_connect_signal ( const QString & signal, const QString & slot );
+void QMediaAvailabilityControlSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_ONAVAILABILITYCHANGED )
 {
