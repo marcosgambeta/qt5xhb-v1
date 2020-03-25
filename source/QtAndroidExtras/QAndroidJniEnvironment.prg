@@ -34,7 +34,7 @@ CLASS QAndroidJniEnvironment
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAndroidJniEnvironment
+PROCEDURE destroyObject() CLASS QAndroidJniEnvironment
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(0) )
   {
-    QAndroidJniEnvironment * o = new QAndroidJniEnvironment ();
+    QAndroidJniEnvironment * o = new QAndroidJniEnvironment();
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_JAVAVM )
   if( ISNUMPAR(0) )
   {
 #endif
-    hb_retptr( (JavaVM *) QAndroidJniEnvironment::javaVM () );
+    hb_retptr( (JavaVM *) QAndroidJniEnvironment::javaVM() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

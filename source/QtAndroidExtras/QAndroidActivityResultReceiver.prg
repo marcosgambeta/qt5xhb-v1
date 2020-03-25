@@ -33,7 +33,7 @@ CLASS QAndroidActivityResultReceiver
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAndroidActivityResultReceiver
+PROCEDURE destroyObject() CLASS QAndroidActivityResultReceiver
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQANDROIDJNIOBJECT(3) )
     {
 #endif
-      obj->handleActivityResult ( PINT(1), PINT(2), *PQANDROIDJNIOBJECT(3) );
+      obj->handleActivityResult( PINT(1), PINT(2), *PQANDROIDJNIOBJECT(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
