@@ -25,7 +25,7 @@ void QAxScriptSlots::entered()
   PHB_ITEM cb = Signals_return_codeblock( object, "entered()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QAxScriptSlots::error( int code, const QString & description, int sourcePos
   PHB_ITEM cb = Signals_return_codeblock( object, "error(int,QString,int,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
     PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING(description) );
     PHB_ITEM psourcePosition = hb_itemPutNI( NULL, sourcePosition );
@@ -55,7 +55,7 @@ void QAxScriptSlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -66,7 +66,7 @@ void QAxScriptSlots::finished( const QVariant & result )
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QVariant)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
     PHB_ITEM presult = Signals_return_object( (void *) &result, "QVARIANT" );
     hb_vmEvalBlockV( cb, 2, psender, presult );
     hb_itemRelease( psender );
@@ -79,7 +79,7 @@ void QAxScriptSlots::finished( int code, const QString & source, const QString &
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(int,QString,QString,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
     PHB_ITEM psource = hb_itemPutC( NULL, QSTRINGTOSTRING(source) );
     PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING(description) );
@@ -98,7 +98,7 @@ void QAxScriptSlots::stateChanged( int state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, state );
     hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -106,7 +106,7 @@ void QAxScriptSlots::stateChanged( int state )
   }
 }
 
-void QAxScriptSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAxScriptSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAxScript * obj = (QAxScript *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -30,7 +30,7 @@ CLASS QAxScriptEngine INHERIT QAxObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAxScriptEngine
+PROCEDURE destroyObject() CLASS QAxScriptEngine
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISQAXSCRIPT(2) )
   {
-    QAxScriptEngine * o = new QAxScriptEngine ( PQSTRING(1), PQAXSCRIPT(2) );
+    QAxScriptEngine * o = new QAxScriptEngine( PQSTRING(1), PQAXSCRIPT(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -76,8 +76,8 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->addItem ( PQSTRING(1) );
+      obj->addItem( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasIntrospection () );
+      RBOOL( obj->hasIntrospection() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->scriptLanguage () );
+      RQSTRING( obj->scriptLanguage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setState ( (QAxScriptEngine::State) hb_parni(1) );
+      obj->setState( (QAxScriptEngine::State) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
