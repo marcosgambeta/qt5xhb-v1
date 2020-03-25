@@ -21,7 +21,7 @@ CLASS QDBusPendingReplyData INHERIT QDBusPendingCall
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusPendingReplyData
+PROCEDURE destroyObject() CLASS QDBusPendingReplyData
    IF ::self_destruction
       ::delete()
    ENDIF

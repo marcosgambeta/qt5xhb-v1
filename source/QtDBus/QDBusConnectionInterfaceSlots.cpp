@@ -25,7 +25,7 @@ void QDBusConnectionInterfaceSlots::serviceRegistered( const QString & service )
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceRegistered(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
     hb_vmEvalBlockV( cb, 2, psender, pservice );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QDBusConnectionInterfaceSlots::serviceUnregistered( const QString & service
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceUnregistered(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
     hb_vmEvalBlockV( cb, 2, psender, pservice );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QDBusConnectionInterfaceSlots::serviceOwnerChanged( const QString & name, c
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceOwnerChanged(QString,QString,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM poldOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(oldOwner) );
     PHB_ITEM pnewOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(newOwner) );
@@ -68,7 +68,7 @@ void QDBusConnectionInterfaceSlots::callWithCallbackFailed( const QDBusError & e
   PHB_ITEM cb = Signals_return_codeblock( object, "callWithCallbackFailed(QDBusError,QDBusMessage)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
     PHB_ITEM perror = Signals_return_object( (void *) &error, "QDBUSERROR" );
     PHB_ITEM pcall = Signals_return_object( (void *) &call, "QDBUSMESSAGE" );
     hb_vmEvalBlockV( cb, 3, psender, perror, pcall );
@@ -78,7 +78,7 @@ void QDBusConnectionInterfaceSlots::callWithCallbackFailed( const QDBusError & e
   }
 }
 
-void QDBusConnectionInterfaceSlots_connect_signal ( const QString & signal, const QString & slot )
+void QDBusConnectionInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QDBusConnectionInterface * obj = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

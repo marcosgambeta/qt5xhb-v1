@@ -47,7 +47,7 @@ CLASS QDBusArgument
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusArgument
+PROCEDURE destroyObject() CLASS QDBusArgument
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,18 +72,18 @@ RETURN
 /*
 QDBusArgument()
 */
-void QDBusArgument_new1 ()
+void QDBusArgument_new1()
 {
-  QDBusArgument * o = new QDBusArgument ();
+  QDBusArgument * o = new QDBusArgument();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDBusArgument(const QDBusArgument &other)
 */
-void QDBusArgument_new2 ()
+void QDBusArgument_new2()
 {
-  QDBusArgument * o = new QDBusArgument ( *PQDBUSARGUMENT(1) );
+  QDBusArgument * o = new QDBusArgument( *PQDBUSARGUMENT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINSTRUCTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->beginStructure ();
+      obj->beginStructure();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->endStructure ();
+      obj->endStructure();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,13 +167,13 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
 /*
 void beginArray(int elementMetaTypeId)
 */
-void QDBusArgument_beginArray1 ()
+void QDBusArgument_beginArray1()
 {
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->beginArray ( PINT(1) );
+    obj->beginArray( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -182,13 +182,13 @@ void QDBusArgument_beginArray1 ()
 /*
 void beginArray() const
 */
-void QDBusArgument_beginArray2 ()
+void QDBusArgument_beginArray2()
 {
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->beginArray ();
+    obj->beginArray();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->endArray ();
+      obj->endArray();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,13 +231,13 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
 /*
 void beginMap(int keyMetaTypeId, int valueMetaTypeId)
 */
-void QDBusArgument_beginMap1 ()
+void QDBusArgument_beginMap1()
 {
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->beginMap ( PINT(1), PINT(2) );
+    obj->beginMap( PINT(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -246,13 +246,13 @@ void QDBusArgument_beginMap1 ()
 /*
 void beginMap() const
 */
-void QDBusArgument_beginMap2 ()
+void QDBusArgument_beginMap2()
 {
   QDBusArgument * obj = (QDBusArgument *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->beginMap ();
+    obj->beginMap();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->endMap ();
+      obj->endMap();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAPENTRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->beginMapEntry ();
+      obj->beginMapEntry();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAPENTRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->endMapEntry ();
+      obj->endMapEntry();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_APPENDVARIANT )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->appendVariant ( *PQVARIANT(1) );
+      obj->appendVariant( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTSIGNATURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->currentSignature () );
+      RQSTRING( obj->currentSignature() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->currentType () );
+      RENUM( obj->currentType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ATEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->atEnd () );
+      RBOOL( obj->atEnd() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,8 +455,8 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ASVARIANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->asVariant () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->asVariant() );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

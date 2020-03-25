@@ -38,7 +38,7 @@ CLASS QDBusObjectPath
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusObjectPath
+PROCEDURE destroyObject() CLASS QDBusObjectPath
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ QDBusObjectPath()
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW1 )
 {
-  QDBusObjectPath * o = new QDBusObjectPath ();
+  QDBusObjectPath * o = new QDBusObjectPath();
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -74,7 +74,7 @@ explicit QDBusObjectPath(const char *path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
 {
-  QDBusObjectPath * o = new QDBusObjectPath ( PCONSTCHAR(1) );
+  QDBusObjectPath * o = new QDBusObjectPath( PCONSTCHAR(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -83,7 +83,7 @@ explicit QDBusObjectPath(QLatin1String path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
 {
-  QDBusObjectPath * o = new QDBusObjectPath ( *PQLATIN1STRING(1) );
+  QDBusObjectPath * o = new QDBusObjectPath( *PQLATIN1STRING(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -92,7 +92,7 @@ explicit QDBusObjectPath(const QString &path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
 {
-  QDBusObjectPath * o = new QDBusObjectPath ( PQSTRING(1) );
+  QDBusObjectPath * o = new QDBusObjectPath( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->path () );
+      RQSTRING( obj->path() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPath ( PQSTRING(1) );
+      obj->setPath( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -23,7 +23,7 @@ CLASS QDBusAbstractAdaptor INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusAbstractAdaptor
+PROCEDURE destroyObject() CLASS QDBusAbstractAdaptor
    IF ::self_destruction
       ::delete()
    ENDIF

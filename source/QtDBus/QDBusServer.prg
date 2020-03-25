@@ -30,7 +30,7 @@ CLASS QDBusServer INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusServer
+PROCEDURE destroyObject() CLASS QDBusServer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,18 +57,18 @@ RETURN
 /*
 QDBusServer(const QString &address, QObject *parent = 0)
 */
-void QDBusServer_new1 ()
+void QDBusServer_new1()
 {
-  QDBusServer * o = new QDBusServer ( PQSTRING(1), OPQOBJECT(2,0) );
+  QDBusServer * o = new QDBusServer( PQSTRING(1), OPQOBJECT(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QDBusServer(QObject *parent = 0)
 */
-void QDBusServer_new2 ()
+void QDBusServer_new2()
 {
-  QDBusServer * o = new QDBusServer ( OPQOBJECT(1,0) );
+  QDBusServer * o = new QDBusServer( OPQOBJECT(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ISCONNECTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isConnected () );
+      RBOOL( obj->isConnected() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,8 +134,8 @@ HB_FUNC_STATIC( QDBUSSERVER_LASTERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDBusError * ptr = new QDBusError( obj->lastError () );
-      _qt5xhb_createReturnClass ( ptr, "QDBUSERROR", true );
+      QDBusError * ptr = new QDBusError( obj->lastError() );
+      _qt5xhb_createReturnClass( ptr, "QDBUSERROR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->address () );
+      RQSTRING( obj->address() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QDBUSSERVER_ADDRESS )
   }
 }
 
-void QDBusServerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDBusServerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDBUSSERVER_ONNEWCONNECTION )
 {

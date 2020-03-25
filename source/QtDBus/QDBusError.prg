@@ -38,7 +38,7 @@ CLASS QDBusError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusError
+PROCEDURE destroyObject() CLASS QDBusError
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,9 +63,9 @@ RETURN
 /*
 QDBusError()
 */
-void QDBusError_new1 ()
+void QDBusError_new1()
 {
-  QDBusError * o = new QDBusError ();
+  QDBusError * o = new QDBusError();
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -76,27 +76,27 @@ QDBusError(const DBusError *error)
 /*
 QDBusError(const QDBusMessage& msg)
 */
-void QDBusError_new3 ()
+void QDBusError_new3()
 {
-  QDBusError * o = new QDBusError ( *PQDBUSMESSAGE(1) );
+  QDBusError * o = new QDBusError( *PQDBUSMESSAGE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDBusError(ErrorType error, const QString &message)
 */
-void QDBusError_new4 ()
+void QDBusError_new4()
 {
-  QDBusError * o = new QDBusError ( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) );
+  QDBusError * o = new QDBusError( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDBusError(const QDBusError &other)
 */
-void QDBusError_new5 ()
+void QDBusError_new5()
 {
-  QDBusError * o = new QDBusError ( *PQDBUSERROR(1) );
+  QDBusError * o = new QDBusError( *PQDBUSERROR(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDBUSERROR_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QDBUSERROR_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDBUSERROR_MESSAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->message () );
+      RQSTRING( obj->message() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDBUSERROR_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRING( QDBusError::errorString ( (QDBusError::ErrorType) hb_parni(1) ) );
+    RQSTRING( QDBusError::errorString( (QDBusError::ErrorType) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

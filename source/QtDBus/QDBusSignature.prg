@@ -39,7 +39,7 @@ CLASS QDBusSignature
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusSignature
+PROCEDURE destroyObject() CLASS QDBusSignature
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ QDBusSignature()
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW1 )
 {
-  QDBusSignature * o = new QDBusSignature ();
+  QDBusSignature * o = new QDBusSignature();
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -75,7 +75,7 @@ explicit QDBusSignature(const char *signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
 {
-  QDBusSignature * o = new QDBusSignature ( PCONSTCHAR(1) );
+  QDBusSignature * o = new QDBusSignature( PCONSTCHAR(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -84,7 +84,7 @@ explicit QDBusSignature(QLatin1String signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
 {
-  QDBusSignature * o = new QDBusSignature ( *PQLATIN1STRING(1) );
+  QDBusSignature * o = new QDBusSignature( *PQLATIN1STRING(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -93,7 +93,7 @@ explicit QDBusSignature(const QString &signature)
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
 {
-  QDBusSignature * o = new QDBusSignature ( PQSTRING(1) );
+  QDBusSignature * o = new QDBusSignature( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->signature () );
+      RQSTRING( obj->signature() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_SETSIGNATURE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setSignature ( PQSTRING(1) );
+      obj->setSignature( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -37,7 +37,7 @@ CLASS QDBusServiceWatcher INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusServiceWatcher
+PROCEDURE destroyObject() CLASS QDBusServiceWatcher
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,18 +64,18 @@ RETURN
 /*
 explicit QDBusServiceWatcher(QObject *parent = 0)
 */
-void QDBusServiceWatcher_new1 ()
+void QDBusServiceWatcher_new1()
 {
-  QDBusServiceWatcher * o = new QDBusServiceWatcher ( OPQOBJECT(1,0) );
+  QDBusServiceWatcher * o = new QDBusServiceWatcher( OPQOBJECT(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = 0)
 */
-void QDBusServiceWatcher_new2 ()
+void QDBusServiceWatcher_new2()
 {
-  QDBusServiceWatcher * o = new QDBusServiceWatcher ( PQSTRING(1), *PQDBUSCONNECTION(2), ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,0) );
+  QDBusServiceWatcher * o = new QDBusServiceWatcher( PQSTRING(1), *PQDBUSCONNECTION(2), ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHEDSERVICES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->watchedServices () );
+      RQSTRINGLIST( obj->watchedServices() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHEDSERVICES )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setWatchedServices ( PQSTRINGLIST(1) );
+      obj->setWatchedServices( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->addWatchedService ( PQSTRING(1) );
+      obj->addWatchedService( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->removeWatchedService ( PQSTRING(1) ) );
+      RBOOL( obj->removeWatchedService( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_WATCHMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->watchMode () );
+      RENUM( obj->watchMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWatchMode ( (QDBusServiceWatcher::WatchMode) hb_parni(1) );
+      obj->setWatchMode( (QDBusServiceWatcher::WatchMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,8 +278,8 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_CONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDBusConnection * ptr = new QDBusConnection( obj->connection () );
-      _qt5xhb_createReturnClass ( ptr, "QDBUSCONNECTION", true );
+      QDBusConnection * ptr = new QDBusConnection( obj->connection() );
+      _qt5xhb_createReturnClass( ptr, "QDBUSCONNECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETCONNECTION )
     if( ISNUMPAR(1) && ISQDBUSCONNECTION(1) )
     {
 #endif
-      obj->setConnection ( *PQDBUSCONNECTION(1) );
+      obj->setConnection( *PQDBUSCONNECTION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETCONNECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDBusServiceWatcherSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDBusServiceWatcherSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ONSERVICEREGISTERED )
 {

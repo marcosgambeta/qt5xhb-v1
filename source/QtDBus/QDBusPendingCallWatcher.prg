@@ -28,7 +28,7 @@ CLASS QDBusPendingCallWatcher INHERIT QObject,QDBusPendingCall
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusPendingCallWatcher
+PROCEDURE destroyObject() CLASS QDBusPendingCallWatcher
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_NEW )
 {
   if( ISBETWEEN(1,2) && ISQDBUSPENDINGCALL(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QDBusPendingCallWatcher * o = new QDBusPendingCallWatcher ( *PQDBUSPENDINGCALL(1), OPQOBJECT(2,0) );
+    QDBusPendingCallWatcher * o = new QDBusPendingCallWatcher( *PQDBUSPENDINGCALL(1), OPQOBJECT(2,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ISFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinished () );
+      RBOOL( obj->isFinished() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_WAITFORFINISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->waitForFinished ();
+      obj->waitForFinished();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_WAITFORFINISHED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QDBusPendingCallWatcherSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDBusPendingCallWatcherSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDBUSPENDINGCALLWATCHER_ONFINISHED )
 {

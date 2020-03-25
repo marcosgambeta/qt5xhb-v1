@@ -25,7 +25,7 @@ void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QDBusPendingCallWatcher*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSPENDINGCALLWATCHER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDBUSPENDINGCALLWATCHER" );
     PHB_ITEM pself = Signals_return_qobject( (QObject *) self, "QDBUSPENDINGCALLWATCHER" );
     hb_vmEvalBlockV( cb, 2, psender, pself );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
   }
 }
 
-void QDBusPendingCallWatcherSlots_connect_signal ( const QString & signal, const QString & slot )
+void QDBusPendingCallWatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QDBusPendingCallWatcher * obj = (QDBusPendingCallWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

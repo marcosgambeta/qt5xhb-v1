@@ -26,7 +26,7 @@ CLASS QDBusConnectionInterface INHERIT QDBusAbstractInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusConnectionInterface
+PROCEDURE destroyObject() CLASS QDBusConnectionInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,7 +86,7 @@ QDBusReply<uint> serviceUid(const QString &serviceName) const
 QDBusReply<void> startService(const QString &name)
 */
 
-void QDBusConnectionInterfaceSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDBusConnectionInterfaceSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )
 {

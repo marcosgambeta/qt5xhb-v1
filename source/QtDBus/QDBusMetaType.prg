@@ -35,7 +35,7 @@ CLASS QDBusMetaType
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusMetaType
+PROCEDURE destroyObject() CLASS QDBusMetaType
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
   if( ISNUMPAR(3) && ISQDBUSARGUMENT(1) && ISNUM(2) && ISPOINTER(3) )
   {
 #endif
-    RBOOL( QDBusMetaType::demarshall ( *PQDBUSARGUMENT(1), PINT(2), (void *) hb_parptr(3) ) );
+    RBOOL( QDBusMetaType::demarshall( *PQDBUSARGUMENT(1), PINT(2), (void *) hb_parptr(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_SIGNATURETOTYPE )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    RINT( QDBusMetaType::signatureToType ( PCONSTCHAR(1) ) );
+    RINT( QDBusMetaType::signatureToType( PCONSTCHAR(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_TYPETOSIGNATURE )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    hb_retc( (const char *) QDBusMetaType::typeToSignature ( PINT(1) ) );
+    hb_retc( (const char *) QDBusMetaType::typeToSignature( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

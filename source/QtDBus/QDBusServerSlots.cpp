@@ -25,7 +25,7 @@ void QDBusServerSlots::newConnection( const QDBusConnection & connection )
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection(QDBusConnection)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDBUSSERVER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDBUSSERVER" );
     PHB_ITEM pconnection = Signals_return_object( (void *) &connection, "QDBUSCONNECTION" );
     hb_vmEvalBlockV( cb, 2, psender, pconnection );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QDBusServerSlots::newConnection( const QDBusConnection & connection )
   }
 }
 
-void QDBusServerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QDBusServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QDBusServer * obj = (QDBusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

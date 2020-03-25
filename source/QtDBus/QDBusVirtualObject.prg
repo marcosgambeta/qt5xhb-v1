@@ -21,7 +21,7 @@ CLASS QDBusVirtualObject INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDBusVirtualObject
+PROCEDURE destroyObject() CLASS QDBusVirtualObject
    IF ::self_destruction
       ::delete()
    ENDIF
