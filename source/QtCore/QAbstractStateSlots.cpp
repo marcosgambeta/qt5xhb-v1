@@ -25,7 +25,7 @@ void QAbstractStateSlots::entered()
   PHB_ITEM cb = Signals_return_codeblock( object, "entered()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSTATE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTSTATE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QAbstractStateSlots::exited()
   PHB_ITEM cb = Signals_return_codeblock( object, "exited()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSTATE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTSTATE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QAbstractStateSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstractStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

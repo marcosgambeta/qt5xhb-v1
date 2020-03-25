@@ -25,13 +25,13 @@ void QAbstractTransitionSlots::triggered()
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTTRANSITION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTRANSITION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QAbstractTransitionSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstractTransitionSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAbstractTransition * obj = (QAbstractTransition *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

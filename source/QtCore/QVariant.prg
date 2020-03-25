@@ -121,7 +121,7 @@ CLASS QVariant
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVariant
+PROCEDURE destroyObject() CLASS QVariant
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -179,9 +179,9 @@ RETURN
 /*
 QVariant()
 */
-void QVariant_new1 ()
+void QVariant_new1()
 {
-  QVariant * o = new QVariant ();
+  QVariant * o = new QVariant();
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -190,34 +190,34 @@ QVariant(Type type)
 */
 HB_FUNC_STATIC( QVARIANT_NEW2 )
 {
-  QVariant * o = new QVariant ( (QVariant::Type) hb_parni(1) );
+  QVariant * o = new QVariant( (QVariant::Type) hb_parni(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(int typeId, const void *copy)
 */
-void QVariant_new3 ()
+void QVariant_new3()
 {
-  QVariant * o = new QVariant ( PINT(1), (const void *) hb_parptr(2) );
+  QVariant * o = new QVariant( PINT(1), (const void *) hb_parptr(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(int typeId, const void *copy, uint flags)
 */
-void QVariant_new4 ()
+void QVariant_new4()
 {
-  QVariant * o = new QVariant ( PINT(1), (const void *) hb_parptr(2), PUINT(3) );
+  QVariant * o = new QVariant( PINT(1), (const void *) hb_parptr(2), PUINT(3) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QVariant &other)
 */
-void QVariant_new5 ()
+void QVariant_new5()
 {
-  QVariant * o = new QVariant ( *PQVARIANT(1) );
+  QVariant * o = new QVariant( *PQVARIANT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -238,7 +238,7 @@ QVariant(int i)
 */
 HB_FUNC_STATIC( QVARIANT_NEW7 )
 {
-  QVariant * o = new QVariant ( PINT(1) );
+  QVariant * o = new QVariant( PINT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -247,7 +247,7 @@ QVariant(uint ui)
 */
 HB_FUNC_STATIC( QVARIANT_NEW8 )
 {
-  QVariant * o = new QVariant ( PUINT(1) );
+  QVariant * o = new QVariant( PUINT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -256,7 +256,7 @@ QVariant(qlonglong ll)
 */
 HB_FUNC_STATIC( QVARIANT_NEW9 )
 {
-  QVariant * o = new QVariant ( PQLONGLONG(1) );
+  QVariant * o = new QVariant( PQLONGLONG(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -265,16 +265,16 @@ QVariant(qulonglong ull)
 */
 HB_FUNC_STATIC( QVARIANT_NEW10 )
 {
-  QVariant * o = new QVariant ( PQULONGLONG(1) );
+  QVariant * o = new QVariant( PQULONGLONG(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(bool b)
 */
-void QVariant_new11 ()
+void QVariant_new11()
 {
-  QVariant * o = new QVariant ( PBOOL(1) );
+  QVariant * o = new QVariant( PBOOL(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -283,7 +283,7 @@ QVariant(double d)
 */
 HB_FUNC_STATIC( QVARIANT_NEW12 )
 {
-  QVariant * o = new QVariant ( PDOUBLE(1) );
+  QVariant * o = new QVariant( PDOUBLE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -292,7 +292,7 @@ QVariant(float f)
 */
 HB_FUNC_STATIC( QVARIANT_NEW13 )
 {
-  QVariant * o = new QVariant ( PFLOAT(1) );
+  QVariant * o = new QVariant( PFLOAT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -302,7 +302,7 @@ QVariant(const char *str)
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
 #ifndef QT_NO_CAST_FROM_ASCII
-  QVariant * o = new QVariant ( PCONSTCHAR(1) );
+  QVariant * o = new QVariant( PCONSTCHAR(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -310,18 +310,18 @@ HB_FUNC_STATIC( QVARIANT_NEW14 )
 /*
 QVariant(const QByteArray &bytearray)
 */
-void QVariant_new15 ()
+void QVariant_new15()
 {
-  QVariant * o = new QVariant ( *PQBYTEARRAY(1) );
+  QVariant * o = new QVariant( *PQBYTEARRAY(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QBitArray &bitarray)
 */
-void QVariant_new16 ()
+void QVariant_new16()
 {
-  QVariant * o = new QVariant ( *PQBITARRAY(1) );
+  QVariant * o = new QVariant( *PQBITARRAY(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -330,16 +330,16 @@ QVariant(const QString &string)
 */
 HB_FUNC_STATIC( QVARIANT_NEW17 )
 {
-  QVariant * o = new QVariant ( PQSTRING(1) );
+  QVariant * o = new QVariant( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(QLatin1String string)
 */
-void QVariant_new18 ()
+void QVariant_new18()
 {
-  QVariant * o = new QVariant ( *PQLATIN1STRING(1) );
+  QVariant * o = new QVariant( *PQLATIN1STRING(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -348,43 +348,43 @@ QVariant(const QStringList &stringlist)
 */
 HB_FUNC_STATIC( QVARIANT_NEW19 )
 {
-  QVariant * o = new QVariant ( PQSTRINGLIST(1) );
+  QVariant * o = new QVariant( PQSTRINGLIST(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(QChar qchar)
 */
-void QVariant_new20 ()
+void QVariant_new20()
 {
-  QVariant * o = new QVariant ( *PQCHAR(1) );
+  QVariant * o = new QVariant( *PQCHAR(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QDate &date)
 */
-void QVariant_new21 ()
+void QVariant_new21()
 {
-  QVariant * o = new QVariant ( *PQDATE(1) );
+  QVariant * o = new QVariant( *PQDATE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QTime &time)
 */
-void QVariant_new22 ()
+void QVariant_new22()
 {
-  QVariant * o = new QVariant ( *PQTIME(1) );
+  QVariant * o = new QVariant( *PQTIME(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QDateTime &datetime)
 */
-void QVariant_new23 ()
+void QVariant_new23()
 {
-  QVariant * o = new QVariant ( *PQDATETIME(1) );
+  QVariant * o = new QVariant( *PQDATETIME(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QVARIANT_NEW24 )
   {
     par1 << *(QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
-  QVariant * o = new QVariant ( par1 );
+  QVariant * o = new QVariant( par1 );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -416,10 +416,10 @@ QVariant(const QHash<QString,QVariant> &hash)
 /*
 QVariant(const QSize &size)
 */
-void QVariant_new27 ()
+void QVariant_new27()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQSIZE(1) );
+  QVariant * o = new QVariant( *PQSIZE(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -427,10 +427,10 @@ void QVariant_new27 ()
 /*
 QVariant(const QSizeF &size)
 */
-void QVariant_new28 ()
+void QVariant_new28()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQSIZEF(1) );
+  QVariant * o = new QVariant( *PQSIZEF(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -438,10 +438,10 @@ void QVariant_new28 ()
 /*
 QVariant(const QPoint &pt)
 */
-void QVariant_new29 ()
+void QVariant_new29()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQPOINT(1) );
+  QVariant * o = new QVariant( *PQPOINT(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -449,10 +449,10 @@ void QVariant_new29 ()
 /*
 QVariant(const QPointF &pt)
 */
-void QVariant_new30 ()
+void QVariant_new30()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQPOINTF(1) );
+  QVariant * o = new QVariant( *PQPOINTF(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -460,10 +460,10 @@ void QVariant_new30 ()
 /*
 QVariant(const QLine &line)
 */
-void QVariant_new31 ()
+void QVariant_new31()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQLINE(1) );
+  QVariant * o = new QVariant( *PQLINE(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -471,10 +471,10 @@ void QVariant_new31 ()
 /*
 QVariant(const QLineF &line)
 */
-void QVariant_new32 ()
+void QVariant_new32()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQLINEF(1) );
+  QVariant * o = new QVariant( *PQLINEF(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -482,10 +482,10 @@ void QVariant_new32 ()
 /*
 QVariant(const QRect &rect)
 */
-void QVariant_new33 ()
+void QVariant_new33()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQRECT(1) );
+  QVariant * o = new QVariant( *PQRECT(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -493,10 +493,10 @@ void QVariant_new33 ()
 /*
 QVariant(const QRectF &rect)
 */
-void QVariant_new34 ()
+void QVariant_new34()
 {
 #ifndef QT_NO_GEOM_VARIANT
-  QVariant * o = new QVariant ( *PQRECTF(1) );
+  QVariant * o = new QVariant( *PQRECTF(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -504,19 +504,19 @@ void QVariant_new34 ()
 /*
 QVariant(const QLocale &locale)
 */
-void QVariant_new35 ()
+void QVariant_new35()
 {
-  QVariant * o = new QVariant ( *PQLOCALE(1) );
+  QVariant * o = new QVariant( *PQLOCALE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QRegExp &regExp)
 */
-void QVariant_new36 ()
+void QVariant_new36()
 {
 #ifndef QT_NO_REGEXP
-  QVariant * o = new QVariant ( *PQREGEXP(1) );
+  QVariant * o = new QVariant( *PQREGEXP(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -524,10 +524,10 @@ void QVariant_new36 ()
 /*
 QVariant(const QRegularExpression &re)
 */
-void QVariant_new37 ()
+void QVariant_new37()
 {
 #ifndef QT_NO_REGULAREXPRESSION
-  QVariant * o = new QVariant ( *PQREGULAREXPRESSION(1) );
+  QVariant * o = new QVariant( *PQREGULAREXPRESSION(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -535,72 +535,72 @@ void QVariant_new37 ()
 /*
 QVariant(const QUrl &url)
 */
-void QVariant_new38 ()
+void QVariant_new38()
 {
-  QVariant * o = new QVariant ( *PQURL(1) );
+  QVariant * o = new QVariant( *PQURL(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QEasingCurve &easing)
 */
-void QVariant_new39 ()
+void QVariant_new39()
 {
-  QVariant * o = new QVariant ( *PQEASINGCURVE(1) );
+  QVariant * o = new QVariant( *PQEASINGCURVE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QUuid &uuid)
 */
-void QVariant_new40 ()
+void QVariant_new40()
 {
-  QVariant * o = new QVariant ( *PQUUID(1) );
+  QVariant * o = new QVariant( *PQUUID(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QModelIndex &modelIndex)
 */
-void QVariant_new41 ()
+void QVariant_new41()
 {
-  QVariant * o = new QVariant ( *PQMODELINDEX(1) );
+  QVariant * o = new QVariant( *PQMODELINDEX(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QJsonValue &jsonValue)
 */
-void QVariant_new42 ()
+void QVariant_new42()
 {
-  QVariant * o = new QVariant ( *PQJSONVALUE(1) );
+  QVariant * o = new QVariant( *PQJSONVALUE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QJsonObject &jsonObject)
 */
-void QVariant_new43 ()
+void QVariant_new43()
 {
-  QVariant * o = new QVariant ( *PQJSONOBJECT(1) );
+  QVariant * o = new QVariant( *PQJSONOBJECT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QJsonArray &jsonArray)
 */
-void QVariant_new44 ()
+void QVariant_new44()
 {
-  QVariant * o = new QVariant ( *PQJSONARRAY(1) );
+  QVariant * o = new QVariant( *PQJSONARRAY(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QVariant(const QJsonDocument &jsonDocument)
 */
-void QVariant_new45 ()
+void QVariant_new45()
 {
-  QVariant * o = new QVariant ( *PQJSONDOCUMENT(1) );
+  QVariant * o = new QVariant( *PQJSONDOCUMENT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QVARIANT_SWAP )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->swap ( *PQVARIANT(1) );
+      obj->swap( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QVARIANT_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QVARIANT_USERTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->userType () );
+      RINT( obj->userType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QVARIANT_TYPENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->typeName () );
+      hb_retc( (const char *) obj->typeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->canConvert ( PINT(1) ) );
+      RBOOL( obj->canConvert( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -989,7 +989,7 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->convert ( PINT(1) ) );
+      RBOOL( obj->convert( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC( QVARIANT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QVARIANT_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QVARIANT_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QVARIANT_DETACH )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->detach ();
+      obj->detach();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QVARIANT_ISDETACHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDetached () );
+      RBOOL( obj->isDetached() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1138,7 +1138,7 @@ HB_FUNC_STATIC( QVARIANT_TOINT )
     {
 #endif
       bool par1;
-      RINT( obj->toInt ( &par1 ) );
+      RINT( obj->toInt( &par1 ) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QVARIANT_TOUINT )
     {
 #endif
       bool par1;
-      RUINT( obj->toUInt ( &par1 ) );
+      RUINT( obj->toUInt( &par1 ) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1190,7 +1190,7 @@ HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
     {
 #endif
       bool par1;
-      RQLONGLONG( obj->toLongLong ( &par1 ) );
+      RQLONGLONG( obj->toLongLong( &par1 ) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1216,7 +1216,7 @@ HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
     {
 #endif
       bool par1;
-      RQULONGLONG( obj->toULongLong ( &par1 ) );
+      RQULONGLONG( obj->toULongLong( &par1 ) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1241,7 +1241,7 @@ HB_FUNC_STATIC( QVARIANT_TOBOOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->toBool () );
+      RBOOL( obj->toBool() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1266,7 +1266,7 @@ HB_FUNC_STATIC( QVARIANT_TODOUBLE )
     {
 #endif
       bool par1;
-      RDOUBLE( obj->toDouble ( &par1 ) );
+      RDOUBLE( obj->toDouble( &par1 ) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1292,7 +1292,7 @@ HB_FUNC_STATIC( QVARIANT_TOFLOAT )
     {
 #endif
       bool par1;
-      RFLOAT( obj->toFloat ( &par1 ) );
+      RFLOAT( obj->toFloat( &par1 ) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QVARIANT_TOREAL )
     {
 #endif
       bool par1;
-      RQREAL( obj->toReal ( &par1 ) );
+      RQREAL( obj->toReal( &par1 ) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1343,8 +1343,8 @@ HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toByteArray () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->toByteArray() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1368,8 +1368,8 @@ HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QBitArray * ptr = new QBitArray( obj->toBitArray () );
-      _qt5xhb_createReturnClass ( ptr, "QBITARRAY", true );
+      QBitArray * ptr = new QBitArray( obj->toBitArray() );
+      _qt5xhb_createReturnClass( ptr, "QBITARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1393,7 +1393,7 @@ HB_FUNC_STATIC( QVARIANT_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1417,7 +1417,7 @@ HB_FUNC_STATIC( QVARIANT_TOSTRINGLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->toStringList () );
+      RQSTRINGLIST( obj->toStringList() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1441,8 +1441,8 @@ HB_FUNC_STATIC( QVARIANT_TOCHAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->toChar () );
-      _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+      QChar * ptr = new QChar( obj->toChar() );
+      _qt5xhb_createReturnClass( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1466,8 +1466,8 @@ HB_FUNC_STATIC( QVARIANT_TODATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDate * ptr = new QDate( obj->toDate () );
-      _qt5xhb_createReturnClass ( ptr, "QDATE", true );
+      QDate * ptr = new QDate( obj->toDate() );
+      _qt5xhb_createReturnClass( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1491,8 +1491,8 @@ HB_FUNC_STATIC( QVARIANT_TOTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTime * ptr = new QTime( obj->toTime () );
-      _qt5xhb_createReturnClass ( ptr, "QTIME", true );
+      QTime * ptr = new QTime( obj->toTime() );
+      _qt5xhb_createReturnClass( ptr, "QTIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1516,8 +1516,8 @@ HB_FUNC_STATIC( QVARIANT_TODATETIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->toDateTime () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->toDateTime() );
+      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1541,7 +1541,7 @@ HB_FUNC_STATIC( QVARIANT_TOLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      _qt5xhb_convert_qvariantlist_to_array( obj->toList () );
+      _qt5xhb_convert_qvariantlist_to_array( obj->toList() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1566,8 +1566,8 @@ HB_FUNC_STATIC( QVARIANT_TOPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->toPoint () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINT", true );
+      QPoint * ptr = new QPoint( obj->toPoint() );
+      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1593,8 +1593,8 @@ HB_FUNC_STATIC( QVARIANT_TOPOINTF )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->toPointF () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->toPointF() );
+      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1620,8 +1620,8 @@ HB_FUNC_STATIC( QVARIANT_TORECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->toRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->toRect() );
+      _qt5xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1647,8 +1647,8 @@ HB_FUNC_STATIC( QVARIANT_TORECTF )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->toRectF () );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->toRectF() );
+      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1674,8 +1674,8 @@ HB_FUNC_STATIC( QVARIANT_TOSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->toSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->toSize() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1701,8 +1701,8 @@ HB_FUNC_STATIC( QVARIANT_TOSIZEF )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->toSizeF () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZEF", true );
+      QSizeF * ptr = new QSizeF( obj->toSizeF() );
+      _qt5xhb_createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1728,8 +1728,8 @@ HB_FUNC_STATIC( QVARIANT_TOLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLine * ptr = new QLine( obj->toLine () );
-      _qt5xhb_createReturnClass ( ptr, "QLINE", true );
+      QLine * ptr = new QLine( obj->toLine() );
+      _qt5xhb_createReturnClass( ptr, "QLINE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1755,8 +1755,8 @@ HB_FUNC_STATIC( QVARIANT_TOLINEF )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLineF * ptr = new QLineF( obj->toLineF () );
-      _qt5xhb_createReturnClass ( ptr, "QLINEF", true );
+      QLineF * ptr = new QLineF( obj->toLineF() );
+      _qt5xhb_createReturnClass( ptr, "QLINEF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1781,8 +1781,8 @@ HB_FUNC_STATIC( QVARIANT_TOLOCALE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QLocale * ptr = new QLocale( obj->toLocale () );
-      _qt5xhb_createReturnClass ( ptr, "QLOCALE", true );
+      QLocale * ptr = new QLocale( obj->toLocale() );
+      _qt5xhb_createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1807,8 +1807,8 @@ HB_FUNC_STATIC( QVARIANT_TOREGEXP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegExp * ptr = new QRegExp( obj->toRegExp () );
-      _qt5xhb_createReturnClass ( ptr, "QREGEXP", true );
+      QRegExp * ptr = new QRegExp( obj->toRegExp() );
+      _qt5xhb_createReturnClass( ptr, "QREGEXP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1834,8 +1834,8 @@ HB_FUNC_STATIC( QVARIANT_TOREGULAREXPRESSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRegularExpression * ptr = new QRegularExpression( obj->toRegularExpression () );
-      _qt5xhb_createReturnClass ( ptr, "QREGULAREXPRESSION", true );
+      QRegularExpression * ptr = new QRegularExpression( obj->toRegularExpression() );
+      _qt5xhb_createReturnClass( ptr, "QREGULAREXPRESSION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1860,8 +1860,8 @@ HB_FUNC_STATIC( QVARIANT_TOURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->toUrl () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->toUrl() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1885,8 +1885,8 @@ HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QEasingCurve * ptr = new QEasingCurve( obj->toEasingCurve () );
-      _qt5xhb_createReturnClass ( ptr, "QEASINGCURVE", true );
+      QEasingCurve * ptr = new QEasingCurve( obj->toEasingCurve() );
+      _qt5xhb_createReturnClass( ptr, "QEASINGCURVE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1910,8 +1910,8 @@ HB_FUNC_STATIC( QVARIANT_TOUUID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUuid * ptr = new QUuid( obj->toUuid () );
-      _qt5xhb_createReturnClass ( ptr, "QUUID", true );
+      QUuid * ptr = new QUuid( obj->toUuid() );
+      _qt5xhb_createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1935,8 +1935,8 @@ HB_FUNC_STATIC( QVARIANT_TOMODELINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->toModelIndex () );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->toModelIndex() );
+      _qt5xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1960,8 +1960,8 @@ HB_FUNC_STATIC( QVARIANT_TOJSONVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJsonValue * ptr = new QJsonValue( obj->toJsonValue () );
-      _qt5xhb_createReturnClass ( ptr, "QJSONVALUE", true );
+      QJsonValue * ptr = new QJsonValue( obj->toJsonValue() );
+      _qt5xhb_createReturnClass( ptr, "QJSONVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1985,8 +1985,8 @@ HB_FUNC_STATIC( QVARIANT_TOJSONOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJsonObject * ptr = new QJsonObject( obj->toJsonObject () );
-      _qt5xhb_createReturnClass ( ptr, "QJSONOBJECT", true );
+      QJsonObject * ptr = new QJsonObject( obj->toJsonObject() );
+      _qt5xhb_createReturnClass( ptr, "QJSONOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2010,8 +2010,8 @@ HB_FUNC_STATIC( QVARIANT_TOJSONARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJsonArray * ptr = new QJsonArray( obj->toJsonArray () );
-      _qt5xhb_createReturnClass ( ptr, "QJSONARRAY", true );
+      QJsonArray * ptr = new QJsonArray( obj->toJsonArray() );
+      _qt5xhb_createReturnClass( ptr, "QJSONARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2035,8 +2035,8 @@ HB_FUNC_STATIC( QVARIANT_TOJSONDOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJsonDocument * ptr = new QJsonDocument( obj->toJsonDocument () );
-      _qt5xhb_createReturnClass ( ptr, "QJSONDOCUMENT", true );
+      QJsonDocument * ptr = new QJsonDocument( obj->toJsonDocument() );
+      _qt5xhb_createReturnClass( ptr, "QJSONDOCUMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2061,7 +2061,7 @@ HB_FUNC_STATIC( QVARIANT_LOAD )
     if( ISNUMPAR(1) && ISQDATASTREAM(1) )
     {
 #endif
-      obj->load ( *PQDATASTREAM(1) );
+      obj->load( *PQDATASTREAM(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2089,7 +2089,7 @@ HB_FUNC_STATIC( QVARIANT_SAVE )
     if( ISNUMPAR(1) && ISQDATASTREAM(1) )
     {
 #endif
-      obj->save ( *PQDATASTREAM(1) );
+      obj->save( *PQDATASTREAM(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2116,7 +2116,7 @@ HB_FUNC_STATIC( QVARIANT_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( (void *) obj->data () );
+      hb_retptr( (void *) obj->data() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2136,7 +2136,7 @@ HB_FUNC_STATIC( QVARIANT_TYPETONAME )
     if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      hb_retc( (const char *) QVariant::typeToName ( PINT(1) ) );
+      hb_retc( (const char *) QVariant::typeToName( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2155,7 +2155,7 @@ HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
     if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RENUM( QVariant::nameToType ( PCONSTCHAR(1) ) );
+      RENUM( QVariant::nameToType( PCONSTCHAR(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

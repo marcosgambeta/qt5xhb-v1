@@ -30,7 +30,7 @@ CLASS QAtomicPointer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAtomicPointer
+PROCEDURE destroyObject() CLASS QAtomicPointer
    IF ::self_destruction
       ::delete()
    ENDIF

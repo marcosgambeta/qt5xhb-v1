@@ -33,7 +33,7 @@ CLASS QXmlStreamEntityResolver
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamEntityResolver
+PROCEDURE destroyObject() CLASS QXmlStreamEntityResolver
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->resolveUndeclaredEntity ( PQSTRING(1) ) );
+      RQSTRING( obj->resolveUndeclaredEntity( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

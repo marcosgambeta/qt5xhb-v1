@@ -45,7 +45,7 @@ CLASS QElapsedTimer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QElapsedTimer
+PROCEDURE destroyObject() CLASS QElapsedTimer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QElapsedTimer * o = new QElapsedTimer ();
+    QElapsedTimer * o = new QElapsedTimer();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->elapsed () );
+      RQINT64( obj->elapsed() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasExpired ( PQINT64(1) ) );
+      RBOOL( obj->hasExpired( PQINT64(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->invalidate ();
+      obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->msecsSinceReference () );
+      RQINT64( obj->msecsSinceReference() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
     if( ISNUMPAR(1) && ISQELAPSEDTIMER(1) )
     {
 #endif
-      RQINT64( obj->msecsTo ( *PQELAPSEDTIMER(1) ) );
+      RQINT64( obj->msecsTo( *PQELAPSEDTIMER(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->nsecsElapsed () );
+      RQINT64( obj->nsecsElapsed() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->restart () );
+      RQINT64( obj->restart() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
     if( ISNUMPAR(1) && ISQELAPSEDTIMER(1) )
     {
 #endif
-      RQINT64( obj->secsTo ( *PQELAPSEDTIMER(1) ) );
+      RQINT64( obj->secsTo( *PQELAPSEDTIMER(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_START )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->start ();
+      obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
   if( ISNUMPAR(0) )
   {
 #endif
-    RENUM( QElapsedTimer::clockType () );
+    RENUM( QElapsedTimer::clockType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ISMONOTONIC )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QElapsedTimer::isMonotonic () );
+    RBOOL( QElapsedTimer::isMonotonic() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

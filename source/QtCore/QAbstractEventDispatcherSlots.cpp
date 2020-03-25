@@ -25,7 +25,7 @@ void QAbstractEventDispatcherSlots::aboutToBlock()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToBlock()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QAbstractEventDispatcherSlots::awake()
   PHB_ITEM cb = Signals_return_codeblock( object, "awake()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QAbstractEventDispatcherSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstractEventDispatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

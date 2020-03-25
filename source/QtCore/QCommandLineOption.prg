@@ -42,7 +42,7 @@ CLASS QCommandLineOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCommandLineOption
+PROCEDURE destroyObject() CLASS QCommandLineOption
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,27 +67,27 @@ RETURN
 /*
 QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 */
-void QCommandLineOption_new1 ()
+void QCommandLineOption_new1()
 {
-  QCommandLineOption * o = new QCommandLineOption ( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
+  QCommandLineOption * o = new QCommandLineOption( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
 */
-void QCommandLineOption_new2 ()
+void QCommandLineOption_new2()
 {
-  QCommandLineOption * o = new QCommandLineOption ( PQSTRINGLIST(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
+  QCommandLineOption * o = new QCommandLineOption( PQSTRINGLIST(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QCommandLineOption(const QCommandLineOption &other)
 */
-void QCommandLineOption_new3 ()
+void QCommandLineOption_new3()
 {
-  QCommandLineOption * o = new QCommandLineOption ( *PQCOMMANDLINEOPTION(1) );
+  QCommandLineOption * o = new QCommandLineOption( *PQCOMMANDLINEOPTION(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SWAP )
     if( ISNUMPAR(1) && ISQCOMMANDLINEOPTION(1) )
     {
 #endif
-      obj->swap ( *PQCOMMANDLINEOPTION(1) );
+      obj->swap( *PQCOMMANDLINEOPTION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->names () );
+      RQSTRINGLIST( obj->names() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETVALUENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setValueName ( PQSTRING(1) );
+      obj->setValueName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_VALUENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->valueName () );
+      RQSTRING( obj->valueName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDescription ( PQSTRING(1) );
+      obj->setDescription( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->description () );
+      RQSTRING( obj->description() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDefaultValue ( PQSTRING(1) );
+      obj->setDefaultValue( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUES )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setDefaultValues ( PQSTRINGLIST(1) );
+      obj->setDefaultValues( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DEFAULTVALUES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->defaultValues () );
+      RQSTRINGLIST( obj->defaultValues() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

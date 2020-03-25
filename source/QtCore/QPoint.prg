@@ -39,7 +39,7 @@ CLASS QPoint
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPoint
+PROCEDURE destroyObject() CLASS QPoint
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,18 +64,18 @@ RETURN
 /*
 QPoint()
 */
-void QPoint_new1 ()
+void QPoint_new1()
 {
-  QPoint * o = new QPoint ();
+  QPoint * o = new QPoint();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QPoint(int xpos, int ypos)
 */
-void QPoint_new2 ()
+void QPoint_new2()
 {
-  QPoint * o = new QPoint ( PINT(1), PINT(2) );
+  QPoint * o = new QPoint( PINT(1), PINT(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QPOINT_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->manhattanLength () );
+      RINT( obj->manhattanLength() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QPOINT_SETX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setX ( PINT(1) );
+      obj->setX( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QPOINT_SETY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setY ( PINT(1) );
+      obj->setY( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPOINT_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->x () );
+      RINT( obj->x() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QPOINT_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->y () );
+      RINT( obj->y() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

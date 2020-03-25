@@ -29,7 +29,7 @@ CLASS QFileSelector INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileSelector
+PROCEDURE destroyObject() CLASS QFileSelector
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QFILESELECTOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QFileSelector * o = new QFileSelector ( OPQOBJECT(1,0) );
+    QFileSelector * o = new QFileSelector( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QFILESELECTOR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -93,27 +93,27 @@ HB_FUNC_STATIC( QFILESELECTOR_DELETE )
 /*
 QString select(const QString &filePath) const
 */
-void QFileSelector_select1 ()
+void QFileSelector_select1()
 {
   QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRING( obj->select ( PQSTRING(1) ) );
+    RQSTRING( obj->select( PQSTRING(1) ) );
   }
 }
 
 /*
 QUrl select(const QUrl &filePath) const
 */
-void QFileSelector_select2 ()
+void QFileSelector_select2()
 {
   QFileSelector * obj = (QFileSelector *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QUrl * ptr = new QUrl( obj->select ( *PQURL(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    QUrl * ptr = new QUrl( obj->select( *PQURL(1) ) );
+    _qt5xhb_createReturnClass( ptr, "QURL", true );
   }
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->extraSelectors () );
+      RQSTRINGLIST( obj->extraSelectors() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setExtraSelectors ( PQSTRINGLIST(1) );
+      obj->setExtraSelectors( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QFILESELECTOR_ALLSELECTORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->allSelectors () );
+      RQSTRINGLIST( obj->allSelectors() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

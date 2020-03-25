@@ -56,7 +56,7 @@ CLASS QSettings INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSettings
+PROCEDURE destroyObject() CLASS QSettings
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,45 +85,45 @@ RETURN
 /*
 QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-void QSettings_new1 ()
+void QSettings_new1()
 {
-  QSettings * o = new QSettings ( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,0) );
+  QSettings * o = new QSettings( PQSTRING(1), OPQSTRING(2,QString()), OPQOBJECT(3,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-void QSettings_new2 ()
+void QSettings_new2()
 {
-  QSettings * o = new QSettings ( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
+  QSettings * o = new QSettings( (QSettings::Scope) hb_parni(1), PQSTRING(2), OPQSTRING(3,QString()), OPQOBJECT(4,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
-void QSettings_new3 ()
+void QSettings_new3()
 {
-  QSettings * o = new QSettings ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
+  QSettings * o = new QSettings( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3), OPQSTRING(4,QString()), OPQOBJECT(5,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
 */
-void QSettings_new4 ()
+void QSettings_new4()
 {
-  QSettings * o = new QSettings ( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
+  QSettings * o = new QSettings( PQSTRING(1), (QSettings::Format) hb_parni(2), OPQOBJECT(3,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QSettings ( QObject * parent = 0 )
 */
-void QSettings_new5 ()
+void QSettings_new5()
 {
-  QSettings * o = new QSettings ( OPQOBJECT(1,0) );
+  QSettings * o = new QSettings( OPQOBJECT(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -167,8 +167,8 @@ HB_FUNC_STATIC( QSETTINGS_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->allKeys () );
+      RQSTRINGLIST( obj->allKeys() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->applicationName () );
+      RQSTRING( obj->applicationName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->beginGroup ( PQSTRING(1) );
+      obj->beginGroup( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RINT( obj->beginReadArray ( PQSTRING(1) ) );
+      RINT( obj->beginReadArray( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->beginWriteArray ( PQSTRING(1), OPINT(2,-1) );
+      obj->beginWriteArray( PQSTRING(1), OPINT(2,-1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->childGroups () );
+      RQSTRINGLIST( obj->childGroups() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->childKeys () );
+      RQSTRINGLIST( obj->childKeys() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QSETTINGS_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QSETTINGS_CONTAINS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->contains ( PQSTRING(1) ) );
+      RBOOL( obj->contains( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->endArray ();
+      obj->endArray();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->endGroup ();
+      obj->endGroup();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->fallbacksEnabled () );
+      RBOOL( obj->fallbacksEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QSETTINGS_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QSETTINGS_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->format () );
+      RENUM( obj->format() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QSETTINGS_GROUP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->group () );
+      RQSTRING( obj->group() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,8 +563,8 @@ HB_FUNC_STATIC( QSETTINGS_INICODEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCodec * ptr = obj->iniCodec ();
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+      QTextCodec * ptr = obj->iniCodec();
+      _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isWritable () );
+      RBOOL( obj->isWritable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->organizationName () );
+      RQSTRING( obj->organizationName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QSETTINGS_REMOVE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->remove ( PQSTRING(1) );
+      obj->remove( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QSETTINGS_SCOPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->scope () );
+      RENUM( obj->scope() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setArrayIndex ( PINT(1) );
+      obj->setArrayIndex( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFallbacksEnabled ( PBOOL(1) );
+      obj->setFallbacksEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -728,13 +728,13 @@ HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
 /*
 void setIniCodec ( QTextCodec * codec )
 */
-void QSettings_setIniCodec1 ()
+void QSettings_setIniCodec1()
 {
   QSettings * obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setIniCodec ( PQTEXTCODEC(1) );
+    obj->setIniCodec( PQTEXTCODEC(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -743,13 +743,13 @@ void QSettings_setIniCodec1 ()
 /*
 void setIniCodec ( const char * codecName )
 */
-void QSettings_setIniCodec2 ()
+void QSettings_setIniCodec2()
 {
   QSettings * obj = (QSettings *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setIniCodec ( PCONSTCHAR(1) );
+    obj->setIniCodec( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QSETTINGS_SETVALUE )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setValue ( PQSTRING(1), *PQVARIANT(2) );
+      obj->setValue( PQSTRING(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QSETTINGS_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QSETTINGS_SYNC )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->sync ();
+      obj->sync();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -860,8 +860,8 @@ HB_FUNC_STATIC( QSETTINGS_VALUE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value ( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->value( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
   if( ISNUMPAR(0) )
   {
 #endif
-    RENUM( QSettings::defaultFormat () );
+    RENUM( QSettings::defaultFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    QSettings::setDefaultFormat ( (QSettings::Format) hb_parni(1) );
+    QSettings::setDefaultFormat( (QSettings::Format) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -921,7 +921,7 @@ HB_FUNC_STATIC( QSETTINGS_SETPATH )
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISCHAR(3) )
   {
 #endif
-    QSettings::setPath ( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3) );
+    QSettings::setPath( (QSettings::Format) hb_parni(1), (QSettings::Scope) hb_parni(2), PQSTRING(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

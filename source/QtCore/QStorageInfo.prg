@@ -51,7 +51,7 @@ CLASS QStorageInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStorageInfo
+PROCEDURE destroyObject() CLASS QStorageInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,10 +80,10 @@ RETURN
 /*
 QStorageInfo()
 */
-void QStorageInfo_new1 ()
+void QStorageInfo_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * o = new QStorageInfo ();
+  QStorageInfo * o = new QStorageInfo();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -91,10 +91,10 @@ void QStorageInfo_new1 ()
 /*
 explicit QStorageInfo(const QString &path)
 */
-void QStorageInfo_new2 ()
+void QStorageInfo_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * o = new QStorageInfo ( PQSTRING(1) );
+  QStorageInfo * o = new QStorageInfo( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -102,10 +102,10 @@ void QStorageInfo_new2 ()
 /*
 explicit QStorageInfo(const QDir &dir)
 */
-void QStorageInfo_new3 ()
+void QStorageInfo_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * o = new QStorageInfo ( *PQDIR(1) );
+  QStorageInfo * o = new QStorageInfo( *PQDIR(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -113,10 +113,10 @@ void QStorageInfo_new3 ()
 /*
 QStorageInfo(const QStorageInfo &other)
 */
-void QStorageInfo_new4 ()
+void QStorageInfo_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QStorageInfo * o = new QStorageInfo ( *PQSTORAGEINFO(1) );
+  QStorageInfo * o = new QStorageInfo( *PQSTORAGEINFO(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_SWAP )
     if( ISNUMPAR(1) && ISQSTORAGEINFO(1) )
     {
 #endif
-      obj->swap ( *PQSTORAGEINFO(1) );
+      obj->swap( *PQSTORAGEINFO(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_SETPATH )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPath ( PQSTRING(1) );
+      obj->setPath( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOTPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->rootPath () );
+      RQSTRING( obj->rootPath() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,8 +265,8 @@ HB_FUNC_STATIC( QSTORAGEINFO_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->device () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->device() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,8 +292,8 @@ HB_FUNC_STATIC( QSTORAGEINFO_FILESYSTEMTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->fileSystemType () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->fileSystemType() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_DISPLAYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->displayName () );
+      RQSTRING( obj->displayName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESTOTAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->bytesTotal () );
+      RQINT64( obj->bytesTotal() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESFREE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->bytesFree () );
+      RQINT64( obj->bytesFree() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_BYTESAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->bytesAvailable () );
+      RQINT64( obj->bytesAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISROOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRoot () );
+      RBOOL( obj->isRoot() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISREADONLY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReadOnly () );
+      RBOOL( obj->isReadOnly() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISREADY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReady () );
+      RBOOL( obj->isReady() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_REFRESH )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->refresh ();
+      obj->refresh();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QStorageInfo> list = QStorageInfo::mountedVolumes ();
+    QList<QStorageInfo> list = QStorageInfo::mountedVolumes();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSTORAGEINFO" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QSTORAGEINFO_MOUNTEDVOLUMES )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QStorageInfo *) new QStorageInfo ( list[i] ) );
+        hb_itemPutPtr( pItem, (QStorageInfo *) new QStorageInfo( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -626,8 +626,8 @@ HB_FUNC_STATIC( QSTORAGEINFO_ROOT )
   if( ISNUMPAR(0) )
   {
 #endif
-    QStorageInfo * ptr = new QStorageInfo( QStorageInfo::root () );
-    _qt5xhb_createReturnClass ( ptr, "QSTORAGEINFO", true );
+    QStorageInfo * ptr = new QStorageInfo( QStorageInfo::root() );
+    _qt5xhb_createReturnClass( ptr, "QSTORAGEINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

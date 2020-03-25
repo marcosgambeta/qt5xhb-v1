@@ -47,7 +47,7 @@ CLASS QEasingCurve
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QEasingCurve
+PROCEDURE destroyObject() CLASS QEasingCurve
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,18 +74,18 @@ RETURN
 /*
 QEasingCurve ( Type type = Linear )
 */
-void QEasingCurve_new1 ()
+void QEasingCurve_new1()
 {
-  QEasingCurve * o = new QEasingCurve ( ISNIL(1)? (QEasingCurve::Type) QEasingCurve::Linear : (QEasingCurve::Type) hb_parni(1) );
+  QEasingCurve * o = new QEasingCurve( ISNIL(1)? (QEasingCurve::Type) QEasingCurve::Linear : (QEasingCurve::Type) hb_parni(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QEasingCurve ( const QEasingCurve & other )
 */
-void QEasingCurve_new2 ()
+void QEasingCurve_new2()
 {
-  QEasingCurve * o = new QEasingCurve ( *PQEASINGCURVE(1) );
+  QEasingCurve * o = new QEasingCurve( *PQEASINGCURVE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDCUBICBEZIERSEGMENT )
     if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) )
     {
 #endif
-      obj->addCubicBezierSegment ( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
+      obj->addCubicBezierSegment( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDTCBSEGMENT )
     if( ISNUMPAR(4) && ISQPOINTF(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
 #endif
-      obj->addTCBSegment ( *PQPOINTF(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+      obj->addTCBSegment( *PQPOINTF(1), PQREAL(2), PQREAL(3), PQREAL(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->amplitude () );
+      RQREAL( obj->amplitude() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->overshoot () );
+      RQREAL( obj->overshoot() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->period () );
+      RQREAL( obj->period() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAmplitude ( PQREAL(1) );
+      obj->setAmplitude( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOvershoot ( PQREAL(1) );
+      obj->setOvershoot( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPeriod ( PQREAL(1) );
+      obj->setPeriod( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setType ( (QEasingCurve::Type) hb_parni(1) );
+      obj->setType( (QEasingCurve::Type) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SWAP )
     if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
     {
 #endif
-      obj->swap ( *PQEASINGCURVE(1) );
+      obj->swap( *PQEASINGCURVE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVector<QPointF> list = obj->toCubicSpline ();
+      QVector<QPointF> list = obj->toCubicSpline();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPointF *) new QPointF ( list[i] ) );
+          hb_itemPutPtr( pItem, (QPointF *) new QPointF( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QEASINGCURVE_VALUEFORPROGRESS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQREAL( obj->valueForProgress ( PQREAL(1) ) );
+      RQREAL( obj->valueForProgress( PQREAL(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

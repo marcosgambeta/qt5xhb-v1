@@ -43,7 +43,7 @@ CLASS QProcessEnvironment
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QProcessEnvironment
+PROCEDURE destroyObject() CLASS QProcessEnvironment
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,18 +68,18 @@ RETURN
 /*
 QProcessEnvironment()
 */
-void QProcessEnvironment_new1 ()
+void QProcessEnvironment_new1()
 {
-  QProcessEnvironment * o = new QProcessEnvironment ();
+  QProcessEnvironment * o = new QProcessEnvironment();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QProcessEnvironment(const QProcessEnvironment &other)
 */
-void QProcessEnvironment_new2 ()
+void QProcessEnvironment_new2()
 {
-  QProcessEnvironment * o = new QProcessEnvironment ( *PQPROCESSENVIRONMENT(1) );
+  QProcessEnvironment * o = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SWAP )
     if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
     {
 #endif
-      obj->swap ( *PQPROCESSENVIRONMENT(1) );
+      obj->swap( *PQPROCESSENVIRONMENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->contains ( PQSTRING(1) ) );
+      RBOOL( obj->contains( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,13 +222,13 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 /*
 void insert(const QString &name, const QString &value)
 */
-void QProcessEnvironment_insert1 ()
+void QProcessEnvironment_insert1()
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insert ( PQSTRING(1), PQSTRING(2) );
+    obj->insert( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -237,13 +237,13 @@ void QProcessEnvironment_insert1 ()
 /*
 void insert(const QProcessEnvironment &e)
 */
-void QProcessEnvironment_insert2 ()
+void QProcessEnvironment_insert2()
 {
   QProcessEnvironment * obj = (QProcessEnvironment *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insert ( *PQPROCESSENVIRONMENT(1) );
+    obj->insert( *PQPROCESSENVIRONMENT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->remove ( PQSTRING(1) );
+      obj->remove( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
 #endif
-      RQSTRING( obj->value ( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      RQSTRING( obj->value( PQSTRING(1), OPQSTRING(2,QString()) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->toStringList () );
+      RQSTRINGLIST( obj->toStringList() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->keys () );
+      RQSTRINGLIST( obj->keys() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,8 +375,8 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
   if( ISNUMPAR(0) )
   {
 #endif
-    QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment () );
-    _qt5xhb_createReturnClass ( ptr, "QPROCESSENVIRONMENT", true );
+    QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment() );
+    _qt5xhb_createReturnClass( ptr, "QPROCESSENVIRONMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

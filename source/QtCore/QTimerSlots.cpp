@@ -25,13 +25,13 @@ void QTimerSlots::timeout()
   PHB_ITEM cb = Signals_return_codeblock( object, "timeout()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTIMER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QTimerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QTimerSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QTimer * obj = (QTimer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

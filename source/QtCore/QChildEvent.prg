@@ -29,7 +29,7 @@ CLASS QChildEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QChildEvent
+PROCEDURE destroyObject() CLASS QChildEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
-    QChildEvent * o = new QChildEvent ( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
+    QChildEvent * o = new QChildEvent( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QCHILDEVENT_ADDED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->added () );
+      RBOOL( obj->added() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QCHILDEVENT_CHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->child ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->child();
+      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->polished () );
+      RBOOL( obj->polished() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->removed () );
+      RBOOL( obj->removed() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

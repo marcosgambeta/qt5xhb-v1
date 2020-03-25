@@ -41,7 +41,7 @@ CLASS QLoggingCategory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLoggingCategory
+PROCEDURE destroyObject() CLASS QLoggingCategory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QLoggingCategory * o = new QLoggingCategory ( PCONSTCHAR(1) );
+    QLoggingCategory * o = new QLoggingCategory( PCONSTCHAR(1) );
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISENABLED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isEnabled ( (QtMsgType) hb_parni(1) ) );
+      RBOOL( obj->isEnabled( (QtMsgType) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_SETENABLED )
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
     {
 #endif
-      obj->setEnabled ( (QtMsgType) hb_parni(1), PBOOL(2) );
+      obj->setEnabled( (QtMsgType) hb_parni(1), PBOOL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISDEBUGENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDebugEnabled () );
+      RBOOL( obj->isDebugEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISWARNINGENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isWarningEnabled () );
+      RBOOL( obj->isWarningEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISCRITICALENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCriticalEnabled () );
+      RBOOL( obj->isCriticalEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_CATEGORYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->categoryName () );
+      hb_retc( (const char *) obj->categoryName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,8 +251,8 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_DEFAULTCATEGORY )
   if( ISNUMPAR(0) )
   {
 #endif
-    QLoggingCategory * ptr = QLoggingCategory::defaultCategory ();
-    _qt5xhb_createReturnClass ( ptr, "QLOGGINGCATEGORY", false );
+    QLoggingCategory * ptr = QLoggingCategory::defaultCategory();
+    _qt5xhb_createReturnClass( ptr, "QLOGGINGCATEGORY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_SETFILTERRULES )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QLoggingCategory::setFilterRules ( PQSTRING(1) );
+    QLoggingCategory::setFilterRules( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

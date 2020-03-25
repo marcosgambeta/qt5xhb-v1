@@ -48,7 +48,7 @@ CLASS QMimeType
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMimeType
+PROCEDURE destroyObject() CLASS QMimeType
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,18 +75,18 @@ RETURN
 /*
 QMimeType()
 */
-void QMimeType_new1 ()
+void QMimeType_new1()
 {
-  QMimeType * o = new QMimeType ();
+  QMimeType * o = new QMimeType();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QMimeType(const QMimeType &other)
 */
-void QMimeType_new2 ()
+void QMimeType_new2()
 {
-  QMimeType * o = new QMimeType ( *PQMIMETYPE(1) );
+  QMimeType * o = new QMimeType( *PQMIMETYPE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QMIMETYPE_SWAP )
     if( ISNUMPAR(1) && ISQMIMETYPE(1) )
     {
 #endif
-      obj->swap ( *PQMIMETYPE(1) );
+      obj->swap( *PQMIMETYPE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QMIMETYPE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QMIMETYPE_ISDEFAULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDefault () );
+      RBOOL( obj->isDefault() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QMIMETYPE_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QMIMETYPE_COMMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->comment () );
+      RQSTRING( obj->comment() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QMIMETYPE_GENERICICONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->genericIconName () );
+      RQSTRING( obj->genericIconName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QMIMETYPE_ICONNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->iconName () );
+      RQSTRING( obj->iconName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QMIMETYPE_GLOBPATTERNS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->globPatterns () );
+      RQSTRINGLIST( obj->globPatterns() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QMIMETYPE_PARENTMIMETYPES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->parentMimeTypes () );
+      RQSTRINGLIST( obj->parentMimeTypes() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QMIMETYPE_ALLANCESTORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->allAncestors () );
+      RQSTRINGLIST( obj->allAncestors() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QMIMETYPE_ALIASES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->aliases () );
+      RQSTRINGLIST( obj->aliases() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QMIMETYPE_SUFFIXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->suffixes () );
+      RQSTRINGLIST( obj->suffixes() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QMIMETYPE_PREFERREDSUFFIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->preferredSuffix () );
+      RQSTRING( obj->preferredSuffix() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QMIMETYPE_INHERITS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->inherits ( PQSTRING(1) ) );
+      RBOOL( obj->inherits( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QMIMETYPE_FILTERSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->filterString () );
+      RQSTRING( obj->filterString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

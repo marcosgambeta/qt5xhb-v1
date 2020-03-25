@@ -40,7 +40,7 @@ CLASS QXmlStreamAttribute
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamAttribute
+PROCEDURE destroyObject() CLASS QXmlStreamAttribute
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,36 +65,36 @@ RETURN
 /*
 QXmlStreamAttribute()
 */
-void QXmlStreamAttribute_new1 ()
+void QXmlStreamAttribute_new1()
 {
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ();
+  QXmlStreamAttribute * o = new QXmlStreamAttribute();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
 */
-void QXmlStreamAttribute_new2 ()
+void QXmlStreamAttribute_new2()
 {
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2) );
+  QXmlStreamAttribute * o = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-void QXmlStreamAttribute_new3 ()
+void QXmlStreamAttribute_new3()
 {
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+  QXmlStreamAttribute * o = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlStreamAttribute(const QXmlStreamAttribute & other)
 */
-void QXmlStreamAttribute_new4 ()
+void QXmlStreamAttribute_new4()
 {
-  QXmlStreamAttribute * o = new QXmlStreamAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
+  QXmlStreamAttribute * o = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDefault () );
+      RBOOL( obj->isDefault() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,8 +181,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->name () );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->name() );
+      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,8 +206,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->namespaceUri () );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->namespaceUri() );
+      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,8 +231,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->prefix () );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->prefix() );
+      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,8 +256,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->qualifiedName () );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->qualifiedName() );
+      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,8 +281,8 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->value () );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->value() );
+      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

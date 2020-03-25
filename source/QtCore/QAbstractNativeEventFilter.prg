@@ -24,7 +24,7 @@ CLASS QAbstractNativeEventFilter INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractNativeEventFilter
+PROCEDURE destroyObject() CLASS QAbstractNativeEventFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QABSTRACTNATIVEEVENTFILTER_NATIVEEVENTFILTER )
     {
 #endif
       long par3;
-      RBOOL( obj->nativeEventFilter ( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
+      RBOOL( obj->nativeEventFilter( *PQBYTEARRAY(1), (void *) hb_parptr(2), &par3 ) );
       hb_stornl( par3, 3 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

@@ -50,7 +50,7 @@ CLASS QTextCodec
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextCodec
+PROCEDURE destroyObject() CLASS QTextCodec
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,26 +75,26 @@ RETURN
 /*
 bool canEncode(QChar) const
 */
-void QTextCodec_canEncode1 ()
+void QTextCodec_canEncode1()
 {
   QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->canEncode ( *PQCHAR(1) ) );
+    RBOOL( obj->canEncode( *PQCHAR(1) ) );
   }
 }
 
 /*
 bool canEncode(const QString&) const
 */
-void QTextCodec_canEncode2 ()
+void QTextCodec_canEncode2()
 {
   QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->canEncode ( PQSTRING(1) ) );
+    RBOOL( obj->canEncode( PQSTRING(1) ) );
   }
 }
 
@@ -120,26 +120,26 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 /*
 QString toUnicode(const QByteArray&) const
 */
-void QTextCodec_toUnicode1 ()
+void QTextCodec_toUnicode1()
 {
   QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRING( obj->toUnicode ( *PQBYTEARRAY(1) ) );
+    RQSTRING( obj->toUnicode( *PQBYTEARRAY(1) ) );
   }
 }
 
 /*
 QString toUnicode(const char* chars) const
 */
-void QTextCodec_toUnicode2 ()
+void QTextCodec_toUnicode2()
 {
   QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRING( obj->toUnicode ( PCONSTCHAR(1) ) );
+    RQSTRING( obj->toUnicode( PCONSTCHAR(1) ) );
   }
 }
 
@@ -166,14 +166,14 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 /*
 QByteArray fromUnicode(const QString& uc) const
 */
-void QTextCodec_fromUnicode1 ()
+void QTextCodec_fromUnicode1()
 {
   QTextCodec * obj = (QTextCodec *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( obj->fromUnicode( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -205,8 +205,8 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QTextDecoder * ptr = obj->makeDecoder ( ISNIL(1)? (QTextCodec::ConversionFlags) QTextCodec::DefaultConversion : (QTextCodec::ConversionFlags) hb_parni(1) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTDECODER", false );
+      QTextDecoder * ptr = obj->makeDecoder( ISNIL(1)? (QTextCodec::ConversionFlags) QTextCodec::DefaultConversion : (QTextCodec::ConversionFlags) hb_parni(1) );
+      _qt5xhb_createReturnClass( ptr, "QTEXTDECODER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,8 +230,8 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QTextEncoder * ptr = obj->makeEncoder ( ISNIL(1)? (QTextCodec::ConversionFlags) QTextCodec::DefaultConversion : (QTextCodec::ConversionFlags) hb_parni(1) );
-      _qt5xhb_createReturnClass ( ptr, "QTEXTENCODER", false );
+      QTextEncoder * ptr = obj->makeEncoder( ISNIL(1)? (QTextCodec::ConversionFlags) QTextCodec::DefaultConversion : (QTextCodec::ConversionFlags) hb_parni(1) );
+      _qt5xhb_createReturnClass( ptr, "QTEXTENCODER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,8 +255,8 @@ HB_FUNC_STATIC( QTEXTCODEC_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->name () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->name() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QByteArray> list = obj->aliases ();
+      QList<QByteArray> list = obj->aliases();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->mibEnum () );
+      RINT( obj->mibEnum() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,21 +346,21 @@ HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
 /*
 static QTextCodec* codecForName(const QByteArray &name)
 */
-void QTextCodec_codecForName1 ()
+void QTextCodec_codecForName1()
 {
 
-  QTextCodec * ptr = QTextCodec::codecForName ( *PQBYTEARRAY(1) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+  QTextCodec * ptr = QTextCodec::codecForName( *PQBYTEARRAY(1) );
+  _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
 /*
 static QTextCodec* codecForName(const char *name)
 */
-void QTextCodec_codecForName2 ()
+void QTextCodec_codecForName2()
 {
 
-  QTextCodec * ptr = QTextCodec::codecForName ( PCONSTCHAR(1) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+  QTextCodec * ptr = QTextCodec::codecForName( PCONSTCHAR(1) );
+  _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
 //[1]static QTextCodec* codecForName(const QByteArray &name)
@@ -391,8 +391,8 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORMIB )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    QTextCodec * ptr = QTextCodec::codecForMib ( PINT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+    QTextCodec * ptr = QTextCodec::codecForMib( PINT(1) );
+    _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QByteArray> list = QTextCodec::availableCodecs ();
+    QList<QByteArray> list = QTextCodec::availableCodecs();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -458,8 +458,8 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<int> list = QTextCodec::availableMibs ();
-    _qt5xhb_convert_qlist_int_to_array ( list );
+    QList<int> list = QTextCodec::availableMibs();
+    _qt5xhb_convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -478,8 +478,8 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QTextCodec * ptr = QTextCodec::codecForLocale ();
-    _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+    QTextCodec * ptr = QTextCodec::codecForLocale();
+    _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
   {
 #endif
-    QTextCodec::setCodecForLocale ( PQTEXTCODEC(1) );
+    QTextCodec::setCodecForLocale( PQTEXTCODEC(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -513,21 +513,21 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba)
 */
-void QTextCodec_codecForHtml1 ()
+void QTextCodec_codecForHtml1()
 {
 
-  QTextCodec * ptr = QTextCodec::codecForHtml ( *PQBYTEARRAY(1) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+  QTextCodec * ptr = QTextCodec::codecForHtml( *PQBYTEARRAY(1) );
+  _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
 /*
 static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
 */
-void QTextCodec_codecForHtml2 ()
+void QTextCodec_codecForHtml2()
 {
 
-  QTextCodec * ptr = QTextCodec::codecForHtml ( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+  QTextCodec * ptr = QTextCodec::codecForHtml( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
+  _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
 //[1]static QTextCodec *codecForHtml(const QByteArray &ba)
@@ -552,21 +552,21 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 /*
 static QTextCodec *codecForUtfText(const QByteArray &ba)
 */
-void QTextCodec_codecForUtfText1 ()
+void QTextCodec_codecForUtfText1()
 {
 
-  QTextCodec * ptr = QTextCodec::codecForUtfText ( *PQBYTEARRAY(1) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+  QTextCodec * ptr = QTextCodec::codecForUtfText( *PQBYTEARRAY(1) );
+  _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
 /*
 static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
 */
-void QTextCodec_codecForUtfText2 ()
+void QTextCodec_codecForUtfText2()
 {
 
-  QTextCodec * ptr = QTextCodec::codecForUtfText ( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
-  _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+  QTextCodec * ptr = QTextCodec::codecForUtfText( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
+  _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
 //[1]static QTextCodec *codecForUtfText(const QByteArray &ba)

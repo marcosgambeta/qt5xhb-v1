@@ -30,7 +30,7 @@ CLASS QSignalTransition INHERIT QAbstractTransition
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSignalTransition
+PROCEDURE destroyObject() CLASS QSignalTransition
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,18 +55,18 @@ RETURN
 /*
 QSignalTransition(QState *sourceState = 0)
 */
-void QSignalTransition_new1 ()
+void QSignalTransition_new1()
 {
-  QSignalTransition * o = new QSignalTransition ( OPQSTATE(1,0) );
+  QSignalTransition * o = new QSignalTransition( OPQSTATE(1,0) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = 0)
 */
-void QSignalTransition_new2 ()
+void QSignalTransition_new2()
 {
-  QSignalTransition * o = new QSignalTransition ( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
+  QSignalTransition * o = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -119,8 +119,8 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->senderObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->senderObject();
+      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->setSenderObject ( PQOBJECT(1) );
+      obj->setSenderObject( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,8 +170,8 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->signal () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->signal() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setSignal ( *PQBYTEARRAY(1) );
+      obj->setSignal( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

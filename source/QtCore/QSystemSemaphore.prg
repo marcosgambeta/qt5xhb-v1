@@ -39,7 +39,7 @@ CLASS QSystemSemaphore
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSystemSemaphore
+PROCEDURE destroyObject() CLASS QSystemSemaphore
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
-    QSystemSemaphore * o = new QSystemSemaphore ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
+    QSystemSemaphore * o = new QSystemSemaphore( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
     if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      obj->setKey ( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
+      obj->setKey( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_KEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->key () );
+      RQSTRING( obj->key() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->acquire () );
+      RBOOL( obj->acquire() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->release ( OPINT(1,1) ) );
+      RBOOL( obj->release( OPINT(1,1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -32,7 +32,7 @@ CLASS QSequentialAnimationGroup INHERIT QAnimationGroup
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSequentialAnimationGroup
+PROCEDURE destroyObject() CLASS QSequentialAnimationGroup
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSequentialAnimationGroup * o = new QSequentialAnimationGroup ( OPQOBJECT(1,0) );
+    QSequentialAnimationGroup * o = new QSequentialAnimationGroup( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -102,8 +102,8 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPauseAnimation * ptr = obj->addPause ( PINT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QPAUSEANIMATION" );
+      QPauseAnimation * ptr = obj->addPause( PINT(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,8 +127,8 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractAnimation * ptr = obj->currentAnimation ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTANIMATION" );
+      QAbstractAnimation * ptr = obj->currentAnimation();
+      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,8 +152,8 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QPauseAnimation * ptr = obj->insertPause ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QPAUSEANIMATION" );
+      QPauseAnimation * ptr = obj->insertPause( PINT(1), PINT(2) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->duration () );
+      RINT( obj->duration() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
   }
 }
 
-void QSequentialAnimationGroupSlots_connect_signal ( const QString & signal, const QString & slot );
+void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ONCURRENTANIMATIONCHANGED )
 {

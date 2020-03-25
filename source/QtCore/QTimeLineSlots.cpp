@@ -25,7 +25,7 @@ void QTimeLineSlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMELINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTIMELINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QTimeLineSlots::frameChanged( int frame )
   PHB_ITEM cb = Signals_return_codeblock( object, "frameChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMELINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTIMELINE" );
     PHB_ITEM pframe = hb_itemPutNI( NULL, frame );
     hb_vmEvalBlockV( cb, 2, psender, pframe );
     hb_itemRelease( psender );
@@ -49,7 +49,7 @@ void QTimeLineSlots::stateChanged( QTimeLine::State newState )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QTimeLine::State)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMELINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTIMELINE" );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
     hb_vmEvalBlockV( cb, 2, psender, pnewState );
     hb_itemRelease( psender );
@@ -62,7 +62,7 @@ void QTimeLineSlots::valueChanged( qreal value )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTIMELINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTIMELINE" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -70,7 +70,7 @@ void QTimeLineSlots::valueChanged( qreal value )
   }
 }
 
-void QTimeLineSlots_connect_signal ( const QString & signal, const QString & slot )
+void QTimeLineSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QTimeLine * obj = (QTimeLine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

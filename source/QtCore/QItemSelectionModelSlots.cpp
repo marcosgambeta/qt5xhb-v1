@@ -25,7 +25,7 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged(QItemSelection,QItemSelection)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
     PHB_ITEM pselected = Signals_return_object( (void *) &selected, "QITEMSELECTION" );
     PHB_ITEM pdeselected = Signals_return_object( (void *) &deselected, "QITEMSELECTION" );
     hb_vmEvalBlockV( cb, 3, psender, pselected, pdeselected );
@@ -40,7 +40,7 @@ void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, cons
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(QModelIndex,QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
     PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
     hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
@@ -55,7 +55,7 @@ void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, c
   PHB_ITEM cb = Signals_return_codeblock( object, "currentRowChanged(QModelIndex,QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
     PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
     hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
@@ -70,7 +70,7 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
   PHB_ITEM cb = Signals_return_codeblock( object, "currentColumnChanged(QModelIndex,QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
     PHB_ITEM pcurrent = Signals_return_object( (void *) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Signals_return_object( (void *) &previous, "QMODELINDEX" );
     hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
@@ -80,7 +80,7 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
   }
 }
 
-void QItemSelectionModelSlots_connect_signal ( const QString & signal, const QString & slot )
+void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

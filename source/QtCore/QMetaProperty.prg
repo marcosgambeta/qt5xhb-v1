@@ -65,7 +65,7 @@ CLASS QMetaProperty
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMetaProperty
+PROCEDURE destroyObject() CLASS QMetaProperty
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMetaProperty * o = new QMetaProperty ();
+    QMetaProperty * o = new QMetaProperty();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->name () );
+      hb_retc( (const char *) obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retc( (const char *) obj->typeName () );
+      hb_retc( (const char *) obj->typeName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_USERTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->userType () );
+      RINT( obj->userType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_PROPERTYINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->propertyIndex () );
+      RINT( obj->propertyIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISREADABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReadable () );
+      RBOOL( obj->isReadable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISWRITABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isWritable () );
+      RBOOL( obj->isWritable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isResettable () );
+      RBOOL( obj->isResettable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isDesignable ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isDesignable( OPQOBJECT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isScriptable ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isScriptable( OPQOBJECT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isStored ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isStored( OPQOBJECT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isEditable ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isEditable( OPQOBJECT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
     if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isUser ( OPQOBJECT(1,0) ) );
+      RBOOL( obj->isUser( OPQOBJECT(1,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISCONSTANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isConstant () );
+      RBOOL( obj->isConstant() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFINAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFinal () );
+      RBOOL( obj->isFinal() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISFLAGTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFlagType () );
+      RBOOL( obj->isFlagType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISENUMTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEnumType () );
+      RBOOL( obj->isEnumType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -541,8 +541,8 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENUMERATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMetaEnum * ptr = new QMetaEnum( obj->enumerator () );
-      _qt5xhb_createReturnClass ( ptr, "QMETAENUM", true );
+      QMetaEnum * ptr = new QMetaEnum( obj->enumerator() );
+      _qt5xhb_createReturnClass( ptr, "QMETAENUM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASNOTIFYSIGNAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasNotifySignal () );
+      RBOOL( obj->hasNotifySignal() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -590,8 +590,8 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMetaMethod * ptr = new QMetaMethod( obj->notifySignal () );
-      _qt5xhb_createReturnClass ( ptr, "QMETAMETHOD", true );
+      QMetaMethod * ptr = new QMetaMethod( obj->notifySignal() );
+      _qt5xhb_createReturnClass( ptr, "QMETAMETHOD", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NOTIFYSIGNALINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->notifySignalIndex () );
+      RINT( obj->notifySignalIndex() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->revision () );
+      RINT( obj->revision() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -663,8 +663,8 @@ HB_FUNC_STATIC( QMETAPROPERTY_READ )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->read ( PQOBJECT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->read( PQOBJECT(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2) )
     {
 #endif
-      RBOOL( obj->write ( PQOBJECT(1), *PQVARIANT(2) ) );
+      RBOOL( obj->write( PQOBJECT(1), *PQVARIANT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_RESET )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      RBOOL( obj->reset ( PQOBJECT(1) ) );
+      RBOOL( obj->reset( PQOBJECT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_HASSTDCPPSET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasStdCppSet () );
+      RBOOL( obj->hasStdCppSet() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -784,8 +784,8 @@ HB_FUNC_STATIC( QMETAPROPERTY_ENCLOSINGMETAOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->enclosingMetaObject ();
-      _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+      const QMetaObject * ptr = obj->enclosingMetaObject();
+      _qt5xhb_createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

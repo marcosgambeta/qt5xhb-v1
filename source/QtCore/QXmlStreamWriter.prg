@@ -61,7 +61,7 @@ CLASS QXmlStreamWriter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamWriter
+PROCEDURE destroyObject() CLASS QXmlStreamWriter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,27 +86,27 @@ RETURN
 /*
 QXmlStreamWriter()
 */
-void QXmlStreamWriter_new1 ()
+void QXmlStreamWriter_new1()
 {
-  QXmlStreamWriter * o = new QXmlStreamWriter ();
+  QXmlStreamWriter * o = new QXmlStreamWriter();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlStreamWriter(QIODevice * device)
 */
-void QXmlStreamWriter_new2 ()
+void QXmlStreamWriter_new2()
 {
-  QXmlStreamWriter * o = new QXmlStreamWriter ( PQIODEVICE(1) );
+  QXmlStreamWriter * o = new QXmlStreamWriter( PQIODEVICE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlStreamWriter(QByteArray * array)
 */
-void QXmlStreamWriter_new3 ()
+void QXmlStreamWriter_new3()
 {
-  QXmlStreamWriter * o = new QXmlStreamWriter ( PQBYTEARRAY(1) );
+  QXmlStreamWriter * o = new QXmlStreamWriter( PQBYTEARRAY(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoFormatting () );
+      RBOOL( obj->autoFormatting() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_AUTOFORMATTINGINDENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->autoFormattingIndent () );
+      RINT( obj->autoFormattingIndent() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,8 +217,8 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_CODEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTextCodec * ptr = obj->codec ();
-      _qt5xhb_createReturnClass ( ptr, "QTEXTCODEC", false );
+      QTextCodec * ptr = obj->codec();
+      _qt5xhb_createReturnClass( ptr, "QTEXTCODEC", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,8 +242,8 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIODevice * ptr = obj->device ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QIODEVICE" );
+      QIODevice * ptr = obj->device();
+      _qt5xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_HASERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasError () );
+      RBOOL( obj->hasError() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTING )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoFormatting ( PBOOL(1) );
+      obj->setAutoFormatting( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAutoFormattingIndent ( PINT(1) );
+      obj->setAutoFormattingIndent( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,13 +333,13 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
 /*
 void setCodec(QTextCodec * codec)
 */
-void QXmlStreamWriter_setCodec1 ()
+void QXmlStreamWriter_setCodec1()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setCodec ( PQTEXTCODEC(1) );
+    obj->setCodec( PQTEXTCODEC(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -348,13 +348,13 @@ void QXmlStreamWriter_setCodec1 ()
 /*
 void setCodec(const char * codecName)
 */
-void QXmlStreamWriter_setCodec2 ()
+void QXmlStreamWriter_setCodec2()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setCodec ( PCONSTCHAR(1) );
+    obj->setCodec( PCONSTCHAR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      obj->setDevice ( PQIODEVICE(1) );
+      obj->setDevice( PQIODEVICE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,13 +408,13 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
 /*
 void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
 */
-void QXmlStreamWriter_writeAttribute1 ()
+void QXmlStreamWriter_writeAttribute1()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeAttribute ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    obj->writeAttribute( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -423,13 +423,13 @@ void QXmlStreamWriter_writeAttribute1 ()
 /*
 void writeAttribute(const QString & qualifiedName, const QString & value)
 */
-void QXmlStreamWriter_writeAttribute2 ()
+void QXmlStreamWriter_writeAttribute2()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeAttribute ( PQSTRING(1), PQSTRING(2) );
+    obj->writeAttribute( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -438,13 +438,13 @@ void QXmlStreamWriter_writeAttribute2 ()
 /*
 void writeAttribute(const QXmlStreamAttribute & attribute)
 */
-void QXmlStreamWriter_writeAttribute3 ()
+void QXmlStreamWriter_writeAttribute3()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeAttribute ( *PQXMLSTREAMATTRIBUTE(1) );
+    obj->writeAttribute( *PQXMLSTREAMATTRIBUTE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTES )
     if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTES(1) )
     {
 #endif
-      obj->writeAttributes ( *PQXMLSTREAMATTRIBUTES(1) );
+      obj->writeAttributes( *PQXMLSTREAMATTRIBUTES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECDATA )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->writeCDATA ( PQSTRING(1) );
+      obj->writeCDATA( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECHARACTERS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->writeCharacters ( PQSTRING(1) );
+      obj->writeCharacters( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECOMMENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->writeComment ( PQSTRING(1) );
+      obj->writeComment( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECURRENTTOKEN )
     if( ISNUMPAR(1) && ISQXMLSTREAMREADER(1) )
     {
 #endif
-      obj->writeCurrentToken ( *PQXMLSTREAMREADER(1) );
+      obj->writeCurrentToken( *PQXMLSTREAMREADER(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDTD )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->writeDTD ( PQSTRING(1) );
+      obj->writeDTD( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDEFAULTNAMESPACE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->writeDefaultNamespace ( PQSTRING(1) );
+      obj->writeDefaultNamespace( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -659,13 +659,13 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDEFAULTNAMESPACE )
 /*
 void writeEmptyElement(const QString & namespaceUri, const QString & name)
 */
-void QXmlStreamWriter_writeEmptyElement1 ()
+void QXmlStreamWriter_writeEmptyElement1()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeEmptyElement ( PQSTRING(1), PQSTRING(2) );
+    obj->writeEmptyElement( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -674,13 +674,13 @@ void QXmlStreamWriter_writeEmptyElement1 ()
 /*
 void writeEmptyElement(const QString & qualifiedName)
 */
-void QXmlStreamWriter_writeEmptyElement2 ()
+void QXmlStreamWriter_writeEmptyElement2()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeEmptyElement ( PQSTRING(1) );
+    obj->writeEmptyElement( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDDOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->writeEndDocument ();
+      obj->writeEndDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -744,7 +744,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDELEMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->writeEndElement ();
+      obj->writeEndElement();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENTITYREFERENCE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->writeEntityReference ( PQSTRING(1) );
+      obj->writeEntityReference( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
 #endif
-      obj->writeNamespace ( PQSTRING(1), OPQSTRING(2,QString()) );
+      obj->writeNamespace( PQSTRING(1), OPQSTRING(2,QString()) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
 #endif
-      obj->writeProcessingInstruction ( PQSTRING(1), OPQSTRING(2,QString()) );
+      obj->writeProcessingInstruction( PQSTRING(1), OPQSTRING(2,QString()) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -838,13 +838,13 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
 /*
 void writeStartDocument(const QString & version)
 */
-void QXmlStreamWriter_writeStartDocument1 ()
+void QXmlStreamWriter_writeStartDocument1()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeStartDocument ( PQSTRING(1) );
+    obj->writeStartDocument( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -853,13 +853,13 @@ void QXmlStreamWriter_writeStartDocument1 ()
 /*
 void writeStartDocument(const QString & version, bool standalone)
 */
-void QXmlStreamWriter_writeStartDocument2 ()
+void QXmlStreamWriter_writeStartDocument2()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeStartDocument ( PQSTRING(1), PBOOL(2) );
+    obj->writeStartDocument( PQSTRING(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -868,13 +868,13 @@ void QXmlStreamWriter_writeStartDocument2 ()
 /*
 void writeStartDocument()
 */
-void QXmlStreamWriter_writeStartDocument3 ()
+void QXmlStreamWriter_writeStartDocument3()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeStartDocument ();
+    obj->writeStartDocument();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -907,13 +907,13 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 /*
 void writeStartElement(const QString & namespaceUri, const QString & name)
 */
-void QXmlStreamWriter_writeStartElement1 ()
+void QXmlStreamWriter_writeStartElement1()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeStartElement ( PQSTRING(1), PQSTRING(2) );
+    obj->writeStartElement( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -922,13 +922,13 @@ void QXmlStreamWriter_writeStartElement1 ()
 /*
 void writeStartElement(const QString & qualifiedName)
 */
-void QXmlStreamWriter_writeStartElement2 ()
+void QXmlStreamWriter_writeStartElement2()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeStartElement ( PQSTRING(1) );
+    obj->writeStartElement( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -956,13 +956,13 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 /*
 void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
 */
-void QXmlStreamWriter_writeTextElement1 ()
+void QXmlStreamWriter_writeTextElement1()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeTextElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    obj->writeTextElement( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -971,13 +971,13 @@ void QXmlStreamWriter_writeTextElement1 ()
 /*
 void writeTextElement(const QString & qualifiedName, const QString & text)
 */
-void QXmlStreamWriter_writeTextElement2 ()
+void QXmlStreamWriter_writeTextElement2()
 {
   QXmlStreamWriter * obj = (QXmlStreamWriter *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->writeTextElement ( PQSTRING(1), PQSTRING(2) );
+    obj->writeTextElement( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );

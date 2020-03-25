@@ -33,7 +33,7 @@ CLASS QEventLoopLocker
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QEventLoopLocker
+PROCEDURE destroyObject() CLASS QEventLoopLocker
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,27 +58,27 @@ RETURN
 /*
 QEventLoopLocker()
 */
-void QEventLoopLocker_new1 ()
+void QEventLoopLocker_new1()
 {
-  QEventLoopLocker * o = new QEventLoopLocker ();
+  QEventLoopLocker * o = new QEventLoopLocker();
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QEventLoopLocker(QEventLoop * loop)
 */
-void QEventLoopLocker_new2 ()
+void QEventLoopLocker_new2()
 {
-  QEventLoopLocker * o = new QEventLoopLocker ( PQEVENTLOOP(1) );
+  QEventLoopLocker * o = new QEventLoopLocker( PQEVENTLOOP(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QEventLoopLocker(QThread * thread)
 */
-void QEventLoopLocker_new3 ()
+void QEventLoopLocker_new3()
 {
-  QEventLoopLocker * o = new QEventLoopLocker ( PQTHREAD(1) );
+  QEventLoopLocker * o = new QEventLoopLocker( PQTHREAD(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 

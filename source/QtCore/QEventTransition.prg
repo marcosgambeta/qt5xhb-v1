@@ -29,7 +29,7 @@ CLASS QEventTransition INHERIT QAbstractTransition
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QEventTransition
+PROCEDURE destroyObject() CLASS QEventTransition
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -54,18 +54,18 @@ RETURN
 /*
 QEventTransition(QState * sourceState = 0)
 */
-void QEventTransition_new1 ()
+void QEventTransition_new1()
 {
-  QEventTransition * o = new QEventTransition ( OPQSTATE(1,0) );
+  QEventTransition * o = new QEventTransition( OPQSTATE(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 */
-void QEventTransition_new2 ()
+void QEventTransition_new2()
 {
-  QEventTransition * o = new QEventTransition ( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,0) );
+  QEventTransition * o = new QEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -118,8 +118,8 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->eventSource ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->eventSource();
+      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->eventType () );
+      RENUM( obj->eventType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->setEventSource ( PQOBJECT(1) );
+      obj->setEventSource( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setEventType ( (QEvent::Type) hb_parni(1) );
+      obj->setEventType( (QEvent::Type) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

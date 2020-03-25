@@ -38,7 +38,7 @@ CLASS QBuffer INHERIT QIODevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QBuffer
+PROCEDURE destroyObject() CLASS QBuffer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,18 +63,18 @@ RETURN
 /*
 QBuffer ( QObject * parent = 0 )
 */
-void QBuffer_new1 ()
+void QBuffer_new1()
 {
-  QBuffer * o = new QBuffer ( OPQOBJECT(1,0) );
+  QBuffer * o = new QBuffer( OPQOBJECT(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 */
-void QBuffer_new2 ()
+void QBuffer_new2()
 {
-  QBuffer * o = new QBuffer ( PQBYTEARRAY(1), OPQOBJECT(2,0) );
+  QBuffer * o = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -127,8 +127,8 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = &obj->buffer ();
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", false );
+      QByteArray * ptr = &obj->buffer();
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,8 +152,8 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QByteArray * ptr = &obj->buffer ();
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", false );
+      const QByteArray * ptr = &obj->buffer();
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,8 +187,8 @@ HB_FUNC_STATIC( QBUFFER_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QByteArray * ptr = &obj->data ();
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", false );
+      const QByteArray * ptr = &obj->data();
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QBUFFER_SETBUFFER )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setBuffer ( PQBYTEARRAY(1) );
+      obj->setBuffer( PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,13 +228,13 @@ HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 /*
 void setData ( const QByteArray & data )
 */
-void QBuffer_setData1 ()
+void QBuffer_setData1()
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setData ( *PQBYTEARRAY(1) );
+    obj->setData( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -243,13 +243,13 @@ void QBuffer_setData1 ()
 /*
 void setData ( const char * data, int size )
 */
-void QBuffer_setData2 ()
+void QBuffer_setData2()
 {
   QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setData ( PCONSTCHAR(1), PINT(2) );
+    obj->setData( PCONSTCHAR(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QBUFFER_ATEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->atEnd () );
+      RBOOL( obj->atEnd() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QBUFFER_CANREADLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canReadLine () );
+      RBOOL( obj->canReadLine() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QBUFFER_CLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->close ();
+      obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->open ( (QBuffer::OpenMode) hb_parni(1) ) );
+      RBOOL( obj->open( (QBuffer::OpenMode) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QBUFFER_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->pos () );
+      RQINT64( obj->pos() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QBUFFER_SEEK )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->seek ( PQINT64(1) ) );
+      RBOOL( obj->seek( PQINT64(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QBUFFER_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->size () );
+      RQINT64( obj->size() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

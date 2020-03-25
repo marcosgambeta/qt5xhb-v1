@@ -38,7 +38,7 @@ CLASS QTemporaryDir
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTemporaryDir
+PROCEDURE destroyObject() CLASS QTemporaryDir
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,18 +63,18 @@ RETURN
 /*
 QTemporaryDir()
 */
-void QTemporaryDir_new1 ()
+void QTemporaryDir_new1()
 {
-  QTemporaryDir * o = new QTemporaryDir ();
+  QTemporaryDir * o = new QTemporaryDir();
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QTemporaryDir(const QString & templateName)
 */
-void QTemporaryDir_new2 ()
+void QTemporaryDir_new2()
 {
-  QTemporaryDir * o = new QTemporaryDir ( PQSTRING(1) );
+  QTemporaryDir * o = new QTemporaryDir( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_AUTOREMOVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoRemove () );
+      RBOOL( obj->autoRemove() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->path () );
+      RQSTRING( obj->path() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->remove () );
+      RBOOL( obj->remove() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_SETAUTOREMOVE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoRemove ( PBOOL(1) );
+      obj->setAutoRemove( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

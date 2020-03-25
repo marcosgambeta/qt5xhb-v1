@@ -37,7 +37,7 @@ CLASS QXmlStreamNotationDeclaration
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlStreamNotationDeclaration
+PROCEDURE destroyObject() CLASS QXmlStreamNotationDeclaration
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,18 +62,18 @@ RETURN
 /*
 QXmlStreamNotationDeclaration()
 */
-void QXmlStreamNotationDeclaration_new1 ()
+void QXmlStreamNotationDeclaration_new1()
 {
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ();
+  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 */
-void QXmlStreamNotationDeclaration_new2 ()
+void QXmlStreamNotationDeclaration_new2()
 {
-  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration ();
+  QXmlStreamNotationDeclaration * o = new QXmlStreamNotationDeclaration();
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -126,8 +126,8 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->name () );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->name() );
+      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,8 +151,8 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_PUBLICID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->publicId () );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->publicId() );
+      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,8 +176,8 @@ HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_SYSTEMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      QStringRef * ptr = new QStringRef( obj->systemId () );
-      _qt5xhb_createReturnClass ( ptr, "QSTRINGREF", true );
+      QStringRef * ptr = new QStringRef( obj->systemId() );
+      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

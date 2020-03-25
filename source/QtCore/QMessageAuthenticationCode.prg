@@ -39,7 +39,7 @@ CLASS QMessageAuthenticationCode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMessageAuthenticationCode
+PROCEDURE destroyObject() CLASS QMessageAuthenticationCode
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
-    QMessageAuthenticationCode * o = new QMessageAuthenticationCode ( (QCryptographicHash::Algorithm) hb_parni(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
+    QMessageAuthenticationCode * o = new QMessageAuthenticationCode( (QCryptographicHash::Algorithm) hb_parni(1), ISNIL(2)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESET )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reset ();
+      obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setKey ( *PQBYTEARRAY(1) );
+      obj->setKey( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,13 +149,13 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
 /*
 void addData(const char *data, int length)
 */
-void QMessageAuthenticationCode_addData1 ()
+void QMessageAuthenticationCode_addData1()
 {
   QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addData ( PCONSTCHAR(1), PINT(2) );
+    obj->addData( PCONSTCHAR(1), PINT(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -164,13 +164,13 @@ void QMessageAuthenticationCode_addData1 ()
 /*
 void addData(const QByteArray &data)
 */
-void QMessageAuthenticationCode_addData2 ()
+void QMessageAuthenticationCode_addData2()
 {
   QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addData ( *PQBYTEARRAY(1) );
+    obj->addData( *PQBYTEARRAY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -179,13 +179,13 @@ void QMessageAuthenticationCode_addData2 ()
 /*
 bool addData(QIODevice *device)
 */
-void QMessageAuthenticationCode_addData3 ()
+void QMessageAuthenticationCode_addData3()
 {
   QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->addData ( PQIODEVICE(1) ) );
+    RBOOL( obj->addData( PQIODEVICE(1) ) );
   }
 }
 
@@ -226,8 +226,8 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_RESULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->result () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->result() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,8 +247,8 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_HASH )
   if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQBYTEARRAY(2) && ISNUM(3) )
   {
 #endif
-    QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash ( *PQBYTEARRAY(1), *PQBYTEARRAY(2), (QCryptographicHash::Algorithm) hb_parni(3) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( QMessageAuthenticationCode::hash( *PQBYTEARRAY(1), *PQBYTEARRAY(2), (QCryptographicHash::Algorithm) hb_parni(3) ) );
+    _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

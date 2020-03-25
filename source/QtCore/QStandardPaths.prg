@@ -39,7 +39,7 @@ CLASS QStandardPaths
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStandardPaths
+PROCEDURE destroyObject() CLASS QStandardPaths
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_WRITABLELOCATION )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRING( QStandardPaths::writableLocation ( (QStandardPaths::StandardLocation) hb_parni(1) ) );
+    RQSTRING( QStandardPaths::writableLocation( (QStandardPaths::StandardLocation) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_STANDARDLOCATIONS )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRINGLIST( QStandardPaths::standardLocations ( (QStandardPaths::StandardLocation) hb_parni(1) ) );
+    RQSTRINGLIST( QStandardPaths::standardLocations( (QStandardPaths::StandardLocation) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
   if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
 #endif
-    RQSTRING( QStandardPaths::locate ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );
+    RQSTRING( QStandardPaths::locate( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
   if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
   {
 #endif
-    RQSTRINGLIST( QStandardPaths::locateAll ( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );
+    RQSTRINGLIST( QStandardPaths::locateAll( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_DISPLAYNAME )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRING( QStandardPaths::displayName ( (QStandardPaths::StandardLocation) hb_parni(1) ) );
+    RQSTRING( QStandardPaths::displayName( (QStandardPaths::StandardLocation) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
   if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTARRAY(2) )
   {
 #endif
-    RQSTRING( QStandardPaths::findExecutable ( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );
+    RQSTRING( QStandardPaths::findExecutable( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_SETTESTMODEENABLED )
   if( ISNUMPAR(1) && ISLOG(1) )
   {
 #endif
-    QStandardPaths::setTestModeEnabled ( PBOOL(1) );
+    QStandardPaths::setTestModeEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_ISTESTMODEENABLED )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QStandardPaths::isTestModeEnabled () );
+    RBOOL( QStandardPaths::isTestModeEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

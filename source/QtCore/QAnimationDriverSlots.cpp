@@ -25,7 +25,7 @@ void QAnimationDriverSlots::started()
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QANIMATIONDRIVER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QANIMATIONDRIVER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QAnimationDriverSlots::stopped()
   PHB_ITEM cb = Signals_return_codeblock( object, "stopped()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QANIMATIONDRIVER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QANIMATIONDRIVER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QAnimationDriverSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAnimationDriverSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAnimationDriver * obj = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

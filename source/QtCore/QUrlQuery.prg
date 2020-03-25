@@ -50,7 +50,7 @@ CLASS QUrlQuery
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUrlQuery
+PROCEDURE destroyObject() CLASS QUrlQuery
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,36 +77,36 @@ RETURN
 /*
 QUrlQuery()
 */
-void QUrlQuery_new1 ()
+void QUrlQuery_new1()
 {
-  QUrlQuery * o = new QUrlQuery ();
+  QUrlQuery * o = new QUrlQuery();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QUrlQuery(const QUrl & url)
 */
-void QUrlQuery_new2 ()
+void QUrlQuery_new2()
 {
-  QUrlQuery * o = new QUrlQuery ( *PQURL(1) );
+  QUrlQuery * o = new QUrlQuery( *PQURL(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QUrlQuery(const QString & queryString)
 */
-void QUrlQuery_new3 ()
+void QUrlQuery_new3()
 {
-  QUrlQuery * o = new QUrlQuery ( PQSTRING(1) );
+  QUrlQuery * o = new QUrlQuery( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QUrlQuery(const QUrlQuery & other)
 */
-void QUrlQuery_new4 ()
+void QUrlQuery_new4()
 {
-  QUrlQuery * o = new QUrlQuery ( *PQURLQUERY(1) );
+  QUrlQuery * o = new QUrlQuery( *PQURLQUERY(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QURLQUERY_ADDQUERYITEM )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      obj->addQueryItem ( PQSTRING(1), PQSTRING(2) );
+      obj->addQueryItem( PQSTRING(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
     {
 #endif
-      RQSTRINGLIST( obj->allQueryItemValues ( PQSTRING(1), ISNIL(2)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(2) ) );
+      RQSTRINGLIST( obj->allQueryItemValues( PQSTRING(1), ISNIL(2)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QURLQUERY_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QURLQUERY_HASQUERYITEM )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasQueryItem ( PQSTRING(1) ) );
+      RBOOL( obj->hasQueryItem( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QURLQUERY_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERY )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RQSTRING( obj->query ( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
+      RQSTRING( obj->query( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
     {
 #endif
-      RQSTRING( obj->queryItemValue ( PQSTRING(1), ISNIL(2)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(2) ) );
+      RQSTRING( obj->queryItemValue( PQSTRING(1), ISNIL(2)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,8 +341,8 @@ HB_FUNC_STATIC( QURLQUERY_QUERYPAIRDELIMITER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->queryPairDelimiter () );
-      _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+      QChar * ptr = new QChar( obj->queryPairDelimiter() );
+      _qt5xhb_createReturnClass( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,8 +366,8 @@ HB_FUNC_STATIC( QURLQUERY_QUERYVALUEDELIMITER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QChar * ptr = new QChar( obj->queryValueDelimiter () );
-      _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+      QChar * ptr = new QChar( obj->queryValueDelimiter() );
+      _qt5xhb_createReturnClass( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEALLQUERYITEMS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->removeAllQueryItems ( PQSTRING(1) );
+      obj->removeAllQueryItems( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QURLQUERY_REMOVEQUERYITEM )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->removeQueryItem ( PQSTRING(1) );
+      obj->removeQueryItem( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QURLQUERY_SETQUERY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setQuery ( PQSTRING(1) );
+      obj->setQuery( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QURLQUERY_SWAP )
     if( ISNUMPAR(1) && ISQURLQUERY(1) )
     {
 #endif
-      obj->swap ( *PQURLQUERY(1) );
+      obj->swap( *PQURLQUERY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QURLQUERY_TOSTRING )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RQSTRING( obj->toString ( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
+      RQSTRING( obj->toString( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,8 +515,8 @@ HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYPAIRDELIMITER )
   if( ISNUMPAR(0) )
   {
 #endif
-    QChar * ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+    QChar * ptr = new QChar( QUrlQuery::defaultQueryPairDelimiter() );
+    _qt5xhb_createReturnClass( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -535,8 +535,8 @@ HB_FUNC_STATIC( QURLQUERY_DEFAULTQUERYVALUEDELIMITER )
   if( ISNUMPAR(0) )
   {
 #endif
-    QChar * ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter () );
-    _qt5xhb_createReturnClass ( ptr, "QCHAR", true );
+    QChar * ptr = new QChar( QUrlQuery::defaultQueryValueDelimiter() );
+    _qt5xhb_createReturnClass( ptr, "QCHAR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

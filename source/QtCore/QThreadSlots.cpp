@@ -25,7 +25,7 @@ void QThreadSlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTHREAD" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTHREAD" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QThreadSlots::started()
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTHREAD" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTHREAD" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QThreadSlots_connect_signal ( const QString & signal, const QString & slot )
+void QThreadSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QThread * obj = (QThread *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

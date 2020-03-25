@@ -34,7 +34,7 @@ CLASS QAnimationDriver INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAnimationDriver
+PROCEDURE destroyObject() CLASS QAnimationDriver
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QAnimationDriver * o = new QAnimationDriver ( OPQOBJECT(1,0) );
+    QAnimationDriver * o = new QAnimationDriver( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ADVANCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->advance ();
+      obj->advance();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_INSTALL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->install ();
+      obj->install();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_UNINSTALL )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->uninstall ();
+      obj->uninstall();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ISRUNNING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRunning () );
+      RBOOL( obj->isRunning() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_ELAPSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->elapsed () );
+      RQINT64( obj->elapsed() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_SETSTARTTIME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStartTime ( PQINT64(1) );
+      obj->setStartTime( PQINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_STARTTIME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->startTime () );
+      RQINT64( obj->startTime() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QANIMATIONDRIVER_STARTTIME )
   }
 }
 
-void QAnimationDriverSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAnimationDriverSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QANIMATIONDRIVER_ONSTARTED )
 {

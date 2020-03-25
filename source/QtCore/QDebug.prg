@@ -39,7 +39,7 @@ CLASS QDebug
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDebug
+PROCEDURE destroyObject() CLASS QDebug
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,9 +64,9 @@ RETURN
 /*
 QDebug(QIODevice *device)
 */
-void QDebug_new1 ()
+void QDebug_new1()
 {
-  QDebug * o = new QDebug ( PQIODEVICE(1) );
+  QDebug * o = new QDebug( PQIODEVICE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -77,18 +77,18 @@ QDebug(QString *string)
 /*
 QDebug(QtMsgType t)
 */
-void QDebug_new3 ()
+void QDebug_new3()
 {
-  QDebug * o = new QDebug ( (QtMsgType) hb_parni(1) );
+  QDebug * o = new QDebug( (QtMsgType) hb_parni(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDebug(const QDebug &o)
 */
-void QDebug_new4 ()
+void QDebug_new4()
 {
-  QDebug * o = new QDebug ( *PQDEBUG(1) );
+  QDebug * o = new QDebug( *PQDEBUG(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDEBUG_SWAP )
     if( ISNUMPAR(1) && ISQDEBUG(1) )
     {
 #endif
-      obj->swap ( *PQDEBUG(1) );
+      obj->swap( *PQDEBUG(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,8 +173,8 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->space ();
-      _qt5xhb_createReturnClass ( ptr, "QDEBUG", false );
+      QDebug * ptr = &obj->space();
+      _qt5xhb_createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,8 +198,8 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->nospace ();
-      _qt5xhb_createReturnClass ( ptr, "QDEBUG", false );
+      QDebug * ptr = &obj->nospace();
+      _qt5xhb_createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,8 +223,8 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDebug * ptr = &obj->maybeSpace ();
-      _qt5xhb_createReturnClass ( ptr, "QDEBUG", false );
+      QDebug * ptr = &obj->maybeSpace();
+      _qt5xhb_createReturnClass( ptr, "QDEBUG", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QDEBUG_AUTOINSERTSPACES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoInsertSpaces () );
+      RBOOL( obj->autoInsertSpaces() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QDEBUG_SETAUTOINSERTSPACES )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoInsertSpaces ( PBOOL(1) );
+      obj->setAutoInsertSpaces( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

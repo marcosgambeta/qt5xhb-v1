@@ -42,7 +42,7 @@ CLASS QMargins
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMargins
+PROCEDURE destroyObject() CLASS QMargins
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,18 +67,18 @@ RETURN
 /*
 QMargins()
 */
-void QMargins_new1 ()
+void QMargins_new1()
 {
-  QMargins * o = new QMargins ();
+  QMargins * o = new QMargins();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QMargins(int left, int top, int right, int bottom)
 */
-void QMargins_new2 ()
+void QMargins_new2()
 {
-  QMargins * o = new QMargins ( PINT(1), PINT(2), PINT(3), PINT(4) );
+  QMargins * o = new QMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMARGINS_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QMARGINS_LEFT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->left () );
+      RINT( obj->left() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QMARGINS_TOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->top () );
+      RINT( obj->top() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QMARGINS_RIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->right () );
+      RINT( obj->right() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QMARGINS_BOTTOM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->bottom () );
+      RINT( obj->bottom() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QMARGINS_SETLEFT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLeft ( PINT(1) );
+      obj->setLeft( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QMARGINS_SETTOP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTop ( PINT(1) );
+      obj->setTop( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QMARGINS_SETRIGHT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setRight ( PINT(1) );
+      obj->setRight( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setBottom ( PINT(1) );
+      obj->setBottom( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

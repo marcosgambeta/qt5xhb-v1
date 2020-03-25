@@ -25,7 +25,7 @@ void QFileSystemWatcherSlots::directoryChanged( const QString & path )
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMWATCHER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     hb_vmEvalBlockV( cb, 2, psender, ppath );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
   PHB_ITEM cb = Signals_return_codeblock( object, "fileChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFILESYSTEMWATCHER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
     hb_vmEvalBlockV( cb, 2, psender, ppath );
     hb_itemRelease( psender );
@@ -46,7 +46,7 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
   }
 }
 
-void QFileSystemWatcherSlots_connect_signal ( const QString & signal, const QString & slot )
+void QFileSystemWatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

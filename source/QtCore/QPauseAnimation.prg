@@ -26,7 +26,7 @@ CLASS QPauseAnimation INHERIT QAbstractAnimation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPauseAnimation
+PROCEDURE destroyObject() CLASS QPauseAnimation
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,18 +53,18 @@ RETURN
 /*
 QPauseAnimation ( QObject * parent = 0 )
 */
-void QPauseAnimation_new1 ()
+void QPauseAnimation_new1()
 {
-  QPauseAnimation * o = new QPauseAnimation ( OPQOBJECT(1,0) );
+  QPauseAnimation * o = new QPauseAnimation( OPQOBJECT(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QPauseAnimation ( int msecs, QObject * parent = 0 )
 */
-void QPauseAnimation_new2 ()
+void QPauseAnimation_new2()
 {
-  QPauseAnimation * o = new QPauseAnimation ( PINT(1), OPQOBJECT(2,0) );
+  QPauseAnimation * o = new QPauseAnimation( PINT(1), OPQOBJECT(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -93,8 +93,8 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDuration ( PINT(1) );
+      obj->setDuration( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->duration () );
+      RINT( obj->duration() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

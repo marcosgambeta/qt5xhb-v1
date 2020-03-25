@@ -25,7 +25,7 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
   PHB_ITEM cb = Signals_return_codeblock( object, "currentAnimationChanged(QAbstractAnimation*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSEQUENTIALANIMATIONGROUP" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSEQUENTIALANIMATIONGROUP" );
     PHB_ITEM pcurrent = Signals_return_qobject( (QObject *) current, "QABSTRACTANIMATION" );
     hb_vmEvalBlockV( cb, 2, psender, pcurrent );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
   }
 }
 
-void QSequentialAnimationGroupSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

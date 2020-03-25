@@ -37,7 +37,7 @@ CLASS QFileDevice INHERIT QIODevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileDevice
+PROCEDURE destroyObject() CLASS QFileDevice
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFILEDEVICE_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QFILEDEVICE_FLUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->flush () );
+      RBOOL( obj->flush() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QFILEDEVICE_HANDLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->handle () );
+      RINT( obj->handle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->permissions () );
+      RENUM( obj->permissions() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QFILEDEVICE_RESIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->resize ( PQINT64(1) ) );
+      RBOOL( obj->resize( PQINT64(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SETPERMISSIONS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->setPermissions ( (QFileDevice::Permissions) hb_parni(1) ) );
+      RBOOL( obj->setPermissions( (QFileDevice::Permissions) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QFILEDEVICE_UNSETERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unsetError ();
+      obj->unsetError();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ATEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->atEnd () );
+      RBOOL( obj->atEnd() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QFILEDEVICE_CLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->close ();
+      obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QFILEDEVICE_ISSEQUENTIAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSequential () );
+      RBOOL( obj->isSequential() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QFILEDEVICE_POS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->pos () );
+      RQINT64( obj->pos() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SEEK )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->seek ( PQINT64(1) ) );
+      RBOOL( obj->seek( PQINT64(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QFILEDEVICE_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->size () );
+      RQINT64( obj->size() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

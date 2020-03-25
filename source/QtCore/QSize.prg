@@ -44,7 +44,7 @@ CLASS QSize
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSize
+PROCEDURE destroyObject() CLASS QSize
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,18 +69,18 @@ RETURN
 /*
 QSize ()
 */
-void QSize_new1 ()
+void QSize_new1()
 {
-  QSize * o = new QSize ();
+  QSize * o = new QSize();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSize ( int width, int height )
 */
-void QSize_new2 ()
+void QSize_new2()
 {
-  QSize * o = new QSize ( PINT(1), PINT(2) );
+  QSize * o = new QSize( PINT(1), PINT(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      QSize * ptr = new QSize( obj->boundedTo ( *PQSIZE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->boundedTo( *PQSIZE(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,8 +158,8 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      QSize * ptr = new QSize( obj->expandedTo ( *PQSIZE(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->expandedTo( *PQSIZE(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSIZE_HEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->height () );
+      RINT( obj->height() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSIZE_ISEMPTY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEmpty () );
+      RBOOL( obj->isEmpty() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSIZE_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,13 +269,13 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
 /*
 void scale ( int width, int height, Qt::AspectRatioMode mode )
 */
-void QSize_scale1 ()
+void QSize_scale1()
 {
   QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->scale ( PINT(1), PINT(2), (Qt::AspectRatioMode) hb_parni(3) );
+    obj->scale( PINT(1), PINT(2), (Qt::AspectRatioMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -284,13 +284,13 @@ void QSize_scale1 ()
 /*
 void scale ( const QSize & size, Qt::AspectRatioMode mode )
 */
-void QSize_scale2 ()
+void QSize_scale2()
 {
   QSize * obj = (QSize *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->scale ( *PQSIZE(1), (Qt::AspectRatioMode) hb_parni(2) );
+    obj->scale( *PQSIZE(1), (Qt::AspectRatioMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSIZE_SETHEIGHT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHeight ( PINT(1) );
+      obj->setHeight( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QSIZE_SETWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWidth ( PINT(1) );
+      obj->setWidth( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSIZE_TRANSPOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->transpose ();
+      obj->transpose();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QSIZE_WIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->width () );
+      RINT( obj->width() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

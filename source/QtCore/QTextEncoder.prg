@@ -36,7 +36,7 @@ CLASS QTextEncoder
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextEncoder
+PROCEDURE destroyObject() CLASS QTextEncoder
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,18 +61,18 @@ RETURN
 /*
 QTextEncoder(const QTextCodec * codec)
 */
-void QTextEncoder_new1 ()
+void QTextEncoder_new1()
 {
-  QTextEncoder * o = new QTextEncoder ( PQTEXTCODEC(1) );
+  QTextEncoder * o = new QTextEncoder( PQTEXTCODEC(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 */
-void QTextEncoder_new2 ()
+void QTextEncoder_new2()
 {
-  QTextEncoder * o = new QTextEncoder ( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
+  QTextEncoder * o = new QTextEncoder( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -115,28 +115,28 @@ HB_FUNC_STATIC( QTEXTENCODER_DELETE )
 /*
 QByteArray fromUnicode(const QString & str)
 */
-void QTextEncoder_fromUnicode1 ()
+void QTextEncoder_fromUnicode1()
 {
   QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( obj->fromUnicode( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
 
 /*
 QByteArray fromUnicode(const QChar * uc, int len)
 */
-void QTextEncoder_fromUnicode2 ()
+void QTextEncoder_fromUnicode2()
 {
   QTextEncoder * obj = (QTextEncoder *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QByteArray * ptr = new QByteArray( obj->fromUnicode ( PQCHAR(1), PINT(2) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+    QByteArray * ptr = new QByteArray( obj->fromUnicode( PQCHAR(1), PINT(2) ) );
+    _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QTEXTENCODER_HASFAILURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasFailure () );
+      RBOOL( obj->hasFailure() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

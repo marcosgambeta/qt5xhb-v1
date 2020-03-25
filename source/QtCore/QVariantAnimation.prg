@@ -37,7 +37,7 @@ CLASS QVariantAnimation INHERIT QAbstractAnimation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVariantAnimation
+PROCEDURE destroyObject() CLASS QVariantAnimation
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->currentValue () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->currentValue() );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,8 +114,8 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QEasingCurve * ptr = new QEasingCurve( obj->easingCurve () );
-      _qt5xhb_createReturnClass ( ptr, "QEASINGCURVE", true );
+      QEasingCurve * ptr = new QEasingCurve( obj->easingCurve() );
+      _qt5xhb_createReturnClass( ptr, "QEASINGCURVE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,8 +139,8 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->endValue () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->endValue() );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,8 +164,8 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->keyValueAt ( PQREAL(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->keyValueAt( PQREAL(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setDuration ( PINT(1) );
+      obj->setDuration( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
     if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
     {
 #endif
-      obj->setEasingCurve ( *PQEASINGCURVE(1) );
+      obj->setEasingCurve( *PQEASINGCURVE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setEndValue ( *PQVARIANT(1) );
+      obj->setEndValue( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setKeyValueAt ( PQREAL(1), *PQVARIANT(2) );
+      obj->setKeyValueAt( PQREAL(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->setStartValue ( *PQVARIANT(1) );
+      obj->setStartValue( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,8 +319,8 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->startValue () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->startValue() );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
   }
 }
 
-void QVariantAnimationSlots_connect_signal ( const QString & signal, const QString & slot );
+void QVariantAnimationSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
 {

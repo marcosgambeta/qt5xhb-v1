@@ -30,7 +30,7 @@ CLASS QCache
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCache
+PROCEDURE destroyObject() CLASS QCache
    IF ::self_destruction
       ::delete()
    ENDIF

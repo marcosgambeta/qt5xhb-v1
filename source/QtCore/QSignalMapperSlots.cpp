@@ -25,7 +25,7 @@ void QSignalMapperSlots::mapped( int arg )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = hb_itemPutNI( NULL, arg );
     hb_vmEvalBlockV( cb, 2, psender, parg );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QSignalMapperSlots::mapped( const QString & arg )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = hb_itemPutC( NULL, QSTRINGTOSTRING(arg) );
     hb_vmEvalBlockV( cb, 2, psender, parg );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QSignalMapperSlots::mapped( QWidget * arg )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QWidget*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = Signals_return_qobject( (QObject *) arg, "QWIDGET" );
     hb_vmEvalBlockV( cb, 2, psender, parg );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QSignalMapperSlots::mapped( QObject * arg )
   PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QObject*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = Signals_return_qobject( (QObject *) arg, "QOBJECT" );
     hb_vmEvalBlockV( cb, 2, psender, parg );
     hb_itemRelease( psender );
@@ -72,7 +72,7 @@ void QSignalMapperSlots::mapped( QObject * arg )
   }
 }
 
-void QSignalMapperSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSignalMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QSignalMapper * obj = (QSignalMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

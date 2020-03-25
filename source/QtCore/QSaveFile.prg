@@ -31,7 +31,7 @@ CLASS QSaveFile INHERIT QFileDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSaveFile
+PROCEDURE destroyObject() CLASS QSaveFile
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,10 +60,10 @@ RETURN
 /*
 QSaveFile(const QString &name)
 */
-void QSaveFile_new1 ()
+void QSaveFile_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( PQSTRING(1) );
+  QSaveFile * o = new QSaveFile( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -71,10 +71,10 @@ void QSaveFile_new1 ()
 /*
 QSaveFile(QObject *parent = 0)
 */
-void QSaveFile_new2 ()
+void QSaveFile_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( OPQOBJECT(1,0) );
+  QSaveFile * o = new QSaveFile( OPQOBJECT(1,0) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -82,10 +82,10 @@ void QSaveFile_new2 ()
 /*
 QSaveFile(const QString &name, QObject *parent)
 */
-void QSaveFile_new3 ()
+void QSaveFile_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSaveFile * o = new QSaveFile ( PQSTRING(1), PQOBJECT(2) );
+  QSaveFile * o = new QSaveFile( PQSTRING(1), PQOBJECT(2) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSAVEFILE_FILENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->fileName () );
+      RQSTRING( obj->fileName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFileName ( PQSTRING(1) );
+      obj->setFileName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSAVEFILE_OPEN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->open ( (QIODevice::OpenMode) hb_parni(1) ) );
+      RBOOL( obj->open( (QIODevice::OpenMode) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSAVEFILE_COMMIT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->commit () );
+      RBOOL( obj->commit() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSAVEFILE_CANCELWRITING )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->cancelWriting ();
+      obj->cancelWriting();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSAVEFILE_SETDIRECTWRITEFALLBACK )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDirectWriteFallback ( PBOOL(1) );
+      obj->setDirectWriteFallback( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSAVEFILE_DIRECTWRITEFALLBACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->directWriteFallback () );
+      RBOOL( obj->directWriteFallback() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

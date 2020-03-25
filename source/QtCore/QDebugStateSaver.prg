@@ -33,7 +33,7 @@ CLASS QDebugStateSaver
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDebugStateSaver
+PROCEDURE destroyObject() CLASS QDebugStateSaver
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QDEBUGSTATESAVER_NEW )
 {
   if( ISNUMPAR(1) && ISQDEBUG(1) )
   {
-    QDebugStateSaver * o = new QDebugStateSaver ( *PQDEBUG(1) );
+    QDebugStateSaver * o = new QDebugStateSaver( *PQDEBUG(1) );
     _qt5xhb_returnNewObject( o, true );
   }
   else

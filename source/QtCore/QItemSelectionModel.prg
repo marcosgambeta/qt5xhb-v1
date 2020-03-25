@@ -50,7 +50,7 @@ CLASS QItemSelectionModel INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemSelectionModel
+PROCEDURE destroyObject() CLASS QItemSelectionModel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,18 +77,18 @@ RETURN
 /*
 QItemSelectionModel(QAbstractItemModel *model)
 */
-void QItemSelectionModel_new1 ()
+void QItemSelectionModel_new1()
 {
-  QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1) );
+  QItemSelectionModel * o = new QItemSelectionModel( PQABSTRACTITEMMODEL(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QItemSelectionModel(QAbstractItemModel *model, QObject *parent)
 */
-void QItemSelectionModel_new2 ()
+void QItemSelectionModel_new2()
 {
-  QItemSelectionModel * o = new QItemSelectionModel ( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
+  QItemSelectionModel * o = new QItemSelectionModel( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -117,8 +117,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -143,8 +143,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->currentIndex () );
-      _qt5xhb_createReturnClass ( ptr, "QMODELINDEX", true );
+      QModelIndex * ptr = new QModelIndex( obj->currentIndex() );
+      _qt5xhb_createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->isSelected ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->isSelected( *PQMODELINDEX(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
     if( ISNUMPAR(2) && ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
-      RBOOL( obj->isRowSelected ( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->isRowSelected( PINT(1), *PQMODELINDEX(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
     if( ISNUMPAR(2) && ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
-      RBOOL( obj->isColumnSelected ( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->isColumnSelected( PINT(1), *PQMODELINDEX(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
     if( ISNUMPAR(2) && ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
-      RBOOL( obj->rowIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->rowIntersectsSelection( PINT(1), *PQMODELINDEX(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
     if( ISNUMPAR(2) && ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
-      RBOOL( obj->columnIntersectsSelection ( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->columnIntersectsSelection( PINT(1), *PQMODELINDEX(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasSelection () );
+      RBOOL( obj->hasSelection() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndexList list = obj->selectedIndexes ();
+      QModelIndexList list = obj->selectedIndexes();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QModelIndexList list = obj->selectedRows ( OPINT(1,0) );
+      QModelIndexList list = obj->selectedRows( OPINT(1,0) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QModelIndexList list = obj->selectedColumns ( OPINT(1,0) );
+      QModelIndexList list = obj->selectedColumns( OPINT(1,0) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -468,8 +468,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QItemSelection * ptr = new QItemSelection( obj->selection () );
-      _qt5xhb_createReturnClass ( ptr, "QITEMSELECTION", true );
+      QItemSelection * ptr = new QItemSelection( obj->selection() );
+      _qt5xhb_createReturnClass( ptr, "QITEMSELECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,8 +493,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractItemModel * ptr = obj->model ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMMODEL" );
+      const QAbstractItemModel * ptr = obj->model();
+      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
     if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISNUM(2) )
     {
 #endif
-      obj->setCurrentIndex ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+      obj->setCurrentIndex( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -534,13 +534,13 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
 /*
 virtual void select(const QModelIndex &index, QItemSelectionModel::SelectionFlags command)
 */
-void QItemSelectionModel_select1 ()
+void QItemSelectionModel_select1()
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->select ( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+    obj->select( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -549,13 +549,13 @@ void QItemSelectionModel_select1 ()
 /*
 virtual void select(const QItemSelection &selection, QItemSelectionModel::SelectionFlags command)
 */
-void QItemSelectionModel_select2 ()
+void QItemSelectionModel_select2()
 {
   QItemSelectionModel * obj = (QItemSelectionModel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->select ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+    obj->select( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reset ();
+      obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearSelection ();
+      obj->clearSelection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARCURRENTINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearCurrentIndex ();
+      obj->clearCurrentIndex();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARCURRENTINDEX )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QItemSelectionModelSlots_connect_signal ( const QString & signal, const QString & slot );
+void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {

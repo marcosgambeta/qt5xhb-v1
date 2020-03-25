@@ -39,7 +39,7 @@ CLASS QItemSelection
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemSelection
+PROCEDURE destroyObject() CLASS QItemSelection
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,18 +64,18 @@ RETURN
 /*
 QItemSelection()
 */
-void QItemSelection_new1 ()
+void QItemSelection_new1()
 {
-  QItemSelection * o = new QItemSelection ();
+  QItemSelection * o = new QItemSelection();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
-void QItemSelection_new2 ()
+void QItemSelection_new2()
 {
-  QItemSelection * o = new QItemSelection ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
+  QItemSelection * o = new QItemSelection( *PQMODELINDEX(1), *PQMODELINDEX(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QITEMSELECTION_SELECT )
     if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQMODELINDEX(2) )
     {
 #endif
-      obj->select ( *PQMODELINDEX(1), *PQMODELINDEX(2) );
+      obj->select( *PQMODELINDEX(1), *PQMODELINDEX(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->contains ( *PQMODELINDEX(1) ) );
+      RBOOL( obj->contains( *PQMODELINDEX(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QModelIndexList list = obj->indexes ();
+      QModelIndexList list = obj->indexes();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QITEMSELECTION_MERGE )
     if( ISNUMPAR(2) && ISQITEMSELECTION(1) && ISNUM(2) )
     {
 #endif
-      obj->merge ( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+      obj->merge( *PQITEMSELECTION(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
   if( ISNUMPAR(3) && ISQITEMSELECTIONRANGE(1) && ISQITEMSELECTIONRANGE(2) && ISQITEMSELECTION(3) )
   {
 #endif
-    QItemSelection::split ( *PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), PQITEMSELECTION(3) );
+    QItemSelection::split( *PQITEMSELECTIONRANGE(1), *PQITEMSELECTIONRANGE(2), PQITEMSELECTION(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

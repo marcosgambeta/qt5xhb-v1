@@ -25,7 +25,7 @@ void QStateMachineSlots::started()
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSTATEMACHINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTATEMACHINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QStateMachineSlots::stopped()
   PHB_ITEM cb = Signals_return_codeblock( object, "stopped()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSTATEMACHINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTATEMACHINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QStateMachineSlots_connect_signal ( const QString & signal, const QString & slot )
+void QStateMachineSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

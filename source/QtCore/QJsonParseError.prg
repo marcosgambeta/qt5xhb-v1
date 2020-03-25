@@ -33,7 +33,7 @@ CLASS QJsonParseError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QJsonParseError
+PROCEDURE destroyObject() CLASS QJsonParseError
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QJSONPARSEERROR_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
