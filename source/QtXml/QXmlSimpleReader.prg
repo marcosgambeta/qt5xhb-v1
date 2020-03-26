@@ -26,7 +26,7 @@ CLASS QXmlSimpleReader INHERIT QXmlReader
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlSimpleReader
+PROCEDURE destroyObject() CLASS QXmlSimpleReader
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlSimpleReader * o = new QXmlSimpleReader ();
+    QXmlSimpleReader * o = new QXmlSimpleReader();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
     if( ISNUMPAR(2) && ISQXMLINPUTSOURCE(1) && ISLOG(2) )
     {
 #endif
-      RBOOL( obj->parse ( PQXMLINPUTSOURCE(1), PBOOL(2) ) );
+      RBOOL( obj->parse( PQXMLINPUTSOURCE(1), PBOOL(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->parseContinue () );
+      RBOOL( obj->parseContinue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

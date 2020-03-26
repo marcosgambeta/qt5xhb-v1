@@ -34,7 +34,7 @@ CLASS QXmlLocator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlLocator
+PROCEDURE destroyObject() CLASS QXmlLocator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnNumber () );
+      RINT( obj->columnNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QXMLLOCATOR_LINENUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lineNumber () );
+      RINT( obj->lineNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

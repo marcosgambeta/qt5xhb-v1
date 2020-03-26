@@ -27,7 +27,7 @@ CLASS QDomNotation INHERIT QDomNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomNotation
+PROCEDURE destroyObject() CLASS QDomNotation
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,18 +52,18 @@ RETURN
 /*
 QDomNotation ()
 */
-void QDomNotation_new1 ()
+void QDomNotation_new1()
 {
-  QDomNotation * o = new QDomNotation ();
+  QDomNotation * o = new QDomNotation();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDomNotation ( const QDomNotation & x )
 */
-void QDomNotation_new2 ()
+void QDomNotation_new2()
 {
-  QDomNotation * o = new QDomNotation ();
+  QDomNotation * o = new QDomNotation();
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->publicId () );
+      RQSTRING( obj->publicId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->systemId () );
+      RQSTRING( obj->systemId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -42,7 +42,7 @@ CLASS QXmlNamespaceSupport
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlNamespaceSupport
+PROCEDURE destroyObject() CLASS QXmlNamespaceSupport
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlNamespaceSupport * o = new QXmlNamespaceSupport ();
+    QXmlNamespaceSupport * o = new QXmlNamespaceSupport();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->popContext ();
+      obj->popContext();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->prefix ( PQSTRING(1) ) );
+      RQSTRING( obj->prefix( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,26 +150,26 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
 /*
 QStringList prefixes () const
 */
-void QXmlNamespaceSupport_prefixes1 ()
+void QXmlNamespaceSupport_prefixes1()
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRINGLIST( obj->prefixes () );
+    RQSTRINGLIST( obj->prefixes() );
   }
 }
 
 /*
 QStringList prefixes ( const QString & uri ) const
 */
-void QXmlNamespaceSupport_prefixes2 ()
+void QXmlNamespaceSupport_prefixes2()
 {
   QXmlNamespaceSupport * obj = (QXmlNamespaceSupport *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRINGLIST( obj->prefixes ( PQSTRING(1) ) );
+    RQSTRINGLIST( obj->prefixes( PQSTRING(1) ) );
   }
 }
 
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
 #endif
       QString par3 = hb_parc(3);
       QString par4 = hb_parc(4);
-      obj->processName ( PQSTRING(1), PBOOL(2), par3, par4 );
+      obj->processName( PQSTRING(1), PBOOL(2), par3, par4 );
       hb_storc( QSTRINGTOSTRING(par3), 3);
       hb_storc( QSTRINGTOSTRING(par4), 4);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->pushContext ();
+      obj->pushContext();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reset ();
+      obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      obj->setPrefix ( PQSTRING(1), PQSTRING(2) );
+      obj->setPrefix( PQSTRING(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
 #endif
       QString par2 = hb_parc(2);
       QString par3 = hb_parc(3);
-      obj->splitName ( PQSTRING(1), par2, par3 );
+      obj->splitName( PQSTRING(1), par2, par3 );
       hb_storc( QSTRINGTOSTRING(par2), 2);
       hb_storc( QSTRINGTOSTRING(par3), 3);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->uri ( PQSTRING(1) ) );
+      RQSTRING( obj->uri( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

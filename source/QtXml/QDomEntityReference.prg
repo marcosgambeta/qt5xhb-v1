@@ -25,7 +25,7 @@ CLASS QDomEntityReference INHERIT QDomNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomEntityReference
+PROCEDURE destroyObject() CLASS QDomEntityReference
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -50,18 +50,18 @@ RETURN
 /*
 QDomEntityReference ()
 */
-void QDomEntityReference_new1 ()
+void QDomEntityReference_new1()
 {
-  QDomEntityReference * o = new QDomEntityReference ();
+  QDomEntityReference * o = new QDomEntityReference();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDomEntityReference ( const QDomEntityReference & x )
 */
-void QDomEntityReference_new2 ()
+void QDomEntityReference_new2()
 {
-  QDomEntityReference * o = new QDomEntityReference ( *PQDOMENTITYREFERENCE(1) );
+  QDomEntityReference * o = new QDomEntityReference( *PQDOMENTITYREFERENCE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

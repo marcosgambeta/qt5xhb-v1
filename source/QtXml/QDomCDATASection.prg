@@ -25,7 +25,7 @@ CLASS QDomCDATASection INHERIT QDomText
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomCDATASection
+PROCEDURE destroyObject() CLASS QDomCDATASection
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -50,18 +50,18 @@ RETURN
 /*
 QDomCDATASection ()
 */
-void QDomCDATASection_new1 ()
+void QDomCDATASection_new1()
 {
-  QDomCDATASection * o = new QDomCDATASection ();
+  QDomCDATASection * o = new QDomCDATASection();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDomCDATASection ( const QDomCDATASection & x )
 */
-void QDomCDATASection_new2 ()
+void QDomCDATASection_new2()
 {
-  QDomCDATASection * o = new QDomCDATASection ( *PQDOMCDATASECTION(1) );
+  QDomCDATASection * o = new QDomCDATASection( *PQDOMCDATASECTION(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -44,7 +44,7 @@ CLASS QXmlContentHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlContentHandler
+PROCEDURE destroyObject() CLASS QXmlContentHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->characters ( PQSTRING(1) ) );
+      RBOOL( obj->characters( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->endDocument () );
+      RBOOL( obj->endDocument() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
     if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
     {
 #endif
-      RBOOL( obj->endElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->endElement( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->endPrefixMapping ( PQSTRING(1) ) );
+      RBOOL( obj->endPrefixMapping( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->ignorableWhitespace ( PQSTRING(1) ) );
+      RBOOL( obj->ignorableWhitespace( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->processingInstruction ( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->processingInstruction( PQSTRING(1), PQSTRING(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
     if( ISNUMPAR(1) && ISQXMLLOCATOR(1) )
     {
 #endif
-      obj->setDocumentLocator ( PQXMLLOCATOR(1) );
+      obj->setDocumentLocator( PQXMLLOCATOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->skippedEntity ( PQSTRING(1) ) );
+      RBOOL( obj->skippedEntity( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->startDocument () );
+      RBOOL( obj->startDocument() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
     if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISQXMLATTRIBUTES(4) )
     {
 #endif
-      RBOOL( obj->startElement ( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
+      RBOOL( obj->startElement( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTPREFIXMAPPING )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->startPrefixMapping ( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->startPrefixMapping( PQSTRING(1), PQSTRING(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -31,7 +31,7 @@ CLASS QDomAttr INHERIT QDomNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDomAttr
+PROCEDURE destroyObject() CLASS QDomAttr
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,18 +56,18 @@ RETURN
 /*
 QDomAttr ()
 */
-void QDomAttr_new1 ()
+void QDomAttr_new1()
 {
-  QDomAttr * o = new QDomAttr ();
+  QDomAttr * o = new QDomAttr();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDomAttr ( const QDomAttr & x )
 */
-void QDomAttr_new2 ()
+void QDomAttr_new2()
 {
-  QDomAttr * o = new QDomAttr ( *PQDOMATTR(1) );
+  QDomAttr * o = new QDomAttr( *PQDOMATTR(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDOMATTR_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDOMATTR_NODETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->nodeType () );
+      RENUM( obj->nodeType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,8 +168,8 @@ HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->ownerElement () );
-      _qt5xhb_createReturnClass ( ptr, "QDOMELEMENT", true );
+      QDomElement * ptr = new QDomElement( obj->ownerElement() );
+      _qt5xhb_createReturnClass( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QDOMATTR_SETVALUE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setValue ( PQSTRING(1) );
+      obj->setValue( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->specified () );
+      RBOOL( obj->specified() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDOMATTR_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->value () );
+      RQSTRING( obj->value() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
