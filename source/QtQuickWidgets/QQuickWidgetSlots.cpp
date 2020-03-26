@@ -26,7 +26,7 @@ void QQuickWidgetSlots::statusChanged( QQuickWidget::Status status )
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QQuickWidget::Status)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWIDGET" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QQuickWidgetSlots::sceneGraphError( QQuickWindow::SceneGraphError error, co
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWIDGET" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
     hb_vmEvalBlockV( cb, 3, psender, perror, pmessage );
@@ -52,7 +52,7 @@ void QQuickWidgetSlots::sceneGraphError( QQuickWindow::SceneGraphError error, co
 }
 #endif
 
-void QQuickWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QQuickWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QQuickWidget * obj = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
