@@ -36,7 +36,7 @@ CLASS QFileIconProvider
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileIconProvider
+PROCEDURE destroyObject() CLASS QFileIconProvider
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QFileIconProvider * o = new QFileIconProvider ();
+    QFileIconProvider * o = new QFileIconProvider();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -94,28 +94,28 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_DELETE )
 /*
 virtual QIcon icon(IconType type) const
 */
-void QFileIconProvider_icon1 ()
+void QFileIconProvider_icon1()
 {
   QFileIconProvider * obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon ( (QFileIconProvider::IconType) hb_parni(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    QIcon * ptr = new QIcon( obj->icon( (QFileIconProvider::IconType) hb_parni(1) ) );
+    _qt5xhb_createReturnClass( ptr, "QICON", true );
   }
 }
 
 /*
 virtual QIcon icon(const QFileInfo & info) const
 */
-void QFileIconProvider_icon2 ()
+void QFileIconProvider_icon2()
 {
   QFileIconProvider * obj = (QFileIconProvider *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QIcon * ptr = new QIcon( obj->icon ( *PQFILEINFO(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QICON", true );
+    QIcon * ptr = new QIcon( obj->icon( *PQFILEINFO(1) ) );
+    _qt5xhb_createReturnClass( ptr, "QICON", true );
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
     if( ISNUMPAR(1) && ISQFILEINFO(1) )
     {
 #endif
-      RQSTRING( obj->type ( *PQFILEINFO(1) ) );
+      RQSTRING( obj->type( *PQFILEINFO(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

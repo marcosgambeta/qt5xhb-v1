@@ -25,13 +25,13 @@ void QAbstractSpinBoxSlots::editingFinished()
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTSPINBOX" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTSPINBOX" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QAbstractSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstractSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

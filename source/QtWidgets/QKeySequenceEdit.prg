@@ -31,7 +31,7 @@ CLASS QKeySequenceEdit INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QKeySequenceEdit
+PROCEDURE destroyObject() CLASS QKeySequenceEdit
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,10 +62,10 @@ RETURN
 /*
 QKeySequenceEdit(QWidget *parent = 0)
 */
-void QKeySequenceEdit_new1 ()
+void QKeySequenceEdit_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * o = new QKeySequenceEdit ( OPQWIDGET(1,0) );
+  QKeySequenceEdit * o = new QKeySequenceEdit( OPQWIDGET(1,0) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -73,10 +73,10 @@ void QKeySequenceEdit_new1 ()
 /*
 QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
 */
-void QKeySequenceEdit_new2 ()
+void QKeySequenceEdit_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * o = new QKeySequenceEdit ( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
+  QKeySequenceEdit * o = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -109,8 +109,8 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -137,8 +137,8 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QKeySequence * ptr = new QKeySequence( obj->keySequence () );
-      _qt5xhb_createReturnClass ( ptr, "QKEYSEQUENCE", true );
+      QKeySequence * ptr = new QKeySequence( obj->keySequence() );
+      _qt5xhb_createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
     if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
     {
 #endif
-      obj->setKeySequence ( *PQKEYSEQUENCE(1) );
+      obj->setKeySequence( *PQKEYSEQUENCE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
 #endif
 }
 
-void QKeySequenceEditSlots_connect_signal ( const QString & signal, const QString & slot );
+void QKeySequenceEditSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_ONEDITINGFINISHED )
 {

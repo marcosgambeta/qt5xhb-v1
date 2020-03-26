@@ -24,7 +24,7 @@ CLASS QCommonStyle INHERIT QStyle
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCommonStyle
+PROCEDURE destroyObject() CLASS QCommonStyle
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QCommonStyle * o = new QCommonStyle ();
+    QCommonStyle * o = new QCommonStyle();
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -70,8 +70,8 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

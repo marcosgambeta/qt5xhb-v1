@@ -32,7 +32,7 @@ CLASS QSlider INHERIT QAbstractSlider
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSlider
+PROCEDURE destroyObject() CLASS QSlider
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,18 +59,18 @@ RETURN
 /*
 QSlider ( QWidget * parent = 0 )
 */
-void QSlider_new1 ()
+void QSlider_new1()
 {
-  QSlider * o = new QSlider ( OPQWIDGET(1,0) );
+  QSlider * o = new QSlider( OPQWIDGET(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-void QSlider_new2 ()
+void QSlider_new2()
 {
-  QSlider * o = new QSlider ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QSlider * o = new QSlider( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -99,8 +99,8 @@ HB_FUNC_STATIC( QSLIDER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->tickInterval () );
+      RINT( obj->tickInterval() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTickInterval ( PINT(1) );
+      obj->setTickInterval( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->tickPosition () );
+      RENUM( obj->tickPosition() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTickPosition ( (QSlider::TickPosition) hb_parni(1) );
+      obj->setTickPosition( (QSlider::TickPosition) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSLIDER_EVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event ( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,8 +249,8 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,8 +274,8 @@ HB_FUNC_STATIC( QSLIDER_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

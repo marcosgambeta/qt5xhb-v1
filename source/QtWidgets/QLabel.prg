@@ -66,7 +66,7 @@ CLASS QLabel INHERIT QFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QLabel
+PROCEDURE destroyObject() CLASS QLabel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -95,18 +95,18 @@ RETURN
 /*
 QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QLabel_new1 ()
+void QLabel_new1()
 {
-  QLabel * o = new QLabel ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  QLabel * o = new QLabel( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
-void QLabel_new2 ()
+void QLabel_new2()
 {
-  QLabel * o = new QLabel ( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  QLabel * o = new QLabel( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -135,8 +135,8 @@ HB_FUNC_STATIC( QLABEL_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QLABEL_ALIGNMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->alignment () );
+      RENUM( obj->alignment() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,8 +185,8 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->buddy ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->buddy();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QLABEL_HASSCALEDCONTENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasScaledContents () );
+      RBOOL( obj->hasScaledContents() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QLABEL_HASSELECTEDTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasSelectedText () );
+      RBOOL( obj->hasSelectedText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QLABEL_INDENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->indent () );
+      RINT( obj->indent() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QLABEL_MARGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->margin () );
+      RINT( obj->margin() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,8 +306,8 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMovie * ptr = obj->movie ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QMOVIE" );
+      QMovie * ptr = obj->movie();
+      _qt5xhb_createReturnQObjectClass( ptr, "QMOVIE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QLABEL_OPENEXTERNALLINKS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->openExternalLinks () );
+      RBOOL( obj->openExternalLinks() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,8 +355,8 @@ HB_FUNC_STATIC( QLABEL_PICTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPicture * ptr = obj->picture ();
-      _qt5xhb_createReturnClass ( ptr, "QPICTURE", false );
+      const QPicture * ptr = obj->picture();
+      _qt5xhb_createReturnClass( ptr, "QPICTURE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,8 +380,8 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QPixmap * ptr = obj->pixmap ();
-      _qt5xhb_createReturnClass ( ptr, "QPIXMAP", false );
+      const QPixmap * ptr = obj->pixmap();
+      _qt5xhb_createReturnClass( ptr, "QPIXMAP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QLABEL_SELECTEDTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->selectedText () );
+      RQSTRING( obj->selectedText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAlignment ( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QLABEL_SETBUDDY )
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
     {
 #endif
-      obj->setBuddy ( OPQWIDGET(1,0) );
+      obj->setBuddy( OPQWIDGET(1,0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QLABEL_SETINDENT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setIndent ( PINT(1) );
+      obj->setIndent( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QLABEL_SETMARGIN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMargin ( PINT(1) );
+      obj->setMargin( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setOpenExternalLinks ( PBOOL(1) );
+      obj->setOpenExternalLinks( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setScaledContents ( PBOOL(1) );
+      obj->setScaledContents( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QLABEL_SETSELECTION )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setSelection ( PINT(1), PINT(2) );
+      obj->setSelection( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTextFormat ( (Qt::TextFormat) hb_parni(1) );
+      obj->setTextFormat( (Qt::TextFormat) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTextInteractionFlags ( (Qt::TextInteractionFlags) hb_parni(1) );
+      obj->setTextInteractionFlags( (Qt::TextInteractionFlags) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setWordWrap ( PBOOL(1) );
+      obj->setWordWrap( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QLABEL_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QLABEL_TEXTFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->textFormat () );
+      RENUM( obj->textFormat() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QLABEL_TEXTINTERACTIONFLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->textInteractionFlags () );
+      RENUM( obj->textInteractionFlags() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QLABEL_WORDWRAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->wordWrap () );
+      RBOOL( obj->wordWrap() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -809,8 +809,8 @@ HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -834,8 +834,8 @@ HB_FUNC_STATIC( QLABEL_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QLABEL_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QLABEL_SETMOVIE )
     if( ISNUMPAR(1) && ISQMOVIE(1) )
     {
 #endif
-      obj->setMovie ( PQMOVIE(1) );
+      obj->setMovie( PQMOVIE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -901,13 +901,13 @@ HB_FUNC_STATIC( QLABEL_SETMOVIE )
 /*
 void setNum ( int num )
 */
-void QLabel_setNum1 ()
+void QLabel_setNum1()
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setNum ( PINT(1) );
+    obj->setNum( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -916,13 +916,13 @@ void QLabel_setNum1 ()
 /*
 void setNum ( double num )
 */
-void QLabel_setNum2 ()
+void QLabel_setNum2()
 {
   QLabel * obj = (QLabel *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setNum ( PDOUBLE(1) );
+    obj->setNum( PDOUBLE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QLABEL_SETPICTURE )
     if( ISNUMPAR(1) && ISQPICTURE(1) )
     {
 #endif
-      obj->setPicture ( *PQPICTURE(1) );
+      obj->setPicture( *PQPICTURE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QLABEL_SETPIXMAP )
     if( ISNUMPAR(1) && ISQPIXMAP(1) )
     {
 #endif
-      obj->setPixmap ( *PQPIXMAP(1) );
+      obj->setPixmap( *PQPIXMAP(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setText ( PQSTRING(1) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1037,7 +1037,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QLabelSlots_connect_signal ( const QString & signal, const QString & slot );
+void QLabelSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
 {

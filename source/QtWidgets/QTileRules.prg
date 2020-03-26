@@ -33,7 +33,7 @@ CLASS QTileRules
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTileRules
+PROCEDURE destroyObject() CLASS QTileRules
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,18 +58,18 @@ RETURN
 /*
 QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 */
-void QTileRules_new1 ()
+void QTileRules_new1()
 {
-  QTileRules * o = new QTileRules ( (Qt::TileRule) hb_parni(1), (Qt::TileRule) hb_parni(2) );
+  QTileRules * o = new QTileRules( (Qt::TileRule) hb_parni(1), (Qt::TileRule) hb_parni(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QTileRules(Qt::TileRule rule = Qt::StretchTile)
 */
-void QTileRules_new2 ()
+void QTileRules_new2()
 {
-  QTileRules * o = new QTileRules ( ISNIL(1)? (Qt::TileRule) Qt::StretchTile : (Qt::TileRule) hb_parni(1) );
+  QTileRules * o = new QTileRules( ISNIL(1)? (Qt::TileRule) Qt::StretchTile : (Qt::TileRule) hb_parni(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 

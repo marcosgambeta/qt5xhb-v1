@@ -32,7 +32,7 @@ CLASS QStyleOptionGraphicsItem INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionGraphicsItem
+PROCEDURE destroyObject() CLASS QStyleOptionGraphicsItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,18 +57,18 @@ RETURN
 /*
 QStyleOptionGraphicsItem()
 */
-void QStyleOptionGraphicsItem_new1 ()
+void QStyleOptionGraphicsItem_new1()
 {
-  QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem ();
+  QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem &other)
 */
-void QStyleOptionGraphicsItem_new2 ()
+void QStyleOptionGraphicsItem_new2()
 {
-  QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem ( *PQSTYLEOPTIONGRAPHICSITEM(1) );
+  QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM )
   if( ISNUMPAR(1) && ISQTRANSFORM(1) )
   {
 #endif
-    RQREAL( QStyleOptionGraphicsItem::levelOfDetailFromTransform ( *PQTRANSFORM(1) ) );
+    RQREAL( QStyleOptionGraphicsItem::levelOfDetailFromTransform( *PQTRANSFORM(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -126,8 +126,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
   {
     if( ISNUMPAR(0) )
     {
-      QRectF * ptr = new QRectF( obj->exposedRect  );
-      _qt5xhb_createReturnClass ( ptr, "QRECTF", true );
+      QRectF * ptr = new QRectF( obj->exposedRect );
+      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
     }
     else
     {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT )
   {
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
-      obj->exposedRect = *PQRECTF(1);
+      obj->exposedRect= *PQRECTF(1);
     }
     else
     {
@@ -165,8 +165,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
   {
     if( ISNUMPAR(0) )
     {
-      QMatrix * ptr = new QMatrix( obj->matrix  );
-      _qt5xhb_createReturnClass ( ptr, "QMATRIX", true );
+      QMatrix * ptr = new QMatrix( obj->matrix );
+      _qt5xhb_createReturnClass( ptr, "QMATRIX", true );
     }
     else
     {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETMATRIX )
   {
     if( ISNUMPAR(1) && ISQMATRIX(1) )
     {
-      obj->matrix = *PQMATRIX(1);
+      obj->matrix= *PQMATRIX(1);
     }
     else
     {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
   {
     if( ISNUMPAR(0) )
     {
-      RQREAL( obj->levelOfDetail  );
+      RQREAL( obj->levelOfDetail );
     }
     else
     {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->levelOfDetail = PQREAL(1);
+      obj->levelOfDetail= PQREAL(1);
     }
     else
     {

@@ -25,7 +25,7 @@ void QProgressBarSlots::valueChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPROGRESSBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPROGRESSBAR" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QProgressBarSlots::valueChanged( int value )
   }
 }
 
-void QProgressBarSlots_connect_signal ( const QString & signal, const QString & slot )
+void QProgressBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

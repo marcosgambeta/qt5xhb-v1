@@ -33,7 +33,7 @@ CLASS QStyleOptionButton INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionButton
+PROCEDURE destroyObject() CLASS QStyleOptionButton
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,18 +58,18 @@ RETURN
 /*
 QStyleOptionButton()
 */
-void QStyleOptionButton_new1 ()
+void QStyleOptionButton_new1()
 {
-  QStyleOptionButton * o = new QStyleOptionButton ();
+  QStyleOptionButton * o = new QStyleOptionButton();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionButton(const QStyleOptionButton &other)
 */
-void QStyleOptionButton_new2 ()
+void QStyleOptionButton_new2()
 {
-  QStyleOptionButton * o = new QStyleOptionButton ( *PQSTYLEOPTIONBUTTON(1) );
+  QStyleOptionButton * o = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_FEATURES )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->features  );
+      RENUM( obj->features );
     }
     else
     {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETFEATURES )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->features = (QStyleOptionButton::ButtonFeatures) hb_parni(1);
+      obj->features= (QStyleOptionButton::ButtonFeatures) hb_parni(1);
     }
     else
     {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_TEXT )
   {
     if( ISNUMPAR(0) )
     {
-      RQSTRING( obj->text  );
+      RQSTRING( obj->text );
     }
     else
     {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETTEXT )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->text = PQSTRING(1);
+      obj->text= PQSTRING(1);
     }
     else
     {
@@ -184,8 +184,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      QIcon * ptr = new QIcon( obj->icon  );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->icon );
+      _qt5xhb_createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICON )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
-      obj->icon = *PQICON(1);
+      obj->icon= *PQICON(1);
     }
     else
     {
@@ -223,8 +223,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
   {
     if( ISNUMPAR(0) )
     {
-      QSize * ptr = new QSize( obj->iconSize  );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->iconSize );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICONSIZE )
   {
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
-      obj->iconSize = *PQSIZE(1);
+      obj->iconSize= *PQSIZE(1);
     }
     else
     {

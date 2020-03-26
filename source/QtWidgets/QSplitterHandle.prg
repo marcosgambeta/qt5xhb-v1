@@ -31,7 +31,7 @@ CLASS QSplitterHandle INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSplitterHandle
+PROCEDURE destroyObject() CLASS QSplitterHandle
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQSPLITTER(2) )
   {
-    QSplitterHandle * o = new QSplitterHandle ( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
+    QSplitterHandle * o = new QSplitterHandle( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->opaqueResize () );
+      RBOOL( obj->opaqueResize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,8 +177,8 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSplitter * ptr = obj->splitter ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QSPLITTER" );
+      QSplitter * ptr = obj->splitter();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QSPLITTER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,8 +202,8 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

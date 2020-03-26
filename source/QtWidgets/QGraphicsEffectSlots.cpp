@@ -25,7 +25,7 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
   PHB_ITEM cb = Signals_return_codeblock( object, "enabledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSEFFECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSEFFECT" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
     hb_vmEvalBlockV( cb, 2, psender, penabled );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
   }
 }
 
-void QGraphicsEffectSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -40,7 +40,7 @@ CLASS QFrame INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFrame
+PROCEDURE destroyObject() CLASS QFrame
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QFRAME_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QFrame * o = new QFrame ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    QFrame * o = new QFrame( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -86,8 +86,8 @@ HB_FUNC_STATIC( QFRAME_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRect * ptr = new QRect( obj->frameRect () );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->frameRect() );
+      _qt5xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->frameShadow () );
+      RENUM( obj->frameShadow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->frameShape () );
+      RENUM( obj->frameShape() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->frameStyle () );
+      RINT( obj->frameStyle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->frameWidth () );
+      RINT( obj->frameWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lineWidth () );
+      RINT( obj->lineWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->midLineWidth () );
+      RINT( obj->midLineWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setFrameRect ( *PQRECT(1) );
+      obj->setFrameRect( *PQRECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFrameShadow ( (QFrame::Shadow) hb_parni(1) );
+      obj->setFrameShadow( (QFrame::Shadow) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFrameShape ( (QFrame::Shape) hb_parni(1) );
+      obj->setFrameShape( (QFrame::Shape) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFrameStyle ( PINT(1) );
+      obj->setFrameStyle( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLineWidth ( PINT(1) );
+      obj->setLineWidth( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMidLineWidth ( PINT(1) );
+      obj->setMidLineWidth( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,8 +437,8 @@ HB_FUNC_STATIC( QFRAME_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

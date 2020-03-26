@@ -25,7 +25,7 @@ void QToolBarSlots::actionTriggered( QAction * action )
   PHB_ITEM cb = Signals_return_codeblock( object, "actionTriggered(QAction*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBAR" );
     PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
     hb_vmEvalBlockV( cb, 2, psender, paction );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QToolBarSlots::allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
   PHB_ITEM cb = Signals_return_codeblock( object, "allowedAreasChanged(Qt::ToolBarAreas)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBAR" );
     PHB_ITEM pallowedAreas = hb_itemPutNI( NULL, (int) allowedAreas );
     hb_vmEvalBlockV( cb, 2, psender, pallowedAreas );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QToolBarSlots::iconSizeChanged( const QSize & iconSize )
   PHB_ITEM cb = Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBAR" );
     PHB_ITEM piconSize = Signals_return_object( (void *) &iconSize, "QSIZE" );
     hb_vmEvalBlockV( cb, 2, psender, piconSize );
     hb_itemRelease( psender );
@@ -64,7 +64,7 @@ void QToolBarSlots::movableChanged( bool movable )
   PHB_ITEM cb = Signals_return_codeblock( object, "movableChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBAR" );
     PHB_ITEM pmovable = hb_itemPutL( NULL, movable );
     hb_vmEvalBlockV( cb, 2, psender, pmovable );
     hb_itemRelease( psender );
@@ -77,7 +77,7 @@ void QToolBarSlots::orientationChanged( Qt::Orientation orientation )
   PHB_ITEM cb = Signals_return_codeblock( object, "orientationChanged(Qt::Orientation)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBAR" );
     PHB_ITEM porientation = hb_itemPutNI( NULL, (int) orientation );
     hb_vmEvalBlockV( cb, 2, psender, porientation );
     hb_itemRelease( psender );
@@ -90,7 +90,7 @@ void QToolBarSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle 
   PHB_ITEM cb = Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBAR" );
     PHB_ITEM ptoolButtonStyle = hb_itemPutNI( NULL, (int) toolButtonStyle );
     hb_vmEvalBlockV( cb, 2, psender, ptoolButtonStyle );
     hb_itemRelease( psender );
@@ -103,7 +103,7 @@ void QToolBarSlots::topLevelChanged( bool topLevel )
   PHB_ITEM cb = Signals_return_codeblock( object, "topLevelChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBAR" );
     PHB_ITEM ptopLevel = hb_itemPutL( NULL, topLevel );
     hb_vmEvalBlockV( cb, 2, psender, ptopLevel );
     hb_itemRelease( psender );
@@ -116,7 +116,7 @@ void QToolBarSlots::visibilityChanged( bool visible )
   PHB_ITEM cb = Signals_return_codeblock( object, "visibilityChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBAR" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
     hb_itemRelease( psender );
@@ -124,7 +124,7 @@ void QToolBarSlots::visibilityChanged( bool visible )
   }
 }
 
-void QToolBarSlots_connect_signal ( const QString & signal, const QString & slot )
+void QToolBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QToolBar * obj = (QToolBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

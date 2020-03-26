@@ -25,7 +25,7 @@ void QMainWindowSlots::iconSizeChanged( const QSize & iconSize )
   PHB_ITEM cb = Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMAINWINDOW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMAINWINDOW" );
     PHB_ITEM piconSize = Signals_return_object( (void *) &iconSize, "QSIZE" );
     hb_vmEvalBlockV( cb, 2, psender, piconSize );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonSty
   PHB_ITEM cb = Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMAINWINDOW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMAINWINDOW" );
     PHB_ITEM ptoolButtonStyle = hb_itemPutNI( NULL, (int) toolButtonStyle );
     hb_vmEvalBlockV( cb, 2, psender, ptoolButtonStyle );
     hb_itemRelease( psender );
@@ -46,7 +46,7 @@ void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonSty
   }
 }
 
-void QMainWindowSlots_connect_signal ( const QString & signal, const QString & slot )
+void QMainWindowSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QMainWindow * obj = (QMainWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

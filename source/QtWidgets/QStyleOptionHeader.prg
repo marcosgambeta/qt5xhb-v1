@@ -42,7 +42,7 @@ CLASS QStyleOptionHeader INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionHeader
+PROCEDURE destroyObject() CLASS QStyleOptionHeader
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,18 +67,18 @@ RETURN
 /*
 QStyleOptionHeader()
 */
-void QStyleOptionHeader_new1 ()
+void QStyleOptionHeader_new1()
 {
-  QStyleOptionHeader * o = new QStyleOptionHeader ();
+  QStyleOptionHeader * o = new QStyleOptionHeader();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionHeader(const QStyleOptionHeader &other)
 */
-void QStyleOptionHeader_new2 ()
+void QStyleOptionHeader_new2()
 {
-  QStyleOptionHeader * o = new QStyleOptionHeader ( *PQSTYLEOPTIONHEADER(1) );
+  QStyleOptionHeader * o = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SECTION )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->section  );
+      RINT( obj->section );
     }
     else
     {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSECTION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->section = PINT(1);
+      obj->section= PINT(1);
     }
     else
     {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXT )
   {
     if( ISNUMPAR(0) )
     {
-      RQSTRING( obj->text  );
+      RQSTRING( obj->text );
     }
     else
     {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXT )
   {
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
-      obj->text = PQSTRING(1);
+      obj->text= PQSTRING(1);
     }
     else
     {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_TEXTALIGNMENT )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->textAlignment  );
+      RENUM( obj->textAlignment );
     }
     else
     {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXTALIGNMENT )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->textAlignment = (Qt::Alignment) hb_parni(1);
+      obj->textAlignment= (Qt::Alignment) hb_parni(1);
     }
     else
     {
@@ -231,8 +231,8 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICON )
   {
     if( ISNUMPAR(0) )
     {
-      QIcon * ptr = new QIcon( obj->icon  );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->icon );
+      _qt5xhb_createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICON )
   {
     if( ISNUMPAR(1) && ISQICON(1) )
     {
-      obj->icon = *PQICON(1);
+      obj->icon= *PQICON(1);
     }
     else
     {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICONALIGNMENT )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->iconAlignment  );
+      RENUM( obj->iconAlignment );
     }
     else
     {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICONALIGNMENT )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->iconAlignment = (Qt::Alignment) hb_parni(1);
+      obj->iconAlignment= (Qt::Alignment) hb_parni(1);
     }
     else
     {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_POSITION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->position  );
+      RENUM( obj->position );
     }
     else
     {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETPOSITION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->position = (QStyleOptionHeader::SectionPosition) hb_parni(1);
+      obj->position= (QStyleOptionHeader::SectionPosition) hb_parni(1);
     }
     else
     {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SELECTEDPOSITION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->selectedPosition  );
+      RENUM( obj->selectedPosition );
     }
     else
     {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSELECTEDPOSITION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->selectedPosition = (QStyleOptionHeader::SelectedPosition) hb_parni(1);
+      obj->selectedPosition= (QStyleOptionHeader::SelectedPosition) hb_parni(1);
     }
     else
     {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SORTINDICATOR )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->sortIndicator  );
+      RENUM( obj->sortIndicator );
     }
     else
     {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSORTINDICATOR )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->sortIndicator = (QStyleOptionHeader::SortIndicator) hb_parni(1);
+      obj->sortIndicator= (QStyleOptionHeader::SortIndicator) hb_parni(1);
     }
     else
     {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ORIENTATION )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->orientation  );
+      RENUM( obj->orientation );
     }
     else
     {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETORIENTATION )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->orientation = (Qt::Orientation) hb_parni(1);
+      obj->orientation= (Qt::Orientation) hb_parni(1);
     }
     else
     {

@@ -25,7 +25,7 @@ void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
   PHB_ITEM cb = Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCOLUMNVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCOLUMNVIEW" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
   }
 }
 
-void QColumnViewSlots_connect_signal ( const QString & signal, const QString & slot )
+void QColumnViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

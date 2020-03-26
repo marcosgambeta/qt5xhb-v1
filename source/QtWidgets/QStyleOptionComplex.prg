@@ -28,7 +28,7 @@ CLASS QStyleOptionComplex INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionComplex
+PROCEDURE destroyObject() CLASS QStyleOptionComplex
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,18 +53,18 @@ RETURN
 /*
 QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Complex)
 */
-void QStyleOptionComplex_new1 ()
+void QStyleOptionComplex_new1()
 {
-  QStyleOptionComplex * o = new QStyleOptionComplex ( OPINT(1,QStyleOptionComplex::Version), OPINT(2,QStyleOptionComplex::SO_Complex) );
+  QStyleOptionComplex * o = new QStyleOptionComplex( OPINT(1,QStyleOptionComplex::Version), OPINT(2,QStyleOptionComplex::SO_Complex) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionComplex(const QStyleOptionComplex &other)
 */
-void QStyleOptionComplex_new2 ()
+void QStyleOptionComplex_new2()
 {
-  QStyleOptionComplex * o = new QStyleOptionComplex ( *PQSTYLEOPTIONCOMPLEX(1) );
+  QStyleOptionComplex * o = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->subControls  );
+      RENUM( obj->subControls );
     }
     else
     {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->subControls = (QStyle::SubControls) hb_parni(1);
+      obj->subControls= (QStyle::SubControls) hb_parni(1);
     }
     else
     {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->activeSubControls  );
+      RENUM( obj->activeSubControls );
     }
     else
     {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->activeSubControls = (QStyle::SubControls) hb_parni(1);
+      obj->activeSubControls= (QStyle::SubControls) hb_parni(1);
     }
     else
     {

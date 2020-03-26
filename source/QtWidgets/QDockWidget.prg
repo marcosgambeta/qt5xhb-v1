@@ -44,7 +44,7 @@ CLASS QDockWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDockWidget
+PROCEDURE destroyObject() CLASS QDockWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,18 +73,18 @@ RETURN
 /*
 QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-void QDockWidget_new1 ()
+void QDockWidget_new1()
 {
-  QDockWidget * o = new QDockWidget ( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  QDockWidget * o = new QDockWidget( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-void QDockWidget_new2 ()
+void QDockWidget_new2()
 {
-  QDockWidget * o = new QDockWidget ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  QDockWidget * o = new QDockWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -113,8 +113,8 @@ HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->allowedAreas () );
+      RENUM( obj->allowedAreas() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->features () );
+      RENUM( obj->features() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isAreaAllowed ( (Qt::DockWidgetArea) hb_parni(1) ) );
+      RBOOL( obj->isAreaAllowed( (Qt::DockWidgetArea) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFloating () );
+      RBOOL( obj->isFloating() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAllowedAreas ( (Qt::DockWidgetAreas) hb_parni(1) );
+      obj->setAllowedAreas( (Qt::DockWidgetAreas) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFeatures ( (QDockWidget::DockWidgetFeatures) hb_parni(1) );
+      obj->setFeatures( (QDockWidget::DockWidgetFeatures) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFloating ( PBOOL(1) );
+      obj->setFloating( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setTitleBarWidget ( PQWIDGET(1) );
+      obj->setTitleBarWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setWidget ( PQWIDGET(1) );
+      obj->setWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,8 +365,8 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->titleBarWidget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->titleBarWidget();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,8 +390,8 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->toggleViewAction ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->toggleViewAction();
+      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,8 +415,8 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
   }
 }
 
-void QDockWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDockWidgetSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDOCKWIDGET_ONALLOWEDAREASCHANGED )
 {

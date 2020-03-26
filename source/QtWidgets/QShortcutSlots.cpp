@@ -25,7 +25,7 @@ void QShortcutSlots::activated()
   PHB_ITEM cb = Signals_return_codeblock( object, "activated()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSHORTCUT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSHORTCUT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QShortcutSlots::activatedAmbiguously()
   PHB_ITEM cb = Signals_return_codeblock( object, "activatedAmbiguously()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSHORTCUT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSHORTCUT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QShortcutSlots_connect_signal ( const QString & signal, const QString & slot )
+void QShortcutSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QShortcut * obj = (QShortcut *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -25,7 +25,7 @@ void QStackedWidgetSlots::currentChanged( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSTACKEDWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTACKEDWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QStackedWidgetSlots::widgetRemoved( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "widgetRemoved(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSTACKEDWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTACKEDWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -46,7 +46,7 @@ void QStackedWidgetSlots::widgetRemoved( int index )
   }
 }
 
-void QStackedWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QStackedWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

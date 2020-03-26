@@ -33,7 +33,7 @@ CLASS QGesture INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGesture
+PROCEDURE destroyObject() CLASS QGesture
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QGESTURE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QGesture * o = new QGesture ( OPQOBJECT(1,0) );
+    QGesture * o = new QGesture( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QGESTURE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->gestureCancelPolicy () );
+      RENUM( obj->gestureCancelPolicy() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->gestureType () );
+      RENUM( obj->gestureType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasHotSpot () );
+      RBOOL( obj->hasHotSpot() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,8 +177,8 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->hotSpot () );
-      _qt5xhb_createReturnClass ( ptr, "QPOINTF", true );
+      QPointF * ptr = new QPointF( obj->hotSpot() );
+      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setGestureCancelPolicy ( (QGesture::GestureCancelPolicy) hb_parni(1) );
+      obj->setGestureCancelPolicy( (QGesture::GestureCancelPolicy) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setHotSpot ( *PQPOINTF(1) );
+      obj->setHotSpot( *PQPOINTF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGESTURE_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unsetHotSpot ();
+      obj->unsetHotSpot();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

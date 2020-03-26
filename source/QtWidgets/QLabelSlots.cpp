@@ -25,7 +25,7 @@ void QLabelSlots::linkActivated( const QString & link )
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLABEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLABEL" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
     hb_vmEvalBlockV( cb, 2, psender, plink );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QLabelSlots::linkHovered( const QString & link )
   PHB_ITEM cb = Signals_return_codeblock( object, "linkHovered(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLABEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLABEL" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
     hb_vmEvalBlockV( cb, 2, psender, plink );
     hb_itemRelease( psender );
@@ -46,7 +46,7 @@ void QLabelSlots::linkHovered( const QString & link )
   }
 }
 
-void QLabelSlots_connect_signal ( const QString & signal, const QString & slot )
+void QLabelSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QLabel * obj = (QLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

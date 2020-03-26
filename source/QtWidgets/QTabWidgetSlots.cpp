@@ -25,7 +25,7 @@ void QTabWidgetSlots::currentChanged( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QTabWidgetSlots::tabCloseRequested( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -52,7 +52,7 @@ void QTabWidgetSlots::tabBarClicked( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "tabBarClicked(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -67,7 +67,7 @@ void QTabWidgetSlots::tabBarDoubleClicked( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "tabBarDoubleClicked(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -76,7 +76,7 @@ void QTabWidgetSlots::tabBarDoubleClicked( int index )
 }
 #endif
 
-void QTabWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

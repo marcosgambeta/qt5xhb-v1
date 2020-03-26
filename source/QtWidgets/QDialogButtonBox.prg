@@ -42,7 +42,7 @@ CLASS QDialogButtonBox INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDialogButtonBox
+PROCEDURE destroyObject() CLASS QDialogButtonBox
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,27 +71,27 @@ RETURN
 /*
 QDialogButtonBox ( QWidget * parent = 0 )
 */
-void QDialogButtonBox_new1 ()
+void QDialogButtonBox_new1()
 {
-  QDialogButtonBox * o = new QDialogButtonBox ( OPQWIDGET(1,0) );
+  QDialogButtonBox * o = new QDialogButtonBox( OPQWIDGET(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-void QDialogButtonBox_new2 ()
+void QDialogButtonBox_new2()
 {
-  QDialogButtonBox * o = new QDialogButtonBox ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QDialogButtonBox * o = new QDialogButtonBox( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
 */
-void QDialogButtonBox_new3 ()
+void QDialogButtonBox_new3()
 {
-  QDialogButtonBox * o = new QDialogButtonBox ( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,0) );
+  QDialogButtonBox * o = new QDialogButtonBox( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -125,8 +125,8 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -141,13 +141,13 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 /*
 void addButton ( QAbstractButton * button, ButtonRole role )
 */
-void QDialogButtonBox_addButton1 ()
+void QDialogButtonBox_addButton1()
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addButton ( PQABSTRACTBUTTON(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
+    obj->addButton( PQABSTRACTBUTTON(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -156,28 +156,28 @@ void QDialogButtonBox_addButton1 ()
 /*
 QPushButton * addButton ( const QString & text, ButtonRole role )
 */
-void QDialogButtonBox_addButton2 ()
+void QDialogButtonBox_addButton2()
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QPushButton * ptr = obj->addButton ( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
+    QPushButton * ptr = obj->addButton( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
+    _qt5xhb_createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
   }
 }
 
 /*
 QPushButton * addButton ( StandardButton button )
 */
-void QDialogButtonBox_addButton3 ()
+void QDialogButtonBox_addButton3()
 {
   QDialogButtonBox * obj = (QDialogButtonBox *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QPushButton * ptr = obj->addButton ( (QDialogButtonBox::StandardButton) hb_parni(1) );
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
+    QPushButton * ptr = obj->addButton( (QDialogButtonBox::StandardButton) hb_parni(1) );
+    _qt5xhb_createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
   }
 }
 
@@ -218,8 +218,8 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QPushButton * ptr = obj->button ( (QDialogButtonBox::StandardButton) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QPUSHBUTTON" );
+      QPushButton * ptr = obj->button( (QDialogButtonBox::StandardButton) hb_parni(1) );
+      _qt5xhb_createReturnQWidgetClass( ptr, "QPUSHBUTTON" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
     {
 #endif
-      RENUM( obj->buttonRole ( PQABSTRACTBUTTON(1) ) );
+      RENUM( obj->buttonRole( PQABSTRACTBUTTON(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->centerButtons () );
+      RBOOL( obj->centerButtons() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
     {
 #endif
-      obj->removeButton ( PQABSTRACTBUTTON(1) );
+      obj->removeButton( PQABSTRACTBUTTON(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setCenterButtons ( PBOOL(1) );
+      obj->setCenterButtons( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setStandardButtons ( (QDialogButtonBox::StandardButtons) hb_parni(1) );
+      obj->setStandardButtons( (QDialogButtonBox::StandardButtons) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
     {
 #endif
-      RENUM( obj->standardButton ( PQABSTRACTBUTTON(1) ) );
+      RENUM( obj->standardButton( PQABSTRACTBUTTON(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->standardButtons () );
+      RENUM( obj->standardButtons() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
   }
 }
 
-void QDialogButtonBoxSlots_connect_signal ( const QString & signal, const QString & slot );
+void QDialogButtonBoxSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
 {

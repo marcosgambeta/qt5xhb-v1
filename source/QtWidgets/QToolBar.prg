@@ -59,7 +59,7 @@ CLASS QToolBar INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QToolBar
+PROCEDURE destroyObject() CLASS QToolBar
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -89,18 +89,18 @@ RETURN
 /*
 QToolBar ( const QString & title, QWidget * parent = 0 )
 */
-void QToolBar_new1 ()
+void QToolBar_new1()
 {
-  QToolBar * o = new QToolBar ( PQSTRING(1), OPQWIDGET(2,0) );
+  QToolBar * o = new QToolBar( PQSTRING(1), OPQWIDGET(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QToolBar ( QWidget * parent = 0 )
 */
-void QToolBar_new2 ()
+void QToolBar_new2()
 {
-  QToolBar * o = new QToolBar ( OPQWIDGET(1,0) );
+  QToolBar * o = new QToolBar( OPQWIDGET(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QTOOLBAR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -145,28 +145,28 @@ HB_FUNC_STATIC( QTOOLBAR_DELETE )
 /*
 QAction * actionAt ( int x, int y ) const
 */
-void QToolBar_actionAt1 ()
+void QToolBar_actionAt1()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->actionAt ( PINT(1), PINT(2) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->actionAt( PINT(1), PINT(2) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
 QAction * actionAt ( const QPoint & p ) const
 */
-void QToolBar_actionAt2 ()
+void QToolBar_actionAt2()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->actionAt ( *PQPOINT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->actionAt( *PQPOINT(1) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
@@ -192,13 +192,13 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 /*
 void addAction ( QAction * action )
 */
-void QToolBar_addAction1 ()
+void QToolBar_addAction1()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addAction ( PQACTION(1) );
+    obj->addAction( PQACTION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -207,56 +207,56 @@ void QToolBar_addAction1 ()
 /*
 QAction * addAction ( const QString & text )
 */
-void QToolBar_addAction2 ()
+void QToolBar_addAction2()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->addAction ( PQSTRING(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction( PQSTRING(1) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-void QToolBar_addAction3 ()
+void QToolBar_addAction3()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
 QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
 */
-void QToolBar_addAction4 ()
+void QToolBar_addAction4()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->addAction ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 */
-void QToolBar_addAction5 ()
+void QToolBar_addAction5()
 {
   QToolBar * obj = (QToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
@@ -307,8 +307,8 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->addSeparator ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->addSeparator();
+      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,8 +332,8 @@ HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QAction * ptr = obj->addWidget ( PQWIDGET(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->addWidget( PQWIDGET(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QTOOLBAR_ALLOWEDAREAS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->allowedAreas () );
+      RENUM( obj->allowedAreas() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QTOOLBAR_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,8 +407,8 @@ HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->iconSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->iconSize() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,8 +432,8 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
     if( ISNUMPAR(1) && ISQACTION(1) )
     {
 #endif
-      QAction * ptr = obj->insertSeparator ( PQACTION(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->insertSeparator( PQACTION(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,8 +457,8 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
     if( ISNUMPAR(2) && ISQACTION(1) && ISQWIDGET(2) )
     {
 #endif
-      QAction * ptr = obj->insertWidget ( PQACTION(1), PQWIDGET(2) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->insertWidget( PQACTION(1), PQWIDGET(2) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isAreaAllowed ( (Qt::ToolBarArea) hb_parni(1) ) );
+      RBOOL( obj->isAreaAllowed( (Qt::ToolBarArea) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFloatable () );
+      RBOOL( obj->isFloatable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISFLOATING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isFloating () );
+      RBOOL( obj->isFloating() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISMOVABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isMovable () );
+      RBOOL( obj->isMovable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAllowedAreas ( (Qt::ToolBarAreas) hb_parni(1) );
+      obj->setAllowedAreas( (Qt::ToolBarAreas) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setFloatable ( PBOOL(1) );
+      obj->setFloatable( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setMovable ( PBOOL(1) );
+      obj->setMovable( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -706,8 +706,8 @@ HB_FUNC_STATIC( QTOOLBAR_TOGGLEVIEWACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->toggleViewAction ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->toggleViewAction();
+      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->toolButtonStyle () );
+      RENUM( obj->toolButtonStyle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -755,8 +755,8 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
     if( ISNUMPAR(1) && ISQACTION(1) )
     {
 #endif
-      QWidget * ptr = obj->widgetForAction ( PQACTION(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widgetForAction( PQACTION(1) );
+      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
     if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      obj->setIconSize ( *PQSIZE(1) );
+      obj->setIconSize( *PQSIZE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setToolButtonStyle ( (Qt::ToolButtonStyle) hb_parni(1) );
+      obj->setToolButtonStyle( (Qt::ToolButtonStyle) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QToolBarSlots_connect_signal ( const QString & signal, const QString & slot );
+void QToolBarSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QTOOLBAR_ONACTIONTRIGGERED )
 {

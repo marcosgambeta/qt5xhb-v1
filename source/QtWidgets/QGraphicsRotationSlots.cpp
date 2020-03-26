@@ -25,7 +25,7 @@ void QGraphicsRotationSlots::angleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "angleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSROTATION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QGraphicsRotationSlots::axisChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "axisChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSROTATION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -47,13 +47,13 @@ void QGraphicsRotationSlots::originChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "originChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSROTATION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QGraphicsRotationSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGraphicsRotationSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

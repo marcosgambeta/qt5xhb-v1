@@ -63,7 +63,7 @@ CLASS QGridLayout INHERIT QLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGridLayout
+PROCEDURE destroyObject() CLASS QGridLayout
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -90,18 +90,18 @@ RETURN
 /*
 QGridLayout ( QWidget * parent )
 */
-void QGridLayout_new1 ()
+void QGridLayout_new1()
 {
-  QGridLayout * o = new QGridLayout ( PQWIDGET(1) );
+  QGridLayout * o = new QGridLayout( PQWIDGET(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QGridLayout ()
 */
-void QGridLayout_new2 ()
+void QGridLayout_new2()
 {
-  QGridLayout * o = new QGridLayout ();
+  QGridLayout * o = new QGridLayout();
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -130,8 +130,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
     if( ISBETWEEN(3,6) && ISQLAYOUTITEM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) )
     {
 #endif
-      obj->addItem ( PQLAYOUTITEM(1), PINT(2), PINT(3), OPINT(4,1), OPINT(5,1), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
+      obj->addItem( PQLAYOUTITEM(1), PINT(2), PINT(3), OPINT(4,1), OPINT(5,1), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,13 +172,13 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 /*
 void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
 */
-void QGridLayout_addLayout1 ()
+void QGridLayout_addLayout1()
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addLayout ( PQLAYOUT(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
+    obj->addLayout( PQLAYOUT(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -187,13 +187,13 @@ void QGridLayout_addLayout1 ()
 /*
 void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
-void QGridLayout_addLayout2 ()
+void QGridLayout_addLayout2()
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addLayout ( PQLAYOUT(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
+    obj->addLayout( PQLAYOUT(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -221,13 +221,13 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 /*
 void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
 */
-void QGridLayout_addWidget1 ()
+void QGridLayout_addWidget1()
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
+    obj->addWidget( PQWIDGET(1), PINT(2), PINT(3), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -236,13 +236,13 @@ void QGridLayout_addWidget1 ()
 /*
 void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
-void QGridLayout_addWidget2 ()
+void QGridLayout_addWidget2()
 {
   QGridLayout * obj = (QGridLayout *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addWidget ( PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
+    obj->addWidget( PQWIDGET(1), PINT(2), PINT(3), PINT(4), PINT(5), ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -280,8 +280,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QRect * ptr = new QRect( obj->cellRect ( PINT(1), PINT(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QRECT", true );
+      QRect * ptr = new QRect( obj->cellRect( PINT(1), PINT(2) ) );
+      _qt5xhb_createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->columnCount () );
+      RINT( obj->columnCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->columnMinimumWidth ( PINT(1) ) );
+      RINT( obj->columnMinimumWidth( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->columnStretch ( PINT(1) ) );
+      RINT( obj->columnStretch( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
       int par3;
       int par4;
       int par5;
-      obj->getItemPosition ( PINT(1), &par2, &par3, &par4, &par5 );
+      obj->getItemPosition( PINT(1), &par2, &par3, &par4, &par5 );
       hb_storni( par2, 2 );
       hb_storni( par3, 3 );
       hb_storni( par4, 4 );
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->horizontalSpacing () );
+      RINT( obj->horizontalSpacing() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,8 +435,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      QLayoutItem * ptr = obj->itemAtPosition ( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      QLayoutItem * ptr = obj->itemAtPosition( PINT(1), PINT(2) );
+      _qt5xhb_createReturnClass( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->originCorner () );
+      RENUM( obj->originCorner() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->rowCount () );
+      RINT( obj->rowCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->rowMinimumHeight ( PINT(1) ) );
+      RINT( obj->rowMinimumHeight( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->rowStretch ( PINT(1) ) );
+      RINT( obj->rowStretch( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setColumnMinimumWidth ( PINT(1), PINT(2) );
+      obj->setColumnMinimumWidth( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setColumnStretch ( PINT(1), PINT(2) );
+      obj->setColumnStretch( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHorizontalSpacing ( PINT(1) );
+      obj->setHorizontalSpacing( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOriginCorner ( (Qt::Corner) hb_parni(1) );
+      obj->setOriginCorner( (Qt::Corner) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setRowMinimumHeight ( PINT(1), PINT(2) );
+      obj->setRowMinimumHeight( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setRowStretch ( PINT(1), PINT(2) );
+      obj->setRowStretch( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSpacing ( PINT(1) );
+      obj->setSpacing( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setVerticalSpacing ( PINT(1) );
+      obj->setVerticalSpacing( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->spacing () );
+      RINT( obj->spacing() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->verticalSpacing () );
+      RINT( obj->verticalSpacing() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->expandingDirections () );
+      RENUM( obj->expandingDirections() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasHeightForWidth () );
+      RBOOL( obj->hasHeightForWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->heightForWidth ( PINT(1) ) );
+      RINT( obj->heightForWidth( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->invalidate ();
+      obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -934,8 +934,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      QLayoutItem * ptr = obj->itemAt( PINT(1) );
+      _qt5xhb_createReturnClass( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -959,8 +959,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->maximumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->maximumSize() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RINT( obj->minimumHeightForWidth ( PINT(1) ) );
+      RINT( obj->minimumHeightForWidth( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1008,8 +1008,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->minimumSize() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setGeometry ( *PQRECT(1) );
+      obj->setGeometry( *PQRECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1059,8 +1059,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1084,8 +1084,8 @@ HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QLayoutItem * ptr = obj->takeAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QLAYOUTITEM", false );
+      QLayoutItem * ptr = obj->takeAt( PINT(1) );
+      _qt5xhb_createReturnClass( ptr, "QLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

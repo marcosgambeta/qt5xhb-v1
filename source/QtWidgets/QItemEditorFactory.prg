@@ -40,7 +40,7 @@ CLASS QItemEditorFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QItemEditorFactory
+PROCEDURE destroyObject() CLASS QItemEditorFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QItemEditorFactory * o = new QItemEditorFactory ();
+    QItemEditorFactory * o = new QItemEditorFactory();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_CREATEEDITOR )
     if( ISNUMPAR(2) && ISNUM(1) && ISQWIDGET(2) )
     {
 #endif
-      QWidget * ptr = obj->createEditor ( PINT(1), PQWIDGET(2) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->createEditor( PINT(1), PQWIDGET(2) );
+      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->valuePropertyName ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->valuePropertyName( PINT(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_REGISTEREDITOR )
     if( ISNUMPAR(2) && ISNUM(1) && ISQITEMEDITORCREATORBASE(2) )
     {
 #endif
-      obj->registerEditor ( PINT(1), PQITEMEDITORCREATORBASE(2) );
+      obj->registerEditor( PINT(1), PQITEMEDITORCREATORBASE(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,8 +180,8 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_DEFAULTFACTORY )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory ();
-    _qt5xhb_createReturnClass ( ptr, "QITEMEDITORFACTORY", false );
+    const QItemEditorFactory * ptr = QItemEditorFactory::defaultFactory();
+    _qt5xhb_createReturnClass( ptr, "QITEMEDITORFACTORY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_SETDEFAULTFACTORY )
   if( ISNUMPAR(1) && ISQITEMEDITORFACTORY(1) )
   {
 #endif
-    QItemEditorFactory::setDefaultFactory ( PQITEMEDITORFACTORY(1) );
+    QItemEditorFactory::setDefaultFactory( PQITEMEDITORFACTORY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

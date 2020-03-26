@@ -21,7 +21,7 @@ CLASS QMacNativeWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMacNativeWidget
+PROCEDURE destroyObject() CLASS QMacNativeWidget
    IF ::self_destruction
       ::delete()
    ENDIF

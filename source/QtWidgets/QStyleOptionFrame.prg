@@ -31,7 +31,7 @@ CLASS QStyleOptionFrame INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionFrame
+PROCEDURE destroyObject() CLASS QStyleOptionFrame
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,18 +56,18 @@ RETURN
 /*
 QStyleOptionFrame()
 */
-void QStyleOptionFrame_new1 ()
+void QStyleOptionFrame_new1()
 {
-  QStyleOptionFrame * o = new QStyleOptionFrame ();
+  QStyleOptionFrame * o = new QStyleOptionFrame();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionFrame(const QStyleOptionFrame &other)
 */
-void QStyleOptionFrame_new2 ()
+void QStyleOptionFrame_new2()
 {
-  QStyleOptionFrame * o = new QStyleOptionFrame ( *PQSTYLEOPTIONFRAME(1) );
+  QStyleOptionFrame * o = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->lineWidth  );
+      RINT( obj->lineWidth );
     }
     else
     {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETLINEWIDTH )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->lineWidth = PINT(1);
+      obj->lineWidth= PINT(1);
     }
     else
     {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
   {
     if( ISNUMPAR(0) )
     {
-      RINT( obj->midLineWidth  );
+      RINT( obj->midLineWidth );
     }
     else
     {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETMIDLINEWIDTH )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->midLineWidth = PINT(1);
+      obj->midLineWidth= PINT(1);
     }
     else
     {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FEATURES )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->features  );
+      RENUM( obj->features );
     }
     else
     {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFEATURES )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->features = (QStyleOptionFrame::FrameFeatures) hb_parni(1);
+      obj->features= (QStyleOptionFrame::FrameFeatures) hb_parni(1);
     }
     else
     {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_FRAMESHAPE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->frameShape  );
+      RENUM( obj->frameShape );
     }
     else
     {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETFRAMESHAPE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->frameShape = (QFrame::Shape) hb_parni(1);
+      obj->frameShape= (QFrame::Shape) hb_parni(1);
     }
     else
     {

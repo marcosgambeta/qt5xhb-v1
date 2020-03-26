@@ -25,7 +25,7 @@ void QToolBoxSlots::currentChanged( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTOOLBOX" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBOX" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QToolBoxSlots::currentChanged( int index )
   }
 }
 
-void QToolBoxSlots_connect_signal ( const QString & signal, const QString & slot )
+void QToolBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -26,7 +26,7 @@ CLASS QErrorMessage INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QErrorMessage
+PROCEDURE destroyObject() CLASS QErrorMessage
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QErrorMessage * o = new QErrorMessage ( OPQWIDGET(1,0) );
+    QErrorMessage * o = new QErrorMessage( OPQWIDGET(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -88,13 +88,13 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 /*
 void showMessage ( const QString & message )
 */
-void QErrorMessage_showMessage1 ()
+void QErrorMessage_showMessage1()
 {
   QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->showMessage ( PQSTRING(1) );
+    obj->showMessage( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -103,13 +103,13 @@ void QErrorMessage_showMessage1 ()
 /*
 void showMessage ( const QString & message, const QString & type )
 */
-void QErrorMessage_showMessage2 ()
+void QErrorMessage_showMessage2()
 {
   QErrorMessage * obj = (QErrorMessage *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->showMessage ( PQSTRING(1), PQSTRING(2) );
+    obj->showMessage( PQSTRING(1), PQSTRING(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -143,8 +143,8 @@ HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
   if( ISNUMPAR(0) )
   {
 #endif
-    QErrorMessage * ptr = QErrorMessage::qtHandler ();
-    _qt5xhb_createReturnQWidgetClass ( ptr, "QERRORMESSAGE" );
+    QErrorMessage * ptr = QErrorMessage::qtHandler();
+    _qt5xhb_createReturnQWidgetClass( ptr, "QERRORMESSAGE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

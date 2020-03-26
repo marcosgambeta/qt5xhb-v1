@@ -24,7 +24,7 @@ CLASS QGraphicsTransform INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsTransform
+PROCEDURE destroyObject() CLASS QGraphicsTransform
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
     if( ISNUMPAR(1) && ISQMATRIX4X4(1) )
     {
 #endif
-      obj->applyTo ( PQMATRIX4X4(1) );
+      obj->applyTo( PQMATRIX4X4(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

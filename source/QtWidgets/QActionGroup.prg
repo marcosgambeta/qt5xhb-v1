@@ -38,7 +38,7 @@ CLASS QActionGroup INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QActionGroup
+PROCEDURE destroyObject() CLASS QActionGroup
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    QActionGroup * o = new QActionGroup ( PQOBJECT(1) );
+    QActionGroup * o = new QActionGroup( PQOBJECT(1) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -84,8 +84,8 @@ HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -100,42 +100,42 @@ HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 /*
 QAction * addAction ( QAction * action )
 */
-void QActionGroup_addAction1 ()
+void QActionGroup_addAction1()
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->addAction ( PQACTION(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction( PQACTION(1) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
 QAction * addAction ( const QString & text )
 */
-void QActionGroup_addAction2 ()
+void QActionGroup_addAction2()
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->addAction ( PQSTRING(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction( PQSTRING(1) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
 QAction * addAction ( const QIcon & icon, const QString & text )
 */
-void QActionGroup_addAction3 ()
+void QActionGroup_addAction3()
 {
   QActionGroup * obj = (QActionGroup *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->addAction ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+    QAction * ptr = obj->addAction( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
@@ -176,8 +176,8 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAction * ptr = obj->checkedAction ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->checkedAction();
+      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEnabled () );
+      RBOOL( obj->isEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isExclusive () );
+      RBOOL( obj->isExclusive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVisible () );
+      RBOOL( obj->isVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
     if( ISNUMPAR(1) && ISQACTION(1) )
     {
 #endif
-      obj->removeAction ( PQACTION(1) );
+      obj->removeAction( PQACTION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDisabled ( PBOOL(1) );
+      obj->setDisabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setEnabled ( PBOOL(1) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setExclusive ( PBOOL(1) );
+      obj->setExclusive( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QActionGroupSlots_connect_signal ( const QString & signal, const QString & slot );
+void QActionGroupSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
 {

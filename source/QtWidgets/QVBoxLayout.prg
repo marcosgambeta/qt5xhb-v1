@@ -24,7 +24,7 @@ CLASS QVBoxLayout INHERIT QBoxLayout
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVBoxLayout
+PROCEDURE destroyObject() CLASS QVBoxLayout
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -49,18 +49,18 @@ RETURN
 /*
 QVBoxLayout ()
 */
-void QVBoxLayout_new1 ()
+void QVBoxLayout_new1()
 {
-  QVBoxLayout * o = new QVBoxLayout ();
+  QVBoxLayout * o = new QVBoxLayout();
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QVBoxLayout ( QWidget * parent )
 */
-void QVBoxLayout_new2 ()
+void QVBoxLayout_new2()
 {
-  QVBoxLayout * o = new QVBoxLayout ( PQWIDGET(1) );
+  QVBoxLayout * o = new QVBoxLayout( PQWIDGET(1) );
   _qt5xhb_returnNewObject( o, false );
 }
 

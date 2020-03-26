@@ -27,7 +27,7 @@ CLASS QStyleOptionRubberBand INHERIT QStyleOption
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleOptionRubberBand
+PROCEDURE destroyObject() CLASS QStyleOptionRubberBand
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -52,18 +52,18 @@ RETURN
 /*
 QStyleOptionRubberBand()
 */
-void QStyleOptionRubberBand_new1 ()
+void QStyleOptionRubberBand_new1()
 {
-  QStyleOptionRubberBand * o = new QStyleOptionRubberBand ();
+  QStyleOptionRubberBand * o = new QStyleOptionRubberBand();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
 */
-void QStyleOptionRubberBand_new2 ()
+void QStyleOptionRubberBand_new2()
 {
-  QStyleOptionRubberBand * o = new QStyleOptionRubberBand ( *PQSTYLEOPTIONRUBBERBAND(1) );
+  QStyleOptionRubberBand * o = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
   {
     if( ISNUMPAR(0) )
     {
-      RENUM( obj->shape  );
+      RENUM( obj->shape );
     }
     else
     {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETSHAPE )
   {
     if( ISNUMPAR(1) && ISNUM(1) )
     {
-      obj->shape = (QRubberBand::Shape) hb_parni(1);
+      obj->shape= (QRubberBand::Shape) hb_parni(1);
     }
     else
     {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
   {
     if( ISNUMPAR(0) )
     {
-      RBOOL( obj->opaque  );
+      RBOOL( obj->opaque );
     }
     else
     {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETOPAQUE )
   {
     if( ISNUMPAR(1) && ISLOG(1) )
     {
-      obj->opaque = PBOOL(1);
+      obj->opaque= PBOOL(1);
     }
     else
     {

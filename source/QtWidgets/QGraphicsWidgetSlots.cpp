@@ -25,13 +25,13 @@ void QGraphicsWidgetSlots::geometryChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "geometryChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSWIDGET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QGraphicsWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGraphicsWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QGraphicsWidget * obj = (QGraphicsWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

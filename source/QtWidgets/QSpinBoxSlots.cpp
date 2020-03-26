@@ -25,7 +25,7 @@ void QSpinBoxSlots::valueChanged( int value )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSPINBOX" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSPINBOX" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QSpinBoxSlots::valueChanged( const QString & text )
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSPINBOX" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSPINBOX" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
@@ -46,7 +46,7 @@ void QSpinBoxSlots::valueChanged( const QString & text )
   }
 }
 
-void QSpinBoxSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

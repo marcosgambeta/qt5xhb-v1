@@ -38,7 +38,7 @@ CLASS QScrollerProperties
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScrollerProperties
+PROCEDURE destroyObject() CLASS QScrollerProperties
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,18 +63,18 @@ RETURN
 /*
 QScrollerProperties()
 */
-void QScrollerProperties_new1 ()
+void QScrollerProperties_new1()
 {
-  QScrollerProperties * o = new QScrollerProperties ();
+  QScrollerProperties * o = new QScrollerProperties();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QScrollerProperties(const QScrollerProperties & sp)
 */
-void QScrollerProperties_new2 ()
+void QScrollerProperties_new2()
 {
-  QScrollerProperties * o = new QScrollerProperties ( *PQSCROLLERPROPERTIES(1) );
+  QScrollerProperties * o = new QScrollerProperties( *PQSCROLLERPROPERTIES(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -127,8 +127,8 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->scrollMetric ( (QScrollerProperties::ScrollMetric) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->scrollMetric( (QScrollerProperties::ScrollMetric) hb_parni(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSCROLLMETRIC )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setScrollMetric ( (QScrollerProperties::ScrollMetric) hb_parni(1), *PQVARIANT(2) );
+      obj->setScrollMetric( (QScrollerProperties::ScrollMetric) hb_parni(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES )
     if( ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1) )
     {
 #endif
-      obj->setDefaultScrollerProperties ( *PQSCROLLERPROPERTIES(1) );
+      obj->setDefaultScrollerProperties( *PQSCROLLERPROPERTIES(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_UNSETDEFAULTSCROLLERPROPERTIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->unsetDefaultScrollerProperties ();
+      obj->unsetDefaultScrollerProperties();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ CLASS QGraphicsSceneEvent INHERIT QEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsSceneEvent
+PROCEDURE destroyObject() CLASS QGraphicsSceneEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWidget * ptr = obj->widget ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

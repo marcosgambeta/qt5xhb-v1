@@ -53,7 +53,7 @@ CLASS QSplitter INHERIT QFrame
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSplitter
+PROCEDURE destroyObject() CLASS QSplitter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,18 +80,18 @@ RETURN
 /*
 QSplitter ( QWidget * parent = 0 )
 */
-void QSplitter_new1 ()
+void QSplitter_new1()
 {
-  QSplitter * o = new QSplitter ( OPQWIDGET(1,0) );
+  QSplitter * o = new QSplitter( OPQWIDGET(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
-void QSplitter_new2 ()
+void QSplitter_new2()
 {
-  QSplitter * o = new QSplitter ( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QSplitter * o = new QSplitter( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -120,8 +120,8 @@ HB_FUNC_STATIC( QSPLITTER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->addWidget ( PQWIDGET(1) );
+      obj->addWidget( PQWIDGET(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->childrenCollapsible () );
+      RBOOL( obj->childrenCollapsible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSPLITTER_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
 #endif
       int par2;
       int par3;
-      obj->getRange ( PINT(1), &par2, &par3 );
+      obj->getRange( PINT(1), &par2, &par3 );
       hb_storni( par2, 2 );
       hb_storni( par3, 3 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
@@ -250,8 +250,8 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QSplitterHandle * ptr = obj->handle ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QSPLITTERHANDLE" );
+      QSplitterHandle * ptr = obj->handle( PINT(1) );
+      _qt5xhb_createReturnQWidgetClass( ptr, "QSPLITTERHANDLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->handleWidth () );
+      RINT( obj->handleWidth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSPLITTER_INDEXOF )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->indexOf ( PQWIDGET(1) ) );
+      RINT( obj->indexOf( PQWIDGET(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
     if( ISNUMPAR(2) && ISNUM(1) && ISQWIDGET(2) )
     {
 #endif
-      obj->insertWidget ( PINT(1), PQWIDGET(2) );
+      obj->insertWidget( PINT(1), PQWIDGET(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isCollapsible ( PINT(1) ) );
+      RBOOL( obj->isCollapsible( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->opaqueResize () );
+      RBOOL( obj->opaqueResize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QSPLITTER_REFRESH )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->refresh ();
+      obj->refresh();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      RBOOL( obj->restoreState ( *PQBYTEARRAY(1) ) );
+      RBOOL( obj->restoreState( *PQBYTEARRAY(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,8 +471,8 @@ HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->saveState () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->saveState() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setChildrenCollapsible ( PBOOL(1) );
+      obj->setChildrenCollapsible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
     {
 #endif
-      obj->setCollapsible ( PINT(1), PBOOL(2) );
+      obj->setCollapsible( PINT(1), PBOOL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setHandleWidth ( PINT(1) );
+      obj->setHandleWidth( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
     if( ISBETWEEN(0,1) && ISOPTLOG(1) )
     {
 #endif
-      obj->setOpaqueResize ( OPBOOL(1,true) );
+      obj->setOpaqueResize( OPBOOL(1,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOrientation ( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setStretchFactor ( PINT(1), PINT(2) );
+      obj->setStretchFactor( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,8 +652,8 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->widget ( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget( PINT(1) );
+      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -677,8 +677,8 @@ HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -702,8 +702,8 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->sizeHint() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
   }
 }
 
-void QSplitterSlots_connect_signal ( const QString & signal, const QString & slot );
+void QSplitterSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
 {

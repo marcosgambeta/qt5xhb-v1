@@ -25,7 +25,7 @@ void QStatusBarSlots::messageChanged( const QString & message )
   PHB_ITEM cb = Signals_return_codeblock( object, "messageChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSTATUSBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTATUSBAR" );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
     hb_vmEvalBlockV( cb, 2, psender, pmessage );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QStatusBarSlots::messageChanged( const QString & message )
   }
 }
 
-void QStatusBarSlots_connect_signal ( const QString & signal, const QString & slot )
+void QStatusBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QStatusBar * obj = (QStatusBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

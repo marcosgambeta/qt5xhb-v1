@@ -33,7 +33,7 @@ CLASS QStyleHintReturn
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleHintReturn
+PROCEDURE destroyObject() CLASS QStyleHintReturn
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 {
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
   {
-    QStyleHintReturn * o = new QStyleHintReturn ( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
+    QStyleHintReturn * o = new QStyleHintReturn( OPINT(1,QStyleOption::Version), OPINT(2,QStyleHintReturn::SH_Default) );
     _qt5xhb_returnNewObject( o, true );
   }
   else

@@ -25,7 +25,7 @@ void QGraphicsObjectSlots::enabledChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "enabledChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QGraphicsObjectSlots::opacityChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -47,7 +47,7 @@ void QGraphicsObjectSlots::parentChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "parentChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -58,7 +58,7 @@ void QGraphicsObjectSlots::rotationChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -69,7 +69,7 @@ void QGraphicsObjectSlots::scaleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "scaleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -80,7 +80,7 @@ void QGraphicsObjectSlots::visibleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -91,7 +91,7 @@ void QGraphicsObjectSlots::xChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "xChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -102,7 +102,7 @@ void QGraphicsObjectSlots::yChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "yChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -113,13 +113,13 @@ void QGraphicsObjectSlots::zChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "zChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QGraphicsObjectSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGraphicsObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QGraphicsObject * obj = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

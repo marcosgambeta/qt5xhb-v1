@@ -35,7 +35,7 @@ CLASS QStyleFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QStyleFactory
+PROCEDURE destroyObject() CLASS QStyleFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,8 +85,8 @@ HB_FUNC_STATIC( QSTYLEFACTORY_CREATE )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QStyle * ptr = QStyleFactory::create ( PQSTRING(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QSTYLE" );
+    QStyle * ptr = QStyleFactory::create( PQSTRING(1) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QSTYLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSTYLEFACTORY_KEYS )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QStyleFactory::keys () );
+    RQSTRINGLIST( QStyleFactory::keys() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

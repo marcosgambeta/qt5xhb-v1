@@ -25,7 +25,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QList<QRectF>)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
     PHB_ITEM pregion = hb_itemArrayNew(0);
     if( pDynSym )
@@ -38,7 +38,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QRectF *) new QRectF ( region [i] ) );
+        hb_itemPutPtr( pTempItem, (QRectF *) new QRectF( region [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pregion, pTempObject );
         hb_itemRelease( pTempObject );
@@ -60,7 +60,7 @@ void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneRectChanged(QRectF)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
     hb_vmEvalBlockV( cb, 2, psender, prect );
     hb_itemRelease( psender );
@@ -73,13 +73,13 @@ void QGraphicsSceneSlots::selectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGRAPHICSSCENE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QGraphicsSceneSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGraphicsSceneSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

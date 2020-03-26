@@ -25,7 +25,7 @@ void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSYSTEMTRAYICON" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
     hb_vmEvalBlockV( cb, 2, psender, preason );
     hb_itemRelease( psender );
@@ -38,13 +38,13 @@ void QSystemTrayIconSlots::messageClicked()
   PHB_ITEM cb = Signals_return_codeblock( object, "messageClicked()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSYSTEMTRAYICON" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QSystemTrayIconSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

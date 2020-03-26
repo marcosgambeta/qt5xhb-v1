@@ -25,7 +25,7 @@ void QFontDialogSlots::currentFontChanged( const QFont & font )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFontChanged(QFont)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFONTDIALOG" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QFONTDIALOG" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
     hb_vmEvalBlockV( cb, 2, psender, pfont );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QFontDialogSlots::fontSelected( const QFont & font )
   PHB_ITEM cb = Signals_return_codeblock( object, "fontSelected(QFont)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QFONTDIALOG" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QFONTDIALOG" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
     hb_vmEvalBlockV( cb, 2, psender, pfont );
     hb_itemRelease( psender );
@@ -46,7 +46,7 @@ void QFontDialogSlots::fontSelected( const QFont & font )
   }
 }
 
-void QFontDialogSlots_connect_signal ( const QString & signal, const QString & slot )
+void QFontDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QFontDialog * obj = (QFontDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

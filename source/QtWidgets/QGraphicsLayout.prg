@@ -36,7 +36,7 @@ CLASS QGraphicsLayout INHERIT QGraphicsLayoutItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGraphicsLayout
+PROCEDURE destroyObject() CLASS QGraphicsLayout
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ACTIVATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->activate ();
+      obj->activate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->invalidate ();
+      obj->invalidate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActivated () );
+      RBOOL( obj->isActivated() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,8 +188,8 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QGraphicsLayoutItem * ptr = obj->itemAt ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QGRAPHICSLAYOUTITEM", false );
+      QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
+      _qt5xhb_createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_REMOVEAT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->removeAt ( PINT(1) );
+      obj->removeAt( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETCONTENTSMARGINS )
     if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
     {
 #endif
-      obj->setContentsMargins ( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+      obj->setContentsMargins( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_WIDGETEVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      obj->widgetEvent ( PQEVENT(1) );
+      obj->widgetEvent( PQEVENT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
       qreal par2;
       qreal par3;
       qreal par4;
-      obj->getContentsMargins ( &par1, &par2, &par3, &par4 );
+      obj->getContentsMargins( &par1, &par2, &par3, &par4 );
       hb_stornd( par1, 1 );
       hb_stornd( par2, 2 );
       hb_stornd( par3, 3 );
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->updateGeometry ();
+      obj->updateGeometry();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QGraphicsLayout::instantInvalidatePropagation () );
+    RBOOL( QGraphicsLayout::instantInvalidatePropagation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION )
   if( ISNUMPAR(1) && ISLOG(1) )
   {
 #endif
-    QGraphicsLayout::setInstantInvalidatePropagation ( PBOOL(1) );
+    QGraphicsLayout::setInstantInvalidatePropagation( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

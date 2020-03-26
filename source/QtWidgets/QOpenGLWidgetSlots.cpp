@@ -26,7 +26,7 @@ void QOpenGLWidgetSlots::aboutToCompose()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToCompose()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOPENGLWIDGET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QOpenGLWidgetSlots::frameSwapped()
   PHB_ITEM cb = Signals_return_codeblock( object, "frameSwapped()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOPENGLWIDGET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -52,7 +52,7 @@ void QOpenGLWidgetSlots::aboutToResize()
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToResize()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOPENGLWIDGET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -65,14 +65,14 @@ void QOpenGLWidgetSlots::resized()
   PHB_ITEM cb = Signals_return_codeblock( object, "resized()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOPENGLWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOPENGLWIDGET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QOpenGLWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QOpenGLWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QOpenGLWidget * obj = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

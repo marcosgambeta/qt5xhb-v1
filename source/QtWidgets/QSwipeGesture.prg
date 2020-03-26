@@ -27,7 +27,7 @@ CLASS QSwipeGesture INHERIT QGesture
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSwipeGesture
+PROCEDURE destroyObject() CLASS QSwipeGesture
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->horizontalDirection () );
+      RENUM( obj->horizontalDirection() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSwipeAngle ( PQREAL(1) );
+      obj->setSwipeAngle( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->swipeAngle () );
+      RQREAL( obj->swipeAngle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->verticalDirection () );
+      RENUM( obj->verticalDirection() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ void QActionSlots::changed()
   PHB_ITEM cb = Signals_return_codeblock( object, "changed()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QACTION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QActionSlots::hovered()
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QACTION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -47,7 +47,7 @@ void QActionSlots::toggled( bool checked )
   PHB_ITEM cb = Signals_return_codeblock( object, "toggled(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QACTION" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
     hb_vmEvalBlockV( cb, 2, psender, pchecked );
     hb_itemRelease( psender );
@@ -60,7 +60,7 @@ void QActionSlots::triggered( bool checked )
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACTION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QACTION" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
     hb_vmEvalBlockV( cb, 2, psender, pchecked );
     hb_itemRelease( psender );
@@ -68,7 +68,7 @@ void QActionSlots::triggered( bool checked )
   }
 }
 
-void QActionSlots_connect_signal ( const QString & signal, const QString & slot )
+void QActionSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QAction * obj = (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

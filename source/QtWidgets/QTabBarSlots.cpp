@@ -25,7 +25,7 @@ void QTabBarSlots::currentChanged( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QTabBarSlots::tabCloseRequested( int index )
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 2, psender, pindex );
     hb_itemRelease( psender );
@@ -51,7 +51,7 @@ void QTabBarSlots::tabMoved( int from, int to )
   PHB_ITEM cb = Signals_return_codeblock( object, "tabMoved(int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTABBAR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABBAR" );
     PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
     PHB_ITEM pto = hb_itemPutNI( NULL, to );
     hb_vmEvalBlockV( cb, 3, psender, pfrom, pto );
@@ -61,7 +61,7 @@ void QTabBarSlots::tabMoved( int from, int to )
   }
 }
 
-void QTabBarSlots_connect_signal ( const QString & signal, const QString & slot )
+void QTabBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -26,7 +26,7 @@ void QWidgetSlots::windowTitleChanged( const QString & title )
   PHB_ITEM cb = Signals_return_codeblock( object, "windowTitleChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWIDGET" );
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
     hb_vmEvalBlockV( cb, 2, psender, ptitle );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QWidgetSlots::windowIconChanged( const QIcon & icon )
   PHB_ITEM cb = Signals_return_codeblock( object, "windowIconChanged(QIcon)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWIDGET" );
     PHB_ITEM picon = Signals_return_object( (void *) &icon, "QICON" );
     hb_vmEvalBlockV( cb, 2, psender, picon );
     hb_itemRelease( psender );
@@ -55,7 +55,7 @@ void QWidgetSlots::windowIconTextChanged( const QString & iconText )
   PHB_ITEM cb = Signals_return_codeblock( object, "windowIconTextChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWIDGET" );
     PHB_ITEM piconText = hb_itemPutC( NULL, QSTRINGTOSTRING(iconText) );
     hb_vmEvalBlockV( cb, 2, psender, piconText );
     hb_itemRelease( psender );
@@ -68,7 +68,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
   PHB_ITEM cb = Signals_return_codeblock( object, "customContextMenuRequested(QPoint)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWIDGET" );
     PHB_ITEM ppos = Signals_return_object( (void *) &pos, "QPOINT" );
     hb_vmEvalBlockV( cb, 2, psender, ppos );
     hb_itemRelease( psender );
@@ -76,7 +76,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
   }
 }
 
-void QWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

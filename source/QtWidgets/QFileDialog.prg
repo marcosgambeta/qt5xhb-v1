@@ -102,7 +102,7 @@ CLASS QFileDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QFileDialog
+PROCEDURE destroyObject() CLASS QFileDialog
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -133,18 +133,18 @@ RETURN
 /*
 QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
 */
-void QFileDialog_new1 ()
+void QFileDialog_new1()
 {
-  QFileDialog * o = new QFileDialog ( PQWIDGET(1), (Qt::WindowFlags) hb_parni(2) );
+  QFileDialog * o = new QFileDialog( PQWIDGET(1), (Qt::WindowFlags) hb_parni(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
 */
-void QFileDialog_new2 ()
+void QFileDialog_new2()
 {
-  QFileDialog * o = new QFileDialog ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
+  QFileDialog * o = new QFileDialog( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -173,8 +173,8 @@ HB_FUNC_STATIC( QFILEDIALOG_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ACCEPTMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->acceptMode () );
+      RENUM( obj->acceptMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETACCEPTMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAcceptMode ( (QFileDialog::AcceptMode) hb_parni(1) );
+      obj->setAcceptMode( (QFileDialog::AcceptMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->confirmOverwrite () );
+      RBOOL( obj->confirmOverwrite() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETCONFIRMOVERWRITE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setConfirmOverwrite ( PBOOL(1) );
+      obj->setConfirmOverwrite( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->defaultSuffix () );
+      RQSTRING( obj->defaultSuffix() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDEFAULTSUFFIX )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDefaultSuffix ( PQSTRING(1) );
+      obj->setDefaultSuffix( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QFILEDIALOG_FILEMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->fileMode () );
+      RENUM( obj->fileMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETFILEMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFileMode ( (QFileDialog::FileMode) hb_parni(1) );
+      obj->setFileMode( (QFileDialog::FileMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QFILEDIALOG_FILTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->filter () );
+      RENUM( obj->filter() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETFILTER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setFilter ( (QDir::Filters) hb_parni(1) );
+      obj->setFilter( (QDir::Filters) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QFILEDIALOG_HISTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->history () );
+      RQSTRINGLIST( obj->history() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETHISTORY )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setHistory ( PQSTRINGLIST(1) );
+      obj->setHistory( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,8 +499,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QFileIconProvider * ptr = obj->iconProvider ();
-      _qt5xhb_createReturnClass ( ptr, "QFILEICONPROVIDER", false );
+      QFileIconProvider * ptr = obj->iconProvider();
+      _qt5xhb_createReturnClass( ptr, "QFILEICONPROVIDER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETICONPROVIDER )
     if( ISNUMPAR(1) && ISQFILEICONPROVIDER(1) )
     {
 #endif
-      obj->setIconProvider ( PQFILEICONPROVIDER(1) );
+      obj->setIconProvider( PQFILEICONPROVIDER(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNameFilterDetailsVisible () );
+      RBOOL( obj->isNameFilterDetailsVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setNameFilterDetailsVisible ( PBOOL(1) );
+      obj->setNameFilterDetailsVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReadOnly () );
+      RBOOL( obj->isReadOnly() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETREADONLY )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setReadOnly ( PBOOL(1) );
+      obj->setReadOnly( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -650,8 +650,8 @@ HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractItemDelegate * ptr = obj->itemDelegate ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTITEMDELEGATE" );
+      QAbstractItemDelegate * ptr = obj->itemDelegate();
+      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETITEMDELEGATE )
     if( ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1) )
     {
 #endif
-      obj->setItemDelegate ( PQABSTRACTITEMDELEGATE(1) );
+      obj->setItemDelegate( PQABSTRACTITEMDELEGATE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->labelText ( (QFileDialog::DialogLabel) hb_parni(1) ) );
+      RQSTRING( obj->labelText( (QFileDialog::DialogLabel) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETLABELTEXT )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->setLabelText ( (QFileDialog::DialogLabel) hb_parni(1), PQSTRING(2) );
+      obj->setLabelText( (QFileDialog::DialogLabel) hb_parni(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NAMEFILTERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->nameFilters () );
+      RQSTRINGLIST( obj->nameFilters() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERS )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setNameFilters ( PQSTRINGLIST(1) );
+      obj->setNameFilters( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QFILEDIALOG_OPEN )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
 #endif
-      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QFILEDIALOG_OPTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->options () );
+      RENUM( obj->options() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTIONS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOptions ( (QFileDialog::Options) hb_parni(1) );
+      obj->setOptions( (QFileDialog::Options) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -878,8 +878,8 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractProxyModel * ptr = obj->proxyModel ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTPROXYMODEL" );
+      QAbstractProxyModel * ptr = obj->proxyModel();
+      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTPROXYMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETPROXYMODEL )
     if( ISNUMPAR(1) && ISQABSTRACTPROXYMODEL(1) )
     {
 #endif
-      obj->setProxyModel ( PQABSTRACTPROXYMODEL(1) );
+      obj->setProxyModel( PQABSTRACTPROXYMODEL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QFILEDIALOG_RESOLVESYMLINKS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->resolveSymlinks () );
+      RBOOL( obj->resolveSymlinks() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETRESOLVESYMLINKS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setResolveSymlinks ( PBOOL(1) );
+      obj->setResolveSymlinks( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -982,7 +982,7 @@ HB_FUNC_STATIC( QFILEDIALOG_RESTORESTATE )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      RBOOL( obj->restoreState ( *PQBYTEARRAY(1) ) );
+      RBOOL( obj->restoreState( *PQBYTEARRAY(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1006,8 +1006,8 @@ HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->saveState () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->saveState() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTFILE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->selectFile ( PQSTRING(1) );
+      obj->selectFile( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTNAMEFILTER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->selectNameFilter ( PQSTRING(1) );
+      obj->selectNameFilter( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1083,7 +1083,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDFILES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->selectedFiles () );
+      RQSTRINGLIST( obj->selectedFiles() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->selectedNameFilter () );
+      RQSTRING( obj->selectedNameFilter() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1131,8 +1131,8 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDir * ptr = new QDir( obj->directory () );
-      _qt5xhb_createReturnClass ( ptr, "QDIR", true );
+      QDir * ptr = new QDir( obj->directory() );
+      _qt5xhb_createReturnClass( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1146,13 +1146,13 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
 /*
 void setDirectory ( const QString & directory )
 */
-void QFileDialog_setDirectory1 ()
+void QFileDialog_setDirectory1()
 {
   QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setDirectory ( PQSTRING(1) );
+    obj->setDirectory( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1161,13 +1161,13 @@ void QFileDialog_setDirectory1 ()
 /*
 void setDirectory ( const QDir & directory )
 */
-void QFileDialog_setDirectory2 ()
+void QFileDialog_setDirectory2()
 {
   QFileDialog * obj = (QFileDialog *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setDirectory ( *PQDIR(1) );
+    obj->setDirectory( *PQDIR(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1205,7 +1205,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setNameFilter ( PQSTRING(1) );
+      obj->setNameFilter( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1231,7 +1231,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->setOption ( (QFileDialog::Option) hb_parni(1), OPBOOL(2,true) );
+      obj->setOption( (QFileDialog::Option) hb_parni(1), OPBOOL(2,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QUrl> list = obj->sidebarUrls ();
+      QList<QUrl> list = obj->sidebarUrls();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -1270,7 +1270,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QUrl *) new QUrl ( list[i] ) );
+          hb_itemPutPtr( pItem, (QUrl *) new QUrl( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1317,7 +1317,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETSIDEBARURLS )
       {
         par1 << *(QUrl *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setSidebarUrls ( par1 );
+      obj->setSidebarUrls( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1343,7 +1343,7 @@ HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption ( (QFileDialog::Option) hb_parni(1) ) );
+      RBOOL( obj->testOption( (QFileDialog::Option) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1367,7 +1367,7 @@ HB_FUNC_STATIC( QFILEDIALOG_VIEWMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->viewMode () );
+      RENUM( obj->viewMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1391,7 +1391,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVIEWMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setViewMode ( (QFileDialog::ViewMode) hb_parni(1) );
+      obj->setViewMode( (QFileDialog::ViewMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1417,7 +1417,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1443,8 +1443,8 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORYURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->directoryUrl () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->directoryUrl() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORYURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setDirectoryUrl ( *PQURL(1) );
+      obj->setDirectoryUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->selectUrl ( *PQURL(1) );
+      obj->selectUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1520,7 +1520,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QUrl> list = obj->selectedUrls ();
+      QList<QUrl> list = obj->selectedUrls();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -1533,7 +1533,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTEDURLS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QUrl *) new QUrl ( list[i] ) );
+          hb_itemPutPtr( pItem, (QUrl *) new QUrl( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1572,7 +1572,7 @@ HB_FUNC_STATIC( QFILEDIALOG_MIMETYPEFILTERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->mimeTypeFilters () );
+      RQSTRINGLIST( obj->mimeTypeFilters() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1596,7 +1596,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETMIMETYPEFILTERS )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setMimeTypeFilters ( PQSTRINGLIST(1) );
+      obj->setMimeTypeFilters( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1622,7 +1622,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTMIMETYPEFILTER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->selectMimeTypeFilter ( PQSTRING(1) );
+      obj->selectMimeTypeFilter( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1644,7 +1644,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
   if( ISBETWEEN(0,4) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
   {
 #endif
-    RQSTRING( QFileDialog::getExistingDirectory ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4) ) );
+    RQSTRING( QFileDialog::getExistingDirectory( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1663,7 +1663,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
   if( ISBETWEEN(0,6) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
   {
 #endif
-    RQSTRING( QFileDialog::getOpenFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6) ) );
+    RQSTRING( QFileDialog::getOpenFileName( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1682,7 +1682,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
   if( ISBETWEEN(0,6) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
   {
 #endif
-    RQSTRINGLIST( QFileDialog::getOpenFileNames ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6) ) );
+    RQSTRINGLIST( QFileDialog::getOpenFileNames( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1701,7 +1701,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
   if( ISBETWEEN(0,6) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) )
   {
 #endif
-    RQSTRING( QFileDialog::getSaveFileName ( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6) ) );
+    RQSTRING( QFileDialog::getSaveFileName( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1720,8 +1720,8 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURL )
   if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
 #endif
-    QUrl * ptr = new QUrl( QFileDialog::getOpenFileUrl ( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    QUrl * ptr = new QUrl( QFileDialog::getOpenFileUrl( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
+    _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1740,8 +1740,8 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILEURL )
   if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
 #endif
-    QUrl * ptr = new QUrl( QFileDialog::getSaveFileUrl ( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    QUrl * ptr = new QUrl( QFileDialog::getSaveFileUrl( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) ) );
+    _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1760,8 +1760,8 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORYURL )
   if( ISBETWEEN(0,5) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTNUM(4) && ISOPTARRAY(5) )
   {
 #endif
-    QUrl * ptr = new QUrl( QFileDialog::getExistingDirectoryUrl ( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4), OPQSTRINGLIST(5,QStringList()) ) );
-    _qt5xhb_createReturnClass ( ptr, "QURL", true );
+    QUrl * ptr = new QUrl( QFileDialog::getExistingDirectoryUrl( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), ISNIL(4)? (QFileDialog::Options) QFileDialog::ShowDirsOnly : (QFileDialog::Options) hb_parni(4), OPQSTRINGLIST(5,QStringList()) ) );
+    _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1780,7 +1780,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
   if( ISBETWEEN(0,7) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && (ISQURL(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) && ISOPTNUM(6) && ISOPTARRAY(7) )
   {
 #endif
-    QList<QUrl> list = QFileDialog::getOpenFileUrls ( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) );
+    QList<QUrl> list = QFileDialog::getOpenFileUrls( OPQWIDGET(1,0), OPQSTRING(2,QString()), ISNIL(3)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(3), OPQSTRING(4,QString()), NULL, ISNIL(6)? (QFileDialog::Options) 0 : (QFileDialog::Options) hb_parni(6), OPQSTRINGLIST(7,QStringList()) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -1793,7 +1793,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QUrl *) new QUrl ( list[i] ) );
+        hb_itemPutPtr( pItem, (QUrl *) new QUrl( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1818,7 +1818,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILEURLS )
 #endif
 }
 
-void QFileDialogSlots_connect_signal ( const QString & signal, const QString & slot );
+void QFileDialogSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
