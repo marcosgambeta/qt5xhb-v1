@@ -25,13 +25,13 @@ void QLocalServerSlots::newConnection()
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLOCALSERVER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOCALSERVER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QLocalServerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QLocalServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QLocalServer * obj = (QLocalServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

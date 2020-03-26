@@ -37,7 +37,7 @@ CLASS QNetworkConfigurationManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkConfigurationManager
+PROCEDURE destroyObject() CLASS QNetworkConfigurationManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QNetworkConfigurationManager * o = new QNetworkConfigurationManager ( OPQOBJECT(1,0) );
+    QNetworkConfigurationManager * o = new QNetworkConfigurationManager( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QList<QNetworkConfiguration> list = obj->allConfigurations ( ISNIL(1)? (QNetworkConfiguration::StateFlags) QNetworkConfiguration::StateFlags() : (QNetworkConfiguration::StateFlags) hb_parni(1) );
+      QList<QNetworkConfiguration> list = obj->allConfigurations( ISNIL(1)? (QNetworkConfiguration::StateFlags) QNetworkConfiguration::StateFlags() : (QNetworkConfiguration::StateFlags) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QNetworkConfiguration *) new QNetworkConfiguration ( list[i] ) );
+          hb_itemPutPtr( pItem, (QNetworkConfiguration *) new QNetworkConfiguration( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->capabilities () );
+      RENUM( obj->capabilities() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,8 +184,8 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configurationFromIdentifier ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configurationFromIdentifier( PQSTRING(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,8 +209,8 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration () );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKCONFIGURATION", true );
+      QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration() );
+      _qt5xhb_createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isOnline () );
+      RBOOL( obj->isOnline() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->updateConfigurations ();
+      obj->updateConfigurations();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QNetworkConfigurationManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QNetworkConfigurationManagerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
 {

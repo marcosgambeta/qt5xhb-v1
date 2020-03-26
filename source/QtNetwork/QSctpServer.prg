@@ -28,7 +28,7 @@ CLASS QSctpServer INHERIT QTcpServer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSctpServer
+PROCEDURE destroyObject() CLASS QSctpServer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSCTPSERVER_NEW )
 #if !defined(QT_NO_SCTP)
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSctpServer * o = new QSctpServer ( OPQOBJECT(1,0) );
+    QSctpServer * o = new QSctpServer( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSCTPSERVER_SETMAXIMUMCHANNELCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaximumChannelCount ( PINT(1) );
+      obj->setMaximumChannelCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSCTPSERVER_MAXIMUMCHANNELCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->maximumChannelCount () );
+      RINT( obj->maximumChannelCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,8 +177,8 @@ HB_FUNC_STATIC( QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSctpSocket * ptr = obj->nextPendingDatagramConnection ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSCTPSOCKET" );
+      QSctpSocket * ptr = obj->nextPendingDatagramConnection();
+      _qt5xhb_createReturnQObjectClass( ptr, "QSCTPSOCKET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

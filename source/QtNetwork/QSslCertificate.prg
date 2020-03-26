@@ -63,7 +63,7 @@ CLASS QSslCertificate
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslCertificate
+PROCEDURE destroyObject() CLASS QSslCertificate
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -94,27 +94,27 @@ RETURN
 /*
 explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
-void QSslCertificate_new1 ()
+void QSslCertificate_new1()
 {
-  QSslCertificate * o = new QSslCertificate ( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+  QSslCertificate * o = new QSslCertificate( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 explicit QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
 */
-void QSslCertificate_new2 ()
+void QSslCertificate_new2()
 {
-  QSslCertificate * o = new QSslCertificate ( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+  QSslCertificate * o = new QSslCertificate( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSslCertificate ( const QSslCertificate & other )
 */
-void QSslCertificate_new3 ()
+void QSslCertificate_new3()
 {
-  QSslCertificate * o = new QSslCertificate ( *PQSSLCERTIFICATE(1) );
+  QSslCertificate * o = new QSslCertificate( *PQSSLCERTIFICATE(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SWAP )
     if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
     {
 #endif
-      obj->swap ( *PQSSLCERTIFICATE(1) );
+      obj->swap( *PQSSLCERTIFICATE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISBLACKLISTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isBlacklisted () );
+      RBOOL( obj->isBlacklisted() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSELFSIGNED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSelfSigned () );
+      RBOOL( obj->isSelfSigned() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clear ();
+      obj->clear();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,8 +327,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->version () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->version() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,8 +352,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->serialNumber () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->serialNumber() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,8 +377,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->digest ( ISNIL(1)? (QCryptographicHash::Algorithm) QCryptographicHash::Md5 : (QCryptographicHash::Algorithm) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->digest( ISNIL(1)? (QCryptographicHash::Algorithm) QCryptographicHash::Md5 : (QCryptographicHash::Algorithm) hb_parni(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,26 +392,26 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 /*
 QStringList issuerInfo ( SubjectInfo subject ) const
 */
-void QSslCertificate_issuerInfo1 ()
+void QSslCertificate_issuerInfo1()
 {
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRINGLIST( obj->issuerInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
+    RQSTRINGLIST( obj->issuerInfo( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
   }
 }
 
 /*
 QStringList issuerInfo ( const QByteArray & attribute ) const
 */
-void QSslCertificate_issuerInfo2 ()
+void QSslCertificate_issuerInfo2()
 {
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRINGLIST( obj->issuerInfo ( *PQBYTEARRAY(1) ) );
+    RQSTRINGLIST( obj->issuerInfo( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -437,26 +437,26 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 /*
 QStringList subjectInfo ( SubjectInfo subject ) const
 */
-void QSslCertificate_subjectInfo1 ()
+void QSslCertificate_subjectInfo1()
 {
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRINGLIST( obj->subjectInfo ( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
+    RQSTRINGLIST( obj->subjectInfo( (QSslCertificate::SubjectInfo) hb_parni(1) ) );
   }
 }
 
 /*
 QStringList subjectInfo ( const QByteArray & attribute ) const
 */
-void QSslCertificate_subjectInfo2 ()
+void QSslCertificate_subjectInfo2()
 {
   QSslCertificate * obj = (QSslCertificate *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRINGLIST( obj->subjectInfo ( *PQBYTEARRAY(1) ) );
+    RQSTRINGLIST( obj->subjectInfo( *PQBYTEARRAY(1) ) );
   }
 }
 
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFOATTRIBUTES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QByteArray> list = obj->subjectInfoAttributes ();
+      QList<QByteArray> list = obj->subjectInfoAttributes();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFOATTRIBUTES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFOATTRIBUTES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QByteArray> list = obj->issuerInfoAttributes ();
+      QList<QByteArray> list = obj->issuerInfoAttributes();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFOATTRIBUTES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray ( list[i] ) );
+          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -604,8 +604,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EFFECTIVEDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->effectiveDate () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->effectiveDate() );
+      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,8 +629,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXPIRYDATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->expiryDate () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->expiryDate() );
+      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -654,8 +654,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_PUBLICKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslKey * ptr = new QSslKey( obj->publicKey () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
+      QSslKey * ptr = new QSslKey( obj->publicKey() );
+      _qt5xhb_createReturnClass( ptr, "QSSLKEY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXTENSIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslCertificateExtension> list = obj->extensions ();
+      QList<QSslCertificateExtension> list = obj->extensions();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATEEXTENSION" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_EXTENSIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslCertificateExtension *) new QSslCertificateExtension ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSslCertificateExtension *) new QSslCertificateExtension( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -731,8 +731,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOPEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toPem () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->toPem() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -756,8 +756,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TODER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toDer () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->toDer() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_TOTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toText () );
+      RQSTRING( obj->toText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
   if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
   {
 #endif
-    QList<QSslCertificate> list = QSslCertificate::fromPath ( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) );
+    QList<QSslCertificate> list = QSslCertificate::fromPath( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
   if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTNUM(2) )
   {
 #endif
-    QList<QSslCertificate> list = QSslCertificate::fromDevice ( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+    QList<QSslCertificate> list = QSslCertificate::fromDevice( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
 #endif
-    QList<QSslCertificate> list = QSslCertificate::fromData ( *PQBYTEARRAY(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+    QList<QSslCertificate> list = QSslCertificate::fromData( *PQBYTEARRAY(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERIFY )
     {
       par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    QList<QSslError> list = QSslCertificate::verify ( par1, OPQSTRING(2,QString()) );
+    QList<QSslError> list = QSslCertificate::verify( par1, OPQSTRING(2,QString()) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERIFY )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslError *) new QSslError ( list[i] ) );
+        hb_itemPutPtr( pItem, (QSslError *) new QSslError( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1005,7 +1005,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_HANDLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( (Qt::HANDLE) obj->handle () );
+      hb_retptr( (Qt::HANDLE) obj->handle() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

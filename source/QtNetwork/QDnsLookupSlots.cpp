@@ -25,7 +25,7 @@ void QDnsLookupSlots::finished()
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDNSLOOKUP" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QDnsLookupSlots::nameChanged( const QString & name )
   PHB_ITEM cb = Signals_return_codeblock( object, "nameChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDNSLOOKUP" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     hb_vmEvalBlockV( cb, 2, psender, pname );
     hb_itemRelease( psender );
@@ -49,7 +49,7 @@ void QDnsLookupSlots::nameserverChanged( const QHostAddress & nameserver )
   PHB_ITEM cb = Signals_return_codeblock( object, "nameserverChanged(QHostAddress)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDNSLOOKUP" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
     PHB_ITEM pnameserver = Signals_return_object( (void *) &nameserver, "QHOSTADDRESS" );
     hb_vmEvalBlockV( cb, 2, psender, pnameserver );
     hb_itemRelease( psender );
@@ -62,7 +62,7 @@ void QDnsLookupSlots::typeChanged( QDnsLookup::Type type )
   PHB_ITEM cb = Signals_return_codeblock( object, "typeChanged(QDnsLookup::Type)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QDNSLOOKUP" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
     hb_vmEvalBlockV( cb, 2, psender, ptype );
     hb_itemRelease( psender );
@@ -70,7 +70,7 @@ void QDnsLookupSlots::typeChanged( QDnsLookup::Type type )
   }
 }
 
-void QDnsLookupSlots_connect_signal ( const QString & signal, const QString & slot )
+void QDnsLookupSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QDnsLookup * obj = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

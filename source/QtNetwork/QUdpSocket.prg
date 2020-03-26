@@ -34,7 +34,7 @@ CLASS QUdpSocket INHERIT QAbstractSocket
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QUdpSocket
+PROCEDURE destroyObject() CLASS QUdpSocket
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QUdpSocket * o = new QUdpSocket ( OPQOBJECT(1,0) );
+    QUdpSocket * o = new QUdpSocket( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -100,26 +100,26 @@ HB_FUNC_STATIC( QUDPSOCKET_DELETE )
 /*
 bool joinMulticastGroup(const QHostAddress &groupAddress)
 */
-void QUdpSocket_joinMulticastGroup1 ()
+void QUdpSocket_joinMulticastGroup1()
 {
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->joinMulticastGroup ( *PQHOSTADDRESS(1) ) );
+    RBOOL( obj->joinMulticastGroup( *PQHOSTADDRESS(1) ) );
   }
 }
 
 /*
 bool joinMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
 */
-void QUdpSocket_joinMulticastGroup2 ()
+void QUdpSocket_joinMulticastGroup2()
 {
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->joinMulticastGroup ( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
+    RBOOL( obj->joinMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
   }
 }
 
@@ -145,26 +145,26 @@ HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
 /*
 bool leaveMulticastGroup(const QHostAddress &groupAddress)
 */
-void QUdpSocket_leaveMulticastGroup1 ()
+void QUdpSocket_leaveMulticastGroup1()
 {
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->leaveMulticastGroup ( *PQHOSTADDRESS(1) ) );
+    RBOOL( obj->leaveMulticastGroup( *PQHOSTADDRESS(1) ) );
   }
 }
 
 /*
 bool leaveMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
 */
-void QUdpSocket_leaveMulticastGroup2 ()
+void QUdpSocket_leaveMulticastGroup2()
 {
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->leaveMulticastGroup ( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
+    RBOOL( obj->leaveMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
   }
 }
 
@@ -200,8 +200,8 @@ HB_FUNC_STATIC( QUDPSOCKET_MULTICASTINTERFACE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkInterface * ptr = new QNetworkInterface( obj->multicastInterface () );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKINTERFACE", true );
+      QNetworkInterface * ptr = new QNetworkInterface( obj->multicastInterface() );
+      _qt5xhb_createReturnClass( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QUDPSOCKET_SETMULTICASTINTERFACE )
     if( ISNUMPAR(1) && ISQNETWORKINTERFACE(1) )
     {
 #endif
-      obj->setMulticastInterface ( *PQNETWORKINTERFACE(1) );
+      obj->setMulticastInterface( *PQNETWORKINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QUDPSOCKET_HASPENDINGDATAGRAMS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasPendingDatagrams () );
+      RBOOL( obj->hasPendingDatagrams() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->pendingDatagramSize () );
+      RQINT64( obj->pendingDatagramSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,8 +300,8 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      QNetworkDatagram * ptr = new QNetworkDatagram( obj->receiveDatagram ( OPQINT64(1,-1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKDATAGRAM", true );
+      QNetworkDatagram * ptr = new QNetworkDatagram( obj->receiveDatagram( OPQINT64(1,-1) ) );
+      _qt5xhb_createReturnClass( ptr, "QNETWORKDATAGRAM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,14 +320,14 @@ qint64 readDatagram(char *data, qint64 maxlen, QHostAddress *host = Q_NULLPTR, q
 /*
 qint64 writeDatagram(const QNetworkDatagram &datagram)
 */
-void QUdpSocket_writeDatagram1 ()
+void QUdpSocket_writeDatagram1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQINT64( obj->writeDatagram ( *PQNETWORKDATAGRAM(1) ) );
+    RQINT64( obj->writeDatagram( *PQNETWORKDATAGRAM(1) ) );
   }
 #endif
 }
@@ -335,26 +335,26 @@ void QUdpSocket_writeDatagram1 ()
 /*
 qint64 writeDatagram(const char *data, qint64 len, const QHostAddress &host, quint16 port)
 */
-void QUdpSocket_writeDatagram2 ()
+void QUdpSocket_writeDatagram2()
 {
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQINT64( obj->writeDatagram ( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4) ) );
+    RQINT64( obj->writeDatagram( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4) ) );
   }
 }
 
 /*
 qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
 */
-void QUdpSocket_writeDatagram3 ()
+void QUdpSocket_writeDatagram3()
 {
   QUdpSocket * obj = (QUdpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQINT64( obj->writeDatagram ( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
+    RQINT64( obj->writeDatagram( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
   }
 }
 

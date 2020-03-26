@@ -29,7 +29,7 @@ CLASS QHttpMultiPart INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHttpMultiPart
+PROCEDURE destroyObject() CLASS QHttpMultiPart
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,18 +56,18 @@ RETURN
 /*
 explicit QHttpMultiPart(QObject *parent = Q_NULLPTR)
 */
-void QHttpMultiPart_new1 ()
+void QHttpMultiPart_new1()
 {
-  QHttpMultiPart * o = new QHttpMultiPart ( OPQOBJECT(1,0) );
+  QHttpMultiPart * o = new QHttpMultiPart( OPQOBJECT(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 explicit QHttpMultiPart(ContentType contentType, QObject *parent = Q_NULLPTR)
 */
-void QHttpMultiPart_new2 ()
+void QHttpMultiPart_new2()
 {
-  QHttpMultiPart * o = new QHttpMultiPart ( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
+  QHttpMultiPart * o = new QHttpMultiPart( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -99,8 +99,8 @@ HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
     if( ISNUMPAR(1) && ISQHTTPPART(1) )
     {
 #endif
-      obj->append ( *PQHTTPPART(1) );
+      obj->append( *PQHTTPPART(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,8 +151,8 @@ HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->boundary () );
-      _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->boundary() );
+      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setBoundary ( *PQBYTEARRAY(1) );
+      obj->setBoundary( *PQBYTEARRAY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setContentType ( (QHttpMultiPart::ContentType) hb_parni(1) );
+      obj->setContentType( (QHttpMultiPart::ContentType) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -104,7 +104,7 @@ CLASS QSslSocket INHERIT QTcpSocket
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslSocket
+PROCEDURE destroyObject() CLASS QSslSocket
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSSLSOCKET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSslSocket * o = new QSslSocket ( OPQOBJECT(1,0) );
+    QSslSocket * o = new QSslSocket( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSSLSOCKET_RESUME )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->resume ();
+      obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,13 +195,13 @@ HB_FUNC_STATIC( QSSLSOCKET_RESUME )
 /*
 void connectToHostEncrypted(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
 */
-void QSslSocket_connectToHostEncrypted1 ()
+void QSslSocket_connectToHostEncrypted1()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->connectToHostEncrypted ( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
+    obj->connectToHostEncrypted( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -210,13 +210,13 @@ void QSslSocket_connectToHostEncrypted1 ()
 /*
 void connectToHostEncrypted(const QString &hostName, quint16 port, const QString &sslPeerName, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
 */
-void QSslSocket_connectToHostEncrypted2 ()
+void QSslSocket_connectToHostEncrypted2()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->connectToHostEncrypted ( PQSTRING(1), PQUINT16(2), PQSTRING(3), ISNIL(4)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(4), ISNIL(5)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(5) );
+    obj->connectToHostEncrypted( PQSTRING(1), PQUINT16(2), PQSTRING(3), ISNIL(4)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(4), ISNIL(5)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(5) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      RBOOL( obj->setSocketDescriptor ( PQINTPTR(1), ISNIL(2)? (QAbstractSocket::SocketState) QAbstractSocket::ConnectedState : (QAbstractSocket::SocketState) hb_parni(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) ) );
+      RBOOL( obj->setSocketDescriptor( PQINTPTR(1), ISNIL(2)? (QAbstractSocket::SocketState) QAbstractSocket::ConnectedState : (QAbstractSocket::SocketState) hb_parni(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOST )
     if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
     {
 #endif
-      obj->connectToHost ( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
+      obj->connectToHost( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DISCONNECTFROMHOST )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->disconnectFromHost ();
+      obj->disconnectFromHost();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETOPTION )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setSocketOption ( (QAbstractSocket::SocketOption) hb_parni(1), *PQVARIANT(2) );
+      obj->setSocketOption( (QAbstractSocket::SocketOption) hb_parni(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,8 +356,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->socketOption( (QAbstractSocket::SocketOption) hb_parni(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QSSLSOCKET_MODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->mode () );
+      RENUM( obj->mode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ISENCRYPTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isEncrypted () );
+      RBOOL( obj->isEncrypted() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PROTOCOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->protocol () );
+      RENUM( obj->protocol() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPROTOCOL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setProtocol ( (QSsl::SslProtocol) hb_parni(1) );
+      obj->setProtocol( (QSsl::SslProtocol) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->peerVerifyMode () );
+      RENUM( obj->peerVerifyMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPeerVerifyMode ( (QSslSocket::PeerVerifyMode) hb_parni(1) );
+      obj->setPeerVerifyMode( (QSslSocket::PeerVerifyMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYDEPTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->peerVerifyDepth () );
+      RINT( obj->peerVerifyDepth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYDEPTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPeerVerifyDepth ( PINT(1) );
+      obj->setPeerVerifyDepth( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERVERIFYNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->peerVerifyName () );
+      RQSTRING( obj->peerVerifyName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPeerVerifyName ( PQSTRING(1) );
+      obj->setPeerVerifyName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QSSLSOCKET_BYTESAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->bytesAvailable () );
+      RQINT64( obj->bytesAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QSSLSOCKET_BYTESTOWRITE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->bytesToWrite () );
+      RQINT64( obj->bytesToWrite() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CANREADLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canReadLine () );
+      RBOOL( obj->canReadLine() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->close ();
+      obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ATEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->atEnd () );
+      RBOOL( obj->atEnd() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QSSLSOCKET_FLUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->flush () );
+      RBOOL( obj->flush() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ABORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->abort ();
+      obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETREADBUFFERSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setReadBufferSize ( PQINT64(1) );
+      obj->setReadBufferSize( PQINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ENCRYPTEDBYTESAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->encryptedBytesAvailable () );
+      RQINT64( obj->encryptedBytesAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ENCRYPTEDBYTESTOWRITE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->encryptedBytesToWrite () );
+      RQINT64( obj->encryptedBytesToWrite() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -875,8 +875,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLCONFIGURATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLCONFIGURATION", true );
+      QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration() );
+      _qt5xhb_createReturnClass( ptr, "QSSLCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSSLCONFIGURATION )
     if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
     {
 #endif
-      obj->setSslConfiguration ( *PQSSLCONFIGURATION(1) );
+      obj->setSslConfiguration( *PQSSLCONFIGURATION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -935,7 +935,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATECHAIN )
       {
         par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setLocalCertificateChain ( par1 );
+      obj->setLocalCertificateChain( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslCertificate> list = obj->localCertificateChain ();
+      QList<QSslCertificate> list = obj->localCertificateChain();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1006,13 +1006,13 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATECHAIN )
 /*
 void setLocalCertificate(const QSslCertificate &certificate)
 */
-void QSslSocket_setLocalCertificate1 ()
+void QSslSocket_setLocalCertificate1()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setLocalCertificate ( *PQSSLCERTIFICATE(1) );
+    obj->setLocalCertificate( *PQSSLCERTIFICATE(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1021,13 +1021,13 @@ void QSslSocket_setLocalCertificate1 ()
 /*
 void setLocalCertificate(const QString &fileName, QSsl::EncodingFormat format = QSsl::Pem)
 */
-void QSslSocket_setLocalCertificate2 ()
+void QSslSocket_setLocalCertificate2()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setLocalCertificate ( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
+    obj->setLocalCertificate( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1065,8 +1065,8 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslCertificate * ptr = new QSslCertificate( obj->localCertificate () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
+      QSslCertificate * ptr = new QSslCertificate( obj->localCertificate() );
+      _qt5xhb_createReturnClass( ptr, "QSSLCERTIFICATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1090,8 +1090,8 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
+      QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate() );
+      _qt5xhb_createReturnClass( ptr, "QSSLCERTIFICATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1115,7 +1115,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslCertificate> list = obj->peerCertificateChain ();
+      QList<QSslCertificate> list = obj->peerCertificateChain();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1167,8 +1167,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SESSIONCIPHER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslCipher * ptr = new QSslCipher( obj->sessionCipher () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLCIPHER", true );
+      QSslCipher * ptr = new QSslCipher( obj->sessionCipher() );
+      _qt5xhb_createReturnClass( ptr, "QSSLCIPHER", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1193,7 +1193,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SESSIONPROTOCOL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->sessionProtocol () );
+      RENUM( obj->sessionProtocol() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1208,13 +1208,13 @@ HB_FUNC_STATIC( QSSLSOCKET_SESSIONPROTOCOL )
 /*
 void setPrivateKey(const QSslKey &key)
 */
-void QSslSocket_setPrivateKey1 ()
+void QSslSocket_setPrivateKey1()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setPrivateKey ( *PQSSLKEY(1) );
+    obj->setPrivateKey( *PQSSLKEY(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1223,13 +1223,13 @@ void QSslSocket_setPrivateKey1 ()
 /*
 void setPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray &passPhrase = QByteArray())
 */
-void QSslSocket_setPrivateKey2 ()
+void QSslSocket_setPrivateKey2()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setPrivateKey ( PQSTRING(1), ISNIL(2)? (QSsl::KeyAlgorithm) QSsl::Rsa : (QSsl::KeyAlgorithm) hb_parni(2), ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), ISNIL(4)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(4) );
+    obj->setPrivateKey( PQSTRING(1), ISNIL(2)? (QSsl::KeyAlgorithm) QSsl::Rsa : (QSsl::KeyAlgorithm) hb_parni(2), ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), ISNIL(4)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1267,8 +1267,8 @@ HB_FUNC_STATIC( QSSLSOCKET_PRIVATEKEY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslKey * ptr = new QSslKey( obj->privateKey () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLKEY", true );
+      QSslKey * ptr = new QSslKey( obj->privateKey() );
+      _qt5xhb_createReturnClass( ptr, "QSSLKEY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1292,7 +1292,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslCipher> list = obj->ciphers ();
+      QList<QSslCipher> list = obj->ciphers();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -1305,7 +1305,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1334,7 +1334,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
 /*
 void setCiphers(const QList<QSslCipher> &ciphers)
 */
-void QSslSocket_setCiphers1 ()
+void QSslSocket_setCiphers1()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -1348,7 +1348,7 @@ void QSslSocket_setCiphers1 ()
     {
       par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    obj->setCiphers ( par1 );
+    obj->setCiphers( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1357,13 +1357,13 @@ void QSslSocket_setCiphers1 ()
 /*
 void setCiphers(const QString &ciphers)
 */
-void QSslSocket_setCiphers2 ()
+void QSslSocket_setCiphers2()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setCiphers ( PQSTRING(1) );
+    obj->setCiphers( PQSTRING(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1405,7 +1405,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
     {
       par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    QSslSocket::setDefaultCiphers ( par1 );
+    QSslSocket::setDefaultCiphers( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1426,7 +1426,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QSslCipher> list = QSslSocket::defaultCiphers ();
+    QList<QSslCipher> list = QSslSocket::defaultCiphers();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -1439,7 +1439,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
+        hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1473,7 +1473,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QSslCipher> list = QSslSocket::supportedCiphers ();
+    QList<QSslCipher> list = QSslSocket::supportedCiphers();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -1486,7 +1486,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher ( list[i] ) );
+        hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1514,20 +1514,20 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
 /*
 bool addCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
 */
-void QSslSocket_addCaCertificates1 ()
+void QSslSocket_addCaCertificates1()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->addCaCertificates ( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) ) );
+    RBOOL( obj->addCaCertificates( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) ) );
   }
 }
 
 /*
 void addCaCertificates(const QList<QSslCertificate> &certificates)
 */
-void QSslSocket_addCaCertificates2 ()
+void QSslSocket_addCaCertificates2()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -1541,7 +1541,7 @@ void QSslSocket_addCaCertificates2 ()
     {
       par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    obj->addCaCertificates ( par1 );
+    obj->addCaCertificates( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1579,7 +1579,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATE )
     if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
     {
 #endif
-      obj->addCaCertificate ( *PQSSLCERTIFICATE(1) );
+      obj->addCaCertificate( *PQSSLCERTIFICATE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1613,7 +1613,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
       {
         par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setCaCertificates ( par1 );
+      obj->setCaCertificates( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1639,7 +1639,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslCertificate> list = obj->caCertificates ();
+      QList<QSslCertificate> list = obj->caCertificates();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -1652,7 +1652,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1687,7 +1687,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATE )
   if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
   {
 #endif
-    QSslSocket::addDefaultCaCertificate ( *PQSSLCERTIFICATE(1) );
+    QSslSocket::addDefaultCaCertificate( *PQSSLCERTIFICATE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1702,16 +1702,16 @@ HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATE )
 /*
 static bool addDefaultCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
 */
-void QSslSocket_addDefaultCaCertificates1 ()
+void QSslSocket_addDefaultCaCertificates1()
 {
 
-  RBOOL( QSslSocket::addDefaultCaCertificates ( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) ) );
+  RBOOL( QSslSocket::addDefaultCaCertificates( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) ) );
 }
 
 /*
 static void addDefaultCaCertificates(const QList<QSslCertificate> &certificates)
 */
-void QSslSocket_addDefaultCaCertificates2 ()
+void QSslSocket_addDefaultCaCertificates2()
 {
 
   QList<QSslCertificate> par1;
@@ -1722,7 +1722,7 @@ void QSslSocket_addDefaultCaCertificates2 ()
   {
     par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
-  QSslSocket::addDefaultCaCertificates ( par1 );
+  QSslSocket::addDefaultCaCertificates( par1 );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -1763,7 +1763,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
     {
       par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    QSslSocket::setDefaultCaCertificates ( par1 );
+    QSslSocket::setDefaultCaCertificates( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1784,7 +1784,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QSslCertificate> list = QSslSocket::defaultCaCertificates ();
+    QList<QSslCertificate> list = QSslSocket::defaultCaCertificates();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -1797,7 +1797,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1831,7 +1831,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QSslCertificate> list = QSslSocket::systemCaCertificates ();
+    QList<QSslCertificate> list = QSslSocket::systemCaCertificates();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -1844,7 +1844,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate ( list[i] ) );
+        hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1882,7 +1882,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForConnected( OPINT(1,30000) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1906,7 +1906,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForEncrypted ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForEncrypted( OPINT(1,30000) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1930,7 +1930,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1954,7 +1954,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1978,7 +1978,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORDISCONNECTED )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForDisconnected( OPINT(1,30000) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2002,7 +2002,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSslError> list = obj->sslErrors ();
+      QList<QSslError> list = obj->sslErrors();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -2015,7 +2015,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslError *) new QSslError ( list[i] ) );
+          hb_itemPutPtr( pItem, (QSslError *) new QSslError( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -2050,7 +2050,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTSSSL )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QSslSocket::supportsSsl () );
+    RBOOL( QSslSocket::supportsSsl() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2069,7 +2069,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYVERSIONNUMBER )
   if( ISNUMPAR(0) )
   {
 #endif
-    RLONG( QSslSocket::sslLibraryVersionNumber () );
+    RLONG( QSslSocket::sslLibraryVersionNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2088,7 +2088,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYVERSIONSTRING )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QSslSocket::sslLibraryVersionString () );
+    RQSTRING( QSslSocket::sslLibraryVersionString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2108,7 +2108,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYBUILDVERSIONNUMBER )
   if( ISNUMPAR(0) )
   {
 #endif
-    RLONG( QSslSocket::sslLibraryBuildVersionNumber () );
+    RLONG( QSslSocket::sslLibraryBuildVersionNumber() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2129,7 +2129,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYBUILDVERSIONSTRING )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QSslSocket::sslLibraryBuildVersionString () );
+    RQSTRING( QSslSocket::sslLibraryBuildVersionString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2143,7 +2143,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLLIBRARYBUILDVERSIONSTRING )
 /*
 void ignoreSslErrors(const QList<QSslError> &errors)
 */
-void QSslSocket_ignoreSslErrors1 ()
+void QSslSocket_ignoreSslErrors1()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
@@ -2157,7 +2157,7 @@ void QSslSocket_ignoreSslErrors1 ()
     {
       par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    obj->ignoreSslErrors ( par1 );
+    obj->ignoreSslErrors( par1 );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2166,13 +2166,13 @@ void QSslSocket_ignoreSslErrors1 ()
 /*
 void ignoreSslErrors() (slot)
 */
-void QSslSocket_ignoreSslErrors2 ()
+void QSslSocket_ignoreSslErrors2()
 {
   QSslSocket * obj = (QSslSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->ignoreSslErrors ();
+    obj->ignoreSslErrors();
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2210,7 +2210,7 @@ HB_FUNC_STATIC( QSSLSOCKET_STARTCLIENTENCRYPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->startClientEncryption ();
+      obj->startClientEncryption();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2236,7 +2236,7 @@ HB_FUNC_STATIC( QSSLSOCKET_STARTSERVERENCRYPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->startServerEncryption ();
+      obj->startServerEncryption();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2257,7 +2257,7 @@ qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
 qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
 */
 
-void QSslSocketSlots_connect_signal ( const QString & signal, const QString & slot );
+void QSslSocketSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 {

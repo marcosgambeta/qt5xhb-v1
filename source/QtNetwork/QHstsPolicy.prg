@@ -42,7 +42,7 @@ CLASS QHstsPolicy
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHstsPolicy
+PROCEDURE destroyObject() CLASS QHstsPolicy
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,10 +73,10 @@ RETURN
 /*
 QHstsPolicy()
 */
-void QHstsPolicy_new1 ()
+void QHstsPolicy_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QHstsPolicy * o = new QHstsPolicy ();
+  QHstsPolicy * o = new QHstsPolicy();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -84,10 +84,10 @@ void QHstsPolicy_new1 ()
 /*
 QHstsPolicy(const QDateTime &expiry, PolicyFlags flags, const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
 */
-void QHstsPolicy_new2 ()
+void QHstsPolicy_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QHstsPolicy * o = new QHstsPolicy ( *PQDATETIME(1), (QHstsPolicy::PolicyFlags) hb_parni(2), PQSTRING(3), ISNIL(4)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(4) );
+  QHstsPolicy * o = new QHstsPolicy( *PQDATETIME(1), (QHstsPolicy::PolicyFlags) hb_parni(2), PQSTRING(3), ISNIL(4)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(4) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -95,10 +95,10 @@ void QHstsPolicy_new2 ()
 /*
 QHstsPolicy(const QHstsPolicy &rhs)
 */
-void QHstsPolicy_new3 ()
+void QHstsPolicy_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QHstsPolicy * o = new QHstsPolicy ( *PQHSTSPOLICY(1) );
+  QHstsPolicy * o = new QHstsPolicy( *PQHSTSPOLICY(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_SWAP )
     if( ISNUMPAR(1) && ISQHSTSPOLICY(1) )
     {
 #endif
-      obj->swap ( *PQHSTSPOLICY(1) );
+      obj->swap( *PQHSTSPOLICY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETHOST )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
     {
 #endif
-      obj->setHost ( PQSTRING(1), ISNIL(2)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(2) );
+      obj->setHost( PQSTRING(1), ISNIL(2)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_HOST )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RQSTRING( obj->host ( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::FullyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
+      RQSTRING( obj->host( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::FullyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETEXPIRY )
     if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      obj->setExpiry ( *PQDATETIME(1) );
+      obj->setExpiry( *PQDATETIME(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,8 +273,8 @@ HB_FUNC_STATIC( QHSTSPOLICY_EXPIRY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->expiry () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->expiry() );
+      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETINCLUDESSUBDOMAINS )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setIncludesSubDomains ( PBOOL(1) );
+      obj->setIncludesSubDomains( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_INCLUDESSUBDOMAINS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->includesSubDomains () );
+      RBOOL( obj->includesSubDomains() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_ISEXPIRED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isExpired () );
+      RBOOL( obj->isExpired() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

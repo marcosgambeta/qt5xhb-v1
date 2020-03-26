@@ -40,7 +40,7 @@ CLASS QDnsServiceRecord
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDnsServiceRecord
+PROCEDURE destroyObject() CLASS QDnsServiceRecord
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ RETURN
 /*
 QDnsServiceRecord()
 */
-void QDnsServiceRecord_new1 ()
+void QDnsServiceRecord_new1()
 {
-  QDnsServiceRecord * o = new QDnsServiceRecord ();
+  QDnsServiceRecord * o = new QDnsServiceRecord();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDnsServiceRecord(const QDnsServiceRecord & other)
 */
-void QDnsServiceRecord_new2 ()
+void QDnsServiceRecord_new2()
 {
-  QDnsServiceRecord * o = new QDnsServiceRecord ( *PQDNSSERVICERECORD(1) );
+  QDnsServiceRecord * o = new QDnsServiceRecord( *PQDNSSERVICERECORD(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->port () );
+      RQUINT16( obj->port() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->priority () );
+      RQUINT16( obj->priority() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_SWAP )
     if( ISNUMPAR(1) && ISQDNSSERVICERECORD(1) )
     {
 #endif
-      obj->swap ( *PQDNSSERVICERECORD(1) );
+      obj->swap( *PQDNSSERVICERECORD(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TARGET )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->target () );
+      RQSTRING( obj->target() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_TIMETOLIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT32( obj->timeToLive () );
+      RQUINT32( obj->timeToLive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_WEIGHT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->weight () );
+      RQUINT16( obj->weight() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

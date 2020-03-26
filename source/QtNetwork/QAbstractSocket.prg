@@ -69,7 +69,7 @@ CLASS QAbstractSocket INHERIT QIODevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractSocket
+PROCEDURE destroyObject() CLASS QAbstractSocket
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
   {
-    QAbstractSocket * o = new QAbstractSocket ( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
+    QAbstractSocket * o = new QAbstractSocket( (QAbstractSocket::SocketType) hb_parni(1), PQOBJECT(2) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_RESUME )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->resume ();
+      obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PAUSEMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->pauseMode () );
+      RENUM( obj->pauseMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETPAUSEMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPauseMode ( (QAbstractSocket::PauseModes) hb_parni(1) );
+      obj->setPauseMode( (QAbstractSocket::PauseModes) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,26 +213,26 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETPAUSEMODE )
 /*
 bool bind(const QHostAddress &address, quint16 port = 0, BindMode mode = DefaultForPlatform)
 */
-void QAbstractSocket_bind1 ()
+void QAbstractSocket_bind1()
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->bind ( *PQHOSTADDRESS(1), OPQUINT16(2,0), ISNIL(3)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(3) ) );
+    RBOOL( obj->bind( *PQHOSTADDRESS(1), OPQUINT16(2,0), ISNIL(3)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(3) ) );
   }
 }
 
 /*
 bool bind(quint16 port = 0, BindMode mode = DefaultForPlatform)
 */
-void QAbstractSocket_bind2 ()
+void QAbstractSocket_bind2()
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->bind ( OPQUINT16(1,0), ISNIL(2)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(2) ) );
+    RBOOL( obj->bind( OPQUINT16(1,0), ISNIL(2)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(2) ) );
   }
 }
 
@@ -258,13 +258,13 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BIND )
 /*
 virtual void connectToHost(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
 */
-void QAbstractSocket_connectToHost1 ()
+void QAbstractSocket_connectToHost1()
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->connectToHost ( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
+    obj->connectToHost( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -273,13 +273,13 @@ void QAbstractSocket_connectToHost1 ()
 /*
 virtual void connectToHost(const QHostAddress &address, quint16 port, OpenMode mode = ReadWrite)
 */
-void QAbstractSocket_connectToHost2 ()
+void QAbstractSocket_connectToHost2()
 {
   QAbstractSocket * obj = (QAbstractSocket *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->connectToHost ( *PQHOSTADDRESS(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    obj->connectToHost( *PQHOSTADDRESS(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->disconnectFromHost ();
+      obj->disconnectFromHost();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->bytesAvailable () );
+      RQINT64( obj->bytesAvailable() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->bytesToWrite () );
+      RQINT64( obj->bytesToWrite() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canReadLine () );
+      RBOOL( obj->canReadLine() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->localPort () );
+      RQUINT16( obj->localPort() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,8 +463,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->localAddress () );
-      _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+      QHostAddress * ptr = new QHostAddress( obj->localAddress() );
+      _qt5xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->peerPort () );
+      RQUINT16( obj->peerPort() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,8 +512,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QHostAddress * ptr = new QHostAddress( obj->peerAddress () );
-      _qt5xhb_createReturnClass ( ptr, "QHOSTADDRESS", true );
+      QHostAddress * ptr = new QHostAddress( obj->peerAddress() );
+      _qt5xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->peerName () );
+      RQSTRING( obj->peerName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->readBufferSize () );
+      RQINT64( obj->readBufferSize() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setReadBufferSize ( PQINT64(1) );
+      obj->setReadBufferSize( PQINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->abort ();
+      obj->abort();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINTPTR( obj->socketDescriptor () );
+      RQINTPTR( obj->socketDescriptor() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
     if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
     {
 #endif
-      RBOOL( obj->setSocketDescriptor ( PQINTPTR(1), ISNIL(2)? (QAbstractSocket::SocketState) QAbstractSocket::ConnectedState : (QAbstractSocket::SocketState) hb_parni(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) ) );
+      RBOOL( obj->setSocketDescriptor( PQINTPTR(1), ISNIL(2)? (QAbstractSocket::SocketState) QAbstractSocket::ConnectedState : (QAbstractSocket::SocketState) hb_parni(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
     if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setSocketOption ( (QAbstractSocket::SocketOption) hb_parni(1), *PQVARIANT(2) );
+      obj->setSocketOption( (QAbstractSocket::SocketOption) hb_parni(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -711,8 +711,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->socketOption ( (QAbstractSocket::SocketOption) hb_parni(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->socketOption( (QAbstractSocket::SocketOption) hb_parni(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->socketType () );
+      RENUM( obj->socketType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->close ();
+      obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSequential () );
+      RBOOL( obj->isSequential() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->atEnd () );
+      RBOOL( obj->atEnd() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->flush () );
+      RBOOL( obj->flush() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForConnected ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForConnected( OPINT(1,30000) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForReadyRead ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -954,7 +954,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForBytesWritten ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForDisconnected ( OPINT(1,30000) ) );
+      RBOOL( obj->waitForDisconnected( OPINT(1,30000) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
     if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
     {
 #endif
-      obj->setProxy ( *PQNETWORKPROXY(1) );
+      obj->setProxy( *PQNETWORKPROXY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1028,8 +1028,8 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkProxy * ptr = new QNetworkProxy( obj->proxy () );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKPROXY", true );
+      QNetworkProxy * ptr = new QNetworkProxy( obj->proxy() );
+      _qt5xhb_createReturnClass( ptr, "QNETWORKPROXY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1080,7 +1080,7 @@ void setPeerAddress(const QHostAddress &address) [protected]
 void setPeerName(const QString &name) [protected]
 */
 
-void QAbstractSocketSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAbstractSocketSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
 {

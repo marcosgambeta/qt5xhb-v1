@@ -32,7 +32,7 @@ CLASS QSctpSocket INHERIT QTcpSocket
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSctpSocket
+PROCEDURE destroyObject() CLASS QSctpSocket
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_NEW )
 #if !defined(QT_NO_SCTP)
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSctpSocket * o = new QSctpSocket ( OPQOBJECT(1,0) );
+    QSctpSocket * o = new QSctpSocket( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -91,8 +91,8 @@ HB_FUNC_STATIC( QSCTPSOCKET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_CLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->close ();
+      obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_DISCONNECTFROMHOST )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->disconnectFromHost ();
+      obj->disconnectFromHost();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_SETMAXIMUMCHANNELCOUNT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaximumChannelCount ( PINT(1) );
+      obj->setMaximumChannelCount( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_MAXIMUMCHANNELCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->maximumChannelCount () );
+      RINT( obj->maximumChannelCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_ISINDATAGRAMMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isInDatagramMode () );
+      RBOOL( obj->isInDatagramMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,8 +267,8 @@ HB_FUNC_STATIC( QSCTPSOCKET_READDATAGRAM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkDatagram * ptr = new QNetworkDatagram( obj->readDatagram () );
-      _qt5xhb_createReturnClass ( ptr, "QNETWORKDATAGRAM", true );
+      QNetworkDatagram * ptr = new QNetworkDatagram( obj->readDatagram() );
+      _qt5xhb_createReturnClass( ptr, "QNETWORKDATAGRAM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QSCTPSOCKET_WRITEDATAGRAM )
     if( ISNUMPAR(1) && ISQNETWORKDATAGRAM(1) )
     {
 #endif
-      RBOOL( obj->writeDatagram ( *PQNETWORKDATAGRAM(1) ) );
+      RBOOL( obj->writeDatagram( *PQNETWORKDATAGRAM(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

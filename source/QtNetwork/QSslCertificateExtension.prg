@@ -40,7 +40,7 @@ CLASS QSslCertificateExtension
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslCertificateExtension
+PROCEDURE destroyObject() CLASS QSslCertificateExtension
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,18 +65,18 @@ RETURN
 /*
 QSslCertificateExtension()
 */
-void QSslCertificateExtension_new1 ()
+void QSslCertificateExtension_new1()
 {
-  QSslCertificateExtension * o = new QSslCertificateExtension ();
+  QSslCertificateExtension * o = new QSslCertificateExtension();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSslCertificateExtension(const QSslCertificateExtension &other)
 */
-void QSslCertificateExtension_new2 ()
+void QSslCertificateExtension_new2()
 {
-  QSslCertificateExtension * o = new QSslCertificateExtension ( *PQSSLCERTIFICATEEXTENSION(1) );
+  QSslCertificateExtension * o = new QSslCertificateExtension( *PQSSLCERTIFICATEEXTENSION(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_SWAP )
     if( ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1) )
     {
 #endif
-      obj->swap ( *PQSSLCERTIFICATEEXTENSION(1) );
+      obj->swap( *PQSSLCERTIFICATEEXTENSION(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_OID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->oid () );
+      RQSTRING( obj->oid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,8 +206,8 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->value() );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISCRITICAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCritical () );
+      RBOOL( obj->isCritical() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_ISSUPPORTED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSupported () );
+      RBOOL( obj->isSupported() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

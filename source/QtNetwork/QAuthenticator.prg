@@ -44,7 +44,7 @@ CLASS QAuthenticator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAuthenticator
+PROCEDURE destroyObject() CLASS QAuthenticator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,18 +69,18 @@ RETURN
 /*
 QAuthenticator ()
 */
-void QAuthenticator_new1 ()
+void QAuthenticator_new1()
 {
-  QAuthenticator * o = new QAuthenticator ();
+  QAuthenticator * o = new QAuthenticator();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QAuthenticator ( const QAuthenticator & other )
 */
-void QAuthenticator_new2 ()
+void QAuthenticator_new2()
 {
-  QAuthenticator * o = new QAuthenticator ( *PQAUTHENTICATOR(1) );
+  QAuthenticator * o = new QAuthenticator( *PQAUTHENTICATOR(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_USER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->user () );
+      RQSTRING( obj->user() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setUser ( PQSTRING(1) );
+      obj->setUser( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->password () );
+      RQSTRING( obj->password() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setPassword ( PQSTRING(1) );
+      obj->setPassword( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->realm () );
+      RQSTRING( obj->realm() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETREALM )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setRealm ( PQSTRING(1) );
+      obj->setRealm( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,8 +288,8 @@ HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->option ( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->option( PQSTRING(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setOption ( PQSTRING(1), *PQVARIANT(2) );
+      obj->setOption( PQSTRING(1), *PQVARIANT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_DETACH )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->detach ();
+      obj->detach();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -39,7 +39,7 @@ CLASS QNetworkProxyFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QNetworkProxyFactory
+PROCEDURE destroyObject() CLASS QNetworkProxyFactory
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
     if( ISBETWEEN(0,1) && (ISQNETWORKPROXYQUERY(1)||ISNIL(1)) )
     {
 #endif
-      QList<QNetworkProxy> list = obj->queryProxy ( ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1) );
+      QList<QNetworkProxy> list = obj->queryProxy( ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QNetworkProxy *) new QNetworkProxy ( list[i] ) );
+          hb_itemPutPtr( pItem, (QNetworkProxy *) new QNetworkProxy( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
   if( ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1) )
   {
 #endif
-    QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery ( *PQNETWORKPROXYQUERY(1) );
+    QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery( *PQNETWORKPROXYQUERY(1) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QNetworkProxy *) new QNetworkProxy ( list[i] ) );
+        hb_itemPutPtr( pItem, (QNetworkProxy *) new QNetworkProxy( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
   if( ISNUMPAR(1) && ISQNETWORKPROXYFACTORY(1) )
   {
 #endif
-    QNetworkProxyFactory::setApplicationProxyFactory ( PQNETWORKPROXYFACTORY(1) );
+    QNetworkProxyFactory::setApplicationProxyFactory( PQNETWORKPROXYFACTORY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
   if( ISNUMPAR(1) && ISLOG(1) )
   {
 #endif
-    QNetworkProxyFactory::setUseSystemConfiguration ( PBOOL(1) );
+    QNetworkProxyFactory::setUseSystemConfiguration( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
   if( ISBETWEEN(0,1) && (ISQNETWORKPROXYQUERY(1)||ISNIL(1)) )
   {
 #endif
-    QList<QNetworkProxy> list = QNetworkProxyFactory::systemProxyForQuery ( ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1) );
+    QList<QNetworkProxy> list = QNetworkProxyFactory::systemProxyForQuery( ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) _qt5xhb_itemGetPtr(1) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QNetworkProxy *) new QNetworkProxy ( list[i] ) );
+        hb_itemPutPtr( pItem, (QNetworkProxy *) new QNetworkProxy( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_USESSYSTEMCONFIGURATION )
   if( ISNUMPAR(0) )
   {
 #endif
-    RBOOL( QNetworkProxyFactory::usesSystemConfiguration () );
+    RBOOL( QNetworkProxyFactory::usesSystemConfiguration() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -38,7 +38,7 @@ CLASS QDnsMailExchangeRecord
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QDnsMailExchangeRecord
+PROCEDURE destroyObject() CLASS QDnsMailExchangeRecord
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,18 +63,18 @@ RETURN
 /*
 QDnsMailExchangeRecord()
 */
-void QDnsMailExchangeRecord_new1 ()
+void QDnsMailExchangeRecord_new1()
 {
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ();
+  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
 */
-void QDnsMailExchangeRecord_new2 ()
+void QDnsMailExchangeRecord_new2()
 {
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord ( *PQDNSMAILEXCHANGERECORD(1) );
+  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord( *PQDNSMAILEXCHANGERECORD(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_EXCHANGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->exchange () );
+      RQSTRING( obj->exchange() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_PREFERENCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->preference () );
+      RQUINT16( obj->preference() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_SWAP )
     if( ISNUMPAR(1) && ISQDNSMAILEXCHANGERECORD(1) )
     {
 #endif
-      obj->swap ( *PQDNSMAILEXCHANGERECORD(1) );
+      obj->swap( *PQDNSMAILEXCHANGERECORD(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_TIMETOLIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT32( obj->timeToLive () );
+      RQUINT32( obj->timeToLive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -50,7 +50,7 @@ CLASS QHostInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHostInfo
+PROCEDURE destroyObject() CLASS QHostInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,18 +75,18 @@ RETURN
 /*
 explicit QHostInfo(int lookupId = -1)
 */
-void QHostInfo_new1 ()
+void QHostInfo_new1()
 {
-  QHostInfo * o = new QHostInfo ( OPINT(1,-1) );
+  QHostInfo * o = new QHostInfo( OPINT(1,-1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QHostInfo ( const QHostInfo & other )
 */
-void QHostInfo_new2 ()
+void QHostInfo_new2()
 {
-  QHostInfo * o = new QHostInfo ( *PQHOSTINFO(1) );
+  QHostInfo * o = new QHostInfo( *PQHOSTINFO(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QHOSTINFO_SWAP )
     if( ISNUMPAR(1) && ISQHOSTINFO(1) )
     {
 #endif
-      obj->swap ( *PQHOSTINFO(1) );
+      obj->swap( *PQHOSTINFO(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QHOSTINFO_HOSTNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->hostName () );
+      RQSTRING( obj->hostName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETHOSTNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setHostName ( PQSTRING(1) );
+      obj->setHostName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QHostAddress> list = obj->addresses ();
+      QList<QHostAddress> list = obj->addresses();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QHOSTINFO_ADDRESSES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QHostAddress *) new QHostAddress ( list[i] ) );
+          hb_itemPutPtr( pItem, (QHostAddress *) new QHostAddress( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETADDRESSES )
       {
         par1 << *(QHostAddress *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setAddresses ( par1 );
+      obj->setAddresses( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETERROR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setError ( (QHostInfo::HostInfoError) hb_parni(1) );
+      obj->setError( (QHostInfo::HostInfoError) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QHOSTINFO_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETERRORSTRING )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setErrorString ( PQSTRING(1) );
+      obj->setErrorString( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QHOSTINFO_SETLOOKUPID )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLookupId ( PINT(1) );
+      obj->setLookupId( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->lookupId () );
+      RINT( obj->lookupId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOOKUPHOST )
   if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
   {
 #endif
-    RINT( QHostInfo::lookupHost ( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) ) );
+    RINT( QHostInfo::lookupHost( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QHOSTINFO_ABORTHOSTLOOKUP )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    QHostInfo::abortHostLookup ( PINT(1) );
+    QHostInfo::abortHostLookup( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -492,8 +492,8 @@ HB_FUNC_STATIC( QHOSTINFO_FROMNAME )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QHostInfo * ptr = new QHostInfo( QHostInfo::fromName ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QHOSTINFO", true );
+    QHostInfo * ptr = new QHostInfo( QHostInfo::fromName( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass( ptr, "QHOSTINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOCALHOSTNAME )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QHostInfo::localHostName () );
+    RQSTRING( QHostInfo::localHostName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QHostInfo::localDomainName () );
+    RQSTRING( QHostInfo::localDomainName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -38,7 +38,7 @@ CLASS QSslError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSslError
+PROCEDURE destroyObject() CLASS QSslError
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,36 +63,36 @@ RETURN
 /*
 QSslError ()
 */
-void QSslError_new1 ()
+void QSslError_new1()
 {
-  QSslError * o = new QSslError ();
+  QSslError * o = new QSslError();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSslError ( SslError error )
 */
-void QSslError_new2 ()
+void QSslError_new2()
 {
-  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1) );
+  QSslError * o = new QSslError( (QSslError::SslError) hb_parni(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSslError ( SslError error, const QSslCertificate & certificate )
 */
-void QSslError_new3 ()
+void QSslError_new3()
 {
-  QSslError * o = new QSslError ( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
+  QSslError * o = new QSslError( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSslError ( const QSslError & other )
 */
-void QSslError_new4 ()
+void QSslError_new4()
 {
-  QSslError * o = new QSslError ( *PQSSLERROR(1) );
+  QSslError * o = new QSslError( *PQSSLERROR(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -158,8 +158,8 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSslCertificate * ptr = new QSslCertificate( obj->certificate () );
-      _qt5xhb_createReturnClass ( ptr, "QSSLCERTIFICATE", true );
+      QSslCertificate * ptr = new QSslCertificate( obj->certificate() );
+      _qt5xhb_createReturnClass( ptr, "QSSLCERTIFICATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSSLERROR_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSSLERROR_SWAP )
     if( ISNUMPAR(1) && ISQSSLERROR(1) )
     {
 #endif
-      obj->swap ( *PQSSLERROR(1) );
+      obj->swap( *PQSSLERROR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
