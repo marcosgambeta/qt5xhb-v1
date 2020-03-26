@@ -49,7 +49,7 @@ CLASS QWinTaskbarProgress INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWinTaskbarProgress
+PROCEDURE destroyObject() CLASS QWinTaskbarProgress
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QWinTaskbarProgress * o = new QWinTaskbarProgress ( OPQOBJECT(1,0) );
+    QWinTaskbarProgress * o = new QWinTaskbarProgress( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -102,8 +102,8 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->value () );
+      RINT( obj->value() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setValue ( PINT(1) );
+      obj->setValue( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_MINIMUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->minimum () );
+      RINT( obj->minimum() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMINIMUM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMinimum ( PINT(1) );
+      obj->setMinimum( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_MAXIMUM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->maximum () );
+      RINT( obj->maximum() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMAXIMUM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setMaximum ( PINT(1) );
+      obj->setMaximum( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISVISIBLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isVisible () );
+      RBOOL( obj->isVisible() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISPAUSED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isPaused () );
+      RBOOL( obj->isPaused() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETPAUSED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setPaused ( PBOOL(1) );
+      obj->setPaused( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISSTOPPED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isStopped () );
+      RBOOL( obj->isStopped() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETRANGE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setRange ( PINT(1), PINT(2) );
+      obj->setRange( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_RESET )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reset ();
+      obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SHOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->show ();
+      obj->show();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_HIDE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->hide ();
+      obj->hide();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_PAUSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->pause ();
+      obj->pause();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_RESUME )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->resume ();
+      obj->resume();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_STOP )
 #endif
 }
 
-void QWinTaskbarProgressSlots_connect_signal ( const QString & signal, const QString & slot );
+void QWinTaskbarProgressSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ONVALUECHANGED )
 {

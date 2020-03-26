@@ -36,7 +36,7 @@ CLASS QWinTaskbarButton INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWinTaskbarButton
+PROCEDURE destroyObject() CLASS QWinTaskbarButton
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QWinTaskbarButton * o = new QWinTaskbarButton ( OPQOBJECT(1,0) );
+    QWinTaskbarButton * o = new QWinTaskbarButton( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_WINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWindow * ptr = obj->window ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QWINDOW" );
+      QWindow * ptr = obj->window();
+      _qt5xhb_createReturnQObjectClass( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_SETWINDOW )
     if( ISNUMPAR(1) && ISQWINDOW(1) )
     {
 #endif
-      obj->setWindow ( PQWINDOW(1) );
+      obj->setWindow( PQWINDOW(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,8 +171,8 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->overlayIcon () );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->overlayIcon() );
+      _qt5xhb_createReturnClass( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_SETOVERLAYICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setOverlayIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setOverlayIcon( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_CLEAROVERLAYICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->clearOverlayIcon ();
+      obj->clearOverlayIcon();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_OVERLAYACCESSIBLEDESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->overlayAccessibleDescription () );
+      RQSTRING( obj->overlayAccessibleDescription() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_SETOVERLAYACCESSIBLEDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setOverlayAccessibleDescription ( PQSTRING(1) );
+      obj->setOverlayAccessibleDescription( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,8 +308,8 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_PROGRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QWinTaskbarProgress * ptr = obj->progress ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QWINTASKBARPROGRESS" );
+      QWinTaskbarProgress * ptr = obj->progress();
+      _qt5xhb_createReturnQObjectClass( ptr, "QWINTASKBARPROGRESS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QWINTASKBARBUTTON_EVENTFILTER )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
     {
 #endif
-      RBOOL( obj->eventFilter ( PQOBJECT(1), PQEVENT(2) ) );
+      RBOOL( obj->eventFilter( PQOBJECT(1), PQEVENT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

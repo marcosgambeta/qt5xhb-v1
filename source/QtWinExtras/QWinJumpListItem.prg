@@ -48,7 +48,7 @@ CLASS QWinJumpListItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWinJumpListItem
+PROCEDURE destroyObject() CLASS QWinJumpListItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QWinJumpListItem * o = new QWinJumpListItem ( (QWinJumpListItem::Type) hb_parni(1) );
+    QWinJumpListItem * o = new QWinJumpListItem( (QWinJumpListItem::Type) hb_parni(1) );
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setType ( (QWinJumpListItem::Type) hb_parni(1) );
+      obj->setType( (QWinJumpListItem::Type) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_FILEPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->filePath () );
+      RQSTRING( obj->filePath() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETFILEPATH )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setFilePath ( PQSTRING(1) );
+      obj->setFilePath( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_WORKINGDIRECTORY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->workingDirectory () );
+      RQSTRING( obj->workingDirectory() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETWORKINGDIRECTORY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setWorkingDirectory ( PQSTRING(1) );
+      obj->setWorkingDirectory( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,8 +287,8 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_ICON )
     if( ISNUMPAR(0) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->icon () );
-      _qt5xhb_createReturnClass ( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->icon() );
+      _qt5xhb_createReturnClass( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIcon ( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTITLE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setTitle ( PQSTRING(1) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_DESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->description () );
+      RQSTRING( obj->description() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDescription ( PQSTRING(1) );
+      obj->setDescription( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_ARGUMENTS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->arguments () );
+      RQSTRINGLIST( obj->arguments() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETARGUMENTS )
     if( ISNUMPAR(1) && ISARRAY(1) )
     {
 #endif
-      obj->setArguments ( PQSTRINGLIST(1) );
+      obj->setArguments( PQSTRINGLIST(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

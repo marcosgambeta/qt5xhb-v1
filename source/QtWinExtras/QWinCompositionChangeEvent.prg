@@ -25,7 +25,7 @@ CLASS QWinCompositionChangeEvent INHERIT QWinEvent
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWinCompositionChangeEvent
+PROCEDURE destroyObject() CLASS QWinCompositionChangeEvent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(1) && ISLOG(1) )
   {
-    QWinCompositionChangeEvent * o = new QWinCompositionChangeEvent ( PBOOL(1) );
+    QWinCompositionChangeEvent * o = new QWinCompositionChangeEvent( PBOOL(1) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_ISCOMPOSITIONENABLED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isCompositionEnabled () );
+      RBOOL( obj->isCompositionEnabled() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
