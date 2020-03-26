@@ -32,7 +32,7 @@ CLASS QtWebEngine
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QtWebEngine
+PROCEDURE destroyObject() CLASS QtWebEngine
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTWEBENGINE_INITIALIZE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QtWebEngine::initialize ();
+    QtWebEngine::initialize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

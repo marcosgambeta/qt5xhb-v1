@@ -45,7 +45,7 @@ CLASS QQuickWebEngineScript INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQuickWebEngineScript
+PROCEDURE destroyObject() CLASS QQuickWebEngineScript
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QQuickWebEngineScript * o = new QQuickWebEngineScript ( OPQOBJECT(1,Q_NULLPTR) );
+    QQuickWebEngineScript * o = new QQuickWebEngineScript( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setName ( PQSTRING(1) );
+      obj->setName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,8 +179,8 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCEURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->sourceUrl () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->sourceUrl() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCEURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setSourceUrl ( *PQURL(1) );
+      obj->setSourceUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCECODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->sourceCode () );
+      RQSTRING( obj->sourceCode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCECODE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setSourceCode ( PQSTRING(1) );
+      obj->setSourceCode( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_INJECTIONPOINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->injectionPoint () );
+      RENUM( obj->injectionPoint() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setInjectionPoint ( (QQuickWebEngineScript::InjectionPoint) hb_parni(1) );
+      obj->setInjectionPoint( (QQuickWebEngineScript::InjectionPoint) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_WORLDID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->worldId () );
+      RENUM( obj->worldId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETWORLDID )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setWorldId ( (QQuickWebEngineScript::ScriptWorldId) hb_parni(1) );
+      obj->setWorldId( (QQuickWebEngineScript::ScriptWorldId) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_RUNONSUBFRAMES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->runOnSubframes () );
+      RBOOL( obj->runOnSubframes() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETRUNONSUBFRAMES )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setRunOnSubframes ( PBOOL(1) );
+      obj->setRunOnSubframes( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_TOSTRING )
 #endif
 }
 
-void QQuickWebEngineScriptSlots_connect_signal ( const QString & signal, const QString & slot );
+void QQuickWebEngineScriptSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_ONINJECTIONPOINTCHANGED )
 {
