@@ -45,7 +45,7 @@ CLASS QSqlError
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlError
+PROCEDURE destroyObject() CLASS QSqlError
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,19 +70,19 @@ RETURN
 /*
 QSqlError ( const QString & driverText, const QString & databaseText, ErrorType type, int number ) (deprecated)
 */
-void QSqlError_new1 ()
+void QSqlError_new1()
 {
-  QSqlError * o = new QSqlError ( PQSTRING(1), PQSTRING(2), (QSqlError::ErrorType) hb_parni(3), PINT(4) );
+  QSqlError * o = new QSqlError( PQSTRING(1), PQSTRING(2), (QSqlError::ErrorType) hb_parni(3), PINT(4) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), ErrorType type = NoError, const QString &errorCode = QString())
 */
-void QSqlError_new2 ()
+void QSqlError_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QSqlError * o = new QSqlError ( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPQSTRING(4,QString()) );
+  QSqlError * o = new QSqlError( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPQSTRING(4,QString()) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -90,9 +90,9 @@ void QSqlError_new2 ()
 /*
 QSqlError ( const QSqlError & other )
 */
-void QSqlError_new3 ()
+void QSqlError_new3()
 {
-  QSqlError * o = new QSqlError ( *PQSQLERROR(1) );
+  QSqlError * o = new QSqlError( *PQSQLERROR(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->databaseText () );
+      RQSTRING( obj->databaseText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDatabaseText ( PQSTRING(1) );
+      obj->setDatabaseText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->driverText () );
+      RQSTRING( obj->driverText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDriverText ( PQSTRING(1) );
+      obj->setDriverText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSQLERROR_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSQLERROR_NUMBER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->number () );
+      RINT( obj->number() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setNumber ( PINT(1) );
+      obj->setNumber( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSQLERROR_TEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->text () );
+      RQSTRING( obj->text() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QSQLERROR_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QSQLERROR_SETTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setType ( (QSqlError::ErrorType) hb_parni(1) );
+      obj->setType( (QSqlError::ErrorType) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QSQLERROR_NATIVEERRORCODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->nativeErrorCode () );
+      RQSTRING( obj->nativeErrorCode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QSQLERROR_SWAP )
     if( ISNUMPAR(1) && ISQSQLERROR(1) )
     {
 #endif
-      obj->swap ( *PQSQLERROR(1) );
+      obj->swap( *PQSQLERROR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -37,7 +37,7 @@ CLASS QSqlRelation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlRelation
+PROCEDURE destroyObject() CLASS QSqlRelation
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,18 +62,18 @@ RETURN
 /*
 QSqlRelation ()
 */
-void QSqlRelation_new1 ()
+void QSqlRelation_new1()
 {
-  QSqlRelation * o = new QSqlRelation ();
+  QSqlRelation * o = new QSqlRelation();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 */
-void QSqlRelation_new2 ()
+void QSqlRelation_new2()
 {
-  QSqlRelation * o = new QSqlRelation ( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+  QSqlRelation * o = new QSqlRelation( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->displayColumn () );
+      RQSTRING( obj->displayColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->indexColumn () );
+      RQSTRING( obj->indexColumn() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSQLRELATION_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->tableName () );
+      RQSTRING( obj->tableName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

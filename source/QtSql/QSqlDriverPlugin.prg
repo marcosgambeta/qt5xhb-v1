@@ -25,7 +25,7 @@ CLASS QSqlDriverPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlDriverPlugin
+PROCEDURE destroyObject() CLASS QSqlDriverPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QSqlDriver * ptr = obj->create ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSQLDRIVER" );
+      QSqlDriver * ptr = obj->create( PQSTRING(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QSQLDRIVER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

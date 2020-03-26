@@ -31,7 +31,7 @@ CLASS QSqlIndex INHERIT QSqlRecord
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSqlIndex
+PROCEDURE destroyObject() CLASS QSqlIndex
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,18 +56,18 @@ RETURN
 /*
 explicit QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
 */
-void QSqlIndex_new1 ()
+void QSqlIndex_new1()
 {
-  QSqlIndex * o = new QSqlIndex ( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
+  QSqlIndex * o = new QSqlIndex( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSqlIndex ( const QSqlIndex & other )
 */
-void QSqlIndex_new2 ()
+void QSqlIndex_new2()
 {
-  QSqlIndex * o = new QSqlIndex ( *PQSQLINDEX(1) );
+  QSqlIndex * o = new QSqlIndex( *PQSQLINDEX(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -110,13 +110,13 @@ HB_FUNC_STATIC( QSQLINDEX_DELETE )
 /*
 void append ( const QSqlField & field )
 */
-void QSqlIndex_append1 ()
+void QSqlIndex_append1()
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->append ( *PQSQLFIELD(1) );
+    obj->append( *PQSQLFIELD(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -125,13 +125,13 @@ void QSqlIndex_append1 ()
 /*
 void append ( const QSqlField & field, bool desc )
 */
-void QSqlIndex_append2 ()
+void QSqlIndex_append2()
 {
   QSqlIndex * obj = (QSqlIndex *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->append ( *PQSQLFIELD(1), PBOOL(2) );
+    obj->append( *PQSQLFIELD(1), PBOOL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->cursorName () );
+      RQSTRING( obj->cursorName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCursorName ( PQSTRING(1) );
+      obj->setCursorName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isDescending ( PINT(1) ) );
+      RBOOL( obj->isDescending( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
     if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
     {
 #endif
-      obj->setDescending ( PINT(1), PBOOL(2) );
+      obj->setDescending( PINT(1), PBOOL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSQLINDEX_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETNAME )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setName ( PQSTRING(1) );
+      obj->setName( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
