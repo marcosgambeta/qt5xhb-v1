@@ -25,7 +25,7 @@ void QWebViewSlots::iconChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "iconChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QWebViewSlots::linkClicked( const QUrl & url )
   PHB_ITEM cb = Signals_return_codeblock( object, "linkClicked(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
     hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
@@ -49,7 +49,7 @@ void QWebViewSlots::loadFinished( bool ok )
   PHB_ITEM cb = Signals_return_codeblock( object, "loadFinished(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
     hb_vmEvalBlockV( cb, 2, psender, pok );
     hb_itemRelease( psender );
@@ -62,7 +62,7 @@ void QWebViewSlots::loadProgress( int progress )
   PHB_ITEM cb = Signals_return_codeblock( object, "loadProgress(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
     hb_vmEvalBlockV( cb, 2, psender, pprogress );
     hb_itemRelease( psender );
@@ -75,7 +75,7 @@ void QWebViewSlots::loadStarted()
   PHB_ITEM cb = Signals_return_codeblock( object, "loadStarted()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -86,7 +86,7 @@ void QWebViewSlots::selectionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -97,7 +97,7 @@ void QWebViewSlots::statusBarMessage( const QString & text )
   PHB_ITEM cb = Signals_return_codeblock( object, "statusBarMessage(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     hb_vmEvalBlockV( cb, 2, psender, ptext );
     hb_itemRelease( psender );
@@ -110,7 +110,7 @@ void QWebViewSlots::titleChanged( const QString & title )
   PHB_ITEM cb = Signals_return_codeblock( object, "titleChanged(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
     hb_vmEvalBlockV( cb, 2, psender, ptitle );
     hb_itemRelease( psender );
@@ -123,7 +123,7 @@ void QWebViewSlots::urlChanged( const QUrl & url )
   PHB_ITEM cb = Signals_return_codeblock( object, "urlChanged(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
     hb_vmEvalBlockV( cb, 2, psender, purl );
     hb_itemRelease( psender );
@@ -131,7 +131,7 @@ void QWebViewSlots::urlChanged( const QUrl & url )
   }
 }
 
-void QWebViewSlots_connect_signal ( const QString & signal, const QString & slot )
+void QWebViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QWebView * obj = (QWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
