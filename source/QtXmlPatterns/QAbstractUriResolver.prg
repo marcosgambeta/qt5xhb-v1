@@ -25,7 +25,7 @@ CLASS QAbstractUriResolver INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractUriResolver
+PROCEDURE destroyObject() CLASS QAbstractUriResolver
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -83,8 +83,8 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
     if( ISNUMPAR(2) && ISQURL(1) && ISQURL(2) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->resolve ( *PQURL(1), *PQURL(2) ) );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->resolve( *PQURL(1), *PQURL(2) ) );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -41,7 +41,7 @@ CLASS QSourceLocation
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSourceLocation
+PROCEDURE destroyObject() CLASS QSourceLocation
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,27 +66,27 @@ RETURN
 /*
 QSourceLocation ()
 */
-void QSourceLocation_new1 ()
+void QSourceLocation_new1()
 {
-  QSourceLocation * o = new QSourceLocation ();
+  QSourceLocation * o = new QSourceLocation();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSourceLocation ( const QSourceLocation & other )
 */
-void QSourceLocation_new2 ()
+void QSourceLocation_new2()
 {
-  QSourceLocation * o = new QSourceLocation ( *PQSOURCELOCATION(1) );
+  QSourceLocation * o = new QSourceLocation( *PQSOURCELOCATION(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 */
-void QSourceLocation_new3 ()
+void QSourceLocation_new3()
 {
-  QSourceLocation * o = new QSourceLocation ( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
+  QSourceLocation * o = new QSourceLocation( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->column () );
+      RQINT64( obj->column() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->line () );
+      RQINT64( obj->line() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setColumn ( PQINT64(1) );
+      obj->setColumn( PQINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLine ( PQINT64(1) );
+      obj->setLine( PQINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setUri ( *PQURL(1) );
+      obj->setUri( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,8 +294,8 @@ HB_FUNC_STATIC( QSOURCELOCATION_URI )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->uri () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->uri() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

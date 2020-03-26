@@ -37,7 +37,7 @@ CLASS QXmlFormatter INHERIT QXmlSerializer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlFormatter
+PROCEDURE destroyObject() CLASS QXmlFormatter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 {
   if( ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2) )
   {
-    QXmlFormatter * o = new QXmlFormatter ( *PQXMLQUERY(1), PQIODEVICE(2) );
+    QXmlFormatter * o = new QXmlFormatter( *PQXMLQUERY(1), PQIODEVICE(2) );
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->indentationDepth () );
+      RINT( obj->indentationDepth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setIndentationDepth ( PINT(1) );
+      obj->setIndentationDepth( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
     if( ISNUMPAR(1) && ISQVARIANT(1) )
     {
 #endif
-      obj->atomicValue ( *PQVARIANT(1) );
+      obj->atomicValue( *PQVARIANT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
     if( ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2) )
     {
 #endif
-      obj->attribute ( *PQXMLNAME(1), *PQSTRINGREF(2) );
+      obj->attribute( *PQXMLNAME(1), *PQSTRINGREF(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
     if( ISNUMPAR(1) && ISQSTRINGREF(1) )
     {
 #endif
-      obj->characters ( *PQSTRINGREF(1) );
+      obj->characters( *PQSTRINGREF(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->comment ( PQSTRING(1) );
+      obj->comment( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->endDocument ();
+      obj->endDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->endElement ();
+      obj->endElement();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->endOfSequence ();
+      obj->endOfSequence();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
     if( ISNUMPAR(2) && ISQXMLNAME(1) && ISCHAR(2) )
     {
 #endif
-      obj->processingInstruction ( *PQXMLNAME(1), PQSTRING(2) );
+      obj->processingInstruction( *PQXMLNAME(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->startDocument ();
+      obj->startDocument();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
     if( ISNUMPAR(1) && ISQXMLNAME(1) )
     {
 #endif
-      obj->startElement ( *PQXMLNAME(1) );
+      obj->startElement( *PQXMLNAME(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->startOfSequence ();
+      obj->startOfSequence();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

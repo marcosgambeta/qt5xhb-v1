@@ -40,7 +40,7 @@ CLASS QXmlItem
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlItem
+PROCEDURE destroyObject() CLASS QXmlItem
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,36 +67,36 @@ RETURN
 /*
 QXmlItem ()
 */
-void QXmlItem_new1 ()
+void QXmlItem_new1()
 {
-  QXmlItem * o = new QXmlItem ();
+  QXmlItem * o = new QXmlItem();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlItem ( const QXmlItem & other )
 */
-void QXmlItem_new2 ()
+void QXmlItem_new2()
 {
-  QXmlItem * o = new QXmlItem ( *PQXMLITEM(1) );
+  QXmlItem * o = new QXmlItem( *PQXMLITEM(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlItem ( const QXmlNodeModelIndex & node )
 */
-void QXmlItem_new3 ()
+void QXmlItem_new3()
 {
-  QXmlItem * o = new QXmlItem ( *PQXMLNODEMODELINDEX(1) );
+  QXmlItem * o = new QXmlItem( *PQXMLNODEMODELINDEX(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlItem ( const QVariant & atomicValue )
 */
-void QXmlItem_new4 ()
+void QXmlItem_new4()
 {
-  QXmlItem * o = new QXmlItem ( *PQVARIANT(1) );
+  QXmlItem * o = new QXmlItem( *PQVARIANT(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isAtomicValue () );
+      RBOOL( obj->isAtomicValue() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNode () );
+      RBOOL( obj->isNode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QXMLITEM_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,8 +231,8 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->toAtomicValue () );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->toAtomicValue() );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,8 +256,8 @@ HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
     if( ISNUMPAR(0) )
     {
 #endif
-      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex () );
-      _qt5xhb_createReturnClass ( ptr, "QXMLNODEMODELINDEX", true );
+      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex() );
+      _qt5xhb_createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -39,7 +39,7 @@ CLASS QXmlNodeModelIndex
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QXmlNodeModelIndex
+PROCEDURE destroyObject() CLASS QXmlNodeModelIndex
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,18 +64,18 @@ RETURN
 /*
 QXmlNodeModelIndex ()
 */
-void QXmlNodeModelIndex_new1 ()
+void QXmlNodeModelIndex_new1()
 {
-  QXmlNodeModelIndex * o = new QXmlNodeModelIndex ();
+  QXmlNodeModelIndex * o = new QXmlNodeModelIndex();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 */
-void QXmlNodeModelIndex_new2 ()
+void QXmlNodeModelIndex_new2()
 {
-  QXmlNodeModelIndex * o = new QXmlNodeModelIndex ( *PQXMLNODEMODELINDEX(1) );
+  QXmlNodeModelIndex * o = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->additionalData () );
+      RQINT64( obj->additionalData() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQINT64( obj->data () );
+      RQINT64( obj->data() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( (void *) obj->internalPointer () );
+      hb_retptr( (void *) obj->internalPointer() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,8 +224,8 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QAbstractXmlNodeModel * ptr = obj->model ();
-      _qt5xhb_createReturnClass ( ptr, "QABSTRACTXMLNODEMODEL", false );
+      const QAbstractXmlNodeModel * ptr = obj->model();
+      _qt5xhb_createReturnClass( ptr, "QABSTRACTXMLNODEMODEL", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
