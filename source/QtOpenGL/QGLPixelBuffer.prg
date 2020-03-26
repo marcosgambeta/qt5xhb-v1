@@ -43,7 +43,7 @@ CLASS QGLPixelBuffer INHERIT QPaintDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGLPixelBuffer
+PROCEDURE destroyObject() CLASS QGLPixelBuffer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -68,18 +68,18 @@ RETURN
 /*
 QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 */
-void QGLPixelBuffer_new1 ()
+void QGLPixelBuffer_new1()
 {
-  QGLPixelBuffer * o = new QGLPixelBuffer ( *PQSIZE(1), ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(2), OPQGLWIDGET(3,0) );
+  QGLPixelBuffer * o = new QGLPixelBuffer( *PQSIZE(1), ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(2), OPQGLWIDGET(3,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 */
-void QGLPixelBuffer_new2 ()
+void QGLPixelBuffer_new2()
 {
-  QGLPixelBuffer * o = new QGLPixelBuffer ( PINT(1), PINT(2), ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(3), OPQGLWIDGET(4,0) );
+  QGLPixelBuffer * o = new QGLPixelBuffer( PINT(1), PINT(2), ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) _qt5xhb_itemGetPtr(3), OPQGLWIDGET(4,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -122,39 +122,39 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DELETE )
 /*
 GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
 */
-void QGLPixelBuffer_bindTexture1 ()
+void QGLPixelBuffer_bindTexture1()
 {
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
+    RGLUINT( obj->bindTexture( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
   }
 }
 
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
 */
-void QGLPixelBuffer_bindTexture2 ()
+void QGLPixelBuffer_bindTexture2()
 {
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
+    RGLUINT( obj->bindTexture( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
   }
 }
 
 /*
 GLuint bindTexture ( const QString & fileName )
 */
-void QGLPixelBuffer_bindTexture3 ()
+void QGLPixelBuffer_bindTexture3()
 {
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
+    RGLUINT( obj->bindTexture( PQSTRING(1) ) );
   }
 }
 
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTODYNAMICTEXTURE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->bindToDynamicTexture ( PGLUINT(1) ) );
+      RBOOL( obj->bindToDynamicTexture( PGLUINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DELETETEXTURE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->deleteTexture ( PGLUINT(1) );
+      obj->deleteTexture( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->doneCurrent () );
+      RBOOL( obj->doneCurrent() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,13 +259,13 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-void QGLPixelBuffer_drawTexture1 ()
+void QGLPixelBuffer_drawTexture1()
 {
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -274,13 +274,13 @@ void QGLPixelBuffer_drawTexture1 ()
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-void QGLPixelBuffer_drawTexture2 ()
+void QGLPixelBuffer_drawTexture2()
 {
   QGLPixelBuffer * obj = (QGLPixelBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -318,8 +318,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGLFormat * ptr = new QGLFormat( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+      QGLFormat * ptr = new QGLFormat( obj->format() );
+      _qt5xhb_createReturnClass( ptr, "QGLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RGLUINT( obj->generateDynamicTexture () );
+      RGLUINT( obj->generateDynamicTexture() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->makeCurrent () );
+      RBOOL( obj->makeCurrent() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_RELEASEFROMDYNAMICTEXTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->releaseFromDynamicTexture ();
+      obj->releaseFromDynamicTexture();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,8 +441,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->size () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->size() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,8 +466,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QImage * ptr = new QImage( obj->toImage () );
-      _qt5xhb_createReturnClass ( ptr, "QIMAGE", true );
+      QImage * ptr = new QImage( obj->toImage() );
+      _qt5xhb_createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_UPDATEDYNAMICTEXTURE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->updateDynamicTexture ( PGLUINT(1) );
+      obj->updateDynamicTexture( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,8 +517,8 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintEngine * ptr = obj->paintEngine ();
-      _qt5xhb_createReturnClass ( ptr, "QPAINTENGINE", false );
+      QPaintEngine * ptr = obj->paintEngine();
+      _qt5xhb_createReturnClass( ptr, "QPAINTENGINE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_HASOPENGLPBUFFERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasOpenGLPbuffers () );
+      RBOOL( obj->hasOpenGLPbuffers() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

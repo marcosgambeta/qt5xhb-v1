@@ -54,7 +54,7 @@ CLASS QGLContext
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGLContext
+PROCEDURE destroyObject() CLASS QGLContext
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
   if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
-    QGLContext * o = new QGLContext ( *PQGLFORMAT(1) );
+    QGLContext * o = new QGLContext( *PQGLFORMAT(1) );
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -112,65 +112,65 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETE )
 /*
 GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
 */
-void QGLContext_bindTexture1 ()
+void QGLContext_bindTexture1()
 {
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture ( *PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
+    RGLUINT( obj->bindTexture( *PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
   }
 }
 
 /*
 GLuint bindTexture ( const QString & fileName )
 */
-void QGLContext_bindTexture2 ()
+void QGLContext_bindTexture2()
 {
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture ( PQSTRING(1) ) );
+    RGLUINT( obj->bindTexture( PQSTRING(1) ) );
   }
 }
 
 /*
 GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
-void QGLContext_bindTexture3 ()
+void QGLContext_bindTexture3()
 {
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture ( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
+    RGLUINT( obj->bindTexture( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
   }
 }
 
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
-void QGLContext_bindTexture4 ()
+void QGLContext_bindTexture4()
 {
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
+    RGLUINT( obj->bindTexture( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
   }
 }
 
 /*
 GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
 */
-void QGLContext_bindTexture5 ()
+void QGLContext_bindTexture5()
 {
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture ( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
+    RGLUINT( obj->bindTexture( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
   }
 }
 
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->deleteTexture ( PGLUINT(1) );
+      obj->deleteTexture( PGLUINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,8 +251,8 @@ HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPaintDevice * ptr = obj->device ();
-      _qt5xhb_createReturnClass ( ptr, "QPAINTDEVICE", false );
+      QPaintDevice * ptr = obj->device();
+      _qt5xhb_createReturnClass( ptr, "QPAINTDEVICE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->doneCurrent ();
+      obj->doneCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,13 +292,13 @@ HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
 /*
 void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-void QGLContext_drawTexture1 ()
+void QGLContext_drawTexture1()
 {
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->drawTexture ( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -307,13 +307,13 @@ void QGLContext_drawTexture1 ()
 /*
 void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
-void QGLContext_drawTexture2 ()
+void QGLContext_drawTexture2()
 {
   QGLContext * obj = (QGLContext *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->drawTexture ( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -351,8 +351,8 @@ HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGLFormat * ptr = new QGLFormat( obj->format () );
-      _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+      QGLFormat * ptr = new QGLFormat( obj->format() );
+      _qt5xhb_createReturnClass( ptr, "QGLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSharing () );
+      RBOOL( obj->isSharing() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->makeCurrent ();
+      obj->makeCurrent();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,8 +450,8 @@ HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QColor * ptr = new QColor( obj->overlayTransparentColor () );
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", true );
+      QColor * ptr = new QColor( obj->overlayTransparentColor() );
+      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,8 +475,8 @@ HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGLFormat * ptr = new QGLFormat( obj->requestedFormat () );
-      _qt5xhb_createReturnClass ( ptr, "QGLFORMAT", true );
+      QGLFormat * ptr = new QGLFormat( obj->requestedFormat() );
+      _qt5xhb_createReturnClass( ptr, "QGLFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QGLCONTEXT_RESET )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->reset ();
+      obj->reset();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
     if( ISNUMPAR(1) && ISQGLFORMAT(1) )
     {
 #endif
-      obj->setFormat ( *PQGLFORMAT(1) );
+      obj->setFormat( *PQGLFORMAT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->swapBuffers ();
+      obj->swapBuffers();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
   if( ISNUMPAR(2) && ISQGLCONTEXT(1) && ISQGLCONTEXT(2) )
   {
 #endif
-    RBOOL( QGLContext::areSharing ( PQGLCONTEXT(1), PQGLCONTEXT(2) ) );
+    RBOOL( QGLContext::areSharing( PQGLCONTEXT(1), PQGLCONTEXT(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -593,8 +593,8 @@ HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
   if( ISNUMPAR(0) )
   {
 #endif
-    const QGLContext * ptr = QGLContext::currentContext ();
-    _qt5xhb_createReturnClass ( ptr, "QGLCONTEXT", false );
+    const QGLContext * ptr = QGLContext::currentContext();
+    _qt5xhb_createReturnClass( ptr, "QGLCONTEXT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    QGLContext::setTextureCacheLimit ( PINT(1) );
+    QGLContext::setTextureCacheLimit( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
   if( ISNUMPAR(0) )
   {
 #endif
-    RINT( QGLContext::textureCacheLimit () );
+    RINT( QGLContext::textureCacheLimit() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
