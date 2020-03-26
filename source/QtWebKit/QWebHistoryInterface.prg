@@ -27,7 +27,7 @@ CLASS QWebHistoryInterface INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebHistoryInterface
+PROCEDURE destroyObject() CLASS QWebHistoryInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->addHistoryEntry ( PQSTRING(1) );
+      obj->addHistoryEntry( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->historyContains ( PQSTRING(1) ) );
+      RBOOL( obj->historyContains( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QWEBHISTORYINTERFACE" );
+    QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface();
+    _qt5xhb_createReturnQObjectClass( ptr, "QWEBHISTORYINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE )
   if( ISNUMPAR(1) && ISQWEBHISTORYINTERFACE(1) )
   {
 #endif
-    QWebHistoryInterface::setDefaultInterface ( PQWEBHISTORYINTERFACE(1) );
+    QWebHistoryInterface::setDefaultInterface( PQWEBHISTORYINTERFACE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
