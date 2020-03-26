@@ -26,7 +26,7 @@ CLASS QCompass INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCompass
+PROCEDURE destroyObject() CLASS QCompass
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QCOMPASS_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QCompass * o = new QCompass ( OPQOBJECT(1,0) );
+    QCompass * o = new QCompass( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QCOMPASS_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QCompassReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QCOMPASSREADING" );
+      QCompassReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QCOMPASSREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

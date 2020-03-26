@@ -24,7 +24,7 @@ CLASS QOrientationFilter INHERIT QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOrientationFilter
+PROCEDURE destroyObject() CLASS QOrientationFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QORIENTATIONFILTER_FILTER )
     if( ISNUMPAR(1) && ISQORIENTATIONREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQORIENTATIONREADING(1) ) );
+      RBOOL( obj->filter( PQORIENTATIONREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

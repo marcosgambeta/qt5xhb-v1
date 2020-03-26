@@ -26,7 +26,7 @@ void QLightSensorSlots::fieldOfViewChanged( qreal fieldOfView )
   PHB_ITEM cb = Signals_return_codeblock( object, "fieldOfViewChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QLIGHTSENSOR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLIGHTSENSOR" );
     PHB_ITEM pfieldOfView = hb_itemPutND( NULL, fieldOfView );
     hb_vmEvalBlockV( cb, 2, psender, pfieldOfView );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QLightSensorSlots::fieldOfViewChanged( qreal fieldOfView )
 }
 #endif
 
-void QLightSensorSlots_connect_signal ( const QString & signal, const QString & slot )
+void QLightSensorSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QLightSensor * obj = (QLightSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

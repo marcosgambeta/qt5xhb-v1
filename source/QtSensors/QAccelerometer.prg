@@ -30,7 +30,7 @@ CLASS QAccelerometer INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccelerometer
+PROCEDURE destroyObject() CLASS QAccelerometer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QACCELEROMETER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QAccelerometer * o = new QAccelerometer ( OPQOBJECT(1,0) );
+    QAccelerometer * o = new QAccelerometer( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->accelerationMode () );
+      RENUM( obj->accelerationMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAccelerationMode ( (QAccelerometer::AccelerationMode) hb_parni(1) );
+      obj->setAccelerationMode( (QAccelerometer::AccelerationMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,8 +161,8 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAccelerometerReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACCELEROMETERREADING" );
+      QAccelerometerReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QACCELEROMETERREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
 #endif
 }
 
-void QAccelerometerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAccelerometerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QACCELEROMETER_ONACCELERATIONMODECHANGED )
 {

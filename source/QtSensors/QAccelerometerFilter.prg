@@ -24,7 +24,7 @@ CLASS QAccelerometerFilter INHERIT QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccelerometerFilter
+PROCEDURE destroyObject() CLASS QAccelerometerFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QACCELEROMETERFILTER_FILTER )
     if( ISNUMPAR(1) && ISQACCELEROMETERREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQACCELEROMETERREADING(1) ) );
+      RBOOL( obj->filter( PQACCELEROMETERREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

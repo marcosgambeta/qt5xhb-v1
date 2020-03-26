@@ -32,7 +32,7 @@ CLASS QSensorPluginInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorPluginInterface
+PROCEDURE destroyObject() CLASS QSensorPluginInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QSENSORPLUGININTERFACE_REGISTERSENSORS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->registerSensors ();
+      obj->registerSensors();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

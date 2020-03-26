@@ -26,7 +26,7 @@ CLASS QAmbientTemperatureSensor INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAmbientTemperatureSensor
+PROCEDURE destroyObject() CLASS QAmbientTemperatureSensor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QAmbientTemperatureSensor * o = new QAmbientTemperatureSensor ( OPQOBJECT(1,0) );
+    QAmbientTemperatureSensor * o = new QAmbientTemperatureSensor( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAmbientTemperatureReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QAMBIENTTEMPERATUREREADING" );
+      QAmbientTemperatureReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QAMBIENTTEMPERATUREREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

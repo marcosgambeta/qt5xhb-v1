@@ -29,7 +29,7 @@ CLASS QAccelerometerReading INHERIT QSensorReading
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAccelerometerReading
+PROCEDURE destroyObject() CLASS QAccelerometerReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->x () );
+      RQREAL( obj->x() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_SETX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setX ( PQREAL(1) );
+      obj->setX( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->y () );
+      RQREAL( obj->y() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_SETY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setY ( PQREAL(1) );
+      obj->setY( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_Z )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->z () );
+      RQREAL( obj->z() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_SETZ )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setZ ( PQREAL(1) );
+      obj->setZ( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

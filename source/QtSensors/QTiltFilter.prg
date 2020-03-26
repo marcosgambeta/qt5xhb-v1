@@ -24,7 +24,7 @@ CLASS QTiltFilter INHERIT QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTiltFilter
+PROCEDURE destroyObject() CLASS QTiltFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QTILTFILTER_FILTER )
     if( ISNUMPAR(1) && ISQTILTREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQTILTREADING(1) ) );
+      RBOOL( obj->filter( PQTILTREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

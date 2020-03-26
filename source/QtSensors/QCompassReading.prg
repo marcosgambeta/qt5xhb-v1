@@ -27,7 +27,7 @@ CLASS QCompassReading INHERIT QSensorReading
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCompassReading
+PROCEDURE destroyObject() CLASS QCompassReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QCOMPASSREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_AZIMUTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->azimuth () );
+      RQREAL( obj->azimuth() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_SETAZIMUTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setAzimuth ( PQREAL(1) );
+      obj->setAzimuth( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_CALIBRATIONLEVEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->calibrationLevel () );
+      RQREAL( obj->calibrationLevel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_SETCALIBRATIONLEVEL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCalibrationLevel ( PQREAL(1) );
+      obj->setCalibrationLevel( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

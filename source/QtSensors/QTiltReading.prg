@@ -27,7 +27,7 @@ CLASS QTiltReading INHERIT QSensorReading
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTiltReading
+PROCEDURE destroyObject() CLASS QTiltReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QTILTREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QTILTREADING_YROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->yRotation () );
+      RQREAL( obj->yRotation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QTILTREADING_SETYROTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setYRotation ( PQREAL(1) );
+      obj->setYRotation( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTILTREADING_XROTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->xRotation () );
+      RQREAL( obj->xRotation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTILTREADING_SETXROTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setXRotation ( PQREAL(1) );
+      obj->setXRotation( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

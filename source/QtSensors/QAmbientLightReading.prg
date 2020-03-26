@@ -25,7 +25,7 @@ CLASS QAmbientLightReading INHERIT QSensorReading
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAmbientLightReading
+PROCEDURE destroyObject() CLASS QAmbientLightReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,8 +60,8 @@ HB_FUNC_STATIC( QAMBIENTLIGHTREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTREADING_LIGHTLEVEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->lightLevel () );
+      RENUM( obj->lightLevel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTREADING_SETLIGHTLEVEL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setLightLevel ( (QAmbientLightReading::LightLevel) hb_parni(1) );
+      obj->setLightLevel( (QAmbientLightReading::LightLevel) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

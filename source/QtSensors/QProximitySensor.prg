@@ -26,7 +26,7 @@ CLASS QProximitySensor INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QProximitySensor
+PROCEDURE destroyObject() CLASS QProximitySensor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QPROXIMITYSENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QProximitySensor * o = new QProximitySensor ( OPQOBJECT(1,0) );
+    QProximitySensor * o = new QProximitySensor( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QPROXIMITYSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QProximityReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QPROXIMITYREADING" );
+      QProximityReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QPROXIMITYREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -30,7 +30,7 @@ CLASS QRotationSensor INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRotationSensor
+PROCEDURE destroyObject() CLASS QRotationSensor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QRotationSensor * o = new QRotationSensor ( OPQOBJECT(1,0) );
+    QRotationSensor * o = new QRotationSensor( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -107,8 +107,8 @@ HB_FUNC_STATIC( QROTATIONSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QRotationReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QROTATIONREADING" );
+      QRotationReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QROTATIONREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasZ () );
+      RBOOL( obj->hasZ() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setHasZ ( PBOOL(1) );
+      obj->setHasZ( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
 #endif
 }
 
-void QRotationSensorSlots_connect_signal ( const QString & signal, const QString & slot );
+void QRotationSensorSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QROTATIONSENSOR_ONHASZCHANGED )
 {

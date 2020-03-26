@@ -24,7 +24,7 @@ CLASS QProximityFilter INHERIT QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QProximityFilter
+PROCEDURE destroyObject() CLASS QProximityFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QPROXIMITYFILTER_FILTER )
     if( ISNUMPAR(1) && ISQPROXIMITYREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQPROXIMITYREADING(1) ) );
+      RBOOL( obj->filter( PQPROXIMITYREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

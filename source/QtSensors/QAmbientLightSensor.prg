@@ -26,7 +26,7 @@ CLASS QAmbientLightSensor INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAmbientLightSensor
+PROCEDURE destroyObject() CLASS QAmbientLightSensor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QAmbientLightSensor * o = new QAmbientLightSensor ( OPQOBJECT(1,0) );
+    QAmbientLightSensor * o = new QAmbientLightSensor( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAmbientLightReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QAMBIENTLIGHTREADING" );
+      QAmbientLightReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QAMBIENTLIGHTREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

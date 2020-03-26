@@ -26,7 +26,7 @@ void QTapSensorSlots::returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
   PHB_ITEM cb = Signals_return_codeblock( object, "returnDoubleTapEventsChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTAPSENSOR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTAPSENSOR" );
     PHB_ITEM preturnDoubleTapEvents = hb_itemPutL( NULL, returnDoubleTapEvents );
     hb_vmEvalBlockV( cb, 2, psender, preturnDoubleTapEvents );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QTapSensorSlots::returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 }
 #endif
 
-void QTapSensorSlots_connect_signal ( const QString & signal, const QString & slot )
+void QTapSensorSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QTapSensor * obj = (QTapSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

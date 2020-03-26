@@ -27,7 +27,7 @@ CLASS QRotationReading INHERIT QSensorReading
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QRotationReading
+PROCEDURE destroyObject() CLASS QRotationReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QROTATIONREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QROTATIONREADING_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->x () );
+      RQREAL( obj->x() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QROTATIONREADING_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->y () );
+      RQREAL( obj->y() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QROTATIONREADING_Z )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->z () );
+      RQREAL( obj->z() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QROTATIONREADING_SETFROMEULER )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      obj->setFromEuler ( PQREAL(1), PQREAL(2), PQREAL(3) );
+      obj->setFromEuler( PQREAL(1), PQREAL(2), PQREAL(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ CLASS QOrientationReading INHERIT QSensorReading
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOrientationReading
+PROCEDURE destroyObject() CLASS QOrientationReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,8 +60,8 @@ HB_FUNC_STATIC( QORIENTATIONREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QORIENTATIONREADING_SETORIENTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOrientation ( (QOrientationReading::Orientation) hb_parni(1) );
+      obj->setOrientation( (QOrientationReading::Orientation) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

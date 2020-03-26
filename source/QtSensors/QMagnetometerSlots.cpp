@@ -26,7 +26,7 @@ void QMagnetometerSlots::returnGeoValuesChanged( bool returnGeoValues )
   PHB_ITEM cb = Signals_return_codeblock( object, "returnGeoValuesChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMAGNETOMETER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMAGNETOMETER" );
     PHB_ITEM preturnGeoValues = hb_itemPutL( NULL, returnGeoValues );
     hb_vmEvalBlockV( cb, 2, psender, preturnGeoValues );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QMagnetometerSlots::returnGeoValuesChanged( bool returnGeoValues )
 }
 #endif
 
-void QMagnetometerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QMagnetometerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QMagnetometer * obj = (QMagnetometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

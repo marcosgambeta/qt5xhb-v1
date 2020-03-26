@@ -21,7 +21,7 @@ CLASS QMagnetometerFilter INHERIT QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMagnetometerFilter
+PROCEDURE destroyObject() CLASS QMagnetometerFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QMAGNETOMETERFILTER_FILTER )
     if( ISNUMPAR(1) && ISQMAGNETOMETERREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQMAGNETOMETERREADING(1) ) );
+      RBOOL( obj->filter( PQMAGNETOMETERREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

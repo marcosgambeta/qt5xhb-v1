@@ -27,7 +27,7 @@ CLASS QTapReading INHERIT QSensorReading
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTapReading
+PROCEDURE destroyObject() CLASS QTapReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QTAPREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->tapDirection () );
+      RENUM( obj->tapDirection() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QTAPREADING_SETTAPDIRECTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTapDirection ( (QTapReading::TapDirection) hb_parni(1) );
+      obj->setTapDirection( (QTapReading::TapDirection) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QTAPREADING_ISDOUBLETAP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDoubleTap () );
+      RBOOL( obj->isDoubleTap() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTAPREADING_SETDOUBLETAP )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setDoubleTap ( PBOOL(1) );
+      obj->setDoubleTap( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

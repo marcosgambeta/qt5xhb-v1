@@ -24,7 +24,7 @@ CLASS QAmbientLightFilter INHERIT QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAmbientLightFilter
+PROCEDURE destroyObject() CLASS QAmbientLightFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTFILTER_FILTER )
     if( ISNUMPAR(1) && ISQAMBIENTLIGHTREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQAMBIENTLIGHTREADING(1) ) );
+      RBOOL( obj->filter( PQAMBIENTLIGHTREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

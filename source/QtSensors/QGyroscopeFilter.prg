@@ -24,7 +24,7 @@ CLASS QGyroscopeFilter INHERIT QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGyroscopeFilter
+PROCEDURE destroyObject() CLASS QGyroscopeFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QGYROSCOPEFILTER_FILTER )
     if( ISNUMPAR(1) && ISQGYROSCOPEREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQGYROSCOPEREADING(1) ) );
+      RBOOL( obj->filter( PQGYROSCOPEREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

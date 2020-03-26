@@ -32,7 +32,7 @@ CLASS QSensorGesture INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorGesture
+PROCEDURE destroyObject() CLASS QSensorGesture
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QSensorGesture * o = new QSensorGesture ( PQSTRINGLIST(1), OPQOBJECT(2,0) );
+    QSensorGesture * o = new QSensorGesture( PQSTRINGLIST(1), OPQOBJECT(2,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_ISACTIVE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isActive () );
+      RBOOL( obj->isActive() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_VALIDIDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->validIds () );
+      RQSTRINGLIST( obj->validIds() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_INVALIDIDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->invalidIds () );
+      RQSTRINGLIST( obj->invalidIds() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_GESTURESIGNALS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->gestureSignals () );
+      RQSTRINGLIST( obj->gestureSignals() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_STARTDETECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->startDetection ();
+      obj->startDetection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_STOPDETECTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stopDetection ();
+      obj->stopDetection();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSENSORGESTURE_STOPDETECTION )
 #endif
 }
 
-void QSensorGestureSlots_connect_signal ( const QString & signal, const QString & slot );
+void QSensorGestureSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSENSORGESTURE_ONDETECTED )
 {

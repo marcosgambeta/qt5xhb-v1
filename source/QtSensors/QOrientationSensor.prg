@@ -26,7 +26,7 @@ CLASS QOrientationSensor INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOrientationSensor
+PROCEDURE destroyObject() CLASS QOrientationSensor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QORIENTATIONSENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QOrientationSensor * o = new QOrientationSensor ( OPQOBJECT(1,0) );
+    QOrientationSensor * o = new QOrientationSensor( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QORIENTATIONSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOrientationReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QORIENTATIONREADING" );
+      QOrientationReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QORIENTATIONREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

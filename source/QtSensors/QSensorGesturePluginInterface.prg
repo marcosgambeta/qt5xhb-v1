@@ -36,7 +36,7 @@ CLASS QSensorGesturePluginInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorGesturePluginInterface
+PROCEDURE destroyObject() CLASS QSensorGesturePluginInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QSensorGestureRecognizer *> list = obj->createRecognizers ();
+      QList<QSensorGestureRecognizer *> list = obj->createRecognizers();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSENSORGESTURERECOGNIZER" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_SUPPORTEDIDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->supportedIds () );
+      RQSTRINGLIST( obj->supportedIds() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

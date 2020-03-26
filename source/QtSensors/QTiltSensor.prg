@@ -27,7 +27,7 @@ CLASS QTiltSensor INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTiltSensor
+PROCEDURE destroyObject() CLASS QTiltSensor
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QTILTSENSOR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QTiltSensor * o = new QTiltSensor ( OPQOBJECT(1,0) );
+    QTiltSensor * o = new QTiltSensor( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -104,8 +104,8 @@ HB_FUNC_STATIC( QTILTSENSOR_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QTiltReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QTILTREADING" );
+      QTiltReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QTILTREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTILTSENSOR_CALIBRATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->calibrate ();
+      obj->calibrate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

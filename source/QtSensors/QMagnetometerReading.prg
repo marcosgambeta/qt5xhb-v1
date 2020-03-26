@@ -28,7 +28,7 @@ CLASS QMagnetometerReading INHERIT QSensorReading
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QMagnetometerReading
+PROCEDURE destroyObject() CLASS QMagnetometerReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_X )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->x () );
+      RQREAL( obj->x() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_SETX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setX ( PQREAL(1) );
+      obj->setX( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_Y )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->y () );
+      RQREAL( obj->y() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_SETY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setY ( PQREAL(1) );
+      obj->setY( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_Z )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->z () );
+      RQREAL( obj->z() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_SETZ )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setZ ( PQREAL(1) );
+      obj->setZ( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_CALIBRATIONLEVEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->calibrationLevel () );
+      RQREAL( obj->calibrationLevel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QMAGNETOMETERREADING_SETCALIBRATIONLEVEL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCalibrationLevel ( PQREAL(1) );
+      obj->setCalibrationLevel( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

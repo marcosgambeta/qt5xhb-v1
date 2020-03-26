@@ -26,7 +26,7 @@ void QAccelerometerSlots::accelerationModeChanged( QAccelerometer::AccelerationM
   PHB_ITEM cb = Signals_return_codeblock( object, "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QACCELEROMETER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QACCELEROMETER" );
     PHB_ITEM paccelerationMode = hb_itemPutNI( NULL, (int) accelerationMode );
     hb_vmEvalBlockV( cb, 2, psender, paccelerationMode );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QAccelerometerSlots::accelerationModeChanged( QAccelerometer::AccelerationM
 }
 #endif
 
-void QAccelerometerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAccelerometerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QAccelerometer * obj = (QAccelerometer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

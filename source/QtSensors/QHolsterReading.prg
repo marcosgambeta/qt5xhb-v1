@@ -25,7 +25,7 @@ CLASS QHolsterReading INHERIT QSensorReading
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QHolsterReading
+PROCEDURE destroyObject() CLASS QHolsterReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,8 +60,8 @@ HB_FUNC_STATIC( QHOLSTERREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QHOLSTERREADING_HOLSTERED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->holstered () );
+      RBOOL( obj->holstered() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QHOLSTERREADING_SETHOLSTERED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setHolstered ( PBOOL(1) );
+      obj->setHolstered( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

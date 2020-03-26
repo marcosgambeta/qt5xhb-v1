@@ -32,7 +32,7 @@ CLASS QSensorChangesInterface
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorChangesInterface
+PROCEDURE destroyObject() CLASS QSensorChangesInterface
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QSENSORCHANGESINTERFACE_SENSORSCHANGED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->sensorsChanged ();
+      obj->sensorsChanged();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

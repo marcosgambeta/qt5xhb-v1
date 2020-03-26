@@ -26,7 +26,7 @@ CLASS QGyroscope INHERIT QSensor
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGyroscope
+PROCEDURE destroyObject() CLASS QGyroscope
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QGYROSCOPE_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QGyroscope * o = new QGyroscope ( OPQOBJECT(1,0) );
+    QGyroscope * o = new QGyroscope( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QGYROSCOPE_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGyroscopeReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QGYROSCOPEREADING" );
+      QGyroscopeReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QGYROSCOPEREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

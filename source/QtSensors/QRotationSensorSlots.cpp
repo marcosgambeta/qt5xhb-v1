@@ -26,7 +26,7 @@ void QRotationSensorSlots::hasZChanged( bool hasZ )
   PHB_ITEM cb = Signals_return_codeblock( object, "hasZChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QROTATIONSENSOR" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QROTATIONSENSOR" );
     PHB_ITEM phasZ = hb_itemPutL( NULL, hasZ );
     hb_vmEvalBlockV( cb, 2, psender, phasZ );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QRotationSensorSlots::hasZChanged( bool hasZ )
 }
 #endif
 
-void QRotationSensorSlots_connect_signal ( const QString & signal, const QString & slot )
+void QRotationSensorSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QRotationSensor * obj = (QRotationSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

@@ -26,7 +26,7 @@ void QSensorGestureSlots::detected( QString s )
   PHB_ITEM cb = Signals_return_codeblock( object, "detected(QString)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSORGESTURE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSENSORGESTURE" );
     PHB_ITEM ps = hb_itemPutC( NULL, (const char *) s.toLatin1().data() );
     hb_vmEvalBlockV( cb, 2, psender, ps );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QSensorGestureSlots::detected( QString s )
 }
 #endif
 
-void QSensorGestureSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSensorGestureSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorGesture * obj = (QSensorGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

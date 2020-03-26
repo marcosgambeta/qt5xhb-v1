@@ -28,7 +28,7 @@ CLASS QSensorReading INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorReading
+PROCEDURE destroyObject() CLASS QSensorReading
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QSENSORREADING_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT64( obj->timestamp () );
+      RQUINT64( obj->timestamp() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setTimestamp ( PQUINT64(1) );
+      obj->setTimestamp( PQUINT64(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->valueCount () );
+      RINT( obj->valueCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,8 +171,8 @@ HB_FUNC_STATIC( QSENSORREADING_VALUE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value ( PINT(1) ) );
-      _qt5xhb_createReturnClass ( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->value( PINT(1) ) );
+      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

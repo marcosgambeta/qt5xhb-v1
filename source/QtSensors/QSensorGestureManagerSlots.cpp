@@ -26,14 +26,14 @@ void QSensorGestureManagerSlots::newSensorGestureAvailable()
   PHB_ITEM cb = Signals_return_codeblock( object, "newSensorGestureAvailable()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSENSORGESTUREMANAGER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSENSORGESTUREMANAGER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 #endif
 
-void QSensorGestureManagerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSensorGestureManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSensorGestureManager * obj = (QSensorGestureManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

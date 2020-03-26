@@ -31,7 +31,7 @@ CLASS QSensorGestureManager INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorGestureManager
+PROCEDURE destroyObject() CLASS QSensorGestureManager
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QSensorGestureManager * o = new QSensorGestureManager ( OPQOBJECT(1,0) );
+    QSensorGestureManager * o = new QSensorGestureManager( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER )
     if( ISNUMPAR(1) && ISQSENSORGESTURERECOGNIZER(1) )
     {
 #endif
-      RBOOL( obj->registerSensorGestureRecognizer ( PQSENSORGESTURERECOGNIZER(1) ) );
+      RBOOL( obj->registerSensorGestureRecognizer( PQSENSORGESTURERECOGNIZER(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_GESTUREIDS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->gestureIds () );
+      RQSTRINGLIST( obj->gestureIds() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRINGLIST( obj->recognizerSignals ( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->recognizerSignals( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,8 +182,8 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer ( PQSTRING(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QSENSORGESTURERECOGNIZER" );
+    QSensorGestureRecognizer * ptr = QSensorGestureManager::sensorGestureRecognizer( PQSTRING(1) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QSENSORGESTURERECOGNIZER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
 #endif
 }
 
-void QSensorGestureManagerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QSensorGestureManagerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_ONNEWSENSORGESTUREAVAILABLE )
 {

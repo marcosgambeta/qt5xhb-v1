@@ -24,7 +24,7 @@ CLASS QAmbientTemperatureFilter INHERIT QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAmbientTemperatureFilter
+PROCEDURE destroyObject() CLASS QAmbientTemperatureFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_FILTER )
     if( ISNUMPAR(1) && ISQAMBIENTTEMPERATUREREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQAMBIENTTEMPERATUREREADING(1) ) );
+      RBOOL( obj->filter( PQAMBIENTTEMPERATUREREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

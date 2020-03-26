@@ -38,7 +38,7 @@ CLASS QSensorBackend INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSensorBackend
+PROCEDURE destroyObject() CLASS QSensorBackend
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,8 +73,8 @@ HB_FUNC_STATIC( QSENSORBACKEND_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_START )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->start ();
+      obj->start();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_STOP )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stop ();
+      obj->stop();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isFeatureSupported ( (QSensor::Feature) hb_parni(1) ) );
+      RBOOL( obj->isFeatureSupported( (QSensor::Feature) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ADDDATARATE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->addDataRate ( PQREAL(1), PQREAL(2) );
+      obj->addDataRate( PQREAL(1), PQREAL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SETDATARATES )
     if( ISNUMPAR(1) && ISQSENSOR(1) )
     {
 #endif
-      obj->setDataRates ( PQSENSOR(1) );
+      obj->setDataRates( PQSENSOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ADDOUTPUTRANGE )
     if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
     {
 #endif
-      obj->addOutputRange ( PQREAL(1), PQREAL(2), PQREAL(3) );
+      obj->addOutputRange( PQREAL(1), PQREAL(2), PQREAL(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SETDESCRIPTION )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setDescription ( PQSTRING(1) );
+      obj->setDescription( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,8 +295,8 @@ HB_FUNC_STATIC( QSENSORBACKEND_READING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSensorReading * ptr = obj->reading ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSENSORREADING" );
+      QSensorReading * ptr = obj->reading();
+      _qt5xhb_createReturnQObjectClass( ptr, "QSENSORREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,8 +322,8 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSensor * ptr = obj->sensor ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QSENSOR" );
+      QSensor * ptr = obj->sensor();
+      _qt5xhb_createReturnQObjectClass( ptr, "QSENSOR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_NEWREADINGAVAILABLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->newReadingAvailable ();
+      obj->newReadingAvailable();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORSTOPPED )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->sensorStopped ();
+      obj->sensorStopped();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORBUSY )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->sensorBusy ();
+      obj->sensorBusy();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORERROR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->sensorError ( PINT(1) );
+      obj->sensorError( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

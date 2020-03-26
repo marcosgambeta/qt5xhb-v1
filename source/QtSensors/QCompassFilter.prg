@@ -24,7 +24,7 @@ CLASS QCompassFilter INHERIT QSensorFilter
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCompassFilter
+PROCEDURE destroyObject() CLASS QCompassFilter
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QCOMPASSFILTER_FILTER )
     if( ISNUMPAR(1) && ISQCOMPASSREADING(1) )
     {
 #endif
-      RBOOL( obj->filter ( PQCOMPASSREADING(1) ) );
+      RBOOL( obj->filter( PQCOMPASSREADING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
