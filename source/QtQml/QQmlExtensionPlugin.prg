@@ -25,7 +25,7 @@ CLASS QQmlExtensionPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlExtensionPlugin
+PROCEDURE destroyObject() CLASS QQmlExtensionPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_INITIALIZEENGINE )
     if( ISNUMPAR(2) && ISQQMLENGINE(1) && ISCHAR(2) )
     {
 #endif
-      obj->initializeEngine ( PQQMLENGINE(1), PCONSTCHAR(2) );
+      obj->initializeEngine( PQQMLENGINE(1), PCONSTCHAR(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_REGISTERTYPES )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->registerTypes ( PCONSTCHAR(1) );
+      obj->registerTypes( PCONSTCHAR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

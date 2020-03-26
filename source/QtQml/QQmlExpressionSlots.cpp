@@ -25,13 +25,13 @@ void QQmlExpressionSlots::valueChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQMLEXPRESSION" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLEXPRESSION" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QQmlExpressionSlots_connect_signal ( const QString & signal, const QString & slot )
+void QQmlExpressionSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QQmlExpression * obj = (QQmlExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

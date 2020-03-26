@@ -38,7 +38,7 @@ CLASS QJSValueIterator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QJSValueIterator
+PROCEDURE destroyObject() CLASS QJSValueIterator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEW )
 {
   if( ISNUMPAR(1) && ISQJSVALUE(1) )
   {
-    QJSValueIterator * o = new QJSValueIterator ( *PQJSVALUE(1) );
+    QJSValueIterator * o = new QJSValueIterator( *PQJSVALUE(1) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_HASNEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->hasNext () );
+      RBOOL( obj->hasNext() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_NEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->next () );
+      RBOOL( obj->next() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,8 +178,8 @@ HB_FUNC_STATIC( QJSVALUEITERATOR_VALUE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QJSValue * ptr = new QJSValue( obj->value () );
-      _qt5xhb_createReturnClass ( ptr, "QJSVALUE", true );
+      QJSValue * ptr = new QJSValue( obj->value() );
+      _qt5xhb_createReturnClass( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

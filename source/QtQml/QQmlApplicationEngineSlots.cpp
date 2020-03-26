@@ -26,7 +26,7 @@ void QQmlApplicationEngineSlots::objectCreated( QObject * obj, const QUrl & url 
   PHB_ITEM cb = Signals_return_codeblock( object, "objectCreated(QObject*,QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQMLAPPLICATIONENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLAPPLICATIONENGINE" );
     PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
     hb_vmEvalBlockV( cb, 3, psender, pobj, purl );
@@ -37,7 +37,7 @@ void QQmlApplicationEngineSlots::objectCreated( QObject * obj, const QUrl & url 
 }
 #endif
 
-void QQmlApplicationEngineSlots_connect_signal ( const QString & signal, const QString & slot )
+void QQmlApplicationEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QQmlApplicationEngine * obj = (QQmlApplicationEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

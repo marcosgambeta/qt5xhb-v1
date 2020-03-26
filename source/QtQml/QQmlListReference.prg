@@ -46,7 +46,7 @@ CLASS QQmlListReference
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlListReference
+PROCEDURE destroyObject() CLASS QQmlListReference
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -71,18 +71,18 @@ RETURN
 /*
 QQmlListReference()
 */
-void QQmlListReference_new1 ()
+void QQmlListReference_new1()
 {
-  QQmlListReference * o = new QQmlListReference ();
+  QQmlListReference * o = new QQmlListReference();
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
 */
-void QQmlListReference_new2 ()
+void QQmlListReference_new2()
 {
-  QQmlListReference * o = new QQmlListReference ( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,0) );
+  QQmlListReference * o = new QQmlListReference( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      RBOOL( obj->append ( PQOBJECT(1) ) );
+      RBOOL( obj->append( PQOBJECT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,8 +159,8 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QObject * ptr = obj->at ( PINT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->at( PINT(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAPPEND )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canAppend () );
+      RBOOL( obj->canAppend() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANAT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canAt () );
+      RBOOL( obj->canAt() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canClear () );
+      RBOOL( obj->canClear() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CANCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->canCount () );
+      RBOOL( obj->canCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_CLEAR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->clear () );
+      RBOOL( obj->clear() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_COUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->count () );
+      RINT( obj->count() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,8 +352,8 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_LISTELEMENTTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QMetaObject * ptr = obj->listElementType ();
-      _qt5xhb_createReturnClass ( ptr, "QMETAOBJECT", false );
+      const QMetaObject * ptr = obj->listElementType();
+      _qt5xhb_createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,8 +377,8 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_OBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObject * ptr = obj->object ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->object();
+      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

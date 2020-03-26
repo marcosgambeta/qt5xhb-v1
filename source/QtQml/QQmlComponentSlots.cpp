@@ -25,7 +25,7 @@ void QQmlComponentSlots::progressChanged( qreal progress )
   PHB_ITEM cb = Signals_return_codeblock( object, "progressChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQMLCOMPONENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLCOMPONENT" );
     PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
     hb_vmEvalBlockV( cb, 2, psender, pprogress );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QQmlComponentSlots::statusChanged( QQmlComponent::Status status )
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QQmlComponent::Status)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQMLCOMPONENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLCOMPONENT" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -46,7 +46,7 @@ void QQmlComponentSlots::statusChanged( QQmlComponent::Status status )
   }
 }
 
-void QQmlComponentSlots_connect_signal ( const QString & signal, const QString & slot )
+void QQmlComponentSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QQmlComponent * obj = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

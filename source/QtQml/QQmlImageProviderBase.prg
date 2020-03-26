@@ -34,7 +34,7 @@ CLASS QQmlImageProviderBase
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlImageProviderBase
+PROCEDURE destroyObject() CLASS QQmlImageProviderBase
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_FLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->flags () );
+      RENUM( obj->flags() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_IMAGETYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->imageType () );
+      RENUM( obj->imageType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

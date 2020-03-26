@@ -25,13 +25,13 @@ void QQmlEngineSlots::quit()
   PHB_ITEM cb = Signals_return_codeblock( object, "quit()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQMLENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QQmlEngineSlots_connect_signal ( const QString & signal, const QString & slot )
+void QQmlEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QQmlEngine * obj = (QQmlEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -32,7 +32,7 @@ CLASS QQmlListProperty
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlListProperty
+PROCEDURE destroyObject() CLASS QQmlListProperty
    IF ::self_destruction
       ::delete()
    ENDIF

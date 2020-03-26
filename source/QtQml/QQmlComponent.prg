@@ -43,7 +43,7 @@ CLASS QQmlComponent INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlComponent
+PROCEDURE destroyObject() CLASS QQmlComponent
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,45 +72,45 @@ RETURN
 /*
 QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
 */
-void QQmlComponent_new1 ()
+void QQmlComponent_new1()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), OPQOBJECT(2,0) );
+  QQmlComponent * o = new QQmlComponent( PQQMLENGINE(1), OPQOBJECT(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
 */
-void QQmlComponent_new2 ()
+void QQmlComponent_new2()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
+  QQmlComponent * o = new QQmlComponent( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
 */
-void QQmlComponent_new3 ()
+void QQmlComponent_new3()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
+  QQmlComponent * o = new QQmlComponent( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
 */
-void QQmlComponent_new4 ()
+void QQmlComponent_new4()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
+  QQmlComponent * o = new QQmlComponent( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
 */
-void QQmlComponent_new5 ()
+void QQmlComponent_new5()
 {
-  QQmlComponent * o = new QQmlComponent ( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
+  QQmlComponent * o = new QQmlComponent( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -154,8 +154,8 @@ HB_FUNC_STATIC( QQMLCOMPONENT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -180,8 +180,8 @@ HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
     if( ISNUMPAR(1) && ISQQMLCONTEXT(1) )
     {
 #endif
-      QObject * ptr = obj->beginCreate ( PQQMLCONTEXT(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+      QObject * ptr = obj->beginCreate( PQQMLCONTEXT(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_COMPLETECREATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->completeCreate ();
+      obj->completeCreate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,27 +221,27 @@ HB_FUNC_STATIC( QQMLCOMPONENT_COMPLETECREATE )
 /*
 virtual QObject * create(QQmlContext * context = 0)
 */
-void QQmlComponent_create1 ()
+void QQmlComponent_create1()
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QObject * ptr = obj->create ( OPQQMLCONTEXT(1,0) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QOBJECT" );
+    QObject * ptr = obj->create( OPQQMLCONTEXT(1,0) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
   }
 }
 
 /*
 void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
 */
-void QQmlComponent_create2 ()
+void QQmlComponent_create2()
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->create ( *PQQMLINCUBATOR(1), OPQQMLCONTEXT(2,0), OPQQMLCONTEXT(3,0) );
+    obj->create( *PQQMLINCUBATOR(1), OPQQMLCONTEXT(2,0), OPQQMLCONTEXT(3,0) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -279,8 +279,8 @@ HB_FUNC_STATIC( QQMLCOMPONENT_CREATIONCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlContext * ptr = obj->creationContext ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QQMLCONTEXT" );
+      QQmlContext * ptr = obj->creationContext();
+      _qt5xhb_createReturnQObjectClass( ptr, "QQMLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isError () );
+      RBOOL( obj->isError() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISLOADING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isLoading () );
+      RBOOL( obj->isLoading() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_ISREADY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isReady () );
+      RBOOL( obj->isReady() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_PROGRESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->progress () );
+      RQREAL( obj->progress() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,8 +448,8 @@ HB_FUNC_STATIC( QQMLCOMPONENT_URL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->url () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->url() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,13 +463,13 @@ HB_FUNC_STATIC( QQMLCOMPONENT_URL )
 /*
 void loadUrl(const QUrl & url)
 */
-void QQmlComponent_loadUrl1 ()
+void QQmlComponent_loadUrl1()
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->loadUrl ( *PQURL(1) );
+    obj->loadUrl( *PQURL(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -478,13 +478,13 @@ void QQmlComponent_loadUrl1 ()
 /*
 void loadUrl(const QUrl & url, CompilationMode mode)
 */
-void QQmlComponent_loadUrl2 ()
+void QQmlComponent_loadUrl2()
 {
   QQmlComponent * obj = (QQmlComponent *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->loadUrl ( *PQURL(1), (QQmlComponent::CompilationMode) hb_parni(2) );
+    obj->loadUrl( *PQURL(1), (QQmlComponent::CompilationMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
     if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2) )
     {
 #endif
-      obj->setData ( *PQBYTEARRAY(1), *PQURL(2) );
+      obj->setData( *PQBYTEARRAY(1), *PQURL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QQmlComponentSlots_connect_signal ( const QString & signal, const QString & slot );
+void QQmlComponentSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QQMLCOMPONENT_ONPROGRESSCHANGED )
 {

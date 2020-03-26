@@ -34,7 +34,7 @@ CLASS QQmlParserStatus
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlParserStatus
+PROCEDURE destroyObject() CLASS QQmlParserStatus
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QQMLPARSERSTATUS_CLASSBEGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->classBegin ();
+      obj->classBegin();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QQMLPARSERSTATUS_COMPONENTCOMPLETE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->componentComplete ();
+      obj->componentComplete();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

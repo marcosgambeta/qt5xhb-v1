@@ -38,7 +38,7 @@ CLASS QQmlIncubationController
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlIncubationController
+PROCEDURE destroyObject() CLASS QQmlIncubationController
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QQmlIncubationController * o = new QQmlIncubationController ();
+    QQmlIncubationController * o = new QQmlIncubationController();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlEngine * ptr = obj->engine ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QQMLENGINE" );
+      QQmlEngine * ptr = obj->engine();
+      _qt5xhb_createReturnQObjectClass( ptr, "QQMLENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEFOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->incubateFor ( PINT(1) );
+      obj->incubateFor( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
     {
 #endif
       bool par1;
-      obj->incubateWhile ( &par1, OPINT(2,0) );
+      obj->incubateWhile( &par1, OPINT(2,0) );
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->incubatingObjectCount () );
+      RINT( obj->incubatingObjectCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
