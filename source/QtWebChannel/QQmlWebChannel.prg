@@ -26,7 +26,7 @@ CLASS QQmlWebChannel INHERIT QWebChannel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQmlWebChannel
+PROCEDURE destroyObject() CLASS QQmlWebChannel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QQmlWebChannel * o = new QQmlWebChannel ( OPQOBJECT(1,0) );
+    QQmlWebChannel * o = new QQmlWebChannel( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_CONNECTTO )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->connectTo ( PQOBJECT(1) );
+      obj->connectTo( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_DISCONNECTFROM )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->disconnectFrom ( PQOBJECT(1) );
+      obj->disconnectFrom( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

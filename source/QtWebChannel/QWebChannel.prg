@@ -32,7 +32,7 @@ CLASS QWebChannel INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebChannel
+PROCEDURE destroyObject() CLASS QWebChannel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QWebChannel * o = new QWebChannel ( OPQOBJECT(1,0) );
+    QWebChannel * o = new QWebChannel( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
     if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
     {
 #endif
-      obj->registerObject ( PQSTRING(1), PQOBJECT(2) );
+      obj->registerObject( PQSTRING(1), PQOBJECT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      obj->deregisterObject ( PQOBJECT(1) );
+      obj->deregisterObject( PQOBJECT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->blockUpdates () );
+      RBOOL( obj->blockUpdates() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setBlockUpdates ( PBOOL(1) );
+      obj->setBlockUpdates( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
     if( ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1) )
     {
 #endif
-      obj->connectTo ( PQWEBCHANNELABSTRACTTRANSPORT(1) );
+      obj->connectTo( PQWEBCHANNELABSTRACTTRANSPORT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
     if( ISNUMPAR(1) && ISQWEBCHANNELABSTRACTTRANSPORT(1) )
     {
 #endif
-      obj->disconnectFrom ( PQWEBCHANNELABSTRACTTRANSPORT(1) );
+      obj->disconnectFrom( PQWEBCHANNELABSTRACTTRANSPORT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 #endif
 }
 
-void QWebChannelSlots_connect_signal ( const QString & signal, const QString & slot );
+void QWebChannelSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QWEBCHANNEL_ONBLOCKUPDATESCHANGED )
 {

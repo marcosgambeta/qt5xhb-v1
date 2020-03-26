@@ -26,7 +26,7 @@ void QWebChannelAbstractTransportSlots::messageReceived( const QJsonObject & mes
   PHB_ITEM cb = Signals_return_codeblock( object, "messageReceived(QJsonObject,QWebChannelAbstractTransport*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBCHANNELABSTRACTTRANSPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBCHANNELABSTRACTTRANSPORT" );
     PHB_ITEM pmessage = Signals_return_object( (void *) &message, "QJSONOBJECT" );
     PHB_ITEM ptransport = Signals_return_qobject( (QObject *) transport, "QWEBCHANNELABSTRACTTRANSPORT" );
     hb_vmEvalBlockV( cb, 3, psender, pmessage, ptransport );
@@ -37,7 +37,7 @@ void QWebChannelAbstractTransportSlots::messageReceived( const QJsonObject & mes
 }
 #endif
 
-void QWebChannelAbstractTransportSlots_connect_signal ( const QString & signal, const QString & slot )
+void QWebChannelAbstractTransportSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannelAbstractTransport * obj = (QWebChannelAbstractTransport *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

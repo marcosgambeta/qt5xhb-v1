@@ -26,7 +26,7 @@ void QWebChannelSlots::blockUpdatesChanged( bool block )
   PHB_ITEM cb = Signals_return_codeblock( object, "blockUpdatesChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QWEBCHANNEL" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBCHANNEL" );
     PHB_ITEM pblock = hb_itemPutL( NULL, block );
     hb_vmEvalBlockV( cb, 2, psender, pblock );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QWebChannelSlots::blockUpdatesChanged( bool block )
 }
 #endif
 
-void QWebChannelSlots_connect_signal ( const QString & signal, const QString & slot )
+void QWebChannelSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QWebChannel * obj = (QWebChannel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
