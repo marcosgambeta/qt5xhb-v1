@@ -30,7 +30,7 @@ CLASS QPageSetupDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPageSetupDialog
+PROCEDURE destroyObject() CLASS QPageSetupDialog
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,18 +55,18 @@ RETURN
 /*
 QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
-void QPageSetupDialog_new1 ()
+void QPageSetupDialog_new1()
 {
-  QPageSetupDialog * o = new QPageSetupDialog ( PQPRINTER(1), OPQWIDGET(2,0) );
+  QPageSetupDialog * o = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QPageSetupDialog ( QWidget * parent = 0 )
 */
-void QPageSetupDialog_new2 ()
+void QPageSetupDialog_new2()
 {
-  QPageSetupDialog * o = new QPageSetupDialog ( OPQWIDGET(1,0) );
+  QPageSetupDialog * o = new QPageSetupDialog( OPQWIDGET(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
     {
 #endif
-      obj->open ( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,8 +145,8 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPrinter * ptr = obj->printer ();
-      _qt5xhb_createReturnClass ( ptr, "QPRINTER", false );
+      QPrinter * ptr = obj->printer();
+      _qt5xhb_createReturnClass( ptr, "QPRINTER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_EXEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->exec () );
+      RINT( obj->exec() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->done ( PINT(1) );
+      obj->done( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

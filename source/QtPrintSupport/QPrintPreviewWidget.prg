@@ -50,7 +50,7 @@ CLASS QPrintPreviewWidget INHERIT QWidget
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPrintPreviewWidget
+PROCEDURE destroyObject() CLASS QPrintPreviewWidget
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -75,18 +75,18 @@ RETURN
 /*
 explicit QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-void QPrintPreviewWidget_new1 ()
+void QPrintPreviewWidget_new1()
 {
-  QPrintPreviewWidget * o = new QPrintPreviewWidget ( PQPRINTER(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  QPrintPreviewWidget * o = new QPrintPreviewWidget( PQPRINTER(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 explicit QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
-void QPrintPreviewWidget_new2 ()
+void QPrintPreviewWidget_new2()
 {
-  QPrintPreviewWidget * o = new QPrintPreviewWidget ( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  QPrintPreviewWidget * o = new QPrintPreviewWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_CURRENTPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->currentPage () );
+      RINT( obj->currentPage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->orientation () );
+      RENUM( obj->orientation() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PAGECOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->pageCount () );
+      RINT( obj->pageCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_VIEWMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->viewMode () );
+      RENUM( obj->viewMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMFACTOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->zoomFactor () );
+      RQREAL( obj->zoomFactor() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->zoomMode () );
+      RENUM( obj->zoomMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVISIBLE )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setVisible ( PBOOL(1) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITINVIEW )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->fitInView ();
+      obj->fitInView();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_FITTOWIDTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->fitToWidth ();
+      obj->fitToWidth();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_PRINT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->print ();
+      obj->print();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->setAllPagesViewMode ();
+      obj->setAllPagesViewMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETCURRENTPAGE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setCurrentPage ( PINT(1) );
+      obj->setCurrentPage( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETFACINGPAGESVIEWMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->setFacingPagesViewMode ();
+      obj->setFacingPagesViewMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->setLandscapeOrientation ();
+      obj->setLandscapeOrientation();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETORIENTATION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOrientation ( (QPrinter::Orientation) hb_parni(1) );
+      obj->setOrientation( (QPrinter::Orientation) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETPORTRAITORIENTATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->setPortraitOrientation ();
+      obj->setPortraitOrientation();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->setSinglePageViewMode ();
+      obj->setSinglePageViewMode();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setViewMode ( (QPrintPreviewWidget::ViewMode) hb_parni(1) );
+      obj->setViewMode( (QPrintPreviewWidget::ViewMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setZoomFactor ( PQREAL(1) );
+      obj->setZoomFactor( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setZoomMode ( (QPrintPreviewWidget::ZoomMode) hb_parni(1) );
+      obj->setZoomMode( (QPrintPreviewWidget::ZoomMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->updatePreview ();
+      obj->updatePreview();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      obj->zoomIn ( OPQREAL(1,1.1) );
+      obj->zoomIn( OPQREAL(1,1.1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      obj->zoomOut ( OPQREAL(1,1.1) );
+      obj->zoomOut( OPQREAL(1,1.1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QPrintPreviewWidgetSlots_connect_signal ( const QString & signal, const QString & slot );
+void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 {

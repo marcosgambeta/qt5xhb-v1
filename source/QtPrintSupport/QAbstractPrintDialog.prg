@@ -39,7 +39,7 @@ CLASS QAbstractPrintDialog INHERIT QDialog
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractPrintDialog
+PROCEDURE destroyObject() CLASS QAbstractPrintDialog
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->exec () );
+      RINT( obj->exec() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->fromPage () );
+      RINT( obj->fromPage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->maxPage () );
+      RINT( obj->maxPage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->minPage () );
+      RINT( obj->minPage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->printRange () );
+      RENUM( obj->printRange() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,8 +211,8 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPrinter * ptr = obj->printer ();
-      _qt5xhb_createReturnClass ( ptr, "QPRINTER", false );
+      QPrinter * ptr = obj->printer();
+      _qt5xhb_createReturnClass( ptr, "QPRINTER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETFROMTO )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setFromTo ( PINT(1), PINT(2) );
+      obj->setFromTo( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETMINMAX )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setMinMax ( PINT(1), PINT(2) );
+      obj->setMinMax( PINT(1), PINT(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETOPTIONTABS )
       {
         par1 << (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
-      obj->setOptionTabs ( par1 );
+      obj->setOptionTabs( par1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setPrintRange ( (QAbstractPrintDialog::PrintRange) hb_parni(1) );
+      obj->setPrintRange( (QAbstractPrintDialog::PrintRange) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->toPage () );
+      RINT( obj->toPage() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ADDENABLEDOPTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->addEnabledOption ( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) );
+      obj->addEnabledOption( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setEnabledOptions ( (QAbstractPrintDialog::PrintDialogOptions) hb_parni(1) );
+      obj->setEnabledOptions( (QAbstractPrintDialog::PrintDialogOptions) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ENABLEDOPTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->enabledOptions () );
+      RENUM( obj->enabledOptions() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ISOPTIONENABLED )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isOptionEnabled ( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) ) );
+      RBOOL( obj->isOptionEnabled( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -25,7 +25,7 @@ void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
   PHB_ITEM cb = Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPRINTPREVIEWWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPRINTPREVIEWWIDGET" );
     PHB_ITEM pprinter = Signals_return_object( (void *) printer, "QPRINTER" );
     hb_vmEvalBlockV( cb, 2, psender, pprinter );
     hb_itemRelease( psender );
@@ -38,13 +38,13 @@ void QPrintPreviewWidgetSlots::previewChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "previewChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QPRINTPREVIEWWIDGET" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPRINTPREVIEWWIDGET" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QPrintPreviewWidgetSlots_connect_signal ( const QString & signal, const QString & slot )
+void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

@@ -56,7 +56,7 @@ CLASS QPrinterInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QPrinterInfo
+PROCEDURE destroyObject() CLASS QPrinterInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -83,27 +83,27 @@ RETURN
 /*
 QPrinterInfo ()
 */
-void QPrinterInfo_new1 ()
+void QPrinterInfo_new1()
 {
-  QPrinterInfo * o = new QPrinterInfo ();
+  QPrinterInfo * o = new QPrinterInfo();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QPrinterInfo ( const QPrinterInfo & src )
 */
-void QPrinterInfo_new2 ()
+void QPrinterInfo_new2()
 {
-  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTERINFO(1) );
+  QPrinterInfo * o = new QPrinterInfo( *PQPRINTERINFO(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 explicit QPrinterInfo ( const QPrinter & printer )
 */
-void QPrinterInfo_new3 ()
+void QPrinterInfo_new3()
 {
-  QPrinterInfo * o = new QPrinterInfo ( *PQPRINTER(1) );
+  QPrinterInfo * o = new QPrinterInfo( *PQPRINTER(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isDefault () );
+      RBOOL( obj->isDefault() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isNull () );
+      RBOOL( obj->isNull() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->printerName () );
+      RQSTRING( obj->printerName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPrinter::PaperSize> list = obj->supportedPaperSizes ();
+      QList<QPrinter::PaperSize> list = obj->supportedPaperSizes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
   if( ISNUMPAR(0) )
   {
 #endif
-    QList<QPrinterInfo> list = QPrinterInfo::availablePrinters ();
+    QList<QPrinterInfo> list = QPrinterInfo::availablePrinters();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QPrinterInfo *) new QPrinterInfo ( list[i] ) );
+        hb_itemPutPtr( pItem, (QPrinterInfo *) new QPrinterInfo( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -308,8 +308,8 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
   if( ISNUMPAR(0) )
   {
 #endif
-    QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter () );
-    _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+    QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter() );
+    _qt5xhb_createReturnClass( ptr, "QPRINTERINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->description () );
+      RQSTRING( obj->description() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QPRINTERINFO_LOCATION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->location () );
+      RQSTRING( obj->location() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QPRINTERINFO_MAKEANDMODEL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->makeAndModel () );
+      RQSTRING( obj->makeAndModel() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISREMOTE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isRemote () );
+      RBOOL( obj->isRemote() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QPRINTERINFO_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPageSize> list = obj->supportedPageSizes ();
+      QList<QPageSize> list = obj->supportedPageSizes();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPAGESIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAGESIZES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPageSize *) new QPageSize ( list[i] ) );
+          hb_itemPutPtr( pItem, (QPageSize *) new QPageSize( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -511,8 +511,8 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPAGESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPageSize * ptr = new QPageSize( obj->defaultPageSize () );
-      _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+      QPageSize * ptr = new QPageSize( obj->defaultPageSize() );
+      _qt5xhb_createReturnClass( ptr, "QPAGESIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTSCUSTOMPAGESIZES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->supportsCustomPageSizes () );
+      RBOOL( obj->supportsCustomPageSizes() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,8 +564,8 @@ HB_FUNC_STATIC( QPRINTERINFO_MINIMUMPHYSICALPAGESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPageSize * ptr = new QPageSize( obj->minimumPhysicalPageSize () );
-      _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+      QPageSize * ptr = new QPageSize( obj->minimumPhysicalPageSize() );
+      _qt5xhb_createReturnClass( ptr, "QPAGESIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,8 +591,8 @@ HB_FUNC_STATIC( QPRINTERINFO_MAXIMUMPHYSICALPAGESIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QPageSize * ptr = new QPageSize( obj->maximumPhysicalPageSize () );
-      _qt5xhb_createReturnClass ( ptr, "QPAGESIZE", true );
+      QPageSize * ptr = new QPageSize( obj->maximumPhysicalPageSize() );
+      _qt5xhb_createReturnClass( ptr, "QPAGESIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,8 +618,8 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDRESOLUTIONS )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<int> list = obj->supportedResolutions ();
-      _qt5xhb_convert_qlist_int_to_array ( list );
+      QList<int> list = obj->supportedResolutions();
+      _qt5xhb_convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERNAMES )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QPrinterInfo::availablePrinterNames () );
+    RQSTRINGLIST( QPrinterInfo::availablePrinterNames() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRING( QPrinterInfo::defaultPrinterName () );
+    RQSTRING( QPrinterInfo::defaultPrinterName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -682,8 +682,8 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERINFO )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-    QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::printerInfo ( PQSTRING(1) ) );
-    _qt5xhb_createReturnClass ( ptr, "QPRINTERINFO", true );
+    QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::printerInfo( PQSTRING(1) ) );
+    _qt5xhb_createReturnClass( ptr, "QPRINTERINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTDUPLEXMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->defaultDuplexMode () );
+      RENUM( obj->defaultDuplexMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDDUPLEXMODES )
     if( ISNUMPAR(0) )
     {
 #endif
-      QList<QPrinter::DuplexMode> list = obj->supportedDuplexModes ();
+      QList<QPrinter::DuplexMode> list = obj->supportedDuplexModes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       for( int i = 0; i < list.count(); i++ )
       {
