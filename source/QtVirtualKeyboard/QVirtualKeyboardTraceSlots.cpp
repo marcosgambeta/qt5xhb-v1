@@ -25,7 +25,7 @@ void QVirtualKeyboardTraceSlots::traceIdChanged( int traceId )
   PHB_ITEM cb = Signals_return_codeblock( object, "traceIdChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
     PHB_ITEM ptraceId = hb_itemPutNI( NULL, traceId );
     hb_vmEvalBlockV( cb, 2, psender, ptraceId );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QVirtualKeyboardTraceSlots::channelsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "channelsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -49,7 +49,7 @@ void QVirtualKeyboardTraceSlots::lengthChanged( int length )
   PHB_ITEM cb = Signals_return_codeblock( object, "lengthChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
     PHB_ITEM plength = hb_itemPutNI( NULL, length );
     hb_vmEvalBlockV( cb, 2, psender, plength );
     hb_itemRelease( psender );
@@ -62,7 +62,7 @@ void QVirtualKeyboardTraceSlots::finalChanged( bool isFinal )
   PHB_ITEM cb = Signals_return_codeblock( object, "finalChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
     PHB_ITEM pisFinal = hb_itemPutL( NULL, isFinal );
     hb_vmEvalBlockV( cb, 2, psender, pisFinal );
     hb_itemRelease( psender );
@@ -75,7 +75,7 @@ void QVirtualKeyboardTraceSlots::canceledChanged( bool isCanceled )
   PHB_ITEM cb = Signals_return_codeblock( object, "canceledChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
     PHB_ITEM pisCanceled = hb_itemPutL( NULL, isCanceled );
     hb_vmEvalBlockV( cb, 2, psender, pisCanceled );
     hb_itemRelease( psender );
@@ -88,7 +88,7 @@ void QVirtualKeyboardTraceSlots::opacityChanged( qreal opacity )
   PHB_ITEM cb = Signals_return_codeblock( object, "opacityChanged(qreal)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
     PHB_ITEM popacity = hb_itemPutND( NULL, opacity );
     hb_vmEvalBlockV( cb, 2, psender, popacity );
     hb_itemRelease( psender );
@@ -96,7 +96,7 @@ void QVirtualKeyboardTraceSlots::opacityChanged( qreal opacity )
   }
 }
 
-void QVirtualKeyboardTraceSlots_connect_signal ( const QString & signal, const QString & slot )
+void QVirtualKeyboardTraceSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

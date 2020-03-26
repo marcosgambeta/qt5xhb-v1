@@ -25,7 +25,7 @@ void QVirtualKeyboardInputContextSlots::preeditTextChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "preeditTextChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QVirtualKeyboardInputContextSlots::inputMethodHintsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "inputMethodHintsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -47,7 +47,7 @@ void QVirtualKeyboardInputContextSlots::surroundingTextChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "surroundingTextChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -58,7 +58,7 @@ void QVirtualKeyboardInputContextSlots::selectedTextChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedTextChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -69,7 +69,7 @@ void QVirtualKeyboardInputContextSlots::anchorPositionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "anchorPositionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -80,7 +80,7 @@ void QVirtualKeyboardInputContextSlots::cursorPositionChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorPositionChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -91,7 +91,7 @@ void QVirtualKeyboardInputContextSlots::anchorRectangleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "anchorRectangleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -102,7 +102,7 @@ void QVirtualKeyboardInputContextSlots::cursorRectangleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorRectangleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -113,7 +113,7 @@ void QVirtualKeyboardInputContextSlots::shiftActiveChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "shiftActiveChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -124,7 +124,7 @@ void QVirtualKeyboardInputContextSlots::capsLockActiveChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "capsLockActiveChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -135,7 +135,7 @@ void QVirtualKeyboardInputContextSlots::uppercaseChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "uppercaseChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -146,7 +146,7 @@ void QVirtualKeyboardInputContextSlots::animatingChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "animatingChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -157,7 +157,7 @@ void QVirtualKeyboardInputContextSlots::localeChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "localeChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -168,7 +168,7 @@ void QVirtualKeyboardInputContextSlots::selectionControlVisibleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionControlVisibleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -179,7 +179,7 @@ void QVirtualKeyboardInputContextSlots::anchorRectIntersectsClipRectChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "anchorRectIntersectsClipRectChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -190,13 +190,13 @@ void QVirtualKeyboardInputContextSlots::cursorRectIntersectsClipRectChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorRectIntersectsClipRectChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTCONTEXT" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QVirtualKeyboardInputContextSlots_connect_signal ( const QString & signal, const QString & slot )
+void QVirtualKeyboardInputContextSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

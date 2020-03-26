@@ -27,7 +27,7 @@ CLASS QVirtualKeyboardSelectionListModel INHERIT QAbstractListModel
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardSelectionListModel
+PROCEDURE destroyObject() CLASS QVirtualKeyboardSelectionListModel
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -108,7 +108,7 @@ void selectionListChanged(Type type) [protected] [slot]
 void selectionListActiveItemChanged(Type type, int index) [protected] [slot]
 */
 
-void QVirtualKeyboardSelectionListModelSlots_connect_signal ( const QString & signal, const QString & slot );
+void QVirtualKeyboardSelectionListModelSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDSELECTIONLISTMODEL_ONCOUNTCHANGED )
 {

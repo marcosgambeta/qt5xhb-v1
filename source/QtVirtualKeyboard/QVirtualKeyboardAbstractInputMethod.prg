@@ -27,7 +27,7 @@ CLASS QVirtualKeyboardAbstractInputMethod INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardAbstractInputMethod
+PROCEDURE destroyObject() CLASS QVirtualKeyboardAbstractInputMethod
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -131,7 +131,7 @@ virtual void update() [slot]
 void setInputEngine(QVirtualKeyboardInputEngine *inputEngine) [private]
 */
 
-void QVirtualKeyboardAbstractInputMethodSlots_connect_signal ( const QString & signal, const QString & slot );
+void QVirtualKeyboardAbstractInputMethodSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDABSTRACTINPUTMETHOD_ONSELECTIONLISTCHANGED )
 {

@@ -25,7 +25,7 @@ void QVirtualKeyboardInputEngineSlots::virtualKeyClicked( Qt::Key key, const QSt
   PHB_ITEM cb = Signals_return_codeblock( object, "virtualKeyClicked(Qt::Key,QString,Qt::KeyboardModifiers,bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     PHB_ITEM pmodifiers = hb_itemPutNI( NULL, (int) modifiers );
@@ -44,7 +44,7 @@ void QVirtualKeyboardInputEngineSlots::activeKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "activeKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -57,7 +57,7 @@ void QVirtualKeyboardInputEngineSlots::previousKeyChanged( Qt::Key key )
   PHB_ITEM cb = Signals_return_codeblock( object, "previousKeyChanged(Qt::Key)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     hb_vmEvalBlockV( cb, 2, psender, pkey );
     hb_itemRelease( psender );
@@ -70,7 +70,7 @@ void QVirtualKeyboardInputEngineSlots::inputMethodChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "inputMethodChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -81,7 +81,7 @@ void QVirtualKeyboardInputEngineSlots::inputMethodReset()
   PHB_ITEM cb = Signals_return_codeblock( object, "inputMethodReset()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -92,7 +92,7 @@ void QVirtualKeyboardInputEngineSlots::inputMethodUpdate()
   PHB_ITEM cb = Signals_return_codeblock( object, "inputMethodUpdate()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -103,7 +103,7 @@ void QVirtualKeyboardInputEngineSlots::inputModesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "inputModesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -114,7 +114,7 @@ void QVirtualKeyboardInputEngineSlots::inputModeChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "inputModeChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -125,7 +125,7 @@ void QVirtualKeyboardInputEngineSlots::patternRecognitionModesChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "patternRecognitionModesChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -136,7 +136,7 @@ void QVirtualKeyboardInputEngineSlots::wordCandidateListModelChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "wordCandidateListModelChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -147,13 +147,13 @@ void QVirtualKeyboardInputEngineSlots::wordCandidateListVisibleHintChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "wordCandidateListVisibleHintChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QVirtualKeyboardInputEngineSlots_connect_signal ( const QString & signal, const QString & slot )
+void QVirtualKeyboardInputEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

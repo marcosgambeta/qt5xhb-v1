@@ -35,7 +35,7 @@ CLASS QVirtualKeyboardInputEngine INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardInputEngine
+PROCEDURE destroyObject() CLASS QVirtualKeyboardInputEngine
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -168,7 +168,7 @@ void updateInputModes() [private] [slot]
 void timerEvent(QTimerEvent *timerEvent) [protected]
 */
 
-void QVirtualKeyboardInputEngineSlots_connect_signal ( const QString & signal, const QString & slot );
+void QVirtualKeyboardInputEngineSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ONVIRTUALKEYCLICKED )
 {

@@ -23,7 +23,7 @@ CLASS QVirtualKeyboardExtensionPlugin INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardExtensionPlugin
+PROCEDURE destroyObject() CLASS QVirtualKeyboardExtensionPlugin
    IF ::self_destruction
       ::delete()
    ENDIF

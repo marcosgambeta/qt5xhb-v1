@@ -30,7 +30,7 @@ CLASS QVirtualKeyboardTrace INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardTrace
+PROCEDURE destroyObject() CLASS QVirtualKeyboardTrace
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -128,7 +128,7 @@ Q_INVOKABLE void setChannelData(const QString &channel, int index, const QVarian
 Q_INVOKABLE QVariantList channelData(const QString &channel, int pos = 0, int count = -1) const
 */
 
-void QVirtualKeyboardTraceSlots_connect_signal ( const QString & signal, const QString & slot );
+void QVirtualKeyboardTraceSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_ONTRACEIDCHANGED )
 {

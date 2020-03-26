@@ -40,7 +40,7 @@ CLASS QVirtualKeyboardInputContext INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVirtualKeyboardInputContext
+PROCEDURE destroyObject() CLASS QVirtualKeyboardInputContext
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -183,7 +183,7 @@ Q_INVOKABLE void clear()
 Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
 */
 
-void QVirtualKeyboardInputContextSlots_connect_signal ( const QString & signal, const QString & slot );
+void QVirtualKeyboardInputContextSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ONPREEDITTEXTCHANGED )
 {

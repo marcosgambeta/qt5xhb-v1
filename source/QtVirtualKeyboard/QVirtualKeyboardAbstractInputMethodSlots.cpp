@@ -25,7 +25,7 @@ void QVirtualKeyboardAbstractInputMethodSlots::selectionListChanged( QVirtualKey
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
     hb_vmEvalBlockV( cb, 2, psender, ptype );
     hb_itemRelease( psender );
@@ -38,7 +38,7 @@ void QVirtualKeyboardAbstractInputMethodSlots::selectionListActiveItemChanged( Q
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     hb_vmEvalBlockV( cb, 3, psender, ptype, pindex );
@@ -53,13 +53,13 @@ void QVirtualKeyboardAbstractInputMethodSlots::selectionListsChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionListsChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QVirtualKeyboardAbstractInputMethodSlots_connect_signal ( const QString & signal, const QString & slot )
+void QVirtualKeyboardAbstractInputMethodSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QVirtualKeyboardAbstractInputMethod * obj = (QVirtualKeyboardAbstractInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
