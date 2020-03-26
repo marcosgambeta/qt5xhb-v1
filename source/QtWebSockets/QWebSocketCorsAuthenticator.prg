@@ -37,7 +37,7 @@ CLASS QWebSocketCorsAuthenticator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QWebSocketCorsAuthenticator
+PROCEDURE destroyObject() CLASS QWebSocketCorsAuthenticator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -69,10 +69,10 @@ RETURN
 /*
 explicit QWebSocketCorsAuthenticator(const QString &origin)
 */
-void QWebSocketCorsAuthenticator_new1 ()
+void QWebSocketCorsAuthenticator_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator ( PQSTRING(1) );
+  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator( PQSTRING(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -80,10 +80,10 @@ void QWebSocketCorsAuthenticator_new1 ()
 /*
 explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
 */
-void QWebSocketCorsAuthenticator_new2 ()
+void QWebSocketCorsAuthenticator_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator ( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
+  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SWAP )
     if( ISNUMPAR(1) && ISQWEBSOCKETCORSAUTHENTICATOR(1) )
     {
 #endif
-      obj->swap ( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
+      obj->swap( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_ORIGIN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->origin () );
+      RQSTRING( obj->origin() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_ALLOWED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->allowed () );
+      RBOOL( obj->allowed() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SETALLOWED )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAllowed ( PBOOL(1) );
+      obj->setAllowed( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
