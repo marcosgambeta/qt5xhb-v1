@@ -35,7 +35,7 @@ CLASS QScriptString
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptString
+PROCEDURE destroyObject() CLASS QScriptString
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -60,18 +60,18 @@ RETURN
 /*
 QScriptString()
 */
-void QScriptString_new1 ()
+void QScriptString_new1()
 {
-  QScriptString * o = new QScriptString ();
+  QScriptString * o = new QScriptString();
   _qt5xhb_returnNewObject( o, true );
 }
 
 /*
 QScriptString(const QScriptString & other)
 */
-void QScriptString_new2 ()
+void QScriptString_new2()
 {
-  QScriptString * o = new QScriptString ( *PQSCRIPTSTRING(1) );
+  QScriptString * o = new QScriptString( *PQSCRIPTSTRING(1) );
   _qt5xhb_returnNewObject( o, true );
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->toString () );
+      RQSTRING( obj->toString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
