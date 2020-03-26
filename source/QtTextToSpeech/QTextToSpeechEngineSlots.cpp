@@ -26,7 +26,7 @@ void QTextToSpeechEngineSlots::stateChanged( QTextToSpeech::State state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QTextToSpeech::State)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QTEXTTOSPEECHENGINE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECHENGINE" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
     hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QTextToSpeechEngineSlots::stateChanged( QTextToSpeech::State state )
 }
 #endif
 
-void QTextToSpeechEngineSlots_connect_signal ( const QString & signal, const QString & slot )
+void QTextToSpeechEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QTextToSpeechEngine * obj = (QTextToSpeechEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

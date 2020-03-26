@@ -38,7 +38,7 @@ CLASS QVoice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QVoice
+PROCEDURE destroyObject() CLASS QVoice
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -63,10 +63,10 @@ RETURN
 /*
 QVoice()
 */
-void QVoice_new1 ()
+void QVoice_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * o = new QVoice ();
+  QVoice * o = new QVoice();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -74,10 +74,10 @@ void QVoice_new1 ()
 /*
 QVoice(const QVoice &other)
 */
-void QVoice_new2 ()
+void QVoice_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * o = new QVoice ( *PQVOICE(1) );
+  QVoice * o = new QVoice( *PQVOICE(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QVOICE_NAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->name () );
+      RQSTRING( obj->name() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QVOICE_GENDER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->gender () );
+      RENUM( obj->gender() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QVOICE_AGE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->age () );
+      RENUM( obj->age() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QVOICE_GENDERNAME )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRING( QVoice::genderName ( (QVoice::Gender) hb_parni(1) ) );
+    RQSTRING( QVoice::genderName( (QVoice::Gender) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QVOICE_AGENAME )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-    RQSTRING( QVoice::ageName ( (QVoice::Age) hb_parni(1) ) );
+    RQSTRING( QVoice::ageName( (QVoice::Age) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

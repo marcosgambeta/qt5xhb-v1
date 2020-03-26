@@ -32,7 +32,7 @@ CLASS QTextToSpeechPlugin
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QTextToSpeechPlugin
+PROCEDURE destroyObject() CLASS QTextToSpeechPlugin
    IF ::self_destruction
       ::delete()
    ENDIF
