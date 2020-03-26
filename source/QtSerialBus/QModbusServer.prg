@@ -25,7 +25,7 @@ CLASS QModbusServer INHERIT QModbusDevice
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModbusServer
+PROCEDURE destroyObject() CLASS QModbusServer
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -136,7 +136,7 @@ virtual QModbusResponse processRequest(const QModbusPdu &request) [protected]
 virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) [protected]
 */
 
-void QModbusServerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QModbusServerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMODBUSSERVER_ONDATAWRITTEN )
 {

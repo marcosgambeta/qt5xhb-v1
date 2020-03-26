@@ -23,7 +23,7 @@ CLASS QModbusRtuSerialSlave INHERIT QModbusServer
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModbusRtuSerialSlave
+PROCEDURE destroyObject() CLASS QModbusRtuSerialSlave
    IF ::self_destruction
       ::delete()
    ENDIF

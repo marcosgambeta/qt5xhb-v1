@@ -26,7 +26,7 @@ void QModbusDeviceSlots::errorOccurred( QModbusDevice::Error error )
   PHB_ITEM cb = Signals_return_codeblock( object, "errorOccurred(QModbusDevice::Error)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMODBUSDEVICE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMODBUSDEVICE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QModbusDeviceSlots::stateChanged( QModbusDevice::State state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QModbusDevice::State)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMODBUSDEVICE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMODBUSDEVICE" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
     hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -50,7 +50,7 @@ void QModbusDeviceSlots::stateChanged( QModbusDevice::State state )
 }
 #endif
 
-void QModbusDeviceSlots_connect_signal ( const QString & signal, const QString & slot )
+void QModbusDeviceSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusDevice * obj = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

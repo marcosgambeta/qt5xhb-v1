@@ -21,7 +21,7 @@ CLASS QCanBusFactoryV2 INHERIT QCanBusFactory
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCanBusFactoryV2
+PROCEDURE destroyObject() CLASS QCanBusFactoryV2
    IF ::self_destruction
       ::delete()
    ENDIF

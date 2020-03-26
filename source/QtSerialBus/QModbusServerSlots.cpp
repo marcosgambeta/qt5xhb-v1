@@ -26,7 +26,7 @@ void QModbusServerSlots::dataWritten( QModbusDataUnit::RegisterType table, int a
   PHB_ITEM cb = Signals_return_codeblock( object, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMODBUSSERVER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMODBUSSERVER" );
     PHB_ITEM ptable = hb_itemPutNI( NULL, (int) table );
     PHB_ITEM paddress = hb_itemPutNI( NULL, address );
     PHB_ITEM psize = hb_itemPutNI( NULL, size );
@@ -39,7 +39,7 @@ void QModbusServerSlots::dataWritten( QModbusDataUnit::RegisterType table, int a
 }
 #endif
 
-void QModbusServerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QModbusServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusServer * obj = (QModbusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

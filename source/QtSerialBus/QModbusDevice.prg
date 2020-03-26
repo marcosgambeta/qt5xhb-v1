@@ -26,7 +26,7 @@ CLASS QModbusDevice INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModbusDevice
+PROCEDURE destroyObject() CLASS QModbusDevice
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -125,7 +125,7 @@ virtual bool open() = 0 [protected]
 virtual void close() = 0 [protected]
 */
 
-void QModbusDeviceSlots_connect_signal ( const QString & signal, const QString & slot );
+void QModbusDeviceSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMODBUSDEVICE_ONERROROCCURRED )
 {

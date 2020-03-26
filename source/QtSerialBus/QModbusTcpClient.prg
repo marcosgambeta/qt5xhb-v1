@@ -24,7 +24,7 @@ CLASS QModbusTcpClient INHERIT QModbusClient
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModbusTcpClient
+PROCEDURE destroyObject() CLASS QModbusTcpClient
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QMODBUSTCPCLIENT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QModbusTcpClient * o = new QModbusTcpClient ( OPQOBJECT(1,nullptr) );
+    QModbusTcpClient * o = new QModbusTcpClient( OPQOBJECT(1,nullptr) );
     _qt5xhb_returnNewObject( o, false );
   }
   else

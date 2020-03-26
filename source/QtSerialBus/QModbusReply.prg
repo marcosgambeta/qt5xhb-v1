@@ -24,7 +24,7 @@ CLASS QModbusReply INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QModbusReply
+PROCEDURE destroyObject() CLASS QModbusReply
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -98,7 +98,7 @@ void setFinished(bool isFinished)
 void setError(QModbusDevice::Error error, const QString &errorText)
 */
 
-void QModbusReplySlots_connect_signal ( const QString & signal, const QString & slot );
+void QModbusReplySlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMODBUSREPLY_ONFINISHED )
 {

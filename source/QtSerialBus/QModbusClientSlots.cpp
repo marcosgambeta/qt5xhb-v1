@@ -26,7 +26,7 @@ void QModbusClientSlots::timeoutChanged( int newTimeout )
   PHB_ITEM cb = Signals_return_codeblock( object, "timeoutChanged(int)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QMODBUSCLIENT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMODBUSCLIENT" );
     PHB_ITEM pnewTimeout = hb_itemPutNI( NULL, newTimeout );
     hb_vmEvalBlockV( cb, 2, psender, pnewTimeout );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QModbusClientSlots::timeoutChanged( int newTimeout )
 }
 #endif
 
-void QModbusClientSlots_connect_signal ( const QString & signal, const QString & slot )
+void QModbusClientSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QModbusClient * obj = (QModbusClient *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

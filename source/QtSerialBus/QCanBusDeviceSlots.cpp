@@ -26,7 +26,7 @@ void QCanBusDeviceSlots::errorOccurred( QCanBusDevice::CanBusError )
   PHB_ITEM cb = Signals_return_codeblock( object, "errorOccurred)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANBUSDEVICE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
     hb_vmEvalBlockV( cb, 1, psender,  );
     hb_itemRelease( psender );
   }
@@ -39,7 +39,7 @@ void QCanBusDeviceSlots::framesReceived()
   PHB_ITEM cb = Signals_return_codeblock( object, "framesReceived()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANBUSDEVICE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -52,7 +52,7 @@ void QCanBusDeviceSlots::framesWritten( qint64 framesCount )
   PHB_ITEM cb = Signals_return_codeblock( object, "framesWritten(qint64)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANBUSDEVICE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
     PHB_ITEM pframesCount = hb_itemPutNLL( NULL, framesCount );
     hb_vmEvalBlockV( cb, 2, psender, pframesCount );
     hb_itemRelease( psender );
@@ -67,7 +67,7 @@ void QCanBusDeviceSlots::stateChanged( QCanBusDevice::CanBusDeviceState state )
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QCANBUSDEVICE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
     hb_vmEvalBlockV( cb, 2, psender, pstate );
     hb_itemRelease( psender );
@@ -76,7 +76,7 @@ void QCanBusDeviceSlots::stateChanged( QCanBusDevice::CanBusDeviceState state )
 }
 #endif
 
-void QCanBusDeviceSlots_connect_signal ( const QString & signal, const QString & slot )
+void QCanBusDeviceSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QCanBusDevice * obj = (QCanBusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

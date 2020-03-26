@@ -28,7 +28,7 @@ CLASS QCanBus INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QCanBus
+PROCEDURE destroyObject() CLASS QCanBus
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,8 +70,8 @@ HB_FUNC_STATIC( QCANBUS_INSTANCE )
   if( ISNUMPAR(0) )
   {
 #endif
-    QCanBus * ptr = QCanBus::instance ();
-    _qt5xhb_createReturnQObjectClass ( ptr, "QCANBUS" );
+    QCanBus * ptr = QCanBus::instance();
+    _qt5xhb_createReturnQObjectClass( ptr, "QCANBUS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QCANBUS_PLUGINS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRINGLIST( obj->plugins () );
+      RQSTRINGLIST( obj->plugins() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
     if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
     {
 #endif
-      QList<QCanBusDeviceInfo> list = obj->availableDevices ( PQSTRING(1), NULL );
+      QList<QCanBusDeviceInfo> list = obj->availableDevices( PQSTRING(1), NULL );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QCANBUSDEVICEINFO" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QCanBusDeviceInfo *) new QCanBusDeviceInfo ( list[i] ) );
+          hb_itemPutPtr( pItem, (QCanBusDeviceInfo *) new QCanBusDeviceInfo( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -176,8 +176,8 @@ HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
     if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
     {
 #endif
-      QCanBusDevice * ptr = obj->createDevice ( PQSTRING(1), PQSTRING(2), NULL );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QCANBUSDEVICE" );
+      QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), PQSTRING(2), NULL );
+      _qt5xhb_createReturnQObjectClass( ptr, "QCANBUSDEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
