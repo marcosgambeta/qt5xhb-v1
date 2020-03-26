@@ -25,13 +25,13 @@ void QSvgRendererSlots::repaintNeeded()
   PHB_ITEM cb = Signals_return_codeblock( object, "repaintNeeded()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSVGRENDERER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSVGRENDERER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QSvgRendererSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSvgRendererSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
