@@ -42,7 +42,7 @@ CLASS QGeoAreaMonitorSource INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoAreaMonitorSource
+PROCEDURE destroyObject() CLASS QGeoAreaMonitorSource
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE )
     if( ISNUMPAR(1) && ISQGEOPOSITIONINFOSOURCE(1) )
     {
 #endif
-      obj->setPositionInfoSource ( PQGEOPOSITIONINFOSOURCE(1) );
+      obj->setPositionInfoSource( PQGEOPOSITIONINFOSOURCE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,8 +133,8 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoPositionInfoSource * ptr = obj->positionInfoSource ();
-      _qt5xhb_createReturnClass ( ptr, "QGEOPOSITIONINFOSOURCE", false );
+      QGeoPositionInfoSource * ptr = obj->positionInfoSource();
+      _qt5xhb_createReturnClass( ptr, "QGEOPOSITIONINFOSOURCE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SOURCENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->sourceName () );
+      RQSTRING( obj->sourceName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->supportedAreaMonitorFeatures () );
+      RENUM( obj->supportedAreaMonitorFeatures() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STARTMONITORING )
     if( ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1) )
     {
 #endif
-      RBOOL( obj->startMonitoring ( *PQGEOAREAMONITORINFO(1) ) );
+      RBOOL( obj->startMonitoring( *PQGEOAREAMONITORINFO(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STOPMONITORING )
     if( ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1) )
     {
 #endif
-      RBOOL( obj->stopMonitoring ( *PQGEOAREAMONITORINFO(1) ) );
+      RBOOL( obj->stopMonitoring( *PQGEOAREAMONITORINFO(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_REQUESTUPDATE )
     if( ISNUMPAR(2) && ISQGEOAREAMONITORINFO(1) && ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->requestUpdate ( *PQGEOAREAMONITORINFO(1), PCONSTCHAR(2) ) );
+      RBOOL( obj->requestUpdate( *PQGEOAREAMONITORINFO(1), PCONSTCHAR(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,14 +305,14 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_REQUESTUPDATE )
 /*
 virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
 */
-void QGeoAreaMonitorSource_activeMonitors1 ()
+void QGeoAreaMonitorSource_activeMonitors1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ();
+    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -325,7 +325,7 @@ void QGeoAreaMonitorSource_activeMonitors1 ()
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGeoAreaMonitorInfo *) new QGeoAreaMonitorInfo ( list[i] ) );
+        hb_itemPutPtr( pItem, (QGeoAreaMonitorInfo *) new QGeoAreaMonitorInfo( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -348,14 +348,14 @@ void QGeoAreaMonitorSource_activeMonitors1 ()
 /*
 virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
 */
-void QGeoAreaMonitorSource_activeMonitors2 ()
+void QGeoAreaMonitorSource_activeMonitors2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) _qt5xhb_itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors ( *PQGEOSHAPE(1) );
+    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors( *PQGEOSHAPE(1) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -368,7 +368,7 @@ void QGeoAreaMonitorSource_activeMonitors2 ()
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGeoAreaMonitorInfo *) new QGeoAreaMonitorInfo ( list[i] ) );
+        hb_itemPutPtr( pItem, (QGeoAreaMonitorInfo *) new QGeoAreaMonitorInfo( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -417,8 +417,8 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createDefaultSource ( PQOBJECT(1) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOAREAMONITORSOURCE" );
+    QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createDefaultSource( PQOBJECT(1) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QGEOAREAMONITORSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -439,8 +439,8 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATESOURCE )
   if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
 #endif
-    QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createSource ( PQSTRING(1), PQOBJECT(2) );
-    _qt5xhb_createReturnQObjectClass ( ptr, "QGEOAREAMONITORSOURCE" );
+    QGeoAreaMonitorSource * ptr = QGeoAreaMonitorSource::createSource( PQSTRING(1), PQOBJECT(2) );
+    _qt5xhb_createReturnQObjectClass( ptr, "QGEOAREAMONITORSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_AVAILABLESOURCES )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QGeoAreaMonitorSource::availableSources () );
+    RQSTRINGLIST( QGeoAreaMonitorSource::availableSources() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_AVAILABLESOURCES )
 #endif
 }
 
-void QGeoAreaMonitorSourceSlots_connect_signal ( const QString & signal, const QString & slot );
+void QGeoAreaMonitorSourceSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ONAREAENTERED )
 {

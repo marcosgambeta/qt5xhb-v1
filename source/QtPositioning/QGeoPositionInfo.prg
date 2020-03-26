@@ -44,7 +44,7 @@ CLASS QGeoPositionInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoPositionInfo
+PROCEDURE destroyObject() CLASS QGeoPositionInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -73,10 +73,10 @@ RETURN
 /*
 QGeoPositionInfo()
 */
-void QGeoPositionInfo_new1 ()
+void QGeoPositionInfo_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * o = new QGeoPositionInfo ();
+  QGeoPositionInfo * o = new QGeoPositionInfo();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -84,10 +84,10 @@ void QGeoPositionInfo_new1 ()
 /*
 QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
 */
-void QGeoPositionInfo_new2 ()
+void QGeoPositionInfo_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * o = new QGeoPositionInfo ( *PQGEOCOORDINATE(1), *PQDATETIME(2) );
+  QGeoPositionInfo * o = new QGeoPositionInfo( *PQGEOCOORDINATE(1), *PQDATETIME(2) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -95,10 +95,10 @@ void QGeoPositionInfo_new2 ()
 /*
 QGeoPositionInfo(const QGeoPositionInfo &other)
 */
-void QGeoPositionInfo_new3 ()
+void QGeoPositionInfo_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * o = new QGeoPositionInfo ( *PQGEOPOSITIONINFO(1) );
+  QGeoPositionInfo * o = new QGeoPositionInfo( *PQGEOPOSITIONINFO(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ISVALID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isValid () );
+      RBOOL( obj->isValid() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETTIMESTAMP )
     if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      obj->setTimestamp ( *PQDATETIME(1) );
+      obj->setTimestamp( *PQDATETIME(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,8 +214,8 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_TIMESTAMP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->timestamp () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->timestamp() );
+      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETCOORDINATE )
     if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
     {
 #endif
-      obj->setCoordinate ( *PQGEOCOORDINATE(1) );
+      obj->setCoordinate( *PQGEOCOORDINATE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,8 +269,8 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_COORDINATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QGeoCoordinate * ptr = new QGeoCoordinate( obj->coordinate () );
-      _qt5xhb_createReturnClass ( ptr, "QGEOCOORDINATE", true );
+      QGeoCoordinate * ptr = new QGeoCoordinate( obj->coordinate() );
+      _qt5xhb_createReturnClass( ptr, "QGEOCOORDINATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETATTRIBUTE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setAttribute ( (QGeoPositionInfo::Attribute) hb_parni(1), PQREAL(2) );
+      obj->setAttribute( (QGeoPositionInfo::Attribute) hb_parni(1), PQREAL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ATTRIBUTE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQREAL( obj->attribute ( (QGeoPositionInfo::Attribute) hb_parni(1) ) );
+      RQREAL( obj->attribute( (QGeoPositionInfo::Attribute) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_REMOVEATTRIBUTE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->removeAttribute ( (QGeoPositionInfo::Attribute) hb_parni(1) );
+      obj->removeAttribute( (QGeoPositionInfo::Attribute) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_HASATTRIBUTE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasAttribute ( (QGeoPositionInfo::Attribute) hb_parni(1) ) );
+      RBOOL( obj->hasAttribute( (QGeoPositionInfo::Attribute) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

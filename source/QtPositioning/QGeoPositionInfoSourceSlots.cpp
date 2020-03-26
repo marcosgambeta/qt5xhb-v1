@@ -26,7 +26,7 @@ void QGeoPositionInfoSourceSlots::positionUpdated( const QGeoPositionInfo & upda
   PHB_ITEM cb = Signals_return_codeblock( object, "positionUpdated(QGeoPositionInfo)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
     PHB_ITEM pupdate = Signals_return_object( (void *) &update, "QGEOPOSITIONINFO" );
     hb_vmEvalBlockV( cb, 2, psender, pupdate );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QGeoPositionInfoSourceSlots::updateTimeout()
   PHB_ITEM cb = Signals_return_codeblock( object, "updateTimeout()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -54,7 +54,7 @@ void QGeoPositionInfoSourceSlots::error( QGeoPositionInfoSource::Error error )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoPositionInfoSource::Error)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -63,7 +63,7 @@ void QGeoPositionInfoSourceSlots::error( QGeoPositionInfoSource::Error error )
 }
 #endif
 
-void QGeoPositionInfoSourceSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGeoPositionInfoSourceSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoPositionInfoSource * obj = (QGeoPositionInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

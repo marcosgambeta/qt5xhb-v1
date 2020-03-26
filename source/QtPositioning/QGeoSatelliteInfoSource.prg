@@ -39,7 +39,7 @@ CLASS QGeoSatelliteInfoSource INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoSatelliteInfoSource
+PROCEDURE destroyObject() CLASS QGeoSatelliteInfoSource
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SOURCENAME )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->sourceName () );
+      RQSTRING( obj->sourceName() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SETUPDATEINTERVAL )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setUpdateInterval ( PINT(1) );
+      obj->setUpdateInterval( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_UPDATEINTERVAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->updateInterval () );
+      RINT( obj->updateInterval() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_MINIMUMUPDATEINTERVAL )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->minimumUpdateInterval () );
+      RINT( obj->minimumUpdateInterval() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ERROR )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->error () );
+      RENUM( obj->error() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_STARTUPDATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->startUpdates ();
+      obj->startUpdates();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_STOPUPDATES )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->stopUpdates ();
+      obj->stopUpdates();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_REQUESTUPDATE )
     if( ISBETWEEN(0,1) && ISOPTNUM(1) )
     {
 #endif
-      obj->requestUpdate ( OPINT(1,0) );
+      obj->requestUpdate( OPINT(1,0) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,8 +312,8 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createDefaultSource ( PQOBJECT(1) );
-    _qt5xhb_createReturnClass ( ptr, "QGEOSATELLITEINFOSOURCE", false );
+    QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createDefaultSource( PQOBJECT(1) );
+    _qt5xhb_createReturnClass( ptr, "QGEOSATELLITEINFOSOURCE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -334,8 +334,8 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATESOURCE )
   if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
   {
 #endif
-    QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createSource ( PQSTRING(1), PQOBJECT(2) );
-    _qt5xhb_createReturnClass ( ptr, "QGEOSATELLITEINFOSOURCE", false );
+    QGeoSatelliteInfoSource * ptr = QGeoSatelliteInfoSource::createSource( PQSTRING(1), PQOBJECT(2) );
+    _qt5xhb_createReturnClass( ptr, "QGEOSATELLITEINFOSOURCE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_AVAILABLESOURCES )
   if( ISNUMPAR(0) )
   {
 #endif
-    RQSTRINGLIST( QGeoSatelliteInfoSource::availableSources () );
+    RQSTRINGLIST( QGeoSatelliteInfoSource::availableSources() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_AVAILABLESOURCES )
 #endif
 }
 
-void QGeoSatelliteInfoSourceSlots_connect_signal ( const QString & signal, const QString & slot );
+void QGeoSatelliteInfoSourceSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ONSATELLITESINVIEWUPDATED )
 {

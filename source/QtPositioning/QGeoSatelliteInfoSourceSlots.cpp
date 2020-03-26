@@ -26,7 +26,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
   PHB_ITEM cb = Signals_return_codeblock( object, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
     PHB_ITEM psatellites = hb_itemArrayNew(0);
     if( pDynSym )
@@ -39,7 +39,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QGeoSatelliteInfo *) new QGeoSatelliteInfo ( satellites [i] ) );
+        hb_itemPutPtr( pTempItem, (QGeoSatelliteInfo *) new QGeoSatelliteInfo( satellites [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( psatellites, pTempObject );
         hb_itemRelease( pTempObject );
@@ -63,7 +63,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
   PHB_ITEM cb = Signals_return_codeblock( object, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
     PHB_ITEM psatellites = hb_itemArrayNew(0);
     if( pDynSym )
@@ -76,7 +76,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QGeoSatelliteInfo *) new QGeoSatelliteInfo ( satellites [i] ) );
+        hb_itemPutPtr( pTempItem, (QGeoSatelliteInfo *) new QGeoSatelliteInfo( satellites [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( psatellites, pTempObject );
         hb_itemRelease( pTempObject );
@@ -100,7 +100,7 @@ void QGeoSatelliteInfoSourceSlots::requestTimeout()
   PHB_ITEM cb = Signals_return_codeblock( object, "requestTimeout()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -113,7 +113,7 @@ void QGeoSatelliteInfoSourceSlots::error( QGeoSatelliteInfoSource::Error error )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoSatelliteInfoSource::Error)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     hb_vmEvalBlockV( cb, 2, psender, perror );
     hb_itemRelease( psender );
@@ -122,7 +122,7 @@ void QGeoSatelliteInfoSourceSlots::error( QGeoSatelliteInfoSource::Error error )
 }
 #endif
 
-void QGeoSatelliteInfoSourceSlots_connect_signal ( const QString & signal, const QString & slot )
+void QGeoSatelliteInfoSourceSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoSatelliteInfoSource * obj = (QGeoSatelliteInfoSource *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

@@ -43,7 +43,7 @@ CLASS QGeoSatelliteInfo
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QGeoSatelliteInfo
+PROCEDURE destroyObject() CLASS QGeoSatelliteInfo
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,10 +72,10 @@ RETURN
 /*
 QGeoSatelliteInfo()
 */
-void QGeoSatelliteInfo_new1 ()
+void QGeoSatelliteInfo_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfo * o = new QGeoSatelliteInfo ();
+  QGeoSatelliteInfo * o = new QGeoSatelliteInfo();
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -83,10 +83,10 @@ void QGeoSatelliteInfo_new1 ()
 /*
 QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
 */
-void QGeoSatelliteInfo_new2 ()
+void QGeoSatelliteInfo_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoSatelliteInfo * o = new QGeoSatelliteInfo ( *PQGEOSATELLITEINFO(1) );
+  QGeoSatelliteInfo * o = new QGeoSatelliteInfo( *PQGEOSATELLITEINFO(1) );
   _qt5xhb_returnNewObject( o, true );
 #endif
 }
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITESYSTEM )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSatelliteSystem ( (QGeoSatelliteInfo::SatelliteSystem) hb_parni(1) );
+      obj->setSatelliteSystem( (QGeoSatelliteInfo::SatelliteSystem) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITESYSTEM )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->satelliteSystem () );
+      RENUM( obj->satelliteSystem() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSATELLITEIDENTIFIER )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSatelliteIdentifier ( PINT(1) );
+      obj->setSatelliteIdentifier( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SATELLITEIDENTIFIER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->satelliteIdentifier () );
+      RINT( obj->satelliteIdentifier() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETSIGNALSTRENGTH )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setSignalStrength ( PINT(1) );
+      obj->setSignalStrength( PINT(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SIGNALSTRENGTH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->signalStrength () );
+      RINT( obj->signalStrength() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_SETATTRIBUTE )
     if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
     {
 #endif
-      obj->setAttribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1), PQREAL(2) );
+      obj->setAttribute( (QGeoSatelliteInfo::Attribute) hb_parni(1), PQREAL(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_ATTRIBUTE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RQREAL( obj->attribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
+      RQREAL( obj->attribute( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_REMOVEATTRIBUTE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->removeAttribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) );
+      obj->removeAttribute( (QGeoSatelliteInfo::Attribute) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFO_HASATTRIBUTE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasAttribute ( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
+      RBOOL( obj->hasAttribute( (QGeoSatelliteInfo::Attribute) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
