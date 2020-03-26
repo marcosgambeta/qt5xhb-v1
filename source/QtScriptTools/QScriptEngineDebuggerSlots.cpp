@@ -25,7 +25,7 @@ void QScriptEngineDebuggerSlots::evaluationResumed()
   PHB_ITEM cb = Signals_return_codeblock( object, "evaluationResumed()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,13 +36,13 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
   PHB_ITEM cb = Signals_return_codeblock( object, "evaluationSuspended()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QScriptEngineDebuggerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QScriptEngineDebuggerSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QScriptEngineDebugger * obj = (QScriptEngineDebugger *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

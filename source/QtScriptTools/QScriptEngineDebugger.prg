@@ -42,7 +42,7 @@ CLASS QScriptEngineDebugger INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QScriptEngineDebugger
+PROCEDURE destroyObject() CLASS QScriptEngineDebugger
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QScriptEngineDebugger * o = new QScriptEngineDebugger ( OPQOBJECT(1,0) );
+    QScriptEngineDebugger * o = new QScriptEngineDebugger( OPQOBJECT(1,0) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -115,8 +115,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QAction * ptr = obj->action ( (QScriptEngineDebugger::DebuggerAction) hb_parni(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QACTION" );
+      QAction * ptr = obj->action( (QScriptEngineDebugger::DebuggerAction) hb_parni(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
     if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
     {
 #endif
-      obj->attachTo ( PQSCRIPTENGINE(1) );
+      obj->attachTo( PQSCRIPTENGINE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->autoShowStandardWindow () );
+      RBOOL( obj->autoShowStandardWindow() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,8 +190,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
     {
 #endif
-      QMenu * ptr = obj->createStandardMenu ( OPQWIDGET(1,0) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMENU" );
+      QMenu * ptr = obj->createStandardMenu( OPQWIDGET(1,0) );
+      _qt5xhb_createReturnQWidgetClass( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,8 +215,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
     if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
     {
 #endif
-      QToolBar * ptr = obj->createStandardToolBar ( OPQWIDGET(1,0) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QTOOLBAR" );
+      QToolBar * ptr = obj->createStandardToolBar( OPQWIDGET(1,0) );
+      _qt5xhb_createReturnQWidgetClass( ptr, "QTOOLBAR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->detach ();
+      obj->detach();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
     if( ISNUMPAR(1) && ISLOG(1) )
     {
 #endif
-      obj->setAutoShowStandardWindow ( PBOOL(1) );
+      obj->setAutoShowStandardWindow( PBOOL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,8 +292,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
     if( ISNUMPAR(0) )
     {
 #endif
-      QMainWindow * ptr = obj->standardWindow ();
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QMAINWINDOW" );
+      QMainWindow * ptr = obj->standardWindow();
+      _qt5xhb_createReturnQWidgetClass( ptr, "QMAINWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->state () );
+      RENUM( obj->state() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,8 +341,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->widget ( (QScriptEngineDebugger::DebuggerWidget) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass ( ptr, "QWIDGET" );
+      QWidget * ptr = obj->widget( (QScriptEngineDebugger::DebuggerWidget) hb_parni(1) );
+      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
   }
 }
 
-void QScriptEngineDebuggerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QScriptEngineDebuggerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ONEVALUATIONRESUMED )
 {
