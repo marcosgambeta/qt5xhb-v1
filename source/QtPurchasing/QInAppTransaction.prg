@@ -33,7 +33,7 @@ CLASS QInAppTransaction INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInAppTransaction
+PROCEDURE destroyObject() CLASS QInAppTransaction
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,8 +122,8 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_PRODUCT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QInAppProduct * ptr = obj->product ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QINAPPPRODUCT" );
+      QInAppProduct * ptr = obj->product();
+      _qt5xhb_createReturnQObjectClass( ptr, "QINAPPPRODUCT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_ORDERID )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->orderId () );
+      RQSTRING( obj->orderId() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_FAILUREREASON )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->failureReason () );
+      RENUM( obj->failureReason() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_ERRORSTRING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->errorString () );
+      RQSTRING( obj->errorString() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,8 +219,8 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_TIMESTAMP )
     if( ISNUMPAR(0) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->timestamp () );
-      _qt5xhb_createReturnClass ( ptr, "QDATETIME", true );
+      QDateTime * ptr = new QDateTime( obj->timestamp() );
+      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_FINALIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->finalize ();
+      obj->finalize();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_PLATFORMPROPERTY )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->platformProperty ( PQSTRING(1) ) );
+      RQSTRING( obj->platformProperty( PQSTRING(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

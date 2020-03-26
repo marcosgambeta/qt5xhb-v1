@@ -33,7 +33,7 @@ CLASS QInAppStore INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInAppStore
+PROCEDURE destroyObject() CLASS QInAppStore
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QINAPPSTORE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QInAppStore * o = new QInAppStore ( OPQOBJECT(1,Q_NULLPTR) );
+    QInAppStore * o = new QInAppStore( OPQOBJECT(1,Q_NULLPTR) );
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->restorePurchases ();
+      obj->restorePurchases();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
     if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
     {
 #endif
-      obj->registerProduct ( (QInAppProduct::ProductType) hb_parni(1), PQSTRING(2) );
+      obj->registerProduct( (QInAppProduct::ProductType) hb_parni(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,8 +156,8 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      QInAppProduct * ptr = obj->registeredProduct ( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass ( ptr, "QINAPPPRODUCT" );
+      QInAppProduct * ptr = obj->registeredProduct( PQSTRING(1) );
+      _qt5xhb_createReturnQObjectClass( ptr, "QINAPPPRODUCT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
     if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
     {
 #endif
-      obj->setPlatformProperty ( PQSTRING(1), PQSTRING(2) );
+      obj->setPlatformProperty( PQSTRING(1), PQSTRING(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ void registerProduct(QInAppProduct *) [private] (slot)
 void setupBackend() [private]
 */
 
-void QInAppStoreSlots_connect_signal ( const QString & signal, const QString & slot );
+void QInAppStoreSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )
 {

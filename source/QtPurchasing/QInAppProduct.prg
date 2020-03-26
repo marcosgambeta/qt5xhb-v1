@@ -29,7 +29,7 @@ CLASS QInAppProduct INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QInAppProduct
+PROCEDURE destroyObject() CLASS QInAppProduct
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -66,8 +66,8 @@ HB_FUNC_STATIC( QINAPPPRODUCT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->identifier () );
+      RQSTRING( obj->identifier() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->productType () );
+      RENUM( obj->productType() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PRICE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->price () );
+      RQSTRING( obj->price() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_TITLE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->title () );
+      RQSTRING( obj->title() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_DESCRIPTION )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->description () );
+      RQSTRING( obj->description() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_PURCHASE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->purchase ();
+      obj->purchase();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
