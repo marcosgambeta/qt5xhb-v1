@@ -40,7 +40,7 @@ CLASS QQuickView INHERIT QQuickWindow
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QQuickView
+PROCEDURE destroyObject() CLASS QQuickView
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -70,27 +70,27 @@ RETURN
 /*
 QQuickView(QWindow * parent = 0)
 */
-void QQuickView_new1 ()
+void QQuickView_new1()
 {
-  QQuickView * o = new QQuickView ( OPQWINDOW(1,0) );
+  QQuickView * o = new QQuickView( OPQWINDOW(1,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QQuickView(QQmlEngine * engine, QWindow * parent)
 */
-void QQuickView_new2 ()
+void QQuickView_new2()
 {
-  QQuickView * o = new QQuickView ( PQQMLENGINE(1), PQWINDOW(2) );
+  QQuickView * o = new QQuickView( PQQMLENGINE(1), PQWINDOW(2) );
   _qt5xhb_returnNewObject( o, false );
 }
 
 /*
 QQuickView(const QUrl & source, QWindow * parent = 0)
 */
-void QQuickView_new3 ()
+void QQuickView_new3()
 {
-  QQuickView * o = new QQuickView ( *PQURL(1), OPQWINDOW(2,0) );
+  QQuickView * o = new QQuickView( *PQURL(1), OPQWINDOW(2,0) );
   _qt5xhb_returnNewObject( o, false );
 }
 
@@ -148,8 +148,8 @@ HB_FUNC_STATIC( QQUICKVIEW_ENGINE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlEngine * ptr = obj->engine ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QQMLENGINE" );
+      QQmlEngine * ptr = obj->engine();
+      _qt5xhb_createReturnQObjectClass( ptr, "QQMLENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,8 +173,8 @@ HB_FUNC_STATIC( QQUICKVIEW_INITIALSIZE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSize * ptr = new QSize( obj->initialSize () );
-      _qt5xhb_createReturnClass ( ptr, "QSIZE", true );
+      QSize * ptr = new QSize( obj->initialSize() );
+      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QQUICKVIEW_RESIZEMODE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->resizeMode () );
+      RENUM( obj->resizeMode() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,8 +222,8 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTCONTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQmlContext * ptr = obj->rootContext ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QQMLCONTEXT" );
+      QQmlContext * ptr = obj->rootContext();
+      _qt5xhb_createReturnQObjectClass( ptr, "QQMLCONTEXT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,8 +247,8 @@ HB_FUNC_STATIC( QQUICKVIEW_ROOTOBJECT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QQuickItem * ptr = obj->rootObject ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QQUICKITEM" );
+      QQuickItem * ptr = obj->rootObject();
+      _qt5xhb_createReturnQObjectClass( ptr, "QQUICKITEM" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setResizeMode ( (QQuickView::ResizeMode) hb_parni(1) );
+      obj->setResizeMode( (QQuickView::ResizeMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,8 +298,8 @@ HB_FUNC_STATIC( QQUICKVIEW_SOURCE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->source () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->source() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QQUICKVIEW_STATUS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->status () );
+      RENUM( obj->status() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setSource ( *PQURL(1) );
+      obj->setSource( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETSOURCE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-void QQuickViewSlots_connect_signal ( const QString & signal, const QString & slot );
+void QQuickViewSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QQUICKVIEW_ONSTATUSCHANGED )
 {

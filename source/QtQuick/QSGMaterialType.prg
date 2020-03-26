@@ -30,7 +30,7 @@ CLASS QSGMaterialType
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGMaterialType
+PROCEDURE destroyObject() CLASS QSGMaterialType
    IF ::self_destruction
       ::delete()
    ENDIF

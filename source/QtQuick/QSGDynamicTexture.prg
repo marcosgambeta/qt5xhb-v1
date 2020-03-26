@@ -23,7 +23,7 @@ CLASS QSGDynamicTexture INHERIT QSGTexture
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGDynamicTexture
+PROCEDURE destroyObject() CLASS QSGDynamicTexture
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSGDYNAMICTEXTURE_UPDATETEXTURE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->updateTexture () );
+      RBOOL( obj->updateTexture() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

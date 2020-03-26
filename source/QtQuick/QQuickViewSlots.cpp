@@ -25,7 +25,7 @@ void QQuickViewSlots::statusChanged( QQuickView::Status status )
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QQuickView::Status)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKVIEW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKVIEW" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
     hb_itemRelease( psender );
@@ -33,7 +33,7 @@ void QQuickViewSlots::statusChanged( QQuickView::Status status )
   }
 }
 
-void QQuickViewSlots_connect_signal ( const QString & signal, const QString & slot )
+void QQuickViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QQuickView * obj = (QQuickView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

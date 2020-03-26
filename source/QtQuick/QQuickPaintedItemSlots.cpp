@@ -25,7 +25,7 @@ void QQuickPaintedItemSlots::contentsScaleChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsScaleChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKPAINTEDITEM" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -36,7 +36,7 @@ void QQuickPaintedItemSlots::contentsSizeChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsSizeChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKPAINTEDITEM" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -47,7 +47,7 @@ void QQuickPaintedItemSlots::fillColorChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "fillColorChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKPAINTEDITEM" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
@@ -58,13 +58,13 @@ void QQuickPaintedItemSlots::renderTargetChanged()
   PHB_ITEM cb = Signals_return_codeblock( object, "renderTargetChanged()" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QQUICKPAINTEDITEM" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
     hb_vmEvalBlockV( cb, 1, psender );
     hb_itemRelease( psender );
   }
 }
 
-void QQuickPaintedItemSlots_connect_signal ( const QString & signal, const QString & slot )
+void QQuickPaintedItemSlots_connect_signal( const QString & signal, const QString & slot )
 {
   QQuickPaintedItem * obj = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 

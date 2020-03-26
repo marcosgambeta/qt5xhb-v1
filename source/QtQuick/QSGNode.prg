@@ -53,7 +53,7 @@ CLASS QSGNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGNode
+PROCEDURE destroyObject() CLASS QSGNode
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSGNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGNode * o = new QSGNode ();
+    QSGNode * o = new QSGNode();
     _qt5xhb_returnNewObject( o, true );
   }
   else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSGNODE_APPENDCHILDNODE )
     if( ISNUMPAR(1) && ISQSGNODE(1) )
     {
 #endif
-      obj->appendChildNode ( PQSGNODE(1) );
+      obj->appendChildNode( PQSGNODE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,8 +147,8 @@ HB_FUNC_STATIC( QSGNODE_CHILDATINDEX )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      QSGNode * ptr = obj->childAtIndex ( PINT(1) );
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      QSGNode * ptr = obj->childAtIndex( PINT(1) );
+      _qt5xhb_createReturnClass( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSGNODE_CHILDCOUNT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RINT( obj->childCount () );
+      RINT( obj->childCount() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,8 +196,8 @@ HB_FUNC_STATIC( QSGNODE_FIRSTCHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->firstChild ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      QSGNode * ptr = obj->firstChild();
+      _qt5xhb_createReturnClass( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSGNODE_FLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->flags () );
+      RENUM( obj->flags() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSGNODE_INSERTCHILDNODEAFTER )
     if( ISNUMPAR(2) && ISQSGNODE(1) && ISQSGNODE(2) )
     {
 #endif
-      obj->insertChildNodeAfter ( PQSGNODE(1), PQSGNODE(2) );
+      obj->insertChildNodeAfter( PQSGNODE(1), PQSGNODE(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QSGNODE_INSERTCHILDNODEBEFORE )
     if( ISNUMPAR(2) && ISQSGNODE(1) && ISQSGNODE(2) )
     {
 #endif
-      obj->insertChildNodeBefore ( PQSGNODE(1), PQSGNODE(2) );
+      obj->insertChildNodeBefore( PQSGNODE(1), PQSGNODE(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QSGNODE_ISSUBTREEBLOCKED )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isSubtreeBlocked () );
+      RBOOL( obj->isSubtreeBlocked() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,8 +321,8 @@ HB_FUNC_STATIC( QSGNODE_LASTCHILD )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->lastChild ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      QSGNode * ptr = obj->lastChild();
+      _qt5xhb_createReturnClass( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QSGNODE_MARKDIRTY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->markDirty ( (QSGNode::DirtyState) hb_parni(1) );
+      obj->markDirty( (QSGNode::DirtyState) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,8 +372,8 @@ HB_FUNC_STATIC( QSGNODE_NEXTSIBLING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->nextSibling ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      QSGNode * ptr = obj->nextSibling();
+      _qt5xhb_createReturnClass( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,8 +397,8 @@ HB_FUNC_STATIC( QSGNODE_PARENT )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->parent ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      QSGNode * ptr = obj->parent();
+      _qt5xhb_createReturnClass( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QSGNODE_PREPENDCHILDNODE )
     if( ISNUMPAR(1) && ISQSGNODE(1) )
     {
 #endif
-      obj->prependChildNode ( PQSGNODE(1) );
+      obj->prependChildNode( PQSGNODE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QSGNODE_PREPROCESS )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->preprocess ();
+      obj->preprocess();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,8 +474,8 @@ HB_FUNC_STATIC( QSGNODE_PREVIOUSSIBLING )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGNode * ptr = obj->previousSibling ();
-      _qt5xhb_createReturnClass ( ptr, "QSGNODE", false );
+      QSGNode * ptr = obj->previousSibling();
+      _qt5xhb_createReturnClass( ptr, "QSGNODE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QSGNODE_REMOVEALLCHILDNODES )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->removeAllChildNodes ();
+      obj->removeAllChildNodes();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QSGNODE_REMOVECHILDNODE )
     if( ISNUMPAR(1) && ISQSGNODE(1) )
     {
 #endif
-      obj->removeChildNode ( PQSGNODE(1) );
+      obj->removeChildNode( PQSGNODE(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QSGNODE_SETFLAG )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->setFlag ( (QSGNode::Flag) hb_parni(1), OPBOOL(2,true) );
+      obj->setFlag( (QSGNode::Flag) hb_parni(1), OPBOOL(2,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QSGNODE_SETFLAGS )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->setFlags ( (QSGNode::Flags) hb_parni(1), OPBOOL(2,true) );
+      obj->setFlags( (QSGNode::Flags) hb_parni(1), OPBOOL(2,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QSGNODE_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->type () );
+      RENUM( obj->type() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

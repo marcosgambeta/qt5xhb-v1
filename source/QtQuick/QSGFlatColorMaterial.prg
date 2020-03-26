@@ -27,7 +27,7 @@ CLASS QSGFlatColorMaterial INHERIT QSGMaterial
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGFlatColorMaterial
+PROCEDURE destroyObject() CLASS QSGFlatColorMaterial
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGFlatColorMaterial * o = new QSGFlatColorMaterial ();
+    QSGFlatColorMaterial * o = new QSGFlatColorMaterial();
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -95,8 +95,8 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_COLOR )
     if( ISNUMPAR(0) )
     {
 #endif
-      const QColor * ptr = &obj->color ();
-      _qt5xhb_createReturnClass ( ptr, "QCOLOR", false );
+      const QColor * ptr = &obj->color();
+      _qt5xhb_createReturnClass( ptr, "QCOLOR", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSGFLATCOLORMATERIAL_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor ( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

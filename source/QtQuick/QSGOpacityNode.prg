@@ -26,7 +26,7 @@ CLASS QSGOpacityNode INHERIT QSGNode
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGOpacityNode
+PROCEDURE destroyObject() CLASS QSGOpacityNode
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGOpacityNode * o = new QSGOpacityNode ();
+    QSGOpacityNode * o = new QSGOpacityNode();
     _qt5xhb_returnNewObject( o, false );
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQREAL( obj->opacity () );
+      RQREAL( obj->opacity() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_SETOPACITY )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setOpacity ( PQREAL(1) );
+      obj->setOpacity( PQREAL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -24,7 +24,7 @@ CLASS QSGVertexColorMaterial INHERIT QSGMaterial
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGVertexColorMaterial
+PROCEDURE destroyObject() CLASS QSGVertexColorMaterial
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGVertexColorMaterial * o = new QSGVertexColorMaterial ();
+    QSGVertexColorMaterial * o = new QSGVertexColorMaterial();
     _qt5xhb_returnNewObject( o, false );
   }
   else

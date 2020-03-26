@@ -36,7 +36,7 @@ CLASS QSGMaterialShader
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGMaterialShader
+PROCEDURE destroyObject() CLASS QSGMaterialShader
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_ACTIVATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->activate ();
+      obj->activate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_DEACTIVATE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->deactivate ();
+      obj->deactivate();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,8 +140,8 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
     if( ISNUMPAR(0) )
     {
 #endif
-      QOpenGLShaderProgram * ptr = obj->program ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QOPENGLSHADERPROGRAM" );
+      QOpenGLShaderProgram * ptr = obj->program();
+      _qt5xhb_createReturnQObjectClass( ptr, "QOPENGLSHADERPROGRAM" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -39,7 +39,7 @@ CLASS QSGMaterial
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QSGMaterial
+PROCEDURE destroyObject() CLASS QSGMaterial
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSGMATERIAL_COMPARE )
     if( ISNUMPAR(1) && ISQSGMATERIAL(1) )
     {
 #endif
-      RINT( obj->compare ( PQSGMATERIAL(1) ) );
+      RINT( obj->compare( PQSGMATERIAL(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,8 +115,8 @@ HB_FUNC_STATIC( QSGMATERIAL_CREATESHADER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGMaterialShader * ptr = obj->createShader ();
-      _qt5xhb_createReturnClass ( ptr, "QSGMATERIALSHADER", false );
+      QSGMaterialShader * ptr = obj->createShader();
+      _qt5xhb_createReturnClass( ptr, "QSGMATERIALSHADER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSGMATERIAL_FLAGS )
     if( ISNUMPAR(0) )
     {
 #endif
-      RENUM( obj->flags () );
+      RENUM( obj->flags() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSGMATERIAL_SETFLAG )
     if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
     {
 #endif
-      obj->setFlag ( (QSGMaterial::Flags) hb_parni(1), OPBOOL(2,true) );
+      obj->setFlag( (QSGMaterial::Flags) hb_parni(1), OPBOOL(2,true) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,8 +190,8 @@ HB_FUNC_STATIC( QSGMATERIAL_TYPE )
     if( ISNUMPAR(0) )
     {
 #endif
-      QSGMaterialType * ptr = obj->type ();
-      _qt5xhb_createReturnClass ( ptr, "QSGMATERIALTYPE", false );
+      QSGMaterialType * ptr = obj->type();
+      _qt5xhb_createReturnClass( ptr, "QSGMATERIALTYPE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
