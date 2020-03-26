@@ -26,7 +26,7 @@ void QSerialPortSlots::baudRateChanged( qint32 baudRate, QSerialPort::Directions
   PHB_ITEM cb = Signals_return_codeblock( object, "baudRateChanged(qint32,QSerialPort::Directions)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pbaudRate = hb_itemPutNI( NULL, baudRate );
     PHB_ITEM pdir = hb_itemPutNI( NULL, (int) dir );
     hb_vmEvalBlockV( cb, 3, psender, pbaudRate, pdir );
@@ -43,7 +43,7 @@ void QSerialPortSlots::dataBitsChanged( QSerialPort::DataBits dataBits )
   PHB_ITEM cb = Signals_return_codeblock( object, "dataBitsChanged(QSerialPort::DataBits)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pdataBits = hb_itemPutNI( NULL, (int) dataBits );
     hb_vmEvalBlockV( cb, 2, psender, pdataBits );
     hb_itemRelease( psender );
@@ -58,7 +58,7 @@ void QSerialPortSlots::parityChanged( QSerialPort::Parity parity )
   PHB_ITEM cb = Signals_return_codeblock( object, "parityChanged(QSerialPort::Parity)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pparity = hb_itemPutNI( NULL, (int) parity );
     hb_vmEvalBlockV( cb, 2, psender, pparity );
     hb_itemRelease( psender );
@@ -73,7 +73,7 @@ void QSerialPortSlots::stopBitsChanged( QSerialPort::StopBits stopBits )
   PHB_ITEM cb = Signals_return_codeblock( object, "stopBitsChanged(QSerialPort::StopBits)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pstopBits = hb_itemPutNI( NULL, (int) stopBits );
     hb_vmEvalBlockV( cb, 2, psender, pstopBits );
     hb_itemRelease( psender );
@@ -88,7 +88,7 @@ void QSerialPortSlots::flowControlChanged( QSerialPort::FlowControl flow )
   PHB_ITEM cb = Signals_return_codeblock( object, "flowControlChanged(QSerialPort::FlowControl)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pflow = hb_itemPutNI( NULL, (int) flow );
     hb_vmEvalBlockV( cb, 2, psender, pflow );
     hb_itemRelease( psender );
@@ -103,7 +103,7 @@ void QSerialPortSlots::dataErrorPolicyChanged( QSerialPort::DataErrorPolicy poli
   PHB_ITEM cb = Signals_return_codeblock( object, "dataErrorPolicyChanged(QSerialPort::DataErrorPolicy)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM ppolicy = hb_itemPutNI( NULL, (int) policy );
     hb_vmEvalBlockV( cb, 2, psender, ppolicy );
     hb_itemRelease( psender );
@@ -118,7 +118,7 @@ void QSerialPortSlots::dataTerminalReadyChanged( bool set )
   PHB_ITEM cb = Signals_return_codeblock( object, "dataTerminalReadyChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pset = hb_itemPutL( NULL, set );
     hb_vmEvalBlockV( cb, 2, psender, pset );
     hb_itemRelease( psender );
@@ -133,7 +133,7 @@ void QSerialPortSlots::requestToSendChanged( bool set )
   PHB_ITEM cb = Signals_return_codeblock( object, "requestToSendChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pset = hb_itemPutL( NULL, set );
     hb_vmEvalBlockV( cb, 2, psender, pset );
     hb_itemRelease( psender );
@@ -148,7 +148,7 @@ void QSerialPortSlots::error( QSerialPort::SerialPortError serialPortError )
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QSerialPort::SerialPortError)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM pserialPortError = hb_itemPutNI( NULL, (int) serialPortError );
     hb_vmEvalBlockV( cb, 2, psender, pserialPortError );
     hb_itemRelease( psender );
@@ -163,7 +163,7 @@ void QSerialPortSlots::settingsRestoredOnCloseChanged( bool restore )
   PHB_ITEM cb = Signals_return_codeblock( object, "settingsRestoredOnCloseChanged(bool)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
     PHB_ITEM prestore = hb_itemPutL( NULL, restore );
     hb_vmEvalBlockV( cb, 2, psender, prestore );
     hb_itemRelease( psender );
@@ -172,7 +172,7 @@ void QSerialPortSlots::settingsRestoredOnCloseChanged( bool restore )
 }
 #endif
 
-void QSerialPortSlots_connect_signal ( const QString & signal, const QString & slot )
+void QSerialPortSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   QSerialPort * obj = (QSerialPort *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
