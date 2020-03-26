@@ -26,7 +26,7 @@ void QAbstractOAuthReplyHandlerSlots::callbackDataReceived( const QByteArray & d
   PHB_ITEM cb = Signals_return_codeblock( object, "callbackDataReceived(QByteArray)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTHREPLYHANDLER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTHREPLYHANDLER" );
     PHB_ITEM pdata = Signals_return_object( (void *) &data, "QBYTEARRAY" );
     hb_vmEvalBlockV( cb, 2, psender, pdata );
     hb_itemRelease( psender );
@@ -41,7 +41,7 @@ void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data
   PHB_ITEM cb = Signals_return_codeblock( object, "replyDataReceived(QByteArray)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QABSTRACTOAUTHREPLYHANDLER" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTHREPLYHANDLER" );
     PHB_ITEM pdata = Signals_return_object( (void *) &data, "QBYTEARRAY" );
     hb_vmEvalBlockV( cb, 2, psender, pdata );
     hb_itemRelease( psender );
@@ -50,7 +50,7 @@ void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data
 }
 #endif
 
-void QAbstractOAuthReplyHandlerSlots_connect_signal ( const QString & signal, const QString & slot )
+void QAbstractOAuthReplyHandlerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QAbstractOAuthReplyHandler * obj = (QAbstractOAuthReplyHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

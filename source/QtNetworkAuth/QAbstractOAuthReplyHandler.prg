@@ -28,7 +28,7 @@ CLASS QAbstractOAuthReplyHandler INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractOAuthReplyHandler
+PROCEDURE destroyObject() CLASS QAbstractOAuthReplyHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events (obj, true);
-    Signals_disconnect_all_signals (obj, true);
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->callback () );
+      RQSTRING( obj->callback() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
     if( ISNUMPAR(1) && ISQNETWORKREPLY(1) )
     {
 #endif
-      obj->networkReplyFinished ( PQNETWORKREPLY(1) );
+      obj->networkReplyFinished( PQNETWORKREPLY(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 #endif
 }
 
-void QAbstractOAuthReplyHandlerSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAbstractOAuthReplyHandlerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_ONCALLBACKDATARECEIVED )
 {

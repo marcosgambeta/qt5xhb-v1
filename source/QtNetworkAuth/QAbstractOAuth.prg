@@ -48,7 +48,7 @@ CLASS QAbstractOAuth INHERIT QObject
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QAbstractOAuth
+PROCEDURE destroyObject() CLASS QAbstractOAuth
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_CLIENTIDENTIFIER )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->clientIdentifier () );
+      RQSTRING( obj->clientIdentifier() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCLIENTIDENTIFIER )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setClientIdentifier ( PQSTRING(1) );
+      obj->setClientIdentifier( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_TOKEN )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->token () );
+      RQSTRING( obj->token() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETTOKEN )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setToken ( PQSTRING(1) );
+      obj->setToken( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,8 +229,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_AUTHORIZATIONURL )
     if( ISNUMPAR(0) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->authorizationUrl () );
-      _qt5xhb_createReturnClass ( ptr, "QURL", true );
+      QUrl * ptr = new QUrl( obj->authorizationUrl() );
+      _qt5xhb_createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETAUTHORIZATIONURL )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setAuthorizationUrl ( *PQURL(1) );
+      obj->setAuthorizationUrl( *PQURL(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETCONTENTTYPE )
     if( ISNUMPAR(1) && ISNUM(1) )
     {
 #endif
-      obj->setContentType ( (QAbstractOAuth::ContentType) hb_parni(1) );
+      obj->setContentType( (QAbstractOAuth::ContentType) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,8 +320,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_NETWORKACCESSMANAGER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QNetworkAccessManager * ptr = obj->networkAccessManager ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QNETWORKACCESSMANAGER" );
+      QNetworkAccessManager * ptr = obj->networkAccessManager();
+      _qt5xhb_createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETNETWORKACCESSMANAGER )
     if( ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1) )
     {
 #endif
-      obj->setNetworkAccessManager ( PQNETWORKACCESSMANAGER(1) );
+      obj->setNetworkAccessManager( PQNETWORKACCESSMANAGER(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,8 +375,8 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_REPLYHANDLER )
     if( ISNUMPAR(0) )
     {
 #endif
-      QAbstractOAuthReplyHandler * ptr = obj->replyHandler ();
-      _qt5xhb_createReturnQObjectClass ( ptr, "QABSTRACTOAUTHREPLYHANDLER" );
+      QAbstractOAuthReplyHandler * ptr = obj->replyHandler();
+      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTOAUTHREPLYHANDLER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_SETREPLYHANDLER )
     if( ISNUMPAR(1) && ISQABSTRACTOAUTHREPLYHANDLER(1) )
     {
 #endif
-      obj->setReplyHandler ( PQABSTRACTOAUTHREPLYHANDLER(1) );
+      obj->setReplyHandler( PQABSTRACTOAUTHREPLYHANDLER(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->grant ();
+      obj->grant();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,7 +488,7 @@ virtual void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &para
 static QByteArray generateRandomString(quint8 length) [protected]
 */
 
-void QAbstractOAuthSlots_connect_signal ( const QString & signal, const QString & slot );
+void QAbstractOAuthSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QABSTRACTOAUTH_ONAUTHORIZATIONURLCHANGED )
 {

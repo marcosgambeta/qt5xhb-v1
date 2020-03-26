@@ -26,7 +26,7 @@ void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged( const QUrl & acce
   PHB_ITEM cb = Signals_return_codeblock( object, "accessTokenUrlChanged(QUrl)" );
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject ( (QObject *) object, "QOAUTH2AUTHORIZATIONCODEFLOW" );
+    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOAUTH2AUTHORIZATIONCODEFLOW" );
     PHB_ITEM paccessTokenUrl = Signals_return_object( (void *) &accessTokenUrl, "QURL" );
     hb_vmEvalBlockV( cb, 2, psender, paccessTokenUrl );
     hb_itemRelease( psender );
@@ -35,7 +35,7 @@ void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged( const QUrl & acce
 }
 #endif
 
-void QOAuth2AuthorizationCodeFlowSlots_connect_signal ( const QString & signal, const QString & slot )
+void QOAuth2AuthorizationCodeFlowSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = (QOAuth2AuthorizationCodeFlow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );

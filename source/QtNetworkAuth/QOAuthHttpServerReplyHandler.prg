@@ -33,7 +33,7 @@ CLASS QOAuthHttpServerReplyHandler INHERIT QOAuthOobReplyHandler
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS QOAuthHttpServerReplyHandler
+PROCEDURE destroyObject() CLASS QOAuthHttpServerReplyHandler
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -62,10 +62,10 @@ RETURN
 /*
 explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
 */
-void QOAuthHttpServerReplyHandler_new1 ()
+void QOAuthHttpServerReplyHandler_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler ( OPQOBJECT(1,nullptr) );
+  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler( OPQOBJECT(1,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -73,10 +73,10 @@ void QOAuthHttpServerReplyHandler_new1 ()
 /*
 explicit QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
 */
-void QOAuthHttpServerReplyHandler_new2 ()
+void QOAuthHttpServerReplyHandler_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler ( PQUINT16(1), OPQOBJECT(2,nullptr) );
+  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler( PQUINT16(1), OPQOBJECT(2,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -84,10 +84,10 @@ void QOAuthHttpServerReplyHandler_new2 ()
 /*
 explicit QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port, QObject *parent = nullptr)
 */
-void QOAuthHttpServerReplyHandler_new3 ()
+void QOAuthHttpServerReplyHandler_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler ( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
+  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
   _qt5xhb_returnNewObject( o, false );
 #endif
 }
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACK )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->callback () );
+      RQSTRING( obj->callback() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKPATH )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->callbackPath () );
+      RQSTRING( obj->callbackPath() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKPATH )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCallbackPath ( PQSTRING(1) );
+      obj->setCallbackPath( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKTEXT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQSTRING( obj->callbackText () );
+      RQSTRING( obj->callbackText() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKTEXT )
     if( ISNUMPAR(1) && ISCHAR(1) )
     {
 #endif
-      obj->setCallbackText ( PQSTRING(1) );
+      obj->setCallbackText( PQSTRING(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_PORT )
     if( ISNUMPAR(0) )
     {
 #endif
-      RQUINT16( obj->port () );
+      RQUINT16( obj->port() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_LISTEN )
     if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && ISOPTNUM(2) )
     {
 #endif
-      RBOOL( obj->listen ( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) _qt5xhb_itemGetPtr(1), OPQUINT16(2,0) ) );
+      RBOOL( obj->listen( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) _qt5xhb_itemGetPtr(1), OPQUINT16(2,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CLOSE )
     if( ISNUMPAR(0) )
     {
 #endif
-      obj->close ();
+      obj->close();
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_ISLISTENING )
     if( ISNUMPAR(0) )
     {
 #endif
-      RBOOL( obj->isListening () );
+      RBOOL( obj->isListening() );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
