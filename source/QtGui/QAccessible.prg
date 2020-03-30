@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
   {
 #endif
     QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface( PQOBJECT(1) );
-    _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
+    Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

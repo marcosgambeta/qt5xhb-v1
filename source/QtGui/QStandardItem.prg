@@ -144,7 +144,7 @@ QStandardItem()
 void QStandardItem_new1()
 {
   QStandardItem * o = new QStandardItem();
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -153,7 +153,7 @@ QStandardItem(const QString &text)
 void QStandardItem_new2()
 {
   QStandardItem * o = new QStandardItem( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -161,8 +161,8 @@ QStandardItem(const QIcon &icon, const QString &text)
 */
 void QStandardItem_new3()
 {
-  QStandardItem * o = new QStandardItem( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-  _qt5xhb_returnNewObject( o, false );
+  QStandardItem * o = new QStandardItem( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -171,7 +171,7 @@ QStandardItem(int rows, int columns = 1)
 void QStandardItem_new4()
 {
   QStandardItem * o = new QStandardItem( PINT(1), OPINT(2,1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QStandardItem()
@@ -205,7 +205,7 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW )
 
 HB_FUNC_STATIC( QSTANDARDITEM_DELETE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ virtual QVariant data(int role = Qt::UserRole + 1) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_DATA )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( OPINT(1,Qt::UserRole+1) ) );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -300,7 +300,7 @@ void setText(const QString &text)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTEXT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ QIcon icon() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ICON )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
-      _qt5xhb_createReturnClass( ptr, "QICON", true );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,7 +351,7 @@ void setIcon(const QIcon &icon)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETICON )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIcon( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ QString toolTip() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -401,7 +401,7 @@ void setToolTip(const QString &toolTip)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTOOLTIP )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -427,7 +427,7 @@ QString statusTip() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -451,7 +451,7 @@ void setStatusTip(const QString &statusTip)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETSTATUSTIP )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -477,7 +477,7 @@ QString whatsThis() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -501,7 +501,7 @@ void setWhatsThis(const QString &whatsThis)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETWHATSTHIS )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -527,7 +527,7 @@ QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SIZEHINT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -552,7 +552,7 @@ void setSizeHint(const QSize &sizeHint)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETSIZEHINT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -578,7 +578,7 @@ QFont font() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_FONT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      _qt5xhb_createReturnClass( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,7 +603,7 @@ void setFont(const QFont &font)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETFONT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -629,7 +629,7 @@ Qt::Alignment textAlignment() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TEXTALIGNMENT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -653,7 +653,7 @@ void setTextAlignment(Qt::Alignment textAlignment)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTEXTALIGNMENT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -679,7 +679,7 @@ QBrush background() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_BACKGROUND )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_BACKGROUND )
     {
 #endif
       QBrush * ptr = new QBrush( obj->background() );
-      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -704,7 +704,7 @@ void setBackground(const QBrush &brush)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETBACKGROUND )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -730,7 +730,7 @@ QBrush foreground() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_FOREGROUND )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FOREGROUND )
     {
 #endif
       QBrush * ptr = new QBrush( obj->foreground() );
-      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -755,7 +755,7 @@ void setForeground(const QBrush &brush)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETFOREGROUND )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -781,7 +781,7 @@ Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CHECKSTATE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -805,7 +805,7 @@ void setCheckState(Qt::CheckState checkState)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKSTATE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -831,7 +831,7 @@ QString accessibleText() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -855,7 +855,7 @@ void setAccessibleText(const QString &accessibleText)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLETEXT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -881,7 +881,7 @@ QString accessibleDescription() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -905,7 +905,7 @@ void setAccessibleDescription(const QString &accessibleDescription)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLEDESCRIPTION )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -931,7 +931,7 @@ Qt::ItemFlags flags() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_FLAGS )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -955,7 +955,7 @@ void setFlags(Qt::ItemFlags flags)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETFLAGS )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -981,7 +981,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISENABLED )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1005,7 +1005,7 @@ void setEnabled(bool enabled)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETENABLED )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1031,7 +1031,7 @@ bool isEditable() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISEDITABLE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1055,7 +1055,7 @@ void setEditable(bool editable)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETEDITABLE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1081,7 +1081,7 @@ bool isSelectable() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISSELECTABLE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1105,7 +1105,7 @@ void setSelectable(bool selectable)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETSELECTABLE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1131,7 +1131,7 @@ bool isCheckable() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISCHECKABLE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1155,7 +1155,7 @@ void setCheckable(bool checkable)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKABLE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1181,7 +1181,7 @@ bool isTristate() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISTRISTATE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1205,7 +1205,7 @@ void setTristate(bool tristate)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTRISTATE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1231,7 +1231,7 @@ bool isDragEnabled() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISDRAGENABLED )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1255,7 +1255,7 @@ void setDragEnabled(bool dragEnabled)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDRAGENABLED )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1281,7 +1281,7 @@ bool isDropEnabled() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISDROPENABLED )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1305,7 +1305,7 @@ void setDropEnabled(bool dropEnabled)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDROPENABLED )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1331,7 +1331,7 @@ QStandardItem *parent() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1340,7 +1340,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
     {
 #endif
       QStandardItem * ptr = obj->parent();
-      _qt5xhb_createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt5xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1356,7 +1356,7 @@ int row() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ROW )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1380,7 +1380,7 @@ int column() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_COLUMN )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1404,7 +1404,7 @@ QModelIndex index() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1413,7 +1413,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->index() );
-      _qt5xhb_createReturnClass( ptr, "QMODELINDEX", true );
+      Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1429,7 +1429,7 @@ QStandardItemModel *model() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1438,7 +1438,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
     {
 #endif
       QStandardItemModel * ptr = obj->model();
-      _qt5xhb_createReturnQObjectClass( ptr, "QSTANDARDITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QSTANDARDITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1454,7 +1454,7 @@ int rowCount() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ROWCOUNT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1478,7 +1478,7 @@ void setRowCount(int rows)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETROWCOUNT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1504,7 +1504,7 @@ int columnCount() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_COLUMNCOUNT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1528,7 +1528,7 @@ void setColumnCount(int columns)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETCOLUMNCOUNT )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1554,7 +1554,7 @@ bool hasChildren() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1578,7 +1578,7 @@ QStandardItem *child(int row, int column = 0) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1587,7 +1587,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
     {
 #endif
       QStandardItem * ptr = obj->child( PINT(1), OPINT(2,0) );
-      _qt5xhb_createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt5xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1603,7 +1603,7 @@ void setChild(int row, int column, QStandardItem *item)
 */
 void QStandardItem_setChild1()
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1618,7 +1618,7 @@ void setChild(int row, QStandardItem *item)
 */
 void QStandardItem_setChild2()
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1652,7 +1652,7 @@ void insertRow(int row, const QList<QStandardItem*> &items)
 */
 void QStandardItem_insertRow1()
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1675,7 +1675,7 @@ void insertRow(int row, QStandardItem *item)
 */
 void QStandardItem_insertRow2()
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1709,7 +1709,7 @@ void insertColumn(int column, const QList<QStandardItem*> &items)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1743,7 +1743,7 @@ void insertRows(int row, const QList<QStandardItem*> &items)
 */
 void QStandardItem_insertRows1()
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1766,7 +1766,7 @@ void insertRows(int row, int count)
 */
 void QStandardItem_insertRows2()
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1800,7 +1800,7 @@ void insertColumns(int column, int count)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMNS )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1826,7 +1826,7 @@ void removeRow(int row)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROW )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1852,7 +1852,7 @@ void removeColumn(int column)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMN )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1878,7 +1878,7 @@ void removeRows(int row, int count)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROWS )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1904,7 +1904,7 @@ void removeColumns(int column, int count)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMNS )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1930,7 +1930,7 @@ void appendRow(const QList<QStandardItem*> &items)
 */
 void QStandardItem_appendRow1()
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1953,7 +1953,7 @@ void appendRow(QStandardItem *item)
 */
 void QStandardItem_appendRow2()
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1987,7 +1987,7 @@ void appendRows(const QList<QStandardItem*> &items)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDROWS )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2021,7 +2021,7 @@ void appendColumn(const QList<QStandardItem*> &items)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2055,7 +2055,7 @@ QStandardItem *takeChild(int row, int column = 0)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2064,7 +2064,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
     {
 #endif
       QStandardItem * ptr = obj->takeChild( PINT(1), OPINT(2,0) );
-      _qt5xhb_createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt5xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2080,7 +2080,7 @@ QList<QStandardItem*> takeRow(int row)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2128,7 +2128,7 @@ QList<QStandardItem*> takeColumn(int column)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2176,7 +2176,7 @@ void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2202,7 +2202,7 @@ virtual QStandardItem *clone() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2211,7 +2211,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
     {
 #endif
       QStandardItem * ptr = obj->clone();
-      _qt5xhb_createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt5xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2227,7 +2227,7 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TYPE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2251,7 +2251,7 @@ virtual void read(QDataStream &in)
 */
 HB_FUNC_STATIC( QSTANDARDITEM_READ )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2277,7 +2277,7 @@ virtual void write(QDataStream &out) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_WRITE )
 {
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2304,7 +2304,7 @@ void QStandardItem::clearData()
 HB_FUNC_STATIC( QSTANDARDITEM_CLEARDATA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
-  QStandardItem * obj = (QStandardItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStandardItem * obj = (QStandardItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

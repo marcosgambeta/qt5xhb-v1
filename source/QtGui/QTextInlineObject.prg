@@ -80,7 +80,7 @@ QTextInlineObject()
 void QTextInlineObject_new2()
 {
   QTextInlineObject * o = new QTextInlineObject();
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QTextInlineObject(int i, QTextEngine *e)
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_DELETE )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_ISVALID )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ QRectF rect() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->rect() );
-      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ qreal width() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_WIDTH )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ qreal ascent() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ qreal descent() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ qreal height() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_HEIGHT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -265,7 +265,7 @@ Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ void setWidth(qreal w)
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETWIDTH )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -315,7 +315,7 @@ void setAscent(qreal a)
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETASCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -341,7 +341,7 @@ void setDescent(qreal d)
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETDESCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ int textPosition() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -391,7 +391,7 @@ int formatIndex() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -415,7 +415,7 @@ QTextFormat format() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = (QTextInlineObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
     {
 #endif
       QTextFormat * ptr = new QTextFormat( obj->format() );
-      _qt5xhb_createReturnClass( ptr, "QTEXTFORMAT", true );
+      Qt5xHb::createReturnClass( ptr, "QTEXTFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

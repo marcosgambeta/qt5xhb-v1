@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QENTEREVENT_NEW )
   if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) )
   {
     QEnterEvent * o = new QEnterEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QENTEREVENT_NEW )
 
 HB_FUNC_STATIC( QENTEREVENT_DELETE )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ QPoint pos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_POS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QENTEREVENT_POS )
     {
 #endif
       QPoint * ptr = new QPoint( obj->pos() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ QPoint globalPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_GLOBALPOS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QENTEREVENT_GLOBALPOS )
     {
 #endif
       QPoint * ptr = new QPoint( obj->globalPos() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ int x() const
 */
 HB_FUNC_STATIC( QENTEREVENT_X )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ int y() const
 */
 HB_FUNC_STATIC( QENTEREVENT_Y )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ int globalX() const
 */
 HB_FUNC_STATIC( QENTEREVENT_GLOBALX )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ int globalY() const
 */
 HB_FUNC_STATIC( QENTEREVENT_GLOBALY )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ const QPointF &localPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_LOCALPOS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QENTEREVENT_LOCALPOS )
     {
 #endif
       const QPointF * ptr = &obj->localPos();
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ const QPointF &windowPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_WINDOWPOS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QENTEREVENT_WINDOWPOS )
     {
 #endif
       const QPointF * ptr = &obj->windowPos();
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ const QPointF &screenPos() const
 */
 HB_FUNC_STATIC( QENTEREVENT_SCREENPOS )
 {
-  QEnterEvent * obj = (QEnterEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEnterEvent * obj = (QEnterEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QENTEREVENT_SCREENPOS )
     {
 #endif
       const QPointF * ptr = &obj->screenPos();
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

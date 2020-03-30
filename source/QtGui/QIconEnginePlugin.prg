@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
 {
-  QIconEnginePlugin * obj = (QIconEnginePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIconEnginePlugin * obj = (QIconEnginePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -69,7 +69,7 @@ virtual QIconEngine * create(const QString & filename = QString()) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
 {
-  QIconEnginePlugin * obj = (QIconEnginePlugin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIconEnginePlugin * obj = (QIconEnginePlugin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
     {
 #endif
       QIconEngine * ptr = obj->create( OPQSTRING(1,QString()) );
-      _qt5xhb_createReturnClass( ptr, "QICONENGINE", false );
+      Qt5xHb::createReturnClass( ptr, "QICONENGINE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

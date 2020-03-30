@@ -74,7 +74,7 @@ QCursor ()
 void QCursor_new1()
 {
   QCursor * o = new QCursor();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -83,7 +83,7 @@ QCursor ( Qt::CursorShape shape )
 void QCursor_new2()
 {
   QCursor * o = new QCursor( (Qt::CursorShape) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -92,7 +92,7 @@ QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY 
 void QCursor_new3()
 {
   QCursor * o = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -101,7 +101,7 @@ QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 void QCursor_new4()
 {
   QCursor * o = new QCursor( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -110,7 +110,7 @@ QCursor ( const QCursor & c )
 void QCursor_new5()
 {
   QCursor * o = new QCursor( *PQCURSOR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QCursor ()
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
 
 HB_FUNC_STATIC( QCURSOR_DELETE )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ const QBitmap * bitmap () const
 */
 HB_FUNC_STATIC( QCURSOR_BITMAP )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCURSOR_BITMAP )
     {
 #endif
       const QBitmap * ptr = obj->bitmap();
-      _qt5xhb_createReturnClass( ptr, "QBITMAP", false );
+      Qt5xHb::createReturnClass( ptr, "QBITMAP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ QPoint hotSpot () const
 */
 HB_FUNC_STATIC( QCURSOR_HOTSPOT )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QCURSOR_HOTSPOT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->hotSpot() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ const QBitmap * mask () const
 */
 HB_FUNC_STATIC( QCURSOR_MASK )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QCURSOR_MASK )
     {
 #endif
       const QBitmap * ptr = obj->mask();
-      _qt5xhb_createReturnClass( ptr, "QBITMAP", false );
+      Qt5xHb::createReturnClass( ptr, "QBITMAP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ QPixmap pixmap () const
 */
 HB_FUNC_STATIC( QCURSOR_PIXMAP )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QCURSOR_PIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap() );
-      _qt5xhb_createReturnClass( ptr, "QPIXMAP", true );
+      Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ void setShape ( Qt::CursorShape shape )
 */
 HB_FUNC_STATIC( QCURSOR_SETSHAPE )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -297,7 +297,7 @@ Qt::CursorShape shape () const
 */
 HB_FUNC_STATIC( QCURSOR_SHAPE )
 {
-  QCursor * obj = (QCursor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCursor * obj = (QCursor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QCURSOR_POS )
   {
 #endif
     QPoint * ptr = new QPoint( QCursor::pos() );
-    _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+    Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

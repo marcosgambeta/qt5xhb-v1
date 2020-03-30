@@ -64,7 +64,7 @@ QTextLength()
 void QTextLength_new1()
 {
   QTextLength * o = new QTextLength();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -73,7 +73,7 @@ QTextLength(Type type, qreal value)
 void QTextLength_new2()
 {
   QTextLength * o = new QTextLength( (QTextLength::Type) hb_parni(1), PQREAL(2) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QTextLength()
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 
 HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 {
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextLength * obj = (QTextLength *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ Type type() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 {
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextLength * obj = (QTextLength *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ qreal value(qreal maximumLength) const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
 {
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextLength * obj = (QTextLength *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ qreal rawValue() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
 {
-  QTextLength * obj = (QTextLength *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextLength * obj = (QTextLength *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

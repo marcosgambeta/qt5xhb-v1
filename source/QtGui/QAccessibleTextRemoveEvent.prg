@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_NEW )
   if( ISNUMPAR(3) && ISQOBJECT(1) && ISNUM(2) && ISCHAR(3) )
   {
     QAccessibleTextRemoveEvent * o = new QAccessibleTextRemoveEvent( PQOBJECT(1), PINT(2), PQSTRING(3) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_DELETE )
 {
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ QString textRemoved() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_TEXTREMOVED )
 {
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ int changePosition() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_CHANGEPOSITION )
 {
-  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextRemoveEvent * obj = (QAccessibleTextRemoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

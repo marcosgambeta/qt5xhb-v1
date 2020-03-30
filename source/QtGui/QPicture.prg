@@ -63,7 +63,7 @@ QPicture ( int formatVersion = -1 )
 void QPicture_new1()
 {
   QPicture * o = new QPicture( OPINT(1,-1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -72,7 +72,7 @@ QPicture ( const QPicture & pic )
 void QPicture_new2()
 {
   QPicture * o = new QPicture( *PQPICTURE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QPicture ( int formatVersion = -1 )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 
 HB_FUNC_STATIC( QPICTURE_DELETE )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ QRect boundingRect () const
 */
 HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->boundingRect() );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ const char * data () const
 */
 HB_FUNC_STATIC( QPICTURE_DATA )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QPICTURE_ISNULL )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ bool load ( const QString & fileName, const char * format = 0 )
 */
 void QPicture_load1()
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ bool load ( QIODevice * dev, const char * format = 0 )
 */
 void QPicture_load2()
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ bool play ( QPainter * painter )
 */
 HB_FUNC_STATIC( QPICTURE_PLAY )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ bool save ( const QString & fileName, const char * format = 0 )
 */
 void QPicture_save1()
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ bool save ( QIODevice * dev, const char * format = 0 )
 */
 void QPicture_save2()
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ void setBoundingRect ( const QRect & r )
 */
 HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -329,7 +329,7 @@ virtual void setData ( const char * data, uint size )
 */
 HB_FUNC_STATIC( QPICTURE_SETDATA )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -355,7 +355,7 @@ uint size () const
 */
 HB_FUNC_STATIC( QPICTURE_SIZE )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -379,7 +379,7 @@ void swap ( QPicture & other )
 */
 HB_FUNC_STATIC( QPICTURE_SWAP )
 {
-  QPicture * obj = (QPicture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

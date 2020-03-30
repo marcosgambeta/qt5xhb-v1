@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
   if( ISBETWEEN(5,6) && ISQPOINT(1) && ISNUM(2) && ISQMIMEDATA(3) && ISNUM(4) && ISNUM(5) && ISOPTNUM(6) )
   {
     QDragMoveEvent * o = new QDragMoveEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (QEvent::Type) QEvent::DragMove : (QEvent::Type) hb_parni(6) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ void accept ( const QRect & rectangle )
 */
 void QDragMoveEvent_accept1()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ void accept ()
 */
 void QDragMoveEvent_accept2()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ QRect answerRect () const
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->answerRect() );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ void ignore ( const QRect & rectangle )
 */
 void QDragMoveEvent_ignore1()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ void ignore ()
 */
 void QDragMoveEvent_ignore2()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = (QDragMoveEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

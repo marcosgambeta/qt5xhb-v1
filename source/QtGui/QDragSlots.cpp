@@ -48,7 +48,7 @@ void QDragSlots::targetChanged( QObject * newTarget )
 
 void QDragSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDrag * obj = (QDrag *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDrag * obj = (QDrag *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -68,7 +68,7 @@ explicit QPdfWriter(const QString & filename)
 void QPdfWriter_new1()
 {
   QPdfWriter * o = new QPdfWriter( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -77,7 +77,7 @@ explicit QPdfWriter(QIODevice * device)
 void QPdfWriter_new2()
 {
   QPdfWriter * o = new QPdfWriter( PQIODEVICE(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]explicit QPdfWriter(const QString & filename)
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPDFWRITER_NEW )
 
 HB_FUNC_STATIC( QPDFWRITER_DELETE )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ QString title() const
 */
 HB_FUNC_STATIC( QPDFWRITER_TITLE )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ void setTitle(const QString & title)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETTITLE )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ QString creator() const
 */
 HB_FUNC_STATIC( QPDFWRITER_CREATOR )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ void setCreator(const QString & creator)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETCREATOR )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ bool newPage()
 */
 HB_FUNC_STATIC( QPDFWRITER_NEWPAGE )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -245,7 +245,7 @@ void setPageSize(PageSize size) (obsolet)
 */
 void QPdfWriter_setPageSize1()
 {
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -261,7 +261,7 @@ bool setPageSize(const QPageSize &pageSize)
 void QPdfWriter_setPageSize2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ void setPageSizeMM(const QSizeF & size) (obsolet)
 */
 HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZEMM )
 {
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -321,7 +321,7 @@ int resolution() const
 HB_FUNC_STATIC( QPDFWRITER_RESOLUTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ void setResolution(int resolution)
 HB_FUNC_STATIC( QPDFWRITER_SETRESOLUTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ QPageLayout pageLayout() const
 HB_FUNC_STATIC( QPDFWRITER_PAGELAYOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QPDFWRITER_PAGELAYOUT )
     {
 #endif
       QPageLayout * ptr = new QPageLayout( obj->pageLayout() );
-      _qt5xhb_createReturnClass( ptr, "QPAGELAYOUT", true );
+      Qt5xHb::createReturnClass( ptr, "QPAGELAYOUT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -402,7 +402,7 @@ bool setPageLayout(const QPageLayout &newPageLayout)
 HB_FUNC_STATIC( QPDFWRITER_SETPAGELAYOUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -428,7 +428,7 @@ PdfVersion pdfVersion() const
 HB_FUNC_STATIC( QPDFWRITER_PDFVERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -454,7 +454,7 @@ bool setPageMargins(const QMarginsF &margins)
 void QPdfWriter_setPageMargins1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -469,7 +469,7 @@ bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
 void QPdfWriter_setPageMargins2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -503,7 +503,7 @@ bool setPageOrientation(QPageLayout::Orientation orientation)
 HB_FUNC_STATIC( QPDFWRITER_SETPAGEORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -529,7 +529,7 @@ void setPdfVersion(PdfVersion version)
 HB_FUNC_STATIC( QPDFWRITER_SETPDFVERSION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QPdfWriter * obj = (QPdfWriter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPdfWriter * obj = (QPdfWriter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

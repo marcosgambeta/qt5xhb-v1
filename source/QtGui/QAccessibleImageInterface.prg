@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_DELETE )
 {
-  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ virtual QString imageDescription() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGEDESCRIPTION )
 {
-  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ virtual QSize imageSize() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGESIZE )
 {
-  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleImageInterface * obj = (QAccessibleImageInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QACCESSIBLEIMAGEINTERFACE_IMAGESIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->imageSize() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

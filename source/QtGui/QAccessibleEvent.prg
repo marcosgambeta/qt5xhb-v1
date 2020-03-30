@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
     QAccessibleEvent * o = new QAccessibleEvent( PQOBJECT(1), (QAccessible::Event) hb_parni(2) );
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 
 HB_FUNC_STATIC( QACCESSIBLEEVENT_DELETE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ QAccessible::Event type() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ QObject *object() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ void setChild(int chld)
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ int child() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ virtual QAccessibleInterface *accessibleInterface() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = (QAccessibleEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
     {
 #endif
       QAccessibleInterface * ptr = obj->accessibleInterface();
-      _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
+      Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

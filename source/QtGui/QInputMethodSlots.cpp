@@ -90,7 +90,7 @@ void QInputMethodSlots::visibleChanged()
 
 void QInputMethodSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QInputMethod * obj = (QInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputMethod * obj = (QInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

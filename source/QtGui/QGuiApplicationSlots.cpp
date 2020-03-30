@@ -83,7 +83,7 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
 
 void QGuiApplicationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGuiApplication * obj = (QGuiApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGuiApplication * obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_NEW )
   if( ISNUMPAR(4) && ISQOBJECT(1) && ISNUM(2) && ISCHAR(3) && ISCHAR(4) )
   {
     QAccessibleTextUpdateEvent * o = new QAccessibleTextUpdateEvent( PQOBJECT(1), PINT(2), PQSTRING(3), PQSTRING(4) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_NEW )
 
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_DELETE )
 {
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -87,7 +87,7 @@ QString textRemoved() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_TEXTREMOVED )
 {
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ QString textInserted() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_TEXTINSERTED )
 {
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ int changePosition() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_CHANGEPOSITION )
 {
-  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextUpdateEvent * obj = (QAccessibleTextUpdateEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

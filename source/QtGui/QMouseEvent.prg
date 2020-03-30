@@ -62,7 +62,7 @@ QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::Mou
 void QMouseEvent_new1()
 {
   QMouseEvent * o = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), (Qt::MouseButton) hb_parni(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -71,7 +71,7 @@ QMouseEvent(Type type, const QPointF & localPos, const QPointF & screenPos, Qt::
 void QMouseEvent_new2()
 {
   QMouseEvent * o = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), (Qt::MouseButton) hb_parni(4), (Qt::MouseButtons) hb_parni(5), (Qt::KeyboardModifiers) hb_parni(6) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -80,7 +80,7 @@ QMouseEvent(Type type, const QPointF & localPos, const QPointF & windowPos, cons
 void QMouseEvent_new3()
 {
   QMouseEvent * o = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), (Qt::MouseButton) hb_parni(5), (Qt::MouseButtons) hb_parni(6), (Qt::KeyboardModifiers) hb_parni(7) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 
 HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ Qt::MouseButton button () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ Qt::MouseButtons buttons () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ int globalX () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ int globalY () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ const QPointF & localPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
     {
 #endif
       const QPointF * ptr = &obj->localPos();
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ const QPointF & screenPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
     {
 #endif
       const QPointF * ptr = &obj->screenPos();
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ const QPointF & windowPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
     {
 #endif
       const QPointF * ptr = &obj->windowPos();
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,7 +300,7 @@ int x () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_X )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -324,7 +324,7 @@ int y () const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_Y )
 {
-  QMouseEvent * obj = (QMouseEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMouseEvent * obj = (QMouseEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

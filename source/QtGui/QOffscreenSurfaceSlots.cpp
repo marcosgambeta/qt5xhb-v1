@@ -35,7 +35,7 @@ void QOffscreenSurfaceSlots::screenChanged( QScreen * screen )
 
 void QOffscreenSurfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QOffscreenSurface * obj = (QOffscreenSurface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QOffscreenSurface * obj = (QOffscreenSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

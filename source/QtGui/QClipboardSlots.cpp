@@ -68,7 +68,7 @@ void QClipboardSlots::selectionChanged()
 
 void QClipboardSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

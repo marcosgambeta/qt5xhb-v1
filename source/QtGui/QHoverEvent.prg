@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
   if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
     QHoverEvent * o = new QHoverEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
 
 HB_FUNC_STATIC( QHOVEREVENT_DELETE )
 {
-  QHoverEvent * obj = (QHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHoverEvent * obj = (QHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

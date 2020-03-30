@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
   if( ISNUMPAR(3) && ISQOBJECT(1) && ISNUM(2) && ISNUM(3) )
   {
     QAccessibleTextSelectionEvent * o = new QAccessibleTextSelectionEvent( PQOBJECT(1), PINT(2), PINT(3) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
 
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_DELETE )
 {
-  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -87,7 +87,7 @@ void setSelection(int start, int end)
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION )
 {
-  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ int selectionStart() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SELECTIONSTART )
 {
-  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ int selectionEnd() const
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SELECTIONEND )
 {
-  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTextSelectionEvent * obj = (QAccessibleTextSelectionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

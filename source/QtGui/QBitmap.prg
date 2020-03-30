@@ -60,7 +60,7 @@ QBitmap ()
 void QBitmap_new1()
 {
   QBitmap * o = new QBitmap();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QBitmap ( const QPixmap & pixmap )
 void QBitmap_new2()
 {
   QBitmap * o = new QBitmap( *PQPIXMAP(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -78,7 +78,7 @@ QBitmap ( int width, int height )
 void QBitmap_new3()
 {
   QBitmap * o = new QBitmap( PINT(1), PINT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -87,7 +87,7 @@ QBitmap ( const QSize & size )
 void QBitmap_new4()
 {
   QBitmap * o = new QBitmap( *PQSIZE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -96,7 +96,7 @@ QBitmap ( const QString & fileName, const char * format = 0 )
 void QBitmap_new5()
 {
   QBitmap * o = new QBitmap( PQSTRING(1), OPCONSTCHAR(2,0) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QBitmap ()
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 
 HB_FUNC_STATIC( QBITMAP_DELETE )
 {
-  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
-  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ QBitmap transformed ( const QTransform & matrix ) const
 */
 HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
-  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
     {
 #endif
       QBitmap * ptr = new QBitmap( obj->transformed( *PQTRANSFORM(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QBITMAP", true );
+      Qt5xHb::createReturnClass( ptr, "QBITMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QBITMAP_FROMDATA )
   {
 #endif
     QBitmap * ptr = new QBitmap( QBitmap::fromData( *PQSIZE(1), PCONSTUCHAR(2), ISNIL(3)? (QImage::Format) QImage::Format_MonoLSB : (QImage::Format) hb_parni(3) ) );
-    _qt5xhb_createReturnClass( ptr, "QBITMAP", true );
+    Qt5xHb::createReturnClass( ptr, "QBITMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
   {
 #endif
     QBitmap * ptr = new QBitmap( QBitmap::fromImage( *PQIMAGE(1), ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );
-    _qt5xhb_createReturnClass( ptr, "QBITMAP", true );
+    Qt5xHb::createReturnClass( ptr, "QBITMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -250,13 +250,13 @@ QVariant toVariant()
 */
 void QBitmap_toVariant1()
 {
-  QBitmap * obj = (QBitmap *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QVariant * variant = new QVariant();
     variant->setValue<QBitmap>( *obj );
-    _qt5xhb_createReturnClass( variant, "QVARIANT", true );
+    Qt5xHb::createReturnClass( variant, "QVARIANT", true );
   }
 }
 
@@ -268,7 +268,7 @@ void QBitmap_toVariant2()
   QBitmap * bitmap = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
   QVariant * variant = new QVariant();
   variant->setValue<QBitmap>( *bitmap );
-  _qt5xhb_createReturnClass( variant, "QVARIANT", true );
+  Qt5xHb::createReturnClass( variant, "QVARIANT", true );
 }
 
 //[1]QVariant toVariant()
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QBITMAP_FROMVARIANT )
   {
     QVariant * variant = (QVariant *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QBitmap * bitmap = new QBitmap( variant->value<QBitmap>() );
-    _qt5xhb_createReturnClass( bitmap, "QBITMAP", true );
+    Qt5xHb::createReturnClass( bitmap, "QBITMAP", true );
   }
   else
   {

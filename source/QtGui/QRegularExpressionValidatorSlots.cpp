@@ -35,7 +35,7 @@ void QRegularExpressionValidatorSlots::regularExpressionChanged( const QRegularE
 
 void QRegularExpressionValidatorSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

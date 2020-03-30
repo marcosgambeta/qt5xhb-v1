@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
   if( ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2) )
   {
     QResizeEvent * o = new QResizeEvent( *PQSIZE(1), *PQSIZE(2) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 
 HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
 {
-  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResizeEvent * obj = (QResizeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -87,7 +87,7 @@ const QSize &size() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResizeEvent * obj = (QResizeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
     {
 #endif
       const QSize * ptr = &obj->size();
-      _qt5xhb_createReturnClass( ptr, "QSIZE", false );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ const QSize &oldSize() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResizeEvent * obj = (QResizeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
     {
 #endif
       const QSize * ptr = &obj->oldSize();
-      _qt5xhb_createReturnClass( ptr, "QSIZE", false );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

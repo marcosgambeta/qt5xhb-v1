@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRADIENT_DELETE )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ CoordinateMode coordinateMode () const
 */
 HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ void setColorAt ( qreal position, const QColor & color )
 */
 HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
     if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
     {
 #endif
-      obj->setColorAt( PQREAL(1), ISOBJECT(2)? *(QColor *) _qt5xhb_itemGetPtr(2) : QColor(hb_parc(2)) );
+      obj->setColorAt( PQREAL(1), ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ void setCoordinateMode ( CoordinateMode mode )
 */
 HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ void setSpread ( Spread method )
 */
 HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ Spread spread () const
 */
 HB_FUNC_STATIC( QGRADIENT_SPREAD )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ Type type () const
 */
 HB_FUNC_STATIC( QGRADIENT_TYPE )
 {
-  QGradient * obj = (QGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGradient * obj = (QGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

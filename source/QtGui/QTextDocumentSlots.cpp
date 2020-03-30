@@ -137,7 +137,7 @@ void QTextDocumentSlots::documentLayoutChanged()
 
 void QTextDocumentSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTextDocument * obj = (QTextDocument *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextDocument * obj = (QTextDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

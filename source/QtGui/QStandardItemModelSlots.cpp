@@ -35,7 +35,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 
 void QStandardItemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStandardItemModel * obj = (QStandardItemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStandardItemModel * obj = (QStandardItemModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

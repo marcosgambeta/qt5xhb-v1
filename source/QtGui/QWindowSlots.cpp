@@ -139,7 +139,7 @@ void QWindowSlots::yChanged( int arg )
 
 void QWindowSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWindow * obj = (QWindow *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QHIDEEVENT_NEW )
   if( ISNUMPAR(0) )
   {
     QHideEvent * o = new QHideEvent();
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QHIDEEVENT_NEW )
 
 HB_FUNC_STATIC( QHIDEEVENT_DELETE )
 {
-  QHideEvent * obj = (QHideEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHideEvent * obj = (QHideEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

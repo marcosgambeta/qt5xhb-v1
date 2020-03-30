@@ -56,7 +56,7 @@ QRegExpValidator ( QObject * parent = 0 )
 void QRegExpValidator_new1()
 {
   QRegExpValidator * o = new QRegExpValidator( OPQOBJECT(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -65,7 +65,7 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent = 0 )
 void QRegExpValidator_new2()
 {
   QRegExpValidator * o = new QRegExpValidator( *PQREGEXP(1), OPQOBJECT(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QRegExpValidator ( QObject * parent = 0 )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ const QRegExp & regExp () const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
     {
 #endif
       const QRegExp * ptr = &obj->regExp();
-      _qt5xhb_createReturnClass( ptr, "QREGEXP", false );
+      Qt5xHb::createReturnClass( ptr, "QREGEXP", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ void setRegExp ( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ virtual QValidator::State validate ( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = (QRegExpValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -140,7 +140,7 @@ QWindow(QScreen * targetScreen = 0)
 void QWindow_new1()
 {
   QWindow * o = new QWindow( OPQSCREEN(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -149,7 +149,7 @@ QWindow(QWindow * parent)
 void QWindow_new2()
 {
   QWindow * o = new QWindow( PQWINDOW(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QWindow(QScreen * targetScreen = 0)
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QWINDOW_NEW )
 
 HB_FUNC_STATIC( QWINDOW_DELETE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ QSize baseSize() const
 */
 HB_FUNC_STATIC( QWINDOW_BASESIZE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QWINDOW_BASESIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->baseSize() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ Qt::ScreenOrientation contentOrientation() const
 */
 HB_FUNC_STATIC( QWINDOW_CONTENTORIENTATION )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -244,7 +244,7 @@ void create()
 */
 HB_FUNC_STATIC( QWINDOW_CREATE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ QCursor cursor() const
 */
 HB_FUNC_STATIC( QWINDOW_CURSOR )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QWINDOW_CURSOR )
     {
 #endif
       QCursor * ptr = new QCursor( obj->cursor() );
-      _qt5xhb_createReturnClass( ptr, "QCURSOR", true );
+      Qt5xHb::createReturnClass( ptr, "QCURSOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ void destroy()
 */
 HB_FUNC_STATIC( QWINDOW_DESTROY )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -321,7 +321,7 @@ virtual QObject * focusObject() const
 */
 HB_FUNC_STATIC( QWINDOW_FOCUSOBJECT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QWINDOW_FOCUSOBJECT )
     {
 #endif
       QObject * ptr = obj->focusObject();
-      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ QRect frameGeometry() const
 */
 HB_FUNC_STATIC( QWINDOW_FRAMEGEOMETRY )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QWINDOW_FRAMEGEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->frameGeometry() );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ QMargins frameMargins() const
 */
 HB_FUNC_STATIC( QWINDOW_FRAMEMARGINS )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QWINDOW_FRAMEMARGINS )
     {
 #endif
       QMargins * ptr = new QMargins( obj->frameMargins() );
-      _qt5xhb_createReturnClass( ptr, "QMARGINS", true );
+      Qt5xHb::createReturnClass( ptr, "QMARGINS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ QRect geometry() const
 */
 HB_FUNC_STATIC( QWINDOW_GEOMETRY )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QWINDOW_GEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,7 +421,7 @@ int height() const
 */
 HB_FUNC_STATIC( QWINDOW_HEIGHT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -445,7 +445,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QWINDOW_ISACTIVE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -469,7 +469,7 @@ bool isAncestorOf(const QWindow * child, AncestorMode mode = IncludeTransients) 
 */
 HB_FUNC_STATIC( QWINDOW_ISANCESTOROF )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -493,7 +493,7 @@ bool isExposed() const
 */
 HB_FUNC_STATIC( QWINDOW_ISEXPOSED )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -517,7 +517,7 @@ bool isModal() const
 */
 HB_FUNC_STATIC( QWINDOW_ISMODAL )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -541,7 +541,7 @@ bool isTopLevel() const
 */
 HB_FUNC_STATIC( QWINDOW_ISTOPLEVEL )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -565,7 +565,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QWINDOW_ISVISIBLE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -589,7 +589,7 @@ QPoint mapFromGlobal(const QPoint & pos) const
 */
 HB_FUNC_STATIC( QWINDOW_MAPFROMGLOBAL )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QWINDOW_MAPFROMGLOBAL )
     {
 #endif
       QPoint * ptr = new QPoint( obj->mapFromGlobal( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -614,7 +614,7 @@ QPoint mapToGlobal(const QPoint & pos) const
 */
 HB_FUNC_STATIC( QWINDOW_MAPTOGLOBAL )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QWINDOW_MAPTOGLOBAL )
     {
 #endif
       QPoint * ptr = new QPoint( obj->mapToGlobal( *PQPOINT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,7 +639,7 @@ QSize maximumSize() const
 */
 HB_FUNC_STATIC( QWINDOW_MAXIMUMSIZE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QWINDOW_MAXIMUMSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->maximumSize() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -664,7 +664,7 @@ QSize minimumSize() const
 */
 HB_FUNC_STATIC( QWINDOW_MINIMUMSIZE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QWINDOW_MINIMUMSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSize() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -689,7 +689,7 @@ QWindow * parent() const
 */
 HB_FUNC_STATIC( QWINDOW_PARENT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QWINDOW_PARENT )
     {
 #endif
       QWindow * ptr = obj->parent();
-      _qt5xhb_createReturnQObjectClass( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -714,7 +714,7 @@ void reportContentOrientationChange(Qt::ScreenOrientation orientation)
 */
 HB_FUNC_STATIC( QWINDOW_REPORTCONTENTORIENTATIONCHANGE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -740,7 +740,7 @@ QSurfaceFormat requestedFormat() const
 */
 HB_FUNC_STATIC( QWINDOW_REQUESTEDFORMAT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QWINDOW_REQUESTEDFORMAT )
     {
 #endif
       QSurfaceFormat * ptr = new QSurfaceFormat( obj->requestedFormat() );
-      _qt5xhb_createReturnClass( ptr, "QSURFACEFORMAT", true );
+      Qt5xHb::createReturnClass( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -765,7 +765,7 @@ void resize(const QSize & newSize)
 */
 void QWindow_resize1()
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -780,7 +780,7 @@ void resize(int w, int h)
 */
 void QWindow_resize2()
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -814,7 +814,7 @@ QScreen * screen() const
 */
 HB_FUNC_STATIC( QWINDOW_SCREEN )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QWINDOW_SCREEN )
     {
 #endif
       QScreen * ptr = obj->screen();
-      _qt5xhb_createReturnQObjectClass( ptr, "QSCREEN" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -839,7 +839,7 @@ void setBaseSize(const QSize & size)
 */
 HB_FUNC_STATIC( QWINDOW_SETBASESIZE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -865,7 +865,7 @@ void setCursor(const QCursor &)
 */
 HB_FUNC_STATIC( QWINDOW_SETCURSOR )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -891,7 +891,7 @@ void setFormat(const QSurfaceFormat & format)
 */
 HB_FUNC_STATIC( QWINDOW_SETFORMAT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -917,7 +917,7 @@ void setGeometry(int posx, int posy, int w, int h)
 */
 void QWindow_setGeometry1()
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -932,7 +932,7 @@ void setGeometry(const QRect & rect)
 */
 void QWindow_setGeometry2()
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -966,7 +966,7 @@ bool setKeyboardGrabEnabled(bool grab)
 */
 HB_FUNC_STATIC( QWINDOW_SETKEYBOARDGRABENABLED )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -990,7 +990,7 @@ void setMaximumSize(const QSize & size)
 */
 HB_FUNC_STATIC( QWINDOW_SETMAXIMUMSIZE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1016,7 +1016,7 @@ void setMinimumSize(const QSize & size)
 */
 HB_FUNC_STATIC( QWINDOW_SETMINIMUMSIZE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1042,7 +1042,7 @@ bool setMouseGrabEnabled(bool grab)
 */
 HB_FUNC_STATIC( QWINDOW_SETMOUSEGRABENABLED )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1066,7 +1066,7 @@ void setOpacity(qreal level)
 */
 HB_FUNC_STATIC( QWINDOW_SETOPACITY )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1092,7 +1092,7 @@ void setParent(QWindow * parent)
 */
 HB_FUNC_STATIC( QWINDOW_SETPARENT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1118,7 +1118,7 @@ void setScreen(QScreen * newScreen)
 */
 HB_FUNC_STATIC( QWINDOW_SETSCREEN )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1144,7 +1144,7 @@ void setSizeIncrement(const QSize & size)
 */
 HB_FUNC_STATIC( QWINDOW_SETSIZEINCREMENT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1170,7 +1170,7 @@ void setSurfaceType(SurfaceType surfaceType)
 */
 HB_FUNC_STATIC( QWINDOW_SETSURFACETYPE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1196,7 +1196,7 @@ void setTransientParent(QWindow * parent)
 */
 HB_FUNC_STATIC( QWINDOW_SETTRANSIENTPARENT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1222,7 +1222,7 @@ QSize sizeIncrement() const
 */
 HB_FUNC_STATIC( QWINDOW_SIZEINCREMENT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1231,7 +1231,7 @@ HB_FUNC_STATIC( QWINDOW_SIZEINCREMENT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeIncrement() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1247,7 +1247,7 @@ QWindow * transientParent() const
 */
 HB_FUNC_STATIC( QWINDOW_TRANSIENTPARENT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1256,7 +1256,7 @@ HB_FUNC_STATIC( QWINDOW_TRANSIENTPARENT )
     {
 #endif
       QWindow * ptr = obj->transientParent();
-      _qt5xhb_createReturnQObjectClass( ptr, "QWINDOW" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1272,7 +1272,7 @@ void unsetCursor()
 */
 HB_FUNC_STATIC( QWINDOW_UNSETCURSOR )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1298,7 +1298,7 @@ int width() const
 */
 HB_FUNC_STATIC( QWINDOW_WIDTH )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1322,7 +1322,7 @@ Qt::WindowState windowState() const
 */
 HB_FUNC_STATIC( QWINDOW_WINDOWSTATE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1346,7 +1346,7 @@ int x() const
 */
 HB_FUNC_STATIC( QWINDOW_X )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1370,7 +1370,7 @@ int y() const
 */
 HB_FUNC_STATIC( QWINDOW_Y )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1394,7 +1394,7 @@ virtual QSurfaceFormat format() const
 */
 HB_FUNC_STATIC( QWINDOW_FORMAT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC( QWINDOW_FORMAT )
     {
 #endif
       QSurfaceFormat * ptr = new QSurfaceFormat( obj->format() );
-      _qt5xhb_createReturnClass( ptr, "QSURFACEFORMAT", true );
+      Qt5xHb::createReturnClass( ptr, "QSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1419,7 +1419,7 @@ virtual QSize size() const
 */
 HB_FUNC_STATIC( QWINDOW_SIZE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1428,7 +1428,7 @@ HB_FUNC_STATIC( QWINDOW_SIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->size() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1444,7 +1444,7 @@ virtual SurfaceType surfaceType() const
 */
 HB_FUNC_STATIC( QWINDOW_SURFACETYPE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1468,7 +1468,7 @@ bool close()
 */
 HB_FUNC_STATIC( QWINDOW_CLOSE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1492,7 +1492,7 @@ void hide()
 */
 HB_FUNC_STATIC( QWINDOW_HIDE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1518,7 +1518,7 @@ void lower()
 */
 HB_FUNC_STATIC( QWINDOW_LOWER )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1544,7 +1544,7 @@ void raise()
 */
 HB_FUNC_STATIC( QWINDOW_RAISE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1570,7 +1570,7 @@ void setHeight(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_SETHEIGHT )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1596,7 +1596,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QWINDOW_SETVISIBLE )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1622,7 +1622,7 @@ void setWidth(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_SETWIDTH )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1648,7 +1648,7 @@ void setX(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_SETX )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1674,7 +1674,7 @@ void setY(int arg)
 */
 HB_FUNC_STATIC( QWINDOW_SETY )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1700,7 +1700,7 @@ void show()
 */
 HB_FUNC_STATIC( QWINDOW_SHOW )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1726,7 +1726,7 @@ void showFullScreen()
 */
 HB_FUNC_STATIC( QWINDOW_SHOWFULLSCREEN )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1752,7 +1752,7 @@ void showMaximized()
 */
 HB_FUNC_STATIC( QWINDOW_SHOWMAXIMIZED )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1778,7 +1778,7 @@ void showMinimized()
 */
 HB_FUNC_STATIC( QWINDOW_SHOWMINIMIZED )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1804,7 +1804,7 @@ void showNormal()
 */
 HB_FUNC_STATIC( QWINDOW_SHOWNORMAL )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1830,7 +1830,7 @@ QPoint position() const
 */
 HB_FUNC_STATIC( QWINDOW_POSITION )
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1839,7 +1839,7 @@ HB_FUNC_STATIC( QWINDOW_POSITION )
     {
 #endif
       QPoint * ptr = new QPoint( obj->position() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1855,7 +1855,7 @@ void setPosition(const QPoint & pt)
 */
 void QWindow_setPosition1()
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1870,7 +1870,7 @@ void setPosition(int posx, int posy)
 */
 void QWindow_setPosition2()
 {
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1901,7 +1901,7 @@ void requestUpdate()
 HB_FUNC_STATIC( QWINDOW_REQUESTUPDATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QWindow * obj = (QWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindow * obj = (QWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

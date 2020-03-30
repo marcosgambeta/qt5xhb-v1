@@ -76,7 +76,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_DELETE )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ virtual QAccessibleInterface *cellAt (int row, int column) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
     {
 #endif
       QAccessibleInterface * ptr = obj->cellAt( PINT(1), PINT(2) );
-      _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
+      Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,7 +121,7 @@ virtual QAccessibleInterface *caption() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
     {
 #endif
       QAccessibleInterface * ptr = obj->caption();
-      _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
+      Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ virtual QString columnDescription(int column) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ virtual int columnCount() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNCOUNT )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ virtual int rowCount() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWCOUNT )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ virtual int selectedCellCount() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLCOUNT )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -242,7 +242,7 @@ virtual int selectedColumnCount() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNCOUNT )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ virtual int selectedRowCount() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ virtual QString rowDescription(int row) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -314,7 +314,7 @@ virtual QList<QAccessibleInterface*> selectedCells() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -362,7 +362,7 @@ virtual QList<int> selectedColumns() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCOLUMNS )
     {
 #endif
       QList<int> list = obj->selectedColumns();
-      _qt5xhb_convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ virtual QList<int> selectedRows() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
     {
 #endif
       QList<int> list = obj->selectedRows();
-      _qt5xhb_convert_qlist_int_to_array( list );
+      Qt5xHb::convert_qlist_int_to_array( list );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ virtual QAccessibleInterface *summary() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
     {
 #endif
       QAccessibleInterface * ptr = obj->summary();
-      _qt5xhb_createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
+      Qt5xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,7 +437,7 @@ virtual bool isColumnSelected(int column) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -461,7 +461,7 @@ virtual bool isRowSelected(int row) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISROWSELECTED )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -485,7 +485,7 @@ virtual bool selectRow(int row) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTROW )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -509,7 +509,7 @@ virtual bool selectColumn(int column) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTCOLUMN )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -533,7 +533,7 @@ virtual bool unselectRow(int row) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTROW )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -557,7 +557,7 @@ virtual bool unselectColumn(int column) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN )
 {
-  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccessibleTableInterface * obj = (QAccessibleTableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

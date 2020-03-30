@@ -57,7 +57,7 @@ QLinearGradient ()
 void QLinearGradient_new1()
 {
   QLinearGradient * o = new QLinearGradient();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -66,7 +66,7 @@ QLinearGradient ( const QPointF & start, const QPointF & finalStop )
 void QLinearGradient_new2()
 {
   QLinearGradient * o = new QLinearGradient( *PQPOINTF(1), *PQPOINTF(2) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QLinearGradient ( qreal x1, qreal y1, qreal x2, qreal y2 )
 void QLinearGradient_new3()
 {
   QLinearGradient * o = new QLinearGradient( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QLinearGradient ()
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
 
 HB_FUNC_STATIC( QLINEARGRADIENT_DELETE )
 {
-  QLinearGradient * obj = (QLinearGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLinearGradient * obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ QPointF finalStop () const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
 {
-  QLinearGradient * obj = (QLinearGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLinearGradient * obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
     {
 #endif
       QPointF * ptr = new QPointF( obj->finalStop() );
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ void setFinalStop ( const QPointF & stop )
 */
 void QLinearGradient_setFinalStop1()
 {
-  QLinearGradient * obj = (QLinearGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLinearGradient * obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ void setFinalStop ( qreal x, qreal y )
 */
 void QLinearGradient_setFinalStop2()
 {
-  QLinearGradient * obj = (QLinearGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLinearGradient * obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ void setStart ( const QPointF & start )
 */
 void QLinearGradient_setStart1()
 {
-  QLinearGradient * obj = (QLinearGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLinearGradient * obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ void setStart ( qreal x, qreal y )
 */
 void QLinearGradient_setStart2()
 {
-  QLinearGradient * obj = (QLinearGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLinearGradient * obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ QPointF start () const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_START )
 {
-  QLinearGradient * obj = (QLinearGradient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLinearGradient * obj = (QLinearGradient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_START )
     {
 #endif
       QPointF * ptr = new QPointF( obj->start() );
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

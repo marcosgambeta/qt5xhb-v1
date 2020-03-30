@@ -57,7 +57,7 @@ QRegularExpressionValidator(QObject *parent = 0)
 void QRegularExpressionValidator_new1()
 {
   QRegularExpressionValidator * o = new QRegularExpressionValidator( OPQOBJECT(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -66,7 +66,7 @@ QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
 void QRegularExpressionValidator_new2()
 {
   QRegularExpressionValidator * o = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QRegularExpressionValidator(QObject *parent = 0)
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_DELETE )
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ QRegularExpression regularExpression() const
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
     {
 #endif
       QRegularExpression * ptr = new QRegularExpression( obj->regularExpression() );
-      _qt5xhb_createReturnClass( ptr, "QREGULAREXPRESSION", true );
+      Qt5xHb::createReturnClass( ptr, "QREGULAREXPRESSION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ void setRegularExpression(const QRegularExpression &re)
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
 {
-  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRegularExpressionValidator * obj = (QRegularExpressionValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

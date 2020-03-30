@@ -126,7 +126,7 @@ void QScreenSlots::refreshRateChanged( qreal refreshRate )
 
 void QScreenSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QScreen * obj = (QScreen *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScreen * obj = (QScreen *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

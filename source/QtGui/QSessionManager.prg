@@ -66,7 +66,7 @@ QString sessionId() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ QString sessionKey() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ bool allowsInteraction()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ bool allowsErrorInteraction()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void release()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ void cancel()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ void setRestartHint(RestartHint)
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -240,7 +240,7 @@ RestartHint restartHint() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -264,7 +264,7 @@ void setRestartCommand(const QStringList&)
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ QStringList restartCommand() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -314,7 +314,7 @@ void setDiscardCommand(const QStringList&)
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -340,7 +340,7 @@ QStringList discardCommand() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -364,7 +364,7 @@ void setManagerProperty(const QString& name, const QString& value)
 */
 void QSessionManager_setManagerProperty1()
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -379,7 +379,7 @@ void setManagerProperty(const QString& name, const QStringList& value)
 */
 void QSessionManager_setManagerProperty2()
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -413,7 +413,7 @@ bool isPhase2() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -437,7 +437,7 @@ void requestPhase2()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
 {
-  QSessionManager * obj = (QSessionManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSessionManager * obj = (QSessionManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

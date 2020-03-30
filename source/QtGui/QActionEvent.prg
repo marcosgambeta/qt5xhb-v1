@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
   if( ISBETWEEN(2,3) && ISNUM(1) && ISQACTION(2) && (ISQACTION(3)||ISNIL(3)) )
   {
     QActionEvent * o = new QActionEvent( PINT(1), PQACTION(2), OPQACTION(3,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
 
 HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 {
-  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QActionEvent * obj = (QActionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ QAction * action () const
 */
 HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 {
-  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QActionEvent * obj = (QActionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
     {
 #endif
       QAction * ptr = obj->action();
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ QAction * before () const
 */
 HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
 {
-  QActionEvent * obj = (QActionEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QActionEvent * obj = (QActionEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
     {
 #endif
       QAction * ptr = obj->before();
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

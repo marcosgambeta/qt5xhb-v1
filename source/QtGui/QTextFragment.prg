@@ -75,7 +75,7 @@ QTextFragment()
 void QTextFragment_new2()
 {
   QTextFragment * o = new QTextFragment();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QTextFragment(const QTextFragment &o)
 void QTextFragment_new3()
 {
   QTextFragment * o = new QTextFragment( *PQTEXTFRAGMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ int length() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ bool contains(int position) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat() );
-      _qt5xhb_createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt5xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ int charFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -274,7 +274,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -298,7 +298,7 @@ QList<QGlyphRun> glyphRuns(int from = -1, int length = -1) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
-  QTextFragment * obj = (QTextFragment *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTextFragment * obj = (QTextFragment *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

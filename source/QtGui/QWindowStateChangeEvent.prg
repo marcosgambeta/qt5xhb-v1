@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
   if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
   {
     QWindowStateChangeEvent * o = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1), OPBOOL(2,false) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ Qt::WindowStates oldState() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ bool isOverride() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

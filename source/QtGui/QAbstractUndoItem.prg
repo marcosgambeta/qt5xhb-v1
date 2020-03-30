@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTUNDOITEM_DELETE )
 {
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractUndoItem * obj = (QAbstractUndoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,7 +78,7 @@ virtual void undo() = 0
 */
 HB_FUNC_STATIC( QABSTRACTUNDOITEM_UNDO )
 {
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractUndoItem * obj = (QAbstractUndoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ virtual void redo() = 0
 */
 HB_FUNC_STATIC( QABSTRACTUNDOITEM_REDO )
 {
-  QAbstractUndoItem * obj = (QAbstractUndoItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractUndoItem * obj = (QAbstractUndoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

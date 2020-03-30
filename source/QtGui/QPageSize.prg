@@ -88,7 +88,7 @@ void QPageSize_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * o = new QPageSize();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -99,7 +99,7 @@ void QPageSize_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * o = new QPageSize( (QPageSize::PageSizeId) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -110,7 +110,7 @@ void QPageSize_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * o = new QPageSize( *PQSIZE(1), OPQSTRING(2,QString()), ISNIL(3)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -121,7 +121,7 @@ void QPageSize_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * o = new QPageSize( *PQSIZEF(1), (QPageSize::Unit) hb_parni(2), OPQSTRING(3,QString()), ISNIL(4)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(4) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -132,7 +132,7 @@ void QPageSize_new5()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * o = new QPageSize( *PQPAGESIZE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
 HB_FUNC_STATIC( QPAGESIZE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ void swap(QPageSize &other)
 HB_FUNC_STATIC( QPAGESIZE_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ bool isEquivalentTo(const QPageSize &other) const
 HB_FUNC_STATIC( QPAGESIZE_ISEQUIVALENTTO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -249,7 +249,7 @@ bool isValid() const
 HB_FUNC_STATIC( QPAGESIZE_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ QString key() const
 void QPageSize_key1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -320,7 +320,7 @@ QString name() const
 void QPageSize_name1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -365,7 +365,7 @@ PageSizeId id() const
 void QPageSize_id1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -442,7 +442,7 @@ int windowsId() const
 void QPageSize_windowsId1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -487,12 +487,12 @@ QSizeF definitionSize() const
 void QPageSize_definitionSize1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->definitionSize() );
-    _qt5xhb_createReturnClass( ptr, "QSIZEF", true );
+    Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
   }
 #endif
 }
@@ -505,7 +505,7 @@ void QPageSize_definitionSize2()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
   QSizeF * ptr = new QSizeF( QPageSize::definitionSize( (QPageSize::PageSizeId) hb_parni(1) ) );
-  _qt5xhb_createReturnClass( ptr, "QSIZEF", true );
+  Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #endif
 }
 
@@ -534,7 +534,7 @@ Unit definitionUnits() const
 void QPageSize_definitionUnits1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -579,12 +579,12 @@ QSizeF size(Unit units) const
 void QPageSize_size1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->size( (QPageSize::Unit) hb_parni(1) ) );
-    _qt5xhb_createReturnClass( ptr, "QSIZEF", true );
+    Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
   }
 #endif
 }
@@ -597,7 +597,7 @@ void QPageSize_size2()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
   QSizeF * ptr = new QSizeF( QPageSize::size( (QPageSize::PageSizeId) hb_parni(1), (QPageSize::Unit) hb_parni(2) ) );
-  _qt5xhb_createReturnClass( ptr, "QSIZEF", true );
+  Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #endif
 }
 
@@ -626,12 +626,12 @@ QSize sizePoints() const
 void QPageSize_sizePoints1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizePoints() );
-    _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+    Qt5xHb::createReturnClass( ptr, "QSIZE", true );
   }
 #endif
 }
@@ -644,7 +644,7 @@ void QPageSize_sizePoints2()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
   QSize * ptr = new QSize( QPageSize::sizePoints( (QPageSize::PageSizeId) hb_parni(1) ) );
-  _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+  Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #endif
 }
 
@@ -673,12 +673,12 @@ QSize sizePixels(int resolution) const
 void QPageSize_sizePixels1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizePixels( PINT(1) ) );
-    _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+    Qt5xHb::createReturnClass( ptr, "QSIZE", true );
   }
 #endif
 }
@@ -691,7 +691,7 @@ void QPageSize_sizePixels2()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
   QSize * ptr = new QSize( QPageSize::sizePixels( (QPageSize::PageSizeId) hb_parni(1), PINT(2) ) );
-  _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+  Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #endif
 }
 
@@ -720,7 +720,7 @@ QRectF rect(Unit units) const
 HB_FUNC_STATIC( QPAGESIZE_RECT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QPAGESIZE_RECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->rect( (QPageSize::Unit) hb_parni(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -747,7 +747,7 @@ QRect rectPoints() const
 HB_FUNC_STATIC( QPAGESIZE_RECTPOINTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QPAGESIZE_RECTPOINTS )
     {
 #endif
       QRect * ptr = new QRect( obj->rectPoints() );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -774,7 +774,7 @@ QRect rectPixels(int resolution) const
 HB_FUNC_STATIC( QPAGESIZE_RECTPIXELS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * obj = (QPageSize *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPageSize * obj = (QPageSize *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QPAGESIZE_RECTPIXELS )
     {
 #endif
       QRect * ptr = new QRect( obj->rectPixels( PINT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QGUIAPPLICATION_DELETE )
 {
-  QGuiApplication * obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGuiApplication * obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ virtual bool notify(QObject * object, QEvent * event)
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
 {
-  QGuiApplication * obj = (QGuiApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGuiApplication * obj = (QGuiApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_CLIPBOARD )
   {
 #endif
     QClipboard * ptr = QGuiApplication::clipboard();
-    _qt5xhb_createReturnQObjectClass( ptr, "QCLIPBOARD" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QCLIPBOARD" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSOBJECT )
   {
 #endif
     QObject * ptr = QGuiApplication::focusObject();
-    _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_FOCUSWINDOW )
   {
 #endif
     QWindow * ptr = QGuiApplication::focusWindow();
-    _qt5xhb_createReturnQObjectClass( ptr, "QWINDOW" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_FONT )
   {
 #endif
     QFont * ptr = new QFont( QGuiApplication::font() );
-    _qt5xhb_createReturnClass( ptr, "QFONT", true );
+    Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_INPUTMETHOD )
   {
 #endif
     QInputMethod * ptr = QGuiApplication::inputMethod();
-    _qt5xhb_createReturnQObjectClass( ptr, "QINPUTMETHOD" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QINPUTMETHOD" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_MODALWINDOW )
   {
 #endif
     QWindow * ptr = QGuiApplication::modalWindow();
-    _qt5xhb_createReturnQObjectClass( ptr, "QWINDOW" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_OVERRIDECURSOR )
   {
 #endif
     QCursor * ptr = QGuiApplication::overrideCursor();
-    _qt5xhb_createReturnClass( ptr, "QCURSOR", false );
+    Qt5xHb::createReturnClass( ptr, "QCURSOR", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PALETTE )
   {
 #endif
     QPalette * ptr = new QPalette( QGuiApplication::palette() );
-    _qt5xhb_createReturnClass( ptr, "QPALETTE", true );
+    Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PRIMARYSCREEN )
   {
 #endif
     QScreen * ptr = QGuiApplication::primaryScreen();
-    _qt5xhb_createReturnQObjectClass( ptr, "QSCREEN" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QSCREEN" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_STYLEHINTS )
   {
 #endif
     QStyleHints * ptr = QGuiApplication::styleHints();
-    _qt5xhb_createReturnQObjectClass( ptr, "QSTYLEHINTS" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QSTYLEHINTS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
   {
 #endif
     QWindow * ptr = QGuiApplication::topLevelAt( *PQPOINT(1) );
-    _qt5xhb_createReturnQObjectClass( ptr, "QWINDOW" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QWINDOW" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
