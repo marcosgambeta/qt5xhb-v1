@@ -13,13 +13,13 @@
 #ifndef QT5XHB_MACROS_QTSERIALPORT_H
 #define QT5XHB_MACROS_QTSERIALPORT_H
 
-#define ISQSERIALPORT(n)                                    _qt5xhb_isObjectDerivedFrom(n,"QSerialPort")
-#define ISQSERIALPORTINFO(n)                                _qt5xhb_isObjectDerivedFrom(n,"QSerialPortInfo")
+#define ISQSERIALPORT(n)                                    Qt5xHb::isObjectDerivedFrom(n,"QSerialPort")
+#define ISQSERIALPORTINFO(n)                                Qt5xHb::isObjectDerivedFrom(n,"QSerialPortInfo")
 
-#define PQSERIALPORT(n)                                     (QSerialPort *) _qt5xhb_itemGetPtr(n)
-#define PQSERIALPORTINFO(n)                                 (QSerialPortInfo *) _qt5xhb_itemGetPtr(n)
+#define PQSERIALPORT(n)                                     (QSerialPort *) Qt5xHb::itemGetPtr(n)
+#define PQSERIALPORTINFO(n)                                 (QSerialPortInfo *) Qt5xHb::itemGetPtr(n)
 
-#define OPQSERIALPORT(n,v)                                  ISNIL(n)? v : (QSerialPort *) _qt5xhb_itemGetPtr(n)
-#define OPQSERIALPORTINFO(n,v)                              ISNIL(n)? v : (QSerialPortInfo *) _qt5xhb_itemGetPtr(n)
+#define OPQSERIALPORT(n,v)                                  ISNIL(n)? v : (QSerialPort *) Qt5xHb::itemGetPtr(n)
+#define OPQSERIALPORTINFO(n,v)                              ISNIL(n)? v : (QSerialPortInfo *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTSERIALPORT_H */

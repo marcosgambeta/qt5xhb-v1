@@ -13,10 +13,10 @@
 #ifndef QT5XHB_MACROS_QTSCRIPTTOOLS_H
 #define QT5XHB_MACROS_QTSCRIPTTOOLS_H
 
-#define ISQSCRIPTENGINEDEBUGGER(n)                          _qt5xhb_isObjectDerivedFrom(n,"QScriptEngineDebugger")
+#define ISQSCRIPTENGINEDEBUGGER(n)                          Qt5xHb::isObjectDerivedFrom(n,"QScriptEngineDebugger")
 
-#define PQSCRIPTENGINEDEBUGGER(n)                           (QScriptEngineDebugger *) _qt5xhb_itemGetPtr(n)
+#define PQSCRIPTENGINEDEBUGGER(n)                           (QScriptEngineDebugger *) Qt5xHb::itemGetPtr(n)
 
-#define OPQSCRIPTENGINEDEBUGGER(n,v)                        ISNIL(n)? v : (QScriptEngineDebugger *) _qt5xhb_itemGetPtr(n)
+#define OPQSCRIPTENGINEDEBUGGER(n,v)                        ISNIL(n)? v : (QScriptEngineDebugger *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTSCRIPTTOOLS_H */

@@ -13,19 +13,19 @@
 #ifndef QT5XHB_MACROS_QTSVG_H
 #define QT5XHB_MACROS_QTSVG_H
 
-#define ISQGRAPHICSSVGITEM(n)                               _qt5xhb_isObjectDerivedFrom(n,"QGraphicsSvgItem")
-#define ISQSVGGENERATOR(n)                                  _qt5xhb_isObjectDerivedFrom(n,"QSvgGenerator")
-#define ISQSVGRENDERER(n)                                   _qt5xhb_isObjectDerivedFrom(n,"QSvgRenderer")
-#define ISQSVGWIDGET(n)                                     _qt5xhb_isObjectDerivedFrom(n,"QSvgWidget")
+#define ISQGRAPHICSSVGITEM(n)                               Qt5xHb::isObjectDerivedFrom(n,"QGraphicsSvgItem")
+#define ISQSVGGENERATOR(n)                                  Qt5xHb::isObjectDerivedFrom(n,"QSvgGenerator")
+#define ISQSVGRENDERER(n)                                   Qt5xHb::isObjectDerivedFrom(n,"QSvgRenderer")
+#define ISQSVGWIDGET(n)                                     Qt5xHb::isObjectDerivedFrom(n,"QSvgWidget")
 
-#define PQGRAPHICSSVGITEM(n)                                (QGraphicsSvgItem *) _qt5xhb_itemGetPtr(n)
-#define PQSVGGENERATOR(n)                                   (QSvgGenerator *) _qt5xhb_itemGetPtr(n)
-#define PQSVGRENDERER(n)                                    (QSvgRenderer *) _qt5xhb_itemGetPtr(n)
-#define PQSVGWIDGET(n)                                      (QSvgWidget *) _qt5xhb_itemGetPtr(n)
+#define PQGRAPHICSSVGITEM(n)                                (QGraphicsSvgItem *) Qt5xHb::itemGetPtr(n)
+#define PQSVGGENERATOR(n)                                   (QSvgGenerator *) Qt5xHb::itemGetPtr(n)
+#define PQSVGRENDERER(n)                                    (QSvgRenderer *) Qt5xHb::itemGetPtr(n)
+#define PQSVGWIDGET(n)                                      (QSvgWidget *) Qt5xHb::itemGetPtr(n)
 
-#define OPQGRAPHICSSVGITEM(n,v)                             ISNIL(n)? v : (QGraphicsSvgItem *) _qt5xhb_itemGetPtr(n)
-#define OPQSVGGENERATOR(n,v)                                ISNIL(n)? v : (QSvgGenerator *) _qt5xhb_itemGetPtr(n)
-#define OPQSVGRENDERER(n,v)                                 ISNIL(n)? v : (QSvgRenderer *) _qt5xhb_itemGetPtr(n)
-#define OPQSVGWIDGET(n,v)                                   ISNIL(n)? v : (QSvgWidget *) _qt5xhb_itemGetPtr(n)
+#define OPQGRAPHICSSVGITEM(n,v)                             ISNIL(n)? v : (QGraphicsSvgItem *) Qt5xHb::itemGetPtr(n)
+#define OPQSVGGENERATOR(n,v)                                ISNIL(n)? v : (QSvgGenerator *) Qt5xHb::itemGetPtr(n)
+#define OPQSVGRENDERER(n,v)                                 ISNIL(n)? v : (QSvgRenderer *) Qt5xHb::itemGetPtr(n)
+#define OPQSVGWIDGET(n,v)                                   ISNIL(n)? v : (QSvgWidget *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTSVG_H */

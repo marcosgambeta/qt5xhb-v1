@@ -13,16 +13,16 @@
 #ifndef QT5XHB_MACROS_QTPURCHASING_H
 #define QT5XHB_MACROS_QTPURCHASING_H
 
-#define ISQINAPPPRODUCT(n)                                  _qt5xhb_isObjectDerivedFrom(n,"QInAppProduct")
-#define ISQINAPPSTORE(n)                                    _qt5xhb_isObjectDerivedFrom(n,"QInAppStore")
-#define ISQINAPPTRANSACTION(n)                              _qt5xhb_isObjectDerivedFrom(n,"QInAppTransaction")
+#define ISQINAPPPRODUCT(n)                                  Qt5xHb::isObjectDerivedFrom(n,"QInAppProduct")
+#define ISQINAPPSTORE(n)                                    Qt5xHb::isObjectDerivedFrom(n,"QInAppStore")
+#define ISQINAPPTRANSACTION(n)                              Qt5xHb::isObjectDerivedFrom(n,"QInAppTransaction")
 
-#define PQINAPPPRODUCT(n)                                   (QInAppProduct *) _qt5xhb_itemGetPtr(n)
-#define PQINAPPSTORE(n)                                     (QInAppStore *) _qt5xhb_itemGetPtr(n)
-#define PQINAPPTRANSACTION(n)                               (QInAppTransaction *) _qt5xhb_itemGetPtr(n)
+#define PQINAPPPRODUCT(n)                                   (QInAppProduct *) Qt5xHb::itemGetPtr(n)
+#define PQINAPPSTORE(n)                                     (QInAppStore *) Qt5xHb::itemGetPtr(n)
+#define PQINAPPTRANSACTION(n)                               (QInAppTransaction *) Qt5xHb::itemGetPtr(n)
 
-#define OPQINAPPPRODUCT(n,v)                                ISNIL(n)? v : (QInAppProduct *) _qt5xhb_itemGetPtr(n)
-#define OPQINAPPSTORE(n,v)                                  ISNIL(n)? v : (QInAppStore *) _qt5xhb_itemGetPtr(n)
-#define OPQINAPPTRANSACTION(n,v)                            ISNIL(n)? v : (QInAppTransaction *) _qt5xhb_itemGetPtr(n)
+#define OPQINAPPPRODUCT(n,v)                                ISNIL(n)? v : (QInAppProduct *) Qt5xHb::itemGetPtr(n)
+#define OPQINAPPSTORE(n,v)                                  ISNIL(n)? v : (QInAppStore *) Qt5xHb::itemGetPtr(n)
+#define OPQINAPPTRANSACTION(n,v)                            ISNIL(n)? v : (QInAppTransaction *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTPURCHASING_H */

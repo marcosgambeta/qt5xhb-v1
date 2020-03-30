@@ -13,16 +13,16 @@
 #ifndef QT5XHB_MACROS_QTWEBENGINE_H
 #define QT5XHB_MACROS_QTWEBENGINE_H
 
-#define ISQQUICKWEBENGINEPROFILE(n)                         _qt5xhb_isObjectDerivedFrom(n,"QQuickWebEngineProfile")
-#define ISQQUICKWEBENGINESCRIPT(n)                          _qt5xhb_isObjectDerivedFrom(n,"QQuickWebEngineScript")
-#define ISQTWEBENGINE(n)                                    _qt5xhb_isObjectDerivedFrom(n,"QtWebEngine")
+#define ISQQUICKWEBENGINEPROFILE(n)                         Qt5xHb::isObjectDerivedFrom(n,"QQuickWebEngineProfile")
+#define ISQQUICKWEBENGINESCRIPT(n)                          Qt5xHb::isObjectDerivedFrom(n,"QQuickWebEngineScript")
+#define ISQTWEBENGINE(n)                                    Qt5xHb::isObjectDerivedFrom(n,"QtWebEngine")
 
-#define PQQUICKWEBENGINEPROFILE(n)                          (QQuickWebEngineProfile *) _qt5xhb_itemGetPtr(n)
-#define PQQUICKWEBENGINESCRIPT(n)                           (QQuickWebEngineScript *) _qt5xhb_itemGetPtr(n)
-#define PQTWEBENGINE(n)                                     (QtWebEngine *) _qt5xhb_itemGetPtr(n)
+#define PQQUICKWEBENGINEPROFILE(n)                          (QQuickWebEngineProfile *) Qt5xHb::itemGetPtr(n)
+#define PQQUICKWEBENGINESCRIPT(n)                           (QQuickWebEngineScript *) Qt5xHb::itemGetPtr(n)
+#define PQTWEBENGINE(n)                                     (QtWebEngine *) Qt5xHb::itemGetPtr(n)
 
-#define OPQQUICKWEBENGINEPROFILE(n,v)                       ISNIL(n)? v : (QQuickWebEngineProfile *) _qt5xhb_itemGetPtr(n)
-#define OPQQUICKWEBENGINESCRIPT(n,v)                        ISNIL(n)? v : (QQuickWebEngineScript *) _qt5xhb_itemGetPtr(n)
-#define OPQTWEBENGINE(n,v)                                  ISNIL(n)? v : (QtWebEngine *) _qt5xhb_itemGetPtr(n)
+#define OPQQUICKWEBENGINEPROFILE(n,v)                       ISNIL(n)? v : (QQuickWebEngineProfile *) Qt5xHb::itemGetPtr(n)
+#define OPQQUICKWEBENGINESCRIPT(n,v)                        ISNIL(n)? v : (QQuickWebEngineScript *) Qt5xHb::itemGetPtr(n)
+#define OPQTWEBENGINE(n,v)                                  ISNIL(n)? v : (QtWebEngine *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTWEBENGINE_H */

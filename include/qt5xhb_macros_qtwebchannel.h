@@ -13,16 +13,16 @@
 #ifndef QT5XHB_MACROS_QTWEBCHANNEL_H
 #define QT5XHB_MACROS_QTWEBCHANNEL_H
 
-#define ISQQMLWEBCHANNEL(n)                                 _qt5xhb_isObjectDerivedFrom(n,"QQmlWebChannel")
-#define ISQWEBCHANNEL(n)                                    _qt5xhb_isObjectDerivedFrom(n,"QWebChannel")
-#define ISQWEBCHANNELABSTRACTTRANSPORT(n)                   _qt5xhb_isObjectDerivedFrom(n,"QWebChannelAbstractTransport")
+#define ISQQMLWEBCHANNEL(n)                                 Qt5xHb::isObjectDerivedFrom(n,"QQmlWebChannel")
+#define ISQWEBCHANNEL(n)                                    Qt5xHb::isObjectDerivedFrom(n,"QWebChannel")
+#define ISQWEBCHANNELABSTRACTTRANSPORT(n)                   Qt5xHb::isObjectDerivedFrom(n,"QWebChannelAbstractTransport")
 
-#define PQQMLWEBCHANNEL(n)                                  (QQmlWebChannel *) _qt5xhb_itemGetPtr(n)
-#define PQWEBCHANNEL(n)                                     (QWebChannel *) _qt5xhb_itemGetPtr(n)
-#define PQWEBCHANNELABSTRACTTRANSPORT(n)                    (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtr(n)
+#define PQQMLWEBCHANNEL(n)                                  (QQmlWebChannel *) Qt5xHb::itemGetPtr(n)
+#define PQWEBCHANNEL(n)                                     (QWebChannel *) Qt5xHb::itemGetPtr(n)
+#define PQWEBCHANNELABSTRACTTRANSPORT(n)                    (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtr(n)
 
-#define OPQQMLWEBCHANNEL(n,v)                               ISNIL(n)? v : (QQmlWebChannel *) _qt5xhb_itemGetPtr(n)
-#define OPQWEBCHANNEL(n,v)                                  ISNIL(n)? v : (QWebChannel *) _qt5xhb_itemGetPtr(n)
-#define OPQWEBCHANNELABSTRACTTRANSPORT(n,v)                 ISNIL(n)? v : (QWebChannelAbstractTransport *) _qt5xhb_itemGetPtr(n)
+#define OPQQMLWEBCHANNEL(n,v)                               ISNIL(n)? v : (QQmlWebChannel *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBCHANNEL(n,v)                                  ISNIL(n)? v : (QWebChannel *) Qt5xHb::itemGetPtr(n)
+#define OPQWEBCHANNELABSTRACTTRANSPORT(n,v)                 ISNIL(n)? v : (QWebChannelAbstractTransport *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTWEBCHANNEL_H */

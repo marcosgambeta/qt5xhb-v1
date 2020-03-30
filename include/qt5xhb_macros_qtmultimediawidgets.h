@@ -13,19 +13,19 @@
 #ifndef QT5XHB_MACROS_QTMULTIMEDIAWIDGETS_H
 #define QT5XHB_MACROS_QTMULTIMEDIAWIDGETS_H
 
-#define ISQCAMERAVIEWFINDER(n)                              _qt5xhb_isObjectDerivedFrom(n,"QCameraViewfinder")
-#define ISQGRAPHICSVIDEOITEM(n)                             _qt5xhb_isObjectDerivedFrom(n,"QGraphicsVideoItem")
-#define ISQVIDEOWIDGET(n)                                   _qt5xhb_isObjectDerivedFrom(n,"QVideoWidget")
-#define ISQVIDEOWIDGETCONTROL(n)                            _qt5xhb_isObjectDerivedFrom(n,"QVideoWidgetControl")
+#define ISQCAMERAVIEWFINDER(n)                              Qt5xHb::isObjectDerivedFrom(n,"QCameraViewfinder")
+#define ISQGRAPHICSVIDEOITEM(n)                             Qt5xHb::isObjectDerivedFrom(n,"QGraphicsVideoItem")
+#define ISQVIDEOWIDGET(n)                                   Qt5xHb::isObjectDerivedFrom(n,"QVideoWidget")
+#define ISQVIDEOWIDGETCONTROL(n)                            Qt5xHb::isObjectDerivedFrom(n,"QVideoWidgetControl")
 
-#define PQCAMERAVIEWFINDER(n)                               (QCameraViewfinder *) _qt5xhb_itemGetPtr(n)
-#define PQGRAPHICSVIDEOITEM(n)                              (QGraphicsVideoItem *) _qt5xhb_itemGetPtr(n)
-#define PQVIDEOWIDGET(n)                                    (QVideoWidget *) _qt5xhb_itemGetPtr(n)
-#define PQVIDEOWIDGETCONTROL(n)                             (QVideoWidgetControl *) _qt5xhb_itemGetPtr(n)
+#define PQCAMERAVIEWFINDER(n)                               (QCameraViewfinder *) Qt5xHb::itemGetPtr(n)
+#define PQGRAPHICSVIDEOITEM(n)                              (QGraphicsVideoItem *) Qt5xHb::itemGetPtr(n)
+#define PQVIDEOWIDGET(n)                                    (QVideoWidget *) Qt5xHb::itemGetPtr(n)
+#define PQVIDEOWIDGETCONTROL(n)                             (QVideoWidgetControl *) Qt5xHb::itemGetPtr(n)
 
-#define OPQCAMERAVIEWFINDER(n,v)                            ISNIL(n)? v : (QCameraViewfinder *) _qt5xhb_itemGetPtr(n)
-#define OPQGRAPHICSVIDEOITEM(n,v)                           ISNIL(n)? v : (QGraphicsVideoItem *) _qt5xhb_itemGetPtr(n)
-#define OPQVIDEOWIDGET(n,v)                                 ISNIL(n)? v : (QVideoWidget *) _qt5xhb_itemGetPtr(n)
-#define OPQVIDEOWIDGETCONTROL(n,v)                          ISNIL(n)? v : (QVideoWidgetControl *) _qt5xhb_itemGetPtr(n)
+#define OPQCAMERAVIEWFINDER(n,v)                            ISNIL(n)? v : (QCameraViewfinder *) Qt5xHb::itemGetPtr(n)
+#define OPQGRAPHICSVIDEOITEM(n,v)                           ISNIL(n)? v : (QGraphicsVideoItem *) Qt5xHb::itemGetPtr(n)
+#define OPQVIDEOWIDGET(n,v)                                 ISNIL(n)? v : (QVideoWidget *) Qt5xHb::itemGetPtr(n)
+#define OPQVIDEOWIDGETCONTROL(n,v)                          ISNIL(n)? v : (QVideoWidgetControl *) Qt5xHb::itemGetPtr(n)
 
 #endif /* QT5XHB_MACROS_QTMULTIMEDIAWIDGETS_H */
