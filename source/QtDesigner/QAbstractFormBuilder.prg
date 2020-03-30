@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
   if( ISNUMPAR(0) )
   {
     QAbstractFormBuilder * o = new QAbstractFormBuilder();
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_DELETE )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ virtual QWidget * load ( QIODevice * device, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
     {
 #endif
       QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET(2,0) );
-      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ virtual void save ( QIODevice * device, QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ void setWorkingDirectory ( const QDir & directory )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ QDir workingDirectory () const
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
 {
-  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractFormBuilder * obj = (QAbstractFormBuilder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_WORKINGDIRECTORY )
     {
 #endif
       QDir * ptr = new QDir( obj->workingDirectory() );
-      _qt5xhb_createReturnClass( ptr, "QDIR", true );
+      Qt5xHb::createReturnClass( ptr, "QDIR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

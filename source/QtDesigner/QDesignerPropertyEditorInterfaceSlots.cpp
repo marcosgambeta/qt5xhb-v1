@@ -37,7 +37,7 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
 
 void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

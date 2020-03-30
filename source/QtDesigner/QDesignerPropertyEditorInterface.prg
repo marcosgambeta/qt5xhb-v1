@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ virtual QDesignerFormEditorInterface * core () const
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
     {
 #endif
       QDesignerFormEditorInterface * ptr = obj->core();
-      _qt5xhb_createReturnQObjectClass( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMEDITORINTERFACE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ virtual QString currentPropertyName () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ virtual bool isReadOnly () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ virtual QObject * object () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
     {
 #endif
       QObject * ptr = obj->object();
-      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ virtual void setObject ( QObject * object ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ virtual void setPropertyValue ( const QString & name, const QVariant & value, bo
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ virtual void setReadOnly ( bool readOnly ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

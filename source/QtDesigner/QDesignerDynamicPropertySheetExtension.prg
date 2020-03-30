@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DELETE )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ virtual int addDynamicProperty ( const QString & propertyName, const QVariant & 
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ virtual bool canAddDynamicProperty ( const QString & propertyName ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ virtual bool dynamicPropertiesAllowed () const = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_DYNAMICPROPERTIESALLOWED )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ virtual bool isDynamicProperty ( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ virtual bool removeDynamicProperty ( int index ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
 {
-  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDesignerDynamicPropertySheetExtension * obj = (QDesignerDynamicPropertySheetExtension *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
