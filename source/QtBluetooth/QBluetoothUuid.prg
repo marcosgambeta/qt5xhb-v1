@@ -64,7 +64,7 @@ void QBluetoothUuid_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW2 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid( (QBluetoothUuid::ProtocolUuid) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW3 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid( (QBluetoothUuid::ServiceClassUuid) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW4 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid( PQUINT16(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW5 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid( PQUINT32(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -123,7 +123,7 @@ void QBluetoothUuid_new7()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -134,7 +134,7 @@ void QBluetoothUuid_new8()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid( *PQBLUETOOTHUUID(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -145,7 +145,7 @@ void QBluetoothUuid_new9()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QBluetoothUuid * o = new QBluetoothUuid( *PQUUID(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW ) // TODO: resolver conflitos
 HB_FUNC_STATIC( QBLUETOOTHUUID_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBluetoothUuid * obj = (QBluetoothUuid *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ int minimumSize() const
 HB_FUNC_STATIC( QBLUETOOTHUUID_MINIMUMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBluetoothUuid * obj = (QBluetoothUuid *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ quint16 toUInt16(bool *ok = 0) const
 HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBluetoothUuid * obj = (QBluetoothUuid *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ quint32 toUInt32(bool *ok = 0) const
 HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothUuid * obj = (QBluetoothUuid *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBluetoothUuid * obj = (QBluetoothUuid *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

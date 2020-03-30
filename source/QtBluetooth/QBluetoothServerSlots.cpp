@@ -51,7 +51,7 @@ void QBluetoothServerSlots::error( QBluetoothServer::Error error )
 void QBluetoothServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServer * obj = (QBluetoothServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothServer * obj = (QBluetoothServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QBluetoothTransferManager * o = new QBluetoothTransferManager( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_NEW )
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferManager * obj = (QBluetoothTransferManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBluetoothTransferManager * obj = (QBluetoothTransferManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ QBluetoothTransferReply *put(const QBluetoothTransferRequest &request, QIODevice
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferManager * obj = (QBluetoothTransferManager *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBluetoothTransferManager * obj = (QBluetoothTransferManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERMANAGER_PUT )
     {
 #endif
       QBluetoothTransferReply * ptr = obj->put( *PQBLUETOOTHTRANSFERREQUEST(1), PQIODEVICE(2) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QBLUETOOTHTRANSFERREPLY" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QBLUETOOTHTRANSFERREPLY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

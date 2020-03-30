@@ -79,7 +79,7 @@ void QBluetoothServiceDiscoveryAgentSlots::error( QBluetoothServiceDiscoveryAgen
 void QBluetoothServiceDiscoveryAgentSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceDiscoveryAgent * obj = (QBluetoothServiceDiscoveryAgent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBluetoothServiceDiscoveryAgent * obj = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
