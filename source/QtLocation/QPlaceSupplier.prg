@@ -77,7 +77,7 @@ void QPlaceSupplier_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * o = new QPlaceSupplier();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -88,7 +88,7 @@ void QPlaceSupplier_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSupplier * o = new QPlaceSupplier( *PQPLACESUPPLIER(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NEW )
 HB_FUNC_STATIC( QPLACESUPPLIER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ QString name() const
 HB_FUNC_STATIC( QPLACESUPPLIER_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setName(const QString &data)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ QString supplierId() const
 HB_FUNC_STATIC( QPLACESUPPLIER_SUPPLIERID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -216,7 +216,7 @@ void setSupplierId(const QString &identifier)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETSUPPLIERID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -244,7 +244,7 @@ QUrl url() const
 HB_FUNC_STATIC( QPLACESUPPLIER_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ void setUrl(const QUrl &data)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -299,7 +299,7 @@ QPlaceIcon icon() const
 HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
     {
 #endif
       QPlaceIcon * ptr = new QPlaceIcon( obj->icon() );
-      _qt5xhb_createReturnClass( ptr, "QPLACEICON", true );
+      Qt5xHb::createReturnClass( ptr, "QPLACEICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ void setIcon(const QPlaceIcon &icon)
 HB_FUNC_STATIC( QPLACESUPPLIER_SETICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -354,7 +354,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QPLACESUPPLIER_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = (QPlaceSupplier *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSupplier * obj = (QPlaceSupplier *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

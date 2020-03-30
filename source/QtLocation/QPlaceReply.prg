@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QPLACEREPLY_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QPlaceReply * o = new QPlaceReply( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QPLACEREPLY_NEW )
 HB_FUNC_STATIC( QPLACEREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceReply * obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ bool isFinished() const
 HB_FUNC_STATIC( QPLACEREPLY_ISFINISHED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceReply * obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ virtual Type type() const
 HB_FUNC_STATIC( QPLACEREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceReply * obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ QString errorString() const
 HB_FUNC_STATIC( QPLACEREPLY_ERRORSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceReply * obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ QPlaceReply::Error error() const
 HB_FUNC_STATIC( QPLACEREPLY_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceReply * obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -209,7 +209,7 @@ virtual void abort()
 HB_FUNC_STATIC( QPLACEREPLY_ABORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceReply * obj = (QPlaceReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceReply * obj = (QPlaceReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

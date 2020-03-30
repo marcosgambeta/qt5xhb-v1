@@ -57,7 +57,7 @@ void QGeoCodingManagerSlots::error( QGeoCodeReply * reply, QGeoCodeReply::Error 
 void QGeoCodingManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoCodingManager * obj = (QGeoCodingManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGeoCodingManager * obj = (QGeoCodingManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

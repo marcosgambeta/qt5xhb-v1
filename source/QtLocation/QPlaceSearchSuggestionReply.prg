@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QPlaceSearchSuggestionReply * o = new QPlaceSearchSuggestionReply( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_NEW )
 HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchSuggestionReply * obj = (QPlaceSearchSuggestionReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchSuggestionReply * obj = (QPlaceSearchSuggestionReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QStringList suggestions() const
 HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_SUGGESTIONS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchSuggestionReply * obj = (QPlaceSearchSuggestionReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchSuggestionReply * obj = (QPlaceSearchSuggestionReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ Type type() const
 HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchSuggestionReply * obj = (QPlaceSearchSuggestionReply *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchSuggestionReply * obj = (QPlaceSearchSuggestionReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

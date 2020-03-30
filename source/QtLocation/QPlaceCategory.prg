@@ -78,7 +78,7 @@ void QPlaceCategory_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * o = new QPlaceCategory();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -89,7 +89,7 @@ void QPlaceCategory_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceCategory * o = new QPlaceCategory( *PQPLACECATEGORY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NEW )
 HB_FUNC_STATIC( QPLACECATEGORY_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ QString categoryId() const
 HB_FUNC_STATIC( QPLACECATEGORY_CATEGORYID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ void setCategoryId(const QString &identifier)
 HB_FUNC_STATIC( QPLACECATEGORY_SETCATEGORYID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ QString name() const
 HB_FUNC_STATIC( QPLACECATEGORY_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ void setName(const QString &name)
 HB_FUNC_STATIC( QPLACECATEGORY_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -245,7 +245,7 @@ QLocation::Visibility visibility() const
 HB_FUNC_STATIC( QPLACECATEGORY_VISIBILITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ void setVisibility(QLocation::Visibility visibility)
 HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -299,7 +299,7 @@ QPlaceIcon icon() const
 HB_FUNC_STATIC( QPLACECATEGORY_ICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_ICON )
     {
 #endif
       QPlaceIcon * ptr = new QPlaceIcon( obj->icon() );
-      _qt5xhb_createReturnClass( ptr, "QPLACEICON", true );
+      Qt5xHb::createReturnClass( ptr, "QPLACEICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ void setIcon(const QPlaceIcon &icon)
 HB_FUNC_STATIC( QPLACECATEGORY_SETICON )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -354,7 +354,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QPLACECATEGORY_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * obj = (QPlaceCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceCategory * obj = (QPlaceCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

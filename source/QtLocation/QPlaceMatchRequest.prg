@@ -71,7 +71,7 @@ void QPlaceMatchRequest_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceMatchRequest * o = new QPlaceMatchRequest();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -82,7 +82,7 @@ void QPlaceMatchRequest_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceMatchRequest * o = new QPlaceMatchRequest( *PQPLACEMATCHREQUEST(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_NEW )
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ QList<QPlace> places() const
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ void setPlaces(const QList<QPlace> places)
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETPLACES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ void setResults(const QList<QPlaceSearchResult> &results)
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETRESULTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ void clear()
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

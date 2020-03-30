@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QPLACERESULT_NEW )
   if( ISNUMPAR(0) )
   {
     QPlaceResult * o = new QPlaceResult();
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPLACERESULT_NEW )
 HB_FUNC_STATIC( QPLACERESULT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ qreal distance() const
 HB_FUNC_STATIC( QPLACERESULT_DISTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ void setDistance(qreal distance)
 HB_FUNC_STATIC( QPLACERESULT_SETDISTANCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ QPlace place() const
 HB_FUNC_STATIC( QPLACERESULT_PLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QPLACERESULT_PLACE )
     {
 #endif
       QPlace * ptr = new QPlace( obj->place() );
-      _qt5xhb_createReturnClass( ptr, "QPLACE", true );
+      Qt5xHb::createReturnClass( ptr, "QPLACE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ void setPlace(const QPlace &place)
 HB_FUNC_STATIC( QPLACERESULT_SETPLACE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -209,7 +209,7 @@ bool isSponsored() const
 HB_FUNC_STATIC( QPLACERESULT_ISSPONSORED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -235,7 +235,7 @@ void setSponsored(bool sponsored)
 HB_FUNC_STATIC( QPLACERESULT_SETSPONSORED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceResult * obj = (QPlaceResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceResult * obj = (QPlaceResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

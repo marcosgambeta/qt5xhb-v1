@@ -90,7 +90,7 @@ void QPlaceSearchRequest_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * o = new QPlaceSearchRequest();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -101,7 +101,7 @@ void QPlaceSearchRequest_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   QPlaceSearchRequest * o = new QPlaceSearchRequest( *PQPLACESEARCHREQUEST(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ QString searchTerm() const
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHTERM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ void setSearchTerm(const QString &term)
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHTERM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ QList<QPlaceCategory> categories() const
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_CATEGORIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -257,7 +257,7 @@ void setCategory(const QPlaceCategory &category)
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -285,7 +285,7 @@ void setCategories(const QList<QPlaceCategory> &categories)
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETCATEGORIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -321,7 +321,7 @@ QGeoShape searchArea() const
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHAREA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHAREA )
     {
 #endif
       QGeoShape * ptr = new QGeoShape( obj->searchArea() );
-      _qt5xhb_createReturnClass( ptr, "QGEOSHAPE", true );
+      Qt5xHb::createReturnClass( ptr, "QGEOSHAPE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ void setSearchArea(const QGeoShape &area)
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHAREA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -376,7 +376,7 @@ QString recommendationId() const
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_RECOMMENDATIONID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ void setRecommendationId(const QString &recommendationId)
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETRECOMMENDATIONID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -430,7 +430,7 @@ QVariant searchContext() const
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QPLACESEARCHREQUEST_SEARCHCONTEXT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->searchContext() );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,7 +457,7 @@ void setSearchContext(const QVariant &context)
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETSEARCHCONTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -485,7 +485,7 @@ QLocation::VisibilityScope visibilityScope() const
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_VISIBILITYSCOPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -511,7 +511,7 @@ void setVisibilityScope(QLocation::VisibilityScope visibilityScopes)
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETVISIBILITYSCOPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -539,7 +539,7 @@ RelevanceHint relevanceHint() const
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_RELEVANCEHINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -565,7 +565,7 @@ void setRelevanceHint(RelevanceHint hint)
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETRELEVANCEHINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -593,7 +593,7 @@ int limit() const
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_LIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -619,7 +619,7 @@ void setLimit(int limit)
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_SETLIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -647,7 +647,7 @@ void clear()
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPlaceSearchRequest * obj = (QPlaceSearchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

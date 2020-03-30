@@ -166,7 +166,7 @@ void QPlaceManagerSlots::dataChanged()
 void QPlaceManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceManager * obj = (QPlaceManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlaceManager * obj = (QPlaceManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
