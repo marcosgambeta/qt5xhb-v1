@@ -65,7 +65,7 @@ void QDBusServiceWatcherSlots::serviceOwnerChanged( const QString & service, con
 
 void QDBusServiceWatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDBusServiceWatcher * obj = (QDBusServiceWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

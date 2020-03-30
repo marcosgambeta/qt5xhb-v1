@@ -35,7 +35,7 @@ void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
 
 void QDBusPendingCallWatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDBusPendingCallWatcher * obj = (QDBusPendingCallWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDBusPendingCallWatcher * obj = (QDBusPendingCallWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

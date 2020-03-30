@@ -68,7 +68,7 @@ QDBusUnixFileDescriptor()
 void QDBusUnixFileDescriptor_new1()
 {
   QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -77,7 +77,7 @@ explicit QDBusUnixFileDescriptor(int fileDescriptor)
 void QDBusUnixFileDescriptor_new2()
 {
   QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor( PINT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
 void QDBusUnixFileDescriptor_new3()
 {
   QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QDBusUnixFileDescriptor()
@@ -115,7 +115,7 @@ HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_DELETE )
 {
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ void swap(QDBusUnixFileDescriptor &other)
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_SWAP )
 {
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_ISVALID )
 {
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ int fileDescriptor() const
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_FILEDESCRIPTOR )
 {
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -209,7 +209,7 @@ void setFileDescriptor(int fileDescriptor)
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_SETFILEDESCRIPTOR )
 {
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -235,7 +235,7 @@ void giveFileDescriptor(int fileDescriptor)
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_GIVEFILEDESCRIPTOR )
 {
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -261,7 +261,7 @@ int takeFileDescriptor()
 */
 HB_FUNC_STATIC( QDBUSUNIXFILEDESCRIPTOR_TAKEFILEDESCRIPTOR )
 {
-  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusUnixFileDescriptor * obj = (QDBusUnixFileDescriptor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

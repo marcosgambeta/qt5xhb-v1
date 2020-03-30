@@ -35,7 +35,7 @@ void QDBusServerSlots::newConnection( const QDBusConnection & connection )
 
 void QDBusServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDBusServer * obj = (QDBusServer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDBusServer * obj = (QDBusServer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

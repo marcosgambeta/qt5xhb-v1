@@ -56,8 +56,8 @@ HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
 {
   if( ISBETWEEN(2,5) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && (ISQDBUSCONNECTION(4)||ISNIL(4)) && (ISQOBJECT(5)||ISNIL(5)) )
   {
-    QDBusInterface * o = new QDBusInterface( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) _qt5xhb_itemGetPtr(4), OPQOBJECT(5,0) );
-    _qt5xhb_returnNewObject( o, false );
+    QDBusInterface * o = new QDBusInterface( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) Qt5xHb::itemGetPtr(4), OPQOBJECT(5,0) );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
 
 HB_FUNC_STATIC( QDBUSINTERFACE_DELETE )
 {
-  QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusInterface * obj = (QDBusInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -87,7 +87,7 @@ virtual const QMetaObject *metaObject() const
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
 {
-  QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusInterface * obj = (QDBusInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
     {
 #endif
       const QMetaObject * ptr = obj->metaObject();
-      _qt5xhb_createReturnClass( ptr, "QMETAOBJECT", false );
+      Qt5xHb::createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ virtual void * qt_metacast ( const char * )
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
 {
-  QDBusInterface * obj = (QDBusInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDBusInterface * obj = (QDBusInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

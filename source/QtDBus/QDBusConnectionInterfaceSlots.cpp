@@ -80,7 +80,7 @@ void QDBusConnectionInterfaceSlots::callWithCallbackFailed( const QDBusError & e
 
 void QDBusConnectionInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDBusConnectionInterface * obj = (QDBusConnectionInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
