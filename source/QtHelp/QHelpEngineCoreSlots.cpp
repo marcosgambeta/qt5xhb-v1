@@ -70,7 +70,7 @@ void QHelpEngineCoreSlots::warning( const QString & msg )
 
 void QHelpEngineCoreSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpEngineCore * obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

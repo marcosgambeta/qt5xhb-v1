@@ -35,7 +35,7 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
 
 void QHelpSearchResultWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

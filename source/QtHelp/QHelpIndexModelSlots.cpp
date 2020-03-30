@@ -44,7 +44,7 @@ void QHelpIndexModelSlots::indexCreationStarted()
 
 void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexModel * obj = (QHelpIndexModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHelpIndexModel * obj = (QHelpIndexModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
