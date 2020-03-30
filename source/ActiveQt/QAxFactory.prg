@@ -71,7 +71,7 @@ RETURN
 
 HB_FUNC_STATIC( QAXFACTORY_DELETE )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QUuid appID () const
 */
 HB_FUNC_STATIC( QAXFACTORY_APPID )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->appID() );
-      _qt5xhb_createReturnClass( ptr, "QUUID", true );
+      Qt5xHb::createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ virtual QUuid classID ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_CLASSID )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QAXFACTORY_CLASSID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->classID( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QUUID", true );
+      Qt5xHb::createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ virtual QObject * createObject ( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
     {
 #endif
       QObject * ptr = obj->createObject( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ virtual QUuid eventsID ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->eventsID( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QUUID", true );
+      Qt5xHb::createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ virtual QString exposeToSuperClass ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ virtual QStringList featureList () const = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_FEATURELIST )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ virtual bool hasStockEvents ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ virtual QUuid interfaceID ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->interfaceID( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QUUID", true );
+      Qt5xHb::createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,7 +288,7 @@ virtual bool isService () const
 */
 HB_FUNC_STATIC( QAXFACTORY_ISSERVICE )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ virtual const QMetaObject * metaObject ( const QString & key ) const = 0
 */
 HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
     {
 #endif
       const QMetaObject * ptr = obj->metaObject( PQSTRING(1) );
-      _qt5xhb_createReturnClass( ptr, "QMETAOBJECT", false );
+      Qt5xHb::createReturnClass( ptr, "QMETAOBJECT", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ virtual void registerClass ( const QString & key, QSettings * settings ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -363,7 +363,7 @@ virtual bool stayTopLevel ( const QString & key ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -387,7 +387,7 @@ virtual QUuid typeLibID () const
 */
 HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->typeLibID() );
-      _qt5xhb_createReturnClass( ptr, "QUUID", true );
+      Qt5xHb::createReturnClass( ptr, "QUUID", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ virtual void unregisterClass ( const QString & key, QSettings * settings ) const
 */
 HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -438,7 +438,7 @@ virtual bool validateLicenseKey ( const QString & key, const QString & licenseKe
 */
 HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
 {
-  QAxFactory * obj = (QAxFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAxFactory * obj = (QAxFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

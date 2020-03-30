@@ -71,7 +71,7 @@ void QAxWidgetSlots::signal( const QString & name, int argc, void * argv )
 
 void QAxWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxWidget * obj = (QAxWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAxWidget * obj = (QAxWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
