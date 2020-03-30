@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEW )
   if( ISNUMPAR(1) && ISNUM(1) )
   {
     QMacPasteboardMime * o = new QMacPasteboardMime( PCHAR(1) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEW )
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMacPasteboardMime * obj = (QMacPasteboardMime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ virtual QString convertorName() = 0
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTORNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMacPasteboardMime * obj = (QMacPasteboardMime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual bool canConvert(const QString &mime, QString flav) = 0
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CANCONVERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMacPasteboardMime * obj = (QMacPasteboardMime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ virtual QString mimeFor(QString flav) = 0
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_MIMEFOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMacPasteboardMime * obj = (QMacPasteboardMime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ virtual QString flavorFor(const QString &mime) = 0
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_FLAVORFOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMacPasteboardMime * obj = (QMacPasteboardMime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ virtual QVariant convertToMime(const QString &mime, QList<QByteArray> data, QStr
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMacPasteboardMime * obj = (QMacPasteboardMime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
         par2 << *(QByteArray *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
       }
       QVariant * ptr = new QVariant( obj->convertToMime( PQSTRING(1), par2, PQSTRING(3) ) );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ virtual QList<QByteArray> convertFromMime(const QString &mime, QVariant data, QS
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMacPasteboardMime * obj = (QMacPasteboardMime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ virtual int count(QMimeData *mimeData)
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QMacPasteboardMime * obj = (QMacPasteboardMime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMacPasteboardMime * obj = (QMacPasteboardMime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
