@@ -265,7 +265,7 @@ void QItemModelBarDataProxySlots::valueRoleReplaceChanged( const QString & repla
 
 void QItemModelBarDataProxySlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemModelBarDataProxy * obj = (QItemModelBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

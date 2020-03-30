@@ -68,7 +68,7 @@ HB_FUNC_STATIC( Q3DOBJECT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     Q3DObject * o = new Q3DObject( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -81,7 +81,7 @@ virtual ~Q3DObject()
 */
 HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 {
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ Q3DScene *parentScene()
 */
 HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
 {
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
     {
 #endif
       Q3DScene * ptr = obj->parentScene();
-      _qt5xhb_createReturnQObjectClass( ptr, "Q3DSCENE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "Q3DSCENE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ QVector3D position() const
 */
 HB_FUNC_STATIC( Q3DOBJECT_POSITION )
 {
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( Q3DOBJECT_POSITION )
     {
 #endif
       QVector3D * ptr = new QVector3D( obj->position() );
-      _qt5xhb_createReturnClass( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ void setPosition(const QVector3D &position)
 */
 HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 {
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -179,7 +179,7 @@ virtual void copyValuesFrom(const Q3DObject &source)
 */
 HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
 {
-  Q3DObject * obj = (Q3DObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DObject * obj = (Q3DObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

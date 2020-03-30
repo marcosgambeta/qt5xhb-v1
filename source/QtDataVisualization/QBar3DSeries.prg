@@ -69,7 +69,7 @@ explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
 void QBar3DSeries_new1()
 {
   QBar3DSeries * o = new QBar3DSeries( OPQOBJECT(1,Q_NULLPTR) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
 void QBar3DSeries_new2()
 {
   QBar3DSeries * o = new QBar3DSeries( PQBARDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
@@ -105,7 +105,7 @@ virtual ~QBar3DSeries()
 */
 HB_FUNC_STATIC( QBAR3DSERIES_DELETE )
 {
-  QBar3DSeries * obj = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ QBarDataProxy *dataProxy() const
 */
 HB_FUNC_STATIC( QBAR3DSERIES_DATAPROXY )
 {
-  QBar3DSeries * obj = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_DATAPROXY )
     {
 #endif
       QBarDataProxy * ptr = obj->dataProxy();
-      _qt5xhb_createReturnQObjectClass( ptr, "QBARDATAPROXY" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QBARDATAPROXY" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ void setDataProxy(QBarDataProxy *proxy)
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SETDATAPROXY )
 {
-  QBar3DSeries * obj = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ QPoint selectedBar() const;
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SELECTEDBAR )
 {
-  QBar3DSeries * obj = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_SELECTEDBAR )
     {
 #endif
       QPoint * ptr = new QPoint( obj->selectedBar() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ void setSelectedBar(const QPoint &position)
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SETSELECTEDBAR )
 {
-  QBar3DSeries * obj = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ float meshAngle() const
 */
 HB_FUNC_STATIC( QBAR3DSERIES_MESHANGLE )
 {
-  QBar3DSeries * obj = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ void setMeshAngle(float angle)
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SETMESHANGLE )
 {
-  QBar3DSeries * obj = (QBar3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_INVALIDSELECTIONPOSITION )
   {
 #endif
     QPoint * ptr = new QPoint( QBar3DSeries::invalidSelectionPosition() );
-    _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+    Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -152,7 +152,7 @@ void Q3DBarsSlots::valueAxisChanged( QValue3DAxis * axis )
 
 void Q3DBarsSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  Q3DBars * obj = (Q3DBars *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  Q3DBars * obj = (Q3DBars *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

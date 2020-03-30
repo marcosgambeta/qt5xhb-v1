@@ -37,7 +37,7 @@ void Q3DLightSlots::autoPositionChanged( bool autoPosition )
 
 void Q3DLightSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  Q3DLight * obj = (Q3DLight *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  Q3DLight * obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

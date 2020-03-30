@@ -70,7 +70,7 @@ virtual ~QAbstract3DInputHandler()
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ InputView inputView() const
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTVIEW )
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ void setInputView(InputView inputView)
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTVIEW )
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ QPoint inputPosition() const
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_INPUTPOSITION )
     {
 #endif
       QPoint * ptr = new QPoint( obj->inputPosition() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ void setInputPosition(const QPoint &position)
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETINPUTPOSITION )
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ Q3DScene *scene() const
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SCENE )
     {
 #endif
       Q3DScene * ptr = obj->scene();
-      _qt5xhb_createReturnQObjectClass( ptr, "Q3DSCENE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "Q3DSCENE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ void setScene(Q3DScene *scene)
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_SETSCENE )
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -139,7 +139,7 @@ void QCustom3DItemSlots::visibleChanged( bool visible )
 
 void QCustom3DItemSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCustom3DItem * obj = (QCustom3DItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCustom3DItem * obj = (QCustom3DItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

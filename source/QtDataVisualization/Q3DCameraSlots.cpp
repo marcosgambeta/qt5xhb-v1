@@ -139,7 +139,7 @@ void Q3DCameraSlots::zoomLevelChanged( float zoomLevel )
 
 void Q3DCameraSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  Q3DCamera * obj = (Q3DCamera *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  Q3DCamera * obj = (Q3DCamera *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

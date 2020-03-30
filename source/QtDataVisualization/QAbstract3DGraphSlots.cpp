@@ -256,7 +256,7 @@ void QAbstract3DGraphSlots::shadowQualityChanged( QAbstract3DGraph::ShadowQualit
 
 void QAbstract3DGraphSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstract3DGraph * obj = (QAbstract3DGraph *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstract3DGraph * obj = (QAbstract3DGraph *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

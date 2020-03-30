@@ -152,7 +152,7 @@ void Q3DSceneSlots::viewportChanged( const QRect & viewport )
 
 void Q3DSceneSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  Q3DScene * obj = (Q3DScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -230,7 +230,7 @@ void QAbstract3DSeriesSlots::visibilityChanged( bool visible )
 
 void QAbstract3DSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

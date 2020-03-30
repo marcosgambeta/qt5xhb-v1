@@ -74,7 +74,7 @@ void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
 
 void Q3DInputHandlerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -352,7 +352,7 @@ void Q3DThemeSlots::windowColorChanged( const QColor & color )
 
 void Q3DThemeSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  Q3DTheme * obj = (Q3DTheme *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  Q3DTheme * obj = (Q3DTheme *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

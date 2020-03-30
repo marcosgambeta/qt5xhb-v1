@@ -22,7 +22,7 @@ QValue3DAxisSlots::~QValue3DAxisSlots()
 
 void QValue3DAxisSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QValue3DAxis * obj = (QValue3DAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValue3DAxis * obj = (QValue3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

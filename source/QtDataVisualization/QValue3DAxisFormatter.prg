@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QValue3DAxisFormatter * o = new QValue3DAxisFormatter( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -75,7 +75,7 @@ virtual ~QValue3DAxisFormatter()
 */
 HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_DELETE )
 {
-  QValue3DAxisFormatter * obj = (QValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QValue3DAxisFormatter * obj = (QValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

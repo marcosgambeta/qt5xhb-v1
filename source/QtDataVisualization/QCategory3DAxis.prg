@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QCategory3DAxis * o = new QCategory3DAxis( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -75,7 +75,7 @@ virtual ~QCategory3DAxis()
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_DELETE )
 {
-  QCategory3DAxis * obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCategory3DAxis * obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ QStringList labels() const
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_LABELS )
 {
-  QCategory3DAxis * obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCategory3DAxis * obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ void setLabels(const QStringList &labels)
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
 {
-  QCategory3DAxis * obj = (QCategory3DAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCategory3DAxis * obj = (QCategory3DAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

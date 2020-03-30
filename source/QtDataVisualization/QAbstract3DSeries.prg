@@ -109,7 +109,7 @@ virtual ~QAbstract3DSeries()
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ SeriesType type() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_TYPE )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ QString itemLabelFormat() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABELFORMAT )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ void setItemLabelFormat(const QString &format)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELFORMAT )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ISVISIBLE )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -227,7 +227,7 @@ void setVisible(bool visible)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETVISIBLE )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ Mesh mesh() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_MESH )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ void setMesh(Mesh mesh)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESH )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ bool isMeshSmooth() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ISMESHSMOOTH )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ void setMeshSmooth(bool enable)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHSMOOTH )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -353,7 +353,7 @@ QQuaternion meshRotation() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_MESHROTATION )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MESHROTATION )
     {
 #endif
       QQuaternion * ptr = new QQuaternion( obj->meshRotation() );
-      _qt5xhb_createReturnClass( ptr, "QQUATERNION", true );
+      Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ void setMeshRotation(const QQuaternion &rotation)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHROTATION )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -404,7 +404,7 @@ QString userDefinedMesh() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_USERDEFINEDMESH )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -428,7 +428,7 @@ void setUserDefinedMesh(const QString &fileName)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETUSERDEFINEDMESH )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -454,7 +454,7 @@ Q3DTheme::ColorStyle colorStyle() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_COLORSTYLE )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -478,7 +478,7 @@ void setColorStyle(Q3DTheme::ColorStyle style)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETCOLORSTYLE )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -504,7 +504,7 @@ QColor baseColor() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_BASECOLOR )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASECOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->baseColor() );
-      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -529,7 +529,7 @@ void setBaseColor(const QColor &color)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASECOLOR )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASECOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setBaseColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBaseColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -555,7 +555,7 @@ QLinearGradient baseGradient() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_BASEGRADIENT )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_BASEGRADIENT )
     {
 #endif
       QLinearGradient * ptr = new QLinearGradient( obj->baseGradient() );
-      _qt5xhb_createReturnClass( ptr, "QLINEARGRADIENT", true );
+      Qt5xHb::createReturnClass( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -580,7 +580,7 @@ void setBaseGradient(const QLinearGradient &gradient)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETBASEGRADIENT )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -606,7 +606,7 @@ QColor singleHighlightColor() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->singleHighlightColor() );
-      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -631,7 +631,7 @@ void setSingleHighlightColor(const QColor &color)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setSingleHighlightColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setSingleHighlightColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -657,7 +657,7 @@ QLinearGradient singleHighlightGradient() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SINGLEHIGHLIGHTGRADIENT )
     {
 #endif
       QLinearGradient * ptr = new QLinearGradient( obj->singleHighlightGradient() );
-      _qt5xhb_createReturnClass( ptr, "QLINEARGRADIENT", true );
+      Qt5xHb::createReturnClass( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -682,7 +682,7 @@ void setSingleHighlightGradient(const QLinearGradient &gradient)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETSINGLEHIGHLIGHTGRADIENT )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -708,7 +708,7 @@ QColor multiHighlightColor() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->multiHighlightColor() );
-      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -733,7 +733,7 @@ void setMultiHighlightColor(const QColor &color)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setMultiHighlightColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setMultiHighlightColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -759,7 +759,7 @@ QLinearGradient multiHighlightGradient() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QABSTRACT3DSERIES_MULTIHIGHLIGHTGRADIENT )
     {
 #endif
       QLinearGradient * ptr = new QLinearGradient( obj->multiHighlightGradient() );
-      _qt5xhb_createReturnClass( ptr, "QLINEARGRADIENT", true );
+      Qt5xHb::createReturnClass( ptr, "QLINEARGRADIENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -784,7 +784,7 @@ void setMultiHighlightGradient(const QLinearGradient &gradient)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMULTIHIGHLIGHTGRADIENT )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -810,7 +810,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_NAME )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -834,7 +834,7 @@ void setName(const QString &name)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETNAME )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -860,7 +860,7 @@ QString itemLabel() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ITEMLABEL )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -884,7 +884,7 @@ bool isItemLabelVisible() const
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_ISITEMLABELVISIBLE )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -908,7 +908,7 @@ void setItemLabelVisible(bool visible)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETITEMLABELVISIBLE )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -934,7 +934,7 @@ Q_INVOKABLE void setMeshAxisAndAngle(const QVector3D &axis, float angle)
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_SETMESHAXISANDANGLE )
 {
-  QAbstract3DSeries * obj = (QAbstract3DSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstract3DSeries * obj = (QAbstract3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

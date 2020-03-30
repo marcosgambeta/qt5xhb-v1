@@ -113,7 +113,7 @@ void QSurface3DSeriesSlots::textureFileChanged( const QString & filename )
 
 void QSurface3DSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSurface3DSeries * obj = (QSurface3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSurface3DSeries * obj = (QSurface3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

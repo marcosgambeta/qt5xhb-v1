@@ -113,7 +113,7 @@ void QCustom3DLabelSlots::textColorChanged( const QColor & color )
 
 void QCustom3DLabelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCustom3DLabel * obj = (QCustom3DLabel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCustom3DLabel * obj = (QCustom3DLabel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

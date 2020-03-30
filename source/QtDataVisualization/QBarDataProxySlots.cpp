@@ -156,7 +156,7 @@ void QBarDataProxySlots::seriesChanged( QBar3DSeries * series )
 
 void QBarDataProxySlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QBarDataProxy * obj = (QBarDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

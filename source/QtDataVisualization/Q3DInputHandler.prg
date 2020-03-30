@@ -69,7 +69,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     Q3DInputHandler * o = new Q3DInputHandler( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -82,7 +82,7 @@ virtual ~Q3DInputHandler()
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_DELETE )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ bool isRotationEnabled() const
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ISROTATIONENABLED )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ void setRotationEnabled(bool enable)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETROTATIONENABLED )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ bool isZoomEnabled() const
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMENABLED )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ void setZoomEnabled(bool enable)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMENABLED )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ bool isSelectionEnabled() const
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ISSELECTIONENABLED )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void setSelectionEnabled(bool enable)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETSELECTIONENABLED )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ bool isZoomAtTargetEnabled() const
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMATTARGETENABLED )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ void setZoomAtTargetEnabled(bool enable)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
 {
-  Q3DInputHandler * obj = (Q3DInputHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DInputHandler * obj = (Q3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

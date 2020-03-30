@@ -241,7 +241,7 @@ void QCustom3DVolumeSlots::useHighDefShaderChanged( bool enabled )
 
 void QCustom3DVolumeSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCustom3DVolume * obj = (QCustom3DVolume *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCustom3DVolume * obj = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -62,7 +62,7 @@ HB_FUNC_STATIC( Q3DLIGHT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     Q3DLight * o = new Q3DLight( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -75,7 +75,7 @@ virtual ~Q3DLight()
 */
 HB_FUNC_STATIC( Q3DLIGHT_DELETE )
 {
-  Q3DLight * obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DLight * obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,7 +98,7 @@ void setAutoPosition(bool enabled)
 HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  Q3DLight * obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DLight * obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ bool isAutoPosition()
 HB_FUNC_STATIC( Q3DLIGHT_ISAUTOPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  Q3DLight * obj = (Q3DLight *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DLight * obj = (Q3DLight *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

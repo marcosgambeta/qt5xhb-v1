@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QLogValue3DAxisFormatter * o = new QLogValue3DAxisFormatter( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -83,7 +83,7 @@ virtual ~QLogValue3DAxisFormatter()
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_DELETE )
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ qreal base() const
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_BASE )
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ void setBase(qreal base)
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ bool autoSubGrid() const
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_AUTOSUBGRID )
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ void setAutoSubGrid(bool enabled)
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ bool showEdgeLabels() const
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SHOWEDGELABELS )
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -227,7 +227,7 @@ void setShowEdgeLabels(bool enabled)
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
 {
-  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValue3DAxisFormatter * obj = (QLogValue3DAxisFormatter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

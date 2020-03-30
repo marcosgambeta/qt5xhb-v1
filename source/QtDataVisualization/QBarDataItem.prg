@@ -67,7 +67,7 @@ QBarDataItem()
 void QBarDataItem_new1()
 {
   QBarDataItem * o = new QBarDataItem();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QBarDataItem(float value)
 void QBarDataItem_new2()
 {
   QBarDataItem * o = new QBarDataItem( PFLOAT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -85,7 +85,7 @@ QBarDataItem(float value, float angle)
 void QBarDataItem_new3()
 {
   QBarDataItem * o = new QBarDataItem( PFLOAT(1), PFLOAT(2) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -94,7 +94,7 @@ QBarDataItem(const QBarDataItem &other)
 void QBarDataItem_new4()
 {
   QBarDataItem * o = new QBarDataItem( *PQBARDATAITEM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QBarDataItem()
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QBARDATAITEM_NEW )
 */
 HB_FUNC_STATIC( QBARDATAITEM_DELETE )
 {
-  QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataItem * obj = (QBarDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ void setValue(float val)
 */
 HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
 {
-  QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataItem * obj = (QBarDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ float value() const
 */
 HB_FUNC_STATIC( QBARDATAITEM_VALUE )
 {
-  QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataItem * obj = (QBarDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ void setRotation(float angle)
 */
 HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
 {
-  QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataItem * obj = (QBarDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -227,7 +227,7 @@ float rotation() const
 */
 HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
 {
-  QBarDataItem * obj = (QBarDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataItem * obj = (QBarDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

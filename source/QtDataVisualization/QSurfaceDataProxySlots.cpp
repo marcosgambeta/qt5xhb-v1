@@ -147,7 +147,7 @@ void QSurfaceDataProxySlots::seriesChanged( QSurface3DSeries * series )
 
 void QSurfaceDataProxySlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

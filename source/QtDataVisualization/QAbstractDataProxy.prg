@@ -57,7 +57,7 @@ virtual ~QAbstractDataProxy()
 */
 HB_FUNC_STATIC( QABSTRACTDATAPROXY_DELETE )
 {
-  QAbstractDataProxy * obj = (QAbstractDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractDataProxy * obj = (QAbstractDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ DataType type() const
 */
 HB_FUNC_STATIC( QABSTRACTDATAPROXY_TYPE )
 {
-  QAbstractDataProxy * obj = (QAbstractDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractDataProxy * obj = (QAbstractDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -61,7 +61,7 @@ void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
 
 void QBar3DSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QBar3DSeries * obj = (QBar3DSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBar3DSeries * obj = (QBar3DSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -95,7 +95,7 @@ HB_FUNC_STATIC( Q3DSCENE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     Q3DScene * o = new Q3DScene( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -108,7 +108,7 @@ virtual ~Q3DScene()
 */
 HB_FUNC_STATIC( Q3DSCENE_DELETE )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ QRect viewport() const
 */
 HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( Q3DSCENE_VIEWPORT )
     {
 #endif
       QRect * ptr = new QRect( obj->viewport() );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ QRect primarySubViewport() const
 */
 HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( Q3DSCENE_PRIMARYSUBVIEWPORT )
     {
 #endif
       QRect * ptr = new QRect( obj->primarySubViewport() );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ void setPrimarySubViewport(const QRect &primarySubViewport)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETPRIMARYSUBVIEWPORT )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ QRect secondarySubViewport() const
 */
 HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( Q3DSCENE_SECONDARYSUBVIEWPORT )
     {
 #endif
       QRect * ptr = new QRect( obj->secondarySubViewport() );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ void setSecondarySubViewport(const QRect &secondarySubViewport)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWPORT )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -257,7 +257,7 @@ QPoint selectionQueryPosition() const
 */
 HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( Q3DSCENE_SELECTIONQUERYPOSITION )
     {
 #endif
       QPoint * ptr = new QPoint( obj->selectionQueryPosition() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ void setSelectionQueryPosition(const QPoint &point)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSELECTIONQUERYPOSITION )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -308,7 +308,7 @@ bool isSecondarySubviewOnTop() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ISSECONDARYSUBVIEWONTOP )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -332,7 +332,7 @@ void setSecondarySubviewOnTop(bool isSecondaryOnTop)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ bool isSlicingActive() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ISSLICINGACTIVE )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -382,7 +382,7 @@ void setSlicingActive(bool isSlicing)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -408,7 +408,7 @@ Q3DCamera *activeCamera() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVECAMERA )
     {
 #endif
       Q3DCamera * ptr = obj->activeCamera();
-      _qt5xhb_createReturnQObjectClass( ptr, "Q3DCAMERA" );
+      Qt5xHb::createReturnQObjectClass( ptr, "Q3DCAMERA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,7 +433,7 @@ void setActiveCamera(Q3DCamera *camera)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVECAMERA )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -459,7 +459,7 @@ Q3DLight *activeLight() const
 */
 HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( Q3DSCENE_ACTIVELIGHT )
     {
 #endif
       Q3DLight * ptr = obj->activeLight();
-      _qt5xhb_createReturnQObjectClass( ptr, "Q3DLIGHT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "Q3DLIGHT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,7 +484,7 @@ void setActiveLight(Q3DLight *light)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETACTIVELIGHT )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -510,7 +510,7 @@ float devicePixelRatio() const
 */
 HB_FUNC_STATIC( Q3DSCENE_DEVICEPIXELRATIO )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -534,7 +534,7 @@ void setDevicePixelRatio(float pixelRatio)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -560,7 +560,7 @@ QPoint graphPositionQuery() const
 */
 HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( Q3DSCENE_GRAPHPOSITIONQUERY )
     {
 #endif
       QPoint * ptr = new QPoint( obj->graphPositionQuery() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -585,7 +585,7 @@ void setGraphPositionQuery(const QPoint &point)
 */
 HB_FUNC_STATIC( Q3DSCENE_SETGRAPHPOSITIONQUERY )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -611,7 +611,7 @@ bool isPointInPrimarySubView(const QPoint &point)
 */
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINPRIMARYSUBVIEW )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -635,7 +635,7 @@ bool isPointInSecondarySubView(const QPoint &point)
 */
 HB_FUNC_STATIC( Q3DSCENE_ISPOINTINSECONDARYSUBVIEW )
 {
-  Q3DScene * obj = (Q3DScene *) _qt5xhb_itemGetPtrStackSelfItem();
+  Q3DScene * obj = (Q3DScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( Q3DSCENE_INVALIDSELECTIONPOINT )
   {
 #endif
     QPoint * ptr = new QPoint( Q3DScene::invalidSelectionPoint() );
-    _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+    Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

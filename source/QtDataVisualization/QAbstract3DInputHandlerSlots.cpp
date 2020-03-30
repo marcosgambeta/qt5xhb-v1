@@ -61,7 +61,7 @@ void QAbstract3DInputHandlerSlots::sceneChanged( Q3DScene * scene )
 
 void QAbstract3DInputHandlerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstract3DInputHandler * obj = (QAbstract3DInputHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

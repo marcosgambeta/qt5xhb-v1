@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QBarDataProxy * o = new QBarDataProxy( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -106,7 +106,7 @@ virtual ~QBarDataProxy()
 */
 HB_FUNC_STATIC( QBARDATAPROXY_DELETE )
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ int rowCount() const
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ROWCOUNT )
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ QStringList rowLabels() const
 */
 HB_FUNC_STATIC( QBARDATAPROXY_ROWLABELS )
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ void setRowLabels(const QStringList &labels)
 */
 HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ QStringList columnLabels() const
 */
 HB_FUNC_STATIC( QBARDATAPROXY_COLUMNLABELS )
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void setColumnLabels(const QStringList &labels)
 */
 HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ QBar3DSeries *series() const
 */
 HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
     {
 #endif
       QBar3DSeries * ptr = obj->series();
-      _qt5xhb_createReturnQObjectClass( ptr, "QBAR3DSERIES" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QBAR3DSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -285,12 +285,12 @@ const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
 */
 void QBarDataProxy_itemAt1()
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     const QBarDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
-    _qt5xhb_createReturnClass( ptr, "QBARDATAITEM", false );
+    Qt5xHb::createReturnClass( ptr, "QBARDATAITEM", false );
   }
 }
 
@@ -299,12 +299,12 @@ const QBarDataItem *itemAt(const QPoint &position) const
 */
 void QBarDataProxy_itemAt2()
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     const QBarDataItem * ptr = obj->itemAt( *PQPOINT(1) );
-    _qt5xhb_createReturnClass( ptr, "QBARDATAITEM", false );
+    Qt5xHb::createReturnClass( ptr, "QBARDATAITEM", false );
   }
 }
 
@@ -382,7 +382,7 @@ void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
 */
 void QBarDataProxy_setItem1()
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -397,7 +397,7 @@ void setItem(const QPoint &position, const QBarDataItem &item)
 */
 void QBarDataProxy_setItem2()
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -491,7 +491,7 @@ void removeRows(int rowIndex, int removeCount, bool removeLabels = true)
 */
 HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
 {
-  QBarDataProxy * obj = (QBarDataProxy *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

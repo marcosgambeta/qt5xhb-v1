@@ -72,7 +72,7 @@ QSurfaceDataItem()
 void QSurfaceDataItem_new1()
 {
   QSurfaceDataItem * o = new QSurfaceDataItem();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QSurfaceDataItem(const QVector3D &position)
 void QSurfaceDataItem_new2()
 {
   QSurfaceDataItem * o = new QSurfaceDataItem( *PQVECTOR3D(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -90,7 +90,7 @@ QSurfaceDataItem(const QSurfaceDataItem &other)
 void QSurfaceDataItem_new3()
 {
   QSurfaceDataItem * o = new QSurfaceDataItem( *PQSURFACEDATAITEM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QSurfaceDataItem()
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_DELETE )
 {
-  QSurfaceDataItem * obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ void setPosition(const QVector3D &pos)
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETPOSITION )
 {
-  QSurfaceDataItem * obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QVector3D position() const
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_POSITION )
 {
-  QSurfaceDataItem * obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_POSITION )
     {
 #endif
       QVector3D * ptr = new QVector3D( obj->position() );
-      _qt5xhb_createReturnClass( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ void setX(float value)
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETX )
 {
-  QSurfaceDataItem * obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -219,7 +219,7 @@ void setY(float value)
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETY )
 {
-  QSurfaceDataItem * obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -245,7 +245,7 @@ void setZ(float value)
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETZ )
 {
-  QSurfaceDataItem * obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ float x() const
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_X )
 {
-  QSurfaceDataItem * obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -295,7 +295,7 @@ float y() const
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_Y )
 {
-  QSurfaceDataItem * obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -319,7 +319,7 @@ float z() const
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_Z )
 {
-  QSurfaceDataItem * obj = (QSurfaceDataItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSurfaceDataItem * obj = (QSurfaceDataItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

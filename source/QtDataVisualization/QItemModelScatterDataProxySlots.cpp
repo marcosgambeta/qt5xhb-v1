@@ -191,7 +191,7 @@ void QItemModelScatterDataProxySlots::zPosRoleReplaceChanged( const QString & re
 
 void QItemModelScatterDataProxySlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemModelScatterDataProxy * obj = (QItemModelScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -119,7 +119,7 @@ void QScatterDataProxySlots::seriesChanged( QScatter3DSeries * series )
 
 void QScatterDataProxySlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QScatterDataProxy * obj = (QScatterDataProxy *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScatterDataProxy * obj = (QScatterDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
