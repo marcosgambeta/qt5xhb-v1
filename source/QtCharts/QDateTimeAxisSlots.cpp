@@ -100,7 +100,7 @@ void QDateTimeAxisSlots::tickCountChanged( int tick )
 void QDateTimeAxisSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QDateTimeAxis * obj = (QDateTimeAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDateTimeAxis * obj = (QDateTimeAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

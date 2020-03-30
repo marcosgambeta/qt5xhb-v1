@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSPLINESERIES_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSplineSeries * o = new QSplineSeries( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSPLINESERIES_NEW )
 HB_FUNC_STATIC( QSPLINESERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSplineSeries * obj = (QSplineSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSplineSeries * obj = (QSplineSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QSPLINESERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QSplineSeries * obj = (QSplineSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSplineSeries * obj = (QSplineSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

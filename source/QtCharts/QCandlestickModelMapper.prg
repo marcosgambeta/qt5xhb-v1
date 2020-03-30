@@ -77,7 +77,7 @@ QAbstractItemModel *model() const
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ QCandlestickSeries *series() const
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
     {
 #endif
       QCandlestickSeries * ptr = obj->series();
-      _qt5xhb_createReturnQObjectClass( ptr, "QCANDLESTICKSERIES" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QCANDLESTICKSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -159,7 +159,7 @@ void setSeries(QCandlestickSeries *series)
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ virtual Qt::Orientation orientation() const = 0
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_ORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickModelMapper * obj = (QCandlestickModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QPOLARCHART_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QPolarChart * o = new QPolarChart( ISNIL(1)? Q_NULLPTR : (QGraphicsItem *) _qt5xhb_itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
-    _qt5xhb_returnNewObject( o, false );
+    QPolarChart * o = new QPolarChart( ISNIL(1)? Q_NULLPTR : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPOLARCHART_NEW )
 HB_FUNC_STATIC( QPOLARCHART_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPolarChart * obj = (QPolarChart *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPolarChart * obj = (QPolarChart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ void addAxis(QAbstractAxis *axis, PolarOrientation polarOrientation)
 HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPolarChart * obj = (QPolarChart *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPolarChart * obj = (QPolarChart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

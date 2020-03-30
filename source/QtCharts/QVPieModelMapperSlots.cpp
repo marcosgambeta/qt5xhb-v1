@@ -101,7 +101,7 @@ void QVPieModelMapperSlots::valuesColumnChanged()
 void QVPieModelMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVPieModelMapper * obj = (QVPieModelMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVPieModelMapper * obj = (QVPieModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

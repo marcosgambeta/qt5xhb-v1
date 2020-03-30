@@ -218,7 +218,7 @@ void QAreaSeriesSlots::selected()
 void QAreaSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * obj = (QAreaSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAreaSeries * obj = (QAreaSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

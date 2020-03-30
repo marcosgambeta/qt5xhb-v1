@@ -23,6 +23,7 @@
 
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
+#include "qt5xhb_utils.h"
 #include "qt5xhb_signals.h"
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))

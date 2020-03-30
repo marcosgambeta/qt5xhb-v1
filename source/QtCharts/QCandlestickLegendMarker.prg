@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_NEW )
   if( ISBETWEEN(2,3) && ISQCANDLESTICKSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QCandlestickLegendMarker * o = new QCandlestickLegendMarker( PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -81,7 +81,7 @@ virtual ~QCandlestickLegendMarker()
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickLegendMarker * obj = (QCandlestickLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickLegendMarker * obj = (QCandlestickLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ virtual LegendMarkerType type()
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickLegendMarker * obj = (QCandlestickLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickLegendMarker * obj = (QCandlestickLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ virtual QCandlestickSeries* series()
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickLegendMarker * obj = (QCandlestickLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickLegendMarker * obj = (QCandlestickLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_SERIES )
     {
 #endif
       QCandlestickSeries * ptr = obj->series();
-      _qt5xhb_createReturnQObjectClass( ptr, "QCANDLESTICKSERIES" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QCANDLESTICKSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -115,7 +115,7 @@ void QValueAxisSlots::tickCountChanged( int tickCount )
 void QValueAxisSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QValueAxis * obj = (QValueAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QValueAxis * obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

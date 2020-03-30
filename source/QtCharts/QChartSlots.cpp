@@ -38,7 +38,7 @@ void QChartSlots::plotAreaChanged( const QRectF & plotArea )
 void QChartSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChart * obj = (QChart *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QChart * obj = (QChart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

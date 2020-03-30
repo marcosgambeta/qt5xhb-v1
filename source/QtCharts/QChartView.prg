@@ -63,7 +63,7 @@ void QChartView_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChartView * o = new QChartView( OPQWIDGET(1,Q_NULLPTR) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 #endif
 }
 
@@ -74,7 +74,7 @@ void QChartView_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QChartView * o = new QChartView( PQCHART(1), OPQWIDGET(2,Q_NULLPTR) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 #endif
 }
 
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QCHARTVIEW_NEW )
 HB_FUNC_STATIC( QCHARTVIEW_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
+  QChartView * obj = (QChartView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ RubberBands rubberBand() const
 HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
+  QChartView * obj = (QChartView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ QChart *chart() const
 HB_FUNC_STATIC( QCHARTVIEW_CHART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
+  QChartView * obj = (QChartView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QCHARTVIEW_CHART )
     {
 #endif
       QChart * ptr = obj->chart();
-      _qt5xhb_createReturnQObjectClass( ptr, "QCHART" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QCHART" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ void setChart(QChart *chart)
 HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * obj = (QChartView *) _qt5xhb_itemGetPtrStackSelfItem();
+  QChartView * obj = (QChartView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

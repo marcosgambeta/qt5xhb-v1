@@ -143,7 +143,7 @@ void QLegendSlots::showToolTipsChanged( bool showToolTips )
 void QLegendSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLegend * obj = (QLegend *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLegend * obj = (QLegend *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

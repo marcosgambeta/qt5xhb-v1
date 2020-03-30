@@ -85,7 +85,7 @@ void QBoxSet_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * o = new QBoxSet( OPQSTRING(1,QString()), OPQOBJECT(2,Q_NULLPTR) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 #endif
 }
 
@@ -96,7 +96,7 @@ void QBoxSet_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QBoxSet * o = new QBoxSet( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,Q_NULLPTR) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 #endif
 }
 
@@ -125,7 +125,7 @@ virtual ~QBoxSet()
 HB_FUNC_STATIC( QBOXSET_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ QPen pen() const
 HB_FUNC_STATIC( QBOXSET_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QBOXSET_PEN )
     {
 #endif
       QPen * ptr = new QPen( obj->pen() );
-      _qt5xhb_createReturnClass( ptr, "QPEN", true );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ void setPen(const QPen &pen)
 HB_FUNC_STATIC( QBOXSET_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ QBrush brush() const
 HB_FUNC_STATIC( QBOXSET_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QBOXSET_BRUSH )
     {
 #endif
       QBrush * ptr = new QBrush( obj->brush() );
-      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ void setBrush(const QBrush &brush)
 HB_FUNC_STATIC( QBOXSET_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -259,7 +259,7 @@ void append(const qreal value)
 void QBoxSet_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ void append(const QList<qreal> &values)
 void QBoxSet_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -322,7 +322,7 @@ void clear()
 HB_FUNC_STATIC( QBOXSET_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -350,7 +350,7 @@ void setLabel(const QString label)
 HB_FUNC_STATIC( QBOXSET_SETLABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -378,7 +378,7 @@ QString label() const
 HB_FUNC_STATIC( QBOXSET_LABEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -404,7 +404,7 @@ void setValue(const int index, const qreal value)
 HB_FUNC_STATIC( QBOXSET_SETVALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -432,7 +432,7 @@ qreal at(const int index) const
 HB_FUNC_STATIC( QBOXSET_AT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -458,7 +458,7 @@ int count() const
 HB_FUNC_STATIC( QBOXSET_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

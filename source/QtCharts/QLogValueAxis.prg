@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QLogValueAxis * o = new QLogValueAxis( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -101,7 +101,7 @@ QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
 HB_FUNC_STATIC( QLOGVALUEAXIS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ qreal min() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_MIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ void setMin(qreal min)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMIN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ qreal max() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_MAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ void setMax(qreal max)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMAX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ QString labelFormat() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_LABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -257,7 +257,7 @@ void setLabelFormat(const QString &format)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETLABELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -285,7 +285,7 @@ qreal base() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_BASE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -311,7 +311,7 @@ void setBase(qreal base)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETBASE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -339,7 +339,7 @@ int tickCount() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_TICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -365,7 +365,7 @@ int minorTickCount() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_MINORTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -391,7 +391,7 @@ void setMinorTickCount(int minorTickCount)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETMINORTICKCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -419,7 +419,7 @@ AxisType type() const
 HB_FUNC_STATIC( QLOGVALUEAXIS_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -445,7 +445,7 @@ void setRange(qreal min, qreal max)
 HB_FUNC_STATIC( QLOGVALUEAXIS_SETRANGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QLogValueAxis * obj = (QLogValueAxis *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLogValueAxis * obj = (QLogValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

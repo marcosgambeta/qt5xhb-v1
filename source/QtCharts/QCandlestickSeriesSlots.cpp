@@ -317,7 +317,7 @@ void QCandlestickSeriesSlots::released( QCandlestickSet * set )
 void QCandlestickSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

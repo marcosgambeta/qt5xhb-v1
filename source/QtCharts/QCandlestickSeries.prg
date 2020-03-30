@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QCandlestickSeries * o = new QCandlestickSeries( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 HB_FUNC_STATIC( QCANDLESTICKSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ int count() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ qreal maximumColumnWidth() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_MAXIMUMCOLUMNWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ void setMaximumColumnWidth(qreal maximumColumnWidth)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMAXIMUMCOLUMNWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -235,7 +235,7 @@ qreal minimumColumnWidth() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_MINIMUMCOLUMNWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -261,7 +261,7 @@ void setMinimumColumnWidth(qreal minimumColumnWidth)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMINIMUMCOLUMNWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ qreal bodyWidth() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -315,7 +315,7 @@ void setBodyWidth(qreal bodyWidth)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ bool bodyOutlineVisible() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYOUTLINEVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -369,7 +369,7 @@ void setBodyOutlineVisible(bool bodyOutlineVisible)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -397,7 +397,7 @@ qreal capsWidth() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -423,7 +423,7 @@ void setCapsWidth(qreal capsWidth)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSWIDTH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -451,7 +451,7 @@ bool capsVisible() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -477,7 +477,7 @@ void setCapsVisible(bool capsVisible)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -505,7 +505,7 @@ QColor increasingColor() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_INCREASINGCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_INCREASINGCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->increasingColor() );
-      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,7 +532,7 @@ void setIncreasingColor(const QColor &increasingColor)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETINCREASINGCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETINCREASINGCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIncreasingColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setIncreasingColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -560,7 +560,7 @@ QColor decreasingColor() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_DECREASINGCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_DECREASINGCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->decreasingColor() );
-      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -587,7 +587,7 @@ void setDecreasingColor(const QColor &decreasingColor)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETDECREASINGCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETDECREASINGCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setDecreasingColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setDecreasingColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,7 +615,7 @@ QBrush brush() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BRUSH )
     {
 #endif
       QBrush * ptr = new QBrush( obj->brush() );
-      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -642,7 +642,7 @@ void setBrush(const QBrush &brush)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -670,7 +670,7 @@ QPen pen() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_PEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_PEN )
     {
 #endif
       QPen * ptr = new QPen( obj->pen() );
-      _qt5xhb_createReturnClass( ptr, "QPEN", true );
+      Qt5xHb::createReturnClass( ptr, "QPEN", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,7 +697,7 @@ void setPen(const QPen &pen)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -725,7 +725,7 @@ bool append(QCandlestickSet *set)
 void QCandlestickSeries_append1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -748,7 +748,7 @@ bool append(const QList<QCandlestickSet *> &sets)
 void QCandlestickSeries_append2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -790,7 +790,7 @@ bool remove(QCandlestickSet *set)
 void QCandlestickSeries_remove1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -805,7 +805,7 @@ bool remove(const QList<QCandlestickSet *> &sets)
 void QCandlestickSeries_remove2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -847,7 +847,7 @@ bool insert(int index, QCandlestickSet *set)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_INSERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -873,7 +873,7 @@ bool take(QCandlestickSet *set)
 HB_FUNC_STATIC( QCANDLESTICKSERIES_TAKE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -899,7 +899,7 @@ void clear()
 HB_FUNC_STATIC( QCANDLESTICKSERIES_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -927,7 +927,7 @@ QList<QCandlestickSet *> sets() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -977,7 +977,7 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QCANDLESTICKSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

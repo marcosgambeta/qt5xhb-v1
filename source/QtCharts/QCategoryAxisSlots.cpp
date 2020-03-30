@@ -51,7 +51,7 @@ void QCategoryAxisSlots::labelsPositionChanged( QCategoryAxis::AxisLabelsPositio
 void QCategoryAxisSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QCategoryAxis * obj = (QCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCategoryAxis * obj = (QCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -96,7 +96,7 @@ void QBarCategoryAxisSlots::rangeChanged( const QString & min, const QString & m
 void QBarCategoryAxisSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarCategoryAxis * obj = (QBarCategoryAxis *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QBarCategoryAxis * obj = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

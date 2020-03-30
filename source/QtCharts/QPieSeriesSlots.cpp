@@ -200,7 +200,7 @@ void QPieSeriesSlots::sumChanged()
 void QPieSeriesSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeries * obj = (QPieSeries *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPieSeries * obj = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

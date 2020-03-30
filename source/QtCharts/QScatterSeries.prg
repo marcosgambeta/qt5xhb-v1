@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QScatterSeries * o = new QScatterSeries( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_NEW )
 HB_FUNC_STATIC( QSCATTERSERIES_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ QColor color() const
 HB_FUNC_STATIC( QSCATTERSERIES_COLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_COLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->color() );
-      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ void setColor(const QColor &color)
 HB_FUNC_STATIC( QSCATTERSERIES_SETCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ QColor borderColor() const
 HB_FUNC_STATIC( QSCATTERSERIES_BORDERCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_BORDERCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->borderColor() );
-      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ void setBorderColor(const QColor &color)
 HB_FUNC_STATIC( QSCATTERSERIES_SETBORDERCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_SETBORDERCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setBorderColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBorderColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ MarkerShape markerShape() const
 HB_FUNC_STATIC( QSCATTERSERIES_MARKERSHAPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ void setMarkerShape(MarkerShape shape)
 HB_FUNC_STATIC( QSCATTERSERIES_SETMARKERSHAPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -281,7 +281,7 @@ qreal markerSize() const
 HB_FUNC_STATIC( QSCATTERSERIES_MARKERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -307,7 +307,7 @@ void setMarkerSize(qreal size)
 HB_FUNC_STATIC( QSCATTERSERIES_SETMARKERSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ QBrush brush() const
 HB_FUNC_STATIC( QSCATTERSERIES_BRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSCATTERSERIES_BRUSH )
     {
 #endif
       QBrush * ptr = new QBrush( obj->brush() );
-      _qt5xhb_createReturnClass( ptr, "QBRUSH", true );
+      Qt5xHb::createReturnClass( ptr, "QBRUSH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ void setBrush(const QBrush &brush)
 HB_FUNC_STATIC( QSCATTERSERIES_SETBRUSH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ QAbstractSeries::SeriesType type() const
 HB_FUNC_STATIC( QSCATTERSERIES_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -416,7 +416,7 @@ void setPen(const QPen &pen)
 HB_FUNC_STATIC( QSCATTERSERIES_SETPEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QScatterSeries * obj = (QScatterSeries *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScatterSeries * obj = (QScatterSeries *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

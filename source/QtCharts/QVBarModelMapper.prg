@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QVBarModelMapper * o = new QVBarModelMapper( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -99,7 +99,7 @@ QAbstractBarSeries *series() const
 HB_FUNC_STATIC( QVBARMODELMAPPER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SERIES )
     {
 #endif
       QAbstractBarSeries * ptr = obj->series();
-      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTBARSERIES" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTBARSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ void setSeries(QAbstractBarSeries *series)
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETSERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ QAbstractItemModel *model() const
 HB_FUNC_STATIC( QVBARMODELMAPPER_MODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ void setModel(QAbstractItemModel *model)
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETMODEL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -209,7 +209,7 @@ int firstBarSetColumn() const
 HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTBARSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -235,7 +235,7 @@ void setFirstBarSetColumn(int firstBarSetColumn)
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ int lastBarSetColumn() const
 HB_FUNC_STATIC( QVBARMODELMAPPER_LASTBARSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ void setLastBarSetColumn(int lastBarSetColumn)
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETLASTBARSETCOLUMN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -317,7 +317,7 @@ int firstRow() const
 HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ void setFirstRow(int firstRow)
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTROW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ int rowCount() const
 HB_FUNC_STATIC( QVBARMODELMAPPER_ROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -397,7 +397,7 @@ void setRowCount(int rowCount)
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETROWCOUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QVBarModelMapper * obj = (QVBarModelMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVBarModelMapper * obj = (QVBarModelMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

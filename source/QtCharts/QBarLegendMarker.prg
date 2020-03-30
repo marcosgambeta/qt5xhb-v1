@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_NEW )
   if( ISBETWEEN(3,4) && ISQABSTRACTBARSERIES(1) && ISQBARSET(2) && ISQLEGEND(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QBarLegendMarker * o = new QBarLegendMarker( PQABSTRACTBARSERIES(1), PQBARSET(2), PQLEGEND(3), OPQOBJECT(4,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -85,7 +85,7 @@ virtual ~QBarLegendMarker()
 HB_FUNC_STATIC( QBARLEGENDMARKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarLegendMarker * obj = (QBarLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarLegendMarker * obj = (QBarLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ virtual LegendMarkerType type()
 HB_FUNC_STATIC( QBARLEGENDMARKER_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarLegendMarker * obj = (QBarLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarLegendMarker * obj = (QBarLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ virtual QAbstractBarSeries* series()
 HB_FUNC_STATIC( QBARLEGENDMARKER_SERIES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarLegendMarker * obj = (QBarLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarLegendMarker * obj = (QBarLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_SERIES )
     {
 #endif
       QAbstractBarSeries * ptr = obj->series();
-      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTBARSERIES" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTBARSERIES" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ QBarSet* barset()
 HB_FUNC_STATIC( QBARLEGENDMARKER_BARSET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarLegendMarker * obj = (QBarLegendMarker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBarLegendMarker * obj = (QBarLegendMarker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_BARSET )
     {
 #endif
       QBarSet * ptr = obj->barset();
-      _qt5xhb_createReturnQObjectClass( ptr, "QBARSET" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QBARSET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
