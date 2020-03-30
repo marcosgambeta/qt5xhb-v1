@@ -48,7 +48,7 @@ void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 
 void QDeclarativeViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeView * obj = (QDeclarativeView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

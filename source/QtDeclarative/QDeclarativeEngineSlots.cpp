@@ -68,7 +68,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
 
 void QDeclarativeEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeEngine * obj = (QDeclarativeEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDeclarativeEngine * obj = (QDeclarativeEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
