@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QJSONPARSEERROR_DELETE )
 {
-  QJsonParseError * obj = (QJsonParseError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonParseError * obj = (QJsonParseError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,7 +77,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QJSONPARSEERROR_ERRORSTRING )
 {
-  QJsonParseError * obj = (QJsonParseError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonParseError * obj = (QJsonParseError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

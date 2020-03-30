@@ -82,7 +82,7 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
 
 void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QItemSelectionModel * obj = (QItemSelectionModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QItemSelectionModel * obj = (QItemSelectionModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

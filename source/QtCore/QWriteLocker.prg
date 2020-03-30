@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QWRITELOCKER_NEW )
   if( ISNUMPAR(1) && ISQREADWRITELOCK(1) )
   {
     QWriteLocker * o = new QWriteLocker( PQREADWRITELOCK(1) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QWRITELOCKER_NEW )
 
 HB_FUNC_STATIC( QWRITELOCKER_DELETE )
 {
-  QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWriteLocker * obj = (QWriteLocker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ QReadWriteLock * readWriteLock() const
 */
 HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
 {
-  QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWriteLocker * obj = (QWriteLocker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QWRITELOCKER_READWRITELOCK )
     {
 #endif
       QReadWriteLock * ptr = obj->readWriteLock();
-      _qt5xhb_createReturnClass( ptr, "QREADWRITELOCK", false );
+      Qt5xHb::createReturnClass( ptr, "QREADWRITELOCK", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,7 +122,7 @@ void relock()
 */
 HB_FUNC_STATIC( QWRITELOCKER_RELOCK )
 {
-  QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWriteLocker * obj = (QWriteLocker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ void unlock()
 */
 HB_FUNC_STATIC( QWRITELOCKER_UNLOCK )
 {
-  QWriteLocker * obj = (QWriteLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWriteLocker * obj = (QWriteLocker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

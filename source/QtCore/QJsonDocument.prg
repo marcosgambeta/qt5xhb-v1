@@ -85,7 +85,7 @@ QJsonDocument()
 void QJsonDocument_new1()
 {
   QJsonDocument * o = new QJsonDocument();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -94,7 +94,7 @@ QJsonDocument(const QJsonObject & object)
 void QJsonDocument_new2()
 {
   QJsonDocument * o = new QJsonDocument( *PQJSONOBJECT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -103,7 +103,7 @@ QJsonDocument(const QJsonArray & array)
 void QJsonDocument_new3()
 {
   QJsonDocument * o = new QJsonDocument( *PQJSONARRAY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -112,7 +112,7 @@ QJsonDocument(const QJsonDocument & other)
 void QJsonDocument_new4()
 {
   QJsonDocument * o = new QJsonDocument( *PQJSONDOCUMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QJsonDocument()
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
 
 HB_FUNC_STATIC( QJSONDOCUMENT_DELETE )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ QJsonArray array() const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_ARRAY )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_ARRAY )
     {
 #endif
       QJsonArray * ptr = new QJsonArray( obj->array() );
-      _qt5xhb_createReturnClass( ptr, "QJSONARRAY", true );
+      Qt5xHb::createReturnClass( ptr, "QJSONARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ bool isArray() const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_ISARRAY )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_ISEMPTY )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_ISNULL )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ bool isObject() const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_ISOBJECT )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ QJsonObject object() const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_OBJECT )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_OBJECT )
     {
 #endif
       QJsonObject * ptr = new QJsonObject( obj->object() );
-      _qt5xhb_createReturnClass( ptr, "QJSONOBJECT", true );
+      Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,7 +312,7 @@ const char * rawData(int * size) const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_RAWDATA )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ void setArray(const QJsonArray & array)
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_SETARRAY )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -364,7 +364,7 @@ void setObject(const QJsonObject & object)
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_SETOBJECT )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ QByteArray toBinaryData() const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_TOBINARYDATA )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOBINARYDATA )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toBinaryData() );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ QByteArray toJson() const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_TOJSON )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOJSON )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toJson() );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,7 +440,7 @@ QVariant toVariant() const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_TOVARIANT )
 {
-  QJsonDocument * obj = (QJsonDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJsonDocument * obj = (QJsonDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOVARIANT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->toVariant() );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMBINARYDATA )
   {
 #endif
     QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromBinaryData( *PQBYTEARRAY(1), ISNIL(2)? (QJsonDocument::DataValidation) QJsonDocument::Validate : (QJsonDocument::DataValidation) hb_parni(2) ) );
-    _qt5xhb_createReturnClass( ptr, "QJSONDOCUMENT", true );
+    Qt5xHb::createReturnClass( ptr, "QJSONDOCUMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -489,8 +489,8 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMJSON )
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQJSONPARSEERROR(2)||ISNIL(2)) )
   {
 #endif
-    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromJson( *PQBYTEARRAY(1), ISNIL(2)? 0 : (QJsonParseError *) _qt5xhb_itemGetPtr(2) ) );
-    _qt5xhb_createReturnClass( ptr, "QJSONDOCUMENT", true );
+    QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromJson( *PQBYTEARRAY(1), ISNIL(2)? 0 : (QJsonParseError *) Qt5xHb::itemGetPtr(2) ) );
+    Qt5xHb::createReturnClass( ptr, "QJSONDOCUMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMRAWDATA )
   {
 #endif
     QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromRawData( PCONSTCHAR(1), PINT(2), ISNIL(3)? (QJsonDocument::DataValidation) QJsonDocument::Validate : (QJsonDocument::DataValidation) hb_parni(3) ) );
-    _qt5xhb_createReturnClass( ptr, "QJSONDOCUMENT", true );
+    Qt5xHb::createReturnClass( ptr, "QJSONDOCUMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMVARIANT )
   {
 #endif
     QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromVariant( *PQVARIANT(1) ) );
-    _qt5xhb_createReturnClass( ptr, "QJSONDOCUMENT", true );
+    Qt5xHb::createReturnClass( ptr, "QJSONDOCUMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

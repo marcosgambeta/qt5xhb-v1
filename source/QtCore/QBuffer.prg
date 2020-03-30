@@ -66,7 +66,7 @@ QBuffer ( QObject * parent = 0 )
 void QBuffer_new1()
 {
   QBuffer * o = new QBuffer( OPQOBJECT(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -75,7 +75,7 @@ QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 void QBuffer_new2()
 {
   QBuffer * o = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QBuffer ( QObject * parent = 0 )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 
 HB_FUNC_STATIC( QBUFFER_DELETE )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ QByteArray & buffer ()
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
     {
 #endif
       QByteArray * ptr = &obj->buffer();
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", false );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ const QByteArray & buffer () const
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
     {
 #endif
       const QByteArray * ptr = &obj->buffer();
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", false );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ const QByteArray & data () const
 */
 HB_FUNC_STATIC( QBUFFER_DATA )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QBUFFER_DATA )
     {
 #endif
       const QByteArray * ptr = &obj->data();
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", false );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ void setBuffer ( QByteArray * byteArray )
 */
 HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ void setData ( const QByteArray & data )
 */
 void QBuffer_setData1()
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -245,7 +245,7 @@ void setData ( const char * data, int size )
 */
 void QBuffer_setData2()
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -279,7 +279,7 @@ virtual bool atEnd () const
 */
 HB_FUNC_STATIC( QBUFFER_ATEND )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ virtual bool canReadLine () const
 */
 HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ virtual void close ()
 */
 HB_FUNC_STATIC( QBUFFER_CLOSE )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -353,7 +353,7 @@ virtual bool open ( OpenMode flags )
 */
 HB_FUNC_STATIC( QBUFFER_OPEN )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -377,7 +377,7 @@ virtual qint64 pos () const
 */
 HB_FUNC_STATIC( QBUFFER_POS )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -401,7 +401,7 @@ virtual bool seek ( qint64 pos )
 */
 HB_FUNC_STATIC( QBUFFER_SEEK )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -425,7 +425,7 @@ virtual qint64 size () const
 */
 HB_FUNC_STATIC( QBUFFER_SIZE )
 {
-  QBuffer * obj = (QBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

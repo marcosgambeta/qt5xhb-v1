@@ -111,7 +111,7 @@ void QProcessSlots::errorOccurred( QProcess::ProcessError error )
 
 void QProcessSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProcess * obj = (QProcess *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProcess * obj = (QProcess *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

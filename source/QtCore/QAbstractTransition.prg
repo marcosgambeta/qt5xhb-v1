@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ void addAnimation ( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ QList<QAbstractAnimation *> animations () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QStateMachine * machine () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
     {
 #endif
       QStateMachine * ptr = obj->machine();
-      _qt5xhb_createReturnQObjectClass( ptr, "QSTATEMACHINE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QSTATEMACHINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ void removeAnimation ( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ void setTargetState ( QAbstractState * target )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ void setTargetStates ( const QList<QAbstractState *> & targets )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ QState * sourceState () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
     {
 #endif
       QState * ptr = obj->sourceState();
-      _qt5xhb_createReturnQObjectClass( ptr, "QSTATE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QSTATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,7 +300,7 @@ QAbstractState * targetState () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
     {
 #endif
       QAbstractState * ptr = obj->targetState();
-      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTSTATE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTSTATE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ QList<QAbstractState *> targetStates () const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 {
-  QAbstractTransition * obj = (QAbstractTransition *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = (QAbstractTransition *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

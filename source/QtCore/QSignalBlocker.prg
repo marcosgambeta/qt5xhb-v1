@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSIGNALBLOCKER_NEW )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
     QSignalBlocker * o = new QSignalBlocker( PQOBJECT(1) );
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -92,7 +92,7 @@ explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
 HB_FUNC_STATIC( QSIGNALBLOCKER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QSignalBlocker * obj = (QSignalBlocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalBlocker * obj = (QSignalBlocker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ void reblock() Q_DECL_NOTHROW
 HB_FUNC_STATIC( QSIGNALBLOCKER_REBLOCK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QSignalBlocker * obj = (QSignalBlocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalBlocker * obj = (QSignalBlocker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ void unblock() Q_DECL_NOTHROW
 HB_FUNC_STATIC( QSIGNALBLOCKER_UNBLOCK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QSignalBlocker * obj = (QSignalBlocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalBlocker * obj = (QSignalBlocker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW ) // TODO: implementar(?) outros construtor
 
 HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )
 {
-  QCoreApplication * obj = (QCoreApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCoreApplication * obj = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ virtual bool notify ( QObject * receiver, QEvent * event )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
 {
-  QCoreApplication * obj = (QCoreApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCoreApplication * obj = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ void quit ()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
 {
-  QCoreApplication * obj = (QCoreApplication *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCoreApplication * obj = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
   {
 #endif
     QCoreApplication * ptr = QCoreApplication::instance();
-    _qt5xhb_createReturnQObjectClass( ptr, "QCOREAPPLICATION" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QCOREAPPLICATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

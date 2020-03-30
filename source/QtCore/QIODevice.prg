@@ -83,7 +83,7 @@ RETURN
 
 HB_FUNC_STATIC( QIODEVICE_DELETE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ virtual bool atEnd () const
 */
 HB_FUNC_STATIC( QIODEVICE_ATEND )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ virtual qint64 bytesAvailable () const
 */
 HB_FUNC_STATIC( QIODEVICE_BYTESAVAILABLE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ virtual qint64 bytesToWrite () const
 */
 HB_FUNC_STATIC( QIODEVICE_BYTESTOWRITE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ virtual bool canReadLine () const
 */
 HB_FUNC_STATIC( QIODEVICE_CANREADLINE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ virtual void close ()
 */
 HB_FUNC_STATIC( QIODEVICE_CLOSE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -227,7 +227,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ bool getChar ( char * c ) // TODO: revisar e implementar corretamente(?)
 */
 HB_FUNC_STATIC( QIODEVICE_GETCHAR )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ bool isOpen () const
 */
 HB_FUNC_STATIC( QIODEVICE_ISOPEN )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -299,7 +299,7 @@ bool isReadable () const
 */
 HB_FUNC_STATIC( QIODEVICE_ISREADABLE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -323,7 +323,7 @@ virtual bool isSequential () const
 */
 HB_FUNC_STATIC( QIODEVICE_ISSEQUENTIAL )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ bool isTextModeEnabled () const
 */
 HB_FUNC_STATIC( QIODEVICE_ISTEXTMODEENABLED )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -371,7 +371,7 @@ bool isWritable () const
 */
 HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -395,7 +395,7 @@ virtual bool open ( OpenMode mode )
 */
 HB_FUNC_STATIC( QIODEVICE_OPEN )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -419,7 +419,7 @@ OpenMode openMode () const
 */
 HB_FUNC_STATIC( QIODEVICE_OPENMODE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -443,7 +443,7 @@ qint64 peek ( char * data, qint64 maxSize )
 */
 void QIODevice_peek1()
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -456,12 +456,12 @@ QByteArray peek ( qint64 maxSize )
 */
 void QIODevice_peek2()
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->peek( PQINT64(1) ) );
-    _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -489,7 +489,7 @@ virtual qint64 pos () const
 */
 HB_FUNC_STATIC( QIODEVICE_POS )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -513,7 +513,7 @@ bool putChar ( char c )
 */
 HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -537,7 +537,7 @@ qint64 read ( char * data, qint64 maxSize )
 */
 void QIODevice_read1()
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -550,12 +550,12 @@ QByteArray read ( qint64 maxSize )
 */
 void QIODevice_read2()
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->read( PQINT64(1) ) );
-    _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -583,7 +583,7 @@ QByteArray readAll ()
 */
 HB_FUNC_STATIC( QIODEVICE_READALL )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QIODEVICE_READALL )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->readAll() );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -608,7 +608,7 @@ qint64 readLine ( char * data, qint64 maxSize )
 */
 void QIODevice_readLine1()
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -621,12 +621,12 @@ QByteArray readLine ( qint64 maxSize = 0 )
 */
 void QIODevice_readLine2()
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->readLine( OPQINT64(1,0) ) );
-    _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
 
@@ -654,7 +654,7 @@ virtual bool reset ()
 */
 HB_FUNC_STATIC( QIODEVICE_RESET )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -678,7 +678,7 @@ virtual bool seek ( qint64 pos )
 */
 HB_FUNC_STATIC( QIODEVICE_SEEK )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -702,7 +702,7 @@ void setTextModeEnabled ( bool enabled )
 */
 HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -728,7 +728,7 @@ virtual qint64 size () const
 */
 HB_FUNC_STATIC( QIODEVICE_SIZE )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -752,7 +752,7 @@ void ungetChar ( char c )
 */
 HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -778,7 +778,7 @@ virtual bool waitForBytesWritten ( int msecs )
 */
 HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -802,7 +802,7 @@ virtual bool waitForReadyRead ( int msecs )
 */
 HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -826,7 +826,7 @@ qint64 write ( const char * data, qint64 maxSize )
 */
 void QIODevice_write1()
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -839,7 +839,7 @@ qint64 write ( const char * data )
 */
 void QIODevice_write2()
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -852,7 +852,7 @@ qint64 write ( const QByteArray & byteArray )
 */
 void QIODevice_write3()
 {
-  QIODevice * obj = (QIODevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QIODevice * obj = (QIODevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

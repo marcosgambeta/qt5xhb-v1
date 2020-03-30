@@ -68,7 +68,7 @@ QSharedMemory(QObject *parent = 0)
 void QSharedMemory_new1()
 {
   QSharedMemory * o = new QSharedMemory( OPQOBJECT(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -77,7 +77,7 @@ QSharedMemory(const QString &key, QObject *parent = 0)
 void QSharedMemory_new2()
 {
   QSharedMemory * o = new QSharedMemory( PQSTRING(1), OPQOBJECT(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QSharedMemory(QObject *parent = 0)
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 
 HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ void setKey(const QString &key)
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ QString key() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ void setNativeKey(const QString &key)
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ QString nativeKey() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ bool create(int size, AccessMode mode = ReadWrite)
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ int size() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ bool attach(AccessMode mode = ReadWrite)
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -295,7 +295,7 @@ bool isAttached() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -319,7 +319,7 @@ bool detach()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ void *data()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ bool lock()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -391,7 +391,7 @@ bool unlock()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -415,7 +415,7 @@ SharedMemoryError error() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -439,7 +439,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
 {
-  QSharedMemory * obj = (QSharedMemory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSharedMemory * obj = (QSharedMemory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

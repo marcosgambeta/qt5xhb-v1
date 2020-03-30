@@ -44,7 +44,7 @@ void QStateMachineSlots::stopped()
 
 void QStateMachineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStateMachine * obj = (QStateMachine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

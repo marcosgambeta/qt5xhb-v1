@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSignalMapper * o = new QSignalMapper( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
 
 HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,7 +98,7 @@ void setMapping(QObject *sender, int id)
 */
 void QSignalMapper_setMapping1()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ void setMapping(QObject *sender, const QString &text)
 */
 void QSignalMapper_setMapping2()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ void setMapping(QObject *sender, QWidget *widget)
 */
 void QSignalMapper_setMapping3()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ void setMapping(QObject *sender, QObject *object)
 */
 void QSignalMapper_setMapping4()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ void removeMappings(QObject *sender)
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,12 +213,12 @@ QObject *mapping(int id) const
 */
 void QSignalMapper_mapping1()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QObject * ptr = obj->mapping( PINT(1) );
-    _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
   }
 }
 
@@ -227,12 +227,12 @@ QObject *mapping(const QString &text) const
 */
 void QSignalMapper_mapping2()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QObject * ptr = obj->mapping( PQSTRING(1) );
-    _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
   }
 }
 
@@ -241,12 +241,12 @@ QObject *mapping(QWidget *widget) const
 */
 void QSignalMapper_mapping3()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QObject * ptr = obj->mapping( PQWIDGET(1) );
-    _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
   }
 }
 
@@ -255,12 +255,12 @@ QObject *mapping(QObject *object) const
 */
 void QSignalMapper_mapping4()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QObject * ptr = obj->mapping( PQOBJECT(1) );
-    _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
   }
 }
 
@@ -298,7 +298,7 @@ void map()
 */
 void QSignalMapper_map1()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -313,7 +313,7 @@ void map(QObject *sender)
 */
 void QSignalMapper_map2()
 {
-  QSignalMapper * obj = (QSignalMapper *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSignalMapper * obj = (QSignalMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

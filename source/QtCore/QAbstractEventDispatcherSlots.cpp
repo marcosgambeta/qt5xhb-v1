@@ -44,7 +44,7 @@ void QAbstractEventDispatcherSlots::awake()
 
 void QAbstractEventDispatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

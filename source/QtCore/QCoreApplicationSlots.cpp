@@ -33,7 +33,7 @@ void QCoreApplicationSlots::aboutToQuit()
 
 void QCoreApplicationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCoreApplication * obj = (QCoreApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCoreApplication * obj = (QCoreApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

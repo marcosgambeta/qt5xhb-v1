@@ -93,7 +93,7 @@ QDateTime ()
 void QDateTime_new1()
 {
   QDateTime * o = new QDateTime();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -102,7 +102,7 @@ QDateTime ( const QDate & date )
 void QDateTime_new2()
 {
   QDateTime * o = new QDateTime( *PQDATE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -111,7 +111,7 @@ QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::Loca
 void QDateTime_new3()
 {
   QDateTime * o = new QDateTime( *PQDATE(1), *PQTIME(2), ISNIL(3)? (Qt::TimeSpec) Qt::LocalTime : (Qt::TimeSpec) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -120,7 +120,7 @@ QDateTime ( const QDateTime & other )
 void QDateTime_new4()
 {
   QDateTime * o = new QDateTime( *PQDATETIME(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QDateTime ()
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
 
 HB_FUNC_STATIC( QDATETIME_DELETE )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ QDateTime addDays ( int ndays ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDDAYS )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDATETIME_ADDDAYS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addDays( PINT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ QDateTime addMSecs ( qint64 msecs ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDMSECS )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMSECS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addMSecs( PQINT64(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ QDateTime addMonths ( int nmonths ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addMonths( PINT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ QDateTime addSecs ( int s ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDSECS )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDATETIME_ADDSECS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addSecs( PINT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ QDateTime addYears ( int nyears ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDYEARS )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDATETIME_ADDYEARS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addYears( PINT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ QDate date () const
 */
 HB_FUNC_STATIC( QDATETIME_DATE )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QDATETIME_DATE )
     {
 #endif
       QDate * ptr = new QDate( obj->date() );
-      _qt5xhb_createReturnClass( ptr, "QDATE", true );
+      Qt5xHb::createReturnClass( ptr, "QDATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ int daysTo ( const QDateTime & other ) const
 */
 HB_FUNC_STATIC( QDATETIME_DAYSTO )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -348,7 +348,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QDATETIME_ISNULL )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -372,7 +372,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QDATETIME_ISVALID )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -396,7 +396,7 @@ qint64 msecsTo ( const QDateTime & other ) const
 */
 HB_FUNC_STATIC( QDATETIME_MSECSTO )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -420,7 +420,7 @@ int secsTo ( const QDateTime & other ) const
 */
 HB_FUNC_STATIC( QDATETIME_SECSTO )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -444,7 +444,7 @@ void setDate ( const QDate & date )
 */
 HB_FUNC_STATIC( QDATETIME_SETDATE )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -470,7 +470,7 @@ void setMSecsSinceEpoch ( qint64 msecs )
 */
 HB_FUNC_STATIC( QDATETIME_SETMSECSSINCEEPOCH )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -496,7 +496,7 @@ void setTime ( const QTime & time )
 */
 HB_FUNC_STATIC( QDATETIME_SETTIME )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -522,7 +522,7 @@ void setTimeSpec ( Qt::TimeSpec spec )
 */
 HB_FUNC_STATIC( QDATETIME_SETTIMESPEC )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -548,7 +548,7 @@ void setTime_t ( uint seconds )
 */
 HB_FUNC_STATIC( QDATETIME_SETTIME_T )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -574,7 +574,7 @@ QTime time () const
 */
 HB_FUNC_STATIC( QDATETIME_TIME )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QDATETIME_TIME )
     {
 #endif
       QTime * ptr = new QTime( obj->time() );
-      _qt5xhb_createReturnClass( ptr, "QTIME", true );
+      Qt5xHb::createReturnClass( ptr, "QTIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -599,7 +599,7 @@ Qt::TimeSpec timeSpec () const
 */
 HB_FUNC_STATIC( QDATETIME_TIMESPEC )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -623,7 +623,7 @@ QDateTime toLocalTime () const
 */
 HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toLocalTime() );
-      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -648,7 +648,7 @@ qint64 toMSecsSinceEpoch () const
 */
 HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -672,7 +672,7 @@ QString toString ( const QString & format ) const
 */
 void QDateTime_toString1()
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -685,7 +685,7 @@ QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 */
 void QDateTime_toString2()
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -717,7 +717,7 @@ QDateTime toTimeSpec ( Qt::TimeSpec specification ) const
 */
 HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toTimeSpec( (Qt::TimeSpec) hb_parni(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -742,7 +742,7 @@ uint toTime_t () const
 */
 HB_FUNC_STATIC( QDATETIME_TOTIME_T )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -766,7 +766,7 @@ QDateTime toUTC () const
 */
 HB_FUNC_STATIC( QDATETIME_TOUTC )
 {
-  QDateTime * obj = (QDateTime *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDateTime * obj = (QDateTime *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QDATETIME_TOUTC )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toUTC() );
-      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::currentDateTime() );
-    _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+    Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::currentDateTimeUtc() );
-    _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+    Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch( PQINT64(1) ) );
-    _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+    Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -872,7 +872,7 @@ void QDateTime_fromString1()
 {
 
   QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
-  _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+  Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 }
 
 /*
@@ -882,7 +882,7 @@ void QDateTime_fromString2()
 {
 
   QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+  Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 }
 
 //[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QDATETIME_FROMTIME_T )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::fromTime_t( PUINT(1) ) );
-    _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+    Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

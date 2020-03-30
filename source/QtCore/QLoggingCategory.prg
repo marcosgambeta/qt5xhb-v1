@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_NEW )
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
     QLoggingCategory * o = new QLoggingCategory( PCONSTCHAR(1) );
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_NEW )
 
 HB_FUNC_STATIC( QLOGGINGCATEGORY_DELETE )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLoggingCategory * obj = (QLoggingCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ bool isEnabled(QtMsgType type) const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLoggingCategory * obj = (QLoggingCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ void setEnabled(QtMsgType type, bool enable)
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_SETENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLoggingCategory * obj = (QLoggingCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ bool isDebugEnabled() const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISDEBUGENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLoggingCategory * obj = (QLoggingCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ bool isWarningEnabled() const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISWARNINGENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLoggingCategory * obj = (QLoggingCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ bool isCriticalEnabled() const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISCRITICALENABLED )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLoggingCategory * obj = (QLoggingCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ const char *categoryName() const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_CATEGORYNAME )
 {
-  QLoggingCategory * obj = (QLoggingCategory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLoggingCategory * obj = (QLoggingCategory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_DEFAULTCATEGORY )
   {
 #endif
     QLoggingCategory * ptr = QLoggingCategory::defaultCategory();
-    _qt5xhb_createReturnClass( ptr, "QLOGGINGCATEGORY", false );
+    Qt5xHb::createReturnClass( ptr, "QLOGGINGCATEGORY", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

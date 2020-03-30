@@ -67,7 +67,7 @@ QXmlStreamEntityDeclaration()
 void QXmlStreamEntityDeclaration_new1()
 {
   QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 void QXmlStreamEntityDeclaration_new2()
 {
   QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QXmlStreamEntityDeclaration()
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_DELETE )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ QStringRef name() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NAME )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->name() );
-      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ QStringRef notationName() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NOTATIONNAME )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->notationName() );
-      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ QStringRef publicId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_PUBLICID )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->publicId() );
-      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,7 +195,7 @@ QStringRef systemId() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_SYSTEMID )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->systemId() );
-      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ QStringRef value() const
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
 {
-  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlStreamEntityDeclaration * obj = (QXmlStreamEntityDeclaration *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_VALUE )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->value() );
-      _qt5xhb_createReturnClass( ptr, "QSTRINGREF", true );
+      Qt5xHb::createReturnClass( ptr, "QSTRINGREF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -35,7 +35,7 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
 
 void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

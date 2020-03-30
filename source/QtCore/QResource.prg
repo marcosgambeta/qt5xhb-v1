@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 {
   if( ISBETWEEN(0,2) && ISOPTCHAR(1) && (ISQLOCALE(2)||ISNIL(2)) )
   {
-    QResource * o = new QResource( OPQSTRING(1,QString()), ISNIL(2)? QLocale() : *(QLocale *) _qt5xhb_itemGetPtr(2) );
-    _qt5xhb_returnNewObject( o, true );
+    QResource * o = new QResource( OPQSTRING(1,QString()), ISNIL(2)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(2) );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 
 HB_FUNC_STATIC( QRESOURCE_DELETE )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ QString absoluteFilePath () const
 */
 HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ const uchar * data () const
 */
 HB_FUNC_STATIC( QRESOURCE_DATA )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ QString fileName () const
 */
 HB_FUNC_STATIC( QRESOURCE_FILENAME )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ bool isCompressed () const
 */
 HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QRESOURCE_ISVALID )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ QLocale locale () const
 */
 HB_FUNC_STATIC( QRESOURCE_LOCALE )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
     {
 #endif
       QLocale * ptr = new QLocale( obj->locale() );
-      _qt5xhb_createReturnClass( ptr, "QLOCALE", true );
+      Qt5xHb::createReturnClass( ptr, "QLOCALE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ void setFileName ( const QString & file )
 */
 HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ void setLocale ( const QLocale & locale )
 */
 HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -302,7 +302,7 @@ qint64 size () const
 */
 HB_FUNC_STATIC( QRESOURCE_SIZE )
 {
-  QResource * obj = (QResource *) _qt5xhb_itemGetPtrStackSelfItem();
+  QResource * obj = (QResource *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

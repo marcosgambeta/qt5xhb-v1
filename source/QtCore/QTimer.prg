@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QTIMER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QTimer * o = new QTimer( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTIMER_NEW )
 
 HB_FUNC_STATIC( QTIMER_DELETE )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ int interval () const
 */
 HB_FUNC_STATIC( QTIMER_INTERVAL )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QTIMER_ISACTIVE )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ bool isSingleShot () const
 */
 HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ void setInterval ( int msec )
 */
 HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ void setSingleShot ( bool singleShot )
 */
 HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ int timerId () const
 */
 HB_FUNC_STATIC( QTIMER_TIMERID )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ void start ( int msec )
 */
 void QTimer_start1()
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ void start ()
 */
 void QTimer_start2()
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ void stop ()
 */
 HB_FUNC_STATIC( QTIMER_STOP )
 {
-  QTimer * obj = (QTimer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

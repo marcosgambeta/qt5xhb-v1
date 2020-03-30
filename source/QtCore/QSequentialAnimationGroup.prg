@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSequentialAnimationGroup * o = new QSequentialAnimationGroup( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DELETE )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,7 +94,7 @@ QPauseAnimation * addPause ( int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
     {
 #endif
       QPauseAnimation * ptr = obj->addPause( PINT(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,7 +119,7 @@ QAbstractAnimation * currentAnimation () const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
     {
 #endif
       QAbstractAnimation * ptr = obj->currentAnimation();
-      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ QPauseAnimation * insertPause ( int index, int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
     {
 #endif
       QPauseAnimation * ptr = obj->insertPause( PINT(1), PINT(2) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ virtual int duration () const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

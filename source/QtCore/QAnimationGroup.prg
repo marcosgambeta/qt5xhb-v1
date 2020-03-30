@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QANIMATIONGROUP_DELETE )
 {
-  QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAnimationGroup * obj = (QAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ void addAnimation ( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ADDANIMATION )
 {
-  QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAnimationGroup * obj = (QAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ QAbstractAnimation * animationAt ( int index ) const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
 {
-  QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAnimationGroup * obj = (QAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
     {
 #endif
       QAbstractAnimation * ptr = obj->animationAt( PINT(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -131,7 +131,7 @@ int animationCount () const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
 {
-  QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAnimationGroup * obj = (QAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
 {
-  QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAnimationGroup * obj = (QAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ int indexOfAnimation ( QAbstractAnimation * animation ) const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
 {
-  QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAnimationGroup * obj = (QAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -205,7 +205,7 @@ void insertAnimation ( int index, QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
 {
-  QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAnimationGroup * obj = (QAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ void removeAnimation ( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_REMOVEANIMATION )
 {
-  QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAnimationGroup * obj = (QAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -257,7 +257,7 @@ QAbstractAnimation * takeAnimation ( int index )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
 {
-  QAnimationGroup * obj = (QAnimationGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAnimationGroup * obj = (QAnimationGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
     {
 #endif
       QAbstractAnimation * ptr = obj->takeAnimation( PINT(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

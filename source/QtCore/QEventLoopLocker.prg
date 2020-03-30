@@ -61,7 +61,7 @@ QEventLoopLocker()
 void QEventLoopLocker_new1()
 {
   QEventLoopLocker * o = new QEventLoopLocker();
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -70,7 +70,7 @@ QEventLoopLocker(QEventLoop * loop)
 void QEventLoopLocker_new2()
 {
   QEventLoopLocker * o = new QEventLoopLocker( PQEVENTLOOP(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -79,7 +79,7 @@ QEventLoopLocker(QThread * thread)
 void QEventLoopLocker_new3()
 {
   QEventLoopLocker * o = new QEventLoopLocker( PQTHREAD(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QEventLoopLocker()
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_DELETE )
 {
-  QEventLoopLocker * obj = (QEventLoopLocker *) _qt5xhb_itemGetPtrStackSelfItem();
+  QEventLoopLocker * obj = (QEventLoopLocker *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -74,7 +74,7 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
 
 void QAbstractAnimationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractAnimation * obj = (QAbstractAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractAnimation * obj = (QAbstractAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

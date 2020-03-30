@@ -44,7 +44,7 @@ void QAnimationDriverSlots::stopped()
 
 void QAnimationDriverSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAnimationDriver * obj = (QAnimationDriver *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAnimationDriver * obj = (QAnimationDriver *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

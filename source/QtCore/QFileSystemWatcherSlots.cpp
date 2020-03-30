@@ -48,7 +48,7 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
 
 void QFileSystemWatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileSystemWatcher * obj = (QFileSystemWatcher *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFileSystemWatcher * obj = (QFileSystemWatcher *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

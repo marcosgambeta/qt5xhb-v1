@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QDEBUGSTATESAVER_NEW )
   if( ISNUMPAR(1) && ISQDEBUG(1) )
   {
     QDebugStateSaver * o = new QDebugStateSaver( *PQDEBUG(1) );
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QDEBUGSTATESAVER_NEW )
 
 HB_FUNC_STATIC( QDEBUGSTATESAVER_DELETE )
 {
-  QDebugStateSaver * obj = (QDebugStateSaver *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDebugStateSaver * obj = (QDebugStateSaver *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

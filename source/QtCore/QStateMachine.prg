@@ -77,7 +77,7 @@ QStateMachine(QObject *parent = 0)
 void QStateMachine_new1()
 {
   QStateMachine * o = new QStateMachine( OPQOBJECT(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -86,7 +86,7 @@ QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
 void QStateMachine_new2()
 {
   QStateMachine * o = new QStateMachine( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QStateMachine(QObject *parent = 0)
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 
 HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ void addState(QAbstractState *state)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ADDSTATE )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ void removeState(QAbstractState *state)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_REMOVESTATE )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ void clearError()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_CLEARERROR )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ bool isAnimated() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ void setAnimated(bool enabled)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -332,7 +332,7 @@ void addDefaultAnimation(QAbstractAnimation *animation)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ADDDEFAULTANIMATION )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ QList<QAbstractAnimation *> defaultAnimations() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -406,7 +406,7 @@ void removeDefaultAnimation(QAbstractAnimation *animation)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_REMOVEDEFAULTANIMATION )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -432,7 +432,7 @@ QState::RestorePolicy globalRestorePolicy() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -456,7 +456,7 @@ void setGlobalRestorePolicy(QState::RestorePolicy restorePolicy)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -482,7 +482,7 @@ void postEvent(QEvent *event, EventPriority priority = NormalPriority)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -508,7 +508,7 @@ int postDelayedEvent(QEvent *event, int delay)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -532,7 +532,7 @@ bool cancelDelayedEvent(int id)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -556,7 +556,7 @@ bool eventFilter(QObject *watched, QEvent *event)
 */
 HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -580,7 +580,7 @@ void start()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_START )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -606,7 +606,7 @@ void stop()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_STOP )
 {
-  QStateMachine * obj = (QStateMachine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStateMachine * obj = (QStateMachine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

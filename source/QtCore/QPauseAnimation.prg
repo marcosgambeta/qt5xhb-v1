@@ -56,7 +56,7 @@ QPauseAnimation ( QObject * parent = 0 )
 void QPauseAnimation_new1()
 {
   QPauseAnimation * o = new QPauseAnimation( OPQOBJECT(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -65,7 +65,7 @@ QPauseAnimation ( int msecs, QObject * parent = 0 )
 void QPauseAnimation_new2()
 {
   QPauseAnimation * o = new QPauseAnimation( PINT(1), OPQOBJECT(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QPauseAnimation ( QObject * parent = 0 )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 
 HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 {
-  QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPauseAnimation * obj = (QPauseAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ void setDuration ( int msecs )
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 {
-  QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPauseAnimation * obj = (QPauseAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual int duration () const
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 {
-  QPauseAnimation * obj = (QPauseAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPauseAnimation * obj = (QPauseAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

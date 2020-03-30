@@ -70,7 +70,7 @@ QCommandLineOption(const QString &name, const QString &description = QString(),c
 void QCommandLineOption_new1()
 {
   QCommandLineOption * o = new QCommandLineOption( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -79,7 +79,7 @@ QCommandLineOption(const QStringList &names, const QString &description = QStrin
 void QCommandLineOption_new2()
 {
   QCommandLineOption * o = new QCommandLineOption( PQSTRINGLIST(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -88,7 +88,7 @@ QCommandLineOption(const QCommandLineOption &other)
 void QCommandLineOption_new3()
 {
   QCommandLineOption * o = new QCommandLineOption( *PQCOMMANDLINEOPTION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DELETE )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ void swap(QCommandLineOption &other)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SWAP )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ QStringList names() const
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ void setValueName(const QString &name)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETVALUENAME )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ QString valueName() const
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_VALUENAME )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ void setDescription(const QString &description)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDESCRIPTION )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DESCRIPTION )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ void setDefaultValue(const QString &defaultValue)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -313,7 +313,7 @@ void setDefaultValues(const QStringList &defaultValues)
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUES )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -339,7 +339,7 @@ QStringList defaultValues() const
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_DEFAULTVALUES )
 {
-  QCommandLineOption * obj = (QCommandLineOption *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommandLineOption * obj = (QCommandLineOption *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

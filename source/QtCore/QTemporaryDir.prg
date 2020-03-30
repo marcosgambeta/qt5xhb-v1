@@ -66,7 +66,7 @@ QTemporaryDir()
 void QTemporaryDir_new1()
 {
   QTemporaryDir * o = new QTemporaryDir();
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -75,7 +75,7 @@ QTemporaryDir(const QString & templateName)
 void QTemporaryDir_new2()
 {
   QTemporaryDir * o = new QTemporaryDir( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QTemporaryDir()
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 
 HB_FUNC_STATIC( QTEMPORARYDIR_DELETE )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTemporaryDir * obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ bool autoRemove() const
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_AUTOREMOVE )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTemporaryDir * obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_ISVALID )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTemporaryDir * obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_PATH )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTemporaryDir * obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ bool remove()
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTemporaryDir * obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ void setAutoRemove(bool b)
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_SETAUTOREMOVE )
 {
-  QTemporaryDir * obj = (QTemporaryDir *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTemporaryDir * obj = (QTemporaryDir *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

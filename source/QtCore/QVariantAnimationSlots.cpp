@@ -35,7 +35,7 @@ void QVariantAnimationSlots::valueChanged( const QVariant & value )
 
 void QVariantAnimationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVariantAnimation * obj = (QVariantAnimation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVariantAnimation * obj = (QVariantAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -49,7 +49,7 @@ void QObjectSlots::objectNameChanged( const QString & objectName )
 
 void QObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QObject * obj = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QObject * obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
   if( ISNUMPAR(0) )
   {
     QObjectCleanupHandler * o = new QObjectCleanupHandler();
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_DELETE )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -93,7 +93,7 @@ QObject* add(QObject* object)
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
     {
 #endif
       QObject * ptr = obj->add( PQOBJECT(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ void remove(QObject *object)
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ void clear()
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
 {
-  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QObjectCleanupHandler * obj = (QObjectCleanupHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

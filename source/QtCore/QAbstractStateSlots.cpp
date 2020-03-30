@@ -44,7 +44,7 @@ void QAbstractStateSlots::exited()
 
 void QAbstractStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractState * obj = (QAbstractState *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractState * obj = (QAbstractState *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

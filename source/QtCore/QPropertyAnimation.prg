@@ -58,7 +58,7 @@ QPropertyAnimation ( QObject * parent = 0 )
 void QPropertyAnimation_new1()
 {
   QPropertyAnimation * o = new QPropertyAnimation( OPQOBJECT(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -67,7 +67,7 @@ QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject 
 void QPropertyAnimation_new2()
 {
   QPropertyAnimation * o = new QPropertyAnimation( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QPropertyAnimation ( QObject * parent = 0 )
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 
 HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = (QPropertyAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ QByteArray propertyName () const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = (QPropertyAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->propertyName() );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ void setPropertyName ( const QByteArray & propertyName )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = (QPropertyAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setTargetObject ( QObject * target )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = (QPropertyAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ QObject * targetObject () const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = (QPropertyAnimation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
     {
 #endif
       QObject * ptr = obj->targetObject();
-      _qt5xhb_createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
