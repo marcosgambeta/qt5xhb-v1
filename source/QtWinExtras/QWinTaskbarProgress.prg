@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QWinTaskbarProgress * o = new QWinTaskbarProgress( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_NEW )
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ int value() const
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_VALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ void setValue(int value)
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ int minimum() const
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_MINIMUM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ void setMinimum(int minimum)
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMINIMUM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ int maximum() const
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_MAXIMUM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ void setMaximum(int maximum)
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMAXIMUM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -284,7 +284,7 @@ bool isVisible() const
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -310,7 +310,7 @@ void setVisible(bool visible)
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVISIBLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ bool isPaused() const
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISPAUSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -364,7 +364,7 @@ void setPaused(bool paused)
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETPAUSED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -392,7 +392,7 @@ bool isStopped() const
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISSTOPPED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -418,7 +418,7 @@ void setRange(int minimum, int maximum)
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETRANGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -446,7 +446,7 @@ void reset()
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_RESET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -474,7 +474,7 @@ void show()
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SHOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -502,7 +502,7 @@ void hide()
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_HIDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -530,7 +530,7 @@ void pause()
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_PAUSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -558,7 +558,7 @@ void resume()
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_RESUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -586,7 +586,7 @@ void stop()
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_STOP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinTaskbarProgress * obj = (QWinTaskbarProgress *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

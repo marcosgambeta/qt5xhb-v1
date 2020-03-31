@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_NEW )
   if( ISNUMPAR(1) && ISLOG(1) )
   {
     QWinCompositionChangeEvent * o = new QWinCompositionChangeEvent( PBOOL(1) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_NEW )
 HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinCompositionChangeEvent * obj = (QWinCompositionChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinCompositionChangeEvent * obj = (QWinCompositionChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,7 +94,7 @@ bool isCompositionEnabled() const
 HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_ISCOMPOSITIONENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinCompositionChangeEvent * obj = (QWinCompositionChangeEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWinCompositionChangeEvent * obj = (QWinCompositionChangeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

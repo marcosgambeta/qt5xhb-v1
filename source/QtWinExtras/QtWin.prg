@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTWIN_FROMHBITMAP )
   {
 #endif
     QPixmap * ptr = new QPixmap( QtWin::fromHBITMAP( (HBITMAP) hb_parptr(1), ISNIL(2)? (QtWin::HBitmapFormat) QtWin::HBitmapNoAlpha : (QtWin::HBitmapFormat) hb_parni(2) ) );
-    _qt5xhb_createReturnClass( ptr, "QPIXMAP", true );
+    Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QTWIN_IMAGEFROMHBITMAP )
   {
 #endif
     QImage * ptr = new QImage( QtWin::imageFromHBITMAP( (HDC) hb_parptr(1), (HBITMAP) hb_parptr(2), PINT(3), PINT(4) ) );
-    _qt5xhb_createReturnClass( ptr, "QIMAGE", true );
+    Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTWIN_FROMHICON )
   {
 #endif
     QPixmap * ptr = new QPixmap( QtWin::fromHICON( (HICON) hb_parptr(1) ) );
-    _qt5xhb_createReturnClass( ptr, "QPIXMAP", true );
+    Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QTWIN_FROMHRGN )
   {
 #endif
     QRegion * ptr = new QRegion( QtWin::fromHRGN( (HRGN) hb_parptr(1) ) );
-    _qt5xhb_createReturnClass( ptr, "QREGION", true );
+    Qt5xHb::createReturnClass( ptr, "QREGION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QTWIN_COLORIZATIONCOLOR )
 #endif
     bool par1;
     QColor * ptr = new QColor( QtWin::colorizationColor( &par1 ) );
-    _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
     hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTWIN_REALCOLORIZATIONCOLOR )
   {
 #endif
     QColor * ptr = new QColor( QtWin::realColorizationColor() );
-    _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+    Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
