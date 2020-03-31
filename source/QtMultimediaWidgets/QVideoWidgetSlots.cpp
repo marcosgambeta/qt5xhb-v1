@@ -87,7 +87,7 @@ void QVideoWidgetSlots::saturationChanged( int saturation )
 
 void QVideoWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVideoWidget * obj = (QVideoWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

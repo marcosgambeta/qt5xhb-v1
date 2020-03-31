@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QVideoWidget * o = new QVideoWidget( OPQWIDGET(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_NEW )
 
 HB_FUNC_STATIC( QVIDEOWIDGET_DELETE )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ QMediaObject *mediaObject() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_MEDIAOBJECT )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
-      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ bool isFullScreen() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_ISFULLSCREEN )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ Qt::AspectRatioMode aspectRatioMode() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_ASPECTRATIOMODE )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ int brightness() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_BRIGHTNESS )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ int contrast() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_CONTRAST )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ int hue() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_HUE )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ int saturation() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SATURATION )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -279,7 +279,7 @@ QSize sizeHint() const
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SIZEHINT )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ void setFullScreen(bool fullScreen)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETFULLSCREEN )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ void setAspectRatioMode(Qt::AspectRatioMode mode)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETASPECTRATIOMODE )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -356,7 +356,7 @@ void setBrightness(int brightness)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETBRIGHTNESS )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -382,7 +382,7 @@ void setContrast(int contrast)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETCONTRAST )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -408,7 +408,7 @@ void setHue(int hue)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETHUE )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -434,7 +434,7 @@ void setSaturation(int saturation)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_SETSATURATION )
 {
-  QVideoWidget * obj = (QVideoWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoWidget * obj = (QVideoWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

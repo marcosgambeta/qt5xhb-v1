@@ -35,7 +35,7 @@ void QGraphicsVideoItemSlots::nativeSizeChanged( const QSizeF & size )
 
 void QGraphicsVideoItemSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsVideoItem * obj = (QGraphicsVideoItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
