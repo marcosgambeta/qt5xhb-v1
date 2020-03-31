@@ -71,7 +71,7 @@ QNetworkAddressEntry ()
 void QNetworkAddressEntry_new1()
 {
   QNetworkAddressEntry * o = new QNetworkAddressEntry();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QNetworkAddressEntry ( const QNetworkAddressEntry & other )
 void QNetworkAddressEntry_new2()
 {
   QNetworkAddressEntry * o = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QNetworkAddressEntry ()
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_DELETE )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ QHostAddress broadcast () const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->broadcast() );
-      _qt5xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ QHostAddress ip () const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->ip() );
-      _qt5xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ QHostAddress netmask () const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->netmask() );
-      _qt5xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ int prefixLength () const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void setBroadcast ( const QHostAddress & newBroadcast )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ void setIp ( const QHostAddress & newIp )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ void setNetmask ( const QHostAddress & newNetmask )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ void setPrefixLength ( int length )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ void swap(QNetworkAddressEntry &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SWAP )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

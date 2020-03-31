@@ -81,7 +81,7 @@ QNetworkProxyQuery ()
 void QNetworkProxyQuery_new1()
 {
   QNetworkProxyQuery * o = new QNetworkProxyQuery();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -90,7 +90,7 @@ explicit QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = Url
 void QNetworkProxyQuery_new2()
 {
   QNetworkProxyQuery * o = new QNetworkProxyQuery( *PQURL(1), ISNIL(2)? (QNetworkProxyQuery::QueryType) QNetworkProxyQuery::UrlRequest : (QNetworkProxyQuery::QueryType) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -99,7 +99,7 @@ QNetworkProxyQuery ( const QString & hostname, int port, const QString & protoco
 void QNetworkProxyQuery_new3()
 {
   QNetworkProxyQuery * o = new QNetworkProxyQuery( PQSTRING(1), PINT(2), OPQSTRING(3,QString()), ISNIL(4)? (QNetworkProxyQuery::QueryType) QNetworkProxyQuery::TcpSocket : (QNetworkProxyQuery::QueryType) hb_parni(4) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -108,7 +108,7 @@ explicit QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QS
 void QNetworkProxyQuery_new4()
 {
   QNetworkProxyQuery * o = new QNetworkProxyQuery( PQUINT16(1), OPQSTRING(2,QString()), ISNIL(3)? (QNetworkProxyQuery::QueryType) QNetworkProxyQuery::TcpServer : (QNetworkProxyQuery::QueryType) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -117,7 +117,7 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const Q
 void QNetworkProxyQuery_new5()
 {
   QNetworkProxyQuery * o = new QNetworkProxyQuery( *PQNETWORKCONFIGURATION(1), *PQURL(2), ISNIL(3)? (QNetworkProxyQuery::QueryType) QNetworkProxyQuery::UrlRequest : (QNetworkProxyQuery::QueryType) hb_parni(3) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -126,7 +126,7 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const Q
 void QNetworkProxyQuery_new6()
 {
   QNetworkProxyQuery * o = new QNetworkProxyQuery( *PQNETWORKCONFIGURATION(1), PQSTRING(2), PINT(3), OPQSTRING(4,QString()), ISNIL(5)? (QNetworkProxyQuery::QueryType) QNetworkProxyQuery::TcpSocket : (QNetworkProxyQuery::QueryType) hb_parni(5) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -135,7 +135,7 @@ QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16
 void QNetworkProxyQuery_new7()
 {
   QNetworkProxyQuery * o = new QNetworkProxyQuery( *PQNETWORKCONFIGURATION(1), PQUINT16(2), OPQSTRING(3,QString()), ISNIL(4)? (QNetworkProxyQuery::QueryType) QNetworkProxyQuery::TcpServer : (QNetworkProxyQuery::QueryType) hb_parni(4) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -144,7 +144,7 @@ QNetworkProxyQuery ( const QNetworkProxyQuery & other )
 void QNetworkProxyQuery_new8()
 {
   QNetworkProxyQuery * o = new QNetworkProxyQuery( *PQNETWORKPROXYQUERY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QNetworkProxyQuery()
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_DELETE )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ int localPort () const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_LOCALPORT )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -245,7 +245,7 @@ QString peerHostName () const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERHOSTNAME )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -269,7 +269,7 @@ int peerPort () const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_PEERPORT )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -293,7 +293,7 @@ QString protocolTag () const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_PROTOCOLTAG )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -317,7 +317,7 @@ QueryType queryType () const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_QUERYTYPE )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -341,7 +341,7 @@ void setLocalPort ( int port )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETLOCALPORT )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ void setPeerHostName ( const QString & hostname )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERHOSTNAME )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -393,7 +393,7 @@ void setPeerPort ( int port )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERPORT )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -419,7 +419,7 @@ void setProtocolTag ( const QString & protocolTag )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPROTOCOLTAG )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -445,7 +445,7 @@ void setQueryType ( QueryType type )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETQUERYTYPE )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -471,7 +471,7 @@ void setUrl ( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETURL )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -497,7 +497,7 @@ QUrl url () const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_URL )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,7 +522,7 @@ void swap(QNetworkProxyQuery &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SWAP )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -548,7 +548,7 @@ QNetworkConfiguration networkConfiguration() const
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NETWORKCONFIGURATION )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NETWORKCONFIGURATION )
     {
 #endif
       QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->networkConfiguration() );
-      _qt5xhb_createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
+      Qt5xHb::createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -573,7 +573,7 @@ void setNetworkConfiguration(const QNetworkConfiguration &networkConfiguration)
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETNETWORKCONFIGURATION )
 {
-  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkProxyQuery * obj = (QNetworkProxyQuery *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

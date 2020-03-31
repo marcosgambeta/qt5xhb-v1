@@ -158,7 +158,7 @@ void QNetworkAccessManagerSlots::networkAccessibleChanged( QNetworkAccessManager
 
 void QNetworkAccessManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

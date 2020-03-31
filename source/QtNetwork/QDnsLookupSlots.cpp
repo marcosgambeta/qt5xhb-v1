@@ -72,7 +72,7 @@ void QDnsLookupSlots::typeChanged( QDnsLookup::Type type )
 
 void QDnsLookupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDnsLookup * obj = (QDnsLookup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDnsLookup * obj = (QDnsLookup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -66,7 +66,7 @@ QHttpPart ()
 void QHttpPart_new1()
 {
   QHttpPart * o = new QHttpPart();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QHttpPart ( const QHttpPart & other )
 void QHttpPart_new2()
 {
   QHttpPart * o = new QHttpPart( *PQHTTPPART(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QHttpPart ()
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
 */
 HB_FUNC_STATIC( QHTTPPART_DELETE )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ void setBody ( const QByteArray & body )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ void setBodyDevice ( QIODevice * device )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -200,7 +200,7 @@ void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValu
 */
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void swap(QHttpPart &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QHTTPPART_SWAP )
 {
-  QHttpPart * obj = (QHttpPart *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHttpPart * obj = (QHttpPart *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

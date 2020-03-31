@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QTCPSOCKET_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QTcpSocket * o = new QTcpSocket( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ virtual ~QTcpSocket()
 */
 HB_FUNC_STATIC( QTCPSOCKET_DELETE )
 {
-  QTcpSocket * obj = (QTcpSocket *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTcpSocket * obj = (QTcpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

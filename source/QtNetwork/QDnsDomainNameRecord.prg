@@ -65,7 +65,7 @@ QDnsDomainNameRecord()
 void QDnsDomainNameRecord_new1()
 {
   QDnsDomainNameRecord * o = new QDnsDomainNameRecord();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -74,7 +74,7 @@ QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
 void QDnsDomainNameRecord_new2()
 {
   QDnsDomainNameRecord * o = new QDnsDomainNameRecord( *PQDNSDOMAINNAMERECORD(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QDnsDomainNameRecord()
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_DELETE )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NAME )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ void swap(QDnsDomainNameRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_SWAP )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_TIMETOLIVE )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ QString value() const
 */
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_VALUE )
 {
-  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsDomainNameRecord * obj = (QDnsDomainNameRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

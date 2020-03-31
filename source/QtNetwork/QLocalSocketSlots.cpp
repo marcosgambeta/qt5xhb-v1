@@ -70,7 +70,7 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
 
 void QLocalSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLocalSocket * obj = (QLocalSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLocalSocket * obj = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

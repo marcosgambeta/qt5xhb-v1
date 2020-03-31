@@ -85,7 +85,7 @@ void QNetworkDatagram_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QNetworkDatagram * o = new QNetworkDatagram();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -95,8 +95,8 @@ QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress 
 void QNetworkDatagram_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * o = new QNetworkDatagram( *PQBYTEARRAY(1), ISNIL(2)? QHostAddress() : *(QHostAddress *) _qt5xhb_itemGetPtr(2), OPQUINT16(3,0) );
-  _qt5xhb_returnNewObject( o, true );
+  QNetworkDatagram * o = new QNetworkDatagram( *PQBYTEARRAY(1), ISNIL(2)? QHostAddress() : *(QHostAddress *) Qt5xHb::itemGetPtr(2), OPQUINT16(3,0) );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -107,7 +107,7 @@ void QNetworkDatagram_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   QNetworkDatagram * o = new QNetworkDatagram( *PQNETWORKDATAGRAM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_NEW )
 HB_FUNC_STATIC( QNETWORKDATAGRAM_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ void swap(QNetworkDatagram &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ void clear()
 HB_FUNC_STATIC( QNETWORKDATAGRAM_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ bool isValid() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -249,7 +249,7 @@ bool isNull() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_ISNULL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ uint interfaceIndex() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_INTERFACEINDEX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -301,7 +301,7 @@ void setInterfaceIndex(uint index)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETINTERFACEINDEX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -329,7 +329,7 @@ QHostAddress senderAddress() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SENDERADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_SENDERADDRESS )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->senderAddress() );
-      _qt5xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,7 +356,7 @@ QHostAddress destinationAddress() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_DESTINATIONADDRESS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_DESTINATIONADDRESS )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->destinationAddress() );
-      _qt5xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ int senderPort() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SENDERPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -409,7 +409,7 @@ int destinationPort() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_DESTINATIONPORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -435,7 +435,7 @@ void setSender(const QHostAddress &address, quint16 port = 0)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETSENDER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -463,7 +463,7 @@ void setDestination(const QHostAddress &address, quint16 port)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETDESTINATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -491,7 +491,7 @@ int hopLimit() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_HOPLIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -517,7 +517,7 @@ void setHopLimit(int count)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETHOPLIMIT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -545,7 +545,7 @@ QByteArray data() const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_DATA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_DATA )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->data() );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,7 +572,7 @@ void setData(const QByteArray &data)
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETDATA )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -600,7 +600,7 @@ QNetworkDatagram makeReply(const QByteArray &paylaod) const
 HB_FUNC_STATIC( QNETWORKDATAGRAM_MAKEREPLY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = (QNetworkDatagram *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkDatagram * obj = (QNetworkDatagram *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_MAKEREPLY )
     {
 #endif
       QNetworkDatagram * ptr = new QNetworkDatagram( obj->makeReply( *PQBYTEARRAY(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QNETWORKDATAGRAM", true );
+      Qt5xHb::createReturnClass( ptr, "QNETWORKDATAGRAM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

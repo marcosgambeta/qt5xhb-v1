@@ -122,7 +122,7 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
 
 void QSslSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSslSocket * obj = (QSslSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSslSocket * obj = (QSslSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

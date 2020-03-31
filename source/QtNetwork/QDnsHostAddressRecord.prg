@@ -68,7 +68,7 @@ QDnsHostAddressRecord()
 void QDnsHostAddressRecord_new1()
 {
   QDnsHostAddressRecord * o = new QDnsHostAddressRecord();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
 void QDnsHostAddressRecord_new2()
 {
   QDnsHostAddressRecord * o = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QDnsHostAddressRecord()
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_DELETE )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ void swap(QDnsHostAddressRecord &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ quint32 timeToLive() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_TIMETOLIVE )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ QHostAddress value() const
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
 {
-  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDnsHostAddressRecord * obj = (QDnsHostAddressRecord *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_VALUE )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->value() );
-      _qt5xhb_createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt5xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

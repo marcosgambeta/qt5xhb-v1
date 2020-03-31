@@ -71,7 +71,7 @@ QSslKey ()
 void QSslKey_new1()
 {
   QSslKey * o = new QSslKey();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QSslKey ( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::Encodi
 */
 void QSslKey_new2()
 {
-  QSslKey * o = new QSslKey( *PQBYTEARRAY(1), (QSsl::KeyAlgorithm) hb_parni(2), ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), ISNIL(5)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(5) );
-  _qt5xhb_returnNewObject( o, true );
+  QSslKey * o = new QSslKey( *PQBYTEARRAY(1), (QSsl::KeyAlgorithm) hb_parni(2), ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), ISNIL(5)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(5) );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -88,8 +88,8 @@ QSslKey ( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat
 */
 void QSslKey_new3()
 {
-  QSslKey * o = new QSslKey( PQIODEVICE(1), (QSsl::KeyAlgorithm) hb_parni(2), ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), ISNIL(5)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(5) );
-  _qt5xhb_returnNewObject( o, true );
+  QSslKey * o = new QSslKey( PQIODEVICE(1), (QSsl::KeyAlgorithm) hb_parni(2), ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), ISNIL(5)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(5) );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -98,7 +98,7 @@ explicit QSslKey(Qt::HANDLE handle, QSsl::KeyType type = QSsl::PrivateKey)
 void QSslKey_new4()
 {
   QSslKey * o = new QSslKey( (Qt::HANDLE) hb_parptr(1), ISNIL(2)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -107,7 +107,7 @@ QSslKey ( const QSslKey & other )
 void QSslKey_new5()
 {
   QSslKey * o = new QSslKey( *PQSSLKEY(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QSslKey()
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
 */
 HB_FUNC_STATIC( QSSLKEY_DELETE )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ QSsl::KeyAlgorithm algorithm () const
 */
 HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSSLKEY_CLEAR )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -219,7 +219,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSSLKEY_ISNULL )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -243,7 +243,7 @@ int length () const
 */
 HB_FUNC_STATIC( QSSLKEY_LENGTH )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -267,7 +267,7 @@ QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
 */
 HB_FUNC_STATIC( QSSLKEY_TODER )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,8 +275,8 @@ HB_FUNC_STATIC( QSSLKEY_TODER )
     if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toDer( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->toDer( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
 */
 HB_FUNC_STATIC( QSSLKEY_TOPEM )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -300,8 +300,8 @@ HB_FUNC_STATIC( QSSLKEY_TOPEM )
     if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toPem( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      QByteArray * ptr = new QByteArray( obj->toPem( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) ) );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ QSsl::KeyType type () const
 */
 HB_FUNC_STATIC( QSSLKEY_TYPE )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -341,7 +341,7 @@ void swap(QSslKey &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLKEY_SWAP )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -367,7 +367,7 @@ Qt::HANDLE handle() const
 */
 HB_FUNC_STATIC( QSSLKEY_HANDLE )
 {
-  QSslKey * obj = (QSslKey *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslKey * obj = (QSslKey *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

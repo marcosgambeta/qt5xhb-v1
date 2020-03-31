@@ -66,7 +66,7 @@ QSslError ()
 void QSslError_new1()
 {
   QSslError * o = new QSslError();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QSslError ( SslError error )
 void QSslError_new2()
 {
   QSslError * o = new QSslError( (QSslError::SslError) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QSslError ( SslError error, const QSslCertificate & certificate )
 void QSslError_new3()
 {
   QSslError * o = new QSslError( (QSslError::SslError) hb_parni(1), *PQSSLCERTIFICATE(2) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -93,7 +93,7 @@ QSslError ( const QSslError & other )
 void QSslError_new4()
 {
   QSslError * o = new QSslError( *PQSSLERROR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QSslError ()
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSSLERROR_NEW )
 */
 HB_FUNC_STATIC( QSSLERROR_DELETE )
 {
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ QSslCertificate certificate () const
 */
 HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
 {
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSSLERROR_CERTIFICATE )
     {
 #endif
       QSslCertificate * ptr = new QSslCertificate( obj->certificate() );
-      _qt5xhb_createReturnClass( ptr, "QSSLCERTIFICATE", true );
+      Qt5xHb::createReturnClass( ptr, "QSSLCERTIFICATE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ SslError error () const
 */
 HB_FUNC_STATIC( QSSLERROR_ERROR )
 {
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ QString errorString () const
 */
 HB_FUNC_STATIC( QSSLERROR_ERRORSTRING )
 {
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ void swap(QSslError &other) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLERROR_SWAP )
 {
-  QSslError * obj = (QSslError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSslError * obj = (QSslError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

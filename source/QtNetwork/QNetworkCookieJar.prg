@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QNetworkCookieJar * o = new QNetworkCookieJar( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ virtual ~QNetworkCookieJar()
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ virtual bool insertCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_INSERTCOOKIE )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ virtual bool updateCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_UPDATECOOKIE )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -231,7 +231,7 @@ virtual bool deleteCookie(const QNetworkCookie &cookie)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETECOOKIE )
 {
-  QNetworkCookieJar * obj = (QNetworkCookieJar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = (QNetworkCookieJar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
