@@ -2135,7 +2135,7 @@ HB_FUNC_STATIC( QOBJECT_ONZORDERCHANGEEVENT )
 
 HB_FUNC_STATIC( QOBJECT_CONNECT )
 {
-  QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QObject * obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -2200,7 +2200,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
 HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 {
-  QObject * obj = (QObject *) _qt5xhb_itemGetPtrStackSelfItem();
+  QObject * obj = (QObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
