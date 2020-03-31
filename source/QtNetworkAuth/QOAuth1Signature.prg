@@ -93,7 +93,7 @@ void QOAuth1Signature_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth1Signature * o = new QOAuth1Signature( *PQOAUTH1SIGNATURE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,7 +150,7 @@ void setHttpRequestMethod(HttpRequestMethod method)
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETHTTPREQUESTMETHOD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ QUrl url() const
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ void setUrl(const QUrl &url)
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ void addRequestBody(const QUrlQuery &body)
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_ADDREQUESTBODY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -269,7 +269,7 @@ void insert(const QString &key, const QVariant &value)
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_INSERT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -297,7 +297,7 @@ QList<QString> keys() const
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_KEYS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -331,7 +331,7 @@ QVariant take(const QString &key)
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_TAKE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_TAKE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->take( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -358,7 +358,7 @@ QVariant value(const QString &key, const QVariant &defaultValue = QVariant()) co
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_VALUE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -366,8 +366,8 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_VALUE )
     if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) _qt5xhb_itemGetPtr(2) ) );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      QVariant * ptr = new QVariant( obj->value( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) ) );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,7 +385,7 @@ QString clientSharedKey() const
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_CLIENTSHAREDKEY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ void setClientSharedKey(const QString &secret)
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETCLIENTSHAREDKEY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -439,7 +439,7 @@ QString tokenSecret() const
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_TOKENSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -465,7 +465,7 @@ void setTokenSecret(const QString &secret)
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SETTOKENSECRET )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -493,7 +493,7 @@ QByteArray hmacSha1() const
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_HMACSHA1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_HMACSHA1 )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->hmacSha1() );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,7 +520,7 @@ QByteArray rsaSha1() const
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_RSASHA1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_RSASHA1 )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->rsaSha1() );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -547,12 +547,12 @@ QByteArray plainText() const
 void QOAuth1Signature_plainText1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->plainText() );
-    _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 #endif
 }
@@ -565,7 +565,7 @@ void QOAuth1Signature_plainText2()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 
   QByteArray * ptr = new QByteArray( QOAuth1Signature::plainText( PQSTRING(1), PQSTRING(2) ) );
-  _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+  Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #endif
 }
 
@@ -594,7 +594,7 @@ void swap(QOAuth1Signature &other)
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -98,7 +98,7 @@ void QOAuth1Slots::tokenSecretChanged( const QString & token )
 void QOAuth1Slots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = (QOAuth1 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QOAuth1 * obj = (QOAuth1 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

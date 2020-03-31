@@ -66,7 +66,7 @@ void QOAuthHttpServerReplyHandler_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler( OPQOBJECT(1,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 #endif
 }
 
@@ -77,7 +77,7 @@ void QOAuthHttpServerReplyHandler_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler( PQUINT16(1), OPQOBJECT(2,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 #endif
 }
 
@@ -88,7 +88,7 @@ void QOAuthHttpServerReplyHandler_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 #endif
 }
 
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_NEW )
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ QString callback() const override
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ QString callbackPath() const
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ void setCallbackPath(const QString &path)
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ QString callbackText() const
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ void setCallbackText(const QString &text)
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKTEXT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ quint16 port() const
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_PORT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_LISTEN )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_LISTEN )
     if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && ISOPTNUM(2) )
     {
 #endif
-      RBOOL( obj->listen( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) _qt5xhb_itemGetPtr(1), OPQUINT16(2,0) ) );
+      RBOOL( obj->listen( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ void close()
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ bool isListening() const
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_ISLISTENING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOAuthHttpServerReplyHandler * obj = (QOAuthHttpServerReplyHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -132,7 +132,7 @@ void QAbstractOAuth2Slots::userAgentChanged( const QString & userAgent )
 void QAbstractOAuth2Slots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAbstractOAuth2 * obj = (QAbstractOAuth2 *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractOAuth2 * obj = (QAbstractOAuth2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
