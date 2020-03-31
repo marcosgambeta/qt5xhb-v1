@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_NEW )
   if( ISNUMPAR(0) )
   {
     QSGVertexColorMaterial * o = new QSGVertexColorMaterial();
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_NEW )
 
 HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_DELETE )
 {
-  QSGVertexColorMaterial * obj = (QSGVertexColorMaterial *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGVertexColorMaterial * obj = (QSGVertexColorMaterial *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

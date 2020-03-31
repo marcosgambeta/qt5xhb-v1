@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
   if( ISNUMPAR(0) )
   {
     QSGOpacityNode * o = new QSGOpacityNode();
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_NEW )
 
 HB_FUNC_STATIC( QSGOPACITYNODE_DELETE )
 {
-  QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGOpacityNode * obj = (QSGOpacityNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ qreal opacity() const
 */
 HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
 {
-  QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGOpacityNode * obj = (QSGOpacityNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ void setOpacity(qreal opacity)
 */
 HB_FUNC_STATIC( QSGOPACITYNODE_SETOPACITY )
 {
-  QSGOpacityNode * obj = (QSGOpacityNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGOpacityNode * obj = (QSGOpacityNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

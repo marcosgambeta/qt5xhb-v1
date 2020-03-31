@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
   if( ISNUMPAR(0) )
   {
     QSGGeometryNode * o = new QSGGeometryNode();
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
 
 HB_FUNC_STATIC( QSGGEOMETRYNODE_DELETE )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGGeometryNode * obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ QSGMaterial * material() const
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGGeometryNode * obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_MATERIAL )
     {
 #endif
       QSGMaterial * ptr = obj->material();
-      _qt5xhb_createReturnClass( ptr, "QSGMATERIAL", false );
+      Qt5xHb::createReturnClass( ptr, "QSGMATERIAL", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,7 +114,7 @@ QSGMaterial * opaqueMaterial() const
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGGeometryNode * obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
     {
 #endif
       QSGMaterial * ptr = obj->opaqueMaterial();
-      _qt5xhb_createReturnClass( ptr, "QSGMATERIAL", false );
+      Qt5xHb::createReturnClass( ptr, "QSGMATERIAL", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,7 +139,7 @@ void setMaterial(QSGMaterial * material)
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGGeometryNode * obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -165,7 +165,7 @@ void setOpaqueMaterial(QSGMaterial * material)
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETOPAQUEMATERIAL )
 {
-  QSGGeometryNode * obj = (QSGGeometryNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGGeometryNode * obj = (QSGGeometryNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

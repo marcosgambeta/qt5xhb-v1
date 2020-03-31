@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSGTRANSFORMNODE_NEW )
   if( ISNUMPAR(0) )
   {
     QSGTransformNode * o = new QSGTransformNode();
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSGTRANSFORMNODE_NEW )
 
 HB_FUNC_STATIC( QSGTRANSFORMNODE_DELETE )
 {
-  QSGTransformNode * obj = (QSGTransformNode *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGTransformNode * obj = (QSGTransformNode *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

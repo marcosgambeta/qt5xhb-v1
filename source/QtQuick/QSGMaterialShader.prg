@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QSGMATERIALSHADER_DELETE )
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGMaterialShader * obj = (QSGMaterialShader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ virtual void activate()
 */
 HB_FUNC_STATIC( QSGMATERIALSHADER_ACTIVATE )
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGMaterialShader * obj = (QSGMaterialShader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ virtual void deactivate()
 */
 HB_FUNC_STATIC( QSGMATERIALSHADER_DEACTIVATE )
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGMaterialShader * obj = (QSGMaterialShader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ QOpenGLShaderProgram * program()
 */
 HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
 {
-  QSGMaterialShader * obj = (QSGMaterialShader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSGMaterialShader * obj = (QSGMaterialShader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSGMATERIALSHADER_PROGRAM )
     {
 #endif
       QOpenGLShaderProgram * ptr = obj->program();
-      _qt5xhb_createReturnQObjectClass( ptr, "QOPENGLSHADERPROGRAM" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOPENGLSHADERPROGRAM" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

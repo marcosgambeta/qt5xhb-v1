@@ -66,7 +66,7 @@ void QQuickPaintedItemSlots::renderTargetChanged()
 
 void QQuickPaintedItemSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QQuickPaintedItem * obj = (QQuickPaintedItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickPaintedItem * obj = (QQuickPaintedItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
