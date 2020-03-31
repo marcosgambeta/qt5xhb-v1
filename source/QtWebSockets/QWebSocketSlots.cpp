@@ -255,7 +255,7 @@ void QWebSocketSlots::sslErrors( const QList<QSslError> & errors )
 void QWebSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebSocket * obj = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
