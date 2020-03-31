@@ -65,7 +65,7 @@ QSqlRelation ()
 void QSqlRelation_new1()
 {
   QSqlRelation * o = new QSqlRelation();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -74,7 +74,7 @@ QSqlRelation ( const QString & tableName, const QString & indexColumn, const QSt
 void QSqlRelation_new2()
 {
   QSqlRelation * o = new QSqlRelation( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QSqlRelation ()
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSQLRELATION_NEW )
 
 HB_FUNC_STATIC( QSQLRELATION_DELETE )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlRelation * obj = (QSqlRelation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -118,7 +118,7 @@ QString displayColumn () const
 */
 HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlRelation * obj = (QSqlRelation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ QString indexColumn () const
 */
 HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlRelation * obj = (QSqlRelation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlRelation * obj = (QSqlRelation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ QString tableName () const
 */
 HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
 {
-  QSqlRelation * obj = (QSqlRelation *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlRelation * obj = (QSqlRelation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

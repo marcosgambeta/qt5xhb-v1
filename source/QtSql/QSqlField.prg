@@ -88,7 +88,7 @@ explicit QSqlField ( const QString & fieldName = QString(), QVariant::Type type 
 void QSqlField_new1()
 {
   QSqlField * o = new QSqlField( OPQSTRING(1,QString()), ISNIL(2)? (QVariant::Type) QVariant::Invalid : (QVariant::Type) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -97,7 +97,7 @@ QSqlField ( const QSqlField & other )
 void QSqlField_new2()
 {
   QSqlField * o = new QSqlField( *PQSQLFIELD(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]explicit QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEW )
 
 HB_FUNC_STATIC( QSQLFIELD_DELETE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QSQLFIELD_CLEAR )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QVariant defaultValue () const
 */
 HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->defaultValue() );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ void setDefaultValue ( const QVariant & value )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETDEFAULTVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ bool isAutoValue () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -242,7 +242,7 @@ void setAutoValue ( bool autoVal )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETAUTOVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -268,7 +268,7 @@ bool isGenerated () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -292,7 +292,7 @@ void setGenerated ( bool gen )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETGENERATED )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -318,7 +318,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISNULL )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -342,7 +342,7 @@ bool isReadOnly () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -366,7 +366,7 @@ void setReadOnly ( bool readOnly )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETREADONLY )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -392,7 +392,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISVALID )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -416,7 +416,7 @@ int length () const
 */
 HB_FUNC_STATIC( QSQLFIELD_LENGTH )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -440,7 +440,7 @@ void setLength ( int fieldLength )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETLENGTH )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -466,7 +466,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QSQLFIELD_NAME )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -490,7 +490,7 @@ void setName ( const QString & name )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETNAME )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -516,7 +516,7 @@ int precision () const
 */
 HB_FUNC_STATIC( QSQLFIELD_PRECISION )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -540,7 +540,7 @@ void setPrecision ( int precision )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETPRECISION )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -566,7 +566,7 @@ RequiredStatus requiredStatus () const
 */
 HB_FUNC_STATIC( QSQLFIELD_REQUIREDSTATUS )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -590,7 +590,7 @@ void setRequiredStatus ( RequiredStatus required )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -616,7 +616,7 @@ void setRequired ( bool required )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETREQUIRED )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -642,7 +642,7 @@ QVariant::Type type () const
 */
 HB_FUNC_STATIC( QSQLFIELD_TYPE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -666,7 +666,7 @@ void setType ( QVariant::Type type )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -692,7 +692,7 @@ QVariant value () const
 */
 HB_FUNC_STATIC( QSQLFIELD_VALUE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QSQLFIELD_VALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->value() );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -717,7 +717,7 @@ void setValue ( const QVariant & value )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETVALUE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -743,7 +743,7 @@ void setSqlType(int type)
 */
 HB_FUNC_STATIC( QSQLFIELD_SETSQLTYPE )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -769,7 +769,7 @@ int typeID() const
 */
 HB_FUNC_STATIC( QSQLFIELD_TYPEID )
 {
-  QSqlField * obj = (QSqlField *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlField * obj = (QSqlField *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

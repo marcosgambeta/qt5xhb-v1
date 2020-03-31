@@ -78,7 +78,7 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 
 void QSqlTableModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSqlTableModel * obj = (QSqlTableModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

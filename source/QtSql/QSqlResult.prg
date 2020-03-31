@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLRESULT_DELETE )
 {
-  QSqlResult * obj = (QSqlResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlResult * obj = (QSqlResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,7 +78,7 @@ virtual QVariant handle () const
 */
 HB_FUNC_STATIC( QSQLRESULT_HANDLE )
 {
-  QSqlResult * obj = (QSqlResult *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlResult * obj = (QSqlResult *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSQLRESULT_HANDLE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->handle() );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

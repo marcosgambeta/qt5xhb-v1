@@ -73,7 +73,7 @@ QSqlError ( const QString & driverText, const QString & databaseText, ErrorType 
 void QSqlError_new1()
 {
   QSqlError * o = new QSqlError( PQSTRING(1), PQSTRING(2), (QSqlError::ErrorType) hb_parni(3), PINT(4) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -83,7 +83,7 @@ void QSqlError_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QSqlError * o = new QSqlError( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPQSTRING(4,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -93,7 +93,7 @@ QSqlError ( const QSqlError & other )
 void QSqlError_new3()
 {
   QSqlError * o = new QSqlError( *PQSQLERROR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
 
 HB_FUNC_STATIC( QSQLERROR_DELETE )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ QString databaseText () const
 */
 HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ QT_DEPRECATED void setDatabaseText ( const QString & databaseText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ QString driverText () const
 */
 HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ QT_DEPRECATED void setDriverText ( const QString & driverText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ bool isValid () const
 */
 HB_FUNC_STATIC( QSQLERROR_ISVALID )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -270,7 +270,7 @@ QT_DEPRECATED  int number () const
 */
 HB_FUNC_STATIC( QSQLERROR_NUMBER )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ QT_DEPRECATED void setNumber ( int number )
 */
 HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -320,7 +320,7 @@ QString text () const
 */
 HB_FUNC_STATIC( QSQLERROR_TEXT )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ ErrorType type () const
 */
 HB_FUNC_STATIC( QSQLERROR_TYPE )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -368,7 +368,7 @@ QT_DEPRECATED void setType ( ErrorType type )
 */
 HB_FUNC_STATIC( QSQLERROR_SETTYPE )
 {
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -395,7 +395,7 @@ QString nativeErrorCode() const
 HB_FUNC_STATIC( QSQLERROR_NATIVEERRORCODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -421,7 +421,7 @@ void swap(QSqlError &other)
 HB_FUNC_STATIC( QSQLERROR_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QSqlError * obj = (QSqlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSqlError * obj = (QSqlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
