@@ -129,7 +129,7 @@ void QWebFrameSlots::urlChanged( const QUrl & url )
 
 void QWebFrameSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWebFrame * obj = (QWebFrame *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

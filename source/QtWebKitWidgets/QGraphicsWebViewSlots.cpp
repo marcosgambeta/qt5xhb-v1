@@ -122,7 +122,7 @@ void QGraphicsWebViewSlots::urlChanged( const QUrl & url )
 
 void QGraphicsWebViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsWebView * obj = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
