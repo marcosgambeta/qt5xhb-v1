@@ -58,7 +58,7 @@ RETURN
 HB_FUNC_STATIC( QTAPREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ TapDirection tapDirection() const
 HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ void setTapDirection(TapDirection tapDirection)
 HB_FUNC_STATIC( QTAPREADING_SETTAPDIRECTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool isDoubleTap() const
 HB_FUNC_STATIC( QTAPREADING_ISDOUBLETAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setDoubleTap(bool doubleTap)
 HB_FUNC_STATIC( QTAPREADING_SETDOUBLETAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapReading * obj = (QTapReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTapReading * obj = (QTapReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -65,7 +65,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -87,7 +87,7 @@ virtual QList <QSensorGestureRecognizer *> createRecognizers() = 0
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual QStringList supportedIds() const = 0
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_SUPPORTEDIDS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ virtual QString name() const = 0
 */
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_NAME )
 {
-  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGesturePluginInterface * obj = (QSensorGesturePluginInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

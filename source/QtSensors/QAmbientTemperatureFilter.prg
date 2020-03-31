@@ -53,7 +53,7 @@ RETURN
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureFilter * obj = (QAmbientTemperatureFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAmbientTemperatureFilter * obj = (QAmbientTemperatureFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ virtual bool filter(QAmbientTemperatureReading *reading) = 0
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureFilter * obj = (QAmbientTemperatureFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAmbientTemperatureFilter * obj = (QAmbientTemperatureFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

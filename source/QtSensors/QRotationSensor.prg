@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QRotationSensor * o = new QRotationSensor( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
 HB_FUNC_STATIC( QROTATIONSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QRotationReading *reading() const
 HB_FUNC_STATIC( QROTATIONSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_READING )
     {
 #endif
       QRotationReading * ptr = obj->reading();
-      _qt5xhb_createReturnQObjectClass( ptr, "QROTATIONREADING" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QROTATIONREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ bool hasZ() const
 HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ void setHasZ(bool hasZ)
 HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationSensor * obj = (QRotationSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRotationSensor * obj = (QRotationSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

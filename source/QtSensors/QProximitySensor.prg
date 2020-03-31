@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QPROXIMITYSENSOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QProximitySensor * o = new QProximitySensor( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QPROXIMITYSENSOR_NEW )
 HB_FUNC_STATIC( QPROXIMITYSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximitySensor * obj = (QProximitySensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProximitySensor * obj = (QProximitySensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ QProximityReading *reading() const
 HB_FUNC_STATIC( QPROXIMITYSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximitySensor * obj = (QProximitySensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProximitySensor * obj = (QProximitySensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QPROXIMITYSENSOR_READING )
     {
 #endif
       QProximityReading * ptr = obj->reading();
-      _qt5xhb_createReturnQObjectClass( ptr, "QPROXIMITYREADING" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QPROXIMITYREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

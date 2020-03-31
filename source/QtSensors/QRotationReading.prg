@@ -58,7 +58,7 @@ RETURN
 HB_FUNC_STATIC( QROTATIONREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ qreal x() const
 HB_FUNC_STATIC( QROTATIONREADING_X )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ qreal y() const
 HB_FUNC_STATIC( QROTATIONREADING_Y )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ qreal z() const
 HB_FUNC_STATIC( QROTATIONREADING_Z )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void setFromEuler(qreal x, qreal y, qreal z)
 HB_FUNC_STATIC( QROTATIONREADING_SETFROMEULER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QRotationReading * obj = (QRotationReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QRotationReading * obj = (QRotationReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

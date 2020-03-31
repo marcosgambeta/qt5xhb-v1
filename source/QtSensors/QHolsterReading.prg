@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QHOLSTERREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterReading * obj = (QHolsterReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHolsterReading * obj = (QHolsterReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ bool holstered() const
 HB_FUNC_STATIC( QHOLSTERREADING_HOLSTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterReading * obj = (QHolsterReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHolsterReading * obj = (QHolsterReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ void setHolstered(bool holstered)
 HB_FUNC_STATIC( QHOLSTERREADING_SETHOLSTERED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterReading * obj = (QHolsterReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHolsterReading * obj = (QHolsterReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

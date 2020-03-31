@@ -53,7 +53,7 @@ RETURN
 HB_FUNC_STATIC( QACCELEROMETERFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometerFilter * obj = (QAccelerometerFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccelerometerFilter * obj = (QAccelerometerFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ virtual bool filter(QAccelerometerReading *reading) = 0
 HB_FUNC_STATIC( QACCELEROMETERFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometerFilter * obj = (QAccelerometerFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccelerometerFilter * obj = (QAccelerometerFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -38,7 +38,7 @@ void QSensorGestureSlots::detected( QString s )
 void QSensorGestureSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGesture * obj = (QSensorGesture *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSensorGesture * obj = (QSensorGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

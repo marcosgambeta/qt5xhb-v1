@@ -62,7 +62,7 @@ RETURN
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ virtual QString id() const = 0
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ virtual bool isActive() = 0
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_ISACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ void startBackend()
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STARTBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ void stopBackend()
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_STOPBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ void createBackend()
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_CREATEBACKEND )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ QStringList gestureSignals() const
 HB_FUNC_STATIC( QSENSORGESTURERECOGNIZER_GESTURESIGNALS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

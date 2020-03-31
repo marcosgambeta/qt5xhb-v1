@@ -50,7 +50,7 @@ RETURN
 HB_FUNC_STATIC( QMAGNETOMETERFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerFilter * obj = (QMagnetometerFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMagnetometerFilter * obj = (QMagnetometerFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -72,7 +72,7 @@ virtual bool filter(QMagnetometerReading *reading) = 0
 HB_FUNC_STATIC( QMAGNETOMETERFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometerFilter * obj = (QMagnetometerFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMagnetometerFilter * obj = (QMagnetometerFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

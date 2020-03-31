@@ -53,7 +53,7 @@ RETURN
 HB_FUNC_STATIC( QPROXIMITYFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityFilter * obj = (QProximityFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProximityFilter * obj = (QProximityFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ virtual bool filter(QProximityReading *reading) = 0
 HB_FUNC_STATIC( QPROXIMITYFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityFilter * obj = (QProximityFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProximityFilter * obj = (QProximityFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

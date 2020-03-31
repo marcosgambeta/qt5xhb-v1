@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QTAPSENSOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QTapSensor * o = new QTapSensor( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTAPSENSOR_NEW )
 HB_FUNC_STATIC( QTAPSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QTapReading *reading() const
 HB_FUNC_STATIC( QTAPSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QTAPSENSOR_READING )
     {
 #endif
       QTapReading * ptr = obj->reading();
-      _qt5xhb_createReturnQObjectClass( ptr, "QTAPREADING" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QTAPREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ bool returnDoubleTapEvents() const
 HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
 HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

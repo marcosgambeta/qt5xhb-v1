@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ qreal temperature() const
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ void setTemperature(qreal temperature)
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_SETTEMPERATURE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAmbientTemperatureReading * obj = (QAmbientTemperatureReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

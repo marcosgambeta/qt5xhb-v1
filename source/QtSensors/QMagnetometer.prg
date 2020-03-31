@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QMagnetometer * o = new QMagnetometer( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QMagnetometerReading *reading() const
 HB_FUNC_STATIC( QMAGNETOMETER_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_READING )
     {
 #endif
       QMagnetometerReading * ptr = obj->reading();
-      _qt5xhb_createReturnQObjectClass( ptr, "QMAGNETOMETERREADING" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QMAGNETOMETERREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ bool returnGeoValues() const
 HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ void setReturnGeoValues(bool returnGeoValues)
 HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QMagnetometer * obj = (QMagnetometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMagnetometer * obj = (QMagnetometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

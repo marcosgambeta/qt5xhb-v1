@@ -36,7 +36,7 @@ void QSensorGestureManagerSlots::newSensorGestureAvailable()
 void QSensorGestureManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureManager * obj = (QSensorGestureManager *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSensorGestureManager * obj = (QSensorGestureManager *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

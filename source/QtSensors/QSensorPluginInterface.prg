@@ -64,7 +64,7 @@ virtual void registerSensors() = 0
 HB_FUNC_STATIC( QSENSORPLUGININTERFACE_REGISTERSENSORS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorPluginInterface * obj = (QSensorPluginInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSensorPluginInterface * obj = (QSensorPluginInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

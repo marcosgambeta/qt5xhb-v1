@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QACCELEROMETER_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QAccelerometer * o = new QAccelerometer( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QACCELEROMETER_NEW )
 HB_FUNC_STATIC( QACCELEROMETER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccelerometer * obj = (QAccelerometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ AccelerationMode accelerationMode() const
 HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccelerometer * obj = (QAccelerometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ void setAccelerationMode(AccelerationMode accelerationMode)
 HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccelerometer * obj = (QAccelerometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ QAccelerometerReading *reading() const
 HB_FUNC_STATIC( QACCELEROMETER_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAccelerometer * obj = (QAccelerometer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAccelerometer * obj = (QAccelerometer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QACCELEROMETER_READING )
     {
 #endif
       QAccelerometerReading * ptr = obj->reading();
-      _qt5xhb_createReturnQObjectClass( ptr, "QACCELEROMETERREADING" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACCELEROMETERREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

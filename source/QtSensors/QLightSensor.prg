@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QLightSensor * o = new QLightSensor( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
 HB_FUNC_STATIC( QLIGHTSENSOR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QLightReading *reading() const
 HB_FUNC_STATIC( QLIGHTSENSOR_READING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_READING )
     {
 #endif
       QLightReading * ptr = obj->reading();
-      _qt5xhb_createReturnQObjectClass( ptr, "QLIGHTREADING" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QLIGHTREADING" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ qreal fieldOfView() const
 HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ void setFieldOfView(qreal fieldOfView)
 HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QLightSensor * obj = (QLightSensor *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLightSensor * obj = (QLightSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

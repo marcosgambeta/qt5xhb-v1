@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QALTIMETERREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAltimeterReading * obj = (QAltimeterReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAltimeterReading * obj = (QAltimeterReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ qreal altitude() const
 HB_FUNC_STATIC( QALTIMETERREADING_ALTITUDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAltimeterReading * obj = (QAltimeterReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAltimeterReading * obj = (QAltimeterReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ void setAltitude(qreal altitude)
 HB_FUNC_STATIC( QALTIMETERREADING_SETALTITUDE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QAltimeterReading * obj = (QAltimeterReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAltimeterReading * obj = (QAltimeterReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

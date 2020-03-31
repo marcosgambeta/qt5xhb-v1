@@ -38,7 +38,7 @@ void QSensorGestureRecognizerSlots::detected( const QString & s )
 void QSensorGestureRecognizerSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSensorGestureRecognizer * obj = (QSensorGestureRecognizer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

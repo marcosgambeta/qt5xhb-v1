@@ -38,7 +38,7 @@ void QTapSensorSlots::returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 void QTapSensorSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QTapSensor * obj = (QTapSensor *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTapSensor * obj = (QTapSensor *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

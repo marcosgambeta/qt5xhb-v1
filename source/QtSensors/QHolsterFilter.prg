@@ -53,7 +53,7 @@ RETURN
 HB_FUNC_STATIC( QHOLSTERFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterFilter * obj = (QHolsterFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHolsterFilter * obj = (QHolsterFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ virtual bool filter(QHolsterReading *reading) = 0
 HB_FUNC_STATIC( QHOLSTERFILTER_FILTER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QHolsterFilter * obj = (QHolsterFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QHolsterFilter * obj = (QHolsterFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

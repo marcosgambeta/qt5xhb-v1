@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QORIENTATIONREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QOrientationReading * obj = (QOrientationReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOrientationReading * obj = (QOrientationReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ Orientation orientation() const
 HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QOrientationReading * obj = (QOrientationReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOrientationReading * obj = (QOrientationReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ void setOrientation(Orientation orientation)
 HB_FUNC_STATIC( QORIENTATIONREADING_SETORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QOrientationReading * obj = (QOrientationReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QOrientationReading * obj = (QOrientationReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

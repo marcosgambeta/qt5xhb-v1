@@ -56,7 +56,7 @@ RETURN
 HB_FUNC_STATIC( QPROXIMITYREADING_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityReading * obj = (QProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProximityReading * obj = (QProximityReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ bool close() const
 HB_FUNC_STATIC( QPROXIMITYREADING_CLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityReading * obj = (QProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProximityReading * obj = (QProximityReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ void setClose(bool close)
 HB_FUNC_STATIC( QPROXIMITYREADING_SETCLOSE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QProximityReading * obj = (QProximityReading *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProximityReading * obj = (QProximityReading *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
