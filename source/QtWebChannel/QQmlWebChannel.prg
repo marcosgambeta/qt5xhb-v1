@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QQmlWebChannel * o = new QQmlWebChannel( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_NEW )
 HB_FUNC_STATIC( QQMLWEBCHANNEL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlWebChannel * obj = (QQmlWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ Q_INVOKABLE void connectTo(QObject *transport)
 HB_FUNC_STATIC( QQMLWEBCHANNEL_CONNECTTO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlWebChannel * obj = (QQmlWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ Q_INVOKABLE void disconnectFrom(QObject *transport)
 HB_FUNC_STATIC( QQMLWEBCHANNEL_DISCONNECTFROM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QQmlWebChannel * obj = (QQmlWebChannel *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlWebChannel * obj = (QQmlWebChannel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
