@@ -43,22 +43,22 @@ $prototype=virtual QStringList keyBindingsForAction(const QString &actionName) c
 $virtualMethod=|QStringList|keyBindingsForAction|const QString &
 
 $prototype=static const QString &pressAction()
-$staticMethod=|const QString &|pressAction|
+%% TODO: $staticMethod=|const QString &|pressAction|
 
 $prototype=static const QString &increaseAction()
-$staticMethod=|const QString &|increaseAction|
+%% TODO: $staticMethod=|const QString &|increaseAction|
 
 $prototype=static const QString &decreaseAction()
-$staticMethod=|const QString &|decreaseAction|
+%% TODO: $staticMethod=|const QString &|decreaseAction|
 
 $prototype=static const QString &showMenuAction()
-$staticMethod=|const QString &|showMenuAction|
+%% TODO: $staticMethod=|const QString &|showMenuAction|
 
 $prototype=static const QString &setFocusAction()
-$staticMethod=|const QString &|setFocusAction|
+%% TODO: $staticMethod=|const QString &|setFocusAction|
 
 $prototype=static const QString &toggleAction()
-$staticMethod=|const QString &|toggleAction|
+%% TODO: $staticMethod=|const QString &|toggleAction|
 
 $extraMethods
 

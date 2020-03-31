@@ -61,10 +61,10 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 $deleteMethod
 
 $prototype=const QString & commitString () const
-$method=|const QString &|commitString|
+%% TODO: $method=|const QString &|commitString|
 
 $prototype=const QString & preeditString () const
-$method=|const QString &|preeditString|
+%% TODO: $method=|const QString &|preeditString|
 
 $prototype=int replacementLength () const
 $method=|int|replacementLength|

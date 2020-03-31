@@ -49,7 +49,7 @@ $prototype=void setCapabilities(Capabilities caps)
 $method=|void|setCapabilities|QTouchDevice::Capabilities
 
 $prototype=static QList<const QTouchDevice *> devices()
-$staticMethod=|QList<const QTouchDevice *>|devices|
+%% TODO: $staticMethod=|QList<const QTouchDevice *>|devices|
 
 $extraMethods
 
