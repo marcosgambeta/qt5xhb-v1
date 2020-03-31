@@ -53,7 +53,7 @@ void QModbusDeviceSlots::stateChanged( QModbusDevice::State state )
 void QModbusDeviceSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusDevice * obj = (QModbusDevice *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QModbusDevice * obj = (QModbusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

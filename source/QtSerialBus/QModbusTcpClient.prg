@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QMODBUSTCPCLIENT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QModbusTcpClient * o = new QModbusTcpClient( OPQOBJECT(1,nullptr) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -78,7 +78,7 @@ QModbusTcpClient(QModbusTcpClientPrivate &dd, QObject *parent = nullptr) [protec
 HB_FUNC_STATIC( QMODBUSTCPCLIENT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusTcpClient * obj = (QModbusTcpClient *) _qt5xhb_itemGetPtrStackSelfItem();
+  QModbusTcpClient * obj = (QModbusTcpClient *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

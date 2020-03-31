@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QCANBUS_INSTANCE )
   {
 #endif
     QCanBus * ptr = QCanBus::instance();
-    _qt5xhb_createReturnQObjectClass( ptr, "QCANBUS" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QCANBUS" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -88,7 +88,7 @@ QStringList plugins() const
 HB_FUNC_STATIC( QCANBUS_PLUGINS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCanBus * obj = (QCanBus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ QList<QCanBusDeviceInfo> availableDevices(const QString &plugin, QString *errorM
 HB_FUNC_STATIC( QCANBUS_AVAILABLEDEVICES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCanBus * obj = (QCanBus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QCanBusDevice *createDevice(const QString &plugin, const QString &interfaceName,
 HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBus * obj = (QCanBus *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCanBus * obj = (QCanBus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QCANBUS_CREATEDEVICE )
     {
 #endif
       QCanBusDevice * ptr = obj->createDevice( PQSTRING(1), PQSTRING(2), NULL );
-      _qt5xhb_createReturnQObjectClass( ptr, "QCANBUSDEVICE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QCANBUSDEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

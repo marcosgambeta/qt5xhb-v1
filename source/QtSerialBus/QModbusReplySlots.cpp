@@ -51,7 +51,7 @@ void QModbusReplySlots::errorOccurred( QModbusDevice::Error error )
 void QModbusReplySlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusReply * obj = (QModbusReply *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QModbusReply * obj = (QModbusReply *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

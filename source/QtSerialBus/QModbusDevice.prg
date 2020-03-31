@@ -65,7 +65,7 @@ QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) [protected]
 HB_FUNC_STATIC( QMODBUSDEVICE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QModbusDevice * obj = (QModbusDevice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QModbusDevice * obj = (QModbusDevice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
