@@ -33,7 +33,7 @@ void QSvgRendererSlots::repaintNeeded()
 
 void QSvgRendererSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSvgRenderer * obj = (QSvgRenderer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSvgRenderer * obj = (QSvgRenderer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
