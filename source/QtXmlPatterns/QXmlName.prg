@@ -68,7 +68,7 @@ QXmlName ()
 void QXmlName_new1()
 {
   QXmlName * o = new QXmlName();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -77,7 +77,7 @@ QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & n
 void QXmlName_new2()
 {
   QXmlName * o = new QXmlName( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QXmlName ()
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
 
 HB_FUNC_STATIC( QXMLNAME_DELETE )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QXMLNAME_ISNULL )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ QString localName ( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ QString namespaceUri ( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ QString prefix ( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_PREFIX )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ QString toClarkName ( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
 {
-  QXmlName * obj = (QXmlName *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlName * obj = (QXmlName *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
   {
 #endif
     QXmlName * ptr = new QXmlName( QXmlName::fromClarkName( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
-    _qt5xhb_createReturnClass( ptr, "QXMLNAME", true );
+    Qt5xHb::createReturnClass( ptr, "QXMLNAME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

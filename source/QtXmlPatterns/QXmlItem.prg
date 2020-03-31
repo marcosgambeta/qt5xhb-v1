@@ -70,7 +70,7 @@ QXmlItem ()
 void QXmlItem_new1()
 {
   QXmlItem * o = new QXmlItem();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -79,7 +79,7 @@ QXmlItem ( const QXmlItem & other )
 void QXmlItem_new2()
 {
   QXmlItem * o = new QXmlItem( *PQXMLITEM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -88,7 +88,7 @@ QXmlItem ( const QXmlNodeModelIndex & node )
 void QXmlItem_new3()
 {
   QXmlItem * o = new QXmlItem( *PQXMLNODEMODELINDEX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -97,7 +97,7 @@ QXmlItem ( const QVariant & atomicValue )
 void QXmlItem_new4()
 {
   QXmlItem * o = new QXmlItem( *PQVARIANT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QXmlItem ()
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 
 HB_FUNC_STATIC( QXMLITEM_DELETE )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlItem * obj = (QXmlItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ bool isAtomicValue () const
 */
 HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlItem * obj = (QXmlItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ bool isNode () const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNODE )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlItem * obj = (QXmlItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ bool isNull () const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNULL )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlItem * obj = (QXmlItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ QVariant toAtomicValue () const
 */
 HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlItem * obj = (QXmlItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->toAtomicValue() );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ QXmlNodeModelIndex toNodeModelIndex () const
 */
 HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
 {
-  QXmlItem * obj = (QXmlItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlItem * obj = (QXmlItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
     {
 #endif
       QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->toNodeModelIndex() );
-      _qt5xhb_createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
+      Qt5xHb::createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

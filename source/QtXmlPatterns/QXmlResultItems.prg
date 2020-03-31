@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
   if( ISNUMPAR(0) )
   {
     QXmlResultItems * o = new QXmlResultItems();
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 
 HB_FUNC_STATIC( QXMLRESULTITEMS_DELETE )
 {
-  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlResultItems * obj = (QXmlResultItems *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QXmlItem current () const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
 {
-  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlResultItems * obj = (QXmlResultItems *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
     {
 #endif
       QXmlItem * ptr = new QXmlItem( obj->current() );
-      _qt5xhb_createReturnClass( ptr, "QXMLITEM", true );
+      Qt5xHb::createReturnClass( ptr, "QXMLITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ bool hasError () const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
 {
-  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlResultItems * obj = (QXmlResultItems *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ QXmlItem next ()
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
 {
-  QXmlResultItems * obj = (QXmlResultItems *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlResultItems * obj = (QXmlResultItems *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
     {
 #endif
       QXmlItem * ptr = new QXmlItem( obj->next() );
-      _qt5xhb_createReturnClass( ptr, "QXMLITEM", true );
+      Qt5xHb::createReturnClass( ptr, "QXMLITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
