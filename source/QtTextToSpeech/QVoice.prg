@@ -67,7 +67,7 @@ void QVoice_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QVoice * o = new QVoice();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -78,7 +78,7 @@ void QVoice_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QVoice * o = new QVoice( *PQVOICE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QVOICE_NEW )
 HB_FUNC_STATIC( QVOICE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * obj = (QVoice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVoice * obj = (QVoice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ QString name() const
 HB_FUNC_STATIC( QVOICE_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * obj = (QVoice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVoice * obj = (QVoice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ Gender gender() const
 HB_FUNC_STATIC( QVOICE_GENDER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * obj = (QVoice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVoice * obj = (QVoice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ Age age() const
 HB_FUNC_STATIC( QVOICE_AGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * obj = (QVoice *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVoice * obj = (QVoice *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
