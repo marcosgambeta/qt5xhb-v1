@@ -63,7 +63,7 @@ QScriptString()
 void QScriptString_new1()
 {
   QScriptString * o = new QScriptString();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -72,7 +72,7 @@ QScriptString(const QScriptString & other)
 void QScriptString_new2()
 {
   QScriptString * o = new QScriptString( *PQSCRIPTSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QScriptString()
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
 
 HB_FUNC_STATIC( QSCRIPTSTRING_DELETE )
 {
-  QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptString * obj = (QScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_ISVALID )
 {
-  QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptString * obj = (QScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QSCRIPTSTRING_TOSTRING )
 {
-  QScriptString * obj = (QScriptString *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptString * obj = (QScriptString *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

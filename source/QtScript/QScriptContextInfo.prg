@@ -71,7 +71,7 @@ QScriptContextInfo(const QScriptContext * context)
 void QScriptContextInfo_new1()
 {
   QScriptContextInfo * o = new QScriptContextInfo( PQSCRIPTCONTEXT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QScriptContextInfo(const QScriptContextInfo & other)
 void QScriptContextInfo_new2()
 {
   QScriptContextInfo * o = new QScriptContextInfo( *PQSCRIPTCONTEXTINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -89,7 +89,7 @@ QScriptContextInfo()
 void QScriptContextInfo_new3()
 {
   QScriptContextInfo * o = new QScriptContextInfo();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QScriptContextInfo(const QScriptContext * context)
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_DELETE )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FILENAME )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ int functionEndLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONENDLINENUMBER )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ int functionMetaIndex() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONMETAINDEX )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ QString functionName() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONNAME )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ QStringList functionParameterNames() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONPARAMETERNAMES )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ int functionStartLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ FunctionType functionType() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_ISNULL )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ int lineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_LINENUMBER )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -354,7 +354,7 @@ qint64 scriptId() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_SCRIPTID )
 {
-  QScriptContextInfo * obj = (QScriptContextInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScriptContextInfo * obj = (QScriptContextInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
