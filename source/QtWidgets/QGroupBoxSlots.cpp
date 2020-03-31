@@ -48,7 +48,7 @@ void QGroupBoxSlots::toggled( bool on )
 
 void QGroupBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGroupBox * obj = (QGroupBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGroupBox * obj = (QGroupBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

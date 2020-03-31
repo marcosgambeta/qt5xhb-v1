@@ -78,7 +78,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
 
 void QWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWidget * obj = (QWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWidget * obj = (QWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

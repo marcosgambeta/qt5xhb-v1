@@ -46,7 +46,7 @@ void QSystemTrayIconSlots::messageClicked()
 
 void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSystemTrayIcon * obj = (QSystemTrayIcon *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

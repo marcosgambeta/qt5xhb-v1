@@ -152,7 +152,7 @@ void QListWidgetSlots::itemSelectionChanged()
 
 void QListWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QListWidget * obj = (QListWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

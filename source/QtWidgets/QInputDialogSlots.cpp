@@ -100,7 +100,7 @@ void QInputDialogSlots::textValueSelected( const QString & text )
 
 void QInputDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QInputDialog * obj = (QInputDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInputDialog * obj = (QInputDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

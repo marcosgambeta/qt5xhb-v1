@@ -107,7 +107,7 @@ void QApplicationSlots::saveStateRequest( QSessionManager & manager )
 
 void QApplicationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QApplication * obj = (QApplication *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QApplication * obj = (QApplication *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

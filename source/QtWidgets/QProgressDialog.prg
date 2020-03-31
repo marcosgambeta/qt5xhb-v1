@@ -81,7 +81,7 @@ explicit QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 void QProgressDialog_new1()
 {
   QProgressDialog * o = new QProgressDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -90,7 +90,7 @@ QProgressDialog ( const QString & labelText, const QString & cancelButtonText, i
 void QProgressDialog_new2()
 {
   QProgressDialog * o = new QProgressDialog( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]explicit QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool autoClose () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void setAutoClose ( bool close )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ bool autoReset () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ void setAutoReset ( bool reset )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -236,7 +236,7 @@ QString labelText () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -260,7 +260,7 @@ void setLabelText ( const QString & text )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -286,7 +286,7 @@ int maximum () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -310,7 +310,7 @@ void setMaximum ( int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -336,7 +336,7 @@ int minimum () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -360,7 +360,7 @@ void setMinimum ( int minimum )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -386,7 +386,7 @@ int minimumDuration () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -410,7 +410,7 @@ void setMinimumDuration ( int ms )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -436,7 +436,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -462,7 +462,7 @@ void setBar ( QProgressBar * bar )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETBAR )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -488,7 +488,7 @@ void setCancelButton ( QPushButton * cancelButton )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTON )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -514,7 +514,7 @@ void setLabel ( QLabel * label )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABEL )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -540,7 +540,7 @@ int value () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -564,7 +564,7 @@ void setValue ( int progress )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -590,7 +590,7 @@ bool wasCanceled () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -614,7 +614,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,7 +639,7 @@ void cancel ()
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_CANCEL )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -665,7 +665,7 @@ void reset ()
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -691,7 +691,7 @@ void setCancelButtonText ( const QString & text )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -717,7 +717,7 @@ void setRange ( int minimum, int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
 {
-  QProgressDialog * obj = (QProgressDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressDialog * obj = (QProgressDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

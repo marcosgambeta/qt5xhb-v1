@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEFACTORY_DELETE )
 {
-  QStyleFactory * obj = (QStyleFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleFactory * obj = (QStyleFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSTYLEFACTORY_CREATE )
   {
 #endif
     QStyle * ptr = QStyleFactory::create( PQSTRING(1) );
-    _qt5xhb_createReturnQObjectClass( ptr, "QSTYLE" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

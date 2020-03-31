@@ -48,7 +48,7 @@ void QSpinBoxSlots::valueChanged( const QString & text )
 
 void QSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSpinBox * obj = (QSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QSpinBox * obj = (QSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

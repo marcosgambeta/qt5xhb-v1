@@ -62,7 +62,7 @@ QSlider ( QWidget * parent = 0 )
 void QSlider_new1()
 {
   QSlider * o = new QSlider( OPQWIDGET(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -71,7 +71,7 @@ QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 void QSlider_new2()
 {
   QSlider * o = new QSlider( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QSlider ( QWidget * parent = 0 )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSLIDER_NEW )
 
 HB_FUNC_STATIC( QSLIDER_DELETE )
 {
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ int tickInterval () const
 */
 HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 {
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ void setTickInterval ( int ti )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 {
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ TickPosition tickPosition () const
 */
 HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 {
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ void setTickPosition ( TickPosition position )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 {
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -217,7 +217,7 @@ virtual bool event ( QEvent * event )
 */
 HB_FUNC_STATIC( QSLIDER_EVENT )
 {
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 {
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QSLIDER_SIZEHINT )
 {
-  QSlider * obj = (QSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QSlider * obj = (QSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSLIDER_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

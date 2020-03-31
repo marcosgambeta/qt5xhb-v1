@@ -33,7 +33,7 @@ void QLCDNumberSlots::overflow()
 
 void QLCDNumberSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLCDNumber * obj = (QLCDNumber *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -61,7 +61,7 @@ void QDesktopWidgetSlots::workAreaResized( int screen )
 
 void QDesktopWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesktopWidget * obj = (QDesktopWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

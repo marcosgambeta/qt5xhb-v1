@@ -96,7 +96,7 @@ void QLineEditSlots::textEdited( const QString & text )
 
 void QLineEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLineEdit * obj = (QLineEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QLineEdit * obj = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

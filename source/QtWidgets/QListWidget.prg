@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QLISTWIDGET_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QListWidget * o = new QListWidget( OPQWIDGET(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QLISTWIDGET_NEW )
 
 HB_FUNC_STATIC( QLISTWIDGET_DELETE )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ void addItem ( const QString & label )
 */
 void QListWidget_addItem1()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ void addItem ( QListWidgetItem * item )
 */
 void QListWidget_addItem2()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ void addItems ( const QStringList & labels )
 */
 HB_FUNC_STATIC( QLISTWIDGET_ADDITEMS )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ void closePersistentEditor ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_CLOSEPERSISTENTEDITOR )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ int count () const
 */
 HB_FUNC_STATIC( QLISTWIDGET_COUNT )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ QListWidgetItem * currentItem () const
 */
 HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
     {
 #endif
       QListWidgetItem * ptr = obj->currentItem();
-      _qt5xhb_createReturnClass( ptr, "QLISTWIDGETITEM", false );
+      Qt5xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ int currentRow () const
 */
 HB_FUNC_STATIC( QLISTWIDGET_CURRENTROW )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -302,7 +302,7 @@ void editItem ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_EDITITEM )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ void insertItem ( int row, QListWidgetItem * item )
 */
 void QListWidget_insertItem1()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -343,7 +343,7 @@ void insertItem ( int row, const QString & label )
 */
 void QListWidget_insertItem2()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -377,7 +377,7 @@ void insertItems ( int row, const QStringList & labels )
 */
 HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -403,7 +403,7 @@ bool isSortingEnabled () const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ISSORTINGENABLED )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -427,7 +427,7 @@ QListWidgetItem * item ( int row ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ITEM )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
     {
 #endif
       QListWidgetItem * ptr = obj->item( PINT(1) );
-      _qt5xhb_createReturnClass( ptr, "QLISTWIDGETITEM", false );
+      Qt5xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,12 +452,12 @@ QListWidgetItem * itemAt ( const QPoint & p ) const
 */
 void QListWidget_itemAt1()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QListWidgetItem * ptr = obj->itemAt( *PQPOINT(1) );
-    _qt5xhb_createReturnClass( ptr, "QLISTWIDGETITEM", false );
+    Qt5xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
   }
 }
 
@@ -466,12 +466,12 @@ QListWidgetItem * itemAt ( int x, int y ) const
 */
 void QListWidget_itemAt2()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QListWidgetItem * ptr = obj->itemAt( PINT(1), PINT(2) );
-    _qt5xhb_createReturnClass( ptr, "QLISTWIDGETITEM", false );
+    Qt5xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
   }
 }
 
@@ -499,7 +499,7 @@ QWidget * itemWidget ( QListWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
     {
 #endif
       QWidget * ptr = obj->itemWidget( PQLISTWIDGETITEM(1) );
-      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,7 +524,7 @@ void openPersistentEditor ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_OPENPERSISTENTEDITOR )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -550,7 +550,7 @@ void removeItemWidget ( QListWidgetItem * item )
 */
 HB_FUNC_STATIC( QLISTWIDGET_REMOVEITEMWIDGET )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -576,7 +576,7 @@ int row ( const QListWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_ROW )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -600,7 +600,7 @@ void setCurrentItem ( QListWidgetItem * item )
 */
 void QListWidget_setCurrentItem1()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -615,7 +615,7 @@ void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlag
 */
 void QListWidget_setCurrentItem2()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -649,7 +649,7 @@ void setCurrentRow ( int row )
 */
 void QListWidget_setCurrentRow1()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -664,7 +664,7 @@ void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
 */
 void QListWidget_setCurrentRow2()
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -698,7 +698,7 @@ void setItemWidget ( QListWidgetItem * item, QWidget * widget )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SETITEMWIDGET )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -724,7 +724,7 @@ void setSortingEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SETSORTINGENABLED )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -750,7 +750,7 @@ void sortItems ( Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -776,7 +776,7 @@ QListWidgetItem * takeItem ( int row )
 */
 HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
     {
 #endif
       QListWidgetItem * ptr = obj->takeItem( PINT(1) );
-      _qt5xhb_createReturnClass( ptr, "QLISTWIDGETITEM", false );
+      Qt5xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -801,7 +801,7 @@ QRect visualItemRect ( const QListWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->visualItemRect( PQLISTWIDGETITEM(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -826,7 +826,7 @@ virtual void dropEvent ( QDropEvent * event )
 */
 HB_FUNC_STATIC( QLISTWIDGET_DROPEVENT )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -852,7 +852,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QLISTWIDGET_CLEAR )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -878,7 +878,7 @@ void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint 
 */
 HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
 {
-  QListWidget * obj = (QListWidget *) _qt5xhb_itemGetPtrStackSelfItem();
+  QListWidget * obj = (QListWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

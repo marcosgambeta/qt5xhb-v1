@@ -65,8 +65,8 @@ QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new1()
 {
-  QGraphicsPolygonItem * o = new QGraphicsPolygonItem( ISNIL(1)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, true );
+  QGraphicsPolygonItem * o = new QGraphicsPolygonItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new2()
 {
-  QGraphicsPolygonItem * o = new QGraphicsPolygonItem( *PQPOLYGONF(1), ISNIL(2)? 0 : (QGraphicsItem *) _qt5xhb_itemGetPtr(2) );
-  _qt5xhb_returnNewObject( o, true );
+  QGraphicsPolygonItem * o = new QGraphicsPolygonItem( *PQPOLYGONF(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ Qt::FillRule fillRule () const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ QPolygonF polygon () const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
     {
 #endif
       QPolygonF * ptr = new QPolygonF( obj->polygon() );
-      _qt5xhb_createReturnClass( ptr, "QPOLYGONF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ void setFillRule ( Qt::FillRule rule )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ void setPolygon ( const QPolygonF & polygon )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -220,7 +220,7 @@ virtual QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,7 +245,7 @@ virtual bool contains ( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -269,7 +269,7 @@ virtual bool isObscuredBy ( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -293,7 +293,7 @@ virtual QPainterPath opaqueArea () const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
-      _qt5xhb_createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ virtual QPainterPath shape () const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
-      _qt5xhb_createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,7 +369,7 @@ virtual int type () const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

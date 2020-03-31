@@ -75,7 +75,7 @@ QStyleOptionSlider()
 void QStyleOptionSlider_new1()
 {
   QStyleOptionSlider * o = new QStyleOptionSlider();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -84,7 +84,7 @@ QStyleOptionSlider(const QStyleOptionSlider &other)
 void QStyleOptionSlider_new2()
 {
   QStyleOptionSlider * o = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -116,7 +116,7 @@ Qt::Orientation orientation
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_ORIENTATION )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_ORIENTATION )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETORIENTATION )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ int minimum
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_MINIMUM )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_MINIMUM )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETMINIMUM )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -192,7 +192,7 @@ int maximum
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_MAXIMUM )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_MAXIMUM )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETMAXIMUM )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ QSlider::TickPosition tickPosition
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_TICKPOSITION )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_TICKPOSITION )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETTICKPOSITION )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -268,7 +268,7 @@ int tickInterval
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_TICKINTERVAL )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_TICKINTERVAL )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETTICKINTERVAL )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ bool upsideDown
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_UPSIDEDOWN )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_UPSIDEDOWN )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETUPSIDEDOWN )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ int sliderPosition
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SLIDERPOSITION )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SLIDERPOSITION )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSLIDERPOSITION )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -382,7 +382,7 @@ int sliderValue
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SLIDERVALUE )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SLIDERVALUE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSLIDERVALUE )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -420,7 +420,7 @@ int singleStep
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SINGLESTEP )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SINGLESTEP )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSINGLESTEP )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -458,7 +458,7 @@ int pageStep
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_PAGESTEP )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_PAGESTEP )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETPAGESTEP )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -496,7 +496,7 @@ qreal notchTarget
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NOTCHTARGET )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NOTCHTARGET )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETNOTCHTARGET )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -534,7 +534,7 @@ bool dialWrapping
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_DIALWRAPPING )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_DIALWRAPPING )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETDIALWRAPPING )
 {
-  QStyleOptionSlider * obj = (QStyleOptionSlider *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSlider * obj = (QStyleOptionSlider *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

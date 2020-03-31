@@ -75,7 +75,7 @@ void QOpenGLWidgetSlots::resized()
 void QOpenGLWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QOpenGLWidget * obj = (QOpenGLWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QOpenGLWidget * obj = (QOpenGLWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -48,7 +48,7 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 
 void QStackedLayoutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStackedLayout * obj = (QStackedLayout *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

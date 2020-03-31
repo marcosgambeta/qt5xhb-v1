@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSLAYOUTITEM(1)||ISNIL(1)) )
   {
-    QGraphicsAnchorLayout * o = new QGraphicsAnchorLayout( ISNIL(1)? 0 : (QGraphicsLayoutItem *) _qt5xhb_itemGetPtr(1) );
-    _qt5xhb_returnNewObject( o, false );
+    QGraphicsAnchorLayout * o = new QGraphicsAnchorLayout( ISNIL(1)? 0 : (QGraphicsLayoutItem *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_DELETE )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ QGraphicsAnchor * addAnchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint f
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
     {
 #endif
       QGraphicsAnchor * ptr = obj->addAnchor( PQGRAPHICSLAYOUTITEM(1), (Qt::AnchorPoint) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), (Qt::AnchorPoint) hb_parni(4) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QGRAPHICSANCHOR" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSANCHOR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,7 +125,7 @@ void addAnchors ( QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondI
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ void addCornerAnchors ( QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner,
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ QGraphicsAnchor * anchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firs
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
     {
 #endif
       QGraphicsAnchor * ptr = obj->anchor( PQGRAPHICSLAYOUTITEM(1), (Qt::AnchorPoint) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), (Qt::AnchorPoint) hb_parni(4) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QGRAPHICSANCHOR" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGRAPHICSANCHOR" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ qreal horizontalSpacing () const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void setHorizontalSpacing ( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ void setSpacing ( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETSPACING )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -278,7 +278,7 @@ void setVerticalSpacing ( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ qreal verticalSpacing () const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -328,7 +328,7 @@ virtual int count () const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -352,7 +352,7 @@ virtual void invalidate ()
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -378,7 +378,7 @@ virtual QGraphicsLayoutItem * itemAt ( int index ) const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
     {
 #endif
       QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
-      _qt5xhb_createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
+      Qt5xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ virtual void removeAt ( int index )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -429,7 +429,7 @@ virtual void setGeometry ( const QRectF & geom )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
 {
-  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = (QGraphicsAnchorLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

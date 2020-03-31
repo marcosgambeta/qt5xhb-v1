@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QUNDOGROUP_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QUndoGroup * o = new QUndoGroup( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QUNDOGROUP_NEW )
 
 HB_FUNC_STATIC( QUNDOGROUP_DELETE )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,7 +115,7 @@ QUndoStack * activeStack() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
     {
 #endif
       QUndoStack * ptr = obj->activeStack();
-      _qt5xhb_createReturnQObjectClass( ptr, "QUNDOSTACK" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QUNDOSTACK" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ void addStack(QUndoStack * stack)
 */
 HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -166,7 +166,7 @@ bool canRedo() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ bool canUndo() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ QAction * createRedoAction(QObject * parent, const QString & prefix = QString())
 */
 HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
     {
 #endif
       QAction * ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ QAction * createUndoAction(QObject * parent, const QString & prefix = QString())
 */
 HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
     {
 #endif
       QAction * ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ bool isClean() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -288,7 +288,7 @@ QString redoText() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ void removeStack(QUndoStack * stack)
 */
 HB_FUNC_STATIC( QUNDOGROUP_REMOVESTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -338,7 +338,7 @@ QList<QUndoStack *> stacks() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_STACKS )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -386,7 +386,7 @@ QString undoText() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -410,7 +410,7 @@ void redo()
 */
 HB_FUNC_STATIC( QUNDOGROUP_REDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -436,7 +436,7 @@ void setActiveStack(QUndoStack * stack)
 */
 HB_FUNC_STATIC( QUNDOGROUP_SETACTIVESTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -462,7 +462,7 @@ void undo()
 */
 HB_FUNC_STATIC( QUNDOGROUP_UNDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) _qt5xhb_itemGetPtrStackSelfItem();
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

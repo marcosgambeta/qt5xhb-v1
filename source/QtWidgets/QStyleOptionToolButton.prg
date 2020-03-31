@@ -71,7 +71,7 @@ QStyleOptionToolButton()
 void QStyleOptionToolButton_new1()
 {
   QStyleOptionToolButton * o = new QStyleOptionToolButton();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -80,7 +80,7 @@ QStyleOptionToolButton(const QStyleOptionToolButton &other)
 void QStyleOptionToolButton_new2()
 {
   QStyleOptionToolButton * o = new QStyleOptionToolButton( *PQSTYLEOPTIONTOOLBUTTON(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -112,7 +112,7 @@ ToolButtonFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FEATURES )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FEATURES )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFEATURES )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -150,14 +150,14 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICON )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->icon );
-      _qt5xhb_createReturnClass( ptr, "QICON", true );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICON )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICON )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,14 +189,14 @@ QSize iconSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICONSIZE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->iconSize );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICONSIZE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETICONSIZE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -228,7 +228,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TEXT )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTEXT )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ Qt::ArrowType arrowType
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ARROWTYPE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ARROWTYPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETARROWTYPE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -304,7 +304,7 @@ Qt::ToolButtonStyle toolButtonStyle
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TOOLBUTTONSTYLE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_TOOLBUTTONSTYLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETTOOLBUTTONSTYLE )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -342,14 +342,14 @@ QPoint pos
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_POS )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QPoint * ptr = new QPoint( obj->pos );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
     }
     else
     {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_POS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETPOS )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -381,14 +381,14 @@ QFont font
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FONT )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QFont * ptr = new QFont( obj->font );
-      _qt5xhb_createReturnClass( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
     }
     else
     {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FONT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_SETFONT )
 {
-  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolButton * obj = (QStyleOptionToolButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

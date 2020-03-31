@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QGraphicsColorizeEffect * o = new QGraphicsColorizeEffect( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ QColor color () const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->color() );
-      _qt5xhb_createReturnClass( ptr, "QCOLOR", true );
+      Qt5xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,7 +117,7 @@ qreal strength () const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ void setColor ( const QColor & c )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor( ISOBJECT(1)? *(QColor *) _qt5xhb_itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ void setStrength ( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

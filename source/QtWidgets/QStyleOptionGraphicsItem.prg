@@ -60,7 +60,7 @@ QStyleOptionGraphicsItem()
 void QStyleOptionGraphicsItem_new1()
 {
   QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem &other)
 void QStyleOptionGraphicsItem_new2()
 {
   QStyleOptionGraphicsItem * o = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -120,14 +120,14 @@ QRectF exposedRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QRectF * ptr = new QRectF( obj->exposedRect );
-      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
     }
     else
     {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -159,14 +159,14 @@ QMatrix matrix
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QMatrix * ptr = new QMatrix( obj->matrix );
-      _qt5xhb_createReturnClass( ptr, "QMATRIX", true );
+      Qt5xHb::createReturnClass( ptr, "QMATRIX", true );
     }
     else
     {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETMATRIX )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -198,7 +198,7 @@ qreal levelOfDetail
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

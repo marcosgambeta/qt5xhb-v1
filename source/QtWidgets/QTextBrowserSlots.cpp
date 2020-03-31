@@ -111,7 +111,7 @@ void QTextBrowserSlots::sourceChanged( const QUrl & src )
 
 void QTextBrowserSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTextBrowser * obj = (QTextBrowser *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextBrowser * obj = (QTextBrowser *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -68,7 +68,7 @@ explicit QFontDialog ( QWidget * parent = 0 )
 void QFontDialog_new1()
 {
   QFontDialog * o = new QFontDialog( OPQWIDGET(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -77,7 +77,7 @@ explicit QFontDialog ( const QFont & initial, QWidget * parent = 0 )
 void QFontDialog_new2()
 {
   QFontDialog * o = new QFontDialog( *PQFONT(1), OPQWIDGET(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]explicit QFontDialog ( QWidget * parent = 0 )
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QFONTDIALOG_NEW )
 
 HB_FUNC_STATIC( QFONTDIALOG_DELETE )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -123,7 +123,7 @@ QFont currentFont () const
 */
 HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
     {
 #endif
       QFont * ptr = new QFont( obj->currentFont() );
-      _qt5xhb_createReturnClass( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,7 +148,7 @@ void setCurrentFont ( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ void open ( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QFONTDIALOG_OPEN )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -200,7 +200,7 @@ FontDialogOptions options () const
 */
 HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ void setOptions ( FontDialogOptions options )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -250,7 +250,7 @@ QFont selectedFont () const
 */
 HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
     {
 #endif
       QFont * ptr = new QFont( obj->selectedFont() );
-      _qt5xhb_createReturnClass( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ void setOption ( FontDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -301,7 +301,7 @@ bool testOption ( FontDialogOption option ) const
 */
 HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -325,7 +325,7 @@ void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
 {
-  QFontDialog * obj = (QFontDialog *) _qt5xhb_itemGetPtrStackSelfItem();
+  QFontDialog * obj = (QFontDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -354,7 +354,7 @@ void QFontDialog_getFont1()
 
   bool par1;
   QFont * ptr = new QFont( QFontDialog::getFont( &par1, OPQWIDGET(2,0) ) );
-  _qt5xhb_createReturnClass( ptr, "QFONT", true );
+  Qt5xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
 
@@ -366,7 +366,7 @@ void QFontDialog_getFont2()
 
   bool par1;
   QFont * ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT(2), OPQWIDGET(3,0), OPQSTRING(4,QString()), ISNIL(5)? (QFontDialog::FontDialogOptions) 0 : (QFontDialog::FontDialogOptions) hb_parni(5) ) );
-  _qt5xhb_createReturnClass( ptr, "QFONT", true );
+  Qt5xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
 

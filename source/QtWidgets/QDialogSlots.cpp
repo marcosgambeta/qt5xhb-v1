@@ -57,7 +57,7 @@ void QDialogSlots::rejected()
 
 void QDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDialog * obj = (QDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDialog * obj = (QDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

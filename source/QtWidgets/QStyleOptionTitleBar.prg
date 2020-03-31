@@ -60,7 +60,7 @@ QStyleOptionTitleBar()
 void QStyleOptionTitleBar_new1()
 {
   QStyleOptionTitleBar * o = new QStyleOptionTitleBar();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QStyleOptionTitleBar(const QStyleOptionTitleBar &other)
 void QStyleOptionTitleBar_new2()
 {
   QStyleOptionTitleBar * o = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -101,7 +101,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TEXT )
 {
-  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTEXT )
 {
-  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,14 +139,14 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_ICON )
 {
-  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->icon );
-      _qt5xhb_createReturnClass( ptr, "QICON", true );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_ICON )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETICON )
 {
-  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,7 +178,7 @@ int titleBarState
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARSTATE )
 {
-  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARSTATE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTITLEBARSTATE )
 {
-  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -216,7 +216,7 @@ Qt::WindowFlags titleBarFlags
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARFLAGS )
 {
-  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_TITLEBARFLAGS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_SETTITLEBARFLAGS )
 {
-  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTitleBar * obj = (QStyleOptionTitleBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

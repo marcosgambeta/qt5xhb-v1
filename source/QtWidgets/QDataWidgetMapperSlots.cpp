@@ -35,7 +35,7 @@ void QDataWidgetMapperSlots::currentIndexChanged( int index )
 
 void QDataWidgetMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDataWidgetMapper * obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

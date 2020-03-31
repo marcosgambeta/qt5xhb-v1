@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_DELETE )
 {
-  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,7 +76,7 @@ QPointF lastPos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTPOS )
 {
-  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTPOS )
     {
 #endif
       QPointF * ptr = new QPointF( obj->lastPos() );
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -101,7 +101,7 @@ QPointF lastScenePos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCENEPOS )
 {
-  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCENEPOS )
     {
 #endif
       QPointF * ptr = new QPointF( obj->lastScenePos() );
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ QPoint lastScreenPos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCREENPOS )
 {
-  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCREENPOS )
     {
 #endif
       QPoint * ptr = new QPoint( obj->lastScreenPos() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ Qt::KeyboardModifiers modifiers () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_MODIFIERS )
 {
-  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -175,7 +175,7 @@ QPointF pos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_POS )
 {
-  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_POS )
     {
 #endif
       QPointF * ptr = new QPointF( obj->pos() );
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,7 +200,7 @@ QPointF scenePos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCENEPOS )
 {
-  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCENEPOS )
     {
 #endif
       QPointF * ptr = new QPointF( obj->scenePos() );
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ QPoint screenPos () const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCREENPOS )
 {
-  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = (QGraphicsSceneHoverEvent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCREENPOS )
     {
 #endif
       QPoint * ptr = new QPoint( obj->screenPos() );
-      _qt5xhb_createReturnClass( ptr, "QPOINT", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -98,7 +98,7 @@ void QAbstractItemViewSlots::viewportEntered()
 
 void QAbstractItemViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractItemView * obj = (QAbstractItemView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

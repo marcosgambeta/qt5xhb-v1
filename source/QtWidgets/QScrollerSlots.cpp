@@ -48,7 +48,7 @@ void QScrollerSlots::stateChanged( QScroller::State newState )
 
 void QScrollerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QScroller * obj = (QScroller *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QScroller * obj = (QScroller *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

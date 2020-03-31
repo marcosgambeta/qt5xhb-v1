@@ -87,7 +87,7 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
 
 void QDockWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDockWidget * obj = (QDockWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDockWidget * obj = (QDockWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

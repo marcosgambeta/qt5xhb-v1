@@ -48,7 +48,7 @@ void QGraphicsTextItemSlots::linkHovered( const QString & link )
 
 void QGraphicsTextItemSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsTextItem * obj = (QGraphicsTextItem *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsTextItem * obj = (QGraphicsTextItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

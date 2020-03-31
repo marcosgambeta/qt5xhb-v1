@@ -78,7 +78,7 @@ void QTabWidgetSlots::tabBarDoubleClicked( int index )
 
 void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTabWidget * obj = (QTabWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

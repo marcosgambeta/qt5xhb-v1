@@ -54,7 +54,7 @@ QTimeEdit ( QWidget * parent = 0 )
 void QTimeEdit_new1()
 {
   QTimeEdit * o = new QTimeEdit( OPQWIDGET(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -63,7 +63,7 @@ QTimeEdit ( const QTime & time, QWidget * parent = 0 )
 void QTimeEdit_new2()
 {
   QTimeEdit * o = new QTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QTimeEdit ( QWidget * parent = 0 )
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QTIMEEDIT_NEW )
 
 HB_FUNC_STATIC( QTIMEEDIT_DELETE )
 {
-  QTimeEdit * obj = (QTimeEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTimeEdit * obj = (QTimeEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

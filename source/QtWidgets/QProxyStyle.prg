@@ -82,7 +82,7 @@ QProxyStyle(QStyle *style = 0)
 void QProxyStyle_new1()
 {
   QProxyStyle * o = new QProxyStyle( OPQSTYLE(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -91,7 +91,7 @@ QProxyStyle(const QString &key)
 void QProxyStyle_new2()
 {
   QProxyStyle * o = new QProxyStyle( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QProxyStyle(QStyle *style = 0)
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_NEW )
 
 HB_FUNC_STATIC( QPROXYSTYLE_DELETE )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ QStyle *baseStyle() const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_BASESTYLE )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_BASESTYLE )
     {
 #endif
       QStyle * ptr = obj->baseStyle();
-      _qt5xhb_createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ void setBaseStyle(QStyle *style)
 */
 HB_FUNC_STATIC( QPROXYSTYLE_SETBASESTYLE )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ void drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainte
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWPRIMITIVE )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ void drawControl(ControlElement element, const QStyleOption *option, QPainter *p
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWCONTROL )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -240,7 +240,7 @@ void drawComplexControl(ComplexControl control, const QStyleOptionComplex *optio
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWCOMPLEXCONTROL )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ void drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalett
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMTEXT )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -292,7 +292,7 @@ virtual void drawItemPixmap(QPainter *painter, const QRect &rect, int alignment,
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMPIXMAP )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -318,7 +318,7 @@ QSize sizeFromContents(ContentsType type, const QStyleOption *option, const QSiz
 */
 HB_FUNC_STATIC( QPROXYSTYLE_SIZEFROMCONTENTS )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SIZEFROMCONTENTS )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeFromContents( (QStyle::ContentsType) hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), PQWIDGET(4) ) );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ QRect subElementRect(SubElement element, const QStyleOption *option, const QWidg
 */
 HB_FUNC_STATIC( QPROXYSTYLE_SUBELEMENTRECT )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBELEMENTRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->subElementRect( (QStyle::SubElement) hb_parni(1), PQSTYLEOPTION(2), PQWIDGET(3) ) );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,7 +368,7 @@ QRect subControlRect(ComplexControl cc, const QStyleOptionComplex *opt, SubContr
 */
 HB_FUNC_STATIC( QPROXYSTYLE_SUBCONTROLRECT )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBCONTROLRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->subControlRect( (QStyle::ComplexControl) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), (QStyle::SubControl) hb_parni(3), PQWIDGET(4) ) );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,7 +393,7 @@ QRect itemTextRect(const QFontMetrics &fm, const QRect &r, int flags, bool enabl
 */
 HB_FUNC_STATIC( QPROXYSTYLE_ITEMTEXTRECT )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMTEXTRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->itemTextRect( *PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5) ) );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ QRect itemPixmapRect(const QRect &r, int flags, const QPixmap &pixmap) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_ITEMPIXMAPRECT )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMPIXMAPRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->itemPixmapRect( *PQRECT(1), PINT(2), *PQPIXMAP(3) ) );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,7 +443,7 @@ SubControl hitTestComplexControl(ComplexControl control, const QStyleOptionCompl
 */
 HB_FUNC_STATIC( QPROXYSTYLE_HITTESTCOMPLEXCONTROL )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -467,7 +467,7 @@ int styleHint(StyleHint hint, const QStyleOption *option = 0, const QWidget *wid
 */
 HB_FUNC_STATIC( QPROXYSTYLE_STYLEHINT )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STYLEHINT )
     if( ISBETWEEN(1,4) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) && (ISQSTYLEHINTRETURN(4)||ISNIL(4)) )
     {
 #endif
-      RINT( obj->styleHint( (QStyle::StyleHint) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt5xhb_itemGetPtr(2), OPQWIDGET(3,0), ISNIL(4)? 0 : (QStyleHintReturn *) _qt5xhb_itemGetPtr(4) ) );
+      RINT( obj->styleHint( (QStyle::StyleHint) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) Qt5xHb::itemGetPtr(2), OPQWIDGET(3,0), ISNIL(4)? 0 : (QStyleHintReturn *) Qt5xHb::itemGetPtr(4) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ int pixelMetric(PixelMetric metric, const QStyleOption *option = 0, const QWidge
 */
 HB_FUNC_STATIC( QPROXYSTYLE_PIXELMETRIC )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_PIXELMETRIC )
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      RINT( obj->pixelMetric( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt5xhb_itemGetPtr(2), OPQWIDGET(3,0) ) );
+      RINT( obj->pixelMetric( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) Qt5xHb::itemGetPtr(2), OPQWIDGET(3,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType co
 */
 HB_FUNC_STATIC( QPROXYSTYLE_LAYOUTSPACING )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_LAYOUTSPACING )
     if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISQSTYLEOPTION(4)||ISNIL(4)) && (ISQWIDGET(5)||ISNIL(5)) )
     {
 #endif
-      RINT( obj->layoutSpacing( (QSizePolicy::ControlType) hb_parni(1), (QSizePolicy::ControlType) hb_parni(2), (Qt::Orientation) hb_parni(3), ISNIL(4)? 0 : (QStyleOption *) _qt5xhb_itemGetPtr(4), OPQWIDGET(5,0) ) );
+      RINT( obj->layoutSpacing( (QSizePolicy::ControlType) hb_parni(1), (QSizePolicy::ControlType) hb_parni(2), (Qt::Orientation) hb_parni(3), ISNIL(4)? 0 : (QStyleOption *) Qt5xHb::itemGetPtr(4), OPQWIDGET(5,0) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,7 +539,7 @@ QIcon standardIcon(StandardPixmap standardIcon, const QStyleOption *option = 0, 
 */
 HB_FUNC_STATIC( QPROXYSTYLE_STANDARDICON )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -547,8 +547,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDICON )
     if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->standardIcon( (QStyle::StandardPixmap) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) _qt5xhb_itemGetPtr(2), OPQWIDGET(3,0) ) );
-      _qt5xhb_createReturnClass( ptr, "QICON", true );
+      QIcon * ptr = new QIcon( obj->standardIcon( (QStyle::StandardPixmap) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) Qt5xHb::itemGetPtr(2), OPQWIDGET(3,0) ) );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,7 +564,7 @@ QPixmap standardPixmap(StandardPixmap standardPixmap, const QStyleOption *opt, c
 */
 HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPIXMAP )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->standardPixmap( (QStyle::StandardPixmap) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3,0) ) );
-      _qt5xhb_createReturnClass( ptr, "QPIXMAP", true );
+      Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const Q
 */
 HB_FUNC_STATIC( QPROXYSTYLE_GENERATEDICONPIXMAP )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_GENERATEDICONPIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->generatedIconPixmap( (QIcon::Mode) hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3) ) );
-      _qt5xhb_createReturnClass( ptr, "QPIXMAP", true );
+      Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -614,7 +614,7 @@ QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPALETTE )
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPALETTE )
     {
 #endif
       QPalette * ptr = new QPalette( obj->standardPalette() );
-      _qt5xhb_createReturnClass( ptr, "QPALETTE", true );
+      Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,7 +639,7 @@ void polish(QWidget *widget)
 */
 void QProxyStyle_polish1()
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -654,7 +654,7 @@ void polish(QPalette &pal)
 */
 void QProxyStyle_polish2()
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -669,7 +669,7 @@ void polish(QApplication *app)
 */
 void QProxyStyle_polish3()
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -708,7 +708,7 @@ void unpolish(QWidget *widget)
 */
 void QProxyStyle_unpolish1()
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -723,7 +723,7 @@ void unpolish(QApplication *app)
 */
 void QProxyStyle_unpolish2()
 {
-  QProxyStyle * obj = (QProxyStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProxyStyle * obj = (QProxyStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

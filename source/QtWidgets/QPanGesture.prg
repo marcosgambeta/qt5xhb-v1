@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QPANGESTURE_DELETE )
 {
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPanGesture * obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,7 +75,7 @@ qreal acceleration() const
 */
 HB_FUNC_STATIC( QPANGESTURE_ACCELERATION )
 {
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPanGesture * obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QPointF delta() const
 */
 HB_FUNC_STATIC( QPANGESTURE_DELTA )
 {
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPanGesture * obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPANGESTURE_DELTA )
     {
 #endif
       QPointF * ptr = new QPointF( obj->delta() );
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ QPointF lastOffset() const
 */
 HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
 {
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPanGesture * obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPANGESTURE_LASTOFFSET )
     {
 #endif
       QPointF * ptr = new QPointF( obj->lastOffset() );
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ QPointF offset() const
 */
 HB_FUNC_STATIC( QPANGESTURE_OFFSET )
 {
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPanGesture * obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPANGESTURE_OFFSET )
     {
 #endif
       QPointF * ptr = new QPointF( obj->offset() );
-      _qt5xhb_createReturnClass( ptr, "QPOINTF", true );
+      Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ void setAcceleration(qreal value)
 */
 HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
 {
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPanGesture * obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -200,7 +200,7 @@ void setLastOffset(const QPointF & value)
 */
 HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
 {
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPanGesture * obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void setOffset(const QPointF & value)
 */
 HB_FUNC_STATIC( QPANGESTURE_SETOFFSET )
 {
-  QPanGesture * obj = (QPanGesture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPanGesture * obj = (QPanGesture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -74,7 +74,7 @@ void QCalendarWidgetSlots::selectionChanged()
 
 void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCalendarWidget * obj = (QCalendarWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCalendarWidget * obj = (QCalendarWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

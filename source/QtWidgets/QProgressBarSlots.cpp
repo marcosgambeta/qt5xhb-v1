@@ -35,7 +35,7 @@ void QProgressBarSlots::valueChanged( int value )
 
 void QProgressBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProgressBar * obj = (QProgressBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

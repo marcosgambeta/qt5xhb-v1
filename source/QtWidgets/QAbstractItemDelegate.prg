@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & 
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
     {
 #endif
       QWidget * ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,7 +113,7 @@ virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QSt
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, co
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,7 +163,7 @@ virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const 
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex 
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ virtual bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QSt
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ virtual void destroyEditor(QWidget *editor, const QModelIndex &index) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ virtual QVector<int> paintingRoles() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINTINGROLES )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

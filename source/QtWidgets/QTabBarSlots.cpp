@@ -63,7 +63,7 @@ void QTabBarSlots::tabMoved( int from, int to )
 
 void QTabBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTabBar * obj = (QTabBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTabBar * obj = (QTabBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

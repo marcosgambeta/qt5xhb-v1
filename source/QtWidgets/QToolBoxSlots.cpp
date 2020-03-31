@@ -35,7 +35,7 @@ void QToolBoxSlots::currentChanged( int index )
 
 void QToolBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolBox * obj = (QToolBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QToolBox * obj = (QToolBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

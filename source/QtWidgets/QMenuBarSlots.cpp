@@ -48,7 +48,7 @@ void QMenuBarSlots::triggered( QAction * action )
 
 void QMenuBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMenuBar * obj = (QMenuBar *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

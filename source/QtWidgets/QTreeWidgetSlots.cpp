@@ -164,7 +164,7 @@ void QTreeWidgetSlots::itemSelectionChanged()
 
 void QTreeWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTreeWidget * obj = (QTreeWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTreeWidget * obj = (QTreeWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

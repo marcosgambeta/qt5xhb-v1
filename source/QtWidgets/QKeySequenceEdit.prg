@@ -66,7 +66,7 @@ void QKeySequenceEdit_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QKeySequenceEdit * o = new QKeySequenceEdit( OPQWIDGET(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 #endif
 }
 
@@ -77,7 +77,7 @@ void QKeySequenceEdit_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QKeySequenceEdit * o = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 #endif
 }
 
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  QKeySequenceEdit * obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ QKeySequence keySequence() const
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  QKeySequenceEdit * obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
     {
 #endif
       QKeySequence * ptr = new QKeySequence( obj->keySequence() );
-      _qt5xhb_createReturnClass( ptr, "QKEYSEQUENCE", true );
+      Qt5xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ void setKeySequence(const QKeySequence &keySequence)
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  QKeySequenceEdit * obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ void clear()
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = (QKeySequenceEdit *) _qt5xhb_itemGetPtrStackSelfItem();
+  QKeySequenceEdit * obj = (QKeySequenceEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

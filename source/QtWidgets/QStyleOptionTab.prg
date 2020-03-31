@@ -77,7 +77,7 @@ QStyleOptionTab()
 void QStyleOptionTab_new1()
 {
   QStyleOptionTab * o = new QStyleOptionTab();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -86,7 +86,7 @@ QStyleOptionTab(const QStyleOptionTab &other)
 void QStyleOptionTab_new2()
 {
   QStyleOptionTab * o = new QStyleOptionTab( *PQSTYLEOPTIONTAB(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -118,7 +118,7 @@ QTabBar::Shape shape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SHAPE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SHAPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSHAPE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -156,7 +156,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_TEXT )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETTEXT )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,14 +194,14 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICON )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->icon );
-      _qt5xhb_createReturnClass( ptr, "QICON", true );
+      Qt5xHb::createReturnClass( ptr, "QICON", true );
     }
     else
     {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICON )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETICON )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -233,7 +233,7 @@ int row
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_ROW )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ROW )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETROW )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,7 +271,7 @@ TabPosition position
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_POSITION )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_POSITION )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETPOSITION )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -309,7 +309,7 @@ SelectedPosition selectedPosition
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SELECTEDPOSITION )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_SELECTEDPOSITION )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETSELECTEDPOSITION )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -347,7 +347,7 @@ CornerWidgets cornerWidgets
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_CORNERWIDGETS )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_CORNERWIDGETS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETCORNERWIDGETS )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -385,14 +385,14 @@ QSize iconSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICONSIZE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->iconSize );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_ICONSIZE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETICONSIZE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ bool documentMode
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_DOCUMENTMODE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_DOCUMENTMODE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETDOCUMENTMODE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -462,14 +462,14 @@ QSize leftButtonSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_LEFTBUTTONSIZE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->leftButtonSize );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_LEFTBUTTONSIZE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETLEFTBUTTONSIZE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -501,14 +501,14 @@ QSize rightButtonSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_RIGHTBUTTONSIZE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->rightButtonSize );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
     }
     else
     {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_RIGHTBUTTONSIZE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETRIGHTBUTTONSIZE )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -540,7 +540,7 @@ TabFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_FEATURES )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTAB_FEATURES )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_SETFEATURES )
 {
-  QStyleOptionTab * obj = (QStyleOptionTab *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionTab * obj = (QStyleOptionTab *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

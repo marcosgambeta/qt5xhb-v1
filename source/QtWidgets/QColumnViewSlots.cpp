@@ -35,7 +35,7 @@ void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 
 void QColumnViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QColumnView * obj = (QColumnView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QColumnView * obj = (QColumnView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     QMdiSubWindow * o = new QMdiSubWindow( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 
 HB_FUNC_STATIC( QMDISUBWINDOW_DELETE )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ bool isShaded () const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ int keyboardPageStep () const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ int keyboardSingleStep () const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ QMdiArea * mdiArea () const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
     {
 #endif
       QMdiArea * ptr = obj->mdiArea();
-      _qt5xhb_createReturnQWidgetClass( ptr, "QMDIAREA" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMDIAREA" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ void setKeyboardPageStep ( int step )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ void setKeyboardSingleStep ( int step )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -263,7 +263,7 @@ void setOption ( SubWindowOption option, bool on = true )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -289,7 +289,7 @@ void setSystemMenu ( QMenu * systemMenu )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -315,7 +315,7 @@ void setWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -341,7 +341,7 @@ QMenu * systemMenu () const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
     {
 #endif
       QMenu * ptr = obj->systemMenu();
-      _qt5xhb_createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ bool testOption ( SubWindowOption option ) const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -390,7 +390,7 @@ QWidget * widget () const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget();
-      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -415,7 +415,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,7 +440,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -465,7 +465,7 @@ void showShaded ()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -491,7 +491,7 @@ void showSystemMenu ()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = (QMdiSubWindow *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

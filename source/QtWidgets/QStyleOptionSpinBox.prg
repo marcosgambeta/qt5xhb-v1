@@ -57,7 +57,7 @@ QStyleOptionSpinBox()
 void QStyleOptionSpinBox_new1()
 {
   QStyleOptionSpinBox * o = new QStyleOptionSpinBox();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -66,7 +66,7 @@ QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
 void QStyleOptionSpinBox_new2()
 {
   QStyleOptionSpinBox * o = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -98,7 +98,7 @@ QAbstractSpinBox::ButtonSymbols buttonSymbols
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ QAbstractSpinBox::StepEnabled stepEnabled
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -174,7 +174,7 @@ bool frame
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETFRAME )
 {
-  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = (QStyleOptionSpinBox *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

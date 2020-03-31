@@ -107,7 +107,7 @@ void QTextEditSlots::undoAvailable( bool available )
 
 void QTextEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTextEdit * obj = (QTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QTextEdit * obj = (QTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

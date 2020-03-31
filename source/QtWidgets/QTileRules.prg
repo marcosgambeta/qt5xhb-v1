@@ -61,7 +61,7 @@ QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
 void QTileRules_new1()
 {
   QTileRules * o = new QTileRules( (Qt::TileRule) hb_parni(1), (Qt::TileRule) hb_parni(2) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -70,7 +70,7 @@ QTileRules(Qt::TileRule rule = Qt::StretchTile)
 void QTileRules_new2()
 {
   QTileRules * o = new QTileRules( ISNIL(1)? (Qt::TileRule) Qt::StretchTile : (Qt::TileRule) hb_parni(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QTILERULES_NEW )
 
 HB_FUNC_STATIC( QTILERULES_DELETE )
 {
-  QTileRules * obj = (QTileRules *) _qt5xhb_itemGetPtrStackSelfItem();
+  QTileRules * obj = (QTileRules *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

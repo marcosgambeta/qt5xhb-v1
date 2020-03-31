@@ -57,7 +57,7 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 
 void QListViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QListView * obj = (QListView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QListView * obj = (QListView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

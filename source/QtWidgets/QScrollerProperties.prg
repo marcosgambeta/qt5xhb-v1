@@ -66,7 +66,7 @@ QScrollerProperties()
 void QScrollerProperties_new1()
 {
   QScrollerProperties * o = new QScrollerProperties();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QScrollerProperties(const QScrollerProperties & sp)
 void QScrollerProperties_new2()
 {
   QScrollerProperties * o = new QScrollerProperties( *PQSCROLLERPROPERTIES(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QScrollerProperties()
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_DELETE )
 {
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScrollerProperties * obj = (QScrollerProperties *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ QVariant scrollMetric(ScrollMetric metric) const
 */
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
 {
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScrollerProperties * obj = (QScrollerProperties *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
     {
 #endif
       QVariant * ptr = new QVariant( obj->scrollMetric( (QScrollerProperties::ScrollMetric) hb_parni(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ void setScrollMetric(ScrollMetric metric, const QVariant & value)
 */
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSCROLLMETRIC )
 {
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScrollerProperties * obj = (QScrollerProperties *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ void setDefaultScrollerProperties(const QScrollerProperties & sp)
 */
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES )
 {
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScrollerProperties * obj = (QScrollerProperties *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ void unsetDefaultScrollerProperties()
 */
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_UNSETDEFAULTSCROLLERPROPERTIES )
 {
-  QScrollerProperties * obj = (QScrollerProperties *) _qt5xhb_itemGetPtrStackSelfItem();
+  QScrollerProperties * obj = (QScrollerProperties *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

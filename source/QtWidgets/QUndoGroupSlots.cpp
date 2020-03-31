@@ -113,7 +113,7 @@ void QUndoGroupSlots::undoTextChanged( const QString & undoText )
 
 void QUndoGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QUndoGroup * obj = (QUndoGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QUndoGroup * obj = (QUndoGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

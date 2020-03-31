@@ -59,7 +59,7 @@ QStylePainter()
 void QStylePainter_new1()
 {
   QStylePainter * o = new QStylePainter();
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -68,7 +68,7 @@ explicit QStylePainter(QWidget *w)
 void QStylePainter_new2()
 {
   QStylePainter * o = new QStylePainter( PQWIDGET(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -77,7 +77,7 @@ QStylePainter(QPaintDevice *pd, QWidget *w)
 void QStylePainter_new3()
 {
   QStylePainter * o = new QStylePainter( PQPAINTDEVICE(1), PQWIDGET(2) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QStylePainter()
@@ -109,7 +109,7 @@ bool begin(QWidget *w)
 */
 void QStylePainter_begin1()
 {
-  QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ bool begin(QPaintDevice *pd, QWidget *w)
 */
 void QStylePainter_begin2()
 {
-  QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ void drawPrimitive(QStyle::PrimitiveElement pe, const QStyleOption &opt)
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWPRIMITIVE )
 {
-  QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ void drawControl(QStyle::ControlElement ce, const QStyleOption &opt)
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCONTROL )
 {
-  QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ void drawComplexControl(QStyle::ComplexControl cc, const QStyleOptionComplex &op
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWCOMPLEXCONTROL )
 {
-  QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ void drawItemText(const QRect &r, int flags, const QPalette &pal, bool enabled, 
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
 {
-  QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ void drawItemPixmap(const QRect &r, int flags, const QPixmap &pixmap)
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMPIXMAP )
 {
-  QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -284,7 +284,7 @@ QStyle *style() const
 */
 HB_FUNC_STATIC( QSTYLEPAINTER_STYLE )
 {
-  QStylePainter * obj = (QStylePainter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_STYLE )
     {
 #endif
       QStyle * ptr = obj->style();
-      _qt5xhb_createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

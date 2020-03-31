@@ -167,7 +167,7 @@ void QFileDialogSlots::directoryUrlEntered( const QUrl & directory )
 
 void QFileDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileDialog * obj = (QFileDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFileDialog * obj = (QFileDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

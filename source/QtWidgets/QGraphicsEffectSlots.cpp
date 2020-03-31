@@ -35,7 +35,7 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
 
 void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

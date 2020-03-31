@@ -121,7 +121,7 @@ void QGraphicsObjectSlots::zChanged()
 
 void QGraphicsObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsObject * obj = (QGraphicsObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsObject * obj = (QGraphicsObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -63,7 +63,7 @@ QStyleOptionToolBar()
 void QStyleOptionToolBar_new1()
 {
   QStyleOptionToolBar * o = new QStyleOptionToolBar();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -72,7 +72,7 @@ QStyleOptionToolBar(const QStyleOptionToolBar &other)
 void QStyleOptionToolBar_new2()
 {
   QStyleOptionToolBar * o = new QStyleOptionToolBar( *PQSTYLEOPTIONTOOLBAR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -104,7 +104,7 @@ ToolBarPosition positionOfLine
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_POSITIONOFLINE )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_POSITIONOFLINE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETPOSITIONOFLINE )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ ToolBarPosition positionWithinLine
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_POSITIONWITHINLINE )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_POSITIONWITHINLINE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETPOSITIONWITHINLINE )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ Qt::ToolBarArea toolBarArea
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_TOOLBARAREA )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_TOOLBARAREA )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETTOOLBARAREA )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -218,7 +218,7 @@ ToolBarFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_FEATURES )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_FEATURES )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETFEATURES )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ int lineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_LINEWIDTH )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_LINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETLINEWIDTH )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -294,7 +294,7 @@ int midLineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_MIDLINEWIDTH )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_MIDLINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_SETMIDLINEWIDTH )
 {
-  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStyleOptionToolBar * obj = (QStyleOptionToolBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

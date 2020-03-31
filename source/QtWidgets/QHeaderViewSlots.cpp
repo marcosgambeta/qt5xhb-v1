@@ -177,7 +177,7 @@ void QHeaderViewSlots::sortIndicatorChanged( int logicalIndex, Qt::SortOrder ord
 
 void QHeaderViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHeaderView * obj = (QHeaderView *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QHeaderView * obj = (QHeaderView *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

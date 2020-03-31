@@ -70,7 +70,7 @@ void QMenuSlots::triggered( QAction * action )
 
 void QMenuSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMenu * obj = (QMenu *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMenu * obj = (QMenu *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

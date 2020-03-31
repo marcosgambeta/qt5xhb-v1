@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
   if( ISNUMPAR(0) )
   {
     QCommonStyle * o = new QCommonStyle();
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 
 HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
 {
-  QCommonStyle * obj = (QCommonStyle *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCommonStyle * obj = (QCommonStyle *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

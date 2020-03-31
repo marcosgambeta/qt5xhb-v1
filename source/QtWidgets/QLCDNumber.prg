@@ -74,7 +74,7 @@ QLCDNumber ( QWidget * parent = 0 )
 void QLCDNumber_new1()
 {
   QLCDNumber * o = new QLCDNumber( OPQWIDGET(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -83,7 +83,7 @@ QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 void QLCDNumber_new2()
 {
   QLCDNumber * o = new QLCDNumber( PUINT(1), OPQWIDGET(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QLCDNumber ( QWidget * parent = 0 )
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
 
 HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ bool checkOverflow ( double num ) const
 */
 void QLCDNumber_checkOverflow1()
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ bool checkOverflow ( int num ) const
 */
 void QLCDNumber_checkOverflow2()
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -189,7 +189,7 @@ int digitCount () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,7 +213,7 @@ int intValue () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ Mode mode () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_MODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -261,7 +261,7 @@ SegmentStyle segmentStyle () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -285,7 +285,7 @@ void setDigitCount ( int numDigits )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -311,7 +311,7 @@ void setMode ( Mode )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -337,7 +337,7 @@ void setSegmentStyle ( SegmentStyle )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -363,7 +363,7 @@ bool smallDecimalPoint () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -387,7 +387,7 @@ double value () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,7 +436,7 @@ void display ( const QString & s )
 */
 void QLCDNumber_display1()
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -451,7 +451,7 @@ void display ( double num )
 */
 void QLCDNumber_display2()
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -466,7 +466,7 @@ void display ( int num )
 */
 void QLCDNumber_display3()
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -527,7 +527,7 @@ void setBinMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -553,7 +553,7 @@ void setDecMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -579,7 +579,7 @@ void setHexMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -605,7 +605,7 @@ void setOctMode ()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -631,7 +631,7 @@ void setSmallDecimalPoint ( bool )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
 {
-  QLCDNumber * obj = (QLCDNumber *) _qt5xhb_itemGetPtrStackSelfItem();
+  QLCDNumber * obj = (QLCDNumber *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

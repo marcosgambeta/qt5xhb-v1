@@ -100,7 +100,7 @@ void QButtonGroupSlots::buttonReleased( int id )
 
 void QButtonGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QButtonGroup * obj = (QButtonGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QButtonGroup * obj = (QButtonGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

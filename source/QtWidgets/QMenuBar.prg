@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QMenuBar * o = new QMenuBar( OPQWIDGET(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
 
 HB_FUNC_STATIC( QMENUBAR_DELETE )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -121,7 +121,7 @@ QAction * activeAction () const
 */
 HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
     {
 #endif
       QAction * ptr = obj->activeAction();
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,12 +146,12 @@ QAction * addAction ( const QString & text )
 */
 void QMenuBar_addAction1()
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QAction * ptr = obj->addAction( PQSTRING(1) );
-    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
@@ -160,12 +160,12 @@ QAction * addAction ( const QString & text, const QObject * receiver, const char
 */
 void QMenuBar_addAction2()
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QAction * ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
@@ -174,7 +174,7 @@ void addAction ( QAction * action )
 */
 void QMenuBar_addAction3()
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,12 +213,12 @@ QAction * addMenu ( QMenu * menu )
 */
 void QMenuBar_addMenu1()
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QAction * ptr = obj->addMenu( PQMENU(1) );
-    _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
@@ -227,12 +227,12 @@ QMenu * addMenu ( const QString & title )
 */
 void QMenuBar_addMenu2()
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QMenu * ptr = obj->addMenu( PQSTRING(1) );
-    _qt5xhb_createReturnQWidgetClass( ptr, "QMENU" );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
   }
 }
 
@@ -241,12 +241,12 @@ QMenu * addMenu ( const QIcon & icon, const QString & title )
 */
 void QMenuBar_addMenu3()
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QMenu * ptr = obj->addMenu( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-    _qt5xhb_createReturnQWidgetClass( ptr, "QMENU" );
+    QMenu * ptr = obj->addMenu( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+    Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
   }
 }
 
@@ -279,7 +279,7 @@ QAction * addSeparator ()
 */
 HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
     {
 #endif
       QAction * ptr = obj->addSeparator();
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ void clear ()
 */
 HB_FUNC_STATIC( QMENUBAR_CLEAR )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ QAction * insertMenu ( QAction * before, QMenu * menu )
 */
 HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
     {
 #endif
       QAction * ptr = obj->insertMenu( PQACTION(1), PQMENU(2) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ QAction * insertSeparator ( QAction * before )
 */
 HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
     {
 #endif
       QAction * ptr = obj->insertSeparator( PQACTION(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,7 +380,7 @@ bool isDefaultUp () const
 */
 HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -404,7 +404,7 @@ void setDefaultUp ( bool )
 */
 HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -430,7 +430,7 @@ bool isNativeMenuBar () const
 */
 HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -454,7 +454,7 @@ void setNativeMenuBar ( bool nativeMenuBar )
 */
 HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -480,7 +480,7 @@ void setActiveAction ( QAction * act )
 */
 HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -506,7 +506,7 @@ int heightForWidth ( int ) const
 */
 HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -530,7 +530,7 @@ QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -555,7 +555,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -580,7 +580,7 @@ virtual void setVisible ( bool visible )
 */
 HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -606,7 +606,7 @@ QRect actionGeometry(QAction *) const
 */
 HB_FUNC_STATIC( QMENUBAR_ACTIONGEOMETRY )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONGEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->actionGeometry( PQACTION(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -631,7 +631,7 @@ QAction *actionAt(const QPoint &) const
 */
 HB_FUNC_STATIC( QMENUBAR_ACTIONAT )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONAT )
     {
 #endif
       QAction * ptr = obj->actionAt( *PQPOINT(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -656,7 +656,7 @@ QWidget *cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const
 */
 HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
     {
 #endif
       QWidget * ptr = obj->cornerWidget( ISNIL(1)? (Qt::Corner) Qt::TopRightCorner : (Qt::Corner) hb_parni(1) );
-      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -681,7 +681,7 @@ void setCornerWidget(QWidget *w, Qt::Corner corner = Qt::TopRightCorner)
 */
 HB_FUNC_STATIC( QMENUBAR_SETCORNERWIDGET )
 {
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -708,7 +708,7 @@ void setDefaultAction ( QAction * act )
 HB_FUNC_STATIC( QMENUBAR_SETDEFAULTACTION )
 {
 #ifdef Q_OS_WINCE
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -736,7 +736,7 @@ QAction * defaultAction () const
 HB_FUNC_STATIC( QMENUBAR_DEFAULTACTION )
 {
 #ifdef Q_OS_WINCE
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QMENUBAR_DEFAULTACTION )
     {
 #endif
       QAction * ptr = obj->defaultAction();
-      _qt5xhb_createReturnQObjectClass( ptr, "QACTION" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QMENUBAR_TONSMENU )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifdef Q_OS_OSX
-  QMenuBar * obj = (QMenuBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMenuBar * obj = (QMenuBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ QRectF boundingRect () const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ virtual QRectF boundingRectFor ( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ bool isEnabled () const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ void setEnabled ( bool enable )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -179,7 +179,7 @@ void update ()
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = (QGraphicsEffect *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

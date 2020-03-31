@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_NEW )
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QProgressBar * o = new QProgressBar( OPQWIDGET(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_NEW )
 
 HB_FUNC_STATIC( QPROGRESSBAR_DELETE )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -114,7 +114,7 @@ Qt::Alignment alignment () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ QString format () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ bool invertedAppearance ()
 */
 HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ bool isTextVisible () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ int maximum () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ int minimum () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -258,7 +258,7 @@ Qt::Orientation orientation () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ void setAlignment ( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETALIGNMENT )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -308,7 +308,7 @@ void setFormat ( const QString & format )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -334,7 +334,7 @@ void setInvertedAppearance ( bool invert )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -360,7 +360,7 @@ void setTextDirection ( QProgressBar::Direction textDirection )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTDIRECTION )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -386,7 +386,7 @@ void setTextVisible ( bool visible )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -412,7 +412,7 @@ virtual QString text () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -436,7 +436,7 @@ QProgressBar::Direction textDirection ()
 */
 HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -460,7 +460,7 @@ int value () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -484,7 +484,7 @@ virtual QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,7 +509,7 @@ virtual QSize sizeHint () const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -534,7 +534,7 @@ void reset ()
 */
 HB_FUNC_STATIC( QPROGRESSBAR_RESET )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -560,7 +560,7 @@ void setMaximum ( int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETMAXIMUM )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -586,7 +586,7 @@ void setMinimum ( int minimum )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETMINIMUM )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -612,7 +612,7 @@ void setOrientation ( Qt::Orientation )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETORIENTATION )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -638,7 +638,7 @@ void setRange ( int minimum, int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETRANGE )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -664,7 +664,7 @@ void setValue ( int value )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
 {
-  QProgressBar * obj = (QProgressBar *) _qt5xhb_itemGetPtrStackSelfItem();
+  QProgressBar * obj = (QProgressBar *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

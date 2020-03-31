@@ -81,7 +81,7 @@ void QGraphicsSceneSlots::selectionChanged()
 
 void QGraphicsSceneSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsScene * obj = (QGraphicsScene *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

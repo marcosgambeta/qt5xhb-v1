@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QTOOLTIP_DELETE )
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ QFont font()
 */
 HB_FUNC_STATIC( QTOOLTIP_FONT )
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QTOOLTIP_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      _qt5xhb_createReturnClass( ptr, "QFONT", true );
+      Qt5xHb::createReturnClass( ptr, "QFONT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,7 +111,7 @@ void hideText()
 */
 HB_FUNC_STATIC( QTOOLTIP_HIDETEXT )
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,7 +137,7 @@ bool isVisible()
 */
 HB_FUNC_STATIC( QTOOLTIP_ISVISIBLE )
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ QPalette palette()
 */
 HB_FUNC_STATIC( QTOOLTIP_PALETTE )
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTOOLTIP_PALETTE )
     {
 #endif
       QPalette * ptr = new QPalette( obj->palette() );
-      _qt5xhb_createReturnClass( ptr, "QPALETTE", true );
+      Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,7 +186,7 @@ void setFont(const QFont & font)
 */
 HB_FUNC_STATIC( QTOOLTIP_SETFONT )
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -212,7 +212,7 @@ void setPalette(const QPalette & palette)
 */
 HB_FUNC_STATIC( QTOOLTIP_SETPALETTE )
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ void showText(const QPoint & pos, const QString & text, QWidget * w, const QRect
 */
 void QToolTip_showText1()
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -253,7 +253,7 @@ void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
 */
 void QToolTip_showText2()
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ QString text()
 */
 HB_FUNC_STATIC( QTOOLTIP_TEXT )
 {
-  QToolTip * obj = (QToolTip *) _qt5xhb_itemGetPtrStackSelfItem();
+  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

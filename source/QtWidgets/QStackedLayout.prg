@@ -67,7 +67,7 @@ QStackedLayout ()
 void QStackedLayout_new1()
 {
   QStackedLayout * o = new QStackedLayout();
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -76,7 +76,7 @@ QStackedLayout ( QWidget * parent )
 void QStackedLayout_new2()
 {
   QStackedLayout * o = new QStackedLayout( PQWIDGET(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -85,7 +85,7 @@ QStackedLayout ( QLayout * parentLayout )
 void QStackedLayout_new3()
 {
   QStackedLayout * o = new QStackedLayout( PQLAYOUT(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QStackedLayout ()
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 
 HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ int addWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ int currentIndex () const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ QWidget * currentWidget () const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->currentWidget();
-      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ int insertWidget ( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -233,7 +233,7 @@ void setStackingMode ( StackingMode stackingMode )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -259,7 +259,7 @@ StackingMode stackingMode () const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -283,7 +283,7 @@ QWidget * widget ( int index ) const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget( PINT(1) );
-      _qt5xhb_createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ void setCurrentIndex ( int index )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -334,7 +334,7 @@ void setCurrentWidget ( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
 {
-  QStackedLayout * obj = (QStackedLayout *) _qt5xhb_itemGetPtrStackSelfItem();
+  QStackedLayout * obj = (QStackedLayout *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -48,7 +48,7 @@ void QActionGroupSlots::triggered( QAction * action )
 
 void QActionGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QActionGroup * obj = (QActionGroup *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

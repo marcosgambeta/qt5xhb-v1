@@ -35,7 +35,7 @@ void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
 
 void QMdiAreaSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMdiArea * obj = (QMdiArea *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMdiArea * obj = (QMdiArea *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

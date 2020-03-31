@@ -55,7 +55,7 @@ void QGraphicsRotationSlots::originChanged()
 
 void QGraphicsRotationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsRotation * obj = (QGraphicsRotation *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QGraphicsRotation * obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

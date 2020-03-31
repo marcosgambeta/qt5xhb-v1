@@ -135,7 +135,7 @@ void QPlainTextEditSlots::updateRequest( const QRect & rect, int dy )
 
 void QPlainTextEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPlainTextEdit * obj = (QPlainTextEdit *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPlainTextEdit * obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

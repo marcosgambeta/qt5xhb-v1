@@ -69,7 +69,7 @@ explicit QPushButton ( QWidget * parent = 0 )
 void QPushButton_new1()
 {
   QPushButton * o = new QPushButton( OPQWIDGET(1,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -78,7 +78,7 @@ explicit QPushButton ( const QString & text, QWidget * parent = 0 )
 void QPushButton_new2()
 {
   QPushButton * o = new QPushButton( PQSTRING(1), OPQWIDGET(2,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -86,8 +86,8 @@ QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new3()
 {
-  QPushButton * o = new QPushButton( ISOBJECT(1)? *(QIcon *) _qt5xhb_itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
-  _qt5xhb_returnNewObject( o, false );
+  QPushButton * o = new QPushButton( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -96,7 +96,7 @@ QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
 void QPushButton_new4()
 {
   QPushButton * o = new QPushButton( *PQPIXMAP(1), PQSTRING(2), OPQWIDGET(3,0) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]explicit QPushButton ( QWidget * parent = 0 )
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 
 HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ bool autoDefault () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ bool isDefault () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -200,7 +200,7 @@ bool isFlat () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,7 +225,7 @@ QMenu * menu () const
 HB_FUNC_STATIC( QPUSHBUTTON_MENU )
 {
 #ifndef QT_NO_MENU
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_MENU )
     {
 #endif
       QMenu * ptr = obj->menu();
-      _qt5xhb_createReturnQWidgetClass( ptr, "QMENU" );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,7 +251,7 @@ void setAutoDefault ( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ void setDefault ( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -303,7 +303,7 @@ void setFlat ( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ void setMenu ( QMenu * menu )
 HB_FUNC_STATIC( QPUSHBUTTON_SETMENU )
 {
 #ifndef QT_NO_MENU
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ void showMenu ()
 HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
 {
 #ifndef QT_NO_MENU
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -385,7 +385,7 @@ QSize minimumSizeHint () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_MINIMUMSIZEHINT )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,7 +410,7 @@ QSize sizeHint () const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SIZEHINT )
 {
-  QPushButton * obj = (QPushButton *) _qt5xhb_itemGetPtrStackSelfItem();
+  QPushButton * obj = (QPushButton *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

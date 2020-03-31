@@ -48,7 +48,7 @@ void QStackedWidgetSlots::widgetRemoved( int index )
 
 void QStackedWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStackedWidget * obj = (QStackedWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QStackedWidget * obj = (QStackedWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
