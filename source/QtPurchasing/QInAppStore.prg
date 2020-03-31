@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QINAPPSTORE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QInAppStore * o = new QInAppStore( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QINAPPSTORE_NEW )
 */
 HB_FUNC_STATIC( QINAPPSTORE_DELETE )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,7 +96,7 @@ Q_INVOKABLE void restorePurchases()
 */
 HB_FUNC_STATIC( QINAPPSTORE_RESTOREPURCHASES )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ Q_INVOKABLE void registerProduct(QInAppProduct::ProductType productType, const Q
 */
 HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ Q_INVOKABLE QInAppProduct *registeredProduct(const QString &identifier) const
 */
 HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
     {
 #endif
       QInAppProduct * ptr = obj->registeredProduct( PQSTRING(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QINAPPPRODUCT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QINAPPPRODUCT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,7 +173,7 @@ Q_INVOKABLE void setPlatformProperty(const QString &propertyName, const QString 
 */
 HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
 {
-  QInAppStore * obj = (QInAppStore *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -62,7 +62,7 @@ explicit QInAppProduct(const QString &price, const QString &title, const QString
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_DELETE )
 {
-  QInAppProduct * obj = (QInAppProduct *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ QString identifier() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
 {
-  QInAppProduct * obj = (QInAppProduct *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ ProductType productType() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
 {
-  QInAppProduct * obj = (QInAppProduct *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ QString price() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PRICE )
 {
-  QInAppProduct * obj = (QInAppProduct *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -156,7 +156,7 @@ QString title() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_TITLE )
 {
-  QInAppProduct * obj = (QInAppProduct *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_DESCRIPTION )
 {
-  QInAppProduct * obj = (QInAppProduct *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ Q_INVOKABLE virtual void purchase() = 0
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PURCHASE )
 {
-  QInAppProduct * obj = (QInAppProduct *) _qt5xhb_itemGetPtrStackSelfItem();
+  QInAppProduct * obj = (QInAppProduct *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

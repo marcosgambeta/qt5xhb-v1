@@ -63,7 +63,7 @@ void QInAppStoreSlots::transactionReady( QInAppTransaction * transaction )
 
 void QInAppStoreSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QInAppStore * obj = (QInAppStore *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QInAppStore * obj = (QInAppStore *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
