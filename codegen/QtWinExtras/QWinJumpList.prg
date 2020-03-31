@@ -52,7 +52,7 @@ $prototype=void addCategory(QWinJumpListCategory *category)
 $internalMethod=5,2,0|void|addCategory,addCategory1|QWinJumpListCategory *
 
 $prototype=QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
-$internalMethod=5,2,0|QWinJumpListCategory *|addCategory,addCategory2|const QString &,const QList<QWinJumpListItem *>=QList<QWinJumpListItem *>()
+%% TODO: $internalMethod=5,2,0|QWinJumpListCategory *|addCategory,addCategory2|const QString &,const QList<QWinJumpListItem *>=QList<QWinJumpListItem *>()
 
 //[1]void addCategory(QWinJumpListCategory *category)
 //[2]QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
@@ -63,10 +63,10 @@ HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
   {
     QWinJumpList_addCategory1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISOPTARRAY(2) )
-  {
-    QWinJumpList_addCategory2();
-  }
+%%  else if( ISNUMPAR(2) && ISCHAR(1) && ISOPTARRAY(2) )
+%%  {
+%%    QWinJumpList_addCategory2();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
