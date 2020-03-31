@@ -33,7 +33,7 @@ void QQmlEngineSlots::quit()
 
 void QQmlEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QQmlEngine * obj = (QQmlEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQmlEngine * obj = (QQmlEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

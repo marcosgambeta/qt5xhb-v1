@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_DELETE )
 {
-  QQmlNetworkAccessManagerFactory * obj = (QQmlNetworkAccessManagerFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlNetworkAccessManagerFactory * obj = (QQmlNetworkAccessManagerFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ virtual QNetworkAccessManager * create(QObject * parent) = 0
 */
 HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_CREATE )
 {
-  QQmlNetworkAccessManagerFactory * obj = (QQmlNetworkAccessManagerFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlNetworkAccessManagerFactory * obj = (QQmlNetworkAccessManagerFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QQMLNETWORKACCESSMANAGERFACTORY_CREATE )
     {
 #endif
       QNetworkAccessManager * ptr = obj->create( PQOBJECT(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

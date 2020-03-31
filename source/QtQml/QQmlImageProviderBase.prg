@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_DELETE )
 {
-  QQmlImageProviderBase * obj = (QQmlImageProviderBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlImageProviderBase * obj = (QQmlImageProviderBase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,7 +78,7 @@ virtual Flags flags() const = 0
 */
 HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_FLAGS )
 {
-  QQmlImageProviderBase * obj = (QQmlImageProviderBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlImageProviderBase * obj = (QQmlImageProviderBase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,7 +102,7 @@ virtual ImageType imageType() const = 0
 */
 HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_IMAGETYPE )
 {
-  QQmlImageProviderBase * obj = (QQmlImageProviderBase *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlImageProviderBase * obj = (QQmlImageProviderBase *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

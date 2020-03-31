@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEW )
   if( ISNUMPAR(0) )
   {
     QQmlIncubationController * o = new QQmlIncubationController();
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEW )
 
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_DELETE )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlIncubationController * obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlIncubationController * obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
     {
 #endif
       QQmlEngine * ptr = obj->engine();
-      _qt5xhb_createReturnQObjectClass( ptr, "QQMLENGINE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QQMLENGINE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,7 +125,7 @@ void incubateFor(int msecs)
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEFOR )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlIncubationController * obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ void incubateWhile(volatile bool * flag, int msecs = 0)
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlIncubationController * obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -179,7 +179,7 @@ int incubatingObjectCount() const
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATINGOBJECTCOUNT )
 {
-  QQmlIncubationController * obj = (QQmlIncubationController *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlIncubationController * obj = (QQmlIncubationController *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

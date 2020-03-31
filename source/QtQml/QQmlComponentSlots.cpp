@@ -48,7 +48,7 @@ void QQmlComponentSlots::statusChanged( QQmlComponent::Status status )
 
 void QQmlComponentSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QQmlComponent * obj = (QQmlComponent *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

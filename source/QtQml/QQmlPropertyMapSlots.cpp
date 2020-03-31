@@ -37,7 +37,7 @@ void QQmlPropertyMapSlots::valueChanged( const QString & key, const QVariant & v
 
 void QQmlPropertyMapSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QQmlPropertyMap * obj = (QQmlPropertyMap *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQmlPropertyMap * obj = (QQmlPropertyMap *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

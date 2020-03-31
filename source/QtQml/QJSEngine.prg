@@ -59,7 +59,7 @@ QJSEngine()
 void QJSEngine_new1()
 {
   QJSEngine * o = new QJSEngine();
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -68,7 +68,7 @@ QJSEngine(QObject * parent)
 void QJSEngine_new2()
 {
   QJSEngine * o = new QJSEngine( PQOBJECT(1) );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 //[1]QJSEngine()
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QJSENGINE_NEW )
 
 HB_FUNC_STATIC( QJSENGINE_DELETE )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ void collectGarbage()
 */
 HB_FUNC_STATIC( QJSENGINE_COLLECTGARBAGE )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ QJSValue evaluate(const QString & program, const QString & fileName = QString(),
 */
 HB_FUNC_STATIC( QJSENGINE_EVALUATE )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->evaluate( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
-      _qt5xhb_createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ QJSValue globalObject() const
 */
 HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->globalObject() );
-      _qt5xhb_createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ QJSValue newArray(uint length = 0)
 */
 HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->newArray( OPUINT(1,0) ) );
-      _qt5xhb_createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ QJSValue newObject()
 */
 HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->newObject() );
-      _qt5xhb_createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,7 +238,7 @@ QJSValue newQObject(QObject * object)
 */
 HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
 {
-  QJSEngine * obj = (QJSEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QJSEngine * obj = (QJSEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->newQObject( PQOBJECT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -33,7 +33,7 @@ void QQmlExpressionSlots::valueChanged()
 
 void QQmlExpressionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QQmlExpression * obj = (QQmlExpression *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQmlExpression * obj = (QQmlExpression *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

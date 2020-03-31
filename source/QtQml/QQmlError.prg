@@ -72,7 +72,7 @@ QQmlError()
 void QQmlError_new1()
 {
   QQmlError * o = new QQmlError();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QQmlError(const QQmlError & other)
 void QQmlError_new2()
 {
   QQmlError * o = new QQmlError( *PQQMLERROR(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QQmlError()
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QQMLERROR_NEW )
 
 HB_FUNC_STATIC( QQMLERROR_DELETE )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -125,7 +125,7 @@ int column() const
 */
 HB_FUNC_STATIC( QQMLERROR_COLUMN )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QQMLERROR_DESCRIPTION )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QQMLERROR_ISVALID )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ int line() const
 */
 HB_FUNC_STATIC( QQMLERROR_LINE )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -221,7 +221,7 @@ void setColumn(int column)
 */
 HB_FUNC_STATIC( QQMLERROR_SETCOLUMN )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ void setDescription(const QString & description)
 */
 HB_FUNC_STATIC( QQMLERROR_SETDESCRIPTION )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -273,7 +273,7 @@ void setLine(int line)
 */
 HB_FUNC_STATIC( QQMLERROR_SETLINE )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -299,7 +299,7 @@ void setUrl(const QUrl & url)
 */
 HB_FUNC_STATIC( QQMLERROR_SETURL )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -325,7 +325,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QQMLERROR_TOSTRING )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -349,7 +349,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QQMLERROR_URL )
 {
-  QQmlError * obj = (QQmlError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQmlError * obj = (QQmlError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QQMLERROR_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
