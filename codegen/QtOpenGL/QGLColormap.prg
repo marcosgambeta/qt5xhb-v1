@@ -38,11 +38,11 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGLColorMap_new1();
+    QGLColormap_new1();
   }
   else if( ISNUMPAR(1) && ISQGLCOLORMAP(1) )
   {
-    QGLColorMap_new2();
+    QGLColormap_new2();
   }
   else
   {
@@ -69,7 +69,7 @@ $method=|bool|isEmpty|
 
 $prototype=void setEntries ( int count, const QRgb * colors, int base = 0 )
 %% TODO: corrigir codigo
-$method=|void|setEntries|int,const QRgb *,int=0
+%% $method=|void|setEntries|int,const QRgb *,int=0
 
 $prototype=void setEntry ( int idx, QRgb color )
 $internalMethod=|void|setEntry,setEntry1|int,QRgb
@@ -84,11 +84,11 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    QGLColorMap_setEntry1();
+    QGLColormap_setEntry1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
   {
-    QGLColorMap_setEntry2();
+    QGLColormap_setEntry2();
   }
   else
   {

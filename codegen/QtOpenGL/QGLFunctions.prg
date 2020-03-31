@@ -99,18 +99,18 @@ $method=|GLuint|glCreateShader|GLenum
 
 $prototype=void glDeleteBuffers(GLsizei n, const GLuint * buffers)
 %% TODO: corrigir segundo parametro
-$method=|void|glDeleteBuffers|GLsizei,const GLuint *
+%% $method=|void|glDeleteBuffers|GLsizei,const GLuint *
 
 $prototype=void glDeleteFramebuffers(GLsizei n, const GLuint * framebuffers)
 %% TODO: corrigir segundo parametro
-$method=|void|glDeleteFramebuffers|GLsizei,const GLuint *
+%% $method=|void|glDeleteFramebuffers|GLsizei,const GLuint *
 
 $prototype=void glDeleteProgram(GLuint program)
 $method=|void|glDeleteProgram|GLuint
 
 $prototype=void glDeleteRenderbuffers(GLsizei n, const GLuint * renderbuffers)
 %% TODO: corrigir segundo parametro
-$method=|void|glDeleteRenderbuffers|GLsizei,const GLuint *
+%% $method=|void|glDeleteRenderbuffers|GLsizei,const GLuint *
 
 $prototype=void glDeleteShader(GLuint shader)
 $method=|void|glDeleteShader|GLuint
@@ -135,88 +135,88 @@ $method=|void|glFramebufferTexture2D|GLenum,GLenum,GLenum,GLuint,GLint
 
 $prototype=void glGenBuffers(GLsizei n, GLuint * buffers)
 %% TODO: corrigir segundo parametro
-$method=|void|glGenBuffers|GLsizei,GLuint *
+%% $method=|void|glGenBuffers|GLsizei,GLuint *
 
 $prototype=void glGenFramebuffers(GLsizei n, GLuint * framebuffers)
 %% TODO: corrigir segundo parametro
-$method=|void|glGenFramebuffers|GLsizei,GLuint *
+%% $method=|void|glGenFramebuffers|GLsizei,GLuint *
 
 $prototype=void glGenRenderbuffers(GLsizei n, GLuint * renderbuffers)
 %% TODO: corrigir segundo parametro
-$method=|void|glGenRenderbuffers|GLsizei,GLuint *
+%% $method=|void|glGenRenderbuffers|GLsizei,GLuint *
 
 $prototype=void glGenerateMipmap(GLenum target)
 $method=|void|glGenerateMipmap|GLenum
 
 $prototype=void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name)
 %% TODO: corrigir codigo
-$method=|void|glGetActiveAttrib|GLuint,GLuint,GLsizei,GLsizei *,GLint *,GLenum *,char *
+%% $method=|void|glGetActiveAttrib|GLuint,GLuint,GLsizei,GLsizei *,GLint *,GLenum *,char *
 
 $prototype=void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name)
 %% TODO: corrigir codigo
-$method=|void|glGetActiveUniform|GLuint,GLuint,GLsizei,GLsizei *,GLint *,GLenum *,char *
+%% $method=|void|glGetActiveUniform|GLuint,GLuint,GLsizei,GLsizei *,GLint *,GLenum *,char *
 
 $prototype=void glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei * count, GLuint * shaders)
 %% TODO: corrigir codigo
-$method=|void|glGetAttachedShaders|GLuint,GLsizei,GLsizei *,GLuint *
+%% $method=|void|glGetAttachedShaders|GLuint,GLsizei,GLsizei *,GLuint *
 
 $prototype=int glGetAttribLocation(GLuint program, const char * name)
 $method=|int|glGetAttribLocation|GLuint,const char *
 
 $prototype=void glGetBufferParameteriv(GLenum target, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
-$method=|void|glGetBufferParameteriv|GLenum,GLenum,GLint *
+%% $method=|void|glGetBufferParameteriv|GLenum,GLenum,GLint *
 
 $prototype=void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
-$method=|void|glGetFramebufferAttachmentParameteriv|GLenum,GLenum,GLenum,GLint *
+%% $method=|void|glGetFramebufferAttachmentParameteriv|GLenum,GLenum,GLenum,GLint *
 
 $prototype=void glGetProgramInfoLog(GLuint program, GLsizei bufsize, GLsizei * length, char * infolog)
 %% TODO: corrigir codigo
-$method=|void|glGetProgramInfoLog|GLuint,GLsizei,GLsizei *,char *
+%% $method=|void|glGetProgramInfoLog|GLuint,GLsizei,GLsizei *,char *
 
 $prototype=void glGetProgramiv(GLuint program, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
-$method=|void|glGetProgramiv|GLuint,GLenum,GLint *
+%% $method=|void|glGetProgramiv|GLuint,GLenum,GLint *
 
 $prototype=void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
-$method=|void|glGetRenderbufferParameteriv|GLenum,GLenum,GLint *
+%% $method=|void|glGetRenderbufferParameteriv|GLenum,GLenum,GLint *
 
 $prototype=void glGetShaderInfoLog(GLuint shader, GLsizei bufsize, GLsizei * length, char * infolog)
 %% TODO: corrigir codigo
-$method=|void|glGetShaderInfoLog|GLuint,GLsizei,GLsizei *,char *
+%% $method=|void|glGetShaderInfoLog|GLuint,GLsizei,GLsizei *,char *
 
 $prototype=void glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint * range, GLint * precision)
 %% TODO: corrigir codigo
-$method=|void|glGetShaderPrecisionFormat|GLenum,GLenum,GLint *,GLint *
+%% $method=|void|glGetShaderPrecisionFormat|GLenum,GLenum,GLint *,GLint *
 
 $prototype=void glGetShaderSource(GLuint shader, GLsizei bufsize, GLsizei * length, char * source)
 %% TODO: corrigir codigo
-$method=|void|glGetShaderSource|GLuint,GLsizei,GLsizei *,char *
+%% $method=|void|glGetShaderSource|GLuint,GLsizei,GLsizei *,char *
 
 $prototype=void glGetShaderiv(GLuint shader, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
-$method=|void|glGetShaderiv|GLuint,GLenum,GLint *
+%% $method=|void|glGetShaderiv|GLuint,GLenum,GLint *
 
 $prototype=int glGetUniformLocation(GLuint program, const char * name)
 $method=|int|glGetUniformLocation|GLuint,const char *
 
 $prototype=void glGetUniformfv(GLuint program, GLint location, GLfloat * params)
 %% TODO: corrigir codigo
-$method=|void|glGetUniformfv|GLuint,GLint,GLfloat *
+%% $method=|void|glGetUniformfv|GLuint,GLint,GLfloat *
 
 $prototype=void glGetUniformiv(GLuint program, GLint location, GLint * params)
 %% TODO: corrigir codigo
-$method=|void|glGetUniformiv|GLuint,GLint,GLint *
+%% $method=|void|glGetUniformiv|GLuint,GLint,GLint *
 
 $prototype=void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat * params)
 %% TODO: corrigir codigo
-$method=|void|glGetVertexAttribfv|GLuint,GLenum,GLfloat *
+%% $method=|void|glGetVertexAttribfv|GLuint,GLenum,GLfloat *
 
 $prototype=void glGetVertexAttribiv(GLuint index, GLenum pname, GLint * params)
 %% TODO: corrigir codigo
-$method=|void|glGetVertexAttribiv|GLuint,GLenum,GLint *
+%% $method=|void|glGetVertexAttribiv|GLuint,GLenum,GLint *
 
 $prototype=GLboolean glIsBuffer(GLuint buffer)
 $method=|GLboolean|glIsBuffer|GLuint
