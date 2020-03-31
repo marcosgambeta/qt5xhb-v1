@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QQuickWebEngineProfile * o = new QQuickWebEngineProfile( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -132,7 +132,7 @@ QQuickWebEngineProfile(QQuickWebEngineProfilePrivate *, QObject *parent = Q_NULL
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -156,7 +156,7 @@ QString storageName() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_STORAGENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ void setStorageName(const QString &name)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSTORAGENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ bool isOffTheRecord() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ISOFFTHERECORD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -236,7 +236,7 @@ void setOffTheRecord(bool offTheRecord)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETOFFTHERECORD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -264,7 +264,7 @@ QString persistentStoragePath() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_PERSISTENTSTORAGEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -290,7 +290,7 @@ void setPersistentStoragePath(const QString &path)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETPERSISTENTSTORAGEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -318,7 +318,7 @@ QString cachePath() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_CACHEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -344,7 +344,7 @@ void setCachePath(const QString &path)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETCACHEPATH )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -372,7 +372,7 @@ QString httpUserAgent() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPUSERAGENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -398,7 +398,7 @@ void setHttpUserAgent(const QString &userAgent)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPUSERAGENT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -426,7 +426,7 @@ HttpCacheType httpCacheType() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPCACHETYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -452,7 +452,7 @@ void setHttpCacheType(QQuickWebEngineProfile::HttpCacheType)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPCACHETYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -480,7 +480,7 @@ QString httpAcceptLanguage() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPACCEPTLANGUAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -506,7 +506,7 @@ void setHttpAcceptLanguage(const QString &httpAcceptLanguage)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPACCEPTLANGUAGE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -534,7 +534,7 @@ PersistentCookiesPolicy persistentCookiesPolicy() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -560,7 +560,7 @@ void setPersistentCookiesPolicy(QQuickWebEngineProfile::PersistentCookiesPolicy)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETPERSISTENTCOOKIESPOLICY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -588,7 +588,7 @@ int httpCacheMaximumSize() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_HTTPCACHEMAXIMUMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -614,7 +614,7 @@ void setHttpCacheMaximumSize(int maxSize)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETHTTPCACHEMAXIMUMSIZE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -642,7 +642,7 @@ QStringList spellCheckLanguages() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SPELLCHECKLANGUAGES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -668,7 +668,7 @@ void setSpellCheckLanguages(const QStringList &languages)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSPELLCHECKLANGUAGES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -696,7 +696,7 @@ bool isSpellCheckEnabled() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_ISSPELLCHECKENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -722,7 +722,7 @@ void setSpellCheckEnabled(bool enabled)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETSPELLCHECKENABLED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -754,7 +754,7 @@ QWebEngineCookieStore *cookieStore() const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_COOKIESTORE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_COOKIESTORE )
     {
 #endif
       QWebEngineCookieStore * ptr = obj->cookieStore();
-      _qt5xhb_createReturnQObjectClass( ptr, "QWEBENGINECOOKIESTORE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QWEBENGINECOOKIESTORE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -781,7 +781,7 @@ void setRequestInterceptor(QWebEngineUrlRequestInterceptor *interceptor)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_SETREQUESTINTERCEPTOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -809,7 +809,7 @@ const QWebEngineUrlSchemeHandler *urlSchemeHandler(const QByteArray &) const
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_URLSCHEMEHANDLER )
     {
 #endif
       const QWebEngineUrlSchemeHandler * ptr = obj->urlSchemeHandler( *PQBYTEARRAY(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QWEBENGINEURLSCHEMEHANDLER" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QWEBENGINEURLSCHEMEHANDLER" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -836,7 +836,7 @@ void installUrlSchemeHandler(const QByteArray &scheme, QWebEngineUrlSchemeHandle
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_INSTALLURLSCHEMEHANDLER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -864,7 +864,7 @@ void removeUrlScheme(const QByteArray &scheme)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEURLSCHEME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -892,7 +892,7 @@ void removeUrlSchemeHandler(QWebEngineUrlSchemeHandler *)
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEURLSCHEMEHANDLER )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -920,7 +920,7 @@ void removeAllUrlSchemeHandlers()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_REMOVEALLURLSCHEMEHANDLERS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -948,7 +948,7 @@ Q_REVISION(2) Q_INVOKABLE void clearHttpCache()
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_CLEARHTTPCACHE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineProfile * obj = (QQuickWebEngineProfile *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DEFAULTPROFILE )
   {
 #endif
     QQuickWebEngineProfile * ptr = QQuickWebEngineProfile::defaultProfile();
-    _qt5xhb_createReturnQObjectClass( ptr, "QQUICKWEBENGINEPROFILE" );
+    Qt5xHb::createReturnQObjectClass( ptr, "QQUICKWEBENGINEPROFILE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

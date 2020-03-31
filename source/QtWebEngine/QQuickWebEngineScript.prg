@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QQuickWebEngineScript * o = new QQuickWebEngineScript( OPQOBJECT(1,Q_NULLPTR) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NEW )
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,7 +117,7 @@ QString name() const
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ Q_INVOKABLE void setName(const QString &name)
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETNAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -171,7 +171,7 @@ QUrl sourceUrl() const
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCEURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCEURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->sourceUrl() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,7 +198,7 @@ Q_INVOKABLE void setSourceUrl(const QUrl &url)
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCEURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ QString sourceCode() const
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCECODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ Q_INVOKABLE void setSourceCode(const QString &code)
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCECODE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -280,7 +280,7 @@ InjectionPoint injectionPoint() const
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_INJECTIONPOINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ Q_INVOKABLE void setInjectionPoint(InjectionPoint injectionPoint)
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -334,7 +334,7 @@ ScriptWorldId worldId() const
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_WORLDID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -360,7 +360,7 @@ Q_INVOKABLE void setWorldId(ScriptWorldId scriptWorldId)
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETWORLDID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -388,7 +388,7 @@ bool runOnSubframes() const
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_RUNONSUBFRAMES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -414,7 +414,7 @@ Q_INVOKABLE void setRunOnSubframes(bool on)
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETRUNONSUBFRAMES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -442,7 +442,7 @@ Q_INVOKABLE QString toString() const
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_TOSTRING )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) _qt5xhb_itemGetPtrStackSelfItem();
+  QQuickWebEngineScript * obj = (QQuickWebEngineScript *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
