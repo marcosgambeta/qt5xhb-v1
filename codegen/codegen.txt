@@ -532,6 +532,7 @@ QGLWidget                                            |QWidget
 QGlyphRun                                            |object
 QGradient                                            |object
 QGradient::CoordinateMode                            |enum
+QGradient::Preset                                    |enum
 QGradient::Spread                                    |enum
 QGradient::Type                                      |enum
 QGraphicsAnchor                                      |QObject
