@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
   if( ISNUMPAR(1) && ISQWEBSECURITYORIGIN(1) )
   {
     QWebSecurityOrigin * o = new QWebSecurityOrigin( *PQWEBSECURITYORIGIN(1) );
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ qint64 databaseQuota () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ qint64 databaseUsage () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -156,7 +156,7 @@ QList<QWebDatabase> databases () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ QString host () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ int port () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ QString scheme () const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -280,7 +280,7 @@ void setDatabaseQuota ( qint64 quota )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
 {
-  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = (QWebSecurityOrigin *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
