@@ -81,7 +81,7 @@ $prototype=bool atEnd() const
 $method=|bool|atEnd|
 
 $prototype=Status status() const
-$method=|QDataStream::Status|QDataStream::status|
+$method=|QDataStream::Status|status|
 
 $prototype=void setStatus(Status status)
 $method=|void|setStatus|QDataStream::Status
@@ -109,7 +109,7 @@ $method=|void|setVersion|int
 
 $prototype=QDataStream &readBytes(char *&, uint &len)
 %% TODO: revisar e corrigir implementacao do metodo
-$method=|QDataStream &|readBytes|char *&,uint &
+%% $method=|QDataStream &|readBytes|char *&,uint &
 
 $prototype=int readRawData(char *, int len)
 %% TODO: corrigir codigo gerado

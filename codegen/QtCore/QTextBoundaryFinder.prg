@@ -35,7 +35,7 @@ $prototype=QTextBoundaryFinder(BoundaryType type, const QString &string)
 $internalConstructor=|new3|QTextBoundaryFinder::BoundaryType,const QString &
 
 $prototype=QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
-$internalConstructor=|new4|QTextBoundaryFinder::BoundaryType,const QChar *,int,unsigned char *=0,int=0
+%% TODO: $internalConstructor=|new4|QTextBoundaryFinder::BoundaryType,const QChar *,int,unsigned char *=0,int=0
 
 //[1]QTextBoundaryFinder()
 //[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
@@ -56,10 +56,10 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
   {
     QTextBoundaryFinder_new3();
   }
-  else if( ISBETWEEN(3,5) && ISNUM(1) && ISQCHAR(2) && ISNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
-  {
-    QTextBoundaryFinder_new4();
-  }
+%%  else if( ISBETWEEN(3,5) && ISNUM(1) && ISQCHAR(2) && ISNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+%%  {
+%%    QTextBoundaryFinder_new4();
+%%  }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );

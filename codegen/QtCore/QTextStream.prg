@@ -35,7 +35,7 @@ $prototype=QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevic
 $internalConstructor=|new3|FILE *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-$internalConstructor=|new4|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
+%% TODO: $internalConstructor=|new4|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 $internalConstructor=|new5|QByteArray *,QIODevice::OpenMode=QIODevice::ReadWrite
@@ -64,10 +64,10 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
   {
     QTextStream_new3();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
-  {
-    QTextStream_new4();
-  }
+%%  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+%%  {
+%%    QTextStream_new4();
+%%  }
   //else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   //{
   //  QTextStream_new5();
@@ -141,7 +141,7 @@ $prototype=void setString(QString *string, QIODevice::OpenMode openMode = QIODev
 $method=|void|setString|QString *,QIODevice::OpenMode=QIODevice::ReadWrite
 
 $prototype=QString *string() const
-$method=|QString *|string|
+%% TODO: $method=|QString *|string|
 
 $prototype=Status status() const
 $method=|QTextStream::Status|status|

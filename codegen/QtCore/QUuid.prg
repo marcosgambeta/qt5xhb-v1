@@ -32,7 +32,7 @@ $prototype=QUuid(const QByteArray & text)
 $internalConstructor=|new2|const QByteArray &
 
 $prototype=QUuid(const GUID & guid)
-$internalConstructor=|new3|const GUID &
+%% TODO: $internalConstructor=|new3|const GUID &
 
 //[1]QUuid()
 //[2]QUuid(const QByteArray & text)

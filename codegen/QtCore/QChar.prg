@@ -35,6 +35,7 @@ HB_FUNC_STATIC( QCHAR_NEW2 )
   QChar * o = new QChar ( par1 );
   _qt5xhb_returnNewObject( o, false );
 }
+$addMethod=new2
 
 $prototype=QChar ( uchar ch )
 HB_FUNC_STATIC( QCHAR_NEW3 )
@@ -43,9 +44,10 @@ HB_FUNC_STATIC( QCHAR_NEW3 )
   QChar * o = new QChar ( par1 );
   _qt5xhb_returnNewObject( o, false );
 }
+$addMethod=new3
 
 $prototype=QChar ( QLatin1Char ch )
-$constructor=|new4|QLatin1Char
+%% TODO: $constructor=|new4|QLatin1Char
 
 $prototype=QChar ( uchar cell, uchar row )
 HB_FUNC_STATIC( QCHAR_NEW5 )
@@ -55,6 +57,7 @@ HB_FUNC_STATIC( QCHAR_NEW5 )
   QChar * o = new QChar ( par1, par2 );
   _qt5xhb_returnNewObject( o, false );
 }
+$addMethod=new5
 
 $prototype=QChar ( ushort code )
 $constructor=|new6|ushort
@@ -86,6 +89,7 @@ HB_FUNC_STATIC( QCHAR_NEW ) // TODO: completar implementação
 {
   HB_FUNC_EXEC( QCHAR_NEW1 );
 }
+$addMethod=new
 
 $deleteMethod
 
