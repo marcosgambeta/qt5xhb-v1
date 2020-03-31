@@ -46,7 +46,7 @@ void QPrintPreviewWidgetSlots::previewChanged()
 
 void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPrintPreviewWidget * obj = (QPrintPreviewWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

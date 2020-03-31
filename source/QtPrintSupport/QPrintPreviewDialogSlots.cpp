@@ -35,7 +35,7 @@ void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 
 void QPrintPreviewDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
