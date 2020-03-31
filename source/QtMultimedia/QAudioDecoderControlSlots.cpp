@@ -135,7 +135,7 @@ void QAudioDecoderControlSlots::stateChanged( QAudioDecoder::State state )
 
 void QAudioDecoderControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

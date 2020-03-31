@@ -63,7 +63,7 @@ QMediaService(QMediaServicePrivate &dd, QObject *parent) [protected]
 */
 HB_FUNC_STATIC( QMEDIASERVICE_DELETE )
 {
-  QMediaService * obj = (QMediaService *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaService * obj = (QMediaService *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ virtual void releaseControl(QMediaControl * control) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICE_RELEASECONTROL )
 {
-  QMediaService * obj = (QMediaService *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaService * obj = (QMediaService *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ virtual QMediaControl * requestControl(const char * interface) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
 {
-  QMediaService * obj = (QMediaService *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaService * obj = (QMediaService *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
     {
 #endif
       QMediaControl * ptr = obj->requestControl( PCONSTCHAR(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIACONTROL" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIACONTROL" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

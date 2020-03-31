@@ -59,7 +59,7 @@ virtual ~QAbstractPlanarVideoBuffer()
 HB_FUNC_STATIC( QABSTRACTPLANARVIDEOBUFFER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QAbstractPlanarVideoBuffer * obj = (QAbstractPlanarVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractPlanarVideoBuffer * obj = (QAbstractPlanarVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

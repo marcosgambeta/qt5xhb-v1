@@ -127,7 +127,7 @@ void QCameraImageCaptureControlSlots::readyForCaptureChanged( bool ready )
 
 void QCameraImageCaptureControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraImageCaptureControl * obj = (QCameraImageCaptureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

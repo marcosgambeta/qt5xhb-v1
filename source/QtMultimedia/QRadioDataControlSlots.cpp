@@ -113,7 +113,7 @@ void QRadioDataControlSlots::error( QRadioData::Error err )
 
 void QRadioDataControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QRadioDataControl * obj = (QRadioDataControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioDataControl * obj = (QRadioDataControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

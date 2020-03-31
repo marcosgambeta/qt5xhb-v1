@@ -61,7 +61,7 @@ virtual ~QMediaServiceSupportedFormatsInterface()
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_DELETE )
 {
-  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ virtual QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const 
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_HASSUPPORT )
 {
-  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ virtual QStringList supportedMimeTypes() const = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDFORMATSINTERFACE_SUPPORTEDMIMETYPES )
 {
-  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedFormatsInterface * obj = (QMediaServiceSupportedFormatsInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

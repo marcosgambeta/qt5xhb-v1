@@ -35,7 +35,7 @@ void QCameraCaptureDestinationControlSlots::captureDestinationChanged( QCameraIm
 
 void QCameraCaptureDestinationControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

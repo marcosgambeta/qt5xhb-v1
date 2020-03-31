@@ -44,7 +44,7 @@ void QMediaStreamsControlSlots::streamsChanged()
 
 void QMediaStreamsControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -69,7 +69,7 @@ explicit QAbstractVideoSurface(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ QSize nativeResolution() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NATIVERESOLUTION )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NATIVERESOLUTION )
     {
 #endif
       QSize * ptr = new QSize( obj->nativeResolution() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ Error error () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ bool isActive () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,7 +164,7 @@ virtual bool isFormatSupported ( const QVideoSurfaceFormat & format ) const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -188,7 +188,7 @@ virtual QVideoSurfaceFormat nearestFormat ( const QVideoSurfaceFormat & format )
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
     {
 #endif
       QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat( *PQVIDEOSURFACEFORMAT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QVIDEOSURFACEFORMAT", true );
+      Qt5xHb::createReturnClass( ptr, "QVIDEOSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ virtual bool present ( const QVideoFrame & frame ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ virtual bool start ( const QVideoSurfaceFormat & format )
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -261,7 +261,7 @@ virtual void stop ()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ QVideoSurfaceFormat surfaceFormat () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
 {
-  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = (QAbstractVideoSurface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
     {
 #endif
       QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat() );
-      _qt5xhb_createReturnClass( ptr, "QVIDEOSURFACEFORMAT", true );
+      Qt5xHb::createReturnClass( ptr, "QVIDEOSURFACEFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

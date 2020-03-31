@@ -61,7 +61,7 @@ virtual ~QCameraInfoControl()
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfoControl * obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraInfoControl * obj = (QCameraInfoControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,7 +83,7 @@ virtual QCamera::Position cameraPosition(const QString &deviceName) const = 0
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfoControl * obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraInfoControl * obj = (QCameraInfoControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ virtual int cameraOrientation(const QString &deviceName) const = 0
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfoControl * obj = (QCameraInfoControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraInfoControl * obj = (QCameraInfoControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

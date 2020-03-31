@@ -61,7 +61,7 @@ virtual ~QMediaBindableInterface()
 */
 HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_DELETE )
 {
-  QMediaBindableInterface * obj = (QMediaBindableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaBindableInterface * obj = (QMediaBindableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,7 +81,7 @@ virtual QMediaObject * mediaObject() const = 0
 */
 HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_MEDIAOBJECT )
 {
-  QMediaBindableInterface * obj = (QMediaBindableInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaBindableInterface * obj = (QMediaBindableInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
-      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

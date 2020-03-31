@@ -39,7 +39,7 @@ void QCameraLocksControlSlots::lockStatusChanged( QCamera::LockType lock, QCamer
 
 void QCameraLocksControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

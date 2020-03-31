@@ -79,7 +79,7 @@ void QCameraViewfinderSettings_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * o = new QCameraViewfinderSettings();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -90,7 +90,7 @@ void QCameraViewfinderSettings_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   QCameraViewfinderSettings * o = new QCameraViewfinderSettings( *PQCAMERAVIEWFINDERSETTINGS(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_NEW )
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ void swap(QCameraViewfinderSettings &other) Q_DECL_NOTHROW
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SWAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -169,7 +169,7 @@ bool isNull() const
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_ISNULL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -195,7 +195,7 @@ QSize resolution() const
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_RESOLUTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_RESOLUTION )
     {
 #endif
       QSize * ptr = new QSize( obj->resolution() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ void setResolution(const QSize &)
 void QCameraViewfinderSettings_setResolution1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -239,7 +239,7 @@ void setResolution(int width, int height)
 void QCameraViewfinderSettings_setResolution2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -275,7 +275,7 @@ qreal minimumFrameRate() const
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_MINIMUMFRAMERATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -301,7 +301,7 @@ void setMinimumFrameRate(qreal rate)
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETMINIMUMFRAMERATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -329,7 +329,7 @@ qreal maximumFrameRate() const
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_MAXIMUMFRAMERATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -355,7 +355,7 @@ void setMaximumFrameRate(qreal rate)
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETMAXIMUMFRAMERATE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -383,7 +383,7 @@ QVideoFrame::PixelFormat pixelFormat() const
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -409,7 +409,7 @@ void setPixelFormat(QVideoFrame::PixelFormat format)
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETPIXELFORMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -437,7 +437,7 @@ QSize pixelAspectRatio() const
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELASPECTRATIO )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELASPECTRATIO )
     {
 #endif
       QSize * ptr = new QSize( obj->pixelAspectRatio() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,7 +464,7 @@ void setPixelAspectRatio(const QSize &ratio)
 void QCameraViewfinderSettings_setPixelAspectRatio1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -481,7 +481,7 @@ void setPixelAspectRatio(int horizontal, int vertical)
 void QCameraViewfinderSettings_setPixelAspectRatio2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

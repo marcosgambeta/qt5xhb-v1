@@ -109,7 +109,7 @@ void QCameraExposureSlots::shutterSpeedRangeChanged()
 
 void QCameraExposureSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCameraExposure * obj = (QCameraExposure *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraExposure * obj = (QCameraExposure *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

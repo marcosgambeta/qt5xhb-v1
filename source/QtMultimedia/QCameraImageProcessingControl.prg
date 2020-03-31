@@ -59,7 +59,7 @@ explicit QCameraImageProcessingControl(QObject *parent = Q_NULLPTR) [protected]
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_DELETE )
 {
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ virtual bool isParameterSupported(ProcessingParameter parameter) const = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERSUPPORTED )
 {
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ virtual bool isParameterValueSupported(ProcessingParameter parameter, const QVar
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_ISPARAMETERVALUESUPPORTED )
 {
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ virtual QVariant parameter(ProcessingParameter parameter) const = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER )
 {
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_PARAMETER )
     {
 #endif
       QVariant * ptr = new QVariant( obj->parameter( (QCameraImageProcessingControl::ProcessingParameter) hb_parni(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ virtual void setParameter(ProcessingParameter parameter, const QVariant & value)
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_SETPARAMETER )
 {
-  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageProcessingControl * obj = (QCameraImageProcessingControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

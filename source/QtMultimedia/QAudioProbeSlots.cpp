@@ -46,7 +46,7 @@ void QAudioProbeSlots::flush()
 
 void QAudioProbeSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAudioProbe * obj = (QAudioProbe *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

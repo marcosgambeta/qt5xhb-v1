@@ -100,7 +100,7 @@ void QMediaObjectSlots::notifyIntervalChanged( int milliseconds )
 
 void QMediaObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMediaObject * obj = (QMediaObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaObject * obj = (QMediaObject *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

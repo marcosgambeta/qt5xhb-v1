@@ -63,7 +63,7 @@ explicit QAbstractVideoFilter(QObject *parent = Q_NULLPTR) (abstract)
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ bool isActive() const
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ISACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -111,7 +111,7 @@ void setActive(bool v)
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_SETACTIVE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ virtual QVideoFilterRunnable *createFilterRunnable() = 0
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoFilter * obj = (QAbstractVideoFilter *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
     {
 #endif
       QVideoFilterRunnable * ptr = obj->createFilterRunnable();
-      _qt5xhb_createReturnClass( ptr, "QVIDEOFILTERRUNNABLE", false );
+      Qt5xHb::createReturnClass( ptr, "QVIDEOFILTERRUNNABLE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

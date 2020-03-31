@@ -100,7 +100,7 @@ void QCameraZoomControlSlots::requestedOpticalZoomChanged( qreal zoom )
 
 void QCameraZoomControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCameraZoomControl * obj = (QCameraZoomControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraZoomControl * obj = (QCameraZoomControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

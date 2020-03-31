@@ -167,7 +167,7 @@ void QRadioTunerControlSlots::antennaConnectedChanged( bool connectionStatus )
 
 void QRadioTunerControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QRadioTunerControl * obj = (QRadioTunerControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioTunerControl * obj = (QRadioTunerControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

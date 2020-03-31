@@ -74,7 +74,7 @@ void QMetaDataWriterControlSlots::metaDataAvailableChanged( bool available )
 
 void QMetaDataWriterControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaDataWriterControl * obj = (QMetaDataWriterControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

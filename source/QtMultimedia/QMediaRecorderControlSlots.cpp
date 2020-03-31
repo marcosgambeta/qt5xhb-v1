@@ -115,7 +115,7 @@ void QMediaRecorderControlSlots::volumeChanged( qreal gain )
 
 void QMediaRecorderControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMediaRecorderControl * obj = (QMediaRecorderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaRecorderControl * obj = (QMediaRecorderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

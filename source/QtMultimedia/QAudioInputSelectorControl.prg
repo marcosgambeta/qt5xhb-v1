@@ -62,7 +62,7 @@ virtual ~QAudioInputSelectorControl()
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DELETE )
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ virtual QString activeInput() const = 0
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_ACTIVEINPUT )
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ virtual QList<QString> availableInputs() const = 0
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_AVAILABLEINPUTS )
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -138,7 +138,7 @@ virtual QString defaultInput() const = 0
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT )
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ virtual QString inputDescription(const QString & name) const = 0
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ virtual void setActiveInput(const QString & name) = 0
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
 {
-  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioInputSelectorControl * obj = (QAudioInputSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

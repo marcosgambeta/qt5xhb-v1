@@ -59,7 +59,7 @@ void QVideoDeviceSelectorControlSlots::selectedDeviceChanged( const QString & na
 
 void QVideoDeviceSelectorControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVideoDeviceSelectorControl * obj = (QVideoDeviceSelectorControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

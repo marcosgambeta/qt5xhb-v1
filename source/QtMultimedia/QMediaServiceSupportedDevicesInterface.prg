@@ -62,7 +62,7 @@ virtual ~QMediaServiceSupportedDevicesInterface()
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DELETE )
 {
-  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,7 +82,7 @@ virtual QString deviceDescription(const QByteArray & service, const QByteArray &
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICEDESCRIPTION )
 {
-  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ virtual QList<QByteArray> devices(const QByteArray & service) const = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICESUPPORTEDDEVICESINTERFACE_DEVICES )
 {
-  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceSupportedDevicesInterface * obj = (QMediaServiceSupportedDevicesInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

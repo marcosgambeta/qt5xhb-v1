@@ -70,7 +70,7 @@ QAudioBuffer()
 void QAudioBuffer_new1()
 {
   QAudioBuffer * o = new QAudioBuffer();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -83,7 +83,7 @@ QAudioBuffer(const QAudioBuffer & other)
 void QAudioBuffer_new2()
 {
   QAudioBuffer * o = new QAudioBuffer( *PQAUDIOBUFFER(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -92,7 +92,7 @@ QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startT
 void QAudioBuffer_new3()
 {
   QAudioBuffer * o = new QAudioBuffer( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -101,7 +101,7 @@ QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
 void QAudioBuffer_new4()
 {
   QAudioBuffer * o = new QAudioBuffer( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QAudioBuffer()
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_DELETE )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioBuffer * obj = (QAudioBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ int byteCount() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_BYTECOUNT )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioBuffer * obj = (QAudioBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ void * data()
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_DATA )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioBuffer * obj = (QAudioBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -214,7 +214,7 @@ qint64 duration() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_DURATION )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioBuffer * obj = (QAudioBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -238,7 +238,7 @@ QAudioFormat format() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_FORMAT )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioBuffer * obj = (QAudioBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QAUDIOBUFFER_FORMAT )
     {
 #endif
       QAudioFormat * ptr = new QAudioFormat( obj->format() );
-      _qt5xhb_createReturnClass( ptr, "QAUDIOFORMAT", true );
+      Qt5xHb::createReturnClass( ptr, "QAUDIOFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ int frameCount() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_FRAMECOUNT )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioBuffer * obj = (QAudioBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -287,7 +287,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_ISVALID )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioBuffer * obj = (QAudioBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -311,7 +311,7 @@ int sampleCount() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_SAMPLECOUNT )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioBuffer * obj = (QAudioBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ qint64 startTime() const
 */
 HB_FUNC_STATIC( QAUDIOBUFFER_STARTTIME )
 {
-  QAudioBuffer * obj = (QAudioBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioBuffer * obj = (QAudioBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

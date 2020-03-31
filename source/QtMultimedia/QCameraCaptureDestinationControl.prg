@@ -59,7 +59,7 @@ explicit QCameraCaptureDestinationControl(QObject *parent = Q_NULLPTR) [protecte
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_DELETE )
 {
-  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ virtual QCameraImageCapture::CaptureDestinations captureDestination() const = 0
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_CAPTUREDESTINATION )
 {
-  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ virtual bool isCaptureDestinationSupported(QCameraImageCapture::CaptureDestinati
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_ISCAPTUREDESTINATIONSUPPORTED )
 {
-  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ virtual void setCaptureDestination(QCameraImageCapture::CaptureDestinations dest
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_SETCAPTUREDESTINATION )
 {
-  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraCaptureDestinationControl * obj = (QCameraCaptureDestinationControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

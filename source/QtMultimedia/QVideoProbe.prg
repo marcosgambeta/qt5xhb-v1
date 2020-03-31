@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QVideoProbe * o = new QVideoProbe( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 */
 HB_FUNC_STATIC( QVIDEOPROBE_DELETE )
 {
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
 {
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ bool setSource(QMediaObject * source)
 */
 void QVideoProbe_setSource1()
 {
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ bool setSource(QMediaRecorder * source)
 */
 void QVideoProbe_setSource2()
 {
-  QVideoProbe * obj = (QVideoProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -63,7 +63,7 @@ virtual ~QMediaStreamsControl()
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_DELETE )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,7 +83,7 @@ virtual bool isActive(int streamNumber) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_ISACTIVE )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ virtual QVariant metaData(int streamNumber, const QString & key) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_METADATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->metaData( PINT(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ virtual void setActive(int streamNumber, bool state) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_SETACTIVE )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ virtual int streamCount() = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMCOUNT )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ virtual StreamType streamType(int streamNumber) = 0
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_STREAMTYPE )
 {
-  QMediaStreamsControl * obj = (QMediaStreamsControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaStreamsControl * obj = (QMediaStreamsControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

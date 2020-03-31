@@ -80,7 +80,7 @@ explicit QAudioDecoderControl(QObject *parent = Q_NULLPTR) [protected]
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_DELETE )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ virtual QAudioFormat audioFormat() const = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_AUDIOFORMAT )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_AUDIOFORMAT )
     {
 #endif
       QAudioFormat * ptr = new QAudioFormat( obj->audioFormat() );
-      _qt5xhb_createReturnClass( ptr, "QAUDIOFORMAT", true );
+      Qt5xHb::createReturnClass( ptr, "QAUDIOFORMAT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,7 +125,7 @@ virtual bool bufferAvailable() const = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_BUFFERAVAILABLE )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -149,7 +149,7 @@ virtual qint64 duration() const = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_DURATION )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,7 +173,7 @@ virtual qint64 position() const = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_POSITION )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -197,7 +197,7 @@ virtual QAudioBuffer read() = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_READ )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_READ )
     {
 #endif
       QAudioBuffer * ptr = new QAudioBuffer( obj->read() );
-      _qt5xhb_createReturnClass( ptr, "QAUDIOBUFFER", true );
+      Qt5xHb::createReturnClass( ptr, "QAUDIOBUFFER", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ virtual void setAudioFormat(const QAudioFormat & format) = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETAUDIOFORMAT )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -248,7 +248,7 @@ virtual QIODevice * sourceDevice() const = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_SOURCEDEVICE )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_SOURCEDEVICE )
     {
 #endif
       QIODevice * ptr = obj->sourceDevice();
-      _qt5xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -273,7 +273,7 @@ virtual void setSourceDevice(QIODevice * device) = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETSOURCEDEVICE )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -299,7 +299,7 @@ virtual void setSourceFilename(const QString & fileName) = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETSOURCEFILENAME )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -325,7 +325,7 @@ virtual QString sourceFilename() const = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_SOURCEFILENAME )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -349,7 +349,7 @@ virtual void start() = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_START )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ virtual QAudioDecoder::State state() const = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_STATE )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -399,7 +399,7 @@ virtual void stop() = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_STOP )
 {
-  QAudioDecoderControl * obj = (QAudioDecoderControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioDecoderControl * obj = (QAudioDecoderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

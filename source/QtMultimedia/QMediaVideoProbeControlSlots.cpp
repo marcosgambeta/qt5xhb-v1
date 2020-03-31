@@ -46,7 +46,7 @@ void QMediaVideoProbeControlSlots::videoFrameProbed( const QVideoFrame & frame )
 
 void QMediaVideoProbeControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMediaVideoProbeControl * obj = (QMediaVideoProbeControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaVideoProbeControl * obj = (QMediaVideoProbeControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

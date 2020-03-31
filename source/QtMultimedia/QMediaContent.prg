@@ -73,7 +73,7 @@ QMediaContent()
 void QMediaContent_new1()
 {
   QMediaContent * o = new QMediaContent();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -82,7 +82,7 @@ QMediaContent(const QUrl & contentUrl)
 void QMediaContent_new2()
 {
   QMediaContent * o = new QMediaContent( *PQURL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -91,7 +91,7 @@ QMediaContent(const QNetworkRequest & contentRequest)
 void QMediaContent_new3()
 {
   QMediaContent * o = new QMediaContent( *PQNETWORKREQUEST(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -100,7 +100,7 @@ QMediaContent(const QMediaResource & contentResource)
 void QMediaContent_new4()
 {
   QMediaContent * o = new QMediaContent( *PQMEDIARESOURCE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -117,7 +117,7 @@ void QMediaContent_new5()
     par1 << *(QMediaResource *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
   QMediaContent * o = new QMediaContent( par1 );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -126,7 +126,7 @@ QMediaContent(const QMediaContent & other)
 void QMediaContent_new6()
 {
   QMediaContent * o = new QMediaContent( *PQMEDIACONTENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -134,8 +134,8 @@ QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool 
 */
 void QMediaContent_new7()
 {
-  QMediaContent * o = new QMediaContent( PQMEDIAPLAYLIST(1), ISNIL(2)? QUrl() : *(QUrl *) _qt5xhb_itemGetPtr(2), OPBOOL(3,false) );
-  _qt5xhb_returnNewObject( o, true );
+  QMediaContent * o = new QMediaContent( PQMEDIAPLAYLIST(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2), OPBOOL(3,false) );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QMediaContent()
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 */
 HB_FUNC_STATIC( QMEDIACONTENT_DELETE )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ QNetworkRequest canonicalRequest() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALREQUEST )
     {
 #endif
       QNetworkRequest * ptr = new QNetworkRequest( obj->canonicalRequest() );
-      _qt5xhb_createReturnClass( ptr, "QNETWORKREQUEST", true );
+      Qt5xHb::createReturnClass( ptr, "QNETWORKREQUEST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ QMediaResource canonicalResource() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALRESOURCE )
     {
 #endif
       QMediaResource * ptr = new QMediaResource( obj->canonicalResource() );
-      _qt5xhb_createReturnClass( ptr, "QMEDIARESOURCE", true );
+      Qt5xHb::createReturnClass( ptr, "QMEDIARESOURCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ QUrl canonicalUrl() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_CANONICALURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->canonicalUrl() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_ISNULL )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ QMediaPlaylist * playlist() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_PLAYLIST )
     {
 #endif
       QMediaPlaylist * ptr = obj->playlist();
-      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAPLAYLIST" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAPLAYLIST" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ QMediaResourceList resources() const
 */
 HB_FUNC_STATIC( QMEDIACONTENT_RESOURCES )
 {
-  QMediaContent * obj = (QMediaContent *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaContent * obj = (QMediaContent *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

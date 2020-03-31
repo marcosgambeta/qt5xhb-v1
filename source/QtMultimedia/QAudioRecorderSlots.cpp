@@ -46,7 +46,7 @@ void QAudioRecorderSlots::availableAudioInputsChanged()
 
 void QAudioRecorderSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAudioRecorder * obj = (QAudioRecorder *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioRecorder * obj = (QAudioRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

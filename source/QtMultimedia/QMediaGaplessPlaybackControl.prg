@@ -64,7 +64,7 @@ virtual ~QMediaGaplessPlaybackControl()
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_DELETE )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ virtual qreal crossfadeTime() const = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_CROSSFADETIME )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ virtual bool isCrossfadeSupported() const = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_ISCROSSFADESUPPORTED )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ virtual QMediaContent nextMedia() const = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_NEXTMEDIA )
     {
 #endif
       QMediaContent * ptr = new QMediaContent( obj->nextMedia() );
-      _qt5xhb_createReturnClass( ptr, "QMEDIACONTENT", true );
+      Qt5xHb::createReturnClass( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ virtual void setCrossfadeTime(qreal crossfadeTime) = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETCROSSFADETIME )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -183,7 +183,7 @@ virtual void setNextMedia(const QMediaContent & media) = 0
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_SETNEXTMEDIA )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

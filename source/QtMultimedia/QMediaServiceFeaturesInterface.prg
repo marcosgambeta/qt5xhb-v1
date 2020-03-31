@@ -60,7 +60,7 @@ virtual ~QMediaServiceFeaturesInterface()
 */
 HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_DELETE )
 {
-  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray &
 */
 HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES )
 {
-  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceFeaturesInterface * obj = (QMediaServiceFeaturesInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

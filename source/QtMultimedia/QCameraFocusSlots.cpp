@@ -85,7 +85,7 @@ void QCameraFocusSlots::opticalZoomChanged( qreal value )
 
 void QCameraFocusSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCameraFocus * obj = (QCameraFocus *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraFocus * obj = (QCameraFocus *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

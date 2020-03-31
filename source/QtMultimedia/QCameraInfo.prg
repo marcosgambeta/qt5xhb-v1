@@ -72,8 +72,8 @@ explicit QCameraInfo(const QByteArray &name = QByteArray())
 void QCameraInfo_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * o = new QCameraInfo( ISNIL(1)? QByteArray() : *(QByteArray *) _qt5xhb_itemGetPtr(1) );
-  _qt5xhb_returnNewObject( o, true );
+  QCameraInfo * o = new QCameraInfo( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -84,7 +84,7 @@ void QCameraInfo_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * o = new QCameraInfo( *PQCAMERA(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -95,7 +95,7 @@ void QCameraInfo_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QCameraInfo * o = new QCameraInfo( *PQCAMERAINFO(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCAMERAINFO_NEW )
 HB_FUNC_STATIC( QCAMERAINFO_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -151,7 +151,7 @@ bool isNull() const
 HB_FUNC_STATIC( QCAMERAINFO_ISNULL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ QString deviceName() const
 HB_FUNC_STATIC( QCAMERAINFO_DEVICENAME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -203,7 +203,7 @@ QString description() const
 HB_FUNC_STATIC( QCAMERAINFO_DESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -229,7 +229,7 @@ QCamera::Position position() const
 HB_FUNC_STATIC( QCAMERAINFO_POSITION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ int orientation() const
 HB_FUNC_STATIC( QCAMERAINFO_ORIENTATION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = (QCameraInfo *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraInfo * obj = (QCameraInfo *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QCAMERAINFO_DEFAULTCAMERA )
   {
 #endif
     QCameraInfo * ptr = new QCameraInfo( QCameraInfo::defaultCamera() );
-    _qt5xhb_createReturnClass( ptr, "QCAMERAINFO", true );
+    Qt5xHb::createReturnClass( ptr, "QCAMERAINFO", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -167,7 +167,7 @@ void QRadioTunerSlots::error( QRadioTuner::Error error )
 
 void QRadioTunerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QRadioTuner * obj = (QRadioTuner *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRadioTuner * obj = (QRadioTuner *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

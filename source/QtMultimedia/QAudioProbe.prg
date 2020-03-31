@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_NEW )
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QAudioProbe * o = new QAudioProbe( OPQOBJECT(1,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 */
 HB_FUNC_STATIC( QAUDIOPROBE_DELETE )
 {
-  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,7 +92,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
 {
-  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,7 +116,7 @@ bool setSource(QMediaObject * source)
 */
 void QAudioProbe_setSource1()
 {
-  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ bool setSource(QMediaRecorder * source)
 */
 void QAudioProbe_setSource2()
 {
-  QAudioProbe * obj = (QAudioProbe *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

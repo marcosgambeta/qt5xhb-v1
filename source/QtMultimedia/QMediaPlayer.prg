@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
   if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     QMediaPlayer * o = new QMediaPlayer( OPQOBJECT(1,0), ISNIL(2)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(2) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_DELETE )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -145,7 +145,7 @@ QMediaContent media() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_MEDIA )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIA )
     {
 #endif
       QMediaContent * ptr = new QMediaContent( obj->media() );
-      _qt5xhb_createReturnClass( ptr, "QMEDIACONTENT", true );
+      Qt5xHb::createReturnClass( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ void setMedia(const QMediaContent &media, QIODevice *stream = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETMEDIA )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -196,7 +196,7 @@ QMediaContent currentMedia() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTMEDIA )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTMEDIA )
     {
 #endif
       QMediaContent * ptr = new QMediaContent( obj->currentMedia() );
-      _qt5xhb_createReturnClass( ptr, "QMEDIACONTENT", true );
+      Qt5xHb::createReturnClass( ptr, "QMEDIACONTENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ QMediaPlaylist * playlist() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_PLAYLIST )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAYLIST )
     {
 #endif
       QMediaPlaylist * ptr = obj->playlist();
-      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAPLAYLIST" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAPLAYLIST" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ void setPlaylist(QMediaPlaylist * playlist)
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETPLAYLIST )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -272,7 +272,7 @@ qint64 duration() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_DURATION )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -296,7 +296,7 @@ qint64 position() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_POSITION )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -320,7 +320,7 @@ void setPosition(qint64 position)
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETPOSITION )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -346,7 +346,7 @@ int volume() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_VOLUME )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -370,7 +370,7 @@ void setVolume(int volume)
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETVOLUME )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -396,7 +396,7 @@ bool isMuted() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ISMUTED )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -420,7 +420,7 @@ void setMuted(bool muted)
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETMUTED )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -446,7 +446,7 @@ int bufferStatus() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_BUFFERSTATUS )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -470,7 +470,7 @@ bool isAudioAvailable() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ISAUDIOAVAILABLE )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -494,7 +494,7 @@ bool isVideoAvailable() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ISVIDEOAVAILABLE )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -518,7 +518,7 @@ bool isSeekable() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ISSEEKABLE )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -542,7 +542,7 @@ qreal playbackRate() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_PLAYBACKRATE )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -566,7 +566,7 @@ State state() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_STATE )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -590,7 +590,7 @@ MediaStatus mediaStatus() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTATUS )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -615,7 +615,7 @@ QAudio::Role audioRole() const
 HB_FUNC_STATIC( QMEDIAPLAYER_AUDIOROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -641,7 +641,7 @@ void setAudioRole(QAudio::Role audioRole)
 HB_FUNC_STATIC( QMEDIAPLAYER_SETAUDIOROLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -668,7 +668,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ERRORSTRING )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -692,7 +692,7 @@ QNetworkConfiguration currentNetworkConfiguration() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION )
     {
 #endif
       QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->currentNetworkConfiguration() );
-      _qt5xhb_createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
+      Qt5xHb::createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -717,7 +717,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ERROR )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -741,7 +741,7 @@ const QIODevice * mediaStream() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
     {
 #endif
       const QIODevice * ptr = obj->mediaStream();
-      _qt5xhb_createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,7 +766,7 @@ void setVideoOutput(QVideoWidget * output)
 */
 void QMediaPlayer_setVideoOutput1()
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -781,7 +781,7 @@ void setVideoOutput(QGraphicsVideoItem * output)
 */
 void QMediaPlayer_setVideoOutput2()
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -796,7 +796,7 @@ void setVideoOutput(QAbstractVideoSurface * surface)
 */
 void QMediaPlayer_setVideoOutput3()
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -835,7 +835,7 @@ virtual QMultimedia::AvailabilityStatus availability() const override
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_AVAILABILITY )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -859,7 +859,7 @@ void pause()
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_PAUSE )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -885,7 +885,7 @@ void play()
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_PLAY )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -911,7 +911,7 @@ void setNetworkConfigurations(const QList<QNetworkConfiguration> & configuration
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETNETWORKCONFIGURATIONS )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -945,7 +945,7 @@ void setPlaybackRate(qreal rate)
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETPLAYBACKRATE )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -971,7 +971,7 @@ void stop()
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_STOP )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1036,7 +1036,7 @@ QList<QAudio::Role> supportedAudioRoles() const
 HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDAUDIOROLES )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-  QMediaPlayer * obj = (QMediaPlayer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

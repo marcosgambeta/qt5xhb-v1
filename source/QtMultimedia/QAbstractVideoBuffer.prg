@@ -71,7 +71,7 @@ virtual ~QAbstractVideoBuffer()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QVariant handle () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->handle() );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,7 +116,7 @@ HandleType handleType () const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -144,7 +144,7 @@ virtual MapMode mapMode () const = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -168,7 +168,7 @@ virtual void unmap () = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -194,7 +194,7 @@ virtual void release()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_RELEASE )
 {
-  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) _qt5xhb_itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = (QAbstractVideoBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

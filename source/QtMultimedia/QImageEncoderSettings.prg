@@ -72,7 +72,7 @@ QImageEncoderSettings()
 void QImageEncoderSettings_new1()
 {
   QImageEncoderSettings * o = new QImageEncoderSettings();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -81,7 +81,7 @@ QImageEncoderSettings(const QImageEncoderSettings& other)
 void QImageEncoderSettings_new2()
 {
   QImageEncoderSettings * o = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QImageEncoderSettings()
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_DELETE )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ISNULL )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ QString codec() const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_CODEC )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ void setCodec(const QString &)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETCODEC )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -202,7 +202,7 @@ QSize resolution() const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
     {
 #endif
       QSize * ptr = new QSize( obj->resolution() );
-      _qt5xhb_createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ void setResolution(const QSize &)
 */
 void QImageEncoderSettings_setResolution1()
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -242,7 +242,7 @@ void setResolution(int width, int height)
 */
 void QImageEncoderSettings_setResolution2()
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ QMultimedia::EncodingQuality quality() const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_QUALITY )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -300,7 +300,7 @@ void setQuality(QMultimedia::EncodingQuality quality)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETQUALITY )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ QVariant encodingOption(const QString &option) const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ENCODINGOPTION )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ENCODINGOPTION )
     {
 #endif
       QVariant * ptr = new QVariant( obj->encodingOption( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ void setEncodingOption(const QString &option, const QVariant &value)
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETENCODINGOPTION )
 {
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) _qt5xhb_itemGetPtrStackSelfItem();
+  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

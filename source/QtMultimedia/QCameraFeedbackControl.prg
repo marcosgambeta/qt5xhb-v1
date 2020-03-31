@@ -59,7 +59,7 @@ explicit QCameraFeedbackControl(QObject *parent = Q_NULLPTR) [protected]
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_DELETE )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,7 +79,7 @@ virtual bool isEventFeedbackEnabled(EventType event) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,7 +103,7 @@ virtual bool isEventFeedbackLocked(EventType event) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,7 +127,7 @@ virtual void resetEventFeedback(EventType event) = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -153,7 +153,7 @@ virtual bool setEventFeedbackEnabled(EventType event, bool enabled) = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -177,7 +177,7 @@ virtual bool setEventFeedbackSound(EventType event, const QString & filePath) = 
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND )
 {
-  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraFeedbackControl * obj = (QCameraFeedbackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -60,7 +60,7 @@ virtual ~QMediaServiceProviderFactoryInterface()
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERFACTORYINTERFACE_DELETE )
 {
-  QMediaServiceProviderFactoryInterface * obj = (QMediaServiceProviderFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceProviderFactoryInterface * obj = (QMediaServiceProviderFactoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ virtual void release(QMediaService *service) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERFACTORYINTERFACE_RELEASE )
 {
-  QMediaServiceProviderFactoryInterface * obj = (QMediaServiceProviderFactoryInterface *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaServiceProviderFactoryInterface * obj = (QMediaServiceProviderFactoryInterface *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

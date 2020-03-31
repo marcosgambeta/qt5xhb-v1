@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QCameraImageCapture * o = new QCameraImageCapture( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_DELETE )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ bool isReadyForCapture() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISREADYFORCAPTURE )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_AVAILABILITY )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QVideoFrame::PixelFormat bufferFormat() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_BUFFERFORMAT )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ CaptureDestinations captureDestination() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTUREDESTINATION )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ QImageEncoderSettings encodingSettings() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ENCODINGSETTINGS )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ENCODINGSETTINGS )
     {
 #endif
       QImageEncoderSettings * ptr = new QImageEncoderSettings( obj->encodingSettings() );
-      _qt5xhb_createReturnClass( ptr, "QIMAGEENCODERSETTINGS", true );
+      Qt5xHb::createReturnClass( ptr, "QIMAGEENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERROR )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -264,7 +264,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ERRORSTRING )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -288,7 +288,7 @@ QString imageCodecDescription(const QString & codecName) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -312,7 +312,7 @@ bool isAvailable() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISAVAILABLE )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -336,7 +336,7 @@ bool isCaptureDestinationSupported(CaptureDestinations destination) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -360,7 +360,7 @@ QMediaObject *mediaObject() const override
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_MEDIAOBJECT )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
-      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,7 +385,7 @@ void setBufferFormat(const QVideoFrame::PixelFormat format)
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -411,7 +411,7 @@ void setCaptureDestination(CaptureDestinations destination)
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -437,7 +437,7 @@ void setEncodingSettings(const QImageEncoderSettings & settings)
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETENCODINGSETTINGS )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -463,7 +463,7 @@ QList<QVideoFrame::PixelFormat> supportedBufferFormats() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDBUFFERFORMATS )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -495,7 +495,7 @@ QStringList supportedImageCodecs() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDIMAGECODECS )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -519,7 +519,7 @@ QList<QSize> supportedResolutions(const QImageEncoderSettings & settings = QImag
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions( ISNIL(1)? QImageEncoderSettings() : *(QImageEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
+      QList<QSize> list = obj->supportedResolutions( ISNIL(1)? QImageEncoderSettings() : *(QImageEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -573,7 +573,7 @@ void cancelCapture()
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CANCELCAPTURE )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -599,7 +599,7 @@ int capture(const QString & location = QString())
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
 {
-  QCameraImageCapture * obj = (QCameraImageCapture *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraImageCapture * obj = (QCameraImageCapture *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

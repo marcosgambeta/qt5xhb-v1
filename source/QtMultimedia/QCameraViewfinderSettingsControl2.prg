@@ -63,7 +63,7 @@ virtual ~QCameraViewfinderSettingsControl2()
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,7 +85,7 @@ virtual QList<QCameraViewfinderSettings> supportedViewfinderSettings() const = 0
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SUPPORTEDVIEWFINDERSETTINGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,7 +139,7 @@ virtual QCameraViewfinderSettings viewfinderSettings() const = 0
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS )
     {
 #endif
       QCameraViewfinderSettings * ptr = new QCameraViewfinderSettings( obj->viewfinderSettings() );
-      _qt5xhb_createReturnClass( ptr, "QCAMERAVIEWFINDERSETTINGS", true );
+      Qt5xHb::createReturnClass( ptr, "QCAMERAVIEWFINDERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ virtual void setViewfinderSettings(const QCameraViewfinderSettings &settings) = 
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SETVIEWFINDERSETTINGS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraViewfinderSettingsControl2 * obj = (QCameraViewfinderSettingsControl2 *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

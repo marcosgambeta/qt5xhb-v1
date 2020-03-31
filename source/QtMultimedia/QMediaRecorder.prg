@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_NEW )
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QMediaRecorder * o = new QMediaRecorder( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -134,7 +134,7 @@ QMediaRecorder(QMediaRecorderPrivate &dd, QMediaObject *mediaObject, QObject *pa
 */
 HB_FUNC_STATIC( QMEDIARECORDER_DELETE )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -156,7 +156,7 @@ State state() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_STATE )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ Status status() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_STATUS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ qint64 duration() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_DURATION )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -228,7 +228,7 @@ QUrl outputLocation() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_OUTPUTLOCATION )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_OUTPUTLOCATION )
     {
 #endif
       QUrl * ptr = new QUrl( obj->outputLocation() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -253,7 +253,7 @@ bool setOutputLocation(const QUrl & location)
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SETOUTPUTLOCATION )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -277,7 +277,7 @@ QUrl actualLocation() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ACTUALLOCATION )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_ACTUALLOCATION )
     {
 #endif
       QUrl * ptr = new QUrl( obj->actualLocation() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ bool isMuted() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ISMUTED )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ void setMuted(bool muted)
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SETMUTED )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -352,7 +352,7 @@ qreal volume() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_VOLUME )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -376,7 +376,7 @@ void setVolume(qreal volume)
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SETVOLUME )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -402,7 +402,7 @@ bool isMetaDataAvailable() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ISMETADATAAVAILABLE )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -426,7 +426,7 @@ bool isMetaDataWritable() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ISMETADATAWRITABLE )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -450,7 +450,7 @@ QString audioCodecDescription(const QString & codecName) const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_AUDIOCODECDESCRIPTION )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -474,7 +474,7 @@ QAudioEncoderSettings audioSettings() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_AUDIOSETTINGS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_AUDIOSETTINGS )
     {
 #endif
       QAudioEncoderSettings * ptr = new QAudioEncoderSettings( obj->audioSettings() );
-      _qt5xhb_createReturnClass( ptr, "QAUDIOENCODERSETTINGS", true );
+      Qt5xHb::createReturnClass( ptr, "QAUDIOENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ QMultimedia::AvailabilityStatus availability() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_AVAILABILITY )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -523,7 +523,7 @@ QStringList availableMetaData() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_AVAILABLEMETADATA )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -547,7 +547,7 @@ QString containerDescription(const QString & format) const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_CONTAINERDESCRIPTION )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -571,7 +571,7 @@ QString containerFormat() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_CONTAINERFORMAT )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -595,7 +595,7 @@ Error error() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ERROR )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -619,7 +619,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ERRORSTRING )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -643,7 +643,7 @@ bool isAvailable() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_ISAVAILABLE )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -667,7 +667,7 @@ QVariant metaData(const QString & key) const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_METADATA )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_METADATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -692,7 +692,7 @@ void setAudioSettings(const QAudioEncoderSettings & audioSettings)
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SETAUDIOSETTINGS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -718,7 +718,7 @@ void setContainerFormat(const QString & container)
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SETCONTAINERFORMAT )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -744,7 +744,7 @@ void setEncodingSettings(const QAudioEncoderSettings & audioSettings, const QVid
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SETENCODINGSETTINGS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SETENCODINGSETTINGS )
     if( ISBETWEEN(1,3) && ISQAUDIOENCODERSETTINGS(1) && (ISQVIDEOENCODERSETTINGS(2)||ISNIL(2)) && ISOPTCHAR(3) )
     {
 #endif
-      obj->setEncodingSettings( *PQAUDIOENCODERSETTINGS(1), ISNIL(2)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(2), OPQSTRING(3,QString()) );
+      obj->setEncodingSettings( *PQAUDIOENCODERSETTINGS(1), ISNIL(2)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) Qt5xHb::itemGetPtr(2), OPQSTRING(3,QString()) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -770,7 +770,7 @@ void setMetaData(const QString & key, const QVariant & value)
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SETMETADATA )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -796,7 +796,7 @@ void setVideoSettings(const QVideoEncoderSettings & videoSettings)
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SETVIDEOSETTINGS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -822,7 +822,7 @@ QStringList supportedAudioCodecs() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDAUDIOCODECS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -846,7 +846,7 @@ QList<int> supportedAudioSampleRates(const QAudioEncoderSettings & settings = QA
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDAUDIOSAMPLERATES )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -855,8 +855,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDAUDIOSAMPLERATES )
     {
 #endif
       bool par2;
-      QList<int> list = obj->supportedAudioSampleRates( ISNIL(1)? QAudioEncoderSettings() : *(QAudioEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
-      _qt5xhb_convert_qlist_int_to_array( list );
+      QList<int> list = obj->supportedAudioSampleRates( ISNIL(1)? QAudioEncoderSettings() : *(QAudioEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
+      Qt5xHb::convert_qlist_int_to_array( list );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -873,7 +873,7 @@ QStringList supportedContainers() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDCONTAINERS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -897,7 +897,7 @@ QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings = QVideo
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDFRAMERATES )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -906,8 +906,8 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDFRAMERATES )
     {
 #endif
       bool par2;
-      QList<qreal> list = obj->supportedFrameRates( ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
-      _qt5xhb_convert_qlist_qreal_to_array( list );
+      QList<qreal> list = obj->supportedFrameRates( ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
+      Qt5xHb::convert_qlist_qreal_to_array( list );
       hb_storl( par2, 2 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -924,7 +924,7 @@ QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings = QVide
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDRESOLUTIONS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDRESOLUTIONS )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions( ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) _qt5xhb_itemGetPtr(1), &par2 );
+      QList<QSize> list = obj->supportedResolutions( ISNIL(1)? QVideoEncoderSettings() : *(QVideoEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -978,7 +978,7 @@ QStringList supportedVideoCodecs() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_SUPPORTEDVIDEOCODECS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1002,7 +1002,7 @@ QString videoCodecDescription(const QString & codecName) const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_VIDEOCODECDESCRIPTION )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1026,7 +1026,7 @@ QVideoEncoderSettings videoSettings() const
 */
 HB_FUNC_STATIC( QMEDIARECORDER_VIDEOSETTINGS )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_VIDEOSETTINGS )
     {
 #endif
       QVideoEncoderSettings * ptr = new QVideoEncoderSettings( obj->videoSettings() );
-      _qt5xhb_createReturnClass( ptr, "QVIDEOENCODERSETTINGS", true );
+      Qt5xHb::createReturnClass( ptr, "QVIDEOENCODERSETTINGS", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1051,7 +1051,7 @@ virtual QMediaObject *mediaObject() const override
 */
 HB_FUNC_STATIC( QMEDIARECORDER_MEDIAOBJECT )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QMEDIARECORDER_MEDIAOBJECT )
     {
 #endif
       QMediaObject * ptr = obj->mediaObject();
-      _qt5xhb_createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QMEDIAOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1076,7 +1076,7 @@ void pause()
 */
 HB_FUNC_STATIC( QMEDIARECORDER_PAUSE )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1102,7 +1102,7 @@ void record()
 */
 HB_FUNC_STATIC( QMEDIARECORDER_RECORD )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -1128,7 +1128,7 @@ void stop()
 */
 HB_FUNC_STATIC( QMEDIARECORDER_STOP )
 {
-  QMediaRecorder * obj = (QMediaRecorder *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaRecorder * obj = (QMediaRecorder *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

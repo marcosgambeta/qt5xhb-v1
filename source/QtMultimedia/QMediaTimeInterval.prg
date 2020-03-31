@@ -67,7 +67,7 @@ QMediaTimeInterval()
 void QMediaTimeInterval_new1()
 {
   QMediaTimeInterval * o = new QMediaTimeInterval();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -76,7 +76,7 @@ QMediaTimeInterval(qint64 start, qint64 end)
 void QMediaTimeInterval_new2()
 {
   QMediaTimeInterval * o = new QMediaTimeInterval( PQINT64(1), PQINT64(2) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -85,7 +85,7 @@ QMediaTimeInterval(const QMediaTimeInterval & other)
 void QMediaTimeInterval_new3()
 {
   QMediaTimeInterval * o = new QMediaTimeInterval( *PQMEDIATIMEINTERVAL(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QMediaTimeInterval()
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
 
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_DELETE )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -134,7 +134,7 @@ bool contains(qint64 time) const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_CONTAINS )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,7 +158,7 @@ qint64 end() const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_END )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -182,7 +182,7 @@ bool isNormal() const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_ISNORMAL )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -206,7 +206,7 @@ QMediaTimeInterval normalized() const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NORMALIZED )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NORMALIZED )
     {
 #endif
       QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->normalized() );
-      _qt5xhb_createReturnClass( ptr, "QMEDIATIMEINTERVAL", true );
+      Qt5xHb::createReturnClass( ptr, "QMEDIATIMEINTERVAL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ qint64 start() const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_START )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -255,7 +255,7 @@ QMediaTimeInterval translated(qint64 offset) const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_TRANSLATED )
 {
-  QMediaTimeInterval * obj = (QMediaTimeInterval *) _qt5xhb_itemGetPtrStackSelfItem();
+  QMediaTimeInterval * obj = (QMediaTimeInterval *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_TRANSLATED )
     {
 #endif
       QMediaTimeInterval * ptr = new QMediaTimeInterval( obj->translated( PQINT64(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QMEDIATIMEINTERVAL", true );
+      Qt5xHb::createReturnClass( ptr, "QMEDIATIMEINTERVAL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -46,7 +46,7 @@ void QAudioOutputSlots::stateChanged( QAudio::State state )
 
 void QAudioOutputSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAudioOutput * obj = (QAudioOutput *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAudioOutput * obj = (QAudioOutput *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

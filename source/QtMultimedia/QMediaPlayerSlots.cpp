@@ -232,7 +232,7 @@ void QMediaPlayerSlots::volumeChanged( int volume )
 
 void QMediaPlayerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMediaPlayer * obj = (QMediaPlayer *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -61,7 +61,7 @@ void QCameraExposureControlSlots::requestedValueChanged( int parameter )
 
 void QCameraExposureControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCameraExposureControl * obj = (QCameraExposureControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraExposureControl * obj = (QCameraExposureControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -35,7 +35,7 @@ void QCameraCaptureBufferFormatControlSlots::bufferFormatChanged( QVideoFrame::P
 
 void QCameraCaptureBufferFormatControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraCaptureBufferFormatControl * obj = (QCameraCaptureBufferFormatControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

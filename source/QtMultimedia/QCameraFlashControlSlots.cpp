@@ -35,7 +35,7 @@ void QCameraFlashControlSlots::flashReady( bool ready )
 
 void QCameraFlashControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCameraFlashControl * obj = (QCameraFlashControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QCameraFlashControl * obj = (QCameraFlashControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

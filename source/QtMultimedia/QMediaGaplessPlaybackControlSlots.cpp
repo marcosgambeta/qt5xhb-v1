@@ -59,7 +59,7 @@ void QMediaGaplessPlaybackControlSlots::nextMediaChanged( const QMediaContent & 
 
 void QMediaGaplessPlaybackControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaGaplessPlaybackControl * obj = (QMediaGaplessPlaybackControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

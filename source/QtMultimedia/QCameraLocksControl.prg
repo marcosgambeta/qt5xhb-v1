@@ -60,7 +60,7 @@ explicit QCameraLocksControl(QObject *parent = Q_NULLPTR) [protected]
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_DELETE )
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ virtual QCamera::LockStatus lockStatus(QCamera::LockType lock) const = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_LOCKSTATUS )
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ virtual void searchAndLock(QCamera::LockTypes locks) = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SEARCHANDLOCK )
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -130,7 +130,7 @@ virtual QCamera::LockTypes supportedLocks() const = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SUPPORTEDLOCKS )
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -154,7 +154,7 @@ virtual void unlock(QCamera::LockTypes locks) = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_UNLOCK )
 {
-  QCameraLocksControl * obj = (QCameraLocksControl *) _qt5xhb_itemGetPtrStackSelfItem();
+  QCameraLocksControl * obj = (QCameraLocksControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

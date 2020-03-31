@@ -158,7 +158,7 @@ void QMediaPlaylistSlots::playbackModeChanged( QMediaPlaylist::PlaybackMode mode
 
 void QMediaPlaylistSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMediaPlaylist * obj = (QMediaPlaylist *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMediaPlaylist * obj = (QMediaPlaylist *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

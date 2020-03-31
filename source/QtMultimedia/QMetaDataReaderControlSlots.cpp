@@ -61,7 +61,7 @@ void QMetaDataReaderControlSlots::metaDataAvailableChanged( bool available )
 
 void QMetaDataReaderControlSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QMetaDataReaderControl * obj = (QMetaDataReaderControl *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
