@@ -237,7 +237,7 @@ void QWebEnginePageSlots::iconUrlChanged( const QUrl & url )
 void QWebEnginePageSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QWebEnginePage * obj = (QWebEnginePage *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

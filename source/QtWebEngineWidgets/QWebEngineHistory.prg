@@ -79,7 +79,7 @@ void clear()
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CLEAR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ QList<QWebEngineHistoryItem> items() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,7 +161,7 @@ QList<QWebEngineHistoryItem> backItems(int maxItems) const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ QList<QWebEngineHistoryItem> forwardItems(int maxItems) const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -269,7 +269,7 @@ bool canGoBack() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOBACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -295,7 +295,7 @@ bool canGoForward() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CANGOFORWARD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -321,7 +321,7 @@ void back()
 HB_FUNC_STATIC( QWEBENGINEHISTORY_BACK )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -349,7 +349,7 @@ void forward()
 HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARD )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -377,7 +377,7 @@ void goToItem(const QWebEngineHistoryItem &item)
 HB_FUNC_STATIC( QWEBENGINEHISTORY_GOTOITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -405,7 +405,7 @@ QWebEngineHistoryItem backItem() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEM )
     {
 #endif
       QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->backItem() );
-      _qt5xhb_createReturnClass( ptr, "QWEBENGINEHISTORYITEM", true );
+      Qt5xHb::createReturnClass( ptr, "QWEBENGINEHISTORYITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,7 +432,7 @@ QWebEngineHistoryItem currentItem() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEM )
     {
 #endif
       QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->currentItem() );
-      _qt5xhb_createReturnClass( ptr, "QWEBENGINEHISTORYITEM", true );
+      Qt5xHb::createReturnClass( ptr, "QWEBENGINEHISTORYITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ QWebEngineHistoryItem forwardItem() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
     {
 #endif
       QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->forwardItem() );
-      _qt5xhb_createReturnClass( ptr, "QWEBENGINEHISTORYITEM", true );
+      Qt5xHb::createReturnClass( ptr, "QWEBENGINEHISTORYITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,7 +486,7 @@ QWebEngineHistoryItem itemAt(int i) const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
     {
 #endif
       QWebEngineHistoryItem * ptr = new QWebEngineHistoryItem( obj->itemAt( PINT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QWEBENGINEHISTORYITEM", true );
+      Qt5xHb::createReturnClass( ptr, "QWEBENGINEHISTORYITEM", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -513,7 +513,7 @@ int currentItemIndex() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_CURRENTITEMINDEX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -539,7 +539,7 @@ int count() const
 HB_FUNC_STATIC( QWEBENGINEHISTORY_COUNT )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistory * obj = (QWebEngineHistory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistory * obj = (QWebEngineHistory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

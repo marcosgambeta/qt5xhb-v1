@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
   if( ISNUMPAR(4) && ISNUM(1) && ISQURL(2) && ISLOG(3) && ISCHAR(4) )
   {
     QWebEngineCertificateError * o = new QWebEngineCertificateError( PINT(1), *PQURL(2), PBOOL(3), PQSTRING(4) );
-    _qt5xhb_returnNewObject( o, false );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
 HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ Error error() const
 HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERROR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,7 +133,7 @@ QUrl url() const
 HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ bool isOverridable() const
 HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ISOVERRIDABLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ QString errorDescription() const
 HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERRORDESCRIPTION )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineCertificateError * obj = (QWebEngineCertificateError *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

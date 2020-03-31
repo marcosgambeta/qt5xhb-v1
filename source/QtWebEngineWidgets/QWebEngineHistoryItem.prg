@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEW )
   if( ISNUMPAR(1) && ISQWEBENGINEHISTORYITEM(1) )
   {
     QWebEngineHistoryItem * o = new QWebEngineHistoryItem( *PQWEBENGINEHISTORYITEM(1) );
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_NEW )
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ QUrl originalUrl() const
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ORIGINALURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ORIGINALURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->originalUrl() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ QUrl url() const
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_URL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ QString title() const
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_TITLE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -190,7 +190,7 @@ QDateTime lastVisited() const
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_LASTVISITED )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_LASTVISITED )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->lastVisited() );
-      _qt5xhb_createReturnClass( ptr, "QDATETIME", true );
+      Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ QUrl iconUrl() const
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ICONURL )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ICONURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->iconUrl() );
-      _qt5xhb_createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ bool isValid() const
 HB_FUNC_STATIC( QWEBENGINEHISTORYITEM_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) _qt5xhb_itemGetPtrStackSelfItem();
+  QWebEngineHistoryItem * obj = (QWebEngineHistoryItem *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
