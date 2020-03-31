@@ -70,7 +70,7 @@ void QGeoShape_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoShape * o = new QGeoShape();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -81,7 +81,7 @@ void QGeoShape_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoShape * o = new QGeoShape( *PQGEOSHAPE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGEOSHAPE_NEW )
 HB_FUNC_STATIC( QGEOSHAPE_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,7 +129,7 @@ ShapeType type() const
 HB_FUNC_STATIC( QGEOSHAPE_TYPE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,7 +155,7 @@ bool isValid() const
 HB_FUNC_STATIC( QGEOSHAPE_ISVALID )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -181,7 +181,7 @@ bool isEmpty() const
 HB_FUNC_STATIC( QGEOSHAPE_ISEMPTY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -207,7 +207,7 @@ bool contains(const QGeoCoordinate &coordinate) const
 HB_FUNC_STATIC( QGEOSHAPE_CONTAINS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = (QGeoShape *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGeoShape * obj = (QGeoShape *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

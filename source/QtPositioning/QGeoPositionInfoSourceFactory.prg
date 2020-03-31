@@ -69,7 +69,7 @@ virtual QGeoPositionInfoSource *positionInfoSource(QObject *parent) = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE )
     {
 #endif
       QGeoPositionInfoSource * ptr = obj->positionInfoSource( PQOBJECT(1) );
-      _qt5xhb_createReturnClass( ptr, "QGEOPOSITIONINFOSOURCE", false );
+      Qt5xHb::createReturnClass( ptr, "QGEOPOSITIONINFOSOURCE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,7 +96,7 @@ virtual QGeoSatelliteInfoSource *satelliteInfoSource(QObject *parent) = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE )
     {
 #endif
       QGeoSatelliteInfoSource * ptr = obj->satelliteInfoSource( PQOBJECT(1) );
-      _qt5xhb_createReturnClass( ptr, "QGEOSATELLITEINFOSOURCE", false );
+      Qt5xHb::createReturnClass( ptr, "QGEOSATELLITEINFOSOURCE", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,7 +123,7 @@ virtual QGeoAreaMonitorSource *areaMonitor(QObject *parent) = 0
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) _qt5xhb_itemGetPtrStackSelfItem();
+  QGeoPositionInfoSourceFactory * obj = (QGeoPositionInfoSourceFactory *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR )
     {
 #endif
       QGeoAreaMonitorSource * ptr = obj->areaMonitor( PQOBJECT(1) );
-      _qt5xhb_createReturnQObjectClass( ptr, "QGEOAREAMONITORSOURCE" );
+      Qt5xHb::createReturnQObjectClass( ptr, "QGEOAREAMONITORSOURCE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
