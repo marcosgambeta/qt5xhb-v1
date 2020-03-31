@@ -61,7 +61,7 @@ explicit QVirtualKeyboardTrace(QObject *parent = nullptr)
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDTRACE_DELETE )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

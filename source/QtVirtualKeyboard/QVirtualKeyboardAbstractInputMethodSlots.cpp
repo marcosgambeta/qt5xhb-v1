@@ -61,7 +61,7 @@ void QVirtualKeyboardAbstractInputMethodSlots::selectionListsChanged()
 
 void QVirtualKeyboardAbstractInputMethodSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVirtualKeyboardAbstractInputMethod * obj = (QVirtualKeyboardAbstractInputMethod *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardAbstractInputMethod * obj = (QVirtualKeyboardAbstractInputMethod *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

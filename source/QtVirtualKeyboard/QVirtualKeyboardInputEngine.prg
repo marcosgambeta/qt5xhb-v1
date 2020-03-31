@@ -66,7 +66,7 @@ explicit QVirtualKeyboardInputEngine(QVirtualKeyboardInputContext *parent = null
 */
 HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_DELETE )
 {
-  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) _qt5xhb_itemGetPtrStackSelfItem();
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -198,7 +198,7 @@ void QVirtualKeyboardInputContextSlots::cursorRectIntersectsClipRectChanged()
 
 void QVirtualKeyboardInputContextSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

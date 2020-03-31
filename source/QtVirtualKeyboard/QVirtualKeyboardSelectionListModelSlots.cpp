@@ -59,7 +59,7 @@ void QVirtualKeyboardSelectionListModelSlots::itemSelected( int index )
 
 void QVirtualKeyboardSelectionListModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVirtualKeyboardSelectionListModel * obj = (QVirtualKeyboardSelectionListModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardSelectionListModel * obj = (QVirtualKeyboardSelectionListModel *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

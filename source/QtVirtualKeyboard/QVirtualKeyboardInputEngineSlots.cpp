@@ -155,7 +155,7 @@ void QVirtualKeyboardInputEngineSlots::wordCandidateListVisibleHintChanged()
 
 void QVirtualKeyboardInputEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

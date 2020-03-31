@@ -98,7 +98,7 @@ void QVirtualKeyboardTraceSlots::opacityChanged( qreal opacity )
 
 void QVirtualKeyboardTraceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QVirtualKeyboardTrace * obj = (QVirtualKeyboardTrace *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
