@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLDECLHANDLER_DELETE )
 {
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlDeclHandler * obj = (QXmlDeclHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,7 +80,7 @@ virtual bool attributeDecl ( const QString & eName, const QString & aName, const
 */
 HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
 {
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlDeclHandler * obj = (QXmlDeclHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,7 +104,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLDECLHANDLER_ERRORSTRING )
 {
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlDeclHandler * obj = (QXmlDeclHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -128,7 +128,7 @@ virtual bool externalEntityDecl ( const QString & name, const QString & publicId
 */
 HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
 {
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlDeclHandler * obj = (QXmlDeclHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -152,7 +152,7 @@ virtual bool internalEntityDecl ( const QString & name, const QString & value ) 
 */
 HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
 {
-  QXmlDeclHandler * obj = (QXmlDeclHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlDeclHandler * obj = (QXmlDeclHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

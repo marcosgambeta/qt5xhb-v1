@@ -86,7 +86,7 @@ QDomDocument ()
 void QDomDocument_new1()
 {
   QDomDocument * o = new QDomDocument();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -95,7 +95,7 @@ QDomDocument ( const QString & name )
 void QDomDocument_new2()
 {
   QDomDocument * o = new QDomDocument( PQSTRING(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -104,7 +104,7 @@ QDomDocument ( const QDomDocumentType & doctype )
 void QDomDocument_new3()
 {
   QDomDocument * o = new QDomDocument( *PQDOMDOCUMENTTYPE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -113,7 +113,7 @@ QDomDocument ( const QDomDocument & x )
 void QDomDocument_new4()
 {
   QDomDocument * o = new QDomDocument( *PQDOMDOCUMENT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QDomDocument ()
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
 
 HB_FUNC_STATIC( QDOMDOCUMENT_DELETE )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QDomAttr createAttribute ( const QString & name )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->createAttribute( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMATTR", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMATTR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,7 +192,7 @@ QDomAttr createAttributeNS ( const QString & nsURI, const QString & qName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->createAttributeNS( PQSTRING(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMATTR", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMATTR", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ QDomCDATASection createCDATASection ( const QString & value )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
     {
 #endif
       QDomCDATASection * ptr = new QDomCDATASection( obj->createCDATASection( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMCDATASECTION", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMCDATASECTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,7 +242,7 @@ QDomComment createComment ( const QString & value )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
     {
 #endif
       QDomComment * ptr = new QDomComment( obj->createComment( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMCOMMENT", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMCOMMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ QDomDocumentFragment createDocumentFragment ()
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
     {
 #endif
       QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment() );
-      _qt5xhb_createReturnClass( ptr, "QDOMDOCUMENTFRAGMENT", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMDOCUMENTFRAGMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ QDomElement createElement ( const QString & tagName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->createElement( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ QDomElement createElementNS ( const QString & nsURI, const QString & qName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->createElementNS( PQSTRING(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ QDomEntityReference createEntityReference ( const QString & name )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
     {
 #endif
       QDomEntityReference * ptr = new QDomEntityReference( obj->createEntityReference( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMENTITYREFERENCE", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMENTITYREFERENCE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ QDomProcessingInstruction createProcessingInstruction ( const QString & target, 
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
     {
 #endif
       QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->createProcessingInstruction( PQSTRING(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMPROCESSINGINSTRUCTION", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMPROCESSINGINSTRUCTION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,7 +392,7 @@ QDomText createTextNode ( const QString & value )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
     {
 #endif
       QDomText * ptr = new QDomText( obj->createTextNode( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMTEXT", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMTEXT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -417,7 +417,7 @@ QDomDocumentType doctype () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
     {
 #endif
       QDomDocumentType * ptr = new QDomDocumentType( obj->doctype() );
-      _qt5xhb_createReturnClass( ptr, "QDOMDOCUMENTTYPE", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMDOCUMENTTYPE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,7 +442,7 @@ QDomElement documentElement () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->documentElement() );
-      _qt5xhb_createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,7 +467,7 @@ QDomElement elementById ( const QString & elementId )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->elementById( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMELEMENT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,7 +492,7 @@ QDomNodeList elementsByTagName ( const QString & tagname ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName( PQSTRING(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMNODELIST", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMNODELIST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -517,7 +517,7 @@ QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localN
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS( PQSTRING(1), PQSTRING(2) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMNODELIST", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMNODELIST", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -542,7 +542,7 @@ QDomImplementation implementation () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
     {
 #endif
       QDomImplementation * ptr = new QDomImplementation( obj->implementation() );
-      _qt5xhb_createReturnClass( ptr, "QDOMIMPLEMENTATION", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMIMPLEMENTATION", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -567,7 +567,7 @@ QDomNode importNode ( const QDomNode & importedNode, bool deep )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
     {
 #endif
       QDomNode * ptr = new QDomNode( obj->importNode( *PQDOMNODE(1), PBOOL(2) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMNODE", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMNODE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -592,7 +592,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -616,7 +616,7 @@ bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * e
 */
 void QDomDocument_setContent1()
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -633,7 +633,7 @@ bool setContent ( const QString & text, bool namespaceProcessing, QString * erro
 */
 void QDomDocument_setContent2()
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -650,7 +650,7 @@ bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg 
 */
 void QDomDocument_setContent3()
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -667,7 +667,7 @@ bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * 
 */
 void QDomDocument_setContent4()
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -684,7 +684,7 @@ bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine 
 */
 void QDomDocument_setContent5()
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -701,7 +701,7 @@ bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * error
 */
 void QDomDocument_setContent6()
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -718,7 +718,7 @@ bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, 
 */
 void QDomDocument_setContent7()
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -735,7 +735,7 @@ bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * error
 */
 void QDomDocument_setContent8()
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -801,7 +801,7 @@ QByteArray toByteArray ( int indent = 1 ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toByteArray( OPINT(1,1) ) );
-      _qt5xhb_createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -826,7 +826,7 @@ QString toString ( int indent = 1 ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
 {
-  QDomDocument * obj = (QDomDocument *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocument * obj = (QDomDocument *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

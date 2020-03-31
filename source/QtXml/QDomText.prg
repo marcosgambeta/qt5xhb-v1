@@ -54,7 +54,7 @@ QDomText ()
 void QDomText_new1()
 {
   QDomText * o = new QDomText();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -63,7 +63,7 @@ QDomText ( const QDomText & x )
 void QDomText_new2()
 {
   QDomText * o = new QDomText( *PQDOMTEXT(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QDomText ()
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
 
 HB_FUNC_STATIC( QDOMTEXT_DELETE )
 {
-  QDomText * obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomText * obj = (QDomText *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,7 +107,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 {
-  QDomText * obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomText * obj = (QDomText *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,7 +131,7 @@ QDomText splitText ( int offset )
 */
 HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {
-  QDomText * obj = (QDomText *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomText * obj = (QDomText *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
     {
 #endif
       QDomText * ptr = new QDomText( obj->splitText( PINT(1) ) );
-      _qt5xhb_createReturnClass( ptr, "QDOMTEXT", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMTEXT", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

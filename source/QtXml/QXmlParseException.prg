@@ -66,7 +66,7 @@ QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, c
 void QXmlParseException_new1()
 {
   QXmlParseException * o = new QXmlParseException( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -75,7 +75,7 @@ QXmlParseException ( const QXmlParseException & other )
 void QXmlParseException_new2()
 {
   QXmlParseException * o = new QXmlParseException( *PQXMLPARSEEXCEPTION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_DELETE )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -119,7 +119,7 @@ int columnNumber () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_COLUMNNUMBER )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -143,7 +143,7 @@ int lineNumber () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_LINENUMBER )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QString message () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_MESSAGE )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -191,7 +191,7 @@ QString publicId () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_PUBLICID )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -215,7 +215,7 @@ QString systemId () const
 */
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_SYSTEMID )
 {
-  QXmlParseException * obj = (QXmlParseException *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlParseException * obj = (QXmlParseException *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

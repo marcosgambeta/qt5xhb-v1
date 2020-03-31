@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_DELETE )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,7 +88,7 @@ virtual bool characters ( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,7 +112,7 @@ virtual bool endDocument () = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -136,7 +136,7 @@ virtual bool endElement ( const QString & namespaceURI, const QString & localNam
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ virtual bool endPrefixMapping ( const QString & prefix ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -184,7 +184,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -208,7 +208,7 @@ virtual bool ignorableWhitespace ( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -232,7 +232,7 @@ virtual bool processingInstruction ( const QString & target, const QString & dat
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,7 +256,7 @@ virtual void setDocumentLocator ( QXmlLocator * locator ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -282,7 +282,7 @@ virtual bool skippedEntity ( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -306,7 +306,7 @@ virtual bool startDocument () = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -330,7 +330,7 @@ virtual bool startElement ( const QString & namespaceURI, const QString & localN
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -354,7 +354,7 @@ virtual bool startPrefixMapping ( const QString & prefix, const QString & uri ) 
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTPREFIXMAPPING )
 {
-  QXmlContentHandler * obj = (QXmlContentHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = (QXmlContentHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

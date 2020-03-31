@@ -60,7 +60,7 @@ QDomDocumentType ()
 void QDomDocumentType_new1()
 {
   QDomDocumentType * o = new QDomDocumentType();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -69,7 +69,7 @@ QDomDocumentType ( const QDomDocumentType & n )
 void QDomDocumentType_new2()
 {
   QDomDocumentType * o = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QDomDocumentType ()
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_DELETE )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,7 +113,7 @@ QDomNamedNodeMap entities () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities() );
-      _qt5xhb_createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,7 +138,7 @@ QString internalSubset () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -162,7 +162,7 @@ QString name () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -186,7 +186,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ QDomNamedNodeMap notations () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations() );
-      _qt5xhb_createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
+      Qt5xHb::createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,7 +235,7 @@ QString publicId () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -259,7 +259,7 @@ QString systemId () const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = (QDomDocumentType *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

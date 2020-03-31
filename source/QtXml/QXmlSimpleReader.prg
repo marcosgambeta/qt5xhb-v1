@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
   if( ISNUMPAR(0) )
   {
     QXmlSimpleReader * o = new QXmlSimpleReader();
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 
 HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
 {
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlSimpleReader * obj = (QXmlSimpleReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,7 +86,7 @@ virtual bool parse ( const QXmlInputSource * input, bool incremental )
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 {
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlSimpleReader * obj = (QXmlSimpleReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ virtual bool parseContinue ()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
 {
-  QXmlSimpleReader * obj = (QXmlSimpleReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlSimpleReader * obj = (QXmlSimpleReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

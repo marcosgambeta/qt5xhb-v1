@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_DELETE )
 {
-  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,7 +84,7 @@ virtual bool comment ( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_COMMENT )
 {
-  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,7 +108,7 @@ virtual bool endCDATA () = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDCDATA )
 {
-  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,7 +132,7 @@ virtual bool endDTD () = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDDTD )
 {
-  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -156,7 +156,7 @@ virtual bool endEntity ( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_ENDENTITY )
 {
-  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -180,7 +180,7 @@ virtual QString errorString () const = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_ERRORSTRING )
 {
-  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -204,7 +204,7 @@ virtual bool startCDATA () = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTCDATA )
 {
-  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -228,7 +228,7 @@ virtual bool startDTD ( const QString & name, const QString & publicId, const QS
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTDTD )
 {
-  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ virtual bool startEntity ( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QXMLLEXICALHANDLER_STARTENTITY )
 {
-  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlLexicalHandler * obj = (QXmlLexicalHandler *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

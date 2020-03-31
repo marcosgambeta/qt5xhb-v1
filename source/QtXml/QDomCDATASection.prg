@@ -53,7 +53,7 @@ QDomCDATASection ()
 void QDomCDATASection_new1()
 {
   QDomCDATASection * o = new QDomCDATASection();
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 /*
@@ -62,7 +62,7 @@ QDomCDATASection ( const QDomCDATASection & x )
 void QDomCDATASection_new2()
 {
   QDomCDATASection * o = new QDomCDATASection( *PQDOMCDATASECTION(1) );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 }
 
 //[1]QDomCDATASection ()
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 
 HB_FUNC_STATIC( QDOMCDATASECTION_DELETE )
 {
-  QDomCDATASection * obj = (QDomCDATASection *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomCDATASection * obj = (QDomCDATASection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,7 +106,7 @@ QDomNode::NodeType nodeType () const
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {
-  QDomCDATASection * obj = (QDomCDATASection *) _qt5xhb_itemGetPtrStackSelfItem();
+  QDomCDATASection * obj = (QDomCDATASection *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

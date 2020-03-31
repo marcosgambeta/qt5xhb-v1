@@ -81,7 +81,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLREADER_DELETE )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,7 +101,7 @@ virtual QXmlDTDHandler * DTDHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QXMLREADER_DTDHANDLER )
     {
 #endif
       QXmlDTDHandler * ptr = obj->DTDHandler();
-      _qt5xhb_createReturnClass( ptr, "QXMLDTDHANDLER", false );
+      Qt5xHb::createReturnClass( ptr, "QXMLDTDHANDLER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ virtual QXmlContentHandler * contentHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QXMLREADER_CONTENTHANDLER )
     {
 #endif
       QXmlContentHandler * ptr = obj->contentHandler();
-      _qt5xhb_createReturnClass( ptr, "QXMLCONTENTHANDLER", false );
+      Qt5xHb::createReturnClass( ptr, "QXMLCONTENTHANDLER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ virtual QXmlDeclHandler * declHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QXMLREADER_DECLHANDLER )
     {
 #endif
       QXmlDeclHandler * ptr = obj->declHandler();
-      _qt5xhb_createReturnClass( ptr, "QXMLDECLHANDLER", false );
+      Qt5xHb::createReturnClass( ptr, "QXMLDECLHANDLER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ virtual QXmlEntityResolver * entityResolver () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QXMLREADER_ENTITYRESOLVER )
     {
 #endif
       QXmlEntityResolver * ptr = obj->entityResolver();
-      _qt5xhb_createReturnClass( ptr, "QXMLENTITYRESOLVER", false );
+      Qt5xHb::createReturnClass( ptr, "QXMLENTITYRESOLVER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ virtual QXmlErrorHandler * errorHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
     {
 #endif
       QXmlErrorHandler * ptr = obj->errorHandler();
-      _qt5xhb_createReturnClass( ptr, "QXMLERRORHANDLER", false );
+      Qt5xHb::createReturnClass( ptr, "QXMLERRORHANDLER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ virtual bool feature ( const QString & name, bool * ok = 0 ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_FEATURE )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -252,7 +252,7 @@ virtual bool hasFeature ( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -276,7 +276,7 @@ virtual bool hasProperty ( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -300,7 +300,7 @@ virtual QXmlLexicalHandler * lexicalHandler () const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QXMLREADER_LEXICALHANDLER )
     {
 #endif
       QXmlLexicalHandler * ptr = obj->lexicalHandler();
-      _qt5xhb_createReturnClass( ptr, "QXMLLEXICALHANDLER", false );
+      Qt5xHb::createReturnClass( ptr, "QXMLLEXICALHANDLER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ virtual bool parse ( const QXmlInputSource * input ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_PARSE )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -349,7 +349,7 @@ virtual void * property ( const QString & name, bool * ok = 0 ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_PROPERTY )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -375,7 +375,7 @@ virtual void setContentHandler ( QXmlContentHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETCONTENTHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -401,7 +401,7 @@ virtual void setDTDHandler ( QXmlDTDHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETDTDHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -427,7 +427,7 @@ virtual void setDeclHandler ( QXmlDeclHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETDECLHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -453,7 +453,7 @@ virtual void setEntityResolver ( QXmlEntityResolver * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETENTITYRESOLVER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -479,7 +479,7 @@ virtual void setErrorHandler ( QXmlErrorHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETERRORHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -505,7 +505,7 @@ virtual void setFeature ( const QString & name, bool value ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETFEATURE )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -531,7 +531,7 @@ virtual void setLexicalHandler ( QXmlLexicalHandler * handler ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETLEXICALHANDLER )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -557,7 +557,7 @@ virtual void setProperty ( const QString & name, void * value ) = 0
 */
 HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
 {
-  QXmlReader * obj = (QXmlReader *) _qt5xhb_itemGetPtrStackSelfItem();
+  QXmlReader * obj = (QXmlReader *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
