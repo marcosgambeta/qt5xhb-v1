@@ -55,7 +55,7 @@ void QQuickWidgetSlots::sceneGraphError( QQuickWindow::SceneGraphError error, co
 void QQuickWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * obj = (QQuickWidget *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QQuickWidget * obj = (QQuickWidget *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
