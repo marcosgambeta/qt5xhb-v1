@@ -29,7 +29,7 @@ $prototype=QScriptProgram()
 $internalConstructor=|new1|
 
 $prototype=QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
-$internalConstructor=|new2|const QString &,const QString=QString(),int=1
+%% TODO: $internalConstructor=|new2|const QString &,const QString=QString(),int=1
 
 $prototype=QScriptProgram(const QScriptProgram & other)
 $internalConstructor=|new3|const QScriptProgram &
@@ -44,10 +44,10 @@ HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
   {
     QScriptProgram_new1();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
-  {
-    QScriptProgram_new2();
-  }
+%%  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+%%  {
+%%    QScriptProgram_new2();
+%%  }
   else if( ISNUMPAR(1) && ISQSCRIPTPROGRAM(1) )
   {
     QScriptProgram_new3();

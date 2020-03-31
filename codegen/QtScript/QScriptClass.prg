@@ -31,7 +31,7 @@ $constructor=|new|QScriptEngine *
 $deleteMethod
 
 $prototype=QScriptEngine * engine() const
-$method=|QScriptEngine *|engine|
+%% TODO: $method=|QScriptEngine *|engine|
 
 $prototype=virtual QVariant extension(Extension extension, const QVariant & argument = QVariant())
 $virtualMethod=|QVariant|extension|QScriptClass::Extension,const QVariant &=QVariant()
@@ -52,7 +52,7 @@ $prototype=virtual QScriptValue prototype() const
 $virtualMethod=|QScriptValue|prototype|
 
 $prototype=virtual QueryFlags queryProperty(const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id)
-$virtualMethod=|QScriptClass::QueryFlags|queryProperty|const QScriptValue &,const QScriptString &,QScriptClass::QueryFlags,uint *
+%% TODO: $virtualMethod=|QScriptClass::QueryFlags|queryProperty|const QScriptValue &,const QScriptString &,QScriptClass::QueryFlags,uint *
 
 $prototype=virtual void setProperty(QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value)
 $virtualMethod=|void|setProperty|QScriptValue &,const QScriptString &,uint,const QScriptValue &

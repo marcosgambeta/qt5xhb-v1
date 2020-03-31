@@ -48,7 +48,7 @@ $prototype=QScriptValue(uint value)
 $constructor=|new6|uint
 
 $prototype=QScriptValue(qsreal value)
-$constructor=|new7|qsreal
+%% TODO: $constructor=|new7|qsreal
 
 $prototype=QScriptValue(const QString & value)
 $constructor=|new8|const QString &
@@ -105,11 +105,12 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
+$addMethod=new
 
 $deleteMethod
 
 $prototype=QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
-$internalMethod=|QScriptValue|call,call1|const QScriptValue &=QScriptValue(),const QScriptValueList &=QScriptValueList()
+%% TODO: $internalMethod=|QScriptValue|call,call1|const QScriptValue &=QScriptValue(),const QScriptValueList &=QScriptValueList()
 
 $prototype=QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
 $internalMethod=|QScriptValue|call,call2|const QScriptValue &,const QScriptValue &
@@ -119,11 +120,12 @@ $internalMethod=|QScriptValue|call,call2|const QScriptValue &,const QScriptValue
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
-  if( ISBETWEEN(0,2) && (ISQSCRIPTVALUE(1)||ISNIL(1)) && ISOPTARRAY(2) )
-  {
-    QScriptValue_call1();
-  }
-  else if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQSCRIPTVALUE(2) )
+%%  if( ISBETWEEN(0,2) && (ISQSCRIPTVALUE(1)||ISNIL(1)) && ISOPTARRAY(2) )
+%%  {
+%%    QScriptValue_call1();
+%%  }
+%%  else if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQSCRIPTVALUE(2) )
+  if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQSCRIPTVALUE(2) )
   {
     QScriptValue_call2();
   }
@@ -135,7 +137,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 $addMethod=call
 
 $prototype=QScriptValue construct(const QScriptValueList & args = QScriptValueList())
-$internalMethod=|QScriptValue|construct,construct1|const QScriptValueList &=QScriptValueList()
+%% TODO: $internalMethod=|QScriptValue|construct,construct1|const QScriptValueList &=QScriptValueList()
 
 $prototype=QScriptValue construct(const QScriptValue & arguments)
 $internalMethod=|QScriptValue|construct,construct2|const QScriptValue &
@@ -145,11 +147,12 @@ $internalMethod=|QScriptValue|construct,construct2|const QScriptValue &
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
-  if( ISBETWEEN(0,1) && ISOPTARRAY(1) )
-  {
-    QScriptValue_construct1();
-  }
-  else if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+%%  if( ISBETWEEN(0,1) && ISOPTARRAY(1) )
+%%  {
+%%    QScriptValue_construct1();
+%%  }
+%%  else if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+  if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
   {
     QScriptValue_construct2();
   }
@@ -164,7 +167,7 @@ $prototype=QScriptValue data() const
 $method=|QScriptValue|data|
 
 $prototype=QScriptEngine * engine() const
-$method=|QScriptEngine *|engine|
+%% TODO: $method=|QScriptEngine *|engine|
 
 $prototype=bool equals(const QScriptValue & other) const
 $method=|bool|equals|const QScriptValue &
@@ -221,13 +224,13 @@ $prototype=bool lessThan(const QScriptValue & other) const
 $method=|bool|lessThan|const QScriptValue &
 
 $prototype=QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-$internalMethod=|QScriptValue|property,property1|const QString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
+%% TODO: $internalMethod=|QScriptValue|property,property1|const QString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
 $prototype=QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-$internalMethod=|QScriptValue|property,property2|const QScriptString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
+%% TODO: $internalMethod=|QScriptValue|property,property2|const QScriptString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
 $prototype=QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
-$internalMethod=|QScriptValue|property,property3|quint32,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
+%% TODO: $internalMethod=|QScriptValue|property,property3|quint32,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
 //[1]QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
 //[2]QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
@@ -235,48 +238,48 @@ $internalMethod=|QScriptValue|property,property3|quint32,const QScriptValue::Res
 
 HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTY )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
-  {
-    QScriptValue_property1();
-  }
-  else if( ISBETWEEN(1,2) && ISQSCRIPTSTRING(1) && ISOPTNUM(2) )
-  {
-    QScriptValue_property2();
-  }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
-  {
-    QScriptValue_property3();
-  }
-  else
-  {
+%%  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+%%  {
+%%    QScriptValue_property1();
+%%  }
+%%  else if( ISBETWEEN(1,2) && ISQSCRIPTSTRING(1) && ISOPTNUM(2) )
+%%  {
+%%    QScriptValue_property2();
+%%  }
+%%  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+%%  {
+%%    QScriptValue_property3();
+%%  }
+%%  else
+%%  {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
+%%  }
 }
 $addMethod=property
 
 $prototype=QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-$internalMethod=|QScriptValue::PropertyFlags|propertyFlags,propertyFlags1|const QString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
+%% TODO: $internalMethod=|QScriptValue::PropertyFlags|propertyFlags,propertyFlags1|const QString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
 $prototype=QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-$internalMethod=|QScriptValue::PropertyFlags|propertyFlags,propertyFlags2|const QScriptString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
+%% TODO: $internalMethod=|QScriptValue::PropertyFlags|propertyFlags,propertyFlags2|const QScriptString &,const QScriptValue::ResolveFlags &=QScriptValue::ResolvePrototype
 
 //[1]QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
 //[2]QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
 
 HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTYFLAGS )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
-  {
-    QScriptValue_propertyFlags1();
-  }
-  else if( ISBETWEEN(1,2) && ISQSCRIPTSTRING(1) && ISOPTNUM(2) )
-  {
-    QScriptValue_propertyFlags2();
-  }
-  else
-  {
+%%  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+%%  {
+%%    QScriptValue_propertyFlags1();
+%%  }
+%%  else if( ISBETWEEN(1,2) && ISQSCRIPTSTRING(1) && ISOPTNUM(2) )
+%%  {
+%%    QScriptValue_propertyFlags2();
+%%  }
+%%  else
+%%  {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
+%%  }
 }
 $addMethod=propertyFlags
 
@@ -290,13 +293,13 @@ $prototype=void setData(const QScriptValue & data)
 $method=|void|setData|const QScriptValue &
 
 $prototype=void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-$internalMethod=|void|setProperty,setProperty1|const QString &,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
+%% TODO: $internalMethod=|void|setProperty,setProperty1|const QString &,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
 
 $prototype=void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-$internalMethod=|void|setProperty,setProperty2|const QScriptString &,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
+%% TODO: $internalMethod=|void|setProperty,setProperty2|const QScriptString &,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
 
 $prototype=void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-$internalMethod=|void|setProperty,setProperty3|quint32,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
+%% TODO: $internalMethod=|void|setProperty,setProperty3|quint32,const QScriptValue &,const QScriptValue::PropertyFlags &=QScriptValue::KeepExistingFlags
 
 //[1]void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
 //[2]void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
@@ -304,22 +307,22 @@ $internalMethod=|void|setProperty,setProperty3|quint32,const QScriptValue &,cons
 
 HB_FUNC_STATIC( QSCRIPTVALUE_SETPROPERTY )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
-  {
-    QScriptValue_setProperty1();
-  }
-  else if( ISBETWEEN(2,3) && ISQSCRIPTSTRING(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
-  {
-    QScriptValue_setProperty2();
-  }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
-  {
-    QScriptValue_setProperty3();
-  }
-  else
-  {
+%%  if( ISBETWEEN(2,3) && ISCHAR(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
+%%  {
+%%    QScriptValue_setProperty1();
+%%  }
+%%  else if( ISBETWEEN(2,3) && ISQSCRIPTSTRING(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
+%%  {
+%%    QScriptValue_setProperty2();
+%%  }
+%%  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQSCRIPTVALUE(2) && ISOPTNUM(3) )
+%%  {
+%%    QScriptValue_setProperty3();
+%%  }
+%%  else
+%%  {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
+%%  }
 }
 $addMethod=setProperty
 
@@ -342,10 +345,10 @@ $prototype=qint32 toInt32() const
 $method=|qint32|toInt32|
 
 $prototype=qsreal toInteger() const
-$method=|qsreal|toInteger|
+%% TODO: $method=|qsreal|toInteger|
 
 $prototype=qsreal toNumber() const
-$method=|qsreal|toNumber|
+%% TODO: $method=|qsreal|toNumber|
 
 $prototype=const QMetaObject * toQMetaObject() const
 $method=|const QMetaObject *|toQMetaObject|
