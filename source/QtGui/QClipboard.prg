@@ -415,7 +415,7 @@ QString text ( QString & subtype, Mode mode = Clipboard ) const
 */
 void QClipboard_text2 ()
 {
-  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
