@@ -57,14 +57,14 @@
 #include "qt5xhb_macros_qtxmlpatterns.h"
 
 // TODO: revise
-#define ISQSTRINGREF(n)                                     _qt5xhb_isObjectDerivedFrom(n,"QStringRef")
-#define PQSTRINGREF(n)                                     (QStringRef *) _qt5xhb_itemGetPtr(n)
-#define ISQRUNNABLE(n)                                      _qt5xhb_isObjectDerivedFrom(n,"QRunnable")
-#define PQRUNNABLE(n)                                      (QRunnable *) _qt5xhb_itemGetPtr(n)
-#define ISQLATIN1STRING(n)                                  _qt5xhb_isObjectDerivedFrom(n,"QLatin1String")
-#define PQLATIN1STRING(n)                                  (QLatin1String *) _qt5xhb_itemGetPtr(n)
-#define ISQDESIGNERFORMWINDOWINTERFACE(n)                   _qt5xhb_isObjectDerivedFrom(n,"QDesignerFormWindowInterface")
-#define PQDESIGNERFORMWINDOWINTERFACE(n)                   (QDesignerFormWindowInterface *) _qt5xhb_itemGetPtr(n)
+#define ISQSTRINGREF(n)                                     Qt5xHb::isObjectDerivedFrom(n,"QStringRef")
+#define PQSTRINGREF(n)                                     (QStringRef *) Qt5xHb::itemGetPtr(n)
+#define ISQRUNNABLE(n)                                      Qt5xHb::isObjectDerivedFrom(n,"QRunnable")
+#define PQRUNNABLE(n)                                      (QRunnable *) Qt5xHb::itemGetPtr(n)
+#define ISQLATIN1STRING(n)                                  Qt5xHb::isObjectDerivedFrom(n,"QLatin1String")
+#define PQLATIN1STRING(n)                                  (QLatin1String *) Qt5xHb::itemGetPtr(n)
+#define ISQDESIGNERFORMWINDOWINTERFACE(n)                   Qt5xHb::isObjectDerivedFrom(n,"QDesignerFormWindowInterface")
+#define PQDESIGNERFORMWINDOWINTERFACE(n)                   (QDesignerFormWindowInterface *) Qt5xHb::itemGetPtr(n)
 
 #define ISOPTQOBJECT(n)                                     (ISQOBJECT(n)||ISNIL(n))
 #define ISOPTQWIDGET(n)                                     (ISQWIDGET(n)||ISNIL(n))
@@ -73,7 +73,7 @@
 
 #define ISBETWEEN(a,b)                                      hb_pcount() >= a && hb_pcount() <= b
 #define ISNUMPAR(a)                                         hb_pcount() == a
-#define INHERITS(a,b)                                       _qt5xhb_isObjectDerivedFrom(a,b)
+#define INHERITS(a,b)                                       Qt5xHb::isObjectDerivedFrom(a,b)
 
 // macros for parameters
 #define PQREAL(n)                                           (qreal) hb_parnd(n)
@@ -93,8 +93,8 @@
 #define PULONG(n)                                           (ulong) hb_parnl(n)
 #define PCONSTCHAR(n)                                       (const char *) hb_parc(n)
 #define PCONSTUCHAR(n)                                      (const uchar *) hb_parc(n)
-#define PQSTRINGLIST(n)                                     _qt5xhb_convert_array_parameter_to_qstringlist(n)
-#define PQVARIANTLIST(n)                                    _qt5xhb_convert_array_parameter_to_qvariantlist(n)
+#define PQSTRINGLIST(n)                                     Qt5xHb::convert_array_parameter_to_qstringlist(n)
+#define PQVARIANTLIST(n)                                    Qt5xHb::convert_array_parameter_to_qvariantlist(n)
 #define PQINT8(n)                                           (qint8) hb_parni(n)
 #define PQINT16(n)                                          (qint16) hb_parni(n)
 #define PQINT32(n)                                          (qint32) hb_parni(n)
@@ -132,8 +132,8 @@
 #define OPCONSTCHAR(n,v)                                    (const char *) ISNIL(n)? v : hb_parc(n)
 #define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromLatin1( hb_parc(n) )
 //#define OPQSTRING(n,v)                                      ISNIL(n)? v : QString::fromUtf8( hb_parc(n) )
-#define OPQSTRINGLIST(n,v)                                  ISNIL(n)? v : _qt5xhb_convert_array_parameter_to_qstringlist(n)
-#define OPQVARIANTLIST(n,v)                                 ISNIL(n)? v : _qt5xhb_convert_array_parameter_to_qvariantlist(n)
+#define OPQSTRINGLIST(n,v)                                  ISNIL(n)? v : Qt5xHb::convert_array_parameter_to_qstringlist(n)
+#define OPQVARIANTLIST(n,v)                                 ISNIL(n)? v : Qt5xHb::convert_array_parameter_to_qvariantlist(n)
 #define OPQINT8(n,v)                                        (qint8) ISNIL(n)? v : hb_parni(n)
 #define OPQINT16(n,v)                                       (qint16) ISNIL(n)? v : hb_parni(n)
 #define OPQINT32(n,v)                                       (qint32) ISNIL(n)? v : hb_parni(n)
@@ -185,7 +185,7 @@
 #define RGLENUM(x)                                          hb_retni( (GLenum) x )
 #define RGLBITFIELD(x)                                      hb_retni( (GLbitfield) x )
 #define RGLSIZEI(x)                                         hb_retni( (GLsizei) x )
-#define RQSTRINGLIST(x)                                     _qt5xhb_convert_qstringlist_to_array( x )
+#define RQSTRINGLIST(x)                                     Qt5xHb::convert_qstringlist_to_array( x )
 #define RENUM(x)                                            hb_retni(x)
 #define RQRGB(x)                                            hb_retni(x)
 #define RQINTPTR(x)                                         hb_retnll(x)
