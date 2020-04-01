@@ -929,7 +929,7 @@ void QSqlDatabase_addDatabase1 ()
 {
   QString par2 = ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( PQSTRING(1), par2 ) );
-  _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+  Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
 /*
@@ -937,10 +937,10 @@ static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectio
 */
 void QSqlDatabase_addDatabase2 ()
 {
-  QSqlDriver * par1 = (QSqlDriver *) _qt5xhb_itemGetPtr(1);
+  QSqlDriver * par1 = (QSqlDriver *) Qt5xHb::itemGetPtr(1);
   QString par2 = ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
-  _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+  Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
 //[1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
   {
     QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+    Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
   }
   else
   {
