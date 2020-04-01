@@ -564,7 +564,7 @@ void QMenu_exec3 ()
     par1 << (QAction *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
   QAction * ptr = QMenu::exec ( par1, *PQPOINT(2), OPQACTION(3,0), OPQWIDGET(4,0) );
-  _qt5xhb_createReturnClass ( ptr, "QACTION" );
+  Qt5xHb::createReturnClass ( ptr, "QACTION" );
 }
 
 //[1]QAction * exec ()

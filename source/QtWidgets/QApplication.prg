@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   argv = hb_cmdargARGV();
   QApplication * o = NULL;
   o = new QApplication( argc, argv );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 HB_FUNC_STATIC( QAPPLICATION_DELETE )
