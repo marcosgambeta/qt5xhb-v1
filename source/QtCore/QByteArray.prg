@@ -201,7 +201,7 @@ void QByteArray_new4 ()
 {
   char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
   QByteArray * o = new QByteArray ( PINT(1), par2 );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 /*
@@ -3124,7 +3124,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
   {
     char par2 = ISNIL(2)? 37 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
     QByteArray * ptr = new QByteArray( QByteArray::fromPercentEncoding ( *PQBYTEARRAY(1), par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else
   {
@@ -3241,7 +3241,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
   {
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
     QByteArray * ptr = new QByteArray( QByteArray::number ( PDOUBLE(1), par2, OPINT(3,6) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else
   {

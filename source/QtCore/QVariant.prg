@@ -227,9 +227,9 @@ QVariant(QDataStream &s)
 void QVariant_new6 ()
 {
 #ifndef QT_NO_DATASTREAM
-  QDataStream * par1 = (QDataStream *) _qt5xhb_itemGetPtr(1);
+  QDataStream * par1 = (QDataStream *) Qt5xHb::itemGetPtr(1);
   QVariant * o = new QVariant ( *par1 );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     hb_dateDecode( hb_itemGetDL( hb_param( 1, HB_IT_DATE ) ), &y, &m, &d );
     QDate date(y, m, d);
     QVariant * o = new QVariant ( date );
-    _qt5xhb_returnNewObject( o, true );
+    Qt5xHb::returnNewObject( o, true );
   }
   else
   {
