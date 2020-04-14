@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 $internalConstructor=|new2|QObject *,const char *,QDeclarativeEngine *=0
 
-//[1]QDeclarativeListReference ()
-//[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
+/*
+[1]QDeclarativeListReference ()
+[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {

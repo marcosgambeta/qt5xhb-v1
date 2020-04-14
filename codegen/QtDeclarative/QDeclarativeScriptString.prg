@@ -33,8 +33,10 @@ $internalConstructor=|new1|
 $prototype=QDeclarativeScriptString ( const QDeclarativeScriptString & other )
 $internalConstructor=|new2|const QDeclarativeScriptString &
 
-//[1]QDeclarativeScriptString ()
-//[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
+/*
+[1]QDeclarativeScriptString ()
+[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {

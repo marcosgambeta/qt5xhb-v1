@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDeclarativeError ( const QDeclarativeError & other )
 $internalConstructor=|new2|const QDeclarativeError &
 
-//[1]QDeclarativeError ()
-//[2]QDeclarativeError ( const QDeclarativeError & other )
+/*
+[1]QDeclarativeError ()
+[2]QDeclarativeError ( const QDeclarativeError & other )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 {

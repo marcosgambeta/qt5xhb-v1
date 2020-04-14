@@ -49,14 +49,16 @@ $internalConstructor=|new7|QObject *,const QString &,QDeclarativeEngine *
 $prototype=QDeclarativeProperty ( const QDeclarativeProperty & other )
 $internalConstructor=|new8|const QDeclarativeProperty &
 
-//[1]QDeclarativeProperty ()
-//[2]QDeclarativeProperty ( QObject * obj )
-//[3]QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
-//[4]QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
-//[5]QDeclarativeProperty ( QObject * obj, const QString & name )
-//[6]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
-//[7]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
-//[8]QDeclarativeProperty ( const QDeclarativeProperty & other )
+/*
+[1]QDeclarativeProperty ()
+[2]QDeclarativeProperty ( QObject * obj )
+[3]QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
+[4]QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
+[5]QDeclarativeProperty ( QObject * obj, const QString & name )
+[6]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
+[7]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
+[8]QDeclarativeProperty ( const QDeclarativeProperty & other )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
 {
@@ -104,8 +106,10 @@ $internalMethod=|bool|connectNotifySignal,connectNotifySignal1|QObject *,const c
 $prototype=bool connectNotifySignal ( QObject * dest, int method ) const
 $internalMethod=|bool|connectNotifySignal,connectNotifySignal2|QObject *,int
 
-//[1]bool connectNotifySignal ( QObject * dest, const char * slot ) const
-//[2]bool connectNotifySignal ( QObject * dest, int method ) const
+/*
+[1]bool connectNotifySignal ( QObject * dest, const char * slot ) const
+[2]bool connectNotifySignal ( QObject * dest, int method ) const
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
 {
@@ -190,10 +194,12 @@ $internalStaticMethod=|QVariant|read,read3|QObject *,const QString &,QDeclarativ
 $prototype=static QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
 $internalStaticMethod=|QVariant|read,read4|QObject *,const QString &,QDeclarativeEngine *
 
-//[1]QVariant read () const
-//[2]QVariant read ( QObject * object, const QString & name )
-//[3]QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
-//[4]QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
+/*
+[1]QVariant read () const
+[2]QVariant read ( QObject * object, const QString & name )
+[3]QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
+[4]QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
 {
@@ -232,10 +238,12 @@ $internalStaticMethod=|bool|write,write3|QObject *,const QString &,const QVarian
 $prototype=static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
 $internalStaticMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QDeclarativeEngine *
 
-//[1]bool write ( const QVariant & value ) const
-//[2]bool write ( QObject * object, const QString & name, const QVariant & value )
-//[3]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
-//[4]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
+/*
+[1]bool write ( const QVariant & value ) const
+[2]bool write ( QObject * object, const QString & name, const QVariant & value )
+[3]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
+[4]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE )
 {
