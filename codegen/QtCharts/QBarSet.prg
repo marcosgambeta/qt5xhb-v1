@@ -125,8 +125,10 @@ $internalMethod=5,7,0|void|append,append1|const qreal
 $prototype=void append(const QList<qreal> &values)
 $internalMethod=5,7,0|void|append,append2|const QList<qreal> &
 
-//[1]void append(const qreal value)
-//[2]void append(const QList<qreal> &values)
+/*
+[1]void append(const qreal value)
+[2]void append(const QList<qreal> &values)
+*/
 
 HB_FUNC_STATIC( QBARSET_APPEND )
 {

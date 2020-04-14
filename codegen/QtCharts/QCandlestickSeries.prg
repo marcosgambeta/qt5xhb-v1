@@ -154,8 +154,10 @@ $internalMethod=5,8,0|bool|append,append1|const QList<QCandlestickSet *> &
 $prototype=bool append(const QList<QCandlestickSet *> &sets)
 $internalMethod=5,8,0|bool|append,append2|const QList<QCandlestickSet *> &
 
-//[1]bool append(QCandlestickSet *set)
-//[2]bool append(const QList<QCandlestickSet *> &sets)
+/*
+[1]bool append(QCandlestickSet *set)
+[2]bool append(const QList<QCandlestickSet *> &sets)
+*/
 
 HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 {
@@ -180,8 +182,10 @@ $internalMethod=5,8,0|bool|remove,remove1|QCandlestickSet *
 $prototype=bool remove(const QList<QCandlestickSet *> &sets)
 $internalMethod=5,8,0|bool|remove,remove2|const QList<QCandlestickSet *> &
 
-//[1]bool remove(QCandlestickSet *set)
-//[2]bool remove(const QList<QCandlestickSet *> &sets)
+/*
+[1]bool remove(QCandlestickSet *set)
+[2]bool remove(const QList<QCandlestickSet *> &sets)
+*/
 
 HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
 {

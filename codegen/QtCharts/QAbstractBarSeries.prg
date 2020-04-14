@@ -101,8 +101,10 @@ $internalMethod=5,7,0|bool|append,append1|QBarSet *
 $prototype=bool append(QList<QBarSet *> sets)
 $internalMethod=5,7,0|bool|append,append2|QList<QBarSet *>
 
-//[1]bool append(QBarSet *set)
-//[2]bool append(QList<QBarSet *> sets)
+/*
+[1]bool append(QBarSet *set)
+[2]bool append(QList<QBarSet *> sets)
+*/
 
 HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
 {

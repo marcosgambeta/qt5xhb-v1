@@ -244,8 +244,10 @@ $internalMethod=5,7,0|void|zoomIn,zoomIn1|
 $prototype=void zoomIn(const QRectF &rect)
 $internalMethod=5,7,0|void|zoomIn,zoomIn2|const QRectF &
 
-//[1]void zoomIn()
-//[2]void zoomIn(const QRectF &rect)
+/*
+[1]void zoomIn()
+[2]void zoomIn(const QRectF &rect)
+*/
 
 HB_FUNC_STATIC( QCHART_ZOOMIN )
 {

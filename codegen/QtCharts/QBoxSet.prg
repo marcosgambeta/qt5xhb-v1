@@ -35,8 +35,10 @@ $internalConstructor=5,7,0|new1|const QString &=QString(),QObject *=Q_NULLPTR
 $prototype=explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
 $internalConstructor=5,7,0|new2|const qreal,const qreal,const qreal,const qreal,const qreal,const QString &=QString(),QObject *=Q_NULLPTR
 
-//[1]explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
-//[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
+[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QBOXSET_NEW )
 {
@@ -87,8 +89,10 @@ $internalMethod=5,7,0|void|append,append1|const qreal
 $prototype=void append(const QList<qreal> &values)
 $internalMethod=5,7,0|void|append,append2|const QList<qreal> &
 
-//[1]void append(const qreal value)
-//[2]void append(const QList<qreal> &values)
+/*
+[1]void append(const qreal value)
+[2]void append(const QList<qreal> &values)
+*/
 
 HB_FUNC_STATIC( QBOXSET_APPEND )
 {

@@ -125,9 +125,11 @@ $internalMethod=5,7,0|bool|append,append2|QList<QPieSlice *>
 $prototype=QPieSlice *append(QString label, qreal value)
 $internalMethod=5,7,0|QPieSlice *|append,append3|QString,qreal
 
-//[1]bool append(QPieSlice *slice)
-//[2]bool append(QList<QPieSlice *> slices)
-//[3]QPieSlice *append(QString label, qreal value)
+/*
+[1]bool append(QPieSlice *slice)
+[2]bool append(QList<QPieSlice *> slices)
+[3]QPieSlice *append(QString label, qreal value)
+*/
 
 HB_FUNC_STATIC( QPIESERIES_APPEND )
 {
