@@ -31,8 +31,10 @@ $internalConstructor=5,2,0|new1|
 $prototype=QBluetoothHostInfo(const QBluetoothHostInfo &other)
 $internalConstructor=5,2,0|new2|const QBluetoothHostInfo &
 
-//[1]QBluetoothHostInfo()
-//[2]QBluetoothHostInfo(const QBluetoothHostInfo &other)
+/*
+[1]QBluetoothHostInfo()
+[2]QBluetoothHostInfo(const QBluetoothHostInfo &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
 {

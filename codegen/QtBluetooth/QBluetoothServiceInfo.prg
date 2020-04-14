@@ -33,8 +33,10 @@ $internalConstructor=5,2,0|new1|
 $prototype=QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
 $internalConstructor=5,2,0|new2|const QBluetoothServiceInfo &
 
-//[1]QBluetoothServiceInfo()
-//[2]QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
+/*
+[1]QBluetoothServiceInfo()
+[2]QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEW )
 {
@@ -76,10 +78,12 @@ $prototype=void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::S
 
 $prototype=void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Alternative &value)
 
-//[1]void setAttribute(quint16 attributeId, const QVariant &value)
-//[2]void setAttribute(quint16 attributeId, const QBluetoothUuid &value)
-//[3]void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Sequence &value)    // TODO: implementar
-//[4]void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Alternative &value) // TODO: implementar
+/*
+[1]void setAttribute(quint16 attributeId, const QVariant &value)
+[2]void setAttribute(quint16 attributeId, const QBluetoothUuid &value)
+[3]void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Sequence &value)    // TODO: implementar
+[4]void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Alternative &value) // TODO: implementar
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETATTRIBUTE )
 {

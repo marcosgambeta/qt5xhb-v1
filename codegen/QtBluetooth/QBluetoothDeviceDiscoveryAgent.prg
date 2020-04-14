@@ -33,8 +33,10 @@ $internalConstructor=5,2,0|new1|QObject *=0
 $prototype=QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
 $internalConstructor=5,2,0|new2|const QBluetoothAddress &,QObject *=0
 
-//[1]QBluetoothDeviceDiscoveryAgent(QObject *parent = 0)
-//[2]QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
+/*
+[1]QBluetoothDeviceDiscoveryAgent(QObject *parent = 0)
+[2]QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW )
 {

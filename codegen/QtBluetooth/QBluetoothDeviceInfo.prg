@@ -42,10 +42,12 @@ $internalConstructor=5,5,0|new3|const QBluetoothUuid &,const QString &,quint32
 $prototype=QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
 $internalConstructor=5,2,0|new4|const QBluetoothDeviceInfo &
 
-//[1]QBluetoothDeviceInfo()
-//[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
-//[3]QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
-//[4]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+/*
+[1]QBluetoothDeviceInfo()
+[2]QBluetoothDeviceInfo(const QBluetoothAddress &address, const QString &name, quint32 classOfDevice)
+[3]QBluetoothDeviceInfo(const QBluetoothUuid &uuid, const QString &name, quint32 classOfDevice)
+[4]QBluetoothDeviceInfo(const QBluetoothDeviceInfo &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 {

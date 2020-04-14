@@ -33,8 +33,10 @@ $internalConstructor=5,2,0|new1|QBluetoothServiceInfo::Protocol,QObject *=0
 $prototype=QBluetoothSocket(QObject *parent = 0)
 $internalConstructor=5,2,0|new2|QObject *=0
 
-//[1]QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
-//[2]QBluetoothSocket(QObject *parent = 0)
+/*
+[1]QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
+[2]QBluetoothSocket(QObject *parent = 0)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW )
 {
@@ -81,9 +83,11 @@ $internalMethod=5,2,0|void|connectToService,connectToService2|const QBluetoothAd
 $prototype=void connectToService(const QBluetoothAddress &address, quint16 port, OpenMode openMode = ReadWrite)
 $internalMethod=5,2,0|void|connectToService,connectToService3|const QBluetoothAddress &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
-//[1]void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
-//[2]void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, OpenMode openMode = ReadWrite)
-//[3]void connectToService(const QBluetoothAddress &address, quint16 port, OpenMode openMode = ReadWrite)
+/*
+[1]void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
+[2]void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, OpenMode openMode = ReadWrite)
+[3]void connectToService(const QBluetoothAddress &address, quint16 port, OpenMode openMode = ReadWrite)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE )
 {
