@@ -125,8 +125,10 @@ $staticMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle1|const QVector3D &,
 $prototype=Q_INVOKABLE static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
 $staticMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle2|float,float,float,float
 
-//[1]Q_INVOKABLE static QQuaternion fromAxisAndAngle(const QVector3D &axis, float angle)
-//[2]Q_INVOKABLE static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
+/*
+[1]Q_INVOKABLE static QQuaternion fromAxisAndAngle(const QVector3D &axis, float angle)
+[2]Q_INVOKABLE static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_FROMAXISANDANGLE )
 {
@@ -139,8 +141,10 @@ $staticMethod=|QQuaternion|fromAxesAndAngles,fromAxesAndAngles1|const QVector3D 
 $prototype=Q_INVOKABLE static QQuaternion fromAxesAndAngles(const QVector3D &axis1, float angle1, const QVector3D &axis2, float angle2, const QVector3D &axis3, float angle3)
 $staticMethod=|QQuaternion|fromAxesAndAngles,fromAxesAndAngles2|const QVector3D &,float,const QVector3D &,float,const QVector3D &,float
 
-//[1]Q_INVOKABLE static QQuaternion fromAxesAndAngles(const QVector3D &axis1, float angle1, const QVector3D &axis2, float angle2)
-//[2]Q_INVOKABLE static QQuaternion fromAxesAndAngles(const QVector3D &axis1, float angle1, const QVector3D &axis2, float angle2, const QVector3D &axis3, float angle3)
+/*
+[1]Q_INVOKABLE static QQuaternion fromAxesAndAngles(const QVector3D &axis1, float angle1, const QVector3D &axis2, float angle2)
+[2]Q_INVOKABLE static QQuaternion fromAxesAndAngles(const QVector3D &axis1, float angle1, const QVector3D &axis2, float angle2, const QVector3D &axis3, float angle3)
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_FROMAXESANDANGLES )
 {
@@ -153,8 +157,10 @@ $staticMethod=|QQuaternion|fromEulerAngles,fromEulerAngles1|const QVector3D &
 $prototype=Q_INVOKABLE static QQuaternion fromEulerAngles(float pitch, float yaw, float roll)
 $staticMethod=|QQuaternion|fromEulerAngles,fromEulerAngles2|float,float,float
 
-//[1]Q_INVOKABLE static QQuaternion fromEulerAngles(const QVector3D &eulerAngles)
-//[2]Q_INVOKABLE static QQuaternion fromEulerAngles(float pitch, float yaw, float roll)
+/*
+[1]Q_INVOKABLE static QQuaternion fromEulerAngles(const QVector3D &eulerAngles)
+[2]Q_INVOKABLE static QQuaternion fromEulerAngles(float pitch, float yaw, float roll)
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_FROMEULERANGLES )
 {
