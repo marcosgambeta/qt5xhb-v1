@@ -65,9 +65,9 @@ $prototype=void setAdditiveFactor(float additiveFactor) (slot)
 $prototype=Qt3DCore::QNodeCreatedChangeBasePtr createNodeCreationChange() const Q_DECL_OVERRIDE [private]
 
 $beginSignals
-$signal=additiveFactorChanged(float)
-$signal=baseClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
-$signal=additiveClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
+$signal=|additiveFactorChanged(float)
+$signal=|baseClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
+$signal=|additiveClipChanged(Qt3DAnimation::QAbstractClipBlendNode*)
 $endSignals
 
 #pragma ENDDUMP
