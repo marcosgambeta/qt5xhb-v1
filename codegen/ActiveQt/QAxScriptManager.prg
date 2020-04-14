@@ -38,8 +38,10 @@ $internalMethod=|void|addObject,addObject1|QAxBase *
 $prototype=void addObject ( QObject * object )
 $internalMethod=|void|addObject,addObject2|QObject *
 
-//[1]void addObject ( QAxBase * object )
-//[2]void addObject ( QObject * object )
+/*
+[1]void addObject ( QAxBase * object )
+[2]void addObject ( QObject * object )
+*/
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
 {
@@ -64,8 +66,10 @@ $internalMethod=|QVariant|call,call1|const QString &,const QVariant &=QVariant()
 $prototype=QVariant call ( const QString & function, QList<QVariant> & arguments )
 $internalMethod=|QVariant|call,call2|const QString &,QList<QVariant> &
 
-//[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-//[2]QVariant call ( const QString & function, QList<QVariant> & arguments )
+/*
+[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+[2]QVariant call ( const QString & function, QList<QVariant> & arguments )
+*/
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
 {
@@ -93,8 +97,10 @@ $internalMethod=|QAxScript *|load,load1|const QString &,const QString &,const QS
 $prototype=QAxScript * load ( const QString & file, const QString & name )
 $internalMethod=|QAxScript *|load,load2|const QString &,const QString &
 
-//[1]QAxScript * load ( const QString & code, const QString & name, const QString & language )
-//[2]QAxScript * load ( const QString & file, const QString & name )
+/*
+[1]QAxScript * load ( const QString & code, const QString & name, const QString & language )
+[2]QAxScript * load ( const QString & file, const QString & name )
+*/
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 {
