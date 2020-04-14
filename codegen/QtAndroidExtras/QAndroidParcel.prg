@@ -33,8 +33,10 @@ $internalConstructor=5,10,0|new1|
 $prototype=explicit QAndroidParcel(const QAndroidJniObject& parcel)
 $internalConstructor=5,10,0|new2|const QAndroidJniObject &
 
-//[1]QAndroidParcel()
-//[2]explicit QAndroidParcel(const QAndroidJniObject& parcel)
+/*
+[1]QAndroidParcel()
+[2]explicit QAndroidParcel(const QAndroidJniObject& parcel)
+*/
 
 HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
 {

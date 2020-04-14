@@ -31,8 +31,10 @@ $internalConstructor=5,10,0|new1|
 $prototype=QAndroidBinder(const QAndroidJniObject &binder)
 $internalConstructor=5,10,0|new2|const QAndroidJniObject &
 
-//[1]explicit QAndroidBinder()
-//[2]QAndroidBinder(const QAndroidJniObject &binder)
+/*
+[1]explicit QAndroidBinder()
+[2]QAndroidBinder(const QAndroidJniObject &binder)
+*/
 
 HB_FUNC_STATIC( QANDROIDBINDER_NEW )
 {

@@ -37,10 +37,12 @@ $internalConstructor=5,10,0|new3|const QString &
 $prototype=explicit QAndroidIntent(const QAndroidJniObject &packageContext, const char *className)
 $internalConstructor=5,10,0|new4|const QAndroidJniObject &,const char *
 
-//[1]QAndroidIntent()
-//[2]explicit QAndroidIntent(const QAndroidJniObject &intent)
-//[3]explicit QAndroidIntent(const QString &action)
-//[4]explicit QAndroidIntent(const QAndroidJniObject &packageContext, const char *className)
+/*
+[1]QAndroidIntent()
+[2]explicit QAndroidIntent(const QAndroidJniObject &intent)
+[3]explicit QAndroidIntent(const QString &action)
+[4]explicit QAndroidIntent(const QAndroidJniObject &packageContext, const char *className)
+*/
 
 HB_FUNC_STATIC( QANDROIDINTENT_NEW )
 {

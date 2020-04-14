@@ -33,8 +33,10 @@ $internalConstructor=5,10,0|new1|
 $prototype=explicit QAndroidServiceConnection(const QAndroidJniObject &serviceConnection)
 $internalConstructor=5,10,0|new2|const QAndroidJniObject &
 
-//[1]QAndroidServiceConnection()
-//[2]explicit QAndroidServiceConnection(const QAndroidJniObject &serviceConnection)
+/*
+[1]QAndroidServiceConnection()
+[2]explicit QAndroidServiceConnection(const QAndroidJniObject &serviceConnection)
+*/
 
 HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEW )
 {

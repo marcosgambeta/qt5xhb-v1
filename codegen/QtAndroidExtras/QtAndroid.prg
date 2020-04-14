@@ -58,8 +58,10 @@ $internalStaticMethod=5,7,0|void|hideSplashScreen,hideSplashScreen1|
 $prototype=static void hideSplashScreen(int duration)
 $internalStaticMethod=5,10,0|void|hideSplashScreen,hideSplashScreen2|int
 
-//[1]static void hideSplashScreen()
-//[2]static void hideSplashScreen(int duration)
+/*
+[1]static void hideSplashScreen()
+[2]static void hideSplashScreen(int duration)
+*/
 
 HB_FUNC_STATIC( QTANDROID_HIDESPLASHSCREEN )
 {
