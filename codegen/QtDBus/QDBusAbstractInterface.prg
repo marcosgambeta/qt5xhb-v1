@@ -59,12 +59,14 @@ $internalMethod=|QDBusMessage|call,call1|const QString &,const QVariant &=QVaria
 $prototype=QDBusMessage call(QDBus::CallMode mode,const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
 $internalMethod=|QDBusMessage|call,call2|QDBus::CallMode,const QString &,const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant(),const QVariant &=QVariant()
 
-//[1]QDBusMessage call(const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
-//[2]QDBusMessage call(QDBus::CallMode mode,const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
+/*
+[1]QDBusMessage call(const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
+[2]QDBusMessage call(QDBus::CallMode mode,const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
+*/
 
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL )
 {
-  // TODO: implementar
+%% TODO: implementar
 }
 $addMethod=call
 
@@ -77,12 +79,14 @@ $internalMethod=|bool|callWithCallback,callWithCallback1|const QString &,const Q
 $prototype=bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member)
 $internalMethod=|bool|callWithCallback,callWithCallback2|const QString &,const QList<QVariant> &,QObject *,const char *
 
-//[1]bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member, const char *errorSlot)
-//[2]bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member)
+/*
+[1]bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member, const char *errorSlot)
+[2]bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member)
+*/
 
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK )
 {
-  // TODO: implementar
+%% TODO: implementar
 }
 $addMethod=callWithCallback
 

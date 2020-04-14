@@ -34,9 +34,11 @@ $internalConstructor=|new2|int
 $prototype=QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
 $internalConstructor=|new3|const QDBusUnixFileDescriptor &
 
-//[1]QDBusUnixFileDescriptor()
-//[2]explicit QDBusUnixFileDescriptor(int fileDescriptor)
-//[3]QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
+/*
+[1]QDBusUnixFileDescriptor()
+[2]explicit QDBusUnixFileDescriptor(int fileDescriptor)
+[3]QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
+*/
 
 HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 {

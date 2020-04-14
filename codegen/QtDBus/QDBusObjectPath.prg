@@ -37,12 +37,14 @@ $constructor=|new3|QLatin1String
 $prototype=explicit QDBusObjectPath(const QString &path)
 $constructor=|new4|const QString &
 
-//[1]QDBusObjectPath()
-//[2]explicit QDBusObjectPath(const char *path)
-//[3]explicit QDBusObjectPath(QLatin1String path)
-//[4]explicit QDBusObjectPath(const QString &path)
+/*
+[1]QDBusObjectPath()
+[2]explicit QDBusObjectPath(const char *path)
+[3]explicit QDBusObjectPath(QLatin1String path)
+[4]explicit QDBusObjectPath(const QString &path)
+*/
 
-// TODO: resolver conflitos entre [2], [3] e [4]
+%% TODO: resolver conflitos entre [2], [3] e [4]
 
 HB_FUNC( QDBUSOBJECTPATH_NEW )
 {

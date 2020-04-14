@@ -53,12 +53,14 @@ $internalMethod=|void|sendErrorReply,sendErrorReply1|const QString &,const QStri
 $prototype=void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
 $internalMethod=|void|sendErrorReply,sendErrorReply2|QDBusError::ErrorType,const QString &=QString()
 
-//[1]void sendErrorReply(const QString &name, const QString &msg = QString()) const
-//[2]void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
+/*
+[1]void sendErrorReply(const QString &name, const QString &msg = QString()) const
+[2]void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
+*/
 
 HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 {
-  // TODO: implementar
+%% TODO: implementar
 }
 $addMethod=sendErrorReply
 

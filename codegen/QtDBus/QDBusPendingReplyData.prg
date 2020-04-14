@@ -36,8 +36,10 @@ $prototype=void assign(const QDBusPendingCall &call) [protected]
 $prototype=void assign(const QDBusMessage &message) [protected]
 %% $internalMethod=|void|assign,assign2|const QDBusMessage &
 
-%% //[1]void assign(const QDBusPendingCall &call)
-%% //[2]void assign(const QDBusMessage &message)
+%% /*
+%% [1]void assign(const QDBusPendingCall &call)
+%% [2]void assign(const QDBusMessage &message)
+%% */
 
 %% HB_FUNC( QDBUSPENDINGREPLYDATA_ASSIGN )
 %% {

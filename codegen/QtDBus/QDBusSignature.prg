@@ -37,10 +37,12 @@ $constructor=|new3|QLatin1String
 $prototype=explicit QDBusSignature(const QString &signature)
 $constructor=|new4|const QString &
 
-//[1]QDBusSignature()
-//[2]explicit QDBusSignature(const char *signature)
-//[3]explicit QDBusSignature(QLatin1String signature)
-//[4]explicit QDBusSignature(const QString &signature)
+/*
+[1]QDBusSignature()
+[2]explicit QDBusSignature(const char *signature)
+[3]explicit QDBusSignature(QLatin1String signature)
+[4]explicit QDBusSignature(const QString &signature)
+*/
 
 %% TODO: resolver conflitos entre [2], [3] e [4]
 

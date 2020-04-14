@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDBusMessage(const QDBusMessage &other)
 $internalConstructor=|new2|const QDBusMessage &
 
-//[1]QDBusMessage()
-//[2]QDBusMessage(const QDBusMessage &other)
+/*
+[1]QDBusMessage()
+[2]QDBusMessage(const QDBusMessage &other)
+*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
 {
@@ -59,8 +61,10 @@ $prototype=QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVa
 $prototype=QDBusMessage createReply(const QVariant &argument) const
 $internalMethod=|QDBusMessage|createReply,createReply2|const QVariant &
 
-//[1]QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
-//[2]QDBusMessage createReply(const QVariant &argument) const
+/*
+[1]QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
+[2]QDBusMessage createReply(const QVariant &argument) const
+*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
 {
@@ -88,9 +92,11 @@ $internalMethod=|QDBusMessage|createErrorReply,createErrorReply2|const QDBusErro
 $prototype=QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
 $internalMethod=|QDBusMessage|createErrorReply,createErrorReply3|QDBusError::ErrorType,const QString &
 
-//[1]QDBusMessage createErrorReply(const QString name, const QString &msg) const
-//[2]QDBusMessage createErrorReply(const QDBusError &err) const
-//[3]QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
+/*
+[1]QDBusMessage createErrorReply(const QString name, const QString &msg) const
+[2]QDBusMessage createErrorReply(const QDBusError &err) const
+[3]QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
+*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 {
@@ -173,9 +179,11 @@ $internalStaticMethod=|QDBusMessage|createError,createError2|const QDBusError &
 $prototype=static inline QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
 $internalStaticMethod=|QDBusMessage|createError,createError3|QDBusError::ErrorType,const QString &
 
-//[1]static QDBusMessage createError(const QString &name, const QString &msg)
-//[2]static inline QDBusMessage createError(const QDBusError &err)
-//[3]static inline QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
+/*
+[1]static QDBusMessage createError(const QString &name, const QString &msg)
+[2]static inline QDBusMessage createError(const QDBusError &err)
+[3]static inline QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
+*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
 {

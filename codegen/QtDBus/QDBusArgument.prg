@@ -31,12 +31,14 @@ $internalConstructor=|new1|
 $prototype=QDBusArgument(const QDBusArgument &other)
 $internalConstructor=|new2|const QDBusArgument &
 
-//[1]QDBusArgument()
-//[2]QDBusArgument(const QDBusArgument &other)
+/*
+[1]QDBusArgument()
+[2]QDBusArgument(const QDBusArgument &other)
+*/
 
 HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
 {
-  // TODO: implementar
+%% TODO: implementar
 }
 
 $deleteMethod
@@ -53,12 +55,14 @@ $internalMethod=|void|beginArray,beginArray1|int
 $prototype=void beginArray() const
 $internalMethod=|void|beginArray,beginArray2|
 
-//[1]void beginArray(int elementMetaTypeId)
-//[2]void beginArray() const
+/*
+[1]void beginArray(int elementMetaTypeId)
+[2]void beginArray() const
+*/
 
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 {
-  // TODO: implementar
+%% TODO: implementar
 }
 $addMethod=beginArray
 
@@ -71,12 +75,14 @@ $internalMethod=|void|beginMap,beginMap1|int,int
 $prototype=void beginMap() const
 $internalMethod=|void|beginMap,beginMap2|
 
-//[1]void beginMap(int keyMetaTypeId, int valueMetaTypeId)
-//[2]void beginMap() const
+/*
+[1]void beginMap(int keyMetaTypeId, int valueMetaTypeId)
+[2]void beginMap() const
+*/
 
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 {
-  // TODO: implementar
+%% TODO: implementar
 }
 $addMethod=beginMap
 
