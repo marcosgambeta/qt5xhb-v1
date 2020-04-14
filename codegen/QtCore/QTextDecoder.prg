@@ -31,8 +31,10 @@ $internalConstructor=|new1|const QTextCodec *
 $prototype=QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
 $internalConstructor=|new2|const QTextCodec *,QTextCodec::ConversionFlags
 
-//[1]QTextDecoder(const QTextCodec * codec)
-//[2]QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
+/*
+[1]QTextDecoder(const QTextCodec * codec)
+[2]QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
+*/
 
 HB_FUNC_STATIC( QTEXTDECODER_NEW )
 {
@@ -60,9 +62,11 @@ $prototype=void toUnicode(QString * target, const char * chars, int len)
 $prototype=QString toUnicode(const QByteArray & ba)
 $internalMethod=|QString|toUnicode,toUnicode3|const QByteArray &
 
-//[1]QString toUnicode(const char * chars, int len)
-//[2]void toUnicode(QString * target, const char * chars, int len) // TODO: implementar(?)
-//[3]QString toUnicode(const QByteArray & ba)
+/*
+[1]QString toUnicode(const char * chars, int len)
+[2]void toUnicode(QString * target, const char * chars, int len) // TODO: implementar(?)
+[3]QString toUnicode(const QByteArray & ba)
+*/
 
 HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 {

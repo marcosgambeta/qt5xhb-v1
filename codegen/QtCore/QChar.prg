@@ -33,7 +33,7 @@ HB_FUNC_STATIC( QCHAR_NEW2 )
 {
   char par1 = ISCHAR(1)? (char) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   QChar * o = new QChar ( par1 );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 $addMethod=new2
 
@@ -42,7 +42,7 @@ HB_FUNC_STATIC( QCHAR_NEW3 )
 {
   uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   QChar * o = new QChar ( par1 );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 $addMethod=new3
 
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QCHAR_NEW5 )
   uchar par1 = ISCHAR(1)? (uchar) hb_parc(1)[0] : (ISNUM(1)? hb_parni(1) : 0);
   uchar par2 = ISCHAR(2)? (uchar) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
   QChar * o = new QChar ( par1, par2 );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 $addMethod=new5
 
@@ -74,18 +74,21 @@ $constructor=|new9|int
 $prototype=QChar ( SpecialCharacter ch )
 $constructor=|new10|QChar::SpecialCharacter
 
-//[01]QChar ()
-//[02]QChar ( char ch )
-//[03]QChar ( uchar ch )
-//[04]QChar ( QLatin1Char ch )
-//[05]QChar ( uchar cell, uchar row )
-//[06]QChar ( ushort code )
-//[07]QChar ( short code )
-//[08]QChar ( uint code )
-//[09]QChar ( int code )
-//[10]QChar ( SpecialCharacter ch )
+/*
+[01]QChar ()
+[02]QChar ( char ch )
+[03]QChar ( uchar ch )
+[04]QChar ( QLatin1Char ch )
+[05]QChar ( uchar cell, uchar row )
+[06]QChar ( ushort code )
+[07]QChar ( short code )
+[08]QChar ( uint code )
+[09]QChar ( int code )
+[10]QChar ( SpecialCharacter ch )
+*/
 
-HB_FUNC_STATIC( QCHAR_NEW ) // TODO: completar implementação
+%% TODO: completar implementação
+HB_FUNC_STATIC( QCHAR_NEW )
 {
   HB_FUNC_EXEC( QCHAR_NEW1 );
 }

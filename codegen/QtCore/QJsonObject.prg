@@ -33,8 +33,10 @@ $internalConstructor=|new1|
 $prototype=QJsonObject(const QJsonObject & other)
 $internalConstructor=|new2|const QJsonObject &
 
-//[1]QJsonObject()
-//[2]QJsonObject(const QJsonObject & other)
+/*
+[1]QJsonObject()
+[2]QJsonObject(const QJsonObject & other)
+*/
 
 HB_FUNC_STATIC( QJSONOBJECT_NEW )
 {

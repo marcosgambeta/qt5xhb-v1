@@ -34,9 +34,11 @@ $internalConstructor=|new2|QEventLoop *
 $prototype=QEventLoopLocker(QThread * thread)
 $internalConstructor=|new3|QThread *
 
-//[1]QEventLoopLocker()
-//[2]QEventLoopLocker(QEventLoop * loop)
-//[3]QEventLoopLocker(QThread * thread)
+/*
+[1]QEventLoopLocker()
+[2]QEventLoopLocker(QEventLoop * loop)
+[3]QEventLoopLocker(QThread * thread)
+*/
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 {

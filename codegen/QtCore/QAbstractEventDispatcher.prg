@@ -59,8 +59,10 @@ $internalMethod=|int|registerTimer,registerTimer1|int,Qt::TimerType,QObject *
 $prototype=virtual void registerTimer(int timerId, int interval, Qt::TimerType timerType, QObject * object) = 0
 $internalVirtualMethod=|void|registerTimer,registerTimer2|int,int,Qt::TimerType,QObject *
 
-//[1]int registerTimer(int interval, Qt::TimerType timerType, QObject * object)
-//[2]virtual void registerTimer(int timerId, int interval, Qt::TimerType timerType, QObject * object) = 0
+/*
+[1]int registerTimer(int interval, Qt::TimerType timerType, QObject * object)
+[2]virtual void registerTimer(int timerId, int interval, Qt::TimerType timerType, QObject * object) = 0
+*/
 
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 {

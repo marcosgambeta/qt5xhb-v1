@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 $internalConstructor=|new2|const QModelIndex &,const QModelIndex &
 
-//[1]QItemSelection()
-//[2]QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+/*
+[1]QItemSelection()
+[2]QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+*/
 
 HB_FUNC_STATIC( QITEMSELECTION_NEW )
 {

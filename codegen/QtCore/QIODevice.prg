@@ -28,8 +28,11 @@ $destructor
 $includes
 
 %% TODO: is abstract ?
-%%//[1]QIODevice ()
-%%//[2]QIODevice ( QObject * parent )
+
+%% /*
+%% [1]QIODevice ()
+%% [2]QIODevice ( QObject * parent )
+%% */
 
 %%//HB_FUNC_STATIC( QIODEVICE_NEW )
 %%//{
@@ -94,8 +97,10 @@ $internalMethod=|qint64|peek,peek1|char *,qint64
 $prototype=QByteArray peek ( qint64 maxSize )
 $internalMethod=|QByteArray|peek,peek2|qint64
 
-//[1]qint64 peek ( char * data, qint64 maxSize )
-//[2]QByteArray peek ( qint64 maxSize )
+/*
+[1]qint64 peek ( char * data, qint64 maxSize )
+[2]QByteArray peek ( qint64 maxSize )
+*/
 
 HB_FUNC_STATIC( QIODEVICE_PEEK )
 {
@@ -127,8 +132,10 @@ $internalMethod=|qint64|read,read1|char *,qint64
 $prototype=QByteArray read ( qint64 maxSize )
 $internalMethod=|QByteArray|read,read2|qint64
 
-//[1]qint64 read ( char * data, qint64 maxSize )
-//[2]QByteArray read ( qint64 maxSize )
+/*
+[1]qint64 read ( char * data, qint64 maxSize )
+[2]QByteArray read ( qint64 maxSize )
+*/
 
 HB_FUNC_STATIC( QIODEVICE_READ )
 {
@@ -157,8 +164,10 @@ $internalMethod=|qint64|readLine,readLine1|char *,qint64
 $prototype=QByteArray readLine ( qint64 maxSize = 0 )
 $internalMethod=|QByteArray|readLine,readLine2|qint64=0
 
-//[1]qint64 readLine ( char * data, qint64 maxSize )
-//[2]QByteArray readLine ( qint64 maxSize = 0 )
+/*
+[1]qint64 readLine ( char * data, qint64 maxSize )
+[2]QByteArray readLine ( qint64 maxSize = 0 )
+*/
 
 HB_FUNC_STATIC( QIODEVICE_READLINE )
 {
@@ -207,9 +216,11 @@ $internalMethod=|qint64|write,write2|const char *
 $prototype=qint64 write ( const QByteArray & byteArray )
 $internalMethod=|qint64|write,write3|const QByteArray &
 
-//[1]qint64 write ( const char * data, qint64 maxSize )
-//[2]qint64 write ( const char * data )
-//[3]qint64 write ( const QByteArray & byteArray )
+/*
+[1]qint64 write ( const char * data, qint64 maxSize )
+[2]qint64 write ( const char * data )
+[3]qint64 write ( const QByteArray & byteArray )
+*/
 
 HB_FUNC_STATIC( QIODEVICE_WRITE )
 {

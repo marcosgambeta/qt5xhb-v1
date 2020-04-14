@@ -37,10 +37,12 @@ $internalConstructor=|new3|QObject *
 $prototype=QTemporaryFile(const QString & templateName, QObject * parent)
 $internalConstructor=|new4|const QString &,QObject *
 
-//[1]QTemporaryFile()
-//[2]QTemporaryFile(const QString & templateName)
-//[3]QTemporaryFile(QObject * parent)
-//[4]QTemporaryFile(const QString & templateName, QObject * parent)
+/*
+[1]QTemporaryFile()
+[2]QTemporaryFile(const QString & templateName)
+[3]QTemporaryFile(QObject * parent)
+[4]QTemporaryFile(const QString & templateName, QObject * parent)
+*/
 
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 {
@@ -92,8 +94,10 @@ $internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile1|QFile
 $prototype=static QTemporaryFile * createNativeFile(const QString & fileName)
 $internalStaticMethod=|QTemporaryFile *|createNativeFile,createNativeFile2|const QString &
 
-//[1]QTemporaryFile * createNativeFile(QFile & file)
-//[2]QTemporaryFile * createNativeFile(const QString & fileName)
+/*
+[1]QTemporaryFile * createNativeFile(QFile & file)
+[2]QTemporaryFile * createNativeFile(const QString & fileName)
+*/
 
 HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
 {

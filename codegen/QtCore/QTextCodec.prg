@@ -31,8 +31,10 @@ $internalMethod=|bool|canEncode,canEncode1|QChar
 $prototype=bool canEncode(const QString&) const
 $internalMethod=|bool|canEncode,canEncode2|const QString &
 
-//[1]bool canEncode(QChar) const
-//[2]bool canEncode(const QString&) const
+/*
+[1]bool canEncode(QChar) const
+[2]bool canEncode(const QString&) const
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 {
@@ -57,9 +59,11 @@ $internalMethod=|QString|toUnicode,toUnicode1|const QByteArray &
 $prototype=QString toUnicode(const char* chars) const
 $internalMethod=|QString|toUnicode,toUnicode2|const char *
 
-//[1]QString toUnicode(const QByteArray&) const
-//[2]QString toUnicode(const char* chars) const
-//[3]QString toUnicode(const char *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
+/*
+[1]QString toUnicode(const QByteArray&) const
+[2]QString toUnicode(const char* chars) const
+[3]QString toUnicode(const char *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 {
@@ -81,8 +85,10 @@ $addMethod=toUnicode
 $prototype=QByteArray fromUnicode(const QString& uc) const
 $internalMethod=|QByteArray|fromUnicode,fromUnicode1|const QString &
 
-//[1]QByteArray fromUnicode(const QString& uc) const
-//[2]QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
+/*
+[1]QByteArray fromUnicode(const QString& uc) const
+[2]QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
 {
@@ -118,8 +124,10 @@ $internalStaticMethod=|QTextCodec *|codecForName,codecForName1|const QByteArray 
 $prototype=static QTextCodec* codecForName(const char *name)
 $internalStaticMethod=|QTextCodec *|codecForName,codecForName2|const char *
 
-//[1]static QTextCodec* codecForName(const QByteArray &name)
-//[2]static QTextCodec* codecForName(const char *name)
+/*
+[1]static QTextCodec* codecForName(const QByteArray &name)
+[2]static QTextCodec* codecForName(const char *name)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 {
@@ -159,8 +167,10 @@ $internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml1|const QByteArray 
 $prototype=static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
 $internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml2|const QByteArray &,QTextCodec *
 
-//[1]static QTextCodec *codecForHtml(const QByteArray &ba)
-//[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
+/*
+[1]static QTextCodec *codecForHtml(const QByteArray &ba)
+[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 {
@@ -185,8 +195,10 @@ $internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText1|const QByte
 $prototype=static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
 $internalStaticMethod=|QTextCodec *|codecForUtfText,codecForUtfText2|const QByteArray &,QTextCodec *
 
-//[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
-//[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
+/*
+[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
+[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
 {

@@ -37,10 +37,12 @@ $internalConstructor=|new3|qreal,qreal,qreal,qreal
 $prototype=QLineF(const QLine & line)
 $internalConstructor=|new4|const QLine &
 
-//[1]QLineF()
-//[2]QLineF(const QPointF & p1, const QPointF & p2)
-//[3]QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
-//[4]QLineF(const QLine & line)
+/*
+[1]QLineF()
+[2]QLineF(const QPointF & p1, const QPointF & p2)
+[3]QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
+[4]QLineF(const QLine & line)
+*/
 
 HB_FUNC_STATIC( QLINEF_NEW )
 {
@@ -140,8 +142,10 @@ $internalMethod=|void|translate,translate1|const QPointF &
 $prototype=void translate(qreal dx, qreal dy)
 $internalMethod=|void|translate,translate2|qreal,qreal
 
-//[1]void translate(const QPointF & offset)
-//[2]void translate(qreal dx, qreal dy)
+/*
+[1]void translate(const QPointF & offset)
+[2]void translate(qreal dx, qreal dy)
+*/
 
 HB_FUNC_STATIC( QLINEF_TRANSLATE )
 {
@@ -166,8 +170,10 @@ $internalMethod=|QLineF|translated,translated1|const QPointF &
 $prototype=QLineF translated(qreal dx, qreal dy) const
 $internalMethod=|QLineF|translated,translated2|qreal,qreal
 
-//[1]QLineF translated(const QPointF & offset) const
-//[2]QLineF translated(qreal dx, qreal dy) const
+/*
+[1]QLineF translated(const QPointF & offset) const
+[2]QLineF translated(qreal dx, qreal dy) const
+*/
 
 HB_FUNC_STATIC( QLINEF_TRANSLATED )
 {

@@ -43,11 +43,13 @@ $internalConstructor=|new4|QLocale::Language,QLocale::Script,QLocale::Country
 $prototype=QLocale ( const QLocale & other )
 $internalConstructor=|new5|const QLocale &
 
-//[1] QLocale ()
-//[2] QLocale ( const QString & name )
-//[3] QLocale ( Language language, Country country = AnyCountry )
-//[4] QLocale ( Language language, Script script, Country country )
-//[5] QLocale ( const QLocale & other )
+/*
+[1] QLocale ()
+[2] QLocale ( const QString & name )
+[3] QLocale ( Language language, Country country = AnyCountry )
+[4] QLocale ( Language language, Script script, Country country )
+[5] QLocale ( const QLocale & other )
+*/
 
 HB_FUNC_STATIC( QLOCALE_NEW )
 {
@@ -154,8 +156,10 @@ $method=|QString|quoteString,quoteString1|const QString &,QLocale::QuotationStyl
 $prototype=QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
 $method=|QString|quoteString,quoteString2|const QStringRef &,QLocale::QuotationStyle=QLocale::StandardQuotation
 
-//[1]QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
-//[2]QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
+/*
+[1]QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
+[2]QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
+*/
 
 %% TODO: resolver caso do QStringRef
 
@@ -207,14 +211,16 @@ $method=|QString|toCurrencyString,toCurrencyString7|qulonglong,const QString &=Q
 $prototype=QString toCurrencyString ( double value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString8|double,const QString &=QString()
 
-//[1]QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
-//[2]QString toCurrencyString ( short value, const QString & symbol = QString() ) const
-//[3]QString toCurrencyString ( ushort value, const QString & symbol = QString() ) const
-//[4]QString toCurrencyString ( int value, const QString & symbol = QString() ) const
-//[5]QString toCurrencyString ( uint value, const QString & symbol = QString() ) const
-//[6]QString toCurrencyString ( float value, const QString & symbol = QString() ) const
-//[7]QString toCurrencyString ( qulonglong value, const QString & symbol = QString() ) const
-//[8]QString toCurrencyString ( double value, const QString & symbol = QString() ) const
+/*
+[1]QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
+[2]QString toCurrencyString ( short value, const QString & symbol = QString() ) const
+[3]QString toCurrencyString ( ushort value, const QString & symbol = QString() ) const
+[4]QString toCurrencyString ( int value, const QString & symbol = QString() ) const
+[5]QString toCurrencyString ( uint value, const QString & symbol = QString() ) const
+[6]QString toCurrencyString ( float value, const QString & symbol = QString() ) const
+[7]QString toCurrencyString ( qulonglong value, const QString & symbol = QString() ) const
+[8]QString toCurrencyString ( double value, const QString & symbol = QString() ) const
+*/
 
 %% TODO: verificar se é possível identificar o valor passado como parâmetro
 
@@ -229,8 +235,10 @@ $internalMethod=|QDate|toDate,toDate1|const QString &,QLocale::FormatType=QLocal
 $prototype=QDate toDate ( const QString & string, const QString & format ) const
 $internalMethod=|QDate|toDate,toDate2|const QString &,const QString &
 
-//[1]QDate toDate ( const QString & string, FormatType format = LongFormat ) const
-//[2]QDate toDate ( const QString & string, const QString & format ) const
+/*
+[1]QDate toDate ( const QString & string, FormatType format = LongFormat ) const
+[2]QDate toDate ( const QString & string, const QString & format ) const
+*/
 
 HB_FUNC_STATIC( QLOCALE_TODATE )
 {
@@ -255,8 +263,10 @@ $internalMethod=|QDateTime|toDateTime,toDateTime1|const QString &,QLocale::Forma
 $prototype=QDateTime toDateTime ( const QString & string, const QString & format ) const
 $internalMethod=|QDateTime|toDateTime,toDateTime2|const QString &,const QString &
 
-//[1]QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
-//[2]QDateTime toDateTime ( const QString & string, const QString & format ) const
+/*
+[1]QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
+[2]QDateTime toDateTime ( const QString & string, const QString & format ) const
+*/
 
 HB_FUNC_STATIC( QLOCALE_TODATETIME )
 {
@@ -328,20 +338,22 @@ $method=|QString|toString,toString13|qulonglong
 $prototype=QString toString ( double i, char f = 'g', int prec = 6 ) const
 $method=|QString|toString,toString14|double,char='g',int=6
 
-//[01]QString toString ( qlonglong i ) const
-//[02]QString toString ( const QDate & date, const QString & format ) const
-//[03]QString toString ( const QDate & date, FormatType format = LongFormat ) const
-//[04]QString toString ( const QTime & time, const QString & format ) const
-//[05]QString toString ( const QTime & time, FormatType format = LongFormat ) const
-//[06]QString toString ( const QDateTime & dateTime, FormatType format = LongFormat ) const
-//[07]QString toString ( const QDateTime & dateTime, const QString & format ) const
-//[08]QString toString ( short i ) const
-//[09]QString toString ( ushort i ) const
-//[10]QString toString ( int i ) const
-//[11]QString toString ( uint i ) const
-//[12]QString toString ( float i, char f = 'g', int prec = 6 ) const
-//[13]QString toString ( qulonglong i ) const
-//[14]QString toString ( double i, char f = 'g', int prec = 6 ) const
+/*
+[01]QString toString ( qlonglong i ) const
+[02]QString toString ( const QDate & date, const QString & format ) const
+[03]QString toString ( const QDate & date, FormatType format = LongFormat ) const
+[04]QString toString ( const QTime & time, const QString & format ) const
+[05]QString toString ( const QTime & time, FormatType format = LongFormat ) const
+[06]QString toString ( const QDateTime & dateTime, FormatType format = LongFormat ) const
+[07]QString toString ( const QDateTime & dateTime, const QString & format ) const
+[08]QString toString ( short i ) const
+[09]QString toString ( ushort i ) const
+[10]QString toString ( int i ) const
+[11]QString toString ( uint i ) const
+[12]QString toString ( float i, char f = 'g', int prec = 6 ) const
+[13]QString toString ( qulonglong i ) const
+[14]QString toString ( double i, char f = 'g', int prec = 6 ) const
+*/
 
 %% TODO: implementar verificação dos parâmetros
 
@@ -388,8 +400,10 @@ $internalMethod=|QTime|toTime,toTime1|const QString &,QLocale::FormatType=QLocal
 $prototype=QTime toTime ( const QString & string, const QString & format ) const
 $internalMethod=|QTime|toTime,toTime2|const QString &,const QString &
 
-//[1]QTime toTime ( const QString & string, FormatType format = LongFormat ) const
-//[2]QTime toTime ( const QString & string, const QString & format ) const
+/*
+[1]QTime toTime ( const QString & string, FormatType format = LongFormat ) const
+[2]QTime toTime ( const QString & string, const QString & format ) const
+*/
 
 HB_FUNC_STATIC( QLOCALE_TOTIME )
 {

@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QPoint &
 $prototype=QPointF(qreal xpos, qreal ypos)
 $internalConstructor=|new3|qreal,qreal
 
-//[1]QPointF()
-//[2]QPointF(const QPoint & point)
-//[3]QPointF(qreal xpos, qreal ypos)
+/*
+[1]QPointF()
+[2]QPointF(const QPoint & point)
+[3]QPointF(qreal xpos, qreal ypos)
+*/
 
 HB_FUNC_STATIC( QPOINTF_NEW )
 {

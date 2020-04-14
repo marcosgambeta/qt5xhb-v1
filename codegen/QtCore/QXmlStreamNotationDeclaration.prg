@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
 $internalConstructor=|new2|
 
-//[1]QXmlStreamNotationDeclaration()
-//[2]QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
+/*
+[1]QXmlStreamNotationDeclaration()
+[2]QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 {

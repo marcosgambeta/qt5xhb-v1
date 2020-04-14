@@ -35,8 +35,10 @@ $internalConstructor=|new1|QState *=0
 $prototype=QState ( ChildMode childMode, QState * parent = 0 )
 $internalConstructor=|new2|QState::ChildMode,QState *=0
 
-//[1]QState ( QState * parent = 0 )
-//[2]QState ( ChildMode childMode, QState * parent = 0 )
+/*
+[1]QState ( QState * parent = 0 )
+[2]QState ( ChildMode childMode, QState * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QSTATE_NEW )
 {
@@ -65,9 +67,11 @@ $internalMethod=|QSignalTransition *|addTransition,addTransition2|QObject *,cons
 $prototype=QAbstractTransition * addTransition ( QAbstractState * target )
 $internalMethod=|QAbstractTransition *|addTransition,addTransition3|QAbstractState *
 
-//[1]void addTransition ( QAbstractTransition * transition )
-//[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
-//[3]QAbstractTransition * addTransition ( QAbstractState * target )
+/*
+[1]void addTransition ( QAbstractTransition * transition )
+[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
+[3]QAbstractTransition * addTransition ( QAbstractState * target )
+*/
 
 HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 {

@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=0
 $prototype=QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 $internalConstructor=|new2|QObject *,const QByteArray &,QObject *=0
 
-//[1]QPropertyAnimation ( QObject * parent = 0 )
-//[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+/*
+[1]QPropertyAnimation ( QObject * parent = 0 )
+[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {

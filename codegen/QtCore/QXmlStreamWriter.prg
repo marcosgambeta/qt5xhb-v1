@@ -38,10 +38,12 @@ $prototype=QXmlStreamWriter(QString * string)
 %% TODO: implementar
 %% $internalConstructor=|new4|QString *
 
-//[1]QXmlStreamWriter()
-//[2]QXmlStreamWriter(QIODevice * device)
-//[3]QXmlStreamWriter(QByteArray * array)
-//[4]QXmlStreamWriter(QString * string)
+/*
+[1]QXmlStreamWriter()
+[2]QXmlStreamWriter(QIODevice * device)
+[3]QXmlStreamWriter(QByteArray * array)
+[4]QXmlStreamWriter(QString * string)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
 {
@@ -96,8 +98,10 @@ $internalMethod=|void|setCodec,setCodec1|QTextCodec *
 $prototype=void setCodec(const char * codecName)
 $internalMethod=|void|setCodec,setCodec2|const char *
 
-//[1]void setCodec(QTextCodec * codec)
-//[2]void setCodec(const char * codecName)
+/*
+[1]void setCodec(QTextCodec * codec)
+[2]void setCodec(const char * codecName)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
 {
@@ -128,9 +132,11 @@ $internalMethod=|void|writeAttribute,writeAttribute2|const QString &,const QStri
 $prototype=void writeAttribute(const QXmlStreamAttribute & attribute)
 $internalMethod=|void|writeAttribute,writeAttribute3|const QXmlStreamAttribute &
 
-//[1]void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
-//[2]void writeAttribute(const QString & qualifiedName, const QString & value)
-//[3]void writeAttribute(const QXmlStreamAttribute & attribute)
+/*
+[1]void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
+[2]void writeAttribute(const QString & qualifiedName, const QString & value)
+[3]void writeAttribute(const QXmlStreamAttribute & attribute)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 {
@@ -180,8 +186,10 @@ $internalMethod=|void|writeEmptyElement,writeEmptyElement1|const QString &,const
 $prototype=void writeEmptyElement(const QString & qualifiedName)
 $internalMethod=|void|writeEmptyElement,writeEmptyElement2|const QString &
 
-//[1]void writeEmptyElement(const QString & namespaceUri, const QString & name)
-//[2]void writeEmptyElement(const QString & qualifiedName)
+/*
+[1]void writeEmptyElement(const QString & namespaceUri, const QString & name)
+[2]void writeEmptyElement(const QString & qualifiedName)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
 {
@@ -224,9 +232,11 @@ $internalMethod=|void|writeStartDocument,writeStartDocument2|const QString &,boo
 $prototype=void writeStartDocument()
 $internalMethod=|void|writeStartDocument,writeStartDocument3|
 
-//[1]void writeStartDocument(const QString & version)
-//[2]void writeStartDocument(const QString & version, bool standalone)
-//[3]void writeStartDocument()
+/*
+[1]void writeStartDocument(const QString & version)
+[2]void writeStartDocument(const QString & version, bool standalone)
+[3]void writeStartDocument()
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 {
@@ -255,8 +265,10 @@ $internalMethod=|void|writeStartElement,writeStartElement1|const QString &,const
 $prototype=void writeStartElement(const QString & qualifiedName)
 $internalMethod=|void|writeStartElement,writeStartElement2|const QString &
 
-//[1]void writeStartElement(const QString & namespaceUri, const QString & name)
-//[2]void writeStartElement(const QString & qualifiedName)
+/*
+[1]void writeStartElement(const QString & namespaceUri, const QString & name)
+[2]void writeStartElement(const QString & qualifiedName)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 {
@@ -281,8 +293,10 @@ $internalMethod=|void|writeTextElement,writeTextElement1|const QString &,const Q
 $prototype=void writeTextElement(const QString & qualifiedName, const QString & text)
 $internalMethod=|void|writeTextElement,writeTextElement2|const QString &,const QString &
 
-//[1]void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
-//[2]void writeTextElement(const QString & qualifiedName, const QString & text)
+/*
+[1]void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
+[2]void writeTextElement(const QString & qualifiedName, const QString & text)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT )
 {

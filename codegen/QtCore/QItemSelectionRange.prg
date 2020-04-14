@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QModelIndex &,const QModelIndex &
 $prototype=QItemSelectionRange(const QModelIndex &index)
 $internalConstructor=|new4|const QModelIndex &
 
-//[1]QItemSelectionRange()
-//[2]QItemSelectionRange(const QItemSelectionRange &other)
-//[3]QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
-//[4]QItemSelectionRange(const QModelIndex &index)
+/*
+[1]QItemSelectionRange()
+[2]QItemSelectionRange(const QItemSelectionRange &other)
+[3]QItemSelectionRange(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+[4]QItemSelectionRange(const QModelIndex &index)
+*/
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 {
@@ -104,8 +106,10 @@ $internalMethod=|bool|contains,contains1|const QModelIndex &
 $prototype=bool contains(int row, int column, const QModelIndex &parentIndex) const
 $internalMethod=|bool|contains,contains2|int,int,const QModelIndex &
 
-//[1]bool contains(const QModelIndex &index) const
-//[2]bool contains(int row, int column, const QModelIndex &parentIndex) const
+/*
+[1]bool contains(const QModelIndex &index) const
+[2]bool contains(int row, int column, const QModelIndex &parentIndex) const
+*/
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 {

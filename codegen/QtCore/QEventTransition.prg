@@ -31,8 +31,10 @@ $internalConstructor=|new1|QState *=0
 $prototype=QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
 $internalConstructor=|new2|QObject *,QEvent::Type,QState *=0
 
-//[1]QEventTransition(QState * sourceState = 0)
-//[2]QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
+/*
+[1]QEventTransition(QState * sourceState = 0)
+[2]QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
+*/
 
 HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {

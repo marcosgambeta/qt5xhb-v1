@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QString &,int,QObject *=0
 $prototype=QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 $internalConstructor=|new4|const QString &,const QString &,QObject *=0
 
-//[1]QLibrary(QObject *parent = 0)
-//[2]QLibrary(const QString& fileName, QObject *parent = 0)
-//[3]QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
-//[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
+/*
+[1]QLibrary(QObject *parent = 0)
+[2]QLibrary(const QString& fileName, QObject *parent = 0)
+[3]QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
+[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
+*/
 
 HB_FUNC_STATIC( QLIBRARY_NEW )
 {
@@ -89,8 +91,10 @@ $internalMethod=|void|setFileNameAndVersion,setFileNameAndVersion1|const QString
 $prototype=void setFileNameAndVersion(const QString &fileName, const QString &version)
 $internalMethod=|void|setFileNameAndVersion,setFileNameAndVersion2|const QString &,const QString &
 
-//[1]void setFileNameAndVersion(const QString &fileName, int verNum)
-//[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
+/*
+[1]void setFileNameAndVersion(const QString &fileName, int verNum)
+[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
+*/
 
 HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
 {
@@ -132,10 +136,12 @@ $prototype=static QFunctionPointer resolve(const QString &fileName, int verNum, 
 $prototype=static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol) // TODO: corrigir implementacao do metodo
 %% $internalStaticMethod=|QFunctionPointer|resolve,resolve4|const QString &,const QString &,const char *
 
-//[1]QFunctionPointer resolve(const char *symbol)
-//[2]static QFunctionPointer resolve(const QString &fileName, const char *symbol)
-//[3]static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol)
-//[4]static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol)
+/*
+[1]QFunctionPointer resolve(const char *symbol)
+[2]static QFunctionPointer resolve(const QString &fileName, const char *symbol)
+[3]static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol)
+[4]static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol)
+*/
 
 HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 {

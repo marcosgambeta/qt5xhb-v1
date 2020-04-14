@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QDate &,const QTime &,Qt::TimeSpec=Qt::LocalTim
 $prototype=QDateTime ( const QDateTime & other )
 $internalConstructor=|new4|const QDateTime &
 
-//[1]QDateTime ()
-//[2]QDateTime ( const QDate & date )
-//[3]QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
-//[4]QDateTime ( const QDateTime & other )
+/*
+[1]QDateTime ()
+[2]QDateTime ( const QDate & date )
+[3]QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
+[4]QDateTime ( const QDateTime & other )
+*/
 
 HB_FUNC_STATIC( QDATETIME_NEW )
 {
@@ -134,8 +136,10 @@ $internalMethod=|QString|toString,toString1|const QString &
 $prototype=QString toString ( Qt::DateFormat format = Qt::TextDate ) const
 $internalMethod=|QString|toString,toString2|Qt::DateFormat=Qt::TextDate
 
-//[1]QString toString ( const QString & format ) const
-//[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
+/*
+[1]QString toString ( const QString & format ) const
+[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
+*/
 
 HB_FUNC_STATIC( QDATETIME_TOSTRING )
 {
@@ -181,8 +185,10 @@ $internalStaticMethod=|QDateTime|fromString,fromString1|const QString &,Qt::Date
 $prototype=static QDateTime fromString ( const QString & string, const QString & format )
 $internalStaticMethod=|QDateTime|fromString,fromString2|const QString &,const QString &
 
-//[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
-//[2]QDateTime fromString ( const QString & string, const QString & format )
+/*
+[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
+[2]QDateTime fromString ( const QString & string, const QString & format )
+*/
 
 HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 {

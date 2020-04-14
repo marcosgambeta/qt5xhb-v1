@@ -39,10 +39,12 @@ $internalConstructor=|new3|const QString &
 $prototype=QUrlQuery(const QUrlQuery & other)
 $internalConstructor=|new4|const QUrlQuery &
 
-//[1]QUrlQuery()
-//[2]QUrlQuery(const QUrl & url)
-//[3]QUrlQuery(const QString & queryString)
-//[4]QUrlQuery(const QUrlQuery & other)
+/*
+[1]QUrlQuery()
+[2]QUrlQuery(const QUrl & url)
+[3]QUrlQuery(const QString & queryString)
+[4]QUrlQuery(const QUrlQuery & other)
+*/
 
 HB_FUNC_STATIC( QURLQUERY_NEW )
 {

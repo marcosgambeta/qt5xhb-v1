@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QModelIndex &
 $prototype=QPersistentModelIndex(const QPersistentModelIndex &other)
 $internalConstructor=|new3|const QPersistentModelIndex &
 
-//[1]QPersistentModelIndex()
-//[2]QPersistentModelIndex(const QModelIndex &index)
-//[3]QPersistentModelIndex(const QPersistentModelIndex &other)
+/*
+[1]QPersistentModelIndex()
+[2]QPersistentModelIndex(const QModelIndex &index)
+[3]QPersistentModelIndex(const QPersistentModelIndex &other)
+*/
 
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 {

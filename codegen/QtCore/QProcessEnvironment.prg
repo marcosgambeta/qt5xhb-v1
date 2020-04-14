@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QProcessEnvironment(const QProcessEnvironment &other)
 $internalConstructor=|new2|const QProcessEnvironment &
 
-//[1]QProcessEnvironment()
-//[2]QProcessEnvironment(const QProcessEnvironment &other)
+/*
+[1]QProcessEnvironment()
+[2]QProcessEnvironment(const QProcessEnvironment &other)
+*/
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
@@ -70,8 +72,10 @@ $internalMethod=|void|insert,insert1|const QString &,const QString &
 $prototype=void insert(const QProcessEnvironment &e)
 $internalMethod=|void|insert,insert2|const QProcessEnvironment &
 
-//[1]void insert(const QString &name, const QString &value)
-//[2]void insert(const QProcessEnvironment &e)
+/*
+[1]void insert(const QString &name, const QString &value)
+[2]void insert(const QProcessEnvironment &e)
+*/
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {

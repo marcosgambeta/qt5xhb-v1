@@ -33,8 +33,10 @@ $internalConstructor=|new1|QEasingCurve::Type=QEasingCurve::Linear
 $prototype=QEasingCurve ( const QEasingCurve & other )
 $internalConstructor=|new2|const QEasingCurve &
 
-//[1]QEasingCurve(Type type = Linear)
-//[2]QEasingCurve(const QEasingCurve & other)
+/*
+[1]QEasingCurve(Type type = Linear)
+[2]QEasingCurve(const QEasingCurve & other)
+*/
 
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {

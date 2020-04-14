@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QModelIndex ( const QModelIndex & other )
 $internalConstructor=|new2|const QModelIndex &
 
-//[1]QModelIndex ()
-//[2]QModelIndex ( const QModelIndex & other )
+/*
+[1]QModelIndex ()
+[2]QModelIndex ( const QModelIndex & other )
+*/
 
 HB_FUNC_STATIC( QMODELINDEX_NEW )
 {

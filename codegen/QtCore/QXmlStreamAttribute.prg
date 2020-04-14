@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QString &,const QString &,const QString &
 $prototype=QXmlStreamAttribute(const QXmlStreamAttribute & other)
 $internalConstructor=|new4|const QXmlStreamAttribute &
 
-//[1]QXmlStreamAttribute()
-//[2]QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
-//[3]QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
-//[4]QXmlStreamAttribute(const QXmlStreamAttribute & other)
+/*
+[1]QXmlStreamAttribute()
+[2]QXmlStreamAttribute(const QString & qualifiedName, const QString & value)
+[3]QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value)
+[4]QXmlStreamAttribute(const QXmlStreamAttribute & other)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 {

@@ -41,10 +41,12 @@ $internalConstructor=|new3|const QJsonArray &
 $prototype=QJsonDocument(const QJsonDocument & other)
 $internalConstructor=|new4|const QJsonDocument &
 
-//[1]QJsonDocument()
-//[2]QJsonDocument(const QJsonObject & object)
-//[3]QJsonDocument(const QJsonArray & array)
-//[4]QJsonDocument(const QJsonDocument & other)
+/*
+[1]QJsonDocument()
+[2]QJsonDocument(const QJsonObject & object)
+[3]QJsonDocument(const QJsonArray & array)
+[4]QJsonDocument(const QJsonDocument & other)
+*/
 
 HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
 {

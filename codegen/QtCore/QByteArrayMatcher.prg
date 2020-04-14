@@ -37,10 +37,12 @@ $internalConstructor=|new3|const char *,int
 $prototype=QByteArrayMatcher ( const QByteArrayMatcher & other )
 $internalConstructor=|new4|const QByteArrayMatcher &
 
-//[1]QByteArrayMatcher()
-//[2]QByteArrayMatcher(const QByteArray & pattern)
-//[3]QByteArrayMatcher(const char * pattern, int length)
-//[4]QByteArrayMatcher(const QByteArrayMatcher & other)
+/*
+[1]QByteArrayMatcher()
+[2]QByteArrayMatcher(const QByteArray & pattern)
+[3]QByteArrayMatcher(const char * pattern, int length)
+[4]QByteArrayMatcher(const QByteArrayMatcher & other)
+*/
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 {
@@ -74,8 +76,10 @@ $internalMethod=|int|indexIn,indexIn1|const QByteArray &,int=0
 $prototype=int indexIn ( const char * str, int len, int from = 0 ) const
 $internalMethod=|int|indexIn,indexIn2|const char *,int,int=0
 
-//[1]int indexIn(const QByteArray & ba, int from = 0) const
-//[2]int indexIn(const char * str, int len, int from = 0) const
+/*
+[1]int indexIn(const QByteArray & ba, int from = 0) const
+[2]int indexIn(const char * str, int len, int from = 0) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 {

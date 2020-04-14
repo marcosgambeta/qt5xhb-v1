@@ -45,9 +45,11 @@ $internalMethod=|void|addData,addData2|const QByteArray &
 $prototype=bool addData(QIODevice *device)
 $internalMethod=|bool|addData,addData3|QIODevice *
 
-//[1]void addData(const char *data, int length)
-//[2]void addData(const QByteArray &data)
-//[3]bool addData(QIODevice *device)
+/*
+[1]void addData(const char *data, int length)
+[2]void addData(const QByteArray &data)
+[3]bool addData(QIODevice *device)
+*/
 
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
 {

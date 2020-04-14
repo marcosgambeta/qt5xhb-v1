@@ -56,8 +56,10 @@ $internalMethod=|void|start,start1|int
 $prototype=void start ()
 $internalMethod=|void|start,start2|
 
-//[1]void start ( int msec )
-//[2]void start ()
+/*
+[1]void start ( int msec )
+[2]void start ()
+*/
 
 HB_FUNC_STATIC( QTIMER_START )
 {

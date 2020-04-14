@@ -80,8 +80,10 @@ $internalMethod=|int|indexIn,indexIn1|const QString &,int=0
 $prototype=int indexIn(const QChar *str, int length, int from = 0) const
 $internalMethod=|int|indexIn,indexIn2|const QChar *,int,int=0
 
-//[1]int indexIn(const QString &str, int from = 0) const
-//[2]int indexIn(const QChar *str, int length, int from = 0) const
+/*
+[1]int indexIn(const QString &str, int from = 0) const
+[2]int indexIn(const QChar *str, int length, int from = 0) const
+*/
 
 HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
 {

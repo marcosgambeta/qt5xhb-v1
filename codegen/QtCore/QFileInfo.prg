@@ -43,11 +43,13 @@ $internalConstructor=|new4|const QDir &,const QString &
 $prototype=QFileInfo(const QFileInfo & fileinfo)
 $internalConstructor=|new5|const QFileInfo &
 
-//[1]QFileInfo()
-//[2]QFileInfo(const QString & file)
-//[3]QFileInfo(const QFile & file)
-//[4]QFileInfo(const QDir & dir, const QString & file)
-//[5]QFileInfo(const QFileInfo & fileinfo)
+/*
+[1]QFileInfo()
+[2]QFileInfo(const QString & file)
+[3]QFileInfo(const QFile & file)
+[4]QFileInfo(const QDir & dir, const QString & file)
+[5]QFileInfo(const QFileInfo & fileinfo)
+*/
 
 HB_FUNC_STATIC( QFILEINFO_NEW )
 {
@@ -205,9 +207,11 @@ $internalMethod=|void|setFile,setFile2|const QFile &
 $prototype=void setFile(const QDir & dir, const QString & file)
 $internalMethod=|void|setFile,setFile3|const QDir &,const QString &
 
-//[1]void setFile(const QString & file)
-//[2]void setFile(const QFile & file)
-//[3]void setFile(const QDir & dir, const QString & file)
+/*
+[1]void setFile(const QString & file)
+[2]void setFile(const QFile & file)
+[3]void setFile(const QDir & dir, const QString & file)
+*/
 
 HB_FUNC_STATIC( QFILEINFO_SETFILE )
 {

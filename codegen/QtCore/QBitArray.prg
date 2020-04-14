@@ -34,9 +34,11 @@ $internalConstructor=|new2|int,bool=false
 $prototype=QBitArray ( const QBitArray & other )
 $internalConstructor=|new3|const QBitArray &
 
-//[1]QBitArray ()
-//[2]QBitArray ( int size, bool value = false )
-//[3]QBitArray ( const QBitArray & other )
+/*
+[1]QBitArray ()
+[2]QBitArray ( int size, bool value = false )
+[3]QBitArray ( const QBitArray & other )
+*/
 
 HB_FUNC_STATIC( QBITARRAY_NEW )
 {
@@ -75,8 +77,10 @@ $internalMethod=|int|count,count1|
 $prototype=int count ( bool on ) const
 $internalMethod=|int|count,count2|bool
 
-//[1]int count () const
-//[2]int count ( bool on ) const
+/*
+[1]int count () const
+[2]int count ( bool on ) const
+*/
 
 HB_FUNC_STATIC( QBITARRAY_COUNT )
 {
@@ -101,8 +105,10 @@ $internalMethod=|bool|fill,fill1|bool,int=-1
 $prototype=void fill ( bool value, int begin, int end )
 $internalMethod=|void|fill,fill2|bool,int,int
 
-//[1]bool fill ( bool value, int size = -1 )
-//[2]void fill ( bool value, int begin, int end )
+/*
+[1]bool fill ( bool value, int size = -1 )
+[2]void fill ( bool value, int begin, int end )
+*/
 
 HB_FUNC_STATIC( QBITARRAY_FILL )
 {
@@ -136,8 +142,10 @@ $internalMethod=|void|setBit,setBit1|int
 $prototype=void setBit ( int i, bool value )
 $internalMethod=|void|setBit,setBit2|int,bool
 
-//[1]void setBit ( int i )
-//[2]void setBit ( int i, bool value )
+/*
+[1]void setBit ( int i )
+[2]void setBit ( int i, bool value )
+*/
 
 HB_FUNC_STATIC( QBITARRAY_SETBIT )
 {

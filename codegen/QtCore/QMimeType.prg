@@ -33,8 +33,10 @@ $internalConstructor=|new1|
 $prototype=QMimeType(const QMimeType &other)
 $internalConstructor=|new2|const QMimeType &
 
-//[1]QMimeType()
-//[2]QMimeType(const QMimeType &other)
+/*
+[1]QMimeType()
+[2]QMimeType(const QMimeType &other)
+*/
 
 HB_FUNC_STATIC( QMIMETYPE_NEW )
 {

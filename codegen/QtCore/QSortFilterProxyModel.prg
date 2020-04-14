@@ -48,8 +48,10 @@ $internalMethod=|void|setFilterRegExp,setFilterRegExp1|const QRegExp &
 $prototype=void setFilterRegExp(const QString &pattern) [slot]
 $internalMethod=|void|setFilterRegExp,setFilterRegExp2|const QString &
 
-//[1]void setFilterRegExp(const QRegExp &regExp)
-//[2]void setFilterRegExp(const QString &pattern)
+/*
+[1]void setFilterRegExp(const QRegExp &regExp)
+[2]void setFilterRegExp(const QString &pattern)
+*/
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {
@@ -82,8 +84,10 @@ $internalMethod=5,12,0|void|setFilterRegularExpression,setFilterRegularExpressio
 $prototype=void setFilterRegularExpression(const QRegularExpression &regularExpression) [slot]
 $internalMethod=5,12,0|void|setFilterRegularExpression,setFilterRegularExpression2|const QRegularExpression &|#if QT_CONFIG(regularexpression)
 
-//[1]void setFilterRegularExpression(const QString &pattern);
-//[2]void setFilterRegularExpression(const QRegularExpression &regularExpression);
+/*
+[1]void setFilterRegularExpression(const QString &pattern);
+[2]void setFilterRegularExpression(const QRegularExpression &regularExpression);
+*/
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION )
 {
@@ -225,8 +229,10 @@ $internalMethod=|QObject *|parent,parent1|
 $prototype=QModelIndex parent(const QModelIndex &child) const
 $internalMethod=|QModelIndex|parent,parent2|const QModelIndex &
 
-//[1]QObject *parent() const
-//[2]QModelIndex parent(const QModelIndex &child) const
+/*
+[1]QObject *parent() const
+[2]QModelIndex parent(const QModelIndex &child) const
+*/
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT )
 {

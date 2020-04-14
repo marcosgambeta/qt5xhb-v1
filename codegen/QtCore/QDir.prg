@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QString &=QString()
 $prototype=QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
 $internalConstructor=|new3|const QString &,const QString &,QDir::SortFlags=QDir::SortFlags( QDir::Name OR QDir::IgnoreCase ),QDir::Filters=QDir::AllEntries
 
-//[1]QDir(const QDir & dir)
-//[2]QDir(const QString & path = QString())
-//[3]QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
+/*
+[1]QDir(const QDir & dir)
+[2]QDir(const QString & path = QString())
+[3]QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
+*/
 
 HB_FUNC_STATIC( QDIR_NEW )
 {
@@ -87,8 +89,10 @@ $internalMethod=|QFileInfoList|entryInfoList,entryInfoList1|const QStringList &,
 $prototype=QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 $internalMethod=|QFileInfoList|entryInfoList,entryInfoList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
-//[1]QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
-//[2]QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
+/*
+[1]QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
+[2]QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
+*/
 
 HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 {
@@ -113,8 +117,10 @@ $internalMethod=|QStringList|entryList,entryList1|const QStringList &,QDir::Filt
 $prototype=QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
 $internalMethod=|QStringList|entryList,entryList2|QDir::Filters=QDir::NoFilter,QDir::SortFlags=QDir::NoSort
 
-//[1]QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
-//[2]QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
+/*
+[1]QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
+[2]QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
+*/
 
 HB_FUNC_STATIC( QDIR_ENTRYLIST )
 {
@@ -139,8 +145,10 @@ $internalMethod=|bool|exists,exists1|const QString &
 $prototype=bool exists() const
 $internalMethod=|bool|exists,exists2|
 
-//[1]bool exists(const QString & name) const
-//[2]bool exists() const
+/*
+[1]bool exists(const QString & name) const
+[2]bool exists() const
+*/
 
 HB_FUNC_STATIC( QDIR_EXISTS )
 {
@@ -267,8 +275,10 @@ $internalStaticMethod=|bool|match,match1|const QString &,const QString &
 $prototype=static bool match(const QStringList & filters, const QString & fileName)
 $internalStaticMethod=|bool|match,match2|const QStringList &,const QString &
 
-//[1]bool match(const QString & filter, const QString & fileName)
-//[2]bool match(const QStringList & filters, const QString & fileName)
+/*
+[1]bool match(const QString & filter, const QString & fileName)
+[2]bool match(const QStringList & filters, const QString & fileName)
+*/
 
 HB_FUNC_STATIC( QDIR_MATCH )
 {

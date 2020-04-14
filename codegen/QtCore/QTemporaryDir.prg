@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QTemporaryDir(const QString & templateName)
 $internalConstructor=|new2|const QString &
 
-//[1]QTemporaryDir()
-//[2]QTemporaryDir(const QString & templateName)
+/*
+[1]QTemporaryDir()
+[2]QTemporaryDir(const QString & templateName)
+*/
 
 HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 {

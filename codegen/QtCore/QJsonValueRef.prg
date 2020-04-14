@@ -34,8 +34,10 @@ $internalConstructor=|new1|QJsonArray *,int
 $prototype=QJsonValueRef(QJsonObject *object, int idx)
 $internalConstructor=|new2|QJsonObject *,int
 
-//[1]QJsonValueRef(QJsonArray *array, int idx)
-//[2]QJsonValueRef(QJsonObject *object, int idx)
+/*
+[1]QJsonValueRef(QJsonArray *array, int idx)
+[2]QJsonValueRef(QJsonObject *object, int idx)
+*/
 
 HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 {

@@ -39,9 +39,11 @@ $internalMethod=|void|append,append2|const QXmlStreamAttribute &
 $prototype=void append(const QString & qualifiedName, const QString & value)
 $internalMethod=|void|append,append3|const QString &,const QString &
 
-//[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
-//[2]void append(const QXmlStreamAttribute & attribute)
-//[3]void append(const QString & qualifiedName, const QString & value)
+/*
+[1]void append(const QString & namespaceUri, const QString & name, const QString & value)
+[2]void append(const QXmlStreamAttribute & attribute)
+[3]void append(const QString & qualifiedName, const QString & value)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 {
@@ -73,9 +75,11 @@ $internalMethod=|bool|hasAttribute,hasAttribute2|QLatin1String
 $prototype=bool hasAttribute(const QString & namespaceUri, const QString & name) const
 $internalMethod=|bool|hasAttribute,hasAttribute3|const QString &,const QString &
 
-//[1]bool hasAttribute(const QString & qualifiedName) const
-//[2]bool hasAttribute(QLatin1String qualifiedName) const
-//[3]bool hasAttribute(const QString & namespaceUri, const QString & name) const
+/*
+[1]bool hasAttribute(const QString & qualifiedName) const
+[2]bool hasAttribute(QLatin1String qualifiedName) const
+[3]bool hasAttribute(const QString & namespaceUri, const QString & name) const
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 {
@@ -114,11 +118,13 @@ $method=|QStringRef|value,value4|const QString &
 $prototype=QStringRef value(QLatin1String qualifiedName) const
 $method=|QStringRef|value,value5|QLatin1String
 
-//[1]QStringRef value(const QString & namespaceUri, const QString & name) const
-//[2]QStringRef value(const QString & namespaceUri, QLatin1String name) const
-//[3]QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
-//[4]QStringRef value(const QString & qualifiedName) const
-//[5]QStringRef value(QLatin1String qualifiedName) const
+/*
+[1]QStringRef value(const QString & namespaceUri, const QString & name) const
+[2]QStringRef value(const QString & namespaceUri, QLatin1String name) const
+[3]QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
+[4]QStringRef value(const QString & qualifiedName) const
+[5]QStringRef value(QLatin1String qualifiedName) const
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 {

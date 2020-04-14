@@ -31,8 +31,10 @@ $internalConstructor=5,2,0|new1|const QLocale &=QLocale()
 $prototype=QCollator(const QCollator &)
 $internalConstructor=5,2,0|new2|const QCollator &
 
-//[1]QCollator(const QLocale &locale = QLocale())
-//[2]QCollator(const QCollator &)
+/*
+[1]QCollator(const QLocale &locale = QLocale())
+[2]QCollator(const QCollator &)
+*/
 
 HB_FUNC_STATIC( QCOLLATOR_NEW )
 {

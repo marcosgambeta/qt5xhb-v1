@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=0
 $prototype=QSharedMemory(const QString &key, QObject *parent = 0)
 $internalConstructor=|new2|const QString &,QObject *=0
 
-//[1]QSharedMemory(QObject *parent = 0)
-//[2]QSharedMemory(const QString &key, QObject *parent = 0)
+/*
+[1]QSharedMemory(QObject *parent = 0)
+[2]QSharedMemory(const QString &key, QObject *parent = 0)
+*/
 
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {

@@ -31,8 +31,10 @@ $internalConstructor=|new1|int=0
 $prototype=QAtomicInt ( const QAtomicInt & other )
 $internalConstructor=|new2|const QAtomicInt &
 
-//[1]QAtomicInt(int value = 0)
-//[2]QAtomicInt(const QAtomicInt & other)
+/*
+[1]QAtomicInt(int value = 0)
+[2]QAtomicInt(const QAtomicInt & other)
+*/
 
 HB_FUNC_STATIC( QATOMICINT_NEW )
 {

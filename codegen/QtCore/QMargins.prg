@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QMargins(int left, int top, int right, int bottom)
 $internalConstructor=|new2|int,int,int,int
 
-//[1]QMargins()
-//[2]QMargins(int left, int top, int right, int bottom)
+/*
+[1]QMargins()
+[2]QMargins(int left, int top, int right, int bottom)
+*/
 
 HB_FUNC_STATIC( QMARGINS_NEW )
 {

@@ -45,8 +45,10 @@ $internalMethod=|bool|processEvents,processEvents1|QEventLoop::ProcessEventsFlag
 $prototype=void processEvents ( ProcessEventsFlags flags, int maxTime )
 $internalMethod=|void|processEvents,processEvents2|QEventLoop::ProcessEventsFlags,int
 
-//[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
-//[2]void processEvents ( ProcessEventsFlags flags, int maxTime )
+/*
+[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
+[2]void processEvents ( ProcessEventsFlags flags, int maxTime )
+*/
 
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {

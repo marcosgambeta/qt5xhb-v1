@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 $internalConstructor=|new2|const QXmlStreamEntityDeclaration &
 
-//[1]QXmlStreamEntityDeclaration()
-//[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
+/*
+[1]QXmlStreamEntityDeclaration()
+[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 {

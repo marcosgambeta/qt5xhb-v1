@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=0
 $prototype=QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 $internalConstructor=|new2|QByteArray *,QObject *=0
 
-//[1]QBuffer ( QObject * parent = 0 )
-//[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
+/*
+[1]QBuffer ( QObject * parent = 0 )
+[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
@@ -58,10 +60,12 @@ $method=|QByteArray &|buffer,buffer1|
 $prototype=const QByteArray & buffer () const
 $method=|const QByteArray &|buffer,buffer2|
 
-//[1]QByteArray & buffer ()
-//[2]const QByteArray & buffer () const
+/*
+[1]QByteArray & buffer ()
+[2]const QByteArray & buffer () const
+*/
 
-// TODO: verificar se [2] é realmente necessário
+%% TODO: verificar se [2] é realmente necessário
 
 HB_FUNC_STATIC( QBUFFER_BUFFER )
 {
@@ -81,8 +85,10 @@ $internalMethod=|void|setData,setData1|const QByteArray &
 $prototype=void setData ( const char * data, int size )
 $internalMethod=|void|setData,setData2|const char *,int
 
-//[1]void setData ( const QByteArray & data )
-//[2]void setData ( const char * data, int size )
+/*
+[1]void setData ( const QByteArray & data )
+[2]void setData ( const char * data, int size )
+*/
 
 HB_FUNC_STATIC( QBUFFER_SETDATA )
 {

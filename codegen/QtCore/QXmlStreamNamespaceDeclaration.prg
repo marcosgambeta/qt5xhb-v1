@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QXmlStreamNamespaceDeclaration &
 $prototype=QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
 $internalConstructor=|new3|const QString &,const QString &
 
-//[1]QXmlStreamNamespaceDeclaration()
-//[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
-//[3]QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
+/*
+[1]QXmlStreamNamespaceDeclaration()
+[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
+[3]QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 {

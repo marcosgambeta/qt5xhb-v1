@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=0
 $prototype=QPluginLoader ( const QString & fileName, QObject * parent = 0 )
 $internalConstructor=|new2|const QString &,QObject *=0
 
-//[1]QPluginLoader ( QObject * parent = 0 )
-//[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
+/*
+[1]QPluginLoader ( QObject * parent = 0 )
+[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {

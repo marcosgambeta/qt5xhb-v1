@@ -57,15 +57,17 @@ $constructor=|new8|const QJsonValue &
 $prototype=QJsonValue(int n)
 $constructor=|new9|int
 
-//[1]QJsonValue(Type type = Null)
-//[2]QJsonValue(bool b)
-//[3]QJsonValue(double n)
-//[4]QJsonValue(const QString & s)
-//[5]QJsonValue(QLatin1String s)
-//[6]QJsonValue(const QJsonArray & a)
-//[7]QJsonValue(const QJsonObject & o)
-//[8]QJsonValue(const QJsonValue & other)
-//[9]QJsonValue(int n)
+/*
+[1]QJsonValue(Type type = Null)
+[2]QJsonValue(bool b)
+[3]QJsonValue(double n)
+[4]QJsonValue(const QString & s)
+[5]QJsonValue(QLatin1String s)
+[6]QJsonValue(const QJsonArray & a)
+[7]QJsonValue(const QJsonObject & o)
+[8]QJsonValue(const QJsonValue & other)
+[9]QJsonValue(int n)
+*/
 
 HB_FUNC_STATIC( QJSONVALUE_NEW )
 {
@@ -134,8 +136,10 @@ $internalMethod=|QJsonArray|toArray,toArray1|const QJsonArray &
 $prototype=QJsonArray toArray() const
 $internalMethod=|QJsonArray|toArray,toArray2|
 
-//[1]QJsonArray toArray(const QJsonArray & defaultValue) const
-//[2]QJsonArray toArray() const
+/*
+[1]QJsonArray toArray(const QJsonArray & defaultValue) const
+[2]QJsonArray toArray() const
+*/
 
 HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
 {
@@ -166,8 +170,10 @@ $internalMethod=|QJsonObject|toObject,toObject1|const QJsonObject &
 $prototype=QJsonObject toObject() const
 $internalMethod=|QJsonObject|toObject,toObject2|
 
-//[1]QJsonObject toObject(const QJsonObject & defaultValue) const
-//[2]QJsonObject toObject() const
+/*
+[1]QJsonObject toObject(const QJsonObject & defaultValue) const
+[2]QJsonObject toObject() const
+*/
 
 HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
 {

@@ -31,8 +31,10 @@ $internalConstructor=|new1|QState *=0
 $prototype=QHistoryState(HistoryType type, QState *parent = 0)
 $internalConstructor=|new2|QHistoryState::HistoryType,QState *=0
 
-//[1]QHistoryState(QState *parent = 0)
-//[2]QHistoryState(HistoryType type, QState *parent = 0)
+/*
+[1]QHistoryState(QState *parent = 0)
+[2]QHistoryState(HistoryType type, QState *parent = 0)
+*/
 
 HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 {

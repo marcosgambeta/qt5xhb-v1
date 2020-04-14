@@ -42,7 +42,7 @@ void QByteArray_new4 ()
 {
   char par2 = ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0);
   QByteArray * o = new QByteArray ( PINT(1), par2 );
-  _qt5xhb_returnNewObject( o, false );
+  Qt5xHb::returnNewObject( o, false );
 }
 
 $prototype=QByteArray ( const QByteArray & other )
@@ -55,11 +55,13 @@ $internalConstructor=|new5|const QByteArray &
 %% QByteArray(const QByteArray &other)
 %% QByteArray(QByteArray &&other)
 
-//[1]QByteArray ()
-//[2]QByteArray ( const char * str )
-//[3]QByteArray ( const char * data, int size )
-//[4]QByteArray ( int size, char ch )
-//[5]QByteArray ( const QByteArray & other )
+/*
+[1]QByteArray ()
+[2]QByteArray ( const char * str )
+[3]QByteArray ( const char * data, int size )
+[4]QByteArray ( int size, char ch )
+[5]QByteArray ( const QByteArray & other )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_NEW )
 {
@@ -111,12 +113,14 @@ $method=5,7,0|QByteArray &|append,append6|int,char
 
 %% TODO: resolver conflito entre [2] e [3]
 
-//[1]QByteArray & append ( const QByteArray & ba )
-//[2]QByteArray & append ( const QString & str )
-//[3]QByteArray & append ( const char * str )
-//[4]QByteArray & append ( const char * str, int len )
-//[5]QByteArray & append ( char ch )
-//[6]QByteArray & append ( int count, char ch )
+/*
+[1]QByteArray & append ( const QByteArray & ba )
+[2]QByteArray & append ( const QString & str )
+[3]QByteArray & append ( const char * str )
+[4]QByteArray & append ( const char * str, int len )
+[5]QByteArray & append ( char ch )
+[6]QByteArray & append ( int count, char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 {
@@ -171,9 +175,11 @@ $internalMethod=|bool|contains,contains2|const char *
 $prototype=bool contains ( char ch ) const
 $internalMethod=|bool|contains,contains3|char
 
-//[1]bool contains ( const QByteArray & ba ) const
-//[2]bool contains ( const char * str ) const
-//[3]bool contains ( char ch ) const
+/*
+[1]bool contains ( const QByteArray & ba ) const
+[2]bool contains ( const char * str ) const
+[3]bool contains ( char ch ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 {
@@ -208,10 +214,12 @@ $internalMethod=|int|count,count3|char
 $prototype=int count () const
 $internalMethod=|int|count,count4|
 
-//[1]int count ( const QByteArray & ba ) const
-//[2]int count ( const char * str ) const
-//[3]int count ( char ch ) const
-//[4]int count () const
+/*
+[1]int count ( const QByteArray & ba ) const
+[2]int count ( const char * str ) const
+[3]int count ( char ch ) const
+[4]int count () const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 {
@@ -241,9 +249,12 @@ $addMethod=count
 $prototype=const char * data () const
 $method=|const char *|data,data2|
 
-// TODO: revisar implementacao dos metodos
-//[1]char * data ()
-//[2]const char * data () const
+%% TODO: revisar implementacao dos metodos
+
+%% /*
+%% [1]char * data ()
+%% [2]const char * data () const
+%% */
 
 HB_FUNC_STATIC( QBYTEARRAY_DATA )
 {
@@ -260,9 +271,11 @@ $internalMethod=|bool|endsWith,endsWith2|const char *
 $prototype=bool endsWith ( char ch ) const
 $internalMethod=|bool|endsWith,endsWith3|char
 
-//[1]bool endsWith ( const QByteArray & ba ) const
-//[2]bool endsWith ( const char * str ) const
-//[3]bool endsWith ( char ch ) const
+/*
+[1]bool endsWith ( const QByteArray & ba ) const
+[2]bool endsWith ( const char * str ) const
+[3]bool endsWith ( char ch ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 {
@@ -300,11 +313,14 @@ $method=|int|indexOf,indexOf3|const char *,int=0
 $prototype=int indexOf ( char ch, int from = 0 ) const
 $method=|int|indexOf,indexOf4|char,int=0
 
-// TODO: resolver conflito entre [2] e [3]
-//[1]int indexOf ( const QByteArray & ba, int from = 0 ) const
-//[2]int indexOf ( const QString & str, int from = 0 ) const
-//[3]int indexOf ( const char * str, int from = 0 ) const
-//[4]int indexOf ( char ch, int from = 0 ) const
+%% TODO: resolver conflito entre [2] e [3]
+
+/*
+[1]int indexOf ( const QByteArray & ba, int from = 0 ) const
+[2]int indexOf ( const QString & str, int from = 0 ) const
+[3]int indexOf ( const char * str, int from = 0 ) const
+[4]int indexOf ( char ch, int from = 0 ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
 {
@@ -347,11 +363,14 @@ $prototype=QByteArray & insert ( int i, char ch )
 $method=|QByteArray &|insert,insert5|int,char
 
 %% TODO: resolver conflito entre [2] e [3]
-//[1]QByteArray & insert ( int i, const QByteArray & ba )
-//[2]QByteArray & insert ( int i, const QString & str )
-//[3]QByteArray & insert ( int i, const char * str )
-//[4]QByteArray & insert ( int i, const char * str, int len )
-//[5]QByteArray & insert ( int i, char ch )
+
+/*
+[1]QByteArray & insert ( int i, const QByteArray & ba )
+[2]QByteArray & insert ( int i, const QString & str )
+[3]QByteArray & insert ( int i, const char * str )
+[4]QByteArray & insert ( int i, const char * str, int len )
+[5]QByteArray & insert ( int i, char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_INSERT )
 {
@@ -397,10 +416,13 @@ $prototype=int lastIndexOf ( char ch, int from = -1 ) const
 $method=|int|lastIndexOf,lastIndexOf4|char,int=-1
 
 %% TODO: resolver conflito entre [2] e [3]
-//[1]int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
-//[2]int lastIndexOf ( const QString & str, int from = -1 ) const
-//[3]int lastIndexOf ( const char * str, int from = -1 ) const
-//[4]int lastIndexOf ( char ch, int from = -1 ) const
+
+/*
+[1]int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
+[2]int lastIndexOf ( const QString & str, int from = -1 ) const
+[3]int lastIndexOf ( const char * str, int from = -1 ) const
+[4]int lastIndexOf ( char ch, int from = -1 ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
 {
@@ -451,10 +473,12 @@ $internalMethod=|QByteArray &|prepend,prepend3|const char *,int
 $prototype=QByteArray & prepend ( char ch )
 $internalMethod=|QByteArray &|prepend,prepend4|char
 
-//[1]QByteArray & prepend ( const QByteArray & ba )
-//[2]QByteArray & prepend ( const char * str )
-//[3]QByteArray & prepend ( const char * str, int len )
-//[4]QByteArray & prepend ( char ch )
+/*
+[1]QByteArray & prepend ( const QByteArray & ba )
+[2]QByteArray & prepend ( const char * str )
+[3]QByteArray & prepend ( const char * str, int len )
+[4]QByteArray & prepend ( char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 {
@@ -490,10 +514,13 @@ $internalMethod=|void|push_back,push_back2|const char *
 $prototype=void push_back ( char ch )
 $internalMethod=|void|push_back,push_back3|char
 
-// TODO: revisar implementacao dos metodos [2] vs [3]
-//[1]void push_back ( const QByteArray & other )
-//[2]void push_back ( const char * str )
-//[3]void push_back ( char ch )
+%% TODO: revisar implementacao dos metodos [2] vs [3]
+
+/*
+[1]void push_back ( const QByteArray & other )
+[2]void push_back ( const char * str )
+[3]void push_back ( char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 {
@@ -526,9 +553,12 @@ $prototype=void push_front ( char ch )
 $internalMethod=|void|push_front,push_front3|char
 
 %% TODO: revisar implementacao dos metodos [2] vs [3]
-//[1]void push_front ( const QByteArray & other )
-//[2]void push_front ( const char * str )
-//[3]void push_front ( char ch )
+
+/*
+[1]void push_front ( const QByteArray & other )
+[2]void push_front ( const char * str )
+[3]void push_front ( char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 {
@@ -600,20 +630,23 @@ $prototype=QByteArray & replace ( char before, char after )
 $method=|QByteArray &|replace,replace14|char,char
 
 %% TODO: resolver conflitos
-//[01]QByteArray & replace ( int pos, int len, const QByteArray & after )
-//[02]QByteArray & replace ( int pos, int len, const char * after )
-//[03]QByteArray & replace ( int pos, int len, const char * after, int alen )
-//[04]QByteArray & replace ( const QByteArray & before, const QByteArray & after )
-//[05]QByteArray & replace ( const char * before, const QByteArray & after )
-//[06]QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
-//[07]QByteArray & replace ( const QByteArray & before, const char * after )
-//[08]QByteArray & replace ( const QString & before, const QByteArray & after )
-//[09]QByteArray & replace ( const QString & before, const char * after )
-//[10]QByteArray & replace ( const char * before, const char * after )
-//[11]QByteArray & replace ( char before, const QByteArray & after )
-//[12]QByteArray & replace ( char before, const QString & after )
-//[13]QByteArray & replace ( char before, const char * after )
-//[14]QByteArray & replace ( char before, char after )
+
+/*
+[01]QByteArray & replace ( int pos, int len, const QByteArray & after )
+[02]QByteArray & replace ( int pos, int len, const char * after )
+[03]QByteArray & replace ( int pos, int len, const char * after, int alen )
+[04]QByteArray & replace ( const QByteArray & before, const QByteArray & after )
+[05]QByteArray & replace ( const char * before, const QByteArray & after )
+[06]QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
+[07]QByteArray & replace ( const QByteArray & before, const char * after )
+[08]QByteArray & replace ( const QString & before, const QByteArray & after )
+[09]QByteArray & replace ( const QString & before, const char * after )
+[10]QByteArray & replace ( const char * before, const char * after )
+[11]QByteArray & replace ( char before, const QByteArray & after )
+[12]QByteArray & replace ( char before, const QString & after )
+[13]QByteArray & replace ( char before, const char * after )
+[14]QByteArray & replace ( char before, char after )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
 {
@@ -717,14 +750,17 @@ $prototype=QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
 $method=|QByteArray &|setNum,setNum8|float,char='g',int=6
 
 %% TODO: implementar(?) identificação de números inteiros e fracionários
-//[1]QByteArray & setNum ( int n, int base = 10 )
-//[2]QByteArray & setNum ( uint n, int base = 10 )
-//[3]QByteArray & setNum ( short n, int base = 10 )
-//[4]QByteArray & setNum ( ushort n, int base = 10 )
-//[5]QByteArray & setNum ( qlonglong n, int base = 10 )
-//[6]QByteArray & setNum ( qulonglong n, int base = 10 )
-//[7]QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
-//[8]QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
+
+/*
+[1]QByteArray & setNum ( int n, int base = 10 )
+[2]QByteArray & setNum ( uint n, int base = 10 )
+[3]QByteArray & setNum ( short n, int base = 10 )
+[4]QByteArray & setNum ( ushort n, int base = 10 )
+[5]QByteArray & setNum ( qlonglong n, int base = 10 )
+[6]QByteArray & setNum ( qulonglong n, int base = 10 )
+[7]QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
+[8]QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
 {
@@ -763,10 +799,13 @@ $internalMethod=|bool|startsWith,startsWith2|const char *
 $prototype=bool startsWith ( char ch ) const
 $internalMethod=|bool|startsWith,startsWith3|char
 
-// TODO: revisar implementacao [2] vs [3]
-//[1]bool startsWith ( const QByteArray & ba ) const
-//[2]bool startsWith ( const char * str ) const
-//[3]bool startsWith ( char ch ) const
+%% TODO: revisar implementacao [2] vs [3]
+
+/*
+[1]bool startsWith ( const QByteArray & ba ) const
+[2]bool startsWith ( const char * str ) const
+[3]bool startsWith ( char ch ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 {
@@ -860,7 +899,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
   {
     char par2 = ISNIL(2)? 37 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
     QByteArray * ptr = new QByteArray( QByteArray::fromPercentEncoding ( *PQBYTEARRAY(1), par2 ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else
   {
@@ -891,7 +930,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
   {
     char par2 = ISNIL(2)? 103 : (ISCHAR(2)? (char) hb_parc(2)[0] : (ISNUM(2)? hb_parni(2) : 0));
     QByteArray * ptr = new QByteArray( QByteArray::number ( PDOUBLE(1), par2, OPINT(3,6) ) );
-    _qt5xhb_createReturnClass ( ptr, "QBYTEARRAY" );
+    Qt5xHb::createReturnClass ( ptr, "QBYTEARRAY" );
   }
   else
   {
@@ -901,11 +940,14 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
 $addMethod=number5
 
 %% TODO: resolver conflitos
-//[1]static QByteArray number ( int n, int base = 10 )
-//[2]static QByteArray number ( uint n, int base = 10 )
-//[3]static QByteArray number ( qlonglong n, int base = 10 )
-//[4]static QByteArray number ( qulonglong n, int base = 10 )
-//[5]static QByteArray number ( double n, char f = 'g', int prec = 6 )
+
+/*
+[1]static QByteArray number ( int n, int base = 10 )
+[2]static QByteArray number ( uint n, int base = 10 )
+[3]static QByteArray number ( qlonglong n, int base = 10 )
+[4]static QByteArray number ( qulonglong n, int base = 10 )
+[5]static QByteArray number ( double n, char f = 'g', int prec = 6 )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER )
 {

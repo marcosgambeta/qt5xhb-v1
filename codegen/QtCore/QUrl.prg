@@ -39,10 +39,12 @@ $internalConstructor=|new3|const QUrl &
 $prototype=QUrl ( const QString & url, ParsingMode parsingMode )
 $internalConstructor=|new4|const QString &,QUrl::ParsingMode
 
-//[1]QUrl ()
-//[2]QUrl ( const QString & url )
-//[3]QUrl ( const QUrl & other )
-//[4]QUrl ( const QString & url, ParsingMode parsingMode )
+/*
+[1]QUrl ()
+[2]QUrl ( const QString & url )
+[3]QUrl ( const QUrl & other )
+[4]QUrl ( const QString & url, ParsingMode parsingMode )
+*/
 
 HB_FUNC_STATIC( QURL_NEW )
 {
@@ -118,8 +120,10 @@ $internalMethod=|int|port,port1|
 $prototype=int port ( int defaultPort ) const
 $internalMethod=|int|port,port2|int
 
-//[1]int port () const
-//[2]int port ( int defaultPort ) const
+/*
+[1]int port () const
+[2]int port ( int defaultPort ) const
+*/
 
 HB_FUNC_STATIC( QURL_PORT )
 {
@@ -171,8 +175,10 @@ $internalMethod=|void|setUrl,setUrl1|const QString &
 $prototype=void setUrl ( const QString & url, ParsingMode parsingMode )
 $internalMethod=|void|setUrl,setUrl2|const QString &,QUrl::ParsingMode
 
-//[1]void setUrl ( const QString & url )
-//[2]void setUrl ( const QString & url, ParsingMode parsingMode )
+/*
+[1]void setUrl ( const QString & url )
+[2]void setUrl ( const QString & url, ParsingMode parsingMode )
+*/
 
 HB_FUNC_STATIC( QURL_SETURL )
 {
@@ -227,8 +233,10 @@ $internalStaticMethod=|QUrl|fromEncoded,fromEncoded1|const QByteArray &
 $prototype=static QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
 $internalStaticMethod=|QUrl|fromEncoded,fromEncoded2|const QByteArray &,QUrl::ParsingMode
 
-//[1]QUrl fromEncoded ( const QByteArray & input )
-//[2]QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
+/*
+[1]QUrl fromEncoded ( const QByteArray & input )
+[2]QUrl fromEncoded ( const QByteArray & input, ParsingMode parsingMode )
+*/
 
 HB_FUNC_STATIC( QURL_FROMENCODED )
 {

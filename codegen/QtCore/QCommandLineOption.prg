@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QStringList &,const QString &=QString(),const Q
 $prototype=QCommandLineOption(const QCommandLineOption &other)
 $internalConstructor=|new3|const QCommandLineOption &
 
-//[1]QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
-//[2]QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
-//[3]QCommandLineOption(const QCommandLineOption &other)
+/*
+[1]QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
+[2]QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
+[3]QCommandLineOption(const QCommandLineOption &other)
+*/
 
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 {

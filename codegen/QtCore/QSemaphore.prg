@@ -39,8 +39,10 @@ $internalMethod=|bool|tryAcquire,tryAcquire1|int=1
 $prototype=bool tryAcquire(int n, int timeout)
 $internalMethod=|bool|tryAcquire,tryAcquire2|int,int
 
-//[1]bool tryAcquire(int n = 1)
-//[2]bool tryAcquire(int n, int timeout)
+/*
+[1]bool tryAcquire(int n = 1)
+[2]bool tryAcquire(int n, int timeout)
+*/
 
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {

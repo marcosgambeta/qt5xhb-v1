@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QPoint(int xpos, int ypos)
 $internalConstructor=|new2|int,int
 
-//[1]QPoint()
-//[2]QPoint(int xpos, int ypos)
+/*
+[1]QPoint()
+[2]QPoint(int xpos, int ypos)
+*/
 
 HB_FUNC_STATIC( QPOINT_NEW )
 {

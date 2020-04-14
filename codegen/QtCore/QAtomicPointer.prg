@@ -25,14 +25,16 @@ $destructor
 
 $includes
 
-// TODO: implementar(?) construtores
+%% TODO: implementar(?) construtores
 
-//[1]QAtomicPointer(T * value = 0)
-//[2]QAtomicPointer(const QAtomicPointer<T> & other)
+%% /*
+%% [1]QAtomicPointer(T * value = 0)
+%% [2]QAtomicPointer(const QAtomicPointer<T> & other)
+%% */
 
-//HB_FUNC_STATIC( QATOMICPOINTER_NEW )
-//{
-//}
+%% HB_FUNC_STATIC( QATOMICPOINTER_NEW )
+%% {
+%% }
 
 $extraMethods
 

@@ -43,14 +43,16 @@ $internalConstructor=|new5|QByteArray *,QIODevice::OpenMode=QIODevice::ReadWrite
 $prototype=QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
 $internalConstructor=|new6|const QByteArray &,QIODevice::OpenMode=QIODevice::ReadOnly
 
-//[1]QTextStream()
-//[2]QTextStream(QIODevice *device)
-//[3]QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-//[4]QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite) // TODO: revisar implementacao
-//[5]QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-//[6]QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
+/*
+[1]QTextStream()
+[2]QTextStream(QIODevice *device)
+[3]QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+[4]QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite) // TODO: revisar implementacao
+[5]QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+[6]QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
+*/
 
-HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
+HB_FUNC_STATIC( QTEXTSTREAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -68,10 +70,11 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
 %%  {
 %%    QTextStream_new4();
 %%  }
-  //else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
-  //{
-  //  QTextStream_new5();
-  //}
+%% TODO: revisar casos [5] e [6]
+%%  //else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+%%  //{
+%%  //  QTextStream_new5();
+%%  //}
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
     QTextStream_new6();
@@ -90,8 +93,10 @@ $internalMethod=|void|setCodec,setCodec1|QTextCodec *
 $prototype=void setCodec(const char *codecName)
 $internalMethod=|void|setCodec,setCodec2|const char *
 
-//[1]void setCodec(QTextCodec *codec)
-//[2]void setCodec(const char *codecName)
+/*
+[1]void setCodec(QTextCodec *codec)
+[2]void setCodec(const char *codecName)
+*/
 
 HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 {

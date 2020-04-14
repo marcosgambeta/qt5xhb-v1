@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QPoint &,const QSize &
 $prototype=QRect ( int x, int y, int width, int height )
 $internalConstructor=|new4|int,int,int,int
 
-//[1]QRect ()
-//[2]QRect ( const QPoint & topLeft, const QPoint & bottomRight )
-//[3]QRect ( const QPoint & topLeft, const QSize & size )
-//[4]QRect ( int x, int y, int width, int height )
+/*
+[1]QRect ()
+[2]QRect ( const QPoint & topLeft, const QPoint & bottomRight )
+[3]QRect ( const QPoint & topLeft, const QSize & size )
+[4]QRect ( int x, int y, int width, int height )
+*/
 
 HB_FUNC_STATIC( QRECT_NEW )
 {
@@ -98,10 +100,12 @@ $internalMethod=|bool|contains,contains3|int,int
 $prototype=bool contains ( const QRect & rectangle, bool proper = false ) const
 $internalMethod=|bool|contains,contains4|const QRect &,bool=false
 
-//[1]bool contains ( const QPoint & point, bool proper = false ) const
-//[2]bool contains ( int x, int y, bool proper ) const
-//[3]bool contains ( int x, int y ) const
-//[4]bool contains ( const QRect & rectangle, bool proper = false ) const
+/*
+[1]bool contains ( const QPoint & point, bool proper = false ) const
+[2]bool contains ( int x, int y, bool proper ) const
+[3]bool contains ( int x, int y ) const
+[4]bool contains ( const QRect & rectangle, bool proper = false ) const
+*/
 
 HB_FUNC_STATIC( QRECT_CONTAINS )
 {
@@ -179,8 +183,10 @@ $internalMethod=|void|moveTo,moveTo1|int,int
 $prototype=void moveTo ( const QPoint & position )
 $internalMethod=|void|moveTo,moveTo2|const QPoint &
 
-//[1]void moveTo ( int x, int y )
-//[2]void moveTo ( const QPoint & position )
+/*
+[1]void moveTo ( int x, int y )
+[2]void moveTo ( const QPoint & position )
+*/
 
 HB_FUNC_STATIC( QRECT_MOVETO )
 {
@@ -277,8 +283,10 @@ $internalMethod=|void|translate,translate1|int,int
 $prototype=void translate ( const QPoint & offset )
 $internalMethod=|void|translate,translate2|const QPoint &
 
-//[1]void translate ( int dx, int dy )
-//[2]void translate ( const QPoint & offset )
+/*
+[1]void translate ( int dx, int dy )
+[2]void translate ( const QPoint & offset )
+*/
 
 HB_FUNC_STATIC( QRECT_TRANSLATE )
 {
@@ -303,8 +311,10 @@ $internalMethod=|QRect|translated,translated1|int,int
 $prototype=QRect translated ( const QPoint & offset ) const
 $internalMethod=|QRect|translated,translated2|const QPoint &
 
-//[1]QRect translated ( int dx, int dy ) const
-//[2]QRect translated ( const QPoint & offset ) const
+/*
+[1]QRect translated ( int dx, int dy ) const
+[2]QRect translated ( const QPoint & offset ) const
+*/
 
 HB_FUNC_STATIC( QRECT_TRANSLATED )
 {

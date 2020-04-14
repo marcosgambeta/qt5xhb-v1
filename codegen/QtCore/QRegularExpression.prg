@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QString &,QRegularExpression::PatternOptions=QR
 $prototype=QRegularExpression(const QRegularExpression & re)
 $internalConstructor=|new3|const QRegularExpression &
 
-//[1]QRegularExpression()
-//[2]QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOption)
-//[3]QRegularExpression(const QRegularExpression & re)
+/*
+[1]QRegularExpression()
+[2]QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOption)
+[3]QRegularExpression(const QRegularExpression & re)
+*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
 {

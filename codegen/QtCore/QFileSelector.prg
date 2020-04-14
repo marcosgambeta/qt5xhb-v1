@@ -38,8 +38,10 @@ $internalMethod=|QString|select,select1|const QString &
 $prototype=QUrl select(const QUrl &filePath) const
 $internalMethod=|QUrl|select,select2|const QUrl &
 
-//[1]QString select(const QString &filePath) const
-//[2]QUrl select(const QUrl &filePath) const
+/*
+[1]QString select(const QString &filePath) const
+[2]QUrl select(const QUrl &filePath) const
+*/
 
 HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 {
