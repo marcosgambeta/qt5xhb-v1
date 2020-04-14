@@ -80,8 +80,10 @@ $internalMethod=|const QSurfaceDataItem *|itemAt,itemAt1|int,int
 $prototype=const QSurfaceDataItem *itemAt(const QPoint &position) const
 $internalMethod=|const QSurfaceDataItem *|itemAt,itemAt2|const QPoint &
 
-//[1]const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
-//[2]const QSurfaceDataItem *itemAt(const QPoint &position) const
+/*
+[1]const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
+[2]const QSurfaceDataItem *itemAt(const QPoint &position) const
+*/
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 {
@@ -115,8 +117,10 @@ $internalMethod=|void|setItem,setItem1|int,int,const QSurfaceDataItem &
 $prototype=void setItem(const QPoint &position, const QSurfaceDataItem &item)
 $internalMethod=|void|setItem,setItem2|const QPoint &,const QSurfaceDataItem &
 
-//[1]void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
-//[2]void setItem(const QPoint &position, const QSurfaceDataItem &item)
+/*
+[1]void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
+[2]void setItem(const QPoint &position, const QSurfaceDataItem &item)
+*/
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 {

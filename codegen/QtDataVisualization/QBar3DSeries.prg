@@ -35,8 +35,10 @@ $internalConstructor=|new1|QObject *=Q_NULLPTR
 $prototype=explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
 $internalConstructor=|new2|QBarDataProxy *,QObject *=Q_NULLPTR
 
-//[1]explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
-//[2]explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
+[2]explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QBAR3DSERIES_NEW )
 {

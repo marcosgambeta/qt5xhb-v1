@@ -36,9 +36,11 @@ $internalConstructor=|new2|const QVector3D &
 $prototype=QSurfaceDataItem(const QSurfaceDataItem &other)
 $internalConstructor=|new3|const QSurfaceDataItem &
 
-//[1]QSurfaceDataItem()
-//[2]QSurfaceDataItem(const QVector3D &position)
-//[3]QSurfaceDataItem(const QSurfaceDataItem &other)
+/*
+[1]QSurfaceDataItem()
+[2]QSurfaceDataItem(const QVector3D &position)
+[3]QSurfaceDataItem(const QSurfaceDataItem &other)
+*/
 
 HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
 {

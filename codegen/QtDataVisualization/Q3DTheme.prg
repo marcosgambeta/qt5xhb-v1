@@ -37,9 +37,11 @@ $internalConstructor=|new2|Q3DTheme::Theme,QObject *=Q_NULLPTR
 
 $prototype=explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = Q_NULLPTR) [protected]
 
-//[1]explicit Q3DTheme(QObject *parent = Q_NULLPTR)
-//[2]explicit Q3DTheme(Theme themeType, QObject *parent = Q_NULLPTR)
-//[3]explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = Q_NULLPTR) [protected]
+/*
+[1]explicit Q3DTheme(QObject *parent = Q_NULLPTR)
+[2]explicit Q3DTheme(Theme themeType, QObject *parent = Q_NULLPTR)
+[3]explicit Q3DTheme(Q3DThemePrivate *d, Theme themeType, QObject *parent = Q_NULLPTR) [protected]
+*/
 
 HB_FUNC_STATIC( Q3DTHEME_NEW )
 {

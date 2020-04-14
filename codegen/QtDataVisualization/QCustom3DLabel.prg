@@ -35,8 +35,10 @@ $internalConstructor=|new1|QObject *=Q_NULLPTR
 $prototype=explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = Q_NULLPTR)
 $internalConstructor=|new2|const QString &,const QFont &,const QVector3D &,const QVector3D &,const QQuaternion &,QObject *=Q_NULLPTR
 
-//[1]explicit QCustom3DLabel(QObject *parent = Q_NULLPTR)
-//[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QCustom3DLabel(QObject *parent = Q_NULLPTR)
+[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
 {

@@ -36,8 +36,10 @@ $prototype=explicit QCustom3DVolume(const QVector3D &position, const QVector3D &
 %% TODO: implementar
 %% $internalConstructor=|new2|const QVector3D &,const QVector3D &,const QQuaternion &,int,int,int,QVector<uchar> *,QImage::Format,const QVector<QRgb> &,QObject *=Q_NULLPTR
 
-//[1]explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
-//[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
+[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_NEW )
 {
@@ -251,8 +253,10 @@ $internalMethod=|void|setSubTextureData,setSubTextureData1|Qt::Axis,int,const uc
 $prototype=void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
 $internalMethod=|void|setSubTextureData,setSubTextureData2|Qt::Axis,int,const QImage &
 
-//[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
-//[2]void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
+/*
+[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
+[2]void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 {
