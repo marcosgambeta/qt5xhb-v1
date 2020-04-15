@@ -31,8 +31,10 @@ $internalConstructor=|new1|int=-1
 $prototype=QHostInfo ( const QHostInfo & other )
 $internalConstructor=|new2|const QHostInfo &
 
-//[1]explicit QHostInfo(int lookupId = -1)
-//[2]QHostInfo ( const QHostInfo & other )
+/*
+[1]explicit QHostInfo(int lookupId = -1)
+[2]QHostInfo ( const QHostInfo & other )
+*/
 
 HB_FUNC_STATIC( QHOSTINFO_NEW )
 {

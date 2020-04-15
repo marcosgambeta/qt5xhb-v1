@@ -35,8 +35,10 @@ $internalConstructor=|new1|
 $prototype=QSslCertificateExtension(const QSslCertificateExtension &other)
 $internalConstructor=|new2|const QSslCertificateExtension &
 
-//[1]QSslCertificateExtension()
-//[2]QSslCertificateExtension(const QSslCertificateExtension &other)
+/*
+[1]QSslCertificateExtension()
+[2]QSslCertificateExtension(const QSslCertificateExtension &other)
+*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEW )
 {

@@ -50,15 +50,17 @@ $constructor=|new8|const QHostAddress &
 $prototype=QHostAddress(SpecialAddress address)
 $constructor=|new9|QHostAddress::SpecialAddress
 
-//[1]QHostAddress()
-//[2]explicit QHostAddress(quint32 ip4Addr)
-//[3]explicit QHostAddress(quint8 *ip6Addr)
-//[4]explicit QHostAddress(const quint8 *ip6Addr)
-//[5]explicit QHostAddress(const Q_IPV6ADDR &ip6Addr)
-//[6]explicit QHostAddress(const sockaddr *address)
-//[7]explicit QHostAddress(const QString &address)
-//[8]QHostAddress(const QHostAddress &copy)
-//[9]QHostAddress(SpecialAddress address)
+/*
+[1]QHostAddress()
+[2]explicit QHostAddress(quint32 ip4Addr)
+[3]explicit QHostAddress(quint8 *ip6Addr)
+[4]explicit QHostAddress(const quint8 *ip6Addr)
+[5]explicit QHostAddress(const Q_IPV6ADDR &ip6Addr)
+[6]explicit QHostAddress(const sockaddr *address)
+[7]explicit QHostAddress(const QString &address)
+[8]QHostAddress(const QHostAddress &copy)
+[9]QHostAddress(SpecialAddress address)
+*/
 
 HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 {
@@ -110,13 +112,15 @@ $internalMethod=|bool|setAddress,setAddress6|const QString &
 $prototype=void setAddress(SpecialAddress address)
 $internalMethod=5,8,0|void|setAddress,setAddress7|QHostAddress::SpecialAddress
 
-//[1]void setAddress(quint32 ip4Addr)
-//[2]void setAddress(quint8 *ip6Addr)
-//[3]void setAddress(const quint8 *ip6Addr)
-//[4]void setAddress(const Q_IPV6ADDR &ip6Addr)
-//[5]void setAddress(const sockaddr *address)
-//[6]bool setAddress(const QString &address)
-//[7]void setAddress(SpecialAddress address)
+/*
+[1]void setAddress(quint32 ip4Addr)
+[2]void setAddress(quint8 *ip6Addr)
+[3]void setAddress(const quint8 *ip6Addr)
+[4]void setAddress(const Q_IPV6ADDR &ip6Addr)
+[5]void setAddress(const sockaddr *address)
+[6]bool setAddress(const QString &address)
+[7]void setAddress(SpecialAddress address)
+*/
 
 HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 {
@@ -144,8 +148,10 @@ $internalMethod=|quint32|toIPv4Address,toIPv4Address1|
 $prototype=quint32 toIPv4Address(bool *ok) const
 $internalMethod=5,5,0|quint32|toIPv4Address,toIPv4Address2|bool *
 
-//[1]quint32 toIPv4Address() const
-//[2]quint32 toIPv4Address(bool *ok) const
+/*
+[1]quint32 toIPv4Address() const
+[2]quint32 toIPv4Address(bool *ok) const
+*/
 
 HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
 {
@@ -192,8 +198,10 @@ $prototype=bool isInSubnet(const QPair<QHostAddress, int> &subnet) const
 %% TODO: implementar QPair
 %% $internalMethod=|bool|isInSubnet,isInSubnet2|const QPair<QHostAddress, int> &
 
-//[1]bool isInSubnet(const QHostAddress &subnet, int netmask) const
-//[2]bool isInSubnet(const QPair<QHostAddress, int> &subnet) const
+/*
+[1]bool isInSubnet(const QHostAddress &subnet, int netmask) const
+[2]bool isInSubnet(const QPair<QHostAddress, int> &subnet) const
+*/
 
 HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 {

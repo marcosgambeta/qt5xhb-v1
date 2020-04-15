@@ -33,8 +33,10 @@ $internalConstructor=|new1|const QByteArray &=QByteArray(),const QByteArray &=QB
 $prototype=QNetworkCookie ( const QNetworkCookie & other )
 $internalConstructor=|new2|const QNetworkCookie &
 
-//[1]explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
-//[2]QNetworkCookie ( const QNetworkCookie & other )
+/*
+[1]explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
+[2]QNetworkCookie ( const QNetworkCookie & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 {

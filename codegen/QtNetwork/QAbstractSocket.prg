@@ -63,8 +63,10 @@ $internalMethod=|bool|bind,bind1|const QHostAddress &,quint16=0,QAbstractSocket:
 $prototype=bool bind(quint16 port = 0, BindMode mode = DefaultForPlatform)
 $internalMethod=|bool|bind,bind2|quint16=0,QAbstractSocket::BindMode=QAbstractSocket::DefaultForPlatform
 
-//[1]bool bind(const QHostAddress &address, quint16 port = 0, BindMode mode = DefaultForPlatform)
-//[2]bool bind(quint16 port = 0, BindMode mode = DefaultForPlatform)
+/*
+[1]bool bind(const QHostAddress &address, quint16 port = 0, BindMode mode = DefaultForPlatform)
+[2]bool bind(quint16 port = 0, BindMode mode = DefaultForPlatform)
+*/
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_BIND )
 {
@@ -89,8 +91,10 @@ $internalVirtualMethod=|void|connectToHost,connectToHost1|const QString &,quint1
 $prototype=virtual void connectToHost(const QHostAddress &address, quint16 port, OpenMode mode = ReadWrite)
 $internalVirtualMethod=|void|connectToHost,connectToHost2|const QHostAddress &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
-//[1]virtual void connectToHost(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
-//[2]virtual void connectToHost(const QHostAddress &address, quint16 port, OpenMode mode = ReadWrite)
+/*
+[1]virtual void connectToHost(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
+[2]virtual void connectToHost(const QHostAddress &address, quint16 port, OpenMode mode = ReadWrite)
+*/
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST )
 {

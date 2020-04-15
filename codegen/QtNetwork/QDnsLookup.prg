@@ -38,9 +38,11 @@ $internalConstructor=|new2|QDnsLookup::Type,const QString &,QObject *=Q_NULLPTR
 $prototype=QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
 $internalConstructor=5,4,0|new3|QDnsLookup::Type,const QString &,const QHostAddress &,QObject *=Q_NULLPTR
 
-//[1]explicit QDnsLookup(QObject *parent = Q_NULLPTR)
-//[2]QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
-//[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QDnsLookup(QObject *parent = Q_NULLPTR)
+[2]QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
+[3]QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 {

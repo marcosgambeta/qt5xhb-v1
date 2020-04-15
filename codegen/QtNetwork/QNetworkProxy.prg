@@ -38,9 +38,11 @@ $internalConstructor=|new2|QNetworkProxy::ProxyType,const QString &=QString(),qu
 $prototype=QNetworkProxy ( const QNetworkProxy & other )
 $internalConstructor=|new3|const QNetworkProxy &
 
-//[1]QNetworkProxy ()
-//[2]QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
-//[3]QNetworkProxy ( const QNetworkProxy & other )
+/*
+[1]QNetworkProxy ()
+[2]QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
+[3]QNetworkProxy ( const QNetworkProxy & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 {

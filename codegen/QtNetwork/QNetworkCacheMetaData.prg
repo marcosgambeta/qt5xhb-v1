@@ -38,8 +38,10 @@ $internalConstructor=|new1|
 $prototype=QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
 $internalConstructor=|new2|const QNetworkCacheMetaData &
 
-//[1]QNetworkCacheMetaData ()
-//[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
+/*
+[1]QNetworkCacheMetaData ()
+[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 {

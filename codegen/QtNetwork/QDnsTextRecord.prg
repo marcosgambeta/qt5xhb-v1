@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDnsTextRecord(const QDnsTextRecord & other)
 $internalConstructor=|new2|const QDnsTextRecord &
 
-//[1]QDnsTextRecord()
-//[2]QDnsTextRecord(const QDnsTextRecord & other)
+/*
+[1]QDnsTextRecord()
+[2]QDnsTextRecord(const QDnsTextRecord & other)
+*/
 
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
 {

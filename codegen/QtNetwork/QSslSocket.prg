@@ -66,8 +66,10 @@ $internalMethod=|void|connectToHostEncrypted,connectToHostEncrypted1|const QStri
 $prototype=void connectToHostEncrypted(const QString &hostName, quint16 port, const QString &sslPeerName, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
 $internalMethod=|void|connectToHostEncrypted,connectToHostEncrypted2|const QString &,quint16,const QString &,QIODevice::OpenMode=QIODevice::ReadWrite,QAbstractSocket::NetworkLayerProtocol=QAbstractSocket::AnyIPProtocol
 
-//[1]void connectToHostEncrypted(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
-//[2]void connectToHostEncrypted(const QString &hostName, quint16 port, const QString &sslPeerName, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
+/*
+[1]void connectToHostEncrypted(const QString &hostName, quint16 port, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
+[2]void connectToHostEncrypted(const QString &hostName, quint16 port, const QString &sslPeerName, OpenMode mode = ReadWrite, NetworkLayerProtocol protocol = AnyIPProtocol)
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
 {
@@ -179,8 +181,10 @@ $internalMethod=|void|setLocalCertificate,setLocalCertificate1|const QSslCertifi
 $prototype=void setLocalCertificate(const QString &fileName, QSsl::EncodingFormat format = QSsl::Pem)
 $internalMethod=|void|setLocalCertificate,setLocalCertificate2|const QString &,QSsl::EncodingFormat=QSsl::Pem
 
-//[1]void setLocalCertificate(const QSslCertificate &certificate)
-//[2]void setLocalCertificate(const QString &fileName, QSsl::EncodingFormat format = QSsl::Pem)
+/*
+[1]void setLocalCertificate(const QSslCertificate &certificate)
+[2]void setLocalCertificate(const QString &fileName, QSsl::EncodingFormat format = QSsl::Pem)
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
 {
@@ -220,8 +224,10 @@ $internalMethod=|void|setPrivateKey,setPrivateKey1|const QSslKey &
 $prototype=void setPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray &passPhrase = QByteArray())
 $internalMethod=|void|setPrivateKey,setPrivateKey2|const QString &,QSsl::KeyAlgorithm=QSsl::Rsa,QSsl::EncodingFormat=QSsl::Pem,const QByteArray &=QByteArray()
 
-//[1]void setPrivateKey(const QSslKey &key)
-//[2]void setPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray &passPhrase = QByteArray())
+/*
+[1]void setPrivateKey(const QSslKey &key)
+[2]void setPrivateKey(const QString &fileName, QSsl::KeyAlgorithm algorithm = QSsl::Rsa, QSsl::EncodingFormat format = QSsl::Pem, const QByteArray &passPhrase = QByteArray())
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
 {
@@ -253,8 +259,10 @@ $internalMethod=|void|setCiphers,setCiphers1|const QList<QSslCipher> &
 $prototype=void setCiphers(const QString &ciphers)
 $internalMethod=|void|setCiphers,setCiphers2|const QString &
 
-//[1]void setCiphers(const QList<QSslCipher> &ciphers)
-//[2]void setCiphers(const QString &ciphers)
+/*
+[1]void setCiphers(const QList<QSslCipher> &ciphers)
+[2]void setCiphers(const QString &ciphers)
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_SETCIPHERS )
 {
@@ -289,8 +297,10 @@ $internalMethod=|bool|addCaCertificates,addCaCertificates1|const QString &,QSsl:
 $prototype=void addCaCertificates(const QList<QSslCertificate> &certificates)
 $internalMethod=|void|addCaCertificates,addCaCertificates2|const QList<QSslCertificate> &
 
-//[1]bool addCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
-//[2]void addCaCertificates(const QList<QSslCertificate> &certificates)
+/*
+[1]bool addCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
+[2]void addCaCertificates(const QList<QSslCertificate> &certificates)
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 {
@@ -329,8 +339,10 @@ $internalStaticMethod=|bool|addDefaultCaCertificates,addDefaultCaCertificates1|c
 $prototype=static void addDefaultCaCertificates(const QList<QSslCertificate> &certificates)
 $internalStaticMethod=|void|addDefaultCaCertificates,addDefaultCaCertificates2|const QList<QSslCertificate> &
 
-//[1]static bool addDefaultCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
-//[2]static void addDefaultCaCertificates(const QList<QSslCertificate> &certificates)
+/*
+[1]static bool addDefaultCaCertificates(const QString &path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString)
+[2]static void addDefaultCaCertificates(const QList<QSslCertificate> &certificates)
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 {
@@ -399,8 +411,10 @@ $internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
 $prototype=void ignoreSslErrors() (slot)
 $internalMethod=|void|ignoreSslErrors,ignoreSslErrors2|
 
-//[1]void ignoreSslErrors(const QList<QSslError> &errors)
-//[2]void ignoreSslErrors() (slot)
+/*
+[1]void ignoreSslErrors(const QList<QSslError> &errors)
+[2]void ignoreSslErrors() (slot)
+*/
 
 HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
 {

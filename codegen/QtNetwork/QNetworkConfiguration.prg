@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QNetworkConfiguration ( const QNetworkConfiguration & other )
 $internalConstructor=|new2|const QNetworkConfiguration &
 
-//[1]QNetworkConfiguration ()
-//[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
+/*
+[1]QNetworkConfiguration ()
+[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {

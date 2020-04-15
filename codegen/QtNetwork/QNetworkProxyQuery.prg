@@ -60,16 +60,18 @@ $internalConstructor=|new7|const QNetworkConfiguration &,quint16,const QString &
 $prototype=QNetworkProxyQuery ( const QNetworkProxyQuery & other )
 $internalConstructor=|new8|const QNetworkProxyQuery &
 
-//[1]QNetworkProxyQuery()
-//[2]explicit QNetworkProxyQuery(const QUrl &requestUrl, QueryType queryType = UrlRequest)
-//[3]QNetworkProxyQuery(const QString &hostname, int port, const QString &protocolTag = QString(), QueryType queryType = TcpSocket)
-//[4]explicit QNetworkProxyQuery(quint16 bindPort, const QString &protocolTag = QString(), QueryType queryType = TcpServer)
+/*
+[1]QNetworkProxyQuery()
+[2]explicit QNetworkProxyQuery(const QUrl &requestUrl, QueryType queryType = UrlRequest)
+[3]QNetworkProxyQuery(const QString &hostname, int port, const QString &protocolTag = QString(), QueryType queryType = TcpSocket)
+[4]explicit QNetworkProxyQuery(quint16 bindPort, const QString &protocolTag = QString(), QueryType queryType = TcpServer)
 %% #if !defined(QT_NO_BEARERMANAGEMENT) && QT_DEPRECATED_SINCE(5, 10)
-//[5]QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, const QUrl &requestUrl, QueryType queryType = UrlRequest)
-//[6]QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, const QString &hostname, int port, const QString &protocolTag = QString(), QueryType queryType = TcpSocket)
-//[7]QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, quint16 bindPort, const QString &protocolTag = QString(), QueryType queryType = TcpServer)
+[5]QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, const QUrl &requestUrl, QueryType queryType = UrlRequest)
+[6]QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, const QString &hostname, int port, const QString &protocolTag = QString(), QueryType queryType = TcpSocket)
+[7]QNetworkProxyQuery(const QNetworkConfiguration &networkConfiguration, quint16 bindPort, const QString &protocolTag = QString(), QueryType queryType = TcpServer)
 %% #endif
-//[8]QNetworkProxyQuery(const QNetworkProxyQuery &other)
+[8]QNetworkProxyQuery(const QNetworkProxyQuery &other)
+*/
 
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
 {

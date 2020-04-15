@@ -67,8 +67,10 @@ $internalMethod=|bool|listen,listen1|const QString &
 $prototype=bool listen(qintptr socketDescriptor)
 $internalMethod=|bool|listen,listen2|qintptr
 
-//[1]bool listen(const QString &name)
-//[2]bool listen(qintptr socketDescriptor)
+/*
+[1]bool listen(const QString &name)
+[2]bool listen(qintptr socketDescriptor)
+*/
 
 HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 {

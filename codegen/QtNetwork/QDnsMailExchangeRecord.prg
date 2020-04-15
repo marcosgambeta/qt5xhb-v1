@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
 $internalConstructor=|new2|const QDnsMailExchangeRecord &
 
-//[1]QDnsMailExchangeRecord()
-//[2]QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
+/*
+[1]QDnsMailExchangeRecord()
+[2]QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
+*/
 
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
 {

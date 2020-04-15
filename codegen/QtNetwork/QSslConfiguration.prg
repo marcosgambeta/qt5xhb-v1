@@ -38,8 +38,10 @@ $internalConstructor=|new1|
 $prototype=QSslConfiguration( const QSslConfiguration & other )
 $internalConstructor=|new2|const QSslConfiguration &
 
-//[1]QSslConfiguration()
-//[2]QSslConfiguration( const QSslConfiguration & other )
+/*
+[1]QSslConfiguration()
+[2]QSslConfiguration( const QSslConfiguration & other )
+*/
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 {

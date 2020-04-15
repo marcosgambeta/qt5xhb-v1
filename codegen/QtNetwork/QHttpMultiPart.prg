@@ -31,8 +31,10 @@ $internalConstructor=|new1|QObject *=0
 $prototype=explicit QHttpMultiPart(ContentType contentType, QObject *parent = Q_NULLPTR)
 $internalConstructor=|new2|QHttpMultiPart::ContentType,QObject *=0
 
-//[1]explicit QHttpMultiPart(QObject *parent = Q_NULLPTR)
-//[2]explicit QHttpMultiPart(ContentType contentType, QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QHttpMultiPart(QObject *parent = Q_NULLPTR)
+[2]explicit QHttpMultiPart(ContentType contentType, QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {

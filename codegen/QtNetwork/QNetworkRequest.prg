@@ -39,8 +39,10 @@ $internalConstructor=|new1|const QUrl &=QUrl()
 $prototype=QNetworkRequest ( const QNetworkRequest & other )
 $internalConstructor=|new2|const QNetworkRequest &
 
-//[1]explicit QNetworkRequest ( const QUrl & url = QUrl() )
-//[2]QNetworkRequest ( const QNetworkRequest & other )
+/*
+[1]explicit QNetworkRequest ( const QUrl & url = QUrl() )
+[2]QNetworkRequest ( const QNetworkRequest & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
 {

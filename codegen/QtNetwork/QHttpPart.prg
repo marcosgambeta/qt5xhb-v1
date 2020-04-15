@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QHttpPart ( const QHttpPart & other )
 $internalConstructor=|new2|const QHttpPart &
 
-//[1]QHttpPart ()
-//[2]QHttpPart ( const QHttpPart & other )
+/*
+[1]QHttpPart ()
+[2]QHttpPart ( const QHttpPart & other )
+*/
 
 HB_FUNC_STATIC( QHTTPPART_NEW )
 {

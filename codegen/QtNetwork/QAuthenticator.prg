@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QAuthenticator ( const QAuthenticator & other )
 $internalConstructor=|new2|const QAuthenticator &
 
-//[1]QAuthenticator ()
-//[2]QAuthenticator ( const QAuthenticator & other )
+/*
+[1]QAuthenticator ()
+[2]QAuthenticator ( const QAuthenticator & other )
+*/
 
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 {
