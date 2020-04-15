@@ -33,8 +33,10 @@ $internalConstructor=|new1|QPrinter *,QWidget *=0,Qt::WindowFlags=0
 $prototype=explicit QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new2|QWidget *=0,Qt::WindowFlags=0
 
-//[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-//[2]QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+/*
+[1]QPrintPreviewWidget ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+[2]QPrintPreviewWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+*/
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 {

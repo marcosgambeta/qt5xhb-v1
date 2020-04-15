@@ -31,8 +31,10 @@ $internalConstructor=|new1|QPrinter::PrinterMode=QPrinter::ScreenResolution
 $prototype=QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
 $internalConstructor=|new2|const QPrinterInfo &,QPrinter::PrinterMode=QPrinter::ScreenResolution
 
-//[1]QPrinter ( PrinterMode mode = ScreenResolution )
-//[2]QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
+/*
+[1]QPrinter ( PrinterMode mode = ScreenResolution )
+[2]QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
+*/
 
 HB_FUNC_STATIC( QPRINTER_NEW )
 {
@@ -121,8 +123,10 @@ $internalMethod=|void|setPageMargins,setPageMargins1|qreal,qreal,qreal,qreal,QPr
 $prototype=bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
 $internalMethod=5,3,0|bool|setPageMargins,setPageMargins2|const QMarginsF &,QPageLayout::Unit
 
-//[1]void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
-//[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+/*
+[1]void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
+[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+*/
 
 HB_FUNC_STATIC( QPRINTER_SETPAGEMARGINS )
 {
@@ -177,8 +181,10 @@ $internalMethod=|QRect|pageRect,pageRect1|
 $prototype=QRectF pageRect ( Unit unit ) const
 $internalMethod=|QRectF|pageRect,pageRect2|QPrinter::Unit
 
-//[1]QRect pageRect () const
-//[2]QRectF pageRect ( Unit unit ) const
+/*
+[1]QRect pageRect () const
+[2]QRectF pageRect ( Unit unit ) const
+*/
 
 HB_FUNC_STATIC( QPRINTER_PAGERECT )
 {
@@ -203,8 +209,10 @@ $internalMethod=|QRect|paperRect,paperRect1|
 $prototype=QRectF paperRect ( Unit unit ) const
 $internalMethod=|QRectF|paperRect,paperRect2|QPrinter::Unit
 
-//[1]QRect paperRect () const
-//[2]QRectF paperRect ( Unit unit ) const
+/*
+[1]QRect paperRect () const
+[2]QRectF paperRect ( Unit unit ) const
+*/
 
 HB_FUNC_STATIC( QPRINTER_PAPERRECT )
 {
@@ -229,8 +237,10 @@ $internalMethod=|QPrinter::PaperSize|paperSize,paperSize1|
 $prototype=QSizeF paperSize ( Unit unit ) const
 $internalMethod=|QSizeF|paperSize,paperSize2|QPrinter::Unit
 
-//[1]PaperSize paperSize () const
-//[2]QSizeF paperSize ( Unit unit ) const
+/*
+[1]PaperSize paperSize () const
+[2]QSizeF paperSize ( Unit unit ) const
+*/
 
 HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
 {
@@ -297,8 +307,10 @@ $internalMethod=|void|setPaperSize,setPaperSize1|QPrinter::PaperSize
 $prototype=void setPaperSize ( const QSizeF & paperSize, Unit unit )
 $internalMethod=|void|setPaperSize,setPaperSize2|const QSizeF &,QPrinter::Unit
 
-//[1]void setPaperSize ( PaperSize newPaperSize )
-//[2]void setPaperSize ( const QSizeF & paperSize, Unit unit )
+/*
+[1]void setPaperSize ( PaperSize newPaperSize )
+[2]void setPaperSize ( const QSizeF & paperSize, Unit unit )
+*/
 
 HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
 {
@@ -353,8 +365,10 @@ $internalMethod=|void|setPageSize,setPageSize1|QPrinter::PageSize
 $prototype=bool setPageSize(const QPageSize &pageSize)
 $internalMethod=5,3,0|bool|setPageSize,setPageSize2|const QPageSize &
 
-//[1]void setPageSize(PageSize)
-//[2]bool setPageSize(const QPageSize &pageSize)
+/*
+[1]void setPageSize(PageSize)
+[2]bool setPageSize(const QPageSize &pageSize)
+*/
 
 HB_FUNC_STATIC( QPRINTER_SETPAGESIZE )
 {
