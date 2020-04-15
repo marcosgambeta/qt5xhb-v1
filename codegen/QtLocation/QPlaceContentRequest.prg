@@ -33,8 +33,10 @@ $internalConstructor=5,4,0|new1|
 $prototype=QPlaceContentRequest(const QPlaceContentRequest &other)
 $internalConstructor=5,4,0|new2|const QPlaceContentRequest &
 
-//[1]QPlaceContentRequest()
-//[2]QPlaceContentRequest(const QPlaceContentRequest &other)
+/*
+[1]QPlaceContentRequest()
+[2]QPlaceContentRequest(const QPlaceContentRequest &other)
+*/
 
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_NEW )
 {

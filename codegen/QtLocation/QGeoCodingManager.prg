@@ -43,8 +43,10 @@ $internalMethod=5,4,0|QGeoCodeReply *|geocode,geocode1|const QGeoAddress &,const
 $prototype=QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds = QGeoShape())
 $internalMethod=5,4,0|QGeoCodeReply *|geocode,geocode2|const QString &,int=-1,int=0,const QGeoShape &=QGeoShape()
 
-//[1]QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
-//[2]QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds = QGeoShape())
+/*
+[1]QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
+[2]QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds = QGeoShape())
+*/
 
 HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE )
 {

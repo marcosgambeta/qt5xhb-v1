@@ -34,8 +34,10 @@ $internalConstructor=5,4,0|new1|
 $prototype=QPlaceSearchRequest(const QPlaceSearchRequest &other)
 $internalConstructor=5,4,0|new2|const QPlaceSearchRequest &
 
-//[1]QPlaceSearchRequest()
-//[2]QPlaceSearchRequest(const QPlaceSearchRequest &other)
+/*
+[1]QPlaceSearchRequest()
+[2]QPlaceSearchRequest(const QPlaceSearchRequest &other)
+*/
 
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
 {

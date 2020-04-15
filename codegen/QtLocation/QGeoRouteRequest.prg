@@ -28,6 +28,7 @@ $includes=5,4,0
 #include <QtPositioning/QGeoRectangle>
 
 $prototype=explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
+%% TODO: code generator
 void QGeoRouteRequest_new1 ()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -40,7 +41,7 @@ void QGeoRouteRequest_new1 ()
     par1 << *(QGeoCoordinate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
   QGeoRouteRequest * o = new QGeoRouteRequest ( par1 );
-  _qt5xhb_returnNewObject( o, true );
+  Qt5xHb::returnNewObject( o, true );
 #endif
 }
 
@@ -50,9 +51,11 @@ $internalConstructor=5,4,0|new2|const QGeoCoordinate &,const QGeoCoordinate &
 $prototype=QGeoRouteRequest(const QGeoRouteRequest &other)
 $internalConstructor=5,4,0|new3|const QGeoRouteRequest &
 
-//[1]explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
-//[2]QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
-//[3]QGeoRouteRequest(const QGeoRouteRequest &other)
+/*
+[1]explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
+[2]QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
+[3]QGeoRouteRequest(const QGeoRouteRequest &other)
+*/
 
 HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
 {

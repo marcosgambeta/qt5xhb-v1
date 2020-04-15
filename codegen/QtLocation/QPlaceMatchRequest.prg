@@ -31,8 +31,10 @@ $internalConstructor=5,4,0|new1|
 $prototype=QPlaceMatchRequest(const QPlaceMatchRequest &other)
 $internalConstructor=5,4,0|new2|const QPlaceMatchRequest &
 
-//[1]QPlaceMatchRequest()
-//[2]QPlaceMatchRequest(const QPlaceMatchRequest &other)
+/*
+[1]QPlaceMatchRequest()
+[2]QPlaceMatchRequest(const QPlaceMatchRequest &other)
+*/
 
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_NEW )
 {

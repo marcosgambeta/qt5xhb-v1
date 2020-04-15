@@ -31,8 +31,10 @@ $internalConstructor=5,4,0|new1|
 $prototype=QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
 $internalConstructor=5,4,0|new2|const QPlaceContent &
 
-//[1]QPlaceEditorial()
-//[2]QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
+/*
+[1]QPlaceEditorial()
+[2]QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
+*/
 
 HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
 {

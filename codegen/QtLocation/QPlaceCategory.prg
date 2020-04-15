@@ -33,8 +33,10 @@ $internalConstructor=5,4,0|new1|
 $prototype=QPlaceCategory(const QPlaceCategory &other)
 $internalConstructor=5,4,0|new2|const QPlaceCategory &
 
-//[1]QPlaceCategory()
-//[2]QPlaceCategory(const QPlaceCategory &other)
+/*
+[1]QPlaceCategory()
+[2]QPlaceCategory(const QPlaceCategory &other)
+*/
 
 HB_FUNC_STATIC( QPLACECATEGORY_NEW )
 {

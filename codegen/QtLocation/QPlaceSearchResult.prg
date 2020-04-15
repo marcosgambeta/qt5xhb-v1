@@ -33,8 +33,10 @@ $internalConstructor=5,4,0|new1|
 $prototype=QPlaceSearchResult(const QPlaceSearchResult &other)
 $internalConstructor=5,4,0|new2|const QPlaceSearchResult &
 
-//[1]QPlaceSearchResult()
-//[2]QPlaceSearchResult(const QPlaceSearchResult &other)
+/*
+[1]QPlaceSearchResult()
+[2]QPlaceSearchResult(const QPlaceSearchResult &other)
+*/
 
 HB_FUNC_STATIC( QPLACESEARCHRESULT_NEW )
 {

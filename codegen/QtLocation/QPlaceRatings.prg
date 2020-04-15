@@ -31,8 +31,10 @@ $internalConstructor=5,4,0|new1|
 $prototype=QPlaceRatings(const QPlaceRatings &other)
 $internalConstructor=5,4,0|new2|const QPlaceRatings &
 
-//[1]QPlaceRatings()
-//[2]QPlaceRatings(const QPlaceRatings &other)
+/*
+[1]QPlaceRatings()
+[2]QPlaceRatings(const QPlaceRatings &other)
+*/
 
 HB_FUNC_STATIC( QPLACERATINGS_NEW )
 {

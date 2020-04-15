@@ -31,8 +31,10 @@ $internalConstructor=5,4,0|new1|
 $prototype=QPlaceSupplier(const QPlaceSupplier &other)
 $internalConstructor=5,4,0|new2|const QPlaceSupplier &
 
-//[1]QPlaceSupplier()
-//[2]QPlaceSupplier(const QPlaceSupplier &other)
+/*
+[1]QPlaceSupplier()
+[2]QPlaceSupplier(const QPlaceSupplier &other)
+*/
 
 HB_FUNC_STATIC( QPLACESUPPLIER_NEW )
 {

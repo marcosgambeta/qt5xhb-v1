@@ -33,8 +33,10 @@ $internalConstructor=5,4,0|new1|
 $prototype=QPlaceIcon(const QPlaceIcon &other)
 $internalConstructor=5,4,0|new2|const QPlaceIcon &
 
-//[1]QPlaceIcon()
-//[2]QPlaceIcon(const QPlaceIcon &other)
+/*
+[1]QPlaceIcon()
+[2]QPlaceIcon(const QPlaceIcon &other)
+*/
 
 HB_FUNC_STATIC( QPLACEICON_NEW )
 {
