@@ -70,8 +70,10 @@ $internalMethod=|QStringList|filterAttributes,filterAttributes1|
 $prototype=QStringList filterAttributes ( const QString & filterName ) const
 $internalMethod=|QStringList|filterAttributes,filterAttributes2|const QString &
 
-//[1]QStringList filterAttributes () const
-//[2]QStringList filterAttributes ( const QString & filterName ) const
+/*
+[1]QStringList filterAttributes () const
+[2]QStringList filterAttributes ( const QString & filterName ) const
+*/
 
 HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 {
