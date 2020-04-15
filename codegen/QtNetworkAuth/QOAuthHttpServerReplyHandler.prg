@@ -37,9 +37,11 @@ $internalConstructor=5,10,0|new2|quint16,QObject *=nullptr
 $prototype=explicit QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port, QObject *parent = nullptr)
 $internalConstructor=5,10,0|new3|const QHostAddress &,quint16,QObject *=nullptr
 
-//[1]explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
-//[2]explicit QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
-//[3]explicit QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port, QObject *parent = nullptr)
+/*
+[1]explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
+[2]explicit QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
+[3]explicit QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_NEW )
 {

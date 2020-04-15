@@ -38,8 +38,10 @@ $internalConstructor=5,10,0|new2|QNetworkAccessManager *,QObject *=nullptr
 
 $prototype=QOAuth1(const QString &clientIdentifier, const QString &clientSharedSecret, QNetworkAccessManager *manager, QObject *parent = nullptr)
 
-//[1]explicit QOAuth1(QObject *parent = nullptr)
-//[2]explicit QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
+/*
+[1]explicit QOAuth1(QObject *parent = nullptr)
+[2]explicit QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QOAUTH1_NEW )
 {
@@ -72,8 +74,10 @@ $prototype=void setClientCredentials(const QPair<QString, QString> &clientCreden
 $prototype=void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
 $method=5,10,0|void|setClientCredentials|const QString &,const QString &
 
-//[1]void setClientCredentials(const QPair<QString, QString> &clientCredentials)
-//[2]void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
+/*
+[1]void setClientCredentials(const QPair<QString, QString> &clientCredentials)
+[2]void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
+*/
 
 $prototype=QString tokenSecret() const
 $method=5,10,0|QString|tokenSecret|
@@ -88,8 +92,10 @@ $prototype=void setTokenCredentials(const QPair<QString, QString> &tokenCredenti
 $prototype=void setTokenCredentials(const QString &token, const QString &tokenSecret)
 $method=5,10,0|void|setTokenCredentials|const QString &,const QString &
 
-//[1]void setTokenCredentials(const QPair<QString, QString> &tokenCredentials)
-//[2]void setTokenCredentials(const QString &token, const QString &tokenSecret)
+/*
+[1]void setTokenCredentials(const QPair<QString, QString> &tokenCredentials)
+[2]void setTokenCredentials(const QString &token, const QString &tokenSecret)
+*/
 
 $prototype=QUrl temporaryCredentialsUrl() const
 $method=5,10,0|QUrl|temporaryCredentialsUrl|

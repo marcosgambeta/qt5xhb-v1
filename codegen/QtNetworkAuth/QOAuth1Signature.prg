@@ -41,10 +41,12 @@ $internalConstructor=5,10,0|new3|const QOAuth1Signature &
 
 $prototype=QOAuth1Signature(QOAuth1Signature &&other)
 
-//[1]explicit QOAuth1Signature(const QUrl &url = QUrl(), HttpRequestMethod method = HttpRequestMethod::Post, const QVariantMap &parameters = QVariantMap())
-//[2]QOAuth1Signature(const QUrl &url, const QString &clientSharedKey, const QString &tokenSecret, HttpRequestMethod method = HttpRequestMethod::Post, const QVariantMap &parameters = QVariantMap())
-//[3]QOAuth1Signature(const QOAuth1Signature &other)
-//[4]QOAuth1Signature(QOAuth1Signature &&other)
+/*
+[1]explicit QOAuth1Signature(const QUrl &url = QUrl(), HttpRequestMethod method = HttpRequestMethod::Post, const QVariantMap &parameters = QVariantMap())
+[2]QOAuth1Signature(const QUrl &url, const QString &clientSharedKey, const QString &tokenSecret, HttpRequestMethod method = HttpRequestMethod::Post, const QVariantMap &parameters = QVariantMap())
+[3]QOAuth1Signature(const QOAuth1Signature &other)
+[4]QOAuth1Signature(QOAuth1Signature &&other)
+*/
 
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_NEW )
 {
@@ -117,8 +119,10 @@ $internalMethod=5,10,0|QByteArray|plainText,plainText1|
 $prototype=static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
 $internalStaticMethod=5,10,0|QByteArray|plainText,plainText2|const QString &,const QString &
 
-//[1]QByteArray plainText() const
-//[2]static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
+/*
+[1]QByteArray plainText() const
+[2]static QByteArray plainText(const QString &clientSharedSecret, const QString &tokenSecret)
+*/
 
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT )
 {

@@ -37,9 +37,11 @@ $prototype=explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *par
 
 $prototype=explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) [protected]
 
-%% //[1]explicit QAbstractOAuth2(QObject *parent = nullptr)
-%% //[2]explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *parent = nullptr)
-%% //[3]explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) [protected]
+%% /*
+%% [1]explicit QAbstractOAuth2(QObject *parent = nullptr)
+%% [2]explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *parent = nullptr)
+%% [3]explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) [protected]
+%% */
 
 %% HB_FUNC_STATIC( QABSTRACTOAUTH2_NEW )
 %% {
