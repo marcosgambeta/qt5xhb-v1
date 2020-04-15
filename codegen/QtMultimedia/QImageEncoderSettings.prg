@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QImageEncoderSettings(const QImageEncoderSettings& other)
 $internalConstructor=|new2|const QImageEncoderSettings &
 
-//[1]QImageEncoderSettings()
-//[2]QImageEncoderSettings(const QImageEncoderSettings& other)
+/*
+[1]QImageEncoderSettings()
+[2]QImageEncoderSettings(const QImageEncoderSettings& other)
+*/
 
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 {
@@ -71,8 +73,10 @@ $internalMethod=|void|setResolution,setResolution1|const QSize &
 $prototype=void setResolution(int width, int height)
 $internalMethod=|void|setResolution,setResolution2|int,int
 
-//[1]void setResolution(const QSize &)
-//[2]void setResolution(int width, int height)
+/*
+[1]void setResolution(const QSize &)
+[2]void setResolution(int width, int height)
+*/
 
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION )
 {

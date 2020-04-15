@@ -42,8 +42,10 @@ $internalMethod=|bool|setSource,setSource1|QMediaObject *
 $prototype=bool setSource(QMediaRecorder * source)
 $internalMethod=|bool|setSource,setSource2|QMediaRecorder *
 
-//[1]bool setSource(QMediaObject * source)
-//[2]bool setSource(QMediaRecorder * mediaRecorder)
+/*
+[1]bool setSource(QMediaObject * source)
+[2]bool setSource(QMediaRecorder * mediaRecorder)
+*/
 
 HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 {

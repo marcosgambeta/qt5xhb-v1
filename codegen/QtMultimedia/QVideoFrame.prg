@@ -42,11 +42,13 @@ $internalConstructor=|new4|const QImage &
 $prototype=QVideoFrame ( const QVideoFrame & other )
 $internalConstructor=|new5|const QVideoFrame &
 
-//[1]QVideoFrame ()
-//[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
-//[3]QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
-//[4]QVideoFrame ( const QImage & image )
-//[5]QVideoFrame ( const QVideoFrame & other )
+/*
+[1]QVideoFrame ()
+[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
+[3]QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
+[4]QVideoFrame ( const QImage & image )
+[5]QVideoFrame ( const QVideoFrame & other )
+*/
 
 HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
@@ -93,10 +95,12 @@ $prototype=const uchar * bits () const
 $prototype=const uchar *bits(int plane) const
 %% $method=|const uchar *|bits,bits4|int
 
-//[1]uchar *bits()
-//[2]uchar *bits(int plane)
-//[3]const uchar *bits() const
-//[4]const uchar *bits(int plane) const
+/*
+[1]uchar *bits()
+[2]uchar *bits(int plane)
+[3]const uchar *bits() const
+[4]const uchar *bits(int plane) const
+*/
 
 %%HB_FUNC_STATIC( QVIDEOFRAME_BITS )
 %%{
@@ -120,8 +124,10 @@ $internalMethod=|int|bytesPerLine,bytesPerLine1|
 $prototype=int bytesPerLine(int plane) const
 $internalMethod=|int|bytesPerLine,bytesPerLine2|int
 
-//[1]int bytesPerLine () const
-//[2]int bytesPerLine(int plane) const
+/*
+[1]int bytesPerLine () const
+[2]int bytesPerLine(int plane) const
+*/
 
 HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 {

@@ -37,8 +37,10 @@ $prototype=uchar *map(MapMode mode, int *numBytes, int *bytesPerLine) override;
 $prototype=virtual int map(MapMode mode, int *numBytes, int bytesPerLine[4], uchar *data[4]) = 0;
 %% TODO: implementar
 
-%% //[1]uchar *map(MapMode mode, int *numBytes, int *bytesPerLine) override;
-%% //[2]virtual int map(MapMode mode, int *numBytes, int bytesPerLine[4], uchar *data[4]) = 0;
+%% /*
+%% [1]uchar *map(MapMode mode, int *numBytes, int *bytesPerLine) override;
+%% [2]virtual int map(MapMode mode, int *numBytes, int bytesPerLine[4], uchar *data[4]) = 0;
+%% */
 
 %% HB_FUNC_STATIC( QABSTRACTPLANARVIDEOBUFFER_MAP )
 %% {

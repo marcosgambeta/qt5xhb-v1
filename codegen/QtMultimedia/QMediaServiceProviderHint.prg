@@ -43,12 +43,14 @@ $constructor=|new5|QMediaServiceProviderHint::Features
 $prototype=QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
 $constructor=|new6|const QMediaServiceProviderHint &
 
-//[1]QMediaServiceProviderHint()
-//[2]QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
-//[3]QMediaServiceProviderHint(const QByteArray &device)
-//[4]QMediaServiceProviderHint(QCamera::Position position)
-//[5]QMediaServiceProviderHint(Features features)
-//[6]QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
+/*
+[1]QMediaServiceProviderHint()
+[2]QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
+[3]QMediaServiceProviderHint(const QByteArray &device)
+[4]QMediaServiceProviderHint(QCamera::Position position)
+[5]QMediaServiceProviderHint(Features features)
+[6]QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
+*/
 
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
 {

@@ -31,8 +31,10 @@ $internalConstructor=5,5,0|new1|
 $prototype=QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
 $internalConstructor=5,5,0|new2|const QCameraViewfinderSettings &
 
-//[1]QCameraViewfinderSettings()
-//[2]QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
+/*
+[1]QCameraViewfinderSettings()
+[2]QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
+*/
 
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_NEW )
 {
@@ -68,8 +70,10 @@ $internalMethod=5,5,0|void|setResolution,setResolution1|const QSize &
 $prototype=void setResolution(int width, int height)
 $internalMethod=5,5,0|void|setResolution,setResolution2|int,int
 
-//[1]void setResolution(const QSize &)
-//[2]void setResolution(int width, int height)
+/*
+[1]void setResolution(const QSize &)
+[2]void setResolution(int width, int height)
+*/
 
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION )
 {
@@ -115,8 +119,10 @@ $internalMethod=5,5,0|void|setPixelAspectRatio,setPixelAspectRatio1|const QSize 
 $prototype=void setPixelAspectRatio(int horizontal, int vertical)
 $internalMethod=5,5,0|void|setPixelAspectRatio,setPixelAspectRatio2|int,int
 
-//[1]void setPixelAspectRatio(const QSize &ratio)
-//[2]void setPixelAspectRatio(int horizontal, int vertical)
+/*
+[1]void setPixelAspectRatio(const QSize &ratio)
+[2]void setPixelAspectRatio(int horizontal, int vertical)
+*/
 
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO )
 {

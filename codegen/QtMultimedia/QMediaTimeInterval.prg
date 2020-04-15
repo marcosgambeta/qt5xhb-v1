@@ -34,9 +34,11 @@ $internalConstructor=|new2|qint64,qint64
 $prototype=QMediaTimeInterval(const QMediaTimeInterval & other)
 $internalConstructor=|new3|const QMediaTimeInterval &
 
-//[1]QMediaTimeInterval()
-//[2]QMediaTimeInterval(qint64 start, qint64 end)
-//[3]QMediaTimeInterval(const QMediaTimeInterval & other)
+/*
+[1]QMediaTimeInterval()
+[2]QMediaTimeInterval(qint64 start, qint64 end)
+[3]QMediaTimeInterval(const QMediaTimeInterval & other)
+*/
 
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
 {

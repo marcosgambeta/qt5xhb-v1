@@ -37,8 +37,10 @@ $internalVirtualMethod=|void|start,start1|QIODevice *
 $prototype=virtual QIODevice* start() = 0
 $internalVirtualMethod=|QIODevice *|start,start2|
 
-//[1]virtual void start(QIODevice *device) = 0
-//[2]virtual QIODevice* start() = 0
+/*
+[1]virtual void start(QIODevice *device) = 0
+[2]virtual QIODevice* start() = 0
+*/
 
 HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_START )
 {

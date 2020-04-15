@@ -33,8 +33,10 @@ $internalConstructor=|new2|const QAudioDeviceInfo &
 
 $prototype=QAudioDeviceInfo(const QString &realm, const QByteArray &handle, QAudio::Mode mode) [private]
 
-//[1]QAudioDeviceInfo ()
-//[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
+/*
+[1]QAudioDeviceInfo ()
+[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
+*/
 
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 {

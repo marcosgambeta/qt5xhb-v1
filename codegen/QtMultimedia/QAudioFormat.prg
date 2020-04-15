@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QAudioFormat ( const QAudioFormat & other )
 $internalConstructor=|new2|const QAudioFormat &
 
-//[1]QAudioFormat ()
-//[2]QAudioFormat ( const QAudioFormat & other )
+/*
+[1]QAudioFormat ()
+[2]QAudioFormat ( const QAudioFormat & other )
+*/
 
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 {

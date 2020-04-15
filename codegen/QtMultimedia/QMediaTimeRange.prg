@@ -39,10 +39,12 @@ $internalConstructor=|new3|const QMediaTimeInterval &
 $prototype=QMediaTimeRange(const QMediaTimeRange & range)
 $internalConstructor=|new4|const QMediaTimeRange &
 
-//[1]QMediaTimeRange()
-//[2]QMediaTimeRange(qint64 start, qint64 end)
-//[3]QMediaTimeRange(const QMediaTimeInterval & interval)
-//[4]QMediaTimeRange(const QMediaTimeRange & range)
+/*
+[1]QMediaTimeRange()
+[2]QMediaTimeRange(qint64 start, qint64 end)
+[3]QMediaTimeRange(const QMediaTimeInterval & interval)
+[4]QMediaTimeRange(const QMediaTimeRange & range)
+*/
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
 {
@@ -77,8 +79,10 @@ $internalMethod=|void|addInterval,addInterval1|const QMediaTimeInterval &
 $prototype=void addInterval(qint64 start, qint64 end)
 $internalMethod=|void|addInterval,addInterval2|qint64,qint64
 
-//[1]void addInterval(const QMediaTimeInterval & interval)
-//[2]void addInterval(qint64 start, qint64 end)
+/*
+[1]void addInterval(const QMediaTimeInterval & interval)
+[2]void addInterval(qint64 start, qint64 end)
+*/
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
 {
@@ -127,8 +131,10 @@ $internalMethod=|void|removeInterval,removeInterval1|const QMediaTimeInterval &
 $prototype=void removeInterval(qint64 start, qint64 end)
 $internalMethod=|void|removeInterval,removeInterval2|qint64,qint64
 
-//[1]void removeInterval(const QMediaTimeInterval & interval)
-//[2]void removeInterval(qint64 start, qint64 end)
+/*
+[1]void removeInterval(const QMediaTimeInterval & interval)
+[2]void removeInterval(qint64 start, qint64 end)
+*/
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
 {

@@ -40,11 +40,13 @@ $internalConstructor=|new3|const QByteArray &,const QAudioFormat &,qint64=-1
 $prototype=QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
 $internalConstructor=|new4|int,const QAudioFormat &,qint64=-1
 
-//[1]QAudioBuffer()
+/*
+[1]QAudioBuffer()
 %% QAudioBuffer(QAbstractAudioBuffer *provider)
-//[2]QAudioBuffer(const QAudioBuffer & other)
-//[3]QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
-//[4]QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
+[2]QAudioBuffer(const QAudioBuffer & other)
+[3]QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
+[4]QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
+*/
 
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 {

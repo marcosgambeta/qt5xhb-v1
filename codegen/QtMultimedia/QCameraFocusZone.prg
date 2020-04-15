@@ -33,9 +33,12 @@ $prototype=QCameraFocusZone(const QCameraFocusZone &other)
 $constructor=|new|const QCameraFocusZone &
 
 %% TODO: [1] and [2] not present in the documentation
-//[1]QCameraFocusZone()
-//[2]QCameraFocusZone(const QRectF &area, FocusZoneStatus status = Selected)
-//[3]QCameraFocusZone(const QCameraFocusZone &other)
+
+/*
+[1]QCameraFocusZone()
+[2]QCameraFocusZone(const QRectF &area, FocusZoneStatus status = Selected)
+[3]QCameraFocusZone(const QCameraFocusZone &other)
+*/
 
 %% HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 %% {

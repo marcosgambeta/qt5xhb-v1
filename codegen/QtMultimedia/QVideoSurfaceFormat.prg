@@ -36,9 +36,11 @@ $internalConstructor=|new2|const QSize &,QVideoFrame::PixelFormat,QAbstractVideo
 $prototype=QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
 $internalConstructor=|new3|const QVideoSurfaceFormat &
 
-//[1]QVideoSurfaceFormat ()
-//[2]QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat pixelFormat, QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle )
-//[3]QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
+/*
+[1]QVideoSurfaceFormat ()
+[2]QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat pixelFormat, QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle )
+[3]QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
+*/
 
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
 {
@@ -105,8 +107,10 @@ $internalMethod=|void|setFrameSize,setFrameSize1|const QSize &
 $prototype=void setFrameSize ( int width, int height )
 $internalMethod=|void|setFrameSize,setFrameSize2|int,int
 
-//[1]void setFrameSize ( const QSize & size )
-//[2]void setFrameSize ( int width, int height )
+/*
+[1]void setFrameSize ( const QSize & size )
+[2]void setFrameSize ( int width, int height )
+*/
 
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE )
 {
@@ -131,8 +135,10 @@ $internalMethod=|void|setPixelAspectRatio,setPixelAspectRatio1|const QSize &
 $prototype=void setPixelAspectRatio ( int horizontal, int vertical )
 $internalMethod=|void|setPixelAspectRatio,setPixelAspectRatio2|int,int
 
-//[1]void setPixelAspectRatio ( const QSize & ratio )
-//[2]void setPixelAspectRatio ( int horizontal, int vertical )
+/*
+[1]void setPixelAspectRatio ( const QSize & ratio )
+[2]void setPixelAspectRatio ( int horizontal, int vertical )
+*/
 
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO )
 {

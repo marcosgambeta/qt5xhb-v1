@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QAudioEncoderSettings(const QAudioEncoderSettings & other)
 $internalConstructor=|new2|const QAudioEncoderSettings &
 
-//[1]QAudioEncoderSettings()
-//[2]QAudioEncoderSettings(const QAudioEncoderSettings & other)
+/*
+[1]QAudioEncoderSettings()
+[2]QAudioEncoderSettings(const QAudioEncoderSettings & other)
+*/
 
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 {

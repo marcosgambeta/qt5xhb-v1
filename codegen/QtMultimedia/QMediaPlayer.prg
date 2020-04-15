@@ -188,9 +188,11 @@ $internalMethod=|void|setVideoOutput,setVideoOutput2|QGraphicsVideoItem *
 $prototype=void setVideoOutput(QAbstractVideoSurface * surface)
 $internalMethod=|void|setVideoOutput,setVideoOutput3|QAbstractVideoSurface *
 
-//[1]void setVideoOutput(QVideoWidget * output)
-//[2]void setVideoOutput(QGraphicsVideoItem * output)
-//[3]void setVideoOutput(QAbstractVideoSurface * surface)
+/*
+[1]void setVideoOutput(QVideoWidget * output)
+[2]void setVideoOutput(QGraphicsVideoItem * output)
+[3]void setVideoOutput(QAbstractVideoSurface * surface)
+*/
 
 HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
 {

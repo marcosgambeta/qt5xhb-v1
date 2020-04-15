@@ -39,10 +39,12 @@ $internalConstructor=5,3,0|new3|const QCameraInfo &,QObject *=Q_NULLPTR
 $prototype=explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR)
 $internalConstructor=5,3,0|new4|QCamera::Position,QObject *=Q_NULLPTR
 
-//[1]explicit QCamera(QObject *parent = Q_NULLPTR)
-//[2]explicit QCamera(const QByteArray& deviceName, QObject *parent = Q_NULLPTR)
-//[3]explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = Q_NULLPTR)
-//[4]explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QCamera(QObject *parent = Q_NULLPTR)
+[2]explicit QCamera(const QByteArray& deviceName, QObject *parent = Q_NULLPTR)
+[3]explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = Q_NULLPTR)
+[4]explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QCAMERA_NEW )
 {
@@ -105,8 +107,10 @@ $internalMethod=|QCamera::LockStatus|lockStatus,lockStatus1|
 $prototype=QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
 $internalMethod=|QCamera::LockStatus|lockStatus,lockStatus2|QCamera::LockType
 
-//[1]QCamera::LockStatus lockStatus() const
-//[2]QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
+/*
+[1]QCamera::LockStatus lockStatus() const
+[2]QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
+*/
 
 HB_FUNC_STATIC( QCAMERA_LOCKSTATUS )
 {
@@ -159,9 +163,11 @@ $internalMethod=|void|setViewfinder,setViewfinder2|QGraphicsVideoItem *
 $prototype=void setViewfinder(QAbstractVideoSurface * surface)
 $internalMethod=|void|setViewfinder,setViewfinder3|QAbstractVideoSurface *
 
-//[1]void setViewfinder(QVideoWidget * viewfinder)
-//[2]void setViewfinder(QGraphicsVideoItem * viewfinder)
-//[3]void setViewfinder(QAbstractVideoSurface * surface)
+/*
+[1]void setViewfinder(QVideoWidget * viewfinder)
+[2]void setViewfinder(QGraphicsVideoItem * viewfinder)
+[3]void setViewfinder(QAbstractVideoSurface * surface)
+*/
 
 HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER )
 {
@@ -196,8 +202,10 @@ $internalSlotMethod=|void|searchAndLock,searchAndLock1|
 $prototype=void searchAndLock(QCamera::LockTypes locks)
 $internalSlotMethod=|void|searchAndLock,searchAndLock2|QCamera::LockTypes
 
-//[1]void searchAndLock()
-//[2]void searchAndLock(QCamera::LockTypes locks)
+/*
+[1]void searchAndLock()
+[2]void searchAndLock(QCamera::LockTypes locks)
+*/
 
 HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK )
 {
@@ -231,8 +239,10 @@ $internalSlotMethod=|void|unlock,unlock1|
 $prototype=void unlock(QCamera::LockTypes locks)
 $internalSlotMethod=|void|unlock,unlock2|QCamera::LockTypes
 
-//[1]void unlock()
-//[2]void unlock(QCamera::LockTypes locks)
+/*
+[1]void unlock()
+[2]void unlock(QCamera::LockTypes locks)
+*/
 
 HB_FUNC_STATIC( QCAMERA_UNLOCK )
 {
