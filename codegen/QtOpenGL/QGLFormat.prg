@@ -34,9 +34,11 @@ $internalConstructor=|new2|QGL::FormatOptions,int=0
 $prototype=QGLFormat ( const QGLFormat & other )
 $internalConstructor=|new3|const QGLFormat &
 
-//[1]QGLFormat ()
-//[2]QGLFormat ( QGL::FormatOptions options, int plane = 0 )
-//[3]QGLFormat ( const QGLFormat & other )
+/*
+[1]QGLFormat ()
+[2]QGLFormat ( QGL::FormatOptions options, int plane = 0 )
+[3]QGLFormat ( const QGLFormat & other )
+*/
 
 HB_FUNC_STATIC( QGLFORMAT_NEW )
 {

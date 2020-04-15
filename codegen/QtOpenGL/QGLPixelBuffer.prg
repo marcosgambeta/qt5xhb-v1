@@ -31,8 +31,10 @@ $internalConstructor=|new1|const QSize &,const QGLFormat &=QGLFormat::defaultFor
 $prototype=QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 $internalConstructor=|new2|int,int,const QGLFormat &=QGLFormat::defaultFormat(),QGLWidget *=0
 
-//[1]QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
-//[2]QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+/*
+[1]QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+[2]QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+*/
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_NEW )
 {
@@ -61,9 +63,11 @@ $internalMethod=|GLuint|bindTexture,bindTexture2|const QPixmap &,GLenum=GL_TEXTU
 $prototype=GLuint bindTexture ( const QString & fileName )
 $internalMethod=|GLuint|bindTexture,bindTexture3|const QString &
 
-//[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
-//[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
-//[3]GLuint bindTexture ( const QString & fileName )
+/*
+[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
+[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
+[3]GLuint bindTexture ( const QString & fileName )
+*/
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 {
@@ -101,8 +105,10 @@ $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_T
 $prototype=void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
-//[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-//[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+/*
+[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+*/
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 {

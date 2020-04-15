@@ -34,9 +34,11 @@ $internalConstructor=|new2|QGLBuffer::Type
 $prototype=QGLBuffer ( const QGLBuffer & other )
 $internalConstructor=|new3|const QGLBuffer &
 
-//[1]QGLBuffer ()
-//[2]QGLBuffer ( QGLBuffer::Type type )
-//[3]QGLBuffer ( const QGLBuffer & other )
+/*
+[1]QGLBuffer ()
+[2]QGLBuffer ( QGLBuffer::Type type )
+[3]QGLBuffer ( const QGLBuffer & other )
+*/
 
 HB_FUNC_STATIC( QGLBUFFER_NEW )
 {
@@ -66,8 +68,10 @@ $internalMethod=|void|allocate,allocate1|const void *,int
 $prototype=void allocate ( int count )
 $internalMethod=|void|allocate,allocate2|int
 
-//[1]void allocate ( const void * data, int count )
-//[2]void allocate ( int count )
+/*
+[1]void allocate ( const void * data, int count )
+[2]void allocate ( int count )
+*/
 
 HB_FUNC_STATIC( QGLBUFFER_ALLOCATE )
 {
@@ -113,8 +117,10 @@ $internalMethod=|void|release,release1|
 $prototype=static void release ( QGLBuffer::Type type )
 $internalStaticMethod=|void|release,release2|QGLBuffer::Type
 
-//[1]void release ()
-//[2]void release ( QGLBuffer::Type type )
+/*
+[1]void release ()
+[2]void release ( QGLBuffer::Type type )
+*/
 
 HB_FUNC_STATIC( QGLBUFFER_RELEASE )
 {

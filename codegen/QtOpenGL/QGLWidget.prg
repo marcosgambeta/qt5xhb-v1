@@ -34,9 +34,11 @@ $internalConstructor=|new2|QGLContext *,QWidget *=0,const QGLWidget *=0,Qt::Wind
 $prototype=QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new3|const QGLFormat &,QWidget *=0,const QGLWidget *=0,Qt::WindowFlags=0
 
-//[1]QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-//[2]QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-//[3]QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+/*
+[1]QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+[2]QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+[3]QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+*/
 
 HB_FUNC_STATIC( QGLWIDGET_NEW )
 {
@@ -75,11 +77,13 @@ $internalMethod=|GLuint|bindTexture,bindTexture4|const QPixmap &,GLenum,GLint,QG
 $prototype=GLuint bindTexture ( const QString & fileName )
 $internalMethod=|GLuint|bindTexture,bindTexture5|const QString &
 
-//[1]GLuint bindTexture(const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
-//[2]GLuint bindTexture(const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
-//[3]GLuint bindTexture(const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options)
-//[4]GLuint bindTexture(const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
-//[5]GLuint bindTexture(const QString & fileName)
+/*
+[1]GLuint bindTexture(const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
+[2]GLuint bindTexture(const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA)
+[3]GLuint bindTexture(const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options)
+[4]GLuint bindTexture(const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options)
+[5]GLuint bindTexture(const QString & fileName)
+*/
 
 HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 {
@@ -131,8 +135,10 @@ $internalMethod=|void|drawTexture,drawTexture1|const QRectF &,GLuint,GLenum=GL_T
 $prototype=void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 $internalMethod=|void|drawTexture,drawTexture2|const QPointF &,GLuint,GLenum=GL_TEXTURE_2D
 
-//[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-//[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+/*
+[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+*/
 
 HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 {
@@ -181,20 +187,32 @@ $method=|void|qglColor|const QColor &
 $prototype=QPixmap renderPixmap ( int w = 0, int h = 0, bool useContext = false )
 $method=|QPixmap|renderPixmap|int=0,int=0,bool=false
 
-//[1]void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
-//[2]void renderText ( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
+$prototype=void renderText(int x, int y, const QString &str, const QFont &font = QFont())
+$internalMethod=|void|renderText,renderText1|int,int,const QString &,const QFont &=QFont()
 
-// HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT ) // TODO: implementar
-// {
-//   if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISCHAR(3) && (ISQFONT(4)||ISNIL(4)) && ISOPTNUM(5) )
-//   {
-//     HB_FUNC_EXEC( QGLWIDGET_RENDERTEXT1 );
-//   }
-//   else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISCHAR(4) && (ISQFONT(5)||ISNIL(5)) && ISOPTNUM(6) )
-//   {
-//     HB_FUNC_EXEC( QGLWIDGET_RENDERTEXT2 );
-//   }
-// }
+$prototype=void renderText(double x, double y, double z, const QString &str, const QFont &font = QFont())
+$internalMethod=|void|renderText,renderText2|double,double,double,const QString &,const QFont &=QFont()
+
+/*
+[1]void renderText(int x, int y, const QString &str, const QFont &font = QFont())
+[2]void renderText(double x, double y, double z, const QString &str, const QFont &font = QFont())
+*/
+
+HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT )
+{
+  if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISCHAR(3) && (ISQFONT(4)||ISNIL(4)) )
+  {
+    QGLWidget_renderText1();
+  }
+  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISCHAR(4) && (ISQFONT(5)||ISNIL(5)) )
+  {
+    QGLWidget_renderText2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 $prototype=void setColormap ( const QGLColormap & cmap )
 $method=|void|setColormap|const QGLColormap &

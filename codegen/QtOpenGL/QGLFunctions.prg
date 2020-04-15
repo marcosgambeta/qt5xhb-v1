@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QGLFunctions(const QGLContext * context)
 $internalConstructor=|new2|const QGLContext *
 
-//[1]QGLFunctions()
-//[2]QGLFunctions(const QGLContext * context)
+/*
+[1]QGLFunctions()
+[2]QGLFunctions(const QGLContext * context)
+*/
 
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 {

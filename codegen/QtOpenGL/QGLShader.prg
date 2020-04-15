@@ -31,8 +31,10 @@ $internalConstructor=|new1|QGLShader::ShaderType,QObject *=0
 $prototype=QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
 $internalConstructor=|new2|QGLShader::ShaderType,const QGLContext *,QObject *=0
 
-//[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
-//[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
+/*
+[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
+[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGLSHADER_NEW )
 {
@@ -61,9 +63,11 @@ $method=|bool|compileSourceCode,compileSourceCode2|const QByteArray &
 $prototype=bool compileSourceCode ( const QString & source )
 $method=|bool|compileSourceCode,compileSourceCode3|const QString &
 
-//[1]bool compileSourceCode ( const char * source )
-//[2]bool compileSourceCode ( const QByteArray & source )
-//[3]bool compileSourceCode ( const QString & source )
+/*
+[1]bool compileSourceCode ( const char * source )
+[2]bool compileSourceCode ( const QByteArray & source )
+[3]bool compileSourceCode ( const QString & source )
+*/
 
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 {
