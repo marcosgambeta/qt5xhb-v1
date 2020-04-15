@@ -37,10 +37,12 @@ $internalConstructor=5,2,0|new3|double,double,double
 $prototype=QGeoCoordinate(const QGeoCoordinate &other)
 $internalConstructor=5,2,0|new4|const QGeoCoordinate &
 
-//[1]QGeoCoordinate()
-//[2]QGeoCoordinate(double latitude, double longitude)
-//[3]QGeoCoordinate(double latitude, double longitude, double altitude)
-//[4]QGeoCoordinate(const QGeoCoordinate &other)
+/*
+[1]QGeoCoordinate()
+[2]QGeoCoordinate(double latitude, double longitude)
+[3]QGeoCoordinate(double latitude, double longitude, double altitude)
+[4]QGeoCoordinate(const QGeoCoordinate &other)
+*/
 
 HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
 {

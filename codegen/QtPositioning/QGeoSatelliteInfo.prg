@@ -31,8 +31,10 @@ $internalConstructor=5,2,0|new1|
 $prototype=QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
 $internalConstructor=5,2,0|new2|const QGeoSatelliteInfo &
 
-//[1]QGeoSatelliteInfo()
-//[2]QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
+/*
+[1]QGeoSatelliteInfo()
+[2]QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
+*/
 
 HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
 {

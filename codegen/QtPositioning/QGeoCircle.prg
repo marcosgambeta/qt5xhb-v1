@@ -37,10 +37,12 @@ $internalConstructor=5,2,0|new3|const QGeoCircle &
 $prototype=QGeoCircle(const QGeoShape &other)
 $internalConstructor=5,2,0|new4|const QGeoShape &
 
-//[1]QGeoCircle()
-//[2]QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
-//[3]QGeoCircle(const QGeoCircle &other)
-//[4]QGeoCircle(const QGeoShape &other)
+/*
+[1]QGeoCircle()
+[2]QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
+[3]QGeoCircle(const QGeoCircle &other)
+[4]QGeoCircle(const QGeoShape &other)
+*/
 
 HB_FUNC_STATIC( QGEOCIRCLE_NEW )
 {
