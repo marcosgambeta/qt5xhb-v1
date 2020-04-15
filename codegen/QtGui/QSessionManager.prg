@@ -67,8 +67,10 @@ $internalMethod=|void|setManagerProperty,setManagerProperty1|const QString &,con
 $prototype=void setManagerProperty(const QString& name, const QStringList& value)
 $internalMethod=|void|setManagerProperty,setManagerProperty2|const QString &,const QStringList &
 
-//[1]void setManagerProperty(const QString& name, const QString& value)
-//[2]void setManagerProperty(const QString& name, const QStringList& value)
+/*
+[1]void setManagerProperty(const QString& name, const QString& value)
+[2]void setManagerProperty(const QString& name, const QStringList& value)
+*/
 
 HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 {

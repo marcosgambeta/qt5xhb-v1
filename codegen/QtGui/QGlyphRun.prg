@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QGlyphRun ( const QGlyphRun & other )
 $internalConstructor=|new2|const QGlyphRun &
 
-//[1]QGlyphRun ()
-//[2]QGlyphRun ( const QGlyphRun & other )
+/*
+[1]QGlyphRun ()
+[2]QGlyphRun ( const QGlyphRun & other )
+*/
 
 HB_FUNC_STATIC( QGLYPHRUN_NEW )
 {

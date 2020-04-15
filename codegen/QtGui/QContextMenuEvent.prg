@@ -34,9 +34,11 @@ $internalConstructor=|new2|QContextMenuEvent::Reason,const QPoint &,const QPoint
 $prototype=QContextMenuEvent ( Reason reason, const QPoint & pos )
 $internalConstructor=|new3|QContextMenuEvent::Reason,const QPoint &
 
-//[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
-//[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
-//[3]QContextMenuEvent ( Reason reason, const QPoint & pos )
+/*
+[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
+[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
+[3]QContextMenuEvent ( Reason reason, const QPoint & pos )
+*/
 
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 {

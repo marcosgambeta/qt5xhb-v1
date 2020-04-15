@@ -35,8 +35,10 @@ $internalConstructor=|new1|QObject *=0
 $prototype=QStandardItemModel(int rows, int columns, QObject *parent = 0)
 $internalConstructor=|new2|int,int,QObject *=0
 
-//[1]QStandardItemModel(QObject *parent = 0)
-//[2]QStandardItemModel(int rows, int columns, QObject *parent = 0)
+/*
+[1]QStandardItemModel(QObject *parent = 0)
+[2]QStandardItemModel(int rows, int columns, QObject *parent = 0)
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
 {
@@ -65,8 +67,10 @@ $internalMethod=|void|appendRow,appendRow1|const QList<QStandardItem *> &
 $prototype=void appendRow(QStandardItem *item)
 $internalMethod=|void|appendRow,appendRow2|QStandardItem *
 
-//[1]void appendRow(const QList<QStandardItem*> &items)
-//[2]void appendRow(QStandardItem *item)
+/*
+[1]void appendRow(const QList<QStandardItem*> &items)
+[2]void appendRow(QStandardItem *item)
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW )
 {
@@ -103,8 +107,10 @@ $internalMethod=|void|insertColumn,insertColumn1|int,const QList<QStandardItem *
 $prototype=bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
 $internalMethod=|bool|insertColumn,insertColumn2|int,const QModelIndex &=QModelIndex()
 
-//[1]void insertColumn(int column, const QList<QStandardItem*> &items)
-//[2]bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
+/*
+[1]void insertColumn(int column, const QList<QStandardItem*> &items)
+[2]bool insertColumn(int column, const QModelIndex &parent = QModelIndex())
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN )
 {
@@ -132,9 +138,11 @@ $internalMethod=|void|insertRow,insertRow2|int,QStandardItem *
 $prototype=bool insertRow(int row, const QModelIndex &parent = QModelIndex())
 $internalMethod=|bool|insertRow,insertRow3|int,const QModelIndex &=QModelIndex()
 
-//[1]void insertRow(int row, const QList<QStandardItem*> &items)
-//[2]void insertRow(int row, QStandardItem *item)
-//[3]bool insertRow(int row, const QModelIndex &parent = QModelIndex())
+/*
+[1]void insertRow(int row, const QList<QStandardItem*> &items)
+[2]void insertRow(int row, QStandardItem *item)
+[3]bool insertRow(int row, const QModelIndex &parent = QModelIndex())
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROW )
 {
@@ -178,8 +186,10 @@ $internalMethod=|QModelIndex|parent,parent1|const QModelIndex &
 $prototype=QObject *parent() const
 $internalMethod=|QObject *|parent,parent2|
 
-//[1]QModelIndex parent(const QModelIndex &child) const
-//[2]QObject *parent() const
+/*
+[1]QModelIndex parent(const QModelIndex &child) const
+[2]QObject *parent() const
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT )
 {
@@ -249,8 +259,10 @@ $internalMethod=|void|setItem,setItem1|int,int,QStandardItem *
 $prototype=void setItem(int row, QStandardItem *item)
 $internalMethod=|void|setItem,setItem2|int,QStandardItem *
 
-//[1]void setItem(int row, int column, QStandardItem *item)
-//[2]void setItem(int row, QStandardItem *item)
+/*
+[1]void setItem(int row, int column, QStandardItem *item)
+[2]void setItem(int row, QStandardItem *item)
+*/
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEM )
 {

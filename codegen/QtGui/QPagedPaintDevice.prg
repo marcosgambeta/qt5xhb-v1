@@ -57,8 +57,10 @@ $internalMethod=5,3,0|bool|setPageMargins,setPageMargins1|const QMarginsF &
 $prototype=bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
 $internalMethod=5,3,0|bool|setPageMargins,setPageMargins2|const QMarginsF &,QPageLayout::Unit
 
-//[1]bool setPageMargins(const QMarginsF &margins)
-//[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+/*
+[1]bool setPageMargins(const QMarginsF &margins)
+[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+*/
 
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS )
 {

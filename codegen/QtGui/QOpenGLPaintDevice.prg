@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QSize &
 $prototype=QOpenGLPaintDevice(int width, int height)
 $internalConstructor=|new3|int,int
 
-//[1]QOpenGLPaintDevice()
-//[2]QOpenGLPaintDevice(const QSize &size)
-//[3]QOpenGLPaintDevice(int width, int height)
+/*
+[1]QOpenGLPaintDevice()
+[2]QOpenGLPaintDevice(const QSize &size)
+[3]QOpenGLPaintDevice(int width, int height)
+*/
 
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 {

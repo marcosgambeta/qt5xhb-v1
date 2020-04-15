@@ -42,13 +42,16 @@ $internalConstructor=|new4|const QPixmap &,int=-1,int=-1
 $prototype=QCursor ( const QCursor & c )
 $internalConstructor=|new5|const QCursor &
 
-//[1]QCursor ()
-//[2]QCursor ( Qt::CursorShape shape )
-//[3]QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
-//[4]QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
-//[5]QCursor ( const QCursor & c )
-//[6]QCursor ( HCURSOR cursor ) // TODO: implementar
-//[7]QCursor ( Qt::HANDLE handle ) // TODO: implementar
+/*
+[1]QCursor ()
+[2]QCursor ( Qt::CursorShape shape )
+[3]QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
+[4]QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
+[5]QCursor ( const QCursor & c )
+%% TODO: implementar [6] e [7]
+[6]QCursor ( HCURSOR cursor )
+[7]QCursor ( Qt::HANDLE handle )
+*/
 
 HB_FUNC_STATIC( QCURSOR_NEW )
 {
@@ -107,8 +110,10 @@ $internalStaticMethod=|void|setPos,setPos1|int,int
 $prototype=static void setPos ( const QPoint & p )
 $internalStaticMethod=|void|setPos,setPos2|const QPoint &
 
-//[1]static void setPos ( int x, int y )
-//[2]static void setPos ( const QPoint & p )
+/*
+[1]static void setPos ( int x, int y )
+[2]static void setPos ( const QPoint & p )
+*/
 
 HB_FUNC_STATIC( QCURSOR_SETPOS )
 {

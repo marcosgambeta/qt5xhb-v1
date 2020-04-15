@@ -84,8 +84,10 @@ $internalMethod=|qreal|lineHeight,lineHeight1|qreal,qreal
 $prototype=qreal lineHeight() const
 $internalMethod=|qreal|lineHeight,lineHeight2|
 
-//[1]qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
-//[2]qreal lineHeight() const
+/*
+[1]qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
+[2]qreal lineHeight() const
+*/
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {

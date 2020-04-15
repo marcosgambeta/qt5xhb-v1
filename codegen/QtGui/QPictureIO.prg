@@ -34,9 +34,11 @@ $internalConstructor=|new2|QIODevice *,const char *
 $prototype=QPictureIO(const QString &fileName, const char *format)
 $internalConstructor=|new3|const QString &,const char *
 
-//[1]QPictureIO()
-//[2]QPictureIO(QIODevice *ioDevice, const char *format)
-//[3]QPictureIO(const QString &fileName, const char *format)
+/*
+[1]QPictureIO()
+[2]QPictureIO(QIODevice *ioDevice, const char *format)
+[3]QPictureIO(const QString &fileName, const char *format)
+*/
 
 HB_FUNC_STATIC( QPICTUREIO_NEW )
 {
@@ -126,8 +128,10 @@ $internalStaticMethod=|QByteArray|pictureFormat,pictureFormat1|const QString &
 $prototype=static QByteArray pictureFormat(QIODevice *)
 $internalStaticMethod=|QByteArray|pictureFormat,pictureFormat2|QIODevice *
 
-//[1]static QByteArray pictureFormat(const QString &fileName)
-//[2]static QByteArray pictureFormat(QIODevice *)
+/*
+[1]static QByteArray pictureFormat(const QString &fileName)
+[2]static QByteArray pictureFormat(QIODevice *)
+*/
 
 HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT )
 {

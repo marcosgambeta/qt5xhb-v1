@@ -46,12 +46,14 @@ $internalConstructor=|new5|const QTransform &
 $prototype=QMatrix4x4(const QMatrix& matrix)
 $internalConstructor=|new6|const QMatrix &
 
-//[1]QMatrix4x4()
-//[2]explicit QMatrix4x4(const float *values)
-//[3]QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)
-//[4]explicit QMatrix4x4(const QGenericMatrix<N, M, float>& matrix);
-//[5]QMatrix4x4(const QTransform& transform);
-//[6]QMatrix4x4(const QMatrix& matrix);
+/*
+[1]QMatrix4x4()
+[2]explicit QMatrix4x4(const float *values)
+[3]QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)
+[4]explicit QMatrix4x4(const QGenericMatrix<N, M, float>& matrix);
+[5]QMatrix4x4(const QTransform& transform);
+[6]QMatrix4x4(const QMatrix& matrix);
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_NEW )
 {
@@ -136,10 +138,12 @@ $internalMethod=|void|scale,scale3|float,float,float
 $prototype=void scale(float factor)
 $internalMethod=|void|scale,scale4|float
 
-//[1]void scale(const QVector3D& vector)
-//[2]void scale(float x, float y)
-//[3]void scale(float x, float y, float z)
-//[4]void scale(float factor)
+/*
+[1]void scale(const QVector3D& vector)
+[2]void scale(float x, float y)
+[3]void scale(float x, float y, float z)
+[4]void scale(float factor)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 {
@@ -175,9 +179,11 @@ $internalMethod=|void|translate,translate2|float,float
 $prototype=void translate(float x, float y, float z)
 $internalMethod=|void|translate,translate3|float,float,float
 
-//[1]void translate(const QVector3D& vector)
-//[2]void translate(float x, float y)
-//[3]void translate(float x, float y, float z)
+/*
+[1]void translate(const QVector3D& vector)
+[2]void translate(float x, float y)
+[3]void translate(float x, float y, float z)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 {
@@ -209,9 +215,11 @@ $internalMethod=|void|rotate,rotate2|float,float,float,float=0.0f
 $prototype=void rotate(const QQuaternion& quaternion)
 $internalMethod=|void|rotate,rotate3|const QQuaternion &|#ifndef QT_NO_QUATERNION
 
-//[1]void rotate(float angle, const QVector3D& vector)
-//[2]void rotate(float angle, float x, float y, float z = 0.0f)
-//[3]void rotate(const QQuaternion& quaternion)
+/*
+[1]void rotate(float angle, const QVector3D& vector)
+[2]void rotate(float angle, float x, float y, float z = 0.0f)
+[3]void rotate(const QQuaternion& quaternion)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 {
@@ -243,9 +251,11 @@ $internalMethod=|void|ortho,ortho2|const QRectF &
 $prototype=void ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane)
 $internalMethod=|void|ortho,ortho3|float,float,float,float,float,float
 
-//[1]void ortho(const QRect& rect)
-//[2]void ortho(const QRectF& rect)
-//[3]void ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane)
+/*
+[1]void ortho(const QRect& rect)
+[2]void ortho(const QRectF& rect)
+[3]void ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 {
@@ -285,8 +295,10 @@ $internalMethod=5,3,0|void|viewport,viewport1|const QRectF &
 $prototype=void viewport(float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f)
 $internalMethod=5,3,0|void|viewport,viewport2|float,float,float,float,float=0.0f,float=1.0f
 
-//[1]void viewport(const QRectF &rect)
-//[2]void viewport(float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f)
+/*
+[1]void viewport(const QRectF &rect)
+[2]void viewport(float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_VIEWPORT )
 {
@@ -317,8 +329,10 @@ $internalMethod=|QTransform|toTransform,toTransform1|
 $prototype=QTransform toTransform(float distanceToPlane) const
 $internalMethod=|QTransform|toTransform,toTransform2|float
 
-//[1]QTransform toTransform() const
-//[2]QTransform toTransform(float distanceToPlane) const
+/*
+[1]QTransform toTransform() const
+[2]QTransform toTransform(float distanceToPlane) const
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
 {
@@ -349,10 +363,12 @@ $internalMethod=|QVector3D|map,map3|const QVector3D &|#ifndef QT_NO_VECTOR3D
 $prototype=QVector4D map(const QVector4D& point) const
 $internalMethod=|QVector4D|map,map4|const QVector4D &|#ifndef QT_NO_VECTOR4D
 
-//[1]QPoint map(const QPoint& point) const
-//[2]QPointF map(const QPointF& point) const
-//[3]QVector3D map(const QVector3D& point) const
-//[4]QVector4D map(const QVector4D& point) const
+/*
+[1]QPoint map(const QPoint& point) const
+[2]QPointF map(const QPointF& point) const
+[3]QVector3D map(const QVector3D& point) const
+[4]QVector4D map(const QVector4D& point) const
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_MAP )
 {
@@ -388,8 +404,10 @@ $internalMethod=|QRect|mapRect,mapRect1|const QRect &
 $prototype=QRectF mapRect(const QRectF& rect) const
 $internalMethod=|QRectF|mapRect,mapRect2|const QRectF &
 
-//[1]QRect mapRect(const QRect& rect) const
-//[2]QRectF mapRect(const QRectF& rect) const
+/*
+[1]QRect mapRect(const QRect& rect) const
+[2]QRectF mapRect(const QRectF& rect) const
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 {

@@ -78,18 +78,20 @@ $prototype=QString text ( QString & subtype, Mode mode = Clipboard ) const
 %% $internalMethod=|QString|text,text2|QString &,QClipboard::Mode=QClipboard::Clipboard
 void QClipboard_text2 ()
 {
-  QClipboard * obj = (QClipboard *) _qt5xhb_itemGetPtrStackSelfItem();
+  QClipboard * obj = (QClipboard *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-      QString par1 = PQSTRING(1);
-      RQSTRING( obj->text ( par1, ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) ) );
-      hb_storc( QSTRINGTOSTRING(par1), 1 );
+    QString par1 = PQSTRING(1);
+    RQSTRING( obj->text ( par1, ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) ) );
+    hb_storc( QSTRINGTOSTRING(par1), 1 );
   }
 }
 
-//[1]QString text ( Mode mode = Clipboard ) const
-//[2]QString text ( QString & subtype, Mode mode = Clipboard ) const
+/*
+[1]QString text ( Mode mode = Clipboard ) const
+[2]QString text ( QString & subtype, Mode mode = Clipboard ) const
+*/
 
 HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 {

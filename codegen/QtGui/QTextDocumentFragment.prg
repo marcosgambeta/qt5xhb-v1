@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QTextCursor &
 $prototype=QTextDocumentFragment(const QTextDocumentFragment &rhs)
 $internalConstructor=|new4|const QTextDocumentFragment &
 
-//[1]QTextDocumentFragment()
-//[2]QTextDocumentFragment(const QTextDocument *document)
-//[3]QTextDocumentFragment(const QTextCursor &range)
-//[4]QTextDocumentFragment(const QTextDocumentFragment &rhs)
+/*
+[1]QTextDocumentFragment()
+[2]QTextDocumentFragment(const QTextDocument *document)
+[3]QTextDocumentFragment(const QTextCursor &range)
+[4]QTextDocumentFragment(const QTextDocumentFragment &rhs)
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 {
@@ -86,8 +88,10 @@ $internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml1|const QString &
 $prototype=static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)
 $internalStaticMethod=|QTextDocumentFragment|fromHtml,fromHtml2|const QString &,const QTextDocument *
 
-//[1]static QTextDocumentFragment fromHtml(const QString &html)
-//[2]static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)
+/*
+[1]static QTextDocumentFragment fromHtml(const QString &html)
+[2]static QTextDocumentFragment fromHtml(const QString &html, const QTextDocument *resourceProvider)
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 {

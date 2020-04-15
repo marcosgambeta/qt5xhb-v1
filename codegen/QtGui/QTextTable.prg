@@ -59,8 +59,10 @@ $internalMethod=|void|mergeCells,mergeCells1|int,int,int,int
 $prototype=void mergeCells(const QTextCursor &cursor)
 $internalMethod=|void|mergeCells,mergeCells2|const QTextCursor &
 
-//[1]void mergeCells(int row, int col, int numRows, int numCols)
-//[2]void mergeCells(const QTextCursor &cursor)
+/*
+[1]void mergeCells(int row, int col, int numRows, int numCols)
+[2]void mergeCells(const QTextCursor &cursor)
+*/
 
 HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 {
@@ -97,9 +99,11 @@ $internalMethod=|QTextTableCell|cellAt,cellAt2|int
 $prototype=QTextTableCell cellAt(const QTextCursor &c) const
 $internalMethod=|QTextTableCell|cellAt,cellAt3|const QTextCursor &
 
-//[1]QTextTableCell cellAt(int row, int col) const
-//[2]QTextTableCell cellAt(int position) const
-//[3]QTextTableCell cellAt(const QTextCursor &c) const
+/*
+[1]QTextTableCell cellAt(int row, int col) const
+[2]QTextTableCell cellAt(int position) const
+[3]QTextTableCell cellAt(const QTextCursor &c) const
+*/
 
 HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 {

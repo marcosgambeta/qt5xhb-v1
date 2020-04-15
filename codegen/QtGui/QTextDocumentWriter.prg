@@ -36,9 +36,11 @@ $internalConstructor=|new2|QIODevice *,const QByteArray &
 $prototype=QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
 $internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
-//[1]QTextDocumentWriter()
-//[2]QTextDocumentWriter(QIODevice *device, const QByteArray &format)
-//[3]QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
+/*
+[1]QTextDocumentWriter()
+[2]QTextDocumentWriter(QIODevice *device, const QByteArray &format)
+[3]QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 {
@@ -86,8 +88,10 @@ $internalMethod=|bool|write,write1|const QTextDocument *
 $prototype=bool write(const QTextDocumentFragment &fragment)
 $internalMethod=|bool|write,write2|const QTextDocumentFragment &
 
-//[1]bool write(const QTextDocument *document)
-//[2]bool write(const QTextDocumentFragment &fragment)
+/*
+[1]bool write(const QTextDocument *document)
+[2]bool write(const QTextDocumentFragment &fragment)
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 {

@@ -57,16 +57,18 @@ $internalConstructor=|new9|const QBrush &
 $prototype=QBrush ( const QGradient & gradient )
 $internalConstructor=|new10|const QGradient &
 
-//[ 1]QBrush ()
-//[ 2]QBrush ( Qt::BrushStyle style )
-//[ 3]QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
-//[ 4]QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
-//[ 5]QBrush ( const QColor & color, const QPixmap & pixmap )
-//[ 6]QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
-//[ 7]QBrush ( const QPixmap & pixmap )
-//[ 8]QBrush ( const QImage & image )
-//[ 9]QBrush ( const QBrush & other )
-//[10]QBrush ( const QGradient & gradient )
+/*
+[01]QBrush ()
+[02]QBrush ( Qt::BrushStyle style )
+[03]QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
+[04]QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
+[05]QBrush ( const QColor & color, const QPixmap & pixmap )
+[06]QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
+[07]QBrush ( const QPixmap & pixmap )
+[08]QBrush ( const QImage & image )
+[09]QBrush ( const QBrush & other )
+[10]QBrush ( const QGradient & gradient )
+*/
 
 HB_FUNC_STATIC( QBRUSH_NEW )
 {
@@ -150,8 +152,10 @@ $internalMethod=|void|setColor,setColor1|const QColor &
 $prototype=void setColor ( Qt::GlobalColor color )
 $internalMethod=|void|setColor,setColor2|Qt::GlobalColor
 
-//[1]void setColor ( const QColor & color )
-//[2]void setColor ( Qt::GlobalColor color )
+/*
+[1]void setColor ( const QColor & color )
+[2]void setColor ( Qt::GlobalColor color )
+*/
 
 HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 {

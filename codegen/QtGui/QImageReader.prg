@@ -36,9 +36,11 @@ $internalConstructor=|new2|QIODevice *,const QByteArray &=QByteArray()
 $prototype=QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
 $internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
-//[1]QImageReader ()
-//[2]QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
-//[3]QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
+/*
+[1]QImageReader ()
+[2]QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
+[3]QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
+*/
 
 HB_FUNC_STATIC( QIMAGEREADER_NEW )
 {
@@ -122,8 +124,10 @@ $internalMethod=|QImage|read,read1|
 $prototype=bool read ( QImage * image )
 $internalMethod=|bool|read,read2|QImage *
 
-//[1]QImage read ()
-//[2]bool read ( QImage * image )
+/*
+[1]QImage read ()
+[2]bool read ( QImage * image )
+*/
 
 HB_FUNC_STATIC( QIMAGEREADER_READ )
 {
@@ -202,9 +206,11 @@ $internalStaticMethod=|QByteArray|imageFormat,imageFormat2|const QString &
 $prototype=static QByteArray imageFormat ( QIODevice * device )
 $internalStaticMethod=|QByteArray|imageFormat,imageFormat3|QIODevice *
 
-//[1]QImage::Format imageFormat () const
-//[2]QByteArray imageFormat ( const QString & fileName )
-//[3]QByteArray imageFormat ( QIODevice * device )
+/*
+[1]QImage::Format imageFormat () const
+[2]QByteArray imageFormat ( const QString & fileName )
+[3]QByteArray imageFormat ( QIODevice * device )
+*/
 
 HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 {

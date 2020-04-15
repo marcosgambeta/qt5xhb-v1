@@ -35,8 +35,10 @@ $internalConstructor=|new1|QScreen *=0
 $prototype=QWindow(QWindow * parent)
 $internalConstructor=|new2|QWindow *
 
-//[1]QWindow(QScreen * targetScreen = 0)
-//[2]QWindow(QWindow * parent)
+/*
+[1]QWindow(QScreen * targetScreen = 0)
+[2]QWindow(QWindow * parent)
+*/
 
 HB_FUNC_STATIC( QWINDOW_NEW )
 {
@@ -131,8 +133,10 @@ $internalMethod=|void|resize,resize1|const QSize &
 $prototype=void resize(int w, int h)
 $internalMethod=|void|resize,resize2|int,int
 
-//[1]void resize(const QSize & newSize)
-//[2]void resize(int w, int h)
+/*
+[1]void resize(const QSize & newSize)
+[2]void resize(int w, int h)
+*/
 
 HB_FUNC_STATIC( QWINDOW_RESIZE )
 {
@@ -169,8 +173,10 @@ $internalMethod=|void|setGeometry,setGeometry1|int,int,int,int
 $prototype=void setGeometry(const QRect & rect)
 $internalMethod=|void|setGeometry,setGeometry2|const QRect &
 
-//[1]void setGeometry(int posx, int posy, int w, int h)
-//[2]void setGeometry(const QRect & rect)
+/*
+[1]void setGeometry(int posx, int posy, int w, int h)
+[2]void setGeometry(const QRect & rect)
+*/
 
 HB_FUNC_STATIC( QWINDOW_SETGEOMETRY )
 {
@@ -208,20 +214,23 @@ $prototype=void setParent(QWindow * parent)
 $method=|void|setParent|QWindow *
 
 %% TODO: checar existencia do metodo
-%%//[1]void setPos(const QPoint & pt)
-%%//[2]void setPos(int posx, int posy)
 
-%%//HB_FUNC_STATIC( QWINDOW_SETPOS )
-%%//{
-%%//  if( ISNUMPAR(1) && ISOBJECT(1) )
-%%//  {
-%%//    HB_FUNC_EXEC( QWINDOW_SETPOS1 );
-%%//  }
-%%//  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
-%%//  {
-%%//    HB_FUNC_EXEC( QWINDOW_SETPOS2 );
-%%//  }
-%%//}
+%% /*
+%% [1]void setPos(const QPoint & pt)
+%% [2]void setPos(int posx, int posy)
+%% */
+
+%% //HB_FUNC_STATIC( QWINDOW_SETPOS )
+%% //{
+%% //  if( ISNUMPAR(1) && ISOBJECT(1) )
+%% //  {
+%% //    HB_FUNC_EXEC( QWINDOW_SETPOS1 );
+%% //  }
+%% //  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+%% //  {
+%% //    HB_FUNC_EXEC( QWINDOW_SETPOS2 );
+%% //  }
+%% //}
 
 $prototype=void setScreen(QScreen * newScreen)
 $method=|void|setScreen|QScreen *
@@ -316,8 +325,10 @@ $internalMethod=|void|setPosition,setPosition1|const QPoint &
 $prototype=void setPosition(int posx, int posy)
 $internalMethod=|void|setPosition,setPosition2|int,int
 
-//[1]void setPosition(const QPoint & pt)
-//[2]void setPosition(int posx, int posy)
+/*
+[1]void setPosition(const QPoint & pt)
+[2]void setPosition(int posx, int posy)
+*/
 
 HB_FUNC_STATIC( QWINDOW_SETPOSITION )
 {

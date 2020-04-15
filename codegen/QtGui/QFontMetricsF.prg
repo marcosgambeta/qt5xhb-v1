@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QFontMetrics &
 $prototype=QFontMetricsF ( const QFontMetricsF & fm )
 $internalConstructor=|new4|const QFontMetricsF &
 
-//[1]QFontMetricsF ( const QFont & font )
-//[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
-//[3]QFontMetricsF ( const QFontMetrics & fontMetrics )
-//[4]QFontMetricsF ( const QFontMetricsF & fm )
+/*
+[1]QFontMetricsF ( const QFont & font )
+[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
+[3]QFontMetricsF ( const QFontMetrics & fontMetrics )
+[4]QFontMetricsF ( const QFontMetricsF & fm )
+*/
 
 HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 {
@@ -84,9 +86,12 @@ $prototype=QRectF boundingRect ( const QRectF & rect, int flags, const QString &
 $internalMethod=|QRectF|boundingRect,boundingRect3|const QRectF &,int,const QString &,int=0,int *=0
 
 %% TODO: implementar metodo [3]
-//[1]QRectF boundingRect ( const QString & text ) const
-//[2]QRectF boundingRect ( QChar ch ) const
-//[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+
+/*
+[1]QRectF boundingRect ( const QString & text ) const
+[2]QRectF boundingRect ( QChar ch ) const
+[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+*/
 
 HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 {

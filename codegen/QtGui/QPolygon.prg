@@ -44,12 +44,14 @@ $prototype=QPolygon(int nPoints, const int *points)
 %% TODO: implementar
 %% $internalConstructor=|new6|int,const int *
 
-//[1]QPolygon()
-//[2]QPolygon(int size)
-//[3]QPolygon(const QPolygon &a)
-//[4]QPolygon(const QVector<QPoint> &v)
-//[5]QPolygon(const QRect &r, bool closed=false)
-//[6]QPolygon(int nPoints, const int *points)
+/*
+[1]QPolygon()
+[2]QPolygon(int size)
+[3]QPolygon(const QPolygon &a)
+[4]QPolygon(const QVector<QPoint> &v)
+[5]QPolygon(const QRect &r, bool closed=false)
+[6]QPolygon(int nPoints, const int *points)
+*/
 
 %% TODO: resolver conflito entre [3] e [5] quando for 1 parâmetro do tipo O
 
@@ -96,8 +98,10 @@ $internalMethod=|void|translate,translate1|int,int
 $prototype=void translate(const QPoint &offset)
 $internalMethod=|void|translate,translate2|const QPoint &
 
-//[1]void translate(int dx, int dy)
-//[2]void translate(const QPoint &offset)
+/*
+[1]void translate(int dx, int dy)
+[2]void translate(const QPoint &offset)
+*/
 
 HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
 {
@@ -122,8 +126,10 @@ $internalMethod=|QPolygon|translated,translated1|int,int
 $prototype=QPolygon translated(const QPoint &offset) const
 $internalMethod=|QPolygon|translated,translated2|const QPoint &
 
-//[1]QPolygon translated(int dx, int dy) const
-//[2]QPolygon translated(const QPoint &offset) const
+/*
+[1]QPolygon translated(int dx, int dy) const
+[2]QPolygon translated(const QPoint &offset) const
+*/
 
 HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
 {
@@ -151,8 +157,10 @@ $internalMethod=|void|point,point1|int,int *,int *
 $prototype=QPoint point(int i) const
 $internalMethod=|QPoint|point,point2|int
 
-//[1]void point(int i, int *x, int *y) const
-//[2]QPoint point(int i) const
+/*
+[1]void point(int i, int *x, int *y) const
+[2]QPoint point(int i) const
+*/
 
 HB_FUNC_STATIC( QPOLYGON_POINT )
 {
@@ -177,8 +185,10 @@ $internalMethod=|void|setPoint,setPoint1|int,int,int
 $prototype=void setPoint(int index, const QPoint &p)
 $internalMethod=|void|setPoint,setPoint2|int,const QPoint &
 
-//[1]void setPoint(int index, int x, int y)
-//[2]void setPoint(int index, const QPoint &p)
+/*
+[1]void setPoint(int index, int x, int y)
+[2]void setPoint(int index, const QPoint &p)
+*/
 
 HB_FUNC_STATIC( QPOLYGON_SETPOINT )
 {

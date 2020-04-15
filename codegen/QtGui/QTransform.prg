@@ -44,12 +44,15 @@ $prototype=QTransform(const QTransform &other)
 $internalConstructor=|new6|const QTransform &
 
 %% TODO: revisar construtores
-//[1]QTransform(Qt::Initialization)
-//[2]QTransform()
-//[3]QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
-//[4]QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
-//[5]QTransform(const QMatrix &mtx)
-//[6]QTransform(const QTransform &other)
+
+/*
+[1]QTransform(Qt::Initialization)
+[2]QTransform()
+[3]QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
+[4]QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
+[5]QTransform(const QMatrix &mtx)
+[6]QTransform(const QTransform &other)
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
@@ -205,16 +208,18 @@ $internalMethod=|void|map,map9|int,int,int *,int *
 $prototype=void map(qreal x, qreal y, qreal *tx, qreal *ty) const
 $internalMethod=|void|map,map10|qreal,qreal,qreal *,qreal *
 
-//[1]QPoint map(const QPoint &p) const
-//[2]QPointF map(const QPointF &p) const
-//[3]QLine map(const QLine &l) const
-//[4]QLineF map(const QLineF &l) const
-//[5]QPolygonF map(const QPolygonF &a) const
-//[6]QPolygon map(const QPolygon &a) const
-//[7]QRegion map(const QRegion &r) const
-//[8]QPainterPath map(const QPainterPath &p) const
-//[9]void map(int x, int y, int *tx, int *ty) const
-//[10]void map(qreal x, qreal y, qreal *tx, qreal *ty) const
+/*
+[1]QPoint map(const QPoint &p) const
+[2]QPointF map(const QPointF &p) const
+[3]QLine map(const QLine &l) const
+[4]QLineF map(const QLineF &l) const
+[5]QPolygonF map(const QPolygonF &a) const
+[6]QPolygon map(const QPolygon &a) const
+[7]QRegion map(const QRegion &r) const
+[8]QPainterPath map(const QPainterPath &p) const
+[9]void map(int x, int y, int *tx, int *ty) const
+[10]void map(qreal x, qreal y, qreal *tx, qreal *ty) const
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAP )
 {
@@ -274,8 +279,10 @@ $internalMethod=|QRect|mapRect,mapRect1|const QRect &
 $prototype=QRectF mapRect(const QRectF &) const
 $internalMethod=|QRectF|mapRect,mapRect2|const QRectF &
 
-//[1]QRect mapRect(const QRect &) const
-//[2]QRectF mapRect(const QRectF &) const
+/*
+[1]QRect mapRect(const QRect &) const
+[2]QRectF mapRect(const QRectF &) const
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 {

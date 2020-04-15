@@ -43,12 +43,14 @@ $internalConstructor=|new5|const QBrush &,const QBrush &,const QBrush &,const QB
 $prototype=QPalette ( const QPalette & p )
 $internalConstructor=|new6|const QPalette &
 
-//[1]QPalette ()
-//[2]QPalette ( const QColor & button )
-//[3]QPalette ( Qt::GlobalColor button )
-//[4]QPalette ( const QColor & button, const QColor & window )
-//[5]QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
-//[6]QPalette ( const QPalette & p )
+/*
+[1]QPalette ()
+[2]QPalette ( const QColor & button )
+[3]QPalette ( Qt::GlobalColor button )
+[4]QPalette ( const QColor & button, const QColor & window )
+[5]QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
+[6]QPalette ( const QPalette & p )
+*/
 
 HB_FUNC_STATIC( QPALETTE_NEW )
 {
@@ -99,8 +101,10 @@ $internalMethod=|const QBrush &|brush,brush1|QPalette::ColorGroup,QPalette::Colo
 $prototype=const QBrush & brush ( ColorRole role ) const
 $internalMethod=|const QBrush &|brush,brush2|QPalette::ColorRole
 
-//[1]const QBrush & brush ( ColorGroup group, ColorRole role ) const
-//[2]const QBrush & brush ( ColorRole role ) const
+/*
+[1]const QBrush & brush ( ColorGroup group, ColorRole role ) const
+[2]const QBrush & brush ( ColorRole role ) const
+*/
 
 HB_FUNC_STATIC( QPALETTE_BRUSH )
 {
@@ -134,8 +138,10 @@ $internalMethod=|const QColor &|color,color1|QPalette::ColorGroup,QPalette::Colo
 $prototype=const QColor & color ( ColorRole role ) const
 $internalMethod=|const QColor &|color,color2|QPalette::ColorRole
 
-//[1]const QColor & color ( ColorGroup group, ColorRole role ) const
-//[2]const QColor & color ( ColorRole role ) const
+/*
+[1]const QColor & color ( ColorGroup group, ColorRole role ) const
+[2]const QColor & color ( ColorRole role ) const
+*/
 
 HB_FUNC_STATIC( QPALETTE_COLOR )
 {
@@ -199,8 +205,10 @@ $internalMethod=|void|setBrush,setBrush1|QPalette::ColorRole,const QBrush &
 $prototype=void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
 $internalMethod=|void|setBrush,setBrush2|QPalette::ColorGroup,QPalette::ColorRole,const QBrush &
 
-//[1]void setBrush ( ColorRole role, const QBrush & brush )
-//[2]void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
+/*
+[1]void setBrush ( ColorRole role, const QBrush & brush )
+[2]void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
+*/
 
 HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 {
@@ -225,8 +233,10 @@ $internalMethod=|void|setColor,setColor1|QPalette::ColorGroup,QPalette::ColorRol
 $prototype=void setColor ( ColorRole role, const QColor & color )
 $internalMethod=|void|setColor,setColor2|QPalette::ColorRole,const QColor &
 
-//[1]void setColor ( ColorGroup group, ColorRole role, const QColor & color )
-//[2]void setColor ( ColorRole role, const QColor & color )
+/*
+[1]void setColor ( ColorGroup group, ColorRole role, const QColor & color )
+[2]void setColor ( ColorRole role, const QColor & color )
+*/
 
 HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 {

@@ -34,9 +34,11 @@ $internalConstructor=|new2|QIODevice *,const QByteArray &
 $prototype=QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
 $internalConstructor=|new3|const QString &,const QByteArray &=QByteArray()
 
-//[1]QImageWriter ()
-//[2]QImageWriter ( QIODevice * device, const QByteArray & format )
-//[3]QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
+/*
+[1]QImageWriter ()
+[2]QImageWriter ( QIODevice * device, const QByteArray & format )
+[3]QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
+*/
 
 HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {

@@ -68,8 +68,10 @@ $internalMethod=|QString|styleString,styleString1|const QFont &
 $prototype=QString styleString ( const QFontInfo & fontInfo )
 $internalMethod=|QString|styleString,styleString2|const QFontInfo &
 
-//[1]QString styleString ( const QFont & font )
-//[2]QString styleString ( const QFontInfo & fontInfo )
+/*
+[1]QString styleString ( const QFont & font )
+[2]QString styleString ( const QFontInfo & fontInfo )
+*/
 
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {

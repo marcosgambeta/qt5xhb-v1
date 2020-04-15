@@ -36,8 +36,10 @@ $internalMethod=|void|accept,accept1|const QRect &
 $prototype=void accept ()
 $internalMethod=|void|accept,accept2|
 
-//[1]void accept ( const QRect & rectangle )
-//[2]void accept ()
+/*
+[1]void accept ( const QRect & rectangle )
+[2]void accept ()
+*/
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 {
@@ -65,8 +67,10 @@ $internalMethod=|void|ignore,ignore1|const QRect &
 $prototype=void ignore ()
 $internalMethod=|void|ignore,ignore2|
 
-//[1]void ignore ( const QRect & rectangle )
-//[2]void ignore ()
+/*
+[1]void ignore ( const QRect & rectangle )
+[2]void ignore ()
+*/
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
 {

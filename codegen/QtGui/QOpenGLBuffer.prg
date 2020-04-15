@@ -34,9 +34,11 @@ $internalConstructor=|new2|QOpenGLBuffer::Type
 $prototype=QOpenGLBuffer(const QOpenGLBuffer & other)
 $internalConstructor=|new3|const QOpenGLBuffer &
 
-//[1]QOpenGLBuffer()
-//[2]QOpenGLBuffer(QOpenGLBuffer::Type type)
-//[3]QOpenGLBuffer(const QOpenGLBuffer & other)
+/*
+[1]QOpenGLBuffer()
+[2]QOpenGLBuffer(QOpenGLBuffer::Type type)
+[3]QOpenGLBuffer(const QOpenGLBuffer & other)
+*/
 
 HB_FUNC_STATIC( QOPENGLBUFFER_NEW )
 {
@@ -66,8 +68,10 @@ $internalMethod=|void|allocate,allocate1|const void *,int
 $prototype=void allocate(int count)
 $internalMethod=|void|allocate,allocate2|int
 
-//[1]void allocate(const void * data, int count)
-//[2]void allocate(int count)
+/*
+[1]void allocate(const void * data, int count)
+[2]void allocate(int count)
+*/
 
 HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
 {
@@ -113,8 +117,10 @@ $internalMethod=|void|release,release1|
 $prototype=static void release(QOpenGLBuffer::Type type)
 $internalStaticMethod=|void|release,release2|QOpenGLBuffer::Type
 
-//[1]void release()
-//[2]void release(QOpenGLBuffer::Type type)
+/*
+[1]void release()
+[2]void release(QOpenGLBuffer::Type type)
+*/
 
 HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
 {

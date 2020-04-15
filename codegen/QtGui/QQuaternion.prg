@@ -37,10 +37,12 @@ $internalConstructor=|new3|float,const QVector3D &
 $prototype=QQuaternion(const QVector4D& vector)
 $internalConstructor=|new4|const QVector4D &
 
-//[1]QQuaternion()
-//[2]QQuaternion(float scalar, float xpos, float ypos, float zpos)
-//[3]QQuaternion(float scalar, const QVector3D& vector)
-//[4]QQuaternion(const QVector4D& vector)
+/*
+[1]QQuaternion()
+[2]QQuaternion(float scalar, float xpos, float ypos, float zpos)
+[3]QQuaternion(float scalar, const QVector3D& vector)
+[4]QQuaternion(const QVector4D& vector)
+*/
 
 HB_FUNC_STATIC( QQUATERNION_NEW )
 {
@@ -83,8 +85,10 @@ $internalMethod=|void|setVector,setVector1|const QVector3D &
 $prototype=void setVector(float x, float y, float z)
 $internalMethod=|void|setVector,setVector2|float,float,float
 
-//[1]void setVector(const QVector3D& vector)
-//[2]void setVector(float x, float y, float z)
+/*
+[1]void setVector(const QVector3D& vector)
+[2]void setVector(float x, float y, float z)
+*/
 
 HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
 {
@@ -154,8 +158,10 @@ $internalStaticMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle1|const QVec
 $prototype=static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
 $internalStaticMethod=|QQuaternion|fromAxisAndAngle,fromAxisAndAngle2|float,float,float,float
 
-//[1]static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
-//[2]static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
+/*
+[1]static QQuaternion fromAxisAndAngle(const QVector3D& axis, float angle)
+[2]static QQuaternion fromAxisAndAngle(float x, float y, float z, float angle)
+*/
 
 HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
 {

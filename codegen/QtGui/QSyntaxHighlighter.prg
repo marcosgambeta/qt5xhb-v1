@@ -37,8 +37,10 @@ $prototype=explicit QSyntaxHighlighter(QTextDocument *parent)
 %% TODO: abstract
 %% $internalConstructor=|new2|QTextDocument *
 
-%% //[1]explicit QSyntaxHighlighter(QObject *parent)
-%% //[2]explicit QSyntaxHighlighter(QTextDocument *parent)
+%% /*
+%% [1]explicit QSyntaxHighlighter(QObject *parent)
+%% [2]explicit QSyntaxHighlighter(QTextDocument *parent)
+%% */
 
 %% HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_NEW )
 %% {

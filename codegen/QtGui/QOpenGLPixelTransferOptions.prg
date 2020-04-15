@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
 $internalConstructor=|new2|const QOpenGLPixelTransferOptions &
 
-//[1]QOpenGLPixelTransferOptions()
-//[2]QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
+/*
+[1]QOpenGLPixelTransferOptions()
+[2]QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
+*/
 
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 {

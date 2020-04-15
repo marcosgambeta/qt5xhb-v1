@@ -36,8 +36,10 @@ $internalVirtualMethod=|void|drawEllipse,drawEllipse1|const QRectF &
 $prototype=virtual void drawEllipse ( const QRect & rect )
 $internalVirtualMethod=|void|drawEllipse,drawEllipse2|const QRect &
 
-//[1]virtual void drawEllipse ( const QRectF & rect )
-//[2]virtual void drawEllipse ( const QRect & rect )
+/*
+[1]virtual void drawEllipse ( const QRectF & rect )
+[2]virtual void drawEllipse ( const QRect & rect )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 {
@@ -61,8 +63,10 @@ $virtualMethod=|void|drawImage|const QRectF &,const QImage &,const QRectF &,Qt::
 
 %% TODO: implementar reconhecimento de 'const QLineF *' e 'const QLine *'
 
-//[1]virtual void drawLines ( const QLineF * lines, int lineCount )
-//[2]virtual void drawLines ( const QLine * lines, int lineCount )
+/*
+[1]virtual void drawLines ( const QLineF * lines, int lineCount )
+[2]virtual void drawLines ( const QLine * lines, int lineCount )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWLINES )
 {
@@ -77,8 +81,10 @@ $virtualMethod=|void|drawPixmap|const QRectF &,const QPixmap &,const QRectF &
 
 %% TODO: implementar reconhecimento de 'const QPointF *' e 'const QPoint *'
 
-//[1]virtual void drawPoints ( const QPointF * points, int pointCount )
-//[2]virtual void drawPoints ( const QPoint * points, int pointCount )
+/*
+[1]virtual void drawPoints ( const QPointF * points, int pointCount )
+[2]virtual void drawPoints ( const QPoint * points, int pointCount )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPOINTS )
 {
@@ -87,8 +93,10 @@ $addMethod=drawPoints
 
 %% TODO: implementar reconhecimento de 'const QPointF *' e 'const QPoint *'
 
-//[1]virtual void drawPolygon ( const QPointF * points, int pointCount, PolygonDrawMode mode )
-//[2]virtual void drawPolygon ( const QPoint * points, int pointCount, PolygonDrawMode mode )
+/*
+[1]virtual void drawPolygon ( const QPointF * points, int pointCount, PolygonDrawMode mode )
+[2]virtual void drawPolygon ( const QPoint * points, int pointCount, PolygonDrawMode mode )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPOLYGON )
 {
@@ -97,8 +105,10 @@ $addMethod=drawPolygon
 
 %% TODO: implementar reconhecimento de 'const QRectF *' e 'const QRect *'
 
-//[1]virtual void drawRects ( const QRectF * rects, int rectCount )
-//[2]virtual void drawRects ( const QRect * rects, int rectCount )
+/*
+[1]virtual void drawRects ( const QRectF * rects, int rectCount )
+[2]virtual void drawRects ( const QRect * rects, int rectCount )
+*/
 
 HB_FUNC_STATIC( QPAINTENGINE_DRAWRECTS )
 {

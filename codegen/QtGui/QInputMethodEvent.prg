@@ -34,9 +34,11 @@ $prototype=QInputMethodEvent ( const QString & preeditText, const QList<Attribut
 $prototype=QInputMethodEvent ( const QInputMethodEvent & other )
 $internalConstructor=|new3|const QInputMethodEvent &
 
-//[1]QInputMethodEvent ()
-//[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
-//[3]QInputMethodEvent ( const QInputMethodEvent & other )
+/*
+[1]QInputMethodEvent ()
+[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
+[3]QInputMethodEvent ( const QInputMethodEvent & other )
+*/
 
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {

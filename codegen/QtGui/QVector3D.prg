@@ -49,13 +49,15 @@ $internalConstructor=|new6|const QVector2D &,float
 $prototype=QVector3D(const QVector4D& vector)
 $internalConstructor=|new7|const QVector4D &
 
-//[1]QVector3D()
-//[2]QVector3D(float xpos, float ypos, float zpos)
-//[3]QVector3D(const QPoint& point)
-//[4]QVector3D(const QPointF& point)
-//[5]QVector3D(const QVector2D& vector)
-//[6]QVector3D(const QVector2D& vector, float zpos)
-//[7]QVector3D(const QVector4D& vector)
+/*
+[1]QVector3D()
+[2]QVector3D(float xpos, float ypos, float zpos)
+[3]QVector3D(const QPoint& point)
+[4]QVector3D(const QPointF& point)
+[5]QVector3D(const QVector2D& vector)
+[6]QVector3D(const QVector2D& vector, float zpos)
+[7]QVector3D(const QVector4D& vector)
+*/
 
 HB_FUNC_STATIC( QVECTOR3D_NEW )
 {
@@ -137,8 +139,10 @@ $internalMethod=|float|distanceToPlane,distanceToPlane1|const QVector3D &,const 
 $prototype=float distanceToPlane(const QVector3D& plane1, const QVector3D& plane2, const QVector3D& plane3) const
 $internalMethod=|float|distanceToPlane,distanceToPlane2|const QVector3D &,const QVector3D &,const QVector3D &
 
-//[1]float distanceToPlane(const QVector3D& plane, const QVector3D& normal) const
-//[2]float distanceToPlane(const QVector3D& plane1, const QVector3D& plane2, const QVector3D& plane3) const
+/*
+[1]float distanceToPlane(const QVector3D& plane, const QVector3D& normal) const
+[2]float distanceToPlane(const QVector3D& plane1, const QVector3D& plane2, const QVector3D& plane3) const
+*/
 
 HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 {
@@ -184,8 +188,10 @@ $internalStaticMethod=|QVector3D|normal,normal1|const QVector3D &,const QVector3
 $prototype=static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3D& v3)
 $internalStaticMethod=|QVector3D|normal,normal2|const QVector3D &,const QVector3D &,const QVector3D &
 
-//[1]static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
-//[2]static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3D& v3)
+/*
+[1]static QVector3D normal(const QVector3D& v1, const QVector3D& v2)
+[2]static QVector3D normal(const QVector3D& v1, const QVector3D& v2, const QVector3D& v3)
+*/
 
 HB_FUNC_STATIC( QVECTOR3D_NORMAL )
 {

@@ -40,11 +40,13 @@ $internalConstructor=|new4|const QBrush &,qreal,Qt::PenStyle=Qt::SolidLine,Qt::P
 $prototype=QPen ( const QPen & pen )
 $internalConstructor=|new5|const QPen &
 
-//[1]QPen ()
-//[2]QPen ( Qt::PenStyle style )
-//[3]QPen ( const QColor & color )
-//[4]QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
-//[5]QPen ( const QPen & pen )
+/*
+[1]QPen ()
+[2]QPen ( Qt::PenStyle style )
+[3]QPen ( const QColor & color )
+[4]QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
+[5]QPen ( const QPen & pen )
+*/
 
 HB_FUNC_STATIC( QPEN_NEW )
 {

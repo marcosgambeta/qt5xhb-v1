@@ -78,8 +78,10 @@ $internalMethod=|qreal|cursorToX,cursorToX1|int *,QTextLine::Edge=QTextLine::Lea
 $prototype=qreal cursorToX(int cursorPos, Edge edge = Leading) const
 $internalMethod=|qreal|cursorToX,cursorToX2|int,QTextLine::Edge=QTextLine::Leading
 
-//[1]qreal cursorToX(int *cursorPos, Edge edge = Leading) const
-//[2]qreal cursorToX(int cursorPos, Edge edge = Leading) const
+/*
+[1]qreal cursorToX(int *cursorPos, Edge edge = Leading) const
+[2]qreal cursorToX(int cursorPos, Edge edge = Leading) const
+*/
 
 %% TODO: resolver conflito
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
@@ -111,8 +113,10 @@ $internalMethod=|void|setNumColumns,setNumColumns1|int
 $prototype=void setNumColumns(int columns, qreal alignmentWidth)
 $internalMethod=|void|setNumColumns,setNumColumns2|int,qreal
 
-//[1]void setNumColumns(int columns)
-//[2]void setNumColumns(int columns, qreal alignmentWidth)
+/*
+[1]void setNumColumns(int columns)
+[2]void setNumColumns(int columns, qreal alignmentWidth)
+*/
 
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 {

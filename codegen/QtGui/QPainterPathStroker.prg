@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QPainterPathStroker( const QPen & pen )
 $internalConstructor=5,3,0|new2|const QPen &
 
-//[1]QPainterPathStroker ()
-//[2]QPainterPathStroker( const QPen & pen )
+/*
+[1]QPainterPathStroker ()
+[2]QPainterPathStroker( const QPen & pen )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
@@ -90,8 +92,10 @@ $internalMethod=|void|setDashPattern,setDashPattern1|Qt::PenStyle
 $prototype=void setDashPattern ( const QVector<qreal> & dashPattern )
 $internalMethod=|void|setDashPattern,setDashPattern2|const QVector<qreal> &
 
-//[1]void setDashPattern ( Qt::PenStyle style )
-//[2]void setDashPattern ( const QVector<qreal> & dashPattern )
+/*
+[1]void setDashPattern ( Qt::PenStyle style )
+[2]void setDashPattern ( const QVector<qreal> & dashPattern )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {

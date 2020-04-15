@@ -99,8 +99,10 @@ $internalMethod=|void|setWidth,setWidth1|qreal
 $prototype=void setWidth(const QTextLength &length)
 $internalMethod=|void|setWidth,setWidth2|const QTextLength &
 
-//[1]void setWidth(qreal width)
-//[2]void setWidth(const QTextLength &length)
+/*
+[1]void setWidth(qreal width)
+[2]void setWidth(const QTextLength &length)
+*/
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 {
@@ -128,8 +130,10 @@ $internalMethod=|void|setHeight,setHeight1|qreal
 $prototype=void setHeight(const QTextLength &height)
 $internalMethod=|void|setHeight,setHeight2|const QTextLength &
 
-//[1]void setHeight(qreal height)
-//[2]void setHeight(const QTextLength &height)
+/*
+[1]void setHeight(qreal height)
+[2]void setHeight(const QTextLength &height)
+*/
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 {

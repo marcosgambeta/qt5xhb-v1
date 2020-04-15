@@ -42,10 +42,12 @@ $staticMethod=|bool|find,find2|const QString &,QPixmap &
 $prototype=static bool find(const QString &key, QPixmap *pixmap)
 $staticMethod=|bool|find,find3|const QString &,QPixmap *
 
-//[1]static QPixmap *find(const QString &key)
-//[2]static bool find(const QString &key, QPixmap &pixmap)
-//[3]static bool find(const QString &key, QPixmap *pixmap)
-//[4]static bool find(const Key &key, QPixmap *pixmap)
+/*
+[1]static QPixmap *find(const QString &key)
+[2]static bool find(const QString &key, QPixmap &pixmap)
+[3]static bool find(const QString &key, QPixmap *pixmap)
+[4]static bool find(const Key &key, QPixmap *pixmap)
+*/
 
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND )
 {
@@ -56,8 +58,10 @@ $addMethod=find
 $prototype=static bool insert(const QString &key, const QPixmap &pixmap)
 $staticMethod=|bool|insert,insert1|const QString &,const QPixmap &
 
-//[1]static bool insert(const QString &key, const QPixmap &pixmap)
-//[2]static Key insert(const QPixmap &pixmap)
+/*
+[1]static bool insert(const QString &key, const QPixmap &pixmap)
+[2]static Key insert(const QPixmap &pixmap)
+*/
 
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT )
 {
@@ -68,8 +72,10 @@ $addMethod=insert
 $prototype=static void remove(const QString &key)
 $staticMethod=|void|remove,remove1|const QString &
 
-//[1]static void remove(const QString &key)
-//[2]static void remove(const Key &key)
+/*
+[1]static void remove(const QString &key)
+[2]static void remove(const Key &key)
+*/
 
 HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE )
 {

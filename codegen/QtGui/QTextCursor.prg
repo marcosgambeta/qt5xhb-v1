@@ -54,13 +54,15 @@ $prototype=QTextCursor(QTextCursorPrivate *d)
 $prototype=QTextCursor(const QTextCursor &cursor)
 $internalConstructor=|new7|const QTextCursor &
 
-//[1]QTextCursor()
-//[2]QTextCursor(QTextDocument *document)
-//[3]QTextCursor(QTextDocumentPrivate *p, int pos)
-//[4]QTextCursor(QTextFrame *frame)
-//[5]QTextCursor(const QTextBlock &block)
-//[6]QTextCursor(QTextCursorPrivate *d)
-//[7]QTextCursor(const QTextCursor &cursor)
+/*
+[1]QTextCursor()
+[2]QTextCursor(QTextDocument *document)
+[3]QTextCursor(QTextDocumentPrivate *p, int pos)
+[4]QTextCursor(QTextFrame *frame)
+[5]QTextCursor(const QTextBlock &block)
+[6]QTextCursor(QTextCursorPrivate *d)
+[7]QTextCursor(const QTextCursor &cursor)
+*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 {
@@ -124,8 +126,10 @@ $internalMethod=|void|insertText,insertText1|const QString &
 $prototype=void insertText(const QString &text, const QTextCharFormat &format)
 $internalMethod=|void|insertText,insertText2|const QString &,const QTextCharFormat &
 
-//[1]void insertText(const QString &text)
-//[2]void insertText(const QString &text, const QTextCharFormat &format)
+/*
+[1]void insertText(const QString &text)
+[2]void insertText(const QString &text, const QTextCharFormat &format)
+*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT )
 {
@@ -252,9 +256,11 @@ $internalMethod=|void|insertBlock,insertBlock2|const QTextBlockFormat &
 $prototype=void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charFormat)
 $internalMethod=|void|insertBlock,insertBlock3|const QTextBlockFormat &,const QTextCharFormat &
 
-//[1]void insertBlock()
-//[2]void insertBlock(const QTextBlockFormat &format)
-//[3]void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charFormat)
+/*
+[1]void insertBlock()
+[2]void insertBlock(const QTextBlockFormat &format)
+[3]void insertBlock(const QTextBlockFormat &format, const QTextCharFormat &charFormat)
+*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK )
 {
@@ -283,8 +289,10 @@ $internalMethod=|QTextList *|insertList,insertList1|const QTextListFormat &
 $prototype=QTextList *insertList(QTextListFormat::Style style)
 $internalMethod=|QTextList *|insertList,insertList2|QTextListFormat::Style
 
-//[1]QTextList *insertList(const QTextListFormat &format)
-//[2]QTextList *insertList(QTextListFormat::Style style)
+/*
+[1]QTextList *insertList(const QTextListFormat &format)
+[2]QTextList *insertList(QTextListFormat::Style style)
+*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 {
@@ -309,8 +317,10 @@ $internalMethod=|QTextList *|createList,createList1|const QTextListFormat &
 $prototype=QTextList *createList(QTextListFormat::Style style)
 $internalMethod=|QTextList *|createList,createList2|QTextListFormat::Style
 
-//[1]QTextList *createList(const QTextListFormat &format)
-//[2]QTextList *createList(QTextListFormat::Style style)
+/*
+[1]QTextList *createList(const QTextListFormat &format)
+[2]QTextList *createList(QTextListFormat::Style style)
+*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 {
@@ -338,8 +348,10 @@ $internalMethod=|QTextTable *|insertTable,insertTable1|int,int,const QTextTableF
 $prototype=QTextTable *insertTable(int rows, int cols)
 $internalMethod=|QTextTable *|insertTable,insertTable2|int,int
 
-//[1]QTextTable *insertTable(int rows, int cols, const QTextTableFormat &format)
-//[2]QTextTable *insertTable(int rows, int cols)
+/*
+[1]QTextTable *insertTable(int rows, int cols, const QTextTableFormat &format)
+[2]QTextTable *insertTable(int rows, int cols)
+*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 {
@@ -385,10 +397,12 @@ $internalMethod=|void|insertImage,insertImage3|const QString &
 $prototype=void insertImage(const QImage &image, const QString &name = QString())
 $internalMethod=|void|insertImage,insertImage4|const QImage &,const QString &=QString()
 
-//[1]void insertImage(const QTextImageFormat &format, QTextFrameFormat::Position alignment)
-//[2]void insertImage(const QTextImageFormat &format)
-//[3]void insertImage(const QString &name)
-//[4]void insertImage(const QImage &image, const QString &name = QString())
+/*
+[1]void insertImage(const QTextImageFormat &format, QTextFrameFormat::Position alignment)
+[2]void insertImage(const QTextImageFormat &format)
+[3]void insertImage(const QString &name)
+[4]void insertImage(const QImage &image, const QString &name = QString())
+*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 {

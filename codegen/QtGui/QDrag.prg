@@ -48,8 +48,10 @@ $internalMethod=|Qt::DropAction|exec,exec1|Qt::DropActions=Qt::MoveAction
 $prototype=Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
 $internalMethod=|Qt::DropAction|exec,exec2|Qt::DropActions,Qt::DropAction
 
-//[1]Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
-//[2]Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
+/*
+[1]Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
+[2]Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
+*/
 
 HB_FUNC_STATIC( QDRAG_EXEC )
 {

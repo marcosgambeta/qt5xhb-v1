@@ -39,9 +39,11 @@ $internalConstructor=|new2|QIODevice *,const QByteArray &=QByteArray(),QObject *
 $prototype=QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 $internalConstructor=|new3|const QString &,const QByteArray &=QByteArray(),QObject *=0
 
-//[1]QMovie ( QObject * parent = 0 )
-//[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-//[3]QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+/*
+[1]QMovie ( QObject * parent = 0 )
+[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+[3]QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QMOVIE_NEW )
 {

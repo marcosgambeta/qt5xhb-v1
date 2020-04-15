@@ -31,8 +31,10 @@ $internalConstructor=|new1|const QFont &
 $prototype=QFontInfo ( const QFontInfo & fi )
 $internalConstructor=|new2|const QFontInfo &
 
-//[1]QFontInfo ( const QFont & font )
-//[2]QFontInfo ( const QFontInfo & fi )
+/*
+[1]QFontInfo ( const QFont & font )
+[2]QFontInfo ( const QFontInfo & fi )
+*/
 
 HB_FUNC_STATIC( QFONTINFO_NEW )
 {

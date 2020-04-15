@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
 $internalConstructor=|new2|const QOpenGLFramebufferObjectFormat &
 
-//[1]QOpenGLFramebufferObjectFormat()
-//[2]QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
+/*
+[1]QOpenGLFramebufferObjectFormat()
+[2]QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
+*/
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {

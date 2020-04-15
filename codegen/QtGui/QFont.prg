@@ -40,10 +40,12 @@ $internalConstructor=|new3|const QFont &,QPaintDevice *
 $prototype=QFont ( const QFont & font )
 $internalConstructor=|new4|const QFont &
 
-//[1]QFont ()
-//[2]QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
-//[3]QFont ( const QFont & font, QPaintDevice * pd )
-//[4]QFont ( const QFont & font )
+/*
+[1]QFont ()
+[2]QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
+[3]QFont ( const QFont & font, QPaintDevice * pd )
+[4]QFont ( const QFont & font )
+*/
 
 HB_FUNC_STATIC( QFONT_NEW )
 {

@@ -52,14 +52,16 @@ $internalConstructor=|new7|const QVector3D &
 $prototype=QVector4D(const QVector3D& vector, float wpos)
 $internalConstructor=|new8|const QVector3D &,float
 
-//[1]QVector4D()
-//[2]QVector4D(float xpos, float ypos, float zpos, float wpos)
-//[3]QVector4D(const QPoint& point)
-//[4]QVector4D(const QPointF& point)
-//[5]QVector4D(const QVector2D& vector)
-//[6]QVector4D(const QVector2D& vector, float zpos, float wpos)
-//[7]QVector4D(const QVector3D& vector)
-//[8]QVector4D(const QVector3D& vector, float wpos)
+/*
+[1]QVector4D()
+[2]QVector4D(float xpos, float ypos, float zpos, float wpos)
+[3]QVector4D(const QPoint& point)
+[4]QVector4D(const QPointF& point)
+[5]QVector4D(const QVector2D& vector)
+[6]QVector4D(const QVector2D& vector, float zpos, float wpos)
+[7]QVector4D(const QVector3D& vector)
+[8]QVector4D(const QVector3D& vector, float wpos)
+*/
 
 HB_FUNC_STATIC( QVECTOR4D_NEW )
 {

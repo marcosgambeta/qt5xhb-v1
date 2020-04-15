@@ -31,8 +31,10 @@ $internalConstructor=|new1|const QRegion &
 $prototype=QPaintEvent ( const QRect & paintRect )
 $internalConstructor=|new2|const QRect &
 
-//[1]QPaintEvent ( const QRegion & paintRegion )
-//[2]QPaintEvent ( const QRect & paintRect )
+/*
+[1]QPaintEvent ( const QRegion & paintRegion )
+[2]QPaintEvent ( const QRect & paintRect )
+*/
 
 HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {

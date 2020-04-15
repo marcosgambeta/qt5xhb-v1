@@ -46,12 +46,15 @@ $prototype=QKeySequence ( StandardKey key )
 $internalConstructor=|new6|QKeySequence::StandardKey
 
 %% TODO: [6] QKeySequence ( StandardKey key ) conflita com [4]
-//[1]QKeySequence ()
-//[2]QKeySequence ( const QString & key )
-//[3]QKeySequence ( const QString & key, SequenceFormat format )
-//[4]QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
-//[5]QKeySequence ( const QKeySequence & keysequence )
-//[6]QKeySequence ( StandardKey key )
+
+/*
+[1]QKeySequence ()
+[2]QKeySequence ( const QString & key )
+[3]QKeySequence ( const QString & key, SequenceFormat format )
+[4]QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
+[5]QKeySequence ( const QKeySequence & keysequence )
+[6]QKeySequence ( StandardKey key )
+*/
 
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 {

@@ -40,10 +40,12 @@ $internalConstructor=|new3|const QString &,const QFont &,QPaintDevice *=0
 $prototype=QTextLayout(const QTextBlock &b)
 $internalConstructor=|new4|const QTextBlock &
 
-//[1]QTextLayout()
-//[2]QTextLayout(const QString& text)
-//[3]QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 0)
-//[4]QTextLayout(const QTextBlock &b)
+/*
+[1]QTextLayout()
+[2]QTextLayout(const QString& text)
+[3]QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 0)
+[4]QTextLayout(const QTextBlock &b)
+*/
 
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 {
@@ -158,8 +160,10 @@ $internalMethod=|void|drawCursor,drawCursor1|QPainter *,const QPointF &,int
 $prototype=void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition, int width) const
 $internalMethod=|void|drawCursor,drawCursor2|QPainter *,const QPointF &,int,int
 
-//[1]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition) const
-//[2]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition, int width) const
+/*
+[1]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition) const
+[2]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition, int width) const
+*/
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 {

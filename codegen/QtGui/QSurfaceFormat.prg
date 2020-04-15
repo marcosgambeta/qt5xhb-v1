@@ -34,9 +34,11 @@ $internalConstructor=|new2|QSurfaceFormat::FormatOptions
 $prototype=QSurfaceFormat(const QSurfaceFormat &other)
 $internalConstructor=|new3|const QSurfaceFormat &
 
-//[1]QSurfaceFormat()
-//[2]QSurfaceFormat(FormatOptions options)
-//[3]QSurfaceFormat(const QSurfaceFormat &other)
+/*
+[1]QSurfaceFormat()
+[2]QSurfaceFormat(FormatOptions options)
+[3]QSurfaceFormat(const QSurfaceFormat &other)
+*/
 
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 {

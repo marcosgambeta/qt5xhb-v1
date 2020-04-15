@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QString &
 $prototype=QStaticText(const QStaticText &other)
 $internalConstructor=|new3|const QStaticText &
 
-//[1]QStaticText()
-//[2]QStaticText(const QString &text)
-//[3]QStaticText(const QStaticText &other)
+/*
+[1]QStaticText()
+[2]QStaticText(const QString &text)
+[3]QStaticText(const QStaticText &other)
+*/
 
 HB_FUNC_STATIC( QSTATICTEXT_NEW )
 {

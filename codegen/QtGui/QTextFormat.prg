@@ -34,9 +34,11 @@ $internalConstructor=|new2|int
 $prototype=QTextFormat(const QTextFormat &rhs)
 $internalConstructor=|new3|const QTextFormat &
 
-//[1]QTextFormat()
-//[2]QTextFormat(int type)
-//[3]QTextFormat(const QTextFormat &rhs)
+/*
+[1]QTextFormat()
+[2]QTextFormat(int type)
+[3]QTextFormat(const QTextFormat &rhs)
+*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 {
@@ -120,8 +122,10 @@ $internalMethod=|void|setProperty,setProperty1|int,const QVariant &
 $prototype=void setProperty(int propertyId, const QVector<QTextLength> &lengths)
 $internalMethod=|void|setProperty,setProperty2|int,const QVector<QTextLength> &
 
-//[1]void setProperty(int propertyId, const QVariant &value)
-//[2]void setProperty(int propertyId, const QVector<QTextLength> &lengths)
+/*
+[1]void setProperty(int propertyId, const QVariant &value)
+[2]void setProperty(int propertyId, const QVector<QTextLength> &lengths)
+*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 {

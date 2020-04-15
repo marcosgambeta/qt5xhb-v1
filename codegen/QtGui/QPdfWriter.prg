@@ -31,8 +31,10 @@ $internalConstructor=|new1|const QString &
 $prototype=explicit QPdfWriter(QIODevice * device)
 $internalConstructor=|new2|QIODevice *
 
-//[1]explicit QPdfWriter(const QString & filename)
-//[2]explicit QPdfWriter(QIODevice * device)
+/*
+[1]explicit QPdfWriter(const QString & filename)
+[2]explicit QPdfWriter(QIODevice * device)
+*/
 
 HB_FUNC_STATIC( QPDFWRITER_NEW )
 {
@@ -73,8 +75,10 @@ $internalMethod=|void|setPageSize,setPageSize1|QPagedPaintDevice::PageSize
 $prototype=bool setPageSize(const QPageSize &pageSize)
 $internalMethod=5,3,0|bool|setPageSize,setPageSize2|const QPageSize &
 
-//[1]void setPageSize(PageSize size) (obsolet)
-//[2]bool setPageSize(const QPageSize &pageSize)
+/*
+[1]void setPageSize(PageSize size) (obsolet)
+[2]bool setPageSize(const QPageSize &pageSize)
+*/
 
 HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
 {
@@ -117,8 +121,10 @@ $internalMethod=5,3,0|bool|setPageMargins,setPageMargins1|const QMarginsF &
 $prototype=bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
 $internalMethod=5,3,0|bool|setPageMargins,setPageMargins2|const QMarginsF &,QPageLayout::Unit
 
-//[1]bool setPageMargins(const QMarginsF &margins)
-//[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+/*
+[1]bool setPageMargins(const QMarginsF &margins)
+[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+*/
 
 HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
 {

@@ -38,9 +38,11 @@ $internalConstructor=|new2|
 $prototype=QTextBlock(const QTextBlock &o)
 $internalConstructor=|new3|const QTextBlock &
 
-//[1]QTextBlock(QTextDocumentPrivate *priv, int b)
-//[2]QTextBlock()
-//[3]QTextBlock(const QTextBlock &o)
+/*
+[1]QTextBlock(QTextDocumentPrivate *priv, int b)
+[2]QTextBlock()
+[3]QTextBlock(const QTextBlock &o)
+*/
 
 HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 {
