@@ -33,8 +33,10 @@ $internalConstructor=|new1|
 $prototype=QWebHitTestResult ( const QWebHitTestResult & other )
 $internalConstructor=|new2|const QWebHitTestResult &
 
-//[1]QWebHitTestResult ()
-//[2]QWebHitTestResult ( const QWebHitTestResult & other )
+/*
+[1]QWebHitTestResult ()
+[2]QWebHitTestResult ( const QWebHitTestResult & other )
+*/
 
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 {

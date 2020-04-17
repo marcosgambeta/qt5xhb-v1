@@ -123,8 +123,10 @@ $method=|bool|hasFocus|
 %%
 %%
 
-%%//[1]void addToJavaScriptWindowObject ( const QString & name, QObject * object )
-%%//[2]void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
+%% /*
+%% [1]void addToJavaScriptWindowObject ( const QString & name, QObject * object )
+%% [2]void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
+%% */
 
 %%// TODO: implementar
 
@@ -170,8 +172,10 @@ $internalMethod=|void|load,load1|const QUrl &
 $prototype=void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 $internalMethod=|void|load,load2|const QNetworkRequest &,QNetworkAccessManager::Operation=QNetworkAccessManager::GetOperation,const QByteArray &=QByteArray()
 
-//[1]void load ( const QUrl & url )
-//[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+/*
+[1]void load ( const QUrl & url )
+[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+*/
 
 HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
@@ -205,8 +209,10 @@ $internalMethod=|void|render,render1|QPainter *,const QRegion &=QRegion()
 $prototype=void render(QPainter*, RenderLayers layer, const QRegion& clip = QRegion())
 $internalMethod=|void|render,render2|QPainter *,QWebFrame::RenderLayers,const QRegion &=QRegion()
 
-//[1]void render(QPainter*, const QRegion& clip = QRegion())
-//[2]void render(QPainter*, RenderLayers layer, const QRegion& clip = QRegion())
+/*
+[1]void render(QPainter*, const QRegion& clip = QRegion())
+[2]void render(QPainter*, RenderLayers layer, const QRegion& clip = QRegion())
+*/
 
 HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {
