@@ -37,8 +37,10 @@ $internalConstructor=5,10,0|new1|QObject *=nullptr
 $prototype=explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
 $internalConstructor=5,10,0|new2|const QString &,QObject *=nullptr
 
-//[1]explicit QTextToSpeech(QObject *parent = nullptr)
-//[2]explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
+/*
+[1]explicit QTextToSpeech(QObject *parent = nullptr)
+[2]explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
 {
