@@ -34,8 +34,10 @@ $internalConstructor=5,3,0|new1|const QString &
 $prototype=explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
 $internalConstructor=5,3,0|new2|const QWebSocketCorsAuthenticator &
 
-//[1]explicit QWebSocketCorsAuthenticator(const QString &origin)
-//[2]explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
+/*
+[1]explicit QWebSocketCorsAuthenticator(const QString &origin)
+[2]explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
+*/
 
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW )
 {
