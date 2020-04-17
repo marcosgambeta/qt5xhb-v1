@@ -39,10 +39,12 @@ $internalConstructor=5,1,0|new3|const QString &
 $prototype=QSerialPortInfo(const QSerialPortInfo &other)
 $internalConstructor=5,1,0|new4|const QSerialPortInfo &
 
-//[1]QSerialPortInfo()
-//[2]QSerialPortInfo(const QSerialPort &port)
-//[3]QSerialPortInfo(const QString &name)
-//[4]QSerialPortInfo(const QSerialPortInfo &other)
+/*
+[1]QSerialPortInfo()
+[2]QSerialPortInfo(const QSerialPort &port)
+[3]QSerialPortInfo(const QString &name)
+[4]QSerialPortInfo(const QSerialPortInfo &other)
+*/
 
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
 {
