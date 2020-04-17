@@ -35,8 +35,10 @@ $internalConstructor=5,9,0|new2|const QCanBusDeviceInfo &
 
 $prototype=explicit QCanBusDeviceInfo(QCanBusDeviceInfoPrivate &dd) [private]
 
-//[1]QCanBusDeviceInfo() = delete
-//[2]QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
+/*
+[1]QCanBusDeviceInfo() = delete
+[2]QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
+*/
 
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 {
