@@ -34,9 +34,11 @@ $prototype=QScriptProgram(const QString & sourceCode, const QString fileName = Q
 $prototype=QScriptProgram(const QScriptProgram & other)
 $internalConstructor=|new3|const QScriptProgram &
 
-//[1]QScriptProgram()
-//[2]QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
-//[3]QScriptProgram(const QScriptProgram & other)
+/*
+[1]QScriptProgram()
+[2]QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
+[3]QScriptProgram(const QScriptProgram & other)
+*/
 
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 {

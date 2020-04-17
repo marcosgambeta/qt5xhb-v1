@@ -75,8 +75,10 @@ $internalMethod=|QScriptValue|throwError,throwError1|QScriptContext::Error,const
 $prototype=QScriptValue throwError(const QString & text)
 $internalMethod=|QScriptValue|throwError,throwError2|const QString &
 
-//[1]QScriptValue throwError(Error error, const QString & text)
-//[2]QScriptValue throwError(const QString & text)
+/*
+[1]QScriptValue throwError(Error error, const QString & text)
+[2]QScriptValue throwError(const QString & text)
+*/
 
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 {
