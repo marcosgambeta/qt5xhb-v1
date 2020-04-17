@@ -1667,4 +1667,5 @@ QCanBusDevice::Directions                            |enum
 QCanBusFrame::FrameType                              |enum
 QCanBusFrame::FrameErrors                            |enum
 QVirtualKeyboardSelectionListModel::Type             |enum
- 
+QModbusReply::ReplyType                              |enum
+  
