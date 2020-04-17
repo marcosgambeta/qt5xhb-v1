@@ -66,8 +66,10 @@ $internalMethod=|void|setViewBox,setViewBox1|const QRect &
 $prototype=void setViewBox ( const QRectF & viewBox )
 $internalMethod=|void|setViewBox,setViewBox2|const QRectF &
 
-//[1]void setViewBox ( const QRect & viewBox )
-//[2]void setViewBox ( const QRectF & viewBox )
+/*
+[1]void setViewBox ( const QRect & viewBox )
+[2]void setViewBox ( const QRectF & viewBox )
+*/
 
 HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 {
