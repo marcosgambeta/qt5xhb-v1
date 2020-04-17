@@ -61,8 +61,10 @@ $internalMethod=|bool|isDirty,isDirty1|
 $prototype=bool isDirty ( const QModelIndex & index ) const
 $internalMethod=|bool|isDirty,isDirty2|const QModelIndex &
 
-//[1]bool isDirty() const
-//[2]bool isDirty ( const QModelIndex & index ) const
+/*
+[1]bool isDirty() const
+[2]bool isDirty ( const QModelIndex & index ) const
+*/
 
 HB_FUNC( QSQLTABLEMODEL_ISDIRTY )
 {
@@ -150,8 +152,10 @@ $internalMethod=|QSqlRecord|record,record1|
 $prototype=QSqlRecord record(int row) const
 $internalMethod=|QSqlRecord|record,record2|int
 
-//[1]QSqlRecord record() const
-//[2]QSqlRecord record(int row) const
+/*
+[1]QSqlRecord record() const
+[2]QSqlRecord record(int row) const
+*/
 
 HB_FUNC( QSQLTABLEMODEL_RECORD )
 {

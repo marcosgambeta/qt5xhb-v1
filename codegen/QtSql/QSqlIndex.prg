@@ -31,8 +31,10 @@ $internalConstructor=|new1|const QString &=QString(),const QString &=QString()
 $prototype=QSqlIndex ( const QSqlIndex & other )
 $internalConstructor=|new2|const QSqlIndex &
 
-//[1]explicit QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
-//[2]QSqlIndex ( const QSqlIndex & other )
+/*
+[1]explicit QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
+[2]QSqlIndex ( const QSqlIndex & other )
+*/
 
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
@@ -58,8 +60,10 @@ $internalMethod=|void|append,append1|const QSqlField &
 $prototype=void append ( const QSqlField & field, bool desc )
 $internalMethod=|void|append,append2|const QSqlField &,bool
 
-//[1]void append ( const QSqlField & field )
-//[2]void append ( const QSqlField & field, bool desc )
+/*
+[1]void append ( const QSqlField & field )
+[2]void append ( const QSqlField & field, bool desc )
+*/
 
 HB_FUNC_STATIC( QSQLINDEX_APPEND )
 {

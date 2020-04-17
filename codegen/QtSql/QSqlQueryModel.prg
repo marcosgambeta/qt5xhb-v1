@@ -49,8 +49,10 @@ $internalMethod=|void|setQuery,setQuery1|const QSqlQuery &
 $prototype=void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
 $internalMethod=|void|setQuery,setQuery2|const QString &,const QSqlDatabase &=QSqlDatabase()
 
-//[1]void setQuery ( const QSqlQuery & query )
-//[2]void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
+/*
+[1]void setQuery ( const QSqlQuery & query )
+[2]void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
+*/
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY )
 {
@@ -75,8 +77,10 @@ $internalMethod=|QSqlRecord|record,record1|int
 $prototype=QSqlRecord record () const
 $internalMethod=|QSqlRecord|record,record2|
 
-//[1]QSqlRecord record ( int row ) const
-//[2]QSqlRecord record () const
+/*
+[1]QSqlRecord record ( int row ) const
+[2]QSqlRecord record () const
+*/
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
 {

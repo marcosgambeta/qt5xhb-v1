@@ -38,8 +38,10 @@ $internalConstructor=|new1|
 $prototype=QSqlDatabase ( const QSqlDatabase & other )
 $internalConstructor=|new2|const QSqlDatabase &
 
-//[1]QSqlDatabase ()
-//[2]QSqlDatabase ( const QSqlDatabase & other )
+/*
+[1]QSqlDatabase ()
+[2]QSqlDatabase ( const QSqlDatabase & other )
+*/
 
 HB_FUNC_STATIC( QSQLDATABASE_NEW )
 {
@@ -119,8 +121,10 @@ $internalMethod=|bool|open,open1|
 $prototype=bool open ( const QString & user, const QString & password )
 $internalMethod=|bool|open,open2|const QString &,const QString &
 
-//[1]bool open ()
-//[2]bool open ( const QString & user, const QString & password )
+/*
+[1]bool open ()
+[2]bool open ( const QString & user, const QString & password )
+*/
 
 HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 {
@@ -177,20 +181,22 @@ void QSqlDatabase_addDatabase1 ()
 {
   QString par2 = ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( PQSTRING(1), par2 ) );
-  _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+  Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
 $prototype=static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
 void QSqlDatabase_addDatabase2 ()
 {
-  QSqlDriver * par1 = (QSqlDriver *) _qt5xhb_itemGetPtr(1);
+  QSqlDriver * par1 = (QSqlDriver *) Qt5xHb::itemGetPtr(1);
   QString par2 = ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
-  _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+  Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
-//[1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
-//[2]QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
+/*
+[1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
+[2]QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
+*/
 
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {
@@ -237,7 +243,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
   {
     QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );
-    _qt5xhb_createReturnClass ( ptr, "QSQLDATABASE", true );
+    Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
   }
   else
   {

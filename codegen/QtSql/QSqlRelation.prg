@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 $internalConstructor=|new2|const QString &,const QString &,const QString &
 
-//[1]QSqlRelation ()
-//[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
+/*
+[1]QSqlRelation ()
+[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
+*/
 
 HB_FUNC_STATIC( QSQLRELATION_NEW )
 {
