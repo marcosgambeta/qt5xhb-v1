@@ -102,8 +102,10 @@ $internalMethod=|void|setRenderTarget,setRenderTarget1|QOpenGLFramebufferObject 
 $prototype=void setRenderTarget(uint fboId, const QSize & size)
 $internalMethod=|void|setRenderTarget,setRenderTarget2|uint,const QSize &
 
-//[1]void setRenderTarget(QOpenGLFramebufferObject * fbo)
-//[2]void setRenderTarget(uint fboId, const QSize & size)
+/*
+[1]void setRenderTarget(QOpenGLFramebufferObject * fbo)
+[2]void setRenderTarget(uint fboId, const QSize & size)
+*/
 
 HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
 {

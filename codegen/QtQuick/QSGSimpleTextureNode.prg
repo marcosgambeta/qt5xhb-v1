@@ -45,8 +45,10 @@ $internalMethod=|void|setRect,setRect1|const QRectF &
 $prototype=void setRect(qreal x, qreal y, qreal w, qreal h)
 $internalMethod=|void|setRect,setRect2|qreal,qreal,qreal,qreal
 
-//[1]void setRect(const QRectF & r)
-//[2]void setRect(qreal x, qreal y, qreal w, qreal h)
+/*
+[1]void setRect(const QRectF & r)
+[2]void setRect(qreal x, qreal y, qreal w, qreal h)
+*/
 
 HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT )
 {

@@ -41,9 +41,11 @@ $internalConstructor=|new2|QQmlEngine *,QWindow *
 $prototype=QQuickView(const QUrl & source, QWindow * parent = 0)
 $internalConstructor=|new3|const QUrl &,QWindow *=0
 
-//[1]QQuickView(QWindow * parent = 0)
-//[2]QQuickView(QQmlEngine * engine, QWindow * parent)
-//[3]QQuickView(const QUrl & source, QWindow * parent = 0)
+/*
+[1]QQuickView(QWindow * parent = 0)
+[2]QQuickView(QQmlEngine * engine, QWindow * parent)
+[3]QQuickView(const QUrl & source, QWindow * parent = 0)
+*/
 
 HB_FUNC_STATIC( QQUICKVIEW_NEW )
 {
