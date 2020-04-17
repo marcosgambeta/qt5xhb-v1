@@ -33,8 +33,10 @@ $internalConstructor=|new1|
 $prototype=QWebElement ( const QWebElement & other )
 $internalConstructor=|new2|const QWebElement &
 
-//[1]QWebElement ()
-//[2]QWebElement ( const QWebElement & other )
+/*
+[1]QWebElement ()
+[2]QWebElement ( const QWebElement & other )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_NEW )
 {
@@ -63,8 +65,10 @@ $internalMethod=|void|appendInside,appendInside1|const QString &
 $prototype=void appendInside ( const QWebElement & element )
 $internalMethod=|void|appendInside,appendInside2|const QWebElement &
 
-//[1]void appendInside ( const QString & markup )
-//[2]void appendInside ( const QWebElement & element )
+/*
+[1]void appendInside ( const QString & markup )
+[2]void appendInside ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
 {
@@ -89,8 +93,10 @@ $internalMethod=|void|appendOutside,appendOutside1|const QString &
 $prototype=void appendOutside ( const QWebElement & element )
 $internalMethod=|void|appendOutside,appendOutside2|const QWebElement &
 
-//[1]void appendOutside ( const QString & markup )
-//[2]void appendOutside ( const QWebElement & element )
+/*
+[1]void appendOutside ( const QString & markup )
+[2]void appendOutside ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 {
@@ -133,8 +139,10 @@ $internalMethod=|void|encloseContentsWith,encloseContentsWith1|const QWebElement
 $prototype=void encloseContentsWith ( const QString & markup )
 $internalMethod=|void|encloseContentsWith,encloseContentsWith2|const QString &
 
-//[1]void encloseContentsWith ( const QWebElement & element )
-//[2]void encloseContentsWith ( const QString & markup )
+/*
+[1]void encloseContentsWith ( const QWebElement & element )
+[2]void encloseContentsWith ( const QString & markup )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
 {
@@ -159,8 +167,10 @@ $internalMethod=|void|encloseWith,encloseWith1|const QString &
 $prototype=void encloseWith ( const QWebElement & element )
 $internalMethod=|void|encloseWith,encloseWith2|const QWebElement &
 
-//[1]void encloseWith ( const QString & markup )
-//[2]void encloseWith ( const QWebElement & element )
+/*
+[1]void encloseWith ( const QString & markup )
+[2]void encloseWith ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 {
@@ -236,8 +246,10 @@ $internalMethod=|void|prependInside,prependInside1|const QString &
 $prototype=void prependInside ( const QWebElement & element )
 $internalMethod=|void|prependInside,prependInside2|const QWebElement &
 
-//[1]void prependInside ( const QString & markup )
-//[2]void prependInside ( const QWebElement & element )
+/*
+[1]void prependInside ( const QString & markup )
+[2]void prependInside ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
 {
@@ -262,8 +274,10 @@ $internalMethod=|void|prependOutside,prependOutside1|const QString &
 $prototype=void prependOutside ( const QWebElement & element )
 $internalMethod=|void|prependOutside,prependOutside2|const QWebElement &
 
-//[1]void prependOutside ( const QString & markup )
-//[2]void prependOutside ( const QWebElement & element )
+/*
+[1]void prependOutside ( const QString & markup )
+[2]void prependOutside ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 {
@@ -306,8 +320,10 @@ $internalMethod=|void|render,render1|QPainter *
 $prototype=void render ( QPainter * painter, const QRect & clip )
 $internalMethod=|void|render,render2|QPainter *,const QRect &
 
-//[1]void render ( QPainter * painter )
-//[2]void render ( QPainter * painter, const QRect & clip )
+/*
+[1]void render ( QPainter * painter )
+[2]void render ( QPainter * painter, const QRect & clip )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_RENDER )
 {
@@ -332,8 +348,10 @@ $internalMethod=|void|replace,replace1|const QString &
 $prototype=void replace ( const QWebElement & element )
 $internalMethod=|void|replace,replace2|const QWebElement &
 
-//[1]void replace ( const QString & markup )
-//[2]void replace ( const QWebElement & element )
+/*
+[1]void replace ( const QString & markup )
+[2]void replace ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 {
