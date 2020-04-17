@@ -28,12 +28,15 @@ $destructor
 $includes=5,8,0
 
 $prototype=explicit QModbusRtuSerialSlave(QObject *parent = nullptr)
+$constructor=5,8,0|new|QObject *=nullptr
+
 $prototype=QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusRtuSerialSlave()
 $deleteMethod=5,8,0
 
 $prototype=bool processesBroadcast() const override
+$method=5,8,0|bool|processesBroadcast|
 
 $prototype=bool open() override [protected]
 

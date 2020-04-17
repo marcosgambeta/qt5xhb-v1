@@ -28,24 +28,33 @@ $destructor
 $includes=5,8,0
 
 $prototype=explicit QModbusDevice(QObject *parent = nullptr)
+$constructor=5,8,0|new|QObject *=nullptr
+
 $prototype=QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusDevice()
 $deleteMethod=5,8,0
 
 $prototype=QVariant connectionParameter(int parameter) const
+$method=5,8,0|QVariant|connectionParameter|int
 
 $prototype=void setConnectionParameter(int parameter, const QVariant &value)
+$method=5,8,0|void|setConnectionParameter|int,const QVariant &
 
 $prototype=bool connectDevice()
+$method=5,8,0|bool|connectDevice|
 
 $prototype=void disconnectDevice()
+$method=5,8,0|void|disconnectDevice|
 
 $prototype=State state() const
+$method=5,8,0|QModbusDevice::State|state|
 
 $prototype=Error error() const
+$method=5,8,0|QModbusDevice::Error|error|
 
 $prototype=QString errorString() const
+$method=5,8,0|QString|errorString|
 
 $prototype=void setState(QModbusDevice::State newState) [protected]
 

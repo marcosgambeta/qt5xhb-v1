@@ -28,30 +28,42 @@ $destructor
 $includes=5,8,0
 
 $prototype=explicit QModbusServer(QObject *parent = nullptr)
+$constructor=5,8,0|new|QObject *=nullptr
+
 $prototype=QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusServer()
 $deleteMethod=5,8,0
 
 $prototype=int serverAddress() const
+$method=5,8,0|int|serverAddress|
 
 $prototype=void setServerAddress(int serverAddress)
+$method=5,8,0|void|setServerAddress|int
 
 $prototype=virtual bool setMap(const QModbusDataUnitMap &map)
+%% TODO: $virtualMethod=5,8,0|bool|setMap|const QModbusDataUnitMap &
 
 $prototype=virtual bool processesBroadcast() const
+$virtualMethod=5,8,0|bool|processesBroadcast|
 
 $prototype=virtual QVariant value(int option) const
+$virtualMethod=5,8,0|QVariant|value|int
 
 $prototype=virtual bool setValue(int option, const QVariant &value)
+$virtualMethod=5,8,0|bool|setValue|int,const QVariant &
 
 $prototype=bool data(QModbusDataUnit *newData) const
+%% TODO: $method=5,8,0|bool|data|QModbusDataUnit *
 
 $prototype=bool setData(const QModbusDataUnit &unit)
+%% TODO: $method=5,8,0|bool|setData|const QModbusDataUnit &
 
 $prototype=bool setData(QModbusDataUnit::RegisterType table, quint16 address, quint16 data)
+$method=5,8,0|bool|setData|QModbusDataUnit::RegisterType,quint16,quint16
 
 $prototype=bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) const
+%% TODO: $method=5,8,0|bool|data|QModbusDataUnit::RegisterType,quint16,quint16 *
 
 $prototype=virtual bool writeData(const QModbusDataUnit &unit) [protected]
 

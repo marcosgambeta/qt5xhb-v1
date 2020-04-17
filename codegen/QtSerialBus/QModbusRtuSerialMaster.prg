@@ -28,14 +28,18 @@ $destructor
 $includes=5,8,0
 
 $prototype=explicit QModbusRtuSerialMaster(QObject *parent = nullptr)
+$constructor=5,8,0|new|QObject *=nullptr
+
 $prototype=QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *parent = nullptr) [protected]
 
 $prototype=~QModbusRtuSerialMaster()
 $deleteMethod=5,8,0
 
 $prototype=int interFrameDelay() const
+$method=5,8,0|int|interFrameDelay|
 
 $prototype=void setInterFrameDelay(int microseconds)
+$method=5,8,0|void|setInterFrameDelay|int
 
 $prototype=void close() override [protected]
 
