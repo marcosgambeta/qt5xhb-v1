@@ -49,14 +49,16 @@ $internalConstructor=|new7|QObject *,const QString &,QQmlEngine *
 $prototype=QQmlProperty(const QQmlProperty & other)
 $internalConstructor=|new8|const QQmlProperty &
 
-//[1]QQmlProperty()
-//[2]QQmlProperty(QObject * obj)
-//[3]QQmlProperty(QObject * obj, QQmlContext * ctxt)
-//[4]QQmlProperty(QObject * obj, QQmlEngine * engine)
-//[5]QQmlProperty(QObject * obj, const QString & name)
-//[6]QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
-//[7]QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
-//[8]QQmlProperty(const QQmlProperty & other)
+/*
+[1]QQmlProperty()
+[2]QQmlProperty(QObject * obj)
+[3]QQmlProperty(QObject * obj, QQmlContext * ctxt)
+[4]QQmlProperty(QObject * obj, QQmlEngine * engine)
+[5]QQmlProperty(QObject * obj, const QString & name)
+[6]QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
+[7]QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
+[8]QQmlProperty(const QQmlProperty & other)
+*/
 
 HB_FUNC_STATIC( QQMLPROPERTY_NEW )
 {
@@ -106,8 +108,10 @@ $internalMethod=|bool|connectNotifySignal,connectNotifySignal1|QObject *,const c
 $prototype=bool connectNotifySignal(QObject * dest, int method) const
 $internalMethod=|bool|connectNotifySignal,connectNotifySignal2|QObject *,int
 
-//[1]bool connectNotifySignal(QObject * dest, const char * slot) const
-//[2]bool connectNotifySignal(QObject * dest, int method) const
+/*
+[1]bool connectNotifySignal(QObject * dest, const char * slot) const
+[2]bool connectNotifySignal(QObject * dest, int method) const
+*/
 
 HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
 {
@@ -186,10 +190,12 @@ $internalStaticMethod=|QVariant|read,read3|QObject *,const QString &,QQmlContext
 $prototype=static QVariant read(QObject * object, const QString & name, QQmlEngine * engine)
 $internalStaticMethod=|QVariant|read,read4|QObject *,const QString &,QQmlEngine *
 
-//[1]QVariant read() const
-//[2]QVariant read(QObject * object, const QString & name)
-//[3]QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
-//[4]QVariant read(QObject * object, const QString & name, QQmlEngine * engine)
+/*
+[1]QVariant read() const
+[2]QVariant read(QObject * object, const QString & name)
+[3]QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
+[4]QVariant read(QObject * object, const QString & name, QQmlEngine * engine)
+*/
 
 HB_FUNC_STATIC( QQMLPROPERTY_READ )
 {
@@ -234,10 +240,12 @@ $internalStaticMethod=|bool|write,write3|QObject *,const QString &,const QVarian
 $prototype=static bool write(QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine)
 $internalStaticMethod=|bool|write,write4|QObject *,const QString &,const QVariant &,QQmlEngine *
 
-//[1]bool write(const QVariant & value) const
-//[2]bool write(QObject * object, const QString & name, const QVariant & value)
-//[3]bool write(QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt)
-//[4]bool write(QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine)
+/*
+[1]bool write(const QVariant & value) const
+[2]bool write(QObject * object, const QString & name, const QVariant & value)
+[3]bool write(QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt)
+[4]bool write(QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine)
+*/
 
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
 {

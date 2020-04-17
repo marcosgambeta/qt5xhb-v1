@@ -44,11 +44,13 @@ $internalConstructor=|new4|QQmlEngine *,const QUrl &,QObject *=0
 $prototype=QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
 $internalConstructor=|new5|QQmlEngine *,const QUrl &,QQmlComponent::CompilationMode,QObject *=0
 
-//[1]QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
-//[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
-//[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
-//[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
-//[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
+/*
+[1]QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
+[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
+[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
+[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
+[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
+*/
 
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
 {
@@ -92,8 +94,10 @@ $internalVirtualMethod=|QObject *|create,create1|QQmlContext *=0
 $prototype=void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
 $internalMethod=|void|create,create2|QQmlIncubator &,QQmlContext *=0,QQmlContext *=0
 
-//[1]virtual QObject * create(QQmlContext * context = 0)
-//[2]void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
+/*
+[1]virtual QObject * create(QQmlContext * context = 0)
+[2]void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
+*/
 
 HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 {
@@ -142,8 +146,10 @@ $internalMethod=|void|loadUrl,loadUrl1|const QUrl &
 $prototype=void loadUrl(const QUrl & url, CompilationMode mode)
 $internalMethod=|void|loadUrl,loadUrl2|const QUrl &,QQmlComponent::CompilationMode
 
-//[1]void loadUrl(const QUrl & url)
-//[2]void loadUrl(const QUrl & url, CompilationMode mode)
+/*
+[1]void loadUrl(const QUrl & url)
+[2]void loadUrl(const QUrl & url, CompilationMode mode)
+*/
 
 HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
 {

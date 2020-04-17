@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QQmlError(const QQmlError & other)
 $internalConstructor=|new2|const QQmlError &
 
-//[1]QQmlError()
-//[2]QQmlError(const QQmlError & other)
+/*
+[1]QQmlError()
+[2]QQmlError(const QQmlError & other)
+*/
 
 HB_FUNC_STATIC( QQMLERROR_NEW )
 {

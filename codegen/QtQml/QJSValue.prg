@@ -55,15 +55,17 @@ $internalConstructor=|new8|const QLatin1String &
 $prototype=QJSValue(const char * value)
 $constructor=|new9|const char *
 
-//[1]QJSValue(SpecialValue value = UndefinedValue)
-//[2]QJSValue(const QJSValue & other)
-//[3]QJSValue(bool value)
-//[4]QJSValue(int value)
-//[5]QJSValue(uint value)
-//[6]QJSValue(double value)
-//[7]QJSValue(const QString & value)
-//[8]QJSValue(const QLatin1String & value)
-//[9]QJSValue(const char * value)
+/*
+[1]QJSValue(SpecialValue value = UndefinedValue)
+[2]QJSValue(const QJSValue & other)
+[3]QJSValue(bool value)
+[4]QJSValue(int value)
+[5]QJSValue(uint value)
+[6]QJSValue(double value)
+[7]QJSValue(const QString & value)
+[8]QJSValue(const QLatin1String & value)
+[9]QJSValue(const char * value)
+*/
 
 %% TODO: resolver conflitos
 HB_FUNC_STATIC( QJSVALUE_NEW )
@@ -157,8 +159,10 @@ $internalMethod=|QJSValue|property,property1|const QString &
 $prototype=QJSValue property(quint32 arrayIndex) const
 $internalMethod=|QJSValue|property,property2|quint32
 
-//[1]QJSValue property(const QString & name) const
-//[2]QJSValue property(quint32 arrayIndex) const
+/*
+[1]QJSValue property(const QString & name) const
+[2]QJSValue property(quint32 arrayIndex) const
+*/
 
 HB_FUNC_STATIC( QJSVALUE_PROPERTY )
 {
@@ -186,8 +190,10 @@ $internalMethod=|void|setProperty,setProperty1|const QString &,const QJSValue &
 $prototype=void setProperty(quint32 arrayIndex, const QJSValue & value)
 $internalMethod=|void|setProperty,setProperty2|quint32,const QJSValue &
 
-//[1]void setProperty(const QString & name, const QJSValue & value)
-//[2]void setProperty(quint32 arrayIndex, const QJSValue & value)
+/*
+[1]void setProperty(const QString & name, const QJSValue & value)
+[2]void setProperty(quint32 arrayIndex, const QJSValue & value)
+*/
 
 HB_FUNC_STATIC( QJSVALUE_SETPROPERTY )
 {

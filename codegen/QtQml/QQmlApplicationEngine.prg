@@ -36,9 +36,11 @@ $internalConstructor=5,1,0|new2|const QUrl &,QObject *=0
 $prototype=QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
 $internalConstructor=5,1,0|new3|const QString &,QObject *=0
 
-//[1]QQmlApplicationEngine(QObject *parent=0)
-//[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
-//[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
+/*
+[1]QQmlApplicationEngine(QObject *parent=0)
+[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
+[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
+*/
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 {
@@ -71,8 +73,10 @@ $internalMethod=5,1,0|void|load,load1|const QUrl &
 $prototype=void load(const QString &filePath)
 $internalMethod=5,1,0|void|load,load2|const QString &
 
-//[1]void load(const QUrl &url)
-//[2]void load(const QString &filePath)
+/*
+[1]void load(const QUrl &url)
+[2]void load(const QString &filePath)
+*/
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 {
