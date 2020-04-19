@@ -71,8 +71,10 @@ void QDomAttr_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDomAttr ()
-//[2]QDomAttr ( const QDomAttr & x )
+/*
+[1]QDomAttr ()
+[2]QDomAttr ( const QDomAttr & x )
+*/
 
 HB_FUNC_STATIC( QDOMATTR_NEW )
 {

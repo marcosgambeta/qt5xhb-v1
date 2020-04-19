@@ -78,8 +78,10 @@ void QXmlParseException_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
-//[2]QXmlParseException ( const QXmlParseException & other )
+/*
+[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
+[2]QXmlParseException ( const QXmlParseException & other )
+*/
 
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 {

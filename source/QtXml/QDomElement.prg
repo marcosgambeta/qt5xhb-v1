@@ -100,8 +100,10 @@ void QDomElement_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDomElement ()
-//[2]QDomElement ( const QDomElement & x )
+/*
+[1]QDomElement ()
+[2]QDomElement ( const QDomElement & x )
+*/
 
 HB_FUNC_STATIC( QDOMELEMENT_NEW )
 {
@@ -640,13 +642,15 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setAttribute ( const QString & name, const QString & value )
-//[2]void setAttribute ( const QString & name, int value )
-//[3]void setAttribute ( const QString & name, uint value )
-//[4]void setAttribute ( const QString & name, qlonglong value )
-//[5]void setAttribute ( const QString & name, qulonglong value )
-//[6]void setAttribute ( const QString & name, float value )
-//[7]void setAttribute ( const QString & name, double value )
+/*
+[1]void setAttribute ( const QString & name, const QString & value )
+[2]void setAttribute ( const QString & name, int value )
+[3]void setAttribute ( const QString & name, uint value )
+[4]void setAttribute ( const QString & name, qlonglong value )
+[5]void setAttribute ( const QString & name, qulonglong value )
+[6]void setAttribute ( const QString & name, float value )
+[7]void setAttribute ( const QString & name, double value )
+*/
 
 HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
 {
@@ -820,12 +824,14 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
-//[2]void setAttributeNS ( const QString nsURI, const QString & qName, int value )
-//[3]void setAttributeNS ( const QString nsURI, const QString & qName, uint value )
-//[4]void setAttributeNS ( const QString nsURI, const QString & qName, qlonglong value )
-//[5]void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
-//[6]void setAttributeNS ( const QString nsURI, const QString & qName, double value )
+/*
+[1]void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
+[2]void setAttributeNS ( const QString nsURI, const QString & qName, int value )
+[3]void setAttributeNS ( const QString nsURI, const QString & qName, uint value )
+[4]void setAttributeNS ( const QString nsURI, const QString & qName, qlonglong value )
+[5]void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
+[6]void setAttributeNS ( const QString nsURI, const QString & qName, double value )
+*/
 
 HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
 {

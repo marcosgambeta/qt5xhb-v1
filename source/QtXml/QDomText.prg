@@ -66,8 +66,10 @@ void QDomText_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDomText ()
-//[2]QDomText ( const QDomText & x )
+/*
+[1]QDomText ()
+[2]QDomText ( const QDomText & x )
+*/
 
 HB_FUNC_STATIC( QDOMTEXT_NEW )
 {

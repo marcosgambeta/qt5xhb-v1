@@ -68,8 +68,10 @@ void QDomEntity_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDomEntity ()
-//[2]QDomEntity ( const QDomEntity & x )
+/*
+[1]QDomEntity ()
+[2]QDomEntity ( const QDomEntity & x )
+*/
 
 HB_FUNC_STATIC( QDOMENTITY_NEW )
 {
