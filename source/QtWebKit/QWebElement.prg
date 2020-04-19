@@ -132,8 +132,10 @@ void QWebElement_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QWebElement ()
-//[2]QWebElement ( const QWebElement & other )
+/*
+[1]QWebElement ()
+[2]QWebElement ( const QWebElement & other )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_NEW )
 {
@@ -224,8 +226,10 @@ void QWebElement_appendInside2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void appendInside ( const QString & markup )
-//[2]void appendInside ( const QWebElement & element )
+/*
+[1]void appendInside ( const QString & markup )
+[2]void appendInside ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
 {
@@ -273,8 +277,10 @@ void QWebElement_appendOutside2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void appendOutside ( const QString & markup )
-//[2]void appendOutside ( const QWebElement & element )
+/*
+[1]void appendOutside ( const QString & markup )
+[2]void appendOutside ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 {
@@ -468,8 +474,10 @@ void QWebElement_encloseContentsWith2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void encloseContentsWith ( const QWebElement & element )
-//[2]void encloseContentsWith ( const QString & markup )
+/*
+[1]void encloseContentsWith ( const QWebElement & element )
+[2]void encloseContentsWith ( const QString & markup )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
 {
@@ -517,8 +525,10 @@ void QWebElement_encloseWith2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void encloseWith ( const QString & markup )
-//[2]void encloseWith ( const QWebElement & element )
+/*
+[1]void encloseWith ( const QString & markup )
+[2]void encloseWith ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 {
@@ -982,8 +992,10 @@ void QWebElement_prependInside2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void prependInside ( const QString & markup )
-//[2]void prependInside ( const QWebElement & element )
+/*
+[1]void prependInside ( const QString & markup )
+[2]void prependInside ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
 {
@@ -1031,8 +1043,10 @@ void QWebElement_prependOutside2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void prependOutside ( const QString & markup )
-//[2]void prependOutside ( const QWebElement & element )
+/*
+[1]void prependOutside ( const QString & markup )
+[2]void prependOutside ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 {
@@ -1235,8 +1249,10 @@ void QWebElement_render2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void render ( QPainter * painter )
-//[2]void render ( QPainter * painter, const QRect & clip )
+/*
+[1]void render ( QPainter * painter )
+[2]void render ( QPainter * painter, const QRect & clip )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_RENDER )
 {
@@ -1284,8 +1300,10 @@ void QWebElement_replace2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void replace ( const QString & markup )
-//[2]void replace ( const QWebElement & element )
+/*
+[1]void replace ( const QString & markup )
+[2]void replace ( const QWebElement & element )
+*/
 
 HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 {
