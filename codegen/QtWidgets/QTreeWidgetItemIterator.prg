@@ -34,9 +34,11 @@ $internalConstructor=|new2|QTreeWidget *,QTreeWidgetItemIterator::IteratorFlags=
 $prototype=QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
 $internalConstructor=|new3|QTreeWidgetItem *,QTreeWidgetItemIterator::IteratorFlags=QTreeWidgetItemIterator::All
 
-//[1]QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
-//[2]QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
-//[3]QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
+/*
+[1]QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
+[2]QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
+[3]QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
+*/
 
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 {

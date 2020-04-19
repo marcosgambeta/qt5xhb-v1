@@ -43,8 +43,10 @@ $internalMethod=|void|addDockWidget,addDockWidget1|Qt::DockWidgetArea,QDockWidge
 $prototype=void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
 $internalMethod=|void|addDockWidget,addDockWidget2|Qt::DockWidgetArea,QDockWidget *,Qt::Orientation
 
-//[1]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
-//[2]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
+/*
+[1]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
+[2]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
+*/
 
 HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 {
@@ -72,9 +74,11 @@ $internalMethod=|void|addToolBar,addToolBar2|QToolBar *
 $prototype=QToolBar * addToolBar ( const QString & title )
 $internalMethod=|QToolBar *|addToolBar,addToolBar3|const QString &
 
-//[1]void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
-//[2]void addToolBar ( QToolBar * toolbar )
-//[3]QToolBar * addToolBar ( const QString & title )
+/*
+[1]void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
+[2]void addToolBar ( QToolBar * toolbar )
+[3]QToolBar * addToolBar ( const QString & title )
+*/
 
 HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 {

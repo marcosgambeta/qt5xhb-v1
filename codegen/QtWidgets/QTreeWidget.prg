@@ -93,8 +93,10 @@ $internalMethod=|QTreeWidgetItem *|itemAt,itemAt1|const QPoint &
 $prototype=QTreeWidgetItem * itemAt ( int x, int y ) const
 $internalMethod=|QTreeWidgetItem *|itemAt,itemAt2|int,int
 
-//[1]QTreeWidgetItem * itemAt ( const QPoint & p ) const
-//[2]QTreeWidgetItem * itemAt ( int x, int y ) const
+/*
+[1]QTreeWidgetItem * itemAt ( const QPoint & p ) const
+[2]QTreeWidgetItem * itemAt ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 {
@@ -134,9 +136,11 @@ $internalMethod=|void|setCurrentItem,setCurrentItem2|QTreeWidgetItem *,int
 $prototype=void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
 $internalMethod=|void|setCurrentItem,setCurrentItem3|QTreeWidgetItem *,int,QItemSelectionModel::SelectionFlags
 
-//[1]void setCurrentItem ( QTreeWidgetItem * item )
-//[2]void setCurrentItem ( QTreeWidgetItem * item, int column )
-//[3]void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
+/*
+[1]void setCurrentItem ( QTreeWidgetItem * item )
+[2]void setCurrentItem ( QTreeWidgetItem * item, int column )
+[3]void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
+*/
 
 HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 {

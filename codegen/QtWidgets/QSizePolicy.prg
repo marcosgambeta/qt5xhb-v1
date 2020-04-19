@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
 $internalConstructor=|new2|QSizePolicy::Policy,QSizePolicy::Policy,QSizePolicy::ControlType=QSizePolicy::DefaultType
 
-//[1]QSizePolicy()
-//[2]QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
+/*
+[1]QSizePolicy()
+[2]QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
+*/
 
 HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 {

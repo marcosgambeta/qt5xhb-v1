@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
 $internalConstructor=|new2|QGraphicsScene *,QWidget *=0
 
-//[1]QGraphicsView ( QWidget * parent = 0 )
-//[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
+/*
+[1]QGraphicsView ( QWidget * parent = 0 )
+[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 {
@@ -72,9 +74,11 @@ $internalMethod=|void|centerOn,centerOn2|qreal,qreal
 $prototype=void centerOn ( const QGraphicsItem * item )
 $internalMethod=|void|centerOn,centerOn3|const QGraphicsItem *
 
-//[1]void centerOn ( const QPointF & pos )
-//[2]void centerOn ( qreal x, qreal y )
-//[3]void centerOn ( const QGraphicsItem * item )
+/*
+[1]void centerOn ( const QPointF & pos )
+[2]void centerOn ( qreal x, qreal y )
+[3]void centerOn ( const QGraphicsItem * item )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
 {
@@ -109,9 +113,11 @@ $internalMethod=|void|ensureVisible,ensureVisible2|qreal,qreal,qreal,qreal,int=5
 $prototype=void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
 $internalMethod=|void|ensureVisible,ensureVisible3|const QGraphicsItem *,int=50,int=50
 
-//[1]void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
-//[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
-//[3]void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
+/*
+[1]void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
+[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
+[3]void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 {
@@ -143,9 +149,11 @@ $internalMethod=|void|fitInView,fitInView2|qreal,qreal,qreal,qreal,Qt::AspectRat
 $prototype=void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 $internalMethod=|void|fitInView,fitInView3|const QGraphicsItem *,Qt::AspectRatioMode=Qt::IgnoreAspectRatio
 
-//[1]void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-//[2]void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-//[3]void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+/*
+[1]void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+[2]void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+[3]void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 {
@@ -183,8 +191,10 @@ $internalMethod=|QGraphicsItem *|itemAt,itemAt1|const QPoint &
 $prototype=QGraphicsItem * itemAt ( int x, int y ) const
 $internalMethod=|QGraphicsItem *|itemAt,itemAt2|int,int
 
-//[1]QGraphicsItem * itemAt ( const QPoint & pos ) const
-//[2]QGraphicsItem * itemAt ( int x, int y ) const
+/*
+[1]QGraphicsItem * itemAt ( const QPoint & pos ) const
+[2]QGraphicsItem * itemAt ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
 {
@@ -221,12 +231,14 @@ $internalMethod=|QPoint|mapFromScene,mapFromScene5|qreal,qreal
 $prototype=QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QPolygon|mapFromScene,mapFromScene6|qreal,qreal,qreal,qreal
 
-//[1]QPoint mapFromScene ( const QPointF & point ) const
-//[2]QPolygon mapFromScene ( const QRectF & rect ) const
-//[3]QPolygon mapFromScene ( const QPolygonF & polygon ) const
-//[4]QPainterPath mapFromScene ( const QPainterPath & path ) const
-//[5]QPoint mapFromScene ( qreal x, qreal y ) const
-//[6]QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+/*
+[1]QPoint mapFromScene ( const QPointF & point ) const
+[2]QPolygon mapFromScene ( const QRectF & rect ) const
+[3]QPolygon mapFromScene ( const QPolygonF & polygon ) const
+[4]QPainterPath mapFromScene ( const QPainterPath & path ) const
+[5]QPoint mapFromScene ( qreal x, qreal y ) const
+[6]QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
 {
@@ -279,12 +291,14 @@ $internalMethod=|QPointF|mapToScene,mapToScene5|int,int
 $prototype=QPolygonF mapToScene ( int x, int y, int w, int h ) const
 $internalMethod=|QPolygonF|mapToScene,mapToScene6|int,int,int,int
 
-//[1]QPointF mapToScene ( const QPoint & point ) const
-//[2]QPolygonF mapToScene ( const QRect & rect ) const
-//[3]QPolygonF mapToScene ( const QPolygon & polygon ) const
-//[4]QPainterPath mapToScene ( const QPainterPath & path ) const
-//[5]QPointF mapToScene ( int x, int y ) const
-//[6]QPolygonF mapToScene ( int x, int y, int w, int h ) const
+/*
+[1]QPointF mapToScene ( const QPoint & point ) const
+[2]QPolygonF mapToScene ( const QRect & rect ) const
+[3]QPolygonF mapToScene ( const QPolygon & polygon ) const
+[4]QPainterPath mapToScene ( const QPainterPath & path ) const
+[5]QPointF mapToScene ( int x, int y ) const
+[6]QPolygonF mapToScene ( int x, int y, int w, int h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
 {
@@ -406,8 +420,10 @@ $internalMethod=|void|setSceneRect,setSceneRect1|const QRectF &
 $prototype=void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|setSceneRect,setSceneRect2|qreal,qreal,qreal,qreal
 
-//[1]void setSceneRect ( const QRectF & rect )
-//[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
+/*
+[1]void setSceneRect ( const QRectF & rect )
+[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 {

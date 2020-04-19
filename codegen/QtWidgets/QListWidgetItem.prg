@@ -37,10 +37,12 @@ $internalConstructor=|new3|const QIcon &,const QString &,QListWidget *=0,int=QLi
 $prototype=QListWidgetItem ( const QListWidgetItem & other )
 $internalConstructor=|new4|const QListWidgetItem &
 
-//[1]QListWidgetItem ( QListWidget * parent = 0, int type = Type )
-//[2]QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
-//[3]QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
-//[4]QListWidgetItem ( const QListWidgetItem & other )
+/*
+[1]QListWidgetItem ( QListWidget * parent = 0, int type = Type )
+[2]QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
+[3]QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
+[4]QListWidgetItem ( const QListWidgetItem & other )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {

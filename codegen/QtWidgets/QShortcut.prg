@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *
 $prototype=QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
 $internalConstructor=|new2|const QKeySequence &,QWidget *,const char *=0,const char *=0,Qt::ShortcutContext=Qt::WindowShortcut
 
-//[1]QShortcut(QWidget * parent)
-//[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
+/*
+[1]QShortcut(QWidget * parent)
+[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
+*/
 
 HB_FUNC_STATIC( QSHORTCUT_NEW )
 {

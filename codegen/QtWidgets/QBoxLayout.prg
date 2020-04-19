@@ -81,8 +81,10 @@ $internalMethod=|bool|setStretchFactor,setStretchFactor1|QWidget *,int
 $prototype=bool setStretchFactor ( QLayout * layout, int stretch )
 $internalMethod=|bool|setStretchFactor,setStretchFactor2|QLayout *,int
 
-//[1]bool setStretchFactor ( QWidget * widget, int stretch )
-//[2]bool setStretchFactor ( QLayout * layout, int stretch )
+/*
+[1]bool setStretchFactor ( QWidget * widget, int stretch )
+[2]bool setStretchFactor ( QLayout * layout, int stretch )
+*/
 
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 {

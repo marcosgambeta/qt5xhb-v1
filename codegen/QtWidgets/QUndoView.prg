@@ -37,9 +37,11 @@ $internalConstructor=|new2|QUndoStack *,QWidget *=0
 $prototype=QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
 $internalConstructor=|new3|QUndoGroup *,QWidget *=0
 
-//[1]QUndoView ( QWidget * parent = 0 )
-//[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
-//[3]QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
+/*
+[1]QUndoView ( QWidget * parent = 0 )
+[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
+[3]QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {

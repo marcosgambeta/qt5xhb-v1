@@ -33,9 +33,11 @@ $internalConstructor=|new2|const QStyleOptionGraphicsItem &
 
 $prototype=QStyleOptionGraphicsItem(int version) [protected]
 
-//[1]QStyleOptionGraphicsItem()
-//[2]QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem &other)
-//[3]QStyleOptionGraphicsItem(int version) [protected]
+/*
+[1]QStyleOptionGraphicsItem()
+[2]QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem &other)
+[3]QStyleOptionGraphicsItem(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
 {

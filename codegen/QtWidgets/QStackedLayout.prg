@@ -36,9 +36,11 @@ $internalConstructor=|new2|QWidget *
 $prototype=QStackedLayout ( QLayout * parentLayout )
 $internalConstructor=|new3|QLayout *
 
-//[1]QStackedLayout ()
-//[2]QStackedLayout ( QWidget * parent )
-//[3]QStackedLayout ( QLayout * parentLayout )
+/*
+[1]QStackedLayout ()
+[2]QStackedLayout ( QWidget * parent )
+[3]QStackedLayout ( QLayout * parentLayout )
+*/
 
 HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 {

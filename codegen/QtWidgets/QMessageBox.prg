@@ -37,8 +37,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 $internalConstructor=|new2|QMessageBox::Icon,const QString &,const QString &,QMessageBox::StandardButtons=QMessageBox::NoButton,QWidget *=0,Qt::WindowFlags=Qt::Dialog OR Qt::MSWindowsFixedSizeDialogHint
 
-//[1]explicit QMessageBox ( QWidget * parent = 0 )
-//[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+/*
+[1]explicit QMessageBox ( QWidget * parent = 0 )
+[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 {
@@ -67,9 +69,11 @@ $internalMethod=|QPushButton *|addButton,addButton2|const QString &,QMessageBox:
 $prototype=QPushButton * addButton ( StandardButton button )
 $internalMethod=|QPushButton *|addButton,addButton3|QMessageBox::StandardButton
 
-//[1]void addButton ( QAbstractButton * button, ButtonRole role )
-//[2]QPushButton * addButton ( const QString & text, ButtonRole role )
-//[3]QPushButton * addButton ( StandardButton button )
+/*
+[1]void addButton ( QAbstractButton * button, ButtonRole role )
+[2]QPushButton * addButton ( const QString & text, ButtonRole role )
+[3]QPushButton * addButton ( StandardButton button )
+*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 {
@@ -146,8 +150,10 @@ $internalMethod=|void|setDefaultButton,setDefaultButton1|QPushButton *
 $prototype=void setDefaultButton ( StandardButton button )
 $internalMethod=|void|setDefaultButton,setDefaultButton2|QMessageBox::StandardButton
 
-//[1]void setDefaultButton ( QPushButton * button )
-//[2]void setDefaultButton ( StandardButton button )
+/*
+[1]void setDefaultButton ( QPushButton * button )
+[2]void setDefaultButton ( StandardButton button )
+*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 {
@@ -172,8 +178,10 @@ $internalMethod=|void|setEscapeButton,setEscapeButton1|QAbstractButton *
 $prototype=void setEscapeButton ( StandardButton button )
 $internalMethod=|void|setEscapeButton,setEscapeButton2|QMessageBox::StandardButton
 
-//[1]void setEscapeButton ( QAbstractButton * button )
-//[2]void setEscapeButton ( StandardButton button )
+/*
+[1]void setEscapeButton ( QAbstractButton * button )
+[2]void setEscapeButton ( StandardButton button )
+*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
 {

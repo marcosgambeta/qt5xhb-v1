@@ -33,9 +33,11 @@ $internalConstructor=|new2|const QStyleOptionDockWidget &
 
 $prototype=QStyleOptionDockWidget(int version) [protected]
 
-//[1]QStyleOptionDockWidget()
-//[2]QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
-//[3]QStyleOptionDockWidget(int version) [protected]
+/*
+[1]QStyleOptionDockWidget()
+[2]QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
+[3]QStyleOptionDockWidget(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
 {

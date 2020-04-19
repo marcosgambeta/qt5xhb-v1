@@ -36,8 +36,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QTextEdit ( const QString & text, QWidget * parent = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0
 
-//[1]QTextEdit ( QWidget * parent = 0 )
-//[2]QTextEdit ( const QString & text, QWidget * parent = 0 )
+/*
+[1]QTextEdit ( QWidget * parent = 0 )
+[2]QTextEdit ( const QString & text, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QTEXTEDIT_NEW )
 {
@@ -78,8 +80,10 @@ $internalMethod=|QMenu *|createStandardContextMenu,createStandardContextMenu1|
 $prototype=QMenu * createStandardContextMenu ( const QPoint & position )
 $internalMethod=|QMenu *|createStandardContextMenu,createStandardContextMenu2|const QPoint &
 
-//[1]QMenu * createStandardContextMenu ()
-//[2]QMenu * createStandardContextMenu ( const QPoint & position )
+/*
+[1]QMenu * createStandardContextMenu ()
+[2]QMenu * createStandardContextMenu ( const QPoint & position )
+*/
 
 HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 {
@@ -113,8 +117,10 @@ $internalMethod=|QRect|cursorRect,cursorRect1|const QTextCursor &
 $prototype=QRect cursorRect () const
 $internalMethod=|QRect|cursorRect,cursorRect2|
 
-//[1]QRect cursorRect ( const QTextCursor & cursor ) const
-//[2]QRect cursorRect () const
+/*
+[1]QRect cursorRect ( const QTextCursor & cursor ) const
+[2]QRect cursorRect () const
+*/
 
 HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 {

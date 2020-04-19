@@ -97,8 +97,10 @@ $internalMethod=|void|setBaseSize,setBaseSize1|const QSize &
 $prototype=void setBaseSize ( int basew, int baseh )
 $internalMethod=|void|setBaseSize,setBaseSize2|int,int
 
-//[1]void setBaseSize ( const QSize & )
-//[2]void setBaseSize ( int basew, int baseh )
+/*
+[1]void setBaseSize ( const QSize & )
+[2]void setBaseSize ( int basew, int baseh )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETBASESIZE )
 {
@@ -123,8 +125,10 @@ $internalMethod=|QWidget *|childAt,childAt1|int,int
 $prototype=QWidget * childAt ( const QPoint & p ) const
 $internalMethod=|QWidget *|childAt,childAt2|const QPoint &
 
-//[1]QWidget * childAt ( int x, int y ) const
-//[2]QWidget * childAt ( const QPoint & p ) const
+/*
+[1]QWidget * childAt ( int x, int y ) const
+[2]QWidget * childAt ( const QPoint & p ) const
+*/
 
 HB_FUNC_STATIC( QWIDGET_CHILDAT )
 {
@@ -233,8 +237,10 @@ $internalMethod=|void|grabMouse,grabMouse1|
 $prototype=void grabMouse ( const QCursor & cursor )
 $internalMethod=|void|grabMouse,grabMouse2|const QCursor &|#ifndef QT_NO_CURSOR
 
-//[1]void grabMouse ()
-//[2]void grabMouse ( const QCursor & cursor )
+/*
+[1]void grabMouse ()
+[2]void grabMouse ( const QCursor & cursor )
+*/
 
 HB_FUNC_STATIC( QWIDGET_GRABMOUSE )
 {
@@ -388,8 +394,10 @@ $internalMethod=|void|setMask,setMask1|const QBitmap &
 $prototype=void setMask ( const QRegion & region )
 $internalMethod=|void|setMask,setMask2|const QRegion &
 
-//[1]void setMask ( const QBitmap & bitmap )
-//[2]void setMask ( const QRegion & region )
+/*
+[1]void setMask ( const QBitmap & bitmap )
+[2]void setMask ( const QRegion & region )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETMASK )
 {
@@ -444,8 +452,10 @@ $internalMethod=|void|move,move1|const QPoint &
 $prototype=void move ( int x, int y )
 $internalMethod=|void|move,move2|int,int
 
-//[1]void move ( const QPoint & )
-//[2]void move ( int x, int y )
+/*
+[1]void move ( const QPoint & )
+[2]void move ( int x, int y )
+*/
 
 HB_FUNC_STATIC( QWIDGET_MOVE )
 {
@@ -509,8 +519,10 @@ $internalMethod=|void|render,render1|QPaintDevice *,const QPoint &=QPoint(),cons
 $prototype=void render (QPainter *painter, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
 $internalMethod=|void|render,render2|QPainter *,const QPoint &=QPoint(),const QRegion &=QRegion(),QWidget::RenderFlags=QWidget::RenderFlags(QWidget::DrawWindowBackground OR QWidget::DrawChildren)
 
-//[1]void render (QPaintDevice *target, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
-//[2]void render (QPainter *painter, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
+/*
+[1]void render (QPaintDevice *target, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
+[2]void render (QPainter *painter, const QPoint &targetOffset = QPoint(),const QRegion &sourceRegion = QRegion(),RenderFlags renderFlags = RenderFlags(DrawWindowBackground | DrawChildren))
+*/
 
 %% TODO: identificar QPaintDevice e QPainter
 HB_FUNC_STATIC( QWIDGET_RENDER )
@@ -542,10 +554,12 @@ $internalMethod=|void|repaint,repaint3|const QRegion &
 $prototype=void repaint ()
 $internalMethod=|void|repaint,repaint4|
 
-//[1]void repaint ( int x, int y, int w, int h )
-//[2]void repaint ( const QRect & rect )
-//[3]void repaint ( const QRegion & rgn )
-//[4]void repaint ()
+/*
+[1]void repaint ( int x, int y, int w, int h )
+[2]void repaint ( const QRect & rect )
+[3]void repaint ( const QRegion & rgn )
+[4]void repaint ()
+*/
 
 HB_FUNC_STATIC( QWIDGET_REPAINT )
 {
@@ -578,8 +592,10 @@ $internalMethod=|void|resize,resize1|const QSize &
 $prototype=void resize ( int w, int h )
 $internalMethod=|void|resize,resize2|int,int
 
-//[1]void resize ( const QSize & )
-//[2]void resize ( int w, int h )
+/*
+[1]void resize ( const QSize & )
+[2]void resize ( int w, int h )
+*/
 
 HB_FUNC_STATIC( QWIDGET_RESIZE )
 {
@@ -610,8 +626,10 @@ $internalMethod=|void|scroll,scroll1|int,int
 $prototype=void scroll ( int dx, int dy, const QRect & r )
 $internalMethod=|void|scroll,scroll2|int,int,const QRect &
 
-//[1]void scroll ( int dx, int dy )
-//[2]void scroll ( int dx, int dy, const QRect & r )
+/*
+[1]void scroll ( int dx, int dy )
+[2]void scroll ( int dx, int dy, const QRect & r )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SCROLL )
 {
@@ -639,8 +657,10 @@ $internalMethod=|void|setContentsMargins,setContentsMargins1|int,int,int,int
 $prototype=void setContentsMargins ( const QMargins & margins )
 $internalMethod=|void|setContentsMargins,setContentsMargins2|const QMargins &
 
-//[1]void setContentsMargins ( int left, int top, int right, int bottom )
-//[2]void setContentsMargins ( const QMargins & margins )
+/*
+[1]void setContentsMargins ( int left, int top, int right, int bottom )
+[2]void setContentsMargins ( const QMargins & margins )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETCONTENTSMARGINS )
 {
@@ -671,8 +691,10 @@ $internalMethod=|void|setFixedSize,setFixedSize1|const QSize &
 $prototype=void setFixedSize ( int w, int h )
 $internalMethod=|void|setFixedSize,setFixedSize2|int,int
 
-//[1]void setFixedSize ( const QSize & s )
-//[2]void setFixedSize ( int w, int h )
+/*
+[1]void setFixedSize ( const QSize & s )
+[2]void setFixedSize ( int w, int h )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETFIXEDSIZE )
 {
@@ -700,8 +722,10 @@ $internalMethod=|void|setFocus,setFocus1|Qt::FocusReason
 $prototype=void setFocus ()
 $internalMethod=|void|setFocus,setFocus2|
 
-//[1]void setFocus ( Qt::FocusReason reason )
-//[2]void setFocus ()
+/*
+[1]void setFocus ( Qt::FocusReason reason )
+[2]void setFocus ()
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETFOCUS )
 {
@@ -732,8 +756,10 @@ $internalMethod=|void|setGeometry,setGeometry1|const QRect &
 $prototype=void setGeometry ( int x, int y, int w, int h )
 $internalMethod=|void|setGeometry,setGeometry2|int,int,int,int
 
-//[1]void setGeometry ( const QRect & )
-//[2]void setGeometry ( int x, int y, int w, int h )
+/*
+[1]void setGeometry ( const QRect & )
+[2]void setGeometry ( int x, int y, int w, int h )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETGEOMETRY )
 {
@@ -764,8 +790,10 @@ $internalMethod=|void|setMaximumSize,setMaximumSize1|const QSize &
 $prototype=void setMaximumSize ( int maxw, int maxh )
 $internalMethod=|void|setMaximumSize,setMaximumSize2|int,int
 
-//[1]void setMaximumSize ( const QSize & )
-//[2]void setMaximumSize ( int maxw, int maxh )
+/*
+[1]void setMaximumSize ( const QSize & )
+[2]void setMaximumSize ( int maxw, int maxh )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETMAXIMUMSIZE )
 {
@@ -793,8 +821,10 @@ $internalMethod=|void|setMinimumSize,setMinimumSize1|const QSize &
 $prototype=void setMinimumSize ( int minw, int minh )
 $internalMethod=|void|setMinimumSize,setMinimumSize2|int,int
 
-//[1]void setMinimumSize ( const QSize & )
-//[2]void setMinimumSize ( int minw, int minh )
+/*
+[1]void setMinimumSize ( const QSize & )
+[2]void setMinimumSize ( int minw, int minh )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETMINIMUMSIZE )
 {
@@ -819,8 +849,10 @@ $internalMethod=|void|setParent,setParent1|QWidget *
 $prototype=void setParent ( QWidget * parent, Qt::WindowFlags f )
 $internalMethod=|void|setParent,setParent2|QWidget *,Qt::WindowFlags
 
-//[1]void setParent ( QWidget * parent )
-//[2]void setParent ( QWidget * parent, Qt::WindowFlags f )
+/*
+[1]void setParent ( QWidget * parent )
+[2]void setParent ( QWidget * parent, Qt::WindowFlags f )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETPARENT )
 {
@@ -854,8 +886,10 @@ $internalMethod=|void|setSizeIncrement,setSizeIncrement1|const QSize &
 $prototype=void setSizeIncrement ( int w, int h )
 $internalMethod=|void|setSizeIncrement,setSizeIncrement2|int,int
 
-//[1]void setSizeIncrement ( const QSize & )
-//[2]void setSizeIncrement ( int w, int h )
+/*
+[1]void setSizeIncrement ( const QSize & )
+[2]void setSizeIncrement ( int w, int h )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETSIZEINCREMENT )
 {
@@ -883,8 +917,10 @@ $internalMethod=|void|setSizePolicy,setSizePolicy1|QSizePolicy
 $prototype=void setSizePolicy ( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
 $internalMethod=|void|setSizePolicy,setSizePolicy2|QSizePolicy::Policy,QSizePolicy::Policy
 
-//[1]void setSizePolicy ( QSizePolicy & )
-//[2]void setSizePolicy ( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
+/*
+[1]void setSizePolicy ( QSizePolicy & )
+[2]void setSizePolicy ( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
+*/
 
 HB_FUNC_STATIC( QWIDGET_SETSIZEPOLICY )
 {
@@ -975,10 +1011,12 @@ $internalMethod=|void|update,update3|const QRegion &
 $prototype=void update ()
 $internalMethod=|void|update,update4|
 
-//[1]void update ( int x, int y, int w, int h )
-//[2]void update ( const QRect & rect )
-//[3]void update ( const QRegion & rgn )
-//[4]void update ()
+/*
+[1]void update ( int x, int y, int w, int h )
+[2]void update ( const QRect & rect )
+[3]void update ( const QRegion & rgn )
+[4]void update ()
+*/
 
 HB_FUNC_STATIC( QWIDGET_UPDATE )
 {

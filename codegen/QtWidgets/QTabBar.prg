@@ -41,8 +41,10 @@ $internalMethod=|int|addTab,addTab1|const QString &
 $prototype=int addTab ( const QIcon & icon, const QString & text )
 $internalMethod=|int|addTab,addTab2|const QIcon &,const QString &
 
-//[1]int addTab ( const QString & text )
-//[2]int addTab ( const QIcon & icon, const QString & text )
+/*
+[1]int addTab ( const QString & text )
+[2]int addTab ( const QIcon & icon, const QString & text )
+*/
 
 HB_FUNC_STATIC( QTABBAR_ADDTAB )
 {
@@ -88,8 +90,10 @@ $internalMethod=|int|insertTab,insertTab1|int,const QString &
 $prototype=int insertTab ( int index, const QIcon & icon, const QString & text )
 $internalMethod=|int|insertTab,insertTab2|int,const QIcon &,const QString &
 
-//[1]int insertTab ( int index, const QString & text )
-//[2]int insertTab ( int index, const QIcon & icon, const QString & text )
+/*
+[1]int insertTab ( int index, const QString & text )
+[2]int insertTab ( int index, const QIcon & icon, const QString & text )
+*/
 
 HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 {

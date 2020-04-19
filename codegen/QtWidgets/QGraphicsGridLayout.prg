@@ -36,8 +36,10 @@ $internalMethod=|void|addItem,addItem1|QGraphicsLayoutItem *,int,int,int,int,Qt:
 $prototype=void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addItem,addItem2|QGraphicsLayoutItem *,int,int,Qt::Alignment=0
 
-//[1]void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-//[2]void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
+/*
+[1]void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+[2]void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 {
@@ -89,8 +91,10 @@ $internalMethod=|QGraphicsLayoutItem *|itemAt,itemAt1|int,int
 $prototype=virtual QGraphicsLayoutItem * itemAt ( int index ) const
 $internalVirtualMethod=|QGraphicsLayoutItem *|itemAt,itemAt2|int
 
-//[1]QGraphicsLayoutItem * itemAt ( int row, int column ) const
-//[2]virtual QGraphicsLayoutItem * itemAt ( int index ) const
+/*
+[1]QGraphicsLayoutItem * itemAt ( int row, int column ) const
+[2]virtual QGraphicsLayoutItem * itemAt ( int index ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 {

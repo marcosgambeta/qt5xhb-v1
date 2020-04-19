@@ -33,8 +33,10 @@ $internalConstructor=|new1|QState *=0
 $prototype=QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
 $internalConstructor=|new2|QObject *,QEvent::Type,Qt::MouseButton,QState *=0
 
-//[1]QMouseEventTransition ( QState * sourceState = 0 )
-//[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
+/*
+[1]QMouseEventTransition ( QState * sourceState = 0 )
+[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
+*/
 
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 {

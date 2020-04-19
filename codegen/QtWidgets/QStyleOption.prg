@@ -31,8 +31,10 @@ $internalConstructor=|new1|int=QStyleOption::Version,int=QStyleOption::SO_Defaul
 $prototype=QStyleOption(const QStyleOption &other)
 $internalConstructor=|new2|const QStyleOption &
 
-//[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
-//[2]QStyleOption(const QStyleOption &other)
+/*
+[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
+[2]QStyleOption(const QStyleOption &other)
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 {

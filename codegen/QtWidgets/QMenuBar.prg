@@ -44,9 +44,11 @@ $internalMethod=|QAction *|addAction,addAction2|const QString &,const QObject *,
 $prototype=void addAction ( QAction * action )
 $internalMethod=|void|addAction,addAction3|QAction *
 
-//[1]QAction * addAction ( const QString & text )
-//[2]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-//[3]void addAction ( QAction * action )
+/*
+[1]QAction * addAction ( const QString & text )
+[2]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
+[3]void addAction ( QAction * action )
+*/
 
 HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 {
@@ -78,9 +80,11 @@ $internalMethod=|QMenu *|addMenu,addMenu2|const QString &
 $prototype=QMenu * addMenu ( const QIcon & icon, const QString & title )
 $internalMethod=|QMenu *|addMenu,addMenu3|const QIcon &,const QString &
 
-//[1]QAction * addMenu ( QMenu * menu )
-//[2]QMenu * addMenu ( const QString & title )
-//[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+/*
+[1]QAction * addMenu ( QMenu * menu )
+[2]QMenu * addMenu ( const QString & title )
+[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+*/
 
 HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 {

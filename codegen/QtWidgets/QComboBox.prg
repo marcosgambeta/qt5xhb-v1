@@ -50,8 +50,10 @@ $internalMethod=|void|addItem,addItem1|const QString &,const QVariant &=QVariant
 $prototype=void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 $internalMethod=|void|addItem,addItem2|const QIcon &,const QString &,const QVariant &=QVariant()
 
-//[1]void addItem ( const QString & text, const QVariant & userData = QVariant() )
-//[2]void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+/*
+[1]void addItem ( const QString & text, const QVariant & userData = QVariant() )
+[2]void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+*/
 
 HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
 {
@@ -109,8 +111,10 @@ $internalMethod=|void|insertItem,insertItem1|int,const QString &,const QVariant 
 $prototype=void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 $internalMethod=|void|insertItem,insertItem2|int,const QIcon &,const QString &,const QVariant &=QVariant()
 
-//[1]void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
-//[2]void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+/*
+[1]void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
+[2]void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+*/
 
 HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 {

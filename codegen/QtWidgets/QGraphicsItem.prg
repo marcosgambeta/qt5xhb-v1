@@ -98,8 +98,10 @@ $internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &=QRectF(),int=5
 $prototype=void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 $internalMethod=|void|ensureVisible,ensureVisible2|qreal,qreal,qreal,qreal,int=50,int=50
 
-//[1]void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
-//[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
+/*
+[1]void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
+[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 {
@@ -182,9 +184,11 @@ $internalMethod=|bool|isObscured,isObscured2|qreal,qreal,qreal,qreal
 $prototype=bool isObscured ( const QRectF & rect ) const
 $internalMethod=|bool|isObscured,isObscured3|const QRectF &
 
-//[1]bool isObscured () const
-//[2]bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
-//[3]bool isObscured ( const QRectF & rect ) const
+/*
+[1]bool isObscured () const
+[2]bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
+[3]bool isObscured ( const QRectF & rect ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 {
@@ -252,12 +256,14 @@ $internalMethod=|QPolygonF|mapFromItem,mapFromItem5|const QGraphicsItem *,qreal,
 $prototype=QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
 $internalMethod=|QPointF|mapFromItem,mapFromItem6|const QGraphicsItem *,qreal,qreal
 
-//[1]QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
-//[2]QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
-//[3]QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
-//[4]QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
-//[5]QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-//[6]QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
+/*
+[1]QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
+[2]QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
+[3]QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
+[4]QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
+[5]QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+[6]QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 {
@@ -310,12 +316,14 @@ $internalMethod=|QPolygonF|mapFromParent,mapFromParent5|qreal,qreal,qreal,qreal
 $prototype=QPointF mapFromParent ( qreal x, qreal y ) const
 $internalMethod=|QPointF|mapFromParent,mapFromParent6|qreal,qreal
 
-//[1]QPointF mapFromParent ( const QPointF & point ) const
-//[2]QPolygonF mapFromParent ( const QRectF & rect ) const
-//[3]QPolygonF mapFromParent ( const QPolygonF & polygon ) const
-//[4]QPainterPath mapFromParent ( const QPainterPath & path ) const
-//[5]QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
-//[6]QPointF mapFromParent ( qreal x, qreal y ) const
+/*
+[1]QPointF mapFromParent ( const QPointF & point ) const
+[2]QPolygonF mapFromParent ( const QRectF & rect ) const
+[3]QPolygonF mapFromParent ( const QPolygonF & polygon ) const
+[4]QPainterPath mapFromParent ( const QPainterPath & path ) const
+[5]QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
+[6]QPointF mapFromParent ( qreal x, qreal y ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 {
@@ -368,12 +376,14 @@ $internalMethod=|QPolygonF|mapFromScene,mapFromScene5|qreal,qreal,qreal,qreal
 $prototype=QPointF mapFromScene ( qreal x, qreal y ) const
 $internalMethod=|QPointF|mapFromScene,mapFromScene6|qreal,qreal
 
-//[1]QPointF mapFromScene ( const QPointF & point ) const
-//[2]QPolygonF mapFromScene ( const QRectF & rect ) const
-//[3]QPolygonF mapFromScene ( const QPolygonF & polygon ) const
-//[4]QPainterPath mapFromScene ( const QPainterPath & path ) const
-//[5]QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-//[6]QPointF mapFromScene ( qreal x, qreal y ) const
+/*
+[1]QPointF mapFromScene ( const QPointF & point ) const
+[2]QPolygonF mapFromScene ( const QRectF & rect ) const
+[3]QPolygonF mapFromScene ( const QPolygonF & polygon ) const
+[4]QPainterPath mapFromScene ( const QPainterPath & path ) const
+[5]QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+[6]QPointF mapFromScene ( qreal x, qreal y ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 {
@@ -414,8 +424,10 @@ $internalMethod=|QRectF|mapRectFromItem,mapRectFromItem1|const QGraphicsItem *,c
 $prototype=QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectFromItem,mapRectFromItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
-//[1]QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
-//[2]QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+/*
+[1]QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
+[2]QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 {
@@ -440,8 +452,10 @@ $internalMethod=|QRectF|mapRectFromParent,mapRectFromParent1|const QRectF &
 $prototype=QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectFromParent,mapRectFromParent2|qreal,qreal,qreal,qreal
 
-//[1]QRectF mapRectFromParent ( const QRectF & rect ) const
-//[2]QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
+/*
+[1]QRectF mapRectFromParent ( const QRectF & rect ) const
+[2]QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 {
@@ -466,8 +480,10 @@ $internalMethod=|QRectF|mapRectFromScene,mapRectFromScene1|const QRectF &
 $prototype=QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectFromScene,mapRectFromScene2|qreal,qreal,qreal,qreal
 
-//[1]QRectF mapRectFromScene ( const QRectF & rect ) const
-//[2]QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+/*
+[1]QRectF mapRectFromScene ( const QRectF & rect ) const
+[2]QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 {
@@ -492,8 +508,10 @@ $internalMethod=|QRectF|mapRectToItem,mapRectToItem1|const QGraphicsItem *,const
 $prototype=QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectToItem,mapRectToItem2|const QGraphicsItem *,qreal,qreal,qreal,qreal
 
-//[1]QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
-//[2]QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+/*
+[1]QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
+[2]QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 {
@@ -518,8 +536,10 @@ $internalMethod=|QRectF|mapRectToParent,mapRectToParent1|const QRectF &
 $prototype=QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectToParent,mapRectToParent2|qreal,qreal,qreal,qreal
 
-//[1]QRectF mapRectToParent ( const QRectF & rect ) const
-//[2]QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
+/*
+[1]QRectF mapRectToParent ( const QRectF & rect ) const
+[2]QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 {
@@ -544,8 +564,10 @@ $internalMethod=|QRectF|mapRectToScene,mapRectToScene1|const QRectF &
 $prototype=QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
 $internalMethod=|QRectF|mapRectToScene,mapRectToScene2|qreal,qreal,qreal,qreal
 
-//[1]QRectF mapRectToScene ( const QRectF & rect ) const
-//[2]QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
+/*
+[1]QRectF mapRectToScene ( const QRectF & rect ) const
+[2]QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 {
@@ -582,12 +604,14 @@ $internalMethod=|QPolygonF|mapToItem,mapToItem5|const QGraphicsItem *,qreal,qrea
 $prototype=QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
 $internalMethod=|QPointF|mapToItem,mapToItem6|const QGraphicsItem *,qreal,qreal
 
-//[1]QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
-//[2]QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
-//[3]QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
-//[4]QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
-//[5]QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-//[6]QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
+/*
+[1]QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
+[2]QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
+[3]QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
+[4]QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
+[5]QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+[6]QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 {
@@ -640,12 +664,14 @@ $internalMethod=|QPolygonF|mapToParent,mapToParent5|qreal,qreal,qreal,qreal
 $prototype=QPointF mapToParent ( qreal x, qreal y ) const
 $internalMethod=|QPointF|mapToParent,mapToParent6|qreal,qreal
 
-//[1]QPointF mapToParent ( const QPointF & point ) const
-//[2]QPolygonF mapToParent ( const QRectF & rect ) const
-//[3]QPolygonF mapToParent ( const QPolygonF & polygon ) const
-//[4]QPainterPath mapToParent ( const QPainterPath & path ) const
-//[5]QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
-//[6]QPointF mapToParent ( qreal x, qreal y ) const
+/*
+[1]QPointF mapToParent ( const QPointF & point ) const
+[2]QPolygonF mapToParent ( const QRectF & rect ) const
+[3]QPolygonF mapToParent ( const QPolygonF & polygon ) const
+[4]QPainterPath mapToParent ( const QPainterPath & path ) const
+[5]QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
+[6]QPointF mapToParent ( qreal x, qreal y ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 {
@@ -698,12 +724,14 @@ $internalMethod=|QPolygonF|mapToScene,mapToScene5|qreal,qreal,qreal,qreal
 $prototype=QPointF mapToScene ( qreal x, qreal y ) const
 $internalMethod=|QPointF|mapToScene,mapToScene6|qreal,qreal
 
-//[1]QPointF mapToScene ( const QPointF & point ) const
-//[2]QPolygonF mapToScene ( const QRectF & rect ) const
-//[3]QPolygonF mapToScene ( const QPolygonF & polygon ) const
-//[4]QPainterPath mapToScene ( const QPainterPath & path ) const
-//[5]QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
-//[6]QPointF mapToScene ( qreal x, qreal y ) const
+/*
+[1]QPointF mapToScene ( const QPointF & point ) const
+[2]QPolygonF mapToScene ( const QRectF & rect ) const
+[3]QPolygonF mapToScene ( const QPolygonF & polygon ) const
+[4]QPainterPath mapToScene ( const QPainterPath & path ) const
+[5]QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
+[6]QPointF mapToScene ( qreal x, qreal y ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 {
@@ -864,8 +892,10 @@ $internalMethod=|void|setPos,setPos1|const QPointF &
 $prototype=void setPos ( qreal x, qreal y )
 $internalMethod=|void|setPos,setPos2|qreal,qreal
 
-//[1]void setPos ( const QPointF & pos )
-//[2]void setPos ( qreal x, qreal y )
+/*
+[1]void setPos ( const QPointF & pos )
+[2]void setPos ( qreal x, qreal y )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
 {
@@ -905,8 +935,10 @@ $internalMethod=|void|setTransformOriginPoint,setTransformOriginPoint1|const QPo
 $prototype=void setTransformOriginPoint ( qreal x, qreal y )
 $internalMethod=|void|setTransformOriginPoint,setTransformOriginPoint2|qreal,qreal
 
-//[1]void setTransformOriginPoint ( const QPointF & origin )
-//[2]void setTransformOriginPoint ( qreal x, qreal y )
+/*
+[1]void setTransformOriginPoint ( const QPointF & origin )
+[2]void setTransformOriginPoint ( qreal x, qreal y )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
 {
@@ -982,8 +1014,10 @@ $internalMethod=|void|update,update1|const QRectF &=QRectF()
 $prototype=void update ( qreal x, qreal y, qreal width, qreal height )
 $internalMethod=|void|update,update2|qreal,qreal,qreal,qreal
 
-//[1]void update ( const QRectF & rect = QRectF() )
-//[2]void update ( qreal x, qreal y, qreal width, qreal height )
+/*
+[1]void update ( const QRectF & rect = QRectF() )
+[2]void update ( qreal x, qreal y, qreal width, qreal height )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 {

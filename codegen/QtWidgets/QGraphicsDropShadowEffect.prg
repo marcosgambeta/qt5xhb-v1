@@ -65,9 +65,11 @@ $internalMethod=|void|setOffset,setOffset2|qreal,qreal
 $prototype=void setOffset ( qreal d )
 $internalMethod=|void|setOffset,setOffset3|qreal
 
-//[1]void setOffset ( const QPointF & ofs )
-//[2]void setOffset ( qreal dx, qreal dy )
-//[3]void setOffset ( qreal d )
+/*
+[1]void setOffset ( const QPointF & ofs )
+[2]void setOffset ( qreal dx, qreal dy )
+[3]void setOffset ( qreal d )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {

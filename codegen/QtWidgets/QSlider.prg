@@ -31,8 +31,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 $internalConstructor=|new2|Qt::Orientation,QWidget *=0
 
-//[1]QSlider ( QWidget * parent = 0 )
-//[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
+/*
+[1]QSlider ( QWidget * parent = 0 )
+[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QSLIDER_NEW )
 {

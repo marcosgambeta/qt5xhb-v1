@@ -31,8 +31,10 @@ $internalConstructor=|new1|Qt::TileRule,Qt::TileRule
 $prototype=QTileRules(Qt::TileRule rule = Qt::StretchTile)
 $internalConstructor=|new2|Qt::TileRule=Qt::StretchTile
 
-//[1]QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
-//[2]QTileRules(Qt::TileRule rule = Qt::StretchTile)
+/*
+[1]QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
+[2]QTileRules(Qt::TileRule rule = Qt::StretchTile)
+*/
 
 HB_FUNC_STATIC( QTILERULES_NEW )
 {

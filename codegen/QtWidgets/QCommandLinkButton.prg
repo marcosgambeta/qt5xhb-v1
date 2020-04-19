@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QString &,QWidget *=0
 $prototype=QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
 $internalConstructor=|new3|const QString &,const QString &,QWidget *=0
 
-//[1]QCommandLinkButton ( QWidget * parent = 0 )
-//[2]QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
-//[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
+/*
+[1]QCommandLinkButton ( QWidget * parent = 0 )
+[2]QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
+[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {

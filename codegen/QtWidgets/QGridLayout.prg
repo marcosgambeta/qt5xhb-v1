@@ -31,8 +31,10 @@ $internalConstructor=|new1|QWidget *
 $prototype=QGridLayout ()
 $internalConstructor=|new2|
 
-//[1]QGridLayout ( QWidget * parent )
-//[2]QGridLayout ()
+/*
+[1]QGridLayout ( QWidget * parent )
+[2]QGridLayout ()
+*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 {
@@ -61,8 +63,10 @@ $internalMethod=|void|addLayout,addLayout1|QLayout *,int,int,Qt::Alignment=0
 $prototype=void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addLayout,addLayout2|QLayout *,int,int,int,int,Qt::Alignment=0
 
-//[1]void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
-//[2]void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+/*
+[1]void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
+[2]void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 {
@@ -87,8 +91,10 @@ $internalMethod=|void|addWidget,addWidget1|QWidget *,int,int,Qt::Alignment=0
 $prototype=void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addWidget,addWidget2|QWidget *,int,int,int,int,Qt::Alignment=0
 
-//[1]void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
-//[2]void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+/*
+[1]void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
+[2]void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 {

@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QScrollerProperties(const QScrollerProperties & sp)
 $internalConstructor=|new2|const QScrollerProperties &
 
-//[1]QScrollerProperties()
-//[2]QScrollerProperties(const QScrollerProperties & sp)
+/*
+[1]QScrollerProperties()
+[2]QScrollerProperties(const QScrollerProperties & sp)
+*/
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 {

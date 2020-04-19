@@ -50,8 +50,10 @@ $internalMethod=|void|setAxis,setAxis1|const QVector3D &
 $prototype=void setAxis ( Qt::Axis axis )
 $internalMethod=|void|setAxis,setAxis2|Qt::Axis
 
-//[1]void setAxis ( const QVector3D & axis )
-//[2]void setAxis ( Qt::Axis axis )
+/*
+[1]void setAxis ( const QVector3D & axis )
+[2]void setAxis ( Qt::Axis axis )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {

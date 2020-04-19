@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QRectF &,QGraphicsItem *=0
 $prototype=QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
 
-//[1]QGraphicsRectItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
-//[3]QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
+/*
+[1]QGraphicsRectItem ( QGraphicsItem * parent = 0 )
+[2]QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
+[3]QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW )
 {
@@ -69,8 +71,10 @@ $internalMethod=|void|setRect,setRect1|const QRectF &
 $prototype=void setRect ( qreal x, qreal y, qreal width, qreal height )
 $internalMethod=|void|setRect,setRect2|qreal,qreal,qreal,qreal
 
-//[1]void setRect ( const QRectF & rect )
-//[2]void setRect ( qreal x, qreal y, qreal width, qreal height )
+/*
+[1]void setRect ( const QRectF & rect )
+[2]void setRect ( qreal x, qreal y, qreal width, qreal height )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_SETRECT )
 {

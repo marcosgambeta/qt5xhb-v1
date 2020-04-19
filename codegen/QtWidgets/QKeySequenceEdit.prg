@@ -33,8 +33,10 @@ $internalConstructor=5,2,0|new1|QWidget *=0
 $prototype=QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
 $internalConstructor=5,2,0|new2|const QKeySequence &,QWidget *=0
 
-//[1]QKeySequenceEdit(QWidget *parent = 0)
-//[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
+/*
+[1]QKeySequenceEdit(QWidget *parent = 0)
+[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
+*/
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {

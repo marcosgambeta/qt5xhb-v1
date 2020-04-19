@@ -37,8 +37,10 @@ $internalConstructor=|new1|QWidget *,Qt::WindowFlags
 $prototype=QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
 $internalConstructor=|new2|QWidget *=0,const QString &=QString(),const QString &=QString(),const QString &=QString()
 
-//[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
-//[2]explicit QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
+/*
+[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
+[2]explicit QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
+*/
 
 HB_FUNC_STATIC( QFILEDIALOG_NEW )
 {
@@ -178,8 +180,10 @@ $internalMethod=|void|setDirectory,setDirectory1|const QString &
 $prototype=void setDirectory ( const QDir & directory )
 $internalMethod=|void|setDirectory,setDirectory2|const QDir &
 
-//[1]void setDirectory ( const QString & directory )
-//[2]void setDirectory ( const QDir & directory )
+/*
+[1]void setDirectory ( const QString & directory )
+[2]void setDirectory ( const QDir & directory )
+*/
 
 HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY )
 {

@@ -33,9 +33,11 @@ $internalConstructor=|new2|const QStyleOptionProgressBar &
 
 $prototype=QStyleOptionProgressBar(int version) [protected]
 
-//[1]QStyleOptionProgressBar()
-//[2]QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
-//[3]QStyleOptionProgressBar(int version) [protected]
+/*
+[1]QStyleOptionProgressBar()
+[2]QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
+[3]QStyleOptionProgressBar(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {

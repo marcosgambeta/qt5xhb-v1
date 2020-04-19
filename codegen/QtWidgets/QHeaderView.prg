@@ -89,9 +89,11 @@ $internalMethod=|int|logicalIndexAt,logicalIndexAt2|int,int
 $prototype=int logicalIndexAt ( const QPoint & pos ) const
 $internalMethod=|int|logicalIndexAt,logicalIndexAt3|const QPoint &
 
-//[1]int logicalIndexAt ( int position ) const
-//[2]int logicalIndexAt ( int x, int y ) const
-//[3]int logicalIndexAt ( const QPoint & pos ) const
+/*
+[1]int logicalIndexAt ( int position ) const
+[2]int logicalIndexAt ( int x, int y ) const
+[3]int logicalIndexAt ( const QPoint & pos ) const
+*/
 
 HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 {
@@ -237,8 +239,10 @@ $internalMethod=|void|setSectionResizeMode,setSectionResizeMode1|QHeaderView::Re
 $prototype=void setSectionResizeMode(int logicalIndex, ResizeMode mode)
 $internalMethod=|void|setSectionResizeMode,setSectionResizeMode2|int,QHeaderView::ResizeMode
 
-//[1]void setSectionResizeMode(ResizeMode mode)
-//[2]void setSectionResizeMode(int logicalIndex, ResizeMode mode)
+/*
+[1]void setSectionResizeMode(ResizeMode mode)
+[2]void setSectionResizeMode(int logicalIndex, ResizeMode mode)
+*/
 
 HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE )
 {

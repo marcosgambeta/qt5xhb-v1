@@ -35,8 +35,10 @@ $internalConstructor=|new1|const QString &,QWidget *=0,Qt::WindowFlags=0
 $prototype=QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 $internalConstructor=|new2|QWidget *=0,Qt::WindowFlags=0
 
-//[1]QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-//[2]QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+/*
+[1]QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+[2]QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+*/
 
 HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 {

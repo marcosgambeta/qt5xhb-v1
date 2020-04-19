@@ -45,8 +45,10 @@ $internalMethod=|void|setSnapPositionsX,setSnapPositionsX1|const QList<qreal> &
 $prototype=void setSnapPositionsX(qreal first, qreal interval)
 $internalMethod=|void|setSnapPositionsX,setSnapPositionsX2|qreal,qreal
 
-//[1]void setSnapPositionsX(const QList<qreal> & positions)
-//[2]void setSnapPositionsX(qreal first, qreal interval)
+/*
+[1]void setSnapPositionsX(const QList<qreal> & positions)
+[2]void setSnapPositionsX(qreal first, qreal interval)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
 {
@@ -71,8 +73,10 @@ $internalMethod=|void|setSnapPositionsY,setSnapPositionsY1|const QList<qreal> &
 $prototype=void setSnapPositionsY(qreal first, qreal interval)
 $internalMethod=|void|setSnapPositionsY,setSnapPositionsY2|qreal,qreal
 
-//[1]void setSnapPositionsY(const QList<qreal> & positions)
-//[2]void setSnapPositionsY(qreal first, qreal interval)
+/*
+[1]void setSnapPositionsY(const QList<qreal> & positions)
+[2]void setSnapPositionsY(qreal first, qreal interval)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
 {
@@ -109,8 +113,10 @@ $internalMethod=|void|ensureVisible,ensureVisible1|const QRectF &,qreal,qreal
 $prototype=void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
 $internalMethod=|void|ensureVisible,ensureVisible2|const QRectF &,qreal,qreal,int
 
-//[1]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
-//[2]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
+/*
+[1]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin)
+[2]void ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
 {
@@ -138,8 +144,10 @@ $internalMethod=|void|scrollTo,scrollTo1|const QPointF &
 $prototype=void scrollTo(const QPointF & pos, int scrollTime)
 $internalMethod=|void|scrollTo,scrollTo2|const QPointF &,int
 
-//[1]void scrollTo(const QPointF & pos)
-//[2]void scrollTo(const QPointF & pos, int scrollTime)
+/*
+[1]void scrollTo(const QPointF & pos)
+[2]void scrollTo(const QPointF & pos, int scrollTime)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_SCROLLTO )
 {
@@ -179,8 +187,10 @@ $internalStaticMethod=|QScroller *|scroller,scroller1|QObject *
 $prototype=static const QScroller * scroller(const QObject * target)
 $internalStaticMethod=|const QScroller *|scroller,scroller2|const QObject *
 
-//[1]static QScroller * scroller(QObject * target)
-//[2]static const QScroller * scroller(const QObject * target)
+/*
+[1]static QScroller * scroller(QObject * target)
+[2]static const QScroller * scroller(const QObject * target)
+*/
 
 HB_FUNC_STATIC( QSCROLLER_SCROLLER )
 {

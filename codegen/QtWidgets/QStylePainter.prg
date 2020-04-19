@@ -34,9 +34,11 @@ $internalConstructor=|new2|QWidget *
 $prototype=QStylePainter(QPaintDevice *pd, QWidget *w)
 $internalConstructor=|new3|QPaintDevice *,QWidget *
 
-//[1]QStylePainter()
-//[2]explicit QStylePainter(QWidget *w)
-//[3]QStylePainter(QPaintDevice *pd, QWidget *w)
+/*
+[1]QStylePainter()
+[2]explicit QStylePainter(QWidget *w)
+[3]QStylePainter(QPaintDevice *pd, QWidget *w)
+*/
 
 HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
 {
@@ -66,8 +68,10 @@ $internalMethod=|bool|begin,begin1|QWidget *
 $prototype=bool begin(QPaintDevice *pd, QWidget *w)
 $internalMethod=|bool|begin,begin2|QPaintDevice *,QWidget *
 
-//[1]bool begin(QWidget *w)
-//[2]bool begin(QPaintDevice *pd, QWidget *w)
+/*
+[1]bool begin(QWidget *w)
+[2]bool begin(QPaintDevice *pd, QWidget *w)
+*/
 
 HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
 {

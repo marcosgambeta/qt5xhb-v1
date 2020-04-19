@@ -33,8 +33,10 @@ $internalConstructor=|new1|QWidget *=0
 $prototype=QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 $internalConstructor=|new2|uint,QWidget *=0
 
-//[1]QLCDNumber ( QWidget * parent = 0 )
-//[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
+/*
+[1]QLCDNumber ( QWidget * parent = 0 )
+[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
@@ -60,8 +62,10 @@ $internalMethod=|bool|checkOverflow,checkOverflow1|double
 $prototype=bool checkOverflow ( int num ) const
 $internalMethod=|bool|checkOverflow,checkOverflow2|int
 
-//[1]bool checkOverflow ( double num ) const
-//[2]bool checkOverflow ( int num ) const
+/*
+[1]bool checkOverflow ( double num ) const
+[2]bool checkOverflow ( int num ) const
+*/
 
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
@@ -134,9 +138,11 @@ $internalMethod=|void|display,display2|double
 $prototype=void display ( int num )
 $internalMethod=|void|display,display3|int
 
-//[1]void display ( const QString & s )
-//[2]void display ( double num )
-//[3]void display ( int num )
+/*
+[1]void display ( const QString & s )
+[2]void display ( double num )
+[3]void display ( int num )
+*/
 
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {

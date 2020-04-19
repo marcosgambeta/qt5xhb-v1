@@ -51,9 +51,11 @@ $internalConstructor=|new2|const QRectF &,QObject *=0
 $prototype=QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,QObject *=0
 
-//[1]QGraphicsScene ( QObject * parent = 0 )
-//[2]QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
-//[3]QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
+/*
+[1]QGraphicsScene ( QObject * parent = 0 )
+[2]QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
+[3]QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
 {
@@ -89,8 +91,10 @@ $internalMethod=|QGraphicsEllipseItem *|addEllipse,addEllipse1|const QRectF &,co
 $prototype=QGraphicsEllipseItem * addEllipse ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $internalMethod=|QGraphicsEllipseItem *|addEllipse,addEllipse2|qreal,qreal,qreal,qreal,const QPen &=QPen(),const QBrush &=QBrush()
 
-//[1]QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-//[2]QGraphicsEllipseItem * addEllipse ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+/*
+[1]QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+[2]QGraphicsEllipseItem * addEllipse ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE )
 {
@@ -118,8 +122,10 @@ $internalMethod=|QGraphicsLineItem *|addLine,addLine1|const QLineF &,const QPen 
 $prototype=QGraphicsLineItem * addLine ( qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen() )
 $internalMethod=|QGraphicsLineItem *|addLine,addLine2|qreal,qreal,qreal,qreal,const QPen &=QPen()
 
-//[1]QGraphicsLineItem * addLine ( const QLineF & line, const QPen & pen = QPen() )
-//[2]QGraphicsLineItem * addLine ( qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen() )
+/*
+[1]QGraphicsLineItem * addLine ( const QLineF & line, const QPen & pen = QPen() )
+[2]QGraphicsLineItem * addLine ( qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen() )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE )
 {
@@ -153,8 +159,10 @@ $internalMethod=|QGraphicsRectItem *|addRect,addRect1|const QRectF &,const QPen 
 $prototype=QGraphicsRectItem * addRect ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $internalMethod=|QGraphicsRectItem *|addRect,addRect2|qreal,qreal,qreal,qreal,const QPen &=QPen(),const QBrush &=QBrush()
 
-//[1]QGraphicsRectItem * addRect ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-//[2]QGraphicsRectItem * addRect ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+/*
+[1]QGraphicsRectItem * addRect ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+[2]QGraphicsRectItem * addRect ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT )
 {
@@ -221,8 +229,10 @@ $internalMethod=|void|invalidate,invalidate1|qreal,qreal,qreal,qreal,QGraphicsSc
 $prototype=void invalidate ( const QRectF & rect = QRectF(), SceneLayers layers = AllLayers )
 $internalMethod=|void|invalidate,invalidate2|const QRectF &=QRectF(),QGraphicsScene::SceneLayers=QGraphicsScene::AllLayers
 
-//[1]void invalidate ( qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLayers )
-//[2]void invalidate ( const QRectF & rect = QRectF(), SceneLayers layers = AllLayers )
+/*
+[1]void invalidate ( qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLayers )
+[2]void invalidate ( const QRectF & rect = QRectF(), SceneLayers layers = AllLayers )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
 {
@@ -253,8 +263,10 @@ $internalMethod=|QGraphicsItem *|itemAt,itemAt1|const QPointF &,const QTransform
 $prototype=QGraphicsItem * itemAt ( qreal x, qreal y, const QTransform & deviceTransform ) const
 $internalMethod=|QGraphicsItem *|itemAt,itemAt2|qreal,qreal,const QTransform &
 
-//[1]QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
-//[2]QGraphicsItem * itemAt ( qreal x, qreal y, const QTransform & deviceTransform ) const
+/*
+[1]QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
+[2]QGraphicsItem * itemAt ( qreal x, qreal y, const QTransform & deviceTransform ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT )
 {
@@ -336,8 +348,10 @@ $internalMethod=|void|setSceneRect,setSceneRect1|const QRectF &
 $prototype=void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|setSceneRect,setSceneRect2|qreal,qreal,qreal,qreal
 
-//[1]void setSceneRect ( const QRectF & rect )
-//[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
+/*
+[1]void setSceneRect ( const QRectF & rect )
+[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSCENERECT )
 {
@@ -362,8 +376,10 @@ $internalMethod=|void|setSelectionArea,setSelectionArea1|const QPainterPath &,co
 $prototype=void setSelectionArea ( const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform )
 $internalMethod=|void|setSelectionArea,setSelectionArea2|const QPainterPath &,Qt::ItemSelectionMode,const QTransform &
 
-//[1]void setSelectionArea ( const QPainterPath & path, const QTransform & deviceTransform )
-//[2]void setSelectionArea ( const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform )
+/*
+[1]void setSelectionArea ( const QPainterPath & path, const QTransform & deviceTransform )
+[2]void setSelectionArea ( const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSELECTIONAREA )
 {
@@ -403,8 +419,10 @@ $internalMethod=|void|update,update1|qreal,qreal,qreal,qreal
 $prototype=void update ( const QRectF & rect = QRectF() )
 $internalMethod=|void|update,update2|const QRectF &=QRectF()
 
-//[1]void update ( qreal x, qreal y, qreal w, qreal h )
-//[2]void update ( const QRectF & rect = QRectF() )
+/*
+[1]void update ( qreal x, qreal y, qreal w, qreal h )
+[2]void update ( const QRectF & rect = QRectF() )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
 {

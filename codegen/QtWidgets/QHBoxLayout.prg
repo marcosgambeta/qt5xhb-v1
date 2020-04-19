@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QHBoxLayout ( QWidget * parent )
 $internalConstructor=|new2|QWidget *
 
-//[1]QHBoxLayout ()
-//[2]QHBoxLayout ( QWidget * parent )
+/*
+[1]QHBoxLayout ()
+[2]QHBoxLayout ( QWidget * parent )
+*/
 
 HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
 {

@@ -52,15 +52,17 @@ $internalConstructor=|new8|QTreeWidgetItem *,QTreeWidgetItem *,int=QTreeWidgetIt
 $prototype=QTreeWidgetItem(const QTreeWidgetItem & other)
 $internalConstructor=|new9|const QTreeWidgetItem &
 
-//[1]explicit QTreeWidgetItem(int type = Type)
-//[2]explicit QTreeWidgetItem(const QStringList &strings, int type = Type)
-//[3]explicit QTreeWidgetItem(QTreeWidget *view, int type = Type)
-//[4]QTreeWidgetItem(QTreeWidget *view, const QStringList &strings, int type = Type)
-//[5]QTreeWidgetItem(QTreeWidget *view, QTreeWidgetItem *after, int type = Type)
-//[6]explicit QTreeWidgetItem(QTreeWidgetItem *parent, int type = Type)
-//[7]QTreeWidgetItem(QTreeWidgetItem *parent, const QStringList &strings, int type = Type)
-//[8]QTreeWidgetItem(QTreeWidgetItem *parent, QTreeWidgetItem *after, int type = Type)
-//[9]QTreeWidgetItem(const QTreeWidgetItem &other)
+/*
+[1]explicit QTreeWidgetItem(int type = Type)
+[2]explicit QTreeWidgetItem(const QStringList &strings, int type = Type)
+[3]explicit QTreeWidgetItem(QTreeWidget *view, int type = Type)
+[4]QTreeWidgetItem(QTreeWidget *view, const QStringList &strings, int type = Type)
+[5]QTreeWidgetItem(QTreeWidget *view, QTreeWidgetItem *after, int type = Type)
+[6]explicit QTreeWidgetItem(QTreeWidgetItem *parent, int type = Type)
+[7]QTreeWidgetItem(QTreeWidgetItem *parent, const QStringList &strings, int type = Type)
+[8]QTreeWidgetItem(QTreeWidgetItem *parent, QTreeWidgetItem *after, int type = Type)
+[9]QTreeWidgetItem(const QTreeWidgetItem &other)
+*/
 
 HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
 {

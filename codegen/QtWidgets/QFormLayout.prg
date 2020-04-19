@@ -48,12 +48,14 @@ $internalMethod=|void|addRow,addRow5|QWidget *
 $prototype=void addRow ( QLayout * layout )
 $internalMethod=|void|addRow,addRow6|QLayout *
 
-//[1]void addRow ( QWidget * label, QWidget * field )
-//[2]void addRow ( QWidget * label, QLayout * field )
-//[3]void addRow ( const QString & labelText, QWidget * field )
-//[4]void addRow ( const QString & labelText, QLayout * field )
-//[5]void addRow ( QWidget * widget )
-//[6]void addRow ( QLayout * layout )
+/*
+[1]void addRow ( QWidget * label, QWidget * field )
+[2]void addRow ( QWidget * label, QLayout * field )
+[3]void addRow ( const QString & labelText, QWidget * field )
+[4]void addRow ( const QString & labelText, QLayout * field )
+[5]void addRow ( QWidget * widget )
+[6]void addRow ( QLayout * layout )
+*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
 {
@@ -115,12 +117,14 @@ $internalMethod=|void|insertRow,insertRow5|int,QWidget *
 $prototype=void insertRow ( int row, QLayout * layout )
 $internalMethod=|void|insertRow,insertRow6|int,QLayout *
 
-//[1]void insertRow ( int row, QWidget * label, QWidget * field )
-//[2]void insertRow ( int row, QWidget * label, QLayout * field )
-//[3]void insertRow ( int row, const QString & labelText, QWidget * field )
-//[4]void insertRow ( int row, const QString & labelText, QLayout * field )
-//[5]void insertRow ( int row, QWidget * widget )
-//[6]void insertRow ( int row, QLayout * layout )
+/*
+[1]void insertRow ( int row, QWidget * label, QWidget * field )
+[2]void insertRow ( int row, QWidget * label, QLayout * field )
+[3]void insertRow ( int row, const QString & labelText, QWidget * field )
+[4]void insertRow ( int row, const QString & labelText, QLayout * field )
+[5]void insertRow ( int row, QWidget * widget )
+[6]void insertRow ( int row, QLayout * layout )
+*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
 {
@@ -161,8 +165,10 @@ $internalMethod=|QLayoutItem *|itemAt,itemAt1|int,QFormLayout::ItemRole
 $prototype=virtual QLayoutItem * itemAt ( int index ) const
 $internalVirtualMethod=|QLayoutItem *|itemAt,itemAt2|int
 
-//[1]QLayoutItem * itemAt ( int row, ItemRole role ) const
-//[2]virtual QLayoutItem * itemAt ( int index ) const
+/*
+[1]QLayoutItem * itemAt ( int row, ItemRole role ) const
+[2]virtual QLayoutItem * itemAt ( int index ) const
+*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 {
@@ -190,8 +196,10 @@ $internalMethod=|QWidget *|labelForField,labelForField1|QWidget *
 $prototype=QWidget * labelForField ( QLayout * field ) const
 $internalMethod=|QWidget *|labelForField,labelForField2|QLayout *
 
-//[1]QWidget * labelForField ( QWidget * field ) const
-//[2]QWidget * labelForField ( QLayout * field ) const
+/*
+[1]QWidget * labelForField ( QWidget * field ) const
+[2]QWidget * labelForField ( QLayout * field ) const
+*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 {

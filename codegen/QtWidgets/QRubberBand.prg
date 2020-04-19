@@ -36,8 +36,10 @@ $internalMethod=|void|move,move1|int,int
 $prototype=void move ( const QPoint & p )
 $internalMethod=|void|move,move2|const QPoint &
 
-//[1]void move ( int x, int y )
-//[2]void move ( const QPoint & p )
+/*
+[1]void move ( int x, int y )
+[2]void move ( const QPoint & p )
+*/
 
 HB_FUNC_STATIC( QRUBBERBAND_MOVE )
 {
@@ -62,8 +64,10 @@ $internalMethod=|void|resize,resize1|int,int
 $prototype=void resize ( const QSize & size )
 $internalMethod=|void|resize,resize2|const QSize &
 
-//[1]void resize ( int width, int height )
-//[2]void resize ( const QSize & size )
+/*
+[1]void resize ( int width, int height )
+[2]void resize ( const QSize & size )
+*/
 
 HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
 {
@@ -88,8 +92,10 @@ $internalMethod=|void|setGeometry,setGeometry1|const QRect &
 $prototype=void setGeometry ( int x, int y, int width, int height )
 $internalMethod=|void|setGeometry,setGeometry2|int,int,int,int
 
-//[1]void setGeometry ( const QRect & rect )
-//[2]void setGeometry ( int x, int y, int width, int height )
+/*
+[1]void setGeometry ( const QRect & rect )
+[2]void setGeometry ( int x, int y, int width, int height )
+*/
 
 HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 {

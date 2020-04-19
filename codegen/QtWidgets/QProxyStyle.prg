@@ -31,8 +31,10 @@ $internalConstructor=|new1|QStyle *=0
 $prototype=QProxyStyle(const QString &key)
 $internalConstructor=|new2|const QString &
 
-//[1]QProxyStyle(QStyle *style = 0)
-//[2]QProxyStyle(const QString &key)
+/*
+[1]QProxyStyle(QStyle *style = 0)
+[2]QProxyStyle(const QString &key)
+*/
 
 HB_FUNC_STATIC( QPROXYSTYLE_NEW )
 {
@@ -121,9 +123,11 @@ $internalMethod=|void|polish,polish2|QPalette &
 $prototype=void polish(QApplication *app)
 $internalMethod=|void|polish,polish3|QApplication *
 
-//[1]void polish(QWidget *widget)
-//[2]void polish(QPalette &pal)
-//[3]void polish(QApplication *app)
+/*
+[1]void polish(QWidget *widget)
+[2]void polish(QPalette &pal)
+[3]void polish(QApplication *app)
+*/
 
 HB_FUNC_STATIC( QPROXYSTYLE_POLISH )
 {
@@ -152,8 +156,10 @@ $internalMethod=|void|unpolish,unpolish1|QWidget *
 $prototype=void unpolish(QApplication *app)
 $internalMethod=|void|unpolish,unpolish2|QApplication *
 
-//[1]void unpolish(QWidget *widget)
-//[2]void unpolish(QApplication *app)
+/*
+[1]void unpolish(QWidget *widget)
+[2]void unpolish(QApplication *app)
+*/
 
 HB_FUNC_STATIC( QPROXYSTYLE_UNPOLISH )
 {

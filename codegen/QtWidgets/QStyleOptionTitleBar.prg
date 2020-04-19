@@ -33,9 +33,11 @@ $internalConstructor=|new2|const QStyleOptionTitleBar &
 
 $prototype=QStyleOptionTitleBar(int version) [protected]
 
-//[1]QStyleOptionTitleBar()
-//[2]QStyleOptionTitleBar(const QStyleOptionTitleBar &other)
-//[3]QStyleOptionTitleBar(int version) [protected]
+/*
+[1]QStyleOptionTitleBar()
+[2]QStyleOptionTitleBar(const QStyleOptionTitleBar &other)
+[3]QStyleOptionTitleBar(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
 {

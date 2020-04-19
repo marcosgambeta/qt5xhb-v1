@@ -90,8 +90,10 @@ $internalMethod=|void|setMaximumSize,setMaximumSize1|const QSizeF &
 $prototype=void setMaximumSize ( qreal w, qreal h )
 $internalMethod=|void|setMaximumSize,setMaximumSize2|qreal,qreal
 
-//[1]void setMaximumSize ( const QSizeF & size )
-//[2]void setMaximumSize ( qreal w, qreal h )
+/*
+[1]void setMaximumSize ( const QSizeF & size )
+[2]void setMaximumSize ( qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 {
@@ -122,8 +124,10 @@ $internalMethod=|void|setMinimumSize,setMinimumSize1|const QSizeF &
 $prototype=void setMinimumSize ( qreal w, qreal h )
 $internalMethod=|void|setMinimumSize,setMinimumSize2|qreal,qreal
 
-//[1]void setMinimumSize ( const QSizeF & size )
-//[2]void setMinimumSize ( qreal w, qreal h )
+/*
+[1]void setMinimumSize ( const QSizeF & size )
+[2]void setMinimumSize ( qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 {
@@ -157,8 +161,10 @@ $internalMethod=|void|setPreferredSize,setPreferredSize1|const QSizeF &
 $prototype=void setPreferredSize ( qreal w, qreal h )
 $internalMethod=|void|setPreferredSize,setPreferredSize2|qreal,qreal
 
-//[1]void setPreferredSize ( const QSizeF & size )
-//[2]void setPreferredSize ( qreal w, qreal h )
+/*
+[1]void setPreferredSize ( const QSizeF & size )
+[2]void setPreferredSize ( qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 {
@@ -186,8 +192,10 @@ $internalMethod=|void|setSizePolicy,setSizePolicy1|const QSizePolicy &
 $prototype=void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
 $internalMethod=|void|setSizePolicy,setSizePolicy2|QSizePolicy::Policy,QSizePolicy::Policy,QSizePolicy::ControlType=QSizePolicy::DefaultType
 
-//[1]void setSizePolicy ( const QSizePolicy & policy )
-//[2]void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
+/*
+[1]void setSizePolicy ( const QSizePolicy & policy )
+[2]void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 {

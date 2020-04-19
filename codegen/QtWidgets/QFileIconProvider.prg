@@ -36,8 +36,10 @@ $internalVirtualMethod=|QIcon|icon,icon1|QFileIconProvider::IconType
 $prototype=virtual QIcon icon(const QFileInfo & info) const
 $internalVirtualMethod=|QIcon|icon,icon2|const QFileInfo &
 
-//[1]virtual QIcon icon(IconType type) const
-//[2]virtual QIcon icon(const QFileInfo & info) const
+/*
+[1]virtual QIcon icon(IconType type) const
+[2]virtual QIcon icon(const QFileInfo & info) const
+*/
 
 HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 {

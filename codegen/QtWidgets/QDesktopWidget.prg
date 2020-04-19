@@ -38,9 +38,11 @@ $internalMethod=|const QRect|availableGeometry,availableGeometry2|const QWidget 
 $prototype=const QRect availableGeometry ( const QPoint & p ) const
 $internalMethod=|const QRect|availableGeometry,availableGeometry3|const QPoint &
 
-//[1]const QRect availableGeometry ( int screen = -1 ) const
-//[2]const QRect availableGeometry ( const QWidget * widget ) const
-//[3]const QRect availableGeometry ( const QPoint & p ) const
+/*
+[1]const QRect availableGeometry ( int screen = -1 ) const
+[2]const QRect availableGeometry ( const QWidget * widget ) const
+[3]const QRect availableGeometry ( const QPoint & p ) const
+*/
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
@@ -84,9 +86,11 @@ $internalMethod=|const QRect|screenGeometry,screenGeometry2|const QWidget *
 $prototype=const QRect screenGeometry ( const QPoint & p ) const
 $internalMethod=|const QRect|screenGeometry,screenGeometry3|const QPoint &
 
-//[1]const QRect screenGeometry ( int screen = -1 ) const
-//[2]const QRect screenGeometry ( const QWidget * widget ) const
-//[3]const QRect screenGeometry ( const QPoint & p ) const
+/*
+[1]const QRect screenGeometry ( int screen = -1 ) const
+[2]const QRect screenGeometry ( const QWidget * widget ) const
+[3]const QRect screenGeometry ( const QPoint & p ) const
+*/
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
@@ -115,8 +119,10 @@ $internalMethod=|int|screenNumber,screenNumber1|const QWidget *=0
 $prototype=int screenNumber ( const QPoint & point ) const
 $internalMethod=|int|screenNumber,screenNumber2|const QPoint &
 
-//[1]int screenNumber ( const QWidget * widget = 0 ) const
-//[2]int screenNumber ( const QPoint & point ) const
+/*
+[1]int screenNumber ( const QWidget * widget = 0 ) const
+[2]int screenNumber ( const QPoint & point ) const
+*/
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {

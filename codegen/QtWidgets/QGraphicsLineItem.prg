@@ -36,9 +36,11 @@ $internalConstructor=|new2|const QLineF &,QGraphicsItem *=0
 $prototype=QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
 $internalConstructor=|new3|qreal,qreal,qreal,qreal,QGraphicsItem *=0
 
-//[1]QGraphicsLineItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
-//[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
+/*
+[1]QGraphicsLineItem ( QGraphicsItem * parent = 0 )
+[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
+[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
@@ -74,8 +76,10 @@ $internalMethod=|void|setLine,setLine1|const QLineF &
 $prototype=void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
 $internalMethod=|void|setLine,setLine2|qreal,qreal,qreal,qreal
 
-//[1]void setLine ( const QLineF & line )
-//[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
+/*
+[1]void setLine ( const QLineF & line )
+[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 {

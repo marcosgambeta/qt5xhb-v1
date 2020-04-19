@@ -91,8 +91,10 @@ $internalMethod=|void|resize,resize1|const QSizeF &
 $prototype=void resize ( qreal w, qreal h )
 $internalMethod=|void|resize,resize2|qreal,qreal
 
-//[1]void resize ( const QSizeF & size )
-//[2]void resize ( qreal w, qreal h )
+/*
+[1]void resize ( const QSizeF & size )
+[2]void resize ( qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
 {
@@ -132,8 +134,10 @@ $internalMethod=|void|setGeometry,setGeometry1|qreal,qreal,qreal,qreal
 $prototype=virtual void setGeometry ( const QRectF & rect )
 $internalVirtualMethod=|void|setGeometry,setGeometry2|const QRectF &
 
-//[1]void setGeometry ( qreal x, qreal y, qreal w, qreal h )
-//[2]virtual void setGeometry ( const QRectF & rect )
+/*
+[1]void setGeometry ( qreal x, qreal y, qreal w, qreal h )
+[2]virtual void setGeometry ( const QRectF & rect )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
 {

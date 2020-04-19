@@ -33,9 +33,11 @@ $internalConstructor=|new2|const QStyleOptionComboBox &
 
 $prototype=QStyleOptionComboBox(int version) [protected]
 
-//[1]QStyleOptionComboBox()
-//[2]QStyleOptionComboBox(const QStyleOptionComboBox &other)
-//[3]QStyleOptionComboBox(int version) [protected]
+/*
+[1]QStyleOptionComboBox()
+[2]QStyleOptionComboBox(const QStyleOptionComboBox &other)
+[3]QStyleOptionComboBox(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
 {

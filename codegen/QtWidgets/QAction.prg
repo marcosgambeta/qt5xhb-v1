@@ -38,9 +38,11 @@ $internalConstructor=|new2|const QString &,QObject *
 $prototype=QAction ( const QIcon & icon, const QString & text, QObject * parent )
 $internalConstructor=|new3|const QIcon &,const QString &,QObject *
 
-//[1]QAction ( QObject * parent )
-//[2]QAction ( const QString & text, QObject * parent )
-//[3]QAction ( const QIcon & icon, const QString & text, QObject * parent )
+/*
+[1]QAction ( QObject * parent )
+[2]QAction ( const QString & text, QObject * parent )
+[3]QAction ( const QIcon & icon, const QString & text, QObject * parent )
+*/
 
 HB_FUNC_STATIC( QACTION_NEW )
 {
@@ -169,8 +171,10 @@ $internalMethod=|void|setShortcuts,setShortcuts1|const QList<QKeySequence> &
 $prototype=void setShortcuts ( QKeySequence::StandardKey key )
 $internalMethod=|void|setShortcuts,setShortcuts2|QKeySequence::StandardKey
 
-//[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
-//[2]void setShortcuts ( QKeySequence::StandardKey key )
+/*
+[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
+[2]void setShortcuts ( QKeySequence::StandardKey key )
+*/
 
 HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 {

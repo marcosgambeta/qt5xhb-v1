@@ -34,9 +34,11 @@ $internalConstructor=|new2|int,int,int,int
 $prototype=QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
 $internalConstructor=|new3|const QTableWidgetSelectionRange &
 
-//[1]QTableWidgetSelectionRange()
-//[2]QTableWidgetSelectionRange(int top, int left, int bottom, int right)
-//[3]QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
+/*
+[1]QTableWidgetSelectionRange()
+[2]QTableWidgetSelectionRange(int top, int left, int bottom, int right)
+[3]QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
+*/
 
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 {

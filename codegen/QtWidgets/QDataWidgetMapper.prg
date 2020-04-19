@@ -41,8 +41,10 @@ $internalMethod=|void|addMapping,addMapping1|QWidget *,int
 $prototype=void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
 $internalMethod=|void|addMapping,addMapping2|QWidget *,int,const QByteArray &
 
-//[1]void addMapping ( QWidget * widget, int section )
-//[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
+/*
+[1]void addMapping ( QWidget * widget, int section )
+[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
+*/
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {

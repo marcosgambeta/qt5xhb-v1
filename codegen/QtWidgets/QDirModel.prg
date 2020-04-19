@@ -31,8 +31,10 @@ $internalConstructor=|new1|const QStringList &,QDir::Filters,QDir::SortFlags,QOb
 $prototype=QDirModel(QObject *parent = 0)
 $internalConstructor=|new2|QObject *=0
 
-//[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
-//[2]QDirModel(QObject *parent = 0)
+/*
+[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
+[2]QDirModel(QObject *parent = 0)
+*/
 
 HB_FUNC_STATIC( QDIRMODEL_NEW )
 {
@@ -58,8 +60,10 @@ $internalMethod=|QModelIndex|index,index1|int,int,const QModelIndex &=QModelInde
 $prototype=QModelIndex index(const QString &path, int column = 0) const
 $internalMethod=|QModelIndex|index,index2|const QString &,int=0
 
-//[1]QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
-//[2]QModelIndex index(const QString &path, int column = 0) const
+/*
+[1]QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
+[2]QModelIndex index(const QString &path, int column = 0) const
+*/
 
 HB_FUNC_STATIC( QDIRMODEL_INDEX )
 {

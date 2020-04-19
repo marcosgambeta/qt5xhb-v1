@@ -35,8 +35,10 @@ $internalConstructor=|new1|QWidget *=0,Qt::WindowFlags=0
 $prototype=QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 $internalConstructor=|new2|const QString &,QWidget *=0,Qt::WindowFlags=0
 
-//[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-//[2]QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+/*
+[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+[2]QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+*/
 
 HB_FUNC_STATIC( QLABEL_NEW )
 {
@@ -152,8 +154,10 @@ $internalMethod=|void|setNum,setNum1|int
 $prototype=void setNum ( double num )
 $internalMethod=|void|setNum,setNum2|double
 
-//[1]void setNum ( int num )
-//[2]void setNum ( double num )
+/*
+[1]void setNum ( int num )
+[2]void setNum ( double num )
+*/
 
 HB_FUNC_STATIC( QLABEL_SETNUM )
 {

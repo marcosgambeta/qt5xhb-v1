@@ -33,9 +33,11 @@ $internalConstructor=|new2|const QStyleOptionMenuItem &
 
 $prototype=QStyleOptionMenuItem(int version) [protected]
 
-//[1]QStyleOptionMenuItem()
-//[2]QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
-//[3]QStyleOptionMenuItem(int version) [protected]
+/*
+[1]QStyleOptionMenuItem()
+[2]QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
+[3]QStyleOptionMenuItem(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )
 {

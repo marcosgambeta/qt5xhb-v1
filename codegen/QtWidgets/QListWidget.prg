@@ -38,8 +38,10 @@ $internalMethod=|void|addItem,addItem1|const QString &
 $prototype=void addItem ( QListWidgetItem * item )
 $internalMethod=|void|addItem,addItem2|QListWidgetItem *
 
-//[1]void addItem ( const QString & label )
-//[2]void addItem ( QListWidgetItem * item )
+/*
+[1]void addItem ( const QString & label )
+[2]void addItem ( QListWidgetItem * item )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
 {
@@ -82,8 +84,10 @@ $internalMethod=|void|insertItem,insertItem1|int,QListWidgetItem *
 $prototype=void insertItem ( int row, const QString & label )
 $internalMethod=|void|insertItem,insertItem2|int,const QString &
 
-//[1]void insertItem ( int row, QListWidgetItem * item )
-//[2]void insertItem ( int row, const QString & label )
+/*
+[1]void insertItem ( int row, QListWidgetItem * item )
+[2]void insertItem ( int row, const QString & label )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
 {
@@ -117,8 +121,10 @@ $internalMethod=|QListWidgetItem *|itemAt,itemAt1|const QPoint &
 $prototype=QListWidgetItem * itemAt ( int x, int y ) const
 $internalMethod=|QListWidgetItem *|itemAt,itemAt2|int,int
 
-//[1]QListWidgetItem * itemAt ( const QPoint & p ) const
-//[2]QListWidgetItem * itemAt ( int x, int y ) const
+/*
+[1]QListWidgetItem * itemAt ( const QPoint & p ) const
+[2]QListWidgetItem * itemAt ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 {
@@ -155,8 +161,10 @@ $internalMethod=|void|setCurrentItem,setCurrentItem1|QListWidgetItem *
 $prototype=void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 $internalMethod=|void|setCurrentItem,setCurrentItem2|QListWidgetItem *,QItemSelectionModel::SelectionFlags
 
-//[1]void setCurrentItem ( QListWidgetItem * item )
-//[2]void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+/*
+[1]void setCurrentItem ( QListWidgetItem * item )
+[2]void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 {
@@ -181,8 +189,10 @@ $internalMethod=|void|setCurrentRow,setCurrentRow1|int
 $prototype=void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
 $internalMethod=|void|setCurrentRow,setCurrentRow2|int,QItemSelectionModel::SelectionFlags
 
-//[1]void setCurrentRow ( int row )
-//[2]void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
+/*
+[1]void setCurrentRow ( int row )
+[2]void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 {

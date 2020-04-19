@@ -40,8 +40,10 @@ $internalMethod=|void|addButton,addButton1|QAbstractButton *
 $prototype=void addButton ( QAbstractButton * button, int id )
 $internalMethod=|void|addButton,addButton2|QAbstractButton *,int
 
-//[1]void addButton ( QAbstractButton * button )
-//[2]void addButton ( QAbstractButton * button, int id )
+/*
+[1]void addButton ( QAbstractButton * button )
+[2]void addButton ( QAbstractButton * button, int id )
+*/
 
 HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 {

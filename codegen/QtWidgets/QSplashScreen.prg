@@ -33,8 +33,10 @@ $internalConstructor=|new1|const QPixmap &=QPixmap(),Qt::WindowFlags=0
 $prototype=QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 $internalConstructor=|new2|QWidget *,const QPixmap &=QPixmap(),Qt::WindowFlags=0
 
-//[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-//[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+/*
+[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+*/
 
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {

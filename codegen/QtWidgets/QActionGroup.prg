@@ -41,9 +41,11 @@ $internalMethod=|QAction *|addAction,addAction2|const QString &
 $prototype=QAction * addAction ( const QIcon & icon, const QString & text )
 $internalMethod=|QAction *|addAction,addAction3|const QIcon &,const QString &
 
-//[1]QAction * addAction ( QAction * action )
-//[2]QAction * addAction ( const QString & text )
-//[3]QAction * addAction ( const QIcon & icon, const QString & text )
+/*
+[1]QAction * addAction ( QAction * action )
+[2]QAction * addAction ( const QString & text )
+[3]QAction * addAction ( const QIcon & icon, const QString & text )
+*/
 
 HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 {
