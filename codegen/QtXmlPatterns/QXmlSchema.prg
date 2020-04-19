@@ -35,8 +35,10 @@ $internalConstructor=|new1|
 $prototype=QXmlSchema ( const QXmlSchema & other )
 $internalConstructor=|new2|const QXmlSchema &
 
-//[1]QXmlSchema ()
-//[2]QXmlSchema ( const QXmlSchema & other )
+/*
+[1]QXmlSchema ()
+[2]QXmlSchema ( const QXmlSchema & other )
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 {
@@ -71,9 +73,11 @@ $internalMethod=|bool|load,load2|QIODevice *,const QUrl &=QUrl()
 $prototype=bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
 $internalMethod=|bool|load,load3|const QByteArray &,const QUrl &=QUrl()
 
-//[1]bool load ( const QUrl & source )
-//[2]bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
-//[3]bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
+/*
+[1]bool load ( const QUrl & source )
+[2]bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
+[3]bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 {

@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 $internalConstructor=|new2|QXmlNamePool &,const QString &,const QString &=QString(),const QString &=QString()
 
-//[1]QXmlName ()
-//[2]QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
+/*
+[1]QXmlName ()
+[2]QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
+*/
 
 HB_FUNC_STATIC( QXMLNAME_NEW )
 {

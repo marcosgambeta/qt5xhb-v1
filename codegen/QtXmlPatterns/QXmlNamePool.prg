@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QXmlNamePool ( const QXmlNamePool & other )
 $internalConstructor=|new2|const QXmlNamePool &
 
-//[1]QXmlNamePool ()
-//[2]QXmlNamePool ( const QXmlNamePool & other )
+/*
+[1]QXmlNamePool ()
+[2]QXmlNamePool ( const QXmlNamePool & other )
+*/
 
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
 {

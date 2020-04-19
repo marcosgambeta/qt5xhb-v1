@@ -41,10 +41,12 @@ $internalConstructor=|new3|const QXmlNamePool &
 $prototype=QXmlQuery ( QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool() )
 $internalConstructor=|new4|QXmlQuery::QueryLanguage,const QXmlNamePool &=QXmlNamePool()
 
-//[1]QXmlQuery ()
-//[2]QXmlQuery ( const QXmlQuery & other )
-//[3]QXmlQuery ( const QXmlNamePool & np )
-//[4]QXmlQuery ( QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool() )
+/*
+[1]QXmlQuery ()
+[2]QXmlQuery ( const QXmlQuery & other )
+[3]QXmlQuery ( const QXmlNamePool & np )
+[4]QXmlQuery ( QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool() )
+*/
 
 HB_FUNC_STATIC( QXMLQUERY_NEW )
 {
@@ -90,12 +92,14 @@ $internalMethod=|void|bindVariable,bindVariable5|const QString &,QIODevice *
 $prototype=void bindVariable ( const QString & localName, const QXmlQuery & query )
 $internalMethod=|void|bindVariable,bindVariable6|const QString &,const QXmlQuery &
 
-//[1]void bindVariable ( const QXmlName & name, const QXmlItem & value )
-//[2]void bindVariable ( const QXmlName & name, QIODevice * device )
-//[3]void bindVariable ( const QXmlName & name, const QXmlQuery & query )
-//[4]void bindVariable ( const QString & localName, const QXmlItem & value )
-//[5]void bindVariable ( const QString & localName, QIODevice * device )
-//[6]void bindVariable ( const QString & localName, const QXmlQuery & query )
+/*
+[1]void bindVariable ( const QXmlName & name, const QXmlItem & value )
+[2]void bindVariable ( const QXmlName & name, QIODevice * device )
+[3]void bindVariable ( const QXmlName & name, const QXmlQuery & query )
+[4]void bindVariable ( const QString & localName, const QXmlItem & value )
+[5]void bindVariable ( const QString & localName, QIODevice * device )
+[6]void bindVariable ( const QString & localName, const QXmlQuery & query )
+*/
 
 HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
 {
@@ -147,11 +151,13 @@ $prototype=bool evaluateTo ( QString * output ) const
 $prototype=bool evaluateTo ( QIODevice * target ) const
 $internalMethod=|bool|evaluateTo,evaluateTo5|QIODevice *
 
-//[1]void evaluateTo ( QXmlResultItems * result ) const
-//[2]bool evaluateTo ( QAbstractXmlReceiver * callback ) const
-//[3]bool evaluateTo ( QStringList * target ) const
-//[4]bool evaluateTo ( QString * output ) const
-//[5]bool evaluateTo ( QIODevice * target ) const
+/*
+[1]void evaluateTo ( QXmlResultItems * result ) const
+[2]bool evaluateTo ( QAbstractXmlReceiver * callback ) const
+[3]bool evaluateTo ( QStringList * target ) const
+[4]bool evaluateTo ( QString * output ) const
+[5]bool evaluateTo ( QIODevice * target ) const
+*/
 
 HB_FUNC_STATIC( QXMLQUERY_EVALUATETO )
 {
@@ -212,10 +218,12 @@ $internalMethod=|bool|setFocus,setFocus3|QIODevice *
 $prototype=bool setFocus ( const QString & focus )
 $internalMethod=|bool|setFocus,setFocus4|const QString &
 
-//[1]void setFocus ( const QXmlItem & item )
-//[2]bool setFocus ( const QUrl & documentURI )
-//[3]bool setFocus ( QIODevice * document )
-//[4]bool setFocus ( const QString & focus )
+/*
+[1]void setFocus ( const QXmlItem & item )
+[2]bool setFocus ( const QUrl & documentURI )
+[3]bool setFocus ( QIODevice * document )
+[4]bool setFocus ( const QString & focus )
+*/
 
 HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
 {
@@ -248,8 +256,10 @@ $internalMethod=|void|setInitialTemplateName,setInitialTemplateName1|const QXmlN
 $prototype=void setInitialTemplateName ( const QString & localName )
 $internalMethod=|void|setInitialTemplateName,setInitialTemplateName2|const QString &
 
-//[1]void setInitialTemplateName ( const QXmlName & name )
-//[2]void setInitialTemplateName ( const QString & localName )
+/*
+[1]void setInitialTemplateName ( const QXmlName & name )
+[2]void setInitialTemplateName ( const QString & localName )
+*/
 
 HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME )
 {
@@ -283,9 +293,11 @@ $internalMethod=|void|setQuery,setQuery2|const QUrl &,const QUrl &=QUrl()
 $prototype=void setQuery ( const QString & sourceCode, const QUrl & documentURI = QUrl() )
 $internalMethod=|void|setQuery,setQuery3|const QString &,const QUrl &=QUrl()
 
-//[1]void setQuery ( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
-//[2]void setQuery ( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
-//[3]void setQuery ( const QString & sourceCode, const QUrl & documentURI = QUrl() )
+/*
+[1]void setQuery ( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
+[2]void setQuery ( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
+[3]void setQuery ( const QString & sourceCode, const QUrl & documentURI = QUrl() )
+*/
 
 HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 {

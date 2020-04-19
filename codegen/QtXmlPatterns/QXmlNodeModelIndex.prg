@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 $internalConstructor=|new2|const QXmlNodeModelIndex &
 
-//[1]QXmlNodeModelIndex ()
-//[2]QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
+/*
+[1]QXmlNodeModelIndex ()
+[2]QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
+*/
 
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 {

@@ -34,9 +34,11 @@ $internalConstructor=|new2|const QSourceLocation &
 $prototype=QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
 $internalConstructor=|new3|const QUrl &,int=-1,int=-1
 
-//[1]QSourceLocation ()
-//[2]QSourceLocation ( const QSourceLocation & other )
-//[3]QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
+/*
+[1]QSourceLocation ()
+[2]QSourceLocation ( const QSourceLocation & other )
+[3]QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
+*/
 
 HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 {

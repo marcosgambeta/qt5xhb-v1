@@ -36,8 +36,10 @@ $internalConstructor=|new1|
 $prototype=QXmlSchemaValidator ( const QXmlSchema & schema )
 $internalConstructor=|new2|const QXmlSchema &
 
-//[1]QXmlSchemaValidator ()
-//[2]QXmlSchemaValidator ( const QXmlSchema & schema )
+/*
+[1]QXmlSchemaValidator ()
+[2]QXmlSchemaValidator ( const QXmlSchema & schema )
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 {
@@ -93,9 +95,11 @@ $internalMethod=|bool|validate,validate2|QIODevice *,const QUrl &=QUrl()
 $prototype=bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
 $internalMethod=|bool|validate,validate3|const QByteArray &,const QUrl &=QUrl()
 
-//[1]bool validate ( const QUrl & source ) const
-//[2]bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
-//[3]bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
+/*
+[1]bool validate ( const QUrl & source ) const
+[2]bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
+[3]bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 {
