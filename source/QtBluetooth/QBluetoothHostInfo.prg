@@ -86,8 +86,10 @@ void QBluetoothHostInfo_new2()
 #endif
 }
 
-//[1]QBluetoothHostInfo()
-//[2]QBluetoothHostInfo(const QBluetoothHostInfo &other)
+/*
+[1]QBluetoothHostInfo()
+[2]QBluetoothHostInfo(const QBluetoothHostInfo &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHHOSTINFO_NEW )
 {

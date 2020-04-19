@@ -86,8 +86,10 @@ void QBluetoothTransferRequest_new2()
 #endif
 }
 
-//[1]QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
-//[2]QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
+/*
+[1]QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress())
+[2]QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREQUEST_NEW )
 {

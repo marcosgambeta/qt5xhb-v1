@@ -112,8 +112,10 @@ void QBluetoothServiceInfo_new2()
 #endif
 }
 
-//[1]QBluetoothServiceInfo()
-//[2]QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
+/*
+[1]QBluetoothServiceInfo()
+[2]QBluetoothServiceInfo(const QBluetoothServiceInfo &other)
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_NEW )
 {
@@ -299,10 +301,12 @@ void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Sequence &va
 void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Alternative &value)
 */
 
-//[1]void setAttribute(quint16 attributeId, const QVariant &value)
-//[2]void setAttribute(quint16 attributeId, const QBluetoothUuid &value)
-//[3]void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Sequence &value)    // TODO: implementar
-//[4]void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Alternative &value) // TODO: implementar
+/*
+[1]void setAttribute(quint16 attributeId, const QVariant &value)
+[2]void setAttribute(quint16 attributeId, const QBluetoothUuid &value)
+[3]void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Sequence &value)    // TODO: implementar
+[4]void setAttribute(quint16 attributeId, const QBluetoothServiceInfo::Alternative &value) // TODO: implementar
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEINFO_SETATTRIBUTE )
 {

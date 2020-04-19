@@ -165,8 +165,10 @@ void QBluetoothServer_listen2()
 #endif
 }
 
-//[1]bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
-//[2]QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
+/*
+[1]bool listen(const QBluetoothAddress &address = QBluetoothAddress(), quint16 port = 0)
+[2]QBluetoothServiceInfo listen(const QBluetoothUuid &uuid, const QString &serviceName = QString())
+*/
 
 HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN )
 {
