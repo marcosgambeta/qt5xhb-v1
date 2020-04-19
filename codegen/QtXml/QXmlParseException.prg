@@ -31,8 +31,10 @@ $internalConstructor=|new1|const QString &=QString(),int=-1,int=-1,const QString
 $prototype=QXmlParseException ( const QXmlParseException & other )
 $internalConstructor=|new2|const QXmlParseException &
 
-//[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
-//[2]QXmlParseException ( const QXmlParseException & other )
+/*
+[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
+[2]QXmlParseException ( const QXmlParseException & other )
+*/
 
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 {

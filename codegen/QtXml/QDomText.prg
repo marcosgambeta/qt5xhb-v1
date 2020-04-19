@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDomText ( const QDomText & x )
 $internalConstructor=|new2|const QDomText &
 
-//[1]QDomText ()
-//[2]QDomText ( const QDomText & x )
+/*
+[1]QDomText ()
+[2]QDomText ( const QDomText & x )
+*/
 
 HB_FUNC_STATIC( QDOMTEXT_NEW )
 {

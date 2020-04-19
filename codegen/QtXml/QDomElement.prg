@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDomElement ( const QDomElement & x )
 $internalConstructor=|new2|const QDomElement &
 
-//[1]QDomElement ()
-//[2]QDomElement ( const QDomElement & x )
+/*
+[1]QDomElement ()
+[2]QDomElement ( const QDomElement & x )
+*/
 
 HB_FUNC_STATIC( QDOMELEMENT_NEW )
 {
@@ -112,13 +114,15 @@ $method=|void|setAttribute,setAttribute6|const QString &,float
 $prototype=void setAttribute ( const QString & name, double value )
 $method=|void|setAttribute,setAttribute7|const QString &,double
 
-//[1]void setAttribute ( const QString & name, const QString & value )
-//[2]void setAttribute ( const QString & name, int value )
-//[3]void setAttribute ( const QString & name, uint value )
-//[4]void setAttribute ( const QString & name, qlonglong value )
-//[5]void setAttribute ( const QString & name, qulonglong value )
-//[6]void setAttribute ( const QString & name, float value )
-//[7]void setAttribute ( const QString & name, double value )
+/*
+[1]void setAttribute ( const QString & name, const QString & value )
+[2]void setAttribute ( const QString & name, int value )
+[3]void setAttribute ( const QString & name, uint value )
+[4]void setAttribute ( const QString & name, qlonglong value )
+[5]void setAttribute ( const QString & name, qulonglong value )
+[6]void setAttribute ( const QString & name, float value )
+[7]void setAttribute ( const QString & name, double value )
+*/
 
 %% TODO: implementar reconhecimento de int e double
 HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
@@ -156,12 +160,14 @@ $method=|void|setAttributeNS,setAttributeNS5|const QString,const QString &,qulon
 $prototype=void setAttributeNS ( const QString nsURI, const QString & qName, double value )
 $method=|void|setAttributeNS,setAttributeNS6|const QString,const QString &,double
 
-//[1]void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
-//[2]void setAttributeNS ( const QString nsURI, const QString & qName, int value )
-//[3]void setAttributeNS ( const QString nsURI, const QString & qName, uint value )
-//[4]void setAttributeNS ( const QString nsURI, const QString & qName, qlonglong value )
-//[5]void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
-//[6]void setAttributeNS ( const QString nsURI, const QString & qName, double value )
+/*
+[1]void setAttributeNS ( const QString nsURI, const QString & qName, const QString & value )
+[2]void setAttributeNS ( const QString nsURI, const QString & qName, int value )
+[3]void setAttributeNS ( const QString nsURI, const QString & qName, uint value )
+[4]void setAttributeNS ( const QString nsURI, const QString & qName, qlonglong value )
+[5]void setAttributeNS ( const QString nsURI, const QString & qName, qulonglong value )
+[6]void setAttributeNS ( const QString nsURI, const QString & qName, double value )
+*/
 
 HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
 {

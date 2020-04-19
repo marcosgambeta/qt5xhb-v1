@@ -42,8 +42,10 @@ $internalMethod=|QStringList|prefixes,prefixes1|
 $prototype=QStringList prefixes ( const QString & uri ) const
 $internalMethod=|QStringList|prefixes,prefixes2|const QString &
 
-//[1]QStringList prefixes () const
-//[2]QStringList prefixes ( const QString & uri ) const
+/*
+[1]QStringList prefixes () const
+[2]QStringList prefixes ( const QString & uri ) const
+*/
 
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 {

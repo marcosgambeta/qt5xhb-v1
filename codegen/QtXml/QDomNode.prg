@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDomNode ( const QDomNode & n )
 $internalConstructor=|new2|const QDomNode &
 
-//[1]QDomNode ()
-//[2]QDomNode ( const QDomNode & n )
+/*
+[1]QDomNode ()
+[2]QDomNode ( const QDomNode & n )
+*/
 
 HB_FUNC_STATIC( QDOMNODE_NEW )
 {
@@ -196,8 +198,10 @@ $internalMethod=|void|save,save1|QTextStream &,int
 $prototype=void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
 $internalMethod=|void|save,save2|QTextStream &,int,QDomNode::EncodingPolicy
 
-//[1]void save ( QTextStream & str, int indent ) const
-//[2]void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
+/*
+[1]void save ( QTextStream & str, int indent ) const
+[2]void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
+*/
 
 HB_FUNC_STATIC( QDOMNODE_SAVE )
 {

@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDomCDATASection ( const QDomCDATASection & x )
 $internalConstructor=|new2|const QDomCDATASection &
 
-//[1]QDomCDATASection ()
-//[2]QDomCDATASection ( const QDomCDATASection & x )
+/*
+[1]QDomCDATASection ()
+[2]QDomCDATASection ( const QDomCDATASection & x )
+*/
 
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {

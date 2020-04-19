@@ -48,9 +48,11 @@ $internalMethod=|int|index,index2|const QLatin1String &
 $prototype=int index ( const QString & uri, const QString & localPart ) const
 $internalMethod=|int|index,index3|const QString &,const QString &
 
-//[1]int index ( const QString & qName ) const
-//[2]int index ( const QLatin1String & qName ) const
-//[3]int index ( const QString & uri, const QString & localPart ) const
+/*
+[1]int index ( const QString & qName ) const
+[2]int index ( const QLatin1String & qName ) const
+[3]int index ( const QString & uri, const QString & localPart ) const
+*/
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 {
@@ -91,9 +93,11 @@ $internalMethod=|QString|type,type2|const QString &
 $prototype=QString type ( const QString & uri, const QString & localName ) const
 $internalMethod=|QString|type,type3|const QString &,const QString &
 
-//[1]QString type ( int index ) const
-//[2]QString type ( const QString & qName ) const
-//[3]QString type ( const QString & uri, const QString & localName ) const
+/*
+[1]QString type ( int index ) const
+[2]QString type ( const QString & qName ) const
+[3]QString type ( const QString & uri, const QString & localName ) const
+*/
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 {
@@ -131,10 +135,12 @@ $internalMethod=|QString|value,value3|const QLatin1String &
 $prototype=QString value ( const QString & uri, const QString & localName ) const
 $internalMethod=|QString|value,value4|const QString &,const QString &
 
-//[1]QString value ( int index ) const
-//[2]QString value ( const QString & qName ) const
-//[3]QString value ( const QLatin1String & qName ) const
-//[4]QString value ( const QString & uri, const QString & localName ) const
+/*
+[1]QString value ( int index ) const
+[2]QString value ( const QString & qName ) const
+[3]QString value ( const QLatin1String & qName ) const
+[4]QString value ( const QString & uri, const QString & localName ) const
+*/
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 {

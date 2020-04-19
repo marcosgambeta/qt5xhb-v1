@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDomDocumentType ( const QDomDocumentType & n )
 $internalConstructor=|new2|const QDomDocumentType &
 
-//[1]QDomDocumentType ()
-//[2]QDomDocumentType ( const QDomDocumentType & n )
+/*
+[1]QDomDocumentType ()
+[2]QDomDocumentType ( const QDomDocumentType & n )
+*/
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {

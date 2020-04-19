@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDomNodeList ( const QDomNodeList & n )
 $internalConstructor=|new2|const QDomNodeList &
 
-//[1]QDomNodeList ()
-//[2]QDomNodeList ( const QDomNodeList & n )
+/*
+[1]QDomNodeList ()
+[2]QDomNodeList ( const QDomNodeList & n )
+*/
 
 HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {

@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDomEntity ( const QDomEntity & x )
 $internalConstructor=|new2|const QDomEntity &
 
-//[1]QDomEntity ()
-//[2]QDomEntity ( const QDomEntity & x )
+/*
+[1]QDomEntity ()
+[2]QDomEntity ( const QDomEntity & x )
+*/
 
 HB_FUNC_STATIC( QDOMENTITY_NEW )
 {

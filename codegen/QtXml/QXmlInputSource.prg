@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QXmlInputSource ( QIODevice * dev )
 $internalConstructor=|new2|QIODevice *
 
-//[1]QXmlInputSource ()
-//[2]QXmlInputSource ( QIODevice * dev )
+/*
+[1]QXmlInputSource ()
+[2]QXmlInputSource ( QIODevice * dev )
+*/
 
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
 {
@@ -70,8 +72,10 @@ $internalVirtualMethod=|void|setData,setData1|const QString &
 $prototype=virtual void setData ( const QByteArray & dat )
 $internalVirtualMethod=|void|setData,setData2|const QByteArray &
 
-//[1]virtual void setData ( const QString & dat )
-//[2]virtual void setData ( const QByteArray & dat )
+/*
+[1]virtual void setData ( const QString & dat )
+[2]virtual void setData ( const QByteArray & dat )
+*/
 
 HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
 {

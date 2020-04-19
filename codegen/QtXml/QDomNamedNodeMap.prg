@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDomNamedNodeMap ( const QDomNamedNodeMap & n )
 $internalConstructor=|new2|const QDomNamedNodeMap &
 
-//[1]QDomNamedNodeMap ()
-//[2]QDomNamedNodeMap ( const QDomNamedNodeMap & n )
+/*
+[1]QDomNamedNodeMap ()
+[2]QDomNamedNodeMap ( const QDomNamedNodeMap & n )
+*/
 
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
 {

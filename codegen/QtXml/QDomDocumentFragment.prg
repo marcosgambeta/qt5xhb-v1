@@ -31,8 +31,10 @@ $internalConstructor=|new1|
 $prototype=QDomDocumentFragment ( const QDomDocumentFragment & x )
 $internalConstructor=|new2|const QDomDocumentFragment &
 
-//[1]QDomDocumentFragment ()
-//[2]QDomDocumentFragment ( const QDomDocumentFragment & x )
+/*
+[1]QDomDocumentFragment ()
+[2]QDomDocumentFragment ( const QDomDocumentFragment & x )
+*/
 
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
