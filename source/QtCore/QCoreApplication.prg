@@ -96,8 +96,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QCoreApplication * o = NULL;
-  o = new QCoreApplication( argc, argv );
+  QCoreApplication * o = new QCoreApplication( argc, argv );
   Qt5xHb::returnNewObject( o, false );
 }
 
