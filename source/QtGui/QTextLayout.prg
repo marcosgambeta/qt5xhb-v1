@@ -133,10 +133,12 @@ void QTextLayout_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QTextLayout()
-//[2]QTextLayout(const QString& text)
-//[3]QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 0)
-//[4]QTextLayout(const QTextBlock &b)
+/*
+[1]QTextLayout()
+[2]QTextLayout(const QString& text)
+[3]QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 0)
+[4]QTextLayout(const QTextBlock &b)
+*/
 
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 {
@@ -884,8 +886,10 @@ void QTextLayout_drawCursor2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition) const
-//[2]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition, int width) const
+/*
+[1]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition) const
+[2]void drawCursor(QPainter *p, const QPointF &pos, int cursorPosition, int width) const
+*/
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 {

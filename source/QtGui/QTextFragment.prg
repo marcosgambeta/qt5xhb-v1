@@ -87,9 +87,11 @@ void QTextFragment_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
-//[2]QTextFragment()
-//[3]QTextFragment(const QTextFragment &o)
+/*
+[1]QTextFragment(const QTextDocumentPrivate *priv, int f, int fe)
+[2]QTextFragment()
+[3]QTextFragment(const QTextFragment &o)
+*/
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {

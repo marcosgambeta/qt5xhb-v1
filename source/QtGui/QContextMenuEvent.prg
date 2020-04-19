@@ -81,9 +81,11 @@ void QContextMenuEvent_new3()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
-//[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
-//[3]QContextMenuEvent ( Reason reason, const QPoint & pos )
+/*
+[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
+[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
+[3]QContextMenuEvent ( Reason reason, const QPoint & pos )
+*/
 
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 {

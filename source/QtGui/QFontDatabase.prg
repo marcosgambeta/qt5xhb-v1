@@ -382,8 +382,10 @@ void QFontDatabase_styleString2()
   }
 }
 
-//[1]QString styleString ( const QFont & font )
-//[2]QString styleString ( const QFontInfo & fontInfo )
+/*
+[1]QString styleString ( const QFont & font )
+[2]QString styleString ( const QFontInfo & fontInfo )
+*/
 
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {

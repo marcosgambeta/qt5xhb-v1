@@ -122,12 +122,14 @@ void QRegion_new6()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QRegion()
-//[2]QRegion(int x, int y, int w, int h, RegionType t = Rectangle)
-//[3]QRegion(const QRect &r, RegionType t = Rectangle)
-//[4]QRegion(const QPolygon &pa, Qt::FillRule fillRule = Qt::OddEvenFill)
-//[5]QRegion(const QRegion &region)
-//[6]QRegion(const QBitmap &bitmap)
+/*
+[1]QRegion()
+[2]QRegion(int x, int y, int w, int h, RegionType t = Rectangle)
+[3]QRegion(const QRect &r, RegionType t = Rectangle)
+[4]QRegion(const QPolygon &pa, Qt::FillRule fillRule = Qt::OddEvenFill)
+[5]QRegion(const QRegion &region)
+[6]QRegion(const QBitmap &bitmap)
+*/
 
 HB_FUNC_STATIC( QREGION_NEW )
 {
@@ -278,8 +280,10 @@ void QRegion_contains2()
   }
 }
 
-//[1]bool contains(const QPoint &p) const
-//[2]bool contains(const QRect &r) const
+/*
+[1]bool contains(const QPoint &p) const
+[2]bool contains(const QRect &r) const
+*/
 
 HB_FUNC_STATIC( QREGION_CONTAINS )
 {
@@ -327,8 +331,10 @@ void QRegion_translate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void translate(int dx, int dy)
-//[2]void translate(const QPoint &p)
+/*
+[1]void translate(int dx, int dy)
+[2]void translate(const QPoint &p)
+*/
 
 HB_FUNC_STATIC( QREGION_TRANSLATE )
 {
@@ -374,8 +380,10 @@ void QRegion_translated2()
   }
 }
 
-//[1]QRegion translated(int dx, int dy) const
-//[2]QRegion translated(const QPoint &p) const
+/*
+[1]QRegion translated(int dx, int dy) const
+[2]QRegion translated(const QPoint &p) const
+*/
 
 HB_FUNC_STATIC( QREGION_TRANSLATED )
 {
@@ -421,8 +429,10 @@ void QRegion_united2()
   }
 }
 
-//[1]QRegion united(const QRegion &r) const
-//[2]QRegion united(const QRect &r) const
+/*
+[1]QRegion united(const QRegion &r) const
+[2]QRegion united(const QRect &r) const
+*/
 
 HB_FUNC_STATIC( QREGION_UNITED )
 {
@@ -516,8 +526,10 @@ void QRegion_intersects2()
   }
 }
 
-//[1]bool intersects(const QRegion &r) const
-//[2]bool intersects(const QRect &r) const
+/*
+[1]bool intersects(const QRegion &r) const
+[2]bool intersects(const QRect &r) const
+*/
 
 HB_FUNC_STATIC( QREGION_INTERSECTS )
 {

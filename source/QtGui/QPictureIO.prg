@@ -108,9 +108,11 @@ void QPictureIO_new3()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QPictureIO()
-//[2]QPictureIO(QIODevice *ioDevice, const char *format)
-//[3]QPictureIO(const QString &fileName, const char *format)
+/*
+[1]QPictureIO()
+[2]QPictureIO(QIODevice *ioDevice, const char *format)
+[3]QPictureIO(const QString &fileName, const char *format)
+*/
 
 HB_FUNC_STATIC( QPICTUREIO_NEW )
 {
@@ -669,8 +671,10 @@ void QPictureIO_pictureFormat2()
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 }
 
-//[1]static QByteArray pictureFormat(const QString &fileName)
-//[2]static QByteArray pictureFormat(QIODevice *)
+/*
+[1]static QByteArray pictureFormat(const QString &fileName)
+[2]static QByteArray pictureFormat(QIODevice *)
+*/
 
 HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT )
 {

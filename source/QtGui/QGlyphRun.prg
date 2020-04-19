@@ -83,8 +83,10 @@ void QGlyphRun_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QGlyphRun ()
-//[2]QGlyphRun ( const QGlyphRun & other )
+/*
+[1]QGlyphRun ()
+[2]QGlyphRun ( const QGlyphRun & other )
+*/
 
 HB_FUNC_STATIC( QGLYPHRUN_NEW )
 {

@@ -125,12 +125,14 @@ void QPolygon_new5()
 QPolygon(int nPoints, const int *points)
 */
 
-//[1]QPolygon()
-//[2]QPolygon(int size)
-//[3]QPolygon(const QPolygon &a)
-//[4]QPolygon(const QVector<QPoint> &v)
-//[5]QPolygon(const QRect &r, bool closed=false)
-//[6]QPolygon(int nPoints, const int *points)
+/*
+[1]QPolygon()
+[2]QPolygon(int size)
+[3]QPolygon(const QPolygon &a)
+[4]QPolygon(const QVector<QPoint> &v)
+[5]QPolygon(const QRect &r, bool closed=false)
+[6]QPolygon(int nPoints, const int *points)
+*/
 
 HB_FUNC_STATIC( QPOLYGON_NEW )
 {
@@ -233,8 +235,10 @@ void QPolygon_translate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void translate(int dx, int dy)
-//[2]void translate(const QPoint &offset)
+/*
+[1]void translate(int dx, int dy)
+[2]void translate(const QPoint &offset)
+*/
 
 HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
 {
@@ -280,8 +284,10 @@ void QPolygon_translated2()
   }
 }
 
-//[1]QPolygon translated(int dx, int dy) const
-//[2]QPolygon translated(const QPoint &offset) const
+/*
+[1]QPolygon translated(int dx, int dy) const
+[2]QPolygon translated(const QPoint &offset) const
+*/
 
 HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
 {
@@ -357,8 +363,10 @@ void QPolygon_point2()
   }
 }
 
-//[1]void point(int i, int *x, int *y) const
-//[2]QPoint point(int i) const
+/*
+[1]void point(int i, int *x, int *y) const
+[2]QPoint point(int i) const
+*/
 
 HB_FUNC_STATIC( QPOLYGON_POINT )
 {
@@ -406,8 +414,10 @@ void QPolygon_setPoint2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setPoint(int index, int x, int y)
-//[2]void setPoint(int index, const QPoint &p)
+/*
+[1]void setPoint(int index, int x, int y)
+[2]void setPoint(int index, const QPoint &p)
+*/
 
 HB_FUNC_STATIC( QPOLYGON_SETPOINT )
 {

@@ -273,13 +273,14 @@ HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
   }
 }
 
-//[1]bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const char *source)
-//[2]bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QByteArray& source)
-//[3]bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QString& source)
+/*
+[1]bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const char *source)
+[2]bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QByteArray& source)
+[3]bool addShaderFromSourceCode(QOpenGLShader::ShaderType type, const QString& source)
+*/
 
 HB_FUNC_STATIC( QOPENGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 {
-  // TODO: implementar
 }
 
 /*

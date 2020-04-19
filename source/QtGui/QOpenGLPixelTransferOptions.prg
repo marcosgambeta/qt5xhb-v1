@@ -90,8 +90,10 @@ void QOpenGLPixelTransferOptions_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QOpenGLPixelTransferOptions()
-//[2]QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
+/*
+[1]QOpenGLPixelTransferOptions()
+[2]QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
+*/
 
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 {

@@ -68,8 +68,10 @@ void QPaintEvent_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QPaintEvent ( const QRegion & paintRegion )
-//[2]QPaintEvent ( const QRect & paintRect )
+/*
+[1]QPaintEvent ( const QRegion & paintRegion )
+[2]QPaintEvent ( const QRect & paintRect )
+*/
 
 HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {

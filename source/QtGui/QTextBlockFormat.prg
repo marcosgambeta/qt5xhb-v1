@@ -529,8 +529,10 @@ void QTextBlockFormat_lineHeight2()
   }
 }
 
-//[1]qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
-//[2]qreal lineHeight() const
+/*
+[1]qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
+[2]qreal lineHeight() const
+*/
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {

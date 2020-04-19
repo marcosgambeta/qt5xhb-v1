@@ -89,9 +89,11 @@ void QOpenGLPaintDevice_new3()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QOpenGLPaintDevice()
-//[2]QOpenGLPaintDevice(const QSize &size)
-//[3]QOpenGLPaintDevice(int width, int height)
+/*
+[1]QOpenGLPaintDevice()
+[2]QOpenGLPaintDevice(const QSize &size)
+[3]QOpenGLPaintDevice(int width, int height)
+*/
 
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 {

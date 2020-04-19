@@ -389,8 +389,10 @@ void QSessionManager_setManagerProperty2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setManagerProperty(const QString& name, const QString& value)
-//[2]void setManagerProperty(const QString& name, const QStringList& value)
+/*
+[1]void setManagerProperty(const QString& name, const QString& value)
+[2]void setManagerProperty(const QString& name, const QStringList& value)
+*/
 
 HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 {

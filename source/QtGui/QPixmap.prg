@@ -142,13 +142,15 @@ void QPixmap_new7()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QPixmap()
-//[2]QPixmap(QPlatformPixmap *data) // TODO: implementar(?)
-//[3]QPixmap(int w, int h)
-//[4]QPixmap(const QSize &)
-//[5]QPixmap(const QString& fileName, const char *format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
-//[6]QPixmap(const char * const xpm[]) // TODO: implementar(?)
-//[7]QPixmap(const QPixmap &)
+/*
+[1]QPixmap()
+[2]QPixmap(QPlatformPixmap *data) // TODO: implementar(?)
+[3]QPixmap(int w, int h)
+[4]QPixmap(const QSize &)
+[5]QPixmap(const QString& fileName, const char *format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+[6]QPixmap(const char * const xpm[]) // TODO: implementar(?)
+[7]QPixmap(const QPixmap &)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_NEW )
 {
@@ -156,10 +158,6 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
   {
     QPixmap_new1();
   }
-  //else if( ISNUMPAR(1) && ISQPLATFORMPIXMAP(1) )
-  //{
-  //  QPixmap_new2();
-  //}
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
     QPixmap_new3();
@@ -440,9 +438,11 @@ void QPixmap_fill3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void fill(const QColor &fillColor = Qt::white)
-//[2]void fill(const QPaintDevice *device, const QPoint &ofs)
-//[3]void fill(const QPaintDevice *device, int xofs, int yofs)
+/*
+[1]void fill(const QColor &fillColor = Qt::white)
+[2]void fill(const QPaintDevice *device, const QPoint &ofs)
+[3]void fill(const QPaintDevice *device, int xofs, int yofs)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_FILL )
 {
@@ -450,11 +450,11 @@ HB_FUNC_STATIC( QPIXMAP_FILL )
   {
     QPixmap_fill1();
   }
-  else if( ISNUMPAR(2) && ISOBJECT(1) && ISQPOINT(2) ) // TODO: implementar ISQPAINTDEVICE
+  else if( ISNUMPAR(2) && ISOBJECT(1) && ISQPOINT(2) )
   {
     QPixmap_fill2();
   }
-  else if( ISNUMPAR(3) && ISOBJECT(1) && ISNUM(2) && ISNUM(3) ) // TODO: implementar ISQPAINTDEVICE
+  else if( ISNUMPAR(3) && ISOBJECT(1) && ISNUM(2) && ISNUM(3) )
   {
     QPixmap_fill3();
   }
@@ -691,8 +691,10 @@ void QPixmap_scaled2()
   }
 }
 
-//[1]QPixmap scaled(int w, int h, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
-//[2]QPixmap scaled(const QSize &s, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
+/*
+[1]QPixmap scaled(int w, int h, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
+[2]QPixmap scaled(const QSize &s, Qt::AspectRatioMode aspectMode = Qt::IgnoreAspectRatio,Qt::TransformationMode mode = Qt::FastTransformation) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_SCALED )
 {
@@ -788,8 +790,10 @@ void QPixmap_transformed2()
   }
 }
 
-//[1]QPixmap transformed(const QMatrix &, Qt::TransformationMode mode = Qt::FastTransformation) const
-//[2]QPixmap transformed(const QTransform &, Qt::TransformationMode mode = Qt::FastTransformation) const
+/*
+[1]QPixmap transformed(const QMatrix &, Qt::TransformationMode mode = Qt::FastTransformation) const
+[2]QPixmap transformed(const QTransform &, Qt::TransformationMode mode = Qt::FastTransformation) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_TRANSFORMED )
 {
@@ -882,8 +886,10 @@ void QPixmap_loadFromData2()
   }
 }
 
-//[1]bool loadFromData(const uchar *buf, uint len, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
-//[2]bool loadFromData(const QByteArray &data, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+/*
+[1]bool loadFromData(const uchar *buf, uint len, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+[2]bool loadFromData(const QByteArray &data, const char* format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 {
@@ -927,8 +933,10 @@ void QPixmap_save2()
   }
 }
 
-//[1]bool save(const QString& fileName, const char* format = 0, int quality = -1) const
-//[2]bool save(QIODevice* device, const char* format = 0, int quality = -1) const
+/*
+[1]bool save(const QString& fileName, const char* format = 0, int quality = -1) const
+[2]bool save(QIODevice* device, const char* format = 0, int quality = -1) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_SAVE )
 {
@@ -998,8 +1006,10 @@ void QPixmap_copy2()
   }
 }
 
-//[1]QPixmap copy(int x, int y, int width, int height) const
-//[2]QPixmap copy(const QRect &rect = QRect()) const
+/*
+[1]QPixmap copy(int x, int y, int width, int height) const
+[2]QPixmap copy(const QRect &rect = QRect()) const
+*/
 
 HB_FUNC_STATIC( QPIXMAP_COPY )
 {
@@ -1047,8 +1057,10 @@ void QPixmap_scroll2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = 0)
-//[2]void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = 0)
+/*
+[1]void scroll(int dx, int dy, int x, int y, int width, int height, QRegion *exposed = 0)
+[2]void scroll(int dx, int dy, const QRect &rect, QRegion *exposed = 0)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_SCROLL )
 {
@@ -1248,8 +1260,10 @@ void QPixmap_grabWidget2()
   Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
 }
 
-//[1]static QPixmap grabWidget(QObject *widget, const QRect &rect)
-//[2]static QPixmap grabWidget(QObject *widget, int x=0, int y=0, int w=-1, int h=-1)
+/*
+[1]static QPixmap grabWidget(QObject *widget, const QRect &rect)
+[2]static QPixmap grabWidget(QObject *widget, int x=0, int y=0, int w=-1, int h=-1)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_GRABWIDGET )
 {
@@ -1287,8 +1301,10 @@ void QPixmap_trueMatrix2()
   Qt5xHb::createReturnClass( ptr, "QTRANSFORM", true );
 }
 
-//[1]static QMatrix trueMatrix(const QMatrix &m, int w, int h)
-//[2]static QTransform trueMatrix(const QTransform &m, int w, int h)
+/*
+[1]static QMatrix trueMatrix(const QMatrix &m, int w, int h)
+[2]static QTransform trueMatrix(const QTransform &m, int w, int h)
+*/
 
 HB_FUNC_STATIC( QPIXMAP_TRUEMATRIX )
 {

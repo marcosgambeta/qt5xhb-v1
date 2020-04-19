@@ -129,12 +129,14 @@ void QPolygonF_new6()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QPolygonF()
-//[2]QPolygonF(int size)
-//[3]QPolygonF(const QPolygonF &a)
-//[4]QPolygonF(const QVector<QPointF> &v)
-//[5]QPolygonF(const QRectF &r)
-//[6]QPolygonF(const QPolygon &a)
+/*
+[1]QPolygonF()
+[2]QPolygonF(int size)
+[3]QPolygonF(const QPolygonF &a)
+[4]QPolygonF(const QVector<QPointF> &v)
+[5]QPolygonF(const QRectF &r)
+[6]QPolygonF(const QPolygon &a)
+*/
 
 HB_FUNC_STATIC( QPOLYGONF_NEW )
 {
@@ -241,8 +243,10 @@ void QPolygonF_translate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void translate(qreal dx, qreal dy)
-//[2]void translate(const QPointF &offset)
+/*
+[1]void translate(qreal dx, qreal dy)
+[2]void translate(const QPointF &offset)
+*/
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 {
@@ -288,8 +292,10 @@ void QPolygonF_translated2()
   }
 }
 
-//[1]QPolygonF translated(qreal dx, qreal dy) const
-//[2]QPolygonF translated(const QPointF &offset) const
+/*
+[1]QPolygonF translated(qreal dx, qreal dy) const
+[2]QPolygonF translated(const QPointF &offset) const
+*/
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 {

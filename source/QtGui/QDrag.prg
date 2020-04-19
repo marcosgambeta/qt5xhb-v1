@@ -178,8 +178,10 @@ void QDrag_exec2()
   }
 }
 
-//[1]Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
-//[2]Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
+/*
+[1]Qt::DropAction exec(Qt::DropActions supportedActions = Qt::MoveAction)
+[2]Qt::DropAction exec(Qt::DropActions supportedActions, Qt::DropAction defaultDropAction)
+*/
 
 HB_FUNC_STATIC( QDRAG_EXEC )
 {

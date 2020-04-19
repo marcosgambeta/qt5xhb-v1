@@ -86,8 +86,10 @@ void QFontInfo_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QFontInfo ( const QFont & font )
-//[2]QFontInfo ( const QFontInfo & fi )
+/*
+[1]QFontInfo ( const QFont & font )
+[2]QFontInfo ( const QFontInfo & fi )
+*/
 
 HB_FUNC_STATIC( QFONTINFO_NEW )
 {

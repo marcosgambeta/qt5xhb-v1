@@ -127,10 +127,12 @@ void QRawFont_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QRawFont()
-//[2]QRawFont(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting)
-//[3]QRawFont(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting)
-//[4]QRawFont(const QRawFont &other)
+/*
+[1]QRawFont()
+[2]QRawFont(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting)
+[3]QRawFont(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting)
+[4]QRawFont(const QRawFont &other)
+*/
 
 HB_FUNC_STATIC( QRAWFONT_NEW )
 {
@@ -406,8 +408,10 @@ void QRawFont_advancesForGlyphIndexes1()
 bool advancesForGlyphIndexes(const quint32 *glyphIndexes, QPointF *advances, int numGlyphs) const
 */
 
-//[1]inline QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
-//[2]bool advancesForGlyphIndexes(const quint32 *glyphIndexes, QPointF *advances, int numGlyphs) const
+/*
+[1]inline QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
+[2]bool advancesForGlyphIndexes(const quint32 *glyphIndexes, QPointF *advances, int numGlyphs) const
+*/
 
 HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 {
@@ -868,8 +872,10 @@ void QRawFont_supportsCharacter2()
   }
 }
 
-//[1]bool supportsCharacter(uint ucs4) const
-//[2]bool supportsCharacter(QChar character) const
+/*
+[1]bool supportsCharacter(uint ucs4) const
+[2]bool supportsCharacter(QChar character) const
+*/
 
 HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 {

@@ -129,9 +129,11 @@ void QImageReader_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QImageReader ()
-//[2]QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
-//[3]QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
+/*
+[1]QImageReader ()
+[2]QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
+[3]QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
+*/
 
 HB_FUNC_STATIC( QIMAGEREADER_NEW )
 {
@@ -634,8 +636,10 @@ void QImageReader_read2()
   }
 }
 
-//[1]QImage read ()
-//[2]bool read ( QImage * image )
+/*
+[1]QImage read ()
+[2]bool read ( QImage * image )
+*/
 
 HB_FUNC_STATIC( QIMAGEREADER_READ )
 {
@@ -1117,9 +1121,11 @@ void QImageReader_imageFormat3()
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 }
 
-//[1]QImage::Format imageFormat () const
-//[2]QByteArray imageFormat ( const QString & fileName )
-//[3]QByteArray imageFormat ( QIODevice * device )
+/*
+[1]QImage::Format imageFormat () const
+[2]QByteArray imageFormat ( const QString & fileName )
+[3]QByteArray imageFormat ( QIODevice * device )
+*/
 
 HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 {

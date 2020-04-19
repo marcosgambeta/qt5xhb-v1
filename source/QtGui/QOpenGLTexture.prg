@@ -148,8 +148,10 @@ void QOpenGLTexture_new2()
 #endif
 }
 
-//[1]QOpenGLTexture(Target target)
-//[2]QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
+/*
+[1]QOpenGLTexture(Target target)
+[2]QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
+*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_NEW )
 {
@@ -326,8 +328,10 @@ void QOpenGLTexture_bind2()
 #endif
 }
 
-//[1]void bind()
-//[2]void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
+/*
+[1]void bind()
+[2]void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
+*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
 {
@@ -379,8 +383,10 @@ void QOpenGLTexture_release2()
 #endif
 }
 
-//[1]void release()
-//[2]void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
+/*
+[1]void release()
+[2]void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
+*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 {
@@ -428,8 +434,10 @@ void QOpenGLTexture_isBound2()
 #endif
 }
 
-//[1]bool isBound() const
-//[2]bool isBound(uint unit)
+/*
+[1]bool isBound() const
+[2]bool isBound(uint unit)
+*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 {
@@ -894,26 +902,16 @@ void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QO
 void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
 */
 
-//[1]void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-//[2]void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-//[3]void setData(int mipLevel,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-//[4]void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-//[5]void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
+/*
+[1]void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
+[2]void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
+[3]void setData(int mipLevel,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
+[4]void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
+[5]void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
+*/
 
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA ) // TODO: implementar
+HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA )
 {
-  //if( ... )
-  //{
-  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETDATA1 );
-  //}
-  //else if( ... )
-  //{
-  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETDATA2 );
-  //}
-  //else
-  //{
-  //  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  //}
 }
 
 /*
@@ -932,25 +930,15 @@ void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixel
 void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
 */
 
-//[1]void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-//[2]void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-//[3]void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-//[4]void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
+/*
+[1]void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
+[2]void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
+[3]void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
+[4]void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
+*/
 
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA ) // TODO: implementar
+HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA )
 {
-  //if( ... )
-  //{
-  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETCOMPRESSEDDATA1 );
-  //}
-  //else if( ... )
-  //{
-  //  HB_FUNC_EXEC( QOPENGLTEXTURE_SETCOMPRESSEDDATA2 );
-  //}
-  //else
-  //{
-  //  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  //}
 }
 
 /*
@@ -1177,8 +1165,10 @@ void QOpenGLTexture_generateMipMaps2()
 #endif
 }
 
-//[1]void generateMipMaps()
-//[2]void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
+/*
+[1]void generateMipMaps()
+[2]void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
+*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 {
@@ -1230,8 +1220,10 @@ void QOpenGLTexture_setSwizzleMask2()
 #endif
 }
 
-//[1]void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
-//[2]void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
+/*
+[1]void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
+[2]void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
+*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 {
@@ -1553,8 +1545,10 @@ void QOpenGLTexture_setWrapMode2()
 #endif
 }
 
-//[1]void setWrapMode(WrapMode mode)
-//[2]void setWrapMode(CoordinateDirection direction, WrapMode mode)
+/*
+[1]void setWrapMode(WrapMode mode)
+[2]void setWrapMode(CoordinateDirection direction, WrapMode mode)
+*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 {
@@ -1710,12 +1704,14 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR4 )
 #endif
 }
 
-//[1]void setBorderColor(QColor color)
-//[2]void setBorderColor(float r, float g, float b, float a)
-//[3]void setBorderColor(int r, int g, int b, int a)
-//[4]void setBorderColor(uint r, uint g, uint b, uint a)
+/*
+[1]void setBorderColor(QColor color)
+[2]void setBorderColor(float r, float g, float b, float a)
+[3]void setBorderColor(int r, int g, int b, int a)
+[4]void setBorderColor(uint r, uint g, uint b, uint a)
+*/
 
-HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR ) // TODO: resolver conflitos entre casos 2, 3 e 4
+HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR )
 {
   if( ISNUMPAR(1) && ISQCOLOR(1) )
   {
@@ -1804,12 +1800,14 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR3 )
 void borderColor(unsigned int *border) const
 */
 
-//[1]QColor borderColor() const
-//[2]void borderColor(float *border) const
-//[3]void borderColor(int *border) const
-//[4]void borderColor(unsigned int *border) const
+/*
+[1]QColor borderColor() const
+[2]void borderColor(float *border) const
+[3]void borderColor(int *border) const
+[4]void borderColor(unsigned int *border) const
+*/
 
-HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR ) // TODO: resolver conflitos entre casos 2, 3 e 4
+HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR )
 {
   if( ISNUMPAR(0) )
   {
@@ -2037,8 +2035,10 @@ void QOpenGLTexture_boundTextureId2()
 #endif
 }
 
-//[1]static GLuint boundTextureId(BindingTarget target)
-//[2]static GLuint boundTextureId(uint unit, BindingTarget target)
+/*
+[1]static GLuint boundTextureId(BindingTarget target)
+[2]static GLuint boundTextureId(uint unit, BindingTarget target)
+*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
 {

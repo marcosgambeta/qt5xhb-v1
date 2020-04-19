@@ -96,9 +96,11 @@ void QTextDocumentWriter_new3()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QTextDocumentWriter()
-//[2]QTextDocumentWriter(QIODevice *device, const QByteArray &format)
-//[3]QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
+/*
+[1]QTextDocumentWriter()
+[2]QTextDocumentWriter(QIODevice *device, const QByteArray &format)
+[3]QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 {
@@ -315,8 +317,10 @@ void QTextDocumentWriter_write2()
   }
 }
 
-//[1]bool write(const QTextDocument *document)
-//[2]bool write(const QTextDocumentFragment &fragment)
+/*
+[1]bool write(const QTextDocument *document)
+[2]bool write(const QTextDocumentFragment &fragment)
+*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 {

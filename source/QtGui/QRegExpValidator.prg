@@ -68,8 +68,10 @@ void QRegExpValidator_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QRegExpValidator ( QObject * parent = 0 )
-//[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
+/*
+[1]QRegExpValidator ( QObject * parent = 0 )
+[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
+*/
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {

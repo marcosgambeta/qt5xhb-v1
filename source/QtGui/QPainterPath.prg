@@ -124,9 +124,11 @@ void QPainterPath_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QPainterPath ()
-//[2]QPainterPath ( const QPointF & startPoint )
-//[3]QPainterPath ( const QPainterPath & path )
+/*
+[1]QPainterPath ()
+[2]QPainterPath ( const QPointF & startPoint )
+[3]QPainterPath ( const QPainterPath & path )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_NEW )
 {
@@ -210,9 +212,11 @@ void QPainterPath_addEllipse3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addEllipse ( const QRectF & boundingRectangle )
-//[2]void addEllipse ( qreal x, qreal y, qreal width, qreal height )
-//[3]void addEllipse ( const QPointF & center, qreal rx, qreal ry )
+/*
+[1]void addEllipse ( const QRectF & boundingRectangle )
+[2]void addEllipse ( qreal x, qreal y, qreal width, qreal height )
+[3]void addEllipse ( const QPointF & center, qreal rx, qreal ry )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
 {
@@ -316,8 +320,10 @@ void QPainterPath_addRect2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addRect ( const QRectF & rectangle )
-//[2]void addRect ( qreal x, qreal y, qreal width, qreal height )
+/*
+[1]void addRect ( const QRectF & rectangle )
+[2]void addRect ( qreal x, qreal y, qreal width, qreal height )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_ADDRECT )
 {
@@ -391,8 +397,10 @@ void QPainterPath_addRoundedRect2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-//[2]void addRoundedRect ( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+/*
+[1]void addRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+[2]void addRoundedRect ( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
 {
@@ -440,8 +448,10 @@ void QPainterPath_addText2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addText ( const QPointF & point, const QFont & font, const QString & text )
-//[2]void addText ( qreal x, qreal y, const QFont & font, const QString & text )
+/*
+[1]void addText ( const QPointF & point, const QFont & font, const QString & text )
+[2]void addText ( qreal x, qreal y, const QFont & font, const QString & text )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
 {
@@ -513,8 +523,10 @@ void QPainterPath_arcMoveTo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void arcMoveTo ( const QRectF & rectangle, qreal angle )
-//[2]void arcMoveTo ( qreal x, qreal y, qreal width, qreal height, qreal angle )
+/*
+[1]void arcMoveTo ( const QRectF & rectangle, qreal angle )
+[2]void arcMoveTo ( qreal x, qreal y, qreal width, qreal height, qreal angle )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO )
 {
@@ -562,8 +574,10 @@ void QPainterPath_arcTo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void arcTo ( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
-//[2]void arcTo ( qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength )
+/*
+[1]void arcTo ( const QRectF & rectangle, qreal startAngle, qreal sweepLength )
+[2]void arcTo ( qreal x, qreal y, qreal width, qreal height, qreal startAngle, qreal sweepLength )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_ARCTO )
 {
@@ -697,9 +711,11 @@ void QPainterPath_contains3()
   }
 }
 
-//[1]bool contains ( const QPointF & point ) const
-//[2]bool contains ( const QRectF & rectangle ) const
-//[3]bool contains ( const QPainterPath & p ) const
+/*
+[1]bool contains ( const QPointF & point ) const
+[2]bool contains ( const QRectF & rectangle ) const
+[3]bool contains ( const QPainterPath & p ) const
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
 {
@@ -776,8 +792,10 @@ void QPainterPath_cubicTo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void cubicTo ( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
-//[2]void cubicTo ( qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY )
+/*
+[1]void cubicTo ( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
+[2]void cubicTo ( qreal c1X, qreal c1Y, qreal c2X, qreal c2Y, qreal endPointX, qreal endPointY )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_CUBICTO )
 {
@@ -919,8 +937,10 @@ void QPainterPath_intersects2()
   }
 }
 
-//[1]bool intersects ( const QRectF & rectangle ) const
-//[2]bool intersects ( const QPainterPath & p ) const
+/*
+[1]bool intersects ( const QRectF & rectangle ) const
+[2]bool intersects ( const QPainterPath & p ) const
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
 {
@@ -1016,8 +1036,10 @@ void QPainterPath_lineTo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void lineTo ( const QPointF & endPoint )
-//[2]void lineTo ( qreal x, qreal y )
+/*
+[1]void lineTo ( const QPointF & endPoint )
+[2]void lineTo ( qreal x, qreal y )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_LINETO )
 {
@@ -1065,8 +1087,10 @@ void QPainterPath_moveTo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void moveTo ( const QPointF & point )
-//[2]void moveTo ( qreal x, qreal y )
+/*
+[1]void moveTo ( const QPointF & point )
+[2]void moveTo ( qreal x, qreal y )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
 {
@@ -1163,8 +1187,10 @@ void QPainterPath_quadTo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void quadTo ( const QPointF & c, const QPointF & endPoint )
-//[2]void quadTo ( qreal cx, qreal cy, qreal endPointX, qreal endPointY )
+/*
+[1]void quadTo ( const QPointF & c, const QPointF & endPoint )
+[2]void quadTo ( qreal cx, qreal cy, qreal endPointX, qreal endPointY )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_QUADTO )
 {
@@ -1362,8 +1388,10 @@ void QPainterPath_toFillPolygon2()
   }
 }
 
-//[1]QPolygonF toFillPolygon ( const QTransform & matrix ) const
-//[2]QPolygonF toFillPolygon ( const QMatrix & matrix = QMatrix() ) const
+/*
+[1]QPolygonF toFillPolygon ( const QTransform & matrix ) const
+[2]QPolygonF toFillPolygon ( const QMatrix & matrix = QMatrix() ) const
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
 {
@@ -1436,8 +1464,10 @@ void QPainterPath_translate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void translate ( qreal dx, qreal dy )
-//[2]void translate ( const QPointF & offset )
+/*
+[1]void translate ( qreal dx, qreal dy )
+[2]void translate ( const QPointF & offset )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE )
 {
@@ -1483,8 +1513,10 @@ void QPainterPath_translated2()
   }
 }
 
-//[1]QPainterPath translated ( qreal dx, qreal dy ) const
-//[2]QPainterPath translated ( const QPointF & offset ) const
+/*
+[1]QPainterPath translated ( qreal dx, qreal dy ) const
+[2]QPainterPath translated ( const QPointF & offset ) const
+*/
 
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
 {

@@ -89,8 +89,10 @@ void QTextTableCell_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QTextTableCell()
-//[2]QTextTableCell(const QTextTableCell &o)
+/*
+[1]QTextTableCell()
+[2]QTextTableCell(const QTextTableCell &o)
+*/
 
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {

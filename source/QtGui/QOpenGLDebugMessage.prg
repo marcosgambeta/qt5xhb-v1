@@ -81,8 +81,10 @@ void QOpenGLDebugMessage_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QOpenGLDebugMessage()
-//[2]QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
+/*
+[1]QOpenGLDebugMessage()
+[2]QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
+*/
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 {

@@ -181,10 +181,12 @@ HB_FUNC_STATIC( QPIXMAPCACHE_FIND3 )
 #endif
 }
 
-//[1]static QPixmap *find(const QString &key)
-//[2]static bool find(const QString &key, QPixmap &pixmap)
-//[3]static bool find(const QString &key, QPixmap *pixmap)
-//[4]static bool find(const Key &key, QPixmap *pixmap)
+/*
+[1]static QPixmap *find(const QString &key)
+[2]static bool find(const QString &key, QPixmap &pixmap)
+[3]static bool find(const QString &key, QPixmap *pixmap)
+[4]static bool find(const Key &key, QPixmap *pixmap)
+*/
 
 HB_FUNC_STATIC( QPIXMAPCACHE_FIND )
 {
@@ -209,8 +211,10 @@ HB_FUNC_STATIC( QPIXMAPCACHE_INSERT1 )
 #endif
 }
 
-//[1]static bool insert(const QString &key, const QPixmap &pixmap)
-//[2]static Key insert(const QPixmap &pixmap)
+/*
+[1]static bool insert(const QString &key, const QPixmap &pixmap)
+[2]static Key insert(const QPixmap &pixmap)
+*/
 
 HB_FUNC_STATIC( QPIXMAPCACHE_INSERT )
 {
@@ -237,8 +241,10 @@ HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE1 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]static void remove(const QString &key)
-//[2]static void remove(const Key &key)
+/*
+[1]static void remove(const QString &key)
+[2]static void remove(const Key &key)
+*/
 
 HB_FUNC_STATIC( QPIXMAPCACHE_REMOVE )
 {

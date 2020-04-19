@@ -132,12 +132,14 @@ void QVector2D_new6()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QVector2D()
-//[2]QVector2D(float xpos, float ypos)
-//[3]QVector2D(const QPoint& point)
-//[4]QVector2D(const QPointF& point)
-//[5]QVector2D(const QVector3D& vector)
-//[6]QVector2D(const QVector4D& vector)
+/*
+[1]QVector2D()
+[2]QVector2D(float xpos, float ypos)
+[3]QVector2D(const QPoint& point)
+[4]QVector2D(const QPointF& point)
+[5]QVector2D(const QVector3D& vector)
+[6]QVector2D(const QVector4D& vector)
+*/
 
 HB_FUNC_STATIC( QVECTOR2D_NEW )
 {

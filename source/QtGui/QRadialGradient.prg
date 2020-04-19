@@ -120,13 +120,15 @@ void QRadialGradient_new7()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QRadialGradient()
-//[2]QRadialGradient(const QPointF & center, qreal radius, const QPointF & focalPoint)
-//[3]QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
-//[4]QRadialGradient(const QPointF & center, qreal radius)
-//[5]QRadialGradient(qreal cx, qreal cy, qreal radius)
-//[6]QRadialGradient(const QPointF & center, qreal centerRadius, const QPointF & focalPoint, qreal focalRadius)
-//[7]QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
+/*
+[1]QRadialGradient()
+[2]QRadialGradient(const QPointF & center, qreal radius, const QPointF & focalPoint)
+[3]QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
+[4]QRadialGradient(const QPointF & center, qreal radius)
+[5]QRadialGradient(qreal cx, qreal cy, qreal radius)
+[6]QRadialGradient(const QPointF & center, qreal centerRadius, const QPointF & focalPoint, qreal focalRadius)
+[7]QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
+*/
 
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW )
 {
@@ -333,8 +335,10 @@ void QRadialGradient_setCenter2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setCenter(const QPointF & center)
-//[2]void setCenter(qreal x, qreal y)
+/*
+[1]void setCenter(const QPointF & center)
+[2]void setCenter(qreal x, qreal y)
+*/
 
 HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
 {
@@ -408,8 +412,10 @@ void QRadialGradient_setFocalPoint2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setFocalPoint(const QPointF & focalPoint)
-//[2]void setFocalPoint(qreal x, qreal y)
+/*
+[1]void setFocalPoint(const QPointF & focalPoint)
+[2]void setFocalPoint(qreal x, qreal y)
+*/
 
 HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
 {

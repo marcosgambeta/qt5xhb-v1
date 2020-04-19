@@ -91,8 +91,10 @@ void QPainterPathStroker_new2()
 #endif
 }
 
-//[1]QPainterPathStroker ()
-//[2]QPainterPathStroker( const QPen & pen )
+/*
+[1]QPainterPathStroker ()
+[2]QPainterPathStroker( const QPen & pen )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
@@ -424,8 +426,10 @@ void QPainterPathStroker_setDashPattern2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setDashPattern ( Qt::PenStyle style )
-//[2]void setDashPattern ( const QVector<qreal> & dashPattern )
+/*
+[1]void setDashPattern ( Qt::PenStyle style )
+[2]void setDashPattern ( const QVector<qreal> & dashPattern )
+*/
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {

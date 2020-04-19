@@ -309,8 +309,10 @@ void QPagedPaintDevice_setPageMargins2()
 #endif
 }
 
-//[1]bool setPageMargins(const QMarginsF &margins)
-//[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+/*
+[1]bool setPageMargins(const QMarginsF &margins)
+[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+*/
 
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS )
 {

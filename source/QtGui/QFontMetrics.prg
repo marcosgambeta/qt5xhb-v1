@@ -104,9 +104,11 @@ void QFontMetrics_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QFontMetrics ( const QFont & font )
-//[2]QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
-//[3]QFontMetrics ( const QFontMetrics & fm )
+/*
+[1]QFontMetrics ( const QFont & font )
+[2]QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
+[3]QFontMetrics ( const QFontMetrics & fm )
+*/
 
 HB_FUNC_STATIC( QFONTMETRICS_NEW )
 {
@@ -229,10 +231,12 @@ QRect boundingRect ( int x, int y, int width, int height, int flags, const QStri
 QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
 
-//[1]QRect boundingRect ( QChar ch ) const
-//[2]QRect boundingRect ( const QString & text ) const
-//[3]QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-//[4]QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+/*
+[1]QRect boundingRect ( QChar ch ) const
+[2]QRect boundingRect ( const QString & text ) const
+[3]QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+[4]QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+*/
 
 HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
 {
@@ -640,8 +644,10 @@ void QFontMetrics_width2()
   }
 }
 
-//[1]int width ( const QString & text, int len = -1 ) const
-//[2]int width ( QChar ch ) const
+/*
+[1]int width ( const QString & text, int len = -1 ) const
+[2]int width ( QChar ch ) const
+*/
 
 HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
 {

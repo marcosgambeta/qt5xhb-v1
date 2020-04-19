@@ -104,9 +104,11 @@ void QImageWriter_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QImageWriter ()
-//[2]QImageWriter ( QIODevice * device, const QByteArray & format )
-//[3]QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
+/*
+[1]QImageWriter ()
+[2]QImageWriter ( QIODevice * device, const QByteArray & format )
+[3]QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
+*/
 
 HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {

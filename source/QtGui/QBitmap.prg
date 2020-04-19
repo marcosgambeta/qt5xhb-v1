@@ -99,11 +99,13 @@ void QBitmap_new5()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QBitmap ()
-//[2]QBitmap ( const QPixmap & pixmap )
-//[3]QBitmap ( int width, int height )
-//[4]QBitmap ( const QSize & size )
-//[5]QBitmap ( const QString & fileName, const char * format = 0 )
+/*
+[1]QBitmap ()
+[2]QBitmap ( const QPixmap & pixmap )
+[3]QBitmap ( int width, int height )
+[4]QBitmap ( const QSize & size )
+[5]QBitmap ( const QString & fileName, const char * format = 0 )
+*/
 
 HB_FUNC_STATIC( QBITMAP_NEW )
 {

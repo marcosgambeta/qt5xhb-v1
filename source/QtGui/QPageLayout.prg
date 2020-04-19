@@ -119,9 +119,11 @@ void QPageLayout_new3()
 #endif
 }
 
-//[1]QPageLayout()
-//[2]QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
-//[3]QPageLayout(const QPageLayout &other)
+/*
+[1]QPageLayout()
+[2]QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
+[3]QPageLayout(const QPageLayout &other)
+*/
 
 HB_FUNC_STATIC( QPAGELAYOUT_NEW )
 {
@@ -129,10 +131,6 @@ HB_FUNC_STATIC( QPAGELAYOUT_NEW )
   {
     QPageLayout_new1();
   }
-  //else if( ISBETWEEN(3,5) && ISQPAGESIZE(1) && ISNUM(2) && ISQMARGINSF(3) && ISOPTNUM(4) && (ISQMARGINSF(5)||ISNIL(5)) )
-  //{
-  //  QPageLayout_new2();
-  //}
   else if( ISNUMPAR(1) && ISQPAGELAYOUT(1) )
   {
     QPageLayout_new3();
@@ -593,8 +591,10 @@ void QPageLayout_margins2()
 #endif
 }
 
-//[1]QMarginsF margins() const
-//[2]QMarginsF margins(Unit units) const
+/*
+[1]QMarginsF margins() const
+[2]QMarginsF margins(Unit units) const
+*/
 
 HB_FUNC_STATIC( QPAGELAYOUT_MARGINS )
 {
@@ -780,8 +780,10 @@ void QPageLayout_fullRect2()
 #endif
 }
 
-//[1]QRectF fullRect() const
-//[2]QRectF fullRect(Unit units) const
+/*
+[1]QRectF fullRect() const
+[2]QRectF fullRect(Unit units) const
+*/
 
 HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT )
 {
@@ -885,8 +887,10 @@ void QPageLayout_paintRect2()
 #endif
 }
 
-//[1]QRectF paintRect() const
-//[2]QRectF paintRect(Unit units) const
+/*
+[1]QRectF paintRect() const
+[2]QRectF paintRect(Unit units) const
+*/
 
 HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT )
 {

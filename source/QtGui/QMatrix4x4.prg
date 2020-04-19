@@ -138,12 +138,14 @@ void QMatrix4x4_new6()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QMatrix4x4()
-//[2]explicit QMatrix4x4(const float *values)
-//[3]QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)
-//[4]explicit QMatrix4x4(const QGenericMatrix<N, M, float>& matrix);
-//[5]QMatrix4x4(const QTransform& transform);
-//[6]QMatrix4x4(const QMatrix& matrix);
+/*
+[1]QMatrix4x4()
+[2]explicit QMatrix4x4(const float *values)
+[3]QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)
+[4]explicit QMatrix4x4(const QGenericMatrix<N, M, float>& matrix);
+[5]QMatrix4x4(const QTransform& transform);
+[6]QMatrix4x4(const QMatrix& matrix);
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_NEW )
 {
@@ -561,10 +563,12 @@ void QMatrix4x4_scale4()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void scale(const QVector3D& vector)
-//[2]void scale(float x, float y)
-//[3]void scale(float x, float y, float z)
-//[4]void scale(float factor)
+/*
+[1]void scale(const QVector3D& vector)
+[2]void scale(float x, float y)
+[3]void scale(float x, float y, float z)
+[4]void scale(float factor)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 {
@@ -637,9 +641,11 @@ void QMatrix4x4_translate3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void translate(const QVector3D& vector)
-//[2]void translate(float x, float y)
-//[3]void translate(float x, float y, float z)
+/*
+[1]void translate(const QVector3D& vector)
+[2]void translate(float x, float y)
+[3]void translate(float x, float y, float z)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 {
@@ -710,9 +716,11 @@ void QMatrix4x4_rotate3()
 #endif
 }
 
-//[1]void rotate(float angle, const QVector3D& vector)
-//[2]void rotate(float angle, float x, float y, float z = 0.0f)
-//[3]void rotate(const QQuaternion& quaternion)
+/*
+[1]void rotate(float angle, const QVector3D& vector)
+[2]void rotate(float angle, float x, float y, float z = 0.0f)
+[3]void rotate(const QQuaternion& quaternion)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 {
@@ -779,9 +787,11 @@ void QMatrix4x4_ortho3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void ortho(const QRect& rect)
-//[2]void ortho(const QRectF& rect)
-//[3]void ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane)
+/*
+[1]void ortho(const QRect& rect)
+[2]void ortho(const QRectF& rect)
+[3]void ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 {
@@ -917,8 +927,10 @@ void QMatrix4x4_viewport2()
 #endif
 }
 
-//[1]void viewport(const QRectF &rect)
-//[2]void viewport(float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f)
+/*
+[1]void viewport(const QRectF &rect)
+[2]void viewport(float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f)
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_VIEWPORT )
 {
@@ -1015,8 +1027,10 @@ void QMatrix4x4_toTransform2()
   }
 }
 
-//[1]QTransform toTransform() const
-//[2]QTransform toTransform(float distanceToPlane) const
+/*
+[1]QTransform toTransform() const
+[2]QTransform toTransform(float distanceToPlane) const
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
 {
@@ -1094,10 +1108,12 @@ void QMatrix4x4_map4()
 #endif
 }
 
-//[1]QPoint map(const QPoint& point) const
-//[2]QPointF map(const QPointF& point) const
-//[3]QVector3D map(const QVector3D& point) const
-//[4]QVector4D map(const QVector4D& point) const
+/*
+[1]QPoint map(const QPoint& point) const
+[2]QPointF map(const QPointF& point) const
+[3]QVector3D map(const QVector3D& point) const
+[4]QVector4D map(const QVector4D& point) const
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_MAP )
 {
@@ -1178,8 +1194,10 @@ void QMatrix4x4_mapRect2()
   }
 }
 
-//[1]QRect mapRect(const QRect& rect) const
-//[2]QRectF mapRect(const QRectF& rect) const
+/*
+[1]QRect mapRect(const QRect& rect) const
+[2]QRectF mapRect(const QRectF& rect) const
+*/
 
 HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 {

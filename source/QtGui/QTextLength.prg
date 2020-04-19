@@ -76,8 +76,10 @@ void QTextLength_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QTextLength()
-//[2]QTextLength(Type type, qreal value)
+/*
+[1]QTextLength()
+[2]QTextLength(Type type, qreal value)
+*/
 
 HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 {

@@ -179,14 +179,16 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW8 )
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
-//[2]QOpenGLFramebufferObject(int width, int height, GLenum target = GL_TEXTURE_2D)
-//[3]QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
-//[4]QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
-//[5]QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
-//[6]QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
-//[7]QOpenGLFramebufferObject(const QSize &size, const QOpenGLFramebufferObjectFormat &format)
-//[8]QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFormat &format)
+/*
+[1]QOpenGLFramebufferObject(const QSize &size, GLenum target = GL_TEXTURE_2D)
+[2]QOpenGLFramebufferObject(int width, int height, GLenum target = GL_TEXTURE_2D)
+[3]QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
+[4]QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8)
+[5]QOpenGLFramebufferObject(const QSize &size, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
+[6]QOpenGLFramebufferObject(int width, int height, Attachment attachment,GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA)
+[7]QOpenGLFramebufferObject(const QSize &size, const QOpenGLFramebufferObjectFormat &format)
+[8]QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFormat &format)
+*/
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW )
 {
@@ -644,8 +646,10 @@ void QOpenGLFramebufferObject_blitFramebuffer2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect,QOpenGLFramebufferObject *source, const QRect &sourceRect,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
-//[2]void blitFramebuffer(QOpenGLFramebufferObject *target,QOpenGLFramebufferObject *source,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
+/*
+[1]void blitFramebuffer(QOpenGLFramebufferObject *target, const QRect &targetRect,QOpenGLFramebufferObject *source, const QRect &sourceRect,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
+[2]void blitFramebuffer(QOpenGLFramebufferObject *target,QOpenGLFramebufferObject *source,GLbitfield buffers = GL_COLOR_BUFFER_BIT,GLenum filter = GL_NEAREST)
+*/
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
 {

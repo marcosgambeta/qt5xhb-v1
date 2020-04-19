@@ -153,10 +153,12 @@ void QFont_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QFont ()
-//[2]QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
-//[3]QFont ( const QFont & font, QPaintDevice * pd )
-//[4]QFont ( const QFont & font )
+/*
+[1]QFont ()
+[2]QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
+[3]QFont ( const QFont & font, QPaintDevice * pd )
+[4]QFont ( const QFont & font )
+*/
 
 HB_FUNC_STATIC( QFONT_NEW )
 {

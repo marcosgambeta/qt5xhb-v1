@@ -78,9 +78,11 @@ void QLinearGradient_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QLinearGradient ()
-//[2]QLinearGradient ( const QPointF & start, const QPointF & finalStop )
-//[3]QLinearGradient ( qreal x1, qreal y1, qreal x2, qreal y2 )
+/*
+[1]QLinearGradient ()
+[2]QLinearGradient ( const QPointF & start, const QPointF & finalStop )
+[3]QLinearGradient ( qreal x1, qreal y1, qreal x2, qreal y2 )
+*/
 
 HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
 {
@@ -174,8 +176,10 @@ void QLinearGradient_setFinalStop2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setFinalStop ( const QPointF & stop )
-//[2]void setFinalStop ( qreal x, qreal y )
+/*
+[1]void setFinalStop ( const QPointF & stop )
+[2]void setFinalStop ( qreal x, qreal y )
+*/
 
 HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
 {
@@ -223,8 +227,10 @@ void QLinearGradient_setStart2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setStart ( const QPointF & start )
-//[2]void setStart ( qreal x, qreal y )
+/*
+[1]void setStart ( const QPointF & start )
+[2]void setStart ( qreal x, qreal y )
+*/
 
 HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
 {

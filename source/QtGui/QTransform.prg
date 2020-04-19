@@ -159,12 +159,14 @@ void QTransform_new6()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QTransform(Qt::Initialization)
-//[2]QTransform()
-//[3]QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
-//[4]QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
-//[5]QTransform(const QMatrix &mtx)
-//[6]QTransform(const QTransform &other)
+/*
+[1]QTransform(Qt::Initialization)
+[2]QTransform()
+[3]QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
+[4]QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
+[5]QTransform(const QMatrix &mtx)
+[6]QTransform(const QTransform &other)
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
@@ -1099,16 +1101,18 @@ void QTransform_map10()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]QPoint map(const QPoint &p) const
-//[2]QPointF map(const QPointF &p) const
-//[3]QLine map(const QLine &l) const
-//[4]QLineF map(const QLineF &l) const
-//[5]QPolygonF map(const QPolygonF &a) const
-//[6]QPolygon map(const QPolygon &a) const
-//[7]QRegion map(const QRegion &r) const
-//[8]QPainterPath map(const QPainterPath &p) const
-//[9]void map(int x, int y, int *tx, int *ty) const
-//[10]void map(qreal x, qreal y, qreal *tx, qreal *ty) const
+/*
+[1]QPoint map(const QPoint &p) const
+[2]QPointF map(const QPointF &p) const
+[3]QLine map(const QLine &l) const
+[4]QLineF map(const QLineF &l) const
+[5]QPolygonF map(const QPolygonF &a) const
+[6]QPolygon map(const QPolygon &a) const
+[7]QRegion map(const QRegion &r) const
+[8]QPainterPath map(const QPainterPath &p) const
+[9]void map(int x, int y, int *tx, int *ty) const
+[10]void map(qreal x, qreal y, qreal *tx, qreal *ty) const
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAP )
 {
@@ -1211,8 +1215,10 @@ void QTransform_mapRect2()
   }
 }
 
-//[1]QRect mapRect(const QRect &) const
-//[2]QRectF mapRect(const QRectF &) const
+/*
+[1]QRect mapRect(const QRect &) const
+[2]QRectF mapRect(const QRectF &) const
+*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 {

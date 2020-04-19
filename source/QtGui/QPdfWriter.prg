@@ -80,8 +80,10 @@ void QPdfWriter_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]explicit QPdfWriter(const QString & filename)
-//[2]explicit QPdfWriter(QIODevice * device)
+/*
+[1]explicit QPdfWriter(const QString & filename)
+[2]explicit QPdfWriter(QIODevice * device)
+*/
 
 HB_FUNC_STATIC( QPDFWRITER_NEW )
 {
@@ -270,8 +272,10 @@ void QPdfWriter_setPageSize2()
 #endif
 }
 
-//[1]void setPageSize(PageSize size) (obsolet)
-//[2]bool setPageSize(const QPageSize &pageSize)
+/*
+[1]void setPageSize(PageSize size) (obsolet)
+[2]bool setPageSize(const QPageSize &pageSize)
+*/
 
 HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
 {
@@ -478,8 +482,10 @@ void QPdfWriter_setPageMargins2()
 #endif
 }
 
-//[1]bool setPageMargins(const QMarginsF &margins)
-//[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+/*
+[1]bool setPageMargins(const QMarginsF &margins)
+[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+*/
 
 HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
 {

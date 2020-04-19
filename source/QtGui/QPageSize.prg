@@ -136,11 +136,13 @@ void QPageSize_new5()
 #endif
 }
 
-//[1]QPageSize()
-//[2]explicit QPageSize(PageSizeId pageSizeId)
-//[3]explicit QPageSize(const QSize &pointSize, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
-//[4]explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
-//[5]QPageSize(const QPageSize &other)
+/*
+[1]QPageSize()
+[2]explicit QPageSize(PageSizeId pageSizeId)
+[3]explicit QPageSize(const QSize &pointSize, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
+[4]explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
+[5]QPageSize(const QPageSize &other)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_NEW )
 {
@@ -295,8 +297,10 @@ void QPageSize_key2()
 #endif
 }
 
-//[1]QString key() const
-//[2]static QString key(PageSizeId pageSizeId)
+/*
+[1]QString key() const
+[2]static QString key(PageSizeId pageSizeId)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_KEY )
 {
@@ -340,8 +344,10 @@ void QPageSize_name2()
 #endif
 }
 
-//[1]QString name() const
-//[2]static QString name(PageSizeId pageSizeId)
+/*
+[1]QString name() const
+[2]static QString name(PageSizeId pageSizeId)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_NAME )
 {
@@ -407,10 +413,12 @@ void QPageSize_id4()
 #endif
 }
 
-//[1]PageSizeId id() const
-//[2]static PageSizeId id(const QSize &pointSize, SizeMatchPolicy matchPolicy = FuzzyMatch)
-//[3]static PageSizeId id(const QSizeF &size, Unit units, SizeMatchPolicy matchPolicy = FuzzyMatch)
-//[4]static PageSizeId id(int windowsId)
+/*
+[1]PageSizeId id() const
+[2]static PageSizeId id(const QSize &pointSize, SizeMatchPolicy matchPolicy = FuzzyMatch)
+[3]static PageSizeId id(const QSizeF &size, Unit units, SizeMatchPolicy matchPolicy = FuzzyMatch)
+[4]static PageSizeId id(int windowsId)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_ID )
 {
@@ -462,8 +470,10 @@ void QPageSize_windowsId2()
 #endif
 }
 
-//[1]int windowsId() const
-//[2]static int windowsId(PageSizeId pageSizeId)
+/*
+[1]int windowsId() const
+[2]static int windowsId(PageSizeId pageSizeId)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_WINDOWSID )
 {
@@ -509,8 +519,10 @@ void QPageSize_definitionSize2()
 #endif
 }
 
-//[1]QSizeF definitionSize() const
-//[2]static QSizeF definitionSize(PageSizeId pageSizeId)
+/*
+[1]QSizeF definitionSize() const
+[2]static QSizeF definitionSize(PageSizeId pageSizeId)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE )
 {
@@ -554,8 +566,10 @@ void QPageSize_definitionUnits2()
 #endif
 }
 
-//[1]Unit definitionUnits() const
-//[2]static Unit definitionUnits(PageSizeId pageSizeId)
+/*
+[1]Unit definitionUnits() const
+[2]static Unit definitionUnits(PageSizeId pageSizeId)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_DEFINITIONUNITS )
 {
@@ -601,8 +615,10 @@ void QPageSize_size2()
 #endif
 }
 
-//[1]QSizeF size(Unit units) const
-//[2]static QSizeF size(PageSizeId pageSizeId, Unit units)
+/*
+[1]QSizeF size(Unit units) const
+[2]static QSizeF size(PageSizeId pageSizeId, Unit units)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_SIZE )
 {
@@ -648,8 +664,10 @@ void QPageSize_sizePoints2()
 #endif
 }
 
-//[1]QSize sizePoints() const
-//[2]static QSize sizePoints(PageSizeId pageSizeId)
+/*
+[1]QSize sizePoints() const
+[2]static QSize sizePoints(PageSizeId pageSizeId)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS )
 {
@@ -695,8 +713,10 @@ void QPageSize_sizePixels2()
 #endif
 }
 
-//[1]QSize sizePixels(int resolution) const
-//[2]static QSize sizePixels(PageSizeId pageSizeId, int resolution)
+/*
+[1]QSize sizePixels(int resolution) const
+[2]static QSize sizePixels(PageSizeId pageSizeId, int resolution)
+*/
 
 HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS )
 {

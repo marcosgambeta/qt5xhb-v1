@@ -83,8 +83,10 @@ void QTextInlineObject_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QTextInlineObject(int i, QTextEngine *e)
-//[2]QTextInlineObject()
+/*
+[1]QTextInlineObject(int i, QTextEngine *e)
+[2]QTextInlineObject()
+*/
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 {

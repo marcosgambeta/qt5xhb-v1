@@ -113,8 +113,10 @@ void QDragMoveEvent_accept2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void accept ( const QRect & rectangle )
-//[2]void accept ()
+/*
+[1]void accept ( const QRect & rectangle )
+[2]void accept ()
+*/
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 {
@@ -187,8 +189,10 @@ void QDragMoveEvent_ignore2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void ignore ( const QRect & rectangle )
-//[2]void ignore ()
+/*
+[1]void ignore ( const QRect & rectangle )
+[2]void ignore ()
+*/
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
 {

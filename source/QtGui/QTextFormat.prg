@@ -138,9 +138,11 @@ void QTextFormat_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QTextFormat()
-//[2]QTextFormat(int type)
-//[3]QTextFormat(const QTextFormat &rhs)
+/*
+[1]QTextFormat()
+[2]QTextFormat(int type)
+[3]QTextFormat(const QTextFormat &rhs)
+*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 {
@@ -690,8 +692,10 @@ void QTextFormat_setProperty2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setProperty(int propertyId, const QVariant &value)
-//[2]void setProperty(int propertyId, const QVector<QTextLength> &lengths)
+/*
+[1]void setProperty(int propertyId, const QVariant &value)
+[2]void setProperty(int propertyId, const QVector<QTextLength> &lengths)
+*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 {

@@ -481,8 +481,10 @@ void QTextLine_cursorToX2()
   }
 }
 
-//[1]qreal cursorToX(int *cursorPos, Edge edge = Leading) const
-//[2]qreal cursorToX(int cursorPos, Edge edge = Leading) const
+/*
+[1]qreal cursorToX(int *cursorPos, Edge edge = Leading) const
+[2]qreal cursorToX(int cursorPos, Edge edge = Leading) const
+*/
 
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 {
@@ -580,8 +582,10 @@ void QTextLine_setNumColumns2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setNumColumns(int columns)
-//[2]void setNumColumns(int columns, qreal alignmentWidth)
+/*
+[1]void setNumColumns(int columns)
+[2]void setNumColumns(int columns, qreal alignmentWidth)
+*/
 
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 {

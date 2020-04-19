@@ -177,8 +177,10 @@ void QPainter_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QPainter ()
-//[2]QPainter ( QPaintDevice * device )
+/*
+[1]QPainter ()
+[2]QPainter ( QPaintDevice * device )
+*/
 
 HB_FUNC_STATIC( QPAINTER_NEW )
 {
@@ -186,7 +188,7 @@ HB_FUNC_STATIC( QPAINTER_NEW )
   {
     QPainter_new1();
   }
-  else if( ISNUMPAR(1) && ISOBJECT(1) ) // TODO: implementar ISQPAINTDEVICE
+  else if( ISNUMPAR(1) && ISOBJECT(1) )
   {
     QPainter_new2();
   }
@@ -368,10 +370,12 @@ void QPainter_boundingRect4()
   }
 }
 
-//[1]QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
-//[2]QRect boundingRect ( const QRect & rectangle, int flags, const QString & text )
-//[3]QRect boundingRect ( int x, int y, int w, int h, int flags, const QString & text )
-//[4]QRectF boundingRect ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
+/*
+[1]QRectF boundingRect ( const QRectF & rectangle, int flags, const QString & text )
+[2]QRect boundingRect ( const QRect & rectangle, int flags, const QString & text )
+[3]QRect boundingRect ( int x, int y, int w, int h, int flags, const QString & text )
+[4]QRectF boundingRect ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
+*/
 
 HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 {
@@ -641,9 +645,11 @@ void QPainter_drawArc3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
-//[2]void drawArc ( const QRect & rectangle, int startAngle, int spanAngle )
-//[3]void drawArc ( int x, int y, int width, int height, int startAngle, int spanAngle )
+/*
+[1]void drawArc ( const QRectF & rectangle, int startAngle, int spanAngle )
+[2]void drawArc ( const QRect & rectangle, int startAngle, int spanAngle )
+[3]void drawArc ( int x, int y, int width, int height, int startAngle, int spanAngle )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWARC )
 {
@@ -710,9 +716,11 @@ void QPainter_drawChord3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
-//[2]void drawChord ( const QRect & rectangle, int startAngle, int spanAngle )
-//[3]void drawChord ( int x, int y, int width, int height, int startAngle, int spanAngle )
+/*
+[1]void drawChord ( const QRectF & rectangle, int startAngle, int spanAngle )
+[2]void drawChord ( const QRect & rectangle, int startAngle, int spanAngle )
+[3]void drawChord ( int x, int y, int width, int height, int startAngle, int spanAngle )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
 {
@@ -764,10 +772,12 @@ void QPainter_drawConvexPolygon4()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawConvexPolygon ( const QPointF * points, int pointCount )
-//[2]void drawConvexPolygon ( const QPoint * points, int pointCount )
-//[3]void drawConvexPolygon ( const QPolygonF & polygon )
-//[4]void drawConvexPolygon ( const QPolygon & polygon )
+/*
+[1]void drawConvexPolygon ( const QPointF * points, int pointCount )
+[2]void drawConvexPolygon ( const QPoint * points, int pointCount )
+[3]void drawConvexPolygon ( const QPolygonF & polygon )
+[4]void drawConvexPolygon ( const QPolygon & polygon )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON )
 {
@@ -860,11 +870,13 @@ void QPainter_drawEllipse5()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawEllipse ( const QRectF & rectangle )
-//[2]void drawEllipse ( const QRect & rectangle )
-//[3]void drawEllipse ( int x, int y, int width, int height )
-//[4]void drawEllipse ( const QPointF & center, qreal rx, qreal ry )
-//[5]void drawEllipse ( const QPoint & center, int rx, int ry )
+/*
+[1]void drawEllipse ( const QRectF & rectangle )
+[2]void drawEllipse ( const QRect & rectangle )
+[3]void drawEllipse ( int x, int y, int width, int height )
+[4]void drawEllipse ( const QPointF & center, qreal rx, qreal ry )
+[5]void drawEllipse ( const QPoint & center, int rx, int ry )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
 {
@@ -1029,15 +1041,17 @@ void QPainter_drawImage9()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawImage ( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-//[2]void drawImage ( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-//[3]void drawImage ( const QPointF & point, const QImage & image )
-//[4]void drawImage ( const QPoint & point, const QImage & image )
-//[5]void drawImage ( const QPointF & point, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-//[6]void drawImage ( const QPoint & point, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-//[7]void drawImage ( const QRectF & rectangle, const QImage & image )
-//[8]void drawImage ( const QRect & rectangle, const QImage & image )
-//[9]void drawImage ( int x, int y, const QImage & image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt::ImageConversionFlags flags = Qt::AutoColor )
+/*
+[1]void drawImage ( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
+[2]void drawImage ( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
+[3]void drawImage ( const QPointF & point, const QImage & image )
+[4]void drawImage ( const QPoint & point, const QImage & image )
+[5]void drawImage ( const QPointF & point, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
+[6]void drawImage ( const QPoint & point, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
+[7]void drawImage ( const QRectF & rectangle, const QImage & image )
+[8]void drawImage ( const QRect & rectangle, const QImage & image )
+[9]void drawImage ( int x, int y, const QImage & image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt::ImageConversionFlags flags = Qt::AutoColor )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 {
@@ -1158,11 +1172,13 @@ void QPainter_drawLine5()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawLine ( const QLineF & line )
-//[2]void drawLine ( const QLine & line )
-//[3]void drawLine ( const QPoint & p1, const QPoint & p2 )
-//[4]void drawLine ( const QPointF & p1, const QPointF & p2 )
-//[5]void drawLine ( int x1, int y1, int x2, int y2 )
+/*
+[1]void drawLine ( const QLineF & line )
+[2]void drawLine ( const QLine & line )
+[3]void drawLine ( const QPoint & p1, const QPoint & p2 )
+[4]void drawLine ( const QPointF & p1, const QPointF & p2 )
+[5]void drawLine ( int x1, int y1, int x2, int y2 )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWLINE )
 {
@@ -1328,14 +1344,16 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINES8 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawLines ( const QLineF * lines, int lineCount )
-//[2]void drawLines ( const QLine * lines, int lineCount )
-//[3]void drawLines ( const QPointF * pointPairs, int lineCount )
-//[4]void drawLines ( const QPoint * pointPairs, int lineCount )
-//[5]void drawLines ( const QVector<QPointF> & pointPairs )
-//[6]void drawLines ( const QVector<QPoint> & pointPairs )
-//[7]void drawLines ( const QVector<QLineF> & lines )
-//[8]void drawLines ( const QVector<QLine> & lines )
+/*
+[1]void drawLines ( const QLineF * lines, int lineCount )
+[2]void drawLines ( const QLine * lines, int lineCount )
+[3]void drawLines ( const QPointF * pointPairs, int lineCount )
+[4]void drawLines ( const QPoint * pointPairs, int lineCount )
+[5]void drawLines ( const QVector<QPointF> & pointPairs )
+[6]void drawLines ( const QVector<QPoint> & pointPairs )
+[7]void drawLines ( const QVector<QLineF> & lines )
+[8]void drawLines ( const QVector<QLine> & lines )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWLINES )
 {
@@ -1412,9 +1430,11 @@ void QPainter_drawPicture3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawPicture ( const QPointF & point, const QPicture & picture )
-//[2]void drawPicture ( const QPoint & point, const QPicture & picture )
-//[3]void drawPicture ( int x, int y, const QPicture & picture )
+/*
+[1]void drawPicture ( const QPointF & point, const QPicture & picture )
+[2]void drawPicture ( const QPoint & point, const QPicture & picture )
+[3]void drawPicture ( int x, int y, const QPicture & picture )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
 {
@@ -1481,9 +1501,11 @@ void QPainter_drawPie3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
-//[2]void drawPie ( const QRect & rectangle, int startAngle, int spanAngle )
-//[3]void drawPie ( int x, int y, int width, int height, int startAngle, int spanAngle )
+/*
+[1]void drawPie ( const QRectF & rectangle, int startAngle, int spanAngle )
+[2]void drawPie ( const QRect & rectangle, int startAngle, int spanAngle )
+[3]void drawPie ( int x, int y, int width, int height, int startAngle, int spanAngle )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWPIE )
 {
@@ -1670,17 +1692,19 @@ void QPainter_drawPixmap11()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[ 1]void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
-//[ 2]void drawPixmap ( const QRect & target, const QPixmap & pixmap, const QRect & source )
-//[ 3]void drawPixmap ( const QPointF & point, const QPixmap & pixmap, const QRectF & source )
-//[ 4]void drawPixmap ( const QPoint & point, const QPixmap & pixmap, const QRect & source )
-//[ 5]void drawPixmap ( const QPointF & point, const QPixmap & pixmap )
-//[ 6]void drawPixmap ( const QPoint & point, const QPixmap & pixmap )
-//[ 7]void drawPixmap ( int x, int y, const QPixmap & pixmap )
-//[ 8]void drawPixmap ( const QRect & rectangle, const QPixmap & pixmap )
-//[ 9]void drawPixmap ( int x, int y, int width, int height, const QPixmap & pixmap )
-//[10]void drawPixmap ( int x, int y, int w, int h, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
-//[11]void drawPixmap ( int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
+/*
+[01]void drawPixmap ( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
+[02]void drawPixmap ( const QRect & target, const QPixmap & pixmap, const QRect & source )
+[03]void drawPixmap ( const QPointF & point, const QPixmap & pixmap, const QRectF & source )
+[04]void drawPixmap ( const QPoint & point, const QPixmap & pixmap, const QRect & source )
+[05]void drawPixmap ( const QPointF & point, const QPixmap & pixmap )
+[06]void drawPixmap ( const QPoint & point, const QPixmap & pixmap )
+[07]void drawPixmap ( int x, int y, const QPixmap & pixmap )
+[08]void drawPixmap ( const QRect & rectangle, const QPixmap & pixmap )
+[09]void drawPixmap ( int x, int y, int width, int height, const QPixmap & pixmap )
+[10]void drawPixmap ( int x, int y, int w, int h, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
+[11]void drawPixmap ( int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 {
@@ -1779,9 +1803,11 @@ void QPainter_drawPoint3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawPoint ( const QPointF & position )
-//[2]void drawPoint ( const QPoint & position )
-//[3]void drawPoint ( int x, int y )
+/*
+[1]void drawPoint ( const QPointF & position )
+[2]void drawPoint ( const QPoint & position )
+[3]void drawPoint ( int x, int y )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
 {
@@ -1833,10 +1859,12 @@ void QPainter_drawPoints4()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawPoints ( const QPointF * points, int pointCount )
-//[2]void drawPoints ( const QPoint * points, int pointCount )
-//[3]void drawPoints ( const QPolygonF & points )
-//[4]void drawPoints ( const QPolygon & points )
+/*
+[1]void drawPoints ( const QPointF * points, int pointCount )
+[2]void drawPoints ( const QPoint * points, int pointCount )
+[3]void drawPoints ( const QPolygonF & points )
+[4]void drawPoints ( const QPolygon & points )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
 {
@@ -1884,10 +1912,12 @@ void QPainter_drawPolygon4()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawPolygon ( const QPointF * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
-//[2]void drawPolygon ( const QPoint * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
-//[3]void drawPolygon ( const QPolygonF & points, Qt::FillRule fillRule = Qt::OddEvenFill )
-//[4]void drawPolygon ( const QPolygon & points, Qt::FillRule fillRule = Qt::OddEvenFill )
+/*
+[1]void drawPolygon ( const QPointF * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
+[2]void drawPolygon ( const QPoint * points, int pointCount, Qt::FillRule fillRule = Qt::OddEvenFill )
+[3]void drawPolygon ( const QPolygonF & points, Qt::FillRule fillRule = Qt::OddEvenFill )
+[4]void drawPolygon ( const QPolygon & points, Qt::FillRule fillRule = Qt::OddEvenFill )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
 {
@@ -1935,10 +1965,12 @@ void QPainter_drawPolyline4()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawPolyline ( const QPointF * points, int pointCount )
-//[2]void drawPolyline ( const QPoint * points, int pointCount )
-//[3]void drawPolyline ( const QPolygonF & points )
-//[4]void drawPolyline ( const QPolygon & points )
+/*
+[1]void drawPolyline ( const QPointF * points, int pointCount )
+[2]void drawPolyline ( const QPoint * points, int pointCount )
+[3]void drawPolyline ( const QPolygonF & points )
+[4]void drawPolyline ( const QPolygon & points )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
 {
@@ -2001,9 +2033,11 @@ void QPainter_drawRect3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawRect ( const QRectF & rectangle )
-//[2]void drawRect ( const QRect & rectangle )
-//[3]void drawRect ( int x, int y, int width, int height )
+/*
+[1]void drawRect ( const QRectF & rectangle )
+[2]void drawRect ( const QRect & rectangle )
+[3]void drawRect ( int x, int y, int width, int height )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWRECT )
 {
@@ -2093,10 +2127,12 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECTS4 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawRects ( const QRectF * rectangles, int rectCount )
-//[2]void drawRects ( const QRect * rectangles, int rectCount )
-//[3]void drawRects ( const QVector<QRectF> & rectangles )
-//[4]void drawRects ( const QVector<QRect> & rectangles )
+/*
+[1]void drawRects ( const QRectF * rectangles, int rectCount )
+[2]void drawRects ( const QRect * rectangles, int rectCount )
+[3]void drawRects ( const QVector<QRectF> & rectangles )
+[4]void drawRects ( const QVector<QRect> & rectangles )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWRECTS )
 {
@@ -2147,9 +2183,11 @@ void QPainter_drawRoundedRect3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-//[2]void drawRoundedRect ( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-//[3]void drawRoundedRect ( int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+/*
+[1]void drawRoundedRect ( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+[2]void drawRoundedRect ( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+[3]void drawRoundedRect ( int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
 {
@@ -2216,9 +2254,11 @@ void QPainter_drawStaticText3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & staticText )
-//[2]void drawStaticText ( const QPoint & topLeftPosition, const QStaticText & staticText )
-//[3]void drawStaticText ( int left, int top, const QStaticText & staticText )
+/*
+[1]void drawStaticText ( const QPointF & topLeftPosition, const QStaticText & staticText )
+[2]void drawStaticText ( const QPoint & topLeftPosition, const QStaticText & staticText )
+[3]void drawStaticText ( int left, int top, const QStaticText & staticText )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
 {
@@ -2345,13 +2385,15 @@ void QPainter_drawText7()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawText ( const QPointF & position, const QString & text )
-//[2]void drawText ( const QPoint & position, const QString & text )
-//[3]void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
-//[4]void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
-//[5]void drawText ( int x, int y, const QString & text )
-//[6]void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
-//[7]void drawText ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
+/*
+[1]void drawText ( const QPointF & position, const QString & text )
+[2]void drawText ( const QPoint & position, const QString & text )
+[3]void drawText ( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
+[4]void drawText ( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
+[5]void drawText ( int x, int y, const QString & text )
+[6]void drawText ( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
+[7]void drawText ( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 {
@@ -2434,9 +2476,11 @@ void QPainter_drawTiledPixmap3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
-//[2]void drawTiledPixmap ( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
-//[3]void drawTiledPixmap ( int x, int y, int width, int height, const QPixmap & pixmap, int sx = 0, int sy = 0 )
+/*
+[1]void drawTiledPixmap ( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
+[2]void drawTiledPixmap ( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
+[3]void drawTiledPixmap ( int x, int y, int width, int height, const QPixmap & pixmap, int sx = 0, int sy = 0 )
+*/
 
 HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
 {
@@ -2553,9 +2597,11 @@ void QPainter_eraseRect3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//void eraseRect ( const QRectF & rectangle )
-//void eraseRect ( const QRect & rectangle )
-//void eraseRect ( int x, int y, int width, int height )
+/*
+[1]void eraseRect ( const QRectF & rectangle )
+[2]void eraseRect ( const QRect & rectangle )
+[3]void eraseRect ( int x, int y, int width, int height )
+*/
 
 HB_FUNC_STATIC( QPAINTER_ERASERECT )
 {
@@ -2834,21 +2880,23 @@ void QPainter_fillRect15()
 #endif
 }
 
-//[ 1]void fillRect ( const QRectF & rectangle, const QBrush & brush )
-//[ 2]void fillRect ( int x, int y, int width, int height, Qt::BrushStyle style )
-//[ 3]void fillRect ( const QRect & rectangle, Qt::BrushStyle style )
-//[ 4]void fillRect ( const QRectF & rectangle, Qt::BrushStyle style )
-//[ 5]void fillRect ( const QRect & rectangle, const QBrush & brush )
-//[ 6]void fillRect ( const QRect & rectangle, const QColor & color )
-//[ 7]void fillRect ( const QRectF & rectangle, const QColor & color )
-//[ 8]void fillRect ( int x, int y, int width, int height, const QBrush & brush )
-//[ 9]void fillRect ( int x, int y, int width, int height, const QColor & color )
-//[10]void fillRect ( int x, int y, int width, int height, Qt::GlobalColor color )
-//[11]void fillRect ( const QRect & rectangle, Qt::GlobalColor color )
-//[12]void fillRect ( const QRectF & rectangle, Qt::GlobalColor color )
-//[13]void fillRect ( int x, int y, int width, int height, QGradient::Preset preset )
-//[14]void fillRect ( const QRect &rectangle, QGradient::Preset preset )
-//[15]void fillRect ( const QRectF &rectangle, QGradient::Preset preset )
+/*
+[01]void fillRect ( const QRectF & rectangle, const QBrush & brush )
+[02]void fillRect ( int x, int y, int width, int height, Qt::BrushStyle style )
+[03]void fillRect ( const QRect & rectangle, Qt::BrushStyle style )
+[04]void fillRect ( const QRectF & rectangle, Qt::BrushStyle style )
+[05]void fillRect ( const QRect & rectangle, const QBrush & brush )
+[06]void fillRect ( const QRect & rectangle, const QColor & color )
+[07]void fillRect ( const QRectF & rectangle, const QColor & color )
+[08]void fillRect ( int x, int y, int width, int height, const QBrush & brush )
+[09]void fillRect ( int x, int y, int width, int height, const QColor & color )
+[10]void fillRect ( int x, int y, int width, int height, Qt::GlobalColor color )
+[11]void fillRect ( const QRect & rectangle, Qt::GlobalColor color )
+[12]void fillRect ( const QRectF & rectangle, Qt::GlobalColor color )
+[13]void fillRect ( int x, int y, int width, int height, QGradient::Preset preset )
+[14]void fillRect ( const QRect &rectangle, QGradient::Preset preset )
+[15]void fillRect ( const QRectF &rectangle, QGradient::Preset preset )
+*/
 
 HB_FUNC_STATIC( QPAINTER_FILLRECT )
 {
@@ -3375,8 +3423,10 @@ void QPainter_setBrush2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setBrush ( const QBrush & brush )
-//[2]void setBrush ( Qt::BrushStyle style )
+/*
+[1]void setBrush ( const QBrush & brush )
+[2]void setBrush ( Qt::BrushStyle style )
+*/
 
 HB_FUNC_STATIC( QPAINTER_SETBRUSH )
 {
@@ -3439,9 +3489,11 @@ void QPainter_setBrushOrigin3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setBrushOrigin ( const QPointF & position )
-//[2]void setBrushOrigin ( const QPoint & position )
-//[3]void setBrushOrigin ( int x, int y )
+/*
+[1]void setBrushOrigin ( const QPointF & position )
+[2]void setBrushOrigin ( const QPoint & position )
+[3]void setBrushOrigin ( int x, int y )
+*/
 
 HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
 {
@@ -3534,9 +3586,11 @@ void QPainter_setClipRect3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
-//[2]void setClipRect ( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
-//[3]void setClipRect ( const QRect & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
+/*
+[1]void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
+[2]void setClipRect ( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
+[3]void setClipRect ( const QRect & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
+*/
 
 HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 {
@@ -3759,9 +3813,11 @@ void QPainter_setPen3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setPen ( const QPen & pen )
-//[2]void setPen ( const QColor & color )
-//[3]void setPen ( Qt::PenStyle style )
+/*
+[1]void setPen ( const QPen & pen )
+[2]void setPen ( const QColor & color )
+[3]void setPen ( Qt::PenStyle style )
+*/
 
 HB_FUNC_STATIC( QPAINTER_SETPEN )
 {
@@ -3917,8 +3973,10 @@ void QPainter_setViewport2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setViewport ( const QRect & rectangle )
-//[2]void setViewport ( int x, int y, int width, int height )
+/*
+[1]void setViewport ( const QRect & rectangle )
+[2]void setViewport ( int x, int y, int width, int height )
+*/
 
 HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
 {
@@ -3966,8 +4024,10 @@ void QPainter_setWindow2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setWindow ( const QRect & rectangle )
-//[2]void setWindow ( int x, int y, int width, int height )
+/*
+[1]void setWindow ( const QRect & rectangle )
+[2]void setWindow ( int x, int y, int width, int height )
+*/
 
 HB_FUNC_STATIC( QPAINTER_SETWINDOW )
 {
@@ -4183,9 +4243,11 @@ void QPainter_translate3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void translate ( const QPointF & offset )
-//[2]void translate ( const QPoint & offset )
-//[3]void translate ( qreal dx, qreal dy )
+/*
+[1]void translate ( const QPointF & offset )
+[2]void translate ( const QPoint & offset )
+[3]void translate ( qreal dx, qreal dy )
+*/
 
 HB_FUNC_STATIC( QPAINTER_TRANSLATE )
 {
