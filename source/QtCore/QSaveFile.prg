@@ -90,9 +90,11 @@ void QSaveFile_new3()
 #endif
 }
 
-//[1]QSaveFile(const QString &name)
-//[2]QSaveFile(QObject *parent = 0)
-//[3]QSaveFile(const QString &name, QObject *parent)
+/*
+[1]QSaveFile(const QString &name)
+[2]QSaveFile(QObject *parent = 0)
+[3]QSaveFile(const QString &name, QObject *parent)
+*/
 
 HB_FUNC_STATIC( QSAVEFILE_NEW )
 {

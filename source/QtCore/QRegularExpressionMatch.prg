@@ -130,8 +130,10 @@ void QRegularExpressionMatch_captured2()
   }
 }
 
-//[1]QString captured(int nth = 0) const
-//[2]QString captured(const QString & name) const
+/*
+[1]QString captured(int nth = 0) const
+[2]QString captured(const QString & name) const
+*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTURED )
 {
@@ -175,8 +177,10 @@ void QRegularExpressionMatch_capturedEnd2()
   }
 }
 
-//[1]int capturedEnd(int nth = 0) const
-//[2]int capturedEnd(const QString & name) const
+/*
+[1]int capturedEnd(int nth = 0) const
+[2]int capturedEnd(const QString & name) const
+*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDEND )
 {
@@ -220,8 +224,10 @@ void QRegularExpressionMatch_capturedLength2()
   }
 }
 
-//[1]int capturedLength(int nth = 0) const
-//[2]int capturedLength(const QString & name) const
+/*
+[1]int capturedLength(int nth = 0) const
+[2]int capturedLength(const QString & name) const
+*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH )
 {
@@ -267,8 +273,10 @@ void QRegularExpressionMatch_capturedRef2()
   }
 }
 
-//[1]QStringRef capturedRef(int nth = 0) const
-//[2]QStringRef capturedRef(const QString & name) const
+/*
+[1]QStringRef capturedRef(int nth = 0) const
+[2]QStringRef capturedRef(const QString & name) const
+*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF )
 {
@@ -312,8 +320,10 @@ void QRegularExpressionMatch_capturedStart2()
   }
 }
 
-//[1]int capturedStart(int nth = 0) const
-//[2]int capturedStart(const QString & name) const
+/*
+[1]int capturedStart(int nth = 0) const
+[2]int capturedStart(const QString & name) const
+*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDSTART )
 {

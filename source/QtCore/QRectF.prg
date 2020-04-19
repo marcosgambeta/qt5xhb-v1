@@ -158,11 +158,13 @@ void QRectF_new5()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QRectF ()
-//[2]QRectF ( const QPointF & topLeft, const QSizeF & size )
-//[3]QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
-//[4]QRectF ( qreal x, qreal y, qreal width, qreal height )
-//[5]QRectF ( const QRect & rectangle )
+/*
+[1]QRectF ()
+[2]QRectF ( const QPointF & topLeft, const QSizeF & size )
+[3]QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
+[4]QRectF ( qreal x, qreal y, qreal width, qreal height )
+[5]QRectF ( const QRect & rectangle )
+*/
 
 HB_FUNC_STATIC( QRECTF_NEW )
 {
@@ -398,9 +400,11 @@ void QRectF_contains3()
   }
 }
 
-//[1]bool contains ( const QPointF & point ) const
-//[2]bool contains ( qreal x, qreal y ) const
-//[3]bool contains ( const QRectF & rectangle ) const
+/*
+[1]bool contains ( const QPointF & point ) const
+[2]bool contains ( qreal x, qreal y ) const
+[3]bool contains ( const QRectF & rectangle ) const
+*/
 
 HB_FUNC_STATIC( QRECTF_CONTAINS )
 {
@@ -845,8 +849,10 @@ void QRectF_moveTo2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void moveTo ( qreal x, qreal y )
-//[2]void moveTo ( const QPointF & position )
+/*
+[1]void moveTo ( qreal x, qreal y )
+[2]void moveTo ( const QPointF & position )
+*/
 
 HB_FUNC_STATIC( QRECTF_MOVETO )
 {
@@ -1560,8 +1566,10 @@ void QRectF_translate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void translate ( qreal dx, qreal dy )
-//[2]void translate ( const QPointF & offset )
+/*
+[1]void translate ( qreal dx, qreal dy )
+[2]void translate ( const QPointF & offset )
+*/
 
 HB_FUNC_STATIC( QRECTF_TRANSLATE )
 {
@@ -1607,8 +1615,10 @@ void QRectF_translated2()
   }
 }
 
-//[1]QRectF translated ( qreal dx, qreal dy ) const
-//[2]QRectF translated ( const QPointF & offset ) const
+/*
+[1]QRectF translated ( qreal dx, qreal dy ) const
+[2]QRectF translated ( const QPointF & offset ) const
+*/
 
 HB_FUNC_STATIC( QRECTF_TRANSLATED )
 {

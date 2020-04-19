@@ -163,9 +163,11 @@ void QCryptographicHash_addData3()
   }
 }
 
-//[1]void addData(const char *data, int length)
-//[2]void addData(const QByteArray &data)
-//[3]bool addData(QIODevice* device)
+/*
+[1]void addData(const char *data, int length)
+[2]void addData(const QByteArray &data)
+[3]bool addData(QIODevice* device)
+*/
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 {

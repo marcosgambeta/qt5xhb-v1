@@ -98,12 +98,12 @@ void QDirIterator_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
-//[2]QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
-//[3]QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
-//[4]QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
-
-// TODO: resolver conflito entre [2] e [3] quando forem 2 parâmetros
+/*
+[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
+[2]QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
+[3]QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
+[4]QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
+*/
 
 HB_FUNC_STATIC( QDIRITERATOR_NEW )
 {

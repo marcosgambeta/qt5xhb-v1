@@ -98,8 +98,10 @@ void QTextCodec_canEncode2()
   }
 }
 
-//[1]bool canEncode(QChar) const
-//[2]bool canEncode(const QString&) const
+/*
+[1]bool canEncode(QChar) const
+[2]bool canEncode(const QString&) const
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 {
@@ -143,9 +145,11 @@ void QTextCodec_toUnicode2()
   }
 }
 
-//[1]QString toUnicode(const QByteArray&) const
-//[2]QString toUnicode(const char* chars) const
-//[3]QString toUnicode(const char *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
+/*
+[1]QString toUnicode(const QByteArray&) const
+[2]QString toUnicode(const char* chars) const
+[3]QString toUnicode(const char *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 {
@@ -177,8 +181,10 @@ void QTextCodec_fromUnicode1()
   }
 }
 
-//[1]QByteArray fromUnicode(const QString& uc) const
-//[2]QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
+/*
+[1]QByteArray fromUnicode(const QString& uc) const
+[2]QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
 {
@@ -363,8 +369,10 @@ void QTextCodec_codecForName2()
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
-//[1]static QTextCodec* codecForName(const QByteArray &name)
-//[2]static QTextCodec* codecForName(const char *name)
+/*
+[1]static QTextCodec* codecForName(const QByteArray &name)
+[2]static QTextCodec* codecForName(const char *name)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 {
@@ -530,8 +538,10 @@ void QTextCodec_codecForHtml2()
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
-//[1]static QTextCodec *codecForHtml(const QByteArray &ba)
-//[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
+/*
+[1]static QTextCodec *codecForHtml(const QByteArray &ba)
+[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 {
@@ -569,8 +579,10 @@ void QTextCodec_codecForUtfText2()
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
-//[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
-//[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
+/*
+[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
+[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
+*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
 {

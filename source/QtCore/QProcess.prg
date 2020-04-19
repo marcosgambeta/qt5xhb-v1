@@ -750,9 +750,11 @@ void QProcess_start3()
 #endif
 }
 
-//[1]void start(const QString &program, const QStringList &arguments, OpenMode mode = ReadWrite)
-//[2]void start(const QString &command, OpenMode mode = ReadWrite)
-//[3]void start(OpenMode mode = ReadWrite)
+/*
+[1]void start(const QString &program, const QStringList &arguments, OpenMode mode = ReadWrite)
+[2]void start(const QString &command, OpenMode mode = ReadWrite)
+[3]void start(OpenMode mode = ReadWrite)
+*/
 
 HB_FUNC_STATIC( QPROCESS_START )
 {
@@ -1134,8 +1136,10 @@ void QProcess_execute2()
   RINT( QProcess::execute( PQSTRING(1) ) );
 }
 
-//[1]int execute ( const QString & program, const QStringList & arguments )
-//[2]int execute ( const QString & program )
+/*
+[1]int execute ( const QString & program, const QStringList & arguments )
+[2]int execute ( const QString & program )
+*/
 
 HB_FUNC_STATIC( QPROCESS_EXECUTE )
 {
@@ -1184,9 +1188,11 @@ void QProcess_startDetached3()
 bool QProcess::startDetached(qint64 *pid = nullptr) Require 5.10.0
 */
 
-//[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
-//[2]bool startDetached ( const QString & program, const QStringList & arguments )
-//[3]bool startDetached ( const QString & program )
+/*
+[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
+[2]bool startDetached ( const QString & program, const QStringList & arguments )
+[3]bool startDetached ( const QString & program )
+*/
 
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {

@@ -95,8 +95,10 @@ void QAtomicInt_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QAtomicInt(int value = 0)
-//[2]QAtomicInt(const QAtomicInt & other)
+/*
+[1]QAtomicInt(int value = 0)
+[2]QAtomicInt(const QAtomicInt & other)
+*/
 
 HB_FUNC_STATIC( QATOMICINT_NEW )
 {

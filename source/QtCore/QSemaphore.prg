@@ -144,8 +144,10 @@ void QSemaphore_tryAcquire2()
   }
 }
 
-//[1]bool tryAcquire(int n = 1)
-//[2]bool tryAcquire(int n, int timeout)
+/*
+[1]bool tryAcquire(int n = 1)
+[2]bool tryAcquire(int n, int timeout)
+*/
 
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {

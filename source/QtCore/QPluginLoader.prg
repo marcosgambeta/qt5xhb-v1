@@ -77,8 +77,10 @@ void QPluginLoader_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QPluginLoader ( QObject * parent = 0 )
-//[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
+/*
+[1]QPluginLoader ( QObject * parent = 0 )
+[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {

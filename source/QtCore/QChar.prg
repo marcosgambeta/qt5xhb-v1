@@ -185,18 +185,20 @@ HB_FUNC_STATIC( QCHAR_NEW10 )
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[01]QChar ()
-//[02]QChar ( char ch )
-//[03]QChar ( uchar ch )
-//[04]QChar ( QLatin1Char ch )
-//[05]QChar ( uchar cell, uchar row )
-//[06]QChar ( ushort code )
-//[07]QChar ( short code )
-//[08]QChar ( uint code )
-//[09]QChar ( int code )
-//[10]QChar ( SpecialCharacter ch )
+/*
+[01]QChar ()
+[02]QChar ( char ch )
+[03]QChar ( uchar ch )
+[04]QChar ( QLatin1Char ch )
+[05]QChar ( uchar cell, uchar row )
+[06]QChar ( ushort code )
+[07]QChar ( short code )
+[08]QChar ( uint code )
+[09]QChar ( int code )
+[10]QChar ( SpecialCharacter ch )
+*/
 
-HB_FUNC_STATIC( QCHAR_NEW ) // TODO: completar implementação
+HB_FUNC_STATIC( QCHAR_NEW )
 {
   HB_FUNC_EXEC( QCHAR_NEW1 );
 }

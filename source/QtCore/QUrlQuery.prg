@@ -110,10 +110,12 @@ void QUrlQuery_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QUrlQuery()
-//[2]QUrlQuery(const QUrl & url)
-//[3]QUrlQuery(const QString & queryString)
-//[4]QUrlQuery(const QUrlQuery & other)
+/*
+[1]QUrlQuery()
+[2]QUrlQuery(const QUrl & url)
+[3]QUrlQuery(const QString & queryString)
+[4]QUrlQuery(const QUrlQuery & other)
+*/
 
 HB_FUNC_STATIC( QURLQUERY_NEW )
 {

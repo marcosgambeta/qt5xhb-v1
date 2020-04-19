@@ -150,8 +150,10 @@ void QMimeDatabase_mimeTypeForFile2()
   }
 }
 
-//[1]QMimeType mimeTypeForFile(const QString &fileName, MatchMode mode = MatchDefault) const
-//[2]QMimeType mimeTypeForFile(const QFileInfo &fileInfo, MatchMode mode = MatchDefault) const
+/*
+[1]QMimeType mimeTypeForFile(const QString &fileName, MatchMode mode = MatchDefault) const
+[2]QMimeType mimeTypeForFile(const QFileInfo &fileInfo, MatchMode mode = MatchDefault) const
+*/
 
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
 {
@@ -249,8 +251,10 @@ void QMimeDatabase_mimeTypeForData2()
   }
 }
 
-//[1]QMimeType mimeTypeForData(const QByteArray &data) const
-//[2]QMimeType mimeTypeForData(QIODevice *device) const
+/*
+[1]QMimeType mimeTypeForData(const QByteArray &data) const
+[2]QMimeType mimeTypeForData(QIODevice *device) const
+*/
 
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA )
 {
@@ -321,8 +325,10 @@ void QMimeDatabase_mimeTypeForFileNameAndData2()
   }
 }
 
-//[1]QMimeType mimeTypeForFileNameAndData(const QString &fileName, QIODevice *device) const
-//[2]QMimeType mimeTypeForFileNameAndData(const QString &fileName, const QByteArray &data) const
+/*
+[1]QMimeType mimeTypeForFileNameAndData(const QString &fileName, QIODevice *device) const
+[2]QMimeType mimeTypeForFileNameAndData(const QString &fileName, const QByteArray &data) const
+*/
 
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA )
 {

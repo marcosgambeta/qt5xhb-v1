@@ -82,9 +82,11 @@ void QEventLoopLocker_new3()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QEventLoopLocker()
-//[2]QEventLoopLocker(QEventLoop * loop)
-//[3]QEventLoopLocker(QThread * thread)
+/*
+[1]QEventLoopLocker()
+[2]QEventLoopLocker(QEventLoop * loop)
+[3]QEventLoopLocker(QThread * thread)
+*/
 
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 {

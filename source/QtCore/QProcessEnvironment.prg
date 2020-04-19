@@ -83,8 +83,10 @@ void QProcessEnvironment_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QProcessEnvironment()
-//[2]QProcessEnvironment(const QProcessEnvironment &other)
+/*
+[1]QProcessEnvironment()
+[2]QProcessEnvironment(const QProcessEnvironment &other)
+*/
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
@@ -249,8 +251,10 @@ void QProcessEnvironment_insert2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void insert(const QString &name, const QString &value)
-//[2]void insert(const QProcessEnvironment &e)
+/*
+[1]void insert(const QString &name, const QString &value)
+[2]void insert(const QProcessEnvironment &e)
+*/
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {

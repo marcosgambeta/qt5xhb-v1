@@ -604,63 +604,52 @@ void QVariant_new45()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QVariant()
-//[2]QVariant(Type type)
-//[3]QVariant(int typeId, const void *copy)
-//[4]QVariant(int typeId, const void *copy, uint flags)
-//[5]QVariant(const QVariant &other)
-//[6]QVariant(QDataStream &s)
-//[7]QVariant(int i)
-//[8]QVariant(uint ui)
-//[9]QVariant(qlonglong ll)
-//[10]QVariant(qulonglong ull)
-//[11]QVariant(bool b)
-//[12]QVariant(double d)
-//[13]QVariant(float f)
-//[14]QVariant(const char *str)
-//[15]QVariant(const QByteArray &bytearray)
-//[16]QVariant(const QBitArray &bitarray)
-//[17]QVariant(const QString &string)
-//[18]QVariant(QLatin1String string)
-//[19]QVariant(const QStringList &stringlist)
-//[20]QVariant(QChar qchar)
-//[21]QVariant(const QDate &date)
-//[22]QVariant(const QTime &time)
-//[23]QVariant(const QDateTime &datetime)
-//[24]QVariant(const QList<QVariant> &list)
-//[25]QVariant(const QMap<QString,QVariant> &map)
-//[26]QVariant(const QHash<QString,QVariant> &hash)
-//[27]QVariant(const QSize &size)
-//[28]QVariant(const QSizeF &size)
-//[29]QVariant(const QPoint &pt)
-//[30]QVariant(const QPointF &pt)
-//[31]QVariant(const QLine &line)
-//[32]QVariant(const QLineF &line)
-//[33]QVariant(const QRect &rect)
-//[34]QVariant(const QRectF &rect)
-//[35]QVariant(const QLocale &locale)
-//[36]QVariant(const QRegExp &regExp)
-//[37]QVariant(const QRegularExpression &re)
-//[38]QVariant(const QUrl &url)
-//[39]QVariant(const QEasingCurve &easing)
-//[40]QVariant(const QUuid &uuid)
-//[41]QVariant(const QModelIndex &modelIndex)
-//[42]QVariant(const QJsonValue &jsonValue)
-//[43]QVariant(const QJsonObject &jsonObject)
-//[44]QVariant(const QJsonArray &jsonArray)
-//[45]QVariant(const QJsonDocument &jsonDocument)
-
 /*
-TODO: implementar reconhecimento de parâmetros, se possível, para os casos abaixo
-
+[1]QVariant()
 [2]QVariant(Type type)
+[3]QVariant(int typeId, const void *copy)
+[4]QVariant(int typeId, const void *copy, uint flags)
+[5]QVariant(const QVariant &other)
+[6]QVariant(QDataStream &s)
+[7]QVariant(int i)
 [8]QVariant(uint ui)
+[9]QVariant(qlonglong ll)
 [10]QVariant(qulonglong ull)
+[11]QVariant(bool b)
+[12]QVariant(double d)
 [13]QVariant(float f)
 [14]QVariant(const char *str)
+[15]QVariant(const QByteArray &bytearray)
+[16]QVariant(const QBitArray &bitarray)
+[17]QVariant(const QString &string)
+[18]QVariant(QLatin1String string)
+[19]QVariant(const QStringList &stringlist)
+[20]QVariant(QChar qchar)
+[21]QVariant(const QDate &date)
+[22]QVariant(const QTime &time)
+[23]QVariant(const QDateTime &datetime)
 [24]QVariant(const QList<QVariant> &list)
 [25]QVariant(const QMap<QString,QVariant> &map)
 [26]QVariant(const QHash<QString,QVariant> &hash)
+[27]QVariant(const QSize &size)
+[28]QVariant(const QSizeF &size)
+[29]QVariant(const QPoint &pt)
+[30]QVariant(const QPointF &pt)
+[31]QVariant(const QLine &line)
+[32]QVariant(const QLineF &line)
+[33]QVariant(const QRect &rect)
+[34]QVariant(const QRectF &rect)
+[35]QVariant(const QLocale &locale)
+[36]QVariant(const QRegExp &regExp)
+[37]QVariant(const QRegularExpression &re)
+[38]QVariant(const QUrl &url)
+[39]QVariant(const QEasingCurve &easing)
+[40]QVariant(const QUuid &uuid)
+[41]QVariant(const QModelIndex &modelIndex)
+[42]QVariant(const QJsonValue &jsonValue)
+[43]QVariant(const QJsonObject &jsonObject)
+[44]QVariant(const QJsonArray &jsonArray)
+[45]QVariant(const QJsonDocument &jsonDocument)
 */
 
 HB_FUNC_STATIC( QVARIANT_NEW )
@@ -2133,10 +2122,10 @@ static const char *typeToName(int typeId)
 HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && ISNUM(1) )
   {
 #endif
-      hb_retc( (const char *) QVariant::typeToName( PINT(1) ) );
+    hb_retc( (const char *) QVariant::typeToName( PINT(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -2152,10 +2141,10 @@ static Type nameToType(const char *name)
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && ISCHAR(1) )
   {
 #endif
-      RENUM( QVariant::nameToType( PCONSTCHAR(1) ) );
+    RENUM( QVariant::nameToType( PCONSTCHAR(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

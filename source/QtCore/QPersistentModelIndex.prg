@@ -97,9 +97,11 @@ void QPersistentModelIndex_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QPersistentModelIndex()
-//[2]QPersistentModelIndex(const QModelIndex &index)
-//[3]QPersistentModelIndex(const QPersistentModelIndex &other)
+/*
+[1]QPersistentModelIndex()
+[2]QPersistentModelIndex(const QModelIndex &index)
+[3]QPersistentModelIndex(const QPersistentModelIndex &other)
+*/
 
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 {

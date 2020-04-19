@@ -97,10 +97,12 @@ void QTextBoundaryFinder_new3()
 QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
 */
 
-//[1]QTextBoundaryFinder()
-//[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
-//[3]QTextBoundaryFinder(BoundaryType type, const QString &string)
-//[4]QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
+/*
+[1]QTextBoundaryFinder()
+[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
+[3]QTextBoundaryFinder(BoundaryType type, const QString &string)
+[4]QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
+*/
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 {

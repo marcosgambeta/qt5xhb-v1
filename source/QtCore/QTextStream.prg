@@ -145,14 +145,16 @@ void QTextStream_new6()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QTextStream()
-//[2]QTextStream(QIODevice *device)
-//[3]QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-//[4]QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite) // TODO: revisar implementacao
-//[5]QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-//[6]QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
+/*
+[1]QTextStream()
+[2]QTextStream(QIODevice *device)
+[3]QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+[4]QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite) // TODO: revisar implementacao
+[5]QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+[6]QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
+*/
 
-HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
+HB_FUNC_STATIC( QTEXTSTREAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
@@ -166,10 +168,6 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW ) // TODO: revisar casos [5] e [6]
   {
     QTextStream_new3();
   }
-  //else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
-  //{
-  //  QTextStream_new5();
-  //}
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
   {
     QTextStream_new6();
@@ -227,8 +225,10 @@ void QTextStream_setCodec2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setCodec(QTextCodec *codec)
-//[2]void setCodec(const char *codecName)
+/*
+[1]void setCodec(QTextCodec *codec)
+[2]void setCodec(const char *codecName)
+*/
 
 HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 {

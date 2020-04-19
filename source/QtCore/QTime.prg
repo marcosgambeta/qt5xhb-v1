@@ -90,8 +90,10 @@ void QTime_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QTime()
-//[2]QTime(int h, int m, int s = 0, int ms = 0)
+/*
+[1]QTime()
+[2]QTime(int h, int m, int s = 0, int ms = 0)
+*/
 
 HB_FUNC_STATIC( QTIME_NEW )
 {
@@ -270,8 +272,10 @@ void QTime_isValid2()
   RBOOL( QTime::isValid( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
 }
 
-//[1]bool isValid() const
-//[2]bool isValid(int h, int m, int s, int ms = 0)
+/*
+[1]bool isValid() const
+[2]bool isValid(int h, int m, int s, int ms = 0)
+*/
 
 HB_FUNC_STATIC( QTIME_ISVALID )
 {
@@ -509,8 +513,10 @@ void QTime_toString2()
   }
 }
 
-//[1]QString toString(const QString & format) const
-//[2]QString toString(Qt::DateFormat format = Qt::TextDate) const
+/*
+[1]QString toString(const QString & format) const
+[2]QString toString(Qt::DateFormat format = Qt::TextDate) const
+*/
 
 HB_FUNC_STATIC( QTIME_TOSTRING )
 {
@@ -568,8 +574,10 @@ void QTime_fromString2()
   Qt5xHb::createReturnClass( ptr, "QTIME", true );
 }
 
-//[1]QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
-//[2]QTime fromString(const QString & string, const QString & format)
+/*
+[1]QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
+[2]QTime fromString(const QString & string, const QString & format)
+*/
 
 HB_FUNC_STATIC( QTIME_FROMSTRING )
 {

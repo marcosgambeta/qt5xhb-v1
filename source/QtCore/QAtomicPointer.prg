@@ -52,15 +52,6 @@ RETURN
 #include <QtCore/QAtomicPointer>
 #endif
 
-// TODO: implementar(?) construtores
-
-//[1]QAtomicPointer(T * value = 0)
-//[2]QAtomicPointer(const QAtomicPointer<T> & other)
-
-//HB_FUNC_STATIC( QATOMICPOINTER_NEW )
-//{
-//}
-
 HB_FUNC_STATIC( QATOMICPOINTER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();

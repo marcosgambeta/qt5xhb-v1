@@ -84,8 +84,10 @@ void QState_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QState ( QState * parent = 0 )
-//[2]QState ( ChildMode childMode, QState * parent = 0 )
+/*
+[1]QState ( QState * parent = 0 )
+[2]QState ( ChildMode childMode, QState * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QSTATE_NEW )
 {
@@ -165,9 +167,11 @@ void QState_addTransition3()
   }
 }
 
-//[1]void addTransition ( QAbstractTransition * transition )
-//[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
-//[3]QAbstractTransition * addTransition ( QAbstractState * target )
+/*
+[1]void addTransition ( QAbstractTransition * transition )
+[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
+[3]QAbstractTransition * addTransition ( QAbstractState * target )
+*/
 
 HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 {

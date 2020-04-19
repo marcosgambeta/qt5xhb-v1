@@ -95,10 +95,12 @@ void QLibrary_new4()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QLibrary(QObject *parent = 0)
-//[2]QLibrary(const QString& fileName, QObject *parent = 0)
-//[3]QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
-//[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
+/*
+[1]QLibrary(QObject *parent = 0)
+[2]QLibrary(const QString& fileName, QObject *parent = 0)
+[3]QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
+[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
+*/
 
 HB_FUNC_STATIC( QLIBRARY_NEW )
 {
@@ -295,8 +297,10 @@ void QLibrary_setFileNameAndVersion2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setFileNameAndVersion(const QString &fileName, int verNum)
-//[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
+/*
+[1]void setFileNameAndVersion(const QString &fileName, int verNum)
+[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
+*/
 
 HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
 {
@@ -404,10 +408,12 @@ static QFunctionPointer resolve(const QString &fileName, int verNum, const char 
 static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol) // TODO: corrigir implementacao do metodo
 */
 
-//[1]QFunctionPointer resolve(const char *symbol)
-//[2]static QFunctionPointer resolve(const QString &fileName, const char *symbol)
-//[3]static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol)
-//[4]static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol)
+/*
+[1]QFunctionPointer resolve(const char *symbol)
+[2]static QFunctionPointer resolve(const QString &fileName, const char *symbol)
+[3]static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol)
+[4]static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol)
+*/
 
 HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 {

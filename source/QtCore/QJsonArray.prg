@@ -101,8 +101,10 @@ void QJsonArray_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QJsonArray()
-//[2]QJsonArray(const QJsonArray & other)
+/*
+[1]QJsonArray()
+[2]QJsonArray(const QJsonArray & other)
+*/
 
 HB_FUNC_STATIC( QJSONARRAY_NEW )
 {

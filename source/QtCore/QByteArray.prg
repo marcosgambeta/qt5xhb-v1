@@ -213,11 +213,13 @@ void QByteArray_new5()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QByteArray ()
-//[2]QByteArray ( const char * str )
-//[3]QByteArray ( const char * data, int size )
-//[4]QByteArray ( int size, char ch )
-//[5]QByteArray ( const QByteArray & other )
+/*
+[1]QByteArray ()
+[2]QByteArray ( const char * str )
+[3]QByteArray ( const char * data, int size )
+[4]QByteArray ( int size, char ch )
+[5]QByteArray ( const QByteArray & other )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_NEW )
 {
@@ -416,12 +418,14 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND6 )
 #endif
 }
 
-//[1]QByteArray & append ( const QByteArray & ba )
-//[2]QByteArray & append ( const QString & str )
-//[3]QByteArray & append ( const char * str )
-//[4]QByteArray & append ( const char * str, int len )
-//[5]QByteArray & append ( char ch )
-//[6]QByteArray & append ( int count, char ch )
+/*
+[1]QByteArray & append ( const QByteArray & ba )
+[2]QByteArray & append ( const QString & str )
+[3]QByteArray & append ( const char * str )
+[4]QByteArray & append ( const char * str, int len )
+[5]QByteArray & append ( char ch )
+[6]QByteArray & append ( int count, char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 {
@@ -614,9 +618,11 @@ void QByteArray_contains3()
   }
 }
 
-//[1]bool contains ( const QByteArray & ba ) const
-//[2]bool contains ( const char * str ) const
-//[3]bool contains ( char ch ) const
+/*
+[1]bool contains ( const QByteArray & ba ) const
+[2]bool contains ( const char * str ) const
+[3]bool contains ( char ch ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 {
@@ -690,10 +696,12 @@ void QByteArray_count4()
   }
 }
 
-//[1]int count ( const QByteArray & ba ) const
-//[2]int count ( const char * str ) const
-//[3]int count ( char ch ) const
-//[4]int count () const
+/*
+[1]int count ( const QByteArray & ba ) const
+[2]int count ( const char * str ) const
+[3]int count ( char ch ) const
+[4]int count () const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 {
@@ -743,10 +751,6 @@ HB_FUNC_STATIC( QBYTEARRAY_DATA2 )
   }
 }
 
-// TODO: revisar implementacao dos metodos
-//[1]char * data ()
-//[2]const char * data () const
-
 HB_FUNC_STATIC( QBYTEARRAY_DATA )
 {
   HB_FUNC_EXEC( QBYTEARRAY_DATA2 );
@@ -791,9 +795,11 @@ void QByteArray_endsWith3()
   }
 }
 
-//[1]bool endsWith ( const QByteArray & ba ) const
-//[2]bool endsWith ( const char * str ) const
-//[3]bool endsWith ( char ch ) const
+/*
+[1]bool endsWith ( const QByteArray & ba ) const
+[2]bool endsWith ( const char * str ) const
+[3]bool endsWith ( char ch ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 {
@@ -936,11 +942,12 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
   }
 }
 
-// TODO: resolver conflito entre [2] e [3]
-//[1]int indexOf ( const QByteArray & ba, int from = 0 ) const
-//[2]int indexOf ( const QString & str, int from = 0 ) const
-//[3]int indexOf ( const char * str, int from = 0 ) const
-//[4]int indexOf ( char ch, int from = 0 ) const
+/*
+[1]int indexOf ( const QByteArray & ba, int from = 0 ) const
+[2]int indexOf ( const QString & str, int from = 0 ) const
+[3]int indexOf ( const char * str, int from = 0 ) const
+[4]int indexOf ( char ch, int from = 0 ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
 {
@@ -1091,11 +1098,13 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
   }
 }
 
-//[1]QByteArray & insert ( int i, const QByteArray & ba )
-//[2]QByteArray & insert ( int i, const QString & str )
-//[3]QByteArray & insert ( int i, const char * str )
-//[4]QByteArray & insert ( int i, const char * str, int len )
-//[5]QByteArray & insert ( int i, char ch )
+/*
+[1]QByteArray & insert ( int i, const QByteArray & ba )
+[2]QByteArray & insert ( int i, const QString & str )
+[3]QByteArray & insert ( int i, const char * str )
+[4]QByteArray & insert ( int i, const char * str, int len )
+[5]QByteArray & insert ( int i, char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_INSERT )
 {
@@ -1265,10 +1274,12 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
   }
 }
 
-//[1]int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
-//[2]int lastIndexOf ( const QString & str, int from = -1 ) const
-//[3]int lastIndexOf ( const char * str, int from = -1 ) const
-//[4]int lastIndexOf ( char ch, int from = -1 ) const
+/*
+[1]int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
+[2]int lastIndexOf ( const QString & str, int from = -1 ) const
+[3]int lastIndexOf ( const char * str, int from = -1 ) const
+[4]int lastIndexOf ( char ch, int from = -1 ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
 {
@@ -1449,10 +1460,12 @@ void QByteArray_prepend4()
   }
 }
 
-//[1]QByteArray & prepend ( const QByteArray & ba )
-//[2]QByteArray & prepend ( const char * str )
-//[3]QByteArray & prepend ( const char * str, int len )
-//[4]QByteArray & prepend ( char ch )
+/*
+[1]QByteArray & prepend ( const QByteArray & ba )
+[2]QByteArray & prepend ( const char * str )
+[3]QByteArray & prepend ( const char * str, int len )
+[4]QByteArray & prepend ( char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 {
@@ -1523,10 +1536,11 @@ void QByteArray_push_back3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-// TODO: revisar implementacao dos metodos [2] vs [3]
-//[1]void push_back ( const QByteArray & other )
-//[2]void push_back ( const char * str )
-//[3]void push_back ( char ch )
+/*
+[1]void push_back ( const QByteArray & other )
+[2]void push_back ( const char * str )
+[3]void push_back ( char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 {
@@ -1593,9 +1607,11 @@ void QByteArray_push_front3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void push_front ( const QByteArray & other )
-//[2]void push_front ( const char * str )
-//[3]void push_front ( char ch )
+/*
+[1]void push_front ( const QByteArray & other )
+[2]void push_front ( const char * str )
+[3]void push_front ( char ch )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 {
@@ -2017,20 +2033,22 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
   }
 }
 
-//[01]QByteArray & replace ( int pos, int len, const QByteArray & after )
-//[02]QByteArray & replace ( int pos, int len, const char * after )
-//[03]QByteArray & replace ( int pos, int len, const char * after, int alen )
-//[04]QByteArray & replace ( const QByteArray & before, const QByteArray & after )
-//[05]QByteArray & replace ( const char * before, const QByteArray & after )
-//[06]QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
-//[07]QByteArray & replace ( const QByteArray & before, const char * after )
-//[08]QByteArray & replace ( const QString & before, const QByteArray & after )
-//[09]QByteArray & replace ( const QString & before, const char * after )
-//[10]QByteArray & replace ( const char * before, const char * after )
-//[11]QByteArray & replace ( char before, const QByteArray & after )
-//[12]QByteArray & replace ( char before, const QString & after )
-//[13]QByteArray & replace ( char before, const char * after )
-//[14]QByteArray & replace ( char before, char after )
+/*
+[01]QByteArray & replace ( int pos, int len, const QByteArray & after )
+[02]QByteArray & replace ( int pos, int len, const char * after )
+[03]QByteArray & replace ( int pos, int len, const char * after, int alen )
+[04]QByteArray & replace ( const QByteArray & before, const QByteArray & after )
+[05]QByteArray & replace ( const char * before, const QByteArray & after )
+[06]QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
+[07]QByteArray & replace ( const QByteArray & before, const char * after )
+[08]QByteArray & replace ( const QString & before, const QByteArray & after )
+[09]QByteArray & replace ( const QString & before, const char * after )
+[10]QByteArray & replace ( const char * before, const char * after )
+[11]QByteArray & replace ( char before, const QByteArray & after )
+[12]QByteArray & replace ( char before, const QString & after )
+[13]QByteArray & replace ( char before, const char * after )
+[14]QByteArray & replace ( char before, char after )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
 {
@@ -2398,14 +2416,16 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
   }
 }
 
-//[1]QByteArray & setNum ( int n, int base = 10 )
-//[2]QByteArray & setNum ( uint n, int base = 10 )
-//[3]QByteArray & setNum ( short n, int base = 10 )
-//[4]QByteArray & setNum ( ushort n, int base = 10 )
-//[5]QByteArray & setNum ( qlonglong n, int base = 10 )
-//[6]QByteArray & setNum ( qulonglong n, int base = 10 )
-//[7]QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
-//[8]QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
+/*
+[1]QByteArray & setNum ( int n, int base = 10 )
+[2]QByteArray & setNum ( uint n, int base = 10 )
+[3]QByteArray & setNum ( short n, int base = 10 )
+[4]QByteArray & setNum ( ushort n, int base = 10 )
+[5]QByteArray & setNum ( qlonglong n, int base = 10 )
+[6]QByteArray & setNum ( qulonglong n, int base = 10 )
+[7]QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
+[8]QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
 {
@@ -2610,10 +2630,11 @@ void QByteArray_startsWith3()
   }
 }
 
-// TODO: revisar implementacao [2] vs [3]
-//[1]bool startsWith ( const QByteArray & ba ) const
-//[2]bool startsWith ( const char * str ) const
-//[3]bool startsWith ( char ch ) const
+/*
+[1]bool startsWith ( const QByteArray & ba ) const
+[2]bool startsWith ( const char * str ) const
+[3]bool startsWith ( char ch ) const
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 {
@@ -3249,11 +3270,13 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
   }
 }
 
-//[1]static QByteArray number ( int n, int base = 10 )
-//[2]static QByteArray number ( uint n, int base = 10 )
-//[3]static QByteArray number ( qlonglong n, int base = 10 )
-//[4]static QByteArray number ( qulonglong n, int base = 10 )
-//[5]static QByteArray number ( double n, char f = 'g', int prec = 6 )
+/*
+[1]static QByteArray number ( int n, int base = 10 )
+[2]static QByteArray number ( uint n, int base = 10 )
+[3]static QByteArray number ( qlonglong n, int base = 10 )
+[4]static QByteArray number ( qulonglong n, int base = 10 )
+[5]static QByteArray number ( double n, char f = 'g', int prec = 6 )
+*/
 
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER )
 {

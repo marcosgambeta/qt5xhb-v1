@@ -191,8 +191,10 @@ void QEventLoop_processEvents2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
-//[2]void processEvents ( ProcessEventsFlags flags, int maxTime )
+/*
+[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
+[2]void processEvents ( ProcessEventsFlags flags, int maxTime )
+*/
 
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {

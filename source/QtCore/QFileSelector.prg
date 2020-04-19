@@ -117,8 +117,10 @@ void QFileSelector_select2()
   }
 }
 
-//[1]QString select(const QString &filePath) const
-//[2]QUrl select(const QUrl &filePath) const
+/*
+[1]QString select(const QString &filePath) const
+[2]QUrl select(const QUrl &filePath) const
+*/
 
 HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 {

@@ -153,10 +153,12 @@ void QSignalMapper_setMapping4()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setMapping(QObject *sender, int id)
-//[2]void setMapping(QObject *sender, const QString &text)
-//[3]void setMapping(QObject *sender, QWidget *widget)
-//[4]void setMapping(QObject *sender, QObject *object)
+/*
+[1]void setMapping(QObject *sender, int id)
+[2]void setMapping(QObject *sender, const QString &text)
+[3]void setMapping(QObject *sender, QWidget *widget)
+[4]void setMapping(QObject *sender, QObject *object)
+*/
 
 HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 {
@@ -264,10 +266,12 @@ void QSignalMapper_mapping4()
   }
 }
 
-//[1]QObject *mapping(int id) const
-//[2]QObject *mapping(const QString &text) const
-//[3]QObject *mapping(QWidget *widget) const
-//[4]QObject *mapping(QObject *object) const
+/*
+[1]QObject *mapping(int id) const
+[2]QObject *mapping(const QString &text) const
+[3]QObject *mapping(QWidget *widget) const
+[4]QObject *mapping(QObject *object) const
+*/
 
 HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 {
@@ -323,8 +327,10 @@ void QSignalMapper_map2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void map()
-//[2]void map(QObject *sender)
+/*
+[1]void map()
+[2]void map(QObject *sender)
+*/
 
 HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
 {

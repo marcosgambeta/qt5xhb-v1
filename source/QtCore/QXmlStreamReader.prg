@@ -149,12 +149,13 @@ void QXmlStreamReader_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-// TODO: conflito entre [4] e [5]
-//[1]QXmlStreamReader()
-//[2]QXmlStreamReader(QIODevice * device)
-//[3]QXmlStreamReader(const QByteArray & data)
-//[4]QXmlStreamReader(const QString & data)
-//[5]QXmlStreamReader(const char * data) // INFO: nao implementado
+/*
+[1]QXmlStreamReader()
+[2]QXmlStreamReader(QIODevice * device)
+[3]QXmlStreamReader(const QByteArray & data)
+[4]QXmlStreamReader(const QString & data)
+[5]QXmlStreamReader(const char * data) // INFO: nao implementado
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
 {
@@ -242,10 +243,11 @@ void QXmlStreamReader_addData3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-// TODO: conflito entre [2] e [3]
-//[1]void addData(const QByteArray & data)
-//[2]void addData(const QString & data)
-//[3]void addData(const char * data)
+/*
+[1]void addData(const QByteArray & data)
+[2]void addData(const QString & data)
+[3]void addData(const char * data)
+*/
 
 HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 {
