@@ -138,13 +138,15 @@ void QMediaContent_new7()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QMediaContent()
-//[2]QMediaContent(const QUrl & contentUrl)
-//[3]QMediaContent(const QNetworkRequest & contentRequest)
-//[4]QMediaContent(const QMediaResource & contentResource)
-//[5]QMediaContent(const QMediaResourceList & resources)
-//[6]QMediaContent(const QMediaContent & other)
-//[7]QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false)
+/*
+[1]QMediaContent()
+[2]QMediaContent(const QUrl & contentUrl)
+[3]QMediaContent(const QNetworkRequest & contentRequest)
+[4]QMediaContent(const QMediaResource & contentResource)
+[5]QMediaContent(const QMediaResourceList & resources)
+[6]QMediaContent(const QMediaContent & other)
+[7]QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false)
+*/
 
 HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 {

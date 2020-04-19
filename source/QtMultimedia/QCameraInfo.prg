@@ -99,9 +99,11 @@ void QCameraInfo_new3()
 #endif
 }
 
-//[1]explicit QCameraInfo(const QByteArray &name = QByteArray())
-//[2]explicit QCameraInfo(const QCamera &camera)
-//[3]QCameraInfo(const QCameraInfo& other)
+/*
+[1]explicit QCameraInfo(const QByteArray &name = QByteArray())
+[2]explicit QCameraInfo(const QCamera &camera)
+[3]QCameraInfo(const QCameraInfo& other)
+*/
 
 HB_FUNC_STATIC( QCAMERAINFO_NEW )
 {

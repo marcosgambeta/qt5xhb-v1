@@ -83,9 +83,11 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
   }
 }
 
-//[1]QCameraFocusZone()
-//[2]QCameraFocusZone(const QRectF &area, FocusZoneStatus status = Selected)
-//[3]QCameraFocusZone(const QCameraFocusZone &other)
+/*
+[1]QCameraFocusZone()
+[2]QCameraFocusZone(const QRectF &area, FocusZoneStatus status = Selected)
+[3]QCameraFocusZone(const QCameraFocusZone &other)
+*/
 
 /*
 ~QCameraFocusZone()

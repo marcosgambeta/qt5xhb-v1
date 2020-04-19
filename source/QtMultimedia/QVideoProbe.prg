@@ -137,8 +137,10 @@ void QVideoProbe_setSource2()
   }
 }
 
-//[1]bool setSource(QMediaObject * source)
-//[2]bool setSource(QMediaRecorder * mediaRecorder)
+/*
+[1]bool setSource(QMediaObject * source)
+[2]bool setSource(QMediaRecorder * mediaRecorder)
+*/
 
 HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 {

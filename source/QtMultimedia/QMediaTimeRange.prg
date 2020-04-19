@@ -105,10 +105,12 @@ void QMediaTimeRange_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QMediaTimeRange()
-//[2]QMediaTimeRange(qint64 start, qint64 end)
-//[3]QMediaTimeRange(const QMediaTimeInterval & interval)
-//[4]QMediaTimeRange(const QMediaTimeRange & range)
+/*
+[1]QMediaTimeRange()
+[2]QMediaTimeRange(qint64 start, qint64 end)
+[3]QMediaTimeRange(const QMediaTimeInterval & interval)
+[4]QMediaTimeRange(const QMediaTimeRange & range)
+*/
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
 {
@@ -184,8 +186,10 @@ void QMediaTimeRange_addInterval2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addInterval(const QMediaTimeInterval & interval)
-//[2]void addInterval(qint64 start, qint64 end)
+/*
+[1]void addInterval(const QMediaTimeInterval & interval)
+[2]void addInterval(qint64 start, qint64 end)
+*/
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
 {
@@ -457,8 +461,10 @@ void QMediaTimeRange_removeInterval2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void removeInterval(const QMediaTimeInterval & interval)
-//[2]void removeInterval(qint64 start, qint64 end)
+/*
+[1]void removeInterval(const QMediaTimeInterval & interval)
+[2]void removeInterval(qint64 start, qint64 end)
+*/
 
 HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
 {

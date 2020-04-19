@@ -93,8 +93,10 @@ void QAudioFormat_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QAudioFormat ()
-//[2]QAudioFormat ( const QAudioFormat & other )
+/*
+[1]QAudioFormat ()
+[2]QAudioFormat ( const QAudioFormat & other )
+*/
 
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 {

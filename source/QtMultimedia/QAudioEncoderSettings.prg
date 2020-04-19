@@ -89,8 +89,10 @@ void QAudioEncoderSettings_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QAudioEncoderSettings()
-//[2]QAudioEncoderSettings(const QAudioEncoderSettings & other)
+/*
+[1]QAudioEncoderSettings()
+[2]QAudioEncoderSettings(const QAudioEncoderSettings & other)
+*/
 
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 {

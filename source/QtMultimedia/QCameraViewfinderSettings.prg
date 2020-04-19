@@ -94,8 +94,10 @@ void QCameraViewfinderSettings_new2()
 #endif
 }
 
-//[1]QCameraViewfinderSettings()
-//[2]QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
+/*
+[1]QCameraViewfinderSettings()
+[2]QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
+*/
 
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_NEW )
 {
@@ -250,8 +252,10 @@ void QCameraViewfinderSettings_setResolution2()
 #endif
 }
 
-//[1]void setResolution(const QSize &)
-//[2]void setResolution(int width, int height)
+/*
+[1]void setResolution(const QSize &)
+[2]void setResolution(int width, int height)
+*/
 
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION )
 {
@@ -492,8 +496,10 @@ void QCameraViewfinderSettings_setPixelAspectRatio2()
 #endif
 }
 
-//[1]void setPixelAspectRatio(const QSize &ratio)
-//[2]void setPixelAspectRatio(int horizontal, int vertical)
+/*
+[1]void setPixelAspectRatio(const QSize &ratio)
+[2]void setPixelAspectRatio(int horizontal, int vertical)
+*/
 
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO )
 {

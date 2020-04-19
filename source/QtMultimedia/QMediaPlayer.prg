@@ -806,9 +806,11 @@ void QMediaPlayer_setVideoOutput3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setVideoOutput(QVideoWidget * output)
-//[2]void setVideoOutput(QGraphicsVideoItem * output)
-//[3]void setVideoOutput(QAbstractVideoSurface * surface)
+/*
+[1]void setVideoOutput(QVideoWidget * output)
+[2]void setVideoOutput(QGraphicsVideoItem * output)
+[3]void setVideoOutput(QAbstractVideoSurface * surface)
+*/
 
 HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
 {
