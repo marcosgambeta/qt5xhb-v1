@@ -192,8 +192,10 @@ void QSGSimpleTextureNode_setRect2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setRect(const QRectF & r)
-//[2]void setRect(qreal x, qreal y, qreal w, qreal h)
+/*
+[1]void setRect(const QRectF & r)
+[2]void setRect(qreal x, qreal y, qreal w, qreal h)
+*/
 
 HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT )
 {

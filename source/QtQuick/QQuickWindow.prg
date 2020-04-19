@@ -657,8 +657,10 @@ void QQuickWindow_setRenderTarget2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setRenderTarget(QOpenGLFramebufferObject * fbo)
-//[2]void setRenderTarget(uint fboId, const QSize & size)
+/*
+[1]void setRenderTarget(QOpenGLFramebufferObject * fbo)
+[2]void setRenderTarget(uint fboId, const QSize & size)
+*/
 
 HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
 {
