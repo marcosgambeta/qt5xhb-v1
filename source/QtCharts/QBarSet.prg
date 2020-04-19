@@ -623,8 +623,10 @@ void QBarSet_append2()
 #endif
 }
 
-//[1]void append(const qreal value)
-//[2]void append(const QList<qreal> &values)
+/*
+[1]void append(const qreal value)
+[2]void append(const QList<qreal> &values)
+*/
 
 HB_FUNC_STATIC( QBARSET_APPEND )
 {

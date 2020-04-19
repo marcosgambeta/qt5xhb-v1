@@ -107,8 +107,10 @@ void QCandlestickSet_new2()
 #endif
 }
 
-//[1]explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
-//[2]explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
+/*
+[1]explicit QCandlestickSet(qreal timestamp = 0.0, QObject *parent = nullptr)
+[2]explicit QCandlestickSet(qreal open, qreal high, qreal low, qreal close, qreal timestamp = 0.0, QObject *parent = nullptr)
+*/
 
 HB_FUNC_STATIC( QCANDLESTICKSET_NEW )
 {

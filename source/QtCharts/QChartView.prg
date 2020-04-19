@@ -78,8 +78,10 @@ void QChartView_new2()
 #endif
 }
 
-//[1]explicit QChartView(QWidget *parent = Q_NULLPTR)
-//[2]explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
+/*
+[1]explicit QChartView(QWidget *parent = Q_NULLPTR)
+[2]explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QCHARTVIEW_NEW )
 {

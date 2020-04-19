@@ -587,9 +587,11 @@ void QPieSeries_append3()
 #endif
 }
 
-//[1]bool append(QPieSlice *slice)
-//[2]bool append(QList<QPieSlice *> slices)
-//[3]QPieSlice *append(QString label, qreal value)
+/*
+[1]bool append(QPieSlice *slice)
+[2]bool append(QList<QPieSlice *> slices)
+[3]QPieSlice *append(QString label, qreal value)
+*/
 
 HB_FUNC_STATIC( QPIESERIES_APPEND )
 {

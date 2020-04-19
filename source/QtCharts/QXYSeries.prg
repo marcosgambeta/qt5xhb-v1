@@ -572,9 +572,11 @@ void QXYSeries_append3()
 #endif
 }
 
-//[1]void append(qreal x, qreal y)
-//[2]void append(const QPointF &point)
-//[3]void append(const QList<QPointF> &points)
+/*
+[1]void append(qreal x, qreal y)
+[2]void append(const QPointF &point)
+[3]void append(const QList<QPointF> &points)
+*/
 
 HB_FUNC_STATIC( QXYSERIES_APPEND )
 {
@@ -714,12 +716,14 @@ void QXYSeries_replace6()
 #endif
 }
 
-//[1]void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
-//[2]void replace(const QPointF &oldPoint, const QPointF &newPoint)
-//[3]void replace(int index, qreal newX, qreal newY)
-//[4]void replace(int index, const QPointF &newPoint)
-//[5]void replace(QList<QPointF> points)
-//[6]void replace(QVector<QPointF> points)
+/*
+[1]void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
+[2]void replace(const QPointF &oldPoint, const QPointF &newPoint)
+[3]void replace(int index, qreal newX, qreal newY)
+[4]void replace(int index, const QPointF &newPoint)
+[5]void replace(QList<QPointF> points)
+[6]void replace(QVector<QPointF> points)
+*/
 
 HB_FUNC_STATIC( QXYSERIES_REPLACE )
 {
@@ -804,9 +808,11 @@ void QXYSeries_remove3()
 #endif
 }
 
-//[1]void remove(qreal x, qreal y)
-//[2]void remove(const QPointF &point)
-//[3]void remove(int index)
+/*
+[1]void remove(qreal x, qreal y)
+[2]void remove(const QPointF &point)
+[3]void remove(int index)
+*/
 
 HB_FUNC_STATIC( QXYSERIES_REMOVE )
 {

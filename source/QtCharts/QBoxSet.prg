@@ -100,8 +100,10 @@ void QBoxSet_new2()
 #endif
 }
 
-//[1]explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
-//[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
+[2]explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QBOXSET_NEW )
 {
@@ -297,8 +299,10 @@ void QBoxSet_append2()
 #endif
 }
 
-//[1]void append(const qreal value)
-//[2]void append(const QList<qreal> &values)
+/*
+[1]void append(const qreal value)
+[2]void append(const QList<qreal> &values)
+*/
 
 HB_FUNC_STATIC( QBOXSET_APPEND )
 {

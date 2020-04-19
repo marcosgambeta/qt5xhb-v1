@@ -122,8 +122,10 @@ void QAreaSeries_new2()
 #endif
 }
 
-//[1]explicit QAreaSeries(QObject *parent = Q_NULLPTR)
-//[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULLPTR)
+/*
+[1]explicit QAreaSeries(QObject *parent = Q_NULLPTR)
+[2]explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QAREASERIES_NEW )
 {
