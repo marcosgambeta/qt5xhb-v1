@@ -96,10 +96,12 @@ void QSslError_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QSslError ()
-//[2]QSslError ( SslError error )
-//[3]QSslError ( SslError error, const QSslCertificate & certificate )
-//[4]QSslError ( const QSslError & other )
+/*
+[1]QSslError ()
+[2]QSslError ( SslError error )
+[3]QSslError ( SslError error, const QSslCertificate & certificate )
+[4]QSslError ( const QSslError & other )
+*/
 
 HB_FUNC_STATIC( QSSLERROR_NEW )
 {

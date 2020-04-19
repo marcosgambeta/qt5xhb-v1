@@ -99,8 +99,10 @@ void QNetworkRequest_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]explicit QNetworkRequest ( const QUrl & url = QUrl() )
-//[2]QNetworkRequest ( const QNetworkRequest & other )
+/*
+[1]explicit QNetworkRequest ( const QUrl & url = QUrl() )
+[2]QNetworkRequest ( const QNetworkRequest & other )
+*/
 
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
 {

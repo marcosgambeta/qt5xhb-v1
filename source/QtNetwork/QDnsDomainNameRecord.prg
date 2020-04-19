@@ -77,8 +77,10 @@ void QDnsDomainNameRecord_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDnsDomainNameRecord()
-//[2]QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
+/*
+[1]QDnsDomainNameRecord()
+[2]QDnsDomainNameRecord(const QDnsDomainNameRecord & other)
+*/
 
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
 {

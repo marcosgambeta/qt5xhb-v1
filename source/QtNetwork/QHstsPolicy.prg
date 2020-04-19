@@ -103,9 +103,11 @@ void QHstsPolicy_new3()
 #endif
 }
 
-//[1]QHstsPolicy()
-//[2]QHstsPolicy(const QDateTime &expiry, PolicyFlags flags, const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
-//[3]QHstsPolicy(const QHstsPolicy &rhs)
+/*
+[1]QHstsPolicy()
+[2]QHstsPolicy(const QDateTime &expiry, PolicyFlags flags, const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
+[3]QHstsPolicy(const QHstsPolicy &rhs)
+*/
 
 HB_FUNC_STATIC( QHSTSPOLICY_NEW )
 {

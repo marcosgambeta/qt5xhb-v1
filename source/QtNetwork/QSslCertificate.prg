@@ -118,9 +118,11 @@ void QSslCertificate_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-//[2]explicit QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
-//[3]QSslCertificate ( const QSslCertificate & other )
+/*
+[1]explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+[2]explicit QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
+[3]QSslCertificate ( const QSslCertificate & other )
+*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 {
@@ -415,8 +417,10 @@ void QSslCertificate_issuerInfo2()
   }
 }
 
-//[1]QStringList issuerInfo ( SubjectInfo subject ) const
-//[2]QStringList issuerInfo ( const QByteArray & tag ) const
+/*
+[1]QStringList issuerInfo ( SubjectInfo subject ) const
+[2]QStringList issuerInfo ( const QByteArray & tag ) const
+*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 {
@@ -460,8 +464,10 @@ void QSslCertificate_subjectInfo2()
   }
 }
 
-//[1]QStringList subjectInfo(SubjectInfo subject) const
-//[2]QStringList subjectInfo(const QByteArray & attribute) const
+/*
+[1]QStringList subjectInfo(SubjectInfo subject) const
+[2]QStringList subjectInfo(const QByteArray & attribute) const
+*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
 {

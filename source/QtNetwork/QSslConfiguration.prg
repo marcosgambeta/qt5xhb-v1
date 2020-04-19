@@ -118,8 +118,10 @@ void QSslConfiguration_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QSslConfiguration()
-//[2]QSslConfiguration( const QSslConfiguration & other )
+/*
+[1]QSslConfiguration()
+[2]QSslConfiguration( const QSslConfiguration & other )
+*/
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 {

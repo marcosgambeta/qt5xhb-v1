@@ -145,8 +145,10 @@ void QLocalSocket_connectToServer2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void connectToServer(OpenMode openMode = ReadWrite)
-//[2]void connectToServer(const QString &name, OpenMode openMode = ReadWrite)
+/*
+[1]void connectToServer(OpenMode openMode = ReadWrite)
+[2]void connectToServer(const QString &name, OpenMode openMode = ReadWrite)
+*/
 
 HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 {

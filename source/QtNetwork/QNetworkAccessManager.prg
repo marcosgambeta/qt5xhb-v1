@@ -768,9 +768,11 @@ void QNetworkAccessManager_post3()
   }
 }
 
-//[1]QNetworkReply *post(const QNetworkRequest &request, QIODevice *data)
-//[2]QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data)
-//[3]QNetworkReply *post(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+/*
+[1]QNetworkReply *post(const QNetworkRequest &request, QIODevice *data)
+[2]QNetworkReply *post(const QNetworkRequest &request, const QByteArray &data)
+[3]QNetworkReply *post(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
@@ -834,9 +836,11 @@ void QNetworkAccessManager_put3()
   }
 }
 
-//[1]QNetworkReply *put(const QNetworkRequest &request, QIODevice *data)
-//[2]QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data)
-//[3]QNetworkReply *put(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+/*
+[1]QNetworkReply *put(const QNetworkRequest &request, QIODevice *data)
+[2]QNetworkReply *put(const QNetworkRequest &request, const QByteArray &data)
+[3]QNetworkReply *put(const QNetworkRequest &request, QHttpMultiPart *multiPart)
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {
@@ -929,9 +933,11 @@ void QNetworkAccessManager_sendCustomRequest3()
 #endif
 }
 
-//[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = Q_NULLPTR)
-//[2]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
-//[3]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
+/*
+[1]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QIODevice *data = Q_NULLPTR)
+[2]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, const QByteArray &data)
+[3]QNetworkReply *sendCustomRequest(const QNetworkRequest &request, const QByteArray &verb, QHttpMultiPart *multiPart)
+*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 {

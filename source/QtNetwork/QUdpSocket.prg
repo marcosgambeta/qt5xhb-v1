@@ -123,8 +123,10 @@ void QUdpSocket_joinMulticastGroup2()
   }
 }
 
-//[1]bool joinMulticastGroup(const QHostAddress &groupAddress)
-//[2]bool joinMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
+/*
+[1]bool joinMulticastGroup(const QHostAddress &groupAddress)
+[2]bool joinMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
+*/
 
 HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
 {
@@ -168,8 +170,10 @@ void QUdpSocket_leaveMulticastGroup2()
   }
 }
 
-//[1]bool leaveMulticastGroup(const QHostAddress &groupAddress)
-//[2]bool leaveMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
+/*
+[1]bool leaveMulticastGroup(const QHostAddress &groupAddress)
+[2]bool leaveMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
+*/
 
 HB_FUNC_STATIC( QUDPSOCKET_LEAVEMULTICASTGROUP )
 {
@@ -358,9 +362,11 @@ void QUdpSocket_writeDatagram3()
   }
 }
 
-//[1]qint64 writeDatagram(const QNetworkDatagram &datagram)
-//[2]qint64 writeDatagram(const char *data, qint64 len, const QHostAddress &host, quint16 port)
-//[3]qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
+/*
+[1]qint64 writeDatagram(const QNetworkDatagram &datagram)
+[2]qint64 writeDatagram(const char *data, qint64 len, const QHostAddress &host, quint16 port)
+[3]qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
+*/
 
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 {
@@ -375,6 +381,10 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
   else if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQHOSTADDRESS(2) && ISNUM(3) )
   {
     QUdpSocket_writeDatagram3();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
 

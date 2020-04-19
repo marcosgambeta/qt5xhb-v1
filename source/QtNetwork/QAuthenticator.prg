@@ -84,8 +84,10 @@ void QAuthenticator_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QAuthenticator ()
-//[2]QAuthenticator ( const QAuthenticator & other )
+/*
+[1]QAuthenticator ()
+[2]QAuthenticator ( const QAuthenticator & other )
+*/
 
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 {

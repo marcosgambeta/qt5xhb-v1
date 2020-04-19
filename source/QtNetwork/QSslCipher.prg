@@ -103,10 +103,12 @@ void QSslCipher_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QSslCipher()
-//[2]explicit QSslCipher(const QString &name)
-//[3]QSslCipher( const QString & name, QSsl::SslProtocol protocol )
-//[4]QSslCipher( const QSslCipher & other )
+/*
+[1]QSslCipher()
+[2]explicit QSslCipher(const QString &name)
+[3]QSslCipher( const QString & name, QSsl::SslProtocol protocol )
+[4]QSslCipher( const QSslCipher & other )
+*/
 
 HB_FUNC_STATIC( QSSLCIPHER_NEW )
 {
