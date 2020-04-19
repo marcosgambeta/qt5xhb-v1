@@ -102,8 +102,10 @@ void QCanBusFrame_new2()
 #endif
 }
 
-//[1]explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
-//[2]explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
+/*
+[1]explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
+[2]explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
+*/
 
 HB_FUNC_STATIC( QCANBUSFRAME_NEW )
 {
