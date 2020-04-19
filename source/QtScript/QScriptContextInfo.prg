@@ -92,9 +92,11 @@ void QScriptContextInfo_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QScriptContextInfo(const QScriptContext * context)
-//[2]QScriptContextInfo(const QScriptContextInfo & other)
-//[3]QScriptContextInfo()
+/*
+[1]QScriptContextInfo(const QScriptContext * context)
+[2]QScriptContextInfo(const QScriptContextInfo & other)
+[3]QScriptContextInfo()
+*/
 
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 {

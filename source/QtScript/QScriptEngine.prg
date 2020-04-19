@@ -112,8 +112,10 @@ void QScriptEngine_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QScriptEngine()
-//[2]QScriptEngine(QObject * parent)
+/*
+[1]QScriptEngine()
+[2]QScriptEngine(QObject * parent)
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 {
@@ -355,8 +357,10 @@ void QScriptEngine_evaluate2()
   }
 }
 
-//[1]QScriptValue evaluate(const QString & program, const QString & fileName = QString(), int lineNumber = 1)
-//[2]QScriptValue evaluate(const QScriptProgram & program)
+/*
+[1]QScriptValue evaluate(const QString & program, const QString & fileName = QString(), int lineNumber = 1)
+[2]QScriptValue evaluate(const QScriptProgram & program)
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
@@ -600,8 +604,10 @@ void QScriptEngine_newObject2()
   }
 }
 
-//[1]QScriptValue newObject()
-//[2]QScriptValue newObject(QScriptClass * scriptClass, const QScriptValue & data = QScriptValue())
+/*
+[1]QScriptValue newObject()
+[2]QScriptValue newObject(QScriptClass * scriptClass, const QScriptValue & data = QScriptValue())
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWOBJECT )
 {
@@ -672,8 +678,10 @@ void QScriptEngine_newQObject2()
   }
 }
 
-//[1]QScriptValue newQObject(QObject * object, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
-//[2]QScriptValue newQObject(const QScriptValue & scriptObject, QObject * qtObject, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
+/*
+[1]QScriptValue newQObject(QObject * object, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
+[2]QScriptValue newQObject(const QScriptValue & scriptObject, QObject * qtObject, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWQOBJECT )
 {
@@ -719,8 +727,10 @@ void QScriptEngine_newRegExp2()
   }
 }
 
-//[1]QScriptValue newRegExp(const QRegExp & regexp)
-//[2]QScriptValue newRegExp(const QString & pattern, const QString & flags)
+/*
+[1]QScriptValue newRegExp(const QRegExp & regexp)
+[2]QScriptValue newRegExp(const QString & pattern, const QString & flags)
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 {
@@ -766,8 +776,10 @@ void QScriptEngine_newVariant2()
   }
 }
 
-//[1]QScriptValue newVariant(const QVariant & value)
-//[2]QScriptValue newVariant(const QScriptValue & object, const QVariant & value)
+/*
+[1]QScriptValue newVariant(const QVariant & value)
+[2]QScriptValue newVariant(const QScriptValue & object, const QVariant & value)
+*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 {

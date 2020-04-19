@@ -443,8 +443,10 @@ void QScriptContext_throwError2()
   }
 }
 
-//[1]QScriptValue throwError(Error error, const QString & text)
-//[2]QScriptValue throwError(const QString & text)
+/*
+[1]QScriptValue throwError(Error error, const QString & text)
+[2]QScriptValue throwError(const QString & text)
+*/
 
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 {

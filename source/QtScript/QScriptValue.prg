@@ -199,16 +199,18 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QScriptValue()
-//[2]QScriptValue(const QScriptValue & other)
-//[3]QScriptValue(SpecialValue value)
-//[4]QScriptValue(bool value)
-//[5]QScriptValue(int value)
-//[6]QScriptValue(uint value)
-//[7]QScriptValue(qsreal value)
-//[8]QScriptValue(const QString & value)
-//[9]QScriptValue(const QLatin1String & value)
-//[10]QScriptValue(const char * value)
+/*
+[1]QScriptValue()
+[2]QScriptValue(const QScriptValue & other)
+[3]QScriptValue(SpecialValue value)
+[4]QScriptValue(bool value)
+[5]QScriptValue(int value)
+[6]QScriptValue(uint value)
+[7]QScriptValue(qsreal value)
+[8]QScriptValue(const QString & value)
+[9]QScriptValue(const QLatin1String & value)
+[10]QScriptValue(const char * value)
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
@@ -273,8 +275,10 @@ void QScriptValue_call2()
   }
 }
 
-//[1]QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
-//[2]QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
+/*
+[1]QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
+[2]QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
@@ -306,8 +310,10 @@ void QScriptValue_construct2()
   }
 }
 
-//[1]QScriptValue construct(const QScriptValueList & args = QScriptValueList())
-//[2]QScriptValue construct(const QScriptValue & arguments)
+/*
+[1]QScriptValue construct(const QScriptValueList & args = QScriptValueList())
+[2]QScriptValue construct(const QScriptValue & arguments)
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
@@ -794,9 +800,11 @@ QScriptValue property(const QScriptString & name, const ResolveFlags & mode = Re
 QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
 */
 
-//[1]QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-//[2]QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-//[3]QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
+/*
+[1]QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
+[2]QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
+[3]QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTY )
 {
@@ -811,8 +819,10 @@ QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFla
 QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
 */
 
-//[1]QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-//[2]QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
+/*
+[1]QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
+[2]QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTYFLAGS )
 {
@@ -907,9 +917,11 @@ void setProperty(const QScriptString & name, const QScriptValue & value, const P
 void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
 */
 
-//[1]void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-//[2]void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-//[3]void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
+/*
+[1]void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
+[2]void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
+[3]void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
+*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_SETPROPERTY )
 {

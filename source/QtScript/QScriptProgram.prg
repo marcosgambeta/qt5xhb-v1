@@ -81,9 +81,11 @@ void QScriptProgram_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QScriptProgram()
-//[2]QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
-//[3]QScriptProgram(const QScriptProgram & other)
+/*
+[1]QScriptProgram()
+[2]QScriptProgram(const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1)
+[3]QScriptProgram(const QScriptProgram & other)
+*/
 
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 {
