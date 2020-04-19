@@ -256,8 +256,10 @@ void QtAndroid_hideSplashScreen2()
 #endif
 }
 
-//[1]static void hideSplashScreen()
-//[2]static void hideSplashScreen(int duration)
+/*
+[1]static void hideSplashScreen()
+[2]static void hideSplashScreen(int duration)
+*/
 
 HB_FUNC_STATIC( QTANDROID_HIDESPLASHSCREEN )
 {
