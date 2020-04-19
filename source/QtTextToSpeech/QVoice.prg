@@ -86,9 +86,11 @@ void QVoice_new2()
 QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
 */
 
-//[1]QVoice()
-//[2]QVoice(const QVoice &other)
-//[3]QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
+/*
+[1]QVoice()
+[2]QVoice(const QVoice &other)
+[3]QVoice(const QString &name, Gender gender, Age age, const QVariant &data) [private]
+*/
 
 HB_FUNC_STATIC( QVOICE_NEW )
 {
