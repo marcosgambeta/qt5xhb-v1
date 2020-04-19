@@ -514,8 +514,10 @@ void QtWin_extendFrameIntoClientArea2()
 #endif
 }
 
-//[1]void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
-//[2]void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
+/*
+[1]void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
+[2]void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
+*/
 
 HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA )
 {
@@ -582,8 +584,10 @@ void QtWin_enableBlurBehindWindow2()
 #endif
 }
 
-//[1]void enableBlurBehindWindow(QWindow *window, const QRegion &region)
-//[2]void enableBlurBehindWindow(QWindow *window)
+/*
+[1]void enableBlurBehindWindow(QWindow *window, const QRegion &region)
+[2]void enableBlurBehindWindow(QWindow *window)
+*/
 
 HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW )
 {

@@ -302,8 +302,10 @@ void QWinJumpList_addCategory1()
 QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
 */
 
-//[1]void addCategory(QWinJumpListCategory *category)
-//[2]QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
+/*
+[1]void addCategory(QWinJumpListCategory *category)
+[2]QWinJumpListCategory *addCategory(const QString &title, const QList<QWinJumpListItem *> items = QList<QWinJumpListItem *>())
+*/
 
 HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
 {

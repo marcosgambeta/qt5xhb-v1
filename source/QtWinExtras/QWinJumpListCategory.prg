@@ -433,8 +433,10 @@ void QWinJumpListCategory_addLink2()
 #endif
 }
 
-//[1]QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
-//[2]QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
+/*
+[1]QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
+[2]QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
+*/
 
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 {
