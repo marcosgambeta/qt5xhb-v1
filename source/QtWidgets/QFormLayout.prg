@@ -208,12 +208,14 @@ void QFormLayout_addRow6()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addRow ( QWidget * label, QWidget * field )
-//[2]void addRow ( QWidget * label, QLayout * field )
-//[3]void addRow ( const QString & labelText, QWidget * field )
-//[4]void addRow ( const QString & labelText, QLayout * field )
-//[5]void addRow ( QWidget * widget )
-//[6]void addRow ( QLayout * layout )
+/*
+[1]void addRow ( QWidget * label, QWidget * field )
+[2]void addRow ( QWidget * label, QLayout * field )
+[3]void addRow ( const QString & labelText, QWidget * field )
+[4]void addRow ( const QString & labelText, QLayout * field )
+[5]void addRow ( QWidget * widget )
+[6]void addRow ( QLayout * layout )
+*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
 {
@@ -409,12 +411,14 @@ void QFormLayout_insertRow6()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void insertRow ( int row, QWidget * label, QWidget * field )
-//[2]void insertRow ( int row, QWidget * label, QLayout * field )
-//[3]void insertRow ( int row, const QString & labelText, QWidget * field )
-//[4]void insertRow ( int row, const QString & labelText, QLayout * field )
-//[5]void insertRow ( int row, QWidget * widget )
-//[6]void insertRow ( int row, QLayout * layout )
+/*
+[1]void insertRow ( int row, QWidget * label, QWidget * field )
+[2]void insertRow ( int row, QWidget * label, QLayout * field )
+[3]void insertRow ( int row, const QString & labelText, QWidget * field )
+[4]void insertRow ( int row, const QString & labelText, QLayout * field )
+[5]void insertRow ( int row, QWidget * widget )
+[6]void insertRow ( int row, QLayout * layout )
+*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
 {
@@ -476,8 +480,10 @@ void QFormLayout_itemAt2()
   }
 }
 
-//[1]QLayoutItem * itemAt ( int row, ItemRole role ) const
-//[2]virtual QLayoutItem * itemAt ( int index ) const
+/*
+[1]QLayoutItem * itemAt ( int row, ItemRole role ) const
+[2]virtual QLayoutItem * itemAt ( int index ) const
+*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 {
@@ -547,8 +553,10 @@ void QFormLayout_labelForField2()
   }
 }
 
-//[1]QWidget * labelForField ( QWidget * field ) const
-//[2]QWidget * labelForField ( QLayout * field ) const
+/*
+[1]QWidget * labelForField ( QWidget * field ) const
+[2]QWidget * labelForField ( QLayout * field ) const
+*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 {

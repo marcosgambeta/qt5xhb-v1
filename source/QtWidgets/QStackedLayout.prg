@@ -88,9 +88,11 @@ void QStackedLayout_new3()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QStackedLayout ()
-//[2]QStackedLayout ( QWidget * parent )
-//[3]QStackedLayout ( QLayout * parentLayout )
+/*
+[1]QStackedLayout ()
+[2]QStackedLayout ( QWidget * parent )
+[3]QStackedLayout ( QLayout * parentLayout )
+*/
 
 HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 {

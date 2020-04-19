@@ -156,8 +156,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
   char ** argv;
   argc = hb_cmdargARGC();
   argv = hb_cmdargARGV();
-  QApplication * o = NULL;
-  o = new QApplication( argc, argv );
+  QApplication * o = new QApplication( argc, argv );
   Qt5xHb::returnNewObject( o, false );
 }
 
@@ -729,9 +728,11 @@ void QApplication_font3()
   Qt5xHb::createReturnClass( ptr, "QFONT", true );
 }
 
-//[1]QFont font ()
-//[2]QFont font ( const QWidget * widget )
-//[3]QFont font ( const char * className )
+/*
+[1]QFont font ()
+[2]QFont font ( const QWidget * widget )
+[3]QFont font ( const char * className )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_FONT )
 {
@@ -976,9 +977,11 @@ void QApplication_palette3()
   Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
 }
 
-//[1]QPalette palette ()
-//[2]QPalette palette ( const QWidget * widget )
-//[3]QPalette palette ( const char * className )
+/*
+[1]QPalette palette ()
+[2]QPalette palette ( const QWidget * widget )
+[3]QPalette palette ( const char * className )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 {
@@ -1395,8 +1398,10 @@ void QApplication_setStyle2()
   Qt5xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 }
 
-//[1]void setStyle ( QStyle * style )
-//[2]QStyle * setStyle ( const QString & style )
+/*
+[1]void setStyle ( QStyle * style )
+[2]QStyle * setStyle ( const QString & style )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 {
@@ -1534,8 +1539,10 @@ void QApplication_topLevelAt2()
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
-//[1]QWidget * topLevelAt ( const QPoint & point )
-//[2]QWidget * topLevelAt ( int x, int y )
+/*
+[1]QWidget * topLevelAt ( const QPoint & point )
+[2]QWidget * topLevelAt ( int x, int y )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 {
@@ -1635,8 +1642,10 @@ void QApplication_widgetAt2()
   Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
 
-//[1]QWidget * widgetAt ( const QPoint & point )
-//[2]QWidget * widgetAt ( int x, int y )
+/*
+[1]QWidget * widgetAt ( const QPoint & point )
+[2]QWidget * widgetAt ( int x, int y )
+*/
 
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 {

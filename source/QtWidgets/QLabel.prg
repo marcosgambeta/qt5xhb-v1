@@ -110,8 +110,10 @@ void QLabel_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-//[2]QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+/*
+[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+[2]QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+*/
 
 HB_FUNC_STATIC( QLABEL_NEW )
 {
@@ -928,8 +930,10 @@ void QLabel_setNum2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setNum ( int num )
-//[2]void setNum ( double num )
+/*
+[1]void setNum ( int num )
+[2]void setNum ( double num )
+*/
 
 HB_FUNC_STATIC( QLABEL_SETNUM )
 {

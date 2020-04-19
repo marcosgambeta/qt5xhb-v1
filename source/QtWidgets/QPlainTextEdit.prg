@@ -142,8 +142,10 @@ void QPlainTextEdit_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QPlainTextEdit ( QWidget * parent = 0 )
-//[2]QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
+/*
+[1]QPlainTextEdit ( QWidget * parent = 0 )
+[2]QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
 {
@@ -403,8 +405,10 @@ void QPlainTextEdit_cursorRect2()
   }
 }
 
-//[1]QRect cursorRect ( const QTextCursor & cursor ) const
-//[2]QRect cursorRect () const
+/*
+[1]QRect cursorRect ( const QTextCursor & cursor ) const
+[2]QRect cursorRect () const
+*/
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 {

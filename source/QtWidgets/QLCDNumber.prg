@@ -86,8 +86,10 @@ void QLCDNumber_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QLCDNumber ( QWidget * parent = 0 )
-//[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
+/*
+[1]QLCDNumber ( QWidget * parent = 0 )
+[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
@@ -150,8 +152,10 @@ void QLCDNumber_checkOverflow2()
   }
 }
 
-//[1]bool checkOverflow ( double num ) const
-//[2]bool checkOverflow ( int num ) const
+/*
+[1]bool checkOverflow ( double num ) const
+[2]bool checkOverflow ( int num ) const
+*/
 
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
@@ -476,9 +480,11 @@ void QLCDNumber_display3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void display ( const QString & s )
-//[2]void display ( double num )
-//[3]void display ( int num )
+/*
+[1]void display ( const QString & s )
+[2]void display ( double num )
+[3]void display ( int num )
+*/
 
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {

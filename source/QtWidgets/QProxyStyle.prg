@@ -94,8 +94,10 @@ void QProxyStyle_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QProxyStyle(QStyle *style = 0)
-//[2]QProxyStyle(const QString &key)
+/*
+[1]QProxyStyle(QStyle *style = 0)
+[2]QProxyStyle(const QString &key)
+*/
 
 HB_FUNC_STATIC( QPROXYSTYLE_NEW )
 {
@@ -679,9 +681,11 @@ void QProxyStyle_polish3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void polish(QWidget *widget)
-//[2]void polish(QPalette &pal)
-//[3]void polish(QApplication *app)
+/*
+[1]void polish(QWidget *widget)
+[2]void polish(QPalette &pal)
+[3]void polish(QApplication *app)
+*/
 
 HB_FUNC_STATIC( QPROXYSTYLE_POLISH )
 {
@@ -733,8 +737,10 @@ void QProxyStyle_unpolish2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void unpolish(QWidget *widget)
-//[2]void unpolish(QApplication *app)
+/*
+[1]void unpolish(QWidget *widget)
+[2]void unpolish(QApplication *app)
+*/
 
 HB_FUNC_STATIC( QPROXYSTYLE_UNPOLISH )
 {

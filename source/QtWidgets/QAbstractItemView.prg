@@ -829,8 +829,10 @@ void QAbstractItemView_itemDelegate2()
   }
 }
 
-//[1]QAbstractItemDelegate * itemDelegate () const
-//[2]QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
+/*
+[1]QAbstractItemDelegate * itemDelegate () const
+[2]QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
+*/
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {
@@ -1861,11 +1863,13 @@ void QAbstractItemView_update5()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void update ( int x, int y, int w, int h ) [QWidget]
-//[2]void update ( const QRect & rect )         [QWidget]
-//[3]void update ( const QRegion & rgn )        [QWidget]
-//[4]void update ()                             [QWidget]
-//[5]void update ( const QModelIndex & index )  [QAbstractItemView]
+/*
+[1]void update ( int x, int y, int w, int h ) [QWidget]
+[2]void update ( const QRect & rect )         [QWidget]
+[3]void update ( const QRegion & rgn )        [QWidget]
+[4]void update ()                             [QWidget]
+[5]void update ( const QModelIndex & index )  [QAbstractItemView]
+*/
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
 {

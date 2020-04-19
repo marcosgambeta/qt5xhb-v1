@@ -173,8 +173,10 @@ void QTabBar_addTab2()
   }
 }
 
-//[1]int addTab ( const QString & text )
-//[2]int addTab ( const QIcon & icon, const QString & text )
+/*
+[1]int addTab ( const QString & text )
+[2]int addTab ( const QIcon & icon, const QString & text )
+*/
 
 HB_FUNC_STATIC( QTABBAR_ADDTAB )
 {
@@ -387,8 +389,10 @@ void QTabBar_insertTab2()
   }
 }
 
-//[1]int insertTab ( int index, const QString & text )
-//[2]int insertTab ( int index, const QIcon & icon, const QString & text )
+/*
+[1]int insertTab ( int index, const QString & text )
+[2]int insertTab ( int index, const QIcon & icon, const QString & text )
+*/
 
 HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 {

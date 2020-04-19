@@ -81,8 +81,10 @@ void QKeySequenceEdit_new2()
 #endif
 }
 
-//[1]QKeySequenceEdit(QWidget *parent = 0)
-//[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
+/*
+[1]QKeySequenceEdit(QWidget *parent = 0)
+[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
+*/
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {

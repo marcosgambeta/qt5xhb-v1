@@ -469,9 +469,11 @@ void QLayout_setAlignment3()
   }
 }
 
-//[1]bool setAlignment ( QWidget * w, Qt::Alignment alignment )
-//[2]void setAlignment ( Qt::Alignment alignment )
-//[3]bool setAlignment ( QLayout * l, Qt::Alignment alignment )
+/*
+[1]bool setAlignment ( QWidget * w, Qt::Alignment alignment )
+[2]void setAlignment ( Qt::Alignment alignment )
+[3]bool setAlignment ( QLayout * l, Qt::Alignment alignment )
+*/
 
 HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 {
@@ -523,8 +525,10 @@ void QLayout_setContentsMargins2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setContentsMargins ( int left, int top, int right, int bottom )
-//[2]void setContentsMargins ( const QMargins & margins )
+/*
+[1]void setContentsMargins ( int left, int top, int right, int bottom )
+[2]void setContentsMargins ( const QMargins & margins )
+*/
 
 HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 {

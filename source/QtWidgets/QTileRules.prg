@@ -73,8 +73,10 @@ void QTileRules_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
-//[2]QTileRules(Qt::TileRule rule = Qt::StretchTile)
+/*
+[1]QTileRules(Qt::TileRule horizontalRule, Qt::TileRule verticalRule)
+[2]QTileRules(Qt::TileRule rule = Qt::StretchTile)
+*/
 
 HB_FUNC_STATIC( QTILERULES_NEW )
 {

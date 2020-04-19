@@ -184,9 +184,11 @@ void QMenuBar_addAction3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]QAction * addAction ( const QString & text )
-//[2]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-//[3]void addAction ( QAction * action )
+/*
+[1]QAction * addAction ( const QString & text )
+[2]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
+[3]void addAction ( QAction * action )
+*/
 
 HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 {
@@ -250,9 +252,11 @@ void QMenuBar_addMenu3()
   }
 }
 
-//[1]QAction * addMenu ( QMenu * menu )
-//[2]QMenu * addMenu ( const QString & title )
-//[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+/*
+[1]QAction * addMenu ( QMenu * menu )
+[2]QMenu * addMenu ( const QString & title )
+[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
+*/
 
 HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 {

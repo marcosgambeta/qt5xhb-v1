@@ -131,8 +131,10 @@ void QToolBox_addItem2()
   }
 }
 
-//[1]int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
-//[2]int addItem ( QWidget * w, const QString & text )
+/*
+[1]int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
+[2]int addItem ( QWidget * w, const QString & text )
+*/
 
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
@@ -273,8 +275,10 @@ void QToolBox_insertItem2()
   }
 }
 
-//[1]int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
-//[2]int insertItem ( int index, QWidget * widget, const QString & text )
+/*
+[1]int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
+[2]int insertItem ( int index, QWidget * widget, const QString & text )
+*/
 
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {

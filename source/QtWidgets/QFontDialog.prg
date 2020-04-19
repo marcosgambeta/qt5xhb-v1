@@ -80,8 +80,10 @@ void QFontDialog_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]explicit QFontDialog ( QWidget * parent = 0 )
-//[2]explicit QFontDialog ( const QFont & initial, QWidget * parent = 0 )
+/*
+[1]explicit QFontDialog ( QWidget * parent = 0 )
+[2]explicit QFontDialog ( const QFont & initial, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QFONTDIALOG_NEW )
 {
@@ -370,8 +372,10 @@ void QFontDialog_getFont2()
   hb_storl( par1, 1 );
 }
 
-//[1]static QFont getFont(bool *ok, QWidget *parent = 0)
-//[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0, const QString &title = QString(), FontDialogOptions options = 0)
+/*
+[1]static QFont getFont(bool *ok, QWidget *parent = 0)
+[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0, const QString &title = QString(), FontDialogOptions options = 0)
+*/
 
 HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 {

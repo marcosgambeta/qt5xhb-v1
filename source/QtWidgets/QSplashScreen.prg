@@ -75,8 +75,10 @@ void QSplashScreen_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-//[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+/*
+[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+*/
 
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {

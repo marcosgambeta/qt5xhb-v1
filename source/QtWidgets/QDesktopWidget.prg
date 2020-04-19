@@ -121,9 +121,11 @@ void QDesktopWidget_availableGeometry3()
   }
 }
 
-//[1]const QRect availableGeometry ( int screen = -1 ) const
-//[2]const QRect availableGeometry ( const QWidget * widget ) const
-//[3]const QRect availableGeometry ( const QPoint & p ) const
+/*
+[1]const QRect availableGeometry ( int screen = -1 ) const
+[2]const QRect availableGeometry ( const QWidget * widget ) const
+[3]const QRect availableGeometry ( const QPoint & p ) const
+*/
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
@@ -284,9 +286,11 @@ void QDesktopWidget_screenGeometry3()
   }
 }
 
-//[1]const QRect screenGeometry ( int screen = -1 ) const
-//[2]const QRect screenGeometry ( const QWidget * widget ) const
-//[3]const QRect screenGeometry ( const QPoint & p ) const
+/*
+[1]const QRect screenGeometry ( int screen = -1 ) const
+[2]const QRect screenGeometry ( const QWidget * widget ) const
+[3]const QRect screenGeometry ( const QPoint & p ) const
+*/
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
@@ -334,8 +338,10 @@ void QDesktopWidget_screenNumber2()
   }
 }
 
-//[1]int screenNumber ( const QWidget * widget = 0 ) const
-//[2]int screenNumber ( const QPoint & point ) const
+/*
+[1]int screenNumber ( const QWidget * widget = 0 ) const
+[2]int screenNumber ( const QPoint & point ) const
+*/
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {

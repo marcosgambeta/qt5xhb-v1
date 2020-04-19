@@ -81,8 +81,10 @@ void QShortcut_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QShortcut(QWidget * parent)
-//[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
+/*
+[1]QShortcut(QWidget * parent)
+[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
+*/
 
 HB_FUNC_STATIC( QSHORTCUT_NEW )
 {

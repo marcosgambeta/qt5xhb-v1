@@ -530,8 +530,10 @@ void QBoxLayout_setStretchFactor2()
   }
 }
 
-//[1]bool setStretchFactor ( QWidget * widget, int stretch )
-//[2]bool setStretchFactor ( QLayout * layout, int stretch )
+/*
+[1]bool setStretchFactor ( QWidget * widget, int stretch )
+[2]bool setStretchFactor ( QLayout * layout, int stretch )
+*/
 
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 {

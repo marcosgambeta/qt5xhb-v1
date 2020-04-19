@@ -78,8 +78,10 @@ void QGraphicsPolygonItem_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
+/*
+[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
+[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {

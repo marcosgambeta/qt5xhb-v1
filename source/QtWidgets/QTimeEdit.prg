@@ -66,8 +66,10 @@ void QTimeEdit_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QTimeEdit ( QWidget * parent = 0 )
-//[2]QTimeEdit ( const QTime & time, QWidget * parent = 0 )
+/*
+[1]QTimeEdit ( QWidget * parent = 0 )
+[2]QTimeEdit ( const QTime & time, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QTIMEEDIT_NEW )
 {

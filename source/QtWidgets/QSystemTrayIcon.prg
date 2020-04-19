@@ -86,8 +86,10 @@ void QSystemTrayIcon_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QSystemTrayIcon(QObject * parent = 0)
-//[2]QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
+/*
+[1]QSystemTrayIcon(QObject * parent = 0)
+[2]QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
+*/
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {

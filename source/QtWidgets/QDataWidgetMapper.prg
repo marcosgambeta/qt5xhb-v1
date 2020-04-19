@@ -144,8 +144,10 @@ void QDataWidgetMapper_addMapping2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addMapping ( QWidget * widget, int section )
-//[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
+/*
+[1]void addMapping ( QWidget * widget, int section )
+[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
+*/
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {

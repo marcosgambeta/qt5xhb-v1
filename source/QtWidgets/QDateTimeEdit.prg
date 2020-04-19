@@ -143,10 +143,12 @@ void QDateTimeEdit_new4()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QDateTimeEdit ( QWidget * parent = 0 )
-//[2]QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
-//[3]QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
-//[4]QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
+/*
+[1]QDateTimeEdit ( QWidget * parent = 0 )
+[2]QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
+[3]QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
+[4]QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 {

@@ -513,8 +513,10 @@ void QTreeWidget_itemAt2()
   }
 }
 
-//[1]QTreeWidgetItem * itemAt ( const QPoint & p ) const
-//[2]QTreeWidgetItem * itemAt ( int x, int y ) const
+/*
+[1]QTreeWidgetItem * itemAt ( const QPoint & p ) const
+[2]QTreeWidgetItem * itemAt ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 {
@@ -679,9 +681,11 @@ void QTreeWidget_setCurrentItem3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setCurrentItem ( QTreeWidgetItem * item )
-//[2]void setCurrentItem ( QTreeWidgetItem * item, int column )
-//[3]void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
+/*
+[1]void setCurrentItem ( QTreeWidgetItem * item )
+[2]void setCurrentItem ( QTreeWidgetItem * item, int column )
+[3]void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
+*/
 
 HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 {

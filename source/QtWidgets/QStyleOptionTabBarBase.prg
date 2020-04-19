@@ -76,9 +76,11 @@ void QStyleOptionTabBarBase_new2()
 QStyleOptionTabBarBase(int version) [protected]
 */
 
-//[1]QStyleOptionTabBarBase()
-//[2]QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
-//[3]QStyleOptionTabBarBase(int version) [protected]
+/*
+[1]QStyleOptionTabBarBase()
+[2]QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
+[3]QStyleOptionTabBarBase(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
 {

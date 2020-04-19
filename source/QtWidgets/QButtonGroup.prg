@@ -133,8 +133,10 @@ void QButtonGroup_addButton2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addButton ( QAbstractButton * button )
-//[2]void addButton ( QAbstractButton * button, int id )
+/*
+[1]void addButton ( QAbstractButton * button )
+[2]void addButton ( QAbstractButton * button, int id )
+*/
 
 HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 {

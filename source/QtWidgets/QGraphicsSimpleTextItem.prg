@@ -80,8 +80,10 @@ void QGraphicsSimpleTextItem_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+/*
+[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
+[2]QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 {

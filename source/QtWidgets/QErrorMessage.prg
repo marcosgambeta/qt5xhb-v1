@@ -115,8 +115,10 @@ void QErrorMessage_showMessage2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void showMessage ( const QString & message )
-//[2]void showMessage ( const QString & message, const QString & type )
+/*
+[1]void showMessage ( const QString & message )
+[2]void showMessage ( const QString & message, const QString & type )
+*/
 
 HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 {

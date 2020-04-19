@@ -104,8 +104,10 @@ void QToolBar_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QToolBar ( const QString & title, QWidget * parent = 0 )
-//[2]QToolBar ( QWidget * parent = 0 )
+/*
+[1]QToolBar ( const QString & title, QWidget * parent = 0 )
+[2]QToolBar ( QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QTOOLBAR_NEW )
 {
@@ -170,8 +172,10 @@ void QToolBar_actionAt2()
   }
 }
 
-//[1]QAction * actionAt ( int x, int y ) const
-//[2]QAction * actionAt ( const QPoint & p ) const
+/*
+[1]QAction * actionAt ( int x, int y ) const
+[2]QAction * actionAt ( const QPoint & p ) const
+*/
 
 HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 {
@@ -260,11 +264,13 @@ void QToolBar_addAction5()
   }
 }
 
-//[1]void addAction ( QAction * action )
-//[2]QAction * addAction ( const QString & text )
-//[3]QAction * addAction ( const QIcon & icon, const QString & text )
-//[4]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-//[5]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
+/*
+[1]void addAction ( QAction * action )
+[2]QAction * addAction ( const QString & text )
+[3]QAction * addAction ( const QIcon & icon, const QString & text )
+[4]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
+[5]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
+*/
 
 HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 {

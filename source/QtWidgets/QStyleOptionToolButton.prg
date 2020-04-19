@@ -87,9 +87,11 @@ void QStyleOptionToolButton_new2()
 QStyleOptionToolButton(int version) [protected]
 */
 
-//[1]QStyleOptionToolButton()
-//[2]QStyleOptionToolButton(const QStyleOptionToolButton &other)
-//[3]QStyleOptionToolButton(int version) [protected]
+/*
+[1]QStyleOptionToolButton()
+[2]QStyleOptionToolButton(const QStyleOptionToolButton &other)
+[3]QStyleOptionToolButton(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_NEW )
 {

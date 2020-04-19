@@ -145,9 +145,11 @@ void QGestureEvent_accept3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void accept ()
-//[2]void accept ( QGesture * gesture )
-//[3]void accept ( Qt::GestureType gestureType )
+/*
+[1]void accept ()
+[2]void accept ( QGesture * gesture )
+[3]void accept ( Qt::GestureType gestureType )
+*/
 
 HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
 {
@@ -383,9 +385,11 @@ void QGestureEvent_ignore3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void ignore ()
-//[2]void ignore ( QGesture * gesture )
-//[3]void ignore ( Qt::GestureType gestureType )
+/*
+[1]void ignore ()
+[2]void ignore ( QGesture * gesture )
+[3]void ignore ( Qt::GestureType gestureType )
+*/
 
 HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
 {
@@ -446,9 +450,11 @@ void QGestureEvent_isAccepted3()
   }
 }
 
-//[1]bool isAccepted () const
-//[2]bool isAccepted ( QGesture * gesture ) const
-//[3]bool isAccepted ( Qt::GestureType gestureType ) const
+/*
+[1]bool isAccepted () const
+[2]bool isAccepted ( QGesture * gesture ) const
+[3]bool isAccepted ( Qt::GestureType gestureType ) const
+*/
 
 HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 {
@@ -540,9 +546,11 @@ void QGestureEvent_setAccepted3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setAccepted ( bool accepted )
-//[2]void setAccepted ( QGesture * gesture, bool value )
-//[3]void setAccepted ( Qt::GestureType gestureType, bool value )
+/*
+[1]void setAccepted ( bool accepted )
+[2]void setAccepted ( QGesture * gesture, bool value )
+[3]void setAccepted ( Qt::GestureType gestureType, bool value )
+*/
 
 HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 {

@@ -132,10 +132,12 @@ void QTableWidgetItem_new4()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QTableWidgetItem ( int type = Type )
-//[2]QTableWidgetItem ( const QString & text, int type = Type )
-//[3]QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
-//[4]QTableWidgetItem ( const QTableWidgetItem & other )
+/*
+[1]QTableWidgetItem ( int type = Type )
+[2]QTableWidgetItem ( const QString & text, int type = Type )
+[3]QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
+[4]QTableWidgetItem ( const QTableWidgetItem & other )
+*/
 
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
 {

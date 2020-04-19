@@ -73,9 +73,11 @@ void QStyleOptionSpinBox_new2()
 QStyleOptionSpinBox(int version) [protected]
 */
 
-//[1]QStyleOptionSpinBox()
-//[2]QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
-//[3]QStyleOptionSpinBox(int version) [protected]
+/*
+[1]QStyleOptionSpinBox()
+[2]QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
+[3]QStyleOptionSpinBox(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
 {

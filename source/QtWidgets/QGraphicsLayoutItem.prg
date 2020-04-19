@@ -614,8 +614,10 @@ void QGraphicsLayoutItem_setMaximumSize2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setMaximumSize ( const QSizeF & size )
-//[2]void setMaximumSize ( qreal w, qreal h )
+/*
+[1]void setMaximumSize ( const QSizeF & size )
+[2]void setMaximumSize ( qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 {
@@ -715,8 +717,10 @@ void QGraphicsLayoutItem_setMinimumSize2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setMinimumSize ( const QSizeF & size )
-//[2]void setMinimumSize ( qreal w, qreal h )
+/*
+[1]void setMinimumSize ( const QSizeF & size )
+[2]void setMinimumSize ( qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 {
@@ -842,8 +846,10 @@ void QGraphicsLayoutItem_setPreferredSize2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setPreferredSize ( const QSizeF & size )
-//[2]void setPreferredSize ( qreal w, qreal h )
+/*
+[1]void setPreferredSize ( const QSizeF & size )
+[2]void setPreferredSize ( qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 {
@@ -917,8 +923,10 @@ void QGraphicsLayoutItem_setSizePolicy2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setSizePolicy ( const QSizePolicy & policy )
-//[2]void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
+/*
+[1]void setSizePolicy ( const QSizePolicy & policy )
+[2]void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 {

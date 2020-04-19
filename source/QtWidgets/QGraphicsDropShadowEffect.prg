@@ -341,9 +341,11 @@ void QGraphicsDropShadowEffect_setOffset3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setOffset ( const QPointF & ofs )
-//[2]void setOffset ( qreal dx, qreal dy )
-//[3]void setOffset ( qreal d )
+/*
+[1]void setOffset ( const QPointF & ofs )
+[2]void setOffset ( qreal dx, qreal dy )
+[3]void setOffset ( qreal d )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {

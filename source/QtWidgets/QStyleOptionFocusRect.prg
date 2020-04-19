@@ -70,9 +70,11 @@ void QStyleOptionFocusRect_new2()
 QStyleOptionFocusRect(int version) [protected]
 */
 
-//[1]QStyleOptionFocusRect()
-//[2]QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
-//[3]QStyleOptionFocusRect(int version) [protected]
+/*
+[1]QStyleOptionFocusRect()
+[2]QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
+[3]QStyleOptionFocusRect(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {

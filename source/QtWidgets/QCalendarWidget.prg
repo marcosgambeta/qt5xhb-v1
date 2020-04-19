@@ -187,16 +187,14 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT2 )
   }
 }
 
-//[1]QMap<QDate, QTextCharFormat> dateTextFormat () const
-//[2]QTextCharFormat dateTextFormat ( const QDate & date ) const
+/*
+[1]QMap<QDate, QTextCharFormat> dateTextFormat () const
+[2]QTextCharFormat dateTextFormat ( const QDate & date ) const
+*/
 
 HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
 {
-  if( ISNUMPAR(0) )
-  {
-    //HB_FUNC_EXEC( QCALENDARWIDGET_DATETEXTFORMAT1 );
-  }
-  else if( ISNUMPAR(1) && ISQDATE(1) )
+  if( ISNUMPAR(1) && ISQDATE(1) )
   {
     HB_FUNC_EXEC( QCALENDARWIDGET_DATETEXTFORMAT2 );
   }

@@ -263,8 +263,10 @@ void QToolTip_showText2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect)
-//[2]void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
+/*
+[1]void showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect)
+[2]void showText(const QPoint & pos, const QString & text, QWidget * w = 0)
+*/
 
 HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT )
 {

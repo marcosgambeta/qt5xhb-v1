@@ -139,9 +139,11 @@ void QActionGroup_addAction3()
   }
 }
 
-//[1]QAction * addAction ( QAction * action )
-//[2]QAction * addAction ( const QString & text )
-//[3]QAction * addAction ( const QIcon & icon, const QString & text )
+/*
+[1]QAction * addAction ( QAction * action )
+[2]QAction * addAction ( const QString & text )
+[3]QAction * addAction ( const QIcon & icon, const QString & text )
+*/
 
 HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 {

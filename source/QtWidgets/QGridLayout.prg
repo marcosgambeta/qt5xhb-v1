@@ -105,8 +105,10 @@ void QGridLayout_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QGridLayout ( QWidget * parent )
-//[2]QGridLayout ()
+/*
+[1]QGridLayout ( QWidget * parent )
+[2]QGridLayout ()
+*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 {
@@ -199,8 +201,10 @@ void QGridLayout_addLayout2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
-//[2]void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+/*
+[1]void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
+[2]void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 {
@@ -248,8 +252,10 @@ void QGridLayout_addWidget2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
-//[2]void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+/*
+[1]void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
+[2]void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 {

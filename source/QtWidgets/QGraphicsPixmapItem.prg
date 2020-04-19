@@ -83,8 +83,10 @@ void QGraphicsPixmapItem_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
-//[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
+/*
+[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
+[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {
@@ -199,8 +201,10 @@ void QGraphicsPixmapItem_setOffset2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setOffset ( const QPointF & offset )
-//[2]void setOffset ( qreal x, qreal y )
+/*
+[1]void setOffset ( const QPointF & offset )
+[2]void setOffset ( qreal x, qreal y )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 {

@@ -365,8 +365,10 @@ void QFileSystemModel_index2()
   }
 }
 
-//[1]QModelIndex index ( const QString & path, int column = 0 ) const
-//[2]QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+/*
+[1]QModelIndex index ( const QString & path, int column = 0 ) const
+[2]QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+*/
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {

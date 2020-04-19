@@ -68,8 +68,10 @@ void QKeyEventTransition_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QKeyEventTransition ( QState * sourceState = 0 )
-//[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
+/*
+[1]QKeyEventTransition ( QState * sourceState = 0 )
+[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
+*/
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {

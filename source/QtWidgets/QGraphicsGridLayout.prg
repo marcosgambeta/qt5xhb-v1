@@ -154,8 +154,10 @@ void QGraphicsGridLayout_addItem2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-//[2]void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
+/*
+[1]void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+[2]void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 {
@@ -417,8 +419,10 @@ void QGraphicsGridLayout_itemAt2()
   }
 }
 
-//[1]QGraphicsLayoutItem * itemAt ( int row, int column ) const
-//[2]virtual QGraphicsLayoutItem * itemAt ( int index ) const
+/*
+[1]QGraphicsLayoutItem * itemAt ( int row, int column ) const
+[2]virtual QGraphicsLayoutItem * itemAt ( int index ) const
+*/
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 {

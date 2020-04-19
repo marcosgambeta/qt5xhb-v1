@@ -609,8 +609,10 @@ void QGraphicsWidget_resize2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void resize ( const QSizeF & size )
-//[2]void resize ( qreal w, qreal h )
+/*
+[1]void resize ( const QSizeF & size )
+[2]void resize ( qreal w, qreal h )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
 {
@@ -788,8 +790,10 @@ void QGraphicsWidget_setGeometry2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setGeometry ( qreal x, qreal y, qreal w, qreal h )
-//[2]virtual void setGeometry ( const QRectF & rect )
+/*
+[1]void setGeometry ( qreal x, qreal y, qreal w, qreal h )
+[2]virtual void setGeometry ( const QRectF & rect )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
 {

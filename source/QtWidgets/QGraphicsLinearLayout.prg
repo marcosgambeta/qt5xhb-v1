@@ -87,8 +87,10 @@ void QGraphicsLinearLayout_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
-//[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
+/*
+[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
+[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 {

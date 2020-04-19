@@ -137,10 +137,12 @@ void QListWidgetItem_new4()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QListWidgetItem ( QListWidget * parent = 0, int type = Type )
-//[2]QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
-//[3]QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
-//[4]QListWidgetItem ( const QListWidgetItem & other )
+/*
+[1]QListWidgetItem ( QListWidget * parent = 0, int type = Type )
+[2]QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
+[3]QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
+[4]QListWidgetItem ( const QListWidgetItem & other )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {

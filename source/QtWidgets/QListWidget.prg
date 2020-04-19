@@ -153,8 +153,10 @@ void QListWidget_addItem2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addItem ( const QString & label )
-//[2]void addItem ( QListWidgetItem * item )
+/*
+[1]void addItem ( const QString & label )
+[2]void addItem ( QListWidgetItem * item )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
 {
@@ -353,8 +355,10 @@ void QListWidget_insertItem2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void insertItem ( int row, QListWidgetItem * item )
-//[2]void insertItem ( int row, const QString & label )
+/*
+[1]void insertItem ( int row, QListWidgetItem * item )
+[2]void insertItem ( int row, const QString & label )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
 {
@@ -475,8 +479,10 @@ void QListWidget_itemAt2()
   }
 }
 
-//[1]QListWidgetItem * itemAt ( const QPoint & p ) const
-//[2]QListWidgetItem * itemAt ( int x, int y ) const
+/*
+[1]QListWidgetItem * itemAt ( const QPoint & p ) const
+[2]QListWidgetItem * itemAt ( int x, int y ) const
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 {
@@ -625,8 +631,10 @@ void QListWidget_setCurrentItem2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setCurrentItem ( QListWidgetItem * item )
-//[2]void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+/*
+[1]void setCurrentItem ( QListWidgetItem * item )
+[2]void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 {
@@ -674,8 +682,10 @@ void QListWidget_setCurrentRow2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setCurrentRow ( int row )
-//[2]void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
+/*
+[1]void setCurrentRow ( int row )
+[2]void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
+*/
 
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 {

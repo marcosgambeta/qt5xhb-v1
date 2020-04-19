@@ -119,8 +119,10 @@ void QFileIconProvider_icon2()
   }
 }
 
-//[1]virtual QIcon icon(IconType type) const
-//[2]virtual QIcon icon(const QFileInfo & info) const
+/*
+[1]virtual QIcon icon(IconType type) const
+[2]virtual QIcon icon(const QFileInfo & info) const
+*/
 
 HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 {

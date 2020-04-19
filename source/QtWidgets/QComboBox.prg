@@ -203,8 +203,10 @@ void QComboBox_addItem2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addItem ( const QString & text, const QVariant & userData = QVariant() )
-//[2]void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+/*
+[1]void addItem ( const QString & text, const QVariant & userData = QVariant() )
+[2]void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+*/
 
 HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
 {
@@ -522,8 +524,10 @@ void QComboBox_insertItem2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
-//[2]void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+/*
+[1]void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
+[2]void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+*/
 
 HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 {

@@ -104,8 +104,10 @@ void QDirModel_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
-//[2]QDirModel(QObject *parent = 0)
+/*
+[1]QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags sort, QObject *parent = 0)
+[2]QDirModel(QObject *parent = 0)
+*/
 
 HB_FUNC_STATIC( QDIRMODEL_NEW )
 {
@@ -168,8 +170,10 @@ void QDirModel_index2()
   }
 }
 
-//[1]QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
-//[2]QModelIndex index(const QString &path, int column = 0) const
+/*
+[1]QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
+[2]QModelIndex index(const QString &path, int column = 0) const
+*/
 
 HB_FUNC_STATIC( QDIRMODEL_INDEX )
 {

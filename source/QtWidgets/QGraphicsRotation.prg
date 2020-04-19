@@ -221,8 +221,10 @@ void QGraphicsRotation_setAxis2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setAxis ( const QVector3D & axis )
-//[2]void setAxis ( Qt::Axis axis )
+/*
+[1]void setAxis ( const QVector3D & axis )
+[2]void setAxis ( Qt::Axis axis )
+*/
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {

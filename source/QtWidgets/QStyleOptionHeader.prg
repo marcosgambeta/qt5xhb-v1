@@ -86,9 +86,11 @@ void QStyleOptionHeader_new2()
 QStyleOptionHeader(int version) [protected]
 */
 
-//[1]QStyleOptionHeader()
-//[2]QStyleOptionHeader(const QStyleOptionHeader &other)
-//[3]QStyleOptionHeader(int version) [protected]
+/*
+[1]QStyleOptionHeader()
+[2]QStyleOptionHeader(const QStyleOptionHeader &other)
+[3]QStyleOptionHeader(int version) [protected]
+*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
 {

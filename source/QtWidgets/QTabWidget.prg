@@ -166,8 +166,10 @@ void QTabWidget_addTab2()
   }
 }
 
-//[1]int addTab ( QWidget * page, const QString & label )
-//[2]int addTab ( QWidget * page, const QIcon & icon, const QString & label )
+/*
+[1]int addTab ( QWidget * page, const QString & label )
+[2]int addTab ( QWidget * page, const QIcon & icon, const QString & label )
+*/
 
 HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
 {
@@ -588,8 +590,10 @@ void QTabWidget_insertTab2()
   }
 }
 
-//[1]int insertTab ( int index, QWidget * page, const QString & label )
-//[2]int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
+/*
+[1]int insertTab ( int index, QWidget * page, const QString & label )
+[2]int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
+*/
 
 HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
 {

@@ -81,8 +81,10 @@ void QGroupBox_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QGroupBox ( QWidget * parent = 0 )
-//[2]QGroupBox ( const QString & title, QWidget * parent = 0 )
+/*
+[1]QGroupBox ( QWidget * parent = 0 )
+[2]QGroupBox ( const QString & title, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGROUPBOX_NEW )
 {
