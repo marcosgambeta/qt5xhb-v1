@@ -90,8 +90,10 @@ void QCustom3DLabel_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]explicit QCustom3DLabel(QObject *parent = Q_NULLPTR)
-//[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QCustom3DLabel(QObject *parent = Q_NULLPTR)
+[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
 {

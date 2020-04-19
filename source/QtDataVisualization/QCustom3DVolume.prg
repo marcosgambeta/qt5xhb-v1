@@ -119,8 +119,10 @@ void QCustom3DVolume_new1()
 explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = Q_NULLPTR)
 */
 
-//[1]explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
-//[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = Q_NULLPTR)
+/*
+[1]explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
+[2]explicit QCustom3DVolume(const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, int textureWidth, int textureHeight, int textureDepth, QVector<uchar> *textureData, QImage::Format textureFormat, const QVector<QRgb> &colorTable, QObject *parent = Q_NULLPTR)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_NEW )
 {
@@ -1034,8 +1036,10 @@ void QCustom3DVolume_setSubTextureData2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
-//[2]void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
+/*
+[1]void setSubTextureData(Qt::Axis axis, int index, const uchar *data)
+[2]void setSubTextureData(Qt::Axis axis, int index, const QImage &image)
+*/
 
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 {
