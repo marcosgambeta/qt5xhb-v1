@@ -100,8 +100,10 @@ void QWebHitTestResult_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QWebHitTestResult ()
-//[2]QWebHitTestResult ( const QWebHitTestResult & other )
+/*
+[1]QWebHitTestResult ()
+[2]QWebHitTestResult ( const QWebHitTestResult & other )
+*/
 
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 {
