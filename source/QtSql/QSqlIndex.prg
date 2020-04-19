@@ -71,8 +71,10 @@ void QSqlIndex_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]explicit QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
-//[2]QSqlIndex ( const QSqlIndex & other )
+/*
+[1]explicit QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
+[2]QSqlIndex ( const QSqlIndex & other )
+*/
 
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
@@ -137,8 +139,10 @@ void QSqlIndex_append2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void append ( const QSqlField & field )
-//[2]void append ( const QSqlField & field, bool desc )
+/*
+[1]void append ( const QSqlField & field )
+[2]void append ( const QSqlField & field, bool desc )
+*/
 
 HB_FUNC_STATIC( QSQLINDEX_APPEND )
 {

@@ -211,8 +211,10 @@ void QSqlQueryModel_setQuery2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setQuery ( const QSqlQuery & query )
-//[2]void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
+/*
+[1]void setQuery ( const QSqlQuery & query )
+[2]void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
+*/
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY )
 {
@@ -258,8 +260,10 @@ void QSqlQueryModel_record2()
   }
 }
 
-//[1]QSqlRecord record ( int row ) const
-//[2]QSqlRecord record () const
+/*
+[1]QSqlRecord record ( int row ) const
+[2]QSqlRecord record () const
+*/
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
 {

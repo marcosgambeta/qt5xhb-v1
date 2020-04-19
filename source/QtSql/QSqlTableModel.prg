@@ -324,8 +324,10 @@ void QSqlTableModel_isDirty2()
   }
 }
 
-//[1]bool isDirty() const
-//[2]bool isDirty ( const QModelIndex & index ) const
+/*
+[1]bool isDirty() const
+[2]bool isDirty ( const QModelIndex & index ) const
+*/
 
 HB_FUNC( QSQLTABLEMODEL_ISDIRTY )
 {
@@ -892,8 +894,10 @@ void QSqlTableModel_record2()
   }
 }
 
-//[1]QSqlRecord record() const
-//[2]QSqlRecord record(int row) const
+/*
+[1]QSqlRecord record() const
+[2]QSqlRecord record(int row) const
+*/
 
 HB_FUNC( QSQLTABLEMODEL_RECORD )
 {

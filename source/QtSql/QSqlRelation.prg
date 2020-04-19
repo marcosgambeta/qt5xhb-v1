@@ -77,8 +77,10 @@ void QSqlRelation_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QSqlRelation ()
-//[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
+/*
+[1]QSqlRelation ()
+[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
+*/
 
 HB_FUNC_STATIC( QSQLRELATION_NEW )
 {

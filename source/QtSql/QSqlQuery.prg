@@ -134,10 +134,12 @@ void QSqlQuery_new4()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]explicit QSqlQuery ( QSqlResult * result )
-//[2]explicit QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
-//[3]explicit QSqlQuery ( QSqlDatabase db )
-//[4]QSqlQuery ( const QSqlQuery & other )
+/*
+[1]explicit QSqlQuery ( QSqlResult * result )
+[2]explicit QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
+[3]explicit QSqlQuery ( QSqlDatabase db )
+[4]QSqlQuery ( const QSqlQuery & other )
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_NEW )
 {
@@ -260,8 +262,10 @@ void QSqlQuery_bindValue2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
-//[2]void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
+/*
+[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
+[2]void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 {
@@ -307,8 +311,10 @@ void QSqlQuery_boundValue2()
   }
 }
 
-//[1]QVariant boundValue ( const QString & placeholder ) const
-//[2]QVariant boundValue ( int pos ) const
+/*
+[1]QVariant boundValue ( const QString & placeholder ) const
+[2]QVariant boundValue ( int pos ) const
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 {
@@ -403,8 +409,10 @@ void QSqlQuery_exec2()
   }
 }
 
-//[1]bool exec ( const QString & query )
-//[2]bool exec ()
+/*
+[1]bool exec ( const QString & query )
+[2]bool exec ()
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_EXEC )
 {
@@ -622,8 +630,10 @@ void QSqlQuery_isNull2()
 #endif
 }
 
-//[1]bool isNull ( int field ) const
-//[2]bool isNull(const QString &name) const
+/*
+[1]bool isNull ( int field ) const
+[2]bool isNull(const QString &name) const
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_ISNULL )
 {
@@ -1083,8 +1093,10 @@ void QSqlQuery_value2()
   }
 }
 
-//[1]QVariant value ( int index ) const
-//[2]QVariant value(const QString& name) const
+/*
+[1]QVariant value ( int index ) const
+[2]QVariant value(const QString& name) const
+*/
 
 HB_FUNC_STATIC( QSQLQUERY_VALUE )
 {
