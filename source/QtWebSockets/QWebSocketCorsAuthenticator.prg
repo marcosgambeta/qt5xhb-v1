@@ -88,8 +88,10 @@ void QWebSocketCorsAuthenticator_new2()
 #endif
 }
 
-//[1]explicit QWebSocketCorsAuthenticator(const QString &origin)
-//[2]explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
+/*
+[1]explicit QWebSocketCorsAuthenticator(const QString &origin)
+[2]explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
+*/
 
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW )
 {
