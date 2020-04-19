@@ -72,8 +72,10 @@ void QGLFramebufferObjectFormat_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QGLFramebufferObjectFormat ()
-//[2]QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
+/*
+[1]QGLFramebufferObjectFormat ()
+[2]QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
+*/
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {

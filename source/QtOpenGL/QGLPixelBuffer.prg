@@ -83,8 +83,10 @@ void QGLPixelBuffer_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
-//[2]QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+/*
+[1]QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+[2]QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+*/
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_NEW )
 {
@@ -158,9 +160,11 @@ void QGLPixelBuffer_bindTexture3()
   }
 }
 
-//[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
-//[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
-//[3]GLuint bindTexture ( const QString & fileName )
+/*
+[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
+[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
+[3]GLuint bindTexture ( const QString & fileName )
+*/
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 {
@@ -286,8 +290,10 @@ void QGLPixelBuffer_drawTexture2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-//[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+/*
+[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+*/
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 {

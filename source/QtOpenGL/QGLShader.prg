@@ -75,8 +75,10 @@ void QGLShader_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
-//[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
+/*
+[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
+[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QGLSHADER_NEW )
 {
@@ -183,9 +185,11 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
   }
 }
 
-//[1]bool compileSourceCode ( const char * source )
-//[2]bool compileSourceCode ( const QByteArray & source )
-//[3]bool compileSourceCode ( const QString & source )
+/*
+[1]bool compileSourceCode ( const char * source )
+[2]bool compileSourceCode ( const QByteArray & source )
+[3]bool compileSourceCode ( const QString & source )
+*/
 
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 {
