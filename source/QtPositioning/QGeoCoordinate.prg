@@ -115,10 +115,12 @@ void QGeoCoordinate_new4()
 #endif
 }
 
-//[1]QGeoCoordinate()
-//[2]QGeoCoordinate(double latitude, double longitude)
-//[3]QGeoCoordinate(double latitude, double longitude, double altitude)
-//[4]QGeoCoordinate(const QGeoCoordinate &other)
+/*
+[1]QGeoCoordinate()
+[2]QGeoCoordinate(double latitude, double longitude)
+[3]QGeoCoordinate(double latitude, double longitude, double altitude)
+[4]QGeoCoordinate(const QGeoCoordinate &other)
+*/
 
 HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
 {

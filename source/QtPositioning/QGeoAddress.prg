@@ -104,8 +104,10 @@ void QGeoAddress_new2()
 #endif
 }
 
-//[1]QGeoAddress()
-//[2]QGeoAddress(const QGeoAddress &other)
+/*
+[1]QGeoAddress()
+[2]QGeoAddress(const QGeoAddress &other)
+*/
 
 HB_FUNC_STATIC( QGEOADDRESS_NEW )
 {

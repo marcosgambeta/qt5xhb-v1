@@ -103,9 +103,11 @@ void QGeoPositionInfo_new3()
 #endif
 }
 
-//[1]QGeoPositionInfo()
-//[2]QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
-//[3]QGeoPositionInfo(const QGeoPositionInfo &other)
+/*
+[1]QGeoPositionInfo()
+[2]QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
+[3]QGeoPositionInfo(const QGeoPositionInfo &other)
+*/
 
 HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
 {
