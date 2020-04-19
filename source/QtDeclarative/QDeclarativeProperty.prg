@@ -151,14 +151,16 @@ void QDeclarativeProperty_new8()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDeclarativeProperty ()
-//[2]QDeclarativeProperty ( QObject * obj )
-//[3]QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
-//[4]QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
-//[5]QDeclarativeProperty ( QObject * obj, const QString & name )
-//[6]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
-//[7]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
-//[8]QDeclarativeProperty ( const QDeclarativeProperty & other )
+/*
+[1]QDeclarativeProperty ()
+[2]QDeclarativeProperty ( QObject * obj )
+[3]QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
+[4]QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
+[5]QDeclarativeProperty ( QObject * obj, const QString & name )
+[6]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
+[7]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
+[8]QDeclarativeProperty ( const QDeclarativeProperty & other )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
 {
@@ -226,8 +228,10 @@ void QDeclarativeProperty_connectNotifySignal2()
   }
 }
 
-//[1]bool connectNotifySignal ( QObject * dest, const char * slot ) const
-//[2]bool connectNotifySignal ( QObject * dest, int method ) const
+/*
+[1]bool connectNotifySignal ( QObject * dest, const char * slot ) const
+[2]bool connectNotifySignal ( QObject * dest, int method ) const
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
 {
@@ -724,10 +728,12 @@ void QDeclarativeProperty_read4()
   Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 }
 
-//[1]QVariant read () const
-//[2]QVariant read ( QObject * object, const QString & name )
-//[3]QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
-//[4]QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
+/*
+[1]QVariant read () const
+[2]QVariant read ( QObject * object, const QString & name )
+[3]QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
+[4]QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
 {
@@ -793,10 +799,12 @@ void QDeclarativeProperty_write4()
   RBOOL( QDeclarativeProperty::write( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4) ) );
 }
 
-//[1]bool write ( const QVariant & value ) const
-//[2]bool write ( QObject * object, const QString & name, const QVariant & value )
-//[3]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
-//[4]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
+/*
+[1]bool write ( const QVariant & value ) const
+[2]bool write ( QObject * object, const QString & name, const QVariant & value )
+[3]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
+[4]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE )
 {

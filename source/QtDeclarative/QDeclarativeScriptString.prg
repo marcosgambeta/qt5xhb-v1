@@ -82,8 +82,10 @@ void QDeclarativeScriptString_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDeclarativeScriptString ()
-//[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
+/*
+[1]QDeclarativeScriptString ()
+[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {

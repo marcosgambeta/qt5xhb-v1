@@ -82,8 +82,10 @@ void QDeclarativeContext_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
-//[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
+/*
+[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
+[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {
@@ -376,8 +378,10 @@ void QDeclarativeContext_setContextProperty2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setContextProperty ( const QString & name, QObject * value )
-//[2]void setContextProperty ( const QString & name, const QVariant & value )
+/*
+[1]void setContextProperty ( const QString & name, QObject * value )
+[2]void setContextProperty ( const QString & name, const QVariant & value )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
 {

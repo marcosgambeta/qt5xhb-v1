@@ -88,8 +88,10 @@ void QDeclarativeView_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QDeclarativeView ( QWidget * parent = 0 )
-//[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
+/*
+[1]QDeclarativeView ( QWidget * parent = 0 )
+[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
+*/
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {
