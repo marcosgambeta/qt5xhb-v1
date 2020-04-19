@@ -90,9 +90,11 @@ void QSourceLocation_new3()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QSourceLocation ()
-//[2]QSourceLocation ( const QSourceLocation & other )
-//[3]QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
+/*
+[1]QSourceLocation ()
+[2]QSourceLocation ( const QSourceLocation & other )
+[3]QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
+*/
 
 HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 {

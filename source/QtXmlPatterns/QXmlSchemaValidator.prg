@@ -93,8 +93,10 @@ void QXmlSchemaValidator_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QXmlSchemaValidator ()
-//[2]QXmlSchemaValidator ( const QXmlSchema & schema )
+/*
+[1]QXmlSchemaValidator ()
+[2]QXmlSchemaValidator ( const QXmlSchema & schema )
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 {
@@ -397,9 +399,11 @@ void QXmlSchemaValidator_validate3()
   }
 }
 
-//[1]bool validate ( const QUrl & source ) const
-//[2]bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
-//[3]bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
+/*
+[1]bool validate ( const QUrl & source ) const
+[2]bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
+[3]bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
+*/
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 {
