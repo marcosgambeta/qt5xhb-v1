@@ -128,8 +128,10 @@ void QAxScript_call2()
   }
 }
 
-//[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-//[2]QVariant call ( const QString & function, QList<QVariant> & arguments )
+/*
+[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+[2]QVariant call ( const QString & function, QList<QVariant> & arguments )
+*/
 
 HB_FUNC_STATIC( QAXSCRIPT_CALL )
 {

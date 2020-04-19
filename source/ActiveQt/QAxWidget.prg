@@ -102,9 +102,11 @@ void QAxWidget_new3()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-//[2]QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-//[3]QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+/*
+[1]QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+[2]QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+[3]QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+*/
 
 HB_FUNC_STATIC( QAXWIDGET_NEW )
 {
@@ -428,8 +430,10 @@ void QAxWidget_dynamicCall2()
   }
 }
 
-//[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-//[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
+/*
+[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
+*/
 
 HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL )
 {
@@ -547,8 +551,10 @@ void QAxWidget_querySubObject2()
   }
 }
 
-//[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-//[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
+/*
+[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
+*/
 
 HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT )
 {

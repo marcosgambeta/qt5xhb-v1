@@ -125,8 +125,10 @@ void QAxScriptManager_addObject2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void addObject ( QAxBase * object )
-//[2]void addObject ( QObject * object )
+/*
+[1]void addObject ( QAxBase * object )
+[2]void addObject ( QObject * object )
+*/
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
 {
@@ -172,8 +174,10 @@ void QAxScriptManager_call2()
   }
 }
 
-//[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-//[2]QVariant call ( const QString & function, QList<QVariant> & arguments )
+/*
+[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+[2]QVariant call ( const QString & function, QList<QVariant> & arguments )
+*/
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
 {
@@ -243,8 +247,10 @@ void QAxScriptManager_load2()
   }
 }
 
-//[1]QAxScript * load ( const QString & code, const QString & name, const QString & language )
-//[2]QAxScript * load ( const QString & file, const QString & name )
+/*
+[1]QAxScript * load ( const QString & code, const QString & name, const QString & language )
+[2]QAxScript * load ( const QString & file, const QString & name )
+*/
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 {
