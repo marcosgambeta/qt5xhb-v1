@@ -73,8 +73,10 @@ void QHelpSearchQuery_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QHelpSearchQuery ()
-//[2]QHelpSearchQuery ( FieldName field, const QStringList & wordList )
+/*
+[1]QHelpSearchQuery ()
+[2]QHelpSearchQuery ( FieldName field, const QStringList & wordList )
+*/
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 {

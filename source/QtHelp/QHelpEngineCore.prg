@@ -385,8 +385,10 @@ void QHelpEngineCore_filterAttributes2()
   }
 }
 
-//[1]QStringList filterAttributes () const
-//[2]QStringList filterAttributes ( const QString & filterName ) const
+/*
+[1]QStringList filterAttributes () const
+[2]QStringList filterAttributes ( const QString & filterName ) const
+*/
 
 HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 {
