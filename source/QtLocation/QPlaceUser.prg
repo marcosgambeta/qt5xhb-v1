@@ -85,8 +85,10 @@ void QPlaceUser_new2()
 #endif
 }
 
-//[1]QPlaceUser()
-//[2]QPlaceUser(const QPlaceUser &other)
+/*
+[1]QPlaceUser()
+[2]QPlaceUser(const QPlaceUser &other)
+*/
 
 HB_FUNC_STATIC( QPLACEUSER_NEW )
 {

@@ -121,9 +121,11 @@ void QGeoRouteRequest_new3()
 #endif
 }
 
-//[1]explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
-//[2]QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
-//[3]QGeoRouteRequest(const QGeoRouteRequest &other)
+/*
+[1]explicit QGeoRouteRequest(const QList<QGeoCoordinate> &waypoints = QList<QGeoCoordinate>())
+[2]QGeoRouteRequest(const QGeoCoordinate &origin, const QGeoCoordinate &destination)
+[3]QGeoRouteRequest(const QGeoRouteRequest &other)
+*/
 
 HB_FUNC_STATIC( QGEOROUTEREQUEST_NEW )
 {

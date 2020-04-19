@@ -86,8 +86,10 @@ void QPlaceAttribute_new2()
 #endif
 }
 
-//[1]QPlaceAttribute()
-//[2]QPlaceAttribute(const QPlaceAttribute &other)
+/*
+[1]QPlaceAttribute()
+[2]QPlaceAttribute(const QPlaceAttribute &other)
+*/
 
 HB_FUNC_STATIC( QPLACEATTRIBUTE_NEW )
 {

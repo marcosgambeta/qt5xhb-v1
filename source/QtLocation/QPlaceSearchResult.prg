@@ -89,8 +89,10 @@ void QPlaceSearchResult_new2()
 #endif
 }
 
-//[1]QPlaceSearchResult()
-//[2]QPlaceSearchResult(const QPlaceSearchResult &other)
+/*
+[1]QPlaceSearchResult()
+[2]QPlaceSearchResult(const QPlaceSearchResult &other)
+*/
 
 HB_FUNC_STATIC( QPLACESEARCHRESULT_NEW )
 {

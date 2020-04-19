@@ -129,8 +129,10 @@ void QPlace_new2()
 #endif
 }
 
-//[1]QPlace()
-//[2]QPlace(const QPlace &other)
+/*
+[1]QPlace()
+[2]QPlace(const QPlace &other)
+*/
 
 HB_FUNC_STATIC( QPLACE_NEW )
 {

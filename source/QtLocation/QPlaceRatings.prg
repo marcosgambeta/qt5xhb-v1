@@ -88,8 +88,10 @@ void QPlaceRatings_new2()
 #endif
 }
 
-//[1]QPlaceRatings()
-//[2]QPlaceRatings(const QPlaceRatings &other)
+/*
+[1]QPlaceRatings()
+[2]QPlaceRatings(const QPlaceRatings &other)
+*/
 
 HB_FUNC_STATIC( QPLACERATINGS_NEW )
 {

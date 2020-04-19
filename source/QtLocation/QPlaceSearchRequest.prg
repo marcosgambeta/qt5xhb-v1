@@ -105,8 +105,10 @@ void QPlaceSearchRequest_new2()
 #endif
 }
 
-//[1]QPlaceSearchRequest()
-//[2]QPlaceSearchRequest(const QPlaceSearchRequest &other)
+/*
+[1]QPlaceSearchRequest()
+[2]QPlaceSearchRequest(const QPlaceSearchRequest &other)
+*/
 
 HB_FUNC_STATIC( QPLACESEARCHREQUEST_NEW )
 {

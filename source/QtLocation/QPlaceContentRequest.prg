@@ -93,8 +93,10 @@ void QPlaceContentRequest_new2()
 #endif
 }
 
-//[1]QPlaceContentRequest()
-//[2]QPlaceContentRequest(const QPlaceContentRequest &other)
+/*
+[1]QPlaceContentRequest()
+[2]QPlaceContentRequest(const QPlaceContentRequest &other)
+*/
 
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_NEW )
 {

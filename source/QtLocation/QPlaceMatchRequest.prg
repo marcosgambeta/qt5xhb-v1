@@ -86,8 +86,10 @@ void QPlaceMatchRequest_new2()
 #endif
 }
 
-//[1]QPlaceMatchRequest()
-//[2]QPlaceMatchRequest(const QPlaceMatchRequest &other)
+/*
+[1]QPlaceMatchRequest()
+[2]QPlaceMatchRequest(const QPlaceMatchRequest &other)
+*/
 
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_NEW )
 {
