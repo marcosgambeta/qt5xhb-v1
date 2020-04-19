@@ -84,8 +84,10 @@ void QQmlError_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QQmlError()
-//[2]QQmlError(const QQmlError & other)
+/*
+[1]QQmlError()
+[2]QQmlError(const QQmlError & other)
+*/
 
 HB_FUNC_STATIC( QQMLERROR_NEW )
 {

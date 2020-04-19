@@ -83,8 +83,10 @@ void QQmlContext_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QQmlContext(QQmlEngine * engine, QObject * parent = 0)
-//[2]QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
+/*
+[1]QQmlContext(QQmlEngine * engine, QObject * parent = 0)
+[2]QQmlContext(QQmlContext * parentContext, QObject * parent = 0)
+*/
 
 HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 {
@@ -401,8 +403,10 @@ void QQmlContext_setContextProperty2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setContextProperty(const QString & name, QObject * value)
-//[2]void setContextProperty(const QString & name, const QVariant & value)
+/*
+[1]void setContextProperty(const QString & name, QObject * value)
+[2]void setContextProperty(const QString & name, const QVariant & value)
+*/
 
 HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY )
 {

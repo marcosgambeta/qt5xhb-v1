@@ -71,8 +71,10 @@ void QJSEngine_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QJSEngine()
-//[2]QJSEngine(QObject * parent)
+/*
+[1]QJSEngine()
+[2]QJSEngine(QObject * parent)
+*/
 
 HB_FUNC_STATIC( QJSENGINE_NEW )
 {

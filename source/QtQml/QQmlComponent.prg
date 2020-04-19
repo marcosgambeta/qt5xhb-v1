@@ -114,11 +114,13 @@ void QQmlComponent_new5()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
-//[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
-//[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
-//[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
-//[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
+/*
+[1]QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
+[2]QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
+[3]QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
+[4]QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
+[5]QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
+*/
 
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
 {
@@ -247,8 +249,10 @@ void QQmlComponent_create2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]virtual QObject * create(QQmlContext * context = 0)
-//[2]void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
+/*
+[1]virtual QObject * create(QQmlContext * context = 0)
+[2]void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
+*/
 
 HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 {
@@ -490,8 +494,10 @@ void QQmlComponent_loadUrl2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void loadUrl(const QUrl & url)
-//[2]void loadUrl(const QUrl & url, CompilationMode mode)
+/*
+[1]void loadUrl(const QUrl & url)
+[2]void loadUrl(const QUrl & url, CompilationMode mode)
+*/
 
 HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
 {

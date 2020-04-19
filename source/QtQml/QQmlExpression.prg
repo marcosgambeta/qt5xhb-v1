@@ -98,9 +98,11 @@ void QQmlExpression_new3()
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QQmlExpression()
-//[2]QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0)
-//[3]QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0)
+/*
+[1]QQmlExpression()
+[2]QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0)
+[3]QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0)
+*/
 
 HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
 {

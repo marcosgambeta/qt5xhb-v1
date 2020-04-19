@@ -178,15 +178,17 @@ HB_FUNC_STATIC( QJSVALUE_NEW9 )
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QJSValue(SpecialValue value = UndefinedValue)
-//[2]QJSValue(const QJSValue & other)
-//[3]QJSValue(bool value)
-//[4]QJSValue(int value)
-//[5]QJSValue(uint value)
-//[6]QJSValue(double value)
-//[7]QJSValue(const QString & value)
-//[8]QJSValue(const QLatin1String & value)
-//[9]QJSValue(const char * value)
+/*
+[1]QJSValue(SpecialValue value = UndefinedValue)
+[2]QJSValue(const QJSValue & other)
+[3]QJSValue(bool value)
+[4]QJSValue(int value)
+[5]QJSValue(uint value)
+[6]QJSValue(double value)
+[7]QJSValue(const QString & value)
+[8]QJSValue(const QLatin1String & value)
+[9]QJSValue(const char * value)
+*/
 
 HB_FUNC_STATIC( QJSVALUE_NEW )
 {
@@ -673,8 +675,10 @@ void QJSValue_property2()
   }
 }
 
-//[1]QJSValue property(const QString & name) const
-//[2]QJSValue property(quint32 arrayIndex) const
+/*
+[1]QJSValue property(const QString & name) const
+[2]QJSValue property(quint32 arrayIndex) const
+*/
 
 HB_FUNC_STATIC( QJSVALUE_PROPERTY )
 {
@@ -747,8 +751,10 @@ void QJSValue_setProperty2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void setProperty(const QString & name, const QJSValue & value)
-//[2]void setProperty(quint32 arrayIndex, const QJSValue & value)
+/*
+[1]void setProperty(const QString & name, const QJSValue & value)
+[2]void setProperty(quint32 arrayIndex, const QJSValue & value)
+*/
 
 HB_FUNC_STATIC( QJSVALUE_SETPROPERTY )
 {
