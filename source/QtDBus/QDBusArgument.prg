@@ -87,12 +87,13 @@ void QDBusArgument_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDBusArgument()
-//[2]QDBusArgument(const QDBusArgument &other)
+/*
+[1]QDBusArgument()
+[2]QDBusArgument(const QDBusArgument &other)
+*/
 
 HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
 {
-  // TODO: implementar
 }
 
 HB_FUNC_STATIC( QDBUSARGUMENT_DELETE )
@@ -194,12 +195,13 @@ void QDBusArgument_beginArray2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void beginArray(int elementMetaTypeId)
-//[2]void beginArray() const
+/*
+[1]void beginArray(int elementMetaTypeId)
+[2]void beginArray() const
+*/
 
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 {
-  // TODO: implementar
 }
 
 /*
@@ -258,12 +260,13 @@ void QDBusArgument_beginMap2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-//[1]void beginMap(int keyMetaTypeId, int valueMetaTypeId)
-//[2]void beginMap() const
+/*
+[1]void beginMap(int keyMetaTypeId, int valueMetaTypeId)
+[2]void beginMap() const
+*/
 
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 {
-  // TODO: implementar
 }
 
 /*

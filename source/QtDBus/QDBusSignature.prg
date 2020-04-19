@@ -97,10 +97,12 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
   Qt5xHb::returnNewObject( o, false );
 }
 
-//[1]QDBusSignature()
-//[2]explicit QDBusSignature(const char *signature)
-//[3]explicit QDBusSignature(QLatin1String signature)
-//[4]explicit QDBusSignature(const QString &signature)
+/*
+[1]QDBusSignature()
+[2]explicit QDBusSignature(const char *signature)
+[3]explicit QDBusSignature(QLatin1String signature)
+[4]explicit QDBusSignature(const QString &signature)
+*/
 
 HB_FUNC( QDBUSSIGNATURE_NEW )
 {

@@ -96,8 +96,10 @@ void QDBusMessage_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDBusMessage()
-//[2]QDBusMessage(const QDBusMessage &other)
+/*
+[1]QDBusMessage()
+[2]QDBusMessage(const QDBusMessage &other)
+*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
 {
@@ -150,8 +152,10 @@ void QDBusMessage_createReply2()
   }
 }
 
-//[1]QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
-//[2]QDBusMessage createReply(const QVariant &argument) const
+/*
+[1]QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
+[2]QDBusMessage createReply(const QVariant &argument) const
+*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
 {
@@ -207,9 +211,11 @@ void QDBusMessage_createErrorReply3()
   }
 }
 
-//[1]QDBusMessage createErrorReply(const QString name, const QString &msg) const
-//[2]QDBusMessage createErrorReply(const QDBusError &err) const
-//[3]QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
+/*
+[1]QDBusMessage createErrorReply(const QString name, const QString &msg) const
+[2]QDBusMessage createErrorReply(const QDBusError &err) const
+[3]QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
+*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 {
@@ -675,9 +681,11 @@ void QDBusMessage_createError3()
   Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
 }
 
-//[1]static QDBusMessage createError(const QString &name, const QString &msg)
-//[2]static inline QDBusMessage createError(const QDBusError &err)
-//[3]static inline QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
+/*
+[1]static QDBusMessage createError(const QString &name, const QString &msg)
+[2]static inline QDBusMessage createError(const QDBusError &err)
+[3]static inline QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
+*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
 {

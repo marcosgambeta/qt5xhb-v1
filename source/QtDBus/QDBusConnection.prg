@@ -110,12 +110,13 @@ void QDBusConnection_new2()
   Qt5xHb::returnNewObject( o, true );
 }
 
-//[1]QDBusConnection(const QString &name)
-//[2]QDBusConnection(const QDBusConnection &other)
+/*
+[1]QDBusConnection(const QString &name)
+[2]QDBusConnection(const QDBusConnection &other)
+*/
 
 HB_FUNC_STATIC( QDBUSCONNECTION_NEW )
 {
-  // TODO: implementar
 }
 
 HB_FUNC_STATIC( QDBUSCONNECTION_DELETE )
@@ -306,12 +307,13 @@ void QDBusConnection_callWithCallback2()
   }
 }
 
-//[1]bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char *returnMethod, const char *errorMethod,int timeout = -1) const
-//[2]bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char *slot, int timeout = -1) const
+/*
+[1]bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char *returnMethod, const char *errorMethod,int timeout = -1) const
+[2]bool callWithCallback(const QDBusMessage &message, QObject *receiver,const char *slot, int timeout = -1) const
+*/
 
 HB_FUNC_STATIC( QDBUSCONNECTION_CALLWITHCALLBACK )
 {
-  // TODO: implementar
 }
 
 /*
@@ -403,13 +405,14 @@ void QDBusConnection_connect3()
   }
 }
 
-//[1]bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, QObject *receiver, const char *slot)
-//[2]bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, const QString& signature,QObject *receiver, const char *slot)
-//[3]bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, const QStringList &argumentMatch, const QString& signature,QObject *receiver, const char *slot)
+/*
+[1]bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, QObject *receiver, const char *slot)
+[2]bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, const QString& signature,QObject *receiver, const char *slot)
+[3]bool connect(const QString &service, const QString &path, const QString &interface,const QString &name, const QStringList &argumentMatch, const QString& signature,QObject *receiver, const char *slot)
+*/
 
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECT )
 {
-  // TODO: implementar
 }
 
 /*
@@ -451,13 +454,14 @@ void QDBusConnection_disconnect3()
   }
 }
 
-//[1]bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, QObject *receiver, const char *slot)
-//[2]bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, const QString& signature,QObject *receiver, const char *slot)
-//[3]bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, const QStringList &argumentMatch, const QString& signature,QObject *receiver, const char *slot)
+/*
+[1]bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, QObject *receiver, const char *slot)
+[2]bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, const QString& signature,QObject *receiver, const char *slot)
+[3]bool disconnect(const QString &service, const QString &path, const QString &interface,const QString &name, const QStringList &argumentMatch, const QString& signature,QObject *receiver, const char *slot)
+*/
 
 HB_FUNC_STATIC( QDBUSCONNECTION_DISCONNECT )
 {
-  // TODO: implementar
 }
 
 /*
@@ -656,12 +660,13 @@ void QDBusConnection_connectToBus2()
   Qt5xHb::createReturnClass( ptr, "QDBUSCONNECTION", true );
 }
 
-//[1]static QDBusConnection connectToBus(BusType type, const QString &name)
-//[2]static QDBusConnection connectToBus(const QString &address, const QString &name)
+/*
+[1]static QDBusConnection connectToBus(BusType type, const QString &name)
+[2]static QDBusConnection connectToBus(const QString &address, const QString &name)
+*/
 
 HB_FUNC_STATIC( QDBUSCONNECTION_CONNECTTOBUS )
 {
-  // TODO: implementar
 }
 
 /*
