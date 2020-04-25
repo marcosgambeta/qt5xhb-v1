@@ -8,442 +8,442 @@
 
 #include "HAbstractListModel.h"
 
-HAbstractListModel::HAbstractListModel (QObject * parent) : QAbstractListModel (parent)
+HAbstractListModel::HAbstractListModel( QObject * parent ) : QAbstractListModel( parent )
 {
   // linhas
-  rowCountCB = NULL;
+  m_rowCountCB = NULL;
 
   // células
-  getFieldCB = NULL;
-  getFieldDecorationCB = NULL;
-  getFieldEditCB = NULL;
-  getFieldToolTipCB = NULL;
-  getFieldStatusTipCB = NULL;
-  getFieldWhatsThisCB = NULL;
-  getFieldSizeHintCB = NULL;
-  getFieldFontCB = NULL;
-  getFieldAlignCB = NULL;
-  getFieldBGColorCB = NULL;
-  getFieldFGColorCB = NULL;
+  m_getFieldCB = NULL;
+  m_getFieldDecorationCB = NULL;
+  m_getFieldEditCB = NULL;
+  m_getFieldToolTipCB = NULL;
+  m_getFieldStatusTipCB = NULL;
+  m_getFieldWhatsThisCB = NULL;
+  m_getFieldSizeHintCB = NULL;
+  m_getFieldFontCB = NULL;
+  m_getFieldAlignCB = NULL;
+  m_getFieldBGColorCB = NULL;
+  m_getFieldFGColorCB = NULL;
 
   // cabeçalho horizontal
-  getHHCB = NULL;
-  getHHDecorationCB = NULL;
-  getHHFontCB = NULL;
-  getHHAlignCB = NULL;
-  getHHBGColorCB = NULL;
-  getHHFGColorCB = NULL;
+  m_getHHCB = NULL;
+  m_getHHDecorationCB = NULL;
+  m_getHHFontCB = NULL;
+  m_getHHAlignCB = NULL;
+  m_getHHBGColorCB = NULL;
+  m_getHHFGColorCB = NULL;
 
   // cabeçalho vertical
-  getVHCB = NULL;
-  getVHDecorationCB = NULL;
-  getVHFontCB = NULL;
-  getVHAlignCB = NULL;
-  getVHBGColorCB = NULL;
-  getVHFGColorCB = NULL;
+  m_getVHCB = NULL;
+  m_getVHDecorationCB = NULL;
+  m_getVHFontCB = NULL;
+  m_getVHAlignCB = NULL;
+  m_getVHBGColorCB = NULL;
+  m_getVHFGColorCB = NULL;
 }
 
-HAbstractListModel::~HAbstractListModel ()
+HAbstractListModel::~HAbstractListModel()
 {
   // linhas
-  if( rowCountCB )
+  if( m_rowCountCB )
   {
-    hb_itemRelease( rowCountCB );
+    hb_itemRelease( m_rowCountCB );
   }
 
   // células
-  if( getFieldCB )
+  if( m_getFieldCB )
   {
-    hb_itemRelease( getFieldCB );
+    hb_itemRelease( m_getFieldCB );
   }
-  if( getFieldDecorationCB )
+  if( m_getFieldDecorationCB )
   {
-    hb_itemRelease( getFieldDecorationCB );
+    hb_itemRelease( m_getFieldDecorationCB );
   }
-  if( getFieldEditCB )
+  if( m_getFieldEditCB )
   {
-    hb_itemRelease( getFieldEditCB );
+    hb_itemRelease( m_getFieldEditCB );
   }
-  if( getFieldToolTipCB )
+  if( m_getFieldToolTipCB )
   {
-    hb_itemRelease( getFieldToolTipCB );
+    hb_itemRelease( m_getFieldToolTipCB );
   }
-  if( getFieldStatusTipCB )
+  if( m_getFieldStatusTipCB )
   {
-    hb_itemRelease( getFieldStatusTipCB );
+    hb_itemRelease( m_getFieldStatusTipCB );
   }
-  if( getFieldWhatsThisCB )
+  if( m_getFieldWhatsThisCB )
   {
-    hb_itemRelease( getFieldWhatsThisCB );
+    hb_itemRelease( m_getFieldWhatsThisCB );
   }
-  if( getFieldSizeHintCB )
+  if( m_getFieldSizeHintCB )
   {
-    hb_itemRelease( getFieldSizeHintCB );
+    hb_itemRelease( m_getFieldSizeHintCB );
   }
-  if( getFieldFontCB )
+  if( m_getFieldFontCB )
   {
-    hb_itemRelease( getFieldFontCB );
+    hb_itemRelease( m_getFieldFontCB );
   }
-  if( getFieldAlignCB )
+  if( m_getFieldAlignCB )
   {
-    hb_itemRelease( getFieldAlignCB );
+    hb_itemRelease( m_getFieldAlignCB );
   }
-  if( getFieldBGColorCB )
+  if( m_getFieldBGColorCB )
   {
-    hb_itemRelease( getFieldBGColorCB );
+    hb_itemRelease( m_getFieldBGColorCB );
   }
-  if( getFieldFGColorCB )
+  if( m_getFieldFGColorCB )
   {
-    hb_itemRelease( getFieldFGColorCB );
+    hb_itemRelease( m_getFieldFGColorCB );
   }
 
   // cabeçalho horizontal
-  if( getHHCB )
+  if( m_getHHCB )
   {
-    hb_itemRelease( getHHCB );
+    hb_itemRelease( m_getHHCB );
   }
-  if( getHHDecorationCB )
+  if( m_getHHDecorationCB )
   {
-    hb_itemRelease( getHHDecorationCB );
+    hb_itemRelease( m_getHHDecorationCB );
   }
-  if( getHHFontCB )
+  if( m_getHHFontCB )
   {
-    hb_itemRelease( getHHFontCB );
+    hb_itemRelease( m_getHHFontCB );
   }
-  if( getHHAlignCB )
+  if( m_getHHAlignCB )
   {
-    hb_itemRelease( getHHAlignCB );
+    hb_itemRelease( m_getHHAlignCB );
   }
-  if( getHHBGColorCB )
+  if( m_getHHBGColorCB )
   {
-    hb_itemRelease( getHHBGColorCB );
+    hb_itemRelease( m_getHHBGColorCB );
   }
-  if( getHHFGColorCB )
+  if( m_getHHFGColorCB )
   {
-    hb_itemRelease( getHHFGColorCB );
+    hb_itemRelease( m_getHHFGColorCB );
   }
 
   // dados do cabecalho vertical
-  if( getVHCB )
+  if( m_getVHCB )
   {
-    hb_itemRelease( getVHCB );
+    hb_itemRelease( m_getVHCB );
   }
-  if( getVHDecorationCB )
+  if( m_getVHDecorationCB )
   {
-    hb_itemRelease( getVHDecorationCB );
+    hb_itemRelease( m_getVHDecorationCB );
   }
-  if( getVHFontCB )
+  if( m_getVHFontCB )
   {
-    hb_itemRelease( getVHFontCB );
+    hb_itemRelease( m_getVHFontCB );
   }
-  if( getVHAlignCB )
+  if( m_getVHAlignCB )
   {
-    hb_itemRelease( getVHAlignCB );
+    hb_itemRelease( m_getVHAlignCB );
   }
-  if( getVHBGColorCB )
+  if( m_getVHBGColorCB )
   {
-    hb_itemRelease( getVHBGColorCB );
+    hb_itemRelease( m_getVHBGColorCB );
   }
-  if( getVHFGColorCB )
+  if( m_getVHFGColorCB )
   {
-    hb_itemRelease( getVHFGColorCB );
+    hb_itemRelease( m_getVHFGColorCB );
   }
 
 }
 
 // linhas
 
-void HAbstractListModel::setRowCountCB ( PHB_ITEM block )
+void HAbstractListModel::setRowCountCB( PHB_ITEM block )
 {
-  if( rowCountCB )
+  if( m_rowCountCB )
   {
-    hb_itemRelease( rowCountCB );
+    hb_itemRelease( m_rowCountCB );
   }
   if( block )
   {
-    rowCountCB = hb_itemNew( block );
+    m_rowCountCB = hb_itemNew( block );
   }
 }
 
 // células
 
-void HAbstractListModel::setDisplayRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setDisplayRoleCB( PHB_ITEM block )
 {
-  if( getFieldCB )
+  if( m_getFieldCB )
   {
-    hb_itemRelease( getFieldCB );
+    hb_itemRelease( m_getFieldCB );
   }
   if( block )
   {
-    getFieldCB = hb_itemNew( block );
+    m_getFieldCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setDecorationRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setDecorationRoleCB( PHB_ITEM block )
 {
-  if( getFieldDecorationCB )
+  if( m_getFieldDecorationCB )
   {
-    hb_itemRelease( getFieldDecorationCB );
+    hb_itemRelease( m_getFieldDecorationCB );
   }
   if( block )
   {
-    getFieldDecorationCB = hb_itemNew( block );
+    m_getFieldDecorationCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setEditRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setEditRoleCB( PHB_ITEM block )
 {
-  if( getFieldEditCB )
+  if( m_getFieldEditCB )
   {
-    hb_itemRelease( getFieldEditCB );
+    hb_itemRelease( m_getFieldEditCB );
   }
   if( block )
   {
-    getFieldEditCB = hb_itemNew( block );
+    m_getFieldEditCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setToolTipRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setToolTipRoleCB( PHB_ITEM block )
 {
-  if( getFieldToolTipCB )
+  if( m_getFieldToolTipCB )
   {
-    hb_itemRelease( getFieldToolTipCB );
+    hb_itemRelease( m_getFieldToolTipCB );
   }
   if( block )
   {
-    getFieldToolTipCB = hb_itemNew( block );
+    m_getFieldToolTipCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setStatusTipRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setStatusTipRoleCB( PHB_ITEM block )
 {
-  if( getFieldStatusTipCB )
+  if( m_getFieldStatusTipCB )
   {
-    hb_itemRelease( getFieldStatusTipCB );
+    hb_itemRelease( m_getFieldStatusTipCB );
   }
   if( block )
   {
-    getFieldStatusTipCB = hb_itemNew( block );
+    m_getFieldStatusTipCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setWhatsThisRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setWhatsThisRoleCB( PHB_ITEM block )
 {
-  if( getFieldWhatsThisCB )
+  if( m_getFieldWhatsThisCB )
   {
-    hb_itemRelease( getFieldWhatsThisCB );
+    hb_itemRelease( m_getFieldWhatsThisCB );
   }
   if( block )
   {
-    getFieldWhatsThisCB = hb_itemNew( block );
+    m_getFieldWhatsThisCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setSizeHintRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setSizeHintRoleCB( PHB_ITEM block )
 {
-  if( getFieldSizeHintCB )
+  if( m_getFieldSizeHintCB )
   {
-    hb_itemRelease( getFieldSizeHintCB );
+    hb_itemRelease( m_getFieldSizeHintCB );
   }
   if( block )
   {
-    getFieldSizeHintCB = hb_itemNew( block );
+    m_getFieldSizeHintCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setFontRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setFontRoleCB( PHB_ITEM block )
 {
-  if( getFieldFontCB )
+  if( m_getFieldFontCB )
   {
-    hb_itemRelease( getFieldFontCB );
+    hb_itemRelease( m_getFieldFontCB );
   }
   if( block )
   {
-    getFieldFontCB = hb_itemNew( block );
+    m_getFieldFontCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setTextAlignmentRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setTextAlignmentRoleCB( PHB_ITEM block )
 {
-  if( getFieldAlignCB )
+  if( m_getFieldAlignCB )
   {
-    hb_itemRelease( getFieldAlignCB );
+    hb_itemRelease( m_getFieldAlignCB );
   }
   if( block )
   {
-    getFieldAlignCB = hb_itemNew( block );
+    m_getFieldAlignCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setBackgroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setBackgroundRoleCB( PHB_ITEM block )
 {
-  if( getFieldBGColorCB )
+  if( m_getFieldBGColorCB )
   {
-    hb_itemRelease( getFieldBGColorCB );
+    hb_itemRelease( m_getFieldBGColorCB );
   }
   if( block )
   {
-    getFieldBGColorCB = hb_itemNew( block );
+    m_getFieldBGColorCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setForegroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setForegroundRoleCB( PHB_ITEM block )
 {
-  if( getFieldFGColorCB )
+  if( m_getFieldFGColorCB )
   {
-    hb_itemRelease( getFieldFGColorCB );
+    hb_itemRelease( m_getFieldFGColorCB );
   }
   if( block )
   {
-    getFieldFGColorCB = hb_itemNew( block );
+    m_getFieldFGColorCB = hb_itemNew( block );
   }
 }
 
 // cabeçalho horizontal
 
-void HAbstractListModel::setHorizontalHeaderDisplayRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
 {
-  if( getHHCB )
+  if( m_getHHCB )
   {
-    hb_itemRelease( getHHCB );
+    hb_itemRelease( m_getHHCB );
   }
   if( block )
   {
-    getHHCB = hb_itemNew( block );
+    m_getHHCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderDecorationRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderDecorationRoleCB( PHB_ITEM block )
 {
-  if( getHHDecorationCB )
+  if( m_getHHDecorationCB )
   {
-    hb_itemRelease( getHHDecorationCB );
+    hb_itemRelease( m_getHHDecorationCB );
   }
   if( block )
   {
-    getHHDecorationCB = hb_itemNew( block );
+    m_getHHDecorationCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderFontRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderFontRoleCB( PHB_ITEM block )
 {
-  if( getHHFontCB )
+  if( m_getHHFontCB )
   {
-    hb_itemRelease( getHHFontCB );
+    hb_itemRelease( m_getHHFontCB );
   }
   if( block )
   {
-    getHHFontCB = hb_itemNew( block );
+    m_getHHFontCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 {
-  if( getHHAlignCB )
+  if( m_getHHAlignCB )
   {
-    hb_itemRelease( getHHAlignCB );
+    hb_itemRelease( m_getHHAlignCB );
   }
   if( block )
   {
-    getHHAlignCB = hb_itemNew( block );
+    m_getHHAlignCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderBackgroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block )
 {
-  if( getHHBGColorCB )
+  if( m_getHHBGColorCB )
   {
-    hb_itemRelease( getHHBGColorCB );
+    hb_itemRelease( m_getHHBGColorCB );
   }
   if( block )
   {
-    getHHBGColorCB = hb_itemNew( block );
+    m_getHHBGColorCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setHorizontalHeaderForegroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setHorizontalHeaderForegroundRoleCB( PHB_ITEM block )
 {
-  if( getHHFGColorCB )
+  if( m_getHHFGColorCB )
   {
-    hb_itemRelease( getHHFGColorCB );
+    hb_itemRelease( m_getHHFGColorCB );
   }
   if( block )
   {
-    getHHFGColorCB = hb_itemNew( block );
+    m_getHHFGColorCB = hb_itemNew( block );
   }
 }
 
 // cabeçalho vertical
 
-void HAbstractListModel::setVerticalHeaderDisplayRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderDisplayRoleCB( PHB_ITEM block )
 {
-  if( getVHCB )
+  if( m_getVHCB )
   {
-    hb_itemRelease( getVHCB );
+    hb_itemRelease( m_getVHCB );
   }
   if( block )
   {
-    getVHCB = hb_itemNew( block );
+    m_getVHCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setVerticalHeaderDecorationRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderDecorationRoleCB( PHB_ITEM block )
 {
-  if( getVHDecorationCB )
+  if( m_getVHDecorationCB )
   {
-    hb_itemRelease( getVHDecorationCB );
+    hb_itemRelease( m_getVHDecorationCB );
   }
   if( block )
   {
-    getVHDecorationCB = hb_itemNew( block );
+    m_getVHDecorationCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setVerticalHeaderFontRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderFontRoleCB( PHB_ITEM block )
 {
-  if( getVHFontCB )
+  if( m_getVHFontCB )
   {
-    hb_itemRelease( getVHFontCB );
+    hb_itemRelease( m_getVHFontCB );
   }
   if( block )
   {
-    getVHFontCB = hb_itemNew( block );
+    m_getVHFontCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setVerticalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 {
-  if( getVHAlignCB )
+  if( m_getVHAlignCB )
   {
-    hb_itemRelease( getVHAlignCB );
+    hb_itemRelease( m_getVHAlignCB );
   }
   if( block )
   {
-    getVHAlignCB = hb_itemNew( block );
+    m_getVHAlignCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setVerticalHeaderBackgroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderBackgroundRoleCB( PHB_ITEM block )
 {
-  if( getVHBGColorCB )
+  if( m_getVHBGColorCB )
   {
-    hb_itemRelease( getVHBGColorCB );
+    hb_itemRelease( m_getVHBGColorCB );
   }
   if( block )
   {
-    getVHBGColorCB = hb_itemNew( block );
+    m_getVHBGColorCB = hb_itemNew( block );
   }
 }
 
-void HAbstractListModel::setVerticalHeaderForegroundRoleCB ( PHB_ITEM block )
+void HAbstractListModel::setVerticalHeaderForegroundRoleCB( PHB_ITEM block )
 {
-  if( getVHFGColorCB )
+  if( m_getVHFGColorCB )
   {
-    hb_itemRelease( getVHFGColorCB );
+    hb_itemRelease( m_getVHFGColorCB );
   }
   if( block )
   {
-    getVHFGColorCB = hb_itemNew( block );
+    m_getVHFGColorCB = hb_itemNew( block );
   }
 }
 
@@ -451,10 +451,10 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
 {
   QVariant data;
 
-  if( role == Qt::DisplayRole && getFieldCB )
+  if( role == Qt::DisplayRole && m_getFieldCB )
   {
     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldCB, 1, pRow ) );
+    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldCB, 1, pRow ) );
     if( hb_itemType( pRet ) & HB_IT_STRING )
     {
       #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -478,10 +478,10 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     hb_itemRelease( pRow );
     hb_itemRelease( pRet );
   }
-  else if( role == Qt::DecorationRole && getFieldDecorationCB )
+  else if( role == Qt::DecorationRole && m_getFieldDecorationCB )
   {
      PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldDecorationCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldDecorationCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -504,10 +504,10 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
   }
-  else if( role == Qt::EditRole && getFieldEditCB )
+  else if( role == Qt::EditRole && m_getFieldEditCB )
   {
      PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldEditCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldEditCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_STRING )
      {
        data = hb_itemGetCPtr( pRet );
@@ -515,25 +515,10 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
   }
-  else if( role == Qt::ToolTipRole && getFieldToolTipCB )
+  else if( role == Qt::ToolTipRole && m_getFieldToolTipCB )
   {
      PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldToolTipCB, 1, pRow ) );
-     if( hb_itemType( pRet ) & HB_IT_STRING )
-     {
-       #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-       data = QLatin1String( hb_itemGetCPtr( pRet ) );
-       #else
-       data = hb_itemGetCPtr( pRet );
-       #endif
-     }
-     hb_itemRelease( pRow );
-     hb_itemRelease( pRet );
-  }
-  else if( role == Qt::StatusTipRole && getFieldStatusTipCB )
-  {
-     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldStatusTipCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldToolTipCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_STRING )
      {
        #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -545,10 +530,10 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
   }
-  else if( role == Qt::WhatsThisRole && getFieldWhatsThisCB )
+  else if( role == Qt::StatusTipRole && m_getFieldStatusTipCB )
   {
      PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldWhatsThisCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldStatusTipCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_STRING )
      {
        #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -560,10 +545,25 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
   }
-  else if( role == Qt::SizeHintRole && getFieldSizeHintCB )
+  else if( role == Qt::WhatsThisRole && m_getFieldWhatsThisCB )
   {
      PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldSizeHintCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldWhatsThisCB, 1, pRow ) );
+     if( hb_itemType( pRet ) & HB_IT_STRING )
+     {
+       #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
+       data = QLatin1String( hb_itemGetCPtr( pRet ) );
+       #else
+       data = hb_itemGetCPtr( pRet );
+       #endif
+     }
+     hb_itemRelease( pRow );
+     hb_itemRelease( pRet );
+  }
+  else if( role == Qt::SizeHintRole && m_getFieldSizeHintCB )
+  {
+     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldSizeHintCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -572,10 +572,10 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
   }
-  else if( role == Qt::FontRole && getFieldFontCB )
+  else if( role == Qt::FontRole && m_getFieldFontCB )
   {
      PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldFontCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldFontCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -584,10 +584,10 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
   }
-  else if( role == Qt::TextAlignmentRole && getFieldAlignCB )
+  else if( role == Qt::TextAlignmentRole && m_getFieldAlignCB )
   {
     PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldAlignCB, 1, pRow ) );
+    PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldAlignCB, 1, pRow ) );
     if( hb_itemType( pRet ) & HB_IT_NUMERIC )
     {
       data = hb_itemGetNI( pRet );
@@ -595,10 +595,10 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
     hb_itemRelease( pRow );
     hb_itemRelease( pRet );
   }
-  else if( role == Qt::BackgroundRole && getFieldBGColorCB )
+  else if( role == Qt::BackgroundRole && m_getFieldBGColorCB )
   {
      PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldBGColorCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldBGColorCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -621,10 +621,10 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
   }
-  else if( role == Qt::ForegroundRole && getFieldFGColorCB )
+  else if( role == Qt::ForegroundRole && m_getFieldFGColorCB )
   {
      PHB_ITEM pRow = hb_itemPutNI( NULL, index.row() );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getFieldFGColorCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldFGColorCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -647,10 +647,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
 
   if( orientation == Qt::Horizontal )
   {
-    if( role == Qt::DisplayRole && getHHCB )
+    if( role == Qt::DisplayRole && m_getHHCB )
     {
       PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getHHCB, 1, pCol ) );
+      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHCB, 1, pCol ) );
       if( hb_itemType( pRet ) & HB_IT_STRING )
       {
         #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -674,10 +674,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       hb_itemRelease( pCol );
       hb_itemRelease( pRet );
     }
-    else if( role == Qt::DecorationRole && getHHDecorationCB )
+    else if( role == Qt::DecorationRole && m_getHHDecorationCB )
     {
       PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getHHDecorationCB, 1, pCol ) );
+      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHDecorationCB, 1, pCol ) );
       if( hb_itemType( pRet ) & HB_IT_OBJECT )
       {
         void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -700,10 +700,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       hb_itemRelease( pCol );
       hb_itemRelease( pRet );
     }
-    else if( role == Qt::FontRole && getHHFontCB )
+    else if( role == Qt::FontRole && m_getHHFontCB )
     {
      PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getHHFontCB, 1, pCol ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHFontCB, 1, pCol ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -712,10 +712,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      hb_itemRelease( pCol );
      hb_itemRelease( pRet );
     }
-    else if( role == Qt::TextAlignmentRole && getHHAlignCB )
+    else if( role == Qt::TextAlignmentRole && m_getHHAlignCB )
     {
       PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getHHAlignCB, 1, pCol ) );
+      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHAlignCB, 1, pCol ) );
       if( hb_itemType( pRet ) & HB_IT_NUMERIC )
       {
         data = hb_itemGetNI( pRet );
@@ -723,10 +723,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       hb_itemRelease( pCol );
       hb_itemRelease( pRet );
     }
-    else if( role == Qt::BackgroundRole && getHHBGColorCB )
+    else if( role == Qt::BackgroundRole && m_getHHBGColorCB )
     {
      PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getHHBGColorCB, 1, pCol ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHBGColorCB, 1, pCol ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -749,10 +749,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      hb_itemRelease( pCol );
      hb_itemRelease( pRet );
     }
-    else if( role == Qt::ForegroundRole && getHHFGColorCB )
+    else if( role == Qt::ForegroundRole && m_getHHFGColorCB )
     {
      PHB_ITEM pCol = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getHHFGColorCB, 1, pCol ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHFGColorCB, 1, pCol ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -768,10 +768,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
   }
   else if( orientation == Qt::Vertical )
   {
-    if( role == Qt::DisplayRole && getVHCB )
+    if( role == Qt::DisplayRole && m_getVHCB )
     {
       PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getVHCB, 1, pRow ) );
+      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHCB, 1, pRow ) );
       if( hb_itemType( pRet ) & HB_IT_STRING )
       {
         #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
@@ -795,10 +795,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       hb_itemRelease( pRow );
       hb_itemRelease( pRet );
     }
-    else if( role == Qt::DecorationRole && getVHDecorationCB )
+    else if( role == Qt::DecorationRole && m_getVHDecorationCB )
     {
       PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getVHDecorationCB, 1, pRow ) );
+      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHDecorationCB, 1, pRow ) );
       if( hb_itemType( pRet ) & HB_IT_OBJECT )
       {
         void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -821,10 +821,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       hb_itemRelease( pRow );
       hb_itemRelease( pRet );
     }
-    else if( role == Qt::FontRole && getVHFontCB )
+    else if( role == Qt::FontRole && m_getVHFontCB )
     {
      PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getVHFontCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHFontCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -833,10 +833,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
     }
-    else if( role == Qt::TextAlignmentRole && getVHAlignCB )
+    else if( role == Qt::TextAlignmentRole && m_getVHAlignCB )
     {
       PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getVHAlignCB, 1, pRow ) );
+      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHAlignCB, 1, pRow ) );
       if( hb_itemType( pRet ) & HB_IT_NUMERIC )
       {
         data = hb_itemGetNI( pRet );
@@ -844,10 +844,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       hb_itemRelease( pRow );
       hb_itemRelease( pRet );
     }
-    else if( role == Qt::BackgroundRole && getVHBGColorCB )
+    else if( role == Qt::BackgroundRole && m_getVHBGColorCB )
     {
      PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getVHBGColorCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHBGColorCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -870,10 +870,10 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      hb_itemRelease( pRow );
      hb_itemRelease( pRet );
     }
-    else if( role == Qt::ForegroundRole && getVHFGColorCB )
+    else if( role == Qt::ForegroundRole && m_getVHFGColorCB )
     {
      PHB_ITEM pRow = hb_itemPutNI( NULL, section );
-     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( getVHFGColorCB, 1, pRow ) );
+     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHFGColorCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
        void * ptr = (void *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) );
@@ -899,9 +899,9 @@ int HAbstractListModel::rowCount( const QModelIndex & parent ) const
   }
   else
   {
-    if( rowCountCB )
+    if( m_rowCountCB )
     {
-      return (int) hb_itemGetNI( hb_vmEvalBlockV( rowCountCB, 0 ) );
+      return (int) hb_itemGetNI( hb_vmEvalBlockV( m_rowCountCB, 0 ) );
     }
     else
     {
@@ -918,6 +918,7 @@ void HAbstractListModel::reloadData()
 {
   // Notas da documentação do Qt:
   // emit layoutAboutToBeChanged
+  emit QAbstractItemModel::layoutAboutToBeChanged();
   // Remember the QModelIndex that will change
   // Update your internal data
   // Call changePersistentIndex()
