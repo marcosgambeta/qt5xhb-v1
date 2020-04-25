@@ -119,6 +119,7 @@
 // TODO: checar macros qintptr/quintptr
 #define PQINTPTR(n)                                         (qintptr) hb_parnll(n)
 #define PQUINTPTR(n)                                        (quintptr) hb_parnll(n)
+#define PBLOCKORSYMBOL(n)                                   hb_param( n, HB_IT_BLOCK | HB_IT_SYMBOL )
 
 // macros for optional parameters
 #define OPBOOL(n,v)                                         (bool) ISNIL(n)? v : hb_parl(n)
