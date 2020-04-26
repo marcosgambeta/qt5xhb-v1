@@ -19,7 +19,7 @@ CLASS HCodeBlockValidator INHERIT QValidator
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS HCodeBlockValidator
+PROCEDURE destroyObject() CLASS HCodeBlockValidator
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -32,29 +32,31 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
-void HCodeBlockValidator_new1 ()
+/*
+explicit HCodeBlockValidator( QObject *parent = 0 )
+*/
+void HCodeBlockValidator_new1()
 {
-  HCodeBlockValidator * o = NULL;
-  o = new HCodeBlockValidator ( OPQOBJECT(1,0) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(HCodeBlockValidator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  HCodeBlockValidator * o = new HCodeBlockValidator( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( o, false );
 }
 
-void HCodeBlockValidator_new2 ()
+/*
+HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = 0 )
+*/
+void HCodeBlockValidator_new2()
 {
-  HCodeBlockValidator * o = NULL;
-  PHB_ITEM block = hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL );
-  o = new HCodeBlockValidator ( block, OPQOBJECT(2,0) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(HCodeBlockValidator *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  HCodeBlockValidator * o = new HCodeBlockValidator( PBLOCKORSYMBOL(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( o, false );
 }
+
+/*
+[1]explicit HCodeBlockValidator( QObject *parent = 0 )
+[2]HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = 0 )
+*/
 
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
 {
@@ -72,12 +74,17 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
   }
 }
 
+/*
+~HCodeBlockValidator()
+*/
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
 {
-  HCodeBlockValidator * obj = (HCodeBlockValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HCodeBlockValidator * obj = (HCodeBlockValidator *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
+    Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -89,10 +96,16 @@ HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+QValidator::State validate( QString & input, int & pos ) const
+*/
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_VALIDATE )
 {
 }
 
+/*
+void fixup( QString & input ) const
+*/
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_FIXUP )
 {
 }

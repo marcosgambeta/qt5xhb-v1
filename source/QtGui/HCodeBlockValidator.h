@@ -17,16 +17,16 @@
 
 class HCodeBlockValidator : public QValidator
 {
-    Q_OBJECT
+  Q_OBJECT
 public:
-    explicit HCodeBlockValidator(QObject *parent = 0);
-    HCodeBlockValidator(PHB_ITEM codeblock, QObject *parent = 0);
-    ~HCodeBlockValidator();
+  explicit HCodeBlockValidator( QObject *parent = 0 );
+  HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = 0 );
+  ~HCodeBlockValidator();
 
-    QValidator::State validate ( QString & input, int & pos ) const;
-    void fixup( QString & input ) const;
+  QValidator::State validate( QString & input, int & pos ) const;
+  void fixup( QString & input ) const;
 
-    PHB_ITEM block;
+  PHB_ITEM m_block;
 
 };
 
