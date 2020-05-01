@@ -29,7 +29,7 @@ CLASS HStyledItemDelegate INHERIT QStyledItemDelegate
 
 END CLASS
 
-PROCEDURE destroyObject () CLASS HStyledItemDelegate
+PROCEDURE destroyObject() CLASS HStyledItemDelegate
    IF ::self_destruction
       ::delete()
    ENDIF
@@ -42,42 +42,41 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
+/*
+explicit HStyledItemDelegate( QObject *parent = 0 )
+*/
 void HStyledItemDelegate_new1 ()
 {
-  HStyledItemDelegate * o = NULL;
-  o = new HStyledItemDelegate ( OPQOBJECT(1,0) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(HStyledItemDelegate *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  HStyledItemDelegate * obj = new HStyledItemDelegate( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
+/*
+HStyledItemDelegate( PHB_ITEM paintBlock, QObject *parent = 0 )
+*/
 void HStyledItemDelegate_new2 ()
 {
-  HStyledItemDelegate * o = NULL;
-  PHB_ITEM paintCB = hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL );
-  o = new HStyledItemDelegate ( paintCB, OPQOBJECT(2,0) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(HStyledItemDelegate *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
+/*
+HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0 )
+*/
 void HStyledItemDelegate_new3 ()
 {
-  HStyledItemDelegate * o = NULL;
-  PHB_ITEM paintCB = hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL );
-  PHB_ITEM sizeHintCB = hb_param( 2, HB_IT_BLOCK | HB_IT_SYMBOL );
-  o = new HStyledItemDelegate ( paintCB, sizeHintCB, OPQOBJECT(3,0) );
-  PHB_ITEM self = hb_stackSelfItem();
-  PHB_ITEM ptr = hb_itemPutPtr( NULL,(HStyledItemDelegate *) o );
-  hb_objSendMsg( self, "_pointer", 1, ptr );
-  hb_itemRelease( ptr );
-  hb_itemReturn( self );
+  HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
+
+/*
+[1]explicit HStyledItemDelegate( QObject *parent = 0 )
+[2]HStyledItemDelegate( PHB_ITEM paintBlock, QObject *parent = 0 )
+[3]HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0 )
+*/
 
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_NEW )
 {
@@ -99,12 +98,17 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_NEW )
   }
 }
 
+/*
+~HStyledItemDelegate()
+*/
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DELETE )
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
+    Events_disconnect_all_events(obj, true);
+    Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
@@ -116,106 +120,244 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+*/
 // HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_PAINT )
 // {
 // }
 
+/*
+void defaultPaint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+*/
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DEFAULTPAINT )
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->defaultPaint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    {
+#endif
+      obj->defaultPaint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 
 }
 
+/*
+QSize sizeHint( const QStyleOptionViewItem &option, const QModelIndex &index ) const
+*/
 // HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SIZEHINT )
 // {
 // }
 
+/*
+QString displayText( const QVariant &value, const QLocale &locale ) const
+*/
+
+/*
+QWidget * createEditor( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+*/
+
+/*
+void setEditorData( QWidget *editor, const QModelIndex &index ) const
+*/
+
+/*
+void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const
+*/
+
+/*
+void updateEditorGeometry( QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index ) const
+*/
+
+/*
+void setPaintCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setPaintCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setPaintCB( PBLOCKORSYMBOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setSizeHintCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setSizeHintCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setSizeHintCB( PBLOCKORSYMBOL(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setDisplayTextCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setDisplayTextCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setDisplayTextCB( PBLOCKORSYMBOL(3) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setCreateEditorCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setCreateEditorCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setCreateEditorCB( PBLOCKORSYMBOL(4) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setEditorDataCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setEditorDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setEditorDataCB( PBLOCKORSYMBOL(5) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setModelDataCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setModelDataCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setModelDataCB( PBLOCKORSYMBOL(6) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
+/*
+void setUpdateEditorGeometryCB( PHB_ITEM block )
+*/
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setUpdateEditorGeometryCB ( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) )
+    {
+#endif
+      obj->setUpdateEditorGeometryCB( PBLOCKORSYMBOL(7) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
