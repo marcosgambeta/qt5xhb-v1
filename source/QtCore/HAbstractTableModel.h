@@ -30,6 +30,7 @@ public:
   HAbstractTableModel( QObject * parent = 0 );
   virtual ~HAbstractTableModel();
 
+private:
   PHB_ITEM m_rowCountCB;
   PHB_ITEM m_colCountCB;
 
@@ -59,6 +60,7 @@ public:
   PHB_ITEM m_getVHBGColorCB;
   PHB_ITEM m_getVHFGColorCB;
 
+public:
   void setRowCountCB( PHB_ITEM block );
   void setColumnCountCB( PHB_ITEM block );
 
@@ -94,7 +96,6 @@ public:
   int columnCount( const QModelIndex & parent = QModelIndex() ) const;
   void reloadData();
   //QModelIndex createIndex ( int row, int column );
-
 };
 
 #endif /* HABSTRACTTABLEMODEL_H */
