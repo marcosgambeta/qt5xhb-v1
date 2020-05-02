@@ -23,6 +23,7 @@ public:
   HAbstractTableModelV2( QObject * parent = 0 );
   virtual ~HAbstractTableModelV2();
 
+private:
   PHB_ITEM m_rowCountBlock;
   PHB_ITEM m_columnCountBlock;
   PHB_ITEM m_dataBlock;
@@ -30,6 +31,7 @@ public:
   PHB_ITEM m_flagsBlock;
   PHB_ITEM m_setDataBlock;
 
+public:
   void setRowCountCB( PHB_ITEM block );
   void setColumnCountCB( PHB_ITEM block );
   void setDataCB( PHB_ITEM block );
@@ -44,7 +46,6 @@ public:
   Qt::ItemFlags flags( const QModelIndex &index ) const;
   bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole );
   void reloadData();
-
 };
 
 #endif /* HABSTRACTTABLEMODELV2_H */
