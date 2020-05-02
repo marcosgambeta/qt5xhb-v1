@@ -26,8 +26,8 @@ public:
   QValidator::State validate( QString & input, int & pos ) const;
   void fixup( QString & input ) const;
 
+private:
   PHB_ITEM m_block;
-
 };
 
 #endif /* HCODEBLOCKVALIDATOR_H */
