@@ -33,6 +33,7 @@ public:
   void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const;
   void updateEditorGeometry( QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index ) const;
 
+private:
   PHB_ITEM m_paintBlock;
   PHB_ITEM m_sizeHintBlock;
   PHB_ITEM m_displayTextBlock;
@@ -41,6 +42,7 @@ public:
   PHB_ITEM m_setModelDataBlock;
   PHB_ITEM m_updateEditorGeometryBlock;
 
+public:
   void setPaintCB( PHB_ITEM block );
   void setSizeHintCB( PHB_ITEM block );
   void setDisplayTextCB( PHB_ITEM block );
@@ -48,7 +50,6 @@ public:
   void setEditorDataCB( PHB_ITEM block );
   void setModelDataCB( PHB_ITEM block );
   void setUpdateEditorGeometryCB( PHB_ITEM block );
-
 };
 
 #endif /* HSTYLEDITEMDELEGATE_H */
