@@ -20,6 +20,7 @@ hbmk2 QColorDialog2           %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QCombobox               %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QCommandLinkButton1     %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QCommandLinkButton2     %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 QCompleter              %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QDateEdit               %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QDateTimeEdit           %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QDesktopWidget          %1 %2 %3 ..\..\qt5xhb.hbc
