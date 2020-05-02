@@ -16,7 +16,7 @@
 
 STATIC aDados
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -74,7 +74,7 @@ CLASS myModel INHERIT HAbstractTableModelV2
 
 END CLASS
 
-METHOD new (...) CLASS myModel
+METHOD new(...) CLASS myModel
 
    ::super:new(...)
 
@@ -87,13 +87,13 @@ METHOD new (...) CLASS myModel
 
 RETURN self
 
-METHOD rowCount () CLASS myModel
+METHOD rowCount() CLASS myModel
 RETURN len(aDados)
 
-METHOD columnCount () CLASS myModel
+METHOD columnCount() CLASS myModel
 RETURN len(aDados[1])
 
-METHOD data (pIndex, nRole) CLASS myModel
+METHOD data(pIndex, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
    LOCAL oIndex := QModelIndex():newFrom(pIndex)
@@ -112,7 +112,7 @@ METHOD data (pIndex, nRole) CLASS myModel
 
 RETURN oVariant
 
-METHOD headerData (nSection, nOrientation, nRole) CLASS myModel
+METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
 
@@ -124,7 +124,7 @@ METHOD headerData (nSection, nOrientation, nRole) CLASS myModel
 
 RETURN oVariant
 
-METHOD flags (pIndex) CLASS myModel
+METHOD flags(pIndex) CLASS myModel
 
    LOCAL nFlags := Qt_ItemIsSelectable + Qt_ItemIsEditable + Qt_ItemIsEnabled
    LOCAL oIndex := QModelIndex():newFrom(pIndex)
@@ -133,7 +133,7 @@ METHOD flags (pIndex) CLASS myModel
 
 RETURN nFlags
 
-METHOD setData (pIndex, pVariant, nRole) CLASS myModel
+METHOD setData(pIndex, pVariant, nRole) CLASS myModel
 
    LOCAL lSuccess := .F.
    LOCAL oIndex := QModelIndex():newFrom(pIndex)

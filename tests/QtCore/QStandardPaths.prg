@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    ? "QStandardPaths_DesktopLocation = "
    ?? QStandardPaths():displayName(QStandardPaths_DesktopLocation)

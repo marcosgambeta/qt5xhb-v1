@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -58,7 +58,7 @@ CLASS myModel INHERIT HAbstractTableModelV2
 
 END CLASS
 
-METHOD new (...) CLASS myModel
+METHOD new(...) CLASS myModel
 
    ::super:new(...)
 
@@ -69,13 +69,13 @@ METHOD new (...) CLASS myModel
 
 RETURN self
 
-METHOD rowCount () CLASS myModel
+METHOD rowCount() CLASS myModel
 RETURN 100
 
-METHOD columnCount () CLASS myModel
+METHOD columnCount() CLASS myModel
 RETURN 10
 
-METHOD data (pIndex, nRole) CLASS myModel
+METHOD data(pIndex, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
    LOCAL oIndex := QModelIndex():newFrom(pIndex)
@@ -92,7 +92,7 @@ METHOD data (pIndex, nRole) CLASS myModel
 
 RETURN oVariant
 
-METHOD headerData (nSection, nOrientation, nRole) CLASS myModel
+METHOD headerData(nSection, nOrientation, nRole) CLASS myModel
 
    LOCAL oVariant := QVariant():new()
 
