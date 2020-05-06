@@ -9,11 +9,11 @@
 $project=Qt5xHb
 $module=QtWinExtras
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QtWinExtrasVersion>
+#include <QtWinExtras/QtWinExtrasVersion>
 #endif
 #endif
 
@@ -23,7 +23,7 @@ $module=QtWinExtras
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-#include <QtWinExtrasVersion>
+#include <QtWinExtras/QtWinExtrasVersion>
 #endif
 #endif
 

@@ -9,11 +9,11 @@ $module=QtQuickWidgets
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-#include <QtQuickWidgetsVersion>
+#include <QtQuickWidgets/QtQuickWidgetsVersion>
 #endif
 #endif
 
@@ -23,7 +23,7 @@ $header
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
-#include <QtQuickWidgetsVersion>
+#include <QtQuickWidgets/QtQuickWidgetsVersion>
 #endif
 #endif
 

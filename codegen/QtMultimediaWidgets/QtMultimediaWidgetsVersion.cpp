@@ -9,10 +9,10 @@ $module=QtMultimediaWidgets
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtMultimediaWidgetsVersion>
+#include <QtMultimediaWidgets/QtMultimediaWidgetsVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtMultimediaWidgetsVersion>
+#include <QtMultimediaWidgets/QtMultimediaWidgetsVersion>
 #endif
 
 HB_FUNC( QTMULTIMEDIAWIDGETS_VERSION_STR )

@@ -9,11 +9,11 @@ $module=QtSerialPort
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#include <QtSerialPortVersion>
+#include <QtSerialPort/QtSerialPortVersion>
 #endif
 #endif
 
@@ -23,7 +23,7 @@ $header
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-#include <QtSerialPortVersion>
+#include <QtSerialPort/QtSerialPortVersion>
 #endif
 #endif
 

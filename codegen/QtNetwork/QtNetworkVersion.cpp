@@ -9,10 +9,10 @@ $module=QtNetwork
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtNetworkVersion>
+#include <QtNetwork/QtNetworkVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtNetworkVersion>
+#include <QtNetwork/QtNetworkVersion>
 #endif
 
 HB_FUNC( QTNETWORK_VERSION_STR )

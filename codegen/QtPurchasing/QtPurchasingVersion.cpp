@@ -9,10 +9,10 @@ $module=QtPurchasing
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtPurchasingVersion>
+#include <QtPurchasing/QtPurchasingVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtPurchasingVersion>
+#include <QtPurchasing/QtPurchasingVersion>
 #endif
 
 HB_FUNC( QTPURCHASING_VERSION_STR )

@@ -9,10 +9,10 @@ $module=QtDeclarative
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtDeclarativeVersion>
+#include <QtDeclarative/QtDeclarativeVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtDeclarativeVersion>
+#include <QtDeclarative/QtDeclarativeVersion>
 #endif
 
 HB_FUNC( QTDECLARATIVE_VERSION_STR )

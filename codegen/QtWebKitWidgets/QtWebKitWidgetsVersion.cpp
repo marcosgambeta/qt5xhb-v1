@@ -9,10 +9,10 @@ $module=QtWebKitWidgets
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtWebKitWidgetsVersion>
+#include <QtWebKitWidgets/QtWebKitWidgetsVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtWebKitWidgetsVersion>
+#include <QtWebKitWidgets/QtWebKitWidgetsVersion>
 #endif
 
 HB_FUNC( QTWEBKITWIDGETS_VERSION_STR )

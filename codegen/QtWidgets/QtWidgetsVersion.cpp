@@ -9,10 +9,10 @@ $module=QtWidgets
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtWidgetsVersion>
+#include <QtWidgets/QtWidgetsVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtWidgetsVersion>
+#include <QtWidgets/QtWidgetsVersion>
 #endif
 
 HB_FUNC( QTWIDGETS_VERSION_STR )

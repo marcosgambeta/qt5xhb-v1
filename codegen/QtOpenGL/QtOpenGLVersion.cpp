@@ -9,10 +9,10 @@ $module=QtOpenGL
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtOpenGLVersion>
+#include <QtOpenGL/QtOpenGLVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtOpenGLVersion>
+#include <QtOpenGL/QtOpenGLVersion>
 #endif
 
 HB_FUNC( QTOPENGL_VERSION_STR )

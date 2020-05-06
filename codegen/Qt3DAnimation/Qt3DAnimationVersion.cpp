@@ -9,11 +9,11 @@ $module=Qt3DAnimation
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-#include <Qt3DAnimationVersion>
+#include <Qt3DAnimation/Qt3DAnimationVersion>
 #endif
 #endif
 
@@ -23,7 +23,7 @@ $header
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-#include <Qt3DAnimationVersion>
+#include <Qt3DAnimation/Qt3DAnimationVersion>
 #endif
 #endif
 

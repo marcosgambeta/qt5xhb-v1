@@ -9,10 +9,10 @@ $module=QtScriptTools
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtScriptToolsVersion>
+#include <QtScriptTools/QtScriptToolsVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtScriptToolsVersion>
+#include <QtScriptTools/QtScriptToolsVersion>
 #endif
 
 HB_FUNC( QTSCRIPTTOOLS_VERSION_STR )

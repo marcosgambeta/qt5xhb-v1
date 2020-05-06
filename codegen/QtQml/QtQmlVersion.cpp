@@ -9,10 +9,10 @@ $module=QtQml
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtQmlVersion>
+#include <QtQml/QtQmlVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtQmlVersion>
+#include <QtQml/QtQmlVersion>
 #endif
 
 HB_FUNC( QTQML_VERSION_STR )

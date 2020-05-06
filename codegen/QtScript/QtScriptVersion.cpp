@@ -9,10 +9,10 @@ $module=QtScript
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtScriptVersion>
+#include <QtScript/QtScriptVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtScriptVersion>
+#include <QtScript/QtScriptVersion>
 #endif
 
 HB_FUNC( QTSCRIPT_VERSION_STR )

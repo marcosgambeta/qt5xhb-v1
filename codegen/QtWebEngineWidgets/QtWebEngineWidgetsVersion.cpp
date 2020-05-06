@@ -9,11 +9,11 @@ $module=QtWebEngineWidgets
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QtWebEngineWidgetsVersion>
+#include <QtWebEngineWidgets/QtWebEngineWidgetsVersion>
 #endif
 #endif
 
@@ -23,7 +23,7 @@ $header
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-#include <QtWebEngineWidgetsVersion>
+#include <QtWebEngineWidgets/QtWebEngineWidgetsVersion>
 #endif
 #endif
 

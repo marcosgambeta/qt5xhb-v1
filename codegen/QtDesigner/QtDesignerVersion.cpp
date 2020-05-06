@@ -9,10 +9,10 @@ $module=QtDesigner
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtDesignerVersion>
+#include <QtDesigner/QtDesignerVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtDesignerVersion>
+#include <QtDesigner/QtDesignerVersion>
 #endif
 
 HB_FUNC( QTDESIGNER_VERSION_STR )

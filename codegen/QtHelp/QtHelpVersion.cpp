@@ -9,10 +9,10 @@ $module=QtHelp
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtHelpVersion>
+#include <QtHelp/QtHelpVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtHelpVersion>
+#include <QtHelp/QtHelpVersion>
 #endif
 
 HB_FUNC( QTHELP_VERSION_STR )

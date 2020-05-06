@@ -9,10 +9,10 @@ $module=QtGui
 
 $header
 
-#include <Qt>
+#include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
-#include <QtGuiVersion>
+#include <QtGui/QtGuiVersion>
 #endif
 
 #include "qt5xhb_common.h"
@@ -20,7 +20,7 @@ $header
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
-#include <QtGuiVersion>
+#include <QtGui/QtGuiVersion>
 #endif
 
 HB_FUNC( QTGUI_VERSION_STR )
