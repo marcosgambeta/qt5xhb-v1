@@ -75,10 +75,10 @@ bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock )
   //int type = hb_parni(2);
   //PHB_ITEM codeblock = hb_itemNew( hb_param( 3, HB_IT_BLOCK | HB_IT_SYMBOL ) );
   // cria objeto da classe Events, caso não tenha sido criado
-  if( s_events == NULL )
-  {
-    s_events = new Events(QCoreApplication::instance());
-  }
+  //if( s_events == NULL )
+  //{
+  //  s_events = new Events(QCoreApplication::instance());
+  //}
   // instala eventfilter, se não houver nenhum evento
   if( s_events->list1.contains( object ) == false )
   {
@@ -138,10 +138,10 @@ bool Events_disconnect_event ( QObject * object, int type )
   //QObject * object = (QObject *) hb_parptr(1);
   //int type = hb_parni(2);
   // cria objeto da classe Events, caso não tenha sido criado
-  if( s_events == NULL )
-  {
-    s_events = new Events(QCoreApplication::instance());
-  }
+  //if( s_events == NULL )
+  //{
+  //  s_events = new Events(QCoreApplication::instance());
+  //}
   bool ret = false;
   // remove evento da lista de eventos
   for (i = 0; i < s_events->list1.size(); ++i)
@@ -369,3 +369,36 @@ PHB_ITEM Events_return_qobject ( QObject * ptr, const char * classname )
 
   return pObject;
 }
+
+#include "hbvm.h"
+#include "hbinit.h"
+
+static void qt5xhb_events_init( void * cargo )
+{
+  HB_SYMBOL_UNUSED( cargo );
+
+  if( s_events == NULL )
+  {
+    //s_events = new Events(QCoreApplication::instance());
+    s_events = new Events();
+  }
+}
+
+static void qt5xhb_events_exit( void * cargo )
+{
+  HB_SYMBOL_UNUSED( cargo );
+
+  delete s_events;
+}
+
+HB_CALL_ON_STARTUP_BEGIN( _qt5xhb_events_init_ )
+  hb_vmAtInit( qt5xhb_events_init, NULL );
+  hb_vmAtExit( qt5xhb_events_exit, NULL );
+HB_CALL_ON_STARTUP_END( _qt5xhb_events_init_ )
+
+#if defined( HB_PRAGMA_STARTUP )
+  #pragma startup _qt5xhb_events_init_
+#elif defined( HB_DATASEG_STARTUP )
+  #define HB_DATASEG_BODY HB_DATASEG_FUNC( _qt5xhb_events_init_ )
+  #include "hbiniseg.h"
+#endif
