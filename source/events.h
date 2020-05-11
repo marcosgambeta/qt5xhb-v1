@@ -9,12 +9,12 @@
 #ifndef EVENTS_H
 #define EVENTS_H
 
-#include <QObject>
-#include <QEvent>
-#include <QVector>
-#include <QList>
-#include <QCoreApplication>
-#include <QMetaEnum>
+#include <QtCore/QObject>
+#include <QtCore/QEvent>
+#include <QtCore/QVector>
+#include <QtCore/QList>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QMetaEnum>
 
 #include "hbapi.h"
 #include "hbapiitm.h"
@@ -25,26 +25,24 @@
 #include "hbapicls.h"
 #endif
 
-bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
-bool Events_disconnect_event ( QObject * object, int type );
-void Events_release_codeblocks ();
-void Events_disconnect_all_events (QObject * obj, bool children);
-PHB_ITEM Events_return_object ( QEvent * ptr, const char * classname );
-PHB_ITEM Events_return_qobject ( QObject * ptr, const char * classname );
+bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock );
+bool Events_disconnect_event( QObject * object, int type );
+void Events_release_codeblocks();
+void Events_disconnect_all_events( QObject * obj, bool children );
+PHB_ITEM Events_return_object( QEvent * ptr, const char * classname );
+PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname );
 
 class Events: public QObject
 {
-
   public:
-  Events(QObject *parent = 0);
+  Events( QObject *parent = 0 );
   ~Events();
   QVector<QObject*> list1;     // armazena ponteiro do objeto
   QVector<QEvent::Type> list2; // armazena tipo de evento
   QVector<PHB_ITEM> list3;     // armazena codeblock
 
   protected:
-  bool eventFilter(QObject *obj, QEvent *event);
-
+  bool eventFilter( QObject *obj, QEvent *event );
 };
 
 #endif
