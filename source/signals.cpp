@@ -41,10 +41,10 @@ bool Signals_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblo
 {
   int i;
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
+  //if( s_signals == NULL )
+  //{
+  //  s_signals = new Signals(QCoreApplication::instance());
+  //}
   // verifica se já está na lista
   int found = -1;
   for (i = 0; i < s_signals->list1.size(); ++i)
@@ -96,10 +96,10 @@ bool Signals_disconnect_signal ( QObject * object, QString signal )
 {
   int i;
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
+  //if( s_signals == NULL )
+  //{
+  //  s_signals = new Signals(QCoreApplication::instance());
+  //}
   bool ret = false;
   // remove sinal da lista de sinais
   for (i = 0; i < s_signals->list1.size(); ++i)
@@ -133,10 +133,10 @@ bool Signals_disconnect_signal ( QObject * object, QString signal )
 bool Signals_is_signal_connected ( QObject * object, QString signal )
 {
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
+  //if( s_signals == NULL )
+  //{
+  //  s_signals = new Signals(QCoreApplication::instance());
+  //}
   // valor de retorno
   bool found = false;
   // verifica se já está na lista
@@ -159,10 +159,10 @@ bool Signals_is_signal_connected ( QObject * object, QString signal )
 PHB_ITEM Signals_return_codeblock ( QObject * object, QString signal )
 {
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
+  //if( s_signals == NULL )
+  //{
+  //  s_signals = new Signals(QCoreApplication::instance());
+  //}
   int i;
   int found = -1;
   // localiza sinal na lista de sinais
@@ -294,10 +294,10 @@ void Signals_disconnect_all_signals (QObject * obj, bool children)
 bool Signals_connection_disconnection ( QObject * s, QString signal, QString slot )
 {
   // cria objeto da classe Signals, caso não tenha sido criado
-  if( s_signals == NULL )
-  {
-    s_signals = new Signals(QCoreApplication::instance());
-  }
+  //if( s_signals == NULL )
+  //{
+  //  s_signals = new Signals(QCoreApplication::instance());
+  //}
 
   bool ret = false;
 
@@ -452,3 +452,35 @@ PHB_ITEM Signals_return_qobject ( QObject * ptr, const char * classname )
 
   return pObject;
 }
+
+#include "hbvm.h"
+#include "hbinit.h"
+
+static void qt5xhb_signals_init( void * cargo )
+{
+  HB_SYMBOL_UNUSED( cargo );
+
+  if( s_signals == NULL )
+  {
+    s_signals = new Signals();
+  }
+}
+
+static void qt5xhb_signals_exit( void * cargo )
+{
+  HB_SYMBOL_UNUSED( cargo );
+
+  delete s_signals;
+}
+
+HB_CALL_ON_STARTUP_BEGIN( _qt5xhb_signals_init_ )
+  hb_vmAtInit( qt5xhb_signals_init, NULL );
+  hb_vmAtExit( qt5xhb_signals_exit, NULL );
+HB_CALL_ON_STARTUP_END( _qt5xhb_signals_init_ )
+
+#if defined( HB_PRAGMA_STARTUP )
+  #pragma startup _qt5xhb_signals_init_
+#elif defined( HB_DATASEG_STARTUP )
+  #define HB_DATASEG_BODY HB_DATASEG_FUNC( _qt5xhb_signals_init_ )
+  #include "hbiniseg.h"
+#endif
