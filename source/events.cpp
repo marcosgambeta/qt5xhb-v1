@@ -110,19 +110,13 @@ Events::Events( QObject *parent ) : QObject( parent )
 */
 Events::~Events()
 {
-  /*
-    Libera todos os codeblocks relacionados com eventos
-  */
-
+  // libera todos os codeblocks ativos
   const int listsize = m_list1->size();
   for( int i = 0; i < listsize; ++i )
   {
     if( m_list1->at(i) )
     {
       hb_itemRelease( m_list3->at(i) );
-      m_list1->replace( i, NULL );
-      m_list2->replace( i, QEvent::None );
-      m_list3->replace( i, NULL );
     }
   }
 
@@ -141,6 +135,7 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   QEvent::Type eventtype = event->type();
   int found = -1;
 
+  // procura evento na lista
   const int listsize = m_list1->size();
   for( int i = 0; i < listsize; ++i )
   {
@@ -159,9 +154,9 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
 
   // executa bloco de código/função
   //PHB_ITEM pObject = hb_itemPutPtr( NULL, (QObject *) obj );
-  PHB_ITEM pObject = Events_return_qobject( (QObject *) obj, "QOBJECT" );
+  PHB_ITEM pObject = returnQObject( obj, "QOBJECT" );
   //PHB_ITEM pEvent = hb_itemPutPtr( NULL, (QEvent *) event );
-  PHB_ITEM pEvent = Events_return_object( (QEvent *) event, "QEVENT" );
+  PHB_ITEM pEvent = returnObject( event, "QEVENT" );
 
   bool ret = hb_itemGetL( hb_vmEvalBlockV( m_list3->at(found), 2, pObject, pEvent ) );
 
@@ -180,8 +175,7 @@ bool Events::eventFilter( QObject *obj, QEvent *event )
   Parâmetro 2: id do evento
   Parâmetro 3: codeblock
   Retorna .t. se a conexão foi bem sucedida ou .f. se falhou
-  Função de uso interno, não deve ser usada nas aplicações do
-  usuário
+  Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
 bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
@@ -243,18 +237,12 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
   return ret;
 }
 
-bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
-{
-  return s_events->connectEvent( object, type, codeblock );
-}
-
 /*
   Desconecta um determinado evento
   Parâmetro 1: ponteiro para o objeto
   Parâmetro 2: id do evento
   Retorna .t. se a desconexão foi bem sucedida ou .f. se falhou
-  Função de uso interno, não deve ser usada nas aplicações do
-  usuário
+  Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
 bool Events::disconnectEvent( QObject * object, int type )
@@ -270,7 +258,7 @@ bool Events::disconnectEvent( QObject * object, int type )
     {
       hb_itemRelease( m_list3->at(i) );
       m_list1->replace( i, NULL );
-      m_list2->replace( i, (QEvent::Type) 0 );
+      m_list2->replace( i, QEvent::None );
       m_list3->replace( i, NULL );
       ret = true;
     }
@@ -285,11 +273,6 @@ bool Events::disconnectEvent( QObject * object, int type )
   // retorna o resultado da operação
   //hb_retl( ret );
   return ret;
-}
-
-bool Events_disconnect_event( QObject * object, int type )
-{
-  return s_events->disconnectEvent( object, type );
 }
 
 /*
@@ -352,11 +335,6 @@ void Events::disconnectAllEvents( QObject * obj, bool children )
   }
 }
 
-void Events_disconnect_all_events( QObject * obj, bool children )
-{
-  s_events->disconnectAllEvents( obj, children );
-}
-
 PHB_ITEM Events::returnObject( QEvent * event, const char * classname )
 {
   QString eventname = m_events->value( event->type(), "QEvent" );
@@ -389,11 +367,6 @@ PHB_ITEM Events::returnObject( QEvent * event, const char * classname )
   }
 
   return pObject;
-}
-
-PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
-{
-  return s_events->returnObject( ptr, classname );
 }
 
 PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
@@ -431,11 +404,6 @@ PHB_ITEM Events::returnQObject( QObject * ptr, const char * classname )
   return pObject;
 }
 
-PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
-{
-  return s_events->returnQObject( ptr, classname );
-}
-
 int Events::size()
 {
   return m_list1->size();
@@ -456,6 +424,31 @@ int Events::active()
   }
 
   return count;
+}
+
+bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
+{
+  return s_events->connectEvent( object, type, codeblock );
+}
+
+bool Events_disconnect_event( QObject * object, int type )
+{
+  return s_events->disconnectEvent( object, type );
+}
+
+void Events_disconnect_all_events( QObject * obj, bool children )
+{
+  s_events->disconnectAllEvents( obj, children );
+}
+
+PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
+{
+  return s_events->returnObject( ptr, classname );
+}
+
+PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
+{
+  return s_events->returnQObject( ptr, classname );
 }
 
 /*
