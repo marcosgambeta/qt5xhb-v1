@@ -43,6 +43,7 @@ class Events: public QObject
   QVector<QEvent::Type> * m_list2; // armazena tipo de evento
   QVector<PHB_ITEM> * m_list3;     // armazena codeblock
   QMutex * m_mutex;
+  QHash<QEvent::Type, QString> * m_events;
 
   protected:
   bool eventFilter( QObject *obj, QEvent *event );
