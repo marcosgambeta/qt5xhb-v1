@@ -25,7 +25,22 @@ Events::Events( QObject *parent ) : QObject( parent )
 */
 Events::~Events()
 {
-  Events_release_codeblocks();
+
+  /*
+    Libera todos os codeblocks relacionados com eventos
+  */
+
+  const int listsize = m_list1->size();
+  for( int i = 0; i < listsize; ++i )
+  {
+    if( m_list1->at(i) )
+    {
+      hb_itemRelease( m_list3->at(i) );
+      m_list1->replace( i, NULL );
+      m_list2->replace( i, QEvent::None );
+      m_list3->replace( i, NULL );
+    }
+  }
 
   delete m_list1;
   delete m_list2;
@@ -182,28 +197,6 @@ bool Events_disconnect_event( QObject * object, int type )
   // retorna o resultado da operação
   //hb_retl( ret );
   return ret;
-}
-
-/*
-  Libera todos os codeblocks relacionados com eventos
-*/
-
-void Events_release_codeblocks()
-{
-  if( s_events )
-  {
-    const int listsize = s_events->m_list1->size();
-    for( int i = 0; i < listsize; ++i )
-    {
-      if( s_events->m_list1->at(i) )
-      {
-        hb_itemRelease((PHB_ITEM) s_events->m_list3->at(i) );
-        s_events->m_list1->replace( i, NULL );
-        s_events->m_list2->replace( i, QEvent::None );
-        s_events->m_list3->replace( i, NULL );
-      }
-    }
-  }
 }
 
 /*
