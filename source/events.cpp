@@ -18,6 +18,7 @@ Events::Events( QObject *parent ) : QObject( parent )
   m_list1 = new QVector<QObject*>( 1000, NULL );     // armazena ponteiro do objeto
   m_list2 = new QVector<QEvent::Type>( 1000, QEvent::None ); // armazena tipo de evento
   m_list3 = new QVector<PHB_ITEM>( 1000, NULL );     // armazena codeblock
+  m_mutex = new QMutex();
 }
 
 /*
@@ -44,6 +45,7 @@ Events::~Events()
   delete m_list1;
   delete m_list2;
   delete m_list3;
+  delete m_mutex;
 }
 
 /*
@@ -107,6 +109,8 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
     object->installEventFilter( this );
   }
 
+  m_mutex->lock();
+
   // verifica se já está na lista
   int found = -1;
 
@@ -146,6 +150,8 @@ bool Events::connectEvent( QObject * object, int type, PHB_ITEM codeblock )
 
     ret = true;
   }
+
+  m_mutex->unlock();
 
   // retorna o resultado da operação
   //hb_retl( ret );
