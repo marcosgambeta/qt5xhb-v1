@@ -75,8 +75,8 @@ QAxObject ( QObject * parent = 0 )
 */
 void QAxObject_new1()
 {
-  QAxObject * o = new QAxObject( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QAxObject * obj = new QAxObject( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -84,8 +84,8 @@ QAxObject ( const QString & c, QObject * parent = 0 )
 */
 void QAxObject_new2()
 {
-  QAxObject * o = new QAxObject( PQSTRING(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QAxObject * obj = new QAxObject( PQSTRING(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -93,8 +93,8 @@ QAxObject ( IUnknown * iface, QObject * parent = 0 )
 */
 void QAxObject_new3()
 {
-  QAxObject * o = new QAxObject( (IUnknown *) hb_parptr(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QAxObject * obj = new QAxObject( (IUnknown *) hb_parptr(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -129,8 +129,8 @@ HB_FUNC_STATIC( QAXOBJECT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

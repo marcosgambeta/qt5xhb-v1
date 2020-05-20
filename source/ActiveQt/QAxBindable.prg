@@ -67,8 +67,8 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAxBindable * o = new QAxBindable();
-    Qt5xHb::returnNewObject( o, false );
+    QAxBindable * obj = new QAxBindable();
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

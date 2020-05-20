@@ -28,7 +28,7 @@ class QAxObjectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAxObjectSlots(QObject *parent = 0);
+  QAxObjectSlots( QObject *parent = 0 );
   ~QAxObjectSlots();
   public slots:
   void exception( int code, const QString & source, const QString & desc, const QString & help );

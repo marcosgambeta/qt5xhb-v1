@@ -28,7 +28,7 @@ class QAxScriptSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAxScriptSlots(QObject *parent = 0);
+  QAxScriptSlots( QObject *parent = 0 );
   ~QAxScriptSlots();
   public slots:
   void entered();
