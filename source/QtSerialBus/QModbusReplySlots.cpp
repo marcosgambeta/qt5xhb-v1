@@ -12,36 +12,46 @@
 
 #include "QModbusReplySlots.h"
 
-QModbusReplySlots::QModbusReplySlots(QObject *parent) : QObject(parent)
+QModbusReplySlots::QModbusReplySlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QModbusReplySlots::~QModbusReplySlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QModbusReplySlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMODBUSREPLY" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QModbusReplySlots::errorOccurred( QModbusDevice::Error error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "errorOccurred(QModbusDevice::Error)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMODBUSREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+
     hb_vmEvalBlockV( cb, 2, psender, perror );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }

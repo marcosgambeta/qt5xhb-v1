@@ -86,8 +86,8 @@ explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
 void QCanBusFrame_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBusFrame * o = new QCanBusFrame( ISNIL(1)? (QCanBusFrame::FrameType) QCanBusFrame::DataFrame : (QCanBusFrame::FrameType) hb_parni(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCanBusFrame * obj = new QCanBusFrame( ISNIL(1)? (QCanBusFrame::FrameType) QCanBusFrame::DataFrame : (QCanBusFrame::FrameType) hb_parni(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -97,8 +97,8 @@ explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
 void QCanBusFrame_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCanBusFrame * o = new QCanBusFrame( PQUINT32(1), *PQBYTEARRAY(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QCanBusFrame * obj = new QCanBusFrame( PQUINT32(1), *PQBYTEARRAY(2) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

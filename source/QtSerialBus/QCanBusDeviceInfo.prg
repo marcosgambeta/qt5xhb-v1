@@ -72,8 +72,8 @@ QCanBusDeviceInfo() = delete
 void QCanBusDeviceInfo_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBusDeviceInfo * o = new QCanBusDeviceInfo();
-  Qt5xHb::returnNewObject( o, true );
+  QCanBusDeviceInfo * obj = new QCanBusDeviceInfo();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -83,8 +83,8 @@ QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
 void QCanBusDeviceInfo_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBusDeviceInfo * o = new QCanBusDeviceInfo( *PQCANBUSDEVICEINFO(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCanBusDeviceInfo * obj = new QCanBusDeviceInfo( *PQCANBUSDEVICEINFO(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

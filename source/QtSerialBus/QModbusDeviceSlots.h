@@ -30,7 +30,7 @@ class QModbusDeviceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QModbusDeviceSlots(QObject *parent = 0);
+  QModbusDeviceSlots( QObject *parent = 0 );
   ~QModbusDeviceSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))

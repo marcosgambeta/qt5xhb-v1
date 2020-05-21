@@ -12,64 +12,84 @@
 
 #include "QCanBusDeviceSlots.h"
 
-QCanBusDeviceSlots::QCanBusDeviceSlots(QObject *parent) : QObject(parent)
+QCanBusDeviceSlots::QCanBusDeviceSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCanBusDeviceSlots::~QCanBusDeviceSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCanBusDeviceSlots::errorOccurred( QCanBusDevice::CanBusError )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "errorOccurred)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
+
     hb_vmEvalBlockV( cb, 1, psender,  );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCanBusDeviceSlots::framesReceived()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "framesReceived()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCanBusDeviceSlots::framesWritten( qint64 framesCount )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "framesWritten(qint64)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
     PHB_ITEM pframesCount = hb_itemPutNLL( NULL, framesCount );
+
     hb_vmEvalBlockV( cb, 2, psender, pframesCount );
+
     hb_itemRelease( psender );
     hb_itemRelease( pframesCount );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCanBusDeviceSlots::stateChanged( QCanBusDevice::CanBusDeviceState state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QCanBusDevice::CanBusDeviceState)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+
     hb_vmEvalBlockV( cb, 2, psender, pstate );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }

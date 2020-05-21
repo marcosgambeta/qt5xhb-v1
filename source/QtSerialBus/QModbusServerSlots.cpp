@@ -12,25 +12,30 @@
 
 #include "QModbusServerSlots.h"
 
-QModbusServerSlots::QModbusServerSlots(QObject *parent) : QObject(parent)
+QModbusServerSlots::QModbusServerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QModbusServerSlots::~QModbusServerSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QModbusServerSlots::dataWritten( QModbusDataUnit::RegisterType table, int address, int size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "dataWritten(QModbusDataUnit::RegisterType,int,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMODBUSSERVER" );
     PHB_ITEM ptable = hb_itemPutNI( NULL, (int) table );
     PHB_ITEM paddress = hb_itemPutNI( NULL, address );
     PHB_ITEM psize = hb_itemPutNI( NULL, size );
+
     hb_vmEvalBlockV( cb, 4, psender, ptable, paddress, psize );
+
     hb_itemRelease( psender );
     hb_itemRelease( ptable );
     hb_itemRelease( paddress );

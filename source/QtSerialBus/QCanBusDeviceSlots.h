@@ -30,7 +30,7 @@ class QCanBusDeviceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCanBusDeviceSlots(QObject *parent = 0);
+  QCanBusDeviceSlots( QObject *parent = 0 );
   ~QCanBusDeviceSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
