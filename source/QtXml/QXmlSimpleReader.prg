@@ -55,8 +55,8 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlSimpleReader * o = new QXmlSimpleReader();
-    Qt5xHb::returnNewObject( o, true );
+    QXmlSimpleReader * obj = new QXmlSimpleReader();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

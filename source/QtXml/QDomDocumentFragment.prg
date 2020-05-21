@@ -52,8 +52,8 @@ QDomDocumentFragment ()
 */
 void QDomDocumentFragment_new1()
 {
-  QDomDocumentFragment * o = new QDomDocumentFragment();
-  Qt5xHb::returnNewObject( o, true );
+  QDomDocumentFragment * obj = new QDomDocumentFragment();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -61,8 +61,8 @@ QDomDocumentFragment ( const QDomDocumentFragment & x )
 */
 void QDomDocumentFragment_new2()
 {
-  QDomDocumentFragment * o = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDomDocumentFragment * obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

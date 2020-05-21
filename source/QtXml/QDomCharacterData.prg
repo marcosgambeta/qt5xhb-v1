@@ -60,8 +60,8 @@ QDomCharacterData ()
 */
 void QDomCharacterData_new1()
 {
-  QDomCharacterData * o = new QDomCharacterData();
-  Qt5xHb::returnNewObject( o, true );
+  QDomCharacterData * obj = new QDomCharacterData();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QDomCharacterData ( const QDomCharacterData & x )
 */
 void QDomCharacterData_new2()
 {
-  QDomCharacterData * o = new QDomCharacterData( *PQDOMCHARACTERDATA(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDomCharacterData * obj = new QDomCharacterData( *PQDOMCHARACTERDATA(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

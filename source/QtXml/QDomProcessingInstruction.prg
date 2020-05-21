@@ -55,8 +55,8 @@ QDomProcessingInstruction ()
 */
 void QDomProcessingInstruction_new1()
 {
-  QDomProcessingInstruction * o = new QDomProcessingInstruction();
-  Qt5xHb::returnNewObject( o, true );
+  QDomProcessingInstruction * obj = new QDomProcessingInstruction();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -64,8 +64,8 @@ QDomProcessingInstruction ( const QDomProcessingInstruction & x )
 */
 void QDomProcessingInstruction_new2()
 {
-  QDomProcessingInstruction * o = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDomProcessingInstruction * obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

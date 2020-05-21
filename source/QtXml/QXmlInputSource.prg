@@ -66,8 +66,8 @@ QXmlInputSource ()
 */
 void QXmlInputSource_new1()
 {
-  QXmlInputSource * o = new QXmlInputSource();
-  Qt5xHb::returnNewObject( o, true );
+  QXmlInputSource * obj = new QXmlInputSource();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QXmlInputSource ( QIODevice * dev )
 */
 void QXmlInputSource_new2()
 {
-  QXmlInputSource * o = new QXmlInputSource( PQIODEVICE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QXmlInputSource * obj = new QXmlInputSource( PQIODEVICE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

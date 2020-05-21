@@ -85,8 +85,8 @@ QDomDocument ()
 */
 void QDomDocument_new1()
 {
-  QDomDocument * o = new QDomDocument();
-  Qt5xHb::returnNewObject( o, true );
+  QDomDocument * obj = new QDomDocument();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QDomDocument ( const QString & name )
 */
 void QDomDocument_new2()
 {
-  QDomDocument * o = new QDomDocument( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDomDocument * obj = new QDomDocument( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -103,8 +103,8 @@ QDomDocument ( const QDomDocumentType & doctype )
 */
 void QDomDocument_new3()
 {
-  QDomDocument * o = new QDomDocument( *PQDOMDOCUMENTTYPE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDomDocument * obj = new QDomDocument( *PQDOMDOCUMENTTYPE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QDomDocument ( const QDomDocument & x )
 */
 void QDomDocument_new4()
 {
-  QDomDocument * o = new QDomDocument( *PQDOMDOCUMENT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDomDocument * obj = new QDomDocument( *PQDOMDOCUMENT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

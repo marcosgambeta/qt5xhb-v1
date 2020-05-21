@@ -54,8 +54,8 @@ QDomNotation ()
 */
 void QDomNotation_new1()
 {
-  QDomNotation * o = new QDomNotation();
-  Qt5xHb::returnNewObject( o, true );
+  QDomNotation * obj = new QDomNotation();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -63,8 +63,8 @@ QDomNotation ( const QDomNotation & x )
 */
 void QDomNotation_new2()
 {
-  QDomNotation * o = new QDomNotation();
-  Qt5xHb::returnNewObject( o, true );
+  QDomNotation * obj = new QDomNotation();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

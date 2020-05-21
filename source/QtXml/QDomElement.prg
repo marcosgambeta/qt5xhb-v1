@@ -87,8 +87,8 @@ QDomElement ()
 */
 void QDomElement_new1()
 {
-  QDomElement * o = new QDomElement();
-  Qt5xHb::returnNewObject( o, true );
+  QDomElement * obj = new QDomElement();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QDomElement ( const QDomElement & x )
 */
 void QDomElement_new2()
 {
-  QDomElement * o = new QDomElement( *PQDOMELEMENT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDomElement * obj = new QDomElement( *PQDOMELEMENT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
