@@ -87,8 +87,8 @@ explicit QSqlField ( const QString & fieldName = QString(), QVariant::Type type 
 */
 void QSqlField_new1()
 {
-  QSqlField * o = new QSqlField( OPQSTRING(1,QString()), ISNIL(2)? (QVariant::Type) QVariant::Invalid : (QVariant::Type) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QSqlField * obj = new QSqlField( OPQSTRING(1,QString()), ISNIL(2)? (QVariant::Type) QVariant::Invalid : (QVariant::Type) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QSqlField ( const QSqlField & other )
 */
 void QSqlField_new2()
 {
-  QSqlField * o = new QSqlField( *PQSQLFIELD(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QSqlField * obj = new QSqlField( *PQSQLFIELD(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

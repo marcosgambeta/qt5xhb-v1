@@ -111,8 +111,8 @@ QSqlDatabase ()
 */
 void QSqlDatabase_new1()
 {
-  QSqlDatabase * o = new QSqlDatabase();
-  Qt5xHb::returnNewObject( o, true );
+  QSqlDatabase * obj = new QSqlDatabase();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -120,8 +120,8 @@ QSqlDatabase ( const QSqlDatabase & other )
 */
 void QSqlDatabase_new2()
 {
-  QSqlDatabase * o = new QSqlDatabase( *PQSQLDATABASE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QSqlDatabase * obj = new QSqlDatabase( *PQSQLDATABASE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

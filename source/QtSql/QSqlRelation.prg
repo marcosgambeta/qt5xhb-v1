@@ -64,8 +64,8 @@ QSqlRelation ()
 */
 void QSqlRelation_new1()
 {
-  QSqlRelation * o = new QSqlRelation();
-  Qt5xHb::returnNewObject( o, true );
+  QSqlRelation * obj = new QSqlRelation();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -73,8 +73,8 @@ QSqlRelation ( const QString & tableName, const QString & indexColumn, const QSt
 */
 void QSqlRelation_new2()
 {
-  QSqlRelation * o = new QSqlRelation( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QSqlRelation * obj = new QSqlRelation( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

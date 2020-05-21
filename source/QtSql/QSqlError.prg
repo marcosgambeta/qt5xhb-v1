@@ -72,8 +72,8 @@ QSqlError ( const QString & driverText, const QString & databaseText, ErrorType 
 */
 void QSqlError_new1()
 {
-  QSqlError * o = new QSqlError( PQSTRING(1), PQSTRING(2), (QSqlError::ErrorType) hb_parni(3), PINT(4) );
-  Qt5xHb::returnNewObject( o, true );
+  QSqlError * obj = new QSqlError( PQSTRING(1), PQSTRING(2), (QSqlError::ErrorType) hb_parni(3), PINT(4) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,8 +82,8 @@ QSqlError(const QString &driverText = QString(), const QString &databaseText = Q
 void QSqlError_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QSqlError * o = new QSqlError( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPQSTRING(4,QString()) );
-  Qt5xHb::returnNewObject( o, true );
+  QSqlError * obj = new QSqlError( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPQSTRING(4,QString()) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -92,8 +92,8 @@ QSqlError ( const QSqlError & other )
 */
 void QSqlError_new3()
 {
-  QSqlError * o = new QSqlError( *PQSQLERROR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QSqlError * obj = new QSqlError( *PQSQLERROR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

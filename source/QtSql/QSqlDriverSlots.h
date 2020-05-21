@@ -28,7 +28,7 @@ class QSqlDriverSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSqlDriverSlots(QObject *parent = 0);
+  QSqlDriverSlots( QObject *parent = 0 );
   ~QSqlDriverSlots();
   public slots:
   void notification( const QString & name );

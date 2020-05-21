@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && (ISQSQLDATABASE(2)||ISNIL(2)) )
   {
-    QSqlRelationalTableModel * o = new QSqlRelationalTableModel( OPQOBJECT(1,0), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt5xHb::itemGetPtr(2) );
-    Qt5xHb::returnNewObject( o, false );
+    QSqlRelationalTableModel * obj = new QSqlRelationalTableModel( OPQOBJECT(1,0), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt5xHb::itemGetPtr(2) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -84,8 +84,8 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

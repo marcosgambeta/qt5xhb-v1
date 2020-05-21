@@ -28,7 +28,7 @@ class QSqlTableModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSqlTableModelSlots(QObject *parent = 0);
+  QSqlTableModelSlots( QObject *parent = 0 );
   ~QSqlTableModelSlots();
   public slots:
   void beforeDelete( int row );
