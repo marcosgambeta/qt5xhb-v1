@@ -210,7 +210,7 @@ $includes
 //bool Events_connect_event ( QObject * object, int type, PHB_ITEM codeblock );
 //bool Events_disconnect_event ( QObject * object, int type );
 //void Events_disconnect_all_events ( QObject * object, bool children );
-void Signals_disconnect_all_signals ( QObject * object, bool children );
+//void Signals_disconnect_all_signals ( QObject * object, bool children );
 void _qtxhb_processOnEventMethod (QEvent::Type event);
 void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
