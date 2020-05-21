@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGGeometryNode * o = new QSGGeometryNode();
-    Qt5xHb::returnNewObject( o, false );
+    QSGGeometryNode * obj = new QSGGeometryNode();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

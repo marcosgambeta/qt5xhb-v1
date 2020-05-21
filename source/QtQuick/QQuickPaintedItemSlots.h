@@ -28,7 +28,7 @@ class QQuickPaintedItemSlots: public QObject
 {
   Q_OBJECT
   public:
-  QQuickPaintedItemSlots(QObject *parent = 0);
+  QQuickPaintedItemSlots( QObject *parent = 0 );
   ~QQuickPaintedItemSlots();
   public slots:
   void contentsScaleChanged();

@@ -53,8 +53,8 @@ HB_FUNC_STATIC( QSGVERTEXCOLORMATERIAL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGVertexColorMaterial * o = new QSGVertexColorMaterial();
-    Qt5xHb::returnNewObject( o, false );
+    QSGVertexColorMaterial * obj = new QSGVertexColorMaterial();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

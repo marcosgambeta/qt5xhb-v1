@@ -57,6 +57,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtQuick/QQuickView>
@@ -72,8 +74,8 @@ QQuickView(QWindow * parent = 0)
 */
 void QQuickView_new1()
 {
-  QQuickView * o = new QQuickView( OPQWINDOW(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QQuickView * obj = new QQuickView( OPQWINDOW(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -81,8 +83,8 @@ QQuickView(QQmlEngine * engine, QWindow * parent)
 */
 void QQuickView_new2()
 {
-  QQuickView * o = new QQuickView( PQQMLENGINE(1), PQWINDOW(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QQuickView * obj = new QQuickView( PQQMLENGINE(1), PQWINDOW(2) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -90,8 +92,8 @@ QQuickView(const QUrl & source, QWindow * parent = 0)
 */
 void QQuickView_new3()
 {
-  QQuickView * o = new QQuickView( *PQURL(1), OPQWINDOW(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QQuickView * obj = new QQuickView( *PQURL(1), OPQWINDOW(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -126,6 +128,8 @@ HB_FUNC_STATIC( QQUICKVIEW_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -61,8 +61,8 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSGSimpleTextureNode * o = new QSGSimpleTextureNode();
-    Qt5xHb::returnNewObject( o, false );
+    QSGSimpleTextureNode * obj = new QSGSimpleTextureNode();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -28,7 +28,7 @@ class QQuickViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QQuickViewSlots(QObject *parent = 0);
+  QQuickViewSlots( QObject *parent = 0 );
   ~QQuickViewSlots();
   public slots:
   void statusChanged( QQuickView::Status status );

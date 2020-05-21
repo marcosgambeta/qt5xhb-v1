@@ -28,7 +28,7 @@ class QQuickWindowSlots: public QObject
 {
   Q_OBJECT
   public:
-  QQuickWindowSlots(QObject *parent = 0);
+  QQuickWindowSlots( QObject *parent = 0 );
   ~QQuickWindowSlots();
   public slots:
   void afterRendering();

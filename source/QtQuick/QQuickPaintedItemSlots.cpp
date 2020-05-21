@@ -12,54 +12,74 @@
 
 #include "QQuickPaintedItemSlots.h"
 
-QQuickPaintedItemSlots::QQuickPaintedItemSlots(QObject *parent) : QObject(parent)
+QQuickPaintedItemSlots::QQuickPaintedItemSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QQuickPaintedItemSlots::~QQuickPaintedItemSlots()
 {
 }
+
 void QQuickPaintedItemSlots::contentsScaleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsScaleChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QQuickPaintedItemSlots::contentsSizeChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "contentsSizeChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QQuickPaintedItemSlots::fillColorChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "fillColorChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QQuickPaintedItemSlots::renderTargetChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "renderTargetChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

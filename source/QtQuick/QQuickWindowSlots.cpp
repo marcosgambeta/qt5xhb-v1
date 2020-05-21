@@ -12,89 +12,124 @@
 
 #include "QQuickWindowSlots.h"
 
-QQuickWindowSlots::QQuickWindowSlots(QObject *parent) : QObject(parent)
+QQuickWindowSlots::QQuickWindowSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QQuickWindowSlots::~QQuickWindowSlots()
 {
 }
+
 void QQuickWindowSlots::afterRendering()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "afterRendering()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QQuickWindowSlots::beforeRendering()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeRendering()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QQuickWindowSlots::beforeSynchronizing()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "beforeSynchronizing()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QQuickWindowSlots::colorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
+
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
 }
+
 void QQuickWindowSlots::frameSwapped()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "frameSwapped()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QQuickWindowSlots::sceneGraphInitialized()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneGraphInitialized()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QQuickWindowSlots::sceneGraphInvalidated()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneGraphInvalidated()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
