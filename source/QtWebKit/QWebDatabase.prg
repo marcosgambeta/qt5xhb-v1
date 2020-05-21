@@ -73,8 +73,8 @@ HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
   if( ISNUMPAR(1) && ISQWEBDATABASE(1) )
   {
-    QWebDatabase * o = new QWebDatabase( *PQWEBDATABASE(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QWebDatabase * obj = new QWebDatabase( *PQWEBDATABASE(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

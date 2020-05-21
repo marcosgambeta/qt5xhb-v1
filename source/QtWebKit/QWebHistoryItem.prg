@@ -76,8 +76,8 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
 {
   if( ISNUMPAR(1) && ISQWEBHISTORYITEM(1) )
   {
-    QWebHistoryItem * o = new QWebHistoryItem( *PQWEBHISTORYITEM(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QWebHistoryItem * obj = new QWebHistoryItem( *PQWEBHISTORYITEM(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
