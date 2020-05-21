@@ -28,7 +28,7 @@ class QDeclarativeExpressionSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDeclarativeExpressionSlots(QObject *parent = 0);
+  QDeclarativeExpressionSlots( QObject *parent = 0 );
   ~QDeclarativeExpressionSlots();
   public slots:
   void valueChanged();

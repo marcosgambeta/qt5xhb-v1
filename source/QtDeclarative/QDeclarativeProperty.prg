@@ -84,8 +84,8 @@ QDeclarativeProperty ()
 */
 void QDeclarativeProperty_new1()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty();
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeProperty * obj = new QDeclarativeProperty();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QDeclarativeProperty ( QObject * obj )
 */
 void QDeclarativeProperty_new2()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeProperty * obj = new QDeclarativeProperty( PQOBJECT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
 */
 void QDeclarativeProperty_new3()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQDECLARATIVECONTEXT(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeProperty * obj = new QDeclarativeProperty( PQOBJECT(1), PQDECLARATIVECONTEXT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -111,8 +111,8 @@ QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
 */
 void QDeclarativeProperty_new4()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQDECLARATIVEENGINE(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeProperty * obj = new QDeclarativeProperty( PQOBJECT(1), PQDECLARATIVEENGINE(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -120,8 +120,8 @@ QDeclarativeProperty ( QObject * obj, const QString & name )
 */
 void QDeclarativeProperty_new5()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeProperty * obj = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -129,8 +129,8 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext 
 */
 void QDeclarativeProperty_new6()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeProperty * obj = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2), PQDECLARATIVECONTEXT(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -138,8 +138,8 @@ QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine *
 */
 void QDeclarativeProperty_new7()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeProperty * obj = new QDeclarativeProperty( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -147,8 +147,8 @@ QDeclarativeProperty ( const QDeclarativeProperty & other )
 */
 void QDeclarativeProperty_new8()
 {
-  QDeclarativeProperty * o = new QDeclarativeProperty( *PQDECLARATIVEPROPERTY(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeProperty * obj = new QDeclarativeProperty( *PQDECLARATIVEPROPERTY(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

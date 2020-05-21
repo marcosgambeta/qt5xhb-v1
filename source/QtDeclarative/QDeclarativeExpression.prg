@@ -62,6 +62,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDeclarative/QDeclarativeExpression>
@@ -75,8 +77,8 @@ QDeclarativeExpression ()
 */
 void QDeclarativeExpression_new1()
 {
-  QDeclarativeExpression * o = new QDeclarativeExpression();
-  Qt5xHb::returnNewObject( o, false );
+  QDeclarativeExpression * obj = new QDeclarativeExpression();
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -84,8 +86,8 @@ QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QStr
 */
 void QDeclarativeExpression_new2()
 {
-  QDeclarativeExpression * o = new QDeclarativeExpression( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDeclarativeExpression * obj = new QDeclarativeExpression( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -115,6 +117,8 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

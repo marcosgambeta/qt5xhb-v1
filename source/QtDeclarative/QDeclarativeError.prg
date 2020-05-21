@@ -70,8 +70,8 @@ QDeclarativeError ()
 */
 void QDeclarativeError_new1()
 {
-  QDeclarativeError * o = new QDeclarativeError();
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeError * obj = new QDeclarativeError();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QDeclarativeError ( const QDeclarativeError & other )
 */
 void QDeclarativeError_new2()
 {
-  QDeclarativeError * o = new QDeclarativeError( *PQDECLARATIVEERROR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDeclarativeError * obj = new QDeclarativeError( *PQDECLARATIVEERROR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

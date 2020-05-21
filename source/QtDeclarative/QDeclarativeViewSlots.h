@@ -28,7 +28,7 @@ class QDeclarativeViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDeclarativeViewSlots(QObject *parent = 0);
+  QDeclarativeViewSlots( QObject *parent = 0 );
   ~QDeclarativeViewSlots();
   public slots:
   void sceneResized( QSize size );

@@ -12,28 +12,36 @@
 
 #include "QDeclarativeEngineSlots.h"
 
-QDeclarativeEngineSlots::QDeclarativeEngineSlots(QObject *parent) : QObject(parent)
+QDeclarativeEngineSlots::QDeclarativeEngineSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QDeclarativeEngineSlots::~QDeclarativeEngineSlots()
 {
 }
+
 void QDeclarativeEngineSlots::quit()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "quit()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDECLARATIVEENGINE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warnings )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "warnings(QList<QDeclarativeError>)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDECLARATIVEENGINE" );
@@ -60,7 +68,9 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
     {
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
     }
+
     hb_vmEvalBlockV( cb, 2, psender, pwarnings );
+
     hb_itemRelease( psender );
     hb_itemRelease( pwarnings );
   }

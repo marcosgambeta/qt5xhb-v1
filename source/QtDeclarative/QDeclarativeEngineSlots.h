@@ -28,7 +28,7 @@ class QDeclarativeEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDeclarativeEngineSlots(QObject *parent = 0);
+  QDeclarativeEngineSlots( QObject *parent = 0 );
   ~QDeclarativeEngineSlots();
   public slots:
   void quit();

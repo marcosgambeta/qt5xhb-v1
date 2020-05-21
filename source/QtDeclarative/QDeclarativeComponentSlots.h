@@ -28,7 +28,7 @@ class QDeclarativeComponentSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDeclarativeComponentSlots(QObject *parent = 0);
+  QDeclarativeComponentSlots( QObject *parent = 0 );
   ~QDeclarativeComponentSlots();
   public slots:
   void progressChanged( qreal progress );

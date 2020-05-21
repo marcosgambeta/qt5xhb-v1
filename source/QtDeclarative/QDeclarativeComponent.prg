@@ -62,6 +62,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDeclarative/QDeclarativeComponent>
@@ -74,8 +76,8 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, QObject * parent = 0 )
 */
 void QDeclarativeComponent_new1()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -83,8 +85,8 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QString & fileName, Q
 */
 void QDeclarativeComponent_new2()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -92,8 +94,8 @@ QDeclarativeComponent ( QDeclarativeEngine * engine, const QUrl & url, QObject *
 */
 void QDeclarativeComponent_new3()
 {
-  QDeclarativeComponent * o = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -128,6 +130,8 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
