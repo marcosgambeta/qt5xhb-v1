@@ -30,7 +30,7 @@ class QTextToSpeechSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTextToSpeechSlots(QObject *parent = 0);
+  QTextToSpeechSlots( QObject *parent = 0 );
   ~QTextToSpeechSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))

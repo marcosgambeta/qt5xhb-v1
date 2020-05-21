@@ -66,8 +66,8 @@ QVoice()
 void QVoice_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * o = new QVoice();
-  Qt5xHb::returnNewObject( o, true );
+  QVoice * obj = new QVoice();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -77,8 +77,8 @@ QVoice(const QVoice &other)
 void QVoice_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * o = new QVoice( *PQVOICE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QVoice * obj = new QVoice( *PQVOICE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

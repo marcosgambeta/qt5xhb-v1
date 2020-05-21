@@ -12,23 +12,28 @@
 
 #include "QTextToSpeechEngineSlots.h"
 
-QTextToSpeechEngineSlots::QTextToSpeechEngineSlots(QObject *parent) : QObject(parent)
+QTextToSpeechEngineSlots::QTextToSpeechEngineSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QTextToSpeechEngineSlots::~QTextToSpeechEngineSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QTextToSpeechEngineSlots::stateChanged( QTextToSpeech::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QTextToSpeech::State)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECHENGINE" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+
     hb_vmEvalBlockV( cb, 2, psender, pstate );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }

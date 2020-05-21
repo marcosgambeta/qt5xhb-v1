@@ -67,6 +67,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtTextToSpeech/QTextToSpeech>
@@ -82,8 +84,8 @@ explicit QTextToSpeech(QObject *parent = nullptr)
 void QTextToSpeech_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * o = new QTextToSpeech( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject( o, false );
+  QTextToSpeech * obj = new QTextToSpeech( OPQOBJECT(1,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -93,8 +95,8 @@ explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
 void QTextToSpeech_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * o = new QTextToSpeech( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject( o, false );
+  QTextToSpeech * obj = new QTextToSpeech( PQSTRING(1), OPQOBJECT(2,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
