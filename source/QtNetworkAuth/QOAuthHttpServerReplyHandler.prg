@@ -52,6 +52,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
@@ -65,8 +67,8 @@ explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
 void QOAuthHttpServerReplyHandler_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject( o, false );
+  QOAuthHttpServerReplyHandler * obj = new QOAuthHttpServerReplyHandler( OPQOBJECT(1,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -76,8 +78,8 @@ explicit QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
 void QOAuthHttpServerReplyHandler_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler( PQUINT16(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject( o, false );
+  QOAuthHttpServerReplyHandler * obj = new QOAuthHttpServerReplyHandler( PQUINT16(1), OPQOBJECT(2,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -87,8 +89,8 @@ explicit QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port,
 void QOAuthHttpServerReplyHandler_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * o = new QOAuthHttpServerReplyHandler( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
-  Qt5xHb::returnNewObject( o, false );
+  QOAuthHttpServerReplyHandler * obj = new QOAuthHttpServerReplyHandler( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -128,6 +130,8 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

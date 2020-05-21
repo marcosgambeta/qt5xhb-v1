@@ -12,23 +12,28 @@
 
 #include "QOAuth2AuthorizationCodeFlowSlots.h"
 
-QOAuth2AuthorizationCodeFlowSlots::QOAuth2AuthorizationCodeFlowSlots(QObject *parent) : QObject(parent)
+QOAuth2AuthorizationCodeFlowSlots::QOAuth2AuthorizationCodeFlowSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QOAuth2AuthorizationCodeFlowSlots::~QOAuth2AuthorizationCodeFlowSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
 void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged( const QUrl & accessTokenUrl )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "accessTokenUrlChanged(QUrl)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOAUTH2AUTHORIZATIONCODEFLOW" );
     PHB_ITEM paccessTokenUrl = Signals_return_object( (void *) &accessTokenUrl, "QURL" );
+
     hb_vmEvalBlockV( cb, 2, psender, paccessTokenUrl );
+
     hb_itemRelease( psender );
     hb_itemRelease( paccessTokenUrl );
   }

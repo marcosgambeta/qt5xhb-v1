@@ -30,7 +30,7 @@ class QAbstractOAuthReplyHandlerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractOAuthReplyHandlerSlots(QObject *parent = 0);
+  QAbstractOAuthReplyHandlerSlots( QObject *parent = 0 );
   ~QAbstractOAuthReplyHandlerSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))

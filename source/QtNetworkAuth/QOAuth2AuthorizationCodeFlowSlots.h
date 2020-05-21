@@ -30,7 +30,7 @@ class QOAuth2AuthorizationCodeFlowSlots: public QObject
 {
   Q_OBJECT
   public:
-  QOAuth2AuthorizationCodeFlowSlots(QObject *parent = 0);
+  QOAuth2AuthorizationCodeFlowSlots( QObject *parent = 0 );
   ~QOAuth2AuthorizationCodeFlowSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))

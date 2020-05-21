@@ -30,7 +30,7 @@ class QOAuth1Slots: public QObject
 {
   Q_OBJECT
   public:
-  QOAuth1Slots(QObject *parent = 0);
+  QOAuth1Slots( QObject *parent = 0 );
   ~QOAuth1Slots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))

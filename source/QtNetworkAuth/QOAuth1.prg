@@ -63,6 +63,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
@@ -76,8 +78,8 @@ explicit QOAuth1(QObject *parent = nullptr)
 void QOAuth1_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * o = new QOAuth1( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject( o, false );
+  QOAuth1 * obj = new QOAuth1( OPQOBJECT(1,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -87,8 +89,8 @@ explicit QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
 void QOAuth1_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * o = new QOAuth1( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject( o, false );
+  QOAuth1 * obj = new QOAuth1( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -124,6 +126,8 @@ HB_FUNC_STATIC( QOAUTH1_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
