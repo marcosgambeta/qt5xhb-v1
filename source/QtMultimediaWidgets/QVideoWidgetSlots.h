@@ -28,7 +28,7 @@ class QVideoWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVideoWidgetSlots(QObject *parent = 0);
+  QVideoWidgetSlots( QObject *parent = 0 );
   ~QVideoWidgetSlots();
   public slots:
   void fullScreenChanged( bool fullScreen );

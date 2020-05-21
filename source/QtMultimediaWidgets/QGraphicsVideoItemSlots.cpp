@@ -12,22 +12,27 @@
 
 #include "QGraphicsVideoItemSlots.h"
 
-QGraphicsVideoItemSlots::QGraphicsVideoItemSlots(QObject *parent) : QObject(parent)
+QGraphicsVideoItemSlots::QGraphicsVideoItemSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QGraphicsVideoItemSlots::~QGraphicsVideoItemSlots()
 {
 }
+
 void QGraphicsVideoItemSlots::nativeSizeChanged( const QSizeF & size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "nativeSizeChanged(QSizeF)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSVIDEOITEM" );
     PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZEF" );
+
     hb_vmEvalBlockV( cb, 2, psender, psize );
+
     hb_itemRelease( psender );
     hb_itemRelease( psize );
   }

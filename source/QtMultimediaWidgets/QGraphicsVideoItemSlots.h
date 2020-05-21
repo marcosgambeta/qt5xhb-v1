@@ -28,7 +28,7 @@ class QGraphicsVideoItemSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsVideoItemSlots(QObject *parent = 0);
+  QGraphicsVideoItemSlots( QObject *parent = 0 );
   ~QGraphicsVideoItemSlots();
   public slots:
   void nativeSizeChanged( const QSizeF & size );
