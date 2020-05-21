@@ -28,7 +28,7 @@ class QQmlExpressionSlots: public QObject
 {
   Q_OBJECT
   public:
-  QQmlExpressionSlots(QObject *parent = 0);
+  QQmlExpressionSlots( QObject *parent = 0 );
   ~QQmlExpressionSlots();
   public slots:
   void valueChanged();

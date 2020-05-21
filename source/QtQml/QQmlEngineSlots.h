@@ -28,7 +28,7 @@ class QQmlEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  QQmlEngineSlots(QObject *parent = 0);
+  QQmlEngineSlots( QObject *parent = 0 );
   ~QQmlEngineSlots();
   public slots:
   void quit();

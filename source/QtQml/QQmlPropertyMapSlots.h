@@ -28,7 +28,7 @@ class QQmlPropertyMapSlots: public QObject
 {
   Q_OBJECT
   public:
-  QQmlPropertyMapSlots(QObject *parent = 0);
+  QQmlPropertyMapSlots( QObject *parent = 0 );
   ~QQmlPropertyMapSlots();
   public slots:
   void valueChanged( const QString & key, const QVariant & value );

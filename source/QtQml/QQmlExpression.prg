@@ -63,6 +63,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtQml/QQmlExpression>
@@ -76,8 +78,8 @@ QQmlExpression()
 */
 void QQmlExpression_new1()
 {
-  QQmlExpression * o = new QQmlExpression();
-  Qt5xHb::returnNewObject( o, false );
+  QQmlExpression * obj = new QQmlExpression();
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -85,8 +87,8 @@ QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, 
 */
 void QQmlExpression_new2()
 {
-  QQmlExpression * o = new QQmlExpression( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QQmlExpression * obj = new QQmlExpression( PQQMLCONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -94,8 +96,8 @@ QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject 
 */
 void QQmlExpression_new3()
 {
-  QQmlExpression * o = new QQmlExpression( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,0), OPQOBJECT(3,0), OPQOBJECT(4,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QQmlExpression * obj = new QQmlExpression( *PQQMLSCRIPTSTRING(1), OPQQMLCONTEXT(2,0), OPQOBJECT(3,0), OPQOBJECT(4,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -130,6 +132,8 @@ HB_FUNC_STATIC( QQMLEXPRESSION_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

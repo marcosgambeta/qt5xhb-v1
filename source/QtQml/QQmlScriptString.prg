@@ -66,8 +66,8 @@ QQmlScriptString()
 */
 void QQmlScriptString_new1()
 {
-  QQmlScriptString * o = new QQmlScriptString();
-  Qt5xHb::returnNewObject( o, true );
+  QQmlScriptString * obj = new QQmlScriptString();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QQmlScriptString(const QQmlScriptString & other)
 */
 void QQmlScriptString_new2()
 {
-  QQmlScriptString * o = new QQmlScriptString( *PQQMLSCRIPTSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QQmlScriptString * obj = new QQmlScriptString( *PQQMLSCRIPTSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

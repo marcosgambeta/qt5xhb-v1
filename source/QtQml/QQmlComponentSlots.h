@@ -28,7 +28,7 @@ class QQmlComponentSlots: public QObject
 {
   Q_OBJECT
   public:
-  QQmlComponentSlots(QObject *parent = 0);
+  QQmlComponentSlots( QObject *parent = 0 );
   ~QQmlComponentSlots();
   public slots:
   void progressChanged( qreal progress );

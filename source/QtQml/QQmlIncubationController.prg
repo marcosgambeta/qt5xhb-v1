@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QQmlIncubationController * o = new QQmlIncubationController();
-    Qt5xHb::returnNewObject( o, true );
+    QQmlIncubationController * obj = new QQmlIncubationController();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

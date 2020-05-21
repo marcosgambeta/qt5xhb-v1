@@ -85,8 +85,8 @@ QQmlProperty()
 */
 void QQmlProperty_new1()
 {
-  QQmlProperty * o = new QQmlProperty();
-  Qt5xHb::returnNewObject( o, true );
+  QQmlProperty * obj = new QQmlProperty();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QQmlProperty(QObject * obj)
 */
 void QQmlProperty_new2()
 {
-  QQmlProperty * o = new QQmlProperty( PQOBJECT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QQmlProperty * obj = new QQmlProperty( PQOBJECT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -103,8 +103,8 @@ QQmlProperty(QObject * obj, QQmlContext * ctxt)
 */
 void QQmlProperty_new3()
 {
-  QQmlProperty * o = new QQmlProperty( PQOBJECT(1), PQQMLCONTEXT(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQQMLCONTEXT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QQmlProperty(QObject * obj, QQmlEngine * engine)
 */
 void QQmlProperty_new4()
 {
-  QQmlProperty * o = new QQmlProperty( PQOBJECT(1), PQQMLENGINE(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQQMLENGINE(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -121,8 +121,8 @@ QQmlProperty(QObject * obj, const QString & name)
 */
 void QQmlProperty_new5()
 {
-  QQmlProperty * o = new QQmlProperty( PQOBJECT(1), PQSTRING(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -130,8 +130,8 @@ QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
 */
 void QQmlProperty_new6()
 {
-  QQmlProperty * o = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -139,8 +139,8 @@ QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
 */
 void QQmlProperty_new7()
 {
-  QQmlProperty * o = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -148,8 +148,8 @@ QQmlProperty(const QQmlProperty & other)
 */
 void QQmlProperty_new8()
 {
-  QQmlProperty * o = new QQmlProperty( *PQQMLPROPERTY(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QQmlProperty * obj = new QQmlProperty( *PQQMLPROPERTY(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

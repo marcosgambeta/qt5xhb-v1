@@ -48,6 +48,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtQml/QJSEngine>
@@ -58,8 +60,8 @@ QJSEngine()
 */
 void QJSEngine_new1()
 {
-  QJSEngine * o = new QJSEngine();
-  Qt5xHb::returnNewObject( o, false );
+  QJSEngine * obj = new QJSEngine();
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,8 +69,8 @@ QJSEngine(QObject * parent)
 */
 void QJSEngine_new2()
 {
-  QJSEngine * o = new QJSEngine( PQOBJECT(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QJSEngine * obj = new QJSEngine( PQOBJECT(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -98,6 +100,8 @@ HB_FUNC_STATIC( QJSENGINE_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

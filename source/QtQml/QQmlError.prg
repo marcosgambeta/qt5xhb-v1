@@ -71,8 +71,8 @@ QQmlError()
 */
 void QQmlError_new1()
 {
-  QQmlError * o = new QQmlError();
-  Qt5xHb::returnNewObject( o, true );
+  QQmlError * obj = new QQmlError();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QQmlError(const QQmlError & other)
 */
 void QQmlError_new2()
 {
-  QQmlError * o = new QQmlError( *PQQMLERROR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QQmlError * obj = new QQmlError( *PQQMLERROR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

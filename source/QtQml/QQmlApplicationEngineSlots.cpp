@@ -12,24 +12,29 @@
 
 #include "QQmlApplicationEngineSlots.h"
 
-QQmlApplicationEngineSlots::QQmlApplicationEngineSlots(QObject *parent) : QObject(parent)
+QQmlApplicationEngineSlots::QQmlApplicationEngineSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QQmlApplicationEngineSlots::~QQmlApplicationEngineSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QQmlApplicationEngineSlots::objectCreated( QObject * obj, const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "objectCreated(QObject*,QUrl)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLAPPLICATIONENGINE" );
     PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
+
     hb_vmEvalBlockV( cb, 3, psender, pobj, purl );
+
     hb_itemRelease( psender );
     hb_itemRelease( pobj );
     hb_itemRelease( purl );

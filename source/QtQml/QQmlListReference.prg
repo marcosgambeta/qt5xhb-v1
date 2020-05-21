@@ -73,8 +73,8 @@ QQmlListReference()
 */
 void QQmlListReference_new1()
 {
-  QQmlListReference * o = new QQmlListReference();
-  Qt5xHb::returnNewObject( o, false );
+  QQmlListReference * obj = new QQmlListReference();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,8 +82,8 @@ QQmlListReference(QObject * object, const char * property, QQmlEngine * engine =
 */
 void QQmlListReference_new2()
 {
-  QQmlListReference * o = new QQmlListReference( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QQmlListReference * obj = new QQmlListReference( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,0) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

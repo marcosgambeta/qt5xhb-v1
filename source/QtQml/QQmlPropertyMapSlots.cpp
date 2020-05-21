@@ -12,23 +12,28 @@
 
 #include "QQmlPropertyMapSlots.h"
 
-QQmlPropertyMapSlots::QQmlPropertyMapSlots(QObject *parent) : QObject(parent)
+QQmlPropertyMapSlots::QQmlPropertyMapSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QQmlPropertyMapSlots::~QQmlPropertyMapSlots()
 {
 }
+
 void QQmlPropertyMapSlots::valueChanged( const QString & key, const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QString,QVariant)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLPROPERTYMAP" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
+
     hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
+
     hb_itemRelease( psender );
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );

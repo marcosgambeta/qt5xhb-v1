@@ -30,7 +30,7 @@ class QQmlApplicationEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  QQmlApplicationEngineSlots(QObject *parent = 0);
+  QQmlApplicationEngineSlots( QObject *parent = 0 );
   ~QQmlApplicationEngineSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))

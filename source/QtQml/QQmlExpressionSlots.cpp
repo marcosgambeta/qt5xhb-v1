@@ -12,21 +12,26 @@
 
 #include "QQmlExpressionSlots.h"
 
-QQmlExpressionSlots::QQmlExpressionSlots(QObject *parent) : QObject(parent)
+QQmlExpressionSlots::QQmlExpressionSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QQmlExpressionSlots::~QQmlExpressionSlots()
 {
 }
+
 void QQmlExpressionSlots::valueChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLEXPRESSION" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

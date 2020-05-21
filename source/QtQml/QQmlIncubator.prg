@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
 {
   if( ISBETWEEN(0,1) && ISOPTNUM(1) )
   {
-    QQmlIncubator * o = new QQmlIncubator( ISNIL(1)? (QQmlIncubator::IncubationMode) QQmlIncubator::Asynchronous : (QQmlIncubator::IncubationMode) hb_parni(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QQmlIncubator * obj = new QQmlIncubator( ISNIL(1)? (QQmlIncubator::IncubationMode) QQmlIncubator::Asynchronous : (QQmlIncubator::IncubationMode) hb_parni(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
