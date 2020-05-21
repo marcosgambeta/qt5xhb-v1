@@ -28,7 +28,7 @@ class QWebPageSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWebPageSlots(QObject *parent = 0);
+  QWebPageSlots( QObject *parent = 0 );
   ~QWebPageSlots();
   public slots:
   void applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, quint64 defaultOriginQuota, quint64 totalSpaceNeeded );

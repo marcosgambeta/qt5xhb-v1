@@ -28,7 +28,7 @@ class QWebFrameSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWebFrameSlots(QObject *parent = 0);
+  QWebFrameSlots( QObject *parent = 0 );
   ~QWebFrameSlots();
   public slots:
   void contentsSizeChanged( const QSize & size );

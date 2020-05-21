@@ -28,7 +28,7 @@ class QGraphicsWebViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsWebViewSlots(QObject *parent = 0);
+  QGraphicsWebViewSlots( QObject *parent = 0 );
   ~QGraphicsWebViewSlots();
   public slots:
   void iconChanged();

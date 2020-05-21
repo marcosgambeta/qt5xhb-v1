@@ -28,7 +28,7 @@ class QWebViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWebViewSlots(QObject *parent = 0);
+  QWebViewSlots( QObject *parent = 0 );
   ~QWebViewSlots();
   public slots:
   void iconChanged();

@@ -87,8 +87,8 @@ QWebHitTestResult ()
 */
 void QWebHitTestResult_new1()
 {
-  QWebHitTestResult * o = new QWebHitTestResult();
-  Qt5xHb::returnNewObject( o, true );
+  QWebHitTestResult * obj = new QWebHitTestResult();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QWebHitTestResult ( const QWebHitTestResult & other )
 */
 void QWebHitTestResult_new2()
 {
-  QWebHitTestResult * o = new QWebHitTestResult( *PQWEBHITTESTRESULT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QWebHitTestResult * obj = new QWebHitTestResult( *PQWEBHITTESTRESULT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
