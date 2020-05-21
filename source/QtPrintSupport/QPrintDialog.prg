@@ -53,6 +53,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtPrintSupport/QPrintDialog>
@@ -63,8 +65,8 @@ QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
 void QPrintDialog_new1()
 {
-  QPrintDialog * o = new QPrintDialog( PQPRINTER(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QPrintDialog * obj = new QPrintDialog( PQPRINTER(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -72,8 +74,8 @@ QPrintDialog ( QWidget * parent = 0 )
 */
 void QPrintDialog_new2()
 {
-  QPrintDialog * o = new QPrintDialog( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QPrintDialog * obj = new QPrintDialog( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -103,6 +105,8 @@ HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

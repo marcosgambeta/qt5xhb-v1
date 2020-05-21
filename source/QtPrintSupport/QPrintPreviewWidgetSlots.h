@@ -28,7 +28,7 @@ class QPrintPreviewWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QPrintPreviewWidgetSlots(QObject *parent = 0);
+  QPrintPreviewWidgetSlots( QObject *parent = 0 );
   ~QPrintPreviewWidgetSlots();
   public slots:
   void paintRequested( QPrinter * printer );

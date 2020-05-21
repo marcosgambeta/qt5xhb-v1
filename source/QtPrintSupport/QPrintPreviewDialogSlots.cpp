@@ -12,22 +12,27 @@
 
 #include "QPrintPreviewDialogSlots.h"
 
-QPrintPreviewDialogSlots::QPrintPreviewDialogSlots(QObject *parent) : QObject(parent)
+QPrintPreviewDialogSlots::QPrintPreviewDialogSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QPrintPreviewDialogSlots::~QPrintPreviewDialogSlots()
 {
 }
+
 void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPRINTPREVIEWDIALOG" );
     PHB_ITEM pprinter = Signals_return_object( (void *) printer, "QPRINTER" );
+
     hb_vmEvalBlockV( cb, 2, psender, pprinter );
+
     hb_itemRelease( psender );
     hb_itemRelease( pprinter );
   }

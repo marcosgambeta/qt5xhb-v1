@@ -12,34 +12,44 @@
 
 #include "QPrintPreviewWidgetSlots.h"
 
-QPrintPreviewWidgetSlots::QPrintPreviewWidgetSlots(QObject *parent) : QObject(parent)
+QPrintPreviewWidgetSlots::QPrintPreviewWidgetSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QPrintPreviewWidgetSlots::~QPrintPreviewWidgetSlots()
 {
 }
+
 void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPRINTPREVIEWWIDGET" );
     PHB_ITEM pprinter = Signals_return_object( (void *) printer, "QPRINTER" );
+
     hb_vmEvalBlockV( cb, 2, psender, pprinter );
+
     hb_itemRelease( psender );
     hb_itemRelease( pprinter );
   }
 }
+
 void QPrintPreviewWidgetSlots::previewChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "previewChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPRINTPREVIEWWIDGET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

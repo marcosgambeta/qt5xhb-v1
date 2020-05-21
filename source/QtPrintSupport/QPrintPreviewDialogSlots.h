@@ -28,7 +28,7 @@ class QPrintPreviewDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  QPrintPreviewDialogSlots(QObject *parent = 0);
+  QPrintPreviewDialogSlots( QObject *parent = 0 );
   ~QPrintPreviewDialogSlots();
   public slots:
   void paintRequested( QPrinter * printer );

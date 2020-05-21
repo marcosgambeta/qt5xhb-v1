@@ -28,7 +28,7 @@ class QPrintDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  QPrintDialogSlots(QObject *parent = 0);
+  QPrintDialogSlots( QObject *parent = 0 );
   ~QPrintDialogSlots();
   public slots:
   void accepted( QPrinter * printer );

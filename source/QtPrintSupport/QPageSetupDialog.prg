@@ -47,6 +47,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtPrintSupport/QPageSetupDialog>
@@ -57,8 +59,8 @@ QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
 */
 void QPageSetupDialog_new1()
 {
-  QPageSetupDialog * o = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QPageSetupDialog * obj = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -66,8 +68,8 @@ QPageSetupDialog ( QWidget * parent = 0 )
 */
 void QPageSetupDialog_new2()
 {
-  QPageSetupDialog * o = new QPageSetupDialog( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QPageSetupDialog * obj = new QPageSetupDialog( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -97,6 +99,8 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
