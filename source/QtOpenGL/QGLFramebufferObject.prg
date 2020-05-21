@@ -70,8 +70,8 @@ QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
 */
 void QGLFramebufferObject_new1()
 {
-  QGLFramebufferObject * o = new QGLFramebufferObject( *PQSIZE(1), OPGLENUM(2,GL_TEXTURE_2D) );
-  Qt5xHb::returnNewObject( o, true );
+  QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), OPGLENUM(2,GL_TEXTURE_2D) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
 */
 void QGLFramebufferObject_new2()
 {
-  QGLFramebufferObject * o = new QGLFramebufferObject( PINT(1), PINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  Qt5xHb::returnNewObject( o, true );
+  QGLFramebufferObject * obj = new QGLFramebufferObject( PINT(1), PINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -88,8 +88,8 @@ QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & fo
 */
 void QGLFramebufferObject_new3()
 {
-  QGLFramebufferObject * o = new QGLFramebufferObject( *PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -97,8 +97,8 @@ QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat &
 */
 void QGLFramebufferObject_new4()
 {
-  QGLFramebufferObject * o = new QGLFramebufferObject( PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QGLFramebufferObject * obj = new QGLFramebufferObject( PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -106,8 +106,8 @@ QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum targ
 */
 void QGLFramebufferObject_new5()
 {
-  QGLFramebufferObject * o = new QGLFramebufferObject( PINT(1), PINT(2), (QGLFramebufferObject::Attachment) hb_parni(3), OPGLENUM(4,GL_TEXTURE_2D), OPGLENUM(5,GL_RGBA8) );
-  Qt5xHb::returnNewObject( o, true );
+  QGLFramebufferObject * obj = new QGLFramebufferObject( PINT(1), PINT(2), (QGLFramebufferObject::Attachment) hb_parni(3), OPGLENUM(4,GL_TEXTURE_2D), OPGLENUM(5,GL_RGBA8) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -115,8 +115,8 @@ QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target 
 */
 void QGLFramebufferObject_new6()
 {
-  QGLFramebufferObject * o = new QGLFramebufferObject( *PQSIZE(1), (QGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA8) );
-  Qt5xHb::returnNewObject( o, true );
+  QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), (QGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA8) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

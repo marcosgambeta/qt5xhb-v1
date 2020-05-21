@@ -115,8 +115,8 @@ QGLFunctions()
 */
 void QGLFunctions_new1()
 {
-  QGLFunctions * o = new QGLFunctions();
-  Qt5xHb::returnNewObject( o, false );
+  QGLFunctions * obj = new QGLFunctions();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -124,8 +124,8 @@ QGLFunctions(const QGLContext * context)
 */
 void QGLFunctions_new2()
 {
-  QGLFunctions * o = new QGLFunctions( PQGLCONTEXT(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QGLFunctions * obj = new QGLFunctions( PQGLCONTEXT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -70,8 +70,8 @@ QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defau
 */
 void QGLPixelBuffer_new1()
 {
-  QGLPixelBuffer * o = new QGLPixelBuffer( *PQSIZE(1), ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(2), OPQGLWIDGET(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QGLPixelBuffer * obj = new QGLPixelBuffer( *PQSIZE(1), ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(2), OPQGLWIDGET(3,0) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::de
 */
 void QGLPixelBuffer_new2()
 {
-  QGLPixelBuffer * o = new QGLPixelBuffer( PINT(1), PINT(2), ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(3), OPQGLWIDGET(4,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QGLPixelBuffer * obj = new QGLPixelBuffer( PINT(1), PINT(2), ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(3), OPQGLWIDGET(4,0) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

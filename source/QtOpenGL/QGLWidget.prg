@@ -82,8 +82,8 @@ QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowF
 */
 void QGLWidget_new1()
 {
-  QGLWidget * o = new QGLWidget( OPQWIDGET(1,0), OPQGLWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt5xHb::returnNewObject( o, false );
+  QGLWidget * obj = new QGLWidget( OPQWIDGET(1,0), OPQGLWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -91,8 +91,8 @@ QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareW
 */
 void QGLWidget_new2()
 {
-  QGLWidget * o = new QGLWidget( PQGLCONTEXT(1), OPQWIDGET(2,0), OPQGLWIDGET(3,0), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
-  Qt5xHb::returnNewObject( o, false );
+  QGLWidget * obj = new QGLWidget( PQGLCONTEXT(1), OPQWIDGET(2,0), OPQGLWIDGET(3,0), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -100,8 +100,8 @@ QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * sh
 */
 void QGLWidget_new3()
 {
-  QGLWidget * o = new QGLWidget( *PQGLFORMAT(1), OPQWIDGET(2,0), OPQGLWIDGET(3,0), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
-  Qt5xHb::returnNewObject( o, false );
+  QGLWidget * obj = new QGLWidget( *PQGLFORMAT(1), OPQWIDGET(2,0), OPQGLWIDGET(3,0), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -136,8 +136,8 @@ HB_FUNC_STATIC( QGLWIDGET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -52,6 +52,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtOpenGL/QGLShader>
@@ -62,8 +64,8 @@ QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
 */
 void QGLShader_new1()
 {
-  QGLShader * o = new QGLShader( (QGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QGLShader * obj = new QGLShader( (QGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -71,8 +73,8 @@ QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * pa
 */
 void QGLShader_new2()
 {
-  QGLShader * o = new QGLShader( (QGLShader::ShaderType) hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QGLShader * obj = new QGLShader( (QGLShader::ShaderType) hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -102,6 +104,8 @@ HB_FUNC_STATIC( QGLSHADER_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
