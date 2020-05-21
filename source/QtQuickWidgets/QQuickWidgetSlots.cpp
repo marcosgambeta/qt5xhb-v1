@@ -12,39 +12,49 @@
 
 #include "QQuickWidgetSlots.h"
 
-QQuickWidgetSlots::QQuickWidgetSlots(QObject *parent) : QObject(parent)
+QQuickWidgetSlots::QQuickWidgetSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QQuickWidgetSlots::~QQuickWidgetSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QQuickWidgetSlots::statusChanged( QQuickWidget::Status status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QQuickWidget::Status)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWIDGET" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
+
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QQuickWidgetSlots::sceneGraphError( QQuickWindow::SceneGraphError error, const QString & message )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneGraphError(QQuickWindow::SceneGraphError,QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQUICKWIDGET" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
+
     hb_vmEvalBlockV( cb, 3, psender, perror, pmessage );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
     hb_itemRelease( pmessage );

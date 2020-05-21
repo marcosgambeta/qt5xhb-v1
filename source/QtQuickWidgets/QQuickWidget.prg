@@ -67,6 +67,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
@@ -85,8 +87,8 @@ explicit QQuickWidget(QWidget *parent = 0)
 void QQuickWidget_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QQuickWidget * obj = new QQuickWidget( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -96,8 +98,8 @@ QQuickWidget(QQmlEngine* engine, QWidget *parent)
 void QQuickWidget_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget( PQQMLENGINE(1), PQWIDGET(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QQuickWidget * obj = new QQuickWidget( PQQMLENGINE(1), PQWIDGET(2) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -107,8 +109,8 @@ QQuickWidget(const QUrl &source, QWidget *parent = 0)
 void QQuickWidget_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QQuickWidget * o = new QQuickWidget( *PQURL(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QQuickWidget * obj = new QQuickWidget( *PQURL(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -147,6 +149,8 @@ HB_FUNC_STATIC( QQUICKWIDGET_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
