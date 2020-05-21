@@ -84,8 +84,8 @@ explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
 void QBoxSet_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * o = new QBoxSet( OPQSTRING(1,QString()), OPQOBJECT(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QBoxSet * obj = new QBoxSet( OPQSTRING(1,QString()), OPQOBJECT(2,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -95,8 +95,8 @@ explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, 
 void QBoxSet_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * o = new QBoxSet( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QBoxSet * obj = new QBoxSet( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -131,8 +131,8 @@ HB_FUNC_STATIC( QBOXSET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

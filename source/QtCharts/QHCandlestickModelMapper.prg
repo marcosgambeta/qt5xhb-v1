@@ -65,6 +65,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -84,8 +86,8 @@ HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QHCandlestickModelMapper * o = new QHCandlestickModelMapper( OPQOBJECT(1,nullptr) );
-    Qt5xHb::returnNewObject( o, false );
+    QHCandlestickModelMapper * obj = new QHCandlestickModelMapper( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

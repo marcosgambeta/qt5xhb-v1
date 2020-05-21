@@ -34,7 +34,7 @@ class QDateTimeAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDateTimeAxisSlots(QObject *parent = 0);
+  QDateTimeAxisSlots( QObject *parent = 0 );
   ~QDateTimeAxisSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

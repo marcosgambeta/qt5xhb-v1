@@ -32,7 +32,7 @@ class QPieSliceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QPieSliceSlots(QObject *parent = 0);
+  QPieSliceSlots( QObject *parent = 0 );
   ~QPieSliceSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

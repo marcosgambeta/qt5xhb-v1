@@ -32,7 +32,7 @@ class QAbstractBarSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractBarSeriesSlots(QObject *parent = 0);
+  QAbstractBarSeriesSlots( QObject *parent = 0 );
   ~QAbstractBarSeriesSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

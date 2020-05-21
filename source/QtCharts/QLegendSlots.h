@@ -32,7 +32,7 @@ class QLegendSlots: public QObject
 {
   Q_OBJECT
   public:
-  QLegendSlots(QObject *parent = 0);
+  QLegendSlots( QObject *parent = 0 );
   ~QLegendSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

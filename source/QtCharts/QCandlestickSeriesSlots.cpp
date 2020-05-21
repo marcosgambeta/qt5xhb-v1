@@ -12,57 +12,75 @@
 
 #include "QCandlestickSeriesSlots.h"
 
-QCandlestickSeriesSlots::QCandlestickSeriesSlots(QObject *parent) : QObject(parent)
+QCandlestickSeriesSlots::QCandlestickSeriesSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCandlestickSeriesSlots::~QCandlestickSeriesSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::bodyOutlineVisibilityChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "bodyOutlineVisibilityChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::bodyWidthChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "bodyWidthChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::brushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "brushChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::candlestickSetsAdded( const QList<QCandlestickSet*> & sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "candlestickSetsAdded(QList<QCandlestickSet*>)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
@@ -89,17 +107,22 @@ void QCandlestickSeriesSlots::candlestickSetsAdded( const QList<QCandlestickSet*
     {
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCANDLESTICKSET", HB_ERR_ARGS_BASEPARAMS );
     }
+
     hb_vmEvalBlockV( cb, 2, psender, psets );
+
     hb_itemRelease( psender );
     hb_itemRelease( psets );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::candlestickSetsRemoved( const QList<QCandlestickSet*> & sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "candlestickSetsRemoved(QList<QCandlestickSet*>)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
@@ -126,188 +149,255 @@ void QCandlestickSeriesSlots::candlestickSetsRemoved( const QList<QCandlestickSe
     {
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QCANDLESTICKSET", HB_ERR_ARGS_BASEPARAMS );
     }
+
     hb_vmEvalBlockV( cb, 2, psender, psets );
+
     hb_itemRelease( psender );
     hb_itemRelease( psets );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::capsVisibilityChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "capsVisibilityChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::capsWidthChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "capsWidthChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::clicked( QCandlestickSet * set )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QCandlestickSet*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+
     hb_vmEvalBlockV( cb, 2, psender, pset );
+
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::countChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::decreasingColorChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "decreasingColorChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::doubleClicked( QCandlestickSet * set )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QCandlestickSet*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+
     hb_vmEvalBlockV( cb, 2, psender, pset );
+
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::hovered( bool status, QCandlestickSet * set )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool,QCandlestickSet*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+
     hb_vmEvalBlockV( cb, 3, psender, pstatus, pset );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstatus );
     hb_itemRelease( pset );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::increasingColorChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "increasingColorChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::maximumColumnWidthChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "maximumColumnWidthChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::minimumColumnWidthChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "minimumColumnWidthChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::penChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "penChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::pressed( QCandlestickSet * set )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QCandlestickSet*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+
     hb_vmEvalBlockV( cb, 2, psender, pset );
+
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickSeriesSlots::released( QCandlestickSet * set )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "released(QCandlestickSet*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+
     hb_vmEvalBlockV( cb, 2, psender, pset );
+
     hb_itemRelease( psender );
     hb_itemRelease( pset );
   }

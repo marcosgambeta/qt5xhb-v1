@@ -32,7 +32,7 @@ class QScatterSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  QScatterSeriesSlots(QObject *parent = 0);
+  QScatterSeriesSlots( QObject *parent = 0 );
   ~QScatterSeriesSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

@@ -32,7 +32,7 @@ class QBarSetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QBarSetSlots(QObject *parent = 0);
+  QBarSetSlots( QObject *parent = 0 );
   ~QBarSetSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

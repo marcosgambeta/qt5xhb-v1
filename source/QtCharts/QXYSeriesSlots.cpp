@@ -12,265 +12,350 @@
 
 #include "QXYSeriesSlots.h"
 
-QXYSeriesSlots::QXYSeriesSlots(QObject *parent) : QObject(parent)
+QXYSeriesSlots::QXYSeriesSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QXYSeriesSlots::~QXYSeriesSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::clicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QPointF)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::colorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
+
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::doubleClicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QPointF)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::hovered( const QPointF & point, bool state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QPointF,bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
     PHB_ITEM pstate = hb_itemPutL( NULL, state );
+
     hb_vmEvalBlockV( cb, 3, psender, ppoint, pstate );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
     hb_itemRelease( pstate );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::penChanged( const QPen & pen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "penChanged(QPen)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppen = Signals_return_object( (void *) &pen, "QPEN" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppen );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppen );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointAdded( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointAdded(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsClippingChanged( bool clipping )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsClippingChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pclipping = hb_itemPutL( NULL, clipping );
+
     hb_vmEvalBlockV( cb, 2, psender, pclipping );
+
     hb_itemRelease( psender );
     hb_itemRelease( pclipping );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsColorChanged(QColor)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
+
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFontChanged(QFont)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
+
     hb_vmEvalBlockV( cb, 2, psender, pfont );
+
     hb_itemRelease( psender );
     hb_itemRelease( pfont );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsFormatChanged( const QString & format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFormatChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
+
     hb_vmEvalBlockV( cb, 2, psender, pformat );
+
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointLabelsVisibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsVisibilityChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
+
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
+
     hb_itemRelease( psender );
     hb_itemRelease( pvisible );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointRemoved( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointRemoved(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointReplaced( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointReplaced(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointsRemoved( int index, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointsRemoved(int,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
+
     hb_vmEvalBlockV( cb, 3, psender, pindex, pcount );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
     hb_itemRelease( pcount );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pointsReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pointsReplaced()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::pressed( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QPointF)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QXYSeriesSlots::released( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "released(QPointF)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppoint );
   }

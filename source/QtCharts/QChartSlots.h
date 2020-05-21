@@ -32,7 +32,7 @@ class QChartSlots: public QObject
 {
   Q_OBJECT
   public:
-  QChartSlots(QObject *parent = 0);
+  QChartSlots( QObject *parent = 0 );
   ~QChartSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

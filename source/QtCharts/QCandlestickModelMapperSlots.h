@@ -34,7 +34,7 @@ class QCandlestickModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCandlestickModelMapperSlots(QObject *parent = 0);
+  QCandlestickModelMapperSlots( QObject *parent = 0 );
   ~QCandlestickModelMapperSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))

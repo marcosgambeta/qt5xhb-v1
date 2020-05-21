@@ -12,23 +12,28 @@
 
 #include "QChartSlots.h"
 
-QChartSlots::QChartSlots(QObject *parent) : QObject(parent)
+QChartSlots::QChartSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QChartSlots::~QChartSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QChartSlots::plotAreaChanged( const QRectF & plotArea )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "plotAreaChanged(QRectF)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCHART" );
     PHB_ITEM pplotArea = Signals_return_object( (void *) &plotArea, "QRECTF" );
+
     hb_vmEvalBlockV( cb, 2, psender, pplotArea );
+
     hb_itemRelease( psender );
     hb_itemRelease( pplotArea );
   }

@@ -12,80 +12,105 @@
 
 #include "QBarCategoryAxisSlots.h"
 
-QBarCategoryAxisSlots::QBarCategoryAxisSlots(QObject *parent) : QObject(parent)
+QBarCategoryAxisSlots::QBarCategoryAxisSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QBarCategoryAxisSlots::~QBarCategoryAxisSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::categoriesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "categoriesChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::countChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::maxChanged( const QString & max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmax = hb_itemPutC( NULL, QSTRINGTOSTRING(max) );
+
     hb_vmEvalBlockV( cb, 2, psender, pmax );
+
     hb_itemRelease( psender );
     hb_itemRelease( pmax );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::minChanged( const QString & min )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmin = hb_itemPutC( NULL, QSTRINGTOSTRING(min) );
+
     hb_vmEvalBlockV( cb, 2, psender, pmin );
+
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QBarCategoryAxisSlots::rangeChanged( const QString & min, const QString & max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(QString,QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmin = hb_itemPutC( NULL, QSTRINGTOSTRING(min) );
     PHB_ITEM pmax = hb_itemPutC( NULL, QSTRINGTOSTRING(max) );
+
     hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
+
     hb_itemRelease( psender );
     hb_itemRelease( pmin );
     hb_itemRelease( pmax );

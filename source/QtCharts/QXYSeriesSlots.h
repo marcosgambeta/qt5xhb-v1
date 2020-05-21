@@ -32,7 +32,7 @@ class QXYSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  QXYSeriesSlots(QObject *parent = 0);
+  QXYSeriesSlots( QObject *parent = 0 );
   ~QXYSeriesSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

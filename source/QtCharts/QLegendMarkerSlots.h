@@ -32,7 +32,7 @@ class QLegendMarkerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QLegendMarkerSlots(QObject *parent = 0);
+  QLegendMarkerSlots( QObject *parent = 0 );
   ~QLegendMarkerSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

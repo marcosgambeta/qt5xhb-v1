@@ -32,7 +32,7 @@ class QHPieModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHPieModelMapperSlots(QObject *parent = 0);
+  QHPieModelMapperSlots( QObject *parent = 0 );
   ~QHPieModelMapperSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

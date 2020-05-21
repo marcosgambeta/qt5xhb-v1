@@ -32,7 +32,7 @@ class QBarCategoryAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  QBarCategoryAxisSlots(QObject *parent = 0);
+  QBarCategoryAxisSlots( QObject *parent = 0 );
   ~QBarCategoryAxisSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

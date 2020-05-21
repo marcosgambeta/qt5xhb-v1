@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QLINESERIES_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QLineSeries * o = new QLineSeries( OPQOBJECT(1,Q_NULLPTR) );
-    Qt5xHb::returnNewObject( o, false );
+    QLineSeries * obj = new QLineSeries( OPQOBJECT(1,Q_NULLPTR) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -87,8 +87,8 @@ HB_FUNC_STATIC( QLINESERIES_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

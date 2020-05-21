@@ -32,7 +32,7 @@ class QHXYModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHXYModelMapperSlots(QObject *parent = 0);
+  QHXYModelMapperSlots( QObject *parent = 0 );
   ~QHXYModelMapperSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

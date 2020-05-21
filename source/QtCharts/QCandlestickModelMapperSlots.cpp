@@ -12,35 +12,45 @@
 
 #include "QCandlestickModelMapperSlots.h"
 
-QCandlestickModelMapperSlots::QCandlestickModelMapperSlots(QObject *parent) : QObject(parent)
+QCandlestickModelMapperSlots::QCandlestickModelMapperSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCandlestickModelMapperSlots::~QCandlestickModelMapperSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickModelMapperSlots::modelReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "modelReplaced()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKMODELMAPPER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
 void QCandlestickModelMapperSlots::seriesReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesReplaced()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCANDLESTICKMODELMAPPER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

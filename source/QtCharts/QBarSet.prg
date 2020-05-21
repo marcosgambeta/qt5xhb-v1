@@ -106,8 +106,8 @@ HB_FUNC_STATIC( QBARSET_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QBarSet * o = new QBarSet( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
-    Qt5xHb::returnNewObject( o, false );
+    QBarSet * obj = new QBarSet( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -126,8 +126,8 @@ HB_FUNC_STATIC( QBARSET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

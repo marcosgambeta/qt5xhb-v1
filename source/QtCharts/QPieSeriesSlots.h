@@ -32,7 +32,7 @@ class QPieSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  QPieSeriesSlots(QObject *parent = 0);
+  QPieSeriesSlots( QObject *parent = 0 );
   ~QPieSeriesSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

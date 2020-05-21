@@ -12,36 +12,46 @@
 
 #include "QCategoryAxisSlots.h"
 
-QCategoryAxisSlots::QCategoryAxisSlots(QObject *parent) : QObject(parent)
+QCategoryAxisSlots::QCategoryAxisSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCategoryAxisSlots::~QCategoryAxisSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QCategoryAxisSlots::categoriesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "categoriesChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCATEGORYAXIS" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 void QCategoryAxisSlots::labelsPositionChanged( QCategoryAxis::AxisLabelsPosition position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsPositionChanged(QCategoryAxis::AxisLabelsPosition)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCATEGORYAXIS" );
     PHB_ITEM pposition = hb_itemPutNI( NULL, (int) position );
+
     hb_vmEvalBlockV( cb, 2, psender, pposition );
+
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }

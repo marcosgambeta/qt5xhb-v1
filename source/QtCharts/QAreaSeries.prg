@@ -106,8 +106,8 @@ explicit QAreaSeries(QObject *parent = Q_NULLPTR)
 void QAreaSeries_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * o = new QAreaSeries( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QAreaSeries * obj = new QAreaSeries( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -117,8 +117,8 @@ explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULL
 void QAreaSeries_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * o = new QAreaSeries( PQLINESERIES(1), OPQLINESERIES(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QAreaSeries * obj = new QAreaSeries( PQLINESERIES(1), OPQLINESERIES(2,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -153,8 +153,8 @@ HB_FUNC_STATIC( QAREASERIES_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

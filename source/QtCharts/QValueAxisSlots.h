@@ -32,7 +32,7 @@ class QValueAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  QValueAxisSlots(QObject *parent = 0);
+  QValueAxisSlots( QObject *parent = 0 );
   ~QValueAxisSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

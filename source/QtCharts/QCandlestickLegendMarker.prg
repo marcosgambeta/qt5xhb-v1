@@ -46,6 +46,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
@@ -65,8 +67,8 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
   if( ISBETWEEN(2,3) && ISQCANDLESTICKSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
-    QCandlestickLegendMarker * o = new QCandlestickLegendMarker( PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
-    Qt5xHb::returnNewObject( o, false );
+    QCandlestickLegendMarker * obj = new QCandlestickLegendMarker( PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -85,6 +87,8 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

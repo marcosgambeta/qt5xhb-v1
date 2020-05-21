@@ -32,7 +32,7 @@ class QVBarModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVBarModelMapperSlots(QObject *parent = 0);
+  QVBarModelMapperSlots( QObject *parent = 0 );
   ~QVBarModelMapperSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

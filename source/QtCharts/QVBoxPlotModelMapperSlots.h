@@ -32,7 +32,7 @@ class QVBoxPlotModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVBoxPlotModelMapperSlots(QObject *parent = 0);
+  QVBoxPlotModelMapperSlots( QObject *parent = 0 );
   ~QVBoxPlotModelMapperSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

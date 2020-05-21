@@ -121,8 +121,8 @@ explicit QPieSlice(QObject *parent = Q_NULLPTR)
 void QPieSlice_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * o = new QPieSlice( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QPieSlice * obj = new QPieSlice( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -132,8 +132,8 @@ QPieSlice(QString label, qreal value, QObject *parent = Q_NULLPTR)
 void QPieSlice_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * o = new QPieSlice( PQSTRING(1), PQREAL(2), OPQOBJECT(3,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QPieSlice * obj = new QPieSlice( PQSTRING(1), PQREAL(2), OPQOBJECT(3,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -168,8 +168,8 @@ HB_FUNC_STATIC( QPIESLICE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -34,7 +34,7 @@ class QHBoxPlotModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHBoxPlotModelMapperSlots(QObject *parent = 0);
+  QHBoxPlotModelMapperSlots( QObject *parent = 0 );
   ~QHBoxPlotModelMapperSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))

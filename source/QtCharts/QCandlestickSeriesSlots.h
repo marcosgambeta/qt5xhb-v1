@@ -34,7 +34,7 @@ class QCandlestickSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCandlestickSeriesSlots(QObject *parent = 0);
+  QCandlestickSeriesSlots( QObject *parent = 0 );
   ~QCandlestickSeriesSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))

@@ -32,7 +32,7 @@ class QHBarModelMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHBarModelMapperSlots(QObject *parent = 0);
+  QHBarModelMapperSlots( QObject *parent = 0 );
   ~QHBarModelMapperSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))

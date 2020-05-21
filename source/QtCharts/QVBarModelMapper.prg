@@ -63,6 +63,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
@@ -83,8 +85,8 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QVBarModelMapper * o = new QVBarModelMapper( OPQOBJECT(1,Q_NULLPTR) );
-    Qt5xHb::returnNewObject( o, false );
+    QVBarModelMapper * obj = new QVBarModelMapper( OPQOBJECT(1,Q_NULLPTR) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
