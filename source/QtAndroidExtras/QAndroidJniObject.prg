@@ -79,8 +79,8 @@ QAndroidJniObject()
 void QAndroidJniObject_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * o = new QAndroidJniObject();
-  Qt5xHb::returnNewObject( o, true );
+  QAndroidJniObject * obj = new QAndroidJniObject();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -90,8 +90,8 @@ QAndroidJniObject(const char *className)
 void QAndroidJniObject_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * o = new QAndroidJniObject( PCONSTCHAR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QAndroidJniObject * obj = new QAndroidJniObject( PCONSTCHAR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
