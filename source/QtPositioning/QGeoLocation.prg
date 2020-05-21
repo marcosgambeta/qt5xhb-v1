@@ -79,8 +79,8 @@ QGeoLocation()
 void QGeoLocation_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * o = new QGeoLocation();
-  Qt5xHb::returnNewObject( o, true );
+  QGeoLocation * obj = new QGeoLocation();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -90,8 +90,8 @@ QGeoLocation(const QGeoLocation &other)
 void QGeoLocation_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoLocation * o = new QGeoLocation( *PQGEOLOCATION(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QGeoLocation * obj = new QGeoLocation( *PQGEOLOCATION(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

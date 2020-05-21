@@ -30,7 +30,7 @@ class QGeoPositionInfoSourceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGeoPositionInfoSourceSlots(QObject *parent = 0);
+  QGeoPositionInfoSourceSlots( QObject *parent = 0 );
   ~QGeoPositionInfoSourceSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))

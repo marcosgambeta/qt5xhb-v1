@@ -79,8 +79,8 @@ QGeoAreaMonitorInfo(const QString &name = QString())
 void QGeoAreaMonitorInfo_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorInfo * o = new QGeoAreaMonitorInfo( OPQSTRING(1,QString()) );
-  Qt5xHb::returnNewObject( o, true );
+  QGeoAreaMonitorInfo * obj = new QGeoAreaMonitorInfo( OPQSTRING(1,QString()) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -90,8 +90,8 @@ QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
 void QGeoAreaMonitorInfo_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorInfo * o = new QGeoAreaMonitorInfo( *PQGEOAREAMONITORINFO(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QGeoAreaMonitorInfo * obj = new QGeoAreaMonitorInfo( *PQGEOAREAMONITORINFO(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

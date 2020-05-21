@@ -30,7 +30,7 @@ class QGeoSatelliteInfoSourceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGeoSatelliteInfoSourceSlots(QObject *parent = 0);
+  QGeoSatelliteInfoSourceSlots( QObject *parent = 0 );
   ~QGeoSatelliteInfoSourceSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))

@@ -88,8 +88,8 @@ QGeoAddress()
 void QGeoAddress_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * o = new QGeoAddress();
-  Qt5xHb::returnNewObject( o, true );
+  QGeoAddress * obj = new QGeoAddress();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -99,8 +99,8 @@ QGeoAddress(const QGeoAddress &other)
 void QGeoAddress_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAddress * o = new QGeoAddress( *PQGEOADDRESS(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QGeoAddress * obj = new QGeoAddress( *PQGEOADDRESS(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

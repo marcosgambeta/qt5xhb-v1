@@ -12,18 +12,21 @@
 
 #include "QGeoSatelliteInfoSourceSlots.h"
 
-QGeoSatelliteInfoSourceSlots::QGeoSatelliteInfoSourceSlots(QObject *parent) : QObject(parent)
+QGeoSatelliteInfoSourceSlots::QGeoSatelliteInfoSourceSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QGeoSatelliteInfoSourceSlots::~QGeoSatelliteInfoSourceSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSatelliteInfo> & satellites )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "satellitesInViewUpdated(QList<QGeoSatelliteInfo>)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
@@ -50,17 +53,22 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
     {
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
     }
+
     hb_vmEvalBlockV( cb, 2, psender, psatellites );
+
     hb_itemRelease( psender );
     hb_itemRelease( psatellites );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatelliteInfo> & satellites )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "satellitesInUseUpdated(QList<QGeoSatelliteInfo>)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
@@ -87,35 +95,47 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
     {
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOSATELLITEINFO", HB_ERR_ARGS_BASEPARAMS );
     }
+
     hb_vmEvalBlockV( cb, 2, psender, psatellites );
+
     hb_itemRelease( psender );
     hb_itemRelease( psatellites );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoSatelliteInfoSourceSlots::requestTimeout()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "requestTimeout()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QGeoSatelliteInfoSourceSlots::error( QGeoSatelliteInfoSource::Error error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoSatelliteInfoSource::Error)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+
     hb_vmEvalBlockV( cb, 2, psender, perror );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
