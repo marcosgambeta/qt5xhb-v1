@@ -28,7 +28,7 @@ class QInAppStoreSlots: public QObject
 {
   Q_OBJECT
   public:
-  QInAppStoreSlots(QObject *parent = 0);
+  QInAppStoreSlots( QObject *parent = 0 );
   ~QInAppStoreSlots();
   public slots:
   void productRegistered( QInAppProduct * product );
