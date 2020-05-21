@@ -30,7 +30,7 @@ class QCustom3DLabelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCustom3DLabelSlots(QObject *parent = 0);
+  QCustom3DLabelSlots( QObject *parent = 0 );
   ~QCustom3DLabelSlots();
   public slots:
   void backgroundColorChanged( const QColor & color );

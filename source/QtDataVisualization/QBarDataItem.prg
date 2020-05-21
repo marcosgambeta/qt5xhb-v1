@@ -66,8 +66,8 @@ QBarDataItem()
 */
 void QBarDataItem_new1()
 {
-  QBarDataItem * o = new QBarDataItem();
-  Qt5xHb::returnNewObject( o, true );
+  QBarDataItem * obj = new QBarDataItem();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QBarDataItem(float value)
 */
 void QBarDataItem_new2()
 {
-  QBarDataItem * o = new QBarDataItem( PFLOAT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QBarDataItem * obj = new QBarDataItem( PFLOAT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QBarDataItem(float value, float angle)
 */
 void QBarDataItem_new3()
 {
-  QBarDataItem * o = new QBarDataItem( PFLOAT(1), PFLOAT(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QBarDataItem * obj = new QBarDataItem( PFLOAT(1), PFLOAT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QBarDataItem(const QBarDataItem &other)
 */
 void QBarDataItem_new4()
 {
-  QBarDataItem * o = new QBarDataItem( *PQBARDATAITEM(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QBarDataItem * obj = new QBarDataItem( *PQBARDATAITEM(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

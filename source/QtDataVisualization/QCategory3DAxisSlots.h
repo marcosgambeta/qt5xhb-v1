@@ -30,7 +30,7 @@ class QCategory3DAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCategory3DAxisSlots(QObject *parent = 0);
+  QCategory3DAxisSlots( QObject *parent = 0 );
   ~QCategory3DAxisSlots();
   public slots:
   void labelsChanged();

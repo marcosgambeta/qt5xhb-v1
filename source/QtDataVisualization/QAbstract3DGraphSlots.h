@@ -30,7 +30,7 @@ class QAbstract3DGraphSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstract3DGraphSlots(QObject *parent = 0);
+  QAbstract3DGraphSlots( QObject *parent = 0 );
   ~QAbstract3DGraphSlots();
   public slots:
   void activeInputHandlerChanged( QAbstract3DInputHandler * inputHandler );

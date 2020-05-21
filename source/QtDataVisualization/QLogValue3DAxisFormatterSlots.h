@@ -30,7 +30,7 @@ class QLogValue3DAxisFormatterSlots: public QObject
 {
   Q_OBJECT
   public:
-  QLogValue3DAxisFormatterSlots(QObject *parent = 0);
+  QLogValue3DAxisFormatterSlots( QObject *parent = 0 );
   ~QLogValue3DAxisFormatterSlots();
   public slots:
   void autoSubGridChanged( bool enabled );

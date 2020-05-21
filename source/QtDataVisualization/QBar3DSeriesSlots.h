@@ -30,7 +30,7 @@ class QBar3DSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  QBar3DSeriesSlots(QObject *parent = 0);
+  QBar3DSeriesSlots( QObject *parent = 0 );
   ~QBar3DSeriesSlots();
   public slots:
   void dataProxyChanged( QBarDataProxy * proxy );

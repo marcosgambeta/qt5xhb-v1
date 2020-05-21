@@ -87,8 +87,8 @@ explicit QCustom3DItem(QObject *parent = Q_NULLPTR)
 */
 void QCustom3DItem_new1()
 {
-  QCustom3DItem * o = new QCustom3DItem( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QCustom3DItem * obj = new QCustom3DItem( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -96,8 +96,8 @@ explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const
 */
 void QCustom3DItem_new2()
 {
-  QCustom3DItem * o = new QCustom3DItem( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QCustom3DItem * obj = new QCustom3DItem( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -134,8 +134,8 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

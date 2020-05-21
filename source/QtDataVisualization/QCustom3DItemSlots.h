@@ -30,7 +30,7 @@ class QCustom3DItemSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCustom3DItemSlots(QObject *parent = 0);
+  QCustom3DItemSlots( QObject *parent = 0 );
   ~QCustom3DItemSlots();
   public slots:
   void meshFileChanged( const QString & meshFile );

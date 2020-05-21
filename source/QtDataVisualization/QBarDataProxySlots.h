@@ -30,7 +30,7 @@ class QBarDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  QBarDataProxySlots(QObject *parent = 0);
+  QBarDataProxySlots( QObject *parent = 0 );
   ~QBarDataProxySlots();
   public slots:
   void arrayReset();

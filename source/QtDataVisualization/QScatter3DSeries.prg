@@ -67,8 +67,8 @@ explicit QScatter3DSeries(QObject *parent = Q_NULLPTR)
 */
 void QScatter3DSeries_new1()
 {
-  QScatter3DSeries * o = new QScatter3DSeries( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QScatter3DSeries * obj = new QScatter3DSeries( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -76,8 +76,8 @@ explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = Q_NULL
 */
 void QScatter3DSeries_new2()
 {
-  QScatter3DSeries * o = new QScatter3DSeries( PQSCATTERDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QScatter3DSeries * obj = new QScatter3DSeries( PQSCATTERDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -114,8 +114,8 @@ HB_FUNC_STATIC( QSCATTER3DSERIES_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -30,7 +30,7 @@ class QValue3DAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  QValue3DAxisSlots(QObject *parent = 0);
+  QValue3DAxisSlots( QObject *parent = 0 );
   ~QValue3DAxisSlots();
   public slots:
 };

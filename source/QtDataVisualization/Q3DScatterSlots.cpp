@@ -12,61 +12,81 @@
 
 #include "Q3DScatterSlots.h"
 
-Q3DScatterSlots::Q3DScatterSlots(QObject *parent) : QObject(parent)
+Q3DScatterSlots::Q3DScatterSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 Q3DScatterSlots::~Q3DScatterSlots()
 {
 }
+
 void Q3DScatterSlots::axisXChanged( QValue3DAxis * axis )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "axisXChanged(QValue3DAxis*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCATTER" );
     PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
+
     hb_vmEvalBlockV( cb, 2, psender, paxis );
+
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
   }
 }
+
 void Q3DScatterSlots::axisYChanged( QValue3DAxis * axis )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "axisYChanged(QValue3DAxis*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCATTER" );
     PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
+
     hb_vmEvalBlockV( cb, 2, psender, paxis );
+
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
   }
 }
+
 void Q3DScatterSlots::axisZChanged( QValue3DAxis * axis )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "axisZChanged(QValue3DAxis*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCATTER" );
     PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
+
     hb_vmEvalBlockV( cb, 2, psender, paxis );
+
     hb_itemRelease( psender );
     hb_itemRelease( paxis );
   }
 }
+
 void Q3DScatterSlots::selectedSeriesChanged( QScatter3DSeries * series )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedSeriesChanged(QScatter3DSeries*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DSCATTER" );
     PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSCATTER3DSERIES" );
+
     hb_vmEvalBlockV( cb, 2, psender, pseries );
+
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }

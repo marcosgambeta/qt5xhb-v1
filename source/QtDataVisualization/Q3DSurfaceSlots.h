@@ -30,7 +30,7 @@ class Q3DSurfaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  Q3DSurfaceSlots(QObject *parent = 0);
+  Q3DSurfaceSlots( QObject *parent = 0 );
   ~Q3DSurfaceSlots();
   public slots:
   void axisXChanged( QValue3DAxis * axis );

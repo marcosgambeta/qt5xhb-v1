@@ -65,6 +65,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDataVisualization/QCustom3DLabel>
@@ -77,8 +79,8 @@ explicit QCustom3DLabel(QObject *parent = Q_NULLPTR)
 */
 void QCustom3DLabel_new1()
 {
-  QCustom3DLabel * o = new QCustom3DLabel( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QCustom3DLabel * obj = new QCustom3DLabel( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -86,8 +88,8 @@ explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D 
 */
 void QCustom3DLabel_new2()
 {
-  QCustom3DLabel * o = new QCustom3DLabel( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QCustom3DLabel * obj = new QCustom3DLabel( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -120,6 +122,8 @@ HB_FUNC_STATIC( QCUSTOM3DLABEL_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

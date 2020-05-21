@@ -30,7 +30,7 @@ class Q3DObjectSlots: public QObject
 {
   Q_OBJECT
   public:
-  Q3DObjectSlots(QObject *parent = 0);
+  Q3DObjectSlots( QObject *parent = 0 );
   ~Q3DObjectSlots();
   public slots:
   void positionChanged( const QVector3D & position );

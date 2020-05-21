@@ -125,8 +125,8 @@ explicit Q3DTheme(QObject *parent = Q_NULLPTR)
 */
 void Q3DTheme_new1()
 {
-  Q3DTheme * o = new Q3DTheme( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  Q3DTheme * obj = new Q3DTheme( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -134,8 +134,8 @@ explicit Q3DTheme(Theme themeType, QObject *parent = Q_NULLPTR)
 */
 void Q3DTheme_new2()
 {
-  Q3DTheme * o = new Q3DTheme( (Q3DTheme::Theme) hb_parni(1), OPQOBJECT(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  Q3DTheme * obj = new Q3DTheme( (Q3DTheme::Theme) hb_parni(1), OPQOBJECT(2,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -173,8 +173,8 @@ HB_FUNC_STATIC( Q3DTHEME_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

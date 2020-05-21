@@ -30,7 +30,7 @@ class QHeightMapSurfaceDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  QHeightMapSurfaceDataProxySlots(QObject *parent = 0);
+  QHeightMapSurfaceDataProxySlots( QObject *parent = 0 );
   ~QHeightMapSurfaceDataProxySlots();
   public slots:
   void heightMapChanged( const QImage & image );

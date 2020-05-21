@@ -30,7 +30,7 @@ class QAbstract3DAxisSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstract3DAxisSlots(QObject *parent = 0);
+  QAbstract3DAxisSlots( QObject *parent = 0 );
   ~QAbstract3DAxisSlots();
   public slots:
   void titleChanged( const QString & newTitle );

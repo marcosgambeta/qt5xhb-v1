@@ -30,7 +30,7 @@ class QCustom3DVolumeSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCustom3DVolumeSlots(QObject *parent = 0);
+  QCustom3DVolumeSlots( QObject *parent = 0 );
   ~QCustom3DVolumeSlots();
   public slots:
   void alphaMultiplierChanged( float mult );

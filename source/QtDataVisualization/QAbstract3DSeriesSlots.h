@@ -30,7 +30,7 @@ class QAbstract3DSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstract3DSeriesSlots(QObject *parent = 0);
+  QAbstract3DSeriesSlots( QObject *parent = 0 );
   ~QAbstract3DSeriesSlots();
   public slots:
   void baseColorChanged( const QColor & color );

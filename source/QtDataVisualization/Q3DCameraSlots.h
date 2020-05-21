@@ -30,7 +30,7 @@ class Q3DCameraSlots: public QObject
 {
   Q_OBJECT
   public:
-  Q3DCameraSlots(QObject *parent = 0);
+  Q3DCameraSlots( QObject *parent = 0 );
   ~Q3DCameraSlots();
   public slots:
   void cameraPresetChanged( Q3DCamera::CameraPreset preset );

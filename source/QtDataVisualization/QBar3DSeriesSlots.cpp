@@ -12,48 +12,63 @@
 
 #include "QBar3DSeriesSlots.h"
 
-QBar3DSeriesSlots::QBar3DSeriesSlots(QObject *parent) : QObject(parent)
+QBar3DSeriesSlots::QBar3DSeriesSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QBar3DSeriesSlots::~QBar3DSeriesSlots()
 {
 }
+
 void QBar3DSeriesSlots::dataProxyChanged( QBarDataProxy * proxy )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "dataProxyChanged(QBarDataProxy*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBAR3DSERIES" );
     PHB_ITEM pproxy = Signals_return_qobject( (QObject *) proxy, "QBARDATAPROXY" );
+
     hb_vmEvalBlockV( cb, 2, psender, pproxy );
+
     hb_itemRelease( psender );
     hb_itemRelease( pproxy );
   }
 }
+
 void QBar3DSeriesSlots::meshAngleChanged( float angle )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "meshAngleChanged(float)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBAR3DSERIES" );
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
+
     hb_vmEvalBlockV( cb, 2, psender, pangle );
+
     hb_itemRelease( psender );
     hb_itemRelease( pangle );
   }
 }
+
 void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "selectedBarChanged(QPoint)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBAR3DSERIES" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
+
     hb_vmEvalBlockV( cb, 2, psender, pposition );
+
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }

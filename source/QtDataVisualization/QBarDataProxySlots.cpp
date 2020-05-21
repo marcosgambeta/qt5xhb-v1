@@ -12,143 +12,193 @@
 
 #include "QBarDataProxySlots.h"
 
-QBarDataProxySlots::QBarDataProxySlots(QObject *parent) : QObject(parent)
+QBarDataProxySlots::QBarDataProxySlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QBarDataProxySlots::~QBarDataProxySlots()
 {
 }
+
 void QBarDataProxySlots::arrayReset()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "arrayReset()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QBarDataProxySlots::columnLabelsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "columnLabelsChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QBarDataProxySlots::itemChanged( int rowIndex, int columnIndex )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "itemChanged(int,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM prowIndex = hb_itemPutNI( NULL, rowIndex );
     PHB_ITEM pcolumnIndex = hb_itemPutNI( NULL, columnIndex );
+
     hb_vmEvalBlockV( cb, 3, psender, prowIndex, pcolumnIndex );
+
     hb_itemRelease( psender );
     hb_itemRelease( prowIndex );
     hb_itemRelease( pcolumnIndex );
   }
 }
+
 void QBarDataProxySlots::rowCountChanged( int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rowCountChanged(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
+
     hb_vmEvalBlockV( cb, 2, psender, pcount );
+
     hb_itemRelease( psender );
     hb_itemRelease( pcount );
   }
 }
+
 void QBarDataProxySlots::rowLabelsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rowLabelsChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QBarDataProxySlots::rowsAdded( int startIndex, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsAdded(int,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
+
     hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
   }
 }
+
 void QBarDataProxySlots::rowsChanged( int startIndex, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsChanged(int,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
+
     hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
   }
 }
+
 void QBarDataProxySlots::rowsInserted( int startIndex, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsInserted(int,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
+
     hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
   }
 }
+
 void QBarDataProxySlots::rowsRemoved( int startIndex, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rowsRemoved(int,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pstartIndex = hb_itemPutNI( NULL, startIndex );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
+
     hb_vmEvalBlockV( cb, 3, psender, pstartIndex, pcount );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstartIndex );
     hb_itemRelease( pcount );
   }
 }
+
 void QBarDataProxySlots::seriesChanged( QBar3DSeries * series )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "seriesChanged(QBar3DSeries*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARDATAPROXY" );
     PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QBAR3DSERIES" );
+
     hb_vmEvalBlockV( cb, 2, psender, pseries );
+
     hb_itemRelease( psender );
     hb_itemRelease( pseries );
   }

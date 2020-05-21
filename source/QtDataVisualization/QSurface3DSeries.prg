@@ -80,8 +80,8 @@ explicit QSurface3DSeries(QObject *parent = Q_NULLPTR)
 */
 void QSurface3DSeries_new1()
 {
-  QSurface3DSeries * o = new QSurface3DSeries( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QSurface3DSeries * obj = new QSurface3DSeries( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -89,8 +89,8 @@ explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = Q_NULL
 */
 void QSurface3DSeries_new2()
 {
-  QSurface3DSeries * o = new QSurface3DSeries( PQSURFACEDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QSurface3DSeries * obj = new QSurface3DSeries( PQSURFACEDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -127,8 +127,8 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

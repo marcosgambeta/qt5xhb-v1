@@ -84,6 +84,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDataVisualization/QItemModelScatterDataProxy>
@@ -96,8 +98,8 @@ explicit QItemModelScatterDataProxy(QObject *parent = Q_NULLPTR)
 */
 void QItemModelScatterDataProxy_new1()
 {
-  QItemModelScatterDataProxy * o = new QItemModelScatterDataProxy( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -105,8 +107,8 @@ explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *pare
 */
 void QItemModelScatterDataProxy_new2()
 {
-  QItemModelScatterDataProxy * o = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -114,8 +116,8 @@ explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString
 */
 void QItemModelScatterDataProxy_new3()
 {
-  QItemModelScatterDataProxy * o = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -123,8 +125,8 @@ explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString
 */
 void QItemModelScatterDataProxy_new4()
 {
-  QItemModelScatterDataProxy * o = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -167,6 +169,8 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

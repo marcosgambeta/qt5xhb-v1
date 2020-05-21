@@ -30,7 +30,7 @@ class Q3DInputHandlerSlots: public QObject
 {
   Q_OBJECT
   public:
-  Q3DInputHandlerSlots(QObject *parent = 0);
+  Q3DInputHandlerSlots( QObject *parent = 0 );
   ~Q3DInputHandlerSlots();
   public slots:
   void rotationEnabledChanged( bool enable );

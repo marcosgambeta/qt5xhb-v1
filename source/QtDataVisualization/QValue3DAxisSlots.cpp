@@ -12,7 +12,7 @@
 
 #include "QValue3DAxisSlots.h"
 
-QValue3DAxisSlots::QValue3DAxisSlots(QObject *parent) : QObject(parent)
+QValue3DAxisSlots::QValue3DAxisSlots( QObject *parent ) : QObject( parent )
 {
 }
 

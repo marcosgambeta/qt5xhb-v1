@@ -12,61 +12,81 @@
 
 #include "Q3DInputHandlerSlots.h"
 
-Q3DInputHandlerSlots::Q3DInputHandlerSlots(QObject *parent) : QObject(parent)
+Q3DInputHandlerSlots::Q3DInputHandlerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 Q3DInputHandlerSlots::~Q3DInputHandlerSlots()
 {
 }
+
 void Q3DInputHandlerSlots::rotationEnabledChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationEnabledChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
+
     hb_vmEvalBlockV( cb, 2, psender, penable );
+
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
 }
+
 void Q3DInputHandlerSlots::selectionEnabledChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionEnabledChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
+
     hb_vmEvalBlockV( cb, 2, psender, penable );
+
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
 }
+
 void Q3DInputHandlerSlots::zoomAtTargetEnabledChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "zoomAtTargetEnabledChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
+
     hb_vmEvalBlockV( cb, 2, psender, penable );
+
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }
 }
+
 void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "zoomEnabledChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
+
     hb_vmEvalBlockV( cb, 2, psender, penable );
+
     hb_itemRelease( psender );
     hb_itemRelease( penable );
   }

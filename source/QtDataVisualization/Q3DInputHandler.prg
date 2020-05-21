@@ -54,6 +54,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDataVisualization/Q3DInputHandler>
@@ -68,8 +70,8 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    Q3DInputHandler * o = new Q3DInputHandler( OPQOBJECT(1,Q_NULLPTR) );
-    Qt5xHb::returnNewObject( o, false );
+    Q3DInputHandler * obj = new Q3DInputHandler( OPQOBJECT(1,Q_NULLPTR) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -86,6 +88,8 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

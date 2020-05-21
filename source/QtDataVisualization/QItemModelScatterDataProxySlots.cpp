@@ -12,178 +12,243 @@
 
 #include "QItemModelScatterDataProxySlots.h"
 
-QItemModelScatterDataProxySlots::QItemModelScatterDataProxySlots(QObject *parent) : QObject(parent)
+QItemModelScatterDataProxySlots::QItemModelScatterDataProxySlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QItemModelScatterDataProxySlots::~QItemModelScatterDataProxySlots()
 {
 }
+
 void QItemModelScatterDataProxySlots::itemModelChanged( const QAbstractItemModel * itemModel )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "itemModelChanged(QAbstractItemModel)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM pitemModel = Signals_return_qobject( (QObject *) itemModel, "QABSTRACTITEMMODEL" );
+
     hb_vmEvalBlockV( cb, 2, psender, pitemModel );
+
     hb_itemRelease( psender );
     hb_itemRelease( pitemModel );
   }
 }
+
 void QItemModelScatterDataProxySlots::rotationRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationRoleChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
+
     hb_vmEvalBlockV( cb, 2, psender, prole );
+
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
 }
+
 void QItemModelScatterDataProxySlots::rotationRolePatternChanged( const QRegExp & pattern )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationRolePatternChanged(QRegExp)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
   }
 }
+
 void QItemModelScatterDataProxySlots::rotationRoleReplaceChanged( const QString & replace )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rotationRoleReplaceChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
+
     hb_vmEvalBlockV( cb, 2, psender, preplace );
+
     hb_itemRelease( psender );
     hb_itemRelease( preplace );
   }
 }
+
 void QItemModelScatterDataProxySlots::xPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "xPosRoleChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
+
     hb_vmEvalBlockV( cb, 2, psender, prole );
+
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
 }
+
 void QItemModelScatterDataProxySlots::xPosRolePatternChanged( const QRegExp & pattern )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "xPosRolePatternChanged(QRegExp)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
   }
 }
+
 void QItemModelScatterDataProxySlots::xPosRoleReplaceChanged( const QString & replace )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "xPosRoleReplaceChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
+
     hb_vmEvalBlockV( cb, 2, psender, preplace );
+
     hb_itemRelease( psender );
     hb_itemRelease( preplace );
   }
 }
+
 void QItemModelScatterDataProxySlots::yPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "yPosRoleChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
+
     hb_vmEvalBlockV( cb, 2, psender, prole );
+
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
 }
+
 void QItemModelScatterDataProxySlots::yPosRolePatternChanged( const QRegExp & pattern )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "yPosRolePatternChanged(QRegExp)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
   }
 }
+
 void QItemModelScatterDataProxySlots::yPosRoleReplaceChanged( const QString & replace )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "yPosRoleReplaceChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
+
     hb_vmEvalBlockV( cb, 2, psender, preplace );
+
     hb_itemRelease( psender );
     hb_itemRelease( preplace );
   }
 }
+
 void QItemModelScatterDataProxySlots::zPosRoleChanged( const QString & role )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "zPosRoleChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
+
     hb_vmEvalBlockV( cb, 2, psender, prole );
+
     hb_itemRelease( psender );
     hb_itemRelease( prole );
   }
 }
+
 void QItemModelScatterDataProxySlots::zPosRolePatternChanged( const QRegExp & pattern )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "zPosRolePatternChanged(QRegExp)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppattern );
   }
 }
+
 void QItemModelScatterDataProxySlots::zPosRoleReplaceChanged( const QString & replace )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "zPosRoleReplaceChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
+
     hb_vmEvalBlockV( cb, 2, psender, preplace );
+
     hb_itemRelease( psender );
     hb_itemRelease( preplace );
   }

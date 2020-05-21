@@ -74,8 +74,8 @@ QScatterDataItem()
 */
 void QScatterDataItem_new1()
 {
-  QScatterDataItem * o = new QScatterDataItem();
-  Qt5xHb::returnNewObject( o, true );
+  QScatterDataItem * obj = new QScatterDataItem();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QScatterDataItem(const QVector3D &position)
 */
 void QScatterDataItem_new2()
 {
-  QScatterDataItem * o = new QScatterDataItem( *PQVECTOR3D(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QScatterDataItem * obj = new QScatterDataItem( *PQVECTOR3D(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
 */
 void QScatterDataItem_new3()
 {
-  QScatterDataItem * o = new QScatterDataItem( *PQVECTOR3D(1), *PQQUATERNION(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QScatterDataItem * obj = new QScatterDataItem( *PQVECTOR3D(1), *PQQUATERNION(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -101,8 +101,8 @@ QScatterDataItem(const QScatterDataItem &other)
 */
 void QScatterDataItem_new4()
 {
-  QScatterDataItem * o = new QScatterDataItem( *PQSCATTERDATAITEM(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QScatterDataItem * obj = new QScatterDataItem( *PQSCATTERDATAITEM(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

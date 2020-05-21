@@ -30,7 +30,7 @@ class Q3DThemeSlots: public QObject
 {
   Q_OBJECT
   public:
-  Q3DThemeSlots(QObject *parent = 0);
+  Q3DThemeSlots( QObject *parent = 0 );
   ~Q3DThemeSlots();
   public slots:
   void ambientLightStrengthChanged( float strength );

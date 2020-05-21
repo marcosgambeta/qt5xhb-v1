@@ -30,7 +30,7 @@ class QAbstract3DInputHandlerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstract3DInputHandlerSlots(QObject *parent = 0);
+  QAbstract3DInputHandlerSlots( QObject *parent = 0 );
   ~QAbstract3DInputHandlerSlots();
   public slots:
   void inputViewChanged( QAbstract3DInputHandler::InputView view );

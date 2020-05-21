@@ -30,7 +30,7 @@ class Q3DSceneSlots: public QObject
 {
   Q_OBJECT
   public:
-  Q3DSceneSlots(QObject *parent = 0);
+  Q3DSceneSlots( QObject *parent = 0 );
   ~Q3DSceneSlots();
   public slots:
   void activeCameraChanged( Q3DCamera * camera );

@@ -30,7 +30,7 @@ class QScatterDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  QScatterDataProxySlots(QObject *parent = 0);
+  QScatterDataProxySlots( QObject *parent = 0 );
   ~QScatterDataProxySlots();
   public slots:
   void arrayReset();

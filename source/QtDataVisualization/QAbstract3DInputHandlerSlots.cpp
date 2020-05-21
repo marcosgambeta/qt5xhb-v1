@@ -12,48 +12,63 @@
 
 #include "QAbstract3DInputHandlerSlots.h"
 
-QAbstract3DInputHandlerSlots::QAbstract3DInputHandlerSlots(QObject *parent) : QObject(parent)
+QAbstract3DInputHandlerSlots::QAbstract3DInputHandlerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAbstract3DInputHandlerSlots::~QAbstract3DInputHandlerSlots()
 {
 }
+
 void QAbstract3DInputHandlerSlots::inputViewChanged( QAbstract3DInputHandler::InputView view )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pview = hb_itemPutNI( NULL, (int) view );
+
     hb_vmEvalBlockV( cb, 2, psender, pview );
+
     hb_itemRelease( psender );
     hb_itemRelease( pview );
   }
 }
+
 void QAbstract3DInputHandlerSlots::positionChanged( const QPoint & position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "positionChanged(QPoint)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
+
     hb_vmEvalBlockV( cb, 2, psender, pposition );
+
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
 }
+
 void QAbstract3DInputHandlerSlots::sceneChanged( Q3DScene * scene )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneChanged(Q3DScene*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pscene = Signals_return_qobject( (QObject *) scene, "Q3DSCENE" );
+
     hb_vmEvalBlockV( cb, 2, psender, pscene );
+
     hb_itemRelease( psender );
     hb_itemRelease( pscene );
   }

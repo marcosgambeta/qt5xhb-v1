@@ -12,23 +12,28 @@
 
 #include "Q3DLightSlots.h"
 
-Q3DLightSlots::Q3DLightSlots(QObject *parent) : QObject(parent)
+Q3DLightSlots::Q3DLightSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 Q3DLightSlots::~Q3DLightSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
 void Q3DLightSlots::autoPositionChanged( bool autoPosition )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "autoPositionChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "Q3DLIGHT" );
     PHB_ITEM pautoPosition = hb_itemPutL( NULL, autoPosition );
+
     hb_vmEvalBlockV( cb, 2, psender, pautoPosition );
+
     hb_itemRelease( psender );
     hb_itemRelease( pautoPosition );
   }

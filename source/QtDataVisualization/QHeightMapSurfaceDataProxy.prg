@@ -62,6 +62,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDataVisualization/QHeightMapSurfaceDataProxy>
@@ -74,8 +76,8 @@ explicit QHeightMapSurfaceDataProxy(QObject *parent = Q_NULLPTR)
 */
 void QHeightMapSurfaceDataProxy_new1()
 {
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QHeightMapSurfaceDataProxy * obj = new QHeightMapSurfaceDataProxy( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -83,8 +85,8 @@ explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = Q_NUL
 */
 void QHeightMapSurfaceDataProxy_new2()
 {
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy( *PQIMAGE(1), OPQOBJECT(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QHeightMapSurfaceDataProxy * obj = new QHeightMapSurfaceDataProxy( *PQIMAGE(1), OPQOBJECT(2,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -92,8 +94,8 @@ explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = Q
 */
 void QHeightMapSurfaceDataProxy_new3()
 {
-  QHeightMapSurfaceDataProxy * o = new QHeightMapSurfaceDataProxy( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QHeightMapSurfaceDataProxy * obj = new QHeightMapSurfaceDataProxy( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -135,6 +137,8 @@ HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

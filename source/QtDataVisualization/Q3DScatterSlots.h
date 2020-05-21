@@ -30,7 +30,7 @@ class Q3DScatterSlots: public QObject
 {
   Q_OBJECT
   public:
-  Q3DScatterSlots(QObject *parent = 0);
+  Q3DScatterSlots( QObject *parent = 0 );
   ~Q3DScatterSlots();
   public slots:
   void axisXChanged( QValue3DAxis * axis );

@@ -99,6 +99,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDataVisualization/QCustom3DVolume>
@@ -111,8 +113,8 @@ explicit QCustom3DVolume(QObject *parent = Q_NULLPTR)
 */
 void QCustom3DVolume_new1()
 {
-  QCustom3DVolume * o = new QCustom3DVolume( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QCustom3DVolume * obj = new QCustom3DVolume( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -145,6 +147,8 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

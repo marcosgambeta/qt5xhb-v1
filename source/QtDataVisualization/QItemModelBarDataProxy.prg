@@ -104,6 +104,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDataVisualization/QItemModelBarDataProxy>
@@ -116,8 +118,8 @@ explicit QItemModelBarDataProxy(QObject *parent = Q_NULLPTR)
 */
 void QItemModelBarDataProxy_new1()
 {
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -125,8 +127,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, QObject *parent =
 */
 void QItemModelBarDataProxy_new2()
 {
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -134,8 +136,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &va
 */
 void QItemModelBarDataProxy_new3()
 {
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -143,8 +145,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 */
 void QItemModelBarDataProxy_new4()
 {
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -152,8 +154,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 */
 void QItemModelBarDataProxy_new5()
 {
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -161,8 +163,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 */
 void QItemModelBarDataProxy_new6()
 {
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -170,8 +172,8 @@ explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &ro
 */
 void QItemModelBarDataProxy_new7()
 {
-  QItemModelBarDataProxy * o = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7), OPQOBJECT(8,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7), OPQOBJECT(8,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -229,6 +231,8 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

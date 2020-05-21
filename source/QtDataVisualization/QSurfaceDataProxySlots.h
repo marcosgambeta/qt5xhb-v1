@@ -30,7 +30,7 @@ class QSurfaceDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  QSurfaceDataProxySlots(QObject *parent = 0);
+  QSurfaceDataProxySlots( QObject *parent = 0 );
   ~QSurfaceDataProxySlots();
   public slots:
   void arrayReset();

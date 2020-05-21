@@ -12,48 +12,63 @@
 
 #include "QLogValue3DAxisFormatterSlots.h"
 
-QLogValue3DAxisFormatterSlots::QLogValue3DAxisFormatterSlots(QObject *parent) : QObject(parent)
+QLogValue3DAxisFormatterSlots::QLogValue3DAxisFormatterSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QLogValue3DAxisFormatterSlots::~QLogValue3DAxisFormatterSlots()
 {
 }
+
 void QLogValue3DAxisFormatterSlots::autoSubGridChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "autoSubGridChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+
     hb_vmEvalBlockV( cb, 2, psender, penabled );
+
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }
 }
+
 void QLogValue3DAxisFormatterSlots::baseChanged( qreal base )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "baseChanged(qreal)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM pbase = hb_itemPutND( NULL, base );
+
     hb_vmEvalBlockV( cb, 2, psender, pbase );
+
     hb_itemRelease( psender );
     hb_itemRelease( pbase );
   }
 }
+
 void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "showEdgeLabelsChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+
     hb_vmEvalBlockV( cb, 2, psender, penabled );
+
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }

@@ -30,7 +30,7 @@ class Q3DBarsSlots: public QObject
 {
   Q_OBJECT
   public:
-  Q3DBarsSlots(QObject *parent = 0);
+  Q3DBarsSlots( QObject *parent = 0 );
   ~Q3DBarsSlots();
   public slots:
   void multiSeriesUniformChanged( bool uniform );

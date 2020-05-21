@@ -30,7 +30,7 @@ class QItemModelBarDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  QItemModelBarDataProxySlots(QObject *parent = 0);
+  QItemModelBarDataProxySlots( QObject *parent = 0 );
   ~QItemModelBarDataProxySlots();
   public slots:
   void autoColumnCategoriesChanged( bool enable );

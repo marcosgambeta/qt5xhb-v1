@@ -30,7 +30,7 @@ class QItemModelScatterDataProxySlots: public QObject
 {
   Q_OBJECT
   public:
-  QItemModelScatterDataProxySlots(QObject *parent = 0);
+  QItemModelScatterDataProxySlots( QObject *parent = 0 );
   ~QItemModelScatterDataProxySlots();
   public slots:
   void itemModelChanged( const QAbstractItemModel * itemModel );

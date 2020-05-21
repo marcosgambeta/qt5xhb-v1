@@ -30,7 +30,7 @@ class QScatter3DSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  QScatter3DSeriesSlots(QObject *parent = 0);
+  QScatter3DSeriesSlots( QObject *parent = 0 );
   ~QScatter3DSeriesSlots();
   public slots:
   void dataProxyChanged( QScatterDataProxy * proxy );

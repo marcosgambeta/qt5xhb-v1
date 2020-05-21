@@ -30,7 +30,7 @@ class QSurface3DSeriesSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSurface3DSeriesSlots(QObject *parent = 0);
+  QSurface3DSeriesSlots( QObject *parent = 0 );
   ~QSurface3DSeriesSlots();
   public slots:
   void dataProxyChanged( QSurfaceDataProxy * proxy );

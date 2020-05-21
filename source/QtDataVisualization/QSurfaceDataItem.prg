@@ -71,8 +71,8 @@ QSurfaceDataItem()
 */
 void QSurfaceDataItem_new1()
 {
-  QSurfaceDataItem * o = new QSurfaceDataItem();
-  Qt5xHb::returnNewObject( o, true );
+  QSurfaceDataItem * obj = new QSurfaceDataItem();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QSurfaceDataItem(const QVector3D &position)
 */
 void QSurfaceDataItem_new2()
 {
-  QSurfaceDataItem * o = new QSurfaceDataItem( *PQVECTOR3D(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QSurfaceDataItem * obj = new QSurfaceDataItem( *PQVECTOR3D(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -89,8 +89,8 @@ QSurfaceDataItem(const QSurfaceDataItem &other)
 */
 void QSurfaceDataItem_new3()
 {
-  QSurfaceDataItem * o = new QSurfaceDataItem( *PQSURFACEDATAITEM(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QSurfaceDataItem * obj = new QSurfaceDataItem( *PQSURFACEDATAITEM(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

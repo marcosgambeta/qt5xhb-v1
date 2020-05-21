@@ -67,8 +67,8 @@ HB_FUNC_STATIC( Q3DOBJECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    Q3DObject * o = new Q3DObject( OPQOBJECT(1,Q_NULLPTR) );
-    Qt5xHb::returnNewObject( o, false );
+    Q3DObject * obj = new Q3DObject( OPQOBJECT(1,Q_NULLPTR) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -85,8 +85,8 @@ HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

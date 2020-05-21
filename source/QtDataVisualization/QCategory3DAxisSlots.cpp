@@ -12,21 +12,26 @@
 
 #include "QCategory3DAxisSlots.h"
 
-QCategory3DAxisSlots::QCategory3DAxisSlots(QObject *parent) : QObject(parent)
+QCategory3DAxisSlots::QCategory3DAxisSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCategory3DAxisSlots::~QCategory3DAxisSlots()
 {
 }
+
 void QCategory3DAxisSlots::labelsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "labelsChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCATEGORY3DAXIS" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
