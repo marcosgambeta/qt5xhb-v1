@@ -30,7 +30,7 @@ class QBluetoothTransferReplySlots: public QObject
 {
   Q_OBJECT
   public:
-  QBluetoothTransferReplySlots(QObject *parent = 0);
+  QBluetoothTransferReplySlots( QObject *parent = 0 );
   ~QBluetoothTransferReplySlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))

@@ -12,64 +12,84 @@
 
 #include "QBluetoothServiceDiscoveryAgentSlots.h"
 
-QBluetoothServiceDiscoveryAgentSlots::QBluetoothServiceDiscoveryAgentSlots(QObject *parent) : QObject(parent)
+QBluetoothServiceDiscoveryAgentSlots::QBluetoothServiceDiscoveryAgentSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QBluetoothServiceDiscoveryAgentSlots::~QBluetoothServiceDiscoveryAgentSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothServiceDiscoveryAgentSlots::serviceDiscovered( const QBluetoothServiceInfo & info )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "serviceDiscovered(QBluetoothServiceInfo)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
     PHB_ITEM pinfo = Signals_return_object( (void *) &info, "QBLUETOOTHSERVICEINFO" );
+
     hb_vmEvalBlockV( cb, 2, psender, pinfo );
+
     hb_itemRelease( psender );
     hb_itemRelease( pinfo );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothServiceDiscoveryAgentSlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothServiceDiscoveryAgentSlots::canceled()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "canceled()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothServiceDiscoveryAgentSlots::error( QBluetoothServiceDiscoveryAgent::Error error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothServiceDiscoveryAgent::Error)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSERVICEDISCOVERYAGENT" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+
     hb_vmEvalBlockV( cb, 2, psender, perror );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }

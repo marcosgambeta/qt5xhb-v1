@@ -84,8 +84,8 @@ QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0
 void QBluetoothSocket_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * o = new QBluetoothSocket( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QBluetoothSocket * obj = new QBluetoothSocket( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -95,8 +95,8 @@ QBluetoothSocket(QObject *parent = 0)
 void QBluetoothSocket_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * o = new QBluetoothSocket( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QBluetoothSocket * obj = new QBluetoothSocket( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -128,8 +128,8 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

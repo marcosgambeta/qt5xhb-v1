@@ -12,65 +12,85 @@
 
 #include "QBluetoothDeviceDiscoveryAgentSlots.h"
 
-QBluetoothDeviceDiscoveryAgentSlots::QBluetoothDeviceDiscoveryAgentSlots(QObject *parent) : QObject(parent)
+QBluetoothDeviceDiscoveryAgentSlots::QBluetoothDeviceDiscoveryAgentSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QBluetoothDeviceDiscoveryAgentSlots::~QBluetoothDeviceDiscoveryAgentSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothDeviceDiscoveryAgentSlots::deviceDiscovered( const QBluetoothDeviceInfo & info )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "deviceDiscovered(QBluetoothDeviceInfo)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
     PHB_ITEM pinfo = Signals_return_object( (void *) &info, "QBLUETOOTHDEVICEINFO" );
+
     hb_vmEvalBlockV( cb, 2, psender, pinfo );
+
     hb_itemRelease( psender );
     hb_itemRelease( pinfo );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothDeviceDiscoveryAgentSlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothDeviceDiscoveryAgentSlots::error( QBluetoothDeviceDiscoveryAgent::Error error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothDeviceDiscoveryAgent::Error)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+
     hb_vmEvalBlockV( cb, 2, psender, perror );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothDeviceDiscoveryAgentSlots::canceled()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "canceled()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

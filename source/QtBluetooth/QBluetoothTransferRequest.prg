@@ -70,8 +70,8 @@ QBluetoothTransferRequest(const QBluetoothAddress &address = QBluetoothAddress()
 void QBluetoothTransferRequest_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferRequest * o = new QBluetoothTransferRequest( ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QBluetoothTransferRequest * obj = new QBluetoothTransferRequest( ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -81,8 +81,8 @@ QBluetoothTransferRequest(const QBluetoothTransferRequest &other)
 void QBluetoothTransferRequest_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothTransferRequest * o = new QBluetoothTransferRequest( *PQBLUETOOTHTRANSFERREQUEST(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QBluetoothTransferRequest * obj = new QBluetoothTransferRequest( *PQBLUETOOTHTRANSFERREQUEST(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

@@ -30,7 +30,7 @@ class QBluetoothSocketSlots: public QObject
 {
   Q_OBJECT
   public:
-  QBluetoothSocketSlots(QObject *parent = 0);
+  QBluetoothSocketSlots( QObject *parent = 0 );
   ~QBluetoothSocketSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))

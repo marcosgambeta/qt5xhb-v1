@@ -30,7 +30,7 @@ class QBluetoothServiceDiscoveryAgentSlots: public QObject
 {
   Q_OBJECT
   public:
-  QBluetoothServiceDiscoveryAgentSlots(QObject *parent = 0);
+  QBluetoothServiceDiscoveryAgentSlots( QObject *parent = 0 );
   ~QBluetoothServiceDiscoveryAgentSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))

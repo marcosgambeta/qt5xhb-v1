@@ -12,23 +12,28 @@
 
 #include "QBluetoothTransferManagerSlots.h"
 
-QBluetoothTransferManagerSlots::QBluetoothTransferManagerSlots(QObject *parent) : QObject(parent)
+QBluetoothTransferManagerSlots::QBluetoothTransferManagerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QBluetoothTransferManagerSlots::~QBluetoothTransferManagerSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothTransferManagerSlots::finished( QBluetoothTransferReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHTRANSFERMANAGER" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QBLUETOOTHTRANSFERREPLY" );
+
     hb_vmEvalBlockV( cb, 2, psender, preply );
+
     hb_itemRelease( psender );
     hb_itemRelease( preply );
   }

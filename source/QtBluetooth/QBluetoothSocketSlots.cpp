@@ -12,64 +12,84 @@
 
 #include "QBluetoothSocketSlots.h"
 
-QBluetoothSocketSlots::QBluetoothSocketSlots(QObject *parent) : QObject(parent)
+QBluetoothSocketSlots::QBluetoothSocketSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QBluetoothSocketSlots::~QBluetoothSocketSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothSocketSlots::connected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSOCKET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothSocketSlots::disconnected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSOCKET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothSocketSlots::error( QBluetoothSocket::SocketError error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QBluetoothSocket::SocketError)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSOCKET" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+
     hb_vmEvalBlockV( cb, 2, psender, perror );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QBluetoothSocketSlots::stateChanged( QBluetoothSocket::SocketState state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QBluetoothSocket::SocketState)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHSOCKET" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+
     hb_vmEvalBlockV( cb, 2, psender, pstate );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }

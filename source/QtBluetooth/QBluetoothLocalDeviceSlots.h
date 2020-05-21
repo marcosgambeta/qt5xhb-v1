@@ -30,7 +30,7 @@ class QBluetoothLocalDeviceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QBluetoothLocalDeviceSlots(QObject *parent = 0);
+  QBluetoothLocalDeviceSlots( QObject *parent = 0 );
   ~QBluetoothLocalDeviceSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
