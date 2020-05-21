@@ -69,8 +69,8 @@ QXmlItem ()
 */
 void QXmlItem_new1()
 {
-  QXmlItem * o = new QXmlItem();
-  Qt5xHb::returnNewObject( o, true );
+  QXmlItem * obj = new QXmlItem();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QXmlItem ( const QXmlItem & other )
 */
 void QXmlItem_new2()
 {
-  QXmlItem * o = new QXmlItem( *PQXMLITEM(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QXmlItem * obj = new QXmlItem( *PQXMLITEM(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QXmlItem ( const QXmlNodeModelIndex & node )
 */
 void QXmlItem_new3()
 {
-  QXmlItem * o = new QXmlItem( *PQXMLNODEMODELINDEX(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QXmlItem * obj = new QXmlItem( *PQXMLNODEMODELINDEX(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QXmlItem ( const QVariant & atomicValue )
 */
 void QXmlItem_new4()
 {
-  QXmlItem * o = new QXmlItem( *PQVARIANT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QXmlItem * obj = new QXmlItem( *PQVARIANT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

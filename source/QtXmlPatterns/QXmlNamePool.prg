@@ -60,8 +60,8 @@ QXmlNamePool ()
 */
 void QXmlNamePool_new1()
 {
-  QXmlNamePool * o = new QXmlNamePool();
-  Qt5xHb::returnNewObject( o, true );
+  QXmlNamePool * obj = new QXmlNamePool();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QXmlNamePool ( const QXmlNamePool & other )
 */
 void QXmlNamePool_new2()
 {
-  QXmlNamePool * o = new QXmlNamePool( *PQXMLNAMEPOOL(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QXmlNamePool * obj = new QXmlNamePool( *PQXMLNAMEPOOL(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

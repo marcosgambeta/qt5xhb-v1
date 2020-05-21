@@ -66,8 +66,8 @@ QXmlNodeModelIndex ()
 */
 void QXmlNodeModelIndex_new1()
 {
-  QXmlNodeModelIndex * o = new QXmlNodeModelIndex();
-  Qt5xHb::returnNewObject( o, true );
+  QXmlNodeModelIndex * obj = new QXmlNodeModelIndex();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
 */
 void QXmlNodeModelIndex_new2()
 {
-  QXmlNodeModelIndex * o = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QXmlNodeModelIndex * obj = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

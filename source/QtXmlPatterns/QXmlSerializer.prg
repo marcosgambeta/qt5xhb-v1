@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QXMLSERIALIZER_NEW )
 {
   if( ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2) )
   {
-    QXmlSerializer * o = new QXmlSerializer( *PQXMLQUERY(1), PQIODEVICE(2) );
-    Qt5xHb::returnNewObject( o, true );
+    QXmlSerializer * obj = new QXmlSerializer( *PQXMLQUERY(1), PQIODEVICE(2) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
