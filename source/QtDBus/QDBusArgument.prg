@@ -74,8 +74,8 @@ QDBusArgument()
 */
 void QDBusArgument_new1()
 {
-  QDBusArgument * o = new QDBusArgument();
-  Qt5xHb::returnNewObject( o, true );
+  QDBusArgument * obj = new QDBusArgument();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QDBusArgument(const QDBusArgument &other)
 */
 void QDBusArgument_new2()
 {
-  QDBusArgument * o = new QDBusArgument( *PQDBUSARGUMENT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDBusArgument * obj = new QDBusArgument( *PQDBUSARGUMENT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

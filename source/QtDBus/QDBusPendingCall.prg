@@ -73,8 +73,8 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_NEW )
 {
   if( ISNUMPAR(1) && ISQDBUSPENDINGCALL(1) )
   {
-    QDBusPendingCall * o = new QDBusPendingCall( *PQDBUSPENDINGCALL(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QDBusPendingCall * obj = new QDBusPendingCall( *PQDBUSPENDINGCALL(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -65,8 +65,8 @@ QDBusError()
 */
 void QDBusError_new1()
 {
-  QDBusError * o = new QDBusError();
-  Qt5xHb::returnNewObject( o, true );
+  QDBusError * obj = new QDBusError();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QDBusError(const QDBusMessage& msg)
 */
 void QDBusError_new3()
 {
-  QDBusError * o = new QDBusError( *PQDBUSMESSAGE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDBusError * obj = new QDBusError( *PQDBUSMESSAGE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QDBusError(ErrorType error, const QString &message)
 */
 void QDBusError_new4()
 {
-  QDBusError * o = new QDBusError( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QDBusError * obj = new QDBusError( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QDBusError(const QDBusError &other)
 */
 void QDBusError_new5()
 {
-  QDBusError * o = new QDBusError( *PQDBUSERROR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDBusError * obj = new QDBusError( *PQDBUSERROR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

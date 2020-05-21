@@ -28,7 +28,7 @@ class QDBusServerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDBusServerSlots(QObject *parent = 0);
+  QDBusServerSlots( QObject *parent = 0 );
   ~QDBusServerSlots();
   public slots:
   void newConnection( const QDBusConnection & connection );

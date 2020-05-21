@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QDBUSCONTEXT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDBusContext * o = new QDBusContext();
-    Qt5xHb::returnNewObject( o, false );
+    QDBusContext * obj = new QDBusContext();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

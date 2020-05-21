@@ -12,22 +12,27 @@
 
 #include "QDBusPendingCallWatcherSlots.h"
 
-QDBusPendingCallWatcherSlots::QDBusPendingCallWatcherSlots(QObject *parent) : QObject(parent)
+QDBusPendingCallWatcherSlots::QDBusPendingCallWatcherSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QDBusPendingCallWatcherSlots::~QDBusPendingCallWatcherSlots()
 {
 }
+
 void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished(QDBusPendingCallWatcher*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDBUSPENDINGCALLWATCHER" );
     PHB_ITEM pself = Signals_return_qobject( (QObject *) self, "QDBUSPENDINGCALLWATCHER" );
+
     hb_vmEvalBlockV( cb, 2, psender, pself );
+
     hb_itemRelease( psender );
     hb_itemRelease( pself );
   }

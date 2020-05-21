@@ -44,6 +44,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDBus/QDBusInterface>
@@ -56,8 +58,8 @@ HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
 {
   if( ISBETWEEN(2,5) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && (ISQDBUSCONNECTION(4)||ISNIL(4)) && (ISQOBJECT(5)||ISNIL(5)) )
   {
-    QDBusInterface * o = new QDBusInterface( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) Qt5xHb::itemGetPtr(4), OPQOBJECT(5,0) );
-    Qt5xHb::returnNewObject( o, false );
+    QDBusInterface * obj = new QDBusInterface( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) Qt5xHb::itemGetPtr(4), OPQOBJECT(5,0) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -71,6 +73,8 @@ HB_FUNC_STATIC( QDBUSINTERFACE_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

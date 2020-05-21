@@ -54,6 +54,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDBus/QDBusServiceWatcher>
@@ -66,8 +68,8 @@ explicit QDBusServiceWatcher(QObject *parent = 0)
 */
 void QDBusServiceWatcher_new1()
 {
-  QDBusServiceWatcher * o = new QDBusServiceWatcher( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDBusServiceWatcher * obj = new QDBusServiceWatcher( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +77,8 @@ QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, W
 */
 void QDBusServiceWatcher_new2()
 {
-  QDBusServiceWatcher * o = new QDBusServiceWatcher( PQSTRING(1), *PQDBUSCONNECTION(2), ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDBusServiceWatcher * obj = new QDBusServiceWatcher( PQSTRING(1), *PQDBUSCONNECTION(2), ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -106,6 +108,8 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

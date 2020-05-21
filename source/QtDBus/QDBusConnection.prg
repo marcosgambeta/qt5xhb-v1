@@ -97,8 +97,8 @@ QDBusConnection(const QString &name)
 */
 void QDBusConnection_new1()
 {
-  QDBusConnection * o = new QDBusConnection( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDBusConnection * obj = new QDBusConnection( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -106,8 +106,8 @@ QDBusConnection(const QDBusConnection &other)
 */
 void QDBusConnection_new2()
 {
-  QDBusConnection * o = new QDBusConnection( *PQDBUSCONNECTION(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDBusConnection * obj = new QDBusConnection( *PQDBUSCONNECTION(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

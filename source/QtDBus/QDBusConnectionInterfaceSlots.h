@@ -28,7 +28,7 @@ class QDBusConnectionInterfaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDBusConnectionInterfaceSlots(QObject *parent = 0);
+  QDBusConnectionInterfaceSlots( QObject *parent = 0 );
   ~QDBusConnectionInterfaceSlots();
   public slots:
   void serviceRegistered( const QString & service );

@@ -12,22 +12,27 @@
 
 #include "QDBusServerSlots.h"
 
-QDBusServerSlots::QDBusServerSlots(QObject *parent) : QObject(parent)
+QDBusServerSlots::QDBusServerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QDBusServerSlots::~QDBusServerSlots()
 {
 }
+
 void QDBusServerSlots::newConnection( const QDBusConnection & connection )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection(QDBusConnection)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDBUSSERVER" );
     PHB_ITEM pconnection = Signals_return_object( (void *) &connection, "QDBUSCONNECTION" );
+
     hb_vmEvalBlockV( cb, 2, psender, pconnection );
+
     hb_itemRelease( psender );
     hb_itemRelease( pconnection );
   }

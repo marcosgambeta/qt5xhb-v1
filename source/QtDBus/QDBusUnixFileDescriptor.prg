@@ -67,8 +67,8 @@ QDBusUnixFileDescriptor()
 */
 void QDBusUnixFileDescriptor_new1()
 {
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor();
-  Qt5xHb::returnNewObject( o, true );
+  QDBusUnixFileDescriptor * obj = new QDBusUnixFileDescriptor();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ explicit QDBusUnixFileDescriptor(int fileDescriptor)
 */
 void QDBusUnixFileDescriptor_new2()
 {
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor( PINT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDBusUnixFileDescriptor * obj = new QDBusUnixFileDescriptor( PINT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
 */
 void QDBusUnixFileDescriptor_new3()
 {
-  QDBusUnixFileDescriptor * o = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDBusUnixFileDescriptor * obj = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -47,6 +47,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtDBus/QDBusServer>
@@ -59,8 +61,8 @@ QDBusServer(const QString &address, QObject *parent = 0)
 */
 void QDBusServer_new1()
 {
-  QDBusServer * o = new QDBusServer( PQSTRING(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDBusServer * obj = new QDBusServer( PQSTRING(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -68,8 +70,8 @@ QDBusServer(QObject *parent = 0)
 */
 void QDBusServer_new2()
 {
-  QDBusServer * o = new QDBusServer( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDBusServer * obj = new QDBusServer( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -87,6 +89,8 @@ HB_FUNC_STATIC( QDBUSSERVER_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

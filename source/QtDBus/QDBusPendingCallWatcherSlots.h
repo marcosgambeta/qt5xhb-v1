@@ -28,7 +28,7 @@ class QDBusPendingCallWatcherSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDBusPendingCallWatcherSlots(QObject *parent = 0);
+  QDBusPendingCallWatcherSlots( QObject *parent = 0 );
   ~QDBusPendingCallWatcherSlots();
   public slots:
   void finished( QDBusPendingCallWatcher * self );

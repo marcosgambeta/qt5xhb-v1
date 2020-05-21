@@ -28,7 +28,7 @@ class QDBusServiceWatcherSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDBusServiceWatcherSlots(QObject *parent = 0);
+  QDBusServiceWatcherSlots( QObject *parent = 0 );
   ~QDBusServiceWatcherSlots();
   public slots:
   void serviceRegistered( const QString & service );

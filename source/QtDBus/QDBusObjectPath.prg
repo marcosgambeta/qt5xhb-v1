@@ -65,8 +65,8 @@ QDBusObjectPath()
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW1 )
 {
-  QDBusObjectPath * o = new QDBusObjectPath();
-  Qt5xHb::returnNewObject( o, false );
+  QDBusObjectPath * obj = new QDBusObjectPath();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ explicit QDBusObjectPath(const char *path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
 {
-  QDBusObjectPath * o = new QDBusObjectPath( PCONSTCHAR(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QDBusObjectPath * obj = new QDBusObjectPath( PCONSTCHAR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ explicit QDBusObjectPath(QLatin1String path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
 {
-  QDBusObjectPath * o = new QDBusObjectPath( *PQLATIN1STRING(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QDBusObjectPath * obj = new QDBusObjectPath( *PQLATIN1STRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ explicit QDBusObjectPath(const QString &path)
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
 {
-  QDBusObjectPath * o = new QDBusObjectPath( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QDBusObjectPath * obj = new QDBusObjectPath( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
