@@ -82,8 +82,8 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QWinJumpListItem * o = new QWinJumpListItem( (QWinJumpListItem::Type) hb_parni(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QWinJumpListItem * obj = new QWinJumpListItem( (QWinJumpListItem::Type) hb_parni(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

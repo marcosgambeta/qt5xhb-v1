@@ -30,7 +30,7 @@ class QWinTaskbarProgressSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWinTaskbarProgressSlots(QObject *parent = 0);
+  QWinTaskbarProgressSlots( QObject *parent = 0 );
   ~QWinTaskbarProgressSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))

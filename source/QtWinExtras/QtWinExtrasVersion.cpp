@@ -6,7 +6,6 @@
 
 */
 
-
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__

@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QWINEVENT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QWinEvent * o = new QWinEvent( PINT(1) );
-    Qt5xHb::returnNewObject( o, false );
+    QWinEvent * obj = new QWinEvent( PINT(1) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
