@@ -64,8 +64,8 @@ QLibrary(QObject *parent = 0)
 */
 void QLibrary_new1()
 {
-  QLibrary * o = new QLibrary( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QLibrary * obj = new QLibrary( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -73,8 +73,8 @@ QLibrary(const QString& fileName, QObject *parent = 0)
 */
 void QLibrary_new2()
 {
-  QLibrary * o = new QLibrary( PQSTRING(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QLibrary * obj = new QLibrary( PQSTRING(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -82,8 +82,8 @@ QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
 */
 void QLibrary_new3()
 {
-  QLibrary * o = new QLibrary( PQSTRING(1), PINT(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QLibrary * obj = new QLibrary( PQSTRING(1), PINT(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -91,8 +91,8 @@ QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
 */
 void QLibrary_new4()
 {
-  QLibrary * o = new QLibrary( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QLibrary * obj = new QLibrary( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -132,8 +132,8 @@ HB_FUNC_STATIC( QLIBRARY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

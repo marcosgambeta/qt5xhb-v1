@@ -75,8 +75,8 @@ QSizeF()
 */
 void QSizeF_new1()
 {
-  QSizeF * o = new QSizeF();
-  Qt5xHb::returnNewObject( o, true );
+  QSizeF * obj = new QSizeF();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QSizeF(const QSize &sz)
 */
 void QSizeF_new2()
 {
-  QSizeF * o = new QSizeF( *PQSIZE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QSizeF * obj = new QSizeF( *PQSIZE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QSizeF(qreal w, qreal h)
 */
 void QSizeF_new3()
 {
-  QSizeF * o = new QSizeF( PQREAL(1), PQREAL(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QSizeF * obj = new QSizeF( PQREAL(1), PQREAL(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

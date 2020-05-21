@@ -28,7 +28,7 @@ class QVariantAnimationSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVariantAnimationSlots(QObject *parent = 0);
+  QVariantAnimationSlots( QObject *parent = 0 );
   ~QVariantAnimationSlots();
   public slots:
   void valueChanged( const QVariant & value );

@@ -66,8 +66,8 @@ HB_FUNC_STATIC( QBASICTIMER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBasicTimer * o = new QBasicTimer();
-    Qt5xHb::returnNewObject( o, false );
+    QBasicTimer * obj = new QBasicTimer();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

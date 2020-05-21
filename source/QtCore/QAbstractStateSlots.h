@@ -28,7 +28,7 @@ class QAbstractStateSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractStateSlots(QObject *parent = 0);
+  QAbstractStateSlots( QObject *parent = 0 );
   ~QAbstractStateSlots();
   public slots:
   void entered();

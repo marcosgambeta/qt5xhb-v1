@@ -28,7 +28,7 @@ class QCoreApplicationSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCoreApplicationSlots(QObject *parent = 0);
+  QCoreApplicationSlots( QObject *parent = 0 );
   ~QCoreApplicationSlots();
   public slots:
   void aboutToQuit();

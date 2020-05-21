@@ -28,7 +28,7 @@ class QAbstractEventDispatcherSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractEventDispatcherSlots(QObject *parent = 0);
+  QAbstractEventDispatcherSlots( QObject *parent = 0 );
   ~QAbstractEventDispatcherSlots();
   public slots:
   void aboutToBlock();

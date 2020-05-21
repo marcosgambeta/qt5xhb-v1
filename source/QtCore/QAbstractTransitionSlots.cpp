@@ -12,21 +12,26 @@
 
 #include "QAbstractTransitionSlots.h"
 
-QAbstractTransitionSlots::QAbstractTransitionSlots(QObject *parent) : QObject(parent)
+QAbstractTransitionSlots::QAbstractTransitionSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAbstractTransitionSlots::~QAbstractTransitionSlots()
 {
 }
+
 void QAbstractTransitionSlots::triggered()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTRANSITION" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

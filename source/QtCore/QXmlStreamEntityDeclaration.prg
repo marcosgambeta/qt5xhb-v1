@@ -66,8 +66,8 @@ QXmlStreamEntityDeclaration()
 */
 void QXmlStreamEntityDeclaration_new1()
 {
-  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration();
-  Qt5xHb::returnNewObject( o, true );
+  QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
 */
 void QXmlStreamEntityDeclaration_new2()
 {
-  QXmlStreamEntityDeclaration * o = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

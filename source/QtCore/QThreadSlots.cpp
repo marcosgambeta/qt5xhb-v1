@@ -12,32 +12,42 @@
 
 #include "QThreadSlots.h"
 
-QThreadSlots::QThreadSlots(QObject *parent) : QObject(parent)
+QThreadSlots::QThreadSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QThreadSlots::~QThreadSlots()
 {
 }
+
 void QThreadSlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTHREAD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QThreadSlots::started()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTHREAD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

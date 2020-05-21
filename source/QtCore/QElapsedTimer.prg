@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QElapsedTimer * o = new QElapsedTimer();
-    Qt5xHb::returnNewObject( o, true );
+    QElapsedTimer * obj = new QElapsedTimer();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

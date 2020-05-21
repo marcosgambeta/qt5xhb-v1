@@ -28,7 +28,7 @@ class QSignalMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSignalMapperSlots(QObject *parent = 0);
+  QSignalMapperSlots( QObject *parent = 0 );
   ~QSignalMapperSlots();
   public slots:
   void mapped( int arg );

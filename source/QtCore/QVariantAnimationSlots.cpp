@@ -12,22 +12,27 @@
 
 #include "QVariantAnimationSlots.h"
 
-QVariantAnimationSlots::QVariantAnimationSlots(QObject *parent) : QObject(parent)
+QVariantAnimationSlots::QVariantAnimationSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QVariantAnimationSlots::~QVariantAnimationSlots()
 {
 }
+
 void QVariantAnimationSlots::valueChanged( const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(QVariant)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVARIANTANIMATION" );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
+
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
+
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }

@@ -76,8 +76,8 @@ QStateMachine(QObject *parent = 0)
 */
 void QStateMachine_new1()
 {
-  QStateMachine * o = new QStateMachine( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QStateMachine * obj = new QStateMachine( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -85,8 +85,8 @@ QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
 */
 void QStateMachine_new2()
 {
-  QStateMachine * o = new QStateMachine( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QStateMachine * obj = new QStateMachine( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -116,8 +116,8 @@ HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

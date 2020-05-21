@@ -70,8 +70,8 @@ QProcessEnvironment()
 */
 void QProcessEnvironment_new1()
 {
-  QProcessEnvironment * o = new QProcessEnvironment();
-  Qt5xHb::returnNewObject( o, true );
+  QProcessEnvironment * obj = new QProcessEnvironment();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QProcessEnvironment(const QProcessEnvironment &other)
 */
 void QProcessEnvironment_new2()
 {
-  QProcessEnvironment * o = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QProcessEnvironment * obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

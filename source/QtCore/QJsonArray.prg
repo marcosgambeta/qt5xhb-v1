@@ -88,8 +88,8 @@ QJsonArray()
 */
 void QJsonArray_new1()
 {
-  QJsonArray * o = new QJsonArray();
-  Qt5xHb::returnNewObject( o, true );
+  QJsonArray * obj = new QJsonArray();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -97,8 +97,8 @@ QJsonArray(const QJsonArray & other)
 */
 void QJsonArray_new2()
 {
-  QJsonArray * o = new QJsonArray( *PQJSONARRAY(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonArray * obj = new QJsonArray( *PQJSONARRAY(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

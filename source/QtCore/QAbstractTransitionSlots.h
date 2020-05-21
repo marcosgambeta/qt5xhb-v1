@@ -28,7 +28,7 @@ class QAbstractTransitionSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractTransitionSlots(QObject *parent = 0);
+  QAbstractTransitionSlots( QObject *parent = 0 );
   ~QAbstractTransitionSlots();
   public slots:
   void triggered();

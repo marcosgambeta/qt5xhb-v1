@@ -28,7 +28,7 @@ class QTimeLineSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTimeLineSlots(QObject *parent = 0);
+  QTimeLineSlots( QObject *parent = 0 );
   ~QTimeLineSlots();
   public slots:
   void finished();

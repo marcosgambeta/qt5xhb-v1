@@ -77,8 +77,8 @@ QMimeType()
 */
 void QMimeType_new1()
 {
-  QMimeType * o = new QMimeType();
-  Qt5xHb::returnNewObject( o, true );
+  QMimeType * obj = new QMimeType();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QMimeType(const QMimeType &other)
 */
 void QMimeType_new2()
 {
-  QMimeType * o = new QMimeType( *PQMIMETYPE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QMimeType * obj = new QMimeType( *PQMIMETYPE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

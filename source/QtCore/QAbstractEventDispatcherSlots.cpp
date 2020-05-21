@@ -12,32 +12,42 @@
 
 #include "QAbstractEventDispatcherSlots.h"
 
-QAbstractEventDispatcherSlots::QAbstractEventDispatcherSlots(QObject *parent) : QObject(parent)
+QAbstractEventDispatcherSlots::QAbstractEventDispatcherSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAbstractEventDispatcherSlots::~QAbstractEventDispatcherSlots()
 {
 }
+
 void QAbstractEventDispatcherSlots::aboutToBlock()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToBlock()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QAbstractEventDispatcherSlots::awake()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "awake()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

@@ -115,8 +115,8 @@ QRect ()
 */
 void QRect_new1()
 {
-  QRect * o = new QRect();
-  Qt5xHb::returnNewObject( o, true );
+  QRect * obj = new QRect();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -124,8 +124,8 @@ QRect ( const QPoint & topLeft, const QPoint & bottomRight )
 */
 void QRect_new2()
 {
-  QRect * o = new QRect( *PQPOINT(1), *PQPOINT(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QRect * obj = new QRect( *PQPOINT(1), *PQPOINT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -133,8 +133,8 @@ QRect ( const QPoint & topLeft, const QSize & size )
 */
 void QRect_new3()
 {
-  QRect * o = new QRect( *PQPOINT(1), *PQSIZE(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QRect * obj = new QRect( *PQPOINT(1), *PQSIZE(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -142,8 +142,8 @@ QRect ( int x, int y, int width, int height )
 */
 void QRect_new4()
 {
-  QRect * o = new QRect( PINT(1), PINT(2), PINT(3), PINT(4) );
-  Qt5xHb::returnNewObject( o, true );
+  QRect * obj = new QRect( PINT(1), PINT(2), PINT(3), PINT(4) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

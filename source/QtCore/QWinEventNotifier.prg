@@ -56,8 +56,8 @@ explicit QWinEventNotifier(QObject *parent = 0)
 void QWinEventNotifier_new1()
 {
 #ifdef Q_OS_WIN
-  QWinEventNotifier * o = new QWinEventNotifier( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QWinEventNotifier * obj = new QWinEventNotifier( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -91,8 +91,8 @@ HB_FUNC_STATIC( QWINEVENTNOTIFIER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

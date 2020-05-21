@@ -28,7 +28,7 @@ class QAbstractItemModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractItemModelSlots(QObject *parent = 0);
+  QAbstractItemModelSlots( QObject *parent = 0 );
   ~QAbstractItemModelSlots();
   public slots:
   void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end );

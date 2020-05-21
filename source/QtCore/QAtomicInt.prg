@@ -82,8 +82,8 @@ QAtomicInt ( int value = 0 )
 */
 void QAtomicInt_new1()
 {
-  QAtomicInt * o = new QAtomicInt( OPINT(1,0) );
-  Qt5xHb::returnNewObject( o, true );
+  QAtomicInt * obj = new QAtomicInt( OPINT(1,0) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QAtomicInt ( const QAtomicInt & other )
 */
 void QAtomicInt_new2()
 {
-  QAtomicInt * o = new QAtomicInt( *PQATOMICINT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QAtomicInt * obj = new QAtomicInt( *PQATOMICINT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

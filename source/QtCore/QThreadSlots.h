@@ -28,7 +28,7 @@ class QThreadSlots: public QObject
 {
   Q_OBJECT
   public:
-  QThreadSlots(QObject *parent = 0);
+  QThreadSlots( QObject *parent = 0 );
   ~QThreadSlots();
   public slots:
   void finished();

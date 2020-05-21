@@ -67,8 +67,8 @@ QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
 */
 void QDirIterator_new1()
 {
-  QDirIterator * o = new QDirIterator( *PQDIR(1), ISNIL(2)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QDirIterator * obj = new QDirIterator( *PQDIR(1), ISNIL(2)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
 */
 void QDirIterator_new2()
 {
-  QDirIterator * o = new QDirIterator( PQSTRING(1), ISNIL(2)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QDirIterator * obj = new QDirIterator( PQSTRING(1), ISNIL(2)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags 
 */
 void QDirIterator_new3()
 {
-  QDirIterator * o = new QDirIterator( PQSTRING(1), (QDir::Filters) hb_parni(2), ISNIL(3)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QDirIterator * obj = new QDirIterator( PQSTRING(1), (QDir::Filters) hb_parni(2), ISNIL(3)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filt
 */
 void QDirIterator_new4()
 {
-  QDirIterator * o = new QDirIterator( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(3), ISNIL(4)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(4) );
-  Qt5xHb::returnNewObject( o, true );
+  QDirIterator * obj = new QDirIterator( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(3), ISNIL(4)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(4) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

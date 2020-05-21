@@ -28,7 +28,7 @@ class QAnimationDriverSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAnimationDriverSlots(QObject *parent = 0);
+  QAnimationDriverSlots( QObject *parent = 0 );
   ~QAnimationDriverSlots();
   public slots:
   void started();

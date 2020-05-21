@@ -77,8 +77,8 @@ QCollator(const QLocale &locale = QLocale())
 void QCollator_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * o = new QCollator( ISNIL(1)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCollator * obj = new QCollator( ISNIL(1)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QCollator(const QCollator &)
 void QCollator_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * o = new QCollator( *PQCOLLATOR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCollator * obj = new QCollator( *PQCOLLATOR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

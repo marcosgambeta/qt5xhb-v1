@@ -28,7 +28,7 @@ class QIODeviceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QIODeviceSlots(QObject *parent = 0);
+  QIODeviceSlots( QObject *parent = 0 );
   ~QIODeviceSlots();
   public slots:
   void aboutToClose();

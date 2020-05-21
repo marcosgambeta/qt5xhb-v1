@@ -88,8 +88,8 @@ QLineF()
 */
 void QLineF_new1()
 {
-  QLineF * o = new QLineF();
-  Qt5xHb::returnNewObject( o, true );
+  QLineF * obj = new QLineF();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -97,8 +97,8 @@ QLineF(const QPointF & p1, const QPointF & p2)
 */
 void QLineF_new2()
 {
-  QLineF * o = new QLineF( *PQPOINTF(1), *PQPOINTF(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QLineF * obj = new QLineF( *PQPOINTF(1), *PQPOINTF(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -106,8 +106,8 @@ QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
 */
 void QLineF_new3()
 {
-  QLineF * o = new QLineF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  Qt5xHb::returnNewObject( o, true );
+  QLineF * obj = new QLineF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -115,8 +115,8 @@ QLineF(const QLine & line)
 */
 void QLineF_new4()
 {
-  QLineF * o = new QLineF( *PQLINE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QLineF * obj = new QLineF( *PQLINE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -87,8 +87,8 @@ HB_FUNC_STATIC( QCOMMANDLINEPARSER_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISNUMPAR(0) )
   {
-    QCommandLineParser * o = new QCommandLineParser();
-    Qt5xHb::returnNewObject( o, true );
+    QCommandLineParser * obj = new QCommandLineParser();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

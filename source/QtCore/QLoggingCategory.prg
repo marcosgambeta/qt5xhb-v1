@@ -70,8 +70,8 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QLoggingCategory * o = new QLoggingCategory( PCONSTCHAR(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QLoggingCategory * obj = new QLoggingCategory( PCONSTCHAR(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

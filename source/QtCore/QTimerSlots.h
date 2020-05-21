@@ -28,7 +28,7 @@ class QTimerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTimerSlots(QObject *parent = 0);
+  QTimerSlots( QObject *parent = 0 );
   ~QTimerSlots();
   public slots:
   void timeout();

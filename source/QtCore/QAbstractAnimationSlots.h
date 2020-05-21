@@ -28,7 +28,7 @@ class QAbstractAnimationSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractAnimationSlots(QObject *parent = 0);
+  QAbstractAnimationSlots( QObject *parent = 0 );
   ~QAbstractAnimationSlots();
   public slots:
   void currentLoopChanged( int currentLoop );

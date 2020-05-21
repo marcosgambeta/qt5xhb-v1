@@ -12,60 +12,80 @@
 
 #include "QAbstractAnimationSlots.h"
 
-QAbstractAnimationSlots::QAbstractAnimationSlots(QObject *parent) : QObject(parent)
+QAbstractAnimationSlots::QAbstractAnimationSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAbstractAnimationSlots::~QAbstractAnimationSlots()
 {
 }
+
 void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "currentLoopChanged(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTANIMATION" );
     PHB_ITEM pcurrentLoop = hb_itemPutNI( NULL, currentLoop );
+
     hb_vmEvalBlockV( cb, 2, psender, pcurrentLoop );
+
     hb_itemRelease( psender );
     hb_itemRelease( pcurrentLoop );
   }
 }
+
 void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction newDirection )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "directionChanged(QAbstractAnimation::Direction)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTANIMATION" );
     PHB_ITEM pnewDirection = hb_itemPutNI( NULL, (int) newDirection );
+
     hb_vmEvalBlockV( cb, 2, psender, pnewDirection );
+
     hb_itemRelease( psender );
     hb_itemRelease( pnewDirection );
   }
 }
+
 void QAbstractAnimationSlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTANIMATION" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTANIMATION" );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
     PHB_ITEM poldState = hb_itemPutNI( NULL, (int) oldState );
+
     hb_vmEvalBlockV( cb, 3, psender, pnewState, poldState );
+
     hb_itemRelease( psender );
     hb_itemRelease( pnewState );
     hb_itemRelease( poldState );

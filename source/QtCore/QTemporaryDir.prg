@@ -65,8 +65,8 @@ QTemporaryDir()
 */
 void QTemporaryDir_new1()
 {
-  QTemporaryDir * o = new QTemporaryDir();
-  Qt5xHb::returnNewObject( o, false );
+  QTemporaryDir * obj = new QTemporaryDir();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QTemporaryDir(const QString & templateName)
 */
 void QTemporaryDir_new2()
 {
-  QTemporaryDir * o = new QTemporaryDir( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QTemporaryDir * obj = new QTemporaryDir( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

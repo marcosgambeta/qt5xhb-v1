@@ -90,8 +90,8 @@ QJsonValue(Type type = Null)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW1 )
 {
-  QJsonValue * o = new QJsonValue( ISNIL(1)? (QJsonValue::Type) QJsonValue::Null : (QJsonValue::Type) hb_parni(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValue * obj = new QJsonValue( ISNIL(1)? (QJsonValue::Type) QJsonValue::Null : (QJsonValue::Type) hb_parni(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -99,8 +99,8 @@ QJsonValue(bool b)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW2 )
 {
-  QJsonValue * o = new QJsonValue( PBOOL(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValue * obj = new QJsonValue( PBOOL(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -108,8 +108,8 @@ QJsonValue(double n)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW3 )
 {
-  QJsonValue * o = new QJsonValue( PDOUBLE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValue * obj = new QJsonValue( PDOUBLE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -117,8 +117,8 @@ QJsonValue(const QString & s)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW4 )
 {
-  QJsonValue * o = new QJsonValue( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValue * obj = new QJsonValue( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -130,8 +130,8 @@ QJsonValue(const QJsonArray & a)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW6 )
 {
-  QJsonValue * o = new QJsonValue( *PQJSONARRAY(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValue * obj = new QJsonValue( *PQJSONARRAY(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -139,8 +139,8 @@ QJsonValue(const QJsonObject & o)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW7 )
 {
-  QJsonValue * o = new QJsonValue( *PQJSONOBJECT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValue * obj = new QJsonValue( *PQJSONOBJECT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -148,8 +148,8 @@ QJsonValue(const QJsonValue & other)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW8 )
 {
-  QJsonValue * o = new QJsonValue( *PQJSONVALUE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValue * obj = new QJsonValue( *PQJSONVALUE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -157,8 +157,8 @@ QJsonValue(int n)
 */
 HB_FUNC_STATIC( QJSONVALUE_NEW9 )
 {
-  QJsonValue * o = new QJsonValue( PINT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValue * obj = new QJsonValue( PINT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

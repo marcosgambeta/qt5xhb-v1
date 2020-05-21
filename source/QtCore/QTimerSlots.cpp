@@ -12,21 +12,26 @@
 
 #include "QTimerSlots.h"
 
-QTimerSlots::QTimerSlots(QObject *parent) : QObject(parent)
+QTimerSlots::QTimerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QTimerSlots::~QTimerSlots()
 {
 }
+
 void QTimerSlots::timeout()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "timeout()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTIMER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

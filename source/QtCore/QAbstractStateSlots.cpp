@@ -12,32 +12,42 @@
 
 #include "QAbstractStateSlots.h"
 
-QAbstractStateSlots::QAbstractStateSlots(QObject *parent) : QObject(parent)
+QAbstractStateSlots::QAbstractStateSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAbstractStateSlots::~QAbstractStateSlots()
 {
 }
+
 void QAbstractStateSlots::entered()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "entered()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTSTATE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QAbstractStateSlots::exited()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "exited()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTSTATE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

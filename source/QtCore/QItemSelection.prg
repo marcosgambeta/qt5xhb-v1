@@ -66,8 +66,8 @@ QItemSelection()
 */
 void QItemSelection_new1()
 {
-  QItemSelection * o = new QItemSelection();
-  Qt5xHb::returnNewObject( o, true );
+  QItemSelection * obj = new QItemSelection();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
 */
 void QItemSelection_new2()
 {
-  QItemSelection * o = new QItemSelection( *PQMODELINDEX(1), *PQMODELINDEX(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QItemSelection * obj = new QItemSelection( *PQMODELINDEX(1), *PQMODELINDEX(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

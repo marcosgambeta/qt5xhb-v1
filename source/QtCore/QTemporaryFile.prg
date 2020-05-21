@@ -60,8 +60,8 @@ QTemporaryFile()
 */
 void QTemporaryFile_new1()
 {
-  QTemporaryFile * o = new QTemporaryFile();
-  Qt5xHb::returnNewObject( o, false );
+  QTemporaryFile * obj = new QTemporaryFile();
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -69,8 +69,8 @@ QTemporaryFile(const QString & templateName)
 */
 void QTemporaryFile_new2()
 {
-  QTemporaryFile * o = new QTemporaryFile( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -78,8 +78,8 @@ QTemporaryFile(QObject * parent)
 */
 void QTemporaryFile_new3()
 {
-  QTemporaryFile * o = new QTemporaryFile( PQOBJECT(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QTemporaryFile * obj = new QTemporaryFile( PQOBJECT(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -87,8 +87,8 @@ QTemporaryFile(const QString & templateName, QObject * parent)
 */
 void QTemporaryFile_new4()
 {
-  QTemporaryFile * o = new QTemporaryFile( PQSTRING(1), PQOBJECT(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1), PQOBJECT(2) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -128,8 +128,8 @@ HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

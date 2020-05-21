@@ -12,32 +12,42 @@
 
 #include "QStateSlots.h"
 
-QStateSlots::QStateSlots(QObject *parent) : QObject(parent)
+QStateSlots::QStateSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QStateSlots::~QStateSlots()
 {
 }
+
 void QStateSlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTATE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QStateSlots::propertiesAssigned()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "propertiesAssigned()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTATE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

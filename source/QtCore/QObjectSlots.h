@@ -28,7 +28,7 @@ class QObjectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QObjectSlots(QObject *parent = 0);
+  QObjectSlots( QObject *parent = 0 );
   ~QObjectSlots();
   public slots:
   void destroyed( QObject * obj = 0 );

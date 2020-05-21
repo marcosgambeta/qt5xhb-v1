@@ -76,8 +76,8 @@ QRegularExpression()
 */
 void QRegularExpression_new1()
 {
-  QRegularExpression * o = new QRegularExpression();
-  Qt5xHb::returnNewObject( o, true );
+  QRegularExpression * obj = new QRegularExpression();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QRegularExpression(const QString & pattern, PatternOptions options = NoPatternOp
 */
 void QRegularExpression_new2()
 {
-  QRegularExpression * o = new QRegularExpression( PQSTRING(1), ISNIL(2)? (QRegularExpression::PatternOptions) QRegularExpression::NoPatternOption : (QRegularExpression::PatternOptions) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QRegularExpression * obj = new QRegularExpression( PQSTRING(1), ISNIL(2)? (QRegularExpression::PatternOptions) QRegularExpression::NoPatternOption : (QRegularExpression::PatternOptions) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -94,8 +94,8 @@ QRegularExpression(const QRegularExpression & re)
 */
 void QRegularExpression_new3()
 {
-  QRegularExpression * o = new QRegularExpression( *PQREGULAREXPRESSION(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QRegularExpression * obj = new QRegularExpression( *PQREGULAREXPRESSION(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

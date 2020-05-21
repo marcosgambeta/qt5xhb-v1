@@ -28,7 +28,7 @@ class QFileSystemWatcherSlots: public QObject
 {
   Q_OBJECT
   public:
-  QFileSystemWatcherSlots(QObject *parent = 0);
+  QFileSystemWatcherSlots( QObject *parent = 0 );
   ~QFileSystemWatcherSlots();
   public slots:
   void directoryChanged( const QString & path );

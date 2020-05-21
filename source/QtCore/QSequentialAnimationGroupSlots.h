@@ -28,7 +28,7 @@ class QSequentialAnimationGroupSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSequentialAnimationGroupSlots(QObject *parent = 0);
+  QSequentialAnimationGroupSlots( QObject *parent = 0 );
   ~QSequentialAnimationGroupSlots();
   public slots:
   void currentAnimationChanged ( QAbstractAnimation * current );

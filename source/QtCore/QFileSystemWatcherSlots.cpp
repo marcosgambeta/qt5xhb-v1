@@ -12,35 +12,45 @@
 
 #include "QFileSystemWatcherSlots.h"
 
-QFileSystemWatcherSlots::QFileSystemWatcherSlots(QObject *parent) : QObject(parent)
+QFileSystemWatcherSlots::QFileSystemWatcherSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QFileSystemWatcherSlots::~QFileSystemWatcherSlots()
 {
 }
+
 void QFileSystemWatcherSlots::directoryChanged( const QString & path )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "directoryChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
+
     hb_vmEvalBlockV( cb, 2, psender, ppath );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }
 }
+
 void QFileSystemWatcherSlots::fileChanged( const QString & path )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "fileChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
+
     hb_vmEvalBlockV( cb, 2, psender, ppath );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppath );
   }

@@ -55,6 +55,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtCore/QBuffer>
@@ -65,8 +67,8 @@ QBuffer ( QObject * parent = 0 )
 */
 void QBuffer_new1()
 {
-  QBuffer * o = new QBuffer( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QBuffer * obj = new QBuffer( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -74,8 +76,8 @@ QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
 */
 void QBuffer_new2()
 {
-  QBuffer * o = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QBuffer * obj = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -105,6 +107,8 @@ HB_FUNC_STATIC( QBUFFER_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

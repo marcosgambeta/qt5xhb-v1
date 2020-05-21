@@ -28,7 +28,7 @@ class QStateSlots: public QObject
 {
   Q_OBJECT
   public:
-  QStateSlots(QObject *parent = 0);
+  QStateSlots( QObject *parent = 0 );
   ~QStateSlots();
   public slots:
   void finished();

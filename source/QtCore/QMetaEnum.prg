@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QMETAENUM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMetaEnum * o = new QMetaEnum();
-    Qt5xHb::returnNewObject( o, true );
+    QMetaEnum * obj = new QMetaEnum();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

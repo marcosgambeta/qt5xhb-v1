@@ -70,8 +70,8 @@ QUuid()
 */
 void QUuid_new1()
 {
-  QUuid * o = new QUuid();
-  Qt5xHb::returnNewObject( o, true );
+  QUuid * obj = new QUuid();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QUuid(const QByteArray & text)
 */
 void QUuid_new2()
 {
-  QUuid * o = new QUuid( *PQBYTEARRAY(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QUuid * obj = new QUuid( *PQBYTEARRAY(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

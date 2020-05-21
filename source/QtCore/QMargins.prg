@@ -69,8 +69,8 @@ QMargins()
 */
 void QMargins_new1()
 {
-  QMargins * o = new QMargins();
-  Qt5xHb::returnNewObject( o, true );
+  QMargins * obj = new QMargins();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QMargins(int left, int top, int right, int bottom)
 */
 void QMargins_new2()
 {
-  QMargins * o = new QMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
-  Qt5xHb::returnNewObject( o, true );
+  QMargins * obj = new QMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

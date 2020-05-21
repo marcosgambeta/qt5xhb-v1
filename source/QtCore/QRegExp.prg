@@ -82,8 +82,8 @@ QRegExp ()
 */
 void QRegExp_new1()
 {
-  QRegExp * o = new QRegExp();
-  Qt5xHb::returnNewObject( o, true );
+  QRegExp * obj = new QRegExp();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, P
 */
 void QRegExp_new2()
 {
-  QRegExp * o = new QRegExp( PQSTRING(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QRegExp * obj = new QRegExp( PQSTRING(1), ISNIL(2)? (Qt::CaseSensitivity) Qt::CaseSensitive : (Qt::CaseSensitivity) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::RegExp : (QRegExp::PatternSyntax) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QRegExp ( const QRegExp & rx )
 */
 void QRegExp_new3()
 {
-  QRegExp * o = new QRegExp( *PQREGEXP(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QRegExp * obj = new QRegExp( *PQREGEXP(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

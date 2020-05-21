@@ -68,8 +68,8 @@ QPointF()
 */
 void QPointF_new1()
 {
-  QPointF * o = new QPointF();
-  Qt5xHb::returnNewObject( o, true );
+  QPointF * obj = new QPointF();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QPointF(const QPoint & point)
 */
 void QPointF_new2()
 {
-  QPointF * o = new QPointF( *PQPOINT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPointF * obj = new QPointF( *PQPOINT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QPointF(qreal xpos, qreal ypos)
 */
 void QPointF_new3()
 {
-  QPointF * o = new QPointF( PQREAL(1), PQREAL(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QPointF * obj = new QPointF( PQREAL(1), PQREAL(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

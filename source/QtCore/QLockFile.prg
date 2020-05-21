@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QLOCKFILE_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QLockFile * o = new QLockFile( PQSTRING(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QLockFile * obj = new QLockFile( PQSTRING(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

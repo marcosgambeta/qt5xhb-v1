@@ -12,32 +12,42 @@
 
 #include "QAnimationDriverSlots.h"
 
-QAnimationDriverSlots::QAnimationDriverSlots(QObject *parent) : QObject(parent)
+QAnimationDriverSlots::QAnimationDriverSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAnimationDriverSlots::~QAnimationDriverSlots()
 {
 }
+
 void QAnimationDriverSlots::started()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QANIMATIONDRIVER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QAnimationDriverSlots::stopped()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stopped()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QANIMATIONDRIVER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

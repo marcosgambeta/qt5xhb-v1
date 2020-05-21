@@ -12,32 +12,42 @@
 
 #include "QStateMachineSlots.h"
 
-QStateMachineSlots::QStateMachineSlots(QObject *parent) : QObject(parent)
+QStateMachineSlots::QStateMachineSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QStateMachineSlots::~QStateMachineSlots()
 {
 }
+
 void QStateMachineSlots::started()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "started()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTATEMACHINE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QStateMachineSlots::stopped()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stopped()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTATEMACHINE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

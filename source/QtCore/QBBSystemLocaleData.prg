@@ -65,8 +65,8 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBBSystemLocaleData * o = new QBBSystemLocaleData();
-    Qt5xHb::returnNewObject( o, false );
+    QBBSystemLocaleData * obj = new QBBSystemLocaleData();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

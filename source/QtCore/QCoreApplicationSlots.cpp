@@ -12,21 +12,26 @@
 
 #include "QCoreApplicationSlots.h"
 
-QCoreApplicationSlots::QCoreApplicationSlots(QObject *parent) : QObject(parent)
+QCoreApplicationSlots::QCoreApplicationSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCoreApplicationSlots::~QCoreApplicationSlots()
 {
 }
+
 void QCoreApplicationSlots::aboutToQuit()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToQuit()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCOREAPPLICATION" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

@@ -28,7 +28,7 @@ class QProcessSlots: public QObject
 {
   Q_OBJECT
   public:
-  QProcessSlots(QObject *parent = 0);
+  QProcessSlots( QObject *parent = 0 );
   ~QProcessSlots();
   public slots:
   void error( QProcess::ProcessError error );

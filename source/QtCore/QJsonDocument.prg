@@ -84,8 +84,8 @@ QJsonDocument()
 */
 void QJsonDocument_new1()
 {
-  QJsonDocument * o = new QJsonDocument();
-  Qt5xHb::returnNewObject( o, true );
+  QJsonDocument * obj = new QJsonDocument();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QJsonDocument(const QJsonObject & object)
 */
 void QJsonDocument_new2()
 {
-  QJsonDocument * o = new QJsonDocument( *PQJSONOBJECT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonDocument * obj = new QJsonDocument( *PQJSONOBJECT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -102,8 +102,8 @@ QJsonDocument(const QJsonArray & array)
 */
 void QJsonDocument_new3()
 {
-  QJsonDocument * o = new QJsonDocument( *PQJSONARRAY(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonDocument * obj = new QJsonDocument( *PQJSONARRAY(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -111,8 +111,8 @@ QJsonDocument(const QJsonDocument & other)
 */
 void QJsonDocument_new4()
 {
-  QJsonDocument * o = new QJsonDocument( *PQJSONDOCUMENT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonDocument * obj = new QJsonDocument( *PQJSONDOCUMENT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

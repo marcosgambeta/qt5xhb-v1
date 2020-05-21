@@ -71,8 +71,8 @@ QSize ()
 */
 void QSize_new1()
 {
-  QSize * o = new QSize();
-  Qt5xHb::returnNewObject( o, true );
+  QSize * obj = new QSize();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QSize ( int width, int height )
 */
 void QSize_new2()
 {
-  QSize * o = new QSize( PINT(1), PINT(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QSize * obj = new QSize( PINT(1), PINT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

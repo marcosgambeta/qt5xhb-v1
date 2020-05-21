@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 {
   if( ISBETWEEN(0,2) && ISOPTCHAR(1) && (ISQLOCALE(2)||ISNIL(2)) )
   {
-    QResource * o = new QResource( OPQSTRING(1,QString()), ISNIL(2)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(2) );
-    Qt5xHb::returnNewObject( o, true );
+    QResource * obj = new QResource( OPQSTRING(1,QString()), ISNIL(2)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(2) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

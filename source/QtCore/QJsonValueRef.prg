@@ -79,8 +79,8 @@ QJsonValueRef(QJsonArray *array, int idx)
 */
 void QJsonValueRef_new1()
 {
-  QJsonValueRef * o = new QJsonValueRef( PQJSONARRAY(1), PINT(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValueRef * obj = new QJsonValueRef( PQJSONARRAY(1), PINT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -88,8 +88,8 @@ QJsonValueRef(QJsonObject *object, int idx)
 */
 void QJsonValueRef_new2()
 {
-  QJsonValueRef * o = new QJsonValueRef( PQJSONOBJECT(1), PINT(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QJsonValueRef * obj = new QJsonValueRef( PQJSONOBJECT(1), PINT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
