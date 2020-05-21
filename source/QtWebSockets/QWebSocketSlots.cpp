@@ -12,213 +12,281 @@
 
 #include "QWebSocketSlots.h"
 
-QWebSocketSlots::QWebSocketSlots(QObject *parent) : QObject(parent)
+QWebSocketSlots::QWebSocketSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QWebSocketSlots::~QWebSocketSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::aboutToClose()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToClose()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::connected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::disconnected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::stateChanged( QAbstractSocket::SocketState state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAbstractSocket::SocketState)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+
     hb_vmEvalBlockV( cb, 2, psender, pstate );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * pAuthenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pproxy = Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
     PHB_ITEM ppAuthenticator = Signals_return_object( (void *) pAuthenticator, "QAUTHENTICATOR" );
+
     hb_vmEvalBlockV( cb, 3, psender, pproxy, ppAuthenticator );
+
     hb_itemRelease( psender );
     hb_itemRelease( pproxy );
     hb_itemRelease( ppAuthenticator );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::readChannelFinished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "readChannelFinished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::textFrameReceived( const QString & frame, bool isLastFrame )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "textFrameReceived(QString,bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pframe = hb_itemPutC( NULL, QSTRINGTOSTRING(frame) );
     PHB_ITEM pisLastFrame = hb_itemPutL( NULL, isLastFrame );
+
     hb_vmEvalBlockV( cb, 3, psender, pframe, pisLastFrame );
+
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
     hb_itemRelease( pisLastFrame );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::binaryFrameReceived( const QByteArray & frame, bool isLastFrame )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "binaryFrameReceived(QByteArray,bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pframe = Signals_return_object( (void *) &frame, "QBYTEARRAY" );
     PHB_ITEM pisLastFrame = hb_itemPutL( NULL, isLastFrame );
+
     hb_vmEvalBlockV( cb, 3, psender, pframe, pisLastFrame );
+
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
     hb_itemRelease( pisLastFrame );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::textMessageReceived( const QString & message )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "textMessageReceived(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
+
     hb_vmEvalBlockV( cb, 2, psender, pmessage );
+
     hb_itemRelease( psender );
     hb_itemRelease( pmessage );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::binaryMessageReceived( const QByteArray & message )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "binaryMessageReceived(QByteArray)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pmessage = Signals_return_object( (void *) &message, "QBYTEARRAY" );
+
     hb_vmEvalBlockV( cb, 2, psender, pmessage );
+
     hb_itemRelease( psender );
     hb_itemRelease( pmessage );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::error( QAbstractSocket::SocketError error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QAbstractSocket::SocketError)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+
     hb_vmEvalBlockV( cb, 2, psender, perror );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::pong( quint64 elapsedTime, const QByteArray & payload )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pong(quint64,QByteArray)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pelapsedTime = hb_itemPutNLL( NULL, elapsedTime );
     PHB_ITEM ppayload = Signals_return_object( (void *) &payload, "QBYTEARRAY" );
+
     hb_vmEvalBlockV( cb, 3, psender, pelapsedTime, ppayload );
+
     hb_itemRelease( psender );
     hb_itemRelease( pelapsedTime );
     hb_itemRelease( ppayload );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::bytesWritten( qint64 bytes )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "bytesWritten(qint64)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pbytes = hb_itemPutNLL( NULL, bytes );
+
     hb_vmEvalBlockV( cb, 2, psender, pbytes );
+
     hb_itemRelease( psender );
     hb_itemRelease( pbytes );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketSlots::sslErrors( const QList<QSslError> & errors )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
@@ -245,7 +313,9 @@ void QWebSocketSlots::sslErrors( const QList<QSslError> & errors )
     {
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
     }
+
     hb_vmEvalBlockV( cb, 2, psender, perrors );
+
     hb_itemRelease( psender );
     hb_itemRelease( perrors );
   }

@@ -72,8 +72,8 @@ explicit QWebSocketCorsAuthenticator(const QString &origin)
 void QWebSocketCorsAuthenticator_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QWebSocketCorsAuthenticator * obj = new QWebSocketCorsAuthenticator( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -83,8 +83,8 @@ explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
 void QWebSocketCorsAuthenticator_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * o = new QWebSocketCorsAuthenticator( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QWebSocketCorsAuthenticator * obj = new QWebSocketCorsAuthenticator( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

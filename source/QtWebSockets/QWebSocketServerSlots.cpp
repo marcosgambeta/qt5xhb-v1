@@ -12,91 +12,119 @@
 
 #include "QWebSocketServerSlots.h"
 
-QWebSocketServerSlots::QWebSocketServerSlots(QObject *parent) : QObject(parent)
+QWebSocketServerSlots::QWebSocketServerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QWebSocketServerSlots::~QWebSocketServerSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketServerSlots::acceptError( QAbstractSocket::SocketError socketError )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "acceptError(QAbstractSocket::SocketError)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKETSERVER" );
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
+
     hb_vmEvalBlockV( cb, 2, psender, psocketError );
+
     hb_itemRelease( psender );
     hb_itemRelease( psocketError );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketServerSlots::serverError( QWebSocketProtocol::CloseCode closeCode )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "serverError(QWebSocketProtocol::CloseCode)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKETSERVER" );
     PHB_ITEM pcloseCode = hb_itemPutNI( NULL, (int) closeCode );
+
     hb_vmEvalBlockV( cb, 2, psender, pcloseCode );
+
     hb_itemRelease( psender );
     hb_itemRelease( pcloseCode );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketServerSlots::originAuthenticationRequired( QWebSocketCorsAuthenticator * pAuthenticator )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "originAuthenticationRequired(QWebSocketCorsAuthenticator*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKETSERVER" );
     PHB_ITEM ppAuthenticator = Signals_return_object( (void *) pAuthenticator, "QWEBSOCKETCORSAUTHENTICATOR" );
+
     hb_vmEvalBlockV( cb, 2, psender, ppAuthenticator );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppAuthenticator );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketServerSlots::newConnection()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKETSERVER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketServerSlots::peerVerifyError( const QSslError & error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "peerVerifyError(QSslError)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKETSERVER" );
     PHB_ITEM perror = Signals_return_object( (void *) &error, "QSSLERROR" );
+
     hb_vmEvalBlockV( cb, 2, psender, perror );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketServerSlots::sslErrors( const QList<QSslError> & errors )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKETSERVER" );
@@ -123,21 +151,28 @@ void QWebSocketServerSlots::sslErrors( const QList<QSslError> & errors )
     {
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
     }
+
     hb_vmEvalBlockV( cb, 2, psender, perrors );
+
     hb_itemRelease( psender );
     hb_itemRelease( perrors );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 void QWebSocketServerSlots::closed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "closed()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWEBSOCKETSERVER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

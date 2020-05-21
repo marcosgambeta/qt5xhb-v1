@@ -30,7 +30,7 @@ class QWebSocketSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWebSocketSlots(QObject *parent = 0);
+  QWebSocketSlots( QObject *parent = 0 );
   ~QWebSocketSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
