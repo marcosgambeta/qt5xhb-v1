@@ -12,23 +12,28 @@
 
 #include "QMagnetometerSlots.h"
 
-QMagnetometerSlots::QMagnetometerSlots(QObject *parent) : QObject(parent)
+QMagnetometerSlots::QMagnetometerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QMagnetometerSlots::~QMagnetometerSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QMagnetometerSlots::returnGeoValuesChanged( bool returnGeoValues )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "returnGeoValuesChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMAGNETOMETER" );
     PHB_ITEM preturnGeoValues = hb_itemPutL( NULL, returnGeoValues );
+
     hb_vmEvalBlockV( cb, 2, psender, preturnGeoValues );
+
     hb_itemRelease( psender );
     hb_itemRelease( preturnGeoValues );
   }

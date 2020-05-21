@@ -12,23 +12,28 @@
 
 #include "QAccelerometerSlots.h"
 
-QAccelerometerSlots::QAccelerometerSlots(QObject *parent) : QObject(parent)
+QAccelerometerSlots::QAccelerometerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAccelerometerSlots::~QAccelerometerSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QAccelerometerSlots::accelerationModeChanged( QAccelerometer::AccelerationMode accelerationMode )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "accelerationModeChanged(QAccelerometer::AccelerationMode)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QACCELEROMETER" );
     PHB_ITEM paccelerationMode = hb_itemPutNI( NULL, (int) accelerationMode );
+
     hb_vmEvalBlockV( cb, 2, psender, paccelerationMode );
+
     hb_itemRelease( psender );
     hb_itemRelease( paccelerationMode );
   }

@@ -30,7 +30,7 @@ class QAccelerometerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAccelerometerSlots(QObject *parent = 0);
+  QAccelerometerSlots( QObject *parent = 0 );
   ~QAccelerometerSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))

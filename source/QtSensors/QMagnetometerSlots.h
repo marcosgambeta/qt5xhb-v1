@@ -30,7 +30,7 @@ class QMagnetometerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMagnetometerSlots(QObject *parent = 0);
+  QMagnetometerSlots( QObject *parent = 0 );
   ~QMagnetometerSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))

@@ -30,7 +30,7 @@ class QRotationSensorSlots: public QObject
 {
   Q_OBJECT
   public:
-  QRotationSensorSlots(QObject *parent = 0);
+  QRotationSensorSlots( QObject *parent = 0 );
   ~QRotationSensorSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))

@@ -30,7 +30,7 @@ class QLightSensorSlots: public QObject
 {
   Q_OBJECT
   public:
-  QLightSensorSlots(QObject *parent = 0);
+  QLightSensorSlots( QObject *parent = 0 );
   ~QLightSensorSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))

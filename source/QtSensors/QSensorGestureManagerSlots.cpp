@@ -12,22 +12,27 @@
 
 #include "QSensorGestureManagerSlots.h"
 
-QSensorGestureManagerSlots::QSensorGestureManagerSlots(QObject *parent) : QObject(parent)
+QSensorGestureManagerSlots::QSensorGestureManagerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QSensorGestureManagerSlots::~QSensorGestureManagerSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorGestureManagerSlots::newSensorGestureAvailable()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "newSensorGestureAvailable()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSENSORGESTUREMANAGER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

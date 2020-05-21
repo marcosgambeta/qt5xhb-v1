@@ -12,23 +12,28 @@
 
 #include "QTapSensorSlots.h"
 
-QTapSensorSlots::QTapSensorSlots(QObject *parent) : QObject(parent)
+QTapSensorSlots::QTapSensorSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QTapSensorSlots::~QTapSensorSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QTapSensorSlots::returnDoubleTapEventsChanged( bool returnDoubleTapEvents )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "returnDoubleTapEventsChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTAPSENSOR" );
     PHB_ITEM preturnDoubleTapEvents = hb_itemPutL( NULL, returnDoubleTapEvents );
+
     hb_vmEvalBlockV( cb, 2, psender, preturnDoubleTapEvents );
+
     hb_itemRelease( psender );
     hb_itemRelease( preturnDoubleTapEvents );
   }

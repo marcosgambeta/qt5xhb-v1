@@ -12,23 +12,28 @@
 
 #include "QSensorGestureSlots.h"
 
-QSensorGestureSlots::QSensorGestureSlots(QObject *parent) : QObject(parent)
+QSensorGestureSlots::QSensorGestureSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QSensorGestureSlots::~QSensorGestureSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QSensorGestureSlots::detected( QString s )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "detected(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSENSORGESTURE" );
     PHB_ITEM ps = hb_itemPutC( NULL, (const char *) s.toLatin1().data() );
+
     hb_vmEvalBlockV( cb, 2, psender, ps );
+
     hb_itemRelease( psender );
     hb_itemRelease( ps );
   }

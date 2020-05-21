@@ -12,23 +12,28 @@
 
 #include "QRotationSensorSlots.h"
 
-QRotationSensorSlots::QRotationSensorSlots(QObject *parent) : QObject(parent)
+QRotationSensorSlots::QRotationSensorSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QRotationSensorSlots::~QRotationSensorSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 void QRotationSensorSlots::hasZChanged( bool hasZ )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "hasZChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QROTATIONSENSOR" );
     PHB_ITEM phasZ = hb_itemPutL( NULL, hasZ );
+
     hb_vmEvalBlockV( cb, 2, psender, phasZ );
+
     hb_itemRelease( psender );
     hb_itemRelease( phasZ );
   }

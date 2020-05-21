@@ -30,7 +30,7 @@ class QSensorGestureManagerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSensorGestureManagerSlots(QObject *parent = 0);
+  QSensorGestureManagerSlots( QObject *parent = 0 );
   ~QSensorGestureManagerSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
