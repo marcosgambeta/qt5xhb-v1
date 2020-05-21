@@ -1032,6 +1032,7 @@ QModbusDevice                                        |QObject        |QtSerialBu
 QModbusDevice::Error                                 |enum           |QtSerialBus
 QModbusDevice::State                                 |enum           |QtSerialBus
 QModbusReply                                         |QObject        |QtSerialBus
+QModbusReply::ReplyType                              |enum           |QtSerialBus
 QModbusRtuSerialMaster                               |QObject        |QtSerialBus
 QModbusRtuSerialSlave                                |QObject        |QtSerialBus
 QModbusServer                                        |QObject        |QtSerialBus
