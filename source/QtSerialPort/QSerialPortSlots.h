@@ -30,7 +30,7 @@ class QSerialPortSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSerialPortSlots(QObject *parent = 0);
+  QSerialPortSlots( QObject *parent = 0 );
   ~QSerialPortSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
