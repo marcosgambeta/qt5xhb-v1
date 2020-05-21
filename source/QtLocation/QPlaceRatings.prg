@@ -72,8 +72,8 @@ QPlaceRatings()
 void QPlaceRatings_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * o = new QPlaceRatings();
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceRatings * obj = new QPlaceRatings();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -83,8 +83,8 @@ QPlaceRatings(const QPlaceRatings &other)
 void QPlaceRatings_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * o = new QPlaceRatings( *PQPLACERATINGS(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceRatings * obj = new QPlaceRatings( *PQPLACERATINGS(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

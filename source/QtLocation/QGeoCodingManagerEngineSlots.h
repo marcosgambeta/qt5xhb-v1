@@ -30,7 +30,7 @@ class QGeoCodingManagerEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGeoCodingManagerEngineSlots(QObject *parent = 0);
+  QGeoCodingManagerEngineSlots( QObject *parent = 0 );
   ~QGeoCodingManagerEngineSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))

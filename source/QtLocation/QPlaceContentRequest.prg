@@ -77,8 +77,8 @@ QPlaceContentRequest()
 void QPlaceContentRequest_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * o = new QPlaceContentRequest();
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceContentRequest * obj = new QPlaceContentRequest();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QPlaceContentRequest(const QPlaceContentRequest &other)
 void QPlaceContentRequest_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * o = new QPlaceContentRequest( *PQPLACECONTENTREQUEST(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceContentRequest * obj = new QPlaceContentRequest( *PQPLACECONTENTREQUEST(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

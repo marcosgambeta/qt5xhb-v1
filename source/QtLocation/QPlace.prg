@@ -113,8 +113,8 @@ QPlace()
 void QPlace_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlace * o = new QPlace();
-  Qt5xHb::returnNewObject( o, true );
+  QPlace * obj = new QPlace();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -124,8 +124,8 @@ QPlace(const QPlace &other)
 void QPlace_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlace * o = new QPlace( *PQPLACE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlace * obj = new QPlace( *PQPLACE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

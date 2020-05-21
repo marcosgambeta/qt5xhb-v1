@@ -63,8 +63,8 @@ QPlaceImage()
 void QPlaceImage_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * o = new QPlaceImage();
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceImage * obj = new QPlaceImage();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -74,8 +74,8 @@ QPlaceImage(const QPlaceContent &other)
 void QPlaceImage_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceImage * o = new QPlaceImage( *PQPLACECONTENT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceImage * obj = new QPlaceImage( *PQPLACECONTENT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

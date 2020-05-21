@@ -82,8 +82,8 @@ QGeoRouteSegment()
 void QGeoRouteSegment_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteSegment * o = new QGeoRouteSegment();
-  Qt5xHb::returnNewObject( o, true );
+  QGeoRouteSegment * obj = new QGeoRouteSegment();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -93,8 +93,8 @@ QGeoRouteSegment(const QGeoRouteSegment &other)
 void QGeoRouteSegment_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteSegment * o = new QGeoRouteSegment( *PQGEOROUTESEGMENT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QGeoRouteSegment * obj = new QGeoRouteSegment( *PQGEOROUTESEGMENT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

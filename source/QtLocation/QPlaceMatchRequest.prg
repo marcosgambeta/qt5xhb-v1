@@ -70,8 +70,8 @@ QPlaceMatchRequest()
 void QPlaceMatchRequest_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * o = new QPlaceMatchRequest();
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceMatchRequest * obj = new QPlaceMatchRequest();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -81,8 +81,8 @@ QPlaceMatchRequest(const QPlaceMatchRequest &other)
 void QPlaceMatchRequest_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * o = new QPlaceMatchRequest( *PQPLACEMATCHREQUEST(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceMatchRequest * obj = new QPlaceMatchRequest( *PQPLACEMATCHREQUEST(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

@@ -65,8 +65,8 @@ HB_FUNC_STATIC( QPLACERESULT_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISNUMPAR(0) )
   {
-    QPlaceResult * o = new QPlaceResult();
-    Qt5xHb::returnNewObject( o, true );
+    QPlaceResult * obj = new QPlaceResult();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -77,8 +77,8 @@ QPlaceContent()
 void QPlaceContent_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * o = new QPlaceContent();
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceContent * obj = new QPlaceContent();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QPlaceContent(const QPlaceContent &other)
 void QPlaceContent_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * o = new QPlaceContent( *PQPLACECONTENT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceContent * obj = new QPlaceContent( *PQPLACECONTENT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

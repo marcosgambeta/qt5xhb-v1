@@ -30,7 +30,7 @@ class QGeoCodeReplySlots: public QObject
 {
   Q_OBJECT
   public:
-  QGeoCodeReplySlots(QObject *parent = 0);
+  QGeoCodeReplySlots( QObject *parent = 0 );
   ~QGeoCodeReplySlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))

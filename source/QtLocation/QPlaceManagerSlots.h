@@ -30,7 +30,7 @@ class QPlaceManagerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QPlaceManagerSlots(QObject *parent = 0);
+  QPlaceManagerSlots( QObject *parent = 0 );
   ~QPlaceManagerSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))

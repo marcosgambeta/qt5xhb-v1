@@ -30,7 +30,7 @@ class QGeoRouteReplySlots: public QObject
 {
   Q_OBJECT
   public:
-  QGeoRouteReplySlots(QObject *parent = 0);
+  QGeoRouteReplySlots( QObject *parent = 0 );
   ~QGeoRouteReplySlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))

@@ -73,8 +73,8 @@ QPlaceIcon()
 void QPlaceIcon_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * o = new QPlaceIcon();
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceIcon * obj = new QPlaceIcon();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -84,8 +84,8 @@ QPlaceIcon(const QPlaceIcon &other)
 void QPlaceIcon_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceIcon * o = new QPlaceIcon( *PQPLACEICON(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceIcon * obj = new QPlaceIcon( *PQPLACEICON(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

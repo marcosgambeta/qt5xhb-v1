@@ -12,37 +12,47 @@
 
 #include "QPlaceReplySlots.h"
 
-QPlaceReplySlots::QPlaceReplySlots(QObject *parent) : QObject(parent)
+QPlaceReplySlots::QPlaceReplySlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QPlaceReplySlots::~QPlaceReplySlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceReplySlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEREPLY" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
 void QPlaceReplySlots::error( QPlaceReply::Error error, const QString & errorString )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QPlaceReply::Error,QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
+
     hb_vmEvalBlockV( cb, 3, psender, perror, perrorString );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );

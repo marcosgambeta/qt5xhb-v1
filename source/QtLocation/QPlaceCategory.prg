@@ -77,8 +77,8 @@ QPlaceCategory()
 void QPlaceCategory_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * o = new QPlaceCategory();
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceCategory * obj = new QPlaceCategory();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -88,8 +88,8 @@ QPlaceCategory(const QPlaceCategory &other)
 void QPlaceCategory_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceCategory * o = new QPlaceCategory( *PQPLACECATEGORY(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceCategory * obj = new QPlaceCategory( *PQPLACECATEGORY(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

@@ -73,8 +73,8 @@ HB_FUNC_STATIC( QPLACEREVIEW_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISNUMPAR(0) )
   {
-    QPlaceReview * o = new QPlaceReview();
-    Qt5xHb::returnNewObject( o, true );
+    QPlaceReview * obj = new QPlaceReview();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

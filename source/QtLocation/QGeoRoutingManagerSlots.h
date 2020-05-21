@@ -30,7 +30,7 @@ class QGeoRoutingManagerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGeoRoutingManagerSlots(QObject *parent = 0);
+  QGeoRoutingManagerSlots( QObject *parent = 0 );
   ~QGeoRoutingManagerSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))

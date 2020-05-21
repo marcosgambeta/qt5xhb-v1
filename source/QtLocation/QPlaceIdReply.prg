@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QPlaceIdReply * o = new QPlaceIdReply( (QPlaceIdReply::OperationType) hb_parni(1), OPQOBJECT(2,0) );
-    Qt5xHb::returnNewObject( o, false );
+    QPlaceIdReply * obj = new QPlaceIdReply( (QPlaceIdReply::OperationType) hb_parni(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -80,8 +80,8 @@ HB_FUNC_STATIC( QPLACEIDREPLY_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

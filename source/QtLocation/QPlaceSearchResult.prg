@@ -73,8 +73,8 @@ QPlaceSearchResult()
 void QPlaceSearchResult_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * o = new QPlaceSearchResult();
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceSearchResult * obj = new QPlaceSearchResult();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -84,8 +84,8 @@ QPlaceSearchResult(const QPlaceSearchResult &other)
 void QPlaceSearchResult_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSearchResult * o = new QPlaceSearchResult( *PQPLACESEARCHRESULT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceSearchResult * obj = new QPlaceSearchResult( *PQPLACESEARCHRESULT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

@@ -69,8 +69,8 @@ QPlaceUser()
 void QPlaceUser_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * o = new QPlaceUser();
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceUser * obj = new QPlaceUser();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -80,8 +80,8 @@ QPlaceUser(const QPlaceUser &other)
 void QPlaceUser_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceUser * o = new QPlaceUser( *PQPLACEUSER(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPlaceUser * obj = new QPlaceUser( *PQPLACEUSER(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
