@@ -28,7 +28,7 @@ class QVirtualKeyboardInputContextSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVirtualKeyboardInputContextSlots(QObject *parent = 0);
+  QVirtualKeyboardInputContextSlots( QObject *parent = 0 );
   ~QVirtualKeyboardInputContextSlots();
   public slots:
   void preeditTextChanged();

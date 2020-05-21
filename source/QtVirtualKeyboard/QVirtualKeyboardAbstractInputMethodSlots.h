@@ -28,7 +28,7 @@ class QVirtualKeyboardAbstractInputMethodSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVirtualKeyboardAbstractInputMethodSlots(QObject *parent = 0);
+  QVirtualKeyboardAbstractInputMethodSlots( QObject *parent = 0 );
   ~QVirtualKeyboardAbstractInputMethodSlots();
   public slots:
   void selectionListChanged( QVirtualKeyboardSelectionListModel::Type type );

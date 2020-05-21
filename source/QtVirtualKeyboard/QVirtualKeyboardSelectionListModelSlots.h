@@ -28,7 +28,7 @@ class QVirtualKeyboardSelectionListModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVirtualKeyboardSelectionListModelSlots(QObject *parent = 0);
+  QVirtualKeyboardSelectionListModelSlots( QObject *parent = 0 );
   ~QVirtualKeyboardSelectionListModelSlots();
   public slots:
   void countChanged();

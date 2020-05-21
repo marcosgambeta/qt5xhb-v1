@@ -12,49 +12,64 @@
 
 #include "QVirtualKeyboardAbstractInputMethodSlots.h"
 
-QVirtualKeyboardAbstractInputMethodSlots::QVirtualKeyboardAbstractInputMethodSlots(QObject *parent) : QObject(parent)
+QVirtualKeyboardAbstractInputMethodSlots::QVirtualKeyboardAbstractInputMethodSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QVirtualKeyboardAbstractInputMethodSlots::~QVirtualKeyboardAbstractInputMethodSlots()
 {
 }
+
 void QVirtualKeyboardAbstractInputMethodSlots::selectionListChanged( QVirtualKeyboardSelectionListModel::Type type )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionListChanged(QVirtualKeyboardSelectionListModel::Type)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
+
     hb_vmEvalBlockV( cb, 2, psender, ptype );
+
     hb_itemRelease( psender );
     hb_itemRelease( ptype );
   }
 }
+
 void QVirtualKeyboardAbstractInputMethodSlots::selectionListActiveItemChanged( QVirtualKeyboardSelectionListModel::Type type, int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionListActiveItemChanged(QVirtualKeyboardSelectionListModel::Type,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 3, psender, ptype, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( ptype );
     hb_itemRelease( pindex );
   }
 }
+
 void QVirtualKeyboardAbstractInputMethodSlots::selectionListsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionListsChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

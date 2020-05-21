@@ -28,7 +28,7 @@ class QVirtualKeyboardInputEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVirtualKeyboardInputEngineSlots(QObject *parent = 0);
+  QVirtualKeyboardInputEngineSlots( QObject *parent = 0 );
   ~QVirtualKeyboardInputEngineSlots();
   public slots:
   void virtualKeyClicked( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat );

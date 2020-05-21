@@ -28,7 +28,7 @@ class QVirtualKeyboardTraceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVirtualKeyboardTraceSlots(QObject *parent = 0);
+  QVirtualKeyboardTraceSlots( QObject *parent = 0 );
   ~QVirtualKeyboardTraceSlots();
   public slots:
   void traceIdChanged( int traceId );
