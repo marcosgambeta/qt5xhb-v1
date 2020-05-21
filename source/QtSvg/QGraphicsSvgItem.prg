@@ -53,6 +53,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtSvg/QGraphicsSvgItem>
@@ -65,8 +67,8 @@ QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
 */
 void QGraphicsSvgItem_new1()
 {
-  QGraphicsSvgItem * o = new QGraphicsSvgItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QGraphicsSvgItem * obj = new QGraphicsSvgItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -74,8 +76,8 @@ QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
 */
 void QGraphicsSvgItem_new2()
 {
-  QGraphicsSvgItem * o = new QGraphicsSvgItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QGraphicsSvgItem * obj = new QGraphicsSvgItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -105,6 +107,8 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

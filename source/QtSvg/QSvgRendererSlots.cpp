@@ -12,21 +12,26 @@
 
 #include "QSvgRendererSlots.h"
 
-QSvgRendererSlots::QSvgRendererSlots(QObject *parent) : QObject(parent)
+QSvgRendererSlots::QSvgRendererSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QSvgRendererSlots::~QSvgRendererSlots()
 {
 }
+
 void QSvgRendererSlots::repaintNeeded()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "repaintNeeded()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSVGRENDERER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

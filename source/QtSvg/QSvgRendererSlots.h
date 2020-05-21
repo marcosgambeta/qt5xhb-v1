@@ -28,7 +28,7 @@ class QSvgRendererSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSvgRendererSlots(QObject *parent = 0);
+  QSvgRendererSlots( QObject *parent = 0 );
   ~QSvgRendererSlots();
   public slots:
   void repaintNeeded();

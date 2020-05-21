@@ -46,6 +46,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtSvg/QSvgWidget>
@@ -58,8 +60,8 @@ QSvgWidget ( QWidget * parent = 0 )
 */
 void QSvgWidget_new1()
 {
-  QSvgWidget * o = new QSvgWidget( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QSvgWidget * obj = new QSvgWidget( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,8 +69,8 @@ QSvgWidget ( const QString & file, QWidget * parent = 0 )
 */
 void QSvgWidget_new2()
 {
-  QSvgWidget * o = new QSvgWidget( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QSvgWidget * obj = new QSvgWidget( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -98,6 +100,8 @@ HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
