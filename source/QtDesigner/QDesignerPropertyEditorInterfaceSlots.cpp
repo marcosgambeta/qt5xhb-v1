@@ -12,23 +12,28 @@
 
 #include "QDesignerPropertyEditorInterfaceSlots.h"
 
-QDesignerPropertyEditorInterfaceSlots::QDesignerPropertyEditorInterfaceSlots(QObject *parent) : QObject(parent)
+QDesignerPropertyEditorInterfaceSlots::QDesignerPropertyEditorInterfaceSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QDesignerPropertyEditorInterfaceSlots::~QDesignerPropertyEditorInterfaceSlots()
 {
 }
+
 void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & name, const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERPROPERTYEDITORINTERFACE" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
+
     hb_vmEvalBlockV( cb, 3, psender, pname, pvalue );
+
     hb_itemRelease( psender );
     hb_itemRelease( pname );
     hb_itemRelease( pvalue );

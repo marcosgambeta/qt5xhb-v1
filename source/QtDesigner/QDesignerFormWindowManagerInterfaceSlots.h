@@ -28,7 +28,7 @@ class QDesignerFormWindowManagerInterfaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDesignerFormWindowManagerInterfaceSlots(QObject *parent = 0);
+  QDesignerFormWindowManagerInterfaceSlots( QObject *parent = 0 );
   ~QDesignerFormWindowManagerInterfaceSlots();
   public slots:
   void activeFormWindowChanged( QDesignerFormWindowInterface * formWindow );

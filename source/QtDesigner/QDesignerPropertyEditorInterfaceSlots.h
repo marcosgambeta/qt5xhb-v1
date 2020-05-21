@@ -28,7 +28,7 @@ class QDesignerPropertyEditorInterfaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDesignerPropertyEditorInterfaceSlots(QObject *parent = 0);
+  QDesignerPropertyEditorInterfaceSlots( QObject *parent = 0 );
   ~QDesignerPropertyEditorInterfaceSlots();
   public slots:
   void propertyChanged( const QString & name, const QVariant & value );

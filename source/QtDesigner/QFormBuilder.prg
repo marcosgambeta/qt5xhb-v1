@@ -59,8 +59,8 @@ HB_FUNC_STATIC( QFORMBUILDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QFormBuilder * o = new QFormBuilder();
-    Qt5xHb::returnNewObject( o, true );
+    QFormBuilder * obj = new QFormBuilder();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {
