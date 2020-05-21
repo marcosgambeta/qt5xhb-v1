@@ -84,8 +84,8 @@ explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray 
 */
 void QNetworkCookie_new1()
 {
-  QNetworkCookie * o = new QNetworkCookie( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkCookie * obj = new QNetworkCookie( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -93,8 +93,8 @@ QNetworkCookie ( const QNetworkCookie & other )
 */
 void QNetworkCookie_new2()
 {
-  QNetworkCookie * o = new QNetworkCookie( *PQNETWORKCOOKIE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkCookie * obj = new QNetworkCookie( *PQNETWORKCOOKIE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

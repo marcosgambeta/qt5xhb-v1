@@ -65,8 +65,8 @@ QDnsMailExchangeRecord()
 */
 void QDnsMailExchangeRecord_new1()
 {
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord();
-  Qt5xHb::returnNewObject( o, true );
+  QDnsMailExchangeRecord * obj = new QDnsMailExchangeRecord();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
 */
 void QDnsMailExchangeRecord_new2()
 {
-  QDnsMailExchangeRecord * o = new QDnsMailExchangeRecord( *PQDNSMAILEXCHANGERECORD(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDnsMailExchangeRecord * obj = new QDnsMailExchangeRecord( *PQDNSMAILEXCHANGERECORD(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

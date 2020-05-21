@@ -84,8 +84,8 @@ QNetworkDatagram()
 void QNetworkDatagram_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * o = new QNetworkDatagram();
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkDatagram * obj = new QNetworkDatagram();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -95,8 +95,8 @@ QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress 
 void QNetworkDatagram_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * o = new QNetworkDatagram( *PQBYTEARRAY(1), ISNIL(2)? QHostAddress() : *(QHostAddress *) Qt5xHb::itemGetPtr(2), OPQUINT16(3,0) );
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkDatagram * obj = new QNetworkDatagram( *PQBYTEARRAY(1), ISNIL(2)? QHostAddress() : *(QHostAddress *) Qt5xHb::itemGetPtr(2), OPQUINT16(3,0) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -106,8 +106,8 @@ QNetworkDatagram(const QNetworkDatagram &other)
 void QNetworkDatagram_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * o = new QNetworkDatagram( *PQNETWORKDATAGRAM(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkDatagram * obj = new QNetworkDatagram( *PQNETWORKDATAGRAM(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

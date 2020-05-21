@@ -67,8 +67,8 @@ QSslCertificateExtension()
 */
 void QSslCertificateExtension_new1()
 {
-  QSslCertificateExtension * o = new QSslCertificateExtension();
-  Qt5xHb::returnNewObject( o, true );
+  QSslCertificateExtension * obj = new QSslCertificateExtension();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QSslCertificateExtension(const QSslCertificateExtension &other)
 */
 void QSslCertificateExtension_new2()
 {
-  QSslCertificateExtension * o = new QSslCertificateExtension( *PQSSLCERTIFICATEEXTENSION(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QSslCertificateExtension * obj = new QSslCertificateExtension( *PQSSLCERTIFICATEEXTENSION(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

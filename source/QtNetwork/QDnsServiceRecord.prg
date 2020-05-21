@@ -67,8 +67,8 @@ QDnsServiceRecord()
 */
 void QDnsServiceRecord_new1()
 {
-  QDnsServiceRecord * o = new QDnsServiceRecord();
-  Qt5xHb::returnNewObject( o, true );
+  QDnsServiceRecord * obj = new QDnsServiceRecord();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QDnsServiceRecord(const QDnsServiceRecord & other)
 */
 void QDnsServiceRecord_new2()
 {
-  QDnsServiceRecord * o = new QDnsServiceRecord( *PQDNSSERVICERECORD(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDnsServiceRecord * obj = new QDnsServiceRecord( *PQDNSSERVICERECORD(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

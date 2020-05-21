@@ -28,7 +28,7 @@ class QDnsLookupSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDnsLookupSlots(QObject *parent = 0);
+  QDnsLookupSlots( QObject *parent = 0 );
   ~QDnsLookupSlots();
   public slots:
   void finished();

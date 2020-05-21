@@ -70,6 +70,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtNetwork/QDnsLookup>
@@ -82,8 +84,8 @@ explicit QDnsLookup(QObject *parent = Q_NULLPTR)
 */
 void QDnsLookup_new1()
 {
-  QDnsLookup * o = new QDnsLookup( OPQOBJECT(1,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QDnsLookup * obj = new QDnsLookup( OPQOBJECT(1,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -91,8 +93,8 @@ QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
 */
 void QDnsLookup_new2()
 {
-  QDnsLookup * o = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -101,8 +103,8 @@ QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObje
 void QDnsLookup_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QDnsLookup * o = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,Q_NULLPTR) );
-  Qt5xHb::returnNewObject( o, false );
+  QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,Q_NULLPTR) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -141,6 +143,8 @@ HB_FUNC_STATIC( QDNSLOOKUP_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

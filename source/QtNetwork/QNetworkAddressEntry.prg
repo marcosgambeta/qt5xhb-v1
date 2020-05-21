@@ -70,8 +70,8 @@ QNetworkAddressEntry ()
 */
 void QNetworkAddressEntry_new1()
 {
-  QNetworkAddressEntry * o = new QNetworkAddressEntry();
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkAddressEntry * obj = new QNetworkAddressEntry();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QNetworkAddressEntry ( const QNetworkAddressEntry & other )
 */
 void QNetworkAddressEntry_new2()
 {
-  QNetworkAddressEntry * o = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkAddressEntry * obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

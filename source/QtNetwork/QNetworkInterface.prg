@@ -76,8 +76,8 @@ QNetworkInterface ()
 */
 void QNetworkInterface_new1()
 {
-  QNetworkInterface * o = new QNetworkInterface();
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkInterface * obj = new QNetworkInterface();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QNetworkInterface ( const QNetworkInterface & other )
 */
 void QNetworkInterface_new2()
 {
-  QNetworkInterface * o = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkInterface * obj = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

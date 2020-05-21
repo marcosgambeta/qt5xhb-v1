@@ -28,7 +28,7 @@ class QNetworkAccessManagerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QNetworkAccessManagerSlots(QObject *parent = 0);
+  QNetworkAccessManagerSlots( QObject *parent = 0 );
   ~QNetworkAccessManagerSlots();
   public slots:
   void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );

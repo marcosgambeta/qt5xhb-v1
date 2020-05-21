@@ -28,7 +28,7 @@ class QTcpServerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTcpServerSlots(QObject *parent = 0);
+  QTcpServerSlots( QObject *parent = 0 );
   ~QTcpServerSlots();
   public slots:
   void acceptError( QAbstractSocket::SocketError socketError );

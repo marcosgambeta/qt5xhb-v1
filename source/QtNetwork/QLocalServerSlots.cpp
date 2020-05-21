@@ -12,21 +12,26 @@
 
 #include "QLocalServerSlots.h"
 
-QLocalServerSlots::QLocalServerSlots(QObject *parent) : QObject(parent)
+QLocalServerSlots::QLocalServerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QLocalServerSlots::~QLocalServerSlots()
 {
 }
+
 void QLocalServerSlots::newConnection()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOCALSERVER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

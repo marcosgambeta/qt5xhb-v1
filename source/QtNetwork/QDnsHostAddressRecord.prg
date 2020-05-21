@@ -67,8 +67,8 @@ QDnsHostAddressRecord()
 */
 void QDnsHostAddressRecord_new1()
 {
-  QDnsHostAddressRecord * o = new QDnsHostAddressRecord();
-  Qt5xHb::returnNewObject( o, true );
+  QDnsHostAddressRecord * obj = new QDnsHostAddressRecord();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
 */
 void QDnsHostAddressRecord_new2()
 {
-  QDnsHostAddressRecord * o = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QDnsHostAddressRecord * obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

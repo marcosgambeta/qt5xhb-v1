@@ -63,8 +63,8 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
-    QNetworkCookieJar * o = new QNetworkCookieJar( OPQOBJECT(1,0) );
-    Qt5xHb::returnNewObject( o, false );
+    QNetworkCookieJar * obj = new QNetworkCookieJar( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -81,8 +81,8 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

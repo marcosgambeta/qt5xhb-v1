@@ -74,8 +74,8 @@ QNetworkConfiguration ()
 */
 void QNetworkConfiguration_new1()
 {
-  QNetworkConfiguration * o = new QNetworkConfiguration();
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkConfiguration * obj = new QNetworkConfiguration();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QNetworkConfiguration ( const QNetworkConfiguration & other )
 */
 void QNetworkConfiguration_new2()
 {
-  QNetworkConfiguration * o = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkConfiguration * obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

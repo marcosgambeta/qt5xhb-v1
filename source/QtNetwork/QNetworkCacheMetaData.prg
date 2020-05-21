@@ -74,8 +74,8 @@ QNetworkCacheMetaData ()
 */
 void QNetworkCacheMetaData_new1()
 {
-  QNetworkCacheMetaData * o = new QNetworkCacheMetaData();
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkCacheMetaData * obj = new QNetworkCacheMetaData();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
 */
 void QNetworkCacheMetaData_new2()
 {
-  QNetworkCacheMetaData * o = new QNetworkCacheMetaData( *PQNETWORKCACHEMETADATA(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QNetworkCacheMetaData * obj = new QNetworkCacheMetaData( *PQNETWORKCACHEMETADATA(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

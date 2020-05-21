@@ -28,7 +28,7 @@ class QAbstractSocketSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractSocketSlots(QObject *parent = 0);
+  QAbstractSocketSlots( QObject *parent = 0 );
   ~QAbstractSocketSlots();
   public slots:
   void connected();

@@ -28,7 +28,7 @@ class QNetworkReplySlots: public QObject
 {
   Q_OBJECT
   public:
-  QNetworkReplySlots(QObject *parent = 0);
+  QNetworkReplySlots( QObject *parent = 0 );
   ~QNetworkReplySlots();
   public slots:
   void downloadProgress( qint64 bytesReceived, qint64 bytesTotal );

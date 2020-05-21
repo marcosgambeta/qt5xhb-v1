@@ -28,7 +28,7 @@ class QLocalServerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QLocalServerSlots(QObject *parent = 0);
+  QLocalServerSlots( QObject *parent = 0 );
   ~QLocalServerSlots();
   public slots:
   void newConnection();

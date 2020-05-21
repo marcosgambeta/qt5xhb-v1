@@ -70,8 +70,8 @@ QSslCipher()
 */
 void QSslCipher_new1()
 {
-  QSslCipher * o = new QSslCipher();
-  Qt5xHb::returnNewObject( o, true );
+  QSslCipher * obj = new QSslCipher();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ explicit QSslCipher(const QString &name)
 void QSslCipher_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QSslCipher * o = new QSslCipher( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QSslCipher * obj = new QSslCipher( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -90,8 +90,8 @@ QSslCipher( const QString & name, QSsl::SslProtocol protocol )
 */
 void QSslCipher_new3()
 {
-  QSslCipher * o = new QSslCipher( PQSTRING(1), (QSsl::SslProtocol) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QSslCipher * obj = new QSslCipher( PQSTRING(1), (QSsl::SslProtocol) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -99,8 +99,8 @@ QSslCipher( const QSslCipher & other )
 */
 void QSslCipher_new4()
 {
-  QSslCipher * o = new QSslCipher( *PQSSLCIPHER(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QSslCipher * obj = new QSslCipher( *PQSSLCIPHER(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

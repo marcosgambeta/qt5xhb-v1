@@ -72,6 +72,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtNetwork/QNetworkSession>
@@ -84,8 +86,8 @@ HB_FUNC_STATIC( QNETWORKSESSION_NEW )
 {
   if( ISBETWEEN(1,2) && ISQNETWORKCONFIGURATION(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QNetworkSession * o = new QNetworkSession( *PQNETWORKCONFIGURATION(1), OPQOBJECT(2,0) );
-    Qt5xHb::returnNewObject( o, false );
+    QNetworkSession * obj = new QNetworkSession( *PQNETWORKCONFIGURATION(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -102,6 +104,8 @@ HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -12,34 +12,44 @@
 
 #include "QTcpServerSlots.h"
 
-QTcpServerSlots::QTcpServerSlots(QObject *parent) : QObject(parent)
+QTcpServerSlots::QTcpServerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QTcpServerSlots::~QTcpServerSlots()
 {
 }
+
 void QTcpServerSlots::acceptError( QAbstractSocket::SocketError socketError )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "acceptError(QAbstractSocket::SocketError)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTCPSERVER" );
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
+
     hb_vmEvalBlockV( cb, 2, psender, psocketError );
+
     hb_itemRelease( psender );
     hb_itemRelease( psocketError );
   }
 }
+
 void QTcpServerSlots::newConnection()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "newConnection()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTCPSERVER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

@@ -12,73 +12,98 @@
 
 #include "QNetworkConfigurationManagerSlots.h"
 
-QNetworkConfigurationManagerSlots::QNetworkConfigurationManagerSlots(QObject *parent) : QObject(parent)
+QNetworkConfigurationManagerSlots::QNetworkConfigurationManagerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QNetworkConfigurationManagerSlots::~QNetworkConfigurationManagerSlots()
 {
 }
+
 void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfiguration & config )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationAdded(QNetworkConfiguration)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+
     hb_vmEvalBlockV( cb, 2, psender, pconfig );
+
     hb_itemRelease( psender );
     hb_itemRelease( pconfig );
   }
 }
+
 void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConfiguration & config )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+
     hb_vmEvalBlockV( cb, 2, psender, pconfig );
+
     hb_itemRelease( psender );
     hb_itemRelease( pconfig );
   }
 }
+
 void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConfiguration & config )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "configurationRemoved(QNetworkConfiguration)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+
     hb_vmEvalBlockV( cb, 2, psender, pconfig );
+
     hb_itemRelease( psender );
     hb_itemRelease( pconfig );
   }
 }
+
 void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "onlineStateChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
     PHB_ITEM pisOnline = hb_itemPutL( NULL, isOnline );
+
     hb_vmEvalBlockV( cb, 2, psender, pisOnline );
+
     hb_itemRelease( psender );
     hb_itemRelease( pisOnline );
   }
 }
+
 void QNetworkConfigurationManagerSlots::updateCompleted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "updateCompleted()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

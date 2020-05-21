@@ -12,57 +12,77 @@
 
 #include "QLocalSocketSlots.h"
 
-QLocalSocketSlots::QLocalSocketSlots(QObject *parent) : QObject(parent)
+QLocalSocketSlots::QLocalSocketSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QLocalSocketSlots::~QLocalSocketSlots()
 {
 }
+
 void QLocalSocketSlots::connected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "connected()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOCALSOCKET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QLocalSocketSlots::disconnected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "disconnected()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOCALSOCKET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QLocalSocketSlots::error( QLocalSocket::LocalSocketError socketError )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(QLocalSocket::LocalSocketError)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOCALSOCKET" );
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
+
     hb_vmEvalBlockV( cb, 2, psender, psocketError );
+
     hb_itemRelease( psender );
     hb_itemRelease( psocketError );
   }
 }
+
 void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QLocalSocket::LocalSocketState)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOCALSOCKET" );
     PHB_ITEM psocketState = hb_itemPutNI( NULL, (int) socketState );
+
     hb_vmEvalBlockV( cb, 2, psender, psocketState );
+
     hb_itemRelease( psender );
     hb_itemRelease( psocketState );
   }

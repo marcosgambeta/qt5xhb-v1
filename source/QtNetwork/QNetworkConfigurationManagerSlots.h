@@ -28,7 +28,7 @@ class QNetworkConfigurationManagerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QNetworkConfigurationManagerSlots(QObject *parent = 0);
+  QNetworkConfigurationManagerSlots( QObject *parent = 0 );
   ~QNetworkConfigurationManagerSlots();
   public slots:
   void configurationAdded( const QNetworkConfiguration & config );

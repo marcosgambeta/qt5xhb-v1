@@ -28,7 +28,7 @@ class QLocalSocketSlots: public QObject
 {
   Q_OBJECT
   public:
-  QLocalSocketSlots(QObject *parent = 0);
+  QLocalSocketSlots( QObject *parent = 0 );
   ~QLocalSocketSlots();
   public slots:
   void connected();

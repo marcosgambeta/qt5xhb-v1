@@ -28,7 +28,7 @@ class QSslSocketSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSslSocketSlots(QObject *parent = 0);
+  QSslSocketSlots( QObject *parent = 0 );
   ~QSslSocketSlots();
   public slots:
   void encrypted();

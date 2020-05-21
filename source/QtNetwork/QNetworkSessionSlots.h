@@ -28,7 +28,7 @@ class QNetworkSessionSlots: public QObject
 {
   Q_OBJECT
   public:
-  QNetworkSessionSlots(QObject *parent = 0);
+  QNetworkSessionSlots( QObject *parent = 0 );
   ~QNetworkSessionSlots();
   public slots:
   void closed();
