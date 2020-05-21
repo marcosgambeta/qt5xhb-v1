@@ -30,7 +30,7 @@ class QWebChannelAbstractTransportSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWebChannelAbstractTransportSlots(QObject *parent = 0);
+  QWebChannelAbstractTransportSlots( QObject *parent = 0 );
   ~QWebChannelAbstractTransportSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
