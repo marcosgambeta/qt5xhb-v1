@@ -30,7 +30,7 @@ class QWebEngineViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWebEngineViewSlots(QObject *parent = 0);
+  QWebEngineViewSlots( QObject *parent = 0 );
   ~QWebEngineViewSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))

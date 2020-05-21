@@ -77,6 +77,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -94,8 +96,8 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QWebEngineView * o = new QWebEngineView( OPQWIDGET(1,0) );
-    Qt5xHb::returnNewObject( o, false );
+    QWebEngineView * obj = new QWebEngineView( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -111,6 +113,8 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

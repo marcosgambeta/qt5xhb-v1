@@ -72,8 +72,8 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
   if( ISNUMPAR(4) && ISNUM(1) && ISQURL(2) && ISLOG(3) && ISCHAR(4) )
   {
-    QWebEngineCertificateError * o = new QWebEngineCertificateError( PINT(1), *PQURL(2), PBOOL(3), PQSTRING(4) );
-    Qt5xHb::returnNewObject( o, false );
+    QWebEngineCertificateError * obj = new QWebEngineCertificateError( PINT(1), *PQURL(2), PBOOL(3), PQSTRING(4) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

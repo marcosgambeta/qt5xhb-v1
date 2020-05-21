@@ -30,7 +30,7 @@ class QWebEnginePageSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWebEnginePageSlots(QObject *parent = 0);
+  QWebEnginePageSlots( QObject *parent = 0 );
   ~QWebEnginePageSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
