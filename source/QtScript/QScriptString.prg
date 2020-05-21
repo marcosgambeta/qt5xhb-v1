@@ -62,8 +62,8 @@ QScriptString()
 */
 void QScriptString_new1()
 {
-  QScriptString * o = new QScriptString();
-  Qt5xHb::returnNewObject( o, true );
+  QScriptString * obj = new QScriptString();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,8 +71,8 @@ QScriptString(const QScriptString & other)
 */
 void QScriptString_new2()
 {
-  QScriptString * o = new QScriptString( *PQSCRIPTSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QScriptString * obj = new QScriptString( *PQSCRIPTSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

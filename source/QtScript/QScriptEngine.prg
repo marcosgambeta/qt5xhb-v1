@@ -99,8 +99,8 @@ QScriptEngine()
 */
 void QScriptEngine_new1()
 {
-  QScriptEngine * o = new QScriptEngine();
-  Qt5xHb::returnNewObject( o, false );
+  QScriptEngine * obj = new QScriptEngine();
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -108,8 +108,8 @@ QScriptEngine(QObject * parent)
 */
 void QScriptEngine_new2()
 {
-  QScriptEngine * o = new QScriptEngine( PQOBJECT(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QScriptEngine * obj = new QScriptEngine( PQOBJECT(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -139,8 +139,8 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

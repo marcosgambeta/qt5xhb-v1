@@ -64,8 +64,8 @@ QScriptProgram()
 */
 void QScriptProgram_new1()
 {
-  QScriptProgram * o = new QScriptProgram();
-  Qt5xHb::returnNewObject( o, true );
+  QScriptProgram * obj = new QScriptProgram();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QScriptProgram(const QScriptProgram & other)
 */
 void QScriptProgram_new3()
 {
-  QScriptProgram * o = new QScriptProgram( *PQSCRIPTPROGRAM(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QScriptProgram * obj = new QScriptProgram( *PQSCRIPTPROGRAM(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

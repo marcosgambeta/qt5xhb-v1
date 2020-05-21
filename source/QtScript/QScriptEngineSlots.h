@@ -28,7 +28,7 @@ class QScriptEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  QScriptEngineSlots(QObject *parent = 0);
+  QScriptEngineSlots( QObject *parent = 0 );
   ~QScriptEngineSlots();
   public slots:
   void signalHandlerException( const QScriptValue & exception );

@@ -78,8 +78,8 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 {
   if( ISNUMPAR(1) && ISQSCRIPTENGINE(1) )
   {
-    QScriptEngineAgent * o = new QScriptEngineAgent( PQSCRIPTENGINE(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QScriptEngineAgent * obj = new QScriptEngineAgent( PQSCRIPTENGINE(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

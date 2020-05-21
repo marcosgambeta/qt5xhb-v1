@@ -12,22 +12,27 @@
 
 #include "QScriptEngineSlots.h"
 
-QScriptEngineSlots::QScriptEngineSlots(QObject *parent) : QObject(parent)
+QScriptEngineSlots::QScriptEngineSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QScriptEngineSlots::~QScriptEngineSlots()
 {
 }
+
 void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "signalHandlerException(QScriptValue)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCRIPTENGINE" );
     PHB_ITEM pexception = Signals_return_object( (void *) &exception, "QSCRIPTVALUE" );
+
     hb_vmEvalBlockV( cb, 2, psender, pexception );
+
     hb_itemRelease( psender );
     hb_itemRelease( pexception );
   }
