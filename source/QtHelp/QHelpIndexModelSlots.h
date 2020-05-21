@@ -28,7 +28,7 @@ class QHelpIndexModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHelpIndexModelSlots(QObject *parent = 0);
+  QHelpIndexModelSlots( QObject *parent = 0 );
   ~QHelpIndexModelSlots();
   public slots:
   void indexCreated();

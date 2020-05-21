@@ -12,32 +12,42 @@
 
 #include "QHelpIndexModelSlots.h"
 
-QHelpIndexModelSlots::QHelpIndexModelSlots(QObject *parent) : QObject(parent)
+QHelpIndexModelSlots::QHelpIndexModelSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QHelpIndexModelSlots::~QHelpIndexModelSlots()
 {
 }
+
 void QHelpIndexModelSlots::indexCreated()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "indexCreated()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPINDEXMODEL" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QHelpIndexModelSlots::indexCreationStarted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "indexCreationStarted()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPINDEXMODEL" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

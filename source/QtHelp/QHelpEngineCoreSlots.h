@@ -28,7 +28,7 @@ class QHelpEngineCoreSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHelpEngineCoreSlots(QObject *parent = 0);
+  QHelpEngineCoreSlots( QObject *parent = 0 );
   ~QHelpEngineCoreSlots();
   public slots:
   void currentFilterChanged( const QString & newFilter );

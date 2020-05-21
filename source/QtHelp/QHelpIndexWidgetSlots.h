@@ -28,7 +28,7 @@ class QHelpIndexWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHelpIndexWidgetSlots(QObject *parent = 0);
+  QHelpIndexWidgetSlots( QObject *parent = 0 );
   ~QHelpIndexWidgetSlots();
   public slots:
   void linkActivated( const QUrl & link, const QString & keyword );

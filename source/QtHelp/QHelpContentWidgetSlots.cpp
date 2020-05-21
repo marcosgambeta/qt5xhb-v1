@@ -12,22 +12,27 @@
 
 #include "QHelpContentWidgetSlots.h"
 
-QHelpContentWidgetSlots::QHelpContentWidgetSlots(QObject *parent) : QObject(parent)
+QHelpContentWidgetSlots::QHelpContentWidgetSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QHelpContentWidgetSlots::~QHelpContentWidgetSlots()
 {
 }
+
 void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QUrl)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPCONTENTWIDGET" );
     PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
+
     hb_vmEvalBlockV( cb, 2, psender, plink );
+
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }

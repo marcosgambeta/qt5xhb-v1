@@ -28,7 +28,7 @@ class QHelpContentModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHelpContentModelSlots(QObject *parent = 0);
+  QHelpContentModelSlots( QObject *parent = 0 );
   ~QHelpContentModelSlots();
   public slots:
   void contentsCreated();

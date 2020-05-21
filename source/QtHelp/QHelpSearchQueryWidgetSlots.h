@@ -28,7 +28,7 @@ class QHelpSearchQueryWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHelpSearchQueryWidgetSlots(QObject *parent = 0);
+  QHelpSearchQueryWidgetSlots( QObject *parent = 0 );
   ~QHelpSearchQueryWidgetSlots();
   public slots:
   void search();

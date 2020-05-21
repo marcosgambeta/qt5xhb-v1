@@ -28,7 +28,7 @@ class QHelpSearchEngineSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHelpSearchEngineSlots(QObject *parent = 0);
+  QHelpSearchEngineSlots( QObject *parent = 0 );
   ~QHelpSearchEngineSlots();
   public slots:
   void indexingFinished();

@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {
   if( ISBETWEEN(1,2) && ISQHELPENGINECORE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QHelpSearchEngine * o = new QHelpSearchEngine( PQHELPENGINECORE(1), OPQOBJECT(2,0) );
-    Qt5xHb::returnNewObject( o, false );
+    QHelpSearchEngine * obj = new QHelpSearchEngine( PQHELPENGINECORE(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -89,8 +89,8 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

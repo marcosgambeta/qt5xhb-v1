@@ -28,7 +28,7 @@ class QHelpSearchResultWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHelpSearchResultWidgetSlots(QObject *parent = 0);
+  QHelpSearchResultWidgetSlots( QObject *parent = 0 );
   ~QHelpSearchResultWidgetSlots();
   public slots:
   void requestShowLink( const QUrl & link );

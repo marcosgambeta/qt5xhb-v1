@@ -51,6 +51,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtHelp/QHelpEngine>
@@ -67,8 +69,8 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QHelpEngine * o = new QHelpEngine( PQSTRING(1), OPQOBJECT(2,0) );
-    Qt5xHb::returnNewObject( o, false );
+    QHelpEngine * obj = new QHelpEngine( PQSTRING(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -82,6 +84,8 @@ HB_FUNC_STATIC( QHELPENGINE_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
