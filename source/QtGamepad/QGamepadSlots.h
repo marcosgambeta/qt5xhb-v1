@@ -30,7 +30,7 @@ class QGamepadSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGamepadSlots(QObject *parent = 0);
+  QGamepadSlots( QObject *parent = 0 );
   ~QGamepadSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))

@@ -112,8 +112,8 @@ HB_FUNC_STATIC( QGAMEPAD_NEW )
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
-    QGamepad * o = new QGamepad( OPINT(1,0), OPQOBJECT(2,nullptr) );
-    Qt5xHb::returnNewObject( o, false );
+    QGamepad * obj = new QGamepad( OPINT(1,0), OPQOBJECT(2,nullptr) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -132,8 +132,8 @@ HB_FUNC_STATIC( QGAMEPAD_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

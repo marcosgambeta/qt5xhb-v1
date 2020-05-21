@@ -30,7 +30,7 @@ class QGamepadKeyNavigationSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGamepadKeyNavigationSlots(QObject *parent = 0);
+  QGamepadKeyNavigationSlots( QObject *parent = 0 );
   ~QGamepadKeyNavigationSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
