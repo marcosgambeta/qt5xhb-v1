@@ -28,7 +28,7 @@ class QScriptEngineDebuggerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QScriptEngineDebuggerSlots(QObject *parent = 0);
+  QScriptEngineDebuggerSlots( QObject *parent = 0 );
   ~QScriptEngineDebuggerSlots();
   public slots:
   void evaluationResumed();

@@ -12,32 +12,42 @@
 
 #include "QScriptEngineDebuggerSlots.h"
 
-QScriptEngineDebuggerSlots::QScriptEngineDebuggerSlots(QObject *parent) : QObject(parent)
+QScriptEngineDebuggerSlots::QScriptEngineDebuggerSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QScriptEngineDebuggerSlots::~QScriptEngineDebuggerSlots()
 {
 }
+
 void QScriptEngineDebuggerSlots::evaluationResumed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "evaluationResumed()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QScriptEngineDebuggerSlots::evaluationSuspended()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "evaluationSuspended()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
