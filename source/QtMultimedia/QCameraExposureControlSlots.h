@@ -28,7 +28,7 @@ class QCameraExposureControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraExposureControlSlots(QObject *parent = 0);
+  QCameraExposureControlSlots( QObject *parent = 0 );
   ~QCameraExposureControlSlots();
   public slots:
   void actualValueChanged( int parameter );

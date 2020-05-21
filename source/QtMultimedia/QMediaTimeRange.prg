@@ -74,8 +74,8 @@ QMediaTimeRange()
 */
 void QMediaTimeRange_new1()
 {
-  QMediaTimeRange * o = new QMediaTimeRange();
-  Qt5xHb::returnNewObject( o, true );
+  QMediaTimeRange * obj = new QMediaTimeRange();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QMediaTimeRange(qint64 start, qint64 end)
 */
 void QMediaTimeRange_new2()
 {
-  QMediaTimeRange * o = new QMediaTimeRange( PQINT64(1), PQINT64(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QMediaTimeRange * obj = new QMediaTimeRange( PQINT64(1), PQINT64(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ QMediaTimeRange(const QMediaTimeInterval & interval)
 */
 void QMediaTimeRange_new3()
 {
-  QMediaTimeRange * o = new QMediaTimeRange( *PQMEDIATIMEINTERVAL(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QMediaTimeRange * obj = new QMediaTimeRange( *PQMEDIATIMEINTERVAL(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -101,8 +101,8 @@ QMediaTimeRange(const QMediaTimeRange & range)
 */
 void QMediaTimeRange_new4()
 {
-  QMediaTimeRange * o = new QMediaTimeRange( *PQMEDIATIMERANGE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QMediaTimeRange * obj = new QMediaTimeRange( *PQMEDIATIMERANGE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

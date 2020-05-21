@@ -12,47 +12,62 @@
 
 #include "QAbstractAudioInputSlots.h"
 
-QAbstractAudioInputSlots::QAbstractAudioInputSlots(QObject *parent) : QObject(parent)
+QAbstractAudioInputSlots::QAbstractAudioInputSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAbstractAudioInputSlots::~QAbstractAudioInputSlots()
 {
 }
+
 void QAbstractAudioInputSlots::errorChanged( QAudio::Error error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "errorChanged(QAudio::Error)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOINPUT" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
+
     hb_vmEvalBlockV( cb, 2, psender, perror );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
   }
 }
+
 void QAbstractAudioInputSlots::stateChanged( QAudio::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOINPUT" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+
     hb_vmEvalBlockV( cb, 2, psender, pstate );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }
 }
+
 void QAbstractAudioInputSlots::notify()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "notify()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOINPUT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

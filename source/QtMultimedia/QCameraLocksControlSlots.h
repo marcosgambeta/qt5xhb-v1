@@ -28,7 +28,7 @@ class QCameraLocksControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraLocksControlSlots(QObject *parent = 0);
+  QCameraLocksControlSlots( QObject *parent = 0 );
   ~QCameraLocksControlSlots();
   public slots:
   void lockStatusChanged( QCamera::LockType lock, QCamera::LockStatus status, QCamera::LockChangeReason reason );

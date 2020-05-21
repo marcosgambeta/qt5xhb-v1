@@ -12,140 +12,185 @@
 
 #include "QCameraImageCaptureSlots.h"
 
-QCameraImageCaptureSlots::QCameraImageCaptureSlots(QObject *parent) : QObject(parent)
+QCameraImageCaptureSlots::QCameraImageCaptureSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCameraImageCaptureSlots::~QCameraImageCaptureSlots()
 {
 }
+
 void QCameraImageCaptureSlots::bufferFormatChanged( QVideoFrame::PixelFormat format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pformat = hb_itemPutNI( NULL, (int) format );
+
     hb_vmEvalBlockV( cb, 2, psender, pformat );
+
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
 }
+
 void QCameraImageCaptureSlots::captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pdestination = hb_itemPutNI( NULL, (int) destination );
+
     hb_vmEvalBlockV( cb, 2, psender, pdestination );
+
     hb_itemRelease( psender );
     hb_itemRelease( pdestination );
   }
 }
+
 void QCameraImageCaptureSlots::error( int id, QCameraImageCapture::Error error, const QString & errorString )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(int,QCameraImageCapture::Error,QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
+
     hb_vmEvalBlockV( cb, 4, psender, pid, perror, perrorString );
+
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );
   }
 }
+
 void QCameraImageCaptureSlots::imageAvailable( int id, const QVideoFrame & buffer )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "imageAvailable(int,QVideoFrame)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM pbuffer = Signals_return_object( (void *) &buffer, "QVIDEOFRAME" );
+
     hb_vmEvalBlockV( cb, 3, psender, pid, pbuffer );
+
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( pbuffer );
   }
 }
+
 void QCameraImageCaptureSlots::imageCaptured( int id, const QImage & preview )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "imageCaptured(int,QImage)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM ppreview = Signals_return_object( (void *) &preview, "QIMAGE" );
+
     hb_vmEvalBlockV( cb, 3, psender, pid, ppreview );
+
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( ppreview );
   }
 }
+
 void QCameraImageCaptureSlots::imageExposed( int id )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "imageExposed(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
+
     hb_vmEvalBlockV( cb, 2, psender, pid );
+
     hb_itemRelease( psender );
     hb_itemRelease( pid );
   }
 }
+
 void QCameraImageCaptureSlots::imageMetadataAvailable( int id, const QString & key, const QVariant & value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "imageMetadataAvailable(int,QString,QVariant)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
+
     hb_vmEvalBlockV( cb, 4, psender, pid, pkey, pvalue );
+
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( pkey );
     hb_itemRelease( pvalue );
   }
 }
+
 void QCameraImageCaptureSlots::imageSaved( int id, const QString & fileName )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "imageSaved(int,QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
     PHB_ITEM pfileName = hb_itemPutC( NULL, QSTRINGTOSTRING(fileName) );
+
     hb_vmEvalBlockV( cb, 3, psender, pid, pfileName );
+
     hb_itemRelease( psender );
     hb_itemRelease( pid );
     hb_itemRelease( pfileName );
   }
 }
+
 void QCameraImageCaptureSlots::readyForCaptureChanged( bool ready )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "readyForCaptureChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAIMAGECAPTURE" );
     PHB_ITEM pready = hb_itemPutL( NULL, ready );
+
     hb_vmEvalBlockV( cb, 2, psender, pready );
+
     hb_itemRelease( psender );
     hb_itemRelease( pready );
   }

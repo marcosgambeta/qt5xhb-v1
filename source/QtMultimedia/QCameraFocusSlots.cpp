@@ -12,72 +12,97 @@
 
 #include "QCameraFocusSlots.h"
 
-QCameraFocusSlots::QCameraFocusSlots(QObject *parent) : QObject(parent)
+QCameraFocusSlots::QCameraFocusSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCameraFocusSlots::~QCameraFocusSlots()
 {
 }
+
 void QCameraFocusSlots::digitalZoomChanged( qreal value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "digitalZoomChanged(qreal)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
+
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
+
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }
 }
+
 void QCameraFocusSlots::focusZonesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "focusZonesChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QCameraFocusSlots::maximumDigitalZoomChanged( qreal zoom )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "maximumDigitalZoomChanged(qreal)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
+
     hb_vmEvalBlockV( cb, 2, psender, pzoom );
+
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
 }
+
 void QCameraFocusSlots::maximumOpticalZoomChanged( qreal zoom )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "maximumOpticalZoomChanged(qreal)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
+
     hb_vmEvalBlockV( cb, 2, psender, pzoom );
+
     hb_itemRelease( psender );
     hb_itemRelease( pzoom );
   }
 }
+
 void QCameraFocusSlots::opticalZoomChanged( qreal value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "opticalZoomChanged(qreal)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
+
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
+
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }

@@ -28,7 +28,7 @@ class QMediaStreamsControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMediaStreamsControlSlots(QObject *parent = 0);
+  QMediaStreamsControlSlots( QObject *parent = 0 );
   ~QMediaStreamsControlSlots();
   public slots:
   void activeStreamsChanged();

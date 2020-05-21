@@ -28,7 +28,7 @@ class QMediaNetworkAccessControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMediaNetworkAccessControlSlots(QObject *parent = 0);
+  QMediaNetworkAccessControlSlots( QObject *parent = 0 );
   ~QMediaNetworkAccessControlSlots();
   public slots:
   void configurationChanged( const QNetworkConfiguration & configuration );

@@ -28,7 +28,7 @@ class QCameraExposureSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraExposureSlots(QObject *parent = 0);
+  QCameraExposureSlots( QObject *parent = 0 );
   ~QCameraExposureSlots();
   public slots:
   void apertureChanged( qreal value );

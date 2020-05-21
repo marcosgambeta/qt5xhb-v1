@@ -12,34 +12,44 @@
 
 #include "QAudioRecorderSlots.h"
 
-QAudioRecorderSlots::QAudioRecorderSlots(QObject *parent) : QObject(parent)
+QAudioRecorderSlots::QAudioRecorderSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAudioRecorderSlots::~QAudioRecorderSlots()
 {
 }
+
 void QAudioRecorderSlots::audioInputChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "audioInputChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIORECORDER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
+
     hb_vmEvalBlockV( cb, 2, psender, pname );
+
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
 }
+
 void QAudioRecorderSlots::availableAudioInputsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "availableAudioInputsChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIORECORDER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

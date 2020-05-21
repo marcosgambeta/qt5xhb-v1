@@ -69,8 +69,8 @@ QAudioBuffer()
 */
 void QAudioBuffer_new1()
 {
-  QAudioBuffer * o = new QAudioBuffer();
-  Qt5xHb::returnNewObject( o, true );
+  QAudioBuffer * obj = new QAudioBuffer();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,8 +82,8 @@ QAudioBuffer(const QAudioBuffer & other)
 */
 void QAudioBuffer_new2()
 {
-  QAudioBuffer * o = new QAudioBuffer( *PQAUDIOBUFFER(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QAudioBuffer * obj = new QAudioBuffer( *PQAUDIOBUFFER(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startT
 */
 void QAudioBuffer_new3()
 {
-  QAudioBuffer * o = new QAudioBuffer( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  Qt5xHb::returnNewObject( o, true );
+  QAudioBuffer * obj = new QAudioBuffer( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
 */
 void QAudioBuffer_new4()
 {
-  QAudioBuffer * o = new QAudioBuffer( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  Qt5xHb::returnNewObject( o, true );
+  QAudioBuffer * obj = new QAudioBuffer( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

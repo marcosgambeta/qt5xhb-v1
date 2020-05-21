@@ -28,7 +28,7 @@ class QMetaDataWriterControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMetaDataWriterControlSlots(QObject *parent = 0);
+  QMetaDataWriterControlSlots( QObject *parent = 0 );
   ~QMetaDataWriterControlSlots();
   public slots:
   void metaDataChanged();

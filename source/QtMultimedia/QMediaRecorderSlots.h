@@ -28,7 +28,7 @@ class QMediaRecorderSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMediaRecorderSlots(QObject *parent = 0);
+  QMediaRecorderSlots( QObject *parent = 0 );
   ~QMediaRecorderSlots();
   public slots:
   void actualLocationChanged( const QUrl & location );

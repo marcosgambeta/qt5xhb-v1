@@ -28,7 +28,7 @@ class QMediaAvailabilityControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMediaAvailabilityControlSlots(QObject *parent = 0);
+  QMediaAvailabilityControlSlots( QObject *parent = 0 );
   ~QMediaAvailabilityControlSlots();
   public slots:
   void availabilityChanged( QMultimedia::AvailabilityStatus availability );

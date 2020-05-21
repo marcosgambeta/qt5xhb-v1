@@ -28,7 +28,7 @@ class QAudioProbeSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAudioProbeSlots(QObject *parent = 0);
+  QAudioProbeSlots( QObject *parent = 0 );
   ~QAudioProbeSlots();
   public slots:
   void audioBufferProbed( const QAudioBuffer & buffer );

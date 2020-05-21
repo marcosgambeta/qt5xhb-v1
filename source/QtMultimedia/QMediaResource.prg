@@ -87,8 +87,8 @@ QMediaResource()
 */
 void QMediaResource_new1()
 {
-  QMediaResource * o = new QMediaResource();
-  Qt5xHb::returnNewObject( o, true );
+  QMediaResource * obj = new QMediaResource();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QMediaResource(const QUrl & url, const QString & mimeType = QString())
 */
 void QMediaResource_new2()
 {
-  QMediaResource * o = new QMediaResource( *PQURL(1), OPQSTRING(2,QString()) );
-  Qt5xHb::returnNewObject( o, true );
+  QMediaResource * obj = new QMediaResource( *PQURL(1), OPQSTRING(2,QString()) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -105,8 +105,8 @@ QMediaResource(const QNetworkRequest & request, const QString & mimeType = QStri
 */
 void QMediaResource_new3()
 {
-  QMediaResource * o = new QMediaResource( *PQNETWORKREQUEST(1), OPQSTRING(2,QString()) );
-  Qt5xHb::returnNewObject( o, true );
+  QMediaResource * obj = new QMediaResource( *PQNETWORKREQUEST(1), OPQSTRING(2,QString()) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -114,8 +114,8 @@ QMediaResource(const QMediaResource & other)
 */
 void QMediaResource_new4()
 {
-  QMediaResource * o = new QMediaResource( *PQMEDIARESOURCE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QMediaResource * obj = new QMediaResource( *PQMEDIARESOURCE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

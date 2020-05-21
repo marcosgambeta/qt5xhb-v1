@@ -12,22 +12,27 @@
 
 #include "QMediaAvailabilityControlSlots.h"
 
-QMediaAvailabilityControlSlots::QMediaAvailabilityControlSlots(QObject *parent) : QObject(parent)
+QMediaAvailabilityControlSlots::QMediaAvailabilityControlSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QMediaAvailabilityControlSlots::~QMediaAvailabilityControlSlots()
 {
 }
+
 void QMediaAvailabilityControlSlots::availabilityChanged( QMultimedia::AvailabilityStatus availability )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAAVAILABILITYCONTROL" );
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
+
     hb_vmEvalBlockV( cb, 2, psender, pavailability );
+
     hb_itemRelease( psender );
     hb_itemRelease( pavailability );
   }

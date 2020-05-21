@@ -12,122 +12,167 @@
 
 #include "QAudioDecoderControlSlots.h"
 
-QAudioDecoderControlSlots::QAudioDecoderControlSlots(QObject *parent) : QObject(parent)
+QAudioDecoderControlSlots::QAudioDecoderControlSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAudioDecoderControlSlots::~QAudioDecoderControlSlots()
 {
 }
+
 void QAudioDecoderControlSlots::bufferAvailableChanged( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "bufferAvailableChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIODECODERCONTROL" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
+
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
+
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
 }
+
 void QAudioDecoderControlSlots::bufferReady()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "bufferReady()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIODECODERCONTROL" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QAudioDecoderControlSlots::durationChanged( qint64 duration )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "durationChanged(qint64)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIODECODERCONTROL" );
     PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
+
     hb_vmEvalBlockV( cb, 2, psender, pduration );
+
     hb_itemRelease( psender );
     hb_itemRelease( pduration );
   }
 }
+
 void QAudioDecoderControlSlots::error( int error, const QString & errorString )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "error(int,QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIODECODERCONTROL" );
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
+
     hb_vmEvalBlockV( cb, 3, psender, perror, perrorString );
+
     hb_itemRelease( psender );
     hb_itemRelease( perror );
     hb_itemRelease( perrorString );
   }
 }
+
 void QAudioDecoderControlSlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIODECODERCONTROL" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QAudioDecoderControlSlots::formatChanged( const QAudioFormat & format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "formatChanged(QAudioFormat)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIODECODERCONTROL" );
     PHB_ITEM pformat = Signals_return_object( (void *) &format, "QAUDIOFORMAT" );
+
     hb_vmEvalBlockV( cb, 2, psender, pformat );
+
     hb_itemRelease( psender );
     hb_itemRelease( pformat );
   }
 }
+
 void QAudioDecoderControlSlots::positionChanged( qint64 position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "positionChanged(qint64)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIODECODERCONTROL" );
     PHB_ITEM pposition = hb_itemPutNLL( NULL, position );
+
     hb_vmEvalBlockV( cb, 2, psender, pposition );
+
     hb_itemRelease( psender );
     hb_itemRelease( pposition );
   }
 }
+
 void QAudioDecoderControlSlots::sourceChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "sourceChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIODECODERCONTROL" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QAudioDecoderControlSlots::stateChanged( QAudioDecoder::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAudioDecoder::State)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIODECODERCONTROL" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+
     hb_vmEvalBlockV( cb, 2, psender, pstate );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }

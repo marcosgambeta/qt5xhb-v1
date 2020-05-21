@@ -28,7 +28,7 @@ class QAbstractAudioOutputSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractAudioOutputSlots(QObject *parent = 0);
+  QAbstractAudioOutputSlots( QObject *parent = 0 );
   ~QAbstractAudioOutputSlots();
   public slots:
   void errorChanged( QAudio::Error error );

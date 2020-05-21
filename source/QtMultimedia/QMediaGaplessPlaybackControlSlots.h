@@ -28,7 +28,7 @@ class QMediaGaplessPlaybackControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMediaGaplessPlaybackControlSlots(QObject *parent = 0);
+  QMediaGaplessPlaybackControlSlots( QObject *parent = 0 );
   ~QMediaGaplessPlaybackControlSlots();
   public slots:
   void advancedToNextMedia();

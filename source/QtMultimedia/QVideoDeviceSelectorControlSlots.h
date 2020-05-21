@@ -28,7 +28,7 @@ class QVideoDeviceSelectorControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVideoDeviceSelectorControlSlots(QObject *parent = 0);
+  QVideoDeviceSelectorControlSlots( QObject *parent = 0 );
   ~QVideoDeviceSelectorControlSlots();
   public slots:
   void devicesChanged();

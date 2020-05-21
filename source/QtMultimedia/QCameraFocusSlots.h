@@ -28,7 +28,7 @@ class QCameraFocusSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraFocusSlots(QObject *parent = 0);
+  QCameraFocusSlots( QObject *parent = 0 );
   ~QCameraFocusSlots();
   public slots:
   void digitalZoomChanged( qreal value );

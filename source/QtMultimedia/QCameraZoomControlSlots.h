@@ -28,7 +28,7 @@ class QCameraZoomControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraZoomControlSlots(QObject *parent = 0);
+  QCameraZoomControlSlots( QObject *parent = 0 );
   ~QCameraZoomControlSlots();
   public slots:
   void currentDigitalZoomChanged( qreal zoom );

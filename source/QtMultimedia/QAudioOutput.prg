@@ -66,6 +66,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtMultimedia/QAudioOutput>
@@ -76,8 +78,8 @@ explicit QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * pa
 */
 void QAudioOutput_new1()
 {
-  QAudioOutput * o = new QAudioOutput( ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QAudioOutput * obj = new QAudioOutput( ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -85,8 +87,8 @@ explicit QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioForm
 */
 void QAudioOutput_new2()
 {
-  QAudioOutput * o = new QAudioOutput( *PQAUDIODEVICEINFO(1), ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QAudioOutput * obj = new QAudioOutput( *PQAUDIODEVICEINFO(1), ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -119,6 +121,8 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

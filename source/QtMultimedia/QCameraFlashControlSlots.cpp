@@ -12,22 +12,27 @@
 
 #include "QCameraFlashControlSlots.h"
 
-QCameraFlashControlSlots::QCameraFlashControlSlots(QObject *parent) : QObject(parent)
+QCameraFlashControlSlots::QCameraFlashControlSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCameraFlashControlSlots::~QCameraFlashControlSlots()
 {
 }
+
 void QCameraFlashControlSlots::flashReady( bool ready )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "flashReady(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAFLASHCONTROL" );
     PHB_ITEM pready = hb_itemPutL( NULL, ready );
+
     hb_vmEvalBlockV( cb, 2, psender, pready );
+
     hb_itemRelease( psender );
     hb_itemRelease( pready );
   }

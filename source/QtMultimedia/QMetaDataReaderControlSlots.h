@@ -28,7 +28,7 @@ class QMetaDataReaderControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMetaDataReaderControlSlots(QObject *parent = 0);
+  QMetaDataReaderControlSlots( QObject *parent = 0 );
   ~QMetaDataReaderControlSlots();
   public slots:
   void metaDataChanged();

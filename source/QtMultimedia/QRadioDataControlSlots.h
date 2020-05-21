@@ -28,7 +28,7 @@ class QRadioDataControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QRadioDataControlSlots(QObject *parent = 0);
+  QRadioDataControlSlots( QObject *parent = 0 );
   ~QRadioDataControlSlots();
   public slots:
   void stationIdChanged( QString stationId );

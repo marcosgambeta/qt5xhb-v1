@@ -12,33 +12,43 @@
 
 #include "QMediaVideoProbeControlSlots.h"
 
-QMediaVideoProbeControlSlots::QMediaVideoProbeControlSlots(QObject *parent) : QObject(parent)
+QMediaVideoProbeControlSlots::QMediaVideoProbeControlSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QMediaVideoProbeControlSlots::~QMediaVideoProbeControlSlots()
 {
 }
+
 void QMediaVideoProbeControlSlots::flush()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAVIDEOPROBECONTROL" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QMediaVideoProbeControlSlots::videoFrameProbed( const QVideoFrame & frame )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "videoFrameProbed(QVideoFrame)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAVIDEOPROBECONTROL" );
     PHB_ITEM pframe = Signals_return_object( (void *) &frame, "QVIDEOFRAME" );
+
     hb_vmEvalBlockV( cb, 2, psender, pframe );
+
     hb_itemRelease( psender );
     hb_itemRelease( pframe );
   }

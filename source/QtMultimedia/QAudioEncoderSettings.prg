@@ -76,8 +76,8 @@ QAudioEncoderSettings()
 */
 void QAudioEncoderSettings_new1()
 {
-  QAudioEncoderSettings * o = new QAudioEncoderSettings();
-  Qt5xHb::returnNewObject( o, true );
+  QAudioEncoderSettings * obj = new QAudioEncoderSettings();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QAudioEncoderSettings(const QAudioEncoderSettings & other)
 */
 void QAudioEncoderSettings_new2()
 {
-  QAudioEncoderSettings * o = new QAudioEncoderSettings( *PQAUDIOENCODERSETTINGS(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QAudioEncoderSettings * obj = new QAudioEncoderSettings( *PQAUDIOENCODERSETTINGS(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

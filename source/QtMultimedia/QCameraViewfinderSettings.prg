@@ -78,8 +78,8 @@ QCameraViewfinderSettings()
 void QCameraViewfinderSettings_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * o = new QCameraViewfinderSettings();
-  Qt5xHb::returnNewObject( o, true );
+  QCameraViewfinderSettings * obj = new QCameraViewfinderSettings();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -89,8 +89,8 @@ QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
 void QCameraViewfinderSettings_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * o = new QCameraViewfinderSettings( *PQCAMERAVIEWFINDERSETTINGS(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCameraViewfinderSettings * obj = new QCameraViewfinderSettings( *PQCAMERAVIEWFINDERSETTINGS(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

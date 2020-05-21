@@ -28,7 +28,7 @@ class QAudioOutputSelectorControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAudioOutputSelectorControlSlots(QObject *parent = 0);
+  QAudioOutputSelectorControlSlots( QObject *parent = 0 );
   ~QAudioOutputSelectorControlSlots();
   public slots:
   void activeOutputChanged( const QString & name );

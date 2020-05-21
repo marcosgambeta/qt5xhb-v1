@@ -77,8 +77,8 @@ QVideoEncoderSettings()
 */
 void QVideoEncoderSettings_new1()
 {
-  QVideoEncoderSettings * o = new QVideoEncoderSettings();
-  Qt5xHb::returnNewObject( o, true );
+  QVideoEncoderSettings * obj = new QVideoEncoderSettings();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QVideoEncoderSettings(const QVideoEncoderSettings & other)
 */
 void QVideoEncoderSettings_new2()
 {
-  QVideoEncoderSettings * o = new QVideoEncoderSettings( *PQVIDEOENCODERSETTINGS(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QVideoEncoderSettings * obj = new QVideoEncoderSettings( *PQVIDEOENCODERSETTINGS(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

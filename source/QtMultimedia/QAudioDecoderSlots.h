@@ -28,7 +28,7 @@ class QAudioDecoderSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAudioDecoderSlots(QObject *parent = 0);
+  QAudioDecoderSlots( QObject *parent = 0 );
   ~QAudioDecoderSlots();
   public slots:
   void bufferAvailableChanged( bool available );

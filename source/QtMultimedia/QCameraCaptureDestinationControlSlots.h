@@ -28,7 +28,7 @@ class QCameraCaptureDestinationControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraCaptureDestinationControlSlots(QObject *parent = 0);
+  QCameraCaptureDestinationControlSlots( QObject *parent = 0 );
   ~QCameraCaptureDestinationControlSlots();
   public slots:
   void captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination );

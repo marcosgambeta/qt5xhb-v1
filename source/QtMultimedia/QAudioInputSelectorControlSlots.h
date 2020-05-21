@@ -28,7 +28,7 @@ class QAudioInputSelectorControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAudioInputSelectorControlSlots(QObject *parent = 0);
+  QAudioInputSelectorControlSlots( QObject *parent = 0 );
   ~QAudioInputSelectorControlSlots();
   public slots:
   void activeInputChanged( const QString & name );

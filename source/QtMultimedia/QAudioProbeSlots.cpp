@@ -12,34 +12,44 @@
 
 #include "QAudioProbeSlots.h"
 
-QAudioProbeSlots::QAudioProbeSlots(QObject *parent) : QObject(parent)
+QAudioProbeSlots::QAudioProbeSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAudioProbeSlots::~QAudioProbeSlots()
 {
 }
+
 void QAudioProbeSlots::audioBufferProbed( const QAudioBuffer & buffer )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "audioBufferProbed(QAudioBuffer)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOPROBE" );
     PHB_ITEM pbuffer = Signals_return_object( (void *) &buffer, "QAUDIOBUFFER" );
+
     hb_vmEvalBlockV( cb, 2, psender, pbuffer );
+
     hb_itemRelease( psender );
     hb_itemRelease( pbuffer );
   }
 }
+
 void QAudioProbeSlots::flush()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOPROBE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

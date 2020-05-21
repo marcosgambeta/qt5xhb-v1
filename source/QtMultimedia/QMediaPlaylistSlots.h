@@ -28,7 +28,7 @@ class QMediaPlaylistSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMediaPlaylistSlots(QObject *parent = 0);
+  QMediaPlaylistSlots( QObject *parent = 0 );
   ~QMediaPlaylistSlots();
   public slots:
   void currentIndexChanged( int position );

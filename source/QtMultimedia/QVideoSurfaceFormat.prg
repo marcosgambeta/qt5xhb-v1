@@ -87,8 +87,8 @@ QVideoSurfaceFormat ()
 */
 void QVideoSurfaceFormat_new1()
 {
-  QVideoSurfaceFormat * o = new QVideoSurfaceFormat();
-  Qt5xHb::returnNewObject( o, true );
+  QVideoSurfaceFormat * obj = new QVideoSurfaceFormat();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbst
 */
 void QVideoSurfaceFormat_new2()
 {
-  QVideoSurfaceFormat * o = new QVideoSurfaceFormat( *PQSIZE(1), (QVideoFrame::PixelFormat) hb_parni(2), ISNIL(3)? (QAbstractVideoBuffer::HandleType) QAbstractVideoBuffer::NoHandle : (QAbstractVideoBuffer::HandleType) hb_parni(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QVideoSurfaceFormat * obj = new QVideoSurfaceFormat( *PQSIZE(1), (QVideoFrame::PixelFormat) hb_parni(2), ISNIL(3)? (QAbstractVideoBuffer::HandleType) QAbstractVideoBuffer::NoHandle : (QAbstractVideoBuffer::HandleType) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -105,8 +105,8 @@ QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
 */
 void QVideoSurfaceFormat_new3()
 {
-  QVideoSurfaceFormat * o = new QVideoSurfaceFormat( *PQVIDEOSURFACEFORMAT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QVideoSurfaceFormat * obj = new QVideoSurfaceFormat( *PQVIDEOSURFACEFORMAT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

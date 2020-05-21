@@ -28,7 +28,7 @@ class QCameraFocusControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraFocusControlSlots(QObject *parent = 0);
+  QCameraFocusControlSlots( QObject *parent = 0 );
   ~QCameraFocusControlSlots();
   public slots:
   void customFocusPointChanged( const QPointF & point );

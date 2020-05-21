@@ -71,8 +71,8 @@ QImageEncoderSettings()
 */
 void QImageEncoderSettings_new1()
 {
-  QImageEncoderSettings * o = new QImageEncoderSettings();
-  Qt5xHb::returnNewObject( o, true );
+  QImageEncoderSettings * obj = new QImageEncoderSettings();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -80,8 +80,8 @@ QImageEncoderSettings(const QImageEncoderSettings& other)
 */
 void QImageEncoderSettings_new2()
 {
-  QImageEncoderSettings * o = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QImageEncoderSettings * obj = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

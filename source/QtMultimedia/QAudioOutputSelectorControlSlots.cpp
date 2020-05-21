@@ -12,34 +12,44 @@
 
 #include "QAudioOutputSelectorControlSlots.h"
 
-QAudioOutputSelectorControlSlots::QAudioOutputSelectorControlSlots(QObject *parent) : QObject(parent)
+QAudioOutputSelectorControlSlots::QAudioOutputSelectorControlSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAudioOutputSelectorControlSlots::~QAudioOutputSelectorControlSlots()
 {
 }
+
 void QAudioOutputSelectorControlSlots::activeOutputChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "activeOutputChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOOUTPUTSELECTORCONTROL" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
+
     hb_vmEvalBlockV( cb, 2, psender, pname );
+
     hb_itemRelease( psender );
     hb_itemRelease( pname );
   }
 }
+
 void QAudioOutputSelectorControlSlots::availableOutputsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "availableOutputsChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOOUTPUTSELECTORCONTROL" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

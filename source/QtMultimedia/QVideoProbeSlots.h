@@ -28,7 +28,7 @@ class QVideoProbeSlots: public QObject
 {
   Q_OBJECT
   public:
-  QVideoProbeSlots(QObject *parent = 0);
+  QVideoProbeSlots( QObject *parent = 0 );
   ~QVideoProbeSlots();
   public slots:
   void flush();

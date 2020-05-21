@@ -12,32 +12,42 @@
 
 #include "QMediaStreamsControlSlots.h"
 
-QMediaStreamsControlSlots::QMediaStreamsControlSlots(QObject *parent) : QObject(parent)
+QMediaStreamsControlSlots::QMediaStreamsControlSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QMediaStreamsControlSlots::~QMediaStreamsControlSlots()
 {
 }
+
 void QMediaStreamsControlSlots::activeStreamsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "activeStreamsChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIASTREAMSCONTROL" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QMediaStreamsControlSlots::streamsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "streamsChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIASTREAMSCONTROL" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

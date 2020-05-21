@@ -28,7 +28,7 @@ class QAudioOutputSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAudioOutputSlots(QObject *parent = 0);
+  QAudioOutputSlots( QObject *parent = 0 );
   ~QAudioOutputSlots();
   public slots:
   void notify();

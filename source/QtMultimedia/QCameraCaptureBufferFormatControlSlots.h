@@ -28,7 +28,7 @@ class QCameraCaptureBufferFormatControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraCaptureBufferFormatControlSlots(QObject *parent = 0);
+  QCameraCaptureBufferFormatControlSlots( QObject *parent = 0 );
   ~QCameraCaptureBufferFormatControlSlots();
   public slots:
   void bufferFormatChanged( QVideoFrame::PixelFormat format );

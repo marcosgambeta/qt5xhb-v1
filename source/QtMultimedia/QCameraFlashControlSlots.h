@@ -28,7 +28,7 @@ class QCameraFlashControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraFlashControlSlots(QObject *parent = 0);
+  QCameraFlashControlSlots( QObject *parent = 0 );
   ~QCameraFlashControlSlots();
   public slots:
   void flashReady( bool ready );

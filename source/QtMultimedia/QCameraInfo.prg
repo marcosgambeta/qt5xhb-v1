@@ -72,8 +72,8 @@ explicit QCameraInfo(const QByteArray &name = QByteArray())
 void QCameraInfo_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * o = new QCameraInfo( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCameraInfo * obj = new QCameraInfo( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -83,8 +83,8 @@ explicit QCameraInfo(const QCamera &camera)
 void QCameraInfo_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * o = new QCameraInfo( *PQCAMERA(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCameraInfo * obj = new QCameraInfo( *PQCAMERA(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -94,8 +94,8 @@ QCameraInfo(const QCameraInfo& other)
 void QCameraInfo_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * o = new QCameraInfo( *PQCAMERAINFO(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCameraInfo * obj = new QCameraInfo( *PQCAMERAINFO(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

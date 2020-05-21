@@ -28,7 +28,7 @@ class QMediaPlayerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMediaPlayerSlots(QObject *parent = 0);
+  QMediaPlayerSlots( QObject *parent = 0 );
   ~QMediaPlayerSlots();
   public slots:
   void audioAvailableChanged( bool available );

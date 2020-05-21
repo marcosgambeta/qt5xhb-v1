@@ -28,7 +28,7 @@ class QAudioRecorderSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAudioRecorderSlots(QObject *parent = 0);
+  QAudioRecorderSlots( QObject *parent = 0 );
   ~QAudioRecorderSlots();
   public slots:
   void audioInputChanged( const QString & name );

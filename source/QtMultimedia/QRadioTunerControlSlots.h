@@ -28,7 +28,7 @@ class QRadioTunerControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QRadioTunerControlSlots(QObject *parent = 0);
+  QRadioTunerControlSlots( QObject *parent = 0 );
   ~QRadioTunerControlSlots();
   public slots:
   void stateChanged( QRadioTuner::State state );

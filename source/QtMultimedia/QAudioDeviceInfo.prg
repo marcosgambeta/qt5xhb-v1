@@ -75,8 +75,8 @@ QAudioDeviceInfo ()
 */
 void QAudioDeviceInfo_new1()
 {
-  QAudioDeviceInfo * o = new QAudioDeviceInfo();
-  Qt5xHb::returnNewObject( o, true );
+  QAudioDeviceInfo * obj = new QAudioDeviceInfo();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QAudioDeviceInfo ( const QAudioDeviceInfo & other )
 */
 void QAudioDeviceInfo_new2()
 {
-  QAudioDeviceInfo * o = new QAudioDeviceInfo( *PQAUDIODEVICEINFO(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QAudioDeviceInfo * obj = new QAudioDeviceInfo( *PQAUDIODEVICEINFO(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

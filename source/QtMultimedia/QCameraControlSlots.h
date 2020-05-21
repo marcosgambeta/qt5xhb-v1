@@ -28,7 +28,7 @@ class QCameraControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraControlSlots(QObject *parent = 0);
+  QCameraControlSlots( QObject *parent = 0 );
   ~QCameraControlSlots();
   public slots:
   void captureModeChanged( QCamera::CaptureModes mode );

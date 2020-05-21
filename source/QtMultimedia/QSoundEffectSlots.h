@@ -28,7 +28,7 @@ class QSoundEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSoundEffectSlots(QObject *parent = 0);
+  QSoundEffectSlots( QObject *parent = 0 );
   ~QSoundEffectSlots();
   public slots:
   void sourceChanged();

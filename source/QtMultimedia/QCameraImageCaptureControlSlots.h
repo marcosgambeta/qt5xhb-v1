@@ -28,7 +28,7 @@ class QCameraImageCaptureControlSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCameraImageCaptureControlSlots(QObject *parent = 0);
+  QCameraImageCaptureControlSlots( QObject *parent = 0 );
   ~QCameraImageCaptureControlSlots();
   public slots:
   void error( int id, int error, const QString & errorString );

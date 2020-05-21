@@ -28,7 +28,7 @@ class QMediaObjectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMediaObjectSlots(QObject *parent = 0);
+  QMediaObjectSlots( QObject *parent = 0 );
   ~QMediaObjectSlots();
   public slots:
   void availabilityChanged( bool available );

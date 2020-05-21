@@ -12,22 +12,27 @@
 
 #include "QCameraCaptureDestinationControlSlots.h"
 
-QCameraCaptureDestinationControlSlots::QCameraCaptureDestinationControlSlots(QObject *parent) : QObject(parent)
+QCameraCaptureDestinationControlSlots::QCameraCaptureDestinationControlSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCameraCaptureDestinationControlSlots::~QCameraCaptureDestinationControlSlots()
 {
 }
+
 void QCameraCaptureDestinationControlSlots::captureDestinationChanged( QCameraImageCapture::CaptureDestinations destination )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "captureDestinationChanged(QCameraImageCapture::CaptureDestinations)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERACAPTUREDESTINATIONCONTROL" );
     PHB_ITEM pdestination = hb_itemPutNI( NULL, (int) destination );
+
     hb_vmEvalBlockV( cb, 2, psender, pdestination );
+
     hb_itemRelease( psender );
     hb_itemRelease( pdestination );
   }
