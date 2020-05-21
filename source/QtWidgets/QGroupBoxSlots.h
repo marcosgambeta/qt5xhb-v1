@@ -28,7 +28,7 @@ class QGroupBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGroupBoxSlots(QObject *parent = 0);
+  QGroupBoxSlots( QObject *parent = 0 );
   ~QGroupBoxSlots();
   public slots:
   void clicked( bool checked = false );

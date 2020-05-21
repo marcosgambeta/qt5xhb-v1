@@ -28,7 +28,7 @@ class QAbstractSpinBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractSpinBoxSlots(QObject *parent = 0);
+  QAbstractSpinBoxSlots( QObject *parent = 0 );
   ~QAbstractSpinBoxSlots();
   public slots:
   void editingFinished();

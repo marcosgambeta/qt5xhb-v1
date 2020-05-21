@@ -12,43 +12,58 @@
 
 #include "QGraphicsRotationSlots.h"
 
-QGraphicsRotationSlots::QGraphicsRotationSlots(QObject *parent) : QObject(parent)
+QGraphicsRotationSlots::QGraphicsRotationSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QGraphicsRotationSlots::~QGraphicsRotationSlots()
 {
 }
+
 void QGraphicsRotationSlots::angleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "angleChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSROTATION" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QGraphicsRotationSlots::axisChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "axisChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSROTATION" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QGraphicsRotationSlots::originChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "originChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSROTATION" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

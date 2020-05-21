@@ -92,8 +92,8 @@ QGraphicsTextItem ( QGraphicsItem * parent = 0 )
 */
 void QGraphicsTextItem_new1()
 {
-  QGraphicsTextItem * o = new QGraphicsTextItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QGraphicsTextItem * obj = new QGraphicsTextItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -101,8 +101,8 @@ QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
 */
 void QGraphicsTextItem_new2()
 {
-  QGraphicsTextItem * o = new QGraphicsTextItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QGraphicsTextItem * obj = new QGraphicsTextItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -12,86 +12,116 @@
 
 #include "QAbstractItemViewSlots.h"
 
-QAbstractItemViewSlots::QAbstractItemViewSlots(QObject *parent) : QObject(parent)
+QAbstractItemViewSlots::QAbstractItemViewSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAbstractItemViewSlots::~QAbstractItemViewSlots()
 {
 }
+
 void QAbstractItemViewSlots::activated( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QModelIndex)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QAbstractItemViewSlots::clicked( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QModelIndex)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QAbstractItemViewSlots::doubleClicked( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QModelIndex)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QAbstractItemViewSlots::entered( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "entered(QModelIndex)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QAbstractItemViewSlots::pressed( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QModelIndex)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QAbstractItemViewSlots::viewportEntered()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "viewportEntered()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

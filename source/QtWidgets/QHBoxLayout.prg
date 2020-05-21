@@ -41,6 +41,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtWidgets/QHBoxLayout>
@@ -51,8 +53,8 @@ QHBoxLayout ()
 */
 void QHBoxLayout_new1()
 {
-  QHBoxLayout * o = new QHBoxLayout();
-  Qt5xHb::returnNewObject( o, false );
+  QHBoxLayout * obj = new QHBoxLayout();
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -60,8 +62,8 @@ QHBoxLayout ( QWidget * parent )
 */
 void QHBoxLayout_new2()
 {
-  QHBoxLayout * o = new QHBoxLayout( PQWIDGET(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QHBoxLayout * obj = new QHBoxLayout( PQWIDGET(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -91,6 +93,8 @@ HB_FUNC_STATIC( QHBOXLAYOUT_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

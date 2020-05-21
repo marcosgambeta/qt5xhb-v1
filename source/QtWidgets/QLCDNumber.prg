@@ -73,8 +73,8 @@ QLCDNumber ( QWidget * parent = 0 )
 */
 void QLCDNumber_new1()
 {
-  QLCDNumber * o = new QLCDNumber( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QLCDNumber * obj = new QLCDNumber( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -82,8 +82,8 @@ QLCDNumber ( uint numDigits, QWidget * parent = 0 )
 */
 void QLCDNumber_new2()
 {
-  QLCDNumber * o = new QLCDNumber( PUINT(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QLCDNumber * obj = new QLCDNumber( PUINT(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -113,8 +113,8 @@ HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

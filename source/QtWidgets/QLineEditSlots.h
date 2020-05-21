@@ -28,7 +28,7 @@ class QLineEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  QLineEditSlots(QObject *parent = 0);
+  QLineEditSlots( QObject *parent = 0 );
   ~QLineEditSlots();
   public slots:
   void cursorPositionChanged( int iold, int inew );

@@ -28,7 +28,7 @@ class QWizardSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWizardSlots(QObject *parent = 0);
+  QWizardSlots( QObject *parent = 0 );
   ~QWizardSlots();
   public slots:
   void currentIdChanged( int id );

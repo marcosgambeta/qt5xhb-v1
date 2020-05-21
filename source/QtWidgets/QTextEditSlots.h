@@ -28,7 +28,7 @@ class QTextEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTextEditSlots(QObject *parent = 0);
+  QTextEditSlots( QObject *parent = 0 );
   ~QTextEditSlots();
   public slots:
   void copyAvailable( bool yes );

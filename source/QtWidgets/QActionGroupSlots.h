@@ -28,7 +28,7 @@ class QActionGroupSlots: public QObject
 {
   Q_OBJECT
   public:
-  QActionGroupSlots(QObject *parent = 0);
+  QActionGroupSlots( QObject *parent = 0 );
   ~QActionGroupSlots();
   public slots:
   void hovered( QAction * action );

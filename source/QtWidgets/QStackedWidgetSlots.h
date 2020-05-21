@@ -28,7 +28,7 @@ class QStackedWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QStackedWidgetSlots(QObject *parent = 0);
+  QStackedWidgetSlots( QObject *parent = 0 );
   ~QStackedWidgetSlots();
   public slots:
   void currentChanged( int index );

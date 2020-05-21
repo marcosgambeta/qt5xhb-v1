@@ -12,34 +12,44 @@
 
 #include "QSystemTrayIconSlots.h"
 
-QSystemTrayIconSlots::QSystemTrayIconSlots(QObject *parent) : QObject(parent)
+QSystemTrayIconSlots::QSystemTrayIconSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QSystemTrayIconSlots::~QSystemTrayIconSlots()
 {
 }
+
 void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
+
     hb_vmEvalBlockV( cb, 2, psender, preason );
+
     hb_itemRelease( psender );
     hb_itemRelease( preason );
   }
 }
+
 void QSystemTrayIconSlots::messageClicked()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "messageClicked()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

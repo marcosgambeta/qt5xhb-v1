@@ -59,8 +59,8 @@ QStyleOptionTabBarBase()
 */
 void QStyleOptionTabBarBase_new1()
 {
-  QStyleOptionTabBarBase * o = new QStyleOptionTabBarBase();
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -68,8 +68,8 @@ QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
 */
 void QStyleOptionTabBarBase_new2()
 {
-  QStyleOptionTabBarBase * o = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

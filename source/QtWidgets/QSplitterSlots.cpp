@@ -12,23 +12,28 @@
 
 #include "QSplitterSlots.h"
 
-QSplitterSlots::QSplitterSlots(QObject *parent) : QObject(parent)
+QSplitterSlots::QSplitterSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QSplitterSlots::~QSplitterSlots()
 {
 }
+
 void QSplitterSlots::splitterMoved( int pos, int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "splitterMoved(int,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSPLITTER" );
     PHB_ITEM ppos = hb_itemPutNI( NULL, pos );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 3, psender, ppos, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( ppos );
     hb_itemRelease( pindex );

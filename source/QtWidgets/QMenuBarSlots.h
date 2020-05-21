@@ -28,7 +28,7 @@ class QMenuBarSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMenuBarSlots(QObject *parent = 0);
+  QMenuBarSlots( QObject *parent = 0 );
   ~QMenuBarSlots();
   public slots:
   void hovered( QAction * action );

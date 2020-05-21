@@ -28,7 +28,7 @@ class QInputDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  QInputDialogSlots(QObject *parent = 0);
+  QInputDialogSlots( QObject *parent = 0 );
   ~QInputDialogSlots();
   public slots:
   void doubleValueChanged( double value );

@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
   {
-    QGraphicsItemGroup * o = new QGraphicsItemGroup( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QGraphicsItemGroup * obj = new QGraphicsItemGroup( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

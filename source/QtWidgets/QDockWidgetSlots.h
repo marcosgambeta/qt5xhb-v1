@@ -28,7 +28,7 @@ class QDockWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDockWidgetSlots(QObject *parent = 0);
+  QDockWidgetSlots( QObject *parent = 0 );
   ~QDockWidgetSlots();
   public slots:
   void allowedAreasChanged( Qt::DockWidgetAreas allowedAreas );

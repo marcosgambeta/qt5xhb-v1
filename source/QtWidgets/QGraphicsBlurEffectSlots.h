@@ -28,7 +28,7 @@ class QGraphicsBlurEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsBlurEffectSlots(QObject *parent = 0);
+  QGraphicsBlurEffectSlots( QObject *parent = 0 );
   ~QGraphicsBlurEffectSlots();
   public slots:
   void blurHintsChanged( QGraphicsBlurEffect::BlurHints hints );

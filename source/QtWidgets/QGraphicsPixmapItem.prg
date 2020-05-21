@@ -70,8 +70,8 @@ QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new1()
 {
-  QGraphicsPixmapItem * o = new QGraphicsPixmapItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -79,8 +79,8 @@ QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new2()
 {
-  QGraphicsPixmapItem * o = new QGraphicsPixmapItem( *PQPIXMAP(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( *PQPIXMAP(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -28,7 +28,7 @@ class QGraphicsObjectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsObjectSlots(QObject *parent = 0);
+  QGraphicsObjectSlots( QObject *parent = 0 );
   ~QGraphicsObjectSlots();
   public slots:
   void enabledChanged();

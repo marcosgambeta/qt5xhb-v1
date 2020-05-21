@@ -28,7 +28,7 @@ class QTreeWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTreeWidgetSlots(QObject *parent = 0);
+  QTreeWidgetSlots( QObject *parent = 0 );
   ~QTreeWidgetSlots();
   public slots:
   void currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous );

@@ -28,7 +28,7 @@ class QTextBrowserSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTextBrowserSlots(QObject *parent = 0);
+  QTextBrowserSlots( QObject *parent = 0 );
   ~QTextBrowserSlots();
   public slots:
   void anchorClicked( const QUrl & link );

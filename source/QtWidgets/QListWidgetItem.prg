@@ -106,8 +106,8 @@ QListWidgetItem ( QListWidget * parent = 0, int type = Type )
 */
 void QListWidgetItem_new1()
 {
-  QListWidgetItem * o = new QListWidgetItem( OPQLISTWIDGET(1,0), OPINT(2,QListWidgetItem::Type) );
-  Qt5xHb::returnNewObject( o, false );
+  QListWidgetItem * obj = new QListWidgetItem( OPQLISTWIDGET(1,0), OPINT(2,QListWidgetItem::Type) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -115,8 +115,8 @@ QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Typ
 */
 void QListWidgetItem_new2()
 {
-  QListWidgetItem * o = new QListWidgetItem( PQSTRING(1), OPQLISTWIDGET(2,0), OPINT(3,QListWidgetItem::Type) );
-  Qt5xHb::returnNewObject( o, false );
+  QListWidgetItem * obj = new QListWidgetItem( PQSTRING(1), OPQLISTWIDGET(2,0), OPINT(3,QListWidgetItem::Type) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -124,8 +124,8 @@ QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent
 */
 void QListWidgetItem_new3()
 {
-  QListWidgetItem * o = new QListWidgetItem( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQLISTWIDGET(3,0), OPINT(4,QListWidgetItem::Type) );
-  Qt5xHb::returnNewObject( o, false );
+  QListWidgetItem * obj = new QListWidgetItem( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQLISTWIDGET(3,0), OPINT(4,QListWidgetItem::Type) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -133,8 +133,8 @@ QListWidgetItem ( const QListWidgetItem & other )
 */
 void QListWidgetItem_new4()
 {
-  QListWidgetItem * o = new QListWidgetItem( *PQLISTWIDGETITEM(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QListWidgetItem * obj = new QListWidgetItem( *PQLISTWIDGETITEM(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*

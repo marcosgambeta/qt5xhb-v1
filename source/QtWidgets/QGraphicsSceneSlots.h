@@ -28,7 +28,7 @@ class QGraphicsSceneSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsSceneSlots(QObject *parent = 0);
+  QGraphicsSceneSlots( QObject *parent = 0 );
   ~QGraphicsSceneSlots();
   public slots:
   void changed( const QList<QRectF> & region );

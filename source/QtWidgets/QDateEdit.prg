@@ -53,8 +53,8 @@ QDateEdit ( QWidget * parent = 0 )
 */
 void QDateEdit_new1()
 {
-  QDateEdit * o = new QDateEdit( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDateEdit * obj = new QDateEdit( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -62,8 +62,8 @@ QDateEdit ( const QDate & date, QWidget * parent = 0 )
 */
 void QDateEdit_new2()
 {
-  QDateEdit * o = new QDateEdit( *PQDATE(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDateEdit * obj = new QDateEdit( *PQDATE(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -93,8 +93,8 @@ HB_FUNC_STATIC( QDATEEDIT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

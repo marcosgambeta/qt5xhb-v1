@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSLAYOUTITEM(1)||ISNIL(1)) )
   {
-    QGraphicsGridLayout * o = new QGraphicsGridLayout( ISNIL(1)? 0 : (QGraphicsLayoutItem *) Qt5xHb::itemGetPtr(1) );
-    Qt5xHb::returnNewObject( o, false );
+    QGraphicsGridLayout * obj = new QGraphicsGridLayout( ISNIL(1)? 0 : (QGraphicsLayoutItem *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -28,7 +28,7 @@ class QSystemTrayIconSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSystemTrayIconSlots(QObject *parent = 0);
+  QSystemTrayIconSlots( QObject *parent = 0 );
   ~QSystemTrayIconSlots();
   public slots:
   void activated( QSystemTrayIcon::ActivationReason reason );

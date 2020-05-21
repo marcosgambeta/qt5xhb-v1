@@ -12,56 +12,76 @@
 
 #include "QDialogButtonBoxSlots.h"
 
-QDialogButtonBoxSlots::QDialogButtonBoxSlots(QObject *parent) : QObject(parent)
+QDialogButtonBoxSlots::QDialogButtonBoxSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QDialogButtonBoxSlots::~QDialogButtonBoxSlots()
 {
 }
+
 void QDialogButtonBoxSlots::accepted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "accepted()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDIALOGBUTTONBOX" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QAbstractButton*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDIALOGBUTTONBOX" );
     PHB_ITEM pbutton = Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
+
     hb_vmEvalBlockV( cb, 2, psender, pbutton );
+
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }
 }
+
 void QDialogButtonBoxSlots::helpRequested()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "helpRequested()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDIALOGBUTTONBOX" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QDialogButtonBoxSlots::rejected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "rejected()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDIALOGBUTTONBOX" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

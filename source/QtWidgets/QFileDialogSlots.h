@@ -28,7 +28,7 @@ class QFileDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  QFileDialogSlots(QObject *parent = 0);
+  QFileDialogSlots( QObject *parent = 0 );
   ~QFileDialogSlots();
   public slots:
   void currentChanged( const QString & path );

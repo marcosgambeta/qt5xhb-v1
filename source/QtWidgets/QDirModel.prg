@@ -81,6 +81,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtWidgets/QDirModel>
@@ -91,8 +93,8 @@ QDirModel(const QStringList &nameFilters, QDir::Filters filters,QDir::SortFlags 
 */
 void QDirModel_new1()
 {
-  QDirModel * o = new QDirModel( PQSTRINGLIST(1), (QDir::Filters) hb_parni(2), (QDir::SortFlags) hb_parni(3), OPQOBJECT(4,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDirModel * obj = new QDirModel( PQSTRINGLIST(1), (QDir::Filters) hb_parni(2), (QDir::SortFlags) hb_parni(3), OPQOBJECT(4,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -100,8 +102,8 @@ QDirModel(QObject *parent = 0)
 */
 void QDirModel_new2()
 {
-  QDirModel * o = new QDirModel( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDirModel * obj = new QDirModel( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -131,6 +133,8 @@ HB_FUNC_STATIC( QDIRMODEL_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

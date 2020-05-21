@@ -12,22 +12,27 @@
 
 #include "QSplashScreenSlots.h"
 
-QSplashScreenSlots::QSplashScreenSlots(QObject *parent) : QObject(parent)
+QSplashScreenSlots::QSplashScreenSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QSplashScreenSlots::~QSplashScreenSlots()
 {
 }
+
 void QSplashScreenSlots::messageChanged( const QString & message )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "messageChanged(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSPLASHSCREEN" );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING(message) );
+
     hb_vmEvalBlockV( cb, 2, psender, pmessage );
+
     hb_itemRelease( psender );
     hb_itemRelease( pmessage );
   }

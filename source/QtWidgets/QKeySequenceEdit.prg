@@ -65,8 +65,8 @@ QKeySequenceEdit(QWidget *parent = 0)
 void QKeySequenceEdit_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * o = new QKeySequenceEdit( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QKeySequenceEdit * obj = new QKeySequenceEdit( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -76,8 +76,8 @@ QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
 void QKeySequenceEdit_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * o = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QKeySequenceEdit * obj = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

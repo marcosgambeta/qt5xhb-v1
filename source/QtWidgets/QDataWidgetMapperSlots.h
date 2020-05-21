@@ -28,7 +28,7 @@ class QDataWidgetMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDataWidgetMapperSlots(QObject *parent = 0);
+  QDataWidgetMapperSlots( QObject *parent = 0 );
   ~QDataWidgetMapperSlots();
   public slots:
   void currentIndexChanged( int index );

@@ -28,7 +28,7 @@ class QActionSlots: public QObject
 {
   Q_OBJECT
   public:
-  QActionSlots(QObject *parent = 0);
+  QActionSlots( QObject *parent = 0 );
   ~QActionSlots();
   public slots:
   void changed();

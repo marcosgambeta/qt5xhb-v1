@@ -28,7 +28,7 @@ class QLCDNumberSlots: public QObject
 {
   Q_OBJECT
   public:
-  QLCDNumberSlots(QObject *parent = 0);
+  QLCDNumberSlots( QObject *parent = 0 );
   ~QLCDNumberSlots();
   public slots:
   void overflow();

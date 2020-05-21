@@ -12,22 +12,27 @@
 
 #include "QGraphicsEffectSlots.h"
 
-QGraphicsEffectSlots::QGraphicsEffectSlots(QObject *parent) : QObject(parent)
+QGraphicsEffectSlots::QGraphicsEffectSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QGraphicsEffectSlots::~QGraphicsEffectSlots()
 {
 }
+
 void QGraphicsEffectSlots::enabledChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "enabledChanged(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSEFFECT" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+
     hb_vmEvalBlockV( cb, 2, psender, penabled );
+
     hb_itemRelease( psender );
     hb_itemRelease( penabled );
   }

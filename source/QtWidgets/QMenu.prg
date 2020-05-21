@@ -97,8 +97,8 @@ explicit QMenu ( QWidget * parent = 0 )
 */
 void QMenu_new1()
 {
-  QMenu * o = new QMenu( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QMenu * obj = new QMenu( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -106,8 +106,8 @@ explicit QMenu ( const QString & title, QWidget * parent = 0 )
 */
 void QMenu_new2()
 {
-  QMenu * o = new QMenu( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QMenu * obj = new QMenu( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -137,8 +137,8 @@ HB_FUNC_STATIC( QMENU_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

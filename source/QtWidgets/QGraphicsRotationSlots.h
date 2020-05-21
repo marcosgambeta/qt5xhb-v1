@@ -28,7 +28,7 @@ class QGraphicsRotationSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsRotationSlots(QObject *parent = 0);
+  QGraphicsRotationSlots( QObject *parent = 0 );
   ~QGraphicsRotationSlots();
   public slots:
   void angleChanged();

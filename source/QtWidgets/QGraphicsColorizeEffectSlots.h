@@ -28,7 +28,7 @@ class QGraphicsColorizeEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsColorizeEffectSlots(QObject *parent = 0);
+  QGraphicsColorizeEffectSlots( QObject *parent = 0 );
   ~QGraphicsColorizeEffectSlots();
   public slots:
   void colorChanged( const QColor & color );

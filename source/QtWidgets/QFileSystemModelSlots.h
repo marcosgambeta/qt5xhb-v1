@@ -28,7 +28,7 @@ class QFileSystemModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QFileSystemModelSlots(QObject *parent = 0);
+  QFileSystemModelSlots( QObject *parent = 0 );
   ~QFileSystemModelSlots();
   public slots:
   void directoryLoaded( const QString & path );

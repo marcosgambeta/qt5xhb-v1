@@ -28,7 +28,7 @@ class QLabelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QLabelSlots(QObject *parent = 0);
+  QLabelSlots( QObject *parent = 0 );
   ~QLabelSlots();
   public slots:
   void linkActivated( const QString & link );

@@ -12,22 +12,27 @@
 
 #include "QFontComboBoxSlots.h"
 
-QFontComboBoxSlots::QFontComboBoxSlots(QObject *parent) : QObject(parent)
+QFontComboBoxSlots::QFontComboBoxSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QFontComboBoxSlots::~QFontComboBoxSlots()
 {
 }
+
 void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "currentFontChanged(QFont)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QFONTCOMBOBOX" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
+
     hb_vmEvalBlockV( cb, 2, psender, pfont );
+
     hb_itemRelease( psender );
     hb_itemRelease( pfont );
   }

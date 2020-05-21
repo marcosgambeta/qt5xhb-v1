@@ -28,7 +28,7 @@ class QSplitterSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSplitterSlots(QObject *parent = 0);
+  QSplitterSlots( QObject *parent = 0 );
   ~QSplitterSlots();
   public slots:
   void splitterMoved( int pos, int index );

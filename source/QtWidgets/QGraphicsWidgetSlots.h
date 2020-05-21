@@ -28,7 +28,7 @@ class QGraphicsWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsWidgetSlots(QObject *parent = 0);
+  QGraphicsWidgetSlots( QObject *parent = 0 );
   ~QGraphicsWidgetSlots();
   public slots:
   void geometryChanged();

@@ -12,34 +12,44 @@
 
 #include "QMdiSubWindowSlots.h"
 
-QMdiSubWindowSlots::QMdiSubWindowSlots(QObject *parent) : QObject(parent)
+QMdiSubWindowSlots::QMdiSubWindowSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QMdiSubWindowSlots::~QMdiSubWindowSlots()
 {
 }
+
 void QMdiSubWindowSlots::aboutToActivate()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToActivate()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMDISUBWINDOW" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMDISUBWINDOW" );
     PHB_ITEM poldState = hb_itemPutNI( NULL, (int) oldState );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
+
     hb_vmEvalBlockV( cb, 3, psender, poldState, pnewState );
+
     hb_itemRelease( psender );
     hb_itemRelease( poldState );
     hb_itemRelease( pnewState );

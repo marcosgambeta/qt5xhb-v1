@@ -12,22 +12,27 @@
 
 #include "QToolButtonSlots.h"
 
-QToolButtonSlots::QToolButtonSlots(QObject *parent) : QObject(parent)
+QToolButtonSlots::QToolButtonSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QToolButtonSlots::~QToolButtonSlots()
 {
 }
+
 void QToolButtonSlots::triggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBUTTON" );
     PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
+
     hb_vmEvalBlockV( cb, 2, psender, paction );
+
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }

@@ -28,7 +28,7 @@ class QAbstractSliderSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractSliderSlots(QObject *parent = 0);
+  QAbstractSliderSlots( QObject *parent = 0 );
   ~QAbstractSliderSlots();
   public slots:
   void actionTriggered( int action );

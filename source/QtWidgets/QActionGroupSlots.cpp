@@ -12,35 +12,45 @@
 
 #include "QActionGroupSlots.h"
 
-QActionGroupSlots::QActionGroupSlots(QObject *parent) : QObject(parent)
+QActionGroupSlots::QActionGroupSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QActionGroupSlots::~QActionGroupSlots()
 {
 }
+
 void QActionGroupSlots::hovered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QAction*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QACTIONGROUP" );
     PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
+
     hb_vmEvalBlockV( cb, 2, psender, paction );
+
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
 }
+
 void QActionGroupSlots::triggered( QAction * action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "triggered(QAction*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QACTIONGROUP" );
     PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
+
     hb_vmEvalBlockV( cb, 2, psender, paction );
+
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }

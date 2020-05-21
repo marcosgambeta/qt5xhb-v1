@@ -12,35 +12,45 @@
 
 #include "QGraphicsTextItemSlots.h"
 
-QGraphicsTextItemSlots::QGraphicsTextItemSlots(QObject *parent) : QObject(parent)
+QGraphicsTextItemSlots::QGraphicsTextItemSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QGraphicsTextItemSlots::~QGraphicsTextItemSlots()
 {
 }
+
 void QGraphicsTextItemSlots::linkActivated( const QString & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "linkActivated(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSTEXTITEM" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
+
     hb_vmEvalBlockV( cb, 2, psender, plink );
+
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
 }
+
 void QGraphicsTextItemSlots::linkHovered( const QString & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "linkHovered(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSTEXTITEM" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
+
     hb_vmEvalBlockV( cb, 2, psender, plink );
+
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }

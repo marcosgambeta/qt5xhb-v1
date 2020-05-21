@@ -12,22 +12,27 @@
 
 #include "QMessageBoxSlots.h"
 
-QMessageBoxSlots::QMessageBoxSlots(QObject *parent) : QObject(parent)
+QMessageBoxSlots::QMessageBoxSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QMessageBoxSlots::~QMessageBoxSlots()
 {
 }
+
 void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMESSAGEBOX" );
     PHB_ITEM pbutton = Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
+
     hb_vmEvalBlockV( cb, 2, psender, pbutton );
+
     hb_itemRelease( psender );
     hb_itemRelease( pbutton );
   }

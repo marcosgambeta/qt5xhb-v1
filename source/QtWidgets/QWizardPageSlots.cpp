@@ -12,21 +12,26 @@
 
 #include "QWizardPageSlots.h"
 
-QWizardPageSlots::QWizardPageSlots(QObject *parent) : QObject(parent)
+QWizardPageSlots::QWizardPageSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QWizardPageSlots::~QWizardPageSlots()
 {
 }
+
 void QWizardPageSlots::completeChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "completeChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QWIZARDPAGE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

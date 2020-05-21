@@ -53,8 +53,8 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleHintReturnVariant * o = new QStyleHintReturnVariant();
-    Qt5xHb::returnNewObject( o, false );
+    QStyleHintReturnVariant * obj = new QStyleHintReturnVariant();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

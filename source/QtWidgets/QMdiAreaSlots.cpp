@@ -12,22 +12,27 @@
 
 #include "QMdiAreaSlots.h"
 
-QMdiAreaSlots::QMdiAreaSlots(QObject *parent) : QObject(parent)
+QMdiAreaSlots::QMdiAreaSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QMdiAreaSlots::~QMdiAreaSlots()
 {
 }
+
 void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "subWindowActivated(QMdiSubWindow*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMDIAREA" );
     PHB_ITEM pwindow = Signals_return_qobject( (QObject *) window, "QMDISUBWINDOW" );
+
     hb_vmEvalBlockV( cb, 2, psender, pwindow );
+
     hb_itemRelease( psender );
     hb_itemRelease( pwindow );
   }

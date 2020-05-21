@@ -28,7 +28,7 @@ class QTreeViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTreeViewSlots(QObject *parent = 0);
+  QTreeViewSlots( QObject *parent = 0 );
   ~QTreeViewSlots();
   public slots:
   void collapsed( const QModelIndex & index );

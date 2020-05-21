@@ -28,7 +28,7 @@ class QPlainTextEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  QPlainTextEditSlots(QObject *parent = 0);
+  QPlainTextEditSlots( QObject *parent = 0 );
   ~QPlainTextEditSlots();
   public slots:
   void blockCountChanged( int newBlockCount );

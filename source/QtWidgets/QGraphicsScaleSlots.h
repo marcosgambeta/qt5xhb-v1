@@ -28,7 +28,7 @@ class QGraphicsScaleSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsScaleSlots(QObject *parent = 0);
+  QGraphicsScaleSlots( QObject *parent = 0 );
   ~QGraphicsScaleSlots();
   public slots:
   void originChanged();

@@ -61,6 +61,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtWidgets/QSystemTrayIcon>
@@ -73,8 +75,8 @@ QSystemTrayIcon(QObject * parent = 0)
 */
 void QSystemTrayIcon_new1()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QSystemTrayIcon * obj = new QSystemTrayIcon( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -82,8 +84,8 @@ QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
 */
 void QSystemTrayIcon_new2()
 {
-  QSystemTrayIcon * o = new QSystemTrayIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QSystemTrayIcon * obj = new QSystemTrayIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -113,6 +115,8 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

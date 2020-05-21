@@ -60,8 +60,8 @@ QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it)
 */
 void QTreeWidgetItemIterator_new1()
 {
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator( *PQTREEWIDGETITEMITERATOR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QTreeWidgetItemIterator * obj = new QTreeWidgetItemIterator( *PQTREEWIDGETITEMITERATOR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -69,8 +69,8 @@ QTreeWidgetItemIterator(QTreeWidget * widget, IteratorFlags flags = All)
 */
 void QTreeWidgetItemIterator_new2()
 {
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator( PQTREEWIDGET(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QTreeWidgetItemIterator * obj = new QTreeWidgetItemIterator( PQTREEWIDGET(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QTreeWidgetItemIterator(QTreeWidgetItem * item, IteratorFlags flags = All)
 */
 void QTreeWidgetItemIterator_new3()
 {
-  QTreeWidgetItemIterator * o = new QTreeWidgetItemIterator( PQTREEWIDGETITEM(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QTreeWidgetItemIterator * obj = new QTreeWidgetItemIterator( PQTREEWIDGETITEM(1), ISNIL(2)? (QTreeWidgetItemIterator::IteratorFlags) QTreeWidgetItemIterator::All : (QTreeWidgetItemIterator::IteratorFlags) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

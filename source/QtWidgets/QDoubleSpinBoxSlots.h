@@ -28,7 +28,7 @@ class QDoubleSpinBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDoubleSpinBoxSlots(QObject *parent = 0);
+  QDoubleSpinBoxSlots( QObject *parent = 0 );
   ~QDoubleSpinBoxSlots();
   public slots:
   void valueChanged( double d );

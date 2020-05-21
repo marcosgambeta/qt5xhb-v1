@@ -58,8 +58,8 @@ QStylePainter()
 */
 void QStylePainter_new1()
 {
-  QStylePainter * o = new QStylePainter();
-  Qt5xHb::returnNewObject( o, false );
+  QStylePainter * obj = new QStylePainter();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -67,8 +67,8 @@ explicit QStylePainter(QWidget *w)
 */
 void QStylePainter_new2()
 {
-  QStylePainter * o = new QStylePainter( PQWIDGET(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QStylePainter * obj = new QStylePainter( PQWIDGET(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QStylePainter(QPaintDevice *pd, QWidget *w)
 */
 void QStylePainter_new3()
 {
-  QStylePainter * o = new QStylePainter( PQPAINTDEVICE(1), PQWIDGET(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QStylePainter * obj = new QStylePainter( PQPAINTDEVICE(1), PQWIDGET(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

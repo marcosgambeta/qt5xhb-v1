@@ -12,35 +12,45 @@
 
 #include "QColorDialogSlots.h"
 
-QColorDialogSlots::QColorDialogSlots(QObject *parent) : QObject(parent)
+QColorDialogSlots::QColorDialogSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QColorDialogSlots::~QColorDialogSlots()
 {
 }
+
 void QColorDialogSlots::colorSelected( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "colorSelected(QColor)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCOLORDIALOG" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
+
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
 }
+
 void QColorDialogSlots::currentColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "currentColorChanged(QColor)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCOLORDIALOG" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
+
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }

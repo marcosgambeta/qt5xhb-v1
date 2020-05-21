@@ -73,8 +73,8 @@ QDialogButtonBox ( QWidget * parent = 0 )
 */
 void QDialogButtonBox_new1()
 {
-  QDialogButtonBox * o = new QDialogButtonBox( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDialogButtonBox * obj = new QDialogButtonBox( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -82,8 +82,8 @@ QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QDialogButtonBox_new2()
 {
-  QDialogButtonBox * o = new QDialogButtonBox( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDialogButtonBox * obj = new QDialogButtonBox( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -91,8 +91,8 @@ QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Ho
 */
 void QDialogButtonBox_new3()
 {
-  QDialogButtonBox * o = new QDialogButtonBox( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDialogButtonBox * obj = new QDialogButtonBox( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -127,8 +127,8 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

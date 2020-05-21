@@ -28,7 +28,7 @@ class QUndoGroupSlots: public QObject
 {
   Q_OBJECT
   public:
-  QUndoGroupSlots(QObject *parent = 0);
+  QUndoGroupSlots( QObject *parent = 0 );
   ~QUndoGroupSlots();
   public slots:
   void activeStackChanged( QUndoStack * stack );

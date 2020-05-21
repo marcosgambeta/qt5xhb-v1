@@ -65,8 +65,8 @@ QScrollerProperties()
 */
 void QScrollerProperties_new1()
 {
-  QScrollerProperties * o = new QScrollerProperties();
-  Qt5xHb::returnNewObject( o, true );
+  QScrollerProperties * obj = new QScrollerProperties();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -74,8 +74,8 @@ QScrollerProperties(const QScrollerProperties & sp)
 */
 void QScrollerProperties_new2()
 {
-  QScrollerProperties * o = new QScrollerProperties( *PQSCROLLERPROPERTIES(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QScrollerProperties * obj = new QScrollerProperties( *PQSCROLLERPROPERTIES(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

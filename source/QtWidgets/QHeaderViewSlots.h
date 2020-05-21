@@ -28,7 +28,7 @@ class QHeaderViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHeaderViewSlots(QObject *parent = 0);
+  QHeaderViewSlots( QObject *parent = 0 );
   ~QHeaderViewSlots();
   public slots:
   void geometriesChanged();

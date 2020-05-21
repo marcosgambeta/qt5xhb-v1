@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QGESTUREEVENT_NEW )
     {
       par1 << (QGesture *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
-    QGestureEvent * o = new QGestureEvent( par1 );
-    Qt5xHb::returnNewObject( o, false );
+    QGestureEvent * obj = new QGestureEvent( par1 );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

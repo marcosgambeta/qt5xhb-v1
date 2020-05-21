@@ -28,7 +28,7 @@ class QGraphicsTextItemSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsTextItemSlots(QObject *parent = 0);
+  QGraphicsTextItemSlots( QObject *parent = 0 );
   ~QGraphicsTextItemSlots();
   public slots:
   void linkActivated( const QString & link );

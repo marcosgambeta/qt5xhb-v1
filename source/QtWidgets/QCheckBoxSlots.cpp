@@ -12,22 +12,27 @@
 
 #include "QCheckBoxSlots.h"
 
-QCheckBoxSlots::QCheckBoxSlots(QObject *parent) : QObject(parent)
+QCheckBoxSlots::QCheckBoxSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCheckBoxSlots::~QCheckBoxSlots()
 {
 }
+
 void QCheckBoxSlots::stateChanged( int state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCHECKBOX" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, state );
+
     hb_vmEvalBlockV( cb, 2, psender, pstate );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstate );
   }

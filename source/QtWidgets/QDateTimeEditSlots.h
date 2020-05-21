@@ -28,7 +28,7 @@ class QDateTimeEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDateTimeEditSlots(QObject *parent = 0);
+  QDateTimeEditSlots( QObject *parent = 0 );
   ~QDateTimeEditSlots();
   public slots:
   void dateChanged( const QDate & date );

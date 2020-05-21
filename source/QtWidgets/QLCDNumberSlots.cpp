@@ -12,21 +12,26 @@
 
 #include "QLCDNumberSlots.h"
 
-QLCDNumberSlots::QLCDNumberSlots(QObject *parent) : QObject(parent)
+QLCDNumberSlots::QLCDNumberSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QLCDNumberSlots::~QLCDNumberSlots()
 {
 }
+
 void QLCDNumberSlots::overflow()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "overflow()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLCDNUMBER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

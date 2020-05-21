@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
-    QBoxLayout * o = new QBoxLayout( (QBoxLayout::Direction) hb_parni(1), OPQWIDGET(2,0) );
-    Qt5xHb::returnNewObject( o, false );
+    QBoxLayout * obj = new QBoxLayout( (QBoxLayout::Direction) hb_parni(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QBOXLAYOUT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -58,6 +58,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtWidgets/QShortcut>
@@ -68,8 +70,8 @@ QShortcut(QWidget * parent)
 */
 void QShortcut_new1()
 {
-  QShortcut * o = new QShortcut( PQWIDGET(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QShortcut * obj = new QShortcut( PQWIDGET(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -77,8 +79,8 @@ QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, c
 */
 void QShortcut_new2()
 {
-  QShortcut * o = new QShortcut( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,0), OPCONSTCHAR(4,0), ISNIL(5)? (Qt::ShortcutContext) Qt::WindowShortcut : (Qt::ShortcutContext) hb_parni(5) );
-  Qt5xHb::returnNewObject( o, false );
+  QShortcut * obj = new QShortcut( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,0), OPCONSTCHAR(4,0), ISNIL(5)? (Qt::ShortcutContext) Qt::WindowShortcut : (Qt::ShortcutContext) hb_parni(5) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -108,6 +110,8 @@ HB_FUNC_STATIC( QSHORTCUT_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

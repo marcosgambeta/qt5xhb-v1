@@ -28,7 +28,7 @@ class QColorDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  QColorDialogSlots(QObject *parent = 0);
+  QColorDialogSlots( QObject *parent = 0 );
   ~QColorDialogSlots();
   public slots:
   void colorSelected( const QColor & color );

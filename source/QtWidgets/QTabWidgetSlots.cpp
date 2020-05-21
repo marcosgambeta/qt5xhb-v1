@@ -12,64 +12,84 @@
 
 #include "QTabWidgetSlots.h"
 
-QTabWidgetSlots::QTabWidgetSlots(QObject *parent) : QObject(parent)
+QTabWidgetSlots::QTabWidgetSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QTabWidgetSlots::~QTabWidgetSlots()
 {
 }
+
 void QTabWidgetSlots::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QTabWidgetSlots::tabCloseRequested( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QTabWidgetSlots::tabBarClicked( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "tabBarClicked(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QTabWidgetSlots::tabBarDoubleClicked( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "tabBarDoubleClicked(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }

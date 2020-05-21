@@ -12,21 +12,26 @@
 
 #include "QGraphicsWidgetSlots.h"
 
-QGraphicsWidgetSlots::QGraphicsWidgetSlots(QObject *parent) : QObject(parent)
+QGraphicsWidgetSlots::QGraphicsWidgetSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QGraphicsWidgetSlots::~QGraphicsWidgetSlots()
 {
 }
+
 void QGraphicsWidgetSlots::geometryChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "geometryChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSWIDGET" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

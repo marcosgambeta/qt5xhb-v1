@@ -28,7 +28,7 @@ class QDesktopWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDesktopWidgetSlots(QObject *parent = 0);
+  QDesktopWidgetSlots( QObject *parent = 0 );
   ~QDesktopWidgetSlots();
   public slots:
   void resized( int screen );

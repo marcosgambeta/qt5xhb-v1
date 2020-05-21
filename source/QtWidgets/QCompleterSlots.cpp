@@ -12,61 +12,81 @@
 
 #include "QCompleterSlots.h"
 
-QCompleterSlots::QCompleterSlots(QObject *parent) : QObject(parent)
+QCompleterSlots::QCompleterSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QCompleterSlots::~QCompleterSlots()
 {
 }
+
 void QCompleterSlots::activated( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
+
     hb_vmEvalBlockV( cb, 2, psender, ptext );
+
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
 }
+
 void QCompleterSlots::activated( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "activated(QModelIndex)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QCompleterSlots::highlighted( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
+
     hb_vmEvalBlockV( cb, 2, psender, ptext );
+
     hb_itemRelease( psender );
     hb_itemRelease( ptext );
   }
 }
+
 void QCompleterSlots::highlighted( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QModelIndex)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }

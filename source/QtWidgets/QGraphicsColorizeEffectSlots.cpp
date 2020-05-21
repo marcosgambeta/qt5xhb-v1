@@ -12,35 +12,45 @@
 
 #include "QGraphicsColorizeEffectSlots.h"
 
-QGraphicsColorizeEffectSlots::QGraphicsColorizeEffectSlots(QObject *parent) : QObject(parent)
+QGraphicsColorizeEffectSlots::QGraphicsColorizeEffectSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QGraphicsColorizeEffectSlots::~QGraphicsColorizeEffectSlots()
 {
 }
+
 void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSCOLORIZEEFFECT" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
+
     hb_itemRelease( psender );
     hb_itemRelease( pcolor );
   }
 }
+
 void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "strengthChanged(qreal)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSCOLORIZEEFFECT" );
     PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
+
     hb_vmEvalBlockV( cb, 2, psender, pstrength );
+
     hb_itemRelease( psender );
     hb_itemRelease( pstrength );
   }

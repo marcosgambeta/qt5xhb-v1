@@ -28,7 +28,7 @@ class QFontDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  QFontDialogSlots(QObject *parent = 0);
+  QFontDialogSlots( QObject *parent = 0 );
   ~QFontDialogSlots();
   public slots:
   void currentFontChanged( const QFont & font );

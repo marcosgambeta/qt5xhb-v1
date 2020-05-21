@@ -28,7 +28,7 @@ class QTableWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTableWidgetSlots(QObject *parent = 0);
+  QTableWidgetSlots( QObject *parent = 0 );
   ~QTableWidgetSlots();
   public slots:
   void cellActivated( int row, int column );

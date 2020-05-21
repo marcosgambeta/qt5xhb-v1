@@ -12,35 +12,45 @@
 
 #include "QTreeViewSlots.h"
 
-QTreeViewSlots::QTreeViewSlots(QObject *parent) : QObject(parent)
+QTreeViewSlots::QTreeViewSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QTreeViewSlots::~QTreeViewSlots()
 {
 }
+
 void QTreeViewSlots::collapsed( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "collapsed(QModelIndex)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTREEVIEW" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QTreeViewSlots::expanded( const QModelIndex & index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "expanded(QModelIndex)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTREEVIEW" );
     PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }

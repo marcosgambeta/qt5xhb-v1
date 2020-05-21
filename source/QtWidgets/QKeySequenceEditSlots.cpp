@@ -12,36 +12,46 @@
 
 #include "QKeySequenceEditSlots.h"
 
-QKeySequenceEditSlots::QKeySequenceEditSlots(QObject *parent) : QObject(parent)
+QKeySequenceEditSlots::QKeySequenceEditSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QKeySequenceEditSlots::~QKeySequenceEditSlots()
 {
 }
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QKeySequenceEditSlots::editingFinished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "editingFinished()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QKEYSEQUENCEEDIT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
 #endif
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 void QKeySequenceEditSlots::keySequenceChanged( const QKeySequence & keySequence )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "keySequenceChanged(QKeySequence)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QKEYSEQUENCEEDIT" );
     PHB_ITEM pkeySequence = Signals_return_object( (void *) &keySequence, "QKEYSEQUENCE" );
+
     hb_vmEvalBlockV( cb, 2, psender, pkeySequence );
+
     hb_itemRelease( psender );
     hb_itemRelease( pkeySequence );
   }

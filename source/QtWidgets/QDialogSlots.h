@@ -28,7 +28,7 @@ class QDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDialogSlots(QObject *parent = 0);
+  QDialogSlots( QObject *parent = 0 );
   ~QDialogSlots();
   public slots:
   void accepted();

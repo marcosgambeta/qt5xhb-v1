@@ -28,7 +28,7 @@ class QFontComboBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QFontComboBoxSlots(QObject *parent = 0);
+  QFontComboBoxSlots( QObject *parent = 0 );
   ~QFontComboBoxSlots();
   public slots:
   void currentFontChanged( const QFont & font );

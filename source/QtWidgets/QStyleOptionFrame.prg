@@ -58,8 +58,8 @@ QStyleOptionFrame()
 */
 void QStyleOptionFrame_new1()
 {
-  QStyleOptionFrame * o = new QStyleOptionFrame();
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionFrame * obj = new QStyleOptionFrame();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -67,8 +67,8 @@ QStyleOptionFrame(const QStyleOptionFrame &other)
 */
 void QStyleOptionFrame_new2()
 {
-  QStyleOptionFrame * o = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionFrame * obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

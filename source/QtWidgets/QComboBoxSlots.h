@@ -28,7 +28,7 @@ class QComboBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QComboBoxSlots(QObject *parent = 0);
+  QComboBoxSlots( QObject *parent = 0 );
   ~QComboBoxSlots();
   public slots:
   void activated( int index );

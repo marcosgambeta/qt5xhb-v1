@@ -28,7 +28,7 @@ class QMainWindowSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMainWindowSlots(QObject *parent = 0);
+  QMainWindowSlots( QObject *parent = 0 );
   ~QMainWindowSlots();
   public slots:
   void iconSizeChanged( const QSize & iconSize );

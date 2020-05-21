@@ -12,49 +12,64 @@
 
 #include "QTabBarSlots.h"
 
-QTabBarSlots::QTabBarSlots(QObject *parent) : QObject(parent)
+QTabBarSlots::QTabBarSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QTabBarSlots::~QTabBarSlots()
 {
 }
+
 void QTabBarSlots::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QTabBarSlots::tabCloseRequested( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "tabCloseRequested(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }
 }
+
 void QTabBarSlots::tabMoved( int from, int to )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "tabMoved(int,int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTABBAR" );
     PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
     PHB_ITEM pto = hb_itemPutNI( NULL, to );
+
     hb_vmEvalBlockV( cb, 3, psender, pfrom, pto );
+
     hb_itemRelease( psender );
     hb_itemRelease( pfrom );
     hb_itemRelease( pto );

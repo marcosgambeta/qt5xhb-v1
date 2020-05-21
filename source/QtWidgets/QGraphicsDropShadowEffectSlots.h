@@ -28,7 +28,7 @@ class QGraphicsDropShadowEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsDropShadowEffectSlots(QObject *parent = 0);
+  QGraphicsDropShadowEffectSlots( QObject *parent = 0 );
   ~QGraphicsDropShadowEffectSlots();
   public slots:
   void blurRadiusChanged( qreal blurRadius );

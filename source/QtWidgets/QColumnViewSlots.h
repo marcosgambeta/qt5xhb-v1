@@ -28,7 +28,7 @@ class QColumnViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QColumnViewSlots(QObject *parent = 0);
+  QColumnViewSlots( QObject *parent = 0 );
   ~QColumnViewSlots();
   public slots:
   void updatePreviewWidget( const QModelIndex & index );

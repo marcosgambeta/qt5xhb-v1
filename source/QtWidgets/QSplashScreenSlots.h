@@ -28,7 +28,7 @@ class QSplashScreenSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSplashScreenSlots(QObject *parent = 0);
+  QSplashScreenSlots( QObject *parent = 0 );
   ~QSplashScreenSlots();
   public slots:
   void messageChanged( const QString & message );

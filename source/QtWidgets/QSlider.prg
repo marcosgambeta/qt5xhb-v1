@@ -61,8 +61,8 @@ QSlider ( QWidget * parent = 0 )
 */
 void QSlider_new1()
 {
-  QSlider * o = new QSlider( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QSlider * obj = new QSlider( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -70,8 +70,8 @@ QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QSlider_new2()
 {
-  QSlider * o = new QSlider( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QSlider * obj = new QSlider( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -101,8 +101,8 @@ HB_FUNC_STATIC( QSLIDER_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

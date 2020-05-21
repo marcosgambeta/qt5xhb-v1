@@ -54,8 +54,8 @@ QStyleOptionRubberBand()
 */
 void QStyleOptionRubberBand_new1()
 {
-  QStyleOptionRubberBand * o = new QStyleOptionRubberBand();
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionRubberBand * obj = new QStyleOptionRubberBand();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -63,8 +63,8 @@ QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
 */
 void QStyleOptionRubberBand_new2()
 {
-  QStyleOptionRubberBand * o = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionRubberBand * obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

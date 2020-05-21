@@ -12,22 +12,27 @@
 
 #include "QDataWidgetMapperSlots.h"
 
-QDataWidgetMapperSlots::QDataWidgetMapperSlots(QObject *parent) : QObject(parent)
+QDataWidgetMapperSlots::QDataWidgetMapperSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QDataWidgetMapperSlots::~QDataWidgetMapperSlots()
 {
 }
+
 void QDataWidgetMapperSlots::currentIndexChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "currentIndexChanged(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDATAWIDGETMAPPER" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }

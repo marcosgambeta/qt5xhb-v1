@@ -81,8 +81,8 @@ QProxyStyle(QStyle *style = 0)
 */
 void QProxyStyle_new1()
 {
-  QProxyStyle * o = new QProxyStyle( OPQSTYLE(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QProxyStyle * obj = new QProxyStyle( OPQSTYLE(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -90,8 +90,8 @@ QProxyStyle(const QString &key)
 */
 void QProxyStyle_new2()
 {
-  QProxyStyle * o = new QProxyStyle( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QProxyStyle * obj = new QProxyStyle( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -121,8 +121,8 @@ HB_FUNC_STATIC( QPROXYSTYLE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

@@ -89,8 +89,8 @@ QStyleOptionViewItem()
 */
 void QStyleOptionViewItem_new1()
 {
-  QStyleOptionViewItem * o = new QStyleOptionViewItem();
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionViewItem * obj = new QStyleOptionViewItem();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -98,8 +98,8 @@ QStyleOptionViewItem(const QStyleOptionViewItem &other)
 */
 void QStyleOptionViewItem_new2()
 {
-  QStyleOptionViewItem * o = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionViewItem * obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -28,7 +28,7 @@ class QListWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QListWidgetSlots(QObject *parent = 0);
+  QListWidgetSlots( QObject *parent = 0 );
   ~QListWidgetSlots();
   public slots:
   void currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous );

@@ -57,8 +57,8 @@ QCommandLinkButton ( QWidget * parent = 0 )
 */
 void QCommandLinkButton_new1()
 {
-  QCommandLinkButton * o = new QCommandLinkButton( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QCommandLinkButton * obj = new QCommandLinkButton( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -66,8 +66,8 @@ QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
 */
 void QCommandLinkButton_new2()
 {
-  QCommandLinkButton * o = new QCommandLinkButton( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QCommandLinkButton * obj = new QCommandLinkButton( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QCommandLinkButton ( const QString & text, const QString & description, QWidget 
 */
 void QCommandLinkButton_new3()
 {
-  QCommandLinkButton * o = new QCommandLinkButton( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QCommandLinkButton * obj = new QCommandLinkButton( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -111,8 +111,8 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

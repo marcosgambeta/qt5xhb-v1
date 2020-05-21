@@ -28,7 +28,7 @@ class QToolBarSlots: public QObject
 {
   Q_OBJECT
   public:
-  QToolBarSlots(QObject *parent = 0);
+  QToolBarSlots( QObject *parent = 0 );
   ~QToolBarSlots();
   public slots:
   void actionTriggered( QAction * action );

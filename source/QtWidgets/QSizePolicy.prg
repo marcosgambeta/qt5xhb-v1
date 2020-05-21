@@ -76,8 +76,8 @@ QSizePolicy()
 */
 void QSizePolicy_new1()
 {
-  QSizePolicy * o = new QSizePolicy();
-  Qt5xHb::returnNewObject( o, true );
+  QSizePolicy * obj = new QSizePolicy();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
 */
 void QSizePolicy_new2()
 {
-  QSizePolicy * o = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), ISNIL(3)? (QSizePolicy::ControlType) QSizePolicy::DefaultType : (QSizePolicy::ControlType) hb_parni(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QSizePolicy * obj = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), ISNIL(3)? (QSizePolicy::ControlType) QSizePolicy::DefaultType : (QSizePolicy::ControlType) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

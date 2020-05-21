@@ -28,7 +28,7 @@ class QSpinBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSpinBoxSlots(QObject *parent = 0);
+  QSpinBoxSlots( QObject *parent = 0 );
   ~QSpinBoxSlots();
   public slots:
   void valueChanged( int value );

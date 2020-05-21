@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    QActionGroup * o = new QActionGroup( PQOBJECT(1) );
-    Qt5xHb::returnNewObject( o, false );
+    QActionGroup * obj = new QActionGroup( PQOBJECT(1) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -84,8 +84,8 @@ HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

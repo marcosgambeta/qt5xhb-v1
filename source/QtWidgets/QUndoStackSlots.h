@@ -28,7 +28,7 @@ class QUndoStackSlots: public QObject
 {
   Q_OBJECT
   public:
-  QUndoStackSlots(QObject *parent = 0);
+  QUndoStackSlots( QObject *parent = 0 );
   ~QUndoStackSlots();
   public slots:
   void canRedoChanged( bool canRedo );

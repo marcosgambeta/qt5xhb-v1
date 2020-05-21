@@ -60,8 +60,8 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    QWidgetAction * o = new QWidgetAction( PQOBJECT(1) );
-    Qt5xHb::returnNewObject( o, false );
+    QWidgetAction * obj = new QWidgetAction( PQOBJECT(1) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -75,8 +75,8 @@ HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

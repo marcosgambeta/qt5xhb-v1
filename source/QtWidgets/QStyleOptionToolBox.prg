@@ -59,8 +59,8 @@ QStyleOptionToolBox()
 */
 void QStyleOptionToolBox_new1()
 {
-  QStyleOptionToolBox * o = new QStyleOptionToolBox();
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionToolBox * obj = new QStyleOptionToolBox();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -68,8 +68,8 @@ QStyleOptionToolBox(const QStyleOptionToolBox &other)
 */
 void QStyleOptionToolBox_new2()
 {
-  QStyleOptionToolBox * o = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionToolBox * obj = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

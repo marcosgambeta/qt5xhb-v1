@@ -12,32 +12,42 @@
 
 #include "QShortcutSlots.h"
 
-QShortcutSlots::QShortcutSlots(QObject *parent) : QObject(parent)
+QShortcutSlots::QShortcutSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QShortcutSlots::~QShortcutSlots()
 {
 }
+
 void QShortcutSlots::activated()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "activated()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSHORTCUT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QShortcutSlots::activatedAmbiguously()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "activatedAmbiguously()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSHORTCUT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

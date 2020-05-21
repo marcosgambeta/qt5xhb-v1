@@ -28,7 +28,7 @@ class QListViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QListViewSlots(QObject *parent = 0);
+  QListViewSlots( QObject *parent = 0 );
   ~QListViewSlots();
   public slots:
   void indexesMoved( const QModelIndexList & indexes );

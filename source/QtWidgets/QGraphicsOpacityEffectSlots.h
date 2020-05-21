@@ -28,7 +28,7 @@ class QGraphicsOpacityEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsOpacityEffectSlots(QObject *parent = 0);
+  QGraphicsOpacityEffectSlots( QObject *parent = 0 );
   ~QGraphicsOpacityEffectSlots();
   public slots:
   void opacityChanged( qreal opacity );

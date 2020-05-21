@@ -28,7 +28,7 @@ class QProgressBarSlots: public QObject
 {
   Q_OBJECT
   public:
-  QProgressBarSlots(QObject *parent = 0);
+  QProgressBarSlots( QObject *parent = 0 );
   ~QProgressBarSlots();
   public slots:
   void valueChanged( int value );

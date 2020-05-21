@@ -28,7 +28,7 @@ class QWizardPageSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWizardPageSlots(QObject *parent = 0);
+  QWizardPageSlots( QObject *parent = 0 );
   ~QWizardPageSlots();
   public slots:
   void completeChanged();

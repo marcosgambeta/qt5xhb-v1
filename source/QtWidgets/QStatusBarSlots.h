@@ -28,7 +28,7 @@ class QStatusBarSlots: public QObject
 {
   Q_OBJECT
   public:
-  QStatusBarSlots(QObject *parent = 0);
+  QStatusBarSlots( QObject *parent = 0 );
   ~QStatusBarSlots();
   public slots:
   void messageChanged( const QString & message );

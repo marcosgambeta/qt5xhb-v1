@@ -88,8 +88,8 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
-    QMenuBar * o = new QMenuBar( OPQWIDGET(1,0) );
-    Qt5xHb::returnNewObject( o, false );
+    QMenuBar * obj = new QMenuBar( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -103,8 +103,8 @@ HB_FUNC_STATIC( QMENUBAR_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

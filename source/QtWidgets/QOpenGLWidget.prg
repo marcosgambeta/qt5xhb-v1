@@ -79,8 +79,8 @@ HB_FUNC_STATIC( QOPENGLWIDGET_NEW )
 #ifndef QT_NO_OPENGL
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
-    QOpenGLWidget * o = new QOpenGLWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-    Qt5xHb::returnNewObject( o, false );
+    QOpenGLWidget * obj = new QOpenGLWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -98,8 +98,8 @@ HB_FUNC_STATIC( QOPENGLWIDGET_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

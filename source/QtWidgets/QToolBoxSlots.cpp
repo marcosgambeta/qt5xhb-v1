@@ -12,22 +12,27 @@
 
 #include "QToolBoxSlots.h"
 
-QToolBoxSlots::QToolBoxSlots(QObject *parent) : QObject(parent)
+QToolBoxSlots::QToolBoxSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QToolBoxSlots::~QToolBoxSlots()
 {
 }
+
 void QToolBoxSlots::currentChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "currentChanged(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTOOLBOX" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+
     hb_vmEvalBlockV( cb, 2, psender, pindex );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindex );
   }

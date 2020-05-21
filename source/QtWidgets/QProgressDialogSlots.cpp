@@ -12,21 +12,26 @@
 
 #include "QProgressDialogSlots.h"
 
-QProgressDialogSlots::QProgressDialogSlots(QObject *parent) : QObject(parent)
+QProgressDialogSlots::QProgressDialogSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QProgressDialogSlots::~QProgressDialogSlots()
 {
 }
+
 void QProgressDialogSlots::canceled()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "canceled()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPROGRESSDIALOG" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

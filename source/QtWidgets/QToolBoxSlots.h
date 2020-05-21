@@ -28,7 +28,7 @@ class QToolBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QToolBoxSlots(QObject *parent = 0);
+  QToolBoxSlots( QObject *parent = 0 );
   ~QToolBoxSlots();
   public slots:
   void currentChanged( int index );

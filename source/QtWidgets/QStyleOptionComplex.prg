@@ -55,8 +55,8 @@ QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Co
 */
 void QStyleOptionComplex_new1()
 {
-  QStyleOptionComplex * o = new QStyleOptionComplex( OPINT(1,QStyleOptionComplex::Version), OPINT(2,QStyleOptionComplex::SO_Complex) );
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionComplex * obj = new QStyleOptionComplex( OPINT(1,QStyleOptionComplex::Version), OPINT(2,QStyleOptionComplex::SO_Complex) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -64,8 +64,8 @@ QStyleOptionComplex(const QStyleOptionComplex &other)
 */
 void QStyleOptionComplex_new2()
 {
-  QStyleOptionComplex * o = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionComplex * obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -12,98 +12,133 @@
 
 #include "QTextBrowserSlots.h"
 
-QTextBrowserSlots::QTextBrowserSlots(QObject *parent) : QObject(parent)
+QTextBrowserSlots::QTextBrowserSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QTextBrowserSlots::~QTextBrowserSlots()
 {
 }
+
 void QTextBrowserSlots::anchorClicked( const QUrl & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "anchorClicked(QUrl)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
     PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
+
     hb_vmEvalBlockV( cb, 2, psender, plink );
+
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
 }
+
 void QTextBrowserSlots::backwardAvailable( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "backwardAvailable(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
+
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
+
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
 }
+
 void QTextBrowserSlots::forwardAvailable( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "forwardAvailable(bool)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
+
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
+
     hb_itemRelease( psender );
     hb_itemRelease( pavailable );
   }
 }
+
 void QTextBrowserSlots::highlighted( const QUrl & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QUrl)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
     PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
+
     hb_vmEvalBlockV( cb, 2, psender, plink );
+
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
 }
+
 void QTextBrowserSlots::highlighted( const QString & link )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "highlighted(QString)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
+
     hb_vmEvalBlockV( cb, 2, psender, plink );
+
     hb_itemRelease( psender );
     hb_itemRelease( plink );
   }
 }
+
 void QTextBrowserSlots::historyChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "historyChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QTextBrowserSlots::sourceChanged( const QUrl & src )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "sourceChanged(QUrl)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
     PHB_ITEM psrc = Signals_return_object( (void *) &src, "QURL" );
+
     hb_vmEvalBlockV( cb, 2, psender, psrc );
+
     hb_itemRelease( psender );
     hb_itemRelease( psrc );
   }

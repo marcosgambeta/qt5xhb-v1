@@ -28,7 +28,7 @@ class QMenuSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMenuSlots(QObject *parent = 0);
+  QMenuSlots( QObject *parent = 0 );
   ~QMenuSlots();
   public slots:
   void aboutToHide();

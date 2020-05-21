@@ -68,8 +68,8 @@ QGroupBox ( QWidget * parent = 0 )
 */
 void QGroupBox_new1()
 {
-  QGroupBox * o = new QGroupBox( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QGroupBox * obj = new QGroupBox( OPQWIDGET(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -77,8 +77,8 @@ QGroupBox ( const QString & title, QWidget * parent = 0 )
 */
 void QGroupBox_new2()
 {
-  QGroupBox * o = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QGroupBox * obj = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -108,8 +108,8 @@ HB_FUNC_STATIC( QGROUPBOX_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

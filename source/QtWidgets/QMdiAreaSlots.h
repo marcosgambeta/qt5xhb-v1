@@ -28,7 +28,7 @@ class QMdiAreaSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMdiAreaSlots(QObject *parent = 0);
+  QMdiAreaSlots( QObject *parent = 0 );
   ~QMdiAreaSlots();
   public slots:
   void subWindowActivated( QMdiSubWindow * window );

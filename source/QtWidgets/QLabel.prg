@@ -97,8 +97,8 @@ QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QLabel_new1()
 {
-  QLabel * o = new QLabel( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QLabel * obj = new QLabel( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -106,8 +106,8 @@ QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QLabel_new2()
 {
-  QLabel * o = new QLabel( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt5xHb::returnNewObject( o, false );
+  QLabel * obj = new QLabel( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -137,8 +137,8 @@ HB_FUNC_STATIC( QLABEL_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

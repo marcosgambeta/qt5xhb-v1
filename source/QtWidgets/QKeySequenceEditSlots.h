@@ -30,7 +30,7 @@ class QKeySequenceEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  QKeySequenceEditSlots(QObject *parent = 0);
+  QKeySequenceEditSlots( QObject *parent = 0 );
   ~QKeySequenceEditSlots();
   public slots:
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))

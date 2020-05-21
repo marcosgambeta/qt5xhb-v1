@@ -28,7 +28,7 @@ class QToolButtonSlots: public QObject
 {
   Q_OBJECT
   public:
-  QToolButtonSlots(QObject *parent = 0);
+  QToolButtonSlots( QObject *parent = 0 );
   ~QToolButtonSlots();
   public slots:
   void triggered( QAction * action );

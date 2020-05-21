@@ -28,7 +28,7 @@ class QScrollerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QScrollerSlots(QObject *parent = 0);
+  QScrollerSlots( QObject *parent = 0 );
   ~QScrollerSlots();
   public slots:
   void scrollerPropertiesChanged( const QScrollerProperties & newProperties );

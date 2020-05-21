@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISQSPLITTER(2) )
   {
-    QSplitterHandle * o = new QSplitterHandle( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
-    Qt5xHb::returnNewObject( o, false );
+    QSplitterHandle * obj = new QSplitterHandle( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

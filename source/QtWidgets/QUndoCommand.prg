@@ -69,8 +69,8 @@ QUndoCommand(QUndoCommand * parent = 0)
 */
 void QUndoCommand_new1()
 {
-  QUndoCommand * o = new QUndoCommand( ISNIL(1)? 0 : (QUndoCommand *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QUndoCommand * obj = new QUndoCommand( ISNIL(1)? 0 : (QUndoCommand *) Qt5xHb::itemGetPtr(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -78,8 +78,8 @@ QUndoCommand(const QString & text, QUndoCommand * parent = 0)
 */
 void QUndoCommand_new2()
 {
-  QUndoCommand * o = new QUndoCommand( PQSTRING(1), ISNIL(2)? 0 : (QUndoCommand *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QUndoCommand * obj = new QUndoCommand( PQSTRING(1), ISNIL(2)? 0 : (QUndoCommand *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*

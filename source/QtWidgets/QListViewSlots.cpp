@@ -12,17 +12,20 @@
 
 #include "QListViewSlots.h"
 
-QListViewSlots::QListViewSlots(QObject *parent) : QObject(parent)
+QListViewSlots::QListViewSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QListViewSlots::~QListViewSlots()
 {
 }
+
 void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "indexesMoved(QModelIndexList)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLISTVIEW" );
@@ -49,7 +52,9 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
     {
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
     }
+
     hb_vmEvalBlockV( cb, 2, psender, pindexes );
+
     hb_itemRelease( psender );
     hb_itemRelease( pindexes );
   }

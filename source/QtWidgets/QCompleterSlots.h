@@ -28,7 +28,7 @@ class QCompleterSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCompleterSlots(QObject *parent = 0);
+  QCompleterSlots( QObject *parent = 0 );
   ~QCompleterSlots();
   public slots:
   void activated( const QString & text );

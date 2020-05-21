@@ -28,7 +28,7 @@ class QAbstractItemViewSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractItemViewSlots(QObject *parent = 0);
+  QAbstractItemViewSlots( QObject *parent = 0 );
   ~QAbstractItemViewSlots();
   public slots:
   void activated( const QModelIndex & index );

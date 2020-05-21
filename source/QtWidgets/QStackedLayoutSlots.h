@@ -28,7 +28,7 @@ class QStackedLayoutSlots: public QObject
 {
   Q_OBJECT
   public:
-  QStackedLayoutSlots(QObject *parent = 0);
+  QStackedLayoutSlots( QObject *parent = 0 );
   ~QStackedLayoutSlots();
   public slots:
   void setCurrentIndex( int index );

@@ -12,17 +12,20 @@
 
 #include "QGraphicsSceneSlots.h"
 
-QGraphicsSceneSlots::QGraphicsSceneSlots(QObject *parent) : QObject(parent)
+QGraphicsSceneSlots::QGraphicsSceneSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QGraphicsSceneSlots::~QGraphicsSceneSlots()
 {
 }
+
 void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QList<QRectF>)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
@@ -49,32 +52,44 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
     {
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS );
     }
+
     hb_vmEvalBlockV( cb, 2, psender, pregion );
+
     hb_itemRelease( psender );
     hb_itemRelease( pregion );
   }
 }
+
 void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "sceneRectChanged(QRectF)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
+
     hb_vmEvalBlockV( cb, 2, psender, prect );
+
     hb_itemRelease( psender );
     hb_itemRelease( prect );
   }
 }
+
 void QGraphicsSceneSlots::selectionChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

@@ -73,8 +73,8 @@ QStyleOptionMenuItem()
 */
 void QStyleOptionMenuItem_new1()
 {
-  QStyleOptionMenuItem * o = new QStyleOptionMenuItem();
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionMenuItem * obj = new QStyleOptionMenuItem();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,8 +82,8 @@ QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
 */
 void QStyleOptionMenuItem_new2()
 {
-  QStyleOptionMenuItem * o = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionMenuItem * obj = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

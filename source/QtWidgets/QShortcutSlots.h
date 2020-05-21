@@ -28,7 +28,7 @@ class QShortcutSlots: public QObject
 {
   Q_OBJECT
   public:
-  QShortcutSlots(QObject *parent = 0);
+  QShortcutSlots( QObject *parent = 0 );
   ~QShortcutSlots();
   public slots:
   void activated();

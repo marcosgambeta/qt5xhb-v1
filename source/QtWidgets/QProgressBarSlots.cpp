@@ -12,22 +12,27 @@
 
 #include "QProgressBarSlots.h"
 
-QProgressBarSlots::QProgressBarSlots(QObject *parent) : QObject(parent)
+QProgressBarSlots::QProgressBarSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QProgressBarSlots::~QProgressBarSlots()
 {
 }
+
 void QProgressBarSlots::valueChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPROGRESSBAR" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
+
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
+
     hb_itemRelease( psender );
     hb_itemRelease( pvalue );
   }

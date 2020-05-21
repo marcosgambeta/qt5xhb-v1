@@ -52,8 +52,8 @@ QStyleOptionSizeGrip()
 */
 void QStyleOptionSizeGrip_new1()
 {
-  QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip();
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -61,8 +61,8 @@ QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
 */
 void QStyleOptionSizeGrip_new2()
 {
-  QStyleOptionSizeGrip * o = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

@@ -28,7 +28,7 @@ class QTabBarSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTabBarSlots(QObject *parent = 0);
+  QTabBarSlots( QObject *parent = 0 );
   ~QTabBarSlots();
   public slots:
   void currentChanged( int index );

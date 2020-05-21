@@ -28,7 +28,7 @@ class QCheckBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCheckBoxSlots(QObject *parent = 0);
+  QCheckBoxSlots( QObject *parent = 0 );
   ~QCheckBoxSlots();
   public slots:
   void stateChanged( int state );

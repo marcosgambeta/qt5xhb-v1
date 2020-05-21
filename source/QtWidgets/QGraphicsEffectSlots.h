@@ -28,7 +28,7 @@ class QGraphicsEffectSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGraphicsEffectSlots(QObject *parent = 0);
+  QGraphicsEffectSlots( QObject *parent = 0 );
   ~QGraphicsEffectSlots();
   public slots:
   void enabledChanged( bool enabled );

@@ -28,7 +28,7 @@ class QCalendarWidgetSlots: public QObject
 {
   Q_OBJECT
   public:
-  QCalendarWidgetSlots(QObject *parent = 0);
+  QCalendarWidgetSlots( QObject *parent = 0 );
   ~QCalendarWidgetSlots();
   public slots:
   void activated( const QDate & date );

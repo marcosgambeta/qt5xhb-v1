@@ -28,7 +28,7 @@ class QAbstractButtonSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractButtonSlots(QObject *parent = 0);
+  QAbstractButtonSlots( QObject *parent = 0 );
   ~QAbstractButtonSlots();
   public slots:
   void clicked( bool checked = false );

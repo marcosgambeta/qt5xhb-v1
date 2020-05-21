@@ -28,7 +28,7 @@ class QAbstractItemDelegateSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractItemDelegateSlots(QObject *parent = 0);
+  QAbstractItemDelegateSlots( QObject *parent = 0 );
   ~QAbstractItemDelegateSlots();
   public slots:
   void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint );

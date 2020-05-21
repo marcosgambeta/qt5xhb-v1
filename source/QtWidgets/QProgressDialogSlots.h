@@ -28,7 +28,7 @@ class QProgressDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  QProgressDialogSlots(QObject *parent = 0);
+  QProgressDialogSlots( QObject *parent = 0 );
   ~QProgressDialogSlots();
   public slots:
   void canceled();
