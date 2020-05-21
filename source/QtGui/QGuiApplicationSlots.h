@@ -28,7 +28,7 @@ class QGuiApplicationSlots: public QObject
 {
   Q_OBJECT
   public:
-  QGuiApplicationSlots(QObject *parent = 0);
+  QGuiApplicationSlots( QObject *parent = 0 );
   ~QGuiApplicationSlots();
   public slots:
   void focusObjectChanged( QObject * focusObject );

@@ -53,8 +53,8 @@ HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QApplicationStateChangeEvent * o = new QApplicationStateChangeEvent( (Qt::ApplicationState) hb_parni(1) );
-    Qt5xHb::returnNewObject( o, false );
+    QApplicationStateChangeEvent * obj = new QApplicationStateChangeEvent( (Qt::ApplicationState) hb_parni(1) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

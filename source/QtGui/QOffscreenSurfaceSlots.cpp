@@ -12,22 +12,27 @@
 
 #include "QOffscreenSurfaceSlots.h"
 
-QOffscreenSurfaceSlots::QOffscreenSurfaceSlots(QObject *parent) : QObject(parent)
+QOffscreenSurfaceSlots::QOffscreenSurfaceSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QOffscreenSurfaceSlots::~QOffscreenSurfaceSlots()
 {
 }
+
 void QOffscreenSurfaceSlots::screenChanged( QScreen * screen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "screenChanged(QScreen*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOFFSCREENSURFACE" );
     PHB_ITEM pscreen = Signals_return_qobject( (QObject *) screen, "QSCREEN" );
+
     hb_vmEvalBlockV( cb, 2, psender, pscreen );
+
     hb_itemRelease( psender );
     hb_itemRelease( pscreen );
   }

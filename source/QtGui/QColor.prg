@@ -149,8 +149,8 @@ QColor ()
 */
 void QColor_new1()
 {
-  QColor * o = new QColor();
-  Qt5xHb::returnNewObject( o, true );
+  QColor * obj = new QColor();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -158,8 +158,8 @@ QColor ( int r, int g, int b, int a = 255 )
 */
 void QColor_new2()
 {
-  QColor * o = new QColor( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
-  Qt5xHb::returnNewObject( o, true );
+  QColor * obj = new QColor( PINT(1), PINT(2), PINT(3), OPINT(4,255) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -167,8 +167,8 @@ QColor ( QRgb color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW3 )
 {
-  QColor * o = new QColor( PQRGB(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QColor * obj = new QColor( PQRGB(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -176,8 +176,8 @@ QColor ( const QString & name )
 */
 HB_FUNC_STATIC( QCOLOR_NEW4 )
 {
-  QColor * o = new QColor( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QColor * obj = new QColor( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -185,8 +185,8 @@ QColor ( const char * name )
 */
 HB_FUNC_STATIC( QCOLOR_NEW5 )
 {
-  QColor * o = new QColor( PCONSTCHAR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QColor * obj = new QColor( PCONSTCHAR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -194,8 +194,8 @@ QColor ( const QColor & color )
 */
 void QColor_new6()
 {
-  QColor * o = new QColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
-  Qt5xHb::returnNewObject( o, true );
+  QColor * obj = new QColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -203,8 +203,8 @@ QColor ( Qt::GlobalColor color )
 */
 HB_FUNC_STATIC( QCOLOR_NEW7 )
 {
-  QColor * o = new QColor( (Qt::GlobalColor) hb_parni(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QColor * obj = new QColor( (Qt::GlobalColor) hb_parni(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

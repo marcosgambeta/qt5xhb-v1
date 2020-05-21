@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextBlockFormat * o = new QTextBlockFormat();
-    Qt5xHb::returnNewObject( o, true );
+    QTextBlockFormat * obj = new QTextBlockFormat();
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

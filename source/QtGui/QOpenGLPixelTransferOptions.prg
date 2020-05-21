@@ -77,8 +77,8 @@ QOpenGLPixelTransferOptions()
 */
 void QOpenGLPixelTransferOptions_new1()
 {
-  QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions();
-  Qt5xHb::returnNewObject( o, true );
+  QOpenGLPixelTransferOptions * obj = new QOpenGLPixelTransferOptions();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -86,8 +86,8 @@ QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
 */
 void QOpenGLPixelTransferOptions_new2()
 {
-  QOpenGLPixelTransferOptions * o = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QOpenGLPixelTransferOptions * obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

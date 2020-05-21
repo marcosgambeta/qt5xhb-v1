@@ -77,8 +77,8 @@ HB_FUNC_STATIC( QBACKINGSTORE_NEW )
 {
   if( ISNUMPAR(1) && ISQWINDOW(1) )
   {
-    QBackingStore * o = new QBackingStore( PQWINDOW(1) );
-    Qt5xHb::returnNewObject( o, true );
+    QBackingStore * obj = new QBackingStore( PQWINDOW(1) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

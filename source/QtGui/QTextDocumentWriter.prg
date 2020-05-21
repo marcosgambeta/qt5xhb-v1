@@ -74,8 +74,8 @@ QTextDocumentWriter()
 */
 void QTextDocumentWriter_new1()
 {
-  QTextDocumentWriter * o = new QTextDocumentWriter();
-  Qt5xHb::returnNewObject( o, false );
+  QTextDocumentWriter * obj = new QTextDocumentWriter();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -83,8 +83,8 @@ QTextDocumentWriter(QIODevice *device, const QByteArray &format)
 */
 void QTextDocumentWriter_new2()
 {
-  QTextDocumentWriter * o = new QTextDocumentWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QTextDocumentWriter * obj = new QTextDocumentWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArr
 */
 void QTextDocumentWriter_new3()
 {
-  QTextDocumentWriter * o = new QTextDocumentWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QTextDocumentWriter * obj = new QTextDocumentWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

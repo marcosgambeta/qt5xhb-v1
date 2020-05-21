@@ -12,35 +12,45 @@
 
 #include "QDragSlots.h"
 
-QDragSlots::QDragSlots(QObject *parent) : QObject(parent)
+QDragSlots::QDragSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QDragSlots::~QDragSlots()
 {
 }
+
 void QDragSlots::actionChanged( Qt::DropAction action )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDRAG" );
     PHB_ITEM paction = hb_itemPutNI( NULL, (int) action );
+
     hb_vmEvalBlockV( cb, 2, psender, paction );
+
     hb_itemRelease( psender );
     hb_itemRelease( paction );
   }
 }
+
 void QDragSlots::targetChanged( QObject * newTarget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "targetChanged(QObject*)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDRAG" );
     PHB_ITEM pnewTarget = Signals_return_qobject( (QObject *) newTarget, "QOBJECT" );
+
     hb_vmEvalBlockV( cb, 2, psender, pnewTarget );
+
     hb_itemRelease( psender );
     hb_itemRelease( pnewTarget );
   }

@@ -28,7 +28,7 @@ class QIntValidatorSlots: public QObject
 {
   Q_OBJECT
   public:
-  QIntValidatorSlots(QObject *parent = 0);
+  QIntValidatorSlots( QObject *parent = 0 );
   ~QIntValidatorSlots();
   public slots:
   void changed();

@@ -94,8 +94,8 @@ QPalette ()
 */
 void QPalette_new1()
 {
-  QPalette * o = new QPalette();
-  Qt5xHb::returnNewObject( o, true );
+  QPalette * obj = new QPalette();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -103,8 +103,8 @@ QPalette ( const QColor & button )
 */
 void QPalette_new2()
 {
-  QPalette * o = new QPalette( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
-  Qt5xHb::returnNewObject( o, true );
+  QPalette * obj = new QPalette( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QPalette ( Qt::GlobalColor button )
 */
 void QPalette_new3()
 {
-  QPalette * o = new QPalette( (Qt::GlobalColor) hb_parni(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPalette * obj = new QPalette( (Qt::GlobalColor) hb_parni(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -121,8 +121,8 @@ QPalette ( const QColor & button, const QColor & window )
 */
 void QPalette_new4()
 {
-  QPalette * o = new QPalette( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
-  Qt5xHb::returnNewObject( o, true );
+  QPalette * obj = new QPalette( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -130,8 +130,8 @@ QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & ligh
 */
 void QPalette_new5()
 {
-  QPalette * o = new QPalette( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
-  Qt5xHb::returnNewObject( o, true );
+  QPalette * obj = new QPalette( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -139,8 +139,8 @@ QPalette ( const QPalette & p )
 */
 void QPalette_new6()
 {
-  QPalette * o = new QPalette( *PQPALETTE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPalette * obj = new QPalette( *PQPALETTE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

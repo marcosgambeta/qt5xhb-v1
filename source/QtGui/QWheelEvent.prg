@@ -66,8 +66,8 @@ QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::Keyboard
 */
 void QWheelEvent_new1()
 {
-  QWheelEvent * o = new QWheelEvent( *PQPOINTF(1), PINT(2), (Qt::MouseButtons) hb_parni(3), (Qt::KeyboardModifiers) hb_parni(4), ISNIL(5)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(5) );
-  Qt5xHb::returnNewObject( o, false );
+  QWheelEvent * obj = new QWheelEvent( *PQPOINTF(1), PINT(2), (Qt::MouseButtons) hb_parni(3), (Qt::KeyboardModifiers) hb_parni(4), ISNIL(5)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(5) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -75,8 +75,8 @@ QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseBut
 */
 void QWheelEvent_new2()
 {
-  QWheelEvent * o = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), PINT(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(6) );
-  Qt5xHb::returnNewObject( o, false );
+  QWheelEvent * obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), PINT(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(6) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -84,8 +84,8 @@ QWheelEvent(const QPointF &pos, const QPointF& globalPos,QPoint pixelDelta, QPoi
 */
 void QWheelEvent_new3()
 {
-  QWheelEvent * o = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), (Qt::Orientation) hb_parni(6), (Qt::MouseButtons) hb_parni(7), (Qt::KeyboardModifiers) hb_parni(8) );
-  Qt5xHb::returnNewObject( o, false );
+  QWheelEvent * obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), (Qt::Orientation) hb_parni(6), (Qt::MouseButtons) hb_parni(7), (Qt::KeyboardModifiers) hb_parni(8) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*

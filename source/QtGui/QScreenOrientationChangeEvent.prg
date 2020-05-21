@@ -58,8 +58,8 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQSCREEN(1) && ISNUM(2) )
   {
-    QScreenOrientationChangeEvent * o = new QScreenOrientationChangeEvent( PQSCREEN(1), (Qt::ScreenOrientation) hb_parni(2) );
-    Qt5xHb::returnNewObject( o, false );
+    QScreenOrientationChangeEvent * obj = new QScreenOrientationChangeEvent( PQSCREEN(1), (Qt::ScreenOrientation) hb_parni(2) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

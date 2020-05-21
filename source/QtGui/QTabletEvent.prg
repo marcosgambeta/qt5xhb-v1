@@ -74,8 +74,8 @@ HB_FUNC_STATIC( QTABLETEVENT_NEW )
 {
   if( ISNUMPAR(13) && ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && ISNUM(9) && ISNUM(10) && ISNUM(11) && ISNUM(12) && ISNUM(13) )
   {
-    QTabletEvent * o = new QTabletEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), PINT(4), PINT(5), PQREAL(6), PINT(7), PINT(8), PQREAL(9), PQREAL(10), PINT(11), (Qt::KeyboardModifiers) hb_parni(12), PQINT64(13) );
-    Qt5xHb::returnNewObject( o, false );
+    QTabletEvent * obj = new QTabletEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), PINT(4), PINT(5), PQREAL(6), PINT(7), PINT(8), PQREAL(9), PQREAL(10), PINT(11), (Qt::KeyboardModifiers) hb_parni(12), PQINT64(13) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

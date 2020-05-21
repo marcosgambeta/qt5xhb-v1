@@ -28,7 +28,7 @@ class QStandardItemModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QStandardItemModelSlots(QObject *parent = 0);
+  QStandardItemModelSlots( QObject *parent = 0 );
   ~QStandardItemModelSlots();
   public slots:
   void itemChanged( QStandardItem * item );

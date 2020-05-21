@@ -51,6 +51,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtGui/QDoubleValidator>
@@ -61,8 +63,8 @@ QDoubleValidator ( QObject * parent = 0 )
 */
 void QDoubleValidator_new1()
 {
-  QDoubleValidator * o = new QDoubleValidator( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QDoubleValidator * obj = new QDoubleValidator( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -70,8 +72,8 @@ QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
 */
 void QDoubleValidator_new2()
 {
-  QDoubleValidator * o = new QDoubleValidator( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
-  Qt5xHb::returnNewObject( o, false );
+  QDoubleValidator * obj = new QDoubleValidator( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -101,6 +103,8 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

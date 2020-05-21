@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    QInputMethodQueryEvent * o = new QInputMethodQueryEvent( (Qt::InputMethodQueries) hb_parni(1) );
-    Qt5xHb::returnNewObject( o, false );
+    QInputMethodQueryEvent * obj = new QInputMethodQueryEvent( (Qt::InputMethodQueries) hb_parni(1) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

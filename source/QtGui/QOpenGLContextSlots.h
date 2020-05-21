@@ -28,7 +28,7 @@ class QOpenGLContextSlots: public QObject
 {
   Q_OBJECT
   public:
-  QOpenGLContextSlots(QObject *parent = 0);
+  QOpenGLContextSlots( QObject *parent = 0 );
   ~QOpenGLContextSlots();
   public slots:
   void aboutToBeDestroyed();

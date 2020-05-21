@@ -28,7 +28,7 @@ class QOpenGLDebugLoggerSlots: public QObject
 {
   Q_OBJECT
   public:
-  QOpenGLDebugLoggerSlots(QObject *parent = 0);
+  QOpenGLDebugLoggerSlots( QObject *parent = 0 );
   ~QOpenGLDebugLoggerSlots();
   public slots:
   void messageLogged( const QOpenGLDebugMessage & debugMessage );

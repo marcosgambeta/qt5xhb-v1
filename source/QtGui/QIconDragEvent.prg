@@ -53,8 +53,8 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QIconDragEvent * o = new QIconDragEvent();
-    Qt5xHb::returnNewObject( o, false );
+    QIconDragEvent * obj = new QIconDragEvent();
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

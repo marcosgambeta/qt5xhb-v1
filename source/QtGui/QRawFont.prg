@@ -96,8 +96,8 @@ QRawFont()
 */
 void QRawFont_new1()
 {
-  QRawFont * o = new QRawFont();
-  Qt5xHb::returnNewObject( o, true );
+  QRawFont * obj = new QRawFont();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -105,8 +105,8 @@ QRawFont(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintin
 */
 void QRawFont_new2()
 {
-  QRawFont * o = new QRawFont( PQSTRING(1), PQREAL(2), ISNIL(3)? (QFont::HintingPreference) QFont::PreferDefaultHinting : (QFont::HintingPreference) hb_parni(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QRawFont * obj = new QRawFont( PQSTRING(1), PQREAL(2), ISNIL(3)? (QFont::HintingPreference) QFont::PreferDefaultHinting : (QFont::HintingPreference) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -114,8 +114,8 @@ QRawFont(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hin
 */
 void QRawFont_new3()
 {
-  QRawFont * o = new QRawFont( *PQBYTEARRAY(1), PQREAL(2), ISNIL(3)? (QFont::HintingPreference) QFont::PreferDefaultHinting : (QFont::HintingPreference) hb_parni(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QRawFont * obj = new QRawFont( *PQBYTEARRAY(1), PQREAL(2), ISNIL(3)? (QFont::HintingPreference) QFont::PreferDefaultHinting : (QFont::HintingPreference) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -123,8 +123,8 @@ QRawFont(const QRawFont &other)
 */
 void QRawFont_new4()
 {
-  QRawFont * o = new QRawFont( *PQRAWFONT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QRawFont * obj = new QRawFont( *PQRAWFONT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

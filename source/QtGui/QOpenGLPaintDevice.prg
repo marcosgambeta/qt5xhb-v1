@@ -67,8 +67,8 @@ QOpenGLPaintDevice()
 */
 void QOpenGLPaintDevice_new1()
 {
-  QOpenGLPaintDevice * o = new QOpenGLPaintDevice();
-  Qt5xHb::returnNewObject( o, false );
+  QOpenGLPaintDevice * obj = new QOpenGLPaintDevice();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -76,8 +76,8 @@ QOpenGLPaintDevice(const QSize &size)
 */
 void QOpenGLPaintDevice_new2()
 {
-  QOpenGLPaintDevice * o = new QOpenGLPaintDevice( *PQSIZE(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QOpenGLPaintDevice * obj = new QOpenGLPaintDevice( *PQSIZE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -85,8 +85,8 @@ QOpenGLPaintDevice(int width, int height)
 */
 void QOpenGLPaintDevice_new3()
 {
-  QOpenGLPaintDevice * o = new QOpenGLPaintDevice( PINT(1), PINT(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QOpenGLPaintDevice * obj = new QOpenGLPaintDevice( PINT(1), PINT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

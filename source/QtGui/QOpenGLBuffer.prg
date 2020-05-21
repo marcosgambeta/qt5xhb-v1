@@ -66,8 +66,8 @@ QOpenGLBuffer()
 */
 void QOpenGLBuffer_new1()
 {
-  QOpenGLBuffer * o = new QOpenGLBuffer();
-  Qt5xHb::returnNewObject( o, true );
+  QOpenGLBuffer * obj = new QOpenGLBuffer();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -75,8 +75,8 @@ QOpenGLBuffer(QOpenGLBuffer::Type type)
 */
 void QOpenGLBuffer_new2()
 {
-  QOpenGLBuffer * o = new QOpenGLBuffer( (QOpenGLBuffer::Type) hb_parni(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QOpenGLBuffer * obj = new QOpenGLBuffer( (QOpenGLBuffer::Type) hb_parni(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -84,8 +84,8 @@ QOpenGLBuffer(const QOpenGLBuffer & other)
 */
 void QOpenGLBuffer_new3()
 {
-  QOpenGLBuffer * o = new QOpenGLBuffer( *PQOPENGLBUFFER(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QOpenGLBuffer * obj = new QOpenGLBuffer( *PQOPENGLBUFFER(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

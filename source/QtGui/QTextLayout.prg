@@ -102,8 +102,8 @@ QTextLayout()
 */
 void QTextLayout_new1()
 {
-  QTextLayout * o = new QTextLayout();
-  Qt5xHb::returnNewObject( o, true );
+  QTextLayout * obj = new QTextLayout();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -111,8 +111,8 @@ QTextLayout(const QString& text)
 */
 void QTextLayout_new2()
 {
-  QTextLayout * o = new QTextLayout( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QTextLayout * obj = new QTextLayout( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -120,8 +120,8 @@ QTextLayout(const QString& text, const QFont &font, QPaintDevice *paintdevice = 
 */
 void QTextLayout_new3()
 {
-  QTextLayout * o = new QTextLayout( PQSTRING(1), *PQFONT(2), ISNIL(3)? 0 : (QPaintDevice *) Qt5xHb::itemGetPtr(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QTextLayout * obj = new QTextLayout( PQSTRING(1), *PQFONT(2), ISNIL(3)? 0 : (QPaintDevice *) Qt5xHb::itemGetPtr(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -129,8 +129,8 @@ QTextLayout(const QTextBlock &b)
 */
 void QTextLayout_new4()
 {
-  QTextLayout * o = new QTextLayout( *PQTEXTBLOCK(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QTextLayout * obj = new QTextLayout( *PQTEXTBLOCK(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

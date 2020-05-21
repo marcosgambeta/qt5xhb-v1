@@ -28,7 +28,7 @@ class QRegularExpressionValidatorSlots: public QObject
 {
   Q_OBJECT
   public:
-  QRegularExpressionValidatorSlots(QObject *parent = 0);
+  QRegularExpressionValidatorSlots( QObject *parent = 0 );
   ~QRegularExpressionValidatorSlots();
   public slots:
   void regularExpressionChanged( const QRegularExpression & re );

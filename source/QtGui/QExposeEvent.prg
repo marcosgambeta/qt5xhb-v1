@@ -55,8 +55,8 @@ HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    QExposeEvent * o = new QExposeEvent( *PQREGION(1) );
-    Qt5xHb::returnNewObject( o, false );
+    QExposeEvent * obj = new QExposeEvent( *PQREGION(1) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

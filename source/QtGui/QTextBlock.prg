@@ -102,8 +102,8 @@ QTextBlock()
 */
 void QTextBlock_new2()
 {
-  QTextBlock * o = new QTextBlock();
-  Qt5xHb::returnNewObject( o, true );
+  QTextBlock * obj = new QTextBlock();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -111,8 +111,8 @@ QTextBlock(const QTextBlock &o)
 */
 void QTextBlock_new3()
 {
-  QTextBlock * o = new QTextBlock( *PQTEXTBLOCK(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QTextBlock * obj = new QTextBlock( *PQTEXTBLOCK(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

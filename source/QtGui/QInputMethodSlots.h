@@ -28,7 +28,7 @@ class QInputMethodSlots: public QObject
 {
   Q_OBJECT
   public:
-  QInputMethodSlots(QObject *parent = 0);
+  QInputMethodSlots( QObject *parent = 0 );
   ~QInputMethodSlots();
   public slots:
   void animatingChanged();

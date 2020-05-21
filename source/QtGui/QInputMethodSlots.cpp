@@ -12,78 +12,108 @@
 
 #include "QInputMethodSlots.h"
 
-QInputMethodSlots::QInputMethodSlots(QObject *parent) : QObject(parent)
+QInputMethodSlots::QInputMethodSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QInputMethodSlots::~QInputMethodSlots()
 {
 }
+
 void QInputMethodSlots::animatingChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "animatingChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTMETHOD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QInputMethodSlots::cursorRectangleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "cursorRectangleChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTMETHOD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QInputMethodSlots::inputDirectionChanged( Qt::LayoutDirection newDirection )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "inputDirectionChanged(Qt::LayoutDirection)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTMETHOD" );
     PHB_ITEM pnewDirection = hb_itemPutNI( NULL, (int) newDirection );
+
     hb_vmEvalBlockV( cb, 2, psender, pnewDirection );
+
     hb_itemRelease( psender );
     hb_itemRelease( pnewDirection );
   }
 }
+
 void QInputMethodSlots::keyboardRectangleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "keyboardRectangleChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTMETHOD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QInputMethodSlots::localeChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "localeChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTMETHOD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QInputMethodSlots::visibleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTMETHOD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

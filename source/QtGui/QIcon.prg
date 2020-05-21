@@ -83,8 +83,8 @@ QIcon ()
 */
 void QIcon_new1()
 {
-  QIcon * o = new QIcon();
-  Qt5xHb::returnNewObject( o, true );
+  QIcon * obj = new QIcon();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -92,8 +92,8 @@ QIcon ( const QPixmap & pixmap )
 */
 void QIcon_new2()
 {
-  QIcon * o = new QIcon( *PQPIXMAP(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QIcon * obj = new QIcon( *PQPIXMAP(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -101,8 +101,8 @@ QIcon ( const QIcon & other )
 */
 void QIcon_new3()
 {
-  QIcon * o = new QIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
-  Qt5xHb::returnNewObject( o, true );
+  QIcon * obj = new QIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -110,8 +110,8 @@ QIcon ( const QString & fileName )
 */
 void QIcon_new4()
 {
-  QIcon * o = new QIcon( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QIcon * obj = new QIcon( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

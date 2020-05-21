@@ -62,8 +62,8 @@ QPicture ( int formatVersion = -1 )
 */
 void QPicture_new1()
 {
-  QPicture * o = new QPicture( OPINT(1,-1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPicture * obj = new QPicture( OPINT(1,-1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -71,8 +71,8 @@ QPicture ( const QPicture & pic )
 */
 void QPicture_new2()
 {
-  QPicture * o = new QPicture( *PQPICTURE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPicture * obj = new QPicture( *PQPICTURE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

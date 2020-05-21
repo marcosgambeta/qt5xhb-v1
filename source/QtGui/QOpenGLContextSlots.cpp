@@ -12,21 +12,26 @@
 
 #include "QOpenGLContextSlots.h"
 
-QOpenGLContextSlots::QOpenGLContextSlots(QObject *parent) : QObject(parent)
+QOpenGLContextSlots::QOpenGLContextSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QOpenGLContextSlots::~QOpenGLContextSlots()
 {
 }
+
 void QOpenGLContextSlots::aboutToBeDestroyed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "aboutToBeDestroyed()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOPENGLCONTEXT" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

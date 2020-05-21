@@ -143,8 +143,8 @@ QStandardItem()
 */
 void QStandardItem_new1()
 {
-  QStandardItem * o = new QStandardItem();
-  Qt5xHb::returnNewObject( o, false );
+  QStandardItem * obj = new QStandardItem();
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -152,8 +152,8 @@ QStandardItem(const QString &text)
 */
 void QStandardItem_new2()
 {
-  QStandardItem * o = new QStandardItem( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QStandardItem * obj = new QStandardItem( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -161,8 +161,8 @@ QStandardItem(const QIcon &icon, const QString &text)
 */
 void QStandardItem_new3()
 {
-  QStandardItem * o = new QStandardItem( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
-  Qt5xHb::returnNewObject( o, false );
+  QStandardItem * obj = new QStandardItem( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -170,8 +170,8 @@ QStandardItem(int rows, int columns = 1)
 */
 void QStandardItem_new4()
 {
-  QStandardItem * o = new QStandardItem( PINT(1), OPINT(2,1) );
-  Qt5xHb::returnNewObject( o, false );
+  QStandardItem * obj = new QStandardItem( PINT(1), OPINT(2,1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 //[1]QStandardItem()

@@ -28,7 +28,7 @@ class QMovieSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMovieSlots(QObject *parent = 0);
+  QMovieSlots( QObject *parent = 0 );
   ~QMovieSlots();
   public slots:
   void error( QImageReader::ImageReaderError error );

@@ -107,8 +107,8 @@ QImageReader ()
 */
 void QImageReader_new1()
 {
-  QImageReader * o = new QImageReader();
-  Qt5xHb::returnNewObject( o, true );
+  QImageReader * obj = new QImageReader();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -116,8 +116,8 @@ QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
 */
 void QImageReader_new2()
 {
-  QImageReader * o = new QImageReader( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QImageReader * obj = new QImageReader( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -125,8 +125,8 @@ QImageReader ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 void QImageReader_new3()
 {
-  QImageReader * o = new QImageReader( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QImageReader * obj = new QImageReader( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

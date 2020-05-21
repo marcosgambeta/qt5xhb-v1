@@ -68,8 +68,8 @@ QOpenGLDebugMessage()
 */
 void QOpenGLDebugMessage_new1()
 {
-  QOpenGLDebugMessage * o = new QOpenGLDebugMessage();
-  Qt5xHb::returnNewObject( o, true );
+  QOpenGLDebugMessage * obj = new QOpenGLDebugMessage();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -77,8 +77,8 @@ QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
 */
 void QOpenGLDebugMessage_new2()
 {
-  QOpenGLDebugMessage * o = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QOpenGLDebugMessage * obj = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

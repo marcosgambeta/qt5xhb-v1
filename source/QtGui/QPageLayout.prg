@@ -99,8 +99,8 @@ QPageLayout()
 void QPageLayout_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageLayout * o = new QPageLayout();
-  Qt5xHb::returnNewObject( o, true );
+  QPageLayout * obj = new QPageLayout();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -114,8 +114,8 @@ QPageLayout(const QPageLayout &other)
 void QPageLayout_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageLayout * o = new QPageLayout( *PQPAGELAYOUT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPageLayout * obj = new QPageLayout( *PQPAGELAYOUT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

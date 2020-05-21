@@ -73,8 +73,8 @@ QCursor ()
 */
 void QCursor_new1()
 {
-  QCursor * o = new QCursor();
-  Qt5xHb::returnNewObject( o, true );
+  QCursor * obj = new QCursor();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,8 +82,8 @@ QCursor ( Qt::CursorShape shape )
 */
 void QCursor_new2()
 {
-  QCursor * o = new QCursor( (Qt::CursorShape) hb_parni(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCursor * obj = new QCursor( (Qt::CursorShape) hb_parni(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY 
 */
 void QCursor_new3()
 {
-  QCursor * o = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCursor * obj = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
 void QCursor_new4()
 {
-  QCursor * o = new QCursor( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCursor * obj = new QCursor( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -109,8 +109,8 @@ QCursor ( const QCursor & c )
 */
 void QCursor_new5()
 {
-  QCursor * o = new QCursor( *PQCURSOR(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QCursor * obj = new QCursor( *PQCURSOR(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

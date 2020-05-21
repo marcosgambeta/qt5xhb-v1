@@ -69,8 +69,8 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
   {
-    QAccessibleEvent * o = new QAccessibleEvent( PQOBJECT(1), (QAccessible::Event) hb_parni(2) );
-    Qt5xHb::returnNewObject( o, true );
+    QAccessibleEvent * obj = new QAccessibleEvent( PQOBJECT(1), (QAccessible::Event) hb_parni(2) );
+    Qt5xHb::returnNewObject( obj, true );
   }
   else
   {

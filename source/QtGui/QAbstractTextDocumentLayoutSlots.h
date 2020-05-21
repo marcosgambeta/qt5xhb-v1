@@ -28,7 +28,7 @@ class QAbstractTextDocumentLayoutSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractTextDocumentLayoutSlots(QObject *parent = 0);
+  QAbstractTextDocumentLayoutSlots( QObject *parent = 0 );
   ~QAbstractTextDocumentLayoutSlots();
   public slots:
   void documentSizeChanged( const QSizeF & newSize );

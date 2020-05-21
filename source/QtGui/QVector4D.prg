@@ -87,8 +87,8 @@ QVector4D()
 */
 void QVector4D_new1()
 {
-  QVector4D * o = new QVector4D();
-  Qt5xHb::returnNewObject( o, true );
+  QVector4D * obj = new QVector4D();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QVector4D(float xpos, float ypos, float zpos, float wpos)
 */
 void QVector4D_new2()
 {
-  QVector4D * o = new QVector4D( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
-  Qt5xHb::returnNewObject( o, true );
+  QVector4D * obj = new QVector4D( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -105,8 +105,8 @@ QVector4D(const QPoint& point)
 */
 void QVector4D_new3()
 {
-  QVector4D * o = new QVector4D( *PQPOINT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QVector4D * obj = new QVector4D( *PQPOINT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -114,8 +114,8 @@ QVector4D(const QPointF& point)
 */
 void QVector4D_new4()
 {
-  QVector4D * o = new QVector4D( *PQPOINTF(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QVector4D * obj = new QVector4D( *PQPOINTF(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -123,8 +123,8 @@ QVector4D(const QVector2D& vector)
 */
 void QVector4D_new5()
 {
-  QVector4D * o = new QVector4D( *PQVECTOR2D(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QVector4D * obj = new QVector4D( *PQVECTOR2D(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -132,8 +132,8 @@ QVector4D(const QVector2D& vector, float zpos, float wpos)
 */
 void QVector4D_new6()
 {
-  QVector4D * o = new QVector4D( *PQVECTOR2D(1), PFLOAT(2), PFLOAT(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QVector4D * obj = new QVector4D( *PQVECTOR2D(1), PFLOAT(2), PFLOAT(3) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -141,8 +141,8 @@ QVector4D(const QVector3D& vector)
 */
 void QVector4D_new7()
 {
-  QVector4D * o = new QVector4D( *PQVECTOR3D(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QVector4D * obj = new QVector4D( *PQVECTOR3D(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -150,8 +150,8 @@ QVector4D(const QVector3D& vector, float wpos)
 */
 void QVector4D_new8()
 {
-  QVector4D * o = new QVector4D( *PQVECTOR3D(1), PFLOAT(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QVector4D * obj = new QVector4D( *PQVECTOR3D(1), PFLOAT(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

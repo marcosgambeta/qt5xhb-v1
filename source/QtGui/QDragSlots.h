@@ -28,7 +28,7 @@ class QDragSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDragSlots(QObject *parent = 0);
+  QDragSlots( QObject *parent = 0 );
   ~QDragSlots();
   public slots:
   void actionChanged( Qt::DropAction action );

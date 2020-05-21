@@ -54,8 +54,8 @@ QInputMethodEvent ()
 */
 void QInputMethodEvent_new1()
 {
-  QInputMethodEvent * o = new QInputMethodEvent();
-  Qt5xHb::returnNewObject( o, false );
+  QInputMethodEvent * obj = new QInputMethodEvent();
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -67,8 +67,8 @@ QInputMethodEvent ( const QInputMethodEvent & other )
 */
 void QInputMethodEvent_new3()
 {
-  QInputMethodEvent * o = new QInputMethodEvent( *PQINPUTMETHODEVENT(1) );
-  Qt5xHb::returnNewObject( o, false );
+  QInputMethodEvent * obj = new QInputMethodEvent( *PQINPUTMETHODEVENT(1) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*

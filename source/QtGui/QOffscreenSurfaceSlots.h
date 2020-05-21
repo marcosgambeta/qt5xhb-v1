@@ -28,7 +28,7 @@ class QOffscreenSurfaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QOffscreenSurfaceSlots(QObject *parent = 0);
+  QOffscreenSurfaceSlots( QObject *parent = 0 );
   ~QOffscreenSurfaceSlots();
   public slots:
   void screenChanged( QScreen * screen );

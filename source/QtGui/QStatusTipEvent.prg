@@ -54,8 +54,8 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
   {
-    QStatusTipEvent * o = new QStatusTipEvent( PQSTRING(1) );
-    Qt5xHb::returnNewObject( o, false );
+    QStatusTipEvent * obj = new QStatusTipEvent( PQSTRING(1) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

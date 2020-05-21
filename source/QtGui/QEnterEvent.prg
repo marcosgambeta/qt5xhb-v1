@@ -64,8 +64,8 @@ HB_FUNC_STATIC( QENTEREVENT_NEW )
 {
   if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINTF(3) )
   {
-    QEnterEvent * o = new QEnterEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
-    Qt5xHb::returnNewObject( o, false );
+    QEnterEvent * obj = new QEnterEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINTF(3) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

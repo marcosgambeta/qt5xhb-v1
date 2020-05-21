@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 {
   if( ISBETWEEN(5,6) && ISQPOINT(1) && ISNUM(2) && ISQMIMEDATA(3) && ISNUM(4) && ISNUM(5) && ISOPTNUM(6) )
   {
-    QDragMoveEvent * o = new QDragMoveEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (QEvent::Type) QEvent::DragMove : (QEvent::Type) hb_parni(6) );
-    Qt5xHb::returnNewObject( o, false );
+    QDragMoveEvent * obj = new QDragMoveEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (QEvent::Type) QEvent::DragMove : (QEvent::Type) hb_parni(6) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

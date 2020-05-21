@@ -57,8 +57,8 @@ HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 {
   if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISNUM(3) )
   {
-    QScrollEvent * o = new QScrollEvent( *PQPOINTF(1), *PQPOINTF(2), (QScrollEvent::ScrollState) hb_parni(3) );
-    Qt5xHb::returnNewObject( o, false );
+    QScrollEvent * obj = new QScrollEvent( *PQPOINTF(1), *PQPOINTF(2), (QScrollEvent::ScrollState) hb_parni(3) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

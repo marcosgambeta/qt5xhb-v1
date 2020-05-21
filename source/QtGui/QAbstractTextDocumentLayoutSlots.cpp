@@ -12,61 +12,81 @@
 
 #include "QAbstractTextDocumentLayoutSlots.h"
 
-QAbstractTextDocumentLayoutSlots::QAbstractTextDocumentLayoutSlots(QObject *parent) : QObject(parent)
+QAbstractTextDocumentLayoutSlots::QAbstractTextDocumentLayoutSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QAbstractTextDocumentLayoutSlots::~QAbstractTextDocumentLayoutSlots()
 {
 }
+
 void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSize )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewSize = Signals_return_object( (void *) &newSize, "QSIZEF" );
+
     hb_vmEvalBlockV( cb, 2, psender, pnewSize );
+
     hb_itemRelease( psender );
     hb_itemRelease( pnewSize );
   }
 }
+
 void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "pageCountChanged(int)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewPages = hb_itemPutNI( NULL, newPages );
+
     hb_vmEvalBlockV( cb, 2, psender, pnewPages );
+
     hb_itemRelease( psender );
     hb_itemRelease( pnewPages );
   }
 }
+
 void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "update(QRectF)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
+
     hb_vmEvalBlockV( cb, 2, psender, prect );
+
     hb_itemRelease( psender );
     hb_itemRelease( prect );
   }
 }
+
 void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pblock = Signals_return_object( (void *) &block, "QTEXTBLOCK" );
+
     hb_vmEvalBlockV( cb, 2, psender, pblock );
+
     hb_itemRelease( psender );
     hb_itemRelease( pblock );
   }

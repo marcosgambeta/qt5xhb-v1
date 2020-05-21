@@ -87,8 +87,8 @@ QPageSize()
 void QPageSize_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * o = new QPageSize();
-  Qt5xHb::returnNewObject( o, true );
+  QPageSize * obj = new QPageSize();
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -98,8 +98,8 @@ explicit QPageSize(PageSizeId pageSizeId)
 void QPageSize_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * o = new QPageSize( (QPageSize::PageSizeId) hb_parni(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPageSize * obj = new QPageSize( (QPageSize::PageSizeId) hb_parni(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -109,8 +109,8 @@ explicit QPageSize(const QSize &pointSize, const QString &name = QString(), Size
 void QPageSize_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * o = new QPageSize( *PQSIZE(1), OPQSTRING(2,QString()), ISNIL(3)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(3) );
-  Qt5xHb::returnNewObject( o, true );
+  QPageSize * obj = new QPageSize( *PQSIZE(1), OPQSTRING(2,QString()), ISNIL(3)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(3) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -120,8 +120,8 @@ explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString
 void QPageSize_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * o = new QPageSize( *PQSIZEF(1), (QPageSize::Unit) hb_parni(2), OPQSTRING(3,QString()), ISNIL(4)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(4) );
-  Qt5xHb::returnNewObject( o, true );
+  QPageSize * obj = new QPageSize( *PQSIZEF(1), (QPageSize::Unit) hb_parni(2), OPQSTRING(3,QString()), ISNIL(4)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(4) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -131,8 +131,8 @@ QPageSize(const QPageSize &other)
 void QPageSize_new5()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPageSize * o = new QPageSize( *PQPAGESIZE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPageSize * obj = new QPageSize( *PQPAGESIZE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

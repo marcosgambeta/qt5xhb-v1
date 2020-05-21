@@ -28,7 +28,7 @@ class QClipboardSlots: public QObject
 {
   Q_OBJECT
   public:
-  QClipboardSlots(QObject *parent = 0);
+  QClipboardSlots( QObject *parent = 0 );
   ~QClipboardSlots();
   public slots:
   void changed( QClipboard::Mode mode );

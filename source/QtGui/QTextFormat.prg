@@ -116,8 +116,8 @@ QTextFormat()
 */
 void QTextFormat_new1()
 {
-  QTextFormat * o = new QTextFormat();
-  Qt5xHb::returnNewObject( o, true );
+  QTextFormat * obj = new QTextFormat();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -125,8 +125,8 @@ QTextFormat(int type)
 */
 void QTextFormat_new2()
 {
-  QTextFormat * o = new QTextFormat( PINT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QTextFormat * obj = new QTextFormat( PINT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -134,8 +134,8 @@ QTextFormat(const QTextFormat &rhs)
 */
 void QTextFormat_new3()
 {
-  QTextFormat * o = new QTextFormat( *PQTEXTFORMAT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QTextFormat * obj = new QTextFormat( *PQTEXTFORMAT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

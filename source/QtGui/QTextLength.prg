@@ -63,8 +63,8 @@ QTextLength()
 */
 void QTextLength_new1()
 {
-  QTextLength * o = new QTextLength();
-  Qt5xHb::returnNewObject( o, true );
+  QTextLength * obj = new QTextLength();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -72,8 +72,8 @@ QTextLength(Type type, qreal value)
 */
 void QTextLength_new2()
 {
-  QTextLength * o = new QTextLength( (QTextLength::Type) hb_parni(1), PQREAL(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QTextLength * obj = new QTextLength( (QTextLength::Type) hb_parni(1), PQREAL(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

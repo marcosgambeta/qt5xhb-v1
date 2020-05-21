@@ -12,22 +12,27 @@
 
 #include "QRegularExpressionValidatorSlots.h"
 
-QRegularExpressionValidatorSlots::QRegularExpressionValidatorSlots(QObject *parent) : QObject(parent)
+QRegularExpressionValidatorSlots::QRegularExpressionValidatorSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QRegularExpressionValidatorSlots::~QRegularExpressionValidatorSlots()
 {
 }
+
 void QRegularExpressionValidatorSlots::regularExpressionChanged( const QRegularExpression & re )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "regularExpressionChanged(QRegularExpression)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QREGULAREXPRESSIONVALIDATOR" );
     PHB_ITEM pre = Signals_return_object( (void *) &re, "QREGULAREXPRESSION" );
+
     hb_vmEvalBlockV( cb, 2, psender, pre );
+
     hb_itemRelease( psender );
     hb_itemRelease( pre );
   }

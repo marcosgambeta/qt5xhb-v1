@@ -79,8 +79,8 @@ QTextInlineObject()
 */
 void QTextInlineObject_new2()
 {
-  QTextInlineObject * o = new QTextInlineObject();
-  Qt5xHb::returnNewObject( o, false );
+  QTextInlineObject * obj = new QTextInlineObject();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

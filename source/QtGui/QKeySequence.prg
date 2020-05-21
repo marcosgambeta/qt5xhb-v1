@@ -69,8 +69,8 @@ QKeySequence ()
 */
 void QKeySequence_new1()
 {
-  QKeySequence * o = new QKeySequence();
-  Qt5xHb::returnNewObject( o, true );
+  QKeySequence * obj = new QKeySequence();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -78,8 +78,8 @@ QKeySequence ( const QString & key )
 */
 void QKeySequence_new2()
 {
-  QKeySequence * o = new QKeySequence( PQSTRING(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QKeySequence * obj = new QKeySequence( PQSTRING(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -87,8 +87,8 @@ QKeySequence ( const QString & key, SequenceFormat format )
 */
 void QKeySequence_new3()
 {
-  QKeySequence * o = new QKeySequence( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QKeySequence * obj = new QKeySequence( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -96,8 +96,8 @@ QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
 void QKeySequence_new4()
 {
-  QKeySequence * o = new QKeySequence( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
-  Qt5xHb::returnNewObject( o, true );
+  QKeySequence * obj = new QKeySequence( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -105,8 +105,8 @@ QKeySequence ( const QKeySequence & keysequence )
 */
 void QKeySequence_new5()
 {
-  QKeySequence * o = new QKeySequence( *PQKEYSEQUENCE(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QKeySequence * obj = new QKeySequence( *PQKEYSEQUENCE(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -114,8 +114,8 @@ QKeySequence ( StandardKey key )
 */
 void QKeySequence_new6()
 {
-  QKeySequence * o = new QKeySequence( (QKeySequence::StandardKey) hb_parni(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QKeySequence * obj = new QKeySequence( (QKeySequence::StandardKey) hb_parni(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

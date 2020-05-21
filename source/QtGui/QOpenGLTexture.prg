@@ -132,8 +132,8 @@ QOpenGLTexture(Target target)
 void QOpenGLTexture_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * o = new QOpenGLTexture( (QOpenGLTexture::Target) hb_parni(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QOpenGLTexture * obj = new QOpenGLTexture( (QOpenGLTexture::Target) hb_parni(1) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 
@@ -143,8 +143,8 @@ QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMap
 void QOpenGLTexture_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QOpenGLTexture * o = new QOpenGLTexture( *PQIMAGE(1), ISNIL(2)? (QOpenGLTexture::MipMapGeneration) QOpenGLTexture::GenerateMipMaps : (QOpenGLTexture::MipMapGeneration) hb_parni(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QOpenGLTexture * obj = new QOpenGLTexture( *PQIMAGE(1), ISNIL(2)? (QOpenGLTexture::MipMapGeneration) QOpenGLTexture::GenerateMipMaps : (QOpenGLTexture::MipMapGeneration) hb_parni(2) );
+  Qt5xHb::returnNewObject( obj, true );
 #endif
 }
 

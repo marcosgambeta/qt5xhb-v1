@@ -12,56 +12,76 @@
 
 #include "QClipboardSlots.h"
 
-QClipboardSlots::QClipboardSlots(QObject *parent) : QObject(parent)
+QClipboardSlots::QClipboardSlots( QObject *parent ) : QObject( parent )
 {
 }
 
 QClipboardSlots::~QClipboardSlots()
 {
 }
+
 void QClipboardSlots::changed( QClipboard::Mode mode )
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "changed(QClipboard::Mode)" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCLIPBOARD" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
+
     hb_vmEvalBlockV( cb, 2, psender, pmode );
+
     hb_itemRelease( psender );
     hb_itemRelease( pmode );
   }
 }
+
 void QClipboardSlots::dataChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCLIPBOARD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QClipboardSlots::findBufferChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "findBufferChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCLIPBOARD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }
+
 void QClipboardSlots::selectionChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
+
   PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
+
   if( cb )
   {
     PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCLIPBOARD" );
+
     hb_vmEvalBlockV( cb, 1, psender );
+
     hb_itemRelease( psender );
   }
 }

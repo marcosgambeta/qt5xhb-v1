@@ -99,8 +99,8 @@ QMatrix4x4()
 */
 void QMatrix4x4_new1()
 {
-  QMatrix4x4 * o = new QMatrix4x4();
-  Qt5xHb::returnNewObject( o, true );
+  QMatrix4x4 * obj = new QMatrix4x4();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -112,8 +112,8 @@ QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, flo
 */
 void QMatrix4x4_new3()
 {
-  QMatrix4x4 * o = new QMatrix4x4( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6), PFLOAT(7), PFLOAT(8), PFLOAT(9), PFLOAT(10), PFLOAT(11), PFLOAT(12), PFLOAT(13), PFLOAT(14), PFLOAT(15), PFLOAT(16) );
-  Qt5xHb::returnNewObject( o, true );
+  QMatrix4x4 * obj = new QMatrix4x4( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6), PFLOAT(7), PFLOAT(8), PFLOAT(9), PFLOAT(10), PFLOAT(11), PFLOAT(12), PFLOAT(13), PFLOAT(14), PFLOAT(15), PFLOAT(16) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -125,8 +125,8 @@ QMatrix4x4(const QTransform& transform)
 */
 void QMatrix4x4_new5()
 {
-  QMatrix4x4 * o = new QMatrix4x4( *PQTRANSFORM(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QMatrix4x4 * obj = new QMatrix4x4( *PQTRANSFORM(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -134,8 +134,8 @@ QMatrix4x4(const QMatrix& matrix)
 */
 void QMatrix4x4_new6()
 {
-  QMatrix4x4 * o = new QMatrix4x4( *PQMATRIX(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QMatrix4x4 * obj = new QMatrix4x4( *PQMATRIX(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

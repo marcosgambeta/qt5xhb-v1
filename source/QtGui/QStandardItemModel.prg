@@ -111,8 +111,8 @@ QStandardItemModel(QObject *parent = 0)
 */
 void QStandardItemModel_new1()
 {
-  QStandardItemModel * o = new QStandardItemModel( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QStandardItemModel * obj = new QStandardItemModel( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -120,8 +120,8 @@ QStandardItemModel(int rows, int columns, QObject *parent = 0)
 */
 void QStandardItemModel_new2()
 {
-  QStandardItemModel * o = new QStandardItemModel( PINT(1), PINT(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QStandardItemModel * obj = new QStandardItemModel( PINT(1), PINT(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -151,8 +151,8 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

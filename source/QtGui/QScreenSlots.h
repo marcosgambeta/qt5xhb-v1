@@ -28,7 +28,7 @@ class QScreenSlots: public QObject
 {
   Q_OBJECT
   public:
-  QScreenSlots(QObject *parent = 0);
+  QScreenSlots( QObject *parent = 0 );
   ~QScreenSlots();
   public slots:
   void geometryChanged( const QRect & geometry );

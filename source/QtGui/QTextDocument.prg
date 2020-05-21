@@ -146,8 +146,8 @@ QTextDocument(QObject *parent = 0)
 */
 void QTextDocument_new1()
 {
-  QTextDocument * o = new QTextDocument( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QTextDocument * obj = new QTextDocument( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -155,8 +155,8 @@ QTextDocument(const QString &text, QObject *parent = 0)
 */
 void QTextDocument_new2()
 {
-  QTextDocument * o = new QTextDocument( PQSTRING(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QTextDocument * obj = new QTextDocument( PQSTRING(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -186,8 +186,8 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

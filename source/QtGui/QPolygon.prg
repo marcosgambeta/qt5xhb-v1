@@ -73,8 +73,8 @@ QPolygon()
 */
 void QPolygon_new1()
 {
-  QPolygon * o = new QPolygon();
-  Qt5xHb::returnNewObject( o, true );
+  QPolygon * obj = new QPolygon();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -82,8 +82,8 @@ QPolygon(int size)
 */
 void QPolygon_new2()
 {
-  QPolygon * o = new QPolygon( PINT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPolygon * obj = new QPolygon( PINT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QPolygon(const QPolygon &a)
 */
 void QPolygon_new3()
 {
-  QPolygon * o = new QPolygon( *PQPOLYGON(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QPolygon * obj = new QPolygon( *PQPOLYGON(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -108,8 +108,8 @@ void QPolygon_new4()
   {
     par1 << *(QPoint *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
   }
-  QPolygon * o = new QPolygon( par1 );
-  Qt5xHb::returnNewObject( o, true );
+  QPolygon * obj = new QPolygon( par1 );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -117,8 +117,8 @@ QPolygon(const QRect &r, bool closed=false)
 */
 void QPolygon_new5()
 {
-  QPolygon * o = new QPolygon( *PQRECT(1), OPBOOL(2,false) );
-  Qt5xHb::returnNewObject( o, true );
+  QPolygon * obj = new QPolygon( *PQRECT(1), OPBOOL(2,false) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

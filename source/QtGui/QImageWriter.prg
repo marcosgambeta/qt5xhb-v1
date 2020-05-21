@@ -82,8 +82,8 @@ QImageWriter ()
 */
 void QImageWriter_new1()
 {
-  QImageWriter * o = new QImageWriter();
-  Qt5xHb::returnNewObject( o, true );
+  QImageWriter * obj = new QImageWriter();
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QImageWriter ( QIODevice * device, const QByteArray & format )
 */
 void QImageWriter_new2()
 {
-  QImageWriter * o = new QImageWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QImageWriter * obj = new QImageWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray(
 */
 void QImageWriter_new3()
 {
-  QImageWriter * o = new QImageWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QImageWriter * obj = new QImageWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

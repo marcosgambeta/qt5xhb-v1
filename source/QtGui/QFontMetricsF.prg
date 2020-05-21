@@ -82,8 +82,8 @@ QFontMetricsF ( const QFont & font )
 */
 void QFontMetricsF_new1()
 {
-  QFontMetricsF * o = new QFontMetricsF( *PQFONT(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QFontMetricsF * obj = new QFontMetricsF( *PQFONT(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -91,8 +91,8 @@ QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
 */
 void QFontMetricsF_new2()
 {
-  QFontMetricsF * o = new QFontMetricsF( *PQFONT(1), PQPAINTDEVICE(2) );
-  Qt5xHb::returnNewObject( o, true );
+  QFontMetricsF * obj = new QFontMetricsF( *PQFONT(1), PQPAINTDEVICE(2) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -100,8 +100,8 @@ QFontMetricsF ( const QFontMetrics & fontMetrics )
 */
 void QFontMetricsF_new3()
 {
-  QFontMetricsF * o = new QFontMetricsF( *PQFONTMETRICS(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QFontMetricsF * obj = new QFontMetricsF( *PQFONTMETRICS(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*
@@ -109,8 +109,8 @@ QFontMetricsF ( const QFontMetricsF & fm )
 */
 void QFontMetricsF_new4()
 {
-  QFontMetricsF * o = new QFontMetricsF( *PQFONTMETRICSF(1) );
-  Qt5xHb::returnNewObject( o, true );
+  QFontMetricsF * obj = new QFontMetricsF( *PQFONTMETRICSF(1) );
+  Qt5xHb::returnNewObject( obj, true );
 }
 
 /*

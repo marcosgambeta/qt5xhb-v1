@@ -62,8 +62,8 @@ HB_FUNC_STATIC( QNATIVEGESTUREEVENT_NEW )
 {
   if( ISNUMPAR(7) && ISNUM(1) && ISQPOINTF(2) && ISQPOINTF(3) && ISQPOINTF(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) )
   {
-    QNativeGestureEvent * o = new QNativeGestureEvent( (Qt::NativeGestureType) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), PQREAL(5), PULONG(6), PQUINT64(7) );
-    Qt5xHb::returnNewObject( o, false );
+    QNativeGestureEvent * obj = new QNativeGestureEvent( (Qt::NativeGestureType) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), PQREAL(5), PULONG(6), PQUINT64(7) );
+    Qt5xHb::returnNewObject( obj, false );
   }
   else
   {

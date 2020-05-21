@@ -28,7 +28,7 @@ class QWindowSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWindowSlots(QObject *parent = 0);
+  QWindowSlots( QObject *parent = 0 );
   ~QWindowSlots();
   public slots:
   void contentOrientationChanged( Qt::ScreenOrientation orientation );

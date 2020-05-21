@@ -45,6 +45,8 @@ RETURN
 #include "qt5xhb_common.h"
 #include "qt5xhb_macros.h"
 #include "qt5xhb_utils.h"
+#include "qt5xhb_events.h"
+#include "qt5xhb_signals.h"
 
 #ifdef __XHARBOUR__
 #include <QtGui/QRegExpValidator>
@@ -55,8 +57,8 @@ QRegExpValidator ( QObject * parent = 0 )
 */
 void QRegExpValidator_new1()
 {
-  QRegExpValidator * o = new QRegExpValidator( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QRegExpValidator * obj = new QRegExpValidator( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -64,8 +66,8 @@ QRegExpValidator ( const QRegExp & rx, QObject * parent = 0 )
 */
 void QRegExpValidator_new2()
 {
-  QRegExpValidator * o = new QRegExpValidator( *PQREGEXP(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP(1), OPQOBJECT(2,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -95,6 +97,8 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 
   if( obj )
   {
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();

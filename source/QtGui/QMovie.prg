@@ -99,8 +99,8 @@ QMovie ( QObject * parent = 0 )
 */
 void QMovie_new1()
 {
-  QMovie * o = new QMovie( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QMovie * obj = new QMovie( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -108,8 +108,8 @@ QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject *
 */
 void QMovie_new2()
 {
-  QMovie * o = new QMovie( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QMovie * obj = new QMovie( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -117,8 +117,8 @@ QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QOb
 */
 void QMovie_new3()
 {
-  QMovie * o = new QMovie( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject( o, false );
+  QMovie * obj = new QMovie( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
@@ -153,8 +153,8 @@ HB_FUNC_STATIC( QMOVIE_DELETE )
 
   if( obj )
   {
-    Events_disconnect_all_events(obj, true);
-    Signals_disconnect_all_signals(obj, true);
+    Qt5xHb::Events_disconnect_all_events( obj, true );
+    Signals_disconnect_all_signals( obj, true );
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
