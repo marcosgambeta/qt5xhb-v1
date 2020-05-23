@@ -25,11 +25,11 @@ void QBluetoothTransferReplySlots::finished( QBluetoothTransferReply * r )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QBluetoothTransferReply*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHTRANSFERREPLY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHTRANSFERREPLY" );
     PHB_ITEM pr = Signals_return_qobject( (QObject *) r, "QBLUETOOTHTRANSFERREPLY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pr );
@@ -45,11 +45,11 @@ void QBluetoothTransferReplySlots::transferProgress( qint64 bytesTransferred, qi
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "transferProgress(qint64,qint64)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "transferProgress(qint64,qint64)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBLUETOOTHTRANSFERREPLY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHTRANSFERREPLY" );
     PHB_ITEM pbytesTransferred = hb_itemPutNLL( NULL, bytesTransferred );
     PHB_ITEM pbytesTotal = hb_itemPutNLL( NULL, bytesTotal );
 
@@ -78,7 +78,7 @@ void QBluetoothTransferReplySlots_connect_signal( const QString & signal, const 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
