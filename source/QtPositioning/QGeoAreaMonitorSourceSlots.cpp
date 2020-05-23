@@ -25,11 +25,11 @@ void QGeoAreaMonitorSourceSlots::areaEntered( const QGeoAreaMonitorInfo & monito
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "areaEntered(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOAREAMONITORSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOAREAMONITORSOURCE" );
     PHB_ITEM pmonitor = Signals_return_object( (void *) &monitor, "QGEOAREAMONITORINFO" );
     PHB_ITEM pupdate = Signals_return_object( (void *) &update, "QGEOPOSITIONINFO" );
 
@@ -47,11 +47,11 @@ void QGeoAreaMonitorSourceSlots::areaExited( const QGeoAreaMonitorInfo & monitor
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "areaExited(QGeoAreaMonitorInfo,QGeoPositionInfo)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOAREAMONITORSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOAREAMONITORSOURCE" );
     PHB_ITEM pmonitor = Signals_return_object( (void *) &monitor, "QGEOAREAMONITORINFO" );
     PHB_ITEM pupdate = Signals_return_object( (void *) &update, "QGEOPOSITIONINFO" );
 
@@ -69,11 +69,11 @@ void QGeoAreaMonitorSourceSlots::monitorExpired( const QGeoAreaMonitorInfo & mon
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "monitorExpired(QGeoAreaMonitorInfo)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "monitorExpired(QGeoAreaMonitorInfo)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOAREAMONITORSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOAREAMONITORSOURCE" );
     PHB_ITEM pmonitor = Signals_return_object( (void *) &monitor, "QGEOAREAMONITORINFO" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmonitor );
@@ -89,11 +89,11 @@ void QGeoAreaMonitorSourceSlots::error( QGeoAreaMonitorSource::Error error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoAreaMonitorSource::Error)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoAreaMonitorSource::Error)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOAREAMONITORSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOAREAMONITORSOURCE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -120,7 +120,7 @@ void QGeoAreaMonitorSourceSlots_connect_signal( const QString & signal, const QS
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
