@@ -24,11 +24,11 @@ void QMediaObjectSlots::availabilityChanged( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availabilityChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -42,11 +42,11 @@ void QMediaObjectSlots::availabilityChanged( QMultimedia::AvailabilityStatus ava
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availabilityChanged(QMultimedia::AvailabilityStatus)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailability );
@@ -60,11 +60,11 @@ void QMediaObjectSlots::metaDataAvailableChanged( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -78,11 +78,11 @@ void QMediaObjectSlots::metaDataChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -94,11 +94,11 @@ void QMediaObjectSlots::metaDataChanged( const QString & key, const QVariant & v
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
 
@@ -114,11 +114,11 @@ void QMediaObjectSlots::notifyIntervalChanged( int milliseconds )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "notifyIntervalChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notifyIntervalChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
     PHB_ITEM pmilliseconds = hb_itemPutNI( NULL, milliseconds );
 
     hb_vmEvalBlockV( cb, 2, psender, pmilliseconds );
@@ -143,7 +143,7 @@ void QMediaObjectSlots_connect_signal( const QString & signal, const QString & s
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

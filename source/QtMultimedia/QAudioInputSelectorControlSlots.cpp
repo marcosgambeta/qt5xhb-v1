@@ -24,11 +24,11 @@ void QAudioInputSelectorControlSlots::activeInputChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "activeInputChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeInputChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOINPUTSELECTORCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIOINPUTSELECTORCONTROL" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
@@ -42,11 +42,11 @@ void QAudioInputSelectorControlSlots::availableInputsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "availableInputsChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availableInputsChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIOINPUTSELECTORCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIOINPUTSELECTORCONTROL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -69,7 +69,7 @@ void QAudioInputSelectorControlSlots_connect_signal( const QString & signal, con
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

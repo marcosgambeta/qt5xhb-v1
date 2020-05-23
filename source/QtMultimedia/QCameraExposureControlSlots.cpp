@@ -24,11 +24,11 @@ void QCameraExposureControlSlots::actualValueChanged( int parameter )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "actualValueChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "actualValueChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
 
     hb_vmEvalBlockV( cb, 2, psender, pparameter );
@@ -42,11 +42,11 @@ void QCameraExposureControlSlots::parameterRangeChanged( int parameter )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "parameterRangeChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "parameterRangeChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
 
     hb_vmEvalBlockV( cb, 2, psender, pparameter );
@@ -60,11 +60,11 @@ void QCameraExposureControlSlots::requestedValueChanged( int parameter )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "requestedValueChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "requestedValueChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURECONTROL" );
     PHB_ITEM pparameter = hb_itemPutNI( NULL, parameter );
 
     hb_vmEvalBlockV( cb, 2, psender, pparameter );
@@ -89,7 +89,7 @@ void QCameraExposureControlSlots_connect_signal( const QString & signal, const Q
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

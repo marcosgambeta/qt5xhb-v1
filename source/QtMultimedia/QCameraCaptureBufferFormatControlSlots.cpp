@@ -24,11 +24,11 @@ void QCameraCaptureBufferFormatControlSlots::bufferFormatChanged( QVideoFrame::P
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "bufferFormatChanged(QVideoFrame::PixelFormat)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCAMERACAPTUREBUFFERFORMATCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERACAPTUREBUFFERFORMATCONTROL" );
     PHB_ITEM pformat = hb_itemPutNI( NULL, (int) format );
 
     hb_vmEvalBlockV( cb, 2, psender, pformat );
@@ -53,7 +53,7 @@ void QCameraCaptureBufferFormatControlSlots_connect_signal( const QString & sign
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

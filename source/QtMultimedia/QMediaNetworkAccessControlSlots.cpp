@@ -24,11 +24,11 @@ void QMediaNetworkAccessControlSlots::configurationChanged( const QNetworkConfig
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIANETWORKACCESSCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIANETWORKACCESSCONTROL" );
     PHB_ITEM pconfiguration = Signals_return_object( (void *) &configuration, "QNETWORKCONFIGURATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconfiguration );
@@ -53,7 +53,7 @@ void QMediaNetworkAccessControlSlots_connect_signal( const QString & signal, con
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

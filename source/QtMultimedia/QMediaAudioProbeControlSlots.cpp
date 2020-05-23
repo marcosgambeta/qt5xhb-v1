@@ -24,11 +24,11 @@ void QMediaAudioProbeControlSlots::audioBufferProbed( const QAudioBuffer & buffe
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "audioBufferProbed(QAudioBuffer)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "audioBufferProbed(QAudioBuffer)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
     PHB_ITEM pbuffer = Signals_return_object( (void *) &buffer, "QAUDIOBUFFER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pbuffer );
@@ -42,11 +42,11 @@ void QMediaAudioProbeControlSlots::flush()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "flush()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "flush()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAAUDIOPROBECONTROL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -69,7 +69,7 @@ void QMediaAudioProbeControlSlots_connect_signal( const QString & signal, const 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

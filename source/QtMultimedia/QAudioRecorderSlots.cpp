@@ -24,11 +24,11 @@ void QAudioRecorderSlots::audioInputChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "audioInputChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "audioInputChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIORECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIORECORDER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
@@ -42,11 +42,11 @@ void QAudioRecorderSlots::availableAudioInputsChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "availableAudioInputsChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "availableAudioInputsChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAUDIORECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIORECORDER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -69,7 +69,7 @@ void QAudioRecorderSlots_connect_signal( const QString & signal, const QString &
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

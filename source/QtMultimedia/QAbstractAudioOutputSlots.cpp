@@ -24,11 +24,11 @@ void QAbstractAudioOutputSlots::errorChanged( QAudio::Error error )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "errorChanged(QAudio::Error)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "errorChanged(QAudio::Error)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOOUTPUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOOUTPUT" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -42,11 +42,11 @@ void QAbstractAudioOutputSlots::stateChanged( QAudio::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOOUTPUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOOUTPUT" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -60,11 +60,11 @@ void QAbstractAudioOutputSlots::notify()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "notify()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "notify()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOOUTPUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOOUTPUT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -87,7 +87,7 @@ void QAbstractAudioOutputSlots_connect_signal( const QString & signal, const QSt
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

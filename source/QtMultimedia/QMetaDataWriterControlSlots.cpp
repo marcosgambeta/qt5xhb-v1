@@ -24,11 +24,11 @@ void QMetaDataWriterControlSlots::metaDataChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMETADATAWRITERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMETADATAWRITERCONTROL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -40,11 +40,11 @@ void QMetaDataWriterControlSlots::metaDataChanged( const QString & key, const QV
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataChanged(QString,QVariant)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMETADATAWRITERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
 
@@ -60,11 +60,11 @@ void QMetaDataWriterControlSlots::writableChanged( bool writable )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "writableChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "writableChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMETADATAWRITERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pwritable = hb_itemPutL( NULL, writable );
 
     hb_vmEvalBlockV( cb, 2, psender, pwritable );
@@ -78,11 +78,11 @@ void QMetaDataWriterControlSlots::metaDataAvailableChanged( bool available )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "metaDataAvailableChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QMETADATAWRITERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -107,7 +107,7 @@ void QMetaDataWriterControlSlots_connect_signal( const QString & signal, const Q
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
