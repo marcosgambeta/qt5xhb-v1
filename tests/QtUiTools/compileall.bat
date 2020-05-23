@@ -6,4 +6,6 @@ rem
 rem Batch to compile all tests
 rem
 
+hbmk2 HUiLoader1              %1 %2 %3 ..\..\qt5xhb.hbc
+hbmk2 HUiLoader2              %1 %2 %3 ..\..\qt5xhb.hbc
 hbmk2 QUiLoader               %1 %2 %3 ..\..\qt5xhb.hbc
