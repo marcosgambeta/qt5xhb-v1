@@ -24,11 +24,11 @@ void QDBusPendingCallWatcherSlots::finished( QDBusPendingCallWatcher * self )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished(QDBusPendingCallWatcher*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QDBusPendingCallWatcher*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDBUSPENDINGCALLWATCHER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDBUSPENDINGCALLWATCHER" );
     PHB_ITEM pself = Signals_return_qobject( (QObject *) self, "QDBUSPENDINGCALLWATCHER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pself );
@@ -53,7 +53,7 @@ void QDBusPendingCallWatcherSlots_connect_signal( const QString & signal, const 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
