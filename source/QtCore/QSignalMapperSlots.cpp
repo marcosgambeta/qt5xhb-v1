@@ -24,11 +24,11 @@ void QSignalMapperSlots::mapped( int arg )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "mapped(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mapped(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = hb_itemPutNI( NULL, arg );
 
     hb_vmEvalBlockV( cb, 2, psender, parg );
@@ -42,11 +42,11 @@ void QSignalMapperSlots::mapped( const QString & arg )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mapped(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = hb_itemPutC( NULL, QSTRINGTOSTRING(arg) );
 
     hb_vmEvalBlockV( cb, 2, psender, parg );
@@ -60,11 +60,11 @@ void QSignalMapperSlots::mapped( QWidget * arg )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QWidget*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mapped(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = Signals_return_qobject( (QObject *) arg, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, parg );
@@ -78,11 +78,11 @@ void QSignalMapperSlots::mapped( QObject * arg )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "mapped(QObject*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "mapped(QObject*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSIGNALMAPPER" );
     PHB_ITEM parg = Signals_return_qobject( (QObject *) arg, "QOBJECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, parg );
@@ -107,7 +107,7 @@ void QSignalMapperSlots_connect_signal( const QString & signal, const QString & 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
