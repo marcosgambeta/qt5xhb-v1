@@ -25,11 +25,11 @@ void QTextToSpeechSlots::localeChanged( const QLocale & locale )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "localeChanged(QLocale)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "localeChanged(QLocale)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM plocale = Signals_return_object( (void *) &locale, "QLOCALE" );
 
     hb_vmEvalBlockV( cb, 2, psender, plocale );
@@ -45,11 +45,11 @@ void QTextToSpeechSlots::pitchChanged( double pitch )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pitchChanged(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pitchChanged(double)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM ppitch = hb_itemPutND( NULL, pitch );
 
     hb_vmEvalBlockV( cb, 2, psender, ppitch );
@@ -65,11 +65,11 @@ void QTextToSpeechSlots::rateChanged( double rate )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "rateChanged(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rateChanged(double)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM prate = hb_itemPutND( NULL, rate );
 
     hb_vmEvalBlockV( cb, 2, psender, prate );
@@ -85,11 +85,11 @@ void QTextToSpeechSlots::stateChanged( QTextToSpeech::State state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "stateChanged(QTextToSpeech::State)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "stateChanged(QTextToSpeech::State)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -105,11 +105,11 @@ void QTextToSpeechSlots::voiceChanged( const QVoice & voice )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "voiceChanged(QVoice)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "voiceChanged(QVoice)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM pvoice = Signals_return_object( (void *) &voice, "QVOICE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pvoice );
@@ -125,11 +125,11 @@ void QTextToSpeechSlots::volumeChanged( int volume )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "volumeChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "volumeChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
 
     hb_vmEvalBlockV( cb, 2, psender, pvolume );
@@ -156,7 +156,7 @@ void QTextToSpeechSlots_connect_signal( const QString & signal, const QString & 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
