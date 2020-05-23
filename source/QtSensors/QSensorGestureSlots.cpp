@@ -25,11 +25,11 @@ void QSensorGestureSlots::detected( QString s )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "detected(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "detected(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSENSORGESTURE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSENSORGESTURE" );
     PHB_ITEM ps = hb_itemPutC( NULL, (const char *) s.toLatin1().data() );
 
     hb_vmEvalBlockV( cb, 2, psender, ps );
@@ -56,7 +56,7 @@ void QSensorGestureSlots_connect_signal( const QString & signal, const QString &
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
