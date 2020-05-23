@@ -25,11 +25,11 @@ void QGeoRoutingManagerEngineSlots::finished( QGeoRouteReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished(QGeoRouteReply*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QGeoRouteReply*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOROUTINGMANAGERENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOROUTINGMANAGERENGINE" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOROUTEREPLY" );
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
@@ -45,11 +45,11 @@ void QGeoRoutingManagerEngineSlots::error( QGeoRouteReply * reply, QGeoRouteRepl
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QGeoRouteReply*,QGeoRouteReply::Error,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGEOROUTINGMANAGERENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOROUTINGMANAGERENGINE" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOROUTEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, (const char *) errorString.toLatin1().data() );
@@ -80,7 +80,7 @@ void QGeoRoutingManagerEngineSlots_connect_signal( const QString & signal, const
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

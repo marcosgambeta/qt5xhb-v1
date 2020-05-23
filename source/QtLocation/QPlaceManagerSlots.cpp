@@ -25,11 +25,11 @@ void QPlaceManagerSlots::finished( QPlaceReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished(QPlaceReply*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QPlaceReply*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
@@ -45,11 +45,11 @@ void QPlaceManagerSlots::error( QPlaceReply * reply, QPlaceReply::Error error, c
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "error(QPlaceReply*,QPlaceReply::Error,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
@@ -69,11 +69,11 @@ void QPlaceManagerSlots::placeAdded( const QString & placeId )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "placeAdded(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "placeAdded(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
 
     hb_vmEvalBlockV( cb, 2, psender, pplaceId );
@@ -89,11 +89,11 @@ void QPlaceManagerSlots::placeUpdated( const QString & placeId )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "placeUpdated(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "placeUpdated(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
 
     hb_vmEvalBlockV( cb, 2, psender, pplaceId );
@@ -109,11 +109,11 @@ void QPlaceManagerSlots::placeRemoved( const QString & placeId )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "placeRemoved(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "placeRemoved(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
 
     hb_vmEvalBlockV( cb, 2, psender, pplaceId );
@@ -129,11 +129,11 @@ void QPlaceManagerSlots::categoryAdded( const QPlaceCategory & category, const Q
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "categoryAdded(QPlaceCategory,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoryAdded(QPlaceCategory,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pcategory = Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
 
@@ -151,11 +151,11 @@ void QPlaceManagerSlots::categoryUpdated( const QPlaceCategory & category, const
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "categoryUpdated(QPlaceCategory,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoryUpdated(QPlaceCategory,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pcategory = Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
 
@@ -173,11 +173,11 @@ void QPlaceManagerSlots::categoryRemoved( const QString & categoryId, const QStr
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "categoryRemoved(QString,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoryRemoved(QString,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
     PHB_ITEM pcategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(categoryId) );
     PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
 
@@ -195,11 +195,11 @@ void QPlaceManagerSlots::dataChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "dataChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -224,7 +224,7 @@ void QPlaceManagerSlots_connect_signal( const QString & signal, const QString & 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
