@@ -652,4 +652,252 @@ void convert_qvariantlist_to_array ( const QVariantList list )
   hb_itemReturnRelease(pArray);
 }
 
+/*
+  cria um objeto da classe QModelIndex, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQModelIndexObject( void * ptr )
+{
+  static PHB_DYNS pDynSym = NULL;
+
+  if( pDynSym == NULL )
+  {
+    pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym != NULL )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
+/*
+  cria um objeto da classe QVariant, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQVariantObject( void * ptr )
+{
+  static PHB_DYNS pDynSym = NULL;
+
+  if( pDynSym == NULL )
+  {
+    pDynSym = hb_dynsymFindName( "QVARIANT" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
+/*
+  cria um objeto da classe QPainter, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQPainterObject( void * ptr )
+{
+  static PHB_DYNS pDynSym = NULL;
+
+  if( pDynSym == NULL )
+  {
+    pDynSym = hb_dynsymFindName( "QPAINTER" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPAINTER", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
+/*
+  cria um objeto da classe QStyleOptionViewItem, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQStyleOptionViewItemObject( void * ptr )
+{
+  static PHB_DYNS pDynSym = NULL;
+
+  if( pDynSym == NULL )
+  {
+    pDynSym = hb_dynsymFindName( "QSTYLEOPTIONVIEWITEM" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSTYLEOPTIONVIEWITEM", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
+/*
+  cria um objeto da classe QLocale, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQLocaleObject( void * ptr )
+{
+  static PHB_DYNS pDynSym = NULL;
+
+  if( pDynSym == NULL )
+  {
+    pDynSym = hb_dynsymFindName( "QLOCALE" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QLOCALE", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
+/*
+  cria um objeto da classe QWidget ou derivada, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQWidgetObject( QWidget * ptr )
+{
+  PHB_DYNS pDynSym = NULL;
+
+  if( ptr != NULL )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+
+  if( pDynSym == NULL )
+  {
+    pDynSym = hb_dynsymFindName( "QWIDGET" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym != NULL )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
+/*
+  cria um objeto da classe QObject ou derivada, com o ponteiro 'ptr'
+*/
+
+PHB_ITEM returnQObjectObject( QObject * ptr )
+{
+  PHB_DYNS pDynSym = NULL;
+
+  if( ptr != NULL )
+  {
+    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+  }
+
+  if( pDynSym == NULL )
+  {
+    pDynSym = hb_dynsymFindName( "QOBJECT" );
+  }
+
+  PHB_ITEM pObject = hb_itemNew( NULL );
+
+  if( pDynSym != NULL )
+  {
+    hb_vmPushDynSym( pDynSym );
+    hb_vmPushNil();
+    hb_vmDo( 0 );
+    hb_itemCopy( pObject, hb_stackReturnItem() );
+    PHB_ITEM pItem = hb_itemNew( NULL );
+    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+    hb_itemRelease( pItem );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
+  }
+
+  return pObject;
+}
+
 }
