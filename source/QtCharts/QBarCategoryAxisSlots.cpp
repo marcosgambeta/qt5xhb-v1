@@ -25,11 +25,11 @@ void QBarCategoryAxisSlots::categoriesChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "categoriesChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "categoriesChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -43,11 +43,11 @@ void QBarCategoryAxisSlots::countChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "countChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -61,11 +61,11 @@ void QBarCategoryAxisSlots::maxChanged( const QString & max )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "maxChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "maxChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmax = hb_itemPutC( NULL, QSTRINGTOSTRING(max) );
 
     hb_vmEvalBlockV( cb, 2, psender, pmax );
@@ -81,11 +81,11 @@ void QBarCategoryAxisSlots::minChanged( const QString & min )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "minChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "minChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmin = hb_itemPutC( NULL, QSTRINGTOSTRING(min) );
 
     hb_vmEvalBlockV( cb, 2, psender, pmin );
@@ -101,11 +101,11 @@ void QBarCategoryAxisSlots::rangeChanged( const QString & min, const QString & m
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "rangeChanged(QString,QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rangeChanged(QString,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBARCATEGORYAXIS" );
     PHB_ITEM pmin = hb_itemPutC( NULL, QSTRINGTOSTRING(min) );
     PHB_ITEM pmax = hb_itemPutC( NULL, QSTRINGTOSTRING(max) );
 
@@ -134,7 +134,7 @@ void QBarCategoryAxisSlots_connect_signal( const QString & signal, const QString
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

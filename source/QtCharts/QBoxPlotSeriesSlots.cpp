@@ -25,11 +25,11 @@ void QBoxPlotSeriesSlots::boxOutlineVisibilityChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "boxOutlineVisibilityChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "boxOutlineVisibilityChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -43,11 +43,11 @@ void QBoxPlotSeriesSlots::boxsetsAdded( QList<QBoxSet*> sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "boxsetsAdded(QList<QBoxSet*>)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "boxsetsAdded(QList<QBoxSet*>)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
     if( pDynSym )
@@ -85,11 +85,11 @@ void QBoxPlotSeriesSlots::boxsetsRemoved( QList<QBoxSet*> sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "boxsetsRemoved(QList<QBoxSet*>)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "boxsetsRemoved(QList<QBoxSet*>)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBOXSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
     if( pDynSym )
@@ -127,11 +127,11 @@ void QBoxPlotSeriesSlots::boxWidthChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "boxWidthChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "boxWidthChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -145,11 +145,11 @@ void QBoxPlotSeriesSlots::brushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "brushChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brushChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -163,11 +163,11 @@ void QBoxPlotSeriesSlots::clicked( QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QBoxSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QBoxSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pboxset );
@@ -183,11 +183,11 @@ void QBoxPlotSeriesSlots::countChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "countChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -201,11 +201,11 @@ void QBoxPlotSeriesSlots::doubleClicked( QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QBoxSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QBoxSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pboxset );
@@ -221,11 +221,11 @@ void QBoxPlotSeriesSlots::hovered( bool status, QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool,QBoxSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool,QBoxSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
@@ -243,11 +243,11 @@ void QBoxPlotSeriesSlots::penChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "penChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -261,11 +261,11 @@ void QBoxPlotSeriesSlots::pressed( QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QBoxSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QBoxSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pboxset );
@@ -281,11 +281,11 @@ void QBoxPlotSeriesSlots::released( QBoxSet * boxset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "released(QBoxSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(QBoxSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pboxset );
@@ -312,7 +312,7 @@ void QBoxPlotSeriesSlots_connect_signal( const QString & signal, const QString &
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

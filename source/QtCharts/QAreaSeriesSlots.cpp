@@ -25,11 +25,11 @@ void QAreaSeriesSlots::borderColorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderColorChanged(QColor)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -45,11 +45,11 @@ void QAreaSeriesSlots::clicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QPointF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
@@ -65,11 +65,11 @@ void QAreaSeriesSlots::colorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -85,11 +85,11 @@ void QAreaSeriesSlots::doubleClicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QPointF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
@@ -105,11 +105,11 @@ void QAreaSeriesSlots::hovered( const QPointF & point, bool state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QPointF,bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(QPointF,bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
     PHB_ITEM pstate = hb_itemPutL( NULL, state );
 
@@ -127,11 +127,11 @@ void QAreaSeriesSlots::pointLabelsClippingChanged( bool clipping )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsClippingChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsClippingChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pclipping = hb_itemPutL( NULL, clipping );
 
     hb_vmEvalBlockV( cb, 2, psender, pclipping );
@@ -147,11 +147,11 @@ void QAreaSeriesSlots::pointLabelsColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsColorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsColorChanged(QColor)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -167,11 +167,11 @@ void QAreaSeriesSlots::pointLabelsFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFontChanged(QFont)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsFontChanged(QFont)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
@@ -187,11 +187,11 @@ void QAreaSeriesSlots::pointLabelsFormatChanged( const QString & format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFormatChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsFormatChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
 
     hb_vmEvalBlockV( cb, 2, psender, pformat );
@@ -207,11 +207,11 @@ void QAreaSeriesSlots::pointLabelsVisibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsVisibilityChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsVisibilityChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
 
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
@@ -227,11 +227,11 @@ void QAreaSeriesSlots::pressed( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QPointF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
@@ -247,11 +247,11 @@ void QAreaSeriesSlots::released( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "released(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(QPointF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
@@ -267,11 +267,11 @@ void QAreaSeriesSlots::selected()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "selected()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selected()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QAREASERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAREASERIES" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -296,7 +296,7 @@ void QAreaSeriesSlots_connect_signal( const QString & signal, const QString & sl
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

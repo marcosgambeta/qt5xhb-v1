@@ -25,11 +25,11 @@ void QVCandlestickModelMapperSlots::closeRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "closeRowChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "closeRowChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -43,11 +43,11 @@ void QVCandlestickModelMapperSlots::firstSetColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "firstSetColumnChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "firstSetColumnChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -61,11 +61,11 @@ void QVCandlestickModelMapperSlots::highRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "highRowChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "highRowChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -79,11 +79,11 @@ void QVCandlestickModelMapperSlots::lastSetColumnChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "lastSetColumnChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lastSetColumnChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -97,11 +97,11 @@ void QVCandlestickModelMapperSlots::lowRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "lowRowChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "lowRowChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -115,11 +115,11 @@ void QVCandlestickModelMapperSlots::openRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "openRowChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "openRowChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -133,11 +133,11 @@ void QVCandlestickModelMapperSlots::timestampRowChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "timestampRowChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "timestampRowChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVCANDLESTICKMODELMAPPER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -162,7 +162,7 @@ void QVCandlestickModelMapperSlots_connect_signal( const QString & signal, const
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

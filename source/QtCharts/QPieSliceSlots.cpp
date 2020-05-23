@@ -25,11 +25,11 @@ void QPieSliceSlots::angleSpanChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "angleSpanChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "angleSpanChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -43,11 +43,11 @@ void QPieSliceSlots::borderColorChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "borderColorChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderColorChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -61,11 +61,11 @@ void QPieSliceSlots::borderWidthChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "borderWidthChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "borderWidthChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -79,11 +79,11 @@ void QPieSliceSlots::brushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "brushChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "brushChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -97,11 +97,11 @@ void QPieSliceSlots::clicked()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "clicked()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -115,11 +115,11 @@ void QPieSliceSlots::colorChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -133,11 +133,11 @@ void QPieSliceSlots::doubleClicked()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -151,11 +151,11 @@ void QPieSliceSlots::hovered( bool state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
     PHB_ITEM pstate = hb_itemPutL( NULL, state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -171,11 +171,11 @@ void QPieSliceSlots::labelBrushChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelBrushChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelBrushChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -189,11 +189,11 @@ void QPieSliceSlots::labelChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -207,11 +207,11 @@ void QPieSliceSlots::labelColorChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelColorChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelColorChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -225,11 +225,11 @@ void QPieSliceSlots::labelFontChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelFontChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelFontChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -243,11 +243,11 @@ void QPieSliceSlots::labelVisibleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelVisibleChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelVisibleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -261,11 +261,11 @@ void QPieSliceSlots::penChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "penChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -279,11 +279,11 @@ void QPieSliceSlots::percentageChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "percentageChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "percentageChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -297,11 +297,11 @@ void QPieSliceSlots::pressed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pressed()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -315,11 +315,11 @@ void QPieSliceSlots::released()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "released()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -333,11 +333,11 @@ void QPieSliceSlots::startAngleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "startAngleChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "startAngleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -351,11 +351,11 @@ void QPieSliceSlots::valueChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "valueChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "valueChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -380,7 +380,7 @@ void QPieSliceSlots_connect_signal( const QString & signal, const QString & slot
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

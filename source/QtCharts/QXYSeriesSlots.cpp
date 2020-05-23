@@ -25,11 +25,11 @@ void QXYSeriesSlots::clicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QPointF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
@@ -45,11 +45,11 @@ void QXYSeriesSlots::colorChanged( QColor color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -65,11 +65,11 @@ void QXYSeriesSlots::doubleClicked( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(QPointF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
@@ -85,11 +85,11 @@ void QXYSeriesSlots::hovered( const QPointF & point, bool state )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "hovered(QPointF,bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(QPointF,bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
     PHB_ITEM pstate = hb_itemPutL( NULL, state );
 
@@ -107,11 +107,11 @@ void QXYSeriesSlots::penChanged( const QPen & pen )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "penChanged(QPen)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "penChanged(QPen)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppen = Signals_return_object( (void *) &pen, "QPEN" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppen );
@@ -127,11 +127,11 @@ void QXYSeriesSlots::pointAdded( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointAdded(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointAdded(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -147,11 +147,11 @@ void QXYSeriesSlots::pointLabelsClippingChanged( bool clipping )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsClippingChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsClippingChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pclipping = hb_itemPutL( NULL, clipping );
 
     hb_vmEvalBlockV( cb, 2, psender, pclipping );
@@ -167,11 +167,11 @@ void QXYSeriesSlots::pointLabelsColorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsColorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsColorChanged(QColor)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -187,11 +187,11 @@ void QXYSeriesSlots::pointLabelsFontChanged( const QFont & font )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFontChanged(QFont)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsFontChanged(QFont)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
@@ -207,11 +207,11 @@ void QXYSeriesSlots::pointLabelsFormatChanged( const QString & format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsFormatChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsFormatChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
 
     hb_vmEvalBlockV( cb, 2, psender, pformat );
@@ -227,11 +227,11 @@ void QXYSeriesSlots::pointLabelsVisibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointLabelsVisibilityChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointLabelsVisibilityChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
 
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
@@ -247,11 +247,11 @@ void QXYSeriesSlots::pointRemoved( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointRemoved(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointRemoved(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -267,11 +267,11 @@ void QXYSeriesSlots::pointReplaced( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointReplaced(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointReplaced(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -287,11 +287,11 @@ void QXYSeriesSlots::pointsRemoved( int index, int count )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointsRemoved(int,int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointsRemoved(int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pcount = hb_itemPutNI( NULL, count );
 
@@ -309,11 +309,11 @@ void QXYSeriesSlots::pointsReplaced()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pointsReplaced()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pointsReplaced()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -327,11 +327,11 @@ void QXYSeriesSlots::pressed( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pressed(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(QPointF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
@@ -347,11 +347,11 @@ void QXYSeriesSlots::released( const QPointF & point )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "released(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(QPointF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QXYSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QXYSERIES" );
     PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
@@ -378,7 +378,7 @@ void QXYSeriesSlots_connect_signal( const QString & signal, const QString & slot
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

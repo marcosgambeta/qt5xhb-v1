@@ -25,11 +25,11 @@ void QAbstractBarSeriesSlots::barsetsAdded( QList<QBarSet*> sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "barsetsAdded(QList<QBarSet*>)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "barsetsAdded(QList<QBarSet*>)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
     if( pDynSym )
@@ -67,11 +67,11 @@ void QAbstractBarSeriesSlots::barsetsRemoved( QList<QBarSet*> sets )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "barsetsRemoved(QList<QBarSet*>)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "barsetsRemoved(QList<QBarSet*>)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBARSET" );
     PHB_ITEM psets = hb_itemArrayNew(0);
     if( pDynSym )
@@ -109,11 +109,11 @@ void QAbstractBarSeriesSlots::clicked( int index, QBarSet * barset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "clicked(int,QBarSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(int,QBarSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
 
@@ -131,11 +131,11 @@ void QAbstractBarSeriesSlots::countChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "countChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "countChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -149,11 +149,11 @@ void QAbstractBarSeriesSlots::doubleClicked( int index, QBarSet * barset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "doubleClicked(int,QBarSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleClicked(int,QBarSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
 
@@ -171,11 +171,11 @@ void QAbstractBarSeriesSlots::hovered( bool status, int index, QBarSet * barset 
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "hovered(bool,int,QBarSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "hovered(bool,int,QBarSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
@@ -195,11 +195,11 @@ void QAbstractBarSeriesSlots::labelsAngleChanged( qreal angle )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelsAngleChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsAngleChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pangle = hb_itemPutND( NULL, angle );
 
     hb_vmEvalBlockV( cb, 2, psender, pangle );
@@ -215,11 +215,11 @@ void QAbstractBarSeriesSlots::labelsFormatChanged( const QString & format )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelsFormatChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsFormatChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
 
     hb_vmEvalBlockV( cb, 2, psender, pformat );
@@ -235,11 +235,11 @@ void QAbstractBarSeriesSlots::labelsPositionChanged( QAbstractBarSeries::LabelsP
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsPositionChanged(QAbstractBarSeries::LabelsPosition)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pposition = hb_itemPutNI( NULL, (int) position );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
@@ -255,11 +255,11 @@ void QAbstractBarSeriesSlots::labelsVisibleChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "labelsVisibleChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "labelsVisibleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -273,11 +273,11 @@ void QAbstractBarSeriesSlots::pressed( int index, QBarSet * barset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pressed(int,QBarSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pressed(int,QBarSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
 
@@ -295,11 +295,11 @@ void QAbstractBarSeriesSlots::released( int index, QBarSet * barset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "released(int,QBarSet*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "released(int,QBarSet*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
     PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
 
@@ -328,7 +328,7 @@ void QAbstractBarSeriesSlots_connect_signal( const QString & signal, const QStri
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
