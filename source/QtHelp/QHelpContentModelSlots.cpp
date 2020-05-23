@@ -24,11 +24,11 @@ void QHelpContentModelSlots::contentsCreated()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreated()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsCreated()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPCONTENTMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPCONTENTMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -40,11 +40,11 @@ void QHelpContentModelSlots::contentsCreationStarted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "contentsCreationStarted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentsCreationStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPCONTENTMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPCONTENTMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -67,7 +67,7 @@ void QHelpContentModelSlots_connect_signal( const QString & signal, const QStrin
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

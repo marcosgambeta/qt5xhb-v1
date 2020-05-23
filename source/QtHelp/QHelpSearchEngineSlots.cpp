@@ -24,11 +24,11 @@ void QHelpSearchEngineSlots::indexingFinished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "indexingFinished()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexingFinished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -40,11 +40,11 @@ void QHelpSearchEngineSlots::indexingStarted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "indexingStarted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexingStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -56,11 +56,11 @@ void QHelpSearchEngineSlots::searchingFinished( int hits )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "searchingFinished(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "searchingFinished(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
     PHB_ITEM phits = hb_itemPutNI( NULL, hits );
 
     hb_vmEvalBlockV( cb, 2, psender, phits );
@@ -74,11 +74,11 @@ void QHelpSearchEngineSlots::searchingStarted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "searchingStarted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "searchingStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -101,7 +101,7 @@ void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QStrin
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
