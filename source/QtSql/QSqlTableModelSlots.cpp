@@ -24,11 +24,11 @@ void QSqlTableModelSlots::beforeDelete( int row )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "beforeDelete(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeDelete(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
 
     hb_vmEvalBlockV( cb, 2, psender, prow );
@@ -42,11 +42,11 @@ void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "beforeInsert(QSqlRecord)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeInsert(QSqlRecord)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
     PHB_ITEM precord = Signals_return_object( (void *) &record, "QSQLRECORD" );
 
     hb_vmEvalBlockV( cb, 2, psender, precord );
@@ -60,11 +60,11 @@ void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "beforeUpdate(int,QSqlRecord)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "beforeUpdate(int,QSqlRecord)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM precord = Signals_return_object( (void *) &record, "QSQLRECORD" );
 
@@ -80,11 +80,11 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "primeInsert(int,QSqlRecord)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "primeInsert(int,QSqlRecord)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM precord = Signals_return_object( (void *) &record, "QSQLRECORD" );
 
@@ -111,7 +111,7 @@ void QSqlTableModelSlots_connect_signal( const QString & signal, const QString &
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
