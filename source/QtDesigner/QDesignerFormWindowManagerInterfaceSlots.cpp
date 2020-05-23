@@ -24,11 +24,11 @@ void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesigne
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
     PHB_ITEM pformWindow = Signals_return_qobject( (QObject *) formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pformWindow );
@@ -42,11 +42,11 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWin
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "formWindowAdded(QDesignerFormWindowInterface*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "formWindowAdded(QDesignerFormWindowInterface*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
     PHB_ITEM pformWindow = Signals_return_qobject( (QObject *) formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pformWindow );
@@ -60,11 +60,11 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormW
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "formWindowRemoved(QDesignerFormWindowInterface*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "formWindowRemoved(QDesignerFormWindowInterface*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
     PHB_ITEM pformWindow = Signals_return_qobject( (QObject *) formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pformWindow );
@@ -89,7 +89,7 @@ void QDesignerFormWindowManagerInterfaceSlots_connect_signal( const QString & si
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
