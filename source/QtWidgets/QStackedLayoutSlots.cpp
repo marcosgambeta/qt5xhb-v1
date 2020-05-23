@@ -24,11 +24,11 @@ void QStackedLayoutSlots::setCurrentIndex( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "setCurrentIndex(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "setCurrentIndex(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTACKEDLAYOUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTACKEDLAYOUT" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -42,11 +42,11 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "setCurrentWidget(QWidget*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "setCurrentWidget(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSTACKEDLAYOUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTACKEDLAYOUT" );
     PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
@@ -71,7 +71,7 @@ void QStackedLayoutSlots_connect_signal( const QString & signal, const QString &
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

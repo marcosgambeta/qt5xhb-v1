@@ -24,11 +24,11 @@ void QInputDialogSlots::doubleValueChanged( double value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueChanged(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleValueChanged(double)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -42,11 +42,11 @@ void QInputDialogSlots::doubleValueSelected( double value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "doubleValueSelected(double)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "doubleValueSelected(double)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -60,11 +60,11 @@ void QInputDialogSlots::intValueChanged( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "intValueChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "intValueChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -78,11 +78,11 @@ void QInputDialogSlots::intValueSelected( int value )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "intValueSelected(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "intValueSelected(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -96,11 +96,11 @@ void QInputDialogSlots::textValueChanged( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "textValueChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textValueChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -114,11 +114,11 @@ void QInputDialogSlots::textValueSelected( const QString & text )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "textValueSelected(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textValueSelected(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINPUTDIALOG" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -143,7 +143,7 @@ void QInputDialogSlots_connect_signal( const QString & signal, const QString & s
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

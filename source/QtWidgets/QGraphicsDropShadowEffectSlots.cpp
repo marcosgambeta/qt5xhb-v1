@@ -24,11 +24,11 @@ void QGraphicsDropShadowEffectSlots::blurRadiusChanged( qreal blurRadius )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSDROPSHADOWEFFECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSDROPSHADOWEFFECT" );
     PHB_ITEM pblurRadius = hb_itemPutND( NULL, blurRadius );
 
     hb_vmEvalBlockV( cb, 2, psender, pblurRadius );
@@ -42,11 +42,11 @@ void QGraphicsDropShadowEffectSlots::colorChanged( const QColor & color )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "colorChanged(QColor)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSDROPSHADOWEFFECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSDROPSHADOWEFFECT" );
     PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -60,11 +60,11 @@ void QGraphicsDropShadowEffectSlots::offsetChanged( const QPointF & offset )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "offsetChanged(QPointF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "offsetChanged(QPointF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QGRAPHICSDROPSHADOWEFFECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSDROPSHADOWEFFECT" );
     PHB_ITEM poffset = Signals_return_object( (void *) &offset, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, poffset );
@@ -89,7 +89,7 @@ void QGraphicsDropShadowEffectSlots_connect_signal( const QString & signal, cons
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

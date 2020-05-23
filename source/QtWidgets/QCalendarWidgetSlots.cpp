@@ -24,11 +24,11 @@ void QCalendarWidgetSlots::activated( const QDate & date )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "activated(QDate)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated(QDate)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
     PHB_ITEM pdate = Signals_return_object( (void *) &date, "QDATE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdate );
@@ -42,11 +42,11 @@ void QCalendarWidgetSlots::clicked( const QDate & date )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "clicked(QDate)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clicked(QDate)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
     PHB_ITEM pdate = Signals_return_object( (void *) &date, "QDATE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdate );
@@ -60,11 +60,11 @@ void QCalendarWidgetSlots::currentPageChanged( int year, int month )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "currentPageChanged(int,int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "currentPageChanged(int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
     PHB_ITEM pyear = hb_itemPutNI( NULL, year );
     PHB_ITEM pmonth = hb_itemPutNI( NULL, month );
 
@@ -80,11 +80,11 @@ void QCalendarWidgetSlots::selectionChanged()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectionChanged()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -107,7 +107,7 @@ void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

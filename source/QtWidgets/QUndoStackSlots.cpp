@@ -24,11 +24,11 @@ void QUndoStackSlots::canRedoChanged( bool canRedo )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "canRedoChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "canRedoChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
     PHB_ITEM pcanRedo = hb_itemPutL( NULL, canRedo );
 
     hb_vmEvalBlockV( cb, 2, psender, pcanRedo );
@@ -42,11 +42,11 @@ void QUndoStackSlots::canUndoChanged( bool canUndo )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "canUndoChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "canUndoChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
     PHB_ITEM pcanUndo = hb_itemPutL( NULL, canUndo );
 
     hb_vmEvalBlockV( cb, 2, psender, pcanUndo );
@@ -60,11 +60,11 @@ void QUndoStackSlots::cleanChanged( bool clean )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "cleanChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "cleanChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
     PHB_ITEM pclean = hb_itemPutL( NULL, clean );
 
     hb_vmEvalBlockV( cb, 2, psender, pclean );
@@ -78,11 +78,11 @@ void QUndoStackSlots::indexChanged( int idx )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "indexChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "indexChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
     PHB_ITEM pidx = hb_itemPutNI( NULL, idx );
 
     hb_vmEvalBlockV( cb, 2, psender, pidx );
@@ -96,11 +96,11 @@ void QUndoStackSlots::redoTextChanged( const QString & redoText )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "redoTextChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "redoTextChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
     PHB_ITEM predoText = hb_itemPutC( NULL, QSTRINGTOSTRING(redoText) );
 
     hb_vmEvalBlockV( cb, 2, psender, predoText );
@@ -114,11 +114,11 @@ void QUndoStackSlots::undoTextChanged( const QString & undoText )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "undoTextChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "undoTextChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
     PHB_ITEM pundoText = hb_itemPutC( NULL, QSTRINGTOSTRING(undoText) );
 
     hb_vmEvalBlockV( cb, 2, psender, pundoText );
@@ -143,7 +143,7 @@ void QUndoStackSlots_connect_signal( const QString & signal, const QString & slo
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

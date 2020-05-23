@@ -24,11 +24,11 @@ void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
 
     hb_vmEvalBlockV( cb, 2, psender, preason );
@@ -42,11 +42,11 @@ void QSystemTrayIconSlots::messageClicked()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "messageClicked()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "messageClicked()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -69,7 +69,7 @@ void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

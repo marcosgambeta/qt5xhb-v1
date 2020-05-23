@@ -24,11 +24,11 @@ void QDockWidgetSlots::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "allowedAreasChanged(Qt::DockWidgetAreas)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "allowedAreasChanged(Qt::DockWidgetAreas)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM pallowedAreas = hb_itemPutNI( NULL, (int) allowedAreas );
 
     hb_vmEvalBlockV( cb, 2, psender, pallowedAreas );
@@ -42,11 +42,11 @@ void QDockWidgetSlots::dockLocationChanged( Qt::DockWidgetArea area )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "dockLocationChanged(Qt::DockWidgetArea)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dockLocationChanged(Qt::DockWidgetArea)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM parea = hb_itemPutNI( NULL, (int) area );
 
     hb_vmEvalBlockV( cb, 2, psender, parea );
@@ -60,11 +60,11 @@ void QDockWidgetSlots::featuresChanged( QDockWidget::DockWidgetFeatures features
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM pfeatures = hb_itemPutNI( NULL, (int) features );
 
     hb_vmEvalBlockV( cb, 2, psender, pfeatures );
@@ -78,11 +78,11 @@ void QDockWidgetSlots::topLevelChanged( bool topLevel )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "topLevelChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "topLevelChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM ptopLevel = hb_itemPutL( NULL, topLevel );
 
     hb_vmEvalBlockV( cb, 2, psender, ptopLevel );
@@ -96,11 +96,11 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "visibilityChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibilityChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDOCKWIDGET" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
 
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
@@ -125,7 +125,7 @@ void QDockWidgetSlots_connect_signal( const QString & signal, const QString & sl
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
