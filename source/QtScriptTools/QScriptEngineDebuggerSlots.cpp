@@ -24,11 +24,11 @@ void QScriptEngineDebuggerSlots::evaluationResumed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "evaluationResumed()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "evaluationResumed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -40,11 +40,11 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "evaluationSuspended()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "evaluationSuspended()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -67,7 +67,7 @@ void QScriptEngineDebuggerSlots_connect_signal( const QString & signal, const QS
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
