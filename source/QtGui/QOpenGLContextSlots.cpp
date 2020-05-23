@@ -24,11 +24,11 @@ void QOpenGLContextSlots::aboutToBeDestroyed()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "aboutToBeDestroyed()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "aboutToBeDestroyed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOPENGLCONTEXT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOPENGLCONTEXT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -51,7 +51,7 @@ void QOpenGLContextSlots_connect_signal( const QString & signal, const QString &
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

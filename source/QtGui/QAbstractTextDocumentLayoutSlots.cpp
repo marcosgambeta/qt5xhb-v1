@@ -24,11 +24,11 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewSize = Signals_return_object( (void *) &newSize, "QSIZEF" );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewSize );
@@ -42,11 +42,11 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "pageCountChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "pageCountChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewPages = hb_itemPutNI( NULL, newPages );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewPages );
@@ -60,11 +60,11 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "update(QRectF)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "update(QRectF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
@@ -78,11 +78,11 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pblock = Signals_return_object( (void *) &block, "QTEXTBLOCK" );
 
     hb_vmEvalBlockV( cb, 2, psender, pblock );
@@ -107,7 +107,7 @@ void QAbstractTextDocumentLayoutSlots_connect_signal( const QString & signal, co
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
