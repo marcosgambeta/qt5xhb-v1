@@ -24,11 +24,11 @@ void QQmlComponentSlots::progressChanged( qreal progress )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "progressChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "progressChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLCOMPONENT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQMLCOMPONENT" );
     PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
 
     hb_vmEvalBlockV( cb, 2, psender, pprogress );
@@ -42,11 +42,11 @@ void QQmlComponentSlots::statusChanged( QQmlComponent::Status status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QQmlComponent::Status)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QQmlComponent::Status)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QQMLCOMPONENT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQMLCOMPONENT" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -71,7 +71,7 @@ void QQmlComponentSlots_connect_signal( const QString & signal, const QString & 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
