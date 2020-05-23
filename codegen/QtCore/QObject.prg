@@ -347,12 +347,12 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
     if( hb_pcount() == 0 )
     {
       Qt5xHb::Events_disconnect_all_events( obj, false );
-      Signals_disconnect_all_signals (obj, false);
+      Qt5xHb::Signals_disconnect_all_signals( obj, false );
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
       Qt5xHb::Events_disconnect_all_events( obj, PBOOL(1) );
-      Signals_disconnect_all_signals (obj, PBOOL(1) );
+      Qt5xHb::Signals_disconnect_all_signals( obj, PBOOL(1) );
     }
     else
     {
@@ -394,11 +394,11 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
   {
     if( hb_pcount() == 0 )
     {
-      Signals_disconnect_all_signals (obj, false);
+      Qt5xHb::Signals_disconnect_all_signals( obj, false );
     }
     else if( hb_pcount() == 1 && ISLOG(1) )
     {
-      Signals_disconnect_all_signals (obj, PBOOL(1) );
+      Qt5xHb::Signals_disconnect_all_signals( obj, PBOOL(1) );
     }
     else
     {
