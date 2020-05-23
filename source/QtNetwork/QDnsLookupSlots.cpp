@@ -24,11 +24,11 @@ void QDnsLookupSlots::finished()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -40,11 +40,11 @@ void QDnsLookupSlots::nameChanged( const QString & name )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "nameChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
@@ -58,11 +58,11 @@ void QDnsLookupSlots::nameserverChanged( const QHostAddress & nameserver )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "nameserverChanged(QHostAddress)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "nameserverChanged(QHostAddress)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
     PHB_ITEM pnameserver = Signals_return_object( (void *) &nameserver, "QHOSTADDRESS" );
 
     hb_vmEvalBlockV( cb, 2, psender, pnameserver );
@@ -76,11 +76,11 @@ void QDnsLookupSlots::typeChanged( QDnsLookup::Type type )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "typeChanged(QDnsLookup::Type)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "typeChanged(QDnsLookup::Type)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
 
     hb_vmEvalBlockV( cb, 2, psender, ptype );
@@ -105,7 +105,7 @@ void QDnsLookupSlots_connect_signal( const QString & signal, const QString & slo
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
