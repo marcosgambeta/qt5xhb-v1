@@ -25,11 +25,11 @@ void QAbstractOAuthSlots::authorizationUrlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "authorizationUrlChanged(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "authorizationUrlChanged(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
@@ -45,11 +45,11 @@ void QAbstractOAuthSlots::authorizeWithBrowser( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "authorizeWithBrowser(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "authorizeWithBrowser(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
@@ -65,11 +65,11 @@ void QAbstractOAuthSlots::clientIdentifierChanged( const QString & clientIdentif
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "clientIdentifierChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clientIdentifierChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM pclientIdentifier = hb_itemPutC( NULL, QSTRINGTOSTRING(clientIdentifier) );
 
     hb_vmEvalBlockV( cb, 2, psender, pclientIdentifier );
@@ -85,11 +85,11 @@ void QAbstractOAuthSlots::contentTypeChanged( QAbstractOAuth::ContentType conten
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "contentTypeChanged(QAbstractOAuth::ContentType)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "contentTypeChanged(QAbstractOAuth::ContentType)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM pcontentType = hb_itemPutNI( NULL, (int) contentType );
 
     hb_vmEvalBlockV( cb, 2, psender, pcontentType );
@@ -105,11 +105,11 @@ void QAbstractOAuthSlots::finished( QNetworkReply * reply )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "finished(QNetworkReply*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "finished(QNetworkReply*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QNETWORKREPLY" );
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
@@ -125,11 +125,11 @@ void QAbstractOAuthSlots::granted()
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "granted()" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "granted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -143,11 +143,11 @@ void QAbstractOAuthSlots::replyDataReceived( const QByteArray & data )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "replyDataReceived(QByteArray)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "replyDataReceived(QByteArray)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM pdata = Signals_return_object( (void *) &data, "QBYTEARRAY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdata );
@@ -163,11 +163,11 @@ void QAbstractOAuthSlots::statusChanged( QAbstractOAuth::Status status )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "statusChanged(QAbstractOAuth::Status)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "statusChanged(QAbstractOAuth::Status)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -183,11 +183,11 @@ void QAbstractOAuthSlots::tokenChanged( const QString & token )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "tokenChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tokenChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
     PHB_ITEM ptoken = hb_itemPutC( NULL, QSTRINGTOSTRING(token) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptoken );
@@ -214,7 +214,7 @@ void QAbstractOAuthSlots_connect_signal( const QString & signal, const QString &
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

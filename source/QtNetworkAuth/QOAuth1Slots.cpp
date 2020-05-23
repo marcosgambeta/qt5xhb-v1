@@ -25,11 +25,11 @@ void QOAuth1Slots::clientSharedSecretChanged( const QString & credential )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "clientSharedSecretChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "clientSharedSecretChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOAUTH1" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOAUTH1" );
     PHB_ITEM pcredential = hb_itemPutC( NULL, QSTRINGTOSTRING(credential) );
 
     hb_vmEvalBlockV( cb, 2, psender, pcredential );
@@ -45,11 +45,11 @@ void QOAuth1Slots::signatureMethodChanged( QOAuth1::SignatureMethod method )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "signatureMethodChanged(QOAuth1::SignatureMethod)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOAUTH1" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOAUTH1" );
     PHB_ITEM pmethod = hb_itemPutNI( NULL, (int) method );
 
     hb_vmEvalBlockV( cb, 2, psender, pmethod );
@@ -65,11 +65,11 @@ void QOAuth1Slots::temporaryCredentialsUrlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "temporaryCredentialsUrlChanged(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "temporaryCredentialsUrlChanged(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOAUTH1" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOAUTH1" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
@@ -85,11 +85,11 @@ void QOAuth1Slots::tokenCredentialsUrlChanged( const QUrl & url )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "tokenCredentialsUrlChanged(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tokenCredentialsUrlChanged(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOAUTH1" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOAUTH1" );
     PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
@@ -105,11 +105,11 @@ void QOAuth1Slots::tokenSecretChanged( const QString & token )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "tokenSecretChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "tokenSecretChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOAUTH1" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOAUTH1" );
     PHB_ITEM ptoken = hb_itemPutC( NULL, QSTRINGTOSTRING(token) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptoken );
@@ -136,7 +136,7 @@ void QOAuth1Slots_connect_signal( const QString & signal, const QString & slot )
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

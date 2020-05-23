@@ -25,11 +25,11 @@ void QOAuth2AuthorizationCodeFlowSlots::accessTokenUrlChanged( const QUrl & acce
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "accessTokenUrlChanged(QUrl)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "accessTokenUrlChanged(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QOAUTH2AUTHORIZATIONCODEFLOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOAUTH2AUTHORIZATIONCODEFLOW" );
     PHB_ITEM paccessTokenUrl = Signals_return_object( (void *) &accessTokenUrl, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, paccessTokenUrl );
@@ -56,7 +56,7 @@ void QOAuth2AuthorizationCodeFlowSlots_connect_signal( const QString & signal, c
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
