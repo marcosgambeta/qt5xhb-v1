@@ -24,11 +24,11 @@ void QScatter3DSeriesSlots::dataProxyChanged( QScatterDataProxy * proxy )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "dataProxyChanged(QScatterDataProxy*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "dataProxyChanged(QScatterDataProxy*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCATTER3DSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCATTER3DSERIES" );
     PHB_ITEM pproxy = Signals_return_qobject( (QObject *) proxy, "QSCATTERDATAPROXY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pproxy );
@@ -42,11 +42,11 @@ void QScatter3DSeriesSlots::itemSizeChanged( float size )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "itemSizeChanged(float)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "itemSizeChanged(float)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCATTER3DSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCATTER3DSERIES" );
     PHB_ITEM psize = hb_itemPutND( NULL, size );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );
@@ -60,11 +60,11 @@ void QScatter3DSeriesSlots::selectedItemChanged( int index )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "selectedItemChanged(int)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "selectedItemChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QSCATTER3DSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCATTER3DSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -89,7 +89,7 @@ void QScatter3DSeriesSlots_connect_signal( const QString & signal, const QString
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

@@ -35,7 +35,7 @@ void QValue3DAxisSlots_connect_signal( const QString & signal, const QString & s
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

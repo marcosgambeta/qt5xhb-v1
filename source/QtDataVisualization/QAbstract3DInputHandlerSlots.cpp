@@ -24,11 +24,11 @@ void QAbstract3DInputHandlerSlots::inputViewChanged( QAbstract3DInputHandler::In
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "inputViewChanged(QAbstract3DInputHandler::InputView)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pview = hb_itemPutNI( NULL, (int) view );
 
     hb_vmEvalBlockV( cb, 2, psender, pview );
@@ -42,11 +42,11 @@ void QAbstract3DInputHandlerSlots::positionChanged( const QPoint & position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "positionChanged(QPoint)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionChanged(QPoint)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
@@ -60,11 +60,11 @@ void QAbstract3DInputHandlerSlots::sceneChanged( Q3DScene * scene )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "sceneChanged(Q3DScene*)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "sceneChanged(Q3DScene*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
     PHB_ITEM pscene = Signals_return_qobject( (QObject *) scene, "Q3DSCENE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pscene );
@@ -89,7 +89,7 @@ void QAbstract3DInputHandlerSlots_connect_signal( const QString & signal, const 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

@@ -24,11 +24,11 @@ void QCustom3DItemSlots::meshFileChanged( const QString & meshFile )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "meshFileChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "meshFileChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pmeshFile = hb_itemPutC( NULL, QSTRINGTOSTRING(meshFile) );
 
     hb_vmEvalBlockV( cb, 2, psender, pmeshFile );
@@ -42,11 +42,11 @@ void QCustom3DItemSlots::positionAbsoluteChanged( bool positionAbsolute )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "positionAbsoluteChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionAbsoluteChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM ppositionAbsolute = hb_itemPutL( NULL, positionAbsolute );
 
     hb_vmEvalBlockV( cb, 2, psender, ppositionAbsolute );
@@ -60,11 +60,11 @@ void QCustom3DItemSlots::positionChanged( const QVector3D & position )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "positionChanged(QVector3D)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "positionChanged(QVector3D)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pposition = Signals_return_object( (void *) &position, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
@@ -78,11 +78,11 @@ void QCustom3DItemSlots::rotationChanged( const QQuaternion & rotation )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "rotationChanged(QQuaternion)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "rotationChanged(QQuaternion)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM protation = Signals_return_object( (void *) &rotation, "QQUATERNION" );
 
     hb_vmEvalBlockV( cb, 2, psender, protation );
@@ -96,11 +96,11 @@ void QCustom3DItemSlots::scalingAbsoluteChanged( bool scalingAbsolute )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "scalingAbsoluteChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scalingAbsoluteChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pscalingAbsolute = hb_itemPutL( NULL, scalingAbsolute );
 
     hb_vmEvalBlockV( cb, 2, psender, pscalingAbsolute );
@@ -114,11 +114,11 @@ void QCustom3DItemSlots::scalingChanged( const QVector3D & scaling )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "scalingChanged(QVector3D)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "scalingChanged(QVector3D)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pscaling = Signals_return_object( (void *) &scaling, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pscaling );
@@ -132,11 +132,11 @@ void QCustom3DItemSlots::shadowCastingChanged( bool shadowCasting )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "shadowCastingChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "shadowCastingChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pshadowCasting = hb_itemPutL( NULL, shadowCasting );
 
     hb_vmEvalBlockV( cb, 2, psender, pshadowCasting );
@@ -150,11 +150,11 @@ void QCustom3DItemSlots::textureFileChanged( const QString & textureFile )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "textureFileChanged(QString)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "textureFileChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM ptextureFile = hb_itemPutC( NULL, QSTRINGTOSTRING(textureFile) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptextureFile );
@@ -168,11 +168,11 @@ void QCustom3DItemSlots::visibleChanged( bool visible )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "visibleChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "visibleChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
 
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
@@ -197,7 +197,7 @@ void QCustom3DItemSlots_connect_signal( const QString & signal, const QString & 
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {

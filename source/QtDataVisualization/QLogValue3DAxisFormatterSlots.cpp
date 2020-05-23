@@ -24,11 +24,11 @@ void QLogValue3DAxisFormatterSlots::autoSubGridChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "autoSubGridChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "autoSubGridChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -42,11 +42,11 @@ void QLogValue3DAxisFormatterSlots::baseChanged( qreal base )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "baseChanged(qreal)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "baseChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM pbase = hb_itemPutND( NULL, base );
 
     hb_vmEvalBlockV( cb, 2, psender, pbase );
@@ -60,11 +60,11 @@ void QLogValue3DAxisFormatterSlots::showEdgeLabelsChanged( bool enabled )
 {
   QObject *object = qobject_cast<QObject *>(sender());
 
-  PHB_ITEM cb = Signals_return_codeblock( object, "showEdgeLabelsChanged(bool)" );
+  PHB_ITEM cb = Qt5xHb::Signals_return_codeblock( object, "showEdgeLabelsChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Signals_return_qobject( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLOGVALUE3DAXISFORMATTER" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -89,7 +89,7 @@ void QLogValue3DAxisFormatterSlots_connect_signal( const QString & signal, const
       s->setParent( QCoreApplication::instance() );
     }
 
-    hb_retl( Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl( Qt5xHb::Signals_connection_disconnection( s, signal, slot ) );
   }
   else
   {
