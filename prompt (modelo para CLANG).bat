@@ -26,7 +26,7 @@ rem Pasta include do Qt5xHb.
 set QT5XHB_INC_DIR=include
 
 rem Pasta lib do Qt5xHb.
-rem Exemplo: C:\qt5xhb\lib\qt540\opengl\mingw\32\windows\harbour\320dev
+rem Exemplo: C:\qt5xhb\lib\qt540\mingw\32\windows\harbour\320dev
 set QT5XHB_LIB_DIR=
 
 rem Define o compilador C++ (clang ou clang64)
