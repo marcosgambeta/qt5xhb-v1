@@ -59,9 +59,6 @@ set HBVER=320dev
 rem Define a versão do Qt (qt530, qt531 ou qt532).
 set QTVERSION=qt592
 
-rem Define se é 32-bit ou 64-bit (32 ou 64).
-set QT32OR64=32
-
 rem Define se é MinGW ou MSVC (mingw, msvc2010, msvc2012 ou msvc2013).
 set QTCOMP=mingw
 
@@ -69,22 +66,20 @@ rem Cria a pasta para as bibliotecas, caso não exista.
 if not exist lib mkdir lib
 if not exist lib\%QTVERSION% mkdir lib\%QTVERSION%
 if not exist lib\%QTVERSION%\%QTCOMP% mkdir lib\%QTVERSION%\%QTCOMP%
-if not exist lib\%QTVERSION%\%QTCOMP%\%QT32OR64% mkdir lib\%QTVERSION%\%QTCOMP%\%QT32OR64%
-if not exist lib\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM% mkdir lib\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%
-if not exist lib\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%\%HBCOMP% mkdir lib\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%\%HBCOMP%
-if not exist lib\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%\%HBCOMP%\%HBVER% mkdir lib\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%\%HBCOMP%\%HBVER%
+if not exist lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM% mkdir lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM%
+if not exist lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
+if not exist lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP%\%HBVER% mkdir lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP%\%HBVER%
 
 rem Cria a pasta para os objetos, caso não exista.
 if not exist obj mkdir obj
 if not exist obj\%QTVERSION% mkdir obj\%QTVERSION%
 if not exist obj\%QTVERSION%\%QTCOMP% mkdir obj\%QTVERSION%\%QTCOMP%
-if not exist obj\%QTVERSION%\%QTCOMP%\%QT32OR64% mkdir obj\%QTVERSION%\%QTCOMP%\%QT32OR64%
-if not exist obj\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM% mkdir obj\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%
-if not exist obj\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%\%HBCOMP% mkdir obj\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%\%HBCOMP%
-if not exist obj\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%\%HBCOMP%\%HBVER% mkdir obj\%QTVERSION%\%QTCOMP%\%QT32OR64%\%QTPLATFORM%\%HBCOMP%\%HBVER%
+if not exist obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM% mkdir obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM%
+if not exist obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
+if not exist obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP%\%HBVER% mkdir obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP%\%HBVER%
 
 rem Compila as bibliotecas.
-mingw32-make.exe -f makefile_android 1>%QTVERSION%_%QTCOMP%_%QT32OR64%_%QTPLATFORM%_%HBCOMP%_%HBVER%-1.log 2>%QTVERSION%_%QTCOMP%_%QT32OR64%_%QTPLATFORM%_%HBCOMP%_%HBVER%-2.log
+mingw32-make.exe -f makefile_android 1>%QTVERSION%_%QTCOMP%_%QTPLATFORM%_%HBCOMP%_%HBVER%-1.log 2>%QTVERSION%_%QTCOMP%_%QTPLATFORM%_%HBCOMP%_%HBVER%-2.log
 
 rem Limpa as variáveis criadas.
 set QTDIR=
@@ -92,7 +87,6 @@ set HBDIR=
 set CPPDIR=
 set QTVERSION=
 set QTCOMP=
-set QT32OR64=
 set QTPLATFORM=
 set HBCOMP=
 set HBVER=
