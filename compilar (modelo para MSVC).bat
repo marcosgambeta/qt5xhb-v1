@@ -28,36 +28,34 @@ call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.ba
 rem Configura a variável PATH, conforme as variáveis definidas acima.
 set PATH=%QTDIR%\bin;%HBDIR%\bin;%PATH%
 
-rem Define se é Harbour ou xHarbour (harbour ou xharbour)
-set HBCOMP=harbour
+rem Define a plataforma (windows)
+set QTPLATFORM=windows
 
 rem Define o compilador C++ (msvc/msvc64)
 set QTCOMP=msvc
 
-rem Define a plataforma (windows)
-set QTPLATFORM=windows
+rem Define se é Harbour ou xHarbour (harbour ou xharbour)
+set HBCOMP=harbour
 
 rem Cria a pasta para as bibliotecas, caso não exista.
 if not exist lib mkdir lib
-if not exist lib\%QTCOMP% mkdir lib\%QTCOMP%
-if not exist lib\%QTCOMP%\%QTPLATFORM% mkdir lib\%QTCOMP%\%QTPLATFORM%
-if not exist lib\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir lib\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
+if not exist lib\%QTPLATFORM% mkdir lib\%QTPLATFORM%
+if not exist lib\%QTPLATFORM%\%QTCOMP% mkdir lib\%QTPLATFORM%\%QTCOMP%
 
 rem Cria a pasta para os objetos, caso não exista.
 if not exist obj mkdir obj
-if not exist obj\%QTCOMP% mkdir obj\%QTCOMP%
-if not exist obj\%QTCOMP%\%QTPLATFORM% mkdir obj\%QTCOMP%\%QTPLATFORM%
-if not exist obj\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir obj\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
+if not exist obj\%QTPLATFORM% mkdir obj\%QTPLATFORM%
+if not exist obj\%QTPLATFORM%\%QTCOMP% mkdir obj\%QTPLATFORM%\%QTCOMP%
 
 rem Compila as bibliotecas.
-mingw32-make -f makefile_msvc 1>%QTCOMP%_%QTPLATFORM%_%HBCOMP%-1.log 2>%QTCOMP%_%QTPLATFORM%_%HBCOMP%-2.log
+mingw32-make -f makefile_msvc 1>%QTPLATFORM%_%QTCOMP%-1.log 2>%QTPLATFORM%_%QTCOMP%-2.log
 
 rem Limpa as variáveis criadas.
 set QTDIR=
 set HBDIR=
 set CPPDIR=
-set HBCOMP=
-set QTCOMP=
 set QTPLATFORM=
+set QTCOMP=
+set HBCOMP=
 
 pause

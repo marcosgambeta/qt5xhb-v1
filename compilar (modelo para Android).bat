@@ -10,9 +10,6 @@ rem Cria um PATH reduzido. Embora opcional, evita conflitos com outras
 rem ferramentas de programação instaladas no ambiente de desenvolvimento.
 set PATH=%SYSTEMROOT%;%SYSTEMROOT%\system32
 
-rem Define a plataforma.
-set QTPLATFORM=android_armv7
-
 rem Pasta da instalação do Qt Framework, para a plataforma acima.
 set QTDIR=C:\Qt\5.9.2\android_armv7
 
@@ -50,33 +47,34 @@ rem ---
 rem Configura a variável PATH, conforme as variáveis definidas acima.
 rem set PATH=%QTDIR%\bin;%HBDIR%\bin;%CPPDIR%\bin;%PATH%
 
-rem Define se é Harbour ou xHarbour (harbour/xharbour).
-set HBCOMP=harbour
+rem Define a plataforma.
+set QTPLATFORM=android_armv7
 
 rem Define se é MinGW ou MSVC (mingw, msvc2010, msvc2012 ou msvc2013).
 set QTCOMP=mingw
 
+rem Define se é Harbour ou xHarbour (harbour/xharbour).
+set HBCOMP=harbour
+
 rem Cria a pasta para as bibliotecas, caso não exista.
 if not exist lib mkdir lib
-if not exist lib\%QTCOMP% mkdir lib\%QTCOMP%
-if not exist lib\%QTCOMP%\%QTPLATFORM% mkdir lib\%QTCOMP%\%QTPLATFORM%
-if not exist lib\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir lib\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
+if not exist lib\%QTPLATFORM% mkdir lib\%QTPLATFORM%
+if not exist lib\%QTPLATFORM%\%QTCOMP% mkdir lib\%QTPLATFORM%\%QTCOMP%
 
 rem Cria a pasta para os objetos, caso não exista.
 if not exist obj mkdir obj
-if not exist obj\%QTCOMP% mkdir obj\%QTCOMP%
-if not exist obj\%QTCOMP%\%QTPLATFORM% mkdir obj\%QTCOMP%\%QTPLATFORM%
-if not exist obj\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir obj\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
+if not exist obj\%QTPLATFORM% mkdir obj\%QTPLATFORM%
+if not exist obj\%QTPLATFORM%\%QTCOMP% mkdir obj\%QTPLATFORM%\%QTCOMP%
 
 rem Compila as bibliotecas.
-mingw32-make.exe -f makefile_android 1>%QTCOMP%_%QTPLATFORM%_%HBCOMP%-1.log 2>%QTCOMP%_%QTPLATFORM%_%HBCOMP%-2.log
+mingw32-make.exe -f makefile_android 1>%QTPLATFORM%_%QTCOMP%-1.log 2>%QTPLATFORM%_%QTCOMP%-2.log
 
 rem Limpa as variáveis criadas.
 set QTDIR=
 set HBDIR=
 set CPPDIR=
-set QTCOMP=
 set QTPLATFORM=
+set QTCOMP=
 set HBCOMP=
 
 pause
