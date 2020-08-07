@@ -31,9 +31,6 @@ set PATH=%QTDIR%\bin;%HBDIR%\bin;%PATH%
 rem Define se é Harbour ou xHarbour (harbour ou xharbour)
 set HBCOMP=harbour
 
-rem Define a versão do Qt (qt540, qt541, ...)
-set QTVERSION=qt540
-
 rem Define o compilador C++ (msvc/msvc64)
 set QTCOMP=msvc
 
@@ -42,27 +39,24 @@ set QTPLATFORM=windows
 
 rem Cria a pasta para as bibliotecas, caso não exista.
 if not exist lib mkdir lib
-if not exist lib\%QTVERSION% mkdir lib\%QTVERSION%
-if not exist lib\%QTVERSION%\%QTCOMP% mkdir lib\%QTVERSION%\%QTCOMP%
-if not exist lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM% mkdir lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM%
-if not exist lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir lib\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
+if not exist lib\%QTCOMP% mkdir lib\%QTCOMP%
+if not exist lib\%QTCOMP%\%QTPLATFORM% mkdir lib\%QTCOMP%\%QTPLATFORM%
+if not exist lib\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir lib\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
 
 rem Cria a pasta para os objetos, caso não exista.
 if not exist obj mkdir obj
-if not exist obj\%QTVERSION% mkdir obj\%QTVERSION%
-if not exist obj\%QTVERSION%\%QTCOMP% mkdir obj\%QTVERSION%\%QTCOMP%
-if not exist obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM% mkdir obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM%
-if not exist obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir obj\%QTVERSION%\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
+if not exist obj\%QTCOMP% mkdir obj\%QTCOMP%
+if not exist obj\%QTCOMP%\%QTPLATFORM% mkdir obj\%QTCOMP%\%QTPLATFORM%
+if not exist obj\%QTCOMP%\%QTPLATFORM%\%HBCOMP% mkdir obj\%QTCOMP%\%QTPLATFORM%\%HBCOMP%
 
 rem Compila as bibliotecas.
-mingw32-make -f makefile_msvc 1>%QTVERSION%_%QTCOMP%_%QTPLATFORM%_%HBCOMP%-1.log 2>%QTVERSION%_%QTCOMP%_%QTPLATFORM%_%HBCOMP%-2.log
+mingw32-make -f makefile_msvc 1>%QTCOMP%_%QTPLATFORM%_%HBCOMP%-1.log 2>%QTCOMP%_%QTPLATFORM%_%HBCOMP%-2.log
 
 rem Limpa as variáveis criadas.
 set QTDIR=
 set HBDIR=
 set CPPDIR=
 set HBCOMP=
-set QTVERSION=
 set QTCOMP=
 set QTPLATFORM=
 
