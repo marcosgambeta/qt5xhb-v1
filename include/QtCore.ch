@@ -56,7 +56,7 @@
 #include "QStateMachine.ch"
 #include "QSysInfo.ch"
 #include "QSystemSemaphore.ch"
-#include "QtCore.ch"
+#include "Qt.ch"
 #include "QTextBoundaryFinder.ch"
 #include "QTextCodec.ch"
 #include "QTextStream.ch"
