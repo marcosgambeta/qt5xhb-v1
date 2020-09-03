@@ -90,6 +90,7 @@ RETURN
 #endif
 
 #include <QtGui/QImage>
+#include <QtGui/QPainterPath>
 
 /*
 QRawFont()

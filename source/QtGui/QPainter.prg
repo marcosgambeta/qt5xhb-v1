@@ -159,6 +159,8 @@ RETURN
 #include <QtGui/QPainter>
 #endif
 
+#include <QtGui/QPainterPath>
+
 /*
 QPainter ()
 */

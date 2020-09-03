@@ -117,6 +117,7 @@ RETURN
 #endif
 
 #include <QtCore/QVariant>
+#include <QtGui/QPainterPath>
 
 /*
 QGraphicsView ( QWidget * parent = 0 )

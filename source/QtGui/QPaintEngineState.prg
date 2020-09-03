@@ -80,6 +80,8 @@ RETURN
 #include <QtGui/QPaintEngineState>
 #endif
 
+#include <QtGui/QPainterPath>
+
 HB_FUNC_STATIC( QPAINTENGINESTATE_DELETE )
 {
   QPaintEngineState * obj = (QPaintEngineState *) Qt5xHb::itemGetPtrStackSelfItem();

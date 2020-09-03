@@ -105,6 +105,8 @@ RETURN
 #include <QtGui/QTransform>
 #endif
 
+#include <QtGui/QPainterPath>
+
 /*
 QTransform(Qt::Initialization)
 */
