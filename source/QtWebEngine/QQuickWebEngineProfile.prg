@@ -98,10 +98,10 @@ RETURN
 #endif
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QtWebEngine/QWebEngineCookieStore>
+#include <QtWebEngineCore/QWebEngineCookieStore>
 #endif
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-#include <QtWebEngine/QWebEngineUrlSchemeHandler>
+#include <QtWebEngineCore/QWebEngineUrlSchemeHandler>
 #endif
 
 /*
