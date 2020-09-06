@@ -16,14 +16,14 @@ rem ferramentas de programação instaladas no ambiente de desenvolvimento.
 set PATH=%SYSTEMROOT%;%SYSTEMROOT%\system32
 
 rem Pasta da instalação do Qt Framework.
-set QTDIR=C:\Qt\Qt5.4.0\5.4\msvc2010_opengl
+set QTDIR=C:\Qt\5.15.0\msvc2019_64
 
 rem Pasta da instalação do Harbour.
 set HBDIR=C:\Harbour
 
 rem Configura para compilação com o Visual C++.
 rem Altere para %ProgramFiles% caso seu Windows seja 32-bit.
-call "%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\Tools\vsvars32.bat"
+call "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
 
 rem Configura a variável PATH, conforme as variáveis definidas acima.
 set PATH=%QTDIR%\bin;%HBDIR%\bin;%PATH%
@@ -32,9 +32,9 @@ rem Define a plataforma (windows)
 set QTPLATFORM=windows
 
 rem Define o compilador C++ (msvc/msvc64)
-set QTCOMP=msvc
+set QTCOMP=msvc64
 
-rem Define se é Harbour ou xHarbour (harbour ou xharbour)
+rem Define se é Harbour ou xHarbour (harbour/xharbour)
 set HBCOMP=harbour
 
 rem Cria a pasta para as bibliotecas, caso não exista.
