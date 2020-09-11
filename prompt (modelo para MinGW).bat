@@ -22,20 +22,11 @@ set CPPDIR=C:\Qt\Qt5.4.0\Tools\mingw491_32
 rem Configura a variável PATH, conforme as variáveis definidas acima.
 set PATH=%QTDIR%\bin;%HBDIR%\bin;%CPPDIR%\bin;%PATH%
 
-rem Pasta include do Qt5xHb.
-set QT5XHB_INC_DIR=C:\qt5xhb\include
-
-rem Pasta lib do Qt5xHb.
-rem Exemplo: C:\qt5xhb\lib\windows\mingw
-set QT5XHB_LIB_DIR=
-
 %ComSpec%
 
 rem Limpa as variáveis criadas.
 set QTDIR=
 set HBDIR=
 set CPPDIR=
-set QT5XHB_INC_DIR=
-set QT5XHB_LIB_DIR=
 
 pause

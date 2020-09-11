@@ -9,10 +9,10 @@
 description=Qt5xHb
 
 # include folder of the Qt5xHb
-{allwin|android|linux|darwin}incpaths=${QT5XHB_INC_DIR}
+{allwin|android|linux|darwin}incpaths=include
 
 # lib folder of the Qt5xHb
-{allwin|android|linux|darwin}libpaths=${QT5XHB_LIB_DIR}
+{allwin|android|linux|darwin}libpaths=lib/${hb_plat}/${hb_comp}
 
 # libraries of the Qt5xHb
 {android}libs=hbqtandroidextras5

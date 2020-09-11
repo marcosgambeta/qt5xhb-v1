@@ -27,8 +27,8 @@ set CPPDIR=C:\Qt\Qt5.4.0\Tools\mingw491_32
 rem Configura a variável PATH, conforme as variáveis definidas acima.
 set PATH=%QTDIR%\bin;%HBDIR%\bin;%CPPDIR%\bin;%PATH%
 
-rem Define a plataforma (windows)
-set QTPLATFORM=windows
+rem Define a plataforma (win)
+set QTPLATFORM=win
 
 rem Define o compilador C++ (mingw/mingw64)
 set QTCOMP=mingw

@@ -1,7 +1,7 @@
 #
 # Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 #
-# Copyright (C) 2018 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+# Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 # Makefile for Linux/GCC
 #
@@ -77,6 +77,18 @@ ifneq (,$(findstring 5.11,$(shell qmake -v)))
 endif
 # Qt 5.12.x require C++11
 ifneq (,$(findstring 5.12,$(shell qmake -v)))
+    CFLAGS += -std=c++11
+endif
+# Qt 5.13.x require C++11
+ifneq (,$(findstring 5.13,$(shell qmake -v)))
+    CFLAGS += -std=c++11
+endif
+# Qt 5.14.x require C++11
+ifneq (,$(findstring 5.14,$(shell qmake -v)))
+    CFLAGS += -std=c++11
+endif
+# Qt 5.15.x require C++11
+ifneq (,$(findstring 5.15,$(shell qmake -v)))
     CFLAGS += -std=c++11
 endif
 CFLAGS += -c -O2 -frtti -fexceptions -Wall -DUNICODE -fPIC

@@ -27,8 +27,8 @@ set CPPDIR=%QTDIR%
 rem Configura a variável PATH, conforme as variáveis definidas acima.
 set PATH=%QTDIR%\bin;%HBDIR%\bin;%CPPDIR%\bin;%PATH%
 
-rem Define a plataforma (windows)
-set QTPLATFORM=windows
+rem Define a plataforma (win)
+set QTPLATFORM=win
 
 rem Define o compilador C++ (clang/clang64)
 set QTCOMP=clang
