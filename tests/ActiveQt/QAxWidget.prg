@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/marcosgambeta/Qt5xHb
+  https://github.com/marcosgambeta/qt5xhb
 
 */
 
@@ -23,7 +23,7 @@ PROCEDURE Main ()
    oWindow := QWidget():new():setWindowTitle("Teste"):resize(800,600)
 
    oAxWidget := QAxWidget():new("Shell.Explorer.2",oWindow):move(10,10):resize(1024-20,768-20)
-   oAxWidget:dynamiccall("Navigate(const QString&)",QVariant():new("https://github.com/marcosgambeta/Qt5xHb"))
+   oAxWidget:dynamiccall("Navigate(const QString&)",QVariant():new("https://github.com/marcosgambeta/qt5xhb"))
 
    oWindow:onResizeEvent({||oAxWidget:resize(oWindow:width()-20,oWindow:height()-20)})
 

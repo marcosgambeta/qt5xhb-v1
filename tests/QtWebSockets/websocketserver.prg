@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/marcosgambeta/Qt5xHb
+  https://github.com/marcosgambeta/qt5xhb
 
 */
 
