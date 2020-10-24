@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QGAMEPAD_DEVICEID )
 }
 
 /*
-void setDeviceId(int number) (slot)
+void setDeviceId(int number) 
 */
 HB_FUNC_STATIC( QGAMEPAD_SETDEVICEID )
 {
