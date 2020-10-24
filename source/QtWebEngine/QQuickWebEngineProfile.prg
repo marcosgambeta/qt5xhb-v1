@@ -123,10 +123,6 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_NEW )
 }
 
 /*
-QQuickWebEngineProfile(QQuickWebEngineProfilePrivate *, QObject *parent = Q_NULLPTR) [private]
-*/
-
-/*
 ~QQuickWebEngineProfile()
 */
 HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DELETE )
@@ -991,14 +987,6 @@ HB_FUNC_STATIC( QQUICKWEBENGINEPROFILE_DEFAULTPROFILE )
 #endif
 #endif
 }
-
-/*
-void destroyedUrlSchemeHandler(QWebEngineUrlSchemeHandler *obj) (slot) [private]
-*/
-
-/*
-QQuickWebEngineSettings *settings() const [private]
-*/
 
 void QQuickWebEngineProfileSlots_connect_signal( const QString & signal, const QString & slot );
 
