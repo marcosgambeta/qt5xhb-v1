@@ -356,8 +356,4 @@ HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
   }
 }
 
-/*
-static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 ) [private]
-*/
-
 #pragma ENDDUMP

@@ -211,10 +211,6 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 }
 
 /*
-virtual bool create ( const QGLContext * shareContext = 0 ) [private]
-*/
-
-/*
 void deleteTexture ( GLuint id )
 */
 HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
