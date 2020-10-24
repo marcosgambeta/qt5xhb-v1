@@ -84,7 +84,7 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-QUndoStack(QObject * parent = 0)
+QUndoStack( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUNDOSTACK_NEW )
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QUNDOSTACK_DELETE )
 }
 
 /*
-void beginMacro(const QString & text)
+void beginMacro( const QString & text )
 */
 HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
 }
 
 /*
-const QUndoCommand * command(int index) const
+const QUndoCommand * command( int index ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
 }
 
 /*
-QAction * createRedoAction(QObject * parent, const QString & prefix = QString()) const
+QAction * createRedoAction( QObject * parent, const QString & prefix = QString() ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 }
 
 /*
-QAction * createUndoAction(QObject * parent, const QString & prefix = QString()) const
+QAction * createUndoAction( QObject * parent, const QString & prefix = QString() ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
 }
 
 /*
-void push(QUndoCommand * cmd)
+void push( QUndoCommand * cmd )
 */
 HB_FUNC_STATIC( QUNDOSTACK_PUSH )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
 }
 
 /*
-void setUndoLimit(int limit)
+void setUndoLimit( int limit )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 }
 
 /*
-QString text(int idx) const
+QString text( int idx ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_TEXT )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDO )
 }
 
 /*
-void setActive(bool active = true)
+void setActive( bool active = true )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
 }
 
 /*
-void setIndex(int idx)
+void setIndex( int idx )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
 {

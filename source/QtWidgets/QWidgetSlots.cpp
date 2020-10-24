@@ -50,7 +50,7 @@ void QWidgetSlots::windowIconChanged( const QIcon & icon )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWIDGET" );
-    PHB_ITEM picon = Signals_return_object( (void *) &icon, "QICON" );
+    PHB_ITEM picon = Qt5xHb::Signals_return_object( (void *) &icon, "QICON" );
 
     hb_vmEvalBlockV( cb, 2, psender, picon );
 
@@ -87,7 +87,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWIDGET" );
-    PHB_ITEM ppos = Signals_return_object( (void *) &pos, "QPOINT" );
+    PHB_ITEM ppos = Qt5xHb::Signals_return_object( (void *) &pos, "QPOINT" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppos );
 

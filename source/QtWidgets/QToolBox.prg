@@ -71,7 +71,7 @@ RETURN
 #endif
 
 /*
-QToolBox ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QToolBox( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QTOOLBOX_NEW )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTOOLBOX_DELETE )
 }
 
 /*
-int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
+int addItem( QWidget * widget, const QIcon & iconSet, const QString & text )
 */
 void QToolBox_addItem1()
 {
@@ -119,7 +119,7 @@ void QToolBox_addItem1()
 }
 
 /*
-int addItem ( QWidget * w, const QString & text )
+int addItem( QWidget * w, const QString & text )
 */
 void QToolBox_addItem2()
 {
@@ -130,11 +130,6 @@ void QToolBox_addItem2()
     RINT( obj->addItem( PQWIDGET(1), PQSTRING(2) ) );
   }
 }
-
-/*
-[1]int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
-[2]int addItem ( QWidget * w, const QString & text )
-*/
 
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
@@ -153,7 +148,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QTOOLBOX_COUNT )
 {
@@ -177,7 +172,7 @@ HB_FUNC_STATIC( QTOOLBOX_COUNT )
 }
 
 /*
-int currentIndex () const
+int currentIndex() const
 */
 HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 {
@@ -201,7 +196,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTINDEX )
 }
 
 /*
-QWidget * currentWidget () const
+QWidget * currentWidget() const
 */
 HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 {
@@ -226,7 +221,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 }
 
 /*
-int indexOf ( QWidget * widget ) const
+int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 {
@@ -250,7 +245,7 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 }
 
 /*
-int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
+int insertItem( int index, QWidget * widget, const QIcon & icon, const QString & text )
 */
 void QToolBox_insertItem1()
 {
@@ -263,7 +258,7 @@ void QToolBox_insertItem1()
 }
 
 /*
-int insertItem ( int index, QWidget * widget, const QString & text )
+int insertItem( int index, QWidget * widget, const QString & text )
 */
 void QToolBox_insertItem2()
 {
@@ -274,11 +269,6 @@ void QToolBox_insertItem2()
     RINT( obj->insertItem( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
 }
-
-/*
-[1]int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
-[2]int insertItem ( int index, QWidget * widget, const QString & text )
-*/
 
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {
@@ -297,7 +287,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 }
 
 /*
-bool isItemEnabled ( int index ) const
+bool isItemEnabled( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
 {
@@ -321,7 +311,7 @@ HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
 }
 
 /*
-QIcon itemIcon ( int index ) const
+QIcon itemIcon( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 {
@@ -346,7 +336,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 }
 
 /*
-QString itemText ( int index ) const
+QString itemText( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
 {
@@ -370,7 +360,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
 }
 
 /*
-QString itemToolTip ( int index ) const
+QString itemToolTip( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
 {
@@ -394,7 +384,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
 }
 
 /*
-void removeItem ( int index )
+void removeItem( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
 {
@@ -420,7 +410,7 @@ HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
 }
 
 /*
-void setItemEnabled ( int index, bool enabled )
+void setItemEnabled( int index, bool enabled )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
 {
@@ -446,7 +436,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
 }
 
 /*
-void setItemIcon ( int index, const QIcon & icon )
+void setItemIcon( int index, const QIcon & icon )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
 {
@@ -472,7 +462,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
 }
 
 /*
-void setItemText ( int index, const QString & text )
+void setItemText( int index, const QString & text )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
 {
@@ -498,7 +488,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
 }
 
 /*
-void setItemToolTip ( int index, const QString & toolTip )
+void setItemToolTip( int index, const QString & toolTip )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
 {
@@ -524,7 +514,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
 }
 
 /*
-QWidget * widget ( int index ) const
+QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_WIDGET )
 {
@@ -549,7 +539,7 @@ HB_FUNC_STATIC( QTOOLBOX_WIDGET )
 }
 
 /*
-void setCurrentIndex ( int index )
+void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
 {
@@ -575,7 +565,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
 }
 
 /*
-void setCurrentWidget ( QWidget * widget )
+void setCurrentWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
 {

@@ -173,8 +173,8 @@ void QTableWidgetSlots::currentItemChanged( QTableWidgetItem * current, QTableWi
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTABLEWIDGET" );
-    PHB_ITEM pcurrent = Signals_return_object( (void *) current, "QTABLEWIDGETITEM" );
-    PHB_ITEM pprevious = Signals_return_object( (void *) previous, "QTABLEWIDGETITEM" );
+    PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) current, "QTABLEWIDGETITEM" );
+    PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) previous, "QTABLEWIDGETITEM" );
 
     hb_vmEvalBlockV( cb, 3, psender, pcurrent, pprevious );
 
@@ -193,7 +193,7 @@ void QTableWidgetSlots::itemActivated( QTableWidgetItem * item )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTABLEWIDGET" );
-    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
+    PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
 
@@ -211,7 +211,7 @@ void QTableWidgetSlots::itemChanged( QTableWidgetItem * item )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTABLEWIDGET" );
-    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
+    PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
 
@@ -229,7 +229,7 @@ void QTableWidgetSlots::itemClicked( QTableWidgetItem * item )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTABLEWIDGET" );
-    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
+    PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
 
@@ -247,7 +247,7 @@ void QTableWidgetSlots::itemDoubleClicked( QTableWidgetItem * item )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTABLEWIDGET" );
-    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
+    PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
 
@@ -265,7 +265,7 @@ void QTableWidgetSlots::itemEntered( QTableWidgetItem * item )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTABLEWIDGET" );
-    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
+    PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
 
@@ -283,7 +283,7 @@ void QTableWidgetSlots::itemPressed( QTableWidgetItem * item )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTABLEWIDGET" );
-    PHB_ITEM pitem = Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
+    PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTABLEWIDGETITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
 

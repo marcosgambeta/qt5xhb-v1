@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-QWidgetItemV2(QWidget *widget)
+QWidgetItemV2( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETITEMV2_NEW )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QWIDGETITEMV2_MAXIMUMSIZE )
 }
 
 /*
-int heightForWidth(int width) const
+int heightForWidth( int width ) const
 */
 HB_FUNC_STATIC( QWIDGETITEMV2_HEIGHTFORWIDTH )
 {

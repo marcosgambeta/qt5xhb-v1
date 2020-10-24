@@ -114,7 +114,7 @@ RETURN
 #include <QtWidgets/QHeaderView>
 
 /*
-QTreeView ( QWidget * parent = 0 )
+QTreeView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTREEVIEW_NEW )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTREEVIEW_DELETE )
 }
 
 /*
-bool allColumnsShowFocus () const
+bool allColumnsShowFocus() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ALLCOLUMNSSHOWFOCUS )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QTREEVIEW_ALLCOLUMNSSHOWFOCUS )
 }
 
 /*
-int autoExpandDelay () const
+int autoExpandDelay() const
 */
 HB_FUNC_STATIC( QTREEVIEW_AUTOEXPANDDELAY )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTREEVIEW_AUTOEXPANDDELAY )
 }
 
 /*
-int columnAt ( int x ) const
+int columnAt( int x ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNAT )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNAT )
 }
 
 /*
-int columnViewportPosition ( int column ) const
+int columnViewportPosition( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNVIEWPORTPOSITION )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNVIEWPORTPOSITION )
 }
 
 /*
-int columnWidth ( int column ) const
+int columnWidth( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
 }
 
 /*
-bool expandsOnDoubleClick () const
+bool expandsOnDoubleClick() const
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDSONDOUBLECLICK )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPANDSONDOUBLECLICK )
 }
 
 /*
-QHeaderView * header () const
+QHeaderView * header() const
 */
 HB_FUNC_STATIC( QTREEVIEW_HEADER )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QTREEVIEW_HEADER )
 }
 
 /*
-int indentation () const
+int indentation() const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDENTATION )
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDENTATION )
 }
 
 /*
-QModelIndex indexAbove ( const QModelIndex & index ) const
+QModelIndex indexAbove( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
 }
 
 /*
-QModelIndex indexBelow ( const QModelIndex & index ) const
+QModelIndex indexBelow( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
 {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
 }
 
 /*
-bool isAnimated () const
+bool isAnimated() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISANIMATED )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISANIMATED )
 }
 
 /*
-bool isColumnHidden ( int column ) const
+bool isColumnHidden( int column ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISCOLUMNHIDDEN )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISCOLUMNHIDDEN )
 }
 
 /*
-bool isExpanded ( const QModelIndex & index ) const
+bool isExpanded( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISEXPANDED )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISEXPANDED )
 }
 
 /*
-bool isFirstColumnSpanned ( int row, const QModelIndex & parent ) const
+bool isFirstColumnSpanned( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISFIRSTCOLUMNSPANNED )
 {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISFIRSTCOLUMNSPANNED )
 }
 
 /*
-bool isHeaderHidden () const
+bool isHeaderHidden() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISHEADERHIDDEN )
 {
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISHEADERHIDDEN )
 }
 
 /*
-bool isRowHidden ( int row, const QModelIndex & parent ) const
+bool isRowHidden( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISROWHIDDEN )
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISROWHIDDEN )
 }
 
 /*
-bool isSortingEnabled () const
+bool isSortingEnabled() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ISSORTINGENABLED )
 {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISSORTINGENABLED )
 }
 
 /*
-bool itemsExpandable () const
+bool itemsExpandable() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ITEMSEXPANDABLE )
 {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QTREEVIEW_ITEMSEXPANDABLE )
 }
 
 /*
-bool rootIsDecorated () const
+bool rootIsDecorated() const
 */
 HB_FUNC_STATIC( QTREEVIEW_ROOTISDECORATED )
 {
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QTREEVIEW_ROOTISDECORATED )
 }
 
 /*
-void setAllColumnsShowFocus ( bool enable )
+void setAllColumnsShowFocus( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETALLCOLUMNSSHOWFOCUS )
 {
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETALLCOLUMNSSHOWFOCUS )
 }
 
 /*
-void setAnimated ( bool enable )
+void setAnimated( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETANIMATED )
 {
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETANIMATED )
 }
 
 /*
-void setAutoExpandDelay ( int delay )
+void setAutoExpandDelay( int delay )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETAUTOEXPANDDELAY )
 {
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETAUTOEXPANDDELAY )
 }
 
 /*
-void setColumnHidden ( int column, bool hide )
+void setColumnHidden( int column, bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNHIDDEN )
 {
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNHIDDEN )
 }
 
 /*
-void setColumnWidth ( int column, int width )
+void setColumnWidth( int column, int width )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNWIDTH )
 {
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETCOLUMNWIDTH )
 }
 
 /*
-void setExpanded ( const QModelIndex & index, bool expanded )
+void setExpanded( const QModelIndex & index, bool expanded )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETEXPANDED )
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETEXPANDED )
 }
 
 /*
-void setExpandsOnDoubleClick ( bool enable )
+void setExpandsOnDoubleClick( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETEXPANDSONDOUBLECLICK )
 {
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETEXPANDSONDOUBLECLICK )
 }
 
 /*
-void setFirstColumnSpanned ( int row, const QModelIndex & parent, bool span )
+void setFirstColumnSpanned( int row, const QModelIndex & parent, bool span )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETFIRSTCOLUMNSPANNED )
 {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETFIRSTCOLUMNSPANNED )
 }
 
 /*
-void setHeader ( QHeaderView * header )
+void setHeader( QHeaderView * header )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETHEADER )
 {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETHEADER )
 }
 
 /*
-void setHeaderHidden ( bool hide )
+void setHeaderHidden( bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETHEADERHIDDEN )
 {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETHEADERHIDDEN )
 }
 
 /*
-void setIndentation ( int i )
+void setIndentation( int i )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETINDENTATION )
 {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETINDENTATION )
 }
 
 /*
-void setItemsExpandable ( bool enable )
+void setItemsExpandable( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETITEMSEXPANDABLE )
 {
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETITEMSEXPANDABLE )
 }
 
 /*
-void setRootIsDecorated ( bool show )
+void setRootIsDecorated( bool show )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROOTISDECORATED )
 {
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROOTISDECORATED )
 }
 
 /*
-void setRowHidden ( int row, const QModelIndex & parent, bool hide )
+void setRowHidden( int row, const QModelIndex & parent, bool hide )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROWHIDDEN )
 {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROWHIDDEN )
 }
 
 /*
-void setSortingEnabled ( bool enable )
+void setSortingEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETSORTINGENABLED )
 {
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETSORTINGENABLED )
 }
 
 /*
-void setUniformRowHeights ( bool uniform )
+void setUniformRowHeights( bool uniform )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETUNIFORMROWHEIGHTS )
 {
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETUNIFORMROWHEIGHTS )
 }
 
 /*
-void setWordWrap ( bool on )
+void setWordWrap( bool on )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETWORDWRAP )
 {
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETWORDWRAP )
 }
 
 /*
-void sortByColumn ( int column, Qt::SortOrder order )
+void sortByColumn( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
 {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QTREEVIEW_SORTBYCOLUMN )
 }
 
 /*
-bool uniformRowHeights () const
+bool uniformRowHeights() const
 */
 HB_FUNC_STATIC( QTREEVIEW_UNIFORMROWHEIGHTS )
 {
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC( QTREEVIEW_UNIFORMROWHEIGHTS )
 }
 
 /*
-bool wordWrap () const
+bool wordWrap() const
 */
 HB_FUNC_STATIC( QTREEVIEW_WORDWRAP )
 {
@@ -1124,7 +1124,7 @@ HB_FUNC_STATIC( QTREEVIEW_WORDWRAP )
 }
 
 /*
-virtual void dataChanged ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+virtual void dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 HB_FUNC_STATIC( QTREEVIEW_DATACHANGED )
 {
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QTREEVIEW_DATACHANGED )
 }
 
 /*
-virtual QModelIndex indexAt ( const QPoint & point ) const
+virtual QModelIndex indexAt( const QPoint & point ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
 {
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
 }
 
 /*
-virtual void keyboardSearch ( const QString & search )
+virtual void keyboardSearch( const QString & search )
 */
 HB_FUNC_STATIC( QTREEVIEW_KEYBOARDSEARCH )
 {
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QTREEVIEW_KEYBOARDSEARCH )
 }
 
 /*
-virtual void reset ()
+virtual void reset()
 */
 HB_FUNC_STATIC( QTREEVIEW_RESET )
 {
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QTREEVIEW_RESET )
 }
 
 /*
-virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
+virtual void scrollTo( const QModelIndex & index, QTreeView::ScrollHint hint = QTreeView::EnsureVisible )
 */
 HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
 {
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
 }
 
 /*
-virtual void selectAll ()
+virtual void selectAll()
 */
 HB_FUNC_STATIC( QTREEVIEW_SELECTALL )
 {
@@ -1279,7 +1279,7 @@ HB_FUNC_STATIC( QTREEVIEW_SELECTALL )
 }
 
 /*
-virtual void setModel ( QAbstractItemModel * model )
+virtual void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETMODEL )
 {
@@ -1305,7 +1305,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETMODEL )
 }
 
 /*
-virtual void setRootIndex ( const QModelIndex & index )
+virtual void setRootIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETROOTINDEX )
 {
@@ -1331,7 +1331,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETROOTINDEX )
 }
 
 /*
-virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
+virtual void setSelectionModel( QItemSelectionModel * selectionModel )
 */
 HB_FUNC_STATIC( QTREEVIEW_SETSELECTIONMODEL )
 {
@@ -1357,7 +1357,7 @@ HB_FUNC_STATIC( QTREEVIEW_SETSELECTIONMODEL )
 }
 
 /*
-virtual QRect visualRect ( const QModelIndex & index ) const
+virtual QRect visualRect( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
 {
@@ -1382,7 +1382,7 @@ HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
 }
 
 /*
-void collapse ( const QModelIndex & index )
+void collapse( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_COLLAPSE )
 {
@@ -1408,7 +1408,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLLAPSE )
 }
 
 /*
-void collapseAll ()
+void collapseAll()
 */
 HB_FUNC_STATIC( QTREEVIEW_COLLAPSEALL )
 {
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLLAPSEALL )
 }
 
 /*
-void expand ( const QModelIndex & index )
+void expand( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPAND )
 {
@@ -1460,7 +1460,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPAND )
 }
 
 /*
-void expandAll ()
+void expandAll()
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDALL )
 {
@@ -1486,7 +1486,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPANDALL )
 }
 
 /*
-void expandToDepth ( int depth )
+void expandToDepth( int depth )
 */
 HB_FUNC_STATIC( QTREEVIEW_EXPANDTODEPTH )
 {
@@ -1512,7 +1512,7 @@ HB_FUNC_STATIC( QTREEVIEW_EXPANDTODEPTH )
 }
 
 /*
-void hideColumn ( int column )
+void hideColumn( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_HIDECOLUMN )
 {
@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC( QTREEVIEW_HIDECOLUMN )
 }
 
 /*
-void resizeColumnToContents ( int column )
+void resizeColumnToContents( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_RESIZECOLUMNTOCONTENTS )
 {
@@ -1564,7 +1564,7 @@ HB_FUNC_STATIC( QTREEVIEW_RESIZECOLUMNTOCONTENTS )
 }
 
 /*
-void showColumn ( int column )
+void showColumn( int column )
 */
 HB_FUNC_STATIC( QTREEVIEW_SHOWCOLUMN )
 {

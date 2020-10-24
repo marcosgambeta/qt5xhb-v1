@@ -63,7 +63,7 @@ RETURN
 #include <QtWidgets/QUndoStack>
 
 /*
-QUndoView ( QWidget * parent = 0 )
+QUndoView( QWidget * parent = 0 )
 */
 void QUndoView_new1()
 {
@@ -72,7 +72,7 @@ void QUndoView_new1()
 }
 
 /*
-QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
+QUndoView( QUndoStack * stack, QWidget * parent = 0 )
 */
 void QUndoView_new2()
 {
@@ -81,19 +81,13 @@ void QUndoView_new2()
 }
 
 /*
-QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
+QUndoView( QUndoGroup * group, QWidget * parent = 0 )
 */
 void QUndoView_new3()
 {
   QUndoView * obj = new QUndoView( PQUNDOGROUP(1), OPQWIDGET(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QUndoView ( QWidget * parent = 0 )
-[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
-[3]QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {
@@ -135,7 +129,7 @@ HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 }
 
 /*
-QIcon cleanIcon () const
+QIcon cleanIcon() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
@@ -160,7 +154,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 }
 
 /*
-QString emptyLabel () const
+QString emptyLabel() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {
@@ -184,7 +178,7 @@ HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 }
 
 /*
-QUndoGroup * group () const
+QUndoGroup * group() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
@@ -209,7 +203,7 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 }
 
 /*
-void setCleanIcon ( const QIcon & icon )
+void setCleanIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
@@ -235,7 +229,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 }
 
 /*
-void setEmptyLabel ( const QString & label )
+void setEmptyLabel( const QString & label )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
@@ -261,7 +255,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 }
 
 /*
-QUndoStack * stack () const
+QUndoStack * stack() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {
@@ -286,7 +280,7 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
 }
 
 /*
-void setGroup ( QUndoGroup * group )
+void setGroup( QUndoGroup * group )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
@@ -312,7 +306,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 }
 
 /*
-void setStack ( QUndoStack * stack )
+void setStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {

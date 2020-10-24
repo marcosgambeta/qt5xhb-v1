@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-QWidgetAction(QObject * parent)
+QWidgetAction( QObject * parent )
 */
 HB_FUNC_STATIC( QWIDGETACTION_NEW )
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 }
 
 /*
-void releaseWidget(QWidget * widget)
+void releaseWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 }
 
 /*
-QWidget * requestWidget(QWidget * parent)
+QWidget * requestWidget( QWidget * parent )
 */
 HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 }
 
 /*
-void setDefaultWidget(QWidget * widget)
+void setDefaultWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
 {

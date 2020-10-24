@@ -98,7 +98,7 @@ RETURN
 #endif
 
 /*
-explicit QTreeWidget(QWidget *parent = nullptr)
+QTreeWidget( QWidget * parent = nullptr )
 */
 HB_FUNC_STATIC( QTREEWIDGET_NEW )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QTREEWIDGET_DELETE )
 }
 
 /*
-int columnCount () const
+int columnCount() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_COLUMNCOUNT )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTREEWIDGET_COLUMNCOUNT )
 }
 
 /*
-void setColumnCount ( int columns )
+void setColumnCount( int columns )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SETCOLUMNCOUNT )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCOLUMNCOUNT )
 }
 
 /*
-int topLevelItemCount () const
+int topLevelItemCount() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEMCOUNT )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEMCOUNT )
 }
 
 /*
-void addTopLevelItem ( QTreeWidgetItem * item )
+void addTopLevelItem( QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEM )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEM )
 }
 
 /*
-void closePersistentEditor ( QTreeWidgetItem * item, int column = 0 )
+void closePersistentEditor( QTreeWidgetItem * item, int column = 0 )
 */
 HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
 }
 
 /*
-int currentColumn () const
+int currentColumn() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_CURRENTCOLUMN )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTCOLUMN )
 }
 
 /*
-QTreeWidgetItem * currentItem () const
+QTreeWidgetItem * currentItem() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
 }
 
 /*
-void editItem ( QTreeWidgetItem * item, int column = 0 )
+void editItem( QTreeWidgetItem * item, int column = 0 )
 */
 HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
 }
 
 /*
-QTreeWidgetItem *  headerItem () const
+QTreeWidgetItem * headerItem() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
 }
 
 /*
-int indexOfTopLevelItem ( QTreeWidgetItem * item ) const
+int indexOfTopLevelItem( QTreeWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QTREEWIDGET_INDEXOFTOPLEVELITEM )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INDEXOFTOPLEVELITEM )
 }
 
 /*
-void insertTopLevelItem ( int index, QTreeWidgetItem * item )
+void insertTopLevelItem( int index, QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEM )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEM )
 }
 
 /*
-QTreeWidgetItem * invisibleRootItem () const
+QTreeWidgetItem * invisibleRootItem() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
 }
 
 /*
-bool isFirstItemColumnSpanned ( const QTreeWidgetItem * item ) const
+bool isFirstItemColumnSpanned( const QTreeWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QTREEWIDGET_ISFIRSTITEMCOLUMNSPANNED )
 {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ISFIRSTITEMCOLUMNSPANNED )
 }
 
 /*
-QTreeWidgetItem * itemAbove ( const QTreeWidgetItem * item ) const
+QTreeWidgetItem * itemAbove( const QTreeWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
 }
 
 /*
-QTreeWidgetItem * itemAt ( const QPoint & p ) const
+QTreeWidgetItem * itemAt( const QPoint & p ) const
 */
 void QTreeWidget_itemAt1()
 {
@@ -500,7 +500,7 @@ void QTreeWidget_itemAt1()
 }
 
 /*
-QTreeWidgetItem * itemAt ( int x, int y ) const
+QTreeWidgetItem * itemAt( int x, int y ) const
 */
 void QTreeWidget_itemAt2()
 {
@@ -512,11 +512,6 @@ void QTreeWidget_itemAt2()
     Qt5xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
   }
 }
-
-/*
-[1]QTreeWidgetItem * itemAt ( const QPoint & p ) const
-[2]QTreeWidgetItem * itemAt ( int x, int y ) const
-*/
 
 HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 {
@@ -535,7 +530,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 }
 
 /*
-QTreeWidgetItem *  itemBelow ( const QTreeWidgetItem * item ) const
+QTreeWidgetItem * itemBelow( const QTreeWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QTREEWIDGET_ITEMBELOW )
 {
@@ -560,7 +555,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMBELOW )
 }
 
 /*
-QWidget * itemWidget ( QTreeWidgetItem * item, int column ) const
+QWidget * itemWidget( QTreeWidgetItem * item, int column ) const
 */
 HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
 {
@@ -585,7 +580,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
 }
 
 /*
-void openPersistentEditor ( QTreeWidgetItem * item, int column = 0 )
+void openPersistentEditor( QTreeWidgetItem * item, int column = 0 )
 */
 HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
 {
@@ -611,7 +606,7 @@ HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
 }
 
 /*
-void removeItemWidget ( QTreeWidgetItem * item, int column )
+void removeItemWidget( QTreeWidgetItem * item, int column )
 */
 HB_FUNC_STATIC( QTREEWIDGET_REMOVEITEMWIDGET )
 {
@@ -637,7 +632,7 @@ HB_FUNC_STATIC( QTREEWIDGET_REMOVEITEMWIDGET )
 }
 
 /*
-void setCurrentItem ( QTreeWidgetItem * item )
+void setCurrentItem( QTreeWidgetItem * item )
 */
 void QTreeWidget_setCurrentItem1()
 {
@@ -652,7 +647,7 @@ void QTreeWidget_setCurrentItem1()
 }
 
 /*
-void setCurrentItem ( QTreeWidgetItem * item, int column )
+void setCurrentItem( QTreeWidgetItem * item, int column )
 */
 void QTreeWidget_setCurrentItem2()
 {
@@ -667,7 +662,7 @@ void QTreeWidget_setCurrentItem2()
 }
 
 /*
-void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
+void setCurrentItem( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
 */
 void QTreeWidget_setCurrentItem3()
 {
@@ -680,12 +675,6 @@ void QTreeWidget_setCurrentItem3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCurrentItem ( QTreeWidgetItem * item )
-[2]void setCurrentItem ( QTreeWidgetItem * item, int column )
-[3]void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
-*/
 
 HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 {
@@ -708,7 +697,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 }
 
 /*
-void setFirstItemColumnSpanned ( const QTreeWidgetItem * item, bool span )
+void setFirstItemColumnSpanned( const QTreeWidgetItem * item, bool span )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SETFIRSTITEMCOLUMNSPANNED )
 {
@@ -734,7 +723,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETFIRSTITEMCOLUMNSPANNED )
 }
 
 /*
-void setHeaderItem ( QTreeWidgetItem * item )
+void setHeaderItem( QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SETHEADERITEM )
 {
@@ -760,7 +749,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERITEM )
 }
 
 /*
-void setHeaderLabel ( const QString & label )
+void setHeaderLabel( const QString & label )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABEL )
 {
@@ -786,7 +775,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABEL )
 }
 
 /*
-void setHeaderLabels ( const QStringList & labels )
+void setHeaderLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABELS )
 {
@@ -812,7 +801,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETHEADERLABELS )
 }
 
 /*
-void setItemWidget ( QTreeWidgetItem * item, int column, QWidget * widget )
+void setItemWidget( QTreeWidgetItem * item, int column, QWidget * widget )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SETITEMWIDGET )
 {
@@ -838,7 +827,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETITEMWIDGET )
 }
 
 /*
-int sortColumn () const
+int sortColumn() const
 */
 HB_FUNC_STATIC( QTREEWIDGET_SORTCOLUMN )
 {
@@ -862,7 +851,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTCOLUMN )
 }
 
 /*
-void sortItems ( int column, Qt::SortOrder order )
+void sortItems( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
 {
@@ -888,7 +877,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SORTITEMS )
 }
 
 /*
-QTreeWidgetItem *  takeTopLevelItem ( int index )
+QTreeWidgetItem * takeTopLevelItem( int index )
 */
 HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
 {
@@ -913,7 +902,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
 }
 
 /*
-QTreeWidgetItem *  topLevelItem ( int index ) const
+QTreeWidgetItem * topLevelItem( int index ) const
 */
 HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
 {
@@ -938,7 +927,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
 }
 
 /*
-QRect visualItemRect ( const QTreeWidgetItem * item ) const
+QRect visualItemRect( const QTreeWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QTREEWIDGET_VISUALITEMRECT )
 {
@@ -963,7 +952,7 @@ HB_FUNC_STATIC( QTREEWIDGET_VISUALITEMRECT )
 }
 
 /*
-virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
+virtual void setSelectionModel( QItemSelectionModel * selectionModel )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SETSELECTIONMODEL )
 {
@@ -989,7 +978,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETSELECTIONMODEL )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QTREEWIDGET_CLEAR )
 {
@@ -1015,7 +1004,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLEAR )
 }
 
 /*
-void collapseItem ( const QTreeWidgetItem * item )
+void collapseItem( const QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_COLLAPSEITEM )
 {
@@ -1041,7 +1030,7 @@ HB_FUNC_STATIC( QTREEWIDGET_COLLAPSEITEM )
 }
 
 /*
-void expandItem ( const QTreeWidgetItem * item )
+void expandItem( const QTreeWidgetItem * item )
 */
 HB_FUNC_STATIC( QTREEWIDGET_EXPANDITEM )
 {
@@ -1067,7 +1056,7 @@ HB_FUNC_STATIC( QTREEWIDGET_EXPANDITEM )
 }
 
 /*
-void scrollToItem ( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
+void scrollToItem( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
 {

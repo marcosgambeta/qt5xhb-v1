@@ -47,7 +47,7 @@ void QTextEditSlots::currentCharFormatChanged( const QTextCharFormat & f )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTEDIT" );
-    PHB_ITEM pf = Signals_return_object( (void *) &f, "QTEXTCHARFORMAT" );
+    PHB_ITEM pf = Qt5xHb::Signals_return_object( (void *) &f, "QTEXTCHARFORMAT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pf );
 

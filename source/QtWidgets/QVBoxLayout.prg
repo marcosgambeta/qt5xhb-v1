@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QVBoxLayout ()
+QVBoxLayout()
 */
 void QVBoxLayout_new1()
 {
@@ -58,18 +58,13 @@ void QVBoxLayout_new1()
 }
 
 /*
-QVBoxLayout ( QWidget * parent )
+QVBoxLayout( QWidget * parent )
 */
 void QVBoxLayout_new2()
 {
   QVBoxLayout * obj = new QVBoxLayout( PQWIDGET(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QVBoxLayout ()
-[2]QVBoxLayout ( QWidget * parent )
-*/
 
 HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 {

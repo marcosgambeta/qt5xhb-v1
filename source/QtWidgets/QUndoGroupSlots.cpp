@@ -29,7 +29,7 @@ void QUndoGroupSlots::activeStackChanged( QUndoStack * stack )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOGROUP" );
-    PHB_ITEM pstack = Signals_return_qobject( (QObject *) stack, "QUNDOSTACK" );
+    PHB_ITEM pstack = Qt5xHb::Signals_return_qobject( (QObject *) stack, "QUNDOSTACK" );
 
     hb_vmEvalBlockV( cb, 2, psender, pstack );
 

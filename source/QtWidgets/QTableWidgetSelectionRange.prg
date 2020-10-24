@@ -71,7 +71,7 @@ void QTableWidgetSelectionRange_new1()
 }
 
 /*
-QTableWidgetSelectionRange(int top, int left, int bottom, int right)
+QTableWidgetSelectionRange( int top, int left, int bottom, int right )
 */
 void QTableWidgetSelectionRange_new2()
 {
@@ -80,19 +80,13 @@ void QTableWidgetSelectionRange_new2()
 }
 
 /*
-QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
+QTableWidgetSelectionRange( const QTableWidgetSelectionRange & other )
 */
 void QTableWidgetSelectionRange_new3()
 {
   QTableWidgetSelectionRange * obj = new QTableWidgetSelectionRange( *PQTABLEWIDGETSELECTIONRANGE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTableWidgetSelectionRange()
-[2]QTableWidgetSelectionRange(int top, int left, int bottom, int right)
-[3]QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other)
-*/
 
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 {

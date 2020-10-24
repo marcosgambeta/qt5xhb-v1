@@ -72,7 +72,7 @@ RETURN
 #include <QtWidgets/QMenu>
 
 /*
-explicit QToolButton ( QWidget * parent = 0 )
+QToolButton( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_NEW )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DELETE )
 }
 
 /*
-Qt::ArrowType arrowType () const
+Qt::ArrowType arrowType() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
 }
 
 /*
-bool autoRaise () const
+bool autoRaise() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
 }
 
 /*
-QAction * defaultAction () const
+QAction * defaultAction() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
 }
 
 /*
-void setArrowType ( Qt::ArrowType type )
+void setArrowType( Qt::ArrowType type )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
 }
 
 /*
-void setAutoRaise ( bool enable )
+void setAutoRaise( bool enable )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
 }
 
 /*
-Qt::ToolButtonStyle toolButtonStyle () const
+Qt::ToolButtonStyle toolButtonStyle() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
 }
 
 /*
-QSize minimumSizeHint () const
+QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
 }
 
 /*
-void setDefaultAction ( QAction * action )
+void setDefaultAction( QAction * action )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
 }
 
 /*
-void setToolButtonStyle ( Qt::ToolButtonStyle style )
+void setToolButtonStyle( Qt::ToolButtonStyle style )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
 {
