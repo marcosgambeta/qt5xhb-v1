@@ -608,14 +608,6 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_STATE )
 #endif
 }
 
-/*
-static QVoice createVoice(const QString &name, QVoice::Gender gender, QVoice::Age age, const QVariant &data) [protected]
-*/
-
-/*
-static QVariant voiceData(const QVoice &voice) [protected]
-*/
-
 void QTextToSpeechEngineSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_ONSTATECHANGED )
