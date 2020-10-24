@@ -97,10 +97,6 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QLegend(QChart *chart) [private]
-*/
-
-/*
 ~QLegend()
 */
 HB_FUNC_STATIC( QLEGEND_DELETE )
@@ -938,14 +934,6 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
   }
 #endif
 }
-
-/*
-void hideEvent(QHideEvent *event) [protected]
-*/
-
-/*
-void showEvent(QShowEvent *event) [protected]
-*/
 
 void QLegendSlots_connect_signal( const QString & signal, const QString & slot );
 

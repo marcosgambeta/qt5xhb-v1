@@ -92,10 +92,6 @@ HB_FUNC_STATIC( QDATETIMEAXIS_NEW )
 }
 
 /*
-QDateTimeAxis(QDateTimeAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QDateTimeAxis()
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_DELETE )

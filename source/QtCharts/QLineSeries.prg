@@ -74,10 +74,6 @@ HB_FUNC_STATIC( QLINESERIES_NEW )
 }
 
 /*
-QLineSeries(QLineSeriesPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QLineSeries()
 */
 HB_FUNC_STATIC( QLINESERIES_DELETE )

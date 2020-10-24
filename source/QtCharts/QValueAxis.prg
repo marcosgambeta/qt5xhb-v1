@@ -93,10 +93,6 @@ HB_FUNC_STATIC( QVALUEAXIS_NEW )
 }
 
 /*
-QValueAxis(QValueAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QValueAxis()
 */
 HB_FUNC_STATIC( QVALUEAXIS_DELETE )

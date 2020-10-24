@@ -105,10 +105,6 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QXYSeries(QXYSeriesPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QXYSeries()
 */
 HB_FUNC_STATIC( QXYSERIES_DELETE )

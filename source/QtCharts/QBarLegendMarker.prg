@@ -78,10 +78,6 @@ HB_FUNC_STATIC( QBARLEGENDMARKER_NEW )
 }
 
 /*
-QBarLegendMarker(QBarLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QBarLegendMarker()
 */
 HB_FUNC_STATIC( QBARLEGENDMARKER_DELETE )

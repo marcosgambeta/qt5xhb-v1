@@ -76,10 +76,6 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_NEW )
 }
 
 /*
-QAreaLegendMarker(QAreaLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAreaLegendMarker()
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_DELETE )

@@ -85,10 +85,6 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QAbstractBarSeries(QAbstractBarSeriesPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAbstractBarSeries()
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_DELETE )

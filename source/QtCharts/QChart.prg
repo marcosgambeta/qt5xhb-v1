@@ -148,10 +148,6 @@ HB_FUNC_STATIC( QCHART_NEW )
 }
 
 /*
-explicit QChart(QChart::ChartType type, QGraphicsItem *parent, Qt::WindowFlags wFlags) [protected]
-*/
-
-/*
 ~QChart()
 */
 HB_FUNC_STATIC( QCHART_DELETE )

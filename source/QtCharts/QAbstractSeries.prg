@@ -78,10 +78,6 @@ RETURN
 using namespace QtCharts;
 
 /*
-QAbstractSeries(QAbstractSeriesPrivate &d, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QAbstractSeries()
 */
 HB_FUNC_STATIC( QABSTRACTSERIES_DELETE )

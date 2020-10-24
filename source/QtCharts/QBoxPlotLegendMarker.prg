@@ -76,10 +76,6 @@ HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_NEW )
 }
 
 /*
-QBoxPlotLegendMarker(QBoxPlotLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QBoxPlotLegendMarker()
 */
 HB_FUNC_STATIC( QBOXPLOTLEGENDMARKER_DELETE )

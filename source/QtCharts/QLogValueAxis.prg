@@ -94,10 +94,6 @@ HB_FUNC_STATIC( QLOGVALUEAXIS_NEW )
 }
 
 /*
-QLogValueAxis(QLogValueAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QLogValueAxis()
 */
 HB_FUNC_STATIC( QLOGVALUEAXIS_DELETE )

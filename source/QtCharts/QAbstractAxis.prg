@@ -142,10 +142,6 @@ RETURN
 using namespace QtCharts;
 
 /*
-QAbstractAxis(QAbstractAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QAbstractAxis()
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_DELETE )

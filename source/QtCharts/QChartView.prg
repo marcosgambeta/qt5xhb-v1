@@ -210,20 +210,4 @@ HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
 #endif
 }
 
-/*
-void resizeEvent(QResizeEvent *event) [protected]
-*/
-
-/*
-void mousePressEvent(QMouseEvent *event) [protected]
-*/
-
-/*
-void mouseMoveEvent(QMouseEvent *event) [protected]
-*/
-
-/*
-void mouseReleaseEvent(QMouseEvent *event) [protected]
-*/
-
 #pragma ENDDUMP

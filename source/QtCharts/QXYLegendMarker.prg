@@ -76,10 +76,6 @@ HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
 }
 
 /*
-QXYLegendMarker(QXYLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QXYLegendMarker()
 */
 HB_FUNC_STATIC( QXYLEGENDMARKER_DELETE )

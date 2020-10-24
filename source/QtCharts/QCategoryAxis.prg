@@ -87,10 +87,6 @@ HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
 }
 
 /*
-QCategoryAxis(QCategoryAxisPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCategoryAxis()
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_DELETE )

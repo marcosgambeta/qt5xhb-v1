@@ -78,10 +78,6 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 }
 
 /*
-QPieLegendMarker(QPieLegendMarkerPrivate &d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QPieLegendMarker()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_DELETE )
