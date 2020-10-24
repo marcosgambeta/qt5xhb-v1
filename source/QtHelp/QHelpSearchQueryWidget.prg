@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QHelpSearchQueryWidget ( QWidget * parent = 0 )
+QHelpSearchQueryWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
 }
 
 /*
-QList<QHelpSearchQuery> query () const
+QList<QHelpSearchQuery> query() const
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
 {

@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
 }
 
 /*
-QHelpContentItem * child ( int row ) const
+QHelpContentItem * child( int row ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 }
 
 /*
-int childCount () const
+int childCount() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 }
 
 /*
-int childPosition ( QHelpContentItem * child ) const
+int childPosition( QHelpContentItem * child ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 }
 
 /*
-QHelpContentItem * parent () const
+QHelpContentItem * parent() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 }
 
 /*
-int row () const
+int row() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
 {

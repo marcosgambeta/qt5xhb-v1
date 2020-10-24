@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-QHelpSearchQuery ()
+QHelpSearchQuery()
 */
 void QHelpSearchQuery_new1()
 {
@@ -65,18 +65,13 @@ void QHelpSearchQuery_new1()
 }
 
 /*
-QHelpSearchQuery ( FieldName field, const QStringList & wordList )
+QHelpSearchQuery( QHelpSearchQuery::FieldName field, const QStringList & wordList )
 */
 void QHelpSearchQuery_new2()
 {
   QHelpSearchQuery * obj = new QHelpSearchQuery( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QHelpSearchQuery ()
-[2]QHelpSearchQuery ( FieldName field, const QStringList & wordList )
-*/
 
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 {

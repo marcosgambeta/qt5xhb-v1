@@ -68,7 +68,7 @@ RETURN
 #include <QtHelp/QHelpSearchResultWidget>
 
 /*
-QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
+QHelpSearchEngine( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 }
 
 /*
-int hitCount () const
+int hitCount() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
 }
 
 /*
-QList<QHelpSearchQuery> query () const
+QList<QHelpSearchQuery> query() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 }
 
 /*
-QHelpSearchQueryWidget * queryWidget ()
+QHelpSearchQueryWidget * queryWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 }
 
 /*
-QHelpSearchResultWidget * resultWidget ()
+QHelpSearchResultWidget * resultWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 }
 
 /*
-void cancelIndexing ()
+void cancelIndexing()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 }
 
 /*
-void cancelSearching ()
+void cancelSearching()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 }
 
 /*
-void reindexDocumentation ()
+void reindexDocumentation()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 }
 
 /*
-void search ( const QList<QHelpSearchQuery> & queryList )
+void search( const QList<QHelpSearchQuery> & queryList )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
 {

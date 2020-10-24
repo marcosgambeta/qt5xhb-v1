@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_DELETE )
 }
 
 /*
-void activateCurrentItem ()
+void activateCurrentItem()
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 }
 
 /*
-void filterIndices ( const QString & filter, const QString & wildcard = QString() )
+void filterIndices( const QString & filter, const QString & wildcard = QString() )
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 {

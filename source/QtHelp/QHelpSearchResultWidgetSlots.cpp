@@ -29,7 +29,7 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHRESULTWIDGET" );
-    PHB_ITEM plink = Signals_return_object( (void *) &link, "QURL" );
+    PHB_ITEM plink = Qt5xHb::Signals_return_object( (void *) &link, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );
 
