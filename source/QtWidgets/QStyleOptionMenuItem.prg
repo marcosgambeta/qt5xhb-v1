@@ -78,23 +78,13 @@ void QStyleOptionMenuItem_new1()
 }
 
 /*
-QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
+QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
 */
 void QStyleOptionMenuItem_new2()
 {
   QStyleOptionMenuItem * obj = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionMenuItem(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionMenuItem()
-[2]QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
-[3]QStyleOptionMenuItem(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )
 {

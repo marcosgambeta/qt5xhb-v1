@@ -57,23 +57,13 @@ void QStyleOptionSizeGrip_new1()
 }
 
 /*
-QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
+QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
 */
 void QStyleOptionSizeGrip_new2()
 {
   QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionSizeGrip(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionSizeGrip()
-[2]QStyleOptionSizeGrip(const QStyleOptionSizeGrip &other)
-[3]QStyleOptionSizeGrip(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 {

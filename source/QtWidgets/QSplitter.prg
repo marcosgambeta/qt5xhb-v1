@@ -78,7 +78,7 @@ RETURN
 #endif
 
 /*
-QSplitter ( QWidget * parent = 0 )
+QSplitter( QWidget * parent = 0 )
 */
 void QSplitter_new1()
 {
@@ -87,18 +87,13 @@ void QSplitter_new1()
 }
 
 /*
-QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
+QSplitter( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QSplitter_new2()
 {
   QSplitter * obj = new QSplitter( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSplitter ( QWidget * parent = 0 )
-[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QSPLITTER_NEW )
 {
@@ -136,7 +131,7 @@ HB_FUNC_STATIC( QSPLITTER_DELETE )
 }
 
 /*
-void addWidget ( QWidget * widget )
+void addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
 {
@@ -162,7 +157,7 @@ HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
 }
 
 /*
-bool childrenCollapsible () const
+bool childrenCollapsible() const
 */
 HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 {
@@ -186,7 +181,7 @@ HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QSPLITTER_COUNT )
 {
@@ -210,7 +205,7 @@ HB_FUNC_STATIC( QSPLITTER_COUNT )
 }
 
 /*
-void getRange ( int index, int * min, int * max ) const
+void getRange( int index, int * min, int * max ) const
 */
 HB_FUNC_STATIC( QSPLITTER_GETRANGE )
 {
@@ -240,7 +235,7 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
 }
 
 /*
-QSplitterHandle * handle ( int index ) const
+QSplitterHandle * handle( int index ) const
 */
 HB_FUNC_STATIC( QSPLITTER_HANDLE )
 {
@@ -265,7 +260,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
 }
 
 /*
-int handleWidth () const
+int handleWidth() const
 */
 HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
 {
@@ -289,7 +284,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
 }
 
 /*
-int indexOf ( QWidget * widget ) const
+int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QSPLITTER_INDEXOF )
 {
@@ -313,7 +308,7 @@ HB_FUNC_STATIC( QSPLITTER_INDEXOF )
 }
 
 /*
-void insertWidget ( int index, QWidget * widget )
+void insertWidget( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
 {
@@ -339,7 +334,7 @@ HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
 }
 
 /*
-bool isCollapsible ( int index ) const
+bool isCollapsible( int index ) const
 */
 HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
 {
@@ -363,7 +358,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
 }
 
 /*
-bool opaqueResize () const
+bool opaqueResize() const
 */
 HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 {
@@ -387,7 +382,7 @@ HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
 {
@@ -411,7 +406,7 @@ HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
 }
 
 /*
-void refresh ()
+void refresh()
 */
 HB_FUNC_STATIC( QSPLITTER_REFRESH )
 {
@@ -437,7 +432,7 @@ HB_FUNC_STATIC( QSPLITTER_REFRESH )
 }
 
 /*
-bool restoreState ( const QByteArray & state )
+bool restoreState( const QByteArray & state )
 */
 HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
 {
@@ -461,7 +456,7 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
 }
 
 /*
-QByteArray saveState () const
+QByteArray saveState() const
 */
 HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
 {
@@ -486,7 +481,7 @@ HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
 }
 
 /*
-void setChildrenCollapsible ( bool )
+void setChildrenCollapsible( bool )
 */
 HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
 {
@@ -512,7 +507,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
 }
 
 /*
-void setCollapsible ( int index, bool collapse )
+void setCollapsible( int index, bool collapse )
 */
 HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
 {
@@ -538,7 +533,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
 }
 
 /*
-void setHandleWidth ( int )
+void setHandleWidth( int )
 */
 HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
 {
@@ -564,7 +559,7 @@ HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
 }
 
 /*
-void setOpaqueResize ( bool opaque = true )
+void setOpaqueResize( bool opaque = true )
 */
 HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
 {
@@ -590,7 +585,7 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
 }
 
 /*
-void setOrientation ( Qt::Orientation )
+void setOrientation( Qt::Orientation )
 */
 HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
 {
@@ -616,7 +611,7 @@ HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
 }
 
 /*
-void setStretchFactor ( int index, int stretch )
+void setStretchFactor( int index, int stretch )
 */
 HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
 {
@@ -642,7 +637,7 @@ HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
 }
 
 /*
-QWidget * widget ( int index ) const
+QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QSPLITTER_WIDGET )
 {
@@ -667,7 +662,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
 {
@@ -692,7 +687,7 @@ HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
 {

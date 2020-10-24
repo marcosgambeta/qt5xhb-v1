@@ -81,23 +81,13 @@ void QStyleOptionTab_new1()
 }
 
 /*
-QStyleOptionTab(const QStyleOptionTab &other)
+QStyleOptionTab( const QStyleOptionTab & other )
 */
 void QStyleOptionTab_new2()
 {
   QStyleOptionTab * obj = new QStyleOptionTab( *PQSTYLEOPTIONTAB(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionTab(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionTab()
-[2]QStyleOptionTab(const QStyleOptionTab &other)
-[3]QStyleOptionTab(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_NEW )
 {

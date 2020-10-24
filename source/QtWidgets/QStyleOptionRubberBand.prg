@@ -59,23 +59,13 @@ void QStyleOptionRubberBand_new1()
 }
 
 /*
-QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
+QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
 */
 void QStyleOptionRubberBand_new2()
 {
   QStyleOptionRubberBand * obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionRubberBand(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionRubberBand()
-[2]QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
-[3]QStyleOptionRubberBand(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
 {

@@ -64,23 +64,13 @@ void QStyleOptionTabBarBase_new1()
 }
 
 /*
-QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
+QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
 */
 void QStyleOptionTabBarBase_new2()
 {
   QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionTabBarBase(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionTabBarBase()
-[2]QStyleOptionTabBarBase(const QStyleOptionTabBarBase &other)
-[3]QStyleOptionTabBarBase(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
 {

@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Complex)
+QStyleOptionComplex( int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex )
 */
 void QStyleOptionComplex_new1()
 {
@@ -60,18 +60,13 @@ void QStyleOptionComplex_new1()
 }
 
 /*
-QStyleOptionComplex(const QStyleOptionComplex &other)
+QStyleOptionComplex( const QStyleOptionComplex & other )
 */
 void QStyleOptionComplex_new2()
 {
   QStyleOptionComplex * obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QStyleOptionComplex(int version = QStyleOptionComplex::Version, int type = SO_Complex)
-[2]QStyleOptionComplex(const QStyleOptionComplex &other)
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 {

@@ -70,18 +70,13 @@ void QScrollerProperties_new1()
 }
 
 /*
-QScrollerProperties(const QScrollerProperties & sp)
+QScrollerProperties( const QScrollerProperties & sp )
 */
 void QScrollerProperties_new2()
 {
   QScrollerProperties * obj = new QScrollerProperties( *PQSCROLLERPROPERTIES(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QScrollerProperties()
-[2]QScrollerProperties(const QScrollerProperties & sp)
-*/
 
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 {
@@ -117,7 +112,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_DELETE )
 }
 
 /*
-QVariant scrollMetric(ScrollMetric metric) const
+QVariant scrollMetric( QScrollerProperties::ScrollMetric metric ) const
 */
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
 {
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SCROLLMETRIC )
 }
 
 /*
-void setScrollMetric(ScrollMetric metric, const QVariant & value)
+void setScrollMetric( QScrollerProperties::ScrollMetric metric, const QVariant & value )
 */
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSCROLLMETRIC )
 {
@@ -168,7 +163,7 @@ HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETSCROLLMETRIC )
 }
 
 /*
-void setDefaultScrollerProperties(const QScrollerProperties & sp)
+void setDefaultScrollerProperties( const QScrollerProperties & sp )
 */
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_SETDEFAULTSCROLLERPROPERTIES )
 {

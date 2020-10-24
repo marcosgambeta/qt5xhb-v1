@@ -64,23 +64,13 @@ void QStyleOptionToolBox_new1()
 }
 
 /*
-QStyleOptionToolBox(const QStyleOptionToolBox &other)
+QStyleOptionToolBox( const QStyleOptionToolBox & other )
 */
 void QStyleOptionToolBox_new2()
 {
   QStyleOptionToolBox * obj = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionToolBox(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionToolBox()
-[2]QStyleOptionToolBox(const QStyleOptionToolBox &other)
-[3]QStyleOptionToolBox(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
 {

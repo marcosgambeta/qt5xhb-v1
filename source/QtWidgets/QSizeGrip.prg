@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-QSizeGrip ( QWidget * parent )
+QSizeGrip( QWidget * parent )
 */
 HB_FUNC_STATIC( QSIZEGRIP_NEW )
 {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
 {

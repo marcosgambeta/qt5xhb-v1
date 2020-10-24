@@ -61,23 +61,13 @@ void QStyleOptionSpinBox_new1()
 }
 
 /*
-QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
+QStyleOptionSpinBox( const QStyleOptionSpinBox & other )
 */
 void QStyleOptionSpinBox_new2()
 {
   QStyleOptionSpinBox * obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionSpinBox(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionSpinBox()
-[2]QStyleOptionSpinBox(const QStyleOptionSpinBox &other)
-[3]QStyleOptionSpinBox(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
 {

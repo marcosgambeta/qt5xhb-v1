@@ -79,23 +79,13 @@ void QStyleOptionSlider_new1()
 }
 
 /*
-QStyleOptionSlider(const QStyleOptionSlider &other)
+QStyleOptionSlider( const QStyleOptionSlider & other )
 */
 void QStyleOptionSlider_new2()
 {
   QStyleOptionSlider * obj = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionSlider(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionSlider()
-[2]QStyleOptionSlider(const QStyleOptionSlider &other)
-[3]QStyleOptionSlider(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NEW )
 {

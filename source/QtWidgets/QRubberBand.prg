@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QRubberBand ( Shape s, QWidget * p = 0 )
+QRubberBand( QRubberBand::Shape s, QWidget * p = 0 )
 */
 HB_FUNC_STATIC( QRUBBERBAND_NEW )
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 }
 
 /*
-void move ( int x, int y )
+void move( int x, int y )
 */
 void QRubberBand_move1()
 {
@@ -103,7 +103,7 @@ void QRubberBand_move1()
 }
 
 /*
-void move ( const QPoint & p )
+void move( const QPoint & p )
 */
 void QRubberBand_move2()
 {
@@ -116,11 +116,6 @@ void QRubberBand_move2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void move ( int x, int y )
-[2]void move ( const QPoint & p )
-*/
 
 HB_FUNC_STATIC( QRUBBERBAND_MOVE )
 {
@@ -139,7 +134,7 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
 }
 
 /*
-void resize ( int width, int height )
+void resize( int width, int height )
 */
 void QRubberBand_resize1()
 {
@@ -154,7 +149,7 @@ void QRubberBand_resize1()
 }
 
 /*
-void resize ( const QSize & size )
+void resize( const QSize & size )
 */
 void QRubberBand_resize2()
 {
@@ -167,11 +162,6 @@ void QRubberBand_resize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void resize ( int width, int height )
-[2]void resize ( const QSize & size )
-*/
 
 HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
 {
@@ -190,7 +180,7 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
 }
 
 /*
-void setGeometry ( const QRect & rect )
+void setGeometry( const QRect & rect )
 */
 void QRubberBand_setGeometry1()
 {
@@ -205,7 +195,7 @@ void QRubberBand_setGeometry1()
 }
 
 /*
-void setGeometry ( int x, int y, int width, int height )
+void setGeometry( int x, int y, int width, int height )
 */
 void QRubberBand_setGeometry2()
 {
@@ -218,11 +208,6 @@ void QRubberBand_setGeometry2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setGeometry ( const QRect & rect )
-[2]void setGeometry ( int x, int y, int width, int height )
-*/
 
 HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 {
@@ -241,7 +226,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 }
 
 /*
-Shape shape () const
+QRubberBand::Shape shape() const
 */
 HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {

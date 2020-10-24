@@ -65,23 +65,13 @@ void QStyleOptionButton_new1()
 }
 
 /*
-QStyleOptionButton(const QStyleOptionButton &other)
+QStyleOptionButton( const QStyleOptionButton & other )
 */
 void QStyleOptionButton_new2()
 {
   QStyleOptionButton * obj = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionButton(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionButton()
-[2]QStyleOptionButton(const QStyleOptionButton &other) : QStyleOption(Version, Type)
-[3]QStyleOptionButton(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )
 {

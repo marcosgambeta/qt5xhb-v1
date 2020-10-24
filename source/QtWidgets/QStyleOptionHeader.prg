@@ -74,23 +74,13 @@ void QStyleOptionHeader_new1()
 }
 
 /*
-QStyleOptionHeader(const QStyleOptionHeader &other)
+QStyleOptionHeader( const QStyleOptionHeader & other )
 */
 void QStyleOptionHeader_new2()
 {
   QStyleOptionHeader * obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionHeader(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionHeader()
-[2]QStyleOptionHeader(const QStyleOptionHeader &other)
-[3]QStyleOptionHeader(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
 {

@@ -47,7 +47,7 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTACKEDLAYOUT" );
-    PHB_ITEM pwidget = Signals_return_qobject( (QObject *) widget, "QWIDGET" );
+    PHB_ITEM pwidget = Qt5xHb::Signals_return_qobject( (QObject *) widget, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
 

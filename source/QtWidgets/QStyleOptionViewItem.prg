@@ -94,23 +94,13 @@ void QStyleOptionViewItem_new1()
 }
 
 /*
-QStyleOptionViewItem(const QStyleOptionViewItem &other)
+QStyleOptionViewItem( const QStyleOptionViewItem & other )
 */
 void QStyleOptionViewItem_new2()
 {
   QStyleOptionViewItem * obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionViewItem(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionViewItem()
-[2]QStyleOptionViewItem(const QStyleOptionViewItem &other) : QStyleOption(Version, Type)
-[3]QStyleOptionViewItem(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
 {

@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-QSplitterHandle ( Qt::Orientation orientation, QSplitter * parent )
+QSplitterHandle( Qt::Orientation orientation, QSplitter * parent )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_DELETE )
 }
 
 /*
-bool opaqueResize () const
+bool opaqueResize() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 }
 
 /*
-void setOrientation ( Qt::Orientation orientation )
+void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 }
 
 /*
-QSplitter * splitter () const
+QSplitter * splitter() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
 {

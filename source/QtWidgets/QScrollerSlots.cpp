@@ -29,7 +29,7 @@ void QScrollerSlots::scrollerPropertiesChanged( const QScrollerProperties & newP
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCROLLER" );
-    PHB_ITEM pnewProperties = Signals_return_object( (void *) &newProperties, "QSCROLLERPROPERTIES" );
+    PHB_ITEM pnewProperties = Qt5xHb::Signals_return_object( (void *) &newProperties, "QSCROLLERPROPERTIES" );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewProperties );
 

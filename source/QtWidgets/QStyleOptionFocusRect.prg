@@ -58,23 +58,13 @@ void QStyleOptionFocusRect_new1()
 }
 
 /*
-QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
+QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
 */
 void QStyleOptionFocusRect_new2()
 {
   QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionFocusRect(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionFocusRect()
-[2]QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
-[3]QStyleOptionFocusRect(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {

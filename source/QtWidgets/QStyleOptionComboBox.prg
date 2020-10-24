@@ -70,23 +70,13 @@ void QStyleOptionComboBox_new1()
 }
 
 /*
-QStyleOptionComboBox(const QStyleOptionComboBox &other)
+QStyleOptionComboBox( const QStyleOptionComboBox & other )
 */
 void QStyleOptionComboBox_new2()
 {
   QStyleOptionComboBox * obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionComboBox(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionComboBox()
-[2]QStyleOptionComboBox(const QStyleOptionComboBox &other)
-[3]QStyleOptionComboBox(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
 {

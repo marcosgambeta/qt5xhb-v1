@@ -63,23 +63,13 @@ void QStyleOptionFrame_new1()
 }
 
 /*
-QStyleOptionFrame(const QStyleOptionFrame &other)
+QStyleOptionFrame( const QStyleOptionFrame & other )
 */
 void QStyleOptionFrame_new2()
 {
   QStyleOptionFrame * obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionFrame(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionFrame()
-[2]QStyleOptionFrame(const QStyleOptionFrame &other)
-[3]QStyleOptionFrame(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
 {

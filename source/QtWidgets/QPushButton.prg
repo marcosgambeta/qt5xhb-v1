@@ -64,7 +64,7 @@ RETURN
 #include <QtWidgets/QMenu>
 
 /*
-explicit QPushButton ( QWidget * parent = 0 )
+QPushButton( QWidget * parent = 0 )
 */
 void QPushButton_new1()
 {
@@ -73,7 +73,7 @@ void QPushButton_new1()
 }
 
 /*
-explicit QPushButton ( const QString & text, QWidget * parent = 0 )
+QPushButton( const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new2()
 {
@@ -82,7 +82,7 @@ void QPushButton_new2()
 }
 
 /*
-QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
+QPushButton( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new3()
 {
@@ -91,20 +91,13 @@ void QPushButton_new3()
 }
 
 /*
-QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
+QPushButton( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new4()
 {
   QPushButton * obj = new QPushButton( *PQPIXMAP(1), PQSTRING(2), OPQWIDGET(3,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]explicit QPushButton ( QWidget * parent = 0 )
-[2]explicit QPushButton ( const QString & text, QWidget * parent = 0 )
-[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
-[4]QPushButton ( const QPixmap & icon, const QString & text, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {
@@ -150,7 +143,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 }
 
 /*
-bool autoDefault () const
+bool autoDefault() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 {
@@ -174,7 +167,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 }
 
 /*
-bool isDefault () const
+bool isDefault() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 {
@@ -198,7 +191,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 }
 
 /*
-bool isFlat () const
+bool isFlat() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 {
@@ -222,7 +215,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 }
 
 /*
-QMenu * menu () const
+QMenu * menu() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_MENU )
 {
@@ -249,7 +242,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_MENU )
 }
 
 /*
-void setAutoDefault ( bool )
+void setAutoDefault( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 {
@@ -275,7 +268,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 }
 
 /*
-void setDefault ( bool )
+void setDefault( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 {
@@ -301,7 +294,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 }
 
 /*
-void setFlat ( bool )
+void setFlat( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 {
@@ -383,7 +376,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
 }
 
 /*
-QSize minimumSizeHint () const
+QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_MINIMUMSIZEHINT )
 {
@@ -408,7 +401,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_MINIMUMSIZEHINT )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SIZEHINT )
 {

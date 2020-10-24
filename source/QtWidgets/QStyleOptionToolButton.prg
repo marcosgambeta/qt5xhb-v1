@@ -75,23 +75,13 @@ void QStyleOptionToolButton_new1()
 }
 
 /*
-QStyleOptionToolButton(const QStyleOptionToolButton &other)
+QStyleOptionToolButton( const QStyleOptionToolButton & other )
 */
 void QStyleOptionToolButton_new2()
 {
   QStyleOptionToolButton * obj = new QStyleOptionToolButton( *PQSTYLEOPTIONTOOLBUTTON(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionToolButton(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionToolButton()
-[2]QStyleOptionToolButton(const QStyleOptionToolButton &other)
-[3]QStyleOptionToolButton(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_NEW )
 {

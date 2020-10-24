@@ -73,23 +73,13 @@ void QStyleOptionProgressBar_new1()
 }
 
 /*
-QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
+QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
 */
 void QStyleOptionProgressBar_new2()
 {
   QStyleOptionProgressBar * obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QStyleOptionProgressBar(int version) [protected]
-*/
-
-/*
-[1]QStyleOptionProgressBar()
-[2]QStyleOptionProgressBar(const QStyleOptionProgressBar &other)
-[3]QStyleOptionProgressBar(int version) [protected]
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {

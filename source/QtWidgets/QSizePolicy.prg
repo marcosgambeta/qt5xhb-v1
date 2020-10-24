@@ -81,18 +81,13 @@ void QSizePolicy_new1()
 }
 
 /*
-QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
+QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type = QSizePolicy::DefaultType )
 */
 void QSizePolicy_new2()
 {
   QSizePolicy * obj = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), ISNIL(3)? (QSizePolicy::ControlType) QSizePolicy::DefaultType : (QSizePolicy::ControlType) hb_parni(3) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSizePolicy()
-[2]QSizePolicy(Policy horizontal, Policy vertical, ControlType type = DefaultType)
-*/
 
 HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 {
@@ -128,7 +123,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_DELETE )
 }
 
 /*
-ControlType controlType() const
+QSizePolicy::ControlType controlType() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_CONTROLTYPE )
 {
@@ -224,7 +219,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASWIDTHFORHEIGHT )
 }
 
 /*
-Policy horizontalPolicy() const
+QSizePolicy::Policy horizontalPolicy() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
 {
@@ -272,7 +267,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALSTRETCH )
 }
 
 /*
-void setControlType(ControlType type)
+void setControlType( QSizePolicy::ControlType type )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETCONTROLTYPE )
 {
@@ -298,7 +293,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETCONTROLTYPE )
 }
 
 /*
-void setHeightForWidth(bool dependent)
+void setHeightForWidth( bool dependent )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETHEIGHTFORWIDTH )
 {
@@ -324,7 +319,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHEIGHTFORWIDTH )
 }
 
 /*
-void setHorizontalPolicy(Policy policy)
+void setHorizontalPolicy( QSizePolicy::Policy policy )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALPOLICY )
 {
@@ -350,7 +345,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALPOLICY )
 }
 
 /*
-void setHorizontalStretch(int stretchFactor)
+void setHorizontalStretch( int stretchFactor )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALSTRETCH )
 {
@@ -376,7 +371,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALSTRETCH )
 }
 
 /*
-void setVerticalPolicy(Policy policy)
+void setVerticalPolicy( QSizePolicy::Policy policy )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALPOLICY )
 {
@@ -402,7 +397,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALPOLICY )
 }
 
 /*
-void setVerticalStretch(int stretchFactor)
+void setVerticalStretch( int stretchFactor )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALSTRETCH )
 {
@@ -428,7 +423,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALSTRETCH )
 }
 
 /*
-void setWidthForHeight(bool dependent)
+void setWidthForHeight( bool dependent )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETWIDTHFORHEIGHT )
 {
@@ -480,7 +475,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_TRANSPOSE )
 }
 
 /*
-Policy verticalPolicy() const
+QSizePolicy::Policy verticalPolicy() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
 {

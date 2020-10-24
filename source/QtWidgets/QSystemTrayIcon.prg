@@ -71,7 +71,7 @@ RETURN
 #include <QtWidgets/QMenu>
 
 /*
-QSystemTrayIcon(QObject * parent = 0)
+QSystemTrayIcon( QObject * parent = 0 )
 */
 void QSystemTrayIcon_new1()
 {
@@ -80,18 +80,13 @@ void QSystemTrayIcon_new1()
 }
 
 /*
-QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
+QSystemTrayIcon( const QIcon & icon, QObject * parent = 0 )
 */
 void QSystemTrayIcon_new2()
 {
   QSystemTrayIcon * obj = new QSystemTrayIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), OPQOBJECT(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSystemTrayIcon(QObject * parent = 0)
-[2]QSystemTrayIcon(const QIcon & icon, QObject * parent = 0)
-*/
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {
@@ -228,7 +223,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 }
 
 /*
-void setContextMenu(QMenu * menu)
+void setContextMenu( QMenu * menu )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 {
@@ -254,7 +249,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 }
 
 /*
-void setIcon(const QIcon & icon)
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 {
@@ -280,7 +275,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 }
 
 /*
-void setToolTip(const QString & tip)
+void setToolTip( const QString & tip )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 {
@@ -306,7 +301,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 }
 
 /*
-void showMessage(const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000)
+void showMessage( const QString & title, const QString & message, QSystemTrayIcon::MessageIcon icon = QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000 )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 {
@@ -382,7 +377,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 }
 
 /*
-void setVisible(bool visible)
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
 {

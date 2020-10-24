@@ -78,7 +78,7 @@ RETURN
 #endif
 
 /*
-QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
+QStyleOption( int version = QStyleOption::Version, int type = QStyleOption::SO_Default )
 */
 void QStyleOption_new1()
 {
@@ -87,18 +87,13 @@ void QStyleOption_new1()
 }
 
 /*
-QStyleOption(const QStyleOption &other)
+QStyleOption( const QStyleOption & other )
 */
 void QStyleOption_new2()
 {
   QStyleOption * obj = new QStyleOption( *PQSTYLEOPTION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QStyleOption(int version = QStyleOption::Version, int type = SO_Default)
-[2]QStyleOption(const QStyleOption &other)
-*/
 
 HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 {
@@ -137,7 +132,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_DELETE )
 }
 
 /*
-void init(const QWidget *w)
+void init( const QWidget * w )
 */
 HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 {
@@ -163,7 +158,7 @@ HB_FUNC_STATIC( QSTYLEOPTION_INIT )
 }
 
 /*
-void initFrom(const QWidget *w)
+void initFrom( const QWidget * w )
 */
 HB_FUNC_STATIC( QSTYLEOPTION_INITFROM )
 {

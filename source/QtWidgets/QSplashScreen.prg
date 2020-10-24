@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new1()
 {
@@ -67,18 +67,13 @@ void QSplashScreen_new1()
 }
 
 /*
-QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new2()
 {
   QSplashScreen * obj = new QSplashScreen( PQWIDGET(1), ISNIL(2)? QPixmap() : *(QPixmap *) Qt5xHb::itemGetPtr(2), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-*/
 
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
@@ -116,7 +111,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 }
 
 /*
-void finish ( QWidget * mainWin )
+void finish( QWidget * mainWin )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 {
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 }
 
 /*
-const QPixmap pixmap () const
+const QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 {
@@ -167,7 +162,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
 }
 
 /*
-void setPixmap ( const QPixmap & pixmap )
+void setPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 {
@@ -193,7 +188,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 }
 
 /*
-void repaint ()
+void repaint()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 {
@@ -219,7 +214,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 }
 
 /*
-void clearMessage ()
+void clearMessage()
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 {
@@ -245,7 +240,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 }
 
 /*
-void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
+void showMessage( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
 {
