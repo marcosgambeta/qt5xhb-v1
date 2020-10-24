@@ -82,10 +82,6 @@ HB_FUNC_STATIC( QMODBUSDEVICE_NEW )
 }
 
 /*
-QModbusDevice(QModbusDevicePrivate &dd, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QModbusDevice()
 */
 HB_FUNC_STATIC( QMODBUSDEVICE_DELETE )
@@ -295,22 +291,6 @@ HB_FUNC_STATIC( QMODBUSDEVICE_ERRORSTRING )
   }
 #endif
 }
-
-/*
-void setState(QModbusDevice::State newState) [protected]
-*/
-
-/*
-void setError(const QString &errorText, QModbusDevice::Error error) [protected]
-*/
-
-/*
-virtual bool open() = 0 [protected]
-*/
-
-/*
-virtual void close() = 0 [protected]
-*/
 
 void QModbusDeviceSlots_connect_signal( const QString & signal, const QString & slot );
 

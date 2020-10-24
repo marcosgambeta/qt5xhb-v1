@@ -77,10 +77,6 @@ HB_FUNC_STATIC( QMODBUSCLIENT_NEW )
 }
 
 /*
-QModbusClient(QModbusClientPrivate &dd, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QModbusClient()
 */
 HB_FUNC_STATIC( QMODBUSCLIENT_DELETE )
@@ -227,14 +223,6 @@ HB_FUNC_STATIC( QMODBUSCLIENT_SETNUMBEROFRETRIES )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-virtual bool processResponse(const QModbusResponse &response, QModbusDataUnit *data) [protected]
-*/
-
-/*
-virtual bool processPrivateResponse(const QModbusResponse &response, QModbusDataUnit *data) [protected]
-*/
 
 void QModbusClientSlots_connect_signal( const QString & signal, const QString & slot );
 

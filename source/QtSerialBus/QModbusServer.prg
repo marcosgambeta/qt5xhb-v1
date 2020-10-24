@@ -80,10 +80,6 @@ HB_FUNC_STATIC( QMODBUSSERVER_NEW )
 }
 
 /*
-QModbusServer(QModbusServerPrivate &dd, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QModbusServer()
 */
 HB_FUNC_STATIC( QMODBUSSERVER_DELETE )
@@ -280,22 +276,6 @@ HB_FUNC_STATIC( QMODBUSSERVER_SETDATA )
 
 /*
 bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) const
-*/
-
-/*
-virtual bool writeData(const QModbusDataUnit &unit) [protected]
-*/
-
-/*
-virtual bool readData(QModbusDataUnit *newData) const [protected]
-*/
-
-/*
-virtual QModbusResponse processRequest(const QModbusPdu &request) [protected]
-*/
-
-/*
-virtual QModbusResponse processPrivateRequest(const QModbusPdu &request) [protected]
 */
 
 void QModbusServerSlots_connect_signal( const QString & signal, const QString & slot );

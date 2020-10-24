@@ -48,10 +48,6 @@ RETURN
 #endif
 
 /*
-virtual ~QCanBusFactoryV2() [protected]
-*/
-
-/*
 virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
 */
 

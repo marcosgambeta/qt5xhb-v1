@@ -57,10 +57,6 @@ RETURN
 #endif
 
 /*
-QCanBus(QObject *parent = nullptr) [private]
-*/
-
-/*
 static QCanBus *instance()
 */
 HB_FUNC_STATIC( QCANBUS_INSTANCE )

@@ -72,10 +72,6 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_NEW )
 }
 
 /*
-QModbusRtuSerialSlave(QModbusRtuSerialSlavePrivate &dd, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QModbusRtuSerialSlave()
 */
 HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_DELETE )
@@ -124,17 +120,5 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_PROCESSESBROADCAST )
   }
 #endif
 }
-
-/*
-bool open() override [protected]
-*/
-
-/*
-void close() override [protected]
-*/
-
-/*
-QModbusResponse processRequest(const QModbusPdu &request) override [protected]
-*/
 
 #pragma ENDDUMP

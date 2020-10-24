@@ -73,10 +73,6 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_NEW )
 }
 
 /*
-QModbusRtuSerialMaster(QModbusRtuSerialMasterPrivate &dd, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QModbusRtuSerialMaster()
 */
 HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_DELETE )
@@ -153,13 +149,5 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_SETINTERFRAMEDELAY )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-void close() override [protected]
-*/
-
-/*
-bool open() override [protected]
-*/
 
 #pragma ENDDUMP
