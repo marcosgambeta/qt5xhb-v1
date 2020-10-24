@@ -56,10 +56,6 @@ RETURN
 #endif
 
 /*
-explicit QMetaDataReaderControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QMetaDataReaderControl()
 */
 HB_FUNC_STATIC( QMETADATAREADERCONTROL_DELETE )

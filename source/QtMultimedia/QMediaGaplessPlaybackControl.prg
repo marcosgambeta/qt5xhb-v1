@@ -58,10 +58,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaGaplessPlaybackControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QMediaGaplessPlaybackControl()
 */
 HB_FUNC_STATIC( QMEDIAGAPLESSPLAYBACKCONTROL_DELETE )

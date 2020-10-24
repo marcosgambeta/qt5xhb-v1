@@ -54,10 +54,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraFlashControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCameraFlashControl()
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_DELETE )

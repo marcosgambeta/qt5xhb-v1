@@ -53,10 +53,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaNetworkAccessControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QMediaNetworkAccessControl()
 */
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_DELETE )

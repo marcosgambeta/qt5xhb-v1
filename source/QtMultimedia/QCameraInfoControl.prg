@@ -54,10 +54,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraInfoControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QCameraInfoControl()
 */
 HB_FUNC_STATIC( QCAMERAINFOCONTROL_DELETE )

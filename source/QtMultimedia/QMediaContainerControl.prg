@@ -54,10 +54,6 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-explicit QMediaContainerControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QMediaContainerControl()
 */
 HB_FUNC_STATIC( QMEDIACONTAINERCONTROL_DELETE )

@@ -56,10 +56,6 @@ RETURN
 #endif
 
 /*
-explicit QAudioInputSelectorControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAudioInputSelectorControl()
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DELETE )

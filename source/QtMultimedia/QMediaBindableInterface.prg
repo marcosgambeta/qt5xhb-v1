@@ -101,10 +101,6 @@ HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_MEDIAOBJECT )
   }
 }
 
-/*
-virtual bool setMediaObject(QMediaObject *object) = 0 [protected]
-*/
-
 HB_FUNC_STATIC( QMEDIABINDABLEINTERFACE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();

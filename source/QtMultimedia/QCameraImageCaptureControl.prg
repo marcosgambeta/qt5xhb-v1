@@ -61,10 +61,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraImageCaptureControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCameraImageCaptureControl()
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_DELETE )

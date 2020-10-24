@@ -66,14 +66,6 @@ RETURN
 #endif
 
 /*
-QCameraImageProcessing(QCamera *camera) [private]
-*/
-
-/*
-~QCameraImageProcessing() [private]
-*/
-
-/*
 qreal contrast() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_CONTRAST )

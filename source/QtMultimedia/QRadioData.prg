@@ -373,10 +373,6 @@ HB_FUNC_STATIC( QRADIODATA_ERRORSTRING )
   }
 }
 
-/*
-bool setMediaObject(QMediaObject *) override [protected]
-*/
-
 void QRadioDataSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QRADIODATA_ONSTATIONIDCHANGED )

@@ -53,10 +53,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraImageProcessingControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCameraImageProcessingControl()
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSINGCONTROL_DELETE )

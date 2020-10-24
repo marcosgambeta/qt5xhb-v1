@@ -53,10 +53,6 @@ RETURN
 #include <QtMultimedia/QAbstractVideoSurface>
 
 /*
-explicit QVideoRendererControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QVideoRendererControl()
 */
 HB_FUNC_STATIC( QVIDEORENDERERCONTROL_DELETE )

@@ -58,10 +58,6 @@ RETURN
 #endif
 
 /*
-explicit QVideoDeviceSelectorControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QVideoDeviceSelectorControl()
 */
 HB_FUNC_STATIC( QVIDEODEVICESELECTORCONTROL_DELETE )

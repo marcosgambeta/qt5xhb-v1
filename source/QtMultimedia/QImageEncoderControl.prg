@@ -55,10 +55,6 @@ RETURN
 #endif
 
 /*
-explicit QImageEncoderControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QImageEncoderControl()
 */
 HB_FUNC_STATIC( QIMAGEENCODERCONTROL_DELETE )

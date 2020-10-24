@@ -51,10 +51,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaAudioProbeControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QMediaAudioProbeControl()
 */
 HB_FUNC_STATIC( QMEDIAAUDIOPROBECONTROL_DELETE )

@@ -70,14 +70,6 @@ RETURN
 #include <QtMultimedia/QMediaService>
 
 /*
-QMediaObject(QObject *parent, QMediaService *service) [protected]
-*/
-
-/*
-QMediaObject(QMediaObjectPrivate &dd, QObject *parent, QMediaService *service) [protected]
-*/
-
-/*
 ~QMediaObject()
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_DELETE )
@@ -344,18 +336,6 @@ HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-void addPropertyWatch(QByteArray const &name) [protected]
-*/
-
-/*
-void removePropertyWatch(QByteArray const &name) [protected]
-*/
-
-/*
-void setupControls() [private]
-*/
 
 void QMediaObjectSlots_connect_signal( const QString & signal, const QString & slot );
 

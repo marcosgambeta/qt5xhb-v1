@@ -288,8 +288,4 @@ HB_FUNC_STATIC( QSOUND_PLAY )
   }
 }
 
-/*
-void deleteOnComplete() (slot) [private]
-*/
-
 #pragma ENDDUMP

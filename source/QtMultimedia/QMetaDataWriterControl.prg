@@ -59,10 +59,6 @@ RETURN
 #endif
 
 /*
-explicit QMetaDataWriterControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QMetaDataWriterControl()
 */
 HB_FUNC_STATIC( QMETADATAWRITERCONTROL_DELETE )

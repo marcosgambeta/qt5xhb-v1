@@ -53,10 +53,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraCaptureBufferFormatControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCameraCaptureBufferFormatControl()
 */
 HB_FUNC_STATIC( QCAMERACAPTUREBUFFERFORMATCONTROL_DELETE )

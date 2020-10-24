@@ -56,10 +56,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraViewfinderSettingsControl2(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QCameraViewfinderSettingsControl2()
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_DELETE )

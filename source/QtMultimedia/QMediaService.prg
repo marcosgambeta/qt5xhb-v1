@@ -51,14 +51,6 @@ RETURN
 #endif
 
 /*
-QMediaService(QObject* parent) [protected]
-*/
-
-/*
-QMediaService(QMediaServicePrivate &dd, QObject *parent) [protected]
-*/
-
-/*
 ~QMediaService()
 */
 HB_FUNC_STATIC( QMEDIASERVICE_DELETE )

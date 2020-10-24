@@ -85,10 +85,6 @@ RETURN
 #endif
 
 /*
-explicit QRadioTunerControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QRadioTunerControl()
 */
 HB_FUNC_STATIC( QRADIOTUNERCONTROL_DELETE )

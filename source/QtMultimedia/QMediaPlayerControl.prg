@@ -88,10 +88,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaPlayerControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QMediaPlayerControl()
 */
 HB_FUNC_STATIC( QMEDIAPLAYERCONTROL_DELETE )

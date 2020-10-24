@@ -70,14 +70,6 @@ RETURN
 #endif
 
 /*
-QCameraFocus(QCamera *camera) [private]
-*/
-
-/*
-~QCameraFocus() [private]
-*/
-
-/*
 FocusModes focusMode() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUS_FOCUSMODE )

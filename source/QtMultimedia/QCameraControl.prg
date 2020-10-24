@@ -60,10 +60,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCameraControl()
 */
 HB_FUNC_STATIC( QCAMERACONTROL_DELETE )

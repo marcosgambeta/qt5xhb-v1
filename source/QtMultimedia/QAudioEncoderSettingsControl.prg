@@ -54,10 +54,6 @@ RETURN
 #endif
 
 /*
-explicit QAudioEncoderSettingsControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAudioEncoderSettingsControl()
 */
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGSCONTROL_DELETE )

@@ -126,10 +126,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_NEW )
 }
 
 /*
-QMediaRecorder(QMediaRecorderPrivate &dd, QMediaObject *mediaObject, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QMediaRecorder()
 */
 HB_FUNC_STATIC( QMEDIARECORDER_DELETE )
@@ -1148,10 +1144,6 @@ HB_FUNC_STATIC( QMEDIARECORDER_STOP )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-bool setMediaObject(QMediaObject *object) override [protected]
-*/
 
 void QMediaRecorderSlots_connect_signal( const QString & signal, const QString & slot );
 

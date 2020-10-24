@@ -867,10 +867,6 @@ HB_FUNC_STATIC( QMEDIAPLAYLIST_MOVEMEDIA )
 #endif
 }
 
-/*
-bool setMediaObject(QMediaObject *object) override [protected]
-*/
-
 void QMediaPlaylistSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ONCURRENTINDEXCHANGED )

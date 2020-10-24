@@ -57,10 +57,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaStreamsControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QMediaStreamsControl()
 */
 HB_FUNC_STATIC( QMEDIASTREAMSCONTROL_DELETE )

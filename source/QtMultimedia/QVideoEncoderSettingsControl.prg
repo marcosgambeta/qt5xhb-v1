@@ -56,10 +56,6 @@ RETURN
 #endif
 
 /*
-explicit QVideoEncoderSettingsControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QVideoEncoderSettingsControl()
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_DELETE )

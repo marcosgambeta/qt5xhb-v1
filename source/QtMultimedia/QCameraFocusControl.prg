@@ -64,10 +64,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraFocusControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCameraFocusControl()
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_DELETE )

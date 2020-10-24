@@ -51,10 +51,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaVideoProbeControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QMediaVideoProbeControl()
 */
 HB_FUNC_STATIC( QMEDIAVIDEOPROBECONTROL_DELETE )

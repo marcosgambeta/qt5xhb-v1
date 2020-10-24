@@ -53,10 +53,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraCaptureDestinationControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCameraCaptureDestinationControl()
 */
 HB_FUNC_STATIC( QCAMERACAPTUREDESTINATIONCONTROL_DELETE )

@@ -62,10 +62,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraZoomControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCameraZoomControl()
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_DELETE )

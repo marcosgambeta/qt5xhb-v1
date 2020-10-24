@@ -70,10 +70,6 @@ RETURN
 #include <QtCore/QUrl>
 
 /*
-explicit QMediaRecorderControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QMediaRecorderControl()
 */
 HB_FUNC_STATIC( QMEDIARECORDERCONTROL_DELETE )

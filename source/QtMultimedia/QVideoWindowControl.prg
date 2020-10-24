@@ -75,10 +75,6 @@ RETURN
 #endif
 
 /*
-explicit QVideoWindowControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QVideoWindowControl()
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_DELETE )

@@ -88,14 +88,6 @@ RETURN
 #include <QtCore/QPointF>
 
 /*
-explicit QCameraExposure(QCamera *parent = Q_NULLPTR) [private]
-*/
-
-/*
-virtual ~QCameraExposure() [private]
-*/
-
-/*
 qreal aperture() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_APERTURE )

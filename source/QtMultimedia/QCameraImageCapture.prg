@@ -622,10 +622,6 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
   }
 }
 
-/*
-bool setMediaObject(QMediaObject *) override [protected]
-*/
-
 void QCameraImageCaptureSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ONBUFFERFORMATCHANGED )

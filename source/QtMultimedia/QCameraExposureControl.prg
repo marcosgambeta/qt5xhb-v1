@@ -58,10 +58,6 @@ RETURN
 #endif
 
 /*
-explicit QCameraExposureControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QCameraExposureControl()
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_DELETE )

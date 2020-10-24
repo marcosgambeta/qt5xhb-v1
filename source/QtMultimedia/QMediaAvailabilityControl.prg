@@ -51,10 +51,6 @@ RETURN
 #endif
 
 /*
-explicit QMediaAvailabilityControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QMediaAvailabilityControl()
 */
 HB_FUNC_STATIC( QMEDIAAVAILABILITYCONTROL_DELETE )

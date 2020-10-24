@@ -74,10 +74,6 @@ RETURN
 #endif
 
 /*
-explicit QAudioDecoderControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QAudioDecoderControl()
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_DELETE )

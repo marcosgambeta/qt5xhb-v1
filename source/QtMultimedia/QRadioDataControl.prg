@@ -65,10 +65,6 @@ RETURN
 #endif
 
 /*
-explicit QRadioDataControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QRadioDataControl()
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_DELETE )

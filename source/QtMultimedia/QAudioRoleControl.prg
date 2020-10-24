@@ -55,10 +55,6 @@ RETURN
 #endif
 
 /*
-explicit QAudioRoleControl(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAudioRoleControl()
 */
 HB_FUNC_STATIC( QAUDIOROLECONTROL_DELETE )

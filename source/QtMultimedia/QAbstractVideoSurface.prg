@@ -311,13 +311,5 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
 virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats( QAbstractVideoBuffer::HandleType handleType = QAbstractVideoBuffer::NoHandle) const = 0
 */
 
-/*
-void setError(Error error) [protected]
-*/
-
-/*
-void setNativeResolution(const QSize &resolution) [protected]
-*/
-
 #pragma ENDDUMP
 
