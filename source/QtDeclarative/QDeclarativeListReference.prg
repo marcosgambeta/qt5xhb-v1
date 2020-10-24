@@ -66,7 +66,7 @@ RETURN
 #endif
 
 /*
-QDeclarativeListReference ()
+QDeclarativeListReference()
 */
 void QDeclarativeListReference_new1()
 {
@@ -75,18 +75,13 @@ void QDeclarativeListReference_new1()
 }
 
 /*
-QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
+QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 */
 void QDeclarativeListReference_new2()
 {
   QDeclarativeListReference * obj = new QDeclarativeListReference( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDeclarativeListReference ()
-[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {
@@ -105,7 +100,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 }
 
 /*
-bool append ( QObject * object ) const
+bool append( QObject * object ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
 {
@@ -129,7 +124,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
 }
 
 /*
-QObject * at ( int index ) const
+QObject * at( int index ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
 {
@@ -154,7 +149,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
 }
 
 /*
-bool canAppend () const
+bool canAppend() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 {
@@ -178,7 +173,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 }
 
 /*
-bool canAt () const
+bool canAt() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 {
@@ -202,7 +197,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 }
 
 /*
-bool canClear () const
+bool canClear() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 {
@@ -226,7 +221,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 }
 
 /*
-bool canCount () const
+bool canCount() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 {
@@ -250,7 +245,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 }
 
 /*
-bool clear () const
+bool clear() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 {
@@ -274,7 +269,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 {
@@ -298,7 +293,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 {
@@ -322,7 +317,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 }
 
 /*
-QObject * object () const
+QObject * object() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
 {

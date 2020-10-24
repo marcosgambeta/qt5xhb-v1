@@ -70,7 +70,7 @@ RETURN
 #endif
 
 /*
-QDeclarativeItem ( QDeclarativeItem * parent = 0 )
+QDeclarativeItem( QDeclarativeItem * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
 }
 
 /*
-qreal baselineOffset () const
+qreal baselineOffset() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
 }
 
 /*
-QDeclarativeItem * childAt ( qreal x, qreal y ) const
+QDeclarativeItem * childAt( qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
 }
 
 /*
-QRectF childrenRect ()
+QRectF childrenRect()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
 }
 
 /*
-bool clip () const
+bool clip() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 }
 
 /*
-void forceActiveFocus ()
+void forceActiveFocus()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
 }
 
 /*
-qreal implicitHeight () const
+qreal implicitHeight() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 }
 
 /*
-qreal implicitWidth () const
+qreal implicitWidth() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 }
 
 /*
-bool keepMouseGrab () const
+bool keepMouseGrab() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
 }
 
 /*
-QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
+QScriptValue mapFromItem( const QScriptValue & item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
 }
 
 /*
-QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
+QScriptValue mapToItem( const QScriptValue & item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
 }
 
 /*
-QDeclarativeItem * parentItem () const
+QDeclarativeItem * parentItem() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
 {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
 }
 
 /*
-void setBaselineOffset ( qreal )
+void setBaselineOffset( qreal )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
 {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
 }
 
 /*
-void setClip ( bool )
+void setClip( bool )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
 }
 
 /*
-void setKeepMouseGrab ( bool keep )
+void setKeepMouseGrab( bool keep )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
 }
 
 /*
-void setParentItem ( QDeclarativeItem * parent )
+void setParentItem( QDeclarativeItem * parent )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETPARENTITEM )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETPARENTITEM )
 }
 
 /*
-void setSmooth ( bool smooth )
+void setSmooth( bool smooth )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
 {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
 }
 
 /*
-void setTransformOrigin ( TransformOrigin origin )
+void setTransformOrigin( QDeclarativeItem::TransformOrigin origin )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
 }
 
 /*
-bool smooth () const
+bool smooth() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 }
 
 /*
-TransformOrigin transformOrigin () const
+QDeclarativeItem::TransformOrigin transformOrigin() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
 {

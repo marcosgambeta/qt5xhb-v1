@@ -85,7 +85,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 
 /*
-QDeclarativeEngine ( QObject * parent = 0 )
+QDeclarativeEngine( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
 }
 
 /*
-void addImageProvider ( const QString & providerId, QDeclarativeImageProvider * provider )
+void addImageProvider( const QString & providerId, QDeclarativeImageProvider * provider )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
 }
 
 /*
-void addImportPath ( const QString & path )
+void addImportPath( const QString & path )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
 }
 
 /*
-void addPluginPath ( const QString & path )
+void addPluginPath( const QString & path )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
 }
 
 /*
-QUrl baseUrl () const
+QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 }
 
 /*
-void clearComponentCache ()
+void clearComponentCache()
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 }
 
 /*
-QDeclarativeImageProvider * imageProvider ( const QString & providerId ) const
+QDeclarativeImageProvider * imageProvider( const QString & providerId ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
 }
 
 /*
-QStringList importPathList () const
+QStringList importPathList() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 }
 
 /*
-QNetworkAccessManager * networkAccessManager () const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 }
 
 /*
-QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory () const
+QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 }
 
 /*
-QString offlineStoragePath () const
+QString offlineStoragePath() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 }
 
 /*
-bool outputWarningsToStandardError () const
+bool outputWarningsToStandardError() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 }
 
 /*
-QStringList pluginPathList () const
+QStringList pluginPathList() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 }
 
 /*
-void removeImageProvider ( const QString & providerId )
+void removeImageProvider( const QString & providerId )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
 {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
 }
 
 /*
-QDeclarativeContext * rootContext () const
+QDeclarativeContext * rootContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
 }
 
 /*
-void setBaseUrl ( const QUrl & url )
+void setBaseUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
 }
 
 /*
-void setImportPathList ( const QStringList & paths )
+void setImportPathList( const QStringList & paths )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
 }
 
 /*
-void setNetworkAccessManagerFactory ( QDeclarativeNetworkAccessManagerFactory * factory )
+void setNetworkAccessManagerFactory( QDeclarativeNetworkAccessManagerFactory * factory )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
 {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
 }
 
 /*
-void setOfflineStoragePath ( const QString & dir )
+void setOfflineStoragePath( const QString & dir )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
 }
 
 /*
-void setOutputWarningsToStandardError ( bool enabled )
+void setOutputWarningsToStandardError( bool enabled )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
 {
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
 }
 
 /*
-void setPluginPathList ( const QStringList & paths )
+void setPluginPathList( const QStringList & paths )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
 {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
 }
 
 /*
-static QDeclarativeContext * contextForObject ( const QObject * object )
+static QDeclarativeContext * contextForObject( const QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
 {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
 }
 
 /*
-static ObjectOwnership objectOwnership ( QObject * object )
+static QDeclarativeEngine::ObjectOwnership objectOwnership( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
 }
 
 /*
-static void setContextForObject ( QObject * object, QDeclarativeContext * context )
+static void setContextForObject( QObject * object, QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETCONTEXTFOROBJECT )
 }
 
 /*
-static void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
+static void setObjectOwnership( QObject * object, QDeclarativeEngine::ObjectOwnership ownership )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 {

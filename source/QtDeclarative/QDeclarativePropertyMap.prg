@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QDeclarativePropertyMap ( QObject * parent = 0 )
+QDeclarativePropertyMap( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
 }
 
 /*
-void clear ( const QString & key )
+void clear( const QString & key )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
 }
 
 /*
-bool contains ( const QString & key ) const
+bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 }
 
 /*
-void insert ( const QString & key, const QVariant & value )
+void insert( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 }
 
 /*
-QStringList keys () const
+QStringList keys() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 }
 
 /*
-QVariant value ( const QString & key ) const
+QVariant value( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
 {

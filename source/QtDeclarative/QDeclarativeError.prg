@@ -66,7 +66,7 @@ RETURN
 #endif
 
 /*
-QDeclarativeError ()
+QDeclarativeError()
 */
 void QDeclarativeError_new1()
 {
@@ -75,18 +75,13 @@ void QDeclarativeError_new1()
 }
 
 /*
-QDeclarativeError ( const QDeclarativeError & other )
+QDeclarativeError( const QDeclarativeError & other )
 */
 void QDeclarativeError_new2()
 {
   QDeclarativeError * obj = new QDeclarativeError( *PQDECLARATIVEERROR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDeclarativeError ()
-[2]QDeclarativeError ( const QDeclarativeError & other )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 {
@@ -105,7 +100,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 }
 
 /*
-int column () const
+int column() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 {
@@ -129,7 +124,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 }
 
 /*
-QString description () const
+QString description() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 {
@@ -153,7 +148,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 {
@@ -177,7 +172,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 }
 
 /*
-int line () const
+int line() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 {
@@ -201,7 +196,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 }
 
 /*
-void setColumn ( int column )
+void setColumn( int column )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 {
@@ -227,7 +222,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 }
 
 /*
-void setDescription ( const QString & description )
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 {
@@ -253,7 +248,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 }
 
 /*
-void setLine ( int line )
+void setLine( int line )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 {
@@ -279,7 +274,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 }
 
 /*
-void setUrl ( const QUrl & url )
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 {
@@ -305,7 +300,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 }
 
 /*
-QString toString () const
+QString toString() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 {
@@ -329,7 +324,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
 {

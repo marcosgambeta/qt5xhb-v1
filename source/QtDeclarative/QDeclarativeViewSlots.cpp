@@ -29,7 +29,7 @@ void QDeclarativeViewSlots::sceneResized( QSize size )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDECLARATIVEVIEW" );
-    PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZE" );
+    PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZE" );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );
 

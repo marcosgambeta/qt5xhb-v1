@@ -73,7 +73,7 @@ RETURN
 #include <QtWidgets/QGraphicsObject>
 
 /*
-QDeclarativeView ( QWidget * parent = 0 )
+QDeclarativeView( QWidget * parent = 0 )
 */
 void QDeclarativeView_new1()
 {
@@ -82,18 +82,13 @@ void QDeclarativeView_new1()
 }
 
 /*
-QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
+QDeclarativeView( const QUrl & source, QWidget * parent = 0 )
 */
 void QDeclarativeView_new2()
 {
   QDeclarativeView * obj = new QDeclarativeView( *PQURL(1), OPQWIDGET(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDeclarativeView ( QWidget * parent = 0 )
-[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {
@@ -131,7 +126,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 }
 
 /*
-QDeclarativeEngine * engine () const
+QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
@@ -156,7 +151,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 }
 
 /*
-QList<QDeclarativeError> errors () const
+QList<QDeclarativeError> errors() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
@@ -208,7 +203,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 }
 
 /*
-QSize initialSize () const
+QSize initialSize() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
@@ -233,7 +228,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 }
 
 /*
-ResizeMode resizeMode () const
+QDeclarativeView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
@@ -257,7 +252,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 }
 
 /*
-QDeclarativeContext * rootContext () const
+QDeclarativeContext * rootContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
@@ -282,7 +277,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 }
 
 /*
-QGraphicsObject * rootObject () const
+QGraphicsObject * rootObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
@@ -307,7 +302,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 }
 
 /*
-void setResizeMode ( ResizeMode )
+void setResizeMode( QDeclarativeView::ResizeMode )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 {
@@ -333,7 +328,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 }
 
 /*
-void setSource ( const QUrl & url )
+void setSource( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 {
@@ -359,7 +354,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 }
 
 /*
-QUrl source () const
+QUrl source() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
@@ -384,7 +379,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 }
 
 /*
-Status status () const
+QDeclarativeView::Status status() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {

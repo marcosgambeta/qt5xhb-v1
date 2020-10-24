@@ -65,7 +65,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 
 /*
-QDeclarativeScriptString ()
+QDeclarativeScriptString()
 */
 void QDeclarativeScriptString_new1()
 {
@@ -74,18 +74,13 @@ void QDeclarativeScriptString_new1()
 }
 
 /*
-QDeclarativeScriptString ( const QDeclarativeScriptString & other )
+QDeclarativeScriptString( const QDeclarativeScriptString & other )
 */
 void QDeclarativeScriptString_new2()
 {
   QDeclarativeScriptString * obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDeclarativeScriptString ()
-[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {
@@ -104,7 +99,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 }
 
 /*
-QDeclarativeContext * context () const
+QDeclarativeContext * context() const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 {
@@ -129,7 +124,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_CONTEXT )
 }
 
 /*
-QObject * scopeObject () const
+QObject * scopeObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 {
@@ -154,7 +149,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCOPEOBJECT )
 }
 
 /*
-QString script () const
+QString script() const
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
 {
@@ -178,7 +173,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SCRIPT )
 }
 
 /*
-void setContext ( QDeclarativeContext * context )
+void setContext( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
 {
@@ -204,7 +199,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETCONTEXT )
 }
 
 /*
-void setScopeObject ( QObject * object )
+void setScopeObject( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
 {
@@ -230,7 +225,7 @@ HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCOPEOBJECT )
 }
 
 /*
-void setScript ( const QString & script )
+void setScript( const QString & script )
 */
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_SETSCRIPT )
 {

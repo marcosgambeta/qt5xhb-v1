@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-virtual void classBegin () = 0
+virtual void classBegin() = 0
 */
 HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
 {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_CLASSBEGIN )
 }
 
 /*
-virtual void componentComplete () = 0
+virtual void componentComplete() = 0
 */
 HB_FUNC_STATIC( QDECLARATIVEPARSERSTATUS_COMPONENTCOMPLETE )
 {
