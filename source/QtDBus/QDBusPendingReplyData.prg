@@ -44,22 +44,6 @@ RETURN
 #endif
 
 /*
-QDBusPendingReplyData() [protected]
-*/
-
-/*
-void assign(const QDBusPendingCall &call) [protected]
-*/
-
-/*
-void assign(const QDBusMessage &message) [protected]
-*/
-
-/*
-QVariant argumentAt(int index) const [protected]
-*/
-
-/*
 void setMetaTypes(int count, const int *metaTypes)
 */
 

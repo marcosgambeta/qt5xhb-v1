@@ -51,10 +51,6 @@ RETURN
 #endif
 
 /*
-QDBusConnectionInterface(const QDBusConnection &connection, QObject *parent) [private]
-*/
-
-/*
 QDBusReply<QStringList> registeredServiceNames() const
 */
 
