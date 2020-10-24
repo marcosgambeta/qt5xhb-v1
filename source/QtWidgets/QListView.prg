@@ -86,7 +86,7 @@ RETURN
 #endif
 
 /*
-QListView ( QWidget * parent = 0 )
+QListView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QLISTVIEW_NEW )
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QLISTVIEW_DELETE )
 }
 
 /*
-int batchSize () const
+int batchSize() const
 */
 HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
 }
 
 /*
-void clearPropertyFlags ()
+void clearPropertyFlags()
 */
 HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
 }
 
 /*
-Flow flow () const
+QListView::Flow flow() const
 */
 HB_FUNC_STATIC( QLISTVIEW_FLOW )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QLISTVIEW_FLOW )
 }
 
 /*
-QSize gridSize () const
+QSize gridSize() const
 */
 HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
 }
 
 /*
-bool isRowHidden ( int row ) const
+bool isRowHidden( int row ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
 }
 
 /*
-bool isSelectionRectVisible () const
+bool isSelectionRectVisible() const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
 }
 
 /*
-bool isWrapping () const
+bool isWrapping() const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
 }
 
 /*
-LayoutMode layoutMode () const
+QListView::LayoutMode layoutMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
 }
 
 /*
-int modelColumn () const
+int modelColumn() const
 */
 HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
 }
 
 /*
-Movement movement () const
+QListView::Movement movement() const
 */
 HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
 }
 
 /*
-ResizeMode resizeMode () const
+QListView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
 }
 
 /*
-void setBatchSize ( int batchSize )
+void setBatchSize( int batchSize )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
 }
 
 /*
-void setFlow ( Flow flow )
+void setFlow( QListView::Flow flow )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
 }
 
 /*
-void setGridSize ( const QSize & size )
+void setGridSize( const QSize & size )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETGRIDSIZE )
 {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETGRIDSIZE )
 }
 
 /*
-void setLayoutMode ( LayoutMode mode )
+void setLayoutMode( QListView::LayoutMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
 {
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
 }
 
 /*
-void setModelColumn ( int column )
+void setModelColumn( int column )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
 {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
 }
 
 /*
-void setMovement ( Movement movement )
+void setMovement( QListView::Movement movement )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
 {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
 }
 
 /*
-void setResizeMode ( ResizeMode mode )
+void setResizeMode( QListView::ResizeMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
 {
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
 }
 
 /*
-void setRowHidden ( int row, bool hide )
+void setRowHidden( int row, bool hide )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
 {
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
 }
 
 /*
-void setSelectionRectVisible ( bool show )
+void setSelectionRectVisible( bool show )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
 {
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
 }
 
 /*
-void setSpacing ( int space )
+void setSpacing( int space )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
 {
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
 }
 
 /*
-void setUniformItemSizes ( bool enable )
+void setUniformItemSizes( bool enable )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
 }
 
 /*
-void setViewMode ( ViewMode mode )
+void setViewMode( QListView::ViewMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
 {
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
 }
 
 /*
-void setWordWrap ( bool on )
+void setWordWrap( bool on )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
 {
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
 }
 
 /*
-void setWrapping ( bool enable )
+void setWrapping( bool enable )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
 {
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
 }
 
 /*
-int spacing () const
+int spacing() const
 */
 HB_FUNC_STATIC( QLISTVIEW_SPACING )
 {
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QLISTVIEW_SPACING )
 }
 
 /*
-bool uniformItemSizes () const
+bool uniformItemSizes() const
 */
 HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
 {
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
 }
 
 /*
-ViewMode viewMode () const
+QListView::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
 {
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
 }
 
 /*
-bool wordWrap () const
+bool wordWrap() const
 */
 HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
 {
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
 }
 
 /*
-virtual QModelIndex indexAt ( const QPoint & p ) const
+virtual QModelIndex indexAt( const QPoint & p ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
 {
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
 }
 
 /*
-virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
+virtual void scrollTo( const QModelIndex & index, QListView::ScrollHint hint = QListView::EnsureVisible )
 */
 HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
 {
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
 }
 
 /*
-virtual QRect visualRect ( const QModelIndex & index ) const
+virtual QRect visualRect( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
 {

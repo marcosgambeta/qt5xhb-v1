@@ -125,7 +125,7 @@ RETURN
 #endif
 
 /*
-explicit QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
+QHeaderView( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QHEADERVIEW_NEW )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DELETE )
 }
 
 /*
-bool cascadingSectionResizes () const
+bool cascadingSectionResizes() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
 }
 
 /*
-void setCascadingSectionResizes ( bool enable )
+void setCascadingSectionResizes( bool enable )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_COUNT )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QHEADERVIEW_COUNT )
 }
 
 /*
-Qt::Alignment defaultAlignment () const
+Qt::Alignment defaultAlignment() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
 }
 
 /*
-void setDefaultAlignment ( Qt::Alignment alignment )
+void setDefaultAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
 }
 
 /*
-int defaultSectionSize () const
+int defaultSectionSize() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
 }
 
 /*
-void setDefaultSectionSize ( int size )
+void setDefaultSectionSize( int size )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
 }
 
 /*
-int hiddenSectionCount () const
+int hiddenSectionCount() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
 }
 
 /*
-void hideSection ( int logicalIndex )
+void hideSection( int logicalIndex )
 */
 HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
 }
 
 /*
-bool highlightSections () const
+bool highlightSections() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
 }
 
 /*
-void setHighlightSections ( bool highlight )
+void setHighlightSections( bool highlight )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
 }
 
 /*
-bool isSectionHidden ( int logicalIndex ) const
+bool isSectionHidden( int logicalIndex ) const
 */
 HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
 }
 
 /*
-bool isSortIndicatorShown () const
+bool isSortIndicatorShown() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
 }
 
 /*
-void setSortIndicatorShown ( bool show )
+void setSortIndicatorShown( bool show )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
 {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
 }
 
 /*
-int length () const
+int length() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
 }
 
 /*
-int logicalIndex ( int visualIndex ) const
+int logicalIndex( int visualIndex ) const
 */
 HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
 }
 
 /*
-int logicalIndexAt ( int position ) const
+int logicalIndexAt( int position ) const
 */
 void QHeaderView_logicalIndexAt1()
 {
@@ -569,7 +569,7 @@ void QHeaderView_logicalIndexAt1()
 }
 
 /*
-int logicalIndexAt ( int x, int y ) const
+int logicalIndexAt( int x, int y ) const
 */
 void QHeaderView_logicalIndexAt2()
 {
@@ -582,7 +582,7 @@ void QHeaderView_logicalIndexAt2()
 }
 
 /*
-int logicalIndexAt ( const QPoint & pos ) const
+int logicalIndexAt( const QPoint & pos ) const
 */
 void QHeaderView_logicalIndexAt3()
 {
@@ -593,12 +593,6 @@ void QHeaderView_logicalIndexAt3()
     RINT( obj->logicalIndexAt( *PQPOINT(1) ) );
   }
 }
-
-/*
-[1]int logicalIndexAt ( int position ) const
-[2]int logicalIndexAt ( int x, int y ) const
-[3]int logicalIndexAt ( const QPoint & pos ) const
-*/
 
 HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 {
@@ -621,7 +615,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 }
 
 /*
-int minimumSectionSize () const
+int minimumSectionSize() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
 {
@@ -645,7 +639,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
 }
 
 /*
-void setMinimumSectionSize ( int size )
+void setMinimumSectionSize( int size )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
 {
@@ -671,7 +665,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
 }
 
 /*
-void moveSection ( int from, int to )
+void moveSection( int from, int to )
 */
 HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
 {
@@ -697,7 +691,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
 }
 
 /*
-int offset () const
+int offset() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
 {
@@ -721,7 +715,7 @@ HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
 {
@@ -745,7 +739,7 @@ HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
 }
 
 /*
-void resizeSection ( int logicalIndex, int size )
+void resizeSection( int logicalIndex, int size )
 */
 HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
 {
@@ -771,7 +765,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
 }
 
 /*
-void resizeSections ( QHeaderView::ResizeMode mode )
+void resizeSections( QHeaderView::ResizeMode mode )
 */
 HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
 {
@@ -797,7 +791,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
 }
 
 /*
-bool restoreState ( const QByteArray & state )
+bool restoreState( const QByteArray & state )
 */
 HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
 {
@@ -821,7 +815,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
 }
 
 /*
-QByteArray saveState () const
+QByteArray saveState() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
 {
@@ -846,7 +840,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
 }
 
 /*
-int sectionPosition ( int logicalIndex ) const
+int sectionPosition( int logicalIndex ) const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
 {
@@ -870,7 +864,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
 }
 
 /*
-int sectionSize ( int logicalIndex ) const
+int sectionSize( int logicalIndex ) const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
 {
@@ -894,7 +888,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
 }
 
 /*
-int sectionSizeHint ( int logicalIndex ) const
+int sectionSizeHint( int logicalIndex ) const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
 {
@@ -918,7 +912,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
 }
 
 /*
-int sectionViewportPosition ( int logicalIndex ) const
+int sectionViewportPosition( int logicalIndex ) const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
 {
@@ -942,7 +936,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
 }
 
 /*
-bool sectionsHidden () const
+bool sectionsHidden() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
 {
@@ -966,7 +960,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
 }
 
 /*
-bool sectionsMoved () const
+bool sectionsMoved() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
 {
@@ -990,7 +984,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
 }
 
 /*
-void setSectionHidden ( int logicalIndex, bool hide )
+void setSectionHidden( int logicalIndex, bool hide )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
 {
@@ -1016,7 +1010,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
 }
 
 /*
-void setSortIndicator ( int logicalIndex, Qt::SortOrder order )
+void setSortIndicator( int logicalIndex, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
 {
@@ -1042,7 +1036,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
 }
 
 /*
-bool stretchLastSection () const
+bool stretchLastSection() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
 {
@@ -1066,7 +1060,7 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
 }
 
 /*
-void setStretchLastSection ( bool stretch )
+void setStretchLastSection( bool stretch )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
 {
@@ -1092,7 +1086,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
 }
 
 /*
-void showSection ( int logicalIndex )
+void showSection( int logicalIndex )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
 {
@@ -1118,7 +1112,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
 }
 
 /*
-Qt::SortOrder sortIndicatorOrder () const
+Qt::SortOrder sortIndicatorOrder() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
 {
@@ -1142,7 +1136,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
 }
 
 /*
-int sortIndicatorSection () const
+int sortIndicatorSection() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
 {
@@ -1166,7 +1160,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
 }
 
 /*
-int stretchSectionCount () const
+int stretchSectionCount() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
 {
@@ -1190,7 +1184,7 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
 }
 
 /*
-void swapSections ( int first, int second )
+void swapSections( int first, int second )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
 {
@@ -1216,7 +1210,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
 }
 
 /*
-int visualIndex ( int logicalIndex ) const
+int visualIndex( int logicalIndex ) const
 */
 HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
 {
@@ -1240,7 +1234,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
 }
 
 /*
-int visualIndexAt ( int position ) const
+int visualIndexAt( int position ) const
 */
 HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
 {
@@ -1264,7 +1258,7 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
 }
 
 /*
-void reset ()
+void reset()
 */
 HB_FUNC_STATIC( QHEADERVIEW_RESET )
 {
@@ -1290,7 +1284,7 @@ HB_FUNC_STATIC( QHEADERVIEW_RESET )
 }
 
 /*
-void setModel ( QAbstractItemModel * model )
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETMODEL )
 {
@@ -1316,7 +1310,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMODEL )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
 {
@@ -1341,7 +1335,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
 }
 
 /*
-void headerDataChanged ( Qt::Orientation orientation, int logicalFirst, int logicalLast )
+void headerDataChanged( Qt::Orientation orientation, int logicalFirst, int logicalLast )
 */
 HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
 {
@@ -1367,7 +1361,7 @@ HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
 }
 
 /*
-void setOffset ( int offset )
+void setOffset( int offset )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
 {
@@ -1393,7 +1387,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
 }
 
 /*
-void setOffsetToLastSection ()
+void setOffsetToLastSection()
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
 {
@@ -1419,7 +1413,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
 }
 
 /*
-void setOffsetToSectionPosition ( int visualIndex )
+void setOffsetToSectionPosition( int visualIndex )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
 {
@@ -1445,7 +1439,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
 }
 
 /*
-void setVisible(bool v)
+void setVisible( bool v )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETVISIBLE )
 {
@@ -1471,7 +1465,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETVISIBLE )
 }
 
 /*
-void setSectionsMovable (bool movable)
+void setSectionsMovable( bool movable )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSMOVABLE )
 {
@@ -1521,7 +1515,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVABLE )
 }
 
 /*
-void setSectionsClickable(bool clickable)
+void setSectionsClickable( bool clickable )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONSCLICKABLE )
 {
@@ -1571,7 +1565,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSCLICKABLE )
 }
 
 /*
-ResizeMode sectionResizeMode(int logicalIndex) const
+QHeaderView::ResizeMode sectionResizeMode( int logicalIndex ) const
 */
 HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
 {
@@ -1595,7 +1589,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONRESIZEMODE )
 }
 
 /*
-void setSectionResizeMode(ResizeMode mode)
+void setSectionResizeMode( QHeaderView::ResizeMode mode )
 */
 void QHeaderView_setSectionResizeMode1()
 {
@@ -1610,7 +1604,7 @@ void QHeaderView_setSectionResizeMode1()
 }
 
 /*
-void setSectionResizeMode(int logicalIndex, ResizeMode mode)
+void setSectionResizeMode( int logicalIndex, QHeaderView::ResizeMode mode )
 */
 void QHeaderView_setSectionResizeMode2()
 {
@@ -1623,11 +1617,6 @@ void QHeaderView_setSectionResizeMode2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setSectionResizeMode(ResizeMode mode)
-[2]void setSectionResizeMode(int logicalIndex, ResizeMode mode)
-*/
 
 HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE )
 {
@@ -1646,7 +1635,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONRESIZEMODE )
 }
 
 /*
-void setResizeContentsPrecision(int precision)
+void setResizeContentsPrecision( int precision )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETRESIZECONTENTSPRECISION )
 {
@@ -1720,7 +1709,7 @@ HB_FUNC_STATIC( QHEADERVIEW_MAXIMUMSECTIONSIZE )
 }
 
 /*
-void setMaximumSectionSize(int size)
+void setMaximumSectionSize( int size )
 */
 HB_FUNC_STATIC( QHEADERVIEW_SETMAXIMUMSECTIONSIZE )
 {

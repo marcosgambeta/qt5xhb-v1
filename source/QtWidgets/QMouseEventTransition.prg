@@ -58,7 +58,7 @@ RETURN
 #include <QtGui/QPainterPath>
 
 /*
-QMouseEventTransition ( QState * sourceState = 0 )
+QMouseEventTransition( QState * sourceState = 0 )
 */
 void QMouseEventTransition_new1()
 {
@@ -67,18 +67,13 @@ void QMouseEventTransition_new1()
 }
 
 /*
-QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
+QMouseEventTransition( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
 */
 void QMouseEventTransition_new2()
 {
   QMouseEventTransition * obj = new QMouseEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), (Qt::MouseButton) hb_parni(3), OPQSTATE(4,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QMouseEventTransition ( QState * sourceState = 0 )
-[2]QMouseEventTransition ( QObject * object, QEvent::Type type, Qt::MouseButton button, QState * sourceState = 0 )
-*/
 
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 {
@@ -116,7 +111,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
 }
 
 /*
-Qt::MouseButton button () const
+Qt::MouseButton button() const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
 {
@@ -140,7 +135,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
 }
 
 /*
-QPainterPath hitTestPath () const
+QPainterPath hitTestPath() const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
 {
@@ -165,7 +160,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
 }
 
 /*
-Qt::KeyboardModifiers modifierMask () const
+Qt::KeyboardModifiers modifierMask() const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
 {
@@ -189,7 +184,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
 }
 
 /*
-void setButton ( Qt::MouseButton button )
+void setButton( Qt::MouseButton button )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
 {
@@ -215,7 +210,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
 }
 
 /*
-void setHitTestPath ( const QPainterPath & path )
+void setHitTestPath( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
 {
@@ -241,7 +236,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
 }
 
 /*
-void setModifierMask ( Qt::KeyboardModifiers modifierMask )
+void setModifierMask( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETMODIFIERMASK )
 {

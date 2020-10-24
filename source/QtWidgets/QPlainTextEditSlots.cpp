@@ -167,7 +167,7 @@ void QPlainTextEditSlots::updateRequest( const QRect & rect, int dy )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
-    PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECT" );
+    PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECT" );
     PHB_ITEM pdy = hb_itemPutNI( NULL, dy );
 
     hb_vmEvalBlockV( cb, 3, psender, prect, pdy );

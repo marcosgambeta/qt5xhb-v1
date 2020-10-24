@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QGraphicsSceneMoveEvent ()
+QGraphicsSceneResizeEvent()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 {
@@ -65,6 +65,9 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
   }
 }
 
+/*
+virtual ~QGraphicsSceneResizeEvent()
+*/
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_DELETE )
 {
   QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -83,7 +86,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_DELETE )
 }
 
 /*
-QSizeF newSize () const
+QSizeF newSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
 {
@@ -108,7 +111,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
 }
 
 /*
-QSizeF oldSize () const
+QSizeF oldSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
 {

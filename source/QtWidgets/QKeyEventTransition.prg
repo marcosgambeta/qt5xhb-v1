@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QKeyEventTransition ( QState * sourceState = 0 )
+QKeyEventTransition( QState * sourceState = 0 )
 */
 void QKeyEventTransition_new1()
 {
@@ -62,18 +62,13 @@ void QKeyEventTransition_new1()
 }
 
 /*
-QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
+QKeyEventTransition( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
 */
 void QKeyEventTransition_new2()
 {
   QKeyEventTransition * obj = new QKeyEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QKeyEventTransition ( QState * sourceState = 0 )
-[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
-*/
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {
@@ -111,7 +106,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 }
 
 /*
-int key () const
+int key() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 {
@@ -135,7 +130,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 }
 
 /*
-Qt::KeyboardModifiers modifierMask () const
+Qt::KeyboardModifiers modifierMask() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 {
@@ -159,7 +154,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 }
 
 /*
-void setKey ( int key )
+void setKey( int key )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 {
@@ -185,7 +180,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 }
 
 /*
-void setModifierMask ( Qt::KeyboardModifiers modifierMask )
+void setModifierMask( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
 {

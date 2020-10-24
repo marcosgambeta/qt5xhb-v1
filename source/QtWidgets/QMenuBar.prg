@@ -82,7 +82,7 @@ RETURN
 #endif
 
 /*
-explicit QMenuBar ( QWidget * parent = 0 )
+QMenuBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QMENUBAR_NEW )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMENUBAR_DELETE )
 }
 
 /*
-QAction * activeAction () const
+QAction * activeAction() const
 */
 HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
 }
 
 /*
-QAction * addAction ( const QString & text )
+QAction * addAction( const QString & text )
 */
 void QMenuBar_addAction1()
 {
@@ -156,7 +156,7 @@ void QMenuBar_addAction1()
 }
 
 /*
-QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
+QAction * addAction( const QString & text, const QObject * receiver, const char * member )
 */
 void QMenuBar_addAction2()
 {
@@ -170,7 +170,7 @@ void QMenuBar_addAction2()
 }
 
 /*
-void addAction ( QAction * action )
+void addAction( QAction * action )
 */
 void QMenuBar_addAction3()
 {
@@ -183,12 +183,6 @@ void QMenuBar_addAction3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]QAction * addAction ( const QString & text )
-[2]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-[3]void addAction ( QAction * action )
-*/
 
 HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 {
@@ -211,7 +205,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 }
 
 /*
-QAction * addMenu ( QMenu * menu )
+QAction * addMenu( QMenu * menu )
 */
 void QMenuBar_addMenu1()
 {
@@ -225,7 +219,7 @@ void QMenuBar_addMenu1()
 }
 
 /*
-QMenu * addMenu ( const QString & title )
+QMenu * addMenu( const QString & title )
 */
 void QMenuBar_addMenu2()
 {
@@ -239,7 +233,7 @@ void QMenuBar_addMenu2()
 }
 
 /*
-QMenu * addMenu ( const QIcon & icon, const QString & title )
+QMenu * addMenu( const QIcon & icon, const QString & title )
 */
 void QMenuBar_addMenu3()
 {
@@ -251,12 +245,6 @@ void QMenuBar_addMenu3()
     Qt5xHb::createReturnQWidgetClass( ptr, "QMENU" );
   }
 }
-
-/*
-[1]QAction * addMenu ( QMenu * menu )
-[2]QMenu * addMenu ( const QString & title )
-[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
-*/
 
 HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 {
@@ -279,7 +267,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 }
 
 /*
-QAction * addSeparator ()
+QAction * addSeparator()
 */
 HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
 {
@@ -304,7 +292,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QMENUBAR_CLEAR )
 {
@@ -330,7 +318,7 @@ HB_FUNC_STATIC( QMENUBAR_CLEAR )
 }
 
 /*
-QAction * insertMenu ( QAction * before, QMenu * menu )
+QAction * insertMenu( QAction * before, QMenu * menu )
 */
 HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
 {
@@ -355,7 +343,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
 }
 
 /*
-QAction * insertSeparator ( QAction * before )
+QAction * insertSeparator( QAction * before )
 */
 HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
 {
@@ -380,7 +368,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
 }
 
 /*
-bool isDefaultUp () const
+bool isDefaultUp() const
 */
 HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
 {
@@ -404,7 +392,7 @@ HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
 }
 
 /*
-void setDefaultUp ( bool )
+void setDefaultUp( bool )
 */
 HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
 {
@@ -430,7 +418,7 @@ HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
 }
 
 /*
-bool isNativeMenuBar () const
+bool isNativeMenuBar() const
 */
 HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
 {
@@ -454,7 +442,7 @@ HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
 }
 
 /*
-void setNativeMenuBar ( bool nativeMenuBar )
+void setNativeMenuBar( bool nativeMenuBar )
 */
 HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
 {
@@ -480,7 +468,7 @@ HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
 }
 
 /*
-void setActiveAction ( QAction * act )
+void setActiveAction( QAction * act )
 */
 HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
 {
@@ -506,7 +494,7 @@ HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
 }
 
 /*
-int heightForWidth ( int ) const
+int heightForWidth( int ) const
 */
 HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
 {
@@ -530,7 +518,7 @@ HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
 }
 
 /*
-QSize minimumSizeHint () const
+QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
 {
@@ -555,7 +543,7 @@ HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
 {
@@ -580,7 +568,7 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
 {
@@ -606,7 +594,7 @@ HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
 }
 
 /*
-QRect actionGeometry(QAction *) const
+QRect actionGeometry( QAction * ) const
 */
 HB_FUNC_STATIC( QMENUBAR_ACTIONGEOMETRY )
 {
@@ -631,7 +619,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONGEOMETRY )
 }
 
 /*
-QAction *actionAt(const QPoint &) const
+QAction * actionAt( const QPoint & ) const
 */
 HB_FUNC_STATIC( QMENUBAR_ACTIONAT )
 {
@@ -656,7 +644,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIONAT )
 }
 
 /*
-QWidget *cornerWidget(Qt::Corner corner = Qt::TopRightCorner) const
+QWidget * cornerWidget( Qt::Corner corner = Qt::TopRightCorner ) const
 */
 HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
 {
@@ -681,7 +669,7 @@ HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
 }
 
 /*
-void setCornerWidget(QWidget *w, Qt::Corner corner = Qt::TopRightCorner)
+void setCornerWidget( QWidget * w, Qt::Corner corner = Qt::TopRightCorner )
 */
 HB_FUNC_STATIC( QMENUBAR_SETCORNERWIDGET )
 {

@@ -88,7 +88,7 @@ RETURN
 #endif
 
 /*
-QGridLayout ( QWidget * parent )
+QGridLayout( QWidget * parent )
 */
 void QGridLayout_new1()
 {
@@ -97,18 +97,13 @@ void QGridLayout_new1()
 }
 
 /*
-QGridLayout ()
+QGridLayout()
 */
 void QGridLayout_new2()
 {
   QGridLayout * obj = new QGridLayout();
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGridLayout ( QWidget * parent )
-[2]QGridLayout ()
-*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 {
@@ -146,7 +141,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 }
 
 /*
-void addItem ( QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0 )
+void addItem( QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0 )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 {
@@ -172,7 +167,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 }
 
 /*
-void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
+void addLayout( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
 */
 void QGridLayout_addLayout1()
 {
@@ -187,7 +182,7 @@ void QGridLayout_addLayout1()
 }
 
 /*
-void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+void addLayout( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
 void QGridLayout_addLayout2()
 {
@@ -200,11 +195,6 @@ void QGridLayout_addLayout2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
-[2]void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 {
@@ -223,7 +213,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 }
 
 /*
-void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
+void addWidget( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
 */
 void QGridLayout_addWidget1()
 {
@@ -238,7 +228,7 @@ void QGridLayout_addWidget1()
 }
 
 /*
-void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+void addWidget( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
 void QGridLayout_addWidget2()
 {
@@ -251,11 +241,6 @@ void QGridLayout_addWidget2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
-[2]void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 {
@@ -274,7 +259,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 }
 
 /*
-QRect cellRect ( int row, int column ) const
+QRect cellRect( int row, int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
 {
@@ -299,7 +284,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
 }
 
 /*
-int columnCount () const
+int columnCount() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
 {
@@ -323,7 +308,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
 }
 
 /*
-int columnMinimumWidth ( int column ) const
+int columnMinimumWidth( int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
 {
@@ -347,7 +332,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
 }
 
 /*
-int columnStretch ( int column ) const
+int columnStretch( int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
 {
@@ -371,7 +356,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
 }
 
 /*
-void getItemPosition ( int index, int * row, int * column, int * rowSpan, int * columnSpan )
+void getItemPosition( int index, int * row, int * column, int * rowSpan, int * columnSpan )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
 {
@@ -405,7 +390,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
 }
 
 /*
-int horizontalSpacing () const
+int horizontalSpacing() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
 {
@@ -429,7 +414,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
 }
 
 /*
-QLayoutItem * itemAtPosition ( int row, int column ) const
+QLayoutItem * itemAtPosition( int row, int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
 {
@@ -454,7 +439,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
 }
 
 /*
-Qt::Corner originCorner () const
+Qt::Corner originCorner() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
 {
@@ -478,7 +463,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
 }
 
 /*
-int rowCount () const
+int rowCount() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
 {
@@ -502,7 +487,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
 }
 
 /*
-int rowMinimumHeight ( int row ) const
+int rowMinimumHeight( int row ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
 {
@@ -526,7 +511,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
 }
 
 /*
-int rowStretch ( int row ) const
+int rowStretch( int row ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
 {
@@ -550,7 +535,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
 }
 
 /*
-void setColumnMinimumWidth ( int column, int minSize )
+void setColumnMinimumWidth( int column, int minSize )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
 {
@@ -576,7 +561,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
 }
 
 /*
-void setColumnStretch ( int column, int stretch )
+void setColumnStretch( int column, int stretch )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
 {
@@ -602,7 +587,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
 }
 
 /*
-void setHorizontalSpacing ( int spacing )
+void setHorizontalSpacing( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
 {
@@ -628,7 +613,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
 }
 
 /*
-void setOriginCorner ( Qt::Corner corner )
+void setOriginCorner( Qt::Corner corner )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
 {
@@ -654,7 +639,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
 }
 
 /*
-void setRowMinimumHeight ( int row, int minSize )
+void setRowMinimumHeight( int row, int minSize )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
 {
@@ -680,7 +665,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
 }
 
 /*
-void setRowStretch ( int row, int stretch )
+void setRowStretch( int row, int stretch )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
 {
@@ -706,7 +691,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
 }
 
 /*
-void setSpacing ( int spacing )
+void setSpacing( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
 {
@@ -732,7 +717,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
 }
 
 /*
-void setVerticalSpacing ( int spacing )
+void setVerticalSpacing( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
 {
@@ -758,7 +743,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
 }
 
 /*
-int spacing () const
+int spacing() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 {
@@ -782,7 +767,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 }
 
 /*
-int verticalSpacing () const
+int verticalSpacing() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 {
@@ -806,7 +791,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 }
 
 /*
-virtual int count () const
+virtual int count() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 {
@@ -830,7 +815,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 }
 
 /*
-virtual Qt::Orientations expandingDirections () const
+virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
 {
@@ -854,7 +839,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
 }
 
 /*
-virtual bool hasHeightForWidth () const
+virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
 {
@@ -878,7 +863,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
 }
 
 /*
-virtual int heightForWidth ( int w ) const
+virtual int heightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
 {
@@ -902,7 +887,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
 {
@@ -928,7 +913,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
 }
 
 /*
-virtual QLayoutItem * itemAt ( int index ) const
+virtual QLayoutItem * itemAt( int index ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
 {
@@ -953,7 +938,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
 }
 
 /*
-virtual QSize maximumSize () const
+virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
 {
@@ -978,7 +963,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
 }
 
 /*
-virtual int minimumHeightForWidth ( int w ) const
+virtual int minimumHeightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
@@ -1002,7 +987,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
 }
 
 /*
-virtual QSize minimumSize () const
+virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
 {
@@ -1027,7 +1012,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
 }
 
 /*
-virtual void setGeometry ( const QRect & rect )
+virtual void setGeometry( const QRect & rect )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
 {
@@ -1053,7 +1038,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
 {
@@ -1078,7 +1063,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
 }
 
 /*
-virtual QLayoutItem * takeAt ( int index )
+virtual QLayoutItem * takeAt( int index )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
 {

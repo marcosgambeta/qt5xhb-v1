@@ -69,7 +69,7 @@ RETURN
 #endif
 
 /*
-QLCDNumber ( QWidget * parent = 0 )
+QLCDNumber( QWidget * parent = 0 )
 */
 void QLCDNumber_new1()
 {
@@ -78,18 +78,13 @@ void QLCDNumber_new1()
 }
 
 /*
-QLCDNumber ( uint numDigits, QWidget * parent = 0 )
+QLCDNumber( uint numDigits, QWidget * parent = 0 )
 */
 void QLCDNumber_new2()
 {
   QLCDNumber * obj = new QLCDNumber( PUINT(1), OPQWIDGET(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QLCDNumber ( QWidget * parent = 0 )
-[2]QLCDNumber ( uint numDigits, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
@@ -127,7 +122,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 }
 
 /*
-bool checkOverflow ( double num ) const
+bool checkOverflow( double num ) const
 */
 void QLCDNumber_checkOverflow1()
 {
@@ -140,7 +135,7 @@ void QLCDNumber_checkOverflow1()
 }
 
 /*
-bool checkOverflow ( int num ) const
+bool checkOverflow( int num ) const
 */
 void QLCDNumber_checkOverflow2()
 {
@@ -151,11 +146,6 @@ void QLCDNumber_checkOverflow2()
     RBOOL( obj->checkOverflow( PINT(1) ) );
   }
 }
-
-/*
-[1]bool checkOverflow ( double num ) const
-[2]bool checkOverflow ( int num ) const
-*/
 
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
@@ -189,7 +179,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 }
 
 /*
-int digitCount () const
+int digitCount() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 {
@@ -213,7 +203,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 }
 
 /*
-int intValue () const
+int intValue() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 {
@@ -237,7 +227,7 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 }
 
 /*
-Mode mode () const
+QLCDNumber::Mode mode() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_MODE )
 {
@@ -261,7 +251,7 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
 }
 
 /*
-SegmentStyle segmentStyle () const
+QLCDNumber::SegmentStyle segmentStyle() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 {
@@ -285,7 +275,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 }
 
 /*
-void setDigitCount ( int numDigits )
+void setDigitCount( int numDigits )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 {
@@ -311,7 +301,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 }
 
 /*
-void setMode ( Mode )
+void setMode( QLCDNumber::Mode )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 {
@@ -337,7 +327,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 }
 
 /*
-void setSegmentStyle ( SegmentStyle )
+void setSegmentStyle( QLCDNumber::SegmentStyle )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 {
@@ -363,7 +353,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 }
 
 /*
-bool smallDecimalPoint () const
+bool smallDecimalPoint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 {
@@ -387,7 +377,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 }
 
 /*
-double value () const
+double value() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 {
@@ -411,7 +401,7 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 {
@@ -436,7 +426,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 }
 
 /*
-void display ( const QString & s )
+void display( const QString & s )
 */
 void QLCDNumber_display1()
 {
@@ -451,7 +441,7 @@ void QLCDNumber_display1()
 }
 
 /*
-void display ( double num )
+void display( double num )
 */
 void QLCDNumber_display2()
 {
@@ -466,7 +456,7 @@ void QLCDNumber_display2()
 }
 
 /*
-void display ( int num )
+void display( int num )
 */
 void QLCDNumber_display3()
 {
@@ -479,12 +469,6 @@ void QLCDNumber_display3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void display ( const QString & s )
-[2]void display ( double num )
-[3]void display ( int num )
-*/
 
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {
@@ -529,7 +513,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 }
 
 /*
-void setBinMode ()
+void setBinMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 {
@@ -555,7 +539,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 }
 
 /*
-void setDecMode ()
+void setDecMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 {
@@ -581,7 +565,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 }
 
 /*
-void setHexMode ()
+void setHexMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 {
@@ -607,7 +591,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 }
 
 /*
-void setOctMode ()
+void setOctMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 {
@@ -633,7 +617,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 }
 
 /*
-void setSmallDecimalPoint ( bool )
+void setSmallDecimalPoint( bool )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
 {

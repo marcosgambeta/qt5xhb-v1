@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QITEMEDITORCREATORBASE_DELETE )
 }
 
 /*
-virtual QWidget *createWidget(QWidget *parent) const = 0
+virtual QWidget * createWidget( QWidget * parent ) const = 0
 */
 HB_FUNC_STATIC( QITEMEDITORCREATORBASE_CREATEWIDGET )
 {

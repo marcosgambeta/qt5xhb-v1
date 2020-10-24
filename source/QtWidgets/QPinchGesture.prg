@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_CENTERPOINT )
 }
 
 /*
-ChangeFlags changeFlags() const
+QPinchGesture::ChangeFlags changeFlags() const
 */
 HB_FUNC_STATIC( QPINCHGESTURE_CHANGEFLAGS )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SCALEFACTOR )
 }
 
 /*
-void setCenterPoint(const QPointF & value)
+void setCenterPoint( const QPointF & value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETCENTERPOINT )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCENTERPOINT )
 }
 
 /*
-void setChangeFlags(ChangeFlags value)
+void setChangeFlags( QPinchGesture::ChangeFlags value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
 }
 
 /*
-void setLastCenterPoint(const QPointF & value)
+void setLastCenterPoint( const QPointF & value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETLASTCENTERPOINT )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTCENTERPOINT )
 }
 
 /*
-void setLastRotationAngle(qreal value)
+void setLastRotationAngle( qreal value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETLASTROTATIONANGLE )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTROTATIONANGLE )
 }
 
 /*
-void setLastScaleFactor(qreal value)
+void setLastScaleFactor( qreal value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETLASTSCALEFACTOR )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTSCALEFACTOR )
 }
 
 /*
-void setRotationAngle(qreal value)
+void setRotationAngle( qreal value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETROTATIONANGLE )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETROTATIONANGLE )
 }
 
 /*
-void setScaleFactor(qreal value)
+void setScaleFactor( qreal value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETSCALEFACTOR )
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSCALEFACTOR )
 }
 
 /*
-void setStartCenterPoint(const QPointF & value)
+void setStartCenterPoint( const QPointF & value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETSTARTCENTERPOINT )
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSTARTCENTERPOINT )
 }
 
 /*
-void setTotalChangeFlags(ChangeFlags value)
+void setTotalChangeFlags( QPinchGesture::ChangeFlags value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
 }
 
 /*
-void setTotalRotationAngle(qreal value)
+void setTotalRotationAngle( qreal value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALROTATIONANGLE )
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALROTATIONANGLE )
 }
 
 /*
-void setTotalScaleFactor(qreal value)
+void setTotalScaleFactor( qreal value )
 */
 HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALSCALEFACTOR )
 {
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_STARTCENTERPOINT )
 }
 
 /*
-ChangeFlags totalChangeFlags() const
+QPinchGesture::ChangeFlags totalChangeFlags() const
 */
 HB_FUNC_STATIC( QPINCHGESTURE_TOTALCHANGEFLAGS )
 {

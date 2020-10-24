@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QPANGESTURE_OFFSET )
 }
 
 /*
-void setAcceleration(qreal value)
+void setAcceleration( qreal value )
 */
 HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETACCELERATION )
 }
 
 /*
-void setLastOffset(const QPointF & value)
+void setLastOffset( const QPointF & value )
 */
 HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QPANGESTURE_SETLASTOFFSET )
 }
 
 /*
-void setOffset(const QPointF & value)
+void setOffset( const QPointF & value )
 */
 HB_FUNC_STATIC( QPANGESTURE_SETOFFSET )
 {

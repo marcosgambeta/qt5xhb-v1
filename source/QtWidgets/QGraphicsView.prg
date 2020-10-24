@@ -120,7 +120,7 @@ RETURN
 #include <QtGui/QPainterPath>
 
 /*
-QGraphicsView ( QWidget * parent = 0 )
+QGraphicsView( QWidget * parent = 0 )
 */
 void QGraphicsView_new1()
 {
@@ -129,18 +129,13 @@ void QGraphicsView_new1()
 }
 
 /*
-QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
+QGraphicsView( QGraphicsScene * scene, QWidget * parent = 0 )
 */
 void QGraphicsView_new2()
 {
   QGraphicsView * obj = new QGraphicsView( PQGRAPHICSSCENE(1), OPQWIDGET(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGraphicsView ( QWidget * parent = 0 )
-[2]QGraphicsView ( QGraphicsScene * scene, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
 {
@@ -178,7 +173,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ALIGNMENT )
 {
@@ -202,7 +197,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ALIGNMENT )
 }
 
 /*
-QBrush backgroundBrush () const
+QBrush backgroundBrush() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
 {
@@ -227,7 +222,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
 }
 
 /*
-CacheMode cacheMode () const
+QGraphicsView::CacheMode cacheMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_CACHEMODE )
 {
@@ -251,7 +246,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CACHEMODE )
 }
 
 /*
-void centerOn ( const QPointF & pos )
+void centerOn( const QPointF & pos )
 */
 void QGraphicsView_centerOn1()
 {
@@ -266,7 +261,7 @@ void QGraphicsView_centerOn1()
 }
 
 /*
-void centerOn ( qreal x, qreal y )
+void centerOn( qreal x, qreal y )
 */
 void QGraphicsView_centerOn2()
 {
@@ -281,7 +276,7 @@ void QGraphicsView_centerOn2()
 }
 
 /*
-void centerOn ( const QGraphicsItem * item )
+void centerOn( const QGraphicsItem * item )
 */
 void QGraphicsView_centerOn3()
 {
@@ -294,12 +289,6 @@ void QGraphicsView_centerOn3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void centerOn ( const QPointF & pos )
-[2]void centerOn ( qreal x, qreal y )
-[3]void centerOn ( const QGraphicsItem * item )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
 {
@@ -322,7 +311,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_CENTERON )
 }
 
 /*
-DragMode dragMode () const
+QGraphicsView::DragMode dragMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_DRAGMODE )
 {
@@ -346,7 +335,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_DRAGMODE )
 }
 
 /*
-void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
+void ensureVisible( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
 */
 void QGraphicsView_ensureVisible1()
 {
@@ -361,7 +350,7 @@ void QGraphicsView_ensureVisible1()
 }
 
 /*
-void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
+void ensureVisible( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 */
 void QGraphicsView_ensureVisible2()
 {
@@ -376,7 +365,7 @@ void QGraphicsView_ensureVisible2()
 }
 
 /*
-void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
+void ensureVisible( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
 */
 void QGraphicsView_ensureVisible3()
 {
@@ -389,12 +378,6 @@ void QGraphicsView_ensureVisible3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void ensureVisible ( const QRectF & rect, int xmargin = 50, int ymargin = 50 )
-[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
-[3]void ensureVisible ( const QGraphicsItem * item, int xmargin = 50, int ymargin = 50 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 {
@@ -417,7 +400,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 }
 
 /*
-void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+void fitInView( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 */
 void QGraphicsView_fitInView1()
 {
@@ -432,7 +415,7 @@ void QGraphicsView_fitInView1()
 }
 
 /*
-void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+void fitInView( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 */
 void QGraphicsView_fitInView2()
 {
@@ -447,7 +430,7 @@ void QGraphicsView_fitInView2()
 }
 
 /*
-void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
+void fitInView( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
 */
 void QGraphicsView_fitInView3()
 {
@@ -460,12 +443,6 @@ void QGraphicsView_fitInView3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void fitInView ( const QRectF & rect, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-[2]void fitInView ( qreal x, qreal y, qreal w, qreal h, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-[3]void fitInView ( const QGraphicsItem * item, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 {
@@ -488,7 +465,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 }
 
 /*
-QBrush foregroundBrush () const
+QBrush foregroundBrush() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
 {
@@ -513,7 +490,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
 }
 
 /*
-bool isInteractive () const
+bool isInteractive() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ISINTERACTIVE )
 {
@@ -537,7 +514,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ISINTERACTIVE )
 }
 
 /*
-bool isTransformed () const
+bool isTransformed() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ISTRANSFORMED )
 {
@@ -561,7 +538,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ISTRANSFORMED )
 }
 
 /*
-QGraphicsItem * itemAt ( const QPoint & pos ) const
+QGraphicsItem * itemAt( const QPoint & pos ) const
 */
 void QGraphicsView_itemAt1()
 {
@@ -575,7 +552,7 @@ void QGraphicsView_itemAt1()
 }
 
 /*
-QGraphicsItem * itemAt ( int x, int y ) const
+QGraphicsItem * itemAt( int x, int y ) const
 */
 void QGraphicsView_itemAt2()
 {
@@ -587,11 +564,6 @@ void QGraphicsView_itemAt2()
     Qt5xHb::createReturnClass( ptr, "QGRAPHICSITEM", false );
   }
 }
-
-/*
-[1]QGraphicsItem * itemAt ( const QPoint & pos ) const
-[2]QGraphicsItem * itemAt ( int x, int y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
 {
@@ -610,7 +582,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
 }
 
 /*
-QPoint mapFromScene ( const QPointF & point ) const
+QPoint mapFromScene( const QPointF & point ) const
 */
 void QGraphicsView_mapFromScene1()
 {
@@ -624,7 +596,7 @@ void QGraphicsView_mapFromScene1()
 }
 
 /*
-QPolygon mapFromScene ( const QRectF & rect ) const
+QPolygon mapFromScene( const QRectF & rect ) const
 */
 void QGraphicsView_mapFromScene2()
 {
@@ -638,7 +610,7 @@ void QGraphicsView_mapFromScene2()
 }
 
 /*
-QPolygon mapFromScene ( const QPolygonF & polygon ) const
+QPolygon mapFromScene( const QPolygonF & polygon ) const
 */
 void QGraphicsView_mapFromScene3()
 {
@@ -652,7 +624,7 @@ void QGraphicsView_mapFromScene3()
 }
 
 /*
-QPainterPath mapFromScene ( const QPainterPath & path ) const
+QPainterPath mapFromScene( const QPainterPath & path ) const
 */
 void QGraphicsView_mapFromScene4()
 {
@@ -666,7 +638,7 @@ void QGraphicsView_mapFromScene4()
 }
 
 /*
-QPoint mapFromScene ( qreal x, qreal y ) const
+QPoint mapFromScene( qreal x, qreal y ) const
 */
 void QGraphicsView_mapFromScene5()
 {
@@ -680,7 +652,7 @@ void QGraphicsView_mapFromScene5()
 }
 
 /*
-QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+QPolygon mapFromScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsView_mapFromScene6()
 {
@@ -692,15 +664,6 @@ void QGraphicsView_mapFromScene6()
     Qt5xHb::createReturnClass( ptr, "QPOLYGON", true );
   }
 }
-
-/*
-[1]QPoint mapFromScene ( const QPointF & point ) const
-[2]QPolygon mapFromScene ( const QRectF & rect ) const
-[3]QPolygon mapFromScene ( const QPolygonF & polygon ) const
-[4]QPainterPath mapFromScene ( const QPainterPath & path ) const
-[5]QPoint mapFromScene ( qreal x, qreal y ) const
-[6]QPolygon mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
 {
@@ -735,7 +698,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
 }
 
 /*
-QPointF mapToScene ( const QPoint & point ) const
+QPointF mapToScene( const QPoint & point ) const
 */
 void QGraphicsView_mapToScene1()
 {
@@ -749,7 +712,7 @@ void QGraphicsView_mapToScene1()
 }
 
 /*
-QPolygonF mapToScene ( const QRect & rect ) const
+QPolygonF mapToScene( const QRect & rect ) const
 */
 void QGraphicsView_mapToScene2()
 {
@@ -763,7 +726,7 @@ void QGraphicsView_mapToScene2()
 }
 
 /*
-QPolygonF mapToScene ( const QPolygon & polygon ) const
+QPolygonF mapToScene( const QPolygon & polygon ) const
 */
 void QGraphicsView_mapToScene3()
 {
@@ -777,7 +740,7 @@ void QGraphicsView_mapToScene3()
 }
 
 /*
-QPainterPath mapToScene ( const QPainterPath & path ) const
+QPainterPath mapToScene( const QPainterPath & path ) const
 */
 void QGraphicsView_mapToScene4()
 {
@@ -791,7 +754,7 @@ void QGraphicsView_mapToScene4()
 }
 
 /*
-QPointF mapToScene ( int x, int y ) const
+QPointF mapToScene( int x, int y ) const
 */
 void QGraphicsView_mapToScene5()
 {
@@ -805,7 +768,7 @@ void QGraphicsView_mapToScene5()
 }
 
 /*
-QPolygonF mapToScene ( int x, int y, int w, int h ) const
+QPolygonF mapToScene( int x, int y, int w, int h ) const
 */
 void QGraphicsView_mapToScene6()
 {
@@ -817,15 +780,6 @@ void QGraphicsView_mapToScene6()
     Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
   }
 }
-
-/*
-[1]QPointF mapToScene ( const QPoint & point ) const
-[2]QPolygonF mapToScene ( const QRect & rect ) const
-[3]QPolygonF mapToScene ( const QPolygon & polygon ) const
-[4]QPainterPath mapToScene ( const QPainterPath & path ) const
-[5]QPointF mapToScene ( int x, int y ) const
-[6]QPolygonF mapToScene ( int x, int y, int w, int h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
 {
@@ -860,7 +814,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
 }
 
 /*
-QMatrix matrix () const
+QMatrix matrix() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
 {
@@ -885,7 +839,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
 }
 
 /*
-OptimizationFlags optimizationFlags () const
+QGraphicsView::OptimizationFlags optimizationFlags() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
 {
@@ -909,7 +863,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
 }
 
 /*
-void render ( QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
+void render( QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
 {
@@ -935,7 +889,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
 }
 
 /*
-QPainter::RenderHints renderHints () const
+QPainter::RenderHints renderHints() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RENDERHINTS )
 {
@@ -959,7 +913,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDERHINTS )
 }
 
 /*
-void resetCachedContent ()
+void resetCachedContent()
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
 {
@@ -985,7 +939,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETCACHEDCONTENT )
 }
 
 /*
-void resetMatrix ()
+void resetMatrix()
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESETMATRIX )
 {
@@ -1011,7 +965,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETMATRIX )
 }
 
 /*
-void resetTransform ()
+void resetTransform()
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESETTRANSFORM )
 {
@@ -1037,7 +991,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESETTRANSFORM )
 }
 
 /*
-ViewportAnchor resizeAnchor () const
+QGraphicsView::ViewportAnchor resizeAnchor() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
 {
@@ -1061,7 +1015,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
 }
 
 /*
-void rotate ( qreal angle )
+void rotate( qreal angle )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ROTATE )
 {
@@ -1087,7 +1041,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ROTATE )
 }
 
 /*
-Qt::ItemSelectionMode rubberBandSelectionMode () const
+Qt::ItemSelectionMode rubberBandSelectionMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
 {
@@ -1111,7 +1065,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
 }
 
 /*
-void scale ( qreal sx, qreal sy )
+void scale( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SCALE )
 {
@@ -1137,7 +1091,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCALE )
 }
 
 /*
-QGraphicsScene * scene () const
+QGraphicsScene * scene() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
 {
@@ -1162,7 +1116,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
 }
 
 /*
-QRectF sceneRect () const
+QRectF sceneRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
 {
@@ -1187,7 +1141,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
 }
 
 /*
-void setAlignment ( Qt::Alignment alignment )
+void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
 {
@@ -1213,7 +1167,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
 }
 
 /*
-void setBackgroundBrush ( const QBrush & brush )
+void setBackgroundBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
 {
@@ -1239,7 +1193,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
 }
 
 /*
-void setCacheMode ( CacheMode mode )
+void setCacheMode( QGraphicsView::CacheMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
 {
@@ -1265,7 +1219,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
 }
 
 /*
-void setDragMode ( DragMode mode )
+void setDragMode( QGraphicsView::DragMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
 {
@@ -1291,7 +1245,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
 }
 
 /*
-void setForegroundBrush ( const QBrush & brush )
+void setForegroundBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
 {
@@ -1317,7 +1271,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
 }
 
 /*
-void setInteractive ( bool allowed )
+void setInteractive( bool allowed )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
 {
@@ -1343,7 +1297,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
 }
 
 /*
-void setMatrix ( const QMatrix & matrix, bool combine = false )
+void setMatrix( const QMatrix & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
 {
@@ -1369,7 +1323,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
 }
 
 /*
-void setOptimizationFlag ( OptimizationFlag flag, bool enabled = true )
+void setOptimizationFlag( QGraphicsView::OptimizationFlag flag, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
 {
@@ -1395,7 +1349,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
 }
 
 /*
-void setOptimizationFlags ( OptimizationFlags flags )
+void setOptimizationFlags( QGraphicsView::OptimizationFlags flags )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
 {
@@ -1421,7 +1375,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
 }
 
 /*
-void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
+void setRenderHint( QPainter::RenderHint hint, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
 {
@@ -1447,7 +1401,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
 }
 
 /*
-void setRenderHints ( QPainter::RenderHints hints )
+void setRenderHints( QPainter::RenderHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
 {
@@ -1473,7 +1427,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
 }
 
 /*
-void setResizeAnchor ( ViewportAnchor anchor )
+void setResizeAnchor( QGraphicsView::ViewportAnchor anchor )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
 {
@@ -1499,7 +1453,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
 }
 
 /*
-void setRubberBandSelectionMode ( Qt::ItemSelectionMode mode )
+void setRubberBandSelectionMode( Qt::ItemSelectionMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
 {
@@ -1525,7 +1479,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
 }
 
 /*
-void setScene ( QGraphicsScene * scene )
+void setScene( QGraphicsScene * scene )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENE )
 {
@@ -1551,7 +1505,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENE )
 }
 
 /*
-void setSceneRect ( const QRectF & rect )
+void setSceneRect( const QRectF & rect )
 */
 void QGraphicsView_setSceneRect1()
 {
@@ -1566,7 +1520,7 @@ void QGraphicsView_setSceneRect1()
 }
 
 /*
-void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
+void setSceneRect( qreal x, qreal y, qreal w, qreal h )
 */
 void QGraphicsView_setSceneRect2()
 {
@@ -1579,11 +1533,6 @@ void QGraphicsView_setSceneRect2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setSceneRect ( const QRectF & rect )
-[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 {
@@ -1602,7 +1551,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 }
 
 /*
-void setTransform ( const QTransform & matrix, bool combine = false )
+void setTransform( const QTransform & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
 {
@@ -1628,7 +1577,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
 }
 
 /*
-void setTransformationAnchor ( ViewportAnchor anchor )
+void setTransformationAnchor( QGraphicsView::ViewportAnchor anchor )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
 {
@@ -1654,7 +1603,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
 }
 
 /*
-void setViewportUpdateMode ( ViewportUpdateMode mode )
+void setViewportUpdateMode( QGraphicsView::ViewportUpdateMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
 {
@@ -1680,7 +1629,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
 }
 
 /*
-void shear ( qreal sh, qreal sv )
+void shear( qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SHEAR )
 {
@@ -1706,7 +1655,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SHEAR )
 }
 
 /*
-QTransform transform () const
+QTransform transform() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
 {
@@ -1731,7 +1680,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
 }
 
 /*
-ViewportAnchor transformationAnchor () const
+QGraphicsView::ViewportAnchor transformationAnchor() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 {
@@ -1755,7 +1704,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 }
 
 /*
-void translate ( qreal dx, qreal dy )
+void translate( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSLATE )
 {
@@ -1781,7 +1730,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSLATE )
 }
 
 /*
-QTransform viewportTransform () const
+QTransform viewportTransform() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
 {
@@ -1806,7 +1755,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
 }
 
 /*
-ViewportUpdateMode viewportUpdateMode () const
+QGraphicsView::ViewportUpdateMode viewportUpdateMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
 {
@@ -1830,7 +1779,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
 }
 
 /*
-virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
+virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
 {
@@ -1855,7 +1804,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
 {
@@ -1880,7 +1829,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
 }
 
 /*
-void invalidateScene ( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
+void invalidateScene( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
 {
@@ -1906,7 +1855,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
 }
 
 /*
-void updateScene ( const QList<QRectF> & rects )
+void updateScene( const QList<QRectF> & rects )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
 {
@@ -1940,7 +1889,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
 }
 
 /*
-void updateSceneRect ( const QRectF & rect )
+void updateSceneRect( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENERECT )
 {

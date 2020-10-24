@@ -75,7 +75,7 @@ RETURN
 #include <QtWidgets/QMenu>
 
 /*
-QMdiSubWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QMdiSubWindow( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_NEW )
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_DELETE )
 }
 
 /*
-bool isShaded () const
+bool isShaded() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_ISSHADED )
 }
 
 /*
-int keyboardPageStep () const
+int keyboardPageStep() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDPAGESTEP )
 }
 
 /*
-int keyboardSingleStep () const
+int keyboardSingleStep() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_KEYBOARDSINGLESTEP )
 }
 
 /*
-QMdiArea * mdiArea () const
+QMdiArea * mdiArea() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
 }
 
 /*
-void setKeyboardPageStep ( int step )
+void setKeyboardPageStep( int step )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
 }
 
 /*
-void setKeyboardSingleStep ( int step )
+void setKeyboardSingleStep( int step )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
 }
 
 /*
-void setOption ( SubWindowOption option, bool on = true )
+void setOption( QMdiSubWindow::SubWindowOption option, bool on = true )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
 }
 
 /*
-void setSystemMenu ( QMenu * systemMenu )
+void setSystemMenu( QMenu * systemMenu )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
 }
 
 /*
-void setWidget ( QWidget * widget )
+void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
 }
 
 /*
-QMenu * systemMenu () const
+QMenu * systemMenu() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
 }
 
 /*
-bool testOption ( SubWindowOption option ) const
+bool testOption( QMdiSubWindow::SubWindowOption option ) const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
 }
 
 /*
-QWidget * widget () const
+QWidget * widget() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_WIDGET )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
 {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SIZEHINT )
 }
 
 /*
-void showShaded ()
+void showShaded()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
 {
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSHADED )
 }
 
 /*
-void showSystemMenu ()
+void showSystemMenu()
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SHOWSYSTEMMENU )
 {

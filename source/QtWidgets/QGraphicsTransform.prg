@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
 }
 
 /*
-virtual void applyTo ( QMatrix4x4 * matrix ) const = 0
+virtual void applyTo( QMatrix4x4 * matrix ) const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
 {

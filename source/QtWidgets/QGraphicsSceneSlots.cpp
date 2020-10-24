@@ -69,7 +69,7 @@ void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
-    PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
+    PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
 

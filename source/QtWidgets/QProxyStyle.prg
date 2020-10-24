@@ -77,7 +77,7 @@ RETURN
 #endif
 
 /*
-QProxyStyle(QStyle *style = 0)
+QProxyStyle( QStyle * style = 0 )
 */
 void QProxyStyle_new1()
 {
@@ -86,18 +86,13 @@ void QProxyStyle_new1()
 }
 
 /*
-QProxyStyle(const QString &key)
+QProxyStyle( const QString & key )
 */
 void QProxyStyle_new2()
 {
   QProxyStyle * obj = new QProxyStyle( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QProxyStyle(QStyle *style = 0)
-[2]QProxyStyle(const QString &key)
-*/
 
 HB_FUNC_STATIC( QPROXYSTYLE_NEW )
 {
@@ -135,7 +130,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DELETE )
 }
 
 /*
-QStyle *baseStyle() const
+QStyle * baseStyle() const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_BASESTYLE )
 {
@@ -160,7 +155,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_BASESTYLE )
 }
 
 /*
-void setBaseStyle(QStyle *style)
+void setBaseStyle( QStyle * style )
 */
 HB_FUNC_STATIC( QPROXYSTYLE_SETBASESTYLE )
 {
@@ -186,7 +181,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SETBASESTYLE )
 }
 
 /*
-void drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = 0) const
+void drawPrimitive( QStyle::PrimitiveElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWPRIMITIVE )
 {
@@ -212,7 +207,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWPRIMITIVE )
 }
 
 /*
-void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = 0) const
+void drawControl( QStyle::ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWCONTROL )
 {
@@ -238,7 +233,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCONTROL )
 }
 
 /*
-void drawComplexControl(ComplexControl control, const QStyleOptionComplex *option, QPainter *painter, const QWidget *widget = 0) const
+void drawComplexControl( QStyle::ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWCOMPLEXCONTROL )
 {
@@ -264,7 +259,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWCOMPLEXCONTROL )
 }
 
 /*
-void drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled,const QString &text, QPalette::ColorRole textRole = QPalette::NoRole) const
+void drawItemText( QPainter * painter, const QRect & rect, int flags, const QPalette & pal, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMTEXT )
 {
@@ -290,7 +285,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMTEXT )
 }
 
 /*
-virtual void drawItemPixmap(QPainter *painter, const QRect &rect, int alignment, const QPixmap &pixmap) const
+virtual void drawItemPixmap( QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMPIXMAP )
 {
@@ -316,7 +311,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMPIXMAP )
 }
 
 /*
-QSize sizeFromContents(ContentsType type, const QStyleOption *option, const QSize &size, const QWidget *widget) const
+QSize sizeFromContents( QStyle::ContentsType type, const QStyleOption * option, const QSize & size, const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_SIZEFROMCONTENTS )
 {
@@ -341,7 +336,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SIZEFROMCONTENTS )
 }
 
 /*
-QRect subElementRect(SubElement element, const QStyleOption *option, const QWidget *widget) const
+QRect subElementRect( QStyle::SubElement element, const QStyleOption * option, const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_SUBELEMENTRECT )
 {
@@ -366,7 +361,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBELEMENTRECT )
 }
 
 /*
-QRect subControlRect(ComplexControl cc, const QStyleOptionComplex *opt, SubControl sc, const QWidget *widget) const
+QRect subControlRect( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, QStyle::SubControl sc, const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_SUBCONTROLRECT )
 {
@@ -391,7 +386,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_SUBCONTROLRECT )
 }
 
 /*
-QRect itemTextRect(const QFontMetrics &fm, const QRect &r, int flags, bool enabled, const QString &text) const
+QRect itemTextRect( const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_ITEMTEXTRECT )
 {
@@ -416,7 +411,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMTEXTRECT )
 }
 
 /*
-QRect itemPixmapRect(const QRect &r, int flags, const QPixmap &pixmap) const
+QRect itemPixmapRect( const QRect & r, int flags, const QPixmap & pixmap ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_ITEMPIXMAPRECT )
 {
@@ -441,7 +436,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_ITEMPIXMAPRECT )
 }
 
 /*
-SubControl hitTestComplexControl(ComplexControl control, const QStyleOptionComplex *option, const QPoint &pos, const QWidget *widget = 0) const
+QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl control, const QStyleOptionComplex * option, const QPoint & pos, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_HITTESTCOMPLEXCONTROL )
 {
@@ -465,7 +460,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_HITTESTCOMPLEXCONTROL )
 }
 
 /*
-int styleHint(StyleHint hint, const QStyleOption *option = 0, const QWidget *widget = 0, QStyleHintReturn *returnData = 0) const
+int styleHint( QStyle::StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_STYLEHINT )
 {
@@ -489,7 +484,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STYLEHINT )
 }
 
 /*
-int pixelMetric(PixelMetric metric, const QStyleOption *option = 0, const QWidget *widget = 0) const
+int pixelMetric( QStyle::PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_PIXELMETRIC )
 {
@@ -513,7 +508,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_PIXELMETRIC )
 }
 
 /*
-int layoutSpacing(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2,Qt::Orientation orientation, const QStyleOption *option = 0, const QWidget *widget = 0) const
+int layoutSpacing( QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_LAYOUTSPACING )
 {
@@ -537,7 +532,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_LAYOUTSPACING )
 }
 
 /*
-QIcon standardIcon(StandardPixmap standardIcon, const QStyleOption *option = 0, const QWidget *widget = 0) const
+QIcon standardIcon( QStyle::StandardPixmap standardIcon, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_STANDARDICON )
 {
@@ -562,7 +557,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDICON )
 }
 
 /*
-QPixmap standardPixmap(StandardPixmap standardPixmap, const QStyleOption *opt, const QWidget *widget = 0) const
+QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPIXMAP )
 {
@@ -587,7 +582,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPIXMAP )
 }
 
 /*
-QPixmap generatedIconPixmap(QIcon::Mode iconMode, const QPixmap &pixmap, const QStyleOption *opt) const
+QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * opt ) const
 */
 HB_FUNC_STATIC( QPROXYSTYLE_GENERATEDICONPIXMAP )
 {
@@ -637,7 +632,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_STANDARDPALETTE )
 }
 
 /*
-void polish(QWidget *widget)
+void polish( QWidget * widget )
 */
 void QProxyStyle_polish1()
 {
@@ -652,7 +647,7 @@ void QProxyStyle_polish1()
 }
 
 /*
-void polish(QPalette &pal)
+void polish( QPalette & pal )
 */
 void QProxyStyle_polish2()
 {
@@ -667,7 +662,7 @@ void QProxyStyle_polish2()
 }
 
 /*
-void polish(QApplication *app)
+void polish( QApplication * app )
 */
 void QProxyStyle_polish3()
 {
@@ -680,12 +675,6 @@ void QProxyStyle_polish3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void polish(QWidget *widget)
-[2]void polish(QPalette &pal)
-[3]void polish(QApplication *app)
-*/
 
 HB_FUNC_STATIC( QPROXYSTYLE_POLISH )
 {
@@ -708,7 +697,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_POLISH )
 }
 
 /*
-void unpolish(QWidget *widget)
+void unpolish( QWidget * widget )
 */
 void QProxyStyle_unpolish1()
 {
@@ -723,7 +712,7 @@ void QProxyStyle_unpolish1()
 }
 
 /*
-void unpolish(QApplication *app)
+void unpolish( QApplication * app )
 */
 void QProxyStyle_unpolish2()
 {
@@ -736,11 +725,6 @@ void QProxyStyle_unpolish2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void unpolish(QWidget *widget)
-[2]void unpolish(QApplication *app)
-*/
 
 HB_FUNC_STATIC( QPROXYSTYLE_UNPOLISH )
 {

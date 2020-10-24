@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QKeySequenceEdit(QWidget *parent = 0)
+QKeySequenceEdit( QWidget * parent = 0 )
 */
 void QKeySequenceEdit_new1()
 {
@@ -71,7 +71,7 @@ void QKeySequenceEdit_new1()
 }
 
 /*
-QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
+QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = 0 )
 */
 void QKeySequenceEdit_new2()
 {
@@ -80,11 +80,6 @@ void QKeySequenceEdit_new2()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]QKeySequenceEdit(QWidget *parent = 0)
-[2]QKeySequenceEdit(const QKeySequence &keySequence, QWidget *parent = 0)
-*/
 
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {
@@ -153,7 +148,7 @@ HB_FUNC_STATIC( QKEYSEQUENCEEDIT_KEYSEQUENCE )
 }
 
 /*
-void setKeySequence(const QKeySequence &keySequence)
+void setKeySequence( const QKeySequence & keySequence )
 */
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_SETKEYSEQUENCE )
 {

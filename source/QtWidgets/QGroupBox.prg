@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-QGroupBox ( QWidget * parent = 0 )
+QGroupBox( QWidget * parent = 0 )
 */
 void QGroupBox_new1()
 {
@@ -73,18 +73,13 @@ void QGroupBox_new1()
 }
 
 /*
-QGroupBox ( const QString & title, QWidget * parent = 0 )
+QGroupBox( const QString & title, QWidget * parent = 0 )
 */
 void QGroupBox_new2()
 {
   QGroupBox * obj = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGroupBox ( QWidget * parent = 0 )
-[2]QGroupBox ( const QString & title, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGROUPBOX_NEW )
 {
@@ -122,7 +117,7 @@ HB_FUNC_STATIC( QGROUPBOX_DELETE )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 {
@@ -146,7 +141,7 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 }
 
 /*
-bool isCheckable () const
+bool isCheckable() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 {
@@ -170,7 +165,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 }
 
 /*
-bool isChecked () const
+bool isChecked() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 {
@@ -194,7 +189,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 }
 
 /*
-bool isFlat () const
+bool isFlat() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 {
@@ -218,7 +213,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 }
 
 /*
-void setAlignment ( int alignment )
+void setAlignment( int alignment )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 {
@@ -244,7 +239,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 }
 
 /*
-void setCheckable ( bool checkable )
+void setCheckable( bool checkable )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 {
@@ -270,7 +265,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 }
 
 /*
-void setFlat ( bool flat )
+void setFlat( bool flat )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 {
@@ -296,7 +291,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 }
 
 /*
-void setTitle ( const QString & title )
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 {
@@ -322,7 +317,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QGROUPBOX_TITLE )
 {
@@ -346,7 +341,7 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 {
@@ -371,7 +366,7 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 }
 
 /*
-void setChecked ( bool checked )
+void setChecked( bool checked )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
 {
