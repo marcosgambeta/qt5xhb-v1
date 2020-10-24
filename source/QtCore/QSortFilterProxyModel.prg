@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
 }
 
 /*
-void setFilterRegExp(const QRegExp &regExp) [slot]
+void setFilterRegExp(const QRegExp &regExp) 
 */
 void QSortFilterProxyModel_setFilterRegExp1()
 {
@@ -195,7 +195,7 @@ void QSortFilterProxyModel_setFilterRegExp1()
 }
 
 /*
-void setFilterRegExp(const QString &pattern) [slot]
+void setFilterRegExp(const QString &pattern) 
 */
 void QSortFilterProxyModel_setFilterRegExp2()
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGULAREXPRESSION )
 }
 
 /*
-void setFilterRegularExpression(const QString &pattern) [slot]
+void setFilterRegularExpression(const QString &pattern) 
 */
 void QSortFilterProxyModel_setFilterRegularExpression1()
 {
@@ -279,7 +279,7 @@ void QSortFilterProxyModel_setFilterRegularExpression1()
 }
 
 /*
-void setFilterRegularExpression(const QRegularExpression &regularExpression) [slot]
+void setFilterRegularExpression(const QRegularExpression &regularExpression) 
 */
 void QSortFilterProxyModel_setFilterRegularExpression2()
 {
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
 }
 
 /*
-void setFilterWildcard(const QString &pattern) [slot]
+void setFilterWildcard(const QString &pattern) 
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
 {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
 }
 
 /*
-void setFilterFixedString(const QString &pattern) [slot]
+void setFilterFixedString(const QString &pattern) 
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
 {
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
 }
 
 /*
-void clear() [slot]
+void clear() 
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CLEAR )
 {
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CLEAR )
 }
 
 /*
-void invalidate() [slot]
+void invalidate() 
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INVALIDATE )
 {
@@ -1671,25 +1671,5 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
 #endif
   }
 }
-
-/*
-virtual bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const [protected]
-*/
-
-/*
-virtual bool filterAcceptsColumn(int source_column, const QModelIndex &source_parent) const [protected]
-*/
-
-/*
-virtual bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const [protected]
-*/
-
-/*
-QT_DEPRECATED_X("Use QSortFilterProxyModel::invalidateFilter") void filterChanged() [protected]
-*/
-
-/*
-void invalidateFilter() [protected]
-*/
 
 #pragma ENDDUMP
