@@ -198,18 +198,6 @@ HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void registerPendingProducts() [private] (slot)
-*/
-
-/*
-void registerProduct(QInAppProduct *) [private] (slot)
-*/
-
-/*
-void setupBackend() [private]
-*/
-
 void QInAppStoreSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QINAPPSTORE_ONPRODUCTREGISTERED )

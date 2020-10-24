@@ -60,10 +60,6 @@ RETURN
 #include <QtPurchasing/QInAppProduct>
 
 /*
-explicit QInAppTransaction(TransactionStatus status, QInAppProduct *product, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QInAppTransaction()
 */
 HB_FUNC_STATIC( QINAPPTRANSACTION_DELETE )
