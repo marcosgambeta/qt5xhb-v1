@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QSQLRESULT_DELETE )
 }
 
 /*
-virtual QVariant handle () const
+virtual QVariant handle() const
 */
 HB_FUNC_STATIC( QSQLRESULT_HANDLE )
 {

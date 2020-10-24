@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QSqlRelation ()
+QSqlRelation()
 */
 void QSqlRelation_new1()
 {
@@ -69,18 +69,13 @@ void QSqlRelation_new1()
 }
 
 /*
-QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
+QSqlRelation( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 */
 void QSqlRelation_new2()
 {
   QSqlRelation * obj = new QSqlRelation( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSqlRelation ()
-[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
-*/
 
 HB_FUNC_STATIC( QSQLRELATION_NEW )
 {
@@ -116,7 +111,7 @@ HB_FUNC_STATIC( QSQLRELATION_DELETE )
 }
 
 /*
-QString displayColumn () const
+QString displayColumn() const
 */
 HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 {
@@ -140,7 +135,7 @@ HB_FUNC_STATIC( QSQLRELATION_DISPLAYCOLUMN )
 }
 
 /*
-QString indexColumn () const
+QString indexColumn() const
 */
 HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 {
@@ -164,7 +159,7 @@ HB_FUNC_STATIC( QSQLRELATION_INDEXCOLUMN )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 {
@@ -188,7 +183,7 @@ HB_FUNC_STATIC( QSQLRELATION_ISVALID )
 }
 
 /*
-QString tableName () const
+QString tableName() const
 */
 HB_FUNC_STATIC( QSQLRELATION_TABLENAME )
 {

@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-explicit QSqlRelationalDelegate(QObject *aParent = 0)
+QSqlRelationalDelegate( QObject * aParent = 0 )
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
 {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
 }
 
 /*
-QWidget *createEditor(QWidget *aParent, const QStyleOptionViewItem &option, const QModelIndex &index) const
+QWidget * createEditor( QWidget * aParent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 }
 
 /*
-void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
+void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
 {

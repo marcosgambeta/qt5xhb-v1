@@ -71,7 +71,7 @@ RETURN
 #include <QtSql/QSqlRecord>
 
 /*
-explicit QSqlQueryModel ( QObject * parent = 0 )
+QSqlQueryModel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DELETE )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
 }
 
 /*
-QSqlError lastError () const
+QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
 }
 
 /*
-QSqlQuery query () const
+QSqlQuery query() const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 }
 
 /*
-void setQuery ( const QSqlQuery & query )
+void setQuery( const QSqlQuery & query )
 */
 void QSqlQueryModel_setQuery1()
 {
@@ -197,7 +197,7 @@ void QSqlQueryModel_setQuery1()
 }
 
 /*
-void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
+void setQuery( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
 */
 void QSqlQueryModel_setQuery2()
 {
@@ -210,11 +210,6 @@ void QSqlQueryModel_setQuery2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setQuery ( const QSqlQuery & query )
-[2]void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
-*/
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY )
 {
@@ -233,7 +228,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY )
 }
 
 /*
-QSqlRecord record ( int row ) const
+QSqlRecord record( int row ) const
 */
 void QSqlQueryModel_record1()
 {
@@ -247,7 +242,7 @@ void QSqlQueryModel_record1()
 }
 
 /*
-QSqlRecord record () const
+QSqlRecord record() const
 */
 void QSqlQueryModel_record2()
 {
@@ -259,11 +254,6 @@ void QSqlQueryModel_record2()
     Qt5xHb::createReturnClass( ptr, "QSQLRECORD", true );
   }
 }
-
-/*
-[1]QSqlRecord record ( int row ) const
-[2]QSqlRecord record () const
-*/
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
 {
@@ -282,7 +272,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
 }
 
 /*
-bool canFetchMore ( const QModelIndex & parent = QModelIndex() ) const
+bool canFetchMore( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
 {
@@ -306,7 +296,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
 }
 
 /*
-int columnCount ( const QModelIndex & index = QModelIndex() ) const
+int columnCount( const QModelIndex & index = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
 {
@@ -330,7 +320,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
 }
 
 /*
-QVariant data ( const QModelIndex & item, int role = Qt::DisplayRole ) const
+QVariant data( const QModelIndex & item, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
 {
@@ -355,7 +345,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
 }
 
 /*
-void fetchMore ( const QModelIndex & parent = QModelIndex() )
+void fetchMore( const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_FETCHMORE )
 {
@@ -381,7 +371,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_FETCHMORE )
 }
 
 /*
-QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
 {
@@ -406,7 +396,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
 }
 
 /*
-bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
+bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
 {
@@ -430,7 +420,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
 }
 
 /*
-bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
 {
@@ -454,7 +444,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
 }
 
 /*
-bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
 {
@@ -478,7 +468,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
 }
 
 /*
-int rowCount ( const QModelIndex & parent = QModelIndex() ) const
+int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_ROWCOUNT )
 {

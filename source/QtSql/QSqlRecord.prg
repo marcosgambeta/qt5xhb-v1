@@ -80,7 +80,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QSqlRecord ()
+QSqlRecord()
 */
 void QSqlRecord_new1()
 {
@@ -89,18 +89,13 @@ void QSqlRecord_new1()
 }
 
 /*
-QSqlRecord ( const QSqlRecord & other )
+QSqlRecord( const QSqlRecord & other )
 */
 void QSqlRecord_new2()
 {
   QSqlRecord * obj = new QSqlRecord( *PQSQLRECORD(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSqlRecord ()
-[2]QSqlRecord ( const QSqlRecord & other )
-*/
 
 HB_FUNC_STATIC( QSQLRECORD_NEW )
 {
@@ -136,7 +131,7 @@ HB_FUNC_STATIC( QSQLRECORD_DELETE )
 }
 
 /*
-void append ( const QSqlField & field )
+void append( const QSqlField & field )
 */
 HB_FUNC_STATIC( QSQLRECORD_APPEND )
 {
@@ -162,7 +157,7 @@ HB_FUNC_STATIC( QSQLRECORD_APPEND )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSQLRECORD_CLEAR )
 {
@@ -188,7 +183,7 @@ HB_FUNC_STATIC( QSQLRECORD_CLEAR )
 }
 
 /*
-void clearValues ()
+void clearValues()
 */
 HB_FUNC_STATIC( QSQLRECORD_CLEARVALUES )
 {
@@ -214,7 +209,7 @@ HB_FUNC_STATIC( QSQLRECORD_CLEARVALUES )
 }
 
 /*
-bool contains ( const QString & name ) const
+bool contains( const QString & name ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_CONTAINS )
 {
@@ -238,7 +233,7 @@ HB_FUNC_STATIC( QSQLRECORD_CONTAINS )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QSQLRECORD_COUNT )
 {
@@ -262,7 +257,7 @@ HB_FUNC_STATIC( QSQLRECORD_COUNT )
 }
 
 /*
-QSqlField field ( int index ) const
+QSqlField field( int index ) const
 */
 void QSqlRecord_field1()
 {
@@ -276,7 +271,7 @@ void QSqlRecord_field1()
 }
 
 /*
-QSqlField field ( const QString & name ) const
+QSqlField field( const QString & name ) const
 */
 void QSqlRecord_field2()
 {
@@ -288,11 +283,6 @@ void QSqlRecord_field2()
     Qt5xHb::createReturnClass( ptr, "QSQLFIELD", true );
   }
 }
-
-/*
-[1]QSqlField field ( int index ) const
-[2]QSqlField field ( const QString & name ) const
-*/
 
 HB_FUNC_STATIC( QSQLRECORD_FIELD )
 {
@@ -311,7 +301,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD )
 }
 
 /*
-QString fieldName ( int index ) const
+QString fieldName( int index ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
 {
@@ -335,7 +325,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
 }
 
 /*
-int indexOf ( const QString & name ) const
+int indexOf( const QString & name ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_INDEXOF )
 {
@@ -359,7 +349,7 @@ HB_FUNC_STATIC( QSQLRECORD_INDEXOF )
 }
 
 /*
-void insert ( int pos, const QSqlField & field )
+void insert( int pos, const QSqlField & field )
 */
 HB_FUNC_STATIC( QSQLRECORD_INSERT )
 {
@@ -385,7 +375,7 @@ HB_FUNC_STATIC( QSQLRECORD_INSERT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
 {
@@ -409,7 +399,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
 }
 
 /*
-bool isGenerated ( const QString & name ) const
+bool isGenerated( const QString & name ) const
 */
 void QSqlRecord_isGenerated1()
 {
@@ -422,7 +412,7 @@ void QSqlRecord_isGenerated1()
 }
 
 /*
-bool isGenerated ( int index ) const
+bool isGenerated( int index ) const
 */
 void QSqlRecord_isGenerated2()
 {
@@ -433,11 +423,6 @@ void QSqlRecord_isGenerated2()
     RBOOL( obj->isGenerated( PINT(1) ) );
   }
 }
-
-/*
-[1]bool isGenerated ( const QString & name ) const
-[2]bool isGenerated ( int index ) const
-*/
 
 HB_FUNC_STATIC( QSQLRECORD_ISGENERATED )
 {
@@ -456,7 +441,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISGENERATED )
 }
 
 /*
-bool isNull ( const QString & name ) const
+bool isNull( const QString & name ) const
 */
 void QSqlRecord_isNull1()
 {
@@ -469,7 +454,7 @@ void QSqlRecord_isNull1()
 }
 
 /*
-bool isNull ( int index ) const
+bool isNull( int index ) const
 */
 void QSqlRecord_isNull2()
 {
@@ -480,11 +465,6 @@ void QSqlRecord_isNull2()
     RBOOL( obj->isNull( PINT(1) ) );
   }
 }
-
-/*
-[1]bool isNull ( const QString & name ) const
-[2]bool isNull ( int index ) const
-*/
 
 HB_FUNC_STATIC( QSQLRECORD_ISNULL )
 {
@@ -503,7 +483,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISNULL )
 }
 
 /*
-void remove ( int pos )
+void remove( int pos )
 */
 HB_FUNC_STATIC( QSQLRECORD_REMOVE )
 {
@@ -529,7 +509,7 @@ HB_FUNC_STATIC( QSQLRECORD_REMOVE )
 }
 
 /*
-void replace ( int pos, const QSqlField & field )
+void replace( int pos, const QSqlField & field )
 */
 HB_FUNC_STATIC( QSQLRECORD_REPLACE )
 {
@@ -555,7 +535,7 @@ HB_FUNC_STATIC( QSQLRECORD_REPLACE )
 }
 
 /*
-void setGenerated ( const QString & name, bool generated )
+void setGenerated( const QString & name, bool generated )
 */
 void QSqlRecord_setGenerated1()
 {
@@ -570,7 +550,7 @@ void QSqlRecord_setGenerated1()
 }
 
 /*
-void setGenerated ( int index, bool generated )
+void setGenerated( int index, bool generated )
 */
 void QSqlRecord_setGenerated2()
 {
@@ -583,11 +563,6 @@ void QSqlRecord_setGenerated2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setGenerated ( const QString & name, bool generated )
-[2]void setGenerated ( int index, bool generated )
-*/
 
 HB_FUNC_STATIC( QSQLRECORD_SETGENERATED )
 {
@@ -606,7 +581,7 @@ HB_FUNC_STATIC( QSQLRECORD_SETGENERATED )
 }
 
 /*
-void setNull ( int index )
+void setNull( int index )
 */
 void QSqlRecord_setNull1()
 {
@@ -621,7 +596,7 @@ void QSqlRecord_setNull1()
 }
 
 /*
-void setNull ( const QString & name )
+void setNull( const QString & name )
 */
 void QSqlRecord_setNull2()
 {
@@ -634,11 +609,6 @@ void QSqlRecord_setNull2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setNull ( int index )
-[2]void setNull ( const QString & name )
-*/
 
 HB_FUNC_STATIC( QSQLRECORD_SETNULL )
 {
@@ -657,7 +627,7 @@ HB_FUNC_STATIC( QSQLRECORD_SETNULL )
 }
 
 /*
-void setValue ( int index, const QVariant & val )
+void setValue( int index, const QVariant & val )
 */
 void QSqlRecord_setValue1()
 {
@@ -672,7 +642,7 @@ void QSqlRecord_setValue1()
 }
 
 /*
-void setValue ( const QString & name, const QVariant & val )
+void setValue( const QString & name, const QVariant & val )
 */
 void QSqlRecord_setValue2()
 {
@@ -685,11 +655,6 @@ void QSqlRecord_setValue2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setValue ( int index, const QVariant & val )
-[2]void setValue ( const QString & name, const QVariant & val )
-*/
 
 HB_FUNC_STATIC( QSQLRECORD_SETVALUE )
 {
@@ -708,7 +673,7 @@ HB_FUNC_STATIC( QSQLRECORD_SETVALUE )
 }
 
 /*
-QVariant value ( int index ) const
+QVariant value( int index ) const
 */
 void QSqlRecord_value1()
 {
@@ -722,7 +687,7 @@ void QSqlRecord_value1()
 }
 
 /*
-QVariant value ( const QString & name ) const
+QVariant value( const QString & name ) const
 */
 void QSqlRecord_value2()
 {
@@ -734,11 +699,6 @@ void QSqlRecord_value2()
     Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
-
-/*
-[1]QVariant value ( int index ) const
-[2]QVariant value ( const QString & name ) const
-*/
 
 HB_FUNC_STATIC( QSQLRECORD_VALUE )
 {
@@ -757,7 +717,7 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE )
 }
 
 /*
-QSqlRecord keyValues(const QSqlRecord &keyFields) const
+QSqlRecord keyValues( const QSqlRecord & keyFields ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_KEYVALUES )
 {

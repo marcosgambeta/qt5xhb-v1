@@ -91,7 +91,7 @@ RETURN
 #include <QtSql/QSqlIndex>
 
 /*
-explicit QSqlTableModel ( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
+QSqlTableModel( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_NEW )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DELETE )
 }
 
 /*
-QSqlDatabase database () const
+QSqlDatabase database() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
 }
 
 /*
-EditStrategy editStrategy () const
+QSqlTableModel::EditStrategy editStrategy() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_EDITSTRATEGY )
 }
 
 /*
-virtual void setEditStrategy ( EditStrategy strategy )
+virtual void setEditStrategy( QSqlTableModel::EditStrategy strategy )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETEDITSTRATEGY )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETEDITSTRATEGY )
 }
 
 /*
-int fieldIndex ( const QString & fieldName ) const
+int fieldIndex( const QString & fieldName ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
 }
 
 /*
-QString filter () const
+QString filter() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FILTER )
 }
 
 /*
-virtual void setFilter ( const QString & filter )
+virtual void setFilter( const QString & filter )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETFILTER )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETFILTER )
 }
 
 /*
-bool insertRecord ( int row, const QSqlRecord & record )
+bool insertRecord( int row, const QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
 {
@@ -312,7 +312,7 @@ void QSqlTableModel_isDirty1()
 }
 
 /*
-bool isDirty ( const QModelIndex & index ) const
+bool isDirty( const QModelIndex & index ) const
 */
 void QSqlTableModel_isDirty2()
 {
@@ -323,11 +323,6 @@ void QSqlTableModel_isDirty2()
     RBOOL( obj->isDirty( *PQMODELINDEX(1) ) );
   }
 }
-
-/*
-[1]bool isDirty() const
-[2]bool isDirty ( const QModelIndex & index ) const
-*/
 
 HB_FUNC( QSQLTABLEMODEL_ISDIRTY )
 {
@@ -346,7 +341,7 @@ HB_FUNC( QSQLTABLEMODEL_ISDIRTY )
 }
 
 /*
-QSqlIndex primaryKey () const
+QSqlIndex primaryKey() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
 {
@@ -371,7 +366,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
 }
 
 /*
-virtual void revertRow ( int row )
+virtual void revertRow( int row )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
 {
@@ -397,7 +392,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
 }
 
 /*
-virtual bool select ()
+virtual bool select()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
 {
@@ -421,7 +416,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECT )
 }
 
 /*
-bool setRecord ( int row, const QSqlRecord & record )
+bool setRecord( int row, const QSqlRecord & record )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
 {
@@ -445,7 +440,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
 }
 
 /*
-void sort ( int column, Qt::SortOrder order )
+void sort( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
 {
@@ -471,7 +466,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
 }
 
 /*
-virtual void setSort ( int column, Qt::SortOrder order )
+virtual void setSort( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
 {
@@ -497,7 +492,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
 }
 
 /*
-virtual void setTable ( const QString & tableName )
+virtual void setTable( const QString & tableName )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
 {
@@ -523,7 +518,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
 }
 
 /*
-QString tableName () const
+QString tableName() const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
 {
@@ -547,7 +542,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_TABLENAME )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
 {
@@ -573,7 +568,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
 }
 
 /*
-QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
+QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
 {
@@ -598,7 +593,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
 }
 
 /*
-bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
 {
@@ -622,7 +617,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
 }
 
 /*
-Qt::ItemFlags flags ( const QModelIndex & index ) const
+Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_FLAGS )
 {
@@ -646,7 +641,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FLAGS )
 }
 
 /*
-QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
 {
@@ -671,7 +666,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
 }
 
 /*
-bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
 {
@@ -695,7 +690,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
 }
 
 /*
-bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
 {
@@ -719,7 +714,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
 }
 
 /*
-bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
 {
@@ -743,7 +738,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
 }
 
 /*
-int rowCount ( const QModelIndex & parent = QModelIndex() ) const
+int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
 {
@@ -767,7 +762,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
 }
 
 /*
-void revert ()
+void revert()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
 {
@@ -793,7 +788,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERT )
 }
 
 /*
-void revertAll ()
+void revertAll()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
 {
@@ -819,7 +814,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTALL )
 }
 
 /*
-bool submit ()
+bool submit()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
 {
@@ -843,7 +838,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMIT )
 }
 
 /*
-bool submitAll ()
+bool submitAll()
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
 {
@@ -881,7 +876,7 @@ void QSqlTableModel_record1()
 }
 
 /*
-QSqlRecord record(int row) const
+QSqlRecord record( int row ) const
 */
 void QSqlTableModel_record2()
 {
@@ -893,11 +888,6 @@ void QSqlTableModel_record2()
     Qt5xHb::createReturnClass( ptr, "QSQLRECORD", true );
   }
 }
-
-/*
-[1]QSqlRecord record() const
-[2]QSqlRecord record(int row) const
-*/
 
 HB_FUNC( QSQLTABLEMODEL_RECORD )
 {
@@ -916,7 +906,7 @@ HB_FUNC( QSQLTABLEMODEL_RECORD )
 }
 
 /*
-virtual bool selectRow(int row)
+virtual bool selectRow( int row )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SELECTROW )
 {

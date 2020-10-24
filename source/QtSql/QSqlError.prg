@@ -68,7 +68,7 @@ RETURN
 #endif
 
 /*
-QSqlError ( const QString & driverText, const QString & databaseText, ErrorType type, int number ) (deprecated)
+QSqlError( const QString & driverText, const QString & databaseText, QSqlError::ErrorType type, int number )
 */
 void QSqlError_new1()
 {
@@ -77,7 +77,7 @@ void QSqlError_new1()
 }
 
 /*
-QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), ErrorType type = NoError, const QString &errorCode = QString())
+QSqlError( const QString & driverText = QString(), const QString & databaseText = QString(), QSqlError::ErrorType type = QSqlError::NoError, const QString & errorCode = QString() )
 */
 void QSqlError_new2()
 {
@@ -88,23 +88,13 @@ void QSqlError_new2()
 }
 
 /*
-QSqlError ( const QSqlError & other )
+QSqlError( const QSqlError & other )
 */
 void QSqlError_new3()
 {
   QSqlError * obj = new QSqlError( *PQSQLERROR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-QSqlError::QSqlError(QSqlError &&other)
-*/
-
-/*
-[1]QSqlError(const QString & driverText, const QString & databaseText, ErrorType type, int number )
-[2]QSqlError(const QString &driverText = QString(), const QString &databaseText = QString(), ErrorType type = NoError, const QString &errorCode = QString())
-[3]QSqlError(const QSqlError & other )
-*/
 
 HB_FUNC_STATIC( QSQLERROR_NEW )
 {
@@ -144,7 +134,7 @@ HB_FUNC_STATIC( QSQLERROR_DELETE )
 }
 
 /*
-QString databaseText () const
+QString databaseText() const
 */
 HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 {
@@ -168,7 +158,7 @@ HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 }
 
 /*
-QT_DEPRECATED void setDatabaseText ( const QString & databaseText )
+QT_DEPRECATED void setDatabaseText( const QString & databaseText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 {
@@ -194,7 +184,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 }
 
 /*
-QString driverText () const
+QString driverText() const
 */
 HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 {
@@ -218,7 +208,7 @@ HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 }
 
 /*
-QT_DEPRECATED void setDriverText ( const QString & driverText )
+QT_DEPRECATED void setDriverText( const QString & driverText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 {
@@ -244,7 +234,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSQLERROR_ISVALID )
 {
@@ -268,7 +258,7 @@ HB_FUNC_STATIC( QSQLERROR_ISVALID )
 }
 
 /*
-QT_DEPRECATED  int number () const
+QT_DEPRECATED int number() const
 */
 HB_FUNC_STATIC( QSQLERROR_NUMBER )
 {
@@ -292,7 +282,7 @@ HB_FUNC_STATIC( QSQLERROR_NUMBER )
 }
 
 /*
-QT_DEPRECATED void setNumber ( int number )
+QT_DEPRECATED void setNumber( int number )
 */
 HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 {
@@ -318,7 +308,7 @@ HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QSQLERROR_TEXT )
 {
@@ -342,7 +332,7 @@ HB_FUNC_STATIC( QSQLERROR_TEXT )
 }
 
 /*
-ErrorType type () const
+QSqlError::ErrorType type() const
 */
 HB_FUNC_STATIC( QSQLERROR_TYPE )
 {
@@ -366,7 +356,7 @@ HB_FUNC_STATIC( QSQLERROR_TYPE )
 }
 
 /*
-QT_DEPRECATED void setType ( ErrorType type )
+QT_DEPRECATED void setType( QSqlError::ErrorType type )
 */
 HB_FUNC_STATIC( QSQLERROR_SETTYPE )
 {
@@ -418,7 +408,7 @@ HB_FUNC_STATIC( QSQLERROR_NATIVEERRORCODE )
 }
 
 /*
-void swap(QSqlError &other)
+void swap( QSqlError & other )
 */
 HB_FUNC_STATIC( QSQLERROR_SWAP )
 {
