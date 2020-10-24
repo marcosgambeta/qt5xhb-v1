@@ -98,10 +98,6 @@ HB_FUNC_STATIC( QBARDATAPROXY_NEW )
 }
 
 /*
-explicit QBarDataProxy(QBarDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QBarDataProxy()
 */
 HB_FUNC_STATIC( QBARDATAPROXY_DELETE )

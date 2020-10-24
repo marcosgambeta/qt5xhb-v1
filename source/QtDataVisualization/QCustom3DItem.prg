@@ -101,10 +101,6 @@ void QCustom3DItem_new2()
 }
 
 /*
-QCustom3DItem(QCustom3DItemPrivate *d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 [1]explicit QCustom3DItem(QObject *parent = Q_NULLPTR)
 [2]explicit QCustom3DItem(const QString &meshFile, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, const QImage &texture, QObject *parent = Q_NULLPTR)
 */

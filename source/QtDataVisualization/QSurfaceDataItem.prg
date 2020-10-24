@@ -340,10 +340,6 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_Z )
   }
 }
 
-/*
-void createExtraData() [protected]
-*/
-
 HB_FUNC_STATIC( QSURFACEDATAITEM_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();

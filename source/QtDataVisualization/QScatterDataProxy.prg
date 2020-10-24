@@ -86,10 +86,6 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_NEW )
 }
 
 /*
-explicit QScatterDataProxy(QScatterDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QScatterDataProxy()
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_DELETE )

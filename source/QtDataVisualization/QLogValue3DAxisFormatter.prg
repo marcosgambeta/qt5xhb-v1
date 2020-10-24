@@ -77,10 +77,6 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
 }
 
 /*
-explicit QLogValue3DAxisFormatter(QLogValue3DAxisFormatterPrivate *d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QLogValue3DAxisFormatter()
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_DELETE )
@@ -251,26 +247,6 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-virtual QValue3DAxisFormatter *createNewInstance() const [protected]
-*/
-
-/*
-virtual void recalculate() [protected]
-*/
-
-/*
-virtual float positionAt(float value) const [protected]
-*/
-
-/*
-virtual float valueAt(float position) const [protected]
-*/
-
-/*
-virtual void populateCopy(QValue3DAxisFormatter &copy) const [protected]
-*/
 
 void QLogValue3DAxisFormatterSlots_connect_signal( const QString & signal, const QString & slot );
 

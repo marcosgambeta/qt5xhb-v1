@@ -134,10 +134,6 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DGraph(QAbstract3DGraphPrivate *d, const QSurfaceFormat *format, QWindow *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAbstract3DGraph()
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_DELETE )
@@ -1582,42 +1578,6 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_HASCONTEXT )
 #endif
   }
 }
-
-/*
-bool event(QEvent *event) [protected]
-*/
-
-/*
-void resizeEvent(QResizeEvent *event) [protected]
-*/
-
-/*
-void exposeEvent(QExposeEvent *event) [protected]
-*/
-
-/*
-void mouseDoubleClickEvent(QMouseEvent *event) [protected]
-*/
-
-/*
-void touchEvent(QTouchEvent *event) [protected]
-*/
-
-/*
-void mousePressEvent(QMouseEvent *event) [protected]
-*/
-
-/*
-void mouseReleaseEvent(QMouseEvent *event) [protected]
-*/
-
-/*
-void mouseMoveEvent(QMouseEvent *event) [protected]
-*/
-
-/*
-void wheelEvent(QWheelEvent *event) [protected]
-*/
 
 void QAbstract3DGraphSlots_connect_signal( const QString & signal, const QString & slot );
 

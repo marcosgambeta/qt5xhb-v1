@@ -80,10 +80,6 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DAxis(QAbstract3DAxisPrivate *d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAbstract3DAxis()
 */
 HB_FUNC_STATIC( QABSTRACT3DAXIS_DELETE )

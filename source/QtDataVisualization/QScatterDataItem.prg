@@ -408,10 +408,6 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_Z )
   }
 }
 
-/*
-void createExtraData() [protected]
-*/
-
 HB_FUNC_STATIC( QSCATTERDATAITEM_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();

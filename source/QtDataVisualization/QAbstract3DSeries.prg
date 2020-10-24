@@ -103,10 +103,6 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DSeries(QAbstract3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAbstract3DSeries()
 */
 HB_FUNC_STATIC( QABSTRACT3DSERIES_DELETE )

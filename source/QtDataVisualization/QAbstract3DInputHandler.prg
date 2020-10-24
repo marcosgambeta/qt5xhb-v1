@@ -62,10 +62,6 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QAbstract3DInputHandler(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAbstract3DInputHandler()
 */
 HB_FUNC_STATIC( QABSTRACT3DINPUTHANDLER_DELETE )
@@ -261,22 +257,6 @@ virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
 
 /*
 virtual void wheelEvent(QWheelEvent *event)
-*/
-
-/*
-void setPrevDistance(int distance) [protected]
-*/
-
-/*
-int prevDistance() const [protected]
-*/
-
-/*
-void setPreviousInputPos(const QPoint &position) [protected]
-*/
-
-/*
-QPoint previousInputPos() const [protected]
 */
 
 void QAbstract3DInputHandlerSlots_connect_signal( const QString & signal, const QString & slot );

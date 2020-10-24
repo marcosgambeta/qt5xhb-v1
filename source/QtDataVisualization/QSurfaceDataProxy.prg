@@ -87,10 +87,6 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_NEW )
 }
 
 /*
-explicit QSurfaceDataProxy(QSurfaceDataProxyPrivate *d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QSurfaceDataProxy()
 */
 HB_FUNC_STATIC( QSURFACEDATAPROXY_DELETE )

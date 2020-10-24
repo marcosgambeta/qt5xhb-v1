@@ -81,10 +81,6 @@ void QScatter3DSeries_new2()
 }
 
 /*
-explicit QScatter3DSeries(QScatter3DSeriesPrivate *d, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 [1]explicit QScatter3DSeries(QObject *parent = Q_NULLPTR)
 [2]explicit QScatter3DSeries(QScatterDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
 */

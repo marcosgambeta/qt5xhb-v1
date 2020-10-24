@@ -248,10 +248,6 @@ HB_FUNC_STATIC( QBARDATAITEM_ROTATION )
   }
 }
 
-/*
-void createExtraData() [protected]
-*/
-
 HB_FUNC_STATIC( QBARDATAITEM_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
