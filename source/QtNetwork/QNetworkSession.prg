@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
 }
 
 /*
-void accept () (slot)
+void accept () 
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 }
 
 /*
-void close () (slot)
+void close () 
 */
 HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 }
 
 /*
-void ignore () (slot)
+void ignore () 
 */
 HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 }
 
 /*
-void migrate () (slot)
+void migrate () 
 */
 HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 }
 
 /*
-void open () (slot)
+void open () 
 */
 HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 }
 
 /*
-void reject () (slot)
+void reject () 
 */
 HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 }
 
 /*
-void stop () (slot)
+void stop () 
 */
 HB_FUNC_STATIC( QNETWORKSESSION_STOP )
 {
@@ -615,14 +615,6 @@ HB_FUNC_STATIC( QNETWORKSESSION_USAGEPOLICIES )
 #endif
   }
 }
-
-/*
-virtual void connectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-virtual void disconnectNotify(const QMetaMethod &signal) Q_DECL_OVERRIDE [protected]
-*/
 
 void QNetworkSessionSlots_connect_signal( const QString & signal, const QString & slot );
 

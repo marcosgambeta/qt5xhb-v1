@@ -60,14 +60,6 @@ RETURN
 #include <QtCore/QIODevice>
 
 /*
-explicit QAbstractNetworkCache(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
-QAbstractNetworkCache(QAbstractNetworkCachePrivate &dd, QObject *parent) [protected]
-*/
-
-/*
 virtual ~QAbstractNetworkCache()
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DELETE )
@@ -265,7 +257,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 }
 
 /*
-virtual void clear () = 0 (slot)
+virtual void clear () = 0 
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
 {

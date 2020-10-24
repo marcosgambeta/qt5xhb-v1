@@ -2180,7 +2180,7 @@ void QSslSocket_ignoreSslErrors1()
 }
 
 /*
-void ignoreSslErrors() (slot)
+void ignoreSslErrors() 
 */
 void QSslSocket_ignoreSslErrors2()
 {
@@ -2196,7 +2196,7 @@ void QSslSocket_ignoreSslErrors2()
 
 /*
 [1]void ignoreSslErrors(const QList<QSslError> &errors)
-[2]void ignoreSslErrors() (slot)
+[2]void ignoreSslErrors() 
 */
 
 HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
@@ -2216,7 +2216,7 @@ HB_FUNC_STATIC( QSSLSOCKET_IGNORESSLERRORS )
 }
 
 /*
-void startClientEncryption() (slot)
+void startClientEncryption() 
 */
 HB_FUNC_STATIC( QSSLSOCKET_STARTCLIENTENCRYPTION )
 {
@@ -2242,7 +2242,7 @@ HB_FUNC_STATIC( QSSLSOCKET_STARTCLIENTENCRYPTION )
 }
 
 /*
-void startServerEncryption() (slot)
+void startServerEncryption() 
 */
 HB_FUNC_STATIC( QSSLSOCKET_STARTSERVERENCRYPTION )
 {
@@ -2266,14 +2266,6 @@ HB_FUNC_STATIC( QSSLSOCKET_STARTSERVERENCRYPTION )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
-*/
 
 void QSslSocketSlots_connect_signal( const QString & signal, const QString & slot );
 

@@ -195,8 +195,4 @@ HB_FUNC_STATIC( QSCTPSERVER_NEXTPENDINGDATAGRAMCONNECTION )
 #endif
 }
 
-/*
-void incomingConnection(qintptr handle) Q_DECL_OVERRIDE [protected]
-*/
-
 #pragma ENDDUMP

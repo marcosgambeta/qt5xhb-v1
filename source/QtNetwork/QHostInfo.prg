@@ -543,10 +543,6 @@ HB_FUNC_STATIC( QHOSTINFO_LOCALDOMAINNAME )
 #endif
 }
 
-/*
-static int lookupHostImpl(const QString &name, const QObject *receiver, QtPrivate::QSlotObjectBase *slotObj) [private]
-*/
-
 HB_FUNC_STATIC( QHOSTINFO_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();

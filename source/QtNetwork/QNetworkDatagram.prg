@@ -112,10 +112,6 @@ void QNetworkDatagram_new3()
 }
 
 /*
-explicit QNetworkDatagram(QNetworkDatagramPrivate &dd) [private]
-*/
-
-/*
 [1]QNetworkDatagram()
 [2]QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port = 0) (implicit)
 [3]QNetworkDatagram(const QNetworkDatagram &other)
@@ -622,18 +618,6 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_MAKEREPLY )
   }
 #endif
 }
-
-/*
-QNetworkDatagram makeReply_helper(const QByteArray &data) const [private]
-*/
-
-/*
-void makeReply_helper_inplace(const QByteArray &data) [private]
-*/
-
-/*
-static void destroy(QNetworkDatagramPrivate *d) [private]
-*/
 
 HB_FUNC_STATIC( QNETWORKDATAGRAM_NEWFROM )
 {

@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
 }
 
 /*
-void abort() (slot)
+void abort() 
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
 {
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
 }
 
 /*
-void lookup() (slot)
+void lookup() 
 */
 HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
 {

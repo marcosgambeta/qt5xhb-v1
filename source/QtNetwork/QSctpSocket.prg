@@ -309,12 +309,4 @@ HB_FUNC_STATIC( QSCTPSOCKET_WRITEDATAGRAM )
 #endif
 }
 
-/*
-qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-qint64 readLineData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
-*/
-
 #pragma ENDDUMP

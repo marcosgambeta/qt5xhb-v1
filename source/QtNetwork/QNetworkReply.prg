@@ -87,14 +87,6 @@ RETURN
 #include <QtNetwork/QSslConfiguration>
 
 /*
-explicit QNetworkReply(QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
-QNetworkReply(QNetworkReplyPrivate &dd, QObject *parent) [protected]
-*/
-
-/*
 ~QNetworkReply()
 */
 HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
@@ -594,7 +586,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 }
 
 /*
-virtual void abort () = 0 (slot)
+virtual void abort () = 0 
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 {
@@ -643,7 +635,7 @@ void QNetworkReply_ignoreSslErrors1()
 }
 
 /*
-virtual void ignoreSslErrors () (slot)
+virtual void ignoreSslErrors () 
 */
 void QNetworkReply_ignoreSslErrors2()
 {
@@ -677,54 +669,6 @@ HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-virtual qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void setOperation(QNetworkAccessManager::Operation operation) [protected]
-*/
-
-/*
-void setRequest(const QNetworkRequest &request) [protected]
-*/
-
-/*
-void setError(NetworkError errorCode, const QString &errorString) [protected]
-*/
-
-/*
-void setFinished(bool) [protected]
-*/
-
-/*
-void setUrl(const QUrl &url) [protected]
-*/
-
-/*
-void setHeader(QNetworkRequest::KnownHeaders header, const QVariant &value) [protected]
-*/
-
-/*
-void setRawHeader(const QByteArray &headerName, const QByteArray &value) [protected]
-*/
-
-/*
-void setAttribute(QNetworkRequest::Attribute code, const QVariant &value) [protected]
-*/
-
-/*
-virtual void sslConfigurationImplementation(QSslConfiguration &) const [protected]
-*/
-
-/*
-virtual void setSslConfigurationImplementation(const QSslConfiguration &) [protected]
-*/
-
-/*
-virtual void ignoreSslErrorsImplementation(const QList<QSslError> &) [protected]
-*/
 
 void QNetworkReplySlots_connect_signal( const QString & signal, const QString & slot );
 

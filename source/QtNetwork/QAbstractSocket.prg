@@ -113,10 +113,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 }
 
 /*
-QAbstractSocket(SocketType socketType, QAbstractSocketPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QAbstractSocket()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
@@ -1047,46 +1043,6 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
 #endif
   }
 }
-
-/*
-qint64 readData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-qint64 readLineData(char *data, qint64 maxlen) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-qint64 writeData(const char *data, qint64 len) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void setSocketState(SocketState state) [protected]
-*/
-
-/*
-void setSocketError(SocketError socketError) [protected]
-*/
-
-/*
-void setLocalPort(quint16 port) [protected]
-*/
-
-/*
-void setLocalAddress(const QHostAddress &address) [protected]
-*/
-
-/*
-void setPeerPort(quint16 port) [protected]
-*/
-
-/*
-void setPeerAddress(const QHostAddress &address) [protected]
-*/
-
-/*
-void setPeerName(const QString &name) [protected]
-*/
 
 void QAbstractSocketSlots_connect_signal( const QString & signal, const QString & slot );
 

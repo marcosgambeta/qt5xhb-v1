@@ -1145,14 +1145,6 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_REDIRECTPOLICY )
 #endif
 }
 
-/*
-virtual QNetworkReply *createRequest(Operation op, const QNetworkRequest &request, QIODevice *outgoingData = Q_NULLPTR) [protected]
-*/
-
-/*
-QStringList supportedSchemesImplementation() const [protected] (slot) (5,2,0)
-*/
-
 void QNetworkAccessManagerSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ONPROXYAUTHENTICATIONREQUIRED )

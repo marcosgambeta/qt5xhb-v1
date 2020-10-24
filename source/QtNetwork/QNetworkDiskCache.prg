@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
 }
 
 /*
-void clear() Q_DECL_OVERRIDE (slot)
+void clear() Q_DECL_OVERRIDE 
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
 {
@@ -428,9 +428,5 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_CLEAR )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-virtual qint64 expire() [protected]
-*/
 
 #pragma ENDDUMP

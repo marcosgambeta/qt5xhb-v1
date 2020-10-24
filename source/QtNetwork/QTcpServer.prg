@@ -92,10 +92,6 @@ HB_FUNC_STATIC( QTCPSERVER_NEW )
 }
 
 /*
-QTcpServer(QAbstractSocket::SocketType socketType, QTcpServerPrivate &dd, QObject *parent = Q_NULLPTR) [protected]
-*/
-
-/*
 virtual ~QTcpServer()
 */
 HB_FUNC_STATIC( QTCPSERVER_DELETE )
@@ -563,14 +559,6 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
 #endif
   }
 }
-
-/*
-virtual void incomingConnection(qintptr handle) [protected]
-*/
-
-/*
-void addPendingConnection(QTcpSocket* socket) [protected]
-*/
 
 void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot );
 

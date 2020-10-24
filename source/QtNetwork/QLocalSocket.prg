@@ -728,14 +728,6 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
   }
 }
 
-/*
-virtual qint64 readData(char*, qint64) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-virtual qint64 writeData(const char*, qint64) Q_DECL_OVERRIDE [protected]
-*/
-
 void QLocalSocketSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )

@@ -250,16 +250,4 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETECOOKIE )
   }
 }
 
-/*
-QList<QNetworkCookie> allCookies() const [protected]
-*/
-
-/*
-void setAllCookies(const QList<QNetworkCookie> &cookieList) [protected]
-*/
-
-/*
-virtual bool validateCookie(const QNetworkCookie &cookie, const QUrl &url) const protected]
-*/
-
 #pragma ENDDUMP
