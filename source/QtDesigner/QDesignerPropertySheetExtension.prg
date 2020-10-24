@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_DELETE )
 }
 
 /*
-virtual int count () const = 0
+virtual int count() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_COUNT )
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_COUNT )
 }
 
 /*
-virtual bool hasReset ( int index ) const = 0
+virtual bool hasReset( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
 }
 
 /*
-virtual int indexOf ( const QString & name ) const = 0
+virtual int indexOf( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF )
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF )
 }
 
 /*
-virtual bool isAttribute ( int index ) const = 0
+virtual bool isAttribute( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
 }
 
 /*
-virtual bool isChanged ( int index ) const = 0
+virtual bool isChanged( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
 }
 
 /*
-virtual bool isVisible ( int index ) const = 0
+virtual bool isVisible( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
 }
 
 /*
-virtual QVariant property ( int index ) const = 0
+virtual QVariant property( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY )
 }
 
 /*
-virtual QString propertyGroup ( int index ) const = 0
+virtual QString propertyGroup( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
 }
 
 /*
-virtual QString propertyName ( int index ) const = 0
+virtual QString propertyName( int index ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
 }
 
 /*
-virtual bool reset ( int index ) = 0
+virtual bool reset( int index ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
 }
 
 /*
-virtual void setAttribute ( int index, bool attribute ) = 0
+virtual void setAttribute( int index, bool attribute ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETATTRIBUTE )
 }
 
 /*
-virtual void setChanged ( int index, bool changed ) = 0
+virtual void setChanged( int index, bool changed ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETCHANGED )
 }
 
 /*
-virtual void setProperty ( int index, const QVariant & value ) = 0
+virtual void setProperty( int index, const QVariant & value ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY )
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTY )
 }
 
 /*
-virtual void setPropertyGroup ( int index, const QString & group ) = 0
+virtual void setPropertyGroup( int index, const QString & group ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETPROPERTYGROUP )
 }
 
 /*
-virtual void setVisible ( int index, bool visible ) = 0
+virtual void setVisible( int index, bool visible ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_SETVISIBLE )
 {

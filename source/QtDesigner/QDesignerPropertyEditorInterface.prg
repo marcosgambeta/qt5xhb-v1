@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 }
 
 /*
-virtual QDesignerFormEditorInterface * core () const
+virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 }
 
 /*
-virtual QString currentPropertyName () const = 0
+virtual QString currentPropertyName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 }
 
 /*
-virtual bool isReadOnly () const = 0
+virtual bool isReadOnly() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 }
 
 /*
-virtual QObject * object () const = 0
+virtual QObject * object() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 }
 
 /*
-virtual void setObject ( QObject * object ) = 0
+virtual void setObject( QObject * object ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 }
 
 /*
-virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
+virtual void setPropertyValue( const QString & name, const QVariant & value, bool changed = true ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 }
 
 /*
-virtual void setReadOnly ( bool readOnly ) = 0
+virtual void setReadOnly( bool readOnly ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
 {

@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QExtensionManager ( QObject * parent = 0 )
+QExtensionManager( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 }
 
 /*
-virtual QObject * extension ( QObject * object, const QString & iid ) const
+virtual QObject * extension( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 }
 
 /*
-virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
+virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 }
 
 /*
-virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
+virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {

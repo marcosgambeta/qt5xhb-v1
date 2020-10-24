@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DELETE )
 }
 
 /*
-virtual QString codeTemplate () const
+virtual QString codeTemplate() const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
 }
 
 /*
-virtual QWidget * createWidget ( QWidget * parent ) = 0
+virtual QWidget * createWidget( QWidget * parent ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
 }
 
 /*
-virtual QString domXml () const
+virtual QString domXml() const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
 }
 
 /*
-virtual QString group () const = 0
+virtual QString group() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
 }
 
 /*
-virtual QIcon icon () const = 0
+virtual QIcon icon() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
 }
 
 /*
-virtual QString includeFile () const = 0
+virtual QString includeFile() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
 }
 
 /*
-virtual void initialize ( QDesignerFormEditorInterface * formEditor )
+virtual void initialize( QDesignerFormEditorInterface * formEditor )
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE )
 }
 
 /*
-virtual bool isContainer () const = 0
+virtual bool isContainer() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
 }
 
 /*
-virtual bool isInitialized () const
+virtual bool isInitialized() const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
 }
 
 /*
-virtual QString name () const = 0
+virtual QString name() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
 {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
 }
 
 /*
-virtual QString toolTip () const = 0
+virtual QString toolTip() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
 {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
 }
 
 /*
-virtual QString whatsThis () const = 0
+virtual QString whatsThis() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
 {

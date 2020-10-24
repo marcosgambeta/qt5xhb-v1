@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE )
 }
 
 /*
-virtual QList<QDesignerCustomWidgetInterface *> customWidgets () const = 0
+virtual QList<QDesignerCustomWidgetInterface *> customWidgets() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_CUSTOMWIDGETS )
 {

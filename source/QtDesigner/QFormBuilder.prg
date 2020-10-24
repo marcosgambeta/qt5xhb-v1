@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QFormBuilder ()
+QFormBuilder()
 */
 HB_FUNC_STATIC( QFORMBUILDER_NEW )
 {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QFORMBUILDER_DELETE )
 }
 
 /*
-void addPluginPath ( const QString & pluginPath )
+void addPluginPath( const QString & pluginPath )
 */
 HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
 }
 
 /*
-void clearPluginPaths ()
+void clearPluginPaths()
 */
 HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 }
 
 /*
-QList<QDesignerCustomWidgetInterface *> customWidgets () const
+QList<QDesignerCustomWidgetInterface *> customWidgets() const
 */
 HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 }
 
 /*
-QStringList pluginPaths () const
+QStringList pluginPaths() const
 */
 HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
 }
 
 /*
-void setPluginPath ( const QStringList & pluginPaths )
+void setPluginPath( const QStringList & pluginPaths )
 */
 HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
 {
