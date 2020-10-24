@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QFontComboBox ( QWidget * parent = 0 )
+QFontComboBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
 }
 
 /*
-QFont currentFont () const
+QFont currentFont() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
 }
 
 /*
-FontFilters fontFilters () const
+QFontComboBox::FontFilters fontFilters() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
 }
 
 /*
-void setFontFilters ( FontFilters filters )
+void setFontFilters( QFontComboBox::FontFilters filters )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
 }
 
 /*
-void setWritingSystem ( QFontDatabase::WritingSystem script )
+void setWritingSystem( QFontDatabase::WritingSystem script )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
 }
 
 /*
-QFontDatabase::WritingSystem writingSystem () const
+QFontDatabase::WritingSystem writingSystem() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
 }
 
 /*
-void setCurrentFont ( const QFont & font )
+void setCurrentFont( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
 {

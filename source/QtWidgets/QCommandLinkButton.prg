@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QCommandLinkButton ( QWidget * parent = 0 )
+QCommandLinkButton( QWidget * parent = 0 )
 */
 void QCommandLinkButton_new1()
 {
@@ -62,7 +62,7 @@ void QCommandLinkButton_new1()
 }
 
 /*
-QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
+QCommandLinkButton( const QString & text, QWidget * parent = 0 )
 */
 void QCommandLinkButton_new2()
 {
@@ -71,19 +71,13 @@ void QCommandLinkButton_new2()
 }
 
 /*
-QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
+QCommandLinkButton( const QString & text, const QString & description, QWidget * parent = 0 )
 */
 void QCommandLinkButton_new3()
 {
   QCommandLinkButton * obj = new QCommandLinkButton( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QCommandLinkButton ( QWidget * parent = 0 )
-[2]QCommandLinkButton ( const QString & text, QWidget * parent = 0 )
-[3]QCommandLinkButton ( const QString & text, const QString & description, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {
@@ -125,7 +119,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
 }
 
 /*
-QString description () const
+QString description() const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {
@@ -149,7 +143,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 }
 
 /*
-void setDescription ( const QString & description )
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
@@ -175,7 +169,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 }
 
 /*
-bool isFlat () const
+bool isFlat() const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 {
@@ -199,7 +193,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 }
 
 /*
-void setFlat ( bool )
+void setFlat( bool )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {

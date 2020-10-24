@@ -65,7 +65,7 @@ RETURN
 #endif
 
 /*
-QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QFrame( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QFRAME_NEW )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QFRAME_DELETE )
 }
 
 /*
-QRect frameRect () const
+QRect frameRect() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
 }
 
 /*
-Shadow frameShadow () const
+QFrame::Shadow frameShadow() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 }
 
 /*
-Shape frameShape () const
+QFrame::Shape frameShape() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 }
 
 /*
-int frameStyle () const
+int frameStyle() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 }
 
 /*
-int frameWidth () const
+int frameWidth() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 }
 
 /*
-int lineWidth () const
+int lineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 }
 
 /*
-int midLineWidth () const
+int midLineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 }
 
 /*
-void setFrameRect ( const QRect & )
+void setFrameRect( const QRect & )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 }
 
 /*
-void setFrameShadow ( Shadow )
+void setFrameShadow( QFrame::Shadow )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 }
 
 /*
-void setFrameShape ( Shape )
+void setFrameShape( QFrame::Shape )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 }
 
 /*
-void setFrameStyle ( int style )
+void setFrameStyle( int style )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 }
 
 /*
-void setLineWidth ( int )
+void setLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 }
 
 /*
-void setMidLineWidth ( int )
+void setMidLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {

@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_DELETE )
 }
 
 /*
-int maximum () const
+int maximum() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MAXIMUM )
 }
 
 /*
-void setMaximum ( int )
+void setMaximum( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
 }
 
 /*
-int minimum () const
+int minimum() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_MINIMUM )
 }
 
 /*
-void setMinimum ( int )
+void setMinimum( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ORIENTATION )
 }
 
 /*
-void setOrientation ( Qt::Orientation )
+void setOrientation( Qt::Orientation )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
 }
 
 /*
-int pageStep () const
+int pageStep() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
 }
 
 /*
-void setPageStep ( int )
+void setPageStep( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
 }
 
 /*
-bool invertedAppearance () const
+bool invertedAppearance() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDAPPEARANCE )
 }
 
 /*
-void setInvertedAppearance ( bool )
+void setInvertedAppearance( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
 }
 
 /*
-bool invertedControls () const
+bool invertedControls() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_INVERTEDCONTROLS )
 }
 
 /*
-void setInvertedControls ( bool )
+void setInvertedControls( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
 }
 
 /*
-void setRange ( int min, int max )
+void setRange( int min, int max )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
 }
 
 /*
-bool isSliderDown () const
+bool isSliderDown() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_ISSLIDERDOWN )
 }
 
 /*
-void setSliderDown ( bool )
+void setSliderDown( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
 {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
 }
 
 /*
-int singleStep () const
+int singleStep() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SINGLESTEP )
 }
 
 /*
-void setSingleStep ( int )
+void setSingleStep( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
 {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
 }
 
 /*
-int sliderPosition () const
+int sliderPosition() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
 }
 
 /*
-void setSliderPosition ( int )
+void setSliderPosition( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
 {
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
 }
 
 /*
-void triggerAction ( SliderAction action )
+void triggerAction( QAbstractSlider::SliderAction action )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
 {
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
 }
 
 /*
-int value () const
+int value() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
 {
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
 }
 
 /*
-void setValue ( int )
+void setValue( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
 {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
 }
 
 /*
-bool hasTracking () const
+bool hasTracking() const
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_HASTRACKING )
 }
 
 /*
-void setTracking ( bool enable )
+void setTracking( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
 {

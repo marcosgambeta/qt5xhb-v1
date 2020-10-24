@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
 }
 
 /*
-void setSizePolicy(QSizePolicy::Policy policy)
+void setSizePolicy( QSizePolicy::Policy policy )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
 }
 
 /*
-void setSpacing(qreal spacing)
+void setSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
 {

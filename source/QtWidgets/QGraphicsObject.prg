@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_DELETE )
 }
 
 /*
-void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
+void grabGesture( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 }
 
 /*
-void ungrabGesture ( Qt::GestureType gesture )
+void ungrabGesture( Qt::GestureType gesture )
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
 {

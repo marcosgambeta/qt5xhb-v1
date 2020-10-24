@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_DELETE )
 }
 
 /*
-QRectF contentsRect () const
+QRectF contentsRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
 }
 
 /*
-QSizeF effectiveSizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
+QSizeF effectiveSizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
 }
 
 /*
-QRectF geometry () const
+QRectF geometry() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
 }
 
 /*
-virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
+virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
 }
 
 /*
-QGraphicsItem * graphicsItem () const
+QGraphicsItem * graphicsItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
 }
 
 /*
-bool isLayout () const
+bool isLayout() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
 }
 
 /*
-qreal maximumHeight () const
+qreal maximumHeight() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
 }
 
 /*
-QSizeF maximumSize () const
+QSizeF maximumSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
 }
 
 /*
-qreal maximumWidth () const
+qreal maximumWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
 }
 
 /*
-qreal minimumHeight () const
+qreal minimumHeight() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
 }
 
 /*
-QSizeF minimumSize () const
+QSizeF minimumSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
 }
 
 /*
-qreal minimumWidth () const
+qreal minimumWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMWIDTH )
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMWIDTH )
 }
 
 /*
-bool ownedByLayout () const
+bool ownedByLayout() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
 }
 
 /*
-QGraphicsLayoutItem * parentLayoutItem () const
+QGraphicsLayoutItem * parentLayoutItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
 {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
 }
 
 /*
-qreal preferredHeight () const
+qreal preferredHeight() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
 }
 
 /*
-QSizeF preferredSize () const
+QSizeF preferredSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
 }
 
 /*
-qreal preferredWidth () const
+qreal preferredWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
 }
 
 /*
-virtual void setGeometry ( const QRectF & rect )
+virtual void setGeometry( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
 }
 
 /*
-void setMaximumHeight ( qreal height )
+void setMaximumHeight( qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
 }
 
 /*
-void setMaximumSize ( const QSizeF & size )
+void setMaximumSize( const QSizeF & size )
 */
 void QGraphicsLayoutItem_setMaximumSize1()
 {
@@ -600,7 +600,7 @@ void QGraphicsLayoutItem_setMaximumSize1()
 }
 
 /*
-void setMaximumSize ( qreal w, qreal h )
+void setMaximumSize( qreal w, qreal h )
 */
 void QGraphicsLayoutItem_setMaximumSize2()
 {
@@ -613,11 +613,6 @@ void QGraphicsLayoutItem_setMaximumSize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setMaximumSize ( const QSizeF & size )
-[2]void setMaximumSize ( qreal w, qreal h )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 {
@@ -636,7 +631,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 }
 
 /*
-void setMaximumWidth ( qreal width )
+void setMaximumWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
 {
@@ -662,7 +657,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
 }
 
 /*
-void setMinimumHeight ( qreal height )
+void setMinimumHeight( qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
 {
@@ -688,7 +683,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
 }
 
 /*
-void setMinimumSize ( const QSizeF & size )
+void setMinimumSize( const QSizeF & size )
 */
 void QGraphicsLayoutItem_setMinimumSize1()
 {
@@ -703,7 +698,7 @@ void QGraphicsLayoutItem_setMinimumSize1()
 }
 
 /*
-void setMinimumSize ( qreal w, qreal h )
+void setMinimumSize( qreal w, qreal h )
 */
 void QGraphicsLayoutItem_setMinimumSize2()
 {
@@ -716,11 +711,6 @@ void QGraphicsLayoutItem_setMinimumSize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setMinimumSize ( const QSizeF & size )
-[2]void setMinimumSize ( qreal w, qreal h )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 {
@@ -739,7 +729,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 }
 
 /*
-void setMinimumWidth ( qreal width )
+void setMinimumWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
 {
@@ -765,7 +755,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
 }
 
 /*
-void setParentLayoutItem ( QGraphicsLayoutItem * parent )
+void setParentLayoutItem( QGraphicsLayoutItem * parent )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
 {
@@ -791,7 +781,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
 }
 
 /*
-void setPreferredHeight ( qreal height )
+void setPreferredHeight( qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
 {
@@ -817,7 +807,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
 }
 
 /*
-void setPreferredSize ( const QSizeF & size )
+void setPreferredSize( const QSizeF & size )
 */
 void QGraphicsLayoutItem_setPreferredSize1()
 {
@@ -832,7 +822,7 @@ void QGraphicsLayoutItem_setPreferredSize1()
 }
 
 /*
-void setPreferredSize ( qreal w, qreal h )
+void setPreferredSize( qreal w, qreal h )
 */
 void QGraphicsLayoutItem_setPreferredSize2()
 {
@@ -845,11 +835,6 @@ void QGraphicsLayoutItem_setPreferredSize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setPreferredSize ( const QSizeF & size )
-[2]void setPreferredSize ( qreal w, qreal h )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 {
@@ -868,7 +853,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 }
 
 /*
-void setPreferredWidth ( qreal width )
+void setPreferredWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
 {
@@ -894,7 +879,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
 }
 
 /*
-void setSizePolicy ( const QSizePolicy & policy )
+void setSizePolicy( const QSizePolicy & policy )
 */
 void QGraphicsLayoutItem_setSizePolicy1()
 {
@@ -909,7 +894,7 @@ void QGraphicsLayoutItem_setSizePolicy1()
 }
 
 /*
-void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
+void setSizePolicy( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
 */
 void QGraphicsLayoutItem_setSizePolicy2()
 {
@@ -922,11 +907,6 @@ void QGraphicsLayoutItem_setSizePolicy2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setSizePolicy ( const QSizePolicy & policy )
-[2]void setSizePolicy ( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 {
@@ -945,7 +925,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 }
 
 /*
-QSizePolicy sizePolicy () const
+QSizePolicy sizePolicy() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
 {
@@ -970,7 +950,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
 }
 
 /*
-virtual void updateGeometry ()
+virtual void updateGeometry()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_UPDATEGEOMETRY )
 {

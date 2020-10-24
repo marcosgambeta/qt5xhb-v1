@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 }
 
 /*
-void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
+void addScrollBarWidget( QWidget * widget, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
 }
 
 /*
-Qt::ScrollBarPolicy horizontalScrollBarPolicy () const
+Qt::ScrollBarPolicy horizontalScrollBarPolicy() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
 }
 
 /*
-void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
+void setHorizontalScrollBarPolicy( Qt::ScrollBarPolicy )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
 }
 
 /*
-QSize maximumViewportSize () const
+QSize maximumViewportSize() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
 }
 
 /*
-QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
+QWidgetList scrollBarWidgets( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 }
 
 /*
-QWidget * cornerWidget () const
+QWidget * cornerWidget() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
 }
 
 /*
-void setCornerWidget ( QWidget * widget )
+void setCornerWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
 }
 
 /*
-QScrollBar * horizontalScrollBar () const
+QScrollBar * horizontalScrollBar() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
 }
 
 /*
-void setHorizontalScrollBar ( QScrollBar * scrollBar )
+void setHorizontalScrollBar( QScrollBar * scrollBar )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
 }
 
 /*
-void setViewport ( QWidget * widget )
+void setViewport( QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
 {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
 }
 
 /*
-QScrollBar * verticalScrollBar () const
+QScrollBar * verticalScrollBar() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
 }
 
 /*
-void setVerticalScrollBar ( QScrollBar * scrollBar )
+void setVerticalScrollBar( QScrollBar * scrollBar )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
 }
 
 /*
-Qt::ScrollBarPolicy verticalScrollBarPolicy () const
+Qt::ScrollBarPolicy verticalScrollBarPolicy() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
 }
 
 /*
-void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
+void setVerticalScrollBarPolicy( Qt::ScrollBarPolicy )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
 {
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
 }
 
 /*
-QWidget * viewport () const
+QWidget * viewport() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
 }
 
 /*
-QSize minimumSizeHint () const
+QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
 }
 
 /*
-virtual void setupViewport(QWidget *viewport)
+virtual void setupViewport( QWidget * viewport )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETUPVIEWPORT )
 {
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETUPVIEWPORT )
 }
 
 /*
-SizeAdjustPolicy sizeAdjustPolicy() const
+QAbstractScrollArea::SizeAdjustPolicy sizeAdjustPolicy() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEADJUSTPOLICY )
 {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEADJUSTPOLICY )
 }
 
 /*
-void setSizeAdjustPolicy(SizeAdjustPolicy policy)
+void setSizeAdjustPolicy( QAbstractScrollArea::SizeAdjustPolicy policy )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETSIZEADJUSTPOLICY )
 {

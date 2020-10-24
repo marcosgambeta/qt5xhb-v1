@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-prototype=explicit QDoubleSpinBox ( QWidget * parent = 0 )
+QDoubleSpinBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_DELETE )
 }
 
 /*
-QString cleanText () const
+QString cleanText() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
 }
 
 /*
-int decimals () const
+int decimals() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
 }
 
 /*
-void setDecimals ( int prec )
+void setDecimals( int prec )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
 }
 
 /*
-double maximum () const
+double maximum() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
 }
 
 /*
-void setMaximum ( double max )
+void setMaximum( double max )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
 }
 
 /*
-double minimum () const
+double minimum() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
 }
 
 /*
-void setMinimum ( double min )
+void setMinimum( double min )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
 }
 
 /*
-QString prefix () const
+QString prefix() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
 }
 
 /*
-void setPrefix ( const QString & prefix )
+void setPrefix( const QString & prefix )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
 }
 
 /*
-void setRange ( double min, double max )
+void setRange( double min, double max )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
 }
 
 /*
-double singleStep () const
+double singleStep() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
 }
 
 /*
-void setSingleStep ( double val )
+void setSingleStep( double val )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
 }
 
 /*
-QString suffix () const
+QString suffix() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
 }
 
 /*
-void setSuffix ( const QString & suffix )
+void setSuffix( const QString & suffix )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
 }
 
 /*
-virtual QString textFromValue ( double value ) const
+virtual QString textFromValue( double value ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 }
 
 /*
-double value () const
+double value() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 }
 
 /*
-void setValue ( double val )
+void setValue( double val )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
 {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
 }
 
 /*
-virtual double valueFromText ( const QString & text ) const
+virtual double valueFromText( const QString & text ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
 {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
 }
 
 /*
-virtual void fixup ( QString & str ) const
+virtual void fixup( QString & str ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
 {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
 }
 
 /*
-virtual QValidator::State validate ( QString & text, int & pos ) const
+virtual QValidator::State validate( QString & text, int & pos ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
 {

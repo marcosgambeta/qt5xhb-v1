@@ -64,7 +64,7 @@ RETURN
 #include <QtGui/QPen>
 
 /*
-QGraphicsLineItem ( QGraphicsItem * parent = 0 )
+QGraphicsLineItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new1()
 {
@@ -73,7 +73,7 @@ void QGraphicsLineItem_new1()
 }
 
 /*
-QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
+QGraphicsLineItem( const QLineF & line, QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new2()
 {
@@ -82,19 +82,13 @@ void QGraphicsLineItem_new2()
 }
 
 /*
-QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
+QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new3()
 {
   QGraphicsLineItem * obj = new QGraphicsLineItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(5) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsLineItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
-[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
@@ -134,7 +128,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_DELETE )
 }
 
 /*
-QLineF line () const
+QLineF line() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
 {
@@ -159,7 +153,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
 }
 
 /*
-QPen pen () const
+QPen pen() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
 {
@@ -184,7 +178,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
 }
 
 /*
-void setLine ( const QLineF & line )
+void setLine( const QLineF & line )
 */
 void QGraphicsLineItem_setLine1()
 {
@@ -199,7 +193,7 @@ void QGraphicsLineItem_setLine1()
 }
 
 /*
-void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
+void setLine( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 void QGraphicsLineItem_setLine2()
 {
@@ -212,11 +206,6 @@ void QGraphicsLineItem_setLine2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setLine ( const QLineF & line )
-[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 {
@@ -235,7 +224,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 }
 
 /*
-void setPen ( const QPen & pen )
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
 {
@@ -261,7 +250,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
 {
@@ -286,7 +275,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
 {
@@ -310,7 +299,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
 {
@@ -334,7 +323,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
 {
@@ -359,7 +348,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
 {
@@ -385,7 +374,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
 {
@@ -410,7 +399,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_TYPE )
 {

@@ -29,7 +29,7 @@ void QAbstractItemDelegateSlots::closeEditor( QWidget * editor, QAbstractItemDel
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMDELEGATE" );
-    PHB_ITEM peditor = Signals_return_qobject( (QObject *) editor, "QWIDGET" );
+    PHB_ITEM peditor = Qt5xHb::Signals_return_qobject( (QObject *) editor, "QWIDGET" );
     PHB_ITEM phint = hb_itemPutNI( NULL, (int) hint );
 
     hb_vmEvalBlockV( cb, 3, psender, peditor, phint );
@@ -49,7 +49,7 @@ void QAbstractItemDelegateSlots::commitData( QWidget * editor )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMDELEGATE" );
-    PHB_ITEM peditor = Signals_return_qobject( (QObject *) editor, "QWIDGET" );
+    PHB_ITEM peditor = Qt5xHb::Signals_return_qobject( (QObject *) editor, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, peditor );
 
@@ -67,7 +67,7 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMDELEGATE" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 

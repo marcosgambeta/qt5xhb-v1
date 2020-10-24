@@ -61,7 +61,7 @@ void QApplicationSlots::commitDataRequest( QSessionManager & manager )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAPPLICATION" );
-    PHB_ITEM pmanager = Signals_return_qobject( (QObject *) &manager, "QSESSIONMANAGER" );
+    PHB_ITEM pmanager = Qt5xHb::Signals_return_qobject( (QObject *) &manager, "QSESSIONMANAGER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmanager );
 
@@ -79,8 +79,8 @@ void QApplicationSlots::focusChanged( QWidget * old, QWidget * now )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAPPLICATION" );
-    PHB_ITEM pold = Signals_return_qobject( (QObject *) old, "QWIDGET" );
-    PHB_ITEM pnow = Signals_return_qobject( (QObject *) now, "QWIDGET" );
+    PHB_ITEM pold = Qt5xHb::Signals_return_qobject( (QObject *) old, "QWIDGET" );
+    PHB_ITEM pnow = Qt5xHb::Signals_return_qobject( (QObject *) now, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 3, psender, pold, pnow );
 
@@ -131,7 +131,7 @@ void QApplicationSlots::saveStateRequest( QSessionManager & manager )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAPPLICATION" );
-    PHB_ITEM pmanager = Signals_return_qobject( (QObject *) &manager, "QSESSIONMANAGER" );
+    PHB_ITEM pmanager = Qt5xHb::Signals_return_qobject( (QObject *) &manager, "QSESSIONMANAGER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmanager );
 

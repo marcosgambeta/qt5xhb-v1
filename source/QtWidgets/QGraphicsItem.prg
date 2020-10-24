@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DELETE )
 }
 
 /*
-bool acceptDrops () const
+bool acceptDrops() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTDROPS )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTDROPS )
 }
 
 /*
-bool acceptHoverEvents () const
+bool acceptHoverEvents() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTHOVEREVENTS )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTHOVEREVENTS )
 }
 
 /*
-bool acceptTouchEvents () const
+bool acceptTouchEvents() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTTOUCHEVENTS )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTTOUCHEVENTS )
 }
 
 /*
-Qt::MouseButtons acceptedMouseButtons () const
+Qt::MouseButtons acceptedMouseButtons() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ACCEPTEDMOUSEBUTTONS )
 }
 
 /*
-virtual void advance ( int phase )
+virtual void advance( int phase )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ADVANCE )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ADVANCE )
 }
 
 /*
-virtual QRectF boundingRect () const = 0
+virtual QRectF boundingRect() const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGRECT )
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGRECT )
 }
 
 /*
-QRegion boundingRegion ( const QTransform & itemToDeviceTransform ) const
+QRegion boundingRegion( const QTransform & itemToDeviceTransform ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGION )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGION )
 }
 
 /*
-qreal boundingRegionGranularity () const
+qreal boundingRegionGranularity() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGIONGRANULARITY )
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGIONGRANULARITY )
 }
 
 /*
-CacheMode cacheMode () const
+QGraphicsItem::CacheMode cacheMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CACHEMODE )
 }
 
 /*
-QRectF childrenBoundingRect () const
+QRectF childrenBoundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CHILDRENBOUNDINGRECT )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CHILDRENBOUNDINGRECT )
 }
 
 /*
-void clearFocus ()
+void clearFocus()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CLEARFOCUS )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CLEARFOCUS )
 }
 
 /*
-QPainterPath clipPath () const
+QPainterPath clipPath() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CLIPPATH )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CLIPPATH )
 }
 
 /*
-virtual bool collidesWithItem ( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+virtual bool collidesWithItem( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
 }
 
 /*
-virtual bool collidesWithPath ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+virtual bool collidesWithPath( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
 }
 
 /*
-QGraphicsItem * commonAncestorItem ( const QGraphicsItem * other ) const
+QGraphicsItem * commonAncestorItem( const QGraphicsItem * other ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_COMMONANCESTORITEM )
 {
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COMMONANCESTORITEM )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CONTAINS )
 {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CONTAINS )
 }
 
 /*
-QCursor cursor () const
+QCursor cursor() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_CURSOR )
 {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CURSOR )
 }
 
 /*
-QVariant data ( int key ) const
+QVariant data( int key ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_DATA )
 {
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DATA )
 }
 
 /*
-QTransform deviceTransform ( const QTransform & viewportTransform ) const
+QTransform deviceTransform( const QTransform & viewportTransform ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_DEVICETRANSFORM )
 {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DEVICETRANSFORM )
 }
 
 /*
-qreal effectiveOpacity () const
+qreal effectiveOpacity() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_EFFECTIVEOPACITY )
 {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_EFFECTIVEOPACITY )
 }
 
 /*
-void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
+void ensureVisible( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
 */
 void QGraphicsItem_ensureVisible1()
 {
@@ -726,7 +726,7 @@ void QGraphicsItem_ensureVisible1()
 }
 
 /*
-void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
+void ensureVisible( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 */
 void QGraphicsItem_ensureVisible2()
 {
@@ -739,11 +739,6 @@ void QGraphicsItem_ensureVisible2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
-[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 {
@@ -762,7 +757,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 }
 
 /*
-bool filtersChildEvents () const
+bool filtersChildEvents() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_FILTERSCHILDEVENTS )
 {
@@ -786,7 +781,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FILTERSCHILDEVENTS )
 }
 
 /*
-GraphicsItemFlags flags () const
+QGraphicsItem::GraphicsItemFlags flags() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
 {
@@ -810,7 +805,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FLAGS )
 }
 
 /*
-QGraphicsItem * focusItem () const
+QGraphicsItem * focusItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSITEM )
 {
@@ -835,7 +830,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSITEM )
 }
 
 /*
-QGraphicsItem * focusProxy () const
+QGraphicsItem * focusProxy() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSPROXY )
 {
@@ -860,7 +855,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_FOCUSPROXY )
 }
 
 /*
-void grabKeyboard ()
+void grabKeyboard()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_GRABKEYBOARD )
 {
@@ -886,7 +881,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRABKEYBOARD )
 }
 
 /*
-void grabMouse ()
+void grabMouse()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_GRABMOUSE )
 {
@@ -912,7 +907,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRABMOUSE )
 }
 
 /*
-QGraphicsEffect * graphicsEffect () const
+QGraphicsEffect * graphicsEffect() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_GRAPHICSEFFECT )
 {
@@ -937,7 +932,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GRAPHICSEFFECT )
 }
 
 /*
-QGraphicsItemGroup * group () const
+QGraphicsItemGroup * group() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_GROUP )
 {
@@ -962,7 +957,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_GROUP )
 }
 
 /*
-bool hasCursor () const
+bool hasCursor() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_HASCURSOR )
 {
@@ -986,7 +981,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HASCURSOR )
 }
 
 /*
-bool hasFocus () const
+bool hasFocus() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_HASFOCUS )
 {
@@ -1010,7 +1005,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HASFOCUS )
 }
 
 /*
-void hide ()
+void hide()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_HIDE )
 {
@@ -1036,7 +1031,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_HIDE )
 }
 
 /*
-Qt::InputMethodHints inputMethodHints () const
+Qt::InputMethodHints inputMethodHints() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_INPUTMETHODHINTS )
 {
@@ -1060,7 +1055,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_INPUTMETHODHINTS )
 }
 
 /*
-void installSceneEventFilter ( QGraphicsItem * filterItem )
+void installSceneEventFilter( QGraphicsItem * filterItem )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_INSTALLSCENEEVENTFILTER )
 {
@@ -1086,7 +1081,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_INSTALLSCENEEVENTFILTER )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISACTIVE )
 {
@@ -1110,7 +1105,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISACTIVE )
 }
 
 /*
-bool isAncestorOf ( const QGraphicsItem * child ) const
+bool isAncestorOf( const QGraphicsItem * child ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISANCESTOROF )
 {
@@ -1134,11 +1129,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISANCESTOROF )
 }
 
 /*
-bool isBlockedByModalPanel ( QGraphicsItem ** blockingPanel = 0 ) const
-*/
-
-/*
-bool isClipped () const
+bool isClipped() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISCLIPPED )
 {
@@ -1162,7 +1153,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISCLIPPED )
 }
 
 /*
-bool isEnabled () const
+bool isEnabled() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISENABLED )
 {
@@ -1186,7 +1177,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISENABLED )
 }
 
 /*
-bool isObscured () const
+bool isObscured() const
 */
 void QGraphicsItem_isObscured1()
 {
@@ -1199,7 +1190,7 @@ void QGraphicsItem_isObscured1()
 }
 
 /*
-bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
+bool isObscured( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_isObscured2()
 {
@@ -1212,7 +1203,7 @@ void QGraphicsItem_isObscured2()
 }
 
 /*
-bool isObscured ( const QRectF & rect ) const
+bool isObscured( const QRectF & rect ) const
 */
 void QGraphicsItem_isObscured3()
 {
@@ -1223,12 +1214,6 @@ void QGraphicsItem_isObscured3()
     RBOOL( obj->isObscured( *PQRECTF(1) ) );
   }
 }
-
-/*
-[1]bool isObscured () const
-[2]bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
-[3]bool isObscured ( const QRectF & rect ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 {
@@ -1251,7 +1236,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCUREDBY )
 {
@@ -1275,7 +1260,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCUREDBY )
 }
 
 /*
-bool isPanel () const
+bool isPanel() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISPANEL )
 {
@@ -1299,7 +1284,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISPANEL )
 }
 
 /*
-bool isSelected () const
+bool isSelected() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISSELECTED )
 {
@@ -1323,7 +1308,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISSELECTED )
 }
 
 /*
-bool isUnderMouse () const
+bool isUnderMouse() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISUNDERMOUSE )
 {
@@ -1347,7 +1332,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISUNDERMOUSE )
 }
 
 /*
-bool isVisible () const
+bool isVisible() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLE )
 {
@@ -1371,7 +1356,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLE )
 }
 
 /*
-bool isVisibleTo ( const QGraphicsItem * parent ) const
+bool isVisibleTo( const QGraphicsItem * parent ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLETO )
 {
@@ -1395,7 +1380,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLETO )
 }
 
 /*
-bool isWidget () const
+bool isWidget() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISWIDGET )
 {
@@ -1419,7 +1404,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISWIDGET )
 }
 
 /*
-bool isWindow () const
+bool isWindow() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ISWINDOW )
 {
@@ -1443,7 +1428,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISWINDOW )
 }
 
 /*
-QTransform itemTransform ( const QGraphicsItem * other, bool * ok = 0 ) const
+QTransform itemTransform( const QGraphicsItem * other, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
 {
@@ -1470,7 +1455,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
 }
 
 /*
-QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
+QPointF mapFromItem( const QGraphicsItem * item, const QPointF & point ) const
 */
 void QGraphicsItem_mapFromItem1()
 {
@@ -1484,7 +1469,7 @@ void QGraphicsItem_mapFromItem1()
 }
 
 /*
-QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
+QPolygonF mapFromItem( const QGraphicsItem * item, const QRectF & rect ) const
 */
 void QGraphicsItem_mapFromItem2()
 {
@@ -1498,7 +1483,7 @@ void QGraphicsItem_mapFromItem2()
 }
 
 /*
-QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
+QPolygonF mapFromItem( const QGraphicsItem * item, const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapFromItem3()
 {
@@ -1512,7 +1497,7 @@ void QGraphicsItem_mapFromItem3()
 }
 
 /*
-QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
+QPainterPath mapFromItem( const QGraphicsItem * item, const QPainterPath & path ) const
 */
 void QGraphicsItem_mapFromItem4()
 {
@@ -1526,7 +1511,7 @@ void QGraphicsItem_mapFromItem4()
 }
 
 /*
-QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapFromItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapFromItem5()
 {
@@ -1540,7 +1525,7 @@ void QGraphicsItem_mapFromItem5()
 }
 
 /*
-QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
+QPointF mapFromItem( const QGraphicsItem * item, qreal x, qreal y ) const
 */
 void QGraphicsItem_mapFromItem6()
 {
@@ -1552,15 +1537,6 @@ void QGraphicsItem_mapFromItem6()
     Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
-[2]QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
-[3]QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
-[4]QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
-[5]QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 {
@@ -1595,7 +1571,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 }
 
 /*
-QPointF mapFromParent ( const QPointF & point ) const
+QPointF mapFromParent( const QPointF & point ) const
 */
 void QGraphicsItem_mapFromParent1()
 {
@@ -1609,7 +1585,7 @@ void QGraphicsItem_mapFromParent1()
 }
 
 /*
-QPolygonF mapFromParent ( const QRectF & rect ) const
+QPolygonF mapFromParent( const QRectF & rect ) const
 */
 void QGraphicsItem_mapFromParent2()
 {
@@ -1623,7 +1599,7 @@ void QGraphicsItem_mapFromParent2()
 }
 
 /*
-QPolygonF mapFromParent ( const QPolygonF & polygon ) const
+QPolygonF mapFromParent( const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapFromParent3()
 {
@@ -1637,7 +1613,7 @@ void QGraphicsItem_mapFromParent3()
 }
 
 /*
-QPainterPath mapFromParent ( const QPainterPath & path ) const
+QPainterPath mapFromParent( const QPainterPath & path ) const
 */
 void QGraphicsItem_mapFromParent4()
 {
@@ -1651,7 +1627,7 @@ void QGraphicsItem_mapFromParent4()
 }
 
 /*
-QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapFromParent( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapFromParent5()
 {
@@ -1665,7 +1641,7 @@ void QGraphicsItem_mapFromParent5()
 }
 
 /*
-QPointF mapFromParent ( qreal x, qreal y ) const
+QPointF mapFromParent( qreal x, qreal y ) const
 */
 void QGraphicsItem_mapFromParent6()
 {
@@ -1677,15 +1653,6 @@ void QGraphicsItem_mapFromParent6()
     Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapFromParent ( const QPointF & point ) const
-[2]QPolygonF mapFromParent ( const QRectF & rect ) const
-[3]QPolygonF mapFromParent ( const QPolygonF & polygon ) const
-[4]QPainterPath mapFromParent ( const QPainterPath & path ) const
-[5]QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapFromParent ( qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 {
@@ -1720,7 +1687,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 }
 
 /*
-QPointF mapFromScene ( const QPointF & point ) const
+QPointF mapFromScene( const QPointF & point ) const
 */
 void QGraphicsItem_mapFromScene1()
 {
@@ -1734,7 +1701,7 @@ void QGraphicsItem_mapFromScene1()
 }
 
 /*
-QPolygonF mapFromScene ( const QRectF & rect ) const
+QPolygonF mapFromScene( const QRectF & rect ) const
 */
 void QGraphicsItem_mapFromScene2()
 {
@@ -1748,7 +1715,7 @@ void QGraphicsItem_mapFromScene2()
 }
 
 /*
-QPolygonF mapFromScene ( const QPolygonF & polygon ) const
+QPolygonF mapFromScene( const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapFromScene3()
 {
@@ -1762,7 +1729,7 @@ void QGraphicsItem_mapFromScene3()
 }
 
 /*
-QPainterPath mapFromScene ( const QPainterPath & path ) const
+QPainterPath mapFromScene( const QPainterPath & path ) const
 */
 void QGraphicsItem_mapFromScene4()
 {
@@ -1776,7 +1743,7 @@ void QGraphicsItem_mapFromScene4()
 }
 
 /*
-QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapFromScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapFromScene5()
 {
@@ -1790,7 +1757,7 @@ void QGraphicsItem_mapFromScene5()
 }
 
 /*
-QPointF mapFromScene ( qreal x, qreal y ) const
+QPointF mapFromScene( qreal x, qreal y ) const
 */
 void QGraphicsItem_mapFromScene6()
 {
@@ -1802,15 +1769,6 @@ void QGraphicsItem_mapFromScene6()
     Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapFromScene ( const QPointF & point ) const
-[2]QPolygonF mapFromScene ( const QRectF & rect ) const
-[3]QPolygonF mapFromScene ( const QPolygonF & polygon ) const
-[4]QPainterPath mapFromScene ( const QPainterPath & path ) const
-[5]QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapFromScene ( qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 {
@@ -1845,7 +1803,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 }
 
 /*
-QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
+QRectF mapRectFromItem( const QGraphicsItem * item, const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectFromItem1()
 {
@@ -1859,7 +1817,7 @@ void QGraphicsItem_mapRectFromItem1()
 }
 
 /*
-QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectFromItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectFromItem2()
 {
@@ -1871,11 +1829,6 @@ void QGraphicsItem_mapRectFromItem2()
     Qt5xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
-[2]QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 {
@@ -1894,7 +1847,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 }
 
 /*
-QRectF mapRectFromParent ( const QRectF & rect ) const
+QRectF mapRectFromParent( const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectFromParent1()
 {
@@ -1908,7 +1861,7 @@ void QGraphicsItem_mapRectFromParent1()
 }
 
 /*
-QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectFromParent( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectFromParent2()
 {
@@ -1920,11 +1873,6 @@ void QGraphicsItem_mapRectFromParent2()
     Qt5xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectFromParent ( const QRectF & rect ) const
-[2]QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 {
@@ -1943,7 +1891,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 }
 
 /*
-QRectF mapRectFromScene ( const QRectF & rect ) const
+QRectF mapRectFromScene( const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectFromScene1()
 {
@@ -1957,7 +1905,7 @@ void QGraphicsItem_mapRectFromScene1()
 }
 
 /*
-QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectFromScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectFromScene2()
 {
@@ -1969,11 +1917,6 @@ void QGraphicsItem_mapRectFromScene2()
     Qt5xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectFromScene ( const QRectF & rect ) const
-[2]QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 {
@@ -1992,7 +1935,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 }
 
 /*
-QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
+QRectF mapRectToItem( const QGraphicsItem * item, const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectToItem1()
 {
@@ -2006,7 +1949,7 @@ void QGraphicsItem_mapRectToItem1()
 }
 
 /*
-QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectToItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectToItem2()
 {
@@ -2018,11 +1961,6 @@ void QGraphicsItem_mapRectToItem2()
     Qt5xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
-[2]QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 {
@@ -2041,7 +1979,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 }
 
 /*
-QRectF mapRectToParent ( const QRectF & rect ) const
+QRectF mapRectToParent( const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectToParent1()
 {
@@ -2055,7 +1993,7 @@ void QGraphicsItem_mapRectToParent1()
 }
 
 /*
-QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectToParent( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectToParent2()
 {
@@ -2067,11 +2005,6 @@ void QGraphicsItem_mapRectToParent2()
     Qt5xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectToParent ( const QRectF & rect ) const
-[2]QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 {
@@ -2090,7 +2023,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 }
 
 /*
-QRectF mapRectToScene ( const QRectF & rect ) const
+QRectF mapRectToScene( const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectToScene1()
 {
@@ -2104,7 +2037,7 @@ void QGraphicsItem_mapRectToScene1()
 }
 
 /*
-QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectToScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectToScene2()
 {
@@ -2116,11 +2049,6 @@ void QGraphicsItem_mapRectToScene2()
     Qt5xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectToScene ( const QRectF & rect ) const
-[2]QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 {
@@ -2139,7 +2067,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 }
 
 /*
-QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
+QPointF mapToItem( const QGraphicsItem * item, const QPointF & point ) const
 */
 void QGraphicsItem_mapToItem1()
 {
@@ -2153,7 +2081,7 @@ void QGraphicsItem_mapToItem1()
 }
 
 /*
-QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
+QPolygonF mapToItem( const QGraphicsItem * item, const QRectF & rect ) const
 */
 void QGraphicsItem_mapToItem2()
 {
@@ -2167,7 +2095,7 @@ void QGraphicsItem_mapToItem2()
 }
 
 /*
-QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
+QPolygonF mapToItem( const QGraphicsItem * item, const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapToItem3()
 {
@@ -2181,7 +2109,7 @@ void QGraphicsItem_mapToItem3()
 }
 
 /*
-QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
+QPainterPath mapToItem( const QGraphicsItem * item, const QPainterPath & path ) const
 */
 void QGraphicsItem_mapToItem4()
 {
@@ -2195,7 +2123,7 @@ void QGraphicsItem_mapToItem4()
 }
 
 /*
-QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapToItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapToItem5()
 {
@@ -2209,7 +2137,7 @@ void QGraphicsItem_mapToItem5()
 }
 
 /*
-QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
+QPointF mapToItem( const QGraphicsItem * item, qreal x, qreal y ) const
 */
 void QGraphicsItem_mapToItem6()
 {
@@ -2221,15 +2149,6 @@ void QGraphicsItem_mapToItem6()
     Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
-[2]QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
-[3]QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
-[4]QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
-[5]QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 {
@@ -2264,7 +2183,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 }
 
 /*
-QPointF mapToParent ( const QPointF & point ) const
+QPointF mapToParent( const QPointF & point ) const
 */
 void QGraphicsItem_mapToParent1()
 {
@@ -2278,7 +2197,7 @@ void QGraphicsItem_mapToParent1()
 }
 
 /*
-QPolygonF mapToParent ( const QRectF & rect ) const
+QPolygonF mapToParent( const QRectF & rect ) const
 */
 void QGraphicsItem_mapToParent2()
 {
@@ -2292,7 +2211,7 @@ void QGraphicsItem_mapToParent2()
 }
 
 /*
-QPolygonF mapToParent ( const QPolygonF & polygon ) const
+QPolygonF mapToParent( const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapToParent3()
 {
@@ -2306,7 +2225,7 @@ void QGraphicsItem_mapToParent3()
 }
 
 /*
-QPainterPath mapToParent ( const QPainterPath & path ) const
+QPainterPath mapToParent( const QPainterPath & path ) const
 */
 void QGraphicsItem_mapToParent4()
 {
@@ -2320,7 +2239,7 @@ void QGraphicsItem_mapToParent4()
 }
 
 /*
-QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapToParent( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapToParent5()
 {
@@ -2334,7 +2253,7 @@ void QGraphicsItem_mapToParent5()
 }
 
 /*
-QPointF mapToParent ( qreal x, qreal y ) const
+QPointF mapToParent( qreal x, qreal y ) const
 */
 void QGraphicsItem_mapToParent6()
 {
@@ -2346,15 +2265,6 @@ void QGraphicsItem_mapToParent6()
     Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapToParent ( const QPointF & point ) const
-[2]QPolygonF mapToParent ( const QRectF & rect ) const
-[3]QPolygonF mapToParent ( const QPolygonF & polygon ) const
-[4]QPainterPath mapToParent ( const QPainterPath & path ) const
-[5]QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapToParent ( qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 {
@@ -2389,7 +2299,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 }
 
 /*
-QPointF mapToScene ( const QPointF & point ) const
+QPointF mapToScene( const QPointF & point ) const
 */
 void QGraphicsItem_mapToScene1()
 {
@@ -2403,7 +2313,7 @@ void QGraphicsItem_mapToScene1()
 }
 
 /*
-QPolygonF mapToScene ( const QRectF & rect ) const
+QPolygonF mapToScene( const QRectF & rect ) const
 */
 void QGraphicsItem_mapToScene2()
 {
@@ -2417,7 +2327,7 @@ void QGraphicsItem_mapToScene2()
 }
 
 /*
-QPolygonF mapToScene ( const QPolygonF & polygon ) const
+QPolygonF mapToScene( const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapToScene3()
 {
@@ -2431,7 +2341,7 @@ void QGraphicsItem_mapToScene3()
 }
 
 /*
-QPainterPath mapToScene ( const QPainterPath & path ) const
+QPainterPath mapToScene( const QPainterPath & path ) const
 */
 void QGraphicsItem_mapToScene4()
 {
@@ -2445,7 +2355,7 @@ void QGraphicsItem_mapToScene4()
 }
 
 /*
-QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapToScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapToScene5()
 {
@@ -2459,7 +2369,7 @@ void QGraphicsItem_mapToScene5()
 }
 
 /*
-QPointF mapToScene ( qreal x, qreal y ) const
+QPointF mapToScene( qreal x, qreal y ) const
 */
 void QGraphicsItem_mapToScene6()
 {
@@ -2471,15 +2381,6 @@ void QGraphicsItem_mapToScene6()
     Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapToScene ( const QPointF & point ) const
-[2]QPolygonF mapToScene ( const QRectF & rect ) const
-[3]QPolygonF mapToScene ( const QPolygonF & polygon ) const
-[4]QPainterPath mapToScene ( const QPainterPath & path ) const
-[5]QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapToScene ( qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 {
@@ -2514,7 +2415,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 }
 
 /*
-void moveBy ( qreal dx, qreal dy )
+void moveBy( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_MOVEBY )
 {
@@ -2540,7 +2441,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MOVEBY )
 }
 
 /*
-qreal opacity () const
+qreal opacity() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_OPACITY )
 {
@@ -2564,7 +2465,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_OPACITY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_OPAQUEAREA )
 {
@@ -2589,7 +2490,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
 {
@@ -2615,7 +2516,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
 }
 
 /*
-QGraphicsItem * panel () const
+QGraphicsItem * panel() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PANEL )
 {
@@ -2640,7 +2541,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PANEL )
 }
 
 /*
-PanelModality panelModality () const
+QGraphicsItem::PanelModality panelModality() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
 {
@@ -2664,7 +2565,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PANELMODALITY )
 }
 
 /*
-QGraphicsItem * parentItem () const
+QGraphicsItem * parentItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PARENTITEM )
 {
@@ -2689,7 +2590,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTITEM )
 }
 
 /*
-QGraphicsObject * parentObject () const
+QGraphicsObject * parentObject() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PARENTOBJECT )
 {
@@ -2714,7 +2615,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTOBJECT )
 }
 
 /*
-QGraphicsWidget * parentWidget () const
+QGraphicsWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PARENTWIDGET )
 {
@@ -2739,7 +2640,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PARENTWIDGET )
 }
 
 /*
-QPointF pos () const
+QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_POS )
 {
@@ -2764,7 +2665,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_POS )
 }
 
 /*
-void removeSceneEventFilter ( QGraphicsItem * filterItem )
+void removeSceneEventFilter( QGraphicsItem * filterItem )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_REMOVESCENEEVENTFILTER )
 {
@@ -2790,7 +2691,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_REMOVESCENEEVENTFILTER )
 }
 
 /*
-void resetTransform ()
+void resetTransform()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_RESETTRANSFORM )
 {
@@ -2816,7 +2717,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_RESETTRANSFORM )
 }
 
 /*
-qreal rotation () const
+qreal rotation() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ROTATION )
 {
@@ -2840,7 +2741,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ROTATION )
 }
 
 /*
-qreal scale () const
+qreal scale() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCALE )
 {
@@ -2864,7 +2765,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCALE )
 }
 
 /*
-QGraphicsScene * scene () const
+QGraphicsScene * scene() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCENE )
 {
@@ -2889,7 +2790,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENE )
 }
 
 /*
-QRectF sceneBoundingRect () const
+QRectF sceneBoundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCENEBOUNDINGRECT )
 {
@@ -2914,7 +2815,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENEBOUNDINGRECT )
 }
 
 /*
-QPointF scenePos () const
+QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCENEPOS )
 {
@@ -2939,7 +2840,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENEPOS )
 }
 
 /*
-QTransform sceneTransform () const
+QTransform sceneTransform() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCENETRANSFORM )
 {
@@ -2964,7 +2865,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENETRANSFORM )
 }
 
 /*
-void scroll ( qreal dx, qreal dy, const QRectF & rect = QRectF() )
+void scroll( qreal dx, qreal dy, const QRectF & rect = QRectF() )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCROLL )
 {
@@ -2990,7 +2891,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCROLL )
 }
 
 /*
-void setAcceptDrops ( bool on )
+void setAcceptDrops( bool on )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTDROPS )
 {
@@ -3016,7 +2917,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTDROPS )
 }
 
 /*
-void setAcceptHoverEvents ( bool enabled )
+void setAcceptHoverEvents( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTHOVEREVENTS )
 {
@@ -3042,7 +2943,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTHOVEREVENTS )
 }
 
 /*
-void setAcceptTouchEvents ( bool enabled )
+void setAcceptTouchEvents( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTTOUCHEVENTS )
 {
@@ -3068,7 +2969,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTTOUCHEVENTS )
 }
 
 /*
-void setAcceptedMouseButtons ( Qt::MouseButtons buttons )
+void setAcceptedMouseButtons( Qt::MouseButtons buttons )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTEDMOUSEBUTTONS )
 {
@@ -3094,7 +2995,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACCEPTEDMOUSEBUTTONS )
 }
 
 /*
-void setActive ( bool active )
+void setActive( bool active )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETACTIVE )
 {
@@ -3120,7 +3021,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETACTIVE )
 }
 
 /*
-void setBoundingRegionGranularity ( qreal granularity )
+void setBoundingRegionGranularity( qreal granularity )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETBOUNDINGREGIONGRANULARITY )
 {
@@ -3146,7 +3047,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETBOUNDINGREGIONGRANULARITY )
 }
 
 /*
-void setCacheMode ( CacheMode mode, const QSize & logicalCacheSize = QSize() )
+void setCacheMode( QGraphicsItem::CacheMode mode, const QSize & logicalCacheSize = QSize() )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETCACHEMODE )
 {
@@ -3172,7 +3073,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETCACHEMODE )
 }
 
 /*
-void setCursor ( const QCursor & cursor )
+void setCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETCURSOR )
 {
@@ -3198,7 +3099,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETCURSOR )
 }
 
 /*
-void setData ( int key, const QVariant & value )
+void setData( int key, const QVariant & value )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETDATA )
 {
@@ -3224,7 +3125,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETDATA )
 }
 
 /*
-void setEnabled ( bool enabled )
+void setEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETENABLED )
 {
@@ -3250,7 +3151,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETENABLED )
 }
 
 /*
-void setFiltersChildEvents ( bool enabled )
+void setFiltersChildEvents( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETFILTERSCHILDEVENTS )
 {
@@ -3276,7 +3177,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFILTERSCHILDEVENTS )
 }
 
 /*
-void setFlag ( GraphicsItemFlag flag, bool enabled = true )
+void setFlag( QGraphicsItem::GraphicsItemFlag flag, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
 {
@@ -3302,7 +3203,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
 }
 
 /*
-void setFlags ( GraphicsItemFlags flags )
+void setFlags( QGraphicsItem::GraphicsItemFlags flags )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAGS )
 {
@@ -3328,7 +3229,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAGS )
 }
 
 /*
-void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
+void setFocus( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
 {
@@ -3354,7 +3255,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
 }
 
 /*
-void setFocusProxy ( QGraphicsItem * item )
+void setFocusProxy( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUSPROXY )
 {
@@ -3380,7 +3281,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUSPROXY )
 }
 
 /*
-void setGraphicsEffect ( QGraphicsEffect * effect )
+void setGraphicsEffect( QGraphicsEffect * effect )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETGRAPHICSEFFECT )
 {
@@ -3406,7 +3307,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETGRAPHICSEFFECT )
 }
 
 /*
-void setGroup ( QGraphicsItemGroup * group )
+void setGroup( QGraphicsItemGroup * group )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETGROUP )
 {
@@ -3432,7 +3333,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETGROUP )
 }
 
 /*
-void setInputMethodHints ( Qt::InputMethodHints hints )
+void setInputMethodHints( Qt::InputMethodHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETINPUTMETHODHINTS )
 {
@@ -3458,7 +3359,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETINPUTMETHODHINTS )
 }
 
 /*
-void setOpacity ( qreal opacity )
+void setOpacity( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETOPACITY )
 {
@@ -3484,7 +3385,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETOPACITY )
 }
 
 /*
-void setPanelModality ( PanelModality panelModality )
+void setPanelModality( QGraphicsItem::PanelModality panelModality )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETPANELMODALITY )
 {
@@ -3510,7 +3411,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPANELMODALITY )
 }
 
 /*
-void setParentItem ( QGraphicsItem * newParent )
+void setParentItem( QGraphicsItem * newParent )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETPARENTITEM )
 {
@@ -3536,7 +3437,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPARENTITEM )
 }
 
 /*
-void setPos ( const QPointF & pos )
+void setPos( const QPointF & pos )
 */
 void QGraphicsItem_setPos1()
 {
@@ -3551,7 +3452,7 @@ void QGraphicsItem_setPos1()
 }
 
 /*
-void setPos ( qreal x, qreal y )
+void setPos( qreal x, qreal y )
 */
 void QGraphicsItem_setPos2()
 {
@@ -3564,11 +3465,6 @@ void QGraphicsItem_setPos2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setPos ( const QPointF & pos )
-[2]void setPos ( qreal x, qreal y )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
 {
@@ -3587,7 +3483,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
 }
 
 /*
-void setRotation ( qreal angle )
+void setRotation( qreal angle )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETROTATION )
 {
@@ -3613,7 +3509,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETROTATION )
 }
 
 /*
-void setScale ( qreal factor )
+void setScale( qreal factor )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETSCALE )
 {
@@ -3639,7 +3535,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETSCALE )
 }
 
 /*
-void setSelected ( bool selected )
+void setSelected( bool selected )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETSELECTED )
 {
@@ -3665,7 +3561,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETSELECTED )
 }
 
 /*
-void setToolTip ( const QString & toolTip )
+void setToolTip( const QString & toolTip )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETTOOLTIP )
 {
@@ -3691,7 +3587,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTOOLTIP )
 }
 
 /*
-void setTransform ( const QTransform & matrix, bool combine = false )
+void setTransform( const QTransform & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
 {
@@ -3717,7 +3613,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
 }
 
 /*
-void setTransformOriginPoint ( const QPointF & origin )
+void setTransformOriginPoint( const QPointF & origin )
 */
 void QGraphicsItem_setTransformOriginPoint1()
 {
@@ -3732,7 +3628,7 @@ void QGraphicsItem_setTransformOriginPoint1()
 }
 
 /*
-void setTransformOriginPoint ( qreal x, qreal y )
+void setTransformOriginPoint( qreal x, qreal y )
 */
 void QGraphicsItem_setTransformOriginPoint2()
 {
@@ -3745,11 +3641,6 @@ void QGraphicsItem_setTransformOriginPoint2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setTransformOriginPoint ( const QPointF & origin )
-[2]void setTransformOriginPoint ( qreal x, qreal y )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
 {
@@ -3768,7 +3659,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
 }
 
 /*
-void setVisible ( bool visible )
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETVISIBLE )
 {
@@ -3794,7 +3685,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETVISIBLE )
 }
 
 /*
-void setX ( qreal x )
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETX )
 {
@@ -3820,7 +3711,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETX )
 }
 
 /*
-void setY ( qreal y )
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETY )
 {
@@ -3846,7 +3737,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETY )
 }
 
 /*
-void setZValue ( qreal z )
+void setZValue( qreal z )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETZVALUE )
 {
@@ -3872,7 +3763,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETZVALUE )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SHAPE )
 {
@@ -3897,7 +3788,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SHAPE )
 }
 
 /*
-void show ()
+void show()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SHOW )
 {
@@ -3923,7 +3814,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SHOW )
 }
 
 /*
-void stackBefore ( const QGraphicsItem * sibling )
+void stackBefore( const QGraphicsItem * sibling )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_STACKBEFORE )
 {
@@ -3949,7 +3840,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_STACKBEFORE )
 }
 
 /*
-QGraphicsObject * toGraphicsObject ()
+QGraphicsObject * toGraphicsObject()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
 {
@@ -3974,7 +3865,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
 }
 
 /*
-QString toolTip () const
+QString toolTip() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TOOLTIP )
 {
@@ -3998,7 +3889,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOOLTIP )
 }
 
 /*
-QGraphicsItem * topLevelItem () const
+QGraphicsItem * topLevelItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELITEM )
 {
@@ -4023,7 +3914,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELITEM )
 }
 
 /*
-QGraphicsWidget * topLevelWidget () const
+QGraphicsWidget * topLevelWidget() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELWIDGET )
 {
@@ -4048,7 +3939,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOPLEVELWIDGET )
 }
 
 /*
-QTransform transform () const
+QTransform transform() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORM )
 {
@@ -4073,7 +3964,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORM )
 }
 
 /*
-QPointF transformOriginPoint () const
+QPointF transformOriginPoint() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMORIGINPOINT )
 {
@@ -4098,7 +3989,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMORIGINPOINT )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TYPE )
 {
@@ -4122,7 +4013,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TYPE )
 }
 
 /*
-void ungrabKeyboard ()
+void ungrabKeyboard()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABKEYBOARD )
 {
@@ -4148,7 +4039,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABKEYBOARD )
 }
 
 /*
-void ungrabMouse ()
+void ungrabMouse()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABMOUSE )
 {
@@ -4174,7 +4065,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNGRABMOUSE )
 }
 
 /*
-void unsetCursor ()
+void unsetCursor()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_UNSETCURSOR )
 {
@@ -4200,7 +4091,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNSETCURSOR )
 }
 
 /*
-void update ( const QRectF & rect = QRectF() )
+void update( const QRectF & rect = QRectF() )
 */
 void QGraphicsItem_update1()
 {
@@ -4215,7 +4106,7 @@ void QGraphicsItem_update1()
 }
 
 /*
-void update ( qreal x, qreal y, qreal width, qreal height )
+void update( qreal x, qreal y, qreal width, qreal height )
 */
 void QGraphicsItem_update2()
 {
@@ -4228,11 +4119,6 @@ void QGraphicsItem_update2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void update ( const QRectF & rect = QRectF() )
-[2]void update ( qreal x, qreal y, qreal width, qreal height )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 {
@@ -4251,7 +4137,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 }
 
 /*
-QGraphicsWidget * window () const
+QGraphicsWidget * window() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_WINDOW )
 {
@@ -4276,7 +4162,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_WINDOW )
 }
 
 /*
-qreal x () const
+qreal x() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_X )
 {
@@ -4300,7 +4186,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_X )
 }
 
 /*
-qreal y () const
+qreal y() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_Y )
 {
@@ -4324,7 +4210,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_Y )
 }
 
 /*
-qreal zValue () const
+qreal zValue() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ZVALUE )
 {

@@ -94,7 +94,7 @@ RETURN
 #include <QtWidgets/QAbstractItemView>
 
 /*
-QCompleter ( QObject * parent = 0 )
+QCompleter( QObject * parent = 0 )
 */
 void QCompleter_new1()
 {
@@ -103,7 +103,7 @@ void QCompleter_new1()
 }
 
 /*
-QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
+QCompleter( QAbstractItemModel * model, QObject * parent = 0 )
 */
 void QCompleter_new2()
 {
@@ -112,7 +112,7 @@ void QCompleter_new2()
 }
 
 /*
-QCompleter ( const QStringList & list, QObject * parent = 0 )
+QCompleter( const QStringList & list, QObject * parent = 0 )
 */
 void QCompleter_new3()
 {
@@ -121,12 +121,6 @@ void QCompleter_new3()
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
-
-/*
-[1]QCompleter ( QObject * parent = 0 )
-[2]QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
-[3]QCompleter ( const QStringList & list, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QCOMPLETER_NEW )
 {
@@ -173,7 +167,7 @@ HB_FUNC_STATIC( QCOMPLETER_DELETE )
 }
 
 /*
-Qt::CaseSensitivity caseSensitivity () const
+Qt::CaseSensitivity caseSensitivity() const
 */
 HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
 {
@@ -197,7 +191,7 @@ HB_FUNC_STATIC( QCOMPLETER_CASESENSITIVITY )
 }
 
 /*
-int completionColumn () const
+int completionColumn() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
 {
@@ -221,7 +215,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOLUMN )
 }
 
 /*
-int completionCount () const
+int completionCount() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
 {
@@ -245,7 +239,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONCOUNT )
 }
 
 /*
-CompletionMode completionMode () const
+QCompleter::CompletionMode completionMode() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
 {
@@ -269,7 +263,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODE )
 }
 
 /*
-QAbstractItemModel * completionModel () const
+QAbstractItemModel * completionModel() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
 {
@@ -294,7 +288,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
 }
 
 /*
-QString completionPrefix () const
+QString completionPrefix() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
 {
@@ -318,7 +312,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONPREFIX )
 }
 
 /*
-int completionRole () const
+int completionRole() const
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
 {
@@ -342,7 +336,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONROLE )
 }
 
 /*
-QString currentCompletion () const
+QString currentCompletion() const
 */
 HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
 {
@@ -366,7 +360,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTCOMPLETION )
 }
 
 /*
-QModelIndex currentIndex () const
+QModelIndex currentIndex() const
 */
 HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
 {
@@ -391,7 +385,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
 }
 
 /*
-int currentRow () const
+int currentRow() const
 */
 HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
 {
@@ -415,7 +409,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTROW )
 }
 
 /*
-int maxVisibleItems () const
+int maxVisibleItems() const
 */
 HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
 {
@@ -439,7 +433,7 @@ HB_FUNC_STATIC( QCOMPLETER_MAXVISIBLEITEMS )
 }
 
 /*
-QAbstractItemModel * model () const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QCOMPLETER_MODEL )
 {
@@ -464,7 +458,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODEL )
 }
 
 /*
-ModelSorting modelSorting () const
+QCompleter::ModelSorting modelSorting() const
 */
 HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
 {
@@ -488,7 +482,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODELSORTING )
 }
 
 /*
-virtual QString pathFromIndex ( const QModelIndex & index ) const
+virtual QString pathFromIndex( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
 {
@@ -512,7 +506,7 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
 }
 
 /*
-QAbstractItemView * popup () const
+QAbstractItemView * popup() const
 */
 HB_FUNC_STATIC( QCOMPLETER_POPUP )
 {
@@ -537,7 +531,7 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
 }
 
 /*
-void setCaseSensitivity ( Qt::CaseSensitivity caseSensitivity )
+void setCaseSensitivity( Qt::CaseSensitivity caseSensitivity )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
 {
@@ -563,7 +557,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCASESENSITIVITY )
 }
 
 /*
-void setCompletionColumn ( int column )
+void setCompletionColumn( int column )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONCOLUMN )
 {
@@ -589,7 +583,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONCOLUMN )
 }
 
 /*
-void setCompletionMode ( CompletionMode mode )
+void setCompletionMode( QCompleter::CompletionMode mode )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
 {
@@ -615,7 +609,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONMODE )
 }
 
 /*
-void setCompletionRole ( int role )
+void setCompletionRole( int role )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONROLE )
 {
@@ -641,7 +635,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONROLE )
 }
 
 /*
-bool setCurrentRow ( int row )
+bool setCurrentRow( int row )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
 {
@@ -665,7 +659,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
 }
 
 /*
-void setMaxVisibleItems ( int maxItems )
+void setMaxVisibleItems( int maxItems )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETMAXVISIBLEITEMS )
 {
@@ -691,7 +685,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMAXVISIBLEITEMS )
 }
 
 /*
-void setModel ( QAbstractItemModel * model )
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETMODEL )
 {
@@ -717,7 +711,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODEL )
 }
 
 /*
-void setModelSorting ( ModelSorting sorting )
+void setModelSorting( QCompleter::ModelSorting sorting )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETMODELSORTING )
 {
@@ -743,7 +737,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETMODELSORTING )
 }
 
 /*
-void setPopup ( QAbstractItemView * popup )
+void setPopup( QAbstractItemView * popup )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETPOPUP )
 {
@@ -769,7 +763,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETPOPUP )
 }
 
 /*
-void setWidget ( QWidget * widget )
+void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETWIDGET )
 {
@@ -795,7 +789,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETWIDGET )
 }
 
 /*
-virtual QStringList splitPath ( const QString & path ) const
+virtual QStringList splitPath( const QString & path ) const
 */
 HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
 {
@@ -819,7 +813,7 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
 }
 
 /*
-QWidget * widget () const
+QWidget * widget() const
 */
 HB_FUNC_STATIC( QCOMPLETER_WIDGET )
 {
@@ -844,7 +838,7 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
 }
 
 /*
-bool wrapAround () const
+bool wrapAround() const
 */
 HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
 {
@@ -868,7 +862,7 @@ HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
 }
 
 /*
-void complete ( const QRect & rect = QRect() )
+void complete( const QRect & rect = QRect() )
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
 {
@@ -894,7 +888,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
 }
 
 /*
-void setCompletionPrefix ( const QString & prefix )
+void setCompletionPrefix( const QString & prefix )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
 {
@@ -920,7 +914,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCOMPLETIONPREFIX )
 }
 
 /*
-void setWrapAround ( bool wrap )
+void setWrapAround( bool wrap )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
 {
@@ -946,7 +940,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
 }
 
 /*
-void setFilterMode(Qt::MatchFlags filterMode)
+void setFilterMode( Qt::MatchFlags filterMode )
 */
 HB_FUNC_STATIC( QCOMPLETER_SETFILTERMODE )
 {

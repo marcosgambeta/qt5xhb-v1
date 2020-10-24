@@ -71,7 +71,7 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QDockWidget( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QDockWidget_new1()
 {
@@ -80,18 +80,13 @@ void QDockWidget_new1()
 }
 
 /*
-QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QDockWidget( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QDockWidget_new2()
 {
   QDockWidget * obj = new QDockWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-[2]QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
 
 HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 {
@@ -129,7 +124,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 }
 
 /*
-Qt::DockWidgetAreas allowedAreas () const
+Qt::DockWidgetAreas allowedAreas() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 {
@@ -153,7 +148,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 }
 
 /*
-DockWidgetFeatures features () const
+QDockWidget::DockWidgetFeatures features() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 {
@@ -177,7 +172,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 }
 
 /*
-bool isAreaAllowed ( Qt::DockWidgetArea area ) const
+bool isAreaAllowed( Qt::DockWidgetArea area ) const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 {
@@ -201,7 +196,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 }
 
 /*
-bool isFloating () const
+bool isFloating() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 {
@@ -225,7 +220,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 }
 
 /*
-void setAllowedAreas ( Qt::DockWidgetAreas areas )
+void setAllowedAreas( Qt::DockWidgetAreas areas )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 {
@@ -251,7 +246,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 }
 
 /*
-void setFeatures ( DockWidgetFeatures features )
+void setFeatures( QDockWidget::DockWidgetFeatures features )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 {
@@ -277,7 +272,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 }
 
 /*
-void setFloating ( bool floating )
+void setFloating( bool floating )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
 {
@@ -303,7 +298,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
 }
 
 /*
-void setTitleBarWidget ( QWidget * widget )
+void setTitleBarWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 {
@@ -329,7 +324,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 }
 
 /*
-void setWidget ( QWidget * widget )
+void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 {
@@ -355,7 +350,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 }
 
 /*
-QWidget * titleBarWidget () const
+QWidget * titleBarWidget() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 {
@@ -380,7 +375,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 }
 
 /*
-QAction * toggleViewAction () const
+QAction * toggleViewAction() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 {
@@ -405,7 +400,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 }
 
 /*
-QWidget * widget () const
+QWidget * widget() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
 {

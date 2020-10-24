@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
+QGraphicsPolygonItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new1()
 {
@@ -70,18 +70,13 @@ void QGraphicsPolygonItem_new1()
 }
 
 /*
-QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
+QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new2()
 {
   QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {
@@ -117,7 +112,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
 }
 
 /*
-Qt::FillRule fillRule () const
+Qt::FillRule fillRule() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
 {
@@ -141,7 +136,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
 }
 
 /*
-QPolygonF polygon () const
+QPolygonF polygon() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
 {
@@ -166,7 +161,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
 }
 
 /*
-void setFillRule ( Qt::FillRule rule )
+void setFillRule( Qt::FillRule rule )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 {
@@ -192,7 +187,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 }
 
 /*
-void setPolygon ( const QPolygonF & polygon )
+void setPolygon( const QPolygonF & polygon )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 {
@@ -218,7 +213,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 {
@@ -243,7 +238,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
 {
@@ -267,7 +262,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 {
@@ -291,7 +286,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 {
@@ -316,7 +311,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 {
@@ -342,7 +337,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
 {
@@ -367,7 +362,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
 {

@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-QGraphicsColorizeEffect ( QObject * parent = 0 )
+QGraphicsColorizeEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 }
 
 /*
-QColor color () const
+QColor color() const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 }
 
 /*
-qreal strength () const
+qreal strength() const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 }
 
 /*
-void setColor ( const QColor & c )
+void setColor( const QColor & c )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 }
 
 /*
-void setStrength ( qreal strength )
+void setStrength( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
 {

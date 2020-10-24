@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-QActionGroup ( QObject * parent )
+QActionGroup( QObject * parent )
 */
 HB_FUNC_STATIC( QACTIONGROUP_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 }
 
 /*
-QAction * addAction ( QAction * action )
+QAction * addAction( QAction * action )
 */
 void QActionGroup_addAction1()
 {
@@ -112,7 +112,7 @@ void QActionGroup_addAction1()
 }
 
 /*
-QAction * addAction ( const QString & text )
+QAction * addAction( const QString & text )
 */
 void QActionGroup_addAction2()
 {
@@ -126,7 +126,7 @@ void QActionGroup_addAction2()
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text )
+QAction * addAction( const QIcon & icon, const QString & text )
 */
 void QActionGroup_addAction3()
 {
@@ -138,12 +138,6 @@ void QActionGroup_addAction3()
     Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
-
-/*
-[1]QAction * addAction ( QAction * action )
-[2]QAction * addAction ( const QString & text )
-[3]QAction * addAction ( const QIcon & icon, const QString & text )
-*/
 
 HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 {
@@ -166,7 +160,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 }
 
 /*
-QAction * checkedAction () const
+QAction * checkedAction() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 {
@@ -191,7 +185,7 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 }
 
 /*
-bool isEnabled () const
+bool isEnabled() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 {
@@ -215,7 +209,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 }
 
 /*
-bool isExclusive () const
+bool isExclusive() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 {
@@ -239,7 +233,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 }
 
 /*
-bool isVisible () const
+bool isVisible() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 {
@@ -263,7 +257,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 }
 
 /*
-void removeAction ( QAction * action )
+void removeAction( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 {
@@ -289,7 +283,7 @@ HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 }
 
 /*
-void setDisabled ( bool b )
+void setDisabled( bool b )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 {
@@ -315,7 +309,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 }
 
 /*
-void setEnabled ( bool )
+void setEnabled( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 {
@@ -341,7 +335,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 }
 
 /*
-void setExclusive ( bool )
+void setExclusive( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 {
@@ -367,7 +361,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 }
 
 /*
-void setVisible ( bool )
+void setVisible( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
 {

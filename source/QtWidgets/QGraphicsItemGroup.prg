@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-QGraphicsItemGroup ( QGraphicsItem * parent = 0 )
+QGraphicsItemGroup( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_DELETE )
 }
 
 /*
-void addToGroup ( QGraphicsItem * item )
+void addToGroup( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
 }
 
 /*
-void removeFromGroup ( QGraphicsItem * item )
+void removeFromGroup( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_TYPE )
 {

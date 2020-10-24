@@ -85,14 +85,6 @@ RETURN
 #include <QtWidgets/QButtonGroup>
 
 /*
-explicit QAbstractButton(QWidget *parent = Q_NULLPTR) (abstract)
-*/
-
-/*
-QAbstractButton(QAbstractButtonPrivate &dd, QWidget* parent = Q_NULLPTR) [protected]
-*/
-
-/*
 ~QAbstractButton()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
@@ -115,7 +107,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 {
@@ -139,7 +131,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 }
 
 /*
-void setText ( const QString & text )
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 {
@@ -165,7 +157,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 {
@@ -190,7 +182,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 }
 
 /*
-void setIcon ( const QIcon & icon )
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 {
@@ -216,7 +208,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 }
 
 /*
-QSize iconSize () const
+QSize iconSize() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 {
@@ -241,7 +233,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 }
 
 /*
-void setIconSize ( const QSize & size ) (slot)
+void setIconSize( const QSize & size )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 {
@@ -322,7 +314,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 }
 
 /*
-bool isCheckable () const
+bool isCheckable() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 {
@@ -346,7 +338,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 }
 
 /*
-void setCheckable ( bool )
+void setCheckable( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 {
@@ -372,7 +364,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 }
 
 /*
-bool isChecked () const
+bool isChecked() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 {
@@ -396,7 +388,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 }
 
 /*
-void setChecked ( bool ) (slot)
+void setChecked( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 {
@@ -422,7 +414,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 }
 
 /*
-bool autoRepeat () const
+bool autoRepeat() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 {
@@ -446,7 +438,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 }
 
 /*
-void setAutoRepeat ( bool )
+void setAutoRepeat( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 {
@@ -472,7 +464,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 }
 
 /*
-bool autoExclusive () const
+bool autoExclusive() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 {
@@ -496,7 +488,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 }
 
 /*
-void setAutoExclusive ( bool )
+void setAutoExclusive( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 {
@@ -522,7 +514,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 }
 
 /*
-int autoRepeatDelay () const
+int autoRepeatDelay() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 {
@@ -546,7 +538,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 }
 
 /*
-void setAutoRepeatDelay ( int )
+void setAutoRepeatDelay( int )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 {
@@ -572,7 +564,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 }
 
 /*
-int autoRepeatInterval () const
+int autoRepeatInterval() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 {
@@ -596,7 +588,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 }
 
 /*
-void setAutoRepeatInterval ( int )
+void setAutoRepeatInterval( int )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 {
@@ -622,7 +614,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 }
 
 /*
-bool isDown () const
+bool isDown() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 {
@@ -646,7 +638,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 }
 
 /*
-void setDown ( bool )
+void setDown( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 {
@@ -699,7 +691,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
 }
 
 /*
-void animateClick ( int msec = 100 ) (slot)
+void animateClick( int msec = 100 )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 {
@@ -725,7 +717,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 }
 
 /*
-void click () (slot)
+void click()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 {
@@ -751,7 +743,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 }
 
 /*
-void toggle () (slot)
+void toggle()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 {
@@ -775,62 +767,6 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE = 0 [protected]
-*/
-
-/*
-virtual bool hitButton(const QPoint &pos) const [protected]
-*/
-
-/*
-virtual void checkStateSet() [protected]
-*/
-
-/*
-virtual void nextCheckState() [protected]
-*/
-
-/*
-bool event(QEvent *e) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void keyReleaseEvent(QKeyEvent *e) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void mouseReleaseEvent(QMouseEvent *e) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void mouseMoveEvent(QMouseEvent *e) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void focusInEvent(QFocusEvent *e) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void focusOutEvent(QFocusEvent *e) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void changeEvent(QEvent *e) Q_DECL_OVERRIDE [protected]
-*/
-
-/*
-void timerEvent(QTimerEvent *e) Q_DECL_OVERRIDE [protected]
-*/
 
 void QAbstractButtonSlots_connect_signal( const QString & signal, const QString & slot );
 

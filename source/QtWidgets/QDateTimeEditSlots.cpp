@@ -29,7 +29,7 @@ void QDateTimeEditSlots::dateChanged( const QDate & date )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
-    PHB_ITEM pdate = Signals_return_object( (void *) &date, "QDATE" );
+    PHB_ITEM pdate = Qt5xHb::Signals_return_object( (void *) &date, "QDATE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdate );
 
@@ -47,7 +47,7 @@ void QDateTimeEditSlots::dateTimeChanged( const QDateTime & datetime )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
-    PHB_ITEM pdatetime = Signals_return_object( (void *) &datetime, "QDATETIME" );
+    PHB_ITEM pdatetime = Qt5xHb::Signals_return_object( (void *) &datetime, "QDATETIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdatetime );
 
@@ -65,7 +65,7 @@ void QDateTimeEditSlots::timeChanged( const QTime & time )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
-    PHB_ITEM ptime = Signals_return_object( (void *) &time, "QTIME" );
+    PHB_ITEM ptime = Qt5xHb::Signals_return_object( (void *) &time, "QTIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, ptime );
 

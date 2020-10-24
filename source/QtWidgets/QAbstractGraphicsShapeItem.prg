@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_DELETE )
 }
 
 /*
-QBrush brush () const
+QBrush brush() const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
 }
 
 /*
-void setBrush ( const QBrush & brush )
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
 }
 
 /*
-QPen pen () const
+QPen pen() const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
 }
 
 /*
-void setPen ( const QPen & pen )
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
 }
 
 /*
-bool isObscuredBy ( const QGraphicsItem * item ) const
+bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
 }
 
 /*
-QPainterPath opaqueArea () const
+QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
 {

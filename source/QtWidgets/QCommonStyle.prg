@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QCommonStyle ()
+QCommonStyle()
 */
 HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
 {

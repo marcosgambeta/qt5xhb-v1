@@ -29,7 +29,7 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QFONTCOMBOBOX" );
-    PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
+    PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
 

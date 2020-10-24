@@ -67,7 +67,7 @@ RETURN
 #endif
 
 /*
-QGraphicsDropShadowEffect ( QObject * parent = 0 )
+QGraphicsDropShadowEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_DELETE )
 }
 
 /*
-qreal blurRadius () const
+qreal blurRadius() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
 }
 
 /*
-QColor color () const
+QColor color() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
 }
 
 /*
-QPointF offset () const
+QPointF offset() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
 }
 
 /*
-qreal xOffset () const
+qreal xOffset() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
 }
 
 /*
-qreal yOffset () const
+qreal yOffset() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
 }
 
 /*
-virtual QRectF boundingRectFor ( const QRectF & rect ) const
+virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
 }
 
 /*
-void setBlurRadius ( qreal blurRadius )
+void setBlurRadius( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
 }
 
 /*
-void setColor ( const QColor & color )
+void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 }
 
 /*
-void setOffset ( const QPointF & ofs )
+void setOffset( const QPointF & ofs )
 */
 void QGraphicsDropShadowEffect_setOffset1()
 {
@@ -316,7 +316,7 @@ void QGraphicsDropShadowEffect_setOffset1()
 }
 
 /*
-void setOffset ( qreal dx, qreal dy )
+void setOffset( qreal dx, qreal dy )
 */
 void QGraphicsDropShadowEffect_setOffset2()
 {
@@ -331,7 +331,7 @@ void QGraphicsDropShadowEffect_setOffset2()
 }
 
 /*
-void setOffset ( qreal d )
+void setOffset( qreal d )
 */
 void QGraphicsDropShadowEffect_setOffset3()
 {
@@ -344,12 +344,6 @@ void QGraphicsDropShadowEffect_setOffset3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setOffset ( const QPointF & ofs )
-[2]void setOffset ( qreal dx, qreal dy )
-[3]void setOffset ( qreal d )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {
@@ -372,7 +366,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 }
 
 /*
-void setXOffset ( qreal dx )
+void setXOffset( qreal dx )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
 {
@@ -398,7 +392,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
 }
 
 /*
-void setYOffset ( qreal dy )
+void setYOffset( qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
 {

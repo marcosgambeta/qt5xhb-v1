@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-QGesture(QObject * parent = 0)
+QGesture( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGESTURE_NEW )
 {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGESTURE_DELETE )
 }
 
 /*
-GestureCancelPolicy gestureCancelPolicy() const
+QGesture::GestureCancelPolicy gestureCancelPolicy() const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 }
 
 /*
-void setGestureCancelPolicy(GestureCancelPolicy policy)
+void setGestureCancelPolicy( QGesture::GestureCancelPolicy policy )
 */
 HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 }
 
 /*
-void setHotSpot(const QPointF & value)
+void setHotSpot( const QPointF & value )
 */
 HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
 {

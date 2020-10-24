@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QDateEdit ( QWidget * parent = 0 )
+QDateEdit( QWidget * parent = 0 )
 */
 void QDateEdit_new1()
 {
@@ -58,18 +58,13 @@ void QDateEdit_new1()
 }
 
 /*
-QDateEdit ( const QDate & date, QWidget * parent = 0 )
+QDateEdit( const QDate & date, QWidget * parent = 0 )
 */
 void QDateEdit_new2()
 {
   QDateEdit * obj = new QDateEdit( *PQDATE(1), OPQWIDGET(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDateEdit ( QWidget * parent = 0 )
-[2]QDateEdit ( const QDate & date, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QDATEEDIT_NEW )
 {

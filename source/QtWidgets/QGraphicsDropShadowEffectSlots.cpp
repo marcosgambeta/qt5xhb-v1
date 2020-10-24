@@ -47,7 +47,7 @@ void QGraphicsDropShadowEffectSlots::colorChanged( const QColor & color )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSDROPSHADOWEFFECT" );
-    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
 
@@ -65,7 +65,7 @@ void QGraphicsDropShadowEffectSlots::offsetChanged( const QPointF & offset )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSDROPSHADOWEFFECT" );
-    PHB_ITEM poffset = Signals_return_object( (void *) &offset, "QPOINTF" );
+    PHB_ITEM poffset = Qt5xHb::Signals_return_object( (void *) &offset, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, poffset );
 

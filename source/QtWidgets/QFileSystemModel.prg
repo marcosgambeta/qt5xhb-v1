@@ -108,7 +108,7 @@ RETURN
 #include <QtCore/QMimeData>
 
 /*
-explicit QFileSystemModel(QObject * parent = 0)
+QFileSystemModel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DELETE )
 }
 
 /*
-QIcon fileIcon ( const QModelIndex & index ) const
+QIcon fileIcon( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
 }
 
 /*
-QFileInfo fileInfo ( const QModelIndex & index ) const
+QFileInfo fileInfo( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
 }
 
 /*
-QString fileName ( const QModelIndex & index ) const
+QString fileName( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
 }
 
 /*
-QString filePath ( const QModelIndex & index ) const
+QString filePath( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
 }
 
 /*
-QDir::Filters filter () const
+QDir::Filters filter() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
 }
 
 /*
-void setFilter ( QDir::Filters filters )
+void setFilter( QDir::Filters filters )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
 }
 
 /*
-QFileIconProvider * iconProvider () const
+QFileIconProvider * iconProvider() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
 }
 
 /*
-void setIconProvider ( QFileIconProvider * provider )
+void setIconProvider( QFileIconProvider * provider )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
 }
 
 /*
-QModelIndex index ( const QString & path, int column = 0 ) const
+QModelIndex index( const QString & path, int column = 0 ) const
 */
 void QFileSystemModel_index1()
 {
@@ -356,7 +356,7 @@ void QFileSystemModel_index1()
 }
 
 /*
-QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
 void QFileSystemModel_index2()
 {
@@ -368,11 +368,6 @@ void QFileSystemModel_index2()
     Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
   }
 }
-
-/*
-[1]QModelIndex index ( const QString & path, int column = 0 ) const
-[2]QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-*/
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {
@@ -391,7 +386,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 }
 
 /*
-bool isDir ( const QModelIndex & index ) const
+bool isDir( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
 {
@@ -415,7 +410,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
 }
 
 /*
-bool isReadOnly () const
+bool isReadOnly() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
 {
@@ -439,7 +434,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
 }
 
 /*
-void setReadOnly ( bool enable )
+void setReadOnly( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
 {
@@ -465,7 +460,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
 }
 
 /*
-QDateTime lastModified ( const QModelIndex & index ) const
+QDateTime lastModified( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
 {
@@ -490,7 +485,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
 }
 
 /*
-QModelIndex mkdir ( const QModelIndex & parent, const QString & name )
+QModelIndex mkdir( const QModelIndex & parent, const QString & name )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
 {
@@ -515,7 +510,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
 }
 
 /*
-QVariant myComputer ( int role = Qt::DisplayRole ) const
+QVariant myComputer( int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
 {
@@ -540,7 +535,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
 }
 
 /*
-bool nameFilterDisables () const
+bool nameFilterDisables() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
 {
@@ -564,7 +559,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
 }
 
 /*
-void setNameFilterDisables ( bool enable )
+void setNameFilterDisables( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
 {
@@ -590,7 +585,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
 }
 
 /*
-QStringList nameFilters () const
+QStringList nameFilters() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
 {
@@ -614,7 +609,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
 }
 
 /*
-void setNameFilters ( const QStringList & filters )
+void setNameFilters( const QStringList & filters )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
 {
@@ -640,7 +635,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
 }
 
 /*
-QFile::Permissions permissions ( const QModelIndex & index ) const
+QFile::Permissions permissions( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
 {
@@ -664,7 +659,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
 }
 
 /*
-bool remove ( const QModelIndex & index ) const
+bool remove( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
 {
@@ -688,7 +683,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
 }
 
 /*
-bool resolveSymlinks () const
+bool resolveSymlinks() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
 {
@@ -712,7 +707,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
 }
 
 /*
-void setResolveSymlinks ( bool enable )
+void setResolveSymlinks( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
 {
@@ -738,7 +733,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
 }
 
 /*
-bool rmdir ( const QModelIndex & index ) const
+bool rmdir( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
 {
@@ -762,7 +757,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
 }
 
 /*
-QDir rootDirectory () const
+QDir rootDirectory() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
 {
@@ -787,7 +782,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
 }
 
 /*
-QString rootPath () const
+QString rootPath() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
 {
@@ -811,7 +806,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
 }
 
 /*
-QModelIndex setRootPath ( const QString & newPath )
+QModelIndex setRootPath( const QString & newPath )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
 {
@@ -836,7 +831,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
 }
 
 /*
-qint64 size ( const QModelIndex & index ) const
+qint64 size( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
 {
@@ -860,7 +855,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
 }
 
 /*
-QString type ( const QModelIndex & index ) const
+QString type( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
 {
@@ -884,7 +879,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
 }
 
 /*
-bool canFetchMore ( const QModelIndex & parent ) const
+bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
 {
@@ -908,7 +903,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
 }
 
 /*
-int columnCount ( const QModelIndex & parent = QModelIndex() ) const
+int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
 {
@@ -932,7 +927,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
 }
 
 /*
-QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
+QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
 {
@@ -957,7 +952,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
 }
 
 /*
-bool setData ( const QModelIndex & idx, const QVariant & value, int role = Qt::EditRole )
+bool setData( const QModelIndex & idx, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
 {
@@ -981,7 +976,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
 }
 
 /*
-bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
 {
@@ -1005,7 +1000,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
 }
 
 /*
-void fetchMore ( const QModelIndex & parent )
+void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
 {
@@ -1031,7 +1026,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
 }
 
 /*
-Qt::ItemFlags flags ( const QModelIndex & index ) const
+Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
 {
@@ -1055,7 +1050,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
 }
 
 /*
-bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
+bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
 {
@@ -1079,7 +1074,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
 }
 
 /*
-QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
 {
@@ -1104,7 +1099,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
 }
 
 /*
-QMimeData * mimeData ( const QModelIndexList & indexes ) const
+QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 {
@@ -1137,7 +1132,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 }
 
 /*
-QStringList mimeTypes () const
+QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
 {
@@ -1161,7 +1156,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
 }
 
 /*
-QModelIndex parent ( const QModelIndex & index ) const
+QModelIndex parent( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
 {
@@ -1186,7 +1181,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
 }
 
 /*
-int rowCount ( const QModelIndex & parent = QModelIndex() ) const
+int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
 {
@@ -1210,7 +1205,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
 }
 
 /*
-void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
+void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
 {
@@ -1236,7 +1231,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
 }
 
 /*
-Qt::DropActions supportedDropActions () const
+Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
 {

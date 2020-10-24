@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_DELETE )
 }
 
 /*
-Qt::MouseButton button () const
+Qt::MouseButton button() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
 {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
 }
 
 /*
-QPointF buttonDownPos ( Qt::MouseButton button ) const
+QPointF buttonDownPos( Qt::MouseButton button ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
 }
 
 /*
-QPointF buttonDownScenePos ( Qt::MouseButton button ) const
+QPointF buttonDownScenePos( Qt::MouseButton button ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
 }
 
 /*
-QPoint buttonDownScreenPos ( Qt::MouseButton button ) const
+QPoint buttonDownScreenPos( Qt::MouseButton button ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
 }
 
 /*
-Qt::MouseButtons buttons () const
+Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
 }
 
 /*
-QPointF lastPos () const
+QPointF lastPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
 }
 
 /*
-QPointF lastScenePos () const
+QPointF lastScenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
 }
 
 /*
-QPoint lastScreenPos () const
+QPoint lastScreenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
 }
 
 /*
-Qt::KeyboardModifiers modifiers () const
+Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
 }
 
 /*
-QPointF pos () const
+QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_POS )
 {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_POS )
 }
 
 /*
-QPointF scenePos () const
+QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
 }
 
 /*
-QPoint screenPos () const
+QPoint screenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCREENPOS )
 {

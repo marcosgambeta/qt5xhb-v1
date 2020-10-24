@@ -66,7 +66,7 @@ RETURN
 #endif
 
 /*
-QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
+QGraphicsPixmapItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new1()
 {
@@ -75,18 +75,13 @@ void QGraphicsPixmapItem_new1()
 }
 
 /*
-QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
+QGraphicsPixmapItem( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new2()
 {
   QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( *PQPIXMAP(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {
@@ -122,7 +117,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_DELETE )
 }
 
 /*
-QPointF offset () const
+QPointF offset() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
 {
@@ -147,7 +142,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
 }
 
 /*
-QPixmap pixmap () const
+QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
 {
@@ -172,7 +167,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
 }
 
 /*
-void setOffset ( const QPointF & offset )
+void setOffset( const QPointF & offset )
 */
 void QGraphicsPixmapItem_setOffset1()
 {
@@ -187,7 +182,7 @@ void QGraphicsPixmapItem_setOffset1()
 }
 
 /*
-void setOffset ( qreal x, qreal y )
+void setOffset( qreal x, qreal y )
 */
 void QGraphicsPixmapItem_setOffset2()
 {
@@ -200,11 +195,6 @@ void QGraphicsPixmapItem_setOffset2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setOffset ( const QPointF & offset )
-[2]void setOffset ( qreal x, qreal y )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 {
@@ -223,7 +213,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 }
 
 /*
-void setPixmap ( const QPixmap & pixmap )
+void setPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
 {
@@ -249,7 +239,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
 }
 
 /*
-void setShapeMode ( ShapeMode mode )
+void setShapeMode( QGraphicsPixmapItem::ShapeMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
 {
@@ -275,7 +265,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
 }
 
 /*
-void setTransformationMode ( Qt::TransformationMode mode )
+void setTransformationMode( Qt::TransformationMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
 {
@@ -301,7 +291,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
 }
 
 /*
-ShapeMode shapeMode () const
+QGraphicsPixmapItem::ShapeMode shapeMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
 {
@@ -325,7 +315,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
 }
 
 /*
-Qt::TransformationMode transformationMode () const
+Qt::TransformationMode transformationMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
 {
@@ -349,7 +339,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
 {
@@ -374,7 +364,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
 {
@@ -398,7 +388,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
 {
@@ -422,7 +412,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
 {
@@ -447,7 +437,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PAINT )
 {
@@ -473,7 +463,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
 {
@@ -498,7 +488,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TYPE )
 {

@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_DELETE )
 }
 
 /*
-virtual void fixup ( QString & input ) const
+virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 }
 
 /*
-bool hasAcceptableInput () const
+bool hasAcceptableInput() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 }
 
 /*
-void interpretText ()
+void interpretText()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
 }
 
 /*
-bool isAccelerated () const
+bool isAccelerated() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 }
 
 /*
-void setAccelerated ( bool on )
+void setAccelerated( bool on )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
 }
 
 /*
-Qt::Alignment alignment () const
+Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
 }
 
 /*
-void setAlignment ( Qt::Alignment flag )
+void setAlignment( Qt::Alignment flag )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
 }
 
 /*
-ButtonSymbols buttonSymbols () const
+QAbstractSpinBox::ButtonSymbols buttonSymbols() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 }
 
 /*
-void setButtonSymbols ( ButtonSymbols bs )
+void setButtonSymbols( QAbstractSpinBox::ButtonSymbols bs )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
 }
 
 /*
-CorrectionMode correctionMode () const
+QAbstractSpinBox::CorrectionMode correctionMode() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
 }
 
 /*
-void setCorrectionMode ( CorrectionMode cm )
+void setCorrectionMode( QAbstractSpinBox::CorrectionMode cm )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 }
 
 /*
-bool hasFrame () const
+bool hasFrame() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 }
 
 /*
-void setFrame ( bool )
+void setFrame( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
 }
 
 /*
-bool keyboardTracking () const
+bool keyboardTracking() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 }
 
 /*
-void setKeyboardTracking ( bool kt )
+void setKeyboardTracking( bool kt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 }
 
 /*
-bool isReadOnly () const
+bool isReadOnly() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 }
 
 /*
-void setReadOnly ( bool r )
+void setReadOnly( bool r )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 }
 
 /*
-QString specialValueText () const
+QString specialValueText() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 }
 
 /*
-void setSpecialValueText ( const QString & txt )
+void setSpecialValueText( const QString & txt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 }
 
 /*
-bool wrapping () const
+bool wrapping() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 }
 
 /*
-void setWrapping ( bool w )
+void setWrapping( bool w )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 {
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 }
 
 /*
-virtual void stepBy ( int steps )
+virtual void stepBy( int steps )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
 {
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 }
 
 /*
-virtual QValidator::State validate ( QString & input, int & pos ) const
+virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 }
 
 /*
-bool event ( QEvent * event )
+bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
 {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
 }
 
 /*
-QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
+QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 {
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 }
 
 /*
-QSize minimumSizeHint () const
+QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 {
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 {
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 }
 
 /*
-virtual void clear ()
+virtual void clear()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
 {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
 }
 
 /*
-void selectAll ()
+void selectAll()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
 {
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
 }
 
 /*
-void stepDown ()
+void stepDown()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
 {
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
 }
 
 /*
-void stepUp ()
+void stepUp()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
 {
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_ISGROUPSEPARATORSHOWN )
 }
 
 /*
-void setGroupSeparatorShown(bool shown)
+void setGroupSeparatorShown( bool shown )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETGROUPSEPARATORSHOWN )
 {

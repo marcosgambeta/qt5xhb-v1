@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 }
 
 /*
-QRectF boundingRect () const
+QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 }
 
 /*
-virtual QRectF boundingRectFor ( const QRectF & rect ) const
+virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 }
 
 /*
-bool isEnabled () const
+bool isEnabled() const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 }
 
 /*
-void setEnabled ( bool enable )
+void setEnabled( bool enable )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 }
 
 /*
-void update ()
+void update()
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 {

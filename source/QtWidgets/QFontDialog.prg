@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-explicit QFontDialog ( QWidget * parent = 0 )
+QFontDialog( QWidget * parent = 0 )
 */
 void QFontDialog_new1()
 {
@@ -72,18 +72,13 @@ void QFontDialog_new1()
 }
 
 /*
-explicit QFontDialog ( const QFont & initial, QWidget * parent = 0 )
+QFontDialog( const QFont & initial, QWidget * parent = 0 )
 */
 void QFontDialog_new2()
 {
   QFontDialog * obj = new QFontDialog( *PQFONT(1), OPQWIDGET(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]explicit QFontDialog ( QWidget * parent = 0 )
-[2]explicit QFontDialog ( const QFont & initial, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QFONTDIALOG_NEW )
 {
@@ -121,7 +116,7 @@ HB_FUNC_STATIC( QFONTDIALOG_DELETE )
 }
 
 /*
-QFont currentFont () const
+QFont currentFont() const
 */
 HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
 {
@@ -146,7 +141,7 @@ HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
 }
 
 /*
-void setCurrentFont ( const QFont & font )
+void setCurrentFont( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
 {
@@ -172,7 +167,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QFONTDIALOG_OPEN )
 {
@@ -198,7 +193,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPEN )
 }
 
 /*
-FontDialogOptions options () const
+QFontDialog::FontDialogOptions options() const
 */
 HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
 {
@@ -222,7 +217,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
 }
 
 /*
-void setOptions ( FontDialogOptions options )
+void setOptions( QFontDialog::FontDialogOptions options )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
 {
@@ -248,7 +243,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
 }
 
 /*
-QFont selectedFont () const
+QFont selectedFont() const
 */
 HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
 {
@@ -273,7 +268,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
 }
 
 /*
-void setOption ( FontDialogOption option, bool on = true )
+void setOption( QFontDialog::FontDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
 {
@@ -299,7 +294,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
 }
 
 /*
-bool testOption ( FontDialogOption option ) const
+bool testOption( QFontDialog::FontDialogOption option ) const
 */
 HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
 {
@@ -323,7 +318,7 @@ HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
 }
 
 /*
-void setVisible ( bool visible )
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
 {
@@ -349,7 +344,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
 }
 
 /*
-static QFont getFont(bool *ok, QWidget *parent = 0)
+static QFont getFont( bool * ok, QWidget * parent = 0 )
 */
 void QFontDialog_getFont1()
 {
@@ -361,7 +356,7 @@ void QFontDialog_getFont1()
 }
 
 /*
-static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0, const QString &title = QString(), FontDialogOptions options = 0)
+static QFont getFont( bool * ok, const QFont & initial, QWidget * parent = 0, const QString & title = QString(), QFontDialog::FontDialogOptions options = 0 )
 */
 void QFontDialog_getFont2()
 {
@@ -371,11 +366,6 @@ void QFontDialog_getFont2()
   Qt5xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
-
-/*
-[1]static QFont getFont(bool *ok, QWidget *parent = 0)
-[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0, const QString &title = QString(), FontDialogOptions options = 0)
-*/
 
 HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 {

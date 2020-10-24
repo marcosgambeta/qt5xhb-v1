@@ -29,7 +29,7 @@ void QActionGroupSlots::hovered( QAction * action )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QACTIONGROUP" );
-    PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
+    PHB_ITEM paction = Qt5xHb::Signals_return_qobject( (QObject *) action, "QACTION" );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 
@@ -47,7 +47,7 @@ void QActionGroupSlots::triggered( QAction * action )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QACTIONGROUP" );
-    PHB_ITEM paction = Signals_return_qobject( (QObject *) action, "QACTION" );
+    PHB_ITEM paction = Qt5xHb::Signals_return_qobject( (QObject *) action, "QACTION" );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 

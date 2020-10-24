@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QGraphicsSceneMoveEvent ()
+QGraphicsSceneMoveEvent()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_DELETE )
 }
 
 /*
-QPointF newPos () const
+QPointF newPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
 }
 
 /*
-QPointF oldPos () const
+QPointF oldPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
 {

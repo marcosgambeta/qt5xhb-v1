@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-explicit QCheckBox ( QWidget * parent = 0 )
+QCheckBox( QWidget * parent = 0 )
 */
 void QCheckBox_new1()
 {
@@ -67,18 +67,13 @@ void QCheckBox_new1()
 }
 
 /*
-explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
+QCheckBox( const QString & text, QWidget * parent = 0 )
 */
 void QCheckBox_new2()
 {
   QCheckBox * obj = new QCheckBox( PQSTRING(1), OPQWIDGET(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]explicit QCheckBox ( QWidget * parent = 0 )
-[2]explicit QCheckBox ( const QString & text, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
@@ -116,7 +111,7 @@ HB_FUNC_STATIC( QCHECKBOX_DELETE )
 }
 
 /*
-Qt::CheckState checkState () const
+Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
@@ -140,7 +135,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 }
 
 /*
-bool isTristate () const
+bool isTristate() const
 */
 HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
@@ -164,7 +159,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 }
 
 /*
-void setCheckState ( Qt::CheckState state )
+void setCheckState( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
@@ -190,7 +185,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 }
 
 /*
-void setTristate ( bool y = true )
+void setTristate( bool y = true )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
@@ -216,7 +211,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 }
 
 /*
-QSize minimumSizeHint () const
+QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
@@ -241,7 +236,7 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {

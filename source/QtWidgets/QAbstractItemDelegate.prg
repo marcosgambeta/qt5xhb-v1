@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 }
 
 /*
-virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
+virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 }
 
 /*
-virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
+virtual bool editorEvent( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
+virtual void paint( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 }
 
 /*
-virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
+virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 }
 
 /*
-virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
+virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 }
 
 /*
-virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
+virtual QSize sizeHint( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 }
 
 /*
-virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
+virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 }
 
 /*
-virtual bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
+virtual bool helpEvent( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 }
 
 /*
-virtual void destroyEditor(QWidget *editor, const QModelIndex &index) const
+virtual void destroyEditor( QWidget * editor, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DESTROYEDITOR )
 }
 
 /*
-static QString elidedText(const QFontMetrics &fontMetrics, int width, Qt::TextElideMode mode, const QString &text)
+static QString elidedText( const QFontMetrics & fontMetrics, int width, Qt::TextElideMode mode, const QString & text )
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_ELIDEDTEXT )
 {

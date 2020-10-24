@@ -70,7 +70,7 @@ RETURN
 #endif
 
 /*
-QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
+QGraphicsLinearLayout( QGraphicsLayoutItem * parent = 0 )
 */
 void QGraphicsLinearLayout_new1()
 {
@@ -79,18 +79,13 @@ void QGraphicsLinearLayout_new1()
 }
 
 /*
-QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
+QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
 */
 void QGraphicsLinearLayout_new2()
 {
   QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( (Qt::Orientation) hb_parni(1), ISNIL(2)? 0 : (QGraphicsLayoutItem *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
-[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 {
@@ -126,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_DELETE )
 }
 
 /*
-void addItem ( QGraphicsLayoutItem * item )
+void addItem( QGraphicsLayoutItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDITEM )
 {
@@ -152,7 +147,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDITEM )
 }
 
 /*
-void addStretch ( int stretch = 1 )
+void addStretch( int stretch = 1 )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDSTRETCH )
 {
@@ -178,7 +173,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDSTRETCH )
 }
 
 /*
-Qt::Alignment alignment ( QGraphicsLayoutItem * item ) const
+Qt::Alignment alignment( QGraphicsLayoutItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ALIGNMENT )
 {
@@ -202,7 +197,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ALIGNMENT )
 }
 
 /*
-void insertItem ( int index, QGraphicsLayoutItem * item )
+void insertItem( int index, QGraphicsLayoutItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTITEM )
 {
@@ -228,7 +223,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTITEM )
 }
 
 /*
-void insertStretch ( int index, int stretch = 1 )
+void insertStretch( int index, int stretch = 1 )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
 {
@@ -254,7 +249,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
 }
 
 /*
-qreal itemSpacing ( int index ) const
+qreal itemSpacing( int index ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMSPACING )
 {
@@ -278,7 +273,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMSPACING )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ORIENTATION )
 {
@@ -302,7 +297,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ORIENTATION )
 }
 
 /*
-void removeItem ( QGraphicsLayoutItem * item )
+void removeItem( QGraphicsLayoutItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_REMOVEITEM )
 {
@@ -328,7 +323,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_REMOVEITEM )
 }
 
 /*
-void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
+void setAlignment( QGraphicsLayoutItem * item, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETALIGNMENT )
 {
@@ -354,7 +349,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETALIGNMENT )
 }
 
 /*
-void setItemSpacing ( int index, qreal spacing )
+void setItemSpacing( int index, qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETITEMSPACING )
 {
@@ -380,7 +375,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETITEMSPACING )
 }
 
 /*
-void setOrientation ( Qt::Orientation orientation )
+void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETORIENTATION )
 {
@@ -406,7 +401,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETORIENTATION )
 }
 
 /*
-void setSpacing ( qreal spacing )
+void setSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSPACING )
 {
@@ -432,7 +427,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSPACING )
 }
 
 /*
-void setStretchFactor ( QGraphicsLayoutItem * item, int stretch )
+void setStretchFactor( QGraphicsLayoutItem * item, int stretch )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR )
 {
@@ -458,7 +453,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETSTRETCHFACTOR )
 }
 
 /*
-qreal spacing () const
+qreal spacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SPACING )
 {
@@ -482,7 +477,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SPACING )
 }
 
 /*
-int stretchFactor ( QGraphicsLayoutItem * item ) const
+int stretchFactor( QGraphicsLayoutItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_STRETCHFACTOR )
 {
@@ -506,7 +501,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_STRETCHFACTOR )
 }
 
 /*
-virtual int count () const
+virtual int count() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
 {
@@ -530,7 +525,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_COUNT )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INVALIDATE )
 {
@@ -556,7 +551,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INVALIDATE )
 }
 
 /*
-virtual QGraphicsLayoutItem * itemAt ( int index ) const
+virtual QGraphicsLayoutItem * itemAt( int index ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMAT )
 {
@@ -581,7 +576,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMAT )
 }
 
 /*
-virtual void removeAt ( int index )
+virtual void removeAt( int index )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_REMOVEAT )
 {
@@ -607,7 +602,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_REMOVEAT )
 }
 
 /*
-virtual void setGeometry ( const QRectF & rect )
+virtual void setGeometry( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETGEOMETRY )
 {
@@ -633,7 +628,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETGEOMETRY )
 }
 
 /*
-virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
+virtual QSizeF sizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
 {

@@ -84,7 +84,7 @@ RETURN
 #include <QtWidgets/QAbstractItemDelegate>
 
 /*
-QDataWidgetMapper ( QObject * parent = 0 )
+QDataWidgetMapper( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 }
 
 /*
-void addMapping ( QWidget * widget, int section )
+void addMapping( QWidget * widget, int section )
 */
 void QDataWidgetMapper_addMapping1()
 {
@@ -134,7 +134,7 @@ void QDataWidgetMapper_addMapping1()
 }
 
 /*
-void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
+void addMapping( QWidget * widget, int section, const QByteArray & propertyName )
 */
 void QDataWidgetMapper_addMapping2()
 {
@@ -147,11 +147,6 @@ void QDataWidgetMapper_addMapping2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addMapping ( QWidget * widget, int section )
-[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
-*/
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {
@@ -170,7 +165,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 }
 
 /*
-void clearMapping ()
+void clearMapping()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
 {
@@ -196,7 +191,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
 }
 
 /*
-int currentIndex () const
+int currentIndex() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
 {
@@ -220,7 +215,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
 }
 
 /*
-QAbstractItemDelegate * itemDelegate () const
+QAbstractItemDelegate * itemDelegate() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
 {
@@ -245,7 +240,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
 }
 
 /*
-QByteArray mappedPropertyName ( QWidget * widget ) const
+QByteArray mappedPropertyName( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
 {
@@ -270,7 +265,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
 }
 
 /*
-int mappedSection ( QWidget * widget ) const
+int mappedSection( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
 {
@@ -294,7 +289,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
 }
 
 /*
-QWidget * mappedWidgetAt ( int section ) const
+QWidget * mappedWidgetAt( int section ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
 {
@@ -319,7 +314,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
 }
 
 /*
-QAbstractItemModel * model () const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
 {
@@ -344,7 +339,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
 {
@@ -368,7 +363,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
 }
 
 /*
-void removeMapping ( QWidget * widget )
+void removeMapping( QWidget * widget )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
 {
@@ -394,7 +389,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
 }
 
 /*
-QModelIndex rootIndex () const
+QModelIndex rootIndex() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
 {
@@ -419,7 +414,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
 }
 
 /*
-void setItemDelegate ( QAbstractItemDelegate * delegate )
+void setItemDelegate( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
 {
@@ -445,7 +440,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
 }
 
 /*
-void setModel ( QAbstractItemModel * model )
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
 {
@@ -471,7 +466,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
 }
 
 /*
-void setOrientation ( Qt::Orientation aOrientation )
+void setOrientation( Qt::Orientation aOrientation )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
 {
@@ -497,7 +492,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
 }
 
 /*
-void setRootIndex ( const QModelIndex & index )
+void setRootIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
 {
@@ -523,7 +518,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
 }
 
 /*
-void setSubmitPolicy ( SubmitPolicy policy )
+void setSubmitPolicy( QDataWidgetMapper::SubmitPolicy policy )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
 {
@@ -549,7 +544,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
 }
 
 /*
-SubmitPolicy submitPolicy () const
+QDataWidgetMapper::SubmitPolicy submitPolicy() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
 {
@@ -573,7 +568,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
 }
 
 /*
-void revert ()
+void revert()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
 {
@@ -599,7 +594,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
 }
 
 /*
-virtual void setCurrentIndex ( int index )
+virtual void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
 {
@@ -625,7 +620,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
 }
 
 /*
-void setCurrentModelIndex ( const QModelIndex & index )
+void setCurrentModelIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
 {
@@ -651,7 +646,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
 }
 
 /*
-bool submit ()
+bool submit()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
 {
@@ -675,7 +670,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
 }
 
 /*
-void toFirst ()
+void toFirst()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
 {
@@ -701,7 +696,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
 }
 
 /*
-void toLast ()
+void toLast()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
 {
@@ -727,7 +722,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
 }
 
 /*
-void toNext ()
+void toNext()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
 {
@@ -753,7 +748,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
 }
 
 /*
-void toPrevious ()
+void toPrevious()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
 {

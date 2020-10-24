@@ -117,7 +117,7 @@ RETURN
 #include <QtWidgets/QMenu>
 
 /*
-QAction ( QObject * parent )
+QAction( QObject * parent )
 */
 void QAction_new1()
 {
@@ -126,7 +126,7 @@ void QAction_new1()
 }
 
 /*
-QAction ( const QString & text, QObject * parent )
+QAction( const QString & text, QObject * parent )
 */
 void QAction_new2()
 {
@@ -135,19 +135,13 @@ void QAction_new2()
 }
 
 /*
-QAction ( const QIcon & icon, const QString & text, QObject * parent )
+QAction( const QIcon & icon, const QString & text, QObject * parent )
 */
 void QAction_new3()
 {
   QAction * obj = new QAction( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QAction ( QObject * parent )
-[2]QAction ( const QString & text, QObject * parent )
-[3]QAction ( const QIcon & icon, const QString & text, QObject * parent )
-*/
 
 HB_FUNC_STATIC( QACTION_NEW )
 {
@@ -189,7 +183,7 @@ HB_FUNC_STATIC( QACTION_DELETE )
 }
 
 /*
-QActionGroup * actionGroup () const
+QActionGroup * actionGroup() const
 */
 HB_FUNC_STATIC( QACTION_ACTIONGROUP )
 {
@@ -214,7 +208,7 @@ HB_FUNC_STATIC( QACTION_ACTIONGROUP )
 }
 
 /*
-void activate ( ActionEvent event )
+void activate( QAction::ActionEvent event )
 */
 HB_FUNC_STATIC( QACTION_ACTIVATE )
 {
@@ -240,7 +234,7 @@ HB_FUNC_STATIC( QACTION_ACTIVATE )
 }
 
 /*
-QList<QGraphicsWidget *> associatedGraphicsWidgets () const
+QList<QGraphicsWidget *> associatedGraphicsWidgets() const
 */
 HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 {
@@ -288,7 +282,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
 }
 
 /*
-QList<QWidget *> associatedWidgets () const
+QList<QWidget *> associatedWidgets() const
 */
 HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 {
@@ -336,7 +330,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
 }
 
 /*
-bool autoRepeat () const
+bool autoRepeat() const
 */
 HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 {
@@ -360,7 +354,7 @@ HB_FUNC_STATIC( QACTION_AUTOREPEAT )
 }
 
 /*
-QVariant data () const
+QVariant data() const
 */
 HB_FUNC_STATIC( QACTION_DATA )
 {
@@ -385,7 +379,7 @@ HB_FUNC_STATIC( QACTION_DATA )
 }
 
 /*
-QFont font () const
+QFont font() const
 */
 HB_FUNC_STATIC( QACTION_FONT )
 {
@@ -410,7 +404,7 @@ HB_FUNC_STATIC( QACTION_FONT )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QACTION_ICON )
 {
@@ -435,7 +429,7 @@ HB_FUNC_STATIC( QACTION_ICON )
 }
 
 /*
-QString iconText () const
+QString iconText() const
 */
 HB_FUNC_STATIC( QACTION_ICONTEXT )
 {
@@ -459,7 +453,7 @@ HB_FUNC_STATIC( QACTION_ICONTEXT )
 }
 
 /*
-bool isCheckable () const
+bool isCheckable() const
 */
 HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 {
@@ -483,7 +477,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKABLE )
 }
 
 /*
-bool isChecked () const
+bool isChecked() const
 */
 HB_FUNC_STATIC( QACTION_ISCHECKED )
 {
@@ -507,7 +501,7 @@ HB_FUNC_STATIC( QACTION_ISCHECKED )
 }
 
 /*
-bool isEnabled () const
+bool isEnabled() const
 */
 HB_FUNC_STATIC( QACTION_ISENABLED )
 {
@@ -531,7 +525,7 @@ HB_FUNC_STATIC( QACTION_ISENABLED )
 }
 
 /*
-bool isIconVisibleInMenu () const
+bool isIconVisibleInMenu() const
 */
 HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 {
@@ -555,7 +549,7 @@ HB_FUNC_STATIC( QACTION_ISICONVISIBLEINMENU )
 }
 
 /*
-bool isSeparator () const
+bool isSeparator() const
 */
 HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 {
@@ -579,7 +573,7 @@ HB_FUNC_STATIC( QACTION_ISSEPARATOR )
 }
 
 /*
-bool isVisible () const
+bool isVisible() const
 */
 HB_FUNC_STATIC( QACTION_ISVISIBLE )
 {
@@ -603,7 +597,7 @@ HB_FUNC_STATIC( QACTION_ISVISIBLE )
 }
 
 /*
-QMenu * menu () const
+QMenu * menu() const
 */
 HB_FUNC_STATIC( QACTION_MENU )
 {
@@ -628,7 +622,7 @@ HB_FUNC_STATIC( QACTION_MENU )
 }
 
 /*
-MenuRole menuRole () const
+QAction::MenuRole menuRole() const
 */
 HB_FUNC_STATIC( QACTION_MENUROLE )
 {
@@ -652,7 +646,7 @@ HB_FUNC_STATIC( QACTION_MENUROLE )
 }
 
 /*
-QWidget * parentWidget () const
+QWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QACTION_PARENTWIDGET )
 {
@@ -677,7 +671,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
 }
 
 /*
-Priority priority () const
+QAction::Priority priority() const
 */
 HB_FUNC_STATIC( QACTION_PRIORITY )
 {
@@ -701,7 +695,7 @@ HB_FUNC_STATIC( QACTION_PRIORITY )
 }
 
 /*
-void setActionGroup ( QActionGroup * group )
+void setActionGroup( QActionGroup * group )
 */
 HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
 {
@@ -727,7 +721,7 @@ HB_FUNC_STATIC( QACTION_SETACTIONGROUP )
 }
 
 /*
-void setAutoRepeat ( bool )
+void setAutoRepeat( bool )
 */
 HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
 {
@@ -753,7 +747,7 @@ HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
 }
 
 /*
-void setCheckable ( bool )
+void setCheckable( bool )
 */
 HB_FUNC_STATIC( QACTION_SETCHECKABLE )
 {
@@ -779,7 +773,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKABLE )
 }
 
 /*
-void setData ( const QVariant & userData )
+void setData( const QVariant & userData )
 */
 HB_FUNC_STATIC( QACTION_SETDATA )
 {
@@ -805,7 +799,7 @@ HB_FUNC_STATIC( QACTION_SETDATA )
 }
 
 /*
-void setFont ( const QFont & font )
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QACTION_SETFONT )
 {
@@ -831,7 +825,7 @@ HB_FUNC_STATIC( QACTION_SETFONT )
 }
 
 /*
-void setIcon ( const QIcon & icon )
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QACTION_SETICON )
 {
@@ -857,7 +851,7 @@ HB_FUNC_STATIC( QACTION_SETICON )
 }
 
 /*
-void setIconText ( const QString & text )
+void setIconText( const QString & text )
 */
 HB_FUNC_STATIC( QACTION_SETICONTEXT )
 {
@@ -883,7 +877,7 @@ HB_FUNC_STATIC( QACTION_SETICONTEXT )
 }
 
 /*
-void setIconVisibleInMenu ( bool visible )
+void setIconVisibleInMenu( bool visible )
 */
 HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
 {
@@ -909,7 +903,7 @@ HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
 }
 
 /*
-void setMenu ( QMenu * menu )
+void setMenu( QMenu * menu )
 */
 HB_FUNC_STATIC( QACTION_SETMENU )
 {
@@ -935,7 +929,7 @@ HB_FUNC_STATIC( QACTION_SETMENU )
 }
 
 /*
-void setMenuRole ( MenuRole menuRole )
+void setMenuRole( QAction::MenuRole menuRole )
 */
 HB_FUNC_STATIC( QACTION_SETMENUROLE )
 {
@@ -961,7 +955,7 @@ HB_FUNC_STATIC( QACTION_SETMENUROLE )
 }
 
 /*
-void setPriority ( Priority priority )
+void setPriority( QAction::Priority priority )
 */
 HB_FUNC_STATIC( QACTION_SETPRIORITY )
 {
@@ -987,7 +981,7 @@ HB_FUNC_STATIC( QACTION_SETPRIORITY )
 }
 
 /*
-void setSeparator ( bool b )
+void setSeparator( bool b )
 */
 HB_FUNC_STATIC( QACTION_SETSEPARATOR )
 {
@@ -1013,7 +1007,7 @@ HB_FUNC_STATIC( QACTION_SETSEPARATOR )
 }
 
 /*
-void setShortcut ( const QKeySequence & shortcut )
+void setShortcut( const QKeySequence & shortcut )
 */
 HB_FUNC_STATIC( QACTION_SETSHORTCUT )
 {
@@ -1039,7 +1033,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUT )
 }
 
 /*
-void setShortcutContext ( Qt::ShortcutContext context )
+void setShortcutContext( Qt::ShortcutContext context )
 */
 HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 {
@@ -1065,7 +1059,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 }
 
 /*
-void setShortcuts ( const QList<QKeySequence> & shortcuts )
+void setShortcuts( const QList<QKeySequence> & shortcuts )
 */
 void QAction_setShortcuts1()
 {
@@ -1088,7 +1082,7 @@ void QAction_setShortcuts1()
 }
 
 /*
-void setShortcuts ( QKeySequence::StandardKey key )
+void setShortcuts( QKeySequence::StandardKey key )
 */
 void QAction_setShortcuts2()
 {
@@ -1101,11 +1095,6 @@ void QAction_setShortcuts2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
-[2]void setShortcuts ( QKeySequence::StandardKey key )
-*/
 
 HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 {
@@ -1124,7 +1113,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 }
 
 /*
-void setStatusTip ( const QString & statusTip )
+void setStatusTip( const QString & statusTip )
 */
 HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
 {
@@ -1150,7 +1139,7 @@ HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
 }
 
 /*
-void setText ( const QString & text )
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QACTION_SETTEXT )
 {
@@ -1176,7 +1165,7 @@ HB_FUNC_STATIC( QACTION_SETTEXT )
 }
 
 /*
-void setToolTip ( const QString & tip )
+void setToolTip( const QString & tip )
 */
 HB_FUNC_STATIC( QACTION_SETTOOLTIP )
 {
@@ -1202,7 +1191,7 @@ HB_FUNC_STATIC( QACTION_SETTOOLTIP )
 }
 
 /*
-void setWhatsThis ( const QString & what )
+void setWhatsThis( const QString & what )
 */
 HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
 {
@@ -1228,7 +1217,7 @@ HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
 }
 
 /*
-QKeySequence shortcut () const
+QKeySequence shortcut() const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUT )
 {
@@ -1253,7 +1242,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
 }
 
 /*
-Qt::ShortcutContext shortcutContext () const
+Qt::ShortcutContext shortcutContext() const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
 {
@@ -1277,7 +1266,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTCONTEXT )
 }
 
 /*
-QList<QKeySequence> shortcuts () const
+QList<QKeySequence> shortcuts() const
 */
 HB_FUNC_STATIC( QACTION_SHORTCUTS )
 {
@@ -1329,7 +1318,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
 }
 
 /*
-bool showStatusText ( QWidget * widget = 0 )
+bool showStatusText( QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 {
@@ -1353,7 +1342,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 }
 
 /*
-QString statusTip () const
+QString statusTip() const
 */
 HB_FUNC_STATIC( QACTION_STATUSTIP )
 {
@@ -1377,7 +1366,7 @@ HB_FUNC_STATIC( QACTION_STATUSTIP )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QACTION_TEXT )
 {
@@ -1401,7 +1390,7 @@ HB_FUNC_STATIC( QACTION_TEXT )
 }
 
 /*
-QString toolTip () const
+QString toolTip() const
 */
 HB_FUNC_STATIC( QACTION_TOOLTIP )
 {
@@ -1425,7 +1414,7 @@ HB_FUNC_STATIC( QACTION_TOOLTIP )
 }
 
 /*
-QString whatsThis () const
+QString whatsThis() const
 */
 HB_FUNC_STATIC( QACTION_WHATSTHIS )
 {
@@ -1449,7 +1438,7 @@ HB_FUNC_STATIC( QACTION_WHATSTHIS )
 }
 
 /*
-void hover ()
+void hover()
 */
 HB_FUNC_STATIC( QACTION_HOVER )
 {
@@ -1475,7 +1464,7 @@ HB_FUNC_STATIC( QACTION_HOVER )
 }
 
 /*
-void setChecked ( bool )
+void setChecked( bool )
 */
 HB_FUNC_STATIC( QACTION_SETCHECKED )
 {
@@ -1501,7 +1490,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKED )
 }
 
 /*
-void setDisabled ( bool b )
+void setDisabled( bool b )
 */
 HB_FUNC_STATIC( QACTION_SETDISABLED )
 {
@@ -1527,7 +1516,7 @@ HB_FUNC_STATIC( QACTION_SETDISABLED )
 }
 
 /*
-void setEnabled ( bool )
+void setEnabled( bool )
 */
 HB_FUNC_STATIC( QACTION_SETENABLED )
 {
@@ -1553,7 +1542,7 @@ HB_FUNC_STATIC( QACTION_SETENABLED )
 }
 
 /*
-void setVisible ( bool )
+void setVisible( bool )
 */
 HB_FUNC_STATIC( QACTION_SETVISIBLE )
 {
@@ -1579,7 +1568,7 @@ HB_FUNC_STATIC( QACTION_SETVISIBLE )
 }
 
 /*
-void toggle ()
+void toggle()
 */
 HB_FUNC_STATIC( QACTION_TOGGLE )
 {
@@ -1605,7 +1594,7 @@ HB_FUNC_STATIC( QACTION_TOGGLE )
 }
 
 /*
-void trigger ()
+void trigger()
 */
 HB_FUNC_STATIC( QACTION_TRIGGER )
 {

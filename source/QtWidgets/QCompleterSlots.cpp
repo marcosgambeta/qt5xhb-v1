@@ -47,7 +47,7 @@ void QCompleterSlots::activated( const QModelIndex & index )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -83,7 +83,7 @@ void QCompleterSlots::highlighted( const QModelIndex & index )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 

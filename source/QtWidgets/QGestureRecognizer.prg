@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_DELETE )
 }
 
 /*
-virtual QGesture * create(QObject * target)
+virtual QGesture * create( QObject * target )
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_CREATE )
 }
 
 /*
-virtual Result recognize(QGesture * gesture, QObject * watched, QEvent * event) = 0
+virtual QGestureRecognizer::Result recognize( QGesture * gesture, QObject * watched, QEvent * event ) = 0
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
 }
 
 /*
-virtual void reset(QGesture * gesture)
+virtual void reset( QGesture * gesture )
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RESET )
 }
 
 /*
-static Qt::GestureType registerRecognizer(QGestureRecognizer * recognizer)
+static Qt::GestureType registerRecognizer( QGestureRecognizer * recognizer )
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
 }
 
 /*
-static void unregisterRecognizer(Qt::GestureType type)
+static void unregisterRecognizer( Qt::GestureType type )
 */
 HB_FUNC_STATIC( QGESTURERECOGNIZER_UNREGISTERRECOGNIZER )
 {

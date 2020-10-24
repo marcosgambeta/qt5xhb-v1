@@ -73,7 +73,7 @@ RETURN
 #endif
 
 /*
-explicit QDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QDialog( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QDIALOG_NEW )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDIALOG_DELETE )
 }
 
 /*
-bool isSizeGripEnabled () const
+bool isSizeGripEnabled() const
 */
 HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 }
 
 /*
-void setSizeGripEnabled ( bool )
+void setSizeGripEnabled( bool )
 */
 HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 }
 
 /*
-int result () const
+int result() const
 */
 HB_FUNC_STATIC( QDIALOG_RESULT )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
 }
 
 /*
-void setModal ( bool modal )
+void setModal( bool modal )
 */
 HB_FUNC_STATIC( QDIALOG_SETMODAL )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QDIALOG_SETMODAL )
 }
 
 /*
-void setResult ( int i )
+void setResult( int i )
 */
 HB_FUNC_STATIC( QDIALOG_SETRESULT )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
 }
 
 /*
-QSize minimumSizeHint () const
+QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 }
 
 /*
-void setVisible ( bool visible )
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 }
 
 /*
-QSize sizeHint () const
+QSize sizeHint() const
 */
 HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 }
 
 /*
-virtual void accept ()
+virtual void accept()
 */
 HB_FUNC_STATIC( QDIALOG_ACCEPT )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QDIALOG_ACCEPT )
 }
 
 /*
-virtual void done ( int r )
+virtual void done( int r )
 */
 HB_FUNC_STATIC( QDIALOG_DONE )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QDIALOG_DONE )
 }
 
 /*
-virtual int exec ()
+virtual int exec()
 */
 HB_FUNC_STATIC( QDIALOG_EXEC )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
 }
 
 /*
-virtual void open ()
+virtual void open()
 */
 HB_FUNC_STATIC( QDIALOG_OPEN )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QDIALOG_OPEN )
 }
 
 /*
-virtual void reject ()
+virtual void reject()
 */
 HB_FUNC_STATIC( QDIALOG_REJECT )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QDIALOG_REJECT )
 }
 
 /*
-Qt::Orientation orientation () const
+Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDIALOG_ORIENTATION )
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QDIALOG_ORIENTATION )
 }
 
 /*
-void setOrientation (Qt::Orientation orientation)
+void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
 {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QDIALOG_SETORIENTATION )
 }
 
 /*
-QWidget* extension () const
+QWidget * extension() const
 */
 HB_FUNC_STATIC( QDIALOG_EXTENSION )
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QDIALOG_EXTENSION )
 }
 
 /*
-void setExtension (QWidget* extension)
+void setExtension( QWidget * extension )
 */
 HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QDIALOG_SETEXTENSION )
 }
 
 /*
-void showExtension(bool)
+void showExtension( bool )
 */
 HB_FUNC_STATIC( QDIALOG_SHOWEXTENSION )
 {

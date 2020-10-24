@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-QGraphicsRotation ( QObject * parent = 0 )
+QGraphicsRotation( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_DELETE )
 }
 
 /*
-qreal angle () const
+qreal angle() const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ANGLE )
 }
 
 /*
-QVector3D axis () const
+QVector3D axis() const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
 }
 
 /*
-QVector3D origin () const
+QVector3D origin() const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
 }
 
 /*
-void setAngle ( qreal )
+void setAngle( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 }
 
 /*
-void setAxis ( const QVector3D & axis )
+void setAxis( const QVector3D & axis )
 */
 void QGraphicsRotation_setAxis1()
 {
@@ -211,7 +211,7 @@ void QGraphicsRotation_setAxis1()
 }
 
 /*
-void setAxis ( Qt::Axis axis )
+void setAxis( Qt::Axis axis )
 */
 void QGraphicsRotation_setAxis2()
 {
@@ -224,11 +224,6 @@ void QGraphicsRotation_setAxis2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setAxis ( const QVector3D & axis )
-[2]void setAxis ( Qt::Axis axis )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {
@@ -247,7 +242,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 }
 
 /*
-void setOrigin ( const QVector3D & point )
+void setOrigin( const QVector3D & point )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
 {
@@ -273,7 +268,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
 }
 
 /*
-virtual void applyTo ( QMatrix4x4 * matrix ) const
+virtual void applyTo( QMatrix4x4 * matrix ) const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
 {

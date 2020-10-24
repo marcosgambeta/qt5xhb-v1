@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QDial ( QWidget * parent = 0 )
+QDial( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDIAL_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDIAL_DELETE )
 }
 
 /*
-int notchSize () const
+int notchSize() const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 }
 
 /*
-qreal notchTarget () const
+qreal notchTarget() const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 }
 
 /*
-bool notchesVisible () const
+bool notchesVisible() const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 }
 
 /*
-void setNotchTarget ( double target )
+void setNotchTarget( double target )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 }
 
 /*
-bool wrapping () const
+bool wrapping() const
 */
 HB_FUNC_STATIC( QDIAL_WRAPPING )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QDIAL_WRAPPING )
 }
 
 /*
-virtual QSize minimumSizeHint () const
+virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QDIAL_SIZEHINT )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDIAL_SIZEHINT )
 }
 
 /*
-void setNotchesVisible ( bool visible )
+void setNotchesVisible( bool visible )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 }
 
 /*
-void setWrapping ( bool on )
+void setWrapping( bool on )
 */
 HB_FUNC_STATIC( QDIAL_SETWRAPPING )
 {

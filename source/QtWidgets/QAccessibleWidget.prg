@@ -68,7 +68,7 @@ RETURN
 #include <QtGui/QWindow>
 
 /*
-QAccessibleWidget(QWidget *o, QAccessible::Role r = QAccessible::Client, const QString& name = QString())
+QAccessibleWidget( QWidget * o, QAccessible::Role r = QAccessible::Client, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ISVALID )
 }
 
 /*
-QWindow *window() const
+QWindow * window() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_WINDOW )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDCOUNT )
 }
 
 /*
-int indexOfChild(const QAccessibleInterface *child) const
+int indexOfChild( const QAccessibleInterface * child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INDEXOFCHILD )
 }
 
 /*
-QAccessibleInterface *focusChild() const
+QAccessibleInterface * focusChild() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_FOCUSCHILD )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
 }
 
 /*
-QAccessibleInterface *parent() const
+QAccessibleInterface * parent() const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_PARENT )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_PARENT )
 }
 
 /*
-QAccessibleInterface *child(int index) const
+QAccessibleInterface * child( int index ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILD )
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILD )
 }
 
 /*
-QString text(QAccessible::Text t) const
+QString text( QAccessible::Text t ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_BACKGROUNDCOLOR )
 }
 
 /*
-void *interface_cast(QAccessible::InterfaceType t)
+void * interface_cast( QAccessible::InterfaceType t )
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONNAMES )
 }
 
 /*
-void doAction(const QString &actionName)
+void doAction( const QString & actionName )
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
 }
 
 /*
-QStringList keyBindingsForAction(const QString &actionName) const
+QStringList keyBindingsForAction( const QString & actionName ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_KEYBINDINGSFORACTION )
 {

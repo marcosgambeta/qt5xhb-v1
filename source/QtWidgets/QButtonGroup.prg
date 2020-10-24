@@ -69,7 +69,7 @@ RETURN
 #include <QtWidgets/QAbstractButton>
 
 /*
-QButtonGroup ( QObject * parent = 0 )
+QButtonGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
 }
 
 /*
-void addButton ( QAbstractButton * button )
+void addButton( QAbstractButton * button )
 */
 void QButtonGroup_addButton1()
 {
@@ -119,7 +119,7 @@ void QButtonGroup_addButton1()
 }
 
 /*
-void addButton ( QAbstractButton * button, int id )
+void addButton( QAbstractButton * button, int id )
 */
 void QButtonGroup_addButton2()
 {
@@ -132,11 +132,6 @@ void QButtonGroup_addButton2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addButton ( QAbstractButton * button )
-[2]void addButton ( QAbstractButton * button, int id )
-*/
 
 HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 {
@@ -155,7 +150,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 }
 
 /*
-QAbstractButton * button ( int id ) const
+QAbstractButton * button( int id ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 {
@@ -180,7 +175,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 }
 
 /*
-QList<QAbstractButton *> buttons () const
+QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 {
@@ -228,7 +223,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 }
 
 /*
-QAbstractButton * checkedButton () const
+QAbstractButton * checkedButton() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 {
@@ -253,7 +248,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 }
 
 /*
-int checkedId () const
+int checkedId() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 {
@@ -277,7 +272,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 }
 
 /*
-bool exclusive () const
+bool exclusive() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 {
@@ -301,7 +296,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 }
 
 /*
-int id ( QAbstractButton * button ) const
+int id( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ID )
 {
@@ -325,7 +320,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
 }
 
 /*
-void removeButton ( QAbstractButton * button )
+void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 {
@@ -351,7 +346,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 }
 
 /*
-void setExclusive ( bool )
+void setExclusive( bool )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 {
@@ -377,7 +372,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 }
 
 /*
-void setId ( QAbstractButton * button, int id )
+void setId( QAbstractButton * button, int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETID )
 {

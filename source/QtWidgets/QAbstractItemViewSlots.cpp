@@ -29,7 +29,7 @@ void QAbstractItemViewSlots::activated( const QModelIndex & index )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -47,7 +47,7 @@ void QAbstractItemViewSlots::clicked( const QModelIndex & index )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -65,7 +65,7 @@ void QAbstractItemViewSlots::doubleClicked( const QModelIndex & index )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -83,7 +83,7 @@ void QAbstractItemViewSlots::entered( const QModelIndex & index )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -101,7 +101,7 @@ void QAbstractItemViewSlots::pressed( const QModelIndex & index )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pindex = Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM pindex = Qt5xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 

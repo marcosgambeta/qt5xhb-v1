@@ -84,7 +84,7 @@ RETURN
 #endif
 
 /*
-QFormLayout ( QWidget * parent = 0 )
+QFormLayout( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_NEW )
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_DELETE )
 }
 
 /*
-void addRow ( QWidget * label, QWidget * field )
+void addRow( QWidget * label, QWidget * field )
 */
 void QFormLayout_addRow1()
 {
@@ -134,7 +134,7 @@ void QFormLayout_addRow1()
 }
 
 /*
-void addRow ( QWidget * label, QLayout * field )
+void addRow( QWidget * label, QLayout * field )
 */
 void QFormLayout_addRow2()
 {
@@ -149,7 +149,7 @@ void QFormLayout_addRow2()
 }
 
 /*
-void addRow ( const QString & labelText, QWidget * field )
+void addRow( const QString & labelText, QWidget * field )
 */
 void QFormLayout_addRow3()
 {
@@ -164,7 +164,7 @@ void QFormLayout_addRow3()
 }
 
 /*
-void addRow ( const QString & labelText, QLayout * field )
+void addRow( const QString & labelText, QLayout * field )
 */
 void QFormLayout_addRow4()
 {
@@ -179,7 +179,7 @@ void QFormLayout_addRow4()
 }
 
 /*
-void addRow ( QWidget * widget )
+void addRow( QWidget * widget )
 */
 void QFormLayout_addRow5()
 {
@@ -194,7 +194,7 @@ void QFormLayout_addRow5()
 }
 
 /*
-void addRow ( QLayout * layout )
+void addRow( QLayout * layout )
 */
 void QFormLayout_addRow6()
 {
@@ -207,15 +207,6 @@ void QFormLayout_addRow6()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addRow ( QWidget * label, QWidget * field )
-[2]void addRow ( QWidget * label, QLayout * field )
-[3]void addRow ( const QString & labelText, QWidget * field )
-[4]void addRow ( const QString & labelText, QLayout * field )
-[5]void addRow ( QWidget * widget )
-[6]void addRow ( QLayout * layout )
-*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
 {
@@ -250,7 +241,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
 }
 
 /*
-FieldGrowthPolicy fieldGrowthPolicy () const
+QFormLayout::FieldGrowthPolicy fieldGrowthPolicy() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
 {
@@ -274,7 +265,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
 }
 
 /*
-Qt::Alignment formAlignment () const
+Qt::Alignment formAlignment() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
 {
@@ -298,7 +289,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
 }
 
 /*
-int horizontalSpacing () const
+int horizontalSpacing() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
 {
@@ -322,7 +313,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
 }
 
 /*
-void insertRow ( int row, QWidget * label, QWidget * field )
+void insertRow( int row, QWidget * label, QWidget * field )
 */
 void QFormLayout_insertRow1()
 {
@@ -337,7 +328,7 @@ void QFormLayout_insertRow1()
 }
 
 /*
-void insertRow ( int row, QWidget * label, QLayout * field )
+void insertRow( int row, QWidget * label, QLayout * field )
 */
 void QFormLayout_insertRow2()
 {
@@ -352,7 +343,7 @@ void QFormLayout_insertRow2()
 }
 
 /*
-void insertRow ( int row, const QString & labelText, QWidget * field )
+void insertRow( int row, const QString & labelText, QWidget * field )
 */
 void QFormLayout_insertRow3()
 {
@@ -367,7 +358,7 @@ void QFormLayout_insertRow3()
 }
 
 /*
-void insertRow ( int row, const QString & labelText, QLayout * field )
+void insertRow( int row, const QString & labelText, QLayout * field )
 */
 void QFormLayout_insertRow4()
 {
@@ -382,7 +373,7 @@ void QFormLayout_insertRow4()
 }
 
 /*
-void insertRow ( int row, QWidget * widget )
+void insertRow( int row, QWidget * widget )
 */
 void QFormLayout_insertRow5()
 {
@@ -397,7 +388,7 @@ void QFormLayout_insertRow5()
 }
 
 /*
-void insertRow ( int row, QLayout * layout )
+void insertRow( int row, QLayout * layout )
 */
 void QFormLayout_insertRow6()
 {
@@ -410,15 +401,6 @@ void QFormLayout_insertRow6()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertRow ( int row, QWidget * label, QWidget * field )
-[2]void insertRow ( int row, QWidget * label, QLayout * field )
-[3]void insertRow ( int row, const QString & labelText, QWidget * field )
-[4]void insertRow ( int row, const QString & labelText, QLayout * field )
-[5]void insertRow ( int row, QWidget * widget )
-[6]void insertRow ( int row, QLayout * layout )
-*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
 {
@@ -453,7 +435,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
 }
 
 /*
-QLayoutItem * itemAt ( int row, ItemRole role ) const
+QLayoutItem * itemAt( int row, QFormLayout::ItemRole role ) const
 */
 void QFormLayout_itemAt1()
 {
@@ -467,7 +449,7 @@ void QFormLayout_itemAt1()
 }
 
 /*
-virtual QLayoutItem * itemAt ( int index ) const
+virtual QLayoutItem * itemAt( int index ) const
 */
 void QFormLayout_itemAt2()
 {
@@ -479,11 +461,6 @@ void QFormLayout_itemAt2()
     Qt5xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
   }
 }
-
-/*
-[1]QLayoutItem * itemAt ( int row, ItemRole role ) const
-[2]virtual QLayoutItem * itemAt ( int index ) const
-*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 {
@@ -502,7 +479,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 }
 
 /*
-Qt::Alignment labelAlignment () const
+Qt::Alignment labelAlignment() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
 {
@@ -526,7 +503,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
 }
 
 /*
-QWidget * labelForField ( QWidget * field ) const
+QWidget * labelForField( QWidget * field ) const
 */
 void QFormLayout_labelForField1()
 {
@@ -540,7 +517,7 @@ void QFormLayout_labelForField1()
 }
 
 /*
-QWidget * labelForField ( QLayout * field ) const
+QWidget * labelForField( QLayout * field ) const
 */
 void QFormLayout_labelForField2()
 {
@@ -552,11 +529,6 @@ void QFormLayout_labelForField2()
     Qt5xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
   }
 }
-
-/*
-[1]QWidget * labelForField ( QWidget * field ) const
-[2]QWidget * labelForField ( QLayout * field ) const
-*/
 
 HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 {
@@ -575,7 +547,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
 }
 
 /*
-int rowCount () const
+int rowCount() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
 {
@@ -599,7 +571,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
 }
 
 /*
-RowWrapPolicy rowWrapPolicy () const
+QFormLayout::RowWrapPolicy rowWrapPolicy() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
 {
@@ -623,7 +595,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
 }
 
 /*
-void setFieldGrowthPolicy ( FieldGrowthPolicy policy )
+void setFieldGrowthPolicy( QFormLayout::FieldGrowthPolicy policy )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETFIELDGROWTHPOLICY )
 {
@@ -649,7 +621,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETFIELDGROWTHPOLICY )
 }
 
 /*
-void setFormAlignment ( Qt::Alignment alignment )
+void setFormAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETFORMALIGNMENT )
 {
@@ -675,7 +647,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETFORMALIGNMENT )
 }
 
 /*
-void setHorizontalSpacing ( int spacing )
+void setHorizontalSpacing( int spacing )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETHORIZONTALSPACING )
 {
@@ -701,7 +673,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETHORIZONTALSPACING )
 }
 
 /*
-void setItem ( int row, ItemRole role, QLayoutItem * item )
+void setItem( int row, QFormLayout::ItemRole role, QLayoutItem * item )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETITEM )
 {
@@ -727,7 +699,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETITEM )
 }
 
 /*
-void setLabelAlignment ( Qt::Alignment alignment )
+void setLabelAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETLABELALIGNMENT )
 {
@@ -753,7 +725,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETLABELALIGNMENT )
 }
 
 /*
-void setLayout ( int row, ItemRole role, QLayout * layout )
+void setLayout( int row, QFormLayout::ItemRole role, QLayout * layout )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETLAYOUT )
 {
@@ -779,7 +751,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETLAYOUT )
 }
 
 /*
-void setRowWrapPolicy ( RowWrapPolicy policy )
+void setRowWrapPolicy( QFormLayout::RowWrapPolicy policy )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETROWWRAPPOLICY )
 {
@@ -805,7 +777,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETROWWRAPPOLICY )
 }
 
 /*
-void setSpacing ( int spacing )
+void setSpacing( int spacing )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETSPACING )
 {
@@ -831,7 +803,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETSPACING )
 }
 
 /*
-void setVerticalSpacing ( int spacing )
+void setVerticalSpacing( int spacing )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETVERTICALSPACING )
 {
@@ -857,7 +829,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETVERTICALSPACING )
 }
 
 /*
-void setWidget ( int row, ItemRole role, QWidget * widget )
+void setWidget( int row, QFormLayout::ItemRole role, QWidget * widget )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETWIDGET )
 {
@@ -883,7 +855,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETWIDGET )
 }
 
 /*
-int spacing () const
+int spacing() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
 {
@@ -907,7 +879,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
 }
 
 /*
-int verticalSpacing () const
+int verticalSpacing() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
 {
@@ -931,7 +903,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
 }
 
 /*
-virtual void addItem ( QLayoutItem * item )
+virtual void addItem( QLayoutItem * item )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ADDITEM )
 {
@@ -957,7 +929,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDITEM )
 }
 
 /*
-virtual int count () const
+virtual int count() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
 {
@@ -981,7 +953,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
 }
 
 /*
-virtual Qt::Orientations expandingDirections () const
+virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
 {
@@ -1005,7 +977,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
 }
 
 /*
-virtual bool hasHeightForWidth () const
+virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
 {
@@ -1029,7 +1001,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
 }
 
 /*
-virtual int heightForWidth ( int width ) const
+virtual int heightForWidth( int width ) const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
 {
@@ -1053,7 +1025,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
 }
 
 /*
-virtual void invalidate ()
+virtual void invalidate()
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
 {
@@ -1079,7 +1051,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
 }
 
 /*
-virtual QSize minimumSize () const
+virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
 {
@@ -1104,7 +1076,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
 }
 
 /*
-virtual void setGeometry ( const QRect & rect )
+virtual void setGeometry( const QRect & rect )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETGEOMETRY )
 {
@@ -1130,7 +1102,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETGEOMETRY )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
 {
@@ -1155,7 +1127,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
 }
 
 /*
-virtual QLayoutItem * takeAt ( int index )
+virtual QLayoutItem * takeAt( int index )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
 {

@@ -29,7 +29,7 @@ void QCalendarWidgetSlots::activated( const QDate & date )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
-    PHB_ITEM pdate = Signals_return_object( (void *) &date, "QDATE" );
+    PHB_ITEM pdate = Qt5xHb::Signals_return_object( (void *) &date, "QDATE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdate );
 
@@ -47,7 +47,7 @@ void QCalendarWidgetSlots::clicked( const QDate & date )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
-    PHB_ITEM pdate = Signals_return_object( (void *) &date, "QDATE" );
+    PHB_ITEM pdate = Qt5xHb::Signals_return_object( (void *) &date, "QDATE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdate );
 

@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
+QGraphicsEllipseItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsEllipseItem_new1()
 {
@@ -71,7 +71,7 @@ void QGraphicsEllipseItem_new1()
 }
 
 /*
-QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
+QGraphicsEllipseItem( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
 void QGraphicsEllipseItem_new2()
 {
@@ -80,19 +80,13 @@ void QGraphicsEllipseItem_new2()
 }
 
 /*
-QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
+QGraphicsEllipseItem( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
 */
 void QGraphicsEllipseItem_new3()
 {
   QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(5) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
-[3]QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW )
 {
@@ -132,7 +126,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_DELETE )
 }
 
 /*
-QRectF rect () const
+QRectF rect() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
 {
@@ -157,7 +151,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
 }
 
 /*
-void setRect ( const QRectF & rect )
+void setRect( const QRectF & rect )
 */
 void QGraphicsEllipseItem_setRect1()
 {
@@ -172,7 +166,7 @@ void QGraphicsEllipseItem_setRect1()
 }
 
 /*
-void setRect ( qreal x, qreal y, qreal width, qreal height )
+void setRect( qreal x, qreal y, qreal width, qreal height )
 */
 void QGraphicsEllipseItem_setRect2()
 {
@@ -185,11 +179,6 @@ void QGraphicsEllipseItem_setRect2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setRect ( const QRectF & rect )
-[2]void setRect ( qreal x, qreal y, qreal width, qreal height )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
 {
@@ -208,7 +197,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
 }
 
 /*
-void setSpanAngle ( int angle )
+void setSpanAngle( int angle )
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSPANANGLE )
 {
@@ -234,7 +223,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSPANANGLE )
 }
 
 /*
-void setStartAngle ( int angle )
+void setStartAngle( int angle )
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
 {
@@ -260,7 +249,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
 }
 
 /*
-int spanAngle () const
+int spanAngle() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
 {
@@ -284,7 +273,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
 }
 
 /*
-int startAngle () const
+int startAngle() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
 {
@@ -308,7 +297,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
 {
@@ -333,7 +322,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_CONTAINS )
 {
@@ -357,7 +346,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_ISOBSCUREDBY )
 {
@@ -381,7 +370,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_ISOBSCUREDBY )
 }
 
 /*
-virtual QPainterPath opaqueArea () const
+virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_OPAQUEAREA )
 {
@@ -406,7 +395,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_PAINT )
 {
@@ -432,7 +421,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_PAINT )
 }
 
 /*
-virtual QPainterPath shape () const
+virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
 {
@@ -457,7 +446,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_TYPE )
 {

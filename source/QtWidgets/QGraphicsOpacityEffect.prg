@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-QGraphicsOpacityEffect ( QObject * parent = 0 )
+QGraphicsOpacityEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_DELETE )
 }
 
 /*
-qreal opacity () const
+qreal opacity() const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
 }
 
 /*
-QBrush opacityMask () const
+QBrush opacityMask() const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 }
 
 /*
-void setOpacity ( qreal opacity )
+void setOpacity( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 }
 
 /*
-void setOpacityMask ( const QBrush & mask )
+void setOpacityMask( const QBrush & mask )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
 {
