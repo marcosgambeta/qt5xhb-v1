@@ -73,18 +73,13 @@ void QOpenGLDebugMessage_new1()
 }
 
 /*
-QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
+QOpenGLDebugMessage( const QOpenGLDebugMessage & debugMessage )
 */
 void QOpenGLDebugMessage_new2()
 {
   QOpenGLDebugMessage * obj = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QOpenGLDebugMessage()
-[2]QOpenGLDebugMessage(const QOpenGLDebugMessage &debugMessage)
-*/
 
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 {
@@ -120,7 +115,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_DELETE )
 }
 
 /*
-void swap(QOpenGLDebugMessage &debugMessage)
+void swap( QOpenGLDebugMessage & debugMessage )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SWAP )
 {
@@ -146,7 +141,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SWAP )
 }
 
 /*
-Source source() const
+QOpenGLDebugMessage::Source source() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
 {
@@ -170,7 +165,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SOURCE )
 }
 
 /*
-Type type() const
+QOpenGLDebugMessage::Type type() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
 {
@@ -194,7 +189,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_TYPE )
 }
 
 /*
-Severity severity() const
+QOpenGLDebugMessage::Severity severity() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_SEVERITY )
 {
@@ -266,7 +261,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_MESSAGE )
 }
 
 /*
-static QOpenGLDebugMessage createApplicationMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
+static QOpenGLDebugMessage createApplicationMessage( const QString & text, GLuint id = 0, QOpenGLDebugMessage::Severity severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type = QOpenGLDebugMessage::OtherType )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE )
 {
@@ -286,7 +281,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE )
 }
 
 /*
-static QOpenGLDebugMessage createThirdPartyMessage(const QString &text,GLuint id = 0,Severity severity = NotificationSeverity,Type type = OtherType)
+static QOpenGLDebugMessage createThirdPartyMessage( const QString & text, GLuint id = 0, QOpenGLDebugMessage::Severity severity = QOpenGLDebugMessage::NotificationSeverity, QOpenGLDebugMessage::Type type = QOpenGLDebugMessage::OtherType )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE )
 {

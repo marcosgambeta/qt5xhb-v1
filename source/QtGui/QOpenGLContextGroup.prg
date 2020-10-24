@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_SHARES )
 }
 
 /*
-static QOpenGLContextGroup *currentContextGroup()
+static QOpenGLContextGroup * currentContextGroup()
 */
 HB_FUNC_STATIC( QOPENGLCONTEXTGROUP_CURRENTCONTEXTGROUP )
 {

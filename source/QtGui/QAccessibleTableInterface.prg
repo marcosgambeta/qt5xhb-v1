@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_DELETE )
 }
 
 /*
-virtual QAccessibleInterface *cellAt (int row, int column) const = 0
+virtual QAccessibleInterface * cellAt( int row, int column ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CELLAT )
 }
 
 /*
-virtual QAccessibleInterface *caption() const = 0
+virtual QAccessibleInterface * caption() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_CAPTION )
 }
 
 /*
-virtual QString columnDescription(int column) const = 0
+virtual QString columnDescription( int column ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_COLUMNDESCRIPTION )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWCOUNT )
 }
 
 /*
-virtual QString rowDescription(int row) const = 0
+virtual QString rowDescription( int row ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ROWDESCRIPTION )
 }
 
 /*
-virtual QList<QAccessibleInterface*> selectedCells() const = 0
+virtual QList<QAccessibleInterface *> selectedCells() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDCELLS )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTEDROWS )
 }
 
 /*
-virtual QAccessibleInterface *summary() const = 0
+virtual QAccessibleInterface * summary() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SUMMARY )
 }
 
 /*
-virtual bool isColumnSelected(int column) const = 0
+virtual bool isColumnSelected( int column ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISCOLUMNSELECTED )
 }
 
 /*
-virtual bool isRowSelected(int row) const = 0
+virtual bool isRowSelected( int row ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISROWSELECTED )
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_ISROWSELECTED )
 }
 
 /*
-virtual bool selectRow(int row) = 0
+virtual bool selectRow( int row ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTROW )
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTROW )
 }
 
 /*
-virtual bool selectColumn(int column) = 0
+virtual bool selectColumn( int column ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTCOLUMN )
 {
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_SELECTCOLUMN )
 }
 
 /*
-virtual bool unselectRow(int row) = 0
+virtual bool unselectRow( int row ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTROW )
 {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTROW )
 }
 
 /*
-virtual bool unselectColumn(int column) = 0
+virtual bool unselectColumn( int column ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEINTERFACE_UNSELECTCOLUMN )
 {

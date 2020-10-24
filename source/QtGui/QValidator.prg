@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QVALIDATOR_DELETE )
 }
 
 /*
-virtual void fixup ( QString & input ) const
+virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 }
 
 /*
-QLocale locale () const
+QLocale locale() const
 */
 HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 }
 
 /*
-void setLocale ( const QLocale & locale )
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 }
 
 /*
-virtual State validate ( QString & input, int & pos ) const = 0
+virtual QValidator::State validate( QString & input, int & pos ) const = 0
 */
 HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
 {

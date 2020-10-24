@@ -91,7 +91,7 @@ void QPictureIO_new1()
 }
 
 /*
-QPictureIO(QIODevice *ioDevice, const char *format)
+QPictureIO( QIODevice * ioDevice, const char * format )
 */
 void QPictureIO_new2()
 {
@@ -100,19 +100,13 @@ void QPictureIO_new2()
 }
 
 /*
-QPictureIO(const QString &fileName, const char *format)
+QPictureIO( const QString & fileName, const char * format )
 */
 void QPictureIO_new3()
 {
   QPictureIO * obj = new QPictureIO( PQSTRING(1), PCONSTCHAR(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPictureIO()
-[2]QPictureIO(QIODevice *ioDevice, const char *format)
-[3]QPictureIO(const QString &fileName, const char *format)
-*/
 
 HB_FUNC_STATIC( QPICTUREIO_NEW )
 {
@@ -152,7 +146,7 @@ HB_FUNC_STATIC( QPICTUREIO_DELETE )
 }
 
 /*
-const QPicture &picture() const
+const QPicture & picture() const
 */
 HB_FUNC_STATIC( QPICTUREIO_PICTURE )
 {
@@ -201,7 +195,7 @@ HB_FUNC_STATIC( QPICTUREIO_STATUS )
 }
 
 /*
-const char *format() const
+const char * format() const
 */
 HB_FUNC_STATIC( QPICTUREIO_FORMAT )
 {
@@ -225,7 +219,7 @@ HB_FUNC_STATIC( QPICTUREIO_FORMAT )
 }
 
 /*
-QIODevice *ioDevice() const
+QIODevice * ioDevice() const
 */
 HB_FUNC_STATIC( QPICTUREIO_IODEVICE )
 {
@@ -322,7 +316,7 @@ HB_FUNC_STATIC( QPICTUREIO_DESCRIPTION )
 }
 
 /*
-const char *parameters() const
+const char * parameters() const
 */
 HB_FUNC_STATIC( QPICTUREIO_PARAMETERS )
 {
@@ -370,7 +364,7 @@ HB_FUNC_STATIC( QPICTUREIO_GAMMA )
 }
 
 /*
-void setPicture(const QPicture &)
+void setPicture( const QPicture & )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETPICTURE )
 {
@@ -396,7 +390,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETPICTURE )
 }
 
 /*
-void setStatus(int)
+void setStatus( int )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETSTATUS )
 {
@@ -422,7 +416,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETSTATUS )
 }
 
 /*
-void setFormat ( const char * )
+void setFormat( const char * )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETFORMAT )
 {
@@ -448,7 +442,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETFORMAT )
 }
 
 /*
-void setIODevice(QIODevice *)
+void setIODevice( QIODevice * )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETIODEVICE )
 {
@@ -474,7 +468,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETIODEVICE )
 }
 
 /*
-void setFileName(const QString &)
+void setFileName( const QString & )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETFILENAME )
 {
@@ -500,7 +494,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETFILENAME )
 }
 
 /*
-void setQuality(int)
+void setQuality( int )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETQUALITY )
 {
@@ -526,7 +520,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETQUALITY )
 }
 
 /*
-void setDescription(const QString &)
+void setDescription( const QString & )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETDESCRIPTION )
 {
@@ -552,7 +546,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETDESCRIPTION )
 }
 
 /*
-void setParameters ( const char * )
+void setParameters( const char * )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETPARAMETERS )
 {
@@ -578,7 +572,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETPARAMETERS )
 }
 
 /*
-void setGamma(float)
+void setGamma( float )
 */
 HB_FUNC_STATIC( QPICTUREIO_SETGAMMA )
 {
@@ -652,7 +646,7 @@ HB_FUNC_STATIC( QPICTUREIO_WRITE )
 }
 
 /*
-static QByteArray pictureFormat(const QString &fileName)
+static QByteArray pictureFormat( const QString & fileName )
 */
 void QPictureIO_pictureFormat1()
 {
@@ -662,7 +656,7 @@ void QPictureIO_pictureFormat1()
 }
 
 /*
-static QByteArray pictureFormat(QIODevice *)
+static QByteArray pictureFormat( QIODevice * )
 */
 void QPictureIO_pictureFormat2()
 {
@@ -670,11 +664,6 @@ void QPictureIO_pictureFormat2()
   QByteArray * ptr = new QByteArray( QPictureIO::pictureFormat( PQIODEVICE(1) ) );
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 }
-
-/*
-[1]static QByteArray pictureFormat(const QString &fileName)
-[2]static QByteArray pictureFormat(QIODevice *)
-*/
 
 HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT )
 {

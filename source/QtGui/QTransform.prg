@@ -108,7 +108,7 @@ RETURN
 #include <QtGui/QPainterPath>
 
 /*
-QTransform(Qt::Initialization)
+QTransform( Qt::Initialization )
 */
 void QTransform_new1()
 {
@@ -126,7 +126,7 @@ void QTransform_new2()
 }
 
 /*
-QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
+QTransform( qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33 = 1.0 )
 */
 void QTransform_new3()
 {
@@ -135,7 +135,7 @@ void QTransform_new3()
 }
 
 /*
-QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
+QTransform( qreal h11, qreal h12, qreal h21, qreal h22, qreal dx, qreal dy )
 */
 void QTransform_new4()
 {
@@ -144,7 +144,7 @@ void QTransform_new4()
 }
 
 /*
-QTransform(const QMatrix &mtx)
+QTransform( const QMatrix & mtx )
 */
 void QTransform_new5()
 {
@@ -153,22 +153,13 @@ void QTransform_new5()
 }
 
 /*
-QTransform(const QTransform &other)
+QTransform( const QTransform & other )
 */
 void QTransform_new6()
 {
   QTransform * obj = new QTransform( *PQTRANSFORM(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTransform(Qt::Initialization)
-[2]QTransform()
-[3]QTransform(qreal h11, qreal h12, qreal h13,qreal h21, qreal h22, qreal h23,qreal h31, qreal h32, qreal h33 = 1.0)
-[4]QTransform(qreal h11, qreal h12, qreal h21,qreal h22, qreal dx, qreal dy)
-[5]QTransform(const QMatrix &mtx)
-[6]QTransform(const QTransform &other)
-*/
 
 HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
@@ -364,7 +355,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
 }
 
 /*
-TransformationType type() const
+QTransform::TransformationType type() const
 */
 HB_FUNC_STATIC( QTRANSFORM_TYPE )
 {
@@ -700,7 +691,7 @@ HB_FUNC_STATIC( QTRANSFORM_DY )
 }
 
 /*
-void setMatrix(qreal m11, qreal m12, qreal m13,qreal m21, qreal m22, qreal m23,qreal m31, qreal m32, qreal m33)
+void setMatrix( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
 */
 HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
 {
@@ -726,7 +717,7 @@ HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
 }
 
 /*
-QTransform inverted(bool *invertible = 0) const
+QTransform inverted( bool * invertible = 0 ) const
 */
 HB_FUNC_STATIC( QTRANSFORM_INVERTED )
 {
@@ -803,7 +794,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSPOSED )
 }
 
 /*
-QTransform &translate(qreal dx, qreal dy)
+QTransform & translate( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QTRANSFORM_TRANSLATE )
 {
@@ -828,7 +819,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSLATE )
 }
 
 /*
-QTransform &scale(qreal sx, qreal sy)
+QTransform & scale( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QTRANSFORM_SCALE )
 {
@@ -853,7 +844,7 @@ HB_FUNC_STATIC( QTRANSFORM_SCALE )
 }
 
 /*
-QTransform &shear(qreal sh, qreal sv)
+QTransform & shear( qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QTRANSFORM_SHEAR )
 {
@@ -878,7 +869,7 @@ HB_FUNC_STATIC( QTRANSFORM_SHEAR )
 }
 
 /*
-QTransform &rotate(qreal a, Qt::Axis axis = Qt::ZAxis)
+QTransform & rotate( qreal a, Qt::Axis axis = Qt::ZAxis )
 */
 HB_FUNC_STATIC( QTRANSFORM_ROTATE )
 {
@@ -903,7 +894,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATE )
 }
 
 /*
-QTransform &rotateRadians(qreal a, Qt::Axis axis = Qt::ZAxis)
+QTransform & rotateRadians( qreal a, Qt::Axis axis = Qt::ZAxis )
 */
 HB_FUNC_STATIC( QTRANSFORM_ROTATERADIANS )
 {
@@ -954,7 +945,7 @@ HB_FUNC_STATIC( QTRANSFORM_RESET )
 }
 
 /*
-QPoint map(const QPoint &p) const
+QPoint map( const QPoint & p ) const
 */
 void QTransform_map1()
 {
@@ -968,7 +959,7 @@ void QTransform_map1()
 }
 
 /*
-QPointF map(const QPointF &p) const
+QPointF map( const QPointF & p ) const
 */
 void QTransform_map2()
 {
@@ -982,7 +973,7 @@ void QTransform_map2()
 }
 
 /*
-QLine map(const QLine &l) const
+QLine map( const QLine & l ) const
 */
 void QTransform_map3()
 {
@@ -996,7 +987,7 @@ void QTransform_map3()
 }
 
 /*
-QLineF map(const QLineF &l) const
+QLineF map( const QLineF & l ) const
 */
 void QTransform_map4()
 {
@@ -1010,7 +1001,7 @@ void QTransform_map4()
 }
 
 /*
-QPolygonF map(const QPolygonF &a) const
+QPolygonF map( const QPolygonF & a ) const
 */
 void QTransform_map5()
 {
@@ -1024,7 +1015,7 @@ void QTransform_map5()
 }
 
 /*
-QPolygon map(const QPolygon &a) const
+QPolygon map( const QPolygon & a ) const
 */
 void QTransform_map6()
 {
@@ -1038,7 +1029,7 @@ void QTransform_map6()
 }
 
 /*
-QRegion map(const QRegion &r) const
+QRegion map( const QRegion & r ) const
 */
 void QTransform_map7()
 {
@@ -1052,7 +1043,7 @@ void QTransform_map7()
 }
 
 /*
-QPainterPath map(const QPainterPath &p) const
+QPainterPath map( const QPainterPath & p ) const
 */
 void QTransform_map8()
 {
@@ -1066,7 +1057,7 @@ void QTransform_map8()
 }
 
 /*
-void map(int x, int y, int *tx, int *ty) const
+void map( int x, int y, int * tx, int * ty ) const
 */
 void QTransform_map9()
 {
@@ -1085,7 +1076,7 @@ void QTransform_map9()
 }
 
 /*
-void map(qreal x, qreal y, qreal *tx, qreal *ty) const
+void map( qreal x, qreal y, qreal * tx, qreal * ty ) const
 */
 void QTransform_map10()
 {
@@ -1102,19 +1093,6 @@ void QTransform_map10()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]QPoint map(const QPoint &p) const
-[2]QPointF map(const QPointF &p) const
-[3]QLine map(const QLine &l) const
-[4]QLineF map(const QLineF &l) const
-[5]QPolygonF map(const QPolygonF &a) const
-[6]QPolygon map(const QPolygon &a) const
-[7]QRegion map(const QRegion &r) const
-[8]QPainterPath map(const QPainterPath &p) const
-[9]void map(int x, int y, int *tx, int *ty) const
-[10]void map(qreal x, qreal y, qreal *tx, qreal *ty) const
-*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAP )
 {
@@ -1165,7 +1143,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 }
 
 /*
-QPolygon mapToPolygon(const QRect &r) const
+QPolygon mapToPolygon( const QRect & r ) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
 {
@@ -1190,7 +1168,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
 }
 
 /*
-QRect mapRect(const QRect &) const
+QRect mapRect( const QRect & ) const
 */
 void QTransform_mapRect1()
 {
@@ -1204,7 +1182,7 @@ void QTransform_mapRect1()
 }
 
 /*
-QRectF mapRect(const QRectF &) const
+QRectF mapRect( const QRectF & ) const
 */
 void QTransform_mapRect2()
 {
@@ -1216,11 +1194,6 @@ void QTransform_mapRect2()
     Qt5xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRect mapRect(const QRect &) const
-[2]QRectF mapRect(const QRectF &) const
-*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 {
@@ -1239,7 +1212,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 }
 
 /*
-const QMatrix &toAffine() const
+const QMatrix & toAffine() const
 */
 HB_FUNC_STATIC( QTRANSFORM_TOAFFINE )
 {
@@ -1264,7 +1237,7 @@ HB_FUNC_STATIC( QTRANSFORM_TOAFFINE )
 }
 
 /*
-static bool squareToQuad(const QPolygonF &square, QTransform &result)
+static bool squareToQuad( const QPolygonF & square, QTransform & result )
 */
 HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
 {
@@ -1283,7 +1256,7 @@ HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
 }
 
 /*
-static bool quadToSquare(const QPolygonF &quad, QTransform &result)
+static bool quadToSquare( const QPolygonF & quad, QTransform & result )
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
 {
@@ -1302,7 +1275,7 @@ HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
 }
 
 /*
-static bool quadToQuad(const QPolygonF &one,const QPolygonF &two,QTransform &result)
+static bool quadToQuad( const QPolygonF & one, const QPolygonF & two, QTransform & result )
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 {
@@ -1321,7 +1294,7 @@ HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 }
 
 /*
-static QTransform fromTranslate(qreal dx, qreal dy)
+static QTransform fromTranslate( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
 {
@@ -1341,7 +1314,7 @@ HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
 }
 
 /*
-static QTransform fromScale(qreal dx, qreal dy)
+static QTransform fromScale( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
 {

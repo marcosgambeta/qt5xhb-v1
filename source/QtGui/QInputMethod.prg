@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_LOCALE )
 }
 
 /*
-void setInputItemTransform(const QTransform & transform)
+void setInputItemTransform( const QTransform & transform )
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_SETINPUTITEMTRANSFORM )
 }
 
 /*
-void setVisible(bool visible)
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QINPUTMETHOD_SETVISIBLE )
 {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_HIDE )
 }
 
 /*
-void invokeAction(Action a, int cursorPosition)
+void invokeAction( QInputMethod::Action a, int cursorPosition )
 */
 HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_SHOW )
 }
 
 /*
-void update(Qt::InputMethodQueries queries)
+void update( Qt::InputMethodQueries queries )
 */
 HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
 {

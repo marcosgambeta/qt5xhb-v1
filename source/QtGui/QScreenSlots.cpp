@@ -29,7 +29,7 @@ void QScreenSlots::geometryChanged( const QRect & geometry )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCREEN" );
-    PHB_ITEM pgeometry = Signals_return_object( (void *) &geometry, "QRECT" );
+    PHB_ITEM pgeometry = Qt5xHb::Signals_return_object( (void *) &geometry, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgeometry );
 
@@ -47,7 +47,7 @@ void QScreenSlots::physicalSizeChanged( const QSizeF & size )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCREEN" );
-    PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZEF" );
+    PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZEF" );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );
 
@@ -101,7 +101,7 @@ void QScreenSlots::virtualGeometryChanged( const QRect & rect )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCREEN" );
-    PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECT" );
+    PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
 

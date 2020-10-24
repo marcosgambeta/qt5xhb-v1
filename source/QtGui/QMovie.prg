@@ -95,7 +95,7 @@ RETURN
 #include <QtGui/QPixmap>
 
 /*
-QMovie ( QObject * parent = 0 )
+QMovie( QObject * parent = 0 )
 */
 void QMovie_new1()
 {
@@ -104,7 +104,7 @@ void QMovie_new1()
 }
 
 /*
-QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
 void QMovie_new2()
 {
@@ -113,19 +113,13 @@ void QMovie_new2()
 }
 
 /*
-QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
 void QMovie_new3()
 {
   QMovie * obj = new QMovie( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QMovie ( QObject * parent = 0 )
-[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-[3]QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QMOVIE_NEW )
 {
@@ -167,7 +161,7 @@ HB_FUNC_STATIC( QMOVIE_DELETE )
 }
 
 /*
-QColor backgroundColor () const
+QColor backgroundColor() const
 */
 HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
 {
@@ -192,7 +186,7 @@ HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
 }
 
 /*
-CacheMode cacheMode () const
+QMovie::CacheMode cacheMode() const
 */
 HB_FUNC_STATIC( QMOVIE_CACHEMODE )
 {
@@ -216,7 +210,7 @@ HB_FUNC_STATIC( QMOVIE_CACHEMODE )
 }
 
 /*
-int currentFrameNumber () const
+int currentFrameNumber() const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
 {
@@ -240,7 +234,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
 }
 
 /*
-QImage currentImage () const
+QImage currentImage() const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
 {
@@ -265,7 +259,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
 }
 
 /*
-QPixmap currentPixmap () const
+QPixmap currentPixmap() const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
 {
@@ -290,7 +284,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
 }
 
 /*
-QIODevice * device () const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QMOVIE_DEVICE )
 {
@@ -315,7 +309,7 @@ HB_FUNC_STATIC( QMOVIE_DEVICE )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QMOVIE_FILENAME )
 {
@@ -339,7 +333,7 @@ HB_FUNC_STATIC( QMOVIE_FILENAME )
 }
 
 /*
-QByteArray format () const
+QByteArray format() const
 */
 HB_FUNC_STATIC( QMOVIE_FORMAT )
 {
@@ -364,7 +358,7 @@ HB_FUNC_STATIC( QMOVIE_FORMAT )
 }
 
 /*
-int frameCount () const
+int frameCount() const
 */
 HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
 {
@@ -388,7 +382,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
 }
 
 /*
-QRect frameRect () const
+QRect frameRect() const
 */
 HB_FUNC_STATIC( QMOVIE_FRAMERECT )
 {
@@ -413,7 +407,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMERECT )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QMOVIE_ISVALID )
 {
@@ -437,7 +431,7 @@ HB_FUNC_STATIC( QMOVIE_ISVALID )
 }
 
 /*
-bool jumpToFrame ( int frameNumber )
+bool jumpToFrame( int frameNumber )
 */
 HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
 {
@@ -461,7 +455,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
 }
 
 /*
-int loopCount () const
+int loopCount() const
 */
 HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
 {
@@ -485,7 +479,7 @@ HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
 }
 
 /*
-int nextFrameDelay () const
+int nextFrameDelay() const
 */
 HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
 {
@@ -509,7 +503,7 @@ HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
 }
 
 /*
-QSize scaledSize ()
+QSize scaledSize()
 */
 HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
 {
@@ -534,7 +528,7 @@ HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
 }
 
 /*
-void setBackgroundColor ( const QColor & color )
+void setBackgroundColor( const QColor & color )
 */
 HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
 {
@@ -560,7 +554,7 @@ HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
 }
 
 /*
-void setCacheMode ( CacheMode mode )
+void setCacheMode( QMovie::CacheMode mode )
 */
 HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
 {
@@ -586,7 +580,7 @@ HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
 }
 
 /*
-void setDevice ( QIODevice * device )
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QMOVIE_SETDEVICE )
 {
@@ -612,7 +606,7 @@ HB_FUNC_STATIC( QMOVIE_SETDEVICE )
 }
 
 /*
-void setFileName ( const QString & fileName )
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QMOVIE_SETFILENAME )
 {
@@ -638,7 +632,7 @@ HB_FUNC_STATIC( QMOVIE_SETFILENAME )
 }
 
 /*
-void setFormat ( const QByteArray & format )
+void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QMOVIE_SETFORMAT )
 {
@@ -664,7 +658,7 @@ HB_FUNC_STATIC( QMOVIE_SETFORMAT )
 }
 
 /*
-void setScaledSize ( const QSize & size )
+void setScaledSize( const QSize & size )
 */
 HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
 {
@@ -690,7 +684,7 @@ HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
 }
 
 /*
-int speed () const
+int speed() const
 */
 HB_FUNC_STATIC( QMOVIE_SPEED )
 {
@@ -714,7 +708,7 @@ HB_FUNC_STATIC( QMOVIE_SPEED )
 }
 
 /*
-MovieState state () const
+QMovie::MovieState state() const
 */
 HB_FUNC_STATIC( QMOVIE_STATE )
 {
@@ -738,7 +732,7 @@ HB_FUNC_STATIC( QMOVIE_STATE )
 }
 
 /*
-bool jumpToNextFrame ()
+bool jumpToNextFrame()
 */
 HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 {
@@ -762,7 +756,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 }
 
 /*
-void setPaused ( bool paused )
+void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 {
@@ -788,7 +782,7 @@ HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 }
 
 /*
-void setSpeed ( int percentSpeed )
+void setSpeed( int percentSpeed )
 */
 HB_FUNC_STATIC( QMOVIE_SETSPEED )
 {
@@ -814,7 +808,7 @@ HB_FUNC_STATIC( QMOVIE_SETSPEED )
 }
 
 /*
-void start ()
+void start()
 */
 HB_FUNC_STATIC( QMOVIE_START )
 {
@@ -840,7 +834,7 @@ HB_FUNC_STATIC( QMOVIE_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QMOVIE_STOP )
 {

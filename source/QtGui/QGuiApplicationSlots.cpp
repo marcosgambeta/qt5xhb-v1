@@ -29,7 +29,7 @@ void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
-    PHB_ITEM pfocusObject = Signals_return_qobject( (QObject *) focusObject, "QOBJECT" );
+    PHB_ITEM pfocusObject = Qt5xHb::Signals_return_qobject( (QObject *) focusObject, "QOBJECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfocusObject );
 
@@ -47,7 +47,7 @@ void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
-    PHB_ITEM pfocusWindow = Signals_return_qobject( (QObject *) focusWindow, "QWINDOW" );
+    PHB_ITEM pfocusWindow = Qt5xHb::Signals_return_qobject( (QObject *) focusWindow, "QWINDOW" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfocusWindow );
 
@@ -97,7 +97,7 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
-    PHB_ITEM pscreen = Signals_return_qobject( (QObject *) screen, "QSCREEN" );
+    PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject( (QObject *) screen, "QSCREEN" );
 
     hb_vmEvalBlockV( cb, 2, psender, pscreen );
 

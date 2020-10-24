@@ -81,18 +81,13 @@ void QTextTableCell_new1()
 }
 
 /*
-QTextTableCell(const QTextTableCell &o)
+QTextTableCell( const QTextTableCell & o )
 */
 void QTextTableCell_new2()
 {
   QTextTableCell * obj = new QTextTableCell( *PQTEXTTABLECELL(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextTableCell()
-[2]QTextTableCell(const QTextTableCell &o)
-*/
 
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {
@@ -128,7 +123,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_DELETE )
 }
 
 /*
-void setFormat(const QTextCharFormat &format)
+void setFormat( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
 {

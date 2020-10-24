@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
 }
 
 /*
-void setWidth(qreal width)
+void setWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
 }
 
 /*
-void setHeight(qreal height)
+void setHeight( qreal height )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
 }
 
 /*
-int QTextImageFormat::quality() const
+int quality() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_QUALITY )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_QUALITY )
 }
 
 /*
-void QTextImageFormat::setQuality(int quality = ...)
+void setQuality( int quality = 100 )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETQUALITY )
 {

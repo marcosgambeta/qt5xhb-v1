@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QFocusEvent ( Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
+QFocusEvent( QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 }
 
 /*
-bool gotFocus () const
+bool gotFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 }
 
 /*
-bool lostFocus () const
+bool lostFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 }
 
 /*
-Qt::FocusReason reason () const
+Qt::FocusReason reason() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_REASON )
 {

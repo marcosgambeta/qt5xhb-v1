@@ -93,7 +93,7 @@ void QPageSize_new1()
 }
 
 /*
-explicit QPageSize(PageSizeId pageSizeId)
+QPageSize( QPageSize::PageSizeId pageSizeId )
 */
 void QPageSize_new2()
 {
@@ -104,7 +104,7 @@ void QPageSize_new2()
 }
 
 /*
-explicit QPageSize(const QSize &pointSize, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
+QPageSize( const QSize & pointSize, const QString & name = QString(), QPageSize::SizeMatchPolicy matchPolicy = QPageSize::FuzzyMatch )
 */
 void QPageSize_new3()
 {
@@ -115,7 +115,7 @@ void QPageSize_new3()
 }
 
 /*
-explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
+QPageSize( const QSizeF & size, QPageSize::Unit units, const QString & name = QString(), QPageSize::SizeMatchPolicy matchPolicy = QPageSize::FuzzyMatch )
 */
 void QPageSize_new4()
 {
@@ -126,7 +126,7 @@ void QPageSize_new4()
 }
 
 /*
-QPageSize(const QPageSize &other)
+QPageSize( const QPageSize & other )
 */
 void QPageSize_new5()
 {
@@ -135,14 +135,6 @@ void QPageSize_new5()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPageSize()
-[2]explicit QPageSize(PageSizeId pageSizeId)
-[3]explicit QPageSize(const QSize &pointSize, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
-[4]explicit QPageSize(const QSizeF &size, Unit units, const QString &name = QString(), SizeMatchPolicy matchPolicy = FuzzyMatch)
-[5]QPageSize(const QPageSize &other)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_NEW )
 {
@@ -192,7 +184,7 @@ HB_FUNC_STATIC( QPAGESIZE_DELETE )
 }
 
 /*
-void swap(QPageSize &other)
+void swap( QPageSize & other )
 */
 HB_FUNC_STATIC( QPAGESIZE_SWAP )
 {
@@ -220,7 +212,7 @@ HB_FUNC_STATIC( QPAGESIZE_SWAP )
 }
 
 /*
-bool isEquivalentTo(const QPageSize &other) const
+bool isEquivalentTo( const QPageSize & other ) const
 */
 HB_FUNC_STATIC( QPAGESIZE_ISEQUIVALENTTO )
 {
@@ -287,7 +279,7 @@ void QPageSize_key1()
 }
 
 /*
-static QString key(PageSizeId pageSizeId)
+static QString key( QPageSize::PageSizeId pageSizeId )
 */
 void QPageSize_key2()
 {
@@ -296,11 +288,6 @@ void QPageSize_key2()
   RQSTRING( QPageSize::key( (QPageSize::PageSizeId) hb_parni(1) ) );
 #endif
 }
-
-/*
-[1]QString key() const
-[2]static QString key(PageSizeId pageSizeId)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_KEY )
 {
@@ -334,7 +321,7 @@ void QPageSize_name1()
 }
 
 /*
-static QString name(PageSizeId pageSizeId)
+static QString name( QPageSize::PageSizeId pageSizeId )
 */
 void QPageSize_name2()
 {
@@ -343,11 +330,6 @@ void QPageSize_name2()
   RQSTRING( QPageSize::name( (QPageSize::PageSizeId) hb_parni(1) ) );
 #endif
 }
-
-/*
-[1]QString name() const
-[2]static QString name(PageSizeId pageSizeId)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_NAME )
 {
@@ -366,7 +348,7 @@ HB_FUNC_STATIC( QPAGESIZE_NAME )
 }
 
 /*
-PageSizeId id() const
+QPageSize::PageSizeId id() const
 */
 void QPageSize_id1()
 {
@@ -381,7 +363,7 @@ void QPageSize_id1()
 }
 
 /*
-static PageSizeId id(const QSize &pointSize, SizeMatchPolicy matchPolicy = FuzzyMatch)
+static QPageSize::PageSizeId id( const QSize & pointSize, QPageSize::SizeMatchPolicy matchPolicy = QPageSize::FuzzyMatch )
 */
 void QPageSize_id2()
 {
@@ -392,7 +374,7 @@ void QPageSize_id2()
 }
 
 /*
-static PageSizeId id(const QSizeF &size, Unit units, SizeMatchPolicy matchPolicy = FuzzyMatch)
+static QPageSize::PageSizeId id( const QSizeF & size, QPageSize::Unit units, QPageSize::SizeMatchPolicy matchPolicy = QPageSize::FuzzyMatch )
 */
 void QPageSize_id3()
 {
@@ -403,7 +385,7 @@ void QPageSize_id3()
 }
 
 /*
-static PageSizeId id(int windowsId)
+static QPageSize::PageSizeId id( int windowsId )
 */
 void QPageSize_id4()
 {
@@ -412,13 +394,6 @@ void QPageSize_id4()
   RENUM( QPageSize::id( PINT(1) ) );
 #endif
 }
-
-/*
-[1]PageSizeId id() const
-[2]static PageSizeId id(const QSize &pointSize, SizeMatchPolicy matchPolicy = FuzzyMatch)
-[3]static PageSizeId id(const QSizeF &size, Unit units, SizeMatchPolicy matchPolicy = FuzzyMatch)
-[4]static PageSizeId id(int windowsId)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_ID )
 {
@@ -460,7 +435,7 @@ void QPageSize_windowsId1()
 }
 
 /*
-static int windowsId(PageSizeId pageSizeId)
+static int windowsId( QPageSize::PageSizeId pageSizeId )
 */
 void QPageSize_windowsId2()
 {
@@ -469,11 +444,6 @@ void QPageSize_windowsId2()
   RINT( QPageSize::windowsId( (QPageSize::PageSizeId) hb_parni(1) ) );
 #endif
 }
-
-/*
-[1]int windowsId() const
-[2]static int windowsId(PageSizeId pageSizeId)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_WINDOWSID )
 {
@@ -508,7 +478,7 @@ void QPageSize_definitionSize1()
 }
 
 /*
-static QSizeF definitionSize(PageSizeId pageSizeId)
+static QSizeF definitionSize( QPageSize::PageSizeId pageSizeId )
 */
 void QPageSize_definitionSize2()
 {
@@ -518,11 +488,6 @@ void QPageSize_definitionSize2()
   Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #endif
 }
-
-/*
-[1]QSizeF definitionSize() const
-[2]static QSizeF definitionSize(PageSizeId pageSizeId)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE )
 {
@@ -541,7 +506,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE )
 }
 
 /*
-Unit definitionUnits() const
+QPageSize::Unit definitionUnits() const
 */
 void QPageSize_definitionUnits1()
 {
@@ -556,7 +521,7 @@ void QPageSize_definitionUnits1()
 }
 
 /*
-static Unit definitionUnits(PageSizeId pageSizeId)
+static QPageSize::Unit definitionUnits( QPageSize::PageSizeId pageSizeId )
 */
 void QPageSize_definitionUnits2()
 {
@@ -565,11 +530,6 @@ void QPageSize_definitionUnits2()
   RENUM( QPageSize::definitionUnits( (QPageSize::PageSizeId) hb_parni(1) ) );
 #endif
 }
-
-/*
-[1]Unit definitionUnits() const
-[2]static Unit definitionUnits(PageSizeId pageSizeId)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_DEFINITIONUNITS )
 {
@@ -588,7 +548,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONUNITS )
 }
 
 /*
-QSizeF size(Unit units) const
+QSizeF size( QPageSize::Unit units ) const
 */
 void QPageSize_size1()
 {
@@ -604,7 +564,7 @@ void QPageSize_size1()
 }
 
 /*
-static QSizeF size(PageSizeId pageSizeId, Unit units)
+static QSizeF size( QPageSize::PageSizeId pageSizeId, QPageSize::Unit units )
 */
 void QPageSize_size2()
 {
@@ -614,11 +574,6 @@ void QPageSize_size2()
   Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
 #endif
 }
-
-/*
-[1]QSizeF size(Unit units) const
-[2]static QSizeF size(PageSizeId pageSizeId, Unit units)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_SIZE )
 {
@@ -653,7 +608,7 @@ void QPageSize_sizePoints1()
 }
 
 /*
-static QSize sizePoints(PageSizeId pageSizeId)
+static QSize sizePoints( QPageSize::PageSizeId pageSizeId )
 */
 void QPageSize_sizePoints2()
 {
@@ -663,11 +618,6 @@ void QPageSize_sizePoints2()
   Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #endif
 }
-
-/*
-[1]QSize sizePoints() const
-[2]static QSize sizePoints(PageSizeId pageSizeId)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS )
 {
@@ -686,7 +636,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS )
 }
 
 /*
-QSize sizePixels(int resolution) const
+QSize sizePixels( int resolution ) const
 */
 void QPageSize_sizePixels1()
 {
@@ -702,7 +652,7 @@ void QPageSize_sizePixels1()
 }
 
 /*
-static QSize sizePixels(PageSizeId pageSizeId, int resolution)
+static QSize sizePixels( QPageSize::PageSizeId pageSizeId, int resolution )
 */
 void QPageSize_sizePixels2()
 {
@@ -712,11 +662,6 @@ void QPageSize_sizePixels2()
   Qt5xHb::createReturnClass( ptr, "QSIZE", true );
 #endif
 }
-
-/*
-[1]QSize sizePixels(int resolution) const
-[2]static QSize sizePixels(PageSizeId pageSizeId, int resolution)
-*/
 
 HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS )
 {
@@ -735,7 +680,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS )
 }
 
 /*
-QRectF rect(Unit units) const
+QRectF rect( QPageSize::Unit units ) const
 */
 HB_FUNC_STATIC( QPAGESIZE_RECT )
 {
@@ -789,7 +734,7 @@ HB_FUNC_STATIC( QPAGESIZE_RECTPOINTS )
 }
 
 /*
-QRect rectPixels(int resolution) const
+QRect rectPixels( int resolution ) const
 */
 HB_FUNC_STATIC( QPAGESIZE_RECTPIXELS )
 {

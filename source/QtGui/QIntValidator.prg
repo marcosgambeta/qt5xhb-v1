@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-QIntValidator(QObject * parent = 0)
+QIntValidator( QObject * parent = 0 )
 */
 void QIntValidator_new1()
 {
@@ -70,18 +70,13 @@ void QIntValidator_new1()
 }
 
 /*
-QIntValidator(int minimum, int maximum, QObject * parent = 0)
+QIntValidator( int minimum, int maximum, QObject * parent = 0 )
 */
 void QIntValidator_new2()
 {
   QIntValidator * obj = new QIntValidator( PINT(1), PINT(2), OPQOBJECT(3,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QIntValidator(QObject * parent = 0)
-[2]QIntValidator(int minimum, int maximum, QObject * parent = 0)
-*/
 
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {
@@ -143,7 +138,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 }
 
 /*
-virtual void fixup(QString & input) const
+virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 {
@@ -196,7 +191,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_LOCALE )
 }
 
 /*
-void setBottom(int)
+void setBottom( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
@@ -222,7 +217,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 }
 
 /*
-void setLocale(const QLocale & locale)
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETLOCALE )
 {
@@ -248,7 +243,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETLOCALE )
 }
 
 /*
-virtual void setRange(int bottom, int top)
+virtual void setRange( int bottom, int top )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
@@ -274,7 +269,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 }
 
 /*
-void setTop(int)
+void setTop( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {
@@ -324,7 +319,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 }
 
 /*
-virtual State validate(QString & input, int & pos) const = 0
+virtual QValidator::State validate( QString & input, int & pos ) const = 0
 */
 HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
 {

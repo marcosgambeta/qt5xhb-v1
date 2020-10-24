@@ -69,7 +69,7 @@ RETURN
 #endif
 
 /*
-QFontInfo ( const QFont & font )
+QFontInfo( const QFont & font )
 */
 void QFontInfo_new1()
 {
@@ -78,18 +78,13 @@ void QFontInfo_new1()
 }
 
 /*
-QFontInfo ( const QFontInfo & fi )
+QFontInfo( const QFontInfo & fi )
 */
 void QFontInfo_new2()
 {
   QFontInfo * obj = new QFontInfo( *PQFONTINFO(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QFontInfo ( const QFont & font )
-[2]QFontInfo ( const QFontInfo & fi )
-*/
 
 HB_FUNC_STATIC( QFONTINFO_NEW )
 {
@@ -125,7 +120,7 @@ HB_FUNC_STATIC( QFONTINFO_DELETE )
 }
 
 /*
-bool bold () const
+bool bold() const
 */
 HB_FUNC_STATIC( QFONTINFO_BOLD )
 {
@@ -149,7 +144,7 @@ HB_FUNC_STATIC( QFONTINFO_BOLD )
 }
 
 /*
-bool exactMatch () const
+bool exactMatch() const
 */
 HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 {
@@ -173,7 +168,7 @@ HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 }
 
 /*
-QString family () const
+QString family() const
 */
 HB_FUNC_STATIC( QFONTINFO_FAMILY )
 {
@@ -197,7 +192,7 @@ HB_FUNC_STATIC( QFONTINFO_FAMILY )
 }
 
 /*
-bool fixedPitch () const
+bool fixedPitch() const
 */
 HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
 {
@@ -221,7 +216,7 @@ HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
 }
 
 /*
-bool italic () const
+bool italic() const
 */
 HB_FUNC_STATIC( QFONTINFO_ITALIC )
 {
@@ -245,7 +240,7 @@ HB_FUNC_STATIC( QFONTINFO_ITALIC )
 }
 
 /*
-int pixelSize () const
+int pixelSize() const
 */
 HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
 {
@@ -269,7 +264,7 @@ HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
 }
 
 /*
-int pointSize () const
+int pointSize() const
 */
 HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
 {
@@ -293,7 +288,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
 }
 
 /*
-qreal pointSizeF () const
+qreal pointSizeF() const
 */
 HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
 {
@@ -317,7 +312,7 @@ HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
 }
 
 /*
-bool rawMode () const
+bool rawMode() const
 */
 HB_FUNC_STATIC( QFONTINFO_RAWMODE )
 {
@@ -341,7 +336,7 @@ HB_FUNC_STATIC( QFONTINFO_RAWMODE )
 }
 
 /*
-QFont::Style style () const
+QFont::Style style() const
 */
 HB_FUNC_STATIC( QFONTINFO_STYLE )
 {
@@ -365,7 +360,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLE )
 }
 
 /*
-QFont::StyleHint styleHint () const
+QFont::StyleHint styleHint() const
 */
 HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
 {
@@ -389,7 +384,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
 }
 
 /*
-QString styleName () const
+QString styleName() const
 */
 HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 {
@@ -413,7 +408,7 @@ HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 }
 
 /*
-int weight () const
+int weight() const
 */
 HB_FUNC_STATIC( QFONTINFO_WEIGHT )
 {

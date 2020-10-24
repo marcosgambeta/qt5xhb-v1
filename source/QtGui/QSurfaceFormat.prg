@@ -94,7 +94,7 @@ void QSurfaceFormat_new1()
 }
 
 /*
-QSurfaceFormat(FormatOptions options)
+QSurfaceFormat( QSurfaceFormat::FormatOptions options )
 */
 void QSurfaceFormat_new2()
 {
@@ -103,19 +103,13 @@ void QSurfaceFormat_new2()
 }
 
 /*
-QSurfaceFormat(const QSurfaceFormat &other)
+QSurfaceFormat( const QSurfaceFormat & other )
 */
 void QSurfaceFormat_new3()
 {
   QSurfaceFormat * obj = new QSurfaceFormat( *PQSURFACEFORMAT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSurfaceFormat()
-[2]QSurfaceFormat(FormatOptions options)
-[3]QSurfaceFormat(const QSurfaceFormat &other)
-*/
 
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 {
@@ -155,7 +149,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_DELETE )
 }
 
 /*
-void setDepthBufferSize(int size)
+void setDepthBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETDEPTHBUFFERSIZE )
 {
@@ -205,7 +199,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_DEPTHBUFFERSIZE )
 }
 
 /*
-void setStencilBufferSize(int size)
+void setStencilBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSTENCILBUFFERSIZE )
 {
@@ -255,7 +249,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_STENCILBUFFERSIZE )
 }
 
 /*
-void setRedBufferSize(int size)
+void setRedBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETREDBUFFERSIZE )
 {
@@ -305,7 +299,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_REDBUFFERSIZE )
 }
 
 /*
-void setGreenBufferSize(int size)
+void setGreenBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETGREENBUFFERSIZE )
 {
@@ -355,7 +349,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_GREENBUFFERSIZE )
 }
 
 /*
-void setBlueBufferSize(int size)
+void setBlueBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETBLUEBUFFERSIZE )
 {
@@ -405,7 +399,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_BLUEBUFFERSIZE )
 }
 
 /*
-void setAlphaBufferSize(int size)
+void setAlphaBufferSize( int size )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETALPHABUFFERSIZE )
 {
@@ -455,7 +449,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_ALPHABUFFERSIZE )
 }
 
 /*
-void setSamples(int numSamples)
+void setSamples( int numSamples )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSAMPLES )
 {
@@ -505,7 +499,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SAMPLES )
 }
 
 /*
-void setSwapBehavior(SwapBehavior behavior)
+void setSwapBehavior( QSurfaceFormat::SwapBehavior behavior )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSWAPBEHAVIOR )
 {
@@ -531,7 +525,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSWAPBEHAVIOR )
 }
 
 /*
-SwapBehavior swapBehavior() const
+QSurfaceFormat::SwapBehavior swapBehavior() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SWAPBEHAVIOR )
 {
@@ -579,7 +573,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_HASALPHA )
 }
 
 /*
-void setProfile(OpenGLContextProfile profile)
+void setProfile( QSurfaceFormat::OpenGLContextProfile profile )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETPROFILE )
 {
@@ -605,7 +599,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETPROFILE )
 }
 
 /*
-OpenGLContextProfile profile() const
+QSurfaceFormat::OpenGLContextProfile profile() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_PROFILE )
 {
@@ -629,7 +623,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_PROFILE )
 }
 
 /*
-void setRenderableType(RenderableType type)
+void setRenderableType( QSurfaceFormat::RenderableType type )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETRENDERABLETYPE )
 {
@@ -655,7 +649,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETRENDERABLETYPE )
 }
 
 /*
-RenderableType renderableType() const
+QSurfaceFormat::RenderableType renderableType() const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_RENDERABLETYPE )
 {
@@ -679,7 +673,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_RENDERABLETYPE )
 }
 
 /*
-void setMajorVersion(int majorVersion)
+void setMajorVersion( int majorVersion )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETMAJORVERSION )
 {
@@ -729,7 +723,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_MAJORVERSION )
 }
 
 /*
-void setMinorVersion(int minorVersion)
+void setMinorVersion( int minorVersion )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETMINORVERSION )
 {
@@ -803,7 +797,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_STEREO )
 }
 
 /*
-void setStereo(bool enable)
+void setStereo( bool enable )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETSTEREO )
 {
@@ -829,7 +823,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETSTEREO )
 }
 
 /*
-void setOption(QSurfaceFormat::FormatOptions opt)
+void setOption( QSurfaceFormat::FormatOptions opt )
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_SETOPTION )
 {
@@ -855,7 +849,7 @@ HB_FUNC_STATIC( QSURFACEFORMAT_SETOPTION )
 }
 
 /*
-bool testOption(QSurfaceFormat::FormatOptions opt) const
+bool testOption( QSurfaceFormat::FormatOptions opt ) const
 */
 HB_FUNC_STATIC( QSURFACEFORMAT_TESTOPTION )
 {

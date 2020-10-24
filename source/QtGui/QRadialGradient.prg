@@ -67,7 +67,7 @@ void QRadialGradient_new1()
 }
 
 /*
-QRadialGradient(const QPointF & center, qreal radius, const QPointF & focalPoint)
+QRadialGradient( const QPointF & center, qreal radius, const QPointF & focalPoint )
 */
 void QRadialGradient_new2()
 {
@@ -76,7 +76,7 @@ void QRadialGradient_new2()
 }
 
 /*
-QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
+QRadialGradient( qreal cx, qreal cy, qreal radius, qreal fx, qreal fy )
 */
 void QRadialGradient_new3()
 {
@@ -85,7 +85,7 @@ void QRadialGradient_new3()
 }
 
 /*
-QRadialGradient(const QPointF & center, qreal radius)
+QRadialGradient( const QPointF & center, qreal radius )
 */
 void QRadialGradient_new4()
 {
@@ -94,7 +94,7 @@ void QRadialGradient_new4()
 }
 
 /*
-QRadialGradient(qreal cx, qreal cy, qreal radius)
+QRadialGradient( qreal cx, qreal cy, qreal radius )
 */
 void QRadialGradient_new5()
 {
@@ -103,7 +103,7 @@ void QRadialGradient_new5()
 }
 
 /*
-QRadialGradient(const QPointF & center, qreal centerRadius, const QPointF & focalPoint, qreal focalRadius)
+QRadialGradient( const QPointF & center, qreal centerRadius, const QPointF & focalPoint, qreal focalRadius )
 */
 void QRadialGradient_new6()
 {
@@ -112,23 +112,13 @@ void QRadialGradient_new6()
 }
 
 /*
-QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
+QRadialGradient( qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius )
 */
 void QRadialGradient_new7()
 {
   QRadialGradient * obj = new QRadialGradient( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QRadialGradient()
-[2]QRadialGradient(const QPointF & center, qreal radius, const QPointF & focalPoint)
-[3]QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy)
-[4]QRadialGradient(const QPointF & center, qreal radius)
-[5]QRadialGradient(qreal cx, qreal cy, qreal radius)
-[6]QRadialGradient(const QPointF & center, qreal centerRadius, const QPointF & focalPoint, qreal focalRadius)
-[7]QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius)
-*/
 
 HB_FUNC_STATIC( QRADIALGRADIENT_NEW )
 {
@@ -306,7 +296,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_RADIUS )
 }
 
 /*
-void setCenter(const QPointF & center)
+void setCenter( const QPointF & center )
 */
 void QRadialGradient_setCenter1()
 {
@@ -321,7 +311,7 @@ void QRadialGradient_setCenter1()
 }
 
 /*
-void setCenter(qreal x, qreal y)
+void setCenter( qreal x, qreal y )
 */
 void QRadialGradient_setCenter2()
 {
@@ -334,11 +324,6 @@ void QRadialGradient_setCenter2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCenter(const QPointF & center)
-[2]void setCenter(qreal x, qreal y)
-*/
 
 HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
 {
@@ -357,7 +342,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
 }
 
 /*
-void setCenterRadius(qreal radius)
+void setCenterRadius( qreal radius )
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTERRADIUS )
 {
@@ -383,7 +368,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTERRADIUS )
 }
 
 /*
-void setFocalPoint(const QPointF & focalPoint)
+void setFocalPoint( const QPointF & focalPoint )
 */
 void QRadialGradient_setFocalPoint1()
 {
@@ -398,7 +383,7 @@ void QRadialGradient_setFocalPoint1()
 }
 
 /*
-void setFocalPoint(qreal x, qreal y)
+void setFocalPoint( qreal x, qreal y )
 */
 void QRadialGradient_setFocalPoint2()
 {
@@ -411,11 +396,6 @@ void QRadialGradient_setFocalPoint2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setFocalPoint(const QPointF & focalPoint)
-[2]void setFocalPoint(qreal x, qreal y)
-*/
 
 HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
 {
@@ -434,7 +414,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
 }
 
 /*
-void setFocalRadius(qreal radius)
+void setFocalRadius( qreal radius )
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALRADIUS )
 {
@@ -460,7 +440,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALRADIUS )
 }
 
 /*
-void setRadius(qreal radius)
+void setRadius( qreal radius )
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_SETRADIUS )
 {

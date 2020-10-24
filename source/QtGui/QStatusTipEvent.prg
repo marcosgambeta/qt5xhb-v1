@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QStatusTipEvent(const QString &tip)
+QStatusTipEvent( const QString & tip )
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {

@@ -61,7 +61,7 @@ RETURN
 #include <QtGui/QTextCursor>
 
 /*
-QTextFrame(QTextDocument *doc)
+QTextFrame( QTextDocument * doc )
 */
 HB_FUNC_STATIC( QTEXTFRAME_NEW )
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTEXTFRAME_DELETE )
 }
 
 /*
-void setFrameFormat(const QTextFrameFormat &format)
+void setFrameFormat( const QTextFrameFormat & format )
 */
 HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
 {
@@ -245,14 +245,6 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
 }
 
 /*
-QTextFrameLayoutData *layoutData() const
-*/
-
-/*
-void setLayoutData(QTextFrameLayoutData *data)
-*/
-
-/*
 QList<QTextFrame *> childFrames() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
@@ -301,7 +293,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 }
 
 /*
-QTextFrame *parentFrame() const
+QTextFrame * parentFrame() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
 {

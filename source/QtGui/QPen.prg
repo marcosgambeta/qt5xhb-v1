@@ -79,7 +79,7 @@ RETURN
 #endif
 
 /*
-QPen ()
+QPen()
 */
 void QPen_new1()
 {
@@ -88,7 +88,7 @@ void QPen_new1()
 }
 
 /*
-QPen ( Qt::PenStyle style )
+QPen( Qt::PenStyle style )
 */
 void QPen_new2()
 {
@@ -97,7 +97,7 @@ void QPen_new2()
 }
 
 /*
-QPen ( const QColor & color )
+QPen( const QColor & color )
 */
 void QPen_new3()
 {
@@ -106,7 +106,7 @@ void QPen_new3()
 }
 
 /*
-QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
+QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
 */
 void QPen_new4()
 {
@@ -115,21 +115,13 @@ void QPen_new4()
 }
 
 /*
-QPen ( const QPen & pen )
+QPen( const QPen & pen )
 */
 void QPen_new5()
 {
   QPen * obj = new QPen( *PQPEN(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPen ()
-[2]QPen ( Qt::PenStyle style )
-[3]QPen ( const QColor & color )
-[4]QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
-[5]QPen ( const QPen & pen )
-*/
 
 HB_FUNC_STATIC( QPEN_NEW )
 {
@@ -177,7 +169,7 @@ HB_FUNC_STATIC( QPEN_DELETE )
 }
 
 /*
-QBrush brush () const
+QBrush brush() const
 */
 HB_FUNC_STATIC( QPEN_BRUSH )
 {
@@ -202,7 +194,7 @@ HB_FUNC_STATIC( QPEN_BRUSH )
 }
 
 /*
-Qt::PenCapStyle capStyle () const
+Qt::PenCapStyle capStyle() const
 */
 HB_FUNC_STATIC( QPEN_CAPSTYLE )
 {
@@ -226,7 +218,7 @@ HB_FUNC_STATIC( QPEN_CAPSTYLE )
 }
 
 /*
-QColor color () const
+QColor color() const
 */
 HB_FUNC_STATIC( QPEN_COLOR )
 {
@@ -251,7 +243,7 @@ HB_FUNC_STATIC( QPEN_COLOR )
 }
 
 /*
-qreal dashOffset () const
+qreal dashOffset() const
 */
 HB_FUNC_STATIC( QPEN_DASHOFFSET )
 {
@@ -275,7 +267,7 @@ HB_FUNC_STATIC( QPEN_DASHOFFSET )
 }
 
 /*
-bool isCosmetic () const
+bool isCosmetic() const
 */
 HB_FUNC_STATIC( QPEN_ISCOSMETIC )
 {
@@ -299,7 +291,7 @@ HB_FUNC_STATIC( QPEN_ISCOSMETIC )
 }
 
 /*
-bool isSolid () const
+bool isSolid() const
 */
 HB_FUNC_STATIC( QPEN_ISSOLID )
 {
@@ -323,7 +315,7 @@ HB_FUNC_STATIC( QPEN_ISSOLID )
 }
 
 /*
-Qt::PenJoinStyle joinStyle () const
+Qt::PenJoinStyle joinStyle() const
 */
 HB_FUNC_STATIC( QPEN_JOINSTYLE )
 {
@@ -347,7 +339,7 @@ HB_FUNC_STATIC( QPEN_JOINSTYLE )
 }
 
 /*
-qreal miterLimit () const
+qreal miterLimit() const
 */
 HB_FUNC_STATIC( QPEN_MITERLIMIT )
 {
@@ -371,7 +363,7 @@ HB_FUNC_STATIC( QPEN_MITERLIMIT )
 }
 
 /*
-void setBrush ( const QBrush & brush )
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QPEN_SETBRUSH )
 {
@@ -397,7 +389,7 @@ HB_FUNC_STATIC( QPEN_SETBRUSH )
 }
 
 /*
-void setCapStyle ( Qt::PenCapStyle style )
+void setCapStyle( Qt::PenCapStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
 {
@@ -423,7 +415,7 @@ HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
 }
 
 /*
-void setColor ( const QColor & color )
+void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QPEN_SETCOLOR )
 {
@@ -449,7 +441,7 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
 }
 
 /*
-void setCosmetic ( bool cosmetic )
+void setCosmetic( bool cosmetic )
 */
 HB_FUNC_STATIC( QPEN_SETCOSMETIC )
 {
@@ -475,7 +467,7 @@ HB_FUNC_STATIC( QPEN_SETCOSMETIC )
 }
 
 /*
-void setDashOffset ( qreal offset )
+void setDashOffset( qreal offset )
 */
 HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
 {
@@ -501,7 +493,7 @@ HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
 }
 
 /*
-void setJoinStyle ( Qt::PenJoinStyle style )
+void setJoinStyle( Qt::PenJoinStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
 {
@@ -527,7 +519,7 @@ HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
 }
 
 /*
-void setMiterLimit ( qreal limit )
+void setMiterLimit( qreal limit )
 */
 HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
 {
@@ -553,7 +545,7 @@ HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
 }
 
 /*
-void setStyle ( Qt::PenStyle style )
+void setStyle( Qt::PenStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETSTYLE )
 {
@@ -579,7 +571,7 @@ HB_FUNC_STATIC( QPEN_SETSTYLE )
 }
 
 /*
-void setWidth ( int width )
+void setWidth( int width )
 */
 HB_FUNC_STATIC( QPEN_SETWIDTH )
 {
@@ -605,7 +597,7 @@ HB_FUNC_STATIC( QPEN_SETWIDTH )
 }
 
 /*
-void setWidthF ( qreal width )
+void setWidthF( qreal width )
 */
 HB_FUNC_STATIC( QPEN_SETWIDTHF )
 {
@@ -631,7 +623,7 @@ HB_FUNC_STATIC( QPEN_SETWIDTHF )
 }
 
 /*
-Qt::PenStyle style () const
+Qt::PenStyle style() const
 */
 HB_FUNC_STATIC( QPEN_STYLE )
 {
@@ -655,7 +647,7 @@ HB_FUNC_STATIC( QPEN_STYLE )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QPEN_WIDTH )
 {
@@ -679,7 +671,7 @@ HB_FUNC_STATIC( QPEN_WIDTH )
 }
 
 /*
-qreal widthF () const
+qreal widthF() const
 */
 HB_FUNC_STATIC( QPEN_WIDTHF )
 {

@@ -79,7 +79,7 @@ void QTextDocumentWriter_new1()
 }
 
 /*
-QTextDocumentWriter(QIODevice *device, const QByteArray &format)
+QTextDocumentWriter( QIODevice * device, const QByteArray & format )
 */
 void QTextDocumentWriter_new2()
 {
@@ -88,19 +88,13 @@ void QTextDocumentWriter_new2()
 }
 
 /*
-QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
+QTextDocumentWriter( const QString & fileName, const QByteArray & format = QByteArray() )
 */
 void QTextDocumentWriter_new3()
 {
   QTextDocumentWriter * obj = new QTextDocumentWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextDocumentWriter()
-[2]QTextDocumentWriter(QIODevice *device, const QByteArray &format)
-[3]QTextDocumentWriter(const QString &fileName, const QByteArray &format = QByteArray())
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 {
@@ -140,7 +134,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DELETE )
 }
 
 /*
-void setFormat (const QByteArray &format)
+void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
 {
@@ -166,7 +160,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
 }
 
 /*
-QByteArray format () const
+QByteArray format() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
 {
@@ -191,7 +185,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
 }
 
 /*
-void setDevice (QIODevice *device)
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
 {
@@ -217,7 +211,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
 }
 
 /*
-QIODevice *device () const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
 {
@@ -242,7 +236,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
 }
 
 /*
-void setFileName (const QString &fileName)
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
 {
@@ -268,7 +262,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
 {
@@ -292,7 +286,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
 }
 
 /*
-bool write(const QTextDocument *document)
+bool write( const QTextDocument * document )
 */
 void QTextDocumentWriter_write1()
 {
@@ -305,7 +299,7 @@ void QTextDocumentWriter_write1()
 }
 
 /*
-bool write(const QTextDocumentFragment &fragment)
+bool write( const QTextDocumentFragment & fragment )
 */
 void QTextDocumentWriter_write2()
 {
@@ -316,11 +310,6 @@ void QTextDocumentWriter_write2()
     RBOOL( obj->write( *PQTEXTDOCUMENTFRAGMENT(1) ) );
   }
 }
-
-/*
-[1]bool write(const QTextDocument *document)
-[2]bool write(const QTextDocumentFragment &fragment)
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 {
@@ -339,7 +328,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 }
 
 /*
-void setCodec(QTextCodec *codec)
+void setCodec( QTextCodec * codec )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
 {
@@ -365,7 +354,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
 }
 
 /*
-QTextCodec *codec() const
+QTextCodec * codec() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
 {

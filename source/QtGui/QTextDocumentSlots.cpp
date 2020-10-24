@@ -137,7 +137,7 @@ void QTextDocumentSlots::cursorPositionChanged( const QTextCursor & cursor )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTDOCUMENT" );
-    PHB_ITEM pcursor = Signals_return_object( (void *) &cursor, "QTEXTCURSOR" );
+    PHB_ITEM pcursor = Qt5xHb::Signals_return_object( (void *) &cursor, "QTEXTCURSOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcursor );
 

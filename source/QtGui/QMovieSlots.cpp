@@ -81,7 +81,7 @@ void QMovieSlots::resized( const QSize & size )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
-    PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZE" );
+    PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZE" );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );
 
@@ -133,7 +133,7 @@ void QMovieSlots::updated( const QRect & rect )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
-    PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECT" );
+    PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
 

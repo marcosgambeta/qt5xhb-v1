@@ -71,7 +71,7 @@ void QOpenGLBuffer_new1()
 }
 
 /*
-QOpenGLBuffer(QOpenGLBuffer::Type type)
+QOpenGLBuffer( QOpenGLBuffer::Type type )
 */
 void QOpenGLBuffer_new2()
 {
@@ -80,19 +80,13 @@ void QOpenGLBuffer_new2()
 }
 
 /*
-QOpenGLBuffer(const QOpenGLBuffer & other)
+QOpenGLBuffer( const QOpenGLBuffer & other )
 */
 void QOpenGLBuffer_new3()
 {
   QOpenGLBuffer * obj = new QOpenGLBuffer( *PQOPENGLBUFFER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QOpenGLBuffer()
-[2]QOpenGLBuffer(QOpenGLBuffer::Type type)
-[3]QOpenGLBuffer(const QOpenGLBuffer & other)
-*/
 
 HB_FUNC_STATIC( QOPENGLBUFFER_NEW )
 {
@@ -132,7 +126,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_DELETE )
 }
 
 /*
-void allocate(const void * data, int count)
+void allocate( const void * data, int count )
 */
 void QOpenGLBuffer_allocate1()
 {
@@ -147,7 +141,7 @@ void QOpenGLBuffer_allocate1()
 }
 
 /*
-void allocate(int count)
+void allocate( int count )
 */
 void QOpenGLBuffer_allocate2()
 {
@@ -160,11 +154,6 @@ void QOpenGLBuffer_allocate2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void allocate(const void * data, int count)
-[2]void allocate(int count)
-*/
 
 HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
 {
@@ -305,7 +294,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_ISCREATED )
 }
 
 /*
-void * map(QOpenGLBuffer::Access access)
+void * map( QOpenGLBuffer::Access access )
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_MAP )
 {
@@ -329,7 +318,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_MAP )
 }
 
 /*
-bool read(int offset, void * data, int count)
+bool read( int offset, void * data, int count )
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_READ )
 {
@@ -368,7 +357,7 @@ void QOpenGLBuffer_release1()
 }
 
 /*
-static void release(QOpenGLBuffer::Type type)
+static void release( QOpenGLBuffer::Type type )
 */
 void QOpenGLBuffer_release2()
 {
@@ -377,11 +366,6 @@ void QOpenGLBuffer_release2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void release()
-[2]void release(QOpenGLBuffer::Type type)
-*/
 
 HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
 {
@@ -400,7 +384,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
 }
 
 /*
-void setUsagePattern(QOpenGLBuffer::UsagePattern value)
+void setUsagePattern( QOpenGLBuffer::UsagePattern value )
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_SETUSAGEPATTERN )
 {
@@ -522,7 +506,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_USAGEPATTERN )
 }
 
 /*
-void write(int offset, const void * data, int count)
+void write( int offset, const void * data, int count )
 */
 HB_FUNC_STATIC( QOPENGLBUFFER_WRITE )
 {

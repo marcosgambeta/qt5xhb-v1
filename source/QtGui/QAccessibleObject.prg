@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ISVALID )
 }
 
 /*
-QObject *object() const
+QObject * object() const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
 }
 
 /*
-void setText(QAccessible::Text t, const QString &text)
+void setText( QAccessible::Text t, const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 }
 
 /*
-QAccessibleInterface *childAt(int x, int y) const
+QAccessibleInterface * childAt( int x, int y ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_CHILDAT )
 {

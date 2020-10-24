@@ -92,7 +92,7 @@ void QVector4D_new1()
 }
 
 /*
-QVector4D(float xpos, float ypos, float zpos, float wpos)
+QVector4D( float xpos, float ypos, float zpos, float wpos )
 */
 void QVector4D_new2()
 {
@@ -101,7 +101,7 @@ void QVector4D_new2()
 }
 
 /*
-QVector4D(const QPoint& point)
+QVector4D( const QPoint & point )
 */
 void QVector4D_new3()
 {
@@ -110,7 +110,7 @@ void QVector4D_new3()
 }
 
 /*
-QVector4D(const QPointF& point)
+QVector4D( const QPointF & point )
 */
 void QVector4D_new4()
 {
@@ -119,7 +119,7 @@ void QVector4D_new4()
 }
 
 /*
-QVector4D(const QVector2D& vector)
+QVector4D( const QVector2D & vector )
 */
 void QVector4D_new5()
 {
@@ -128,7 +128,7 @@ void QVector4D_new5()
 }
 
 /*
-QVector4D(const QVector2D& vector, float zpos, float wpos)
+QVector4D( const QVector2D & vector, float zpos, float wpos )
 */
 void QVector4D_new6()
 {
@@ -137,7 +137,7 @@ void QVector4D_new6()
 }
 
 /*
-QVector4D(const QVector3D& vector)
+QVector4D( const QVector3D & vector )
 */
 void QVector4D_new7()
 {
@@ -146,24 +146,13 @@ void QVector4D_new7()
 }
 
 /*
-QVector4D(const QVector3D& vector, float wpos)
+QVector4D( const QVector3D & vector, float wpos )
 */
 void QVector4D_new8()
 {
   QVector4D * obj = new QVector4D( *PQVECTOR3D(1), PFLOAT(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVector4D()
-[2]QVector4D(float xpos, float ypos, float zpos, float wpos)
-[3]QVector4D(const QPoint& point)
-[4]QVector4D(const QPointF& point)
-[5]QVector4D(const QVector2D& vector)
-[6]QVector4D(const QVector2D& vector, float zpos, float wpos)
-[7]QVector4D(const QVector3D& vector)
-[8]QVector4D(const QVector3D& vector, float wpos)
-*/
 
 HB_FUNC_STATIC( QVECTOR4D_NEW )
 {
@@ -343,7 +332,7 @@ HB_FUNC_STATIC( QVECTOR4D_W )
 }
 
 /*
-void setX(float x)
+void setX( float x )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETX )
 {
@@ -369,7 +358,7 @@ HB_FUNC_STATIC( QVECTOR4D_SETX )
 }
 
 /*
-void setY(float y)
+void setY( float y )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETY )
 {
@@ -395,7 +384,7 @@ HB_FUNC_STATIC( QVECTOR4D_SETY )
 }
 
 /*
-void setZ(float z)
+void setZ( float z )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETZ )
 {
@@ -421,7 +410,7 @@ HB_FUNC_STATIC( QVECTOR4D_SETZ )
 }
 
 /*
-void setW(float w)
+void setW( float w )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETW )
 {
@@ -696,7 +685,7 @@ HB_FUNC_STATIC( QVECTOR4D_TOPOINTF )
 }
 
 /*
-static float dotProduct(const QVector4D& v1, const QVector4D& v2)
+static float dotProduct( const QVector4D & v1, const QVector4D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR4D_DOTPRODUCT )
 {

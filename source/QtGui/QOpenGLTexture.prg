@@ -127,7 +127,7 @@ RETURN
 #include <QtGui/QColor>
 
 /*
-QOpenGLTexture(Target target)
+QOpenGLTexture( QOpenGLTexture::Target target )
 */
 void QOpenGLTexture_new1()
 {
@@ -138,7 +138,7 @@ void QOpenGLTexture_new1()
 }
 
 /*
-QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
+QOpenGLTexture( const QImage & image, QOpenGLTexture::MipMapGeneration genMipMaps = QOpenGLTexture::GenerateMipMaps )
 */
 void QOpenGLTexture_new2()
 {
@@ -147,11 +147,6 @@ void QOpenGLTexture_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QOpenGLTexture(Target target)
-[2]QOpenGLTexture(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_NEW )
 {
@@ -312,7 +307,7 @@ void QOpenGLTexture_bind1()
 }
 
 /*
-void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
+void bind( uint unit, QOpenGLTexture::TextureUnitReset reset = QOpenGLTexture::DontResetTextureUnit )
 */
 void QOpenGLTexture_bind2()
 {
@@ -327,11 +322,6 @@ void QOpenGLTexture_bind2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void bind()
-[2]void bind(uint unit, TextureUnitReset reset = DontResetTextureUnit)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
 {
@@ -367,7 +357,7 @@ void QOpenGLTexture_release1()
 }
 
 /*
-void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
+void release( uint unit, QOpenGLTexture::TextureUnitReset reset = QOpenGLTexture::DontResetTextureUnit )
 */
 void QOpenGLTexture_release2()
 {
@@ -382,11 +372,6 @@ void QOpenGLTexture_release2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void release()
-[2]void release(uint unit, TextureUnitReset reset = DontResetTextureUnit)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
 {
@@ -420,7 +405,7 @@ void QOpenGLTexture_isBound1()
 }
 
 /*
-bool isBound(uint unit)
+bool isBound( uint unit )
 */
 void QOpenGLTexture_isBound2()
 {
@@ -433,11 +418,6 @@ void QOpenGLTexture_isBound2()
   }
 #endif
 }
-
-/*
-[1]bool isBound() const
-[2]bool isBound(uint unit)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 {
@@ -456,7 +436,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISBOUND )
 }
 
 /*
-void setFormat(TextureFormat format)
+void setFormat( QOpenGLTexture::TextureFormat format )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETFORMAT )
 {
@@ -484,7 +464,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETFORMAT )
 }
 
 /*
-TextureFormat format() const
+QOpenGLTexture::TextureFormat format() const
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_FORMAT )
 {
@@ -510,7 +490,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_FORMAT )
 }
 
 /*
-void setSize(int width, int height = 1, int depth = 1)
+void setSize( int width, int height = 1, int depth = 1 )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETSIZE )
 {
@@ -616,7 +596,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTH )
 }
 
 /*
-void setMipLevels(int levels)
+void setMipLevels( int levels )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPLEVELS )
 {
@@ -696,7 +676,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMMIPLEVELS )
 }
 
 /*
-void setLayers(int layers)
+void setLayers( int layers )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETLAYERS )
 {
@@ -830,7 +810,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISSTORAGEALLOCATED )
 }
 
 /*
-QOpenGLTexture *createTextureView(Target target,TextureFormat viewFormat,int minimumMipmapLevel, int maximumMipmapLevel,int minimumLayer, int maximumLayer) const
+QOpenGLTexture * createTextureView( QOpenGLTexture::Target target, QOpenGLTexture::TextureFormat viewFormat, int minimumMipmapLevel, int maximumMipmapLevel, int minimumLayer, int maximumLayer ) const
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_CREATETEXTUREVIEW )
 {
@@ -882,67 +862,16 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_ISTEXTUREVIEW )
 #endif
 }
 
-/*
-void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-*/
-
-/*
-void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-*/
-
-/*
-void setData(int mipLevel,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-*/
-
-/*
-void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-*/
-
-/*
-void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
-*/
-
-/*
-[1]void setData(int mipLevel, int layer, CubeMapFace cubeFace,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-[2]void setData(int mipLevel, int layer,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-[3]void setData(int mipLevel,PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-[4]void setData(PixelFormat sourceFormat, PixelType sourceType,void *data, const QOpenGLPixelTransferOptions * const options = 0)
-[5]void setData(const QImage& image, MipMapGeneration genMipMaps = GenerateMipMaps)
-*/
-
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETDATA )
 {
 }
-
-/*
-void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-*/
-
-/*
-void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-*/
-
-/*
-void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-*/
-
-/*
-void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-*/
-
-/*
-[1]void setCompressedData(int mipLevel, int layer, CubeMapFace cubeFace,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-[2]void setCompressedData(int mipLevel, int layer,int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-[3]void setCompressedData(int mipLevel, int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-[4]void setCompressedData(int dataSize, void *data,const QOpenGLPixelTransferOptions * const options = 0)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETCOMPRESSEDDATA )
 {
 }
 
 /*
-void setMipBaseLevel(int baseLevel)
+void setMipBaseLevel( int baseLevel )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPBASELEVEL )
 {
@@ -996,7 +925,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPBASELEVEL )
 }
 
 /*
-void setMipMaxLevel(int maxLevel)
+void setMipMaxLevel( int maxLevel )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPMAXLEVEL )
 {
@@ -1050,7 +979,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MIPMAXLEVEL )
 }
 
 /*
-void setMipLevelRange(int baseLevel, int maxLevel)
+void setMipLevelRange( int baseLevel, int maxLevel )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPLEVELRANGE )
 {
@@ -1078,7 +1007,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMIPLEVELRANGE )
 }
 
 /*
-void setAutoMipMapGenerationEnabled(bool enabled)
+void setAutoMipMapGenerationEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETAUTOMIPMAPGENERATIONENABLED )
 {
@@ -1149,7 +1078,7 @@ void QOpenGLTexture_generateMipMaps1()
 }
 
 /*
-void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
+void generateMipMaps( int baseLevel, bool resetBaseLevel = true )
 */
 void QOpenGLTexture_generateMipMaps2()
 {
@@ -1164,11 +1093,6 @@ void QOpenGLTexture_generateMipMaps2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void generateMipMaps()
-[2]void generateMipMaps(int baseLevel, bool resetBaseLevel = true)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 {
@@ -1187,7 +1111,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
 }
 
 /*
-void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
+void setSwizzleMask( QOpenGLTexture::SwizzleComponent component, QOpenGLTexture::SwizzleValue value )
 */
 void QOpenGLTexture_setSwizzleMask1()
 {
@@ -1204,7 +1128,7 @@ void QOpenGLTexture_setSwizzleMask1()
 }
 
 /*
-void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
+void setSwizzleMask( QOpenGLTexture::SwizzleValue r, QOpenGLTexture::SwizzleValue g, QOpenGLTexture::SwizzleValue b, QOpenGLTexture::SwizzleValue a )
 */
 void QOpenGLTexture_setSwizzleMask2()
 {
@@ -1219,11 +1143,6 @@ void QOpenGLTexture_setSwizzleMask2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void setSwizzleMask(SwizzleComponent component, SwizzleValue value)
-[2]void setSwizzleMask(SwizzleValue r, SwizzleValue g,SwizzleValue b, SwizzleValue a)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 {
@@ -1242,7 +1161,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSWIZZLEMASK )
 }
 
 /*
-SwizzleValue swizzleMask(SwizzleComponent component) const
+QOpenGLTexture::SwizzleValue swizzleMask( QOpenGLTexture::SwizzleComponent component ) const
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SWIZZLEMASK )
 {
@@ -1268,7 +1187,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SWIZZLEMASK )
 }
 
 /*
-void setDepthStencilMode(DepthStencilMode mode)
+void setDepthStencilMode( QOpenGLTexture::DepthStencilMode mode )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETDEPTHSTENCILMODE )
 {
@@ -1296,7 +1215,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETDEPTHSTENCILMODE )
 }
 
 /*
-DepthStencilMode depthStencilMode() const
+QOpenGLTexture::DepthStencilMode depthStencilMode() const
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTHSTENCILMODE )
 {
@@ -1322,7 +1241,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_DEPTHSTENCILMODE )
 }
 
 /*
-void setMinificationFilter(Filter filter)
+void setMinificationFilter( QOpenGLTexture::Filter filter )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINIFICATIONFILTER )
 {
@@ -1350,7 +1269,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINIFICATIONFILTER )
 }
 
 /*
-Filter minificationFilter() const
+QOpenGLTexture::Filter minificationFilter() const
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_MINIFICATIONFILTER )
 {
@@ -1376,7 +1295,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MINIFICATIONFILTER )
 }
 
 /*
-void setMagnificationFilter(Filter filter)
+void setMagnificationFilter( QOpenGLTexture::Filter filter )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAGNIFICATIONFILTER )
 {
@@ -1404,7 +1323,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAGNIFICATIONFILTER )
 }
 
 /*
-Filter magnificationFilter() const
+QOpenGLTexture::Filter magnificationFilter() const
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_MAGNIFICATIONFILTER )
 {
@@ -1430,7 +1349,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAGNIFICATIONFILTER )
 }
 
 /*
-void setMinMagFilters(Filter minificationFilter,Filter magnificationFilter)
+void setMinMagFilters( QOpenGLTexture::Filter minificationFilter, QOpenGLTexture::Filter magnificationFilter )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINMAGFILTERS )
 {
@@ -1458,7 +1377,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINMAGFILTERS )
 }
 
 /*
-void setMaximumAnisotropy(float anisotropy)
+void setMaximumAnisotropy( float anisotropy )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAXIMUMANISOTROPY )
 {
@@ -1512,7 +1431,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMANISOTROPY )
 }
 
 /*
-void setWrapMode(WrapMode mode)
+void setWrapMode( QOpenGLTexture::WrapMode mode )
 */
 void QOpenGLTexture_setWrapMode1()
 {
@@ -1529,7 +1448,7 @@ void QOpenGLTexture_setWrapMode1()
 }
 
 /*
-void setWrapMode(CoordinateDirection direction, WrapMode mode)
+void setWrapMode( QOpenGLTexture::CoordinateDirection direction, QOpenGLTexture::WrapMode mode )
 */
 void QOpenGLTexture_setWrapMode2()
 {
@@ -1544,11 +1463,6 @@ void QOpenGLTexture_setWrapMode2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void setWrapMode(WrapMode mode)
-[2]void setWrapMode(CoordinateDirection direction, WrapMode mode)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 {
@@ -1567,7 +1481,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETWRAPMODE )
 }
 
 /*
-WrapMode wrapMode(CoordinateDirection direction) const
+QOpenGLTexture::WrapMode wrapMode( QOpenGLTexture::CoordinateDirection direction ) const
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_WRAPMODE )
 {
@@ -1593,7 +1507,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_WRAPMODE )
 }
 
 /*
-void setBorderColor(QColor color)
+void setBorderColor( QColor color )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR1 )
 {
@@ -1621,7 +1535,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR1 )
 }
 
 /*
-void setBorderColor(float r, float g, float b, float a)
+void setBorderColor( float r, float g, float b, float a )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR2 )
 {
@@ -1649,7 +1563,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR2 )
 }
 
 /*
-void setBorderColor(int r, int g, int b, int a)
+void setBorderColor( int r, int g, int b, int a )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR3 )
 {
@@ -1677,7 +1591,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR3 )
 }
 
 /*
-void setBorderColor(uint r, uint g, uint b, uint a)
+void setBorderColor( uint r, uint g, uint b, uint a )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR4 )
 {
@@ -1703,13 +1617,6 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR4 )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void setBorderColor(QColor color)
-[2]void setBorderColor(float r, float g, float b, float a)
-[3]void setBorderColor(int r, int g, int b, int a)
-[4]void setBorderColor(uint r, uint g, uint b, uint a)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETBORDERCOLOR )
 {
@@ -1763,11 +1670,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR1 )
 }
 
 /*
-void borderColor(float *border) const
-*/
-
-/*
-void borderColor(int *border) const
+void borderColor( int * border ) const
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR3 )
 {
@@ -1796,17 +1699,6 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR3 )
 #endif
 }
 
-/*
-void borderColor(unsigned int *border) const
-*/
-
-/*
-[1]QColor borderColor() const
-[2]void borderColor(float *border) const
-[3]void borderColor(int *border) const
-[4]void borderColor(unsigned int *border) const
-*/
-
 HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR )
 {
   if( ISNUMPAR(0) )
@@ -1824,7 +1716,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BORDERCOLOR )
 }
 
 /*
-void setMinimumLevelOfDetail(float value)
+void setMinimumLevelOfDetail( float value )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMINIMUMLEVELOFDETAIL )
 {
@@ -1878,7 +1770,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MINIMUMLEVELOFDETAIL )
 }
 
 /*
-void setMaximumLevelOfDetail(float value)
+void setMaximumLevelOfDetail( float value )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETMAXIMUMLEVELOFDETAIL )
 {
@@ -1932,7 +1824,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_MAXIMUMLEVELOFDETAIL )
 }
 
 /*
-void setLevelOfDetailRange(float min, float max)
+void setLevelOfDetailRange( float min, float max )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETLEVELOFDETAILRANGE )
 {
@@ -1960,7 +1852,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETLEVELOFDETAILRANGE )
 }
 
 /*
-void setLevelofDetailBias(float bias)
+void setLevelofDetailBias( float bias )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_SETLEVELOFDETAILBIAS )
 {
@@ -2014,7 +1906,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_LEVELOFDETAILBIAS )
 }
 
 /*
-static GLuint boundTextureId(BindingTarget target)
+static GLuint boundTextureId( QOpenGLTexture::BindingTarget target )
 */
 void QOpenGLTexture_boundTextureId1()
 {
@@ -2025,7 +1917,7 @@ void QOpenGLTexture_boundTextureId1()
 }
 
 /*
-static GLuint boundTextureId(uint unit, BindingTarget target)
+static GLuint boundTextureId( uint unit, QOpenGLTexture::BindingTarget target )
 */
 void QOpenGLTexture_boundTextureId2()
 {
@@ -2034,11 +1926,6 @@ void QOpenGLTexture_boundTextureId2()
   RGLUINT( QOpenGLTexture::boundTextureId( PUINT(1), (QOpenGLTexture::BindingTarget) hb_parni(2) ) );
 #endif
 }
-
-/*
-[1]static GLuint boundTextureId(BindingTarget target)
-[2]static GLuint boundTextureId(uint unit, BindingTarget target)
-*/
 
 HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
 {
@@ -2057,7 +1944,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BOUNDTEXTUREID )
 }
 
 /*
-static bool hasFeature(Feature feature)
+static bool hasFeature( QOpenGLTexture::Feature feature )
 */
 HB_FUNC_STATIC( QOPENGLTEXTURE_HASFEATURE )
 {

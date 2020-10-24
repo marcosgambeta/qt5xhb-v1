@@ -68,18 +68,13 @@ void QTextLength_new1()
 }
 
 /*
-QTextLength(Type type, qreal value)
+QTextLength( QTextLength::Type type, qreal value )
 */
 void QTextLength_new2()
 {
   QTextLength * obj = new QTextLength( (QTextLength::Type) hb_parni(1), PQREAL(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextLength()
-[2]QTextLength(Type type, qreal value)
-*/
 
 HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 {
@@ -115,7 +110,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 }
 
 /*
-Type type() const
+QTextLength::Type type() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 {
@@ -139,7 +134,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 }
 
 /*
-qreal value(qreal maximumLength) const
+qreal value( qreal maximumLength ) const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
 {

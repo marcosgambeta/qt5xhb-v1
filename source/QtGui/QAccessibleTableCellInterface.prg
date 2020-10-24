@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_COLUMNEXTENT )
 }
 
 /*
-virtual QList<QAccessibleInterface*> columnHeaderCells() const = 0
+virtual QList<QAccessibleInterface *> columnHeaderCells() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_COLUMNHEADERCELLS )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ROWEXTENT )
 }
 
 /*
-virtual QList<QAccessibleInterface*> rowHeaderCells() const = 0
+virtual QList<QAccessibleInterface *> rowHeaderCells() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ROWHEADERCELLS )
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_ISSELECTED )
 }
 
 /*
-virtual QAccessibleInterface* table() const = 0
+virtual QAccessibleInterface * table() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLETABLECELLINTERFACE_TABLE )
 {

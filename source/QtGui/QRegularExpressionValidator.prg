@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-QRegularExpressionValidator(QObject *parent = 0)
+QRegularExpressionValidator( QObject * parent = 0 )
 */
 void QRegularExpressionValidator_new1()
 {
@@ -63,18 +63,13 @@ void QRegularExpressionValidator_new1()
 }
 
 /*
-QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
+QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = 0 )
 */
 void QRegularExpressionValidator_new2()
 {
   QRegularExpressionValidator * obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QRegularExpressionValidator(QObject *parent = 0)
-[2]QRegularExpressionValidator(const QRegularExpression &re, QObject *parent = 0)
-*/
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 {
@@ -137,7 +132,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_REGULAREXPRESSION )
 }
 
 /*
-void setRegularExpression(const QRegularExpression &re)
+void setRegularExpression( const QRegularExpression & re )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_SETREGULAREXPRESSION )
 {

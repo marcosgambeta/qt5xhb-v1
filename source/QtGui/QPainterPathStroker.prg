@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-QPainterPathStroker ()
+QPainterPathStroker()
 */
 void QPainterPathStroker_new1()
 {
@@ -90,11 +90,6 @@ void QPainterPathStroker_new2()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPainterPathStroker ()
-[2]QPainterPathStroker( const QPen & pen )
-*/
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
@@ -132,7 +127,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DELETE )
 }
 
 /*
-Qt::PenCapStyle capStyle () const
+Qt::PenCapStyle capStyle() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_CAPSTYLE )
 {
@@ -156,7 +151,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CAPSTYLE )
 }
 
 /*
-QPainterPath createStroke ( const QPainterPath & path ) const
+QPainterPath createStroke( const QPainterPath & path ) const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
 {
@@ -181,7 +176,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
 }
 
 /*
-qreal curveThreshold () const
+qreal curveThreshold() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
 {
@@ -205,7 +200,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CURVETHRESHOLD )
 }
 
 /*
-qreal dashOffset () const
+qreal dashOffset() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
 {
@@ -229,7 +224,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHOFFSET )
 }
 
 /*
-QVector<qreal> dashPattern () const
+QVector<qreal> dashPattern() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
 {
@@ -261,7 +256,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
 }
 
 /*
-Qt::PenJoinStyle joinStyle () const
+Qt::PenJoinStyle joinStyle() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
 {
@@ -285,7 +280,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_JOINSTYLE )
 }
 
 /*
-qreal miterLimit () const
+qreal miterLimit() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
 {
@@ -309,7 +304,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_MITERLIMIT )
 }
 
 /*
-void setCapStyle ( Qt::PenCapStyle style )
+void setCapStyle( Qt::PenCapStyle style )
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCAPSTYLE )
 {
@@ -335,7 +330,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCAPSTYLE )
 }
 
 /*
-void setCurveThreshold ( qreal threshold )
+void setCurveThreshold( qreal threshold )
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
 {
@@ -361,7 +356,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETCURVETHRESHOLD )
 }
 
 /*
-void setDashOffset ( qreal offset )
+void setDashOffset( qreal offset )
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
 {
@@ -387,7 +382,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
 }
 
 /*
-void setDashPattern ( Qt::PenStyle style )
+void setDashPattern( Qt::PenStyle style )
 */
 void QPainterPathStroker_setDashPattern1()
 {
@@ -402,7 +397,7 @@ void QPainterPathStroker_setDashPattern1()
 }
 
 /*
-void setDashPattern ( const QVector<qreal> & dashPattern )
+void setDashPattern( const QVector<qreal> & dashPattern )
 */
 void QPainterPathStroker_setDashPattern2()
 {
@@ -426,11 +421,6 @@ void QPainterPathStroker_setDashPattern2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void setDashPattern ( Qt::PenStyle style )
-[2]void setDashPattern ( const QVector<qreal> & dashPattern )
-*/
-
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
@@ -448,7 +438,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 }
 
 /*
-void setJoinStyle ( Qt::PenJoinStyle style )
+void setJoinStyle( Qt::PenJoinStyle style )
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETJOINSTYLE )
 {
@@ -474,7 +464,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETJOINSTYLE )
 }
 
 /*
-void setMiterLimit ( qreal limit )
+void setMiterLimit( qreal limit )
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETMITERLIMIT )
 {
@@ -500,7 +490,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETMITERLIMIT )
 }
 
 /*
-void setWidth ( qreal width )
+void setWidth( qreal width )
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETWIDTH )
 {
@@ -526,7 +516,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETWIDTH )
 }
 
 /*
-qreal width () const
+qreal width() const
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_WIDTH )
 {

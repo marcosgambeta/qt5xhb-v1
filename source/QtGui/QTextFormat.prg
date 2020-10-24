@@ -121,7 +121,7 @@ void QTextFormat_new1()
 }
 
 /*
-QTextFormat(int type)
+QTextFormat( int type )
 */
 void QTextFormat_new2()
 {
@@ -130,19 +130,13 @@ void QTextFormat_new2()
 }
 
 /*
-QTextFormat(const QTextFormat &rhs)
+QTextFormat( const QTextFormat & rhs )
 */
 void QTextFormat_new3()
 {
   QTextFormat * obj = new QTextFormat( *PQTEXTFORMAT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextFormat()
-[2]QTextFormat(int type)
-[3]QTextFormat(const QTextFormat &rhs)
-*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 {
@@ -182,7 +176,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_DELETE )
 }
 
 /*
-void swap(QTextFormat &other)
+void swap( QTextFormat & other )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SWAP )
 {
@@ -208,7 +202,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SWAP )
 }
 
 /*
-void merge(const QTextFormat &other)
+void merge( const QTextFormat & other )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_MERGE )
 {
@@ -306,7 +300,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_OBJECTINDEX )
 }
 
 /*
-void setObjectIndex(int object)
+void setObjectIndex( int object )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTINDEX )
 {
@@ -332,7 +326,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTINDEX )
 }
 
 /*
-QVariant property(int propertyId) const
+QVariant property( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
 {
@@ -357,7 +351,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
 }
 
 /*
-void clearProperty(int propertyId)
+void clearProperty( int propertyId )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_CLEARPROPERTY )
 {
@@ -383,7 +377,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_CLEARPROPERTY )
 }
 
 /*
-bool hasProperty(int propertyId) const
+bool hasProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_HASPROPERTY )
 {
@@ -407,7 +401,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_HASPROPERTY )
 }
 
 /*
-bool boolProperty(int propertyId) const
+bool boolProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_BOOLPROPERTY )
 {
@@ -431,7 +425,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BOOLPROPERTY )
 }
 
 /*
-int intProperty(int propertyId) const
+int intProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_INTPROPERTY )
 {
@@ -455,7 +449,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_INTPROPERTY )
 }
 
 /*
-qreal doubleProperty(int propertyId) const
+qreal doubleProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_DOUBLEPROPERTY )
 {
@@ -479,7 +473,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_DOUBLEPROPERTY )
 }
 
 /*
-QString stringProperty(int propertyId) const
+QString stringProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_STRINGPROPERTY )
 {
@@ -503,7 +497,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_STRINGPROPERTY )
 }
 
 /*
-QColor colorProperty(int propertyId) const
+QColor colorProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
 {
@@ -528,7 +522,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
 }
 
 /*
-QPen penProperty(int propertyId) const
+QPen penProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_PENPROPERTY )
 {
@@ -553,7 +547,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PENPROPERTY )
 }
 
 /*
-QBrush brushProperty(int propertyId) const
+QBrush brushProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
 {
@@ -578,7 +572,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
 }
 
 /*
-QTextLength lengthProperty(int propertyId) const
+QTextLength lengthProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_LENGTHPROPERTY )
 {
@@ -603,7 +597,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHPROPERTY )
 }
 
 /*
-QVector<QTextLength> lengthVectorProperty(int propertyId) const
+QVector<QTextLength> lengthVectorProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
 {
@@ -655,7 +649,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
 }
 
 /*
-void setProperty(int propertyId, const QVariant &value)
+void setProperty( int propertyId, const QVariant & value )
 */
 void QTextFormat_setProperty1()
 {
@@ -670,7 +664,7 @@ void QTextFormat_setProperty1()
 }
 
 /*
-void setProperty(int propertyId, const QVector<QTextLength> &lengths)
+void setProperty( int propertyId, const QVector<QTextLength> & lengths )
 */
 void QTextFormat_setProperty2()
 {
@@ -691,11 +685,6 @@ void QTextFormat_setProperty2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setProperty(int propertyId, const QVariant &value)
-[2]void setProperty(int propertyId, const QVector<QTextLength> &lengths)
-*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 {
@@ -738,7 +727,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTYCOUNT )
 }
 
 /*
-void setObjectType(int type)
+void setObjectType( int type )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTTYPE )
 {
@@ -1131,7 +1120,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLECELLFORMAT )
 }
 
 /*
-void setLayoutDirection(Qt::LayoutDirection direction)
+void setLayoutDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETLAYOUTDIRECTION )
 {
@@ -1181,7 +1170,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LAYOUTDIRECTION )
 }
 
 /*
-void setBackground(const QBrush &brush)
+void setBackground( const QBrush & brush )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETBACKGROUND )
 {
@@ -1258,7 +1247,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_CLEARBACKGROUND )
 }
 
 /*
-void setForeground(const QBrush &brush)
+void setForeground( const QBrush & brush )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETFOREGROUND )
 {

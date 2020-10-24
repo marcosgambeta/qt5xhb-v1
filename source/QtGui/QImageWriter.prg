@@ -78,7 +78,7 @@ RETURN
 #endif
 
 /*
-QImageWriter ()
+QImageWriter()
 */
 void QImageWriter_new1()
 {
@@ -87,7 +87,7 @@ void QImageWriter_new1()
 }
 
 /*
-QImageWriter ( QIODevice * device, const QByteArray & format )
+QImageWriter( QIODevice * device, const QByteArray & format )
 */
 void QImageWriter_new2()
 {
@@ -96,19 +96,13 @@ void QImageWriter_new2()
 }
 
 /*
-QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
+QImageWriter( const QString & fileName, const QByteArray & format = QByteArray() )
 */
 void QImageWriter_new3()
 {
   QImageWriter * obj = new QImageWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QImageWriter ()
-[2]QImageWriter ( QIODevice * device, const QByteArray & format )
-[3]QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
 
 HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {
@@ -148,7 +142,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 }
 
 /*
-bool canWrite () const
+bool canWrite() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 {
@@ -172,7 +166,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 }
 
 /*
-int compression () const
+int compression() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 {
@@ -196,7 +190,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 }
 
 /*
-QIODevice * device () const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 {
@@ -221,7 +215,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 }
 
 /*
-ImageWriterError error () const
+QImageWriter::ImageWriterError error() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 {
@@ -245,7 +239,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 {
@@ -269,7 +263,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 {
@@ -293,7 +287,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 }
 
 /*
-QByteArray format () const
+QByteArray format() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 {
@@ -318,7 +312,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 }
 
 /*
-float gamma () const
+float gamma() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 {
@@ -342,7 +336,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 }
 
 /*
-int quality () const
+int quality() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 {
@@ -366,7 +360,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 }
 
 /*
-void setCompression ( int compression )
+void setCompression( int compression )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
 {
@@ -392,7 +386,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
 }
 
 /*
-void setDevice ( QIODevice * device )
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
 {
@@ -418,7 +412,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
 }
 
 /*
-void setFileName ( const QString & fileName )
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
 {
@@ -444,7 +438,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
 }
 
 /*
-void setFormat ( const QByteArray & format )
+void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
 {
@@ -470,7 +464,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
 }
 
 /*
-void setGamma ( float gamma )
+void setGamma( float gamma )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
 {
@@ -496,7 +490,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
 }
 
 /*
-void setQuality ( int quality )
+void setQuality( int quality )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
 {
@@ -522,7 +516,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
 }
 
 /*
-void setText ( const QString & key, const QString & text )
+void setText( const QString & key, const QString & text )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
 {
@@ -548,7 +542,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
 }
 
 /*
-bool supportsOption ( QImageIOHandler::ImageOption option ) const
+bool supportsOption( QImageIOHandler::ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
 {
@@ -572,7 +566,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
 }
 
 /*
-bool write ( const QImage & image )
+bool write( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
 {
@@ -596,7 +590,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
 }
 
 /*
-static QList<QByteArray> supportedImageFormats ()
+static QList<QByteArray> supportedImageFormats()
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 {
@@ -643,7 +637,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 }
 
 /*
-static QList<QByteArray> QImageWriter::imageFormatsForMimeType(const QByteArray &mimeType)
+static QList<QByteArray> imageFormatsForMimeType( const QByteArray & mimeType )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_IMAGEFORMATSFORMIMETYPE )
 {

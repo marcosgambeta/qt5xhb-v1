@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_NEWPAGE )
 }
 
 /*
-PageSize pageSize() const
+QPagedPaintDevice::PageSize pageSize() const
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZE )
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZE )
 }
 
 /*
-virtual void setPageSize(PageSize size)
+virtual void setPageSize( QPagedPaintDevice::PageSize size )
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGESIZEMM )
 }
 
 /*
-virtual void setPageSizeMM(const QSizeF & size)
+virtual void setPageSizeMM( const QSizeF & size )
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZEMM )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_PAGELAYOUT )
 }
 
 /*
-bool setPageLayout(const QPageLayout &pageLayout)
+bool setPageLayout( const QPageLayout & pageLayout )
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGELAYOUT )
 {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGELAYOUT )
 }
 
 /*
-bool setPageOrientation(QPageLayout::Orientation orientation)
+bool setPageOrientation( QPageLayout::Orientation orientation )
 */
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
 }
 
 /*
-bool setPageMargins(const QMarginsF &margins)
+bool setPageMargins( const QMarginsF & margins )
 */
 void QPagedPaintDevice_setPageMargins1()
 {
@@ -295,7 +295,7 @@ void QPagedPaintDevice_setPageMargins1()
 }
 
 /*
-bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+bool setPageMargins( const QMarginsF & margins, QPageLayout::Unit units )
 */
 void QPagedPaintDevice_setPageMargins2()
 {
@@ -308,11 +308,6 @@ void QPagedPaintDevice_setPageMargins2()
   }
 #endif
 }
-
-/*
-[1]bool setPageMargins(const QMarginsF &margins)
-[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
-*/
 
 HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS )
 {

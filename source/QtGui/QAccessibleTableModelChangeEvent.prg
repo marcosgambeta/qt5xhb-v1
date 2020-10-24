@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-QAccessibleTableModelChangeEvent(QObject *obj, ModelChangeType changeType)
+QAccessibleTableModelChangeEvent( QObject * obj, QAccessibleTableModelChangeEvent::ModelChangeType changeType )
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_NEW )
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_DELETE )
 }
 
 /*
-void setModelChangeType(ModelChangeType changeType)
+void setModelChangeType( QAccessibleTableModelChangeEvent::ModelChangeType changeType )
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE )
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETMODELCHANGETYPE )
 }
 
 /*
-ModelChangeType modelChangeType() const
+QAccessibleTableModelChangeEvent::ModelChangeType modelChangeType() const
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_MODELCHANGETYPE )
 }
 
 /*
-void setFirstRow(int row)
+void setFirstRow( int row )
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTROW )
 }
 
 /*
-void setFirstColumn(int col)
+void setFirstColumn( int col )
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETFIRSTCOLUMN )
 }
 
 /*
-void setLastRow(int row)
+void setLastRow( int row )
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTROW )
 }
 
 /*
-void setLastColumn(int col)
+void setLastColumn( int col )
 */
 HB_FUNC_STATIC( QACCESSIBLETABLEMODELCHANGEEVENT_SETLASTCOLUMN )
 {

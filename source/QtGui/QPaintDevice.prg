@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_DELETE )
 }
 
 /*
-int colorCount () const
+int colorCount() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
 }
 
 /*
-int depth () const
+int depth() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
 }
 
 /*
-int heightMM () const
+int heightMM() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
 }
 
 /*
-int logicalDpiX () const
+int logicalDpiX() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
 }
 
 /*
-int logicalDpiY () const
+int logicalDpiY() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
 }
 
 /*
-virtual QPaintEngine * paintEngine () const = 0
+virtual QPaintEngine * paintEngine() const = 0
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 }
 
 /*
-bool paintingActive () const
+bool paintingActive() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
 }
 
 /*
-int physicalDpiX () const
+int physicalDpiX() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
 }
 
 /*
-int physicalDpiY () const
+int physicalDpiY() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
 {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
 }
 
 /*
-int widthMM () const
+int widthMM() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
 {

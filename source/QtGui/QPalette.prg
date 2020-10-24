@@ -90,7 +90,7 @@ RETURN
 #endif
 
 /*
-QPalette ()
+QPalette()
 */
 void QPalette_new1()
 {
@@ -99,7 +99,7 @@ void QPalette_new1()
 }
 
 /*
-QPalette ( const QColor & button )
+QPalette( const QColor & button )
 */
 void QPalette_new2()
 {
@@ -108,7 +108,7 @@ void QPalette_new2()
 }
 
 /*
-QPalette ( Qt::GlobalColor button )
+QPalette( Qt::GlobalColor button )
 */
 void QPalette_new3()
 {
@@ -117,7 +117,7 @@ void QPalette_new3()
 }
 
 /*
-QPalette ( const QColor & button, const QColor & window )
+QPalette( const QColor & button, const QColor & window )
 */
 void QPalette_new4()
 {
@@ -126,7 +126,7 @@ void QPalette_new4()
 }
 
 /*
-QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
+QPalette( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 */
 void QPalette_new5()
 {
@@ -135,22 +135,13 @@ void QPalette_new5()
 }
 
 /*
-QPalette ( const QPalette & p )
+QPalette( const QPalette & p )
 */
 void QPalette_new6()
 {
   QPalette * obj = new QPalette( *PQPALETTE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPalette ()
-[2]QPalette ( const QColor & button )
-[3]QPalette ( Qt::GlobalColor button )
-[4]QPalette ( const QColor & button, const QColor & window )
-[5]QPalette ( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
-[6]QPalette ( const QPalette & p )
-*/
 
 HB_FUNC_STATIC( QPALETTE_NEW )
 {
@@ -202,7 +193,7 @@ HB_FUNC_STATIC( QPALETTE_DELETE )
 }
 
 /*
-const QBrush & alternateBase () const
+const QBrush & alternateBase() const
 */
 HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
 {
@@ -227,7 +218,7 @@ HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
 }
 
 /*
-const QBrush & base () const
+const QBrush & base() const
 */
 HB_FUNC_STATIC( QPALETTE_BASE )
 {
@@ -252,7 +243,7 @@ HB_FUNC_STATIC( QPALETTE_BASE )
 }
 
 /*
-const QBrush & brightText () const
+const QBrush & brightText() const
 */
 HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
 {
@@ -277,7 +268,7 @@ HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
 }
 
 /*
-const QBrush & brush ( ColorGroup group, ColorRole role ) const
+const QBrush & brush( QPalette::ColorGroup group, QPalette::ColorRole role ) const
 */
 void QPalette_brush1()
 {
@@ -291,7 +282,7 @@ void QPalette_brush1()
 }
 
 /*
-const QBrush & brush ( ColorRole role ) const
+const QBrush & brush( QPalette::ColorRole role ) const
 */
 void QPalette_brush2()
 {
@@ -303,11 +294,6 @@ void QPalette_brush2()
     Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
   }
 }
-
-/*
-[1]const QBrush & brush ( ColorGroup group, ColorRole role ) const
-[2]const QBrush & brush ( ColorRole role ) const
-*/
 
 HB_FUNC_STATIC( QPALETTE_BRUSH )
 {
@@ -326,7 +312,7 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
 }
 
 /*
-const QBrush & button () const
+const QBrush & button() const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTON )
 {
@@ -351,7 +337,7 @@ HB_FUNC_STATIC( QPALETTE_BUTTON )
 }
 
 /*
-const QBrush & buttonText () const
+const QBrush & buttonText() const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
 {
@@ -376,7 +362,7 @@ HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
 }
 
 /*
-qint64 cacheKey () const
+qint64 cacheKey() const
 */
 HB_FUNC_STATIC( QPALETTE_CACHEKEY )
 {
@@ -400,7 +386,7 @@ HB_FUNC_STATIC( QPALETTE_CACHEKEY )
 }
 
 /*
-const QColor & color ( ColorGroup group, ColorRole role ) const
+const QColor & color( QPalette::ColorGroup group, QPalette::ColorRole role ) const
 */
 void QPalette_color1()
 {
@@ -414,7 +400,7 @@ void QPalette_color1()
 }
 
 /*
-const QColor & color ( ColorRole role ) const
+const QColor & color( QPalette::ColorRole role ) const
 */
 void QPalette_color2()
 {
@@ -426,11 +412,6 @@ void QPalette_color2()
     Qt5xHb::createReturnClass( ptr, "QCOLOR", false );
   }
 }
-
-/*
-[1]const QColor & color ( ColorGroup group, ColorRole role ) const
-[2]const QColor & color ( ColorRole role ) const
-*/
 
 HB_FUNC_STATIC( QPALETTE_COLOR )
 {
@@ -449,7 +430,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
 }
 
 /*
-ColorGroup currentColorGroup () const
+QPalette::ColorGroup currentColorGroup() const
 */
 HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
 {
@@ -473,7 +454,7 @@ HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
 }
 
 /*
-const QBrush & dark () const
+const QBrush & dark() const
 */
 HB_FUNC_STATIC( QPALETTE_DARK )
 {
@@ -498,7 +479,7 @@ HB_FUNC_STATIC( QPALETTE_DARK )
 }
 
 /*
-const QBrush & highlight () const
+const QBrush & highlight() const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
 {
@@ -523,7 +504,7 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
 }
 
 /*
-const QBrush & highlightedText () const
+const QBrush & highlightedText() const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
 {
@@ -548,7 +529,7 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
 }
 
 /*
-bool isBrushSet ( ColorGroup cg, ColorRole cr ) const
+bool isBrushSet( QPalette::ColorGroup cg, QPalette::ColorRole cr ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
 {
@@ -572,7 +553,7 @@ HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
 }
 
 /*
-bool isCopyOf ( const QPalette & p ) const
+bool isCopyOf( const QPalette & p ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
 {
@@ -596,7 +577,7 @@ HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
 }
 
 /*
-bool isEqual ( ColorGroup cg1, ColorGroup cg2 ) const
+bool isEqual( QPalette::ColorGroup cg1, QPalette::ColorGroup cg2 ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISEQUAL )
 {
@@ -620,7 +601,7 @@ HB_FUNC_STATIC( QPALETTE_ISEQUAL )
 }
 
 /*
-const QBrush & light () const
+const QBrush & light() const
 */
 HB_FUNC_STATIC( QPALETTE_LIGHT )
 {
@@ -645,7 +626,7 @@ HB_FUNC_STATIC( QPALETTE_LIGHT )
 }
 
 /*
-const QBrush & link () const
+const QBrush & link() const
 */
 HB_FUNC_STATIC( QPALETTE_LINK )
 {
@@ -670,7 +651,7 @@ HB_FUNC_STATIC( QPALETTE_LINK )
 }
 
 /*
-const QBrush & linkVisited () const
+const QBrush & linkVisited() const
 */
 HB_FUNC_STATIC( QPALETTE_LINKVISITED )
 {
@@ -695,7 +676,7 @@ HB_FUNC_STATIC( QPALETTE_LINKVISITED )
 }
 
 /*
-const QBrush & mid () const
+const QBrush & mid() const
 */
 HB_FUNC_STATIC( QPALETTE_MID )
 {
@@ -720,7 +701,7 @@ HB_FUNC_STATIC( QPALETTE_MID )
 }
 
 /*
-const QBrush & midlight () const
+const QBrush & midlight() const
 */
 HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
 {
@@ -745,7 +726,7 @@ HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
 }
 
 /*
-QPalette resolve ( const QPalette & other ) const
+QPalette resolve( const QPalette & other ) const
 */
 HB_FUNC_STATIC( QPALETTE_RESOLVE )
 {
@@ -770,7 +751,7 @@ HB_FUNC_STATIC( QPALETTE_RESOLVE )
 }
 
 /*
-void setBrush ( ColorRole role, const QBrush & brush )
+void setBrush( QPalette::ColorRole role, const QBrush & brush )
 */
 void QPalette_setBrush1()
 {
@@ -785,7 +766,7 @@ void QPalette_setBrush1()
 }
 
 /*
-void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
+void setBrush( QPalette::ColorGroup group, QPalette::ColorRole role, const QBrush & brush )
 */
 void QPalette_setBrush2()
 {
@@ -798,11 +779,6 @@ void QPalette_setBrush2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setBrush ( ColorRole role, const QBrush & brush )
-[2]void setBrush ( ColorGroup group, ColorRole role, const QBrush & brush )
-*/
 
 HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 {
@@ -821,7 +797,7 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 }
 
 /*
-void setColor ( ColorGroup group, ColorRole role, const QColor & color )
+void setColor( QPalette::ColorGroup group, QPalette::ColorRole role, const QColor & color )
 */
 void QPalette_setColor1()
 {
@@ -836,7 +812,7 @@ void QPalette_setColor1()
 }
 
 /*
-void setColor ( ColorRole role, const QColor & color )
+void setColor( QPalette::ColorRole role, const QColor & color )
 */
 void QPalette_setColor2()
 {
@@ -849,11 +825,6 @@ void QPalette_setColor2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setColor ( ColorGroup group, ColorRole role, const QColor & color )
-[2]void setColor ( ColorRole role, const QColor & color )
-*/
 
 HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 {
@@ -872,7 +843,7 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 }
 
 /*
-void setColorGroup ( ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
+void setColorGroup( QPalette::ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 */
 HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
 {
@@ -898,7 +869,7 @@ HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
 }
 
 /*
-void setCurrentColorGroup ( ColorGroup cg )
+void setCurrentColorGroup( QPalette::ColorGroup cg )
 */
 HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
 {
@@ -924,7 +895,7 @@ HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
 }
 
 /*
-const QBrush & shadow () const
+const QBrush & shadow() const
 */
 HB_FUNC_STATIC( QPALETTE_SHADOW )
 {
@@ -949,7 +920,7 @@ HB_FUNC_STATIC( QPALETTE_SHADOW )
 }
 
 /*
-const QBrush & text () const
+const QBrush & text() const
 */
 HB_FUNC_STATIC( QPALETTE_TEXT )
 {
@@ -974,7 +945,7 @@ HB_FUNC_STATIC( QPALETTE_TEXT )
 }
 
 /*
-const QBrush & toolTipBase () const
+const QBrush & toolTipBase() const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
 {
@@ -999,7 +970,7 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
 }
 
 /*
-const QBrush & toolTipText () const
+const QBrush & toolTipText() const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
 {
@@ -1024,7 +995,7 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
 }
 
 /*
-const QBrush & window () const
+const QBrush & window() const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOW )
 {
@@ -1049,7 +1020,7 @@ HB_FUNC_STATIC( QPALETTE_WINDOW )
 }
 
 /*
-const QBrush & windowText () const
+const QBrush & windowText() const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
 {
@@ -1074,7 +1045,7 @@ HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
 }
 
 /*
-const QBrush &QPalette::placeholderText() const
+const QBrush & placeholderText() const
 */
 HB_FUNC_STATIC( QPALETTE_PLACEHOLDERTEXT )
 {

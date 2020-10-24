@@ -47,7 +47,7 @@ RETURN
 #endif
 
 /*
-QDragLeaveEvent ()
+QDragLeaveEvent()
 */
 HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 {

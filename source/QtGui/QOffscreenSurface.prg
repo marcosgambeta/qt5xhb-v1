@@ -66,7 +66,7 @@ RETURN
 #include <QtGui/QScreen>
 
 /*
-QOffscreenSurface(QScreen *screen = 0)
+QOffscreenSurface( QScreen * screen = 0 )
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_NEW )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_ISVALID )
 }
 
 /*
-void setFormat(const QSurfaceFormat &format)
+void setFormat( const QSurfaceFormat & format )
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_SETFORMAT )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SIZE )
 }
 
 /*
-QScreen *screen() const
+QScreen * screen() const
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_SCREEN )
 {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SCREEN )
 }
 
 /*
-void setScreen(QScreen *screen)
+void setScreen( QScreen * screen )
 */
 HB_FUNC_STATIC( QOFFSCREENSURFACE_SETSCREEN )
 {
@@ -351,10 +351,6 @@ HB_FUNC_STATIC( QOFFSCREENSURFACE_SETSCREEN )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-QPlatformOffscreenSurface *handle() const
-*/
 
 void QOffscreenSurfaceSlots_connect_signal( const QString & signal, const QString & slot );
 

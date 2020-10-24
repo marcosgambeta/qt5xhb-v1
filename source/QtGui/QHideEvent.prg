@@ -47,7 +47,7 @@ RETURN
 #endif
 
 /*
-QHideEvent ()
+QHideEvent()
 */
 HB_FUNC_STATIC( QHIDEEVENT_NEW )
 {

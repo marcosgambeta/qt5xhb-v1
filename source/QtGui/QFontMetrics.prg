@@ -78,7 +78,7 @@ RETURN
 #endif
 
 /*
-QFontMetrics ( const QFont & font )
+QFontMetrics( const QFont & font )
 */
 void QFontMetrics_new1()
 {
@@ -87,7 +87,7 @@ void QFontMetrics_new1()
 }
 
 /*
-QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
+QFontMetrics( const QFont & font, QPaintDevice * paintdevice )
 */
 void QFontMetrics_new2()
 {
@@ -96,7 +96,7 @@ void QFontMetrics_new2()
 }
 
 /*
-QFontMetrics ( const QFontMetrics & fm )
+QFontMetrics( const QFontMetrics & fm )
 */
 void QFontMetrics_new3()
 {
@@ -104,19 +104,13 @@ void QFontMetrics_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QFontMetrics ( const QFont & font )
-[2]QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
-[3]QFontMetrics ( const QFontMetrics & fm )
-*/
-
 HB_FUNC_STATIC( QFONTMETRICS_NEW )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
     QFontMetrics_new1();
   }
-  else if( ISNUMPAR(2) && ISQFONT(1) && ISOBJECT(2) ) // TODO: implementar ISQPAINTDEVICE
+  else if( ISNUMPAR(2) && ISQFONT(1) && ISOBJECT(2) )
   {
     QFontMetrics_new2();
   }
@@ -148,7 +142,7 @@ HB_FUNC_STATIC( QFONTMETRICS_DELETE )
 }
 
 /*
-int ascent () const
+int ascent() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_ASCENT )
 {
@@ -172,7 +166,7 @@ HB_FUNC_STATIC( QFONTMETRICS_ASCENT )
 }
 
 /*
-int averageCharWidth () const
+int averageCharWidth() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_AVERAGECHARWIDTH )
 {
@@ -196,7 +190,7 @@ HB_FUNC_STATIC( QFONTMETRICS_AVERAGECHARWIDTH )
 }
 
 /*
-QRect boundingRect ( QChar ch ) const
+QRect boundingRect( QChar ch ) const
 */
 void QFontMetrics_boundingRect1()
 {
@@ -210,7 +204,7 @@ void QFontMetrics_boundingRect1()
 }
 
 /*
-QRect boundingRect ( const QString & text ) const
+QRect boundingRect( const QString & text ) const
 */
 void QFontMetrics_boundingRect2()
 {
@@ -222,21 +216,6 @@ void QFontMetrics_boundingRect2()
     Qt5xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
-
-/*
-QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-*/
-
-/*
-QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-*/
-
-/*
-[1]QRect boundingRect ( QChar ch ) const
-[2]QRect boundingRect ( const QString & text ) const
-[3]QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-[4]QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-*/
 
 HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
 {
@@ -255,7 +234,7 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
 }
 
 /*
-int descent () const
+int descent() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_DESCENT )
 {
@@ -279,7 +258,7 @@ HB_FUNC_STATIC( QFONTMETRICS_DESCENT )
 }
 
 /*
-QString elidedText ( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
+QString elidedText( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
 {
@@ -303,7 +282,7 @@ HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_HEIGHT )
 {
@@ -327,7 +306,7 @@ HB_FUNC_STATIC( QFONTMETRICS_HEIGHT )
 }
 
 /*
-bool inFontUcs4 ( uint character ) const
+bool inFontUcs4( uint character ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_INFONTUCS4 )
 {
@@ -351,7 +330,7 @@ HB_FUNC_STATIC( QFONTMETRICS_INFONTUCS4 )
 }
 
 /*
-int leading () const
+int leading() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_LEADING )
 {
@@ -375,7 +354,7 @@ HB_FUNC_STATIC( QFONTMETRICS_LEADING )
 }
 
 /*
-int lineSpacing () const
+int lineSpacing() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_LINESPACING )
 {
@@ -399,7 +378,7 @@ HB_FUNC_STATIC( QFONTMETRICS_LINESPACING )
 }
 
 /*
-int lineWidth () const
+int lineWidth() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_LINEWIDTH )
 {
@@ -423,7 +402,7 @@ HB_FUNC_STATIC( QFONTMETRICS_LINEWIDTH )
 }
 
 /*
-int maxWidth () const
+int maxWidth() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_MAXWIDTH )
 {
@@ -447,7 +426,7 @@ HB_FUNC_STATIC( QFONTMETRICS_MAXWIDTH )
 }
 
 /*
-int minLeftBearing () const
+int minLeftBearing() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_MINLEFTBEARING )
 {
@@ -471,7 +450,7 @@ HB_FUNC_STATIC( QFONTMETRICS_MINLEFTBEARING )
 }
 
 /*
-int minRightBearing () const
+int minRightBearing() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_MINRIGHTBEARING )
 {
@@ -495,7 +474,7 @@ HB_FUNC_STATIC( QFONTMETRICS_MINRIGHTBEARING )
 }
 
 /*
-int overlinePos () const
+int overlinePos() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_OVERLINEPOS )
 {
@@ -519,7 +498,7 @@ HB_FUNC_STATIC( QFONTMETRICS_OVERLINEPOS )
 }
 
 /*
-QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+QSize size( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_SIZE )
 {
@@ -546,7 +525,7 @@ HB_FUNC_STATIC( QFONTMETRICS_SIZE )
 }
 
 /*
-int strikeOutPos () const
+int strikeOutPos() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_STRIKEOUTPOS )
 {
@@ -570,7 +549,7 @@ HB_FUNC_STATIC( QFONTMETRICS_STRIKEOUTPOS )
 }
 
 /*
-QRect tightBoundingRect ( const QString & text ) const
+QRect tightBoundingRect( const QString & text ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_TIGHTBOUNDINGRECT )
 {
@@ -595,7 +574,7 @@ HB_FUNC_STATIC( QFONTMETRICS_TIGHTBOUNDINGRECT )
 }
 
 /*
-int underlinePos () const
+int underlinePos() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_UNDERLINEPOS )
 {
@@ -619,7 +598,7 @@ HB_FUNC_STATIC( QFONTMETRICS_UNDERLINEPOS )
 }
 
 /*
-int width ( const QString & text, int len = -1 ) const
+int width( const QString & text, int len = -1 ) const
 */
 void QFontMetrics_width1()
 {
@@ -632,7 +611,7 @@ void QFontMetrics_width1()
 }
 
 /*
-int width ( QChar ch ) const
+int width( QChar ch ) const
 */
 void QFontMetrics_width2()
 {
@@ -643,11 +622,6 @@ void QFontMetrics_width2()
     RINT( obj->width( *PQCHAR(1) ) );
   }
 }
-
-/*
-[1]int width ( const QString & text, int len = -1 ) const
-[2]int width ( QChar ch ) const
-*/
 
 HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
 {
@@ -666,7 +640,7 @@ HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
 }
 
 /*
-int xHeight () const
+int xHeight() const
 */
 HB_FUNC_STATIC( QFONTMETRICS_XHEIGHT )
 {

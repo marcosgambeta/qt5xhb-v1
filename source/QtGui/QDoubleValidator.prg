@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QDoubleValidator ( QObject * parent = 0 )
+QDoubleValidator( QObject * parent = 0 )
 */
 void QDoubleValidator_new1()
 {
@@ -68,18 +68,13 @@ void QDoubleValidator_new1()
 }
 
 /*
-QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
+QDoubleValidator( double bottom, double top, int decimals, QObject * parent )
 */
 void QDoubleValidator_new2()
 {
   QDoubleValidator * obj = new QDoubleValidator( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDoubleValidator ( QObject * parent = 0 )
-[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 {
@@ -117,7 +112,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
 }
 
 /*
-double bottom () const
+double bottom() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
 {
@@ -141,7 +136,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
 }
 
 /*
-int decimals () const
+int decimals() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
 {
@@ -165,7 +160,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
 }
 
 /*
-Notation notation () const
+QDoubleValidator::Notation notation() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
 {
@@ -189,7 +184,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
 }
 
 /*
-void setBottom ( double )
+void setBottom( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
 {
@@ -215,7 +210,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
 }
 
 /*
-void setDecimals ( int )
+void setDecimals( int )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
 {
@@ -241,7 +236,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
 }
 
 /*
-void setNotation ( Notation )
+void setNotation( QDoubleValidator::Notation )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
 {
@@ -267,7 +262,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
 }
 
 /*
-virtual void setRange ( double minimum, double maximum, int decimals = 0 )
+virtual void setRange( double minimum, double maximum, int decimals = 0 )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
 {
@@ -293,7 +288,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
 }
 
 /*
-void setTop ( double )
+void setTop( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
 {
@@ -319,7 +314,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
 }
 
 /*
-double top () const
+double top() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
 {
@@ -343,7 +338,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
 }
 
 /*
-virtual QValidator::State validate ( QString & input, int & pos ) const
+virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
 {

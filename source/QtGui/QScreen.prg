@@ -113,10 +113,6 @@ HB_FUNC_STATIC( QSCREEN_DELETE )
 }
 
 /*
-QPlatformScreen *handle() const
-*/
-
-/*
 QString name() const
 */
 HB_FUNC_STATIC( QSCREEN_NAME )
@@ -458,7 +454,7 @@ HB_FUNC_STATIC( QSCREEN_AVAILABLEGEOMETRY )
 }
 
 /*
-QList<QScreen *> virtualSiblings() const // TODO: implementar método
+QList<QScreen *> virtualSiblings() const
 */
 HB_FUNC_STATIC( QSCREEN_VIRTUALSIBLINGS )
 {
@@ -678,7 +674,7 @@ HB_FUNC_STATIC( QSCREEN_ORIENTATIONUPDATEMASK )
 }
 
 /*
-void setOrientationUpdateMask(Qt::ScreenOrientations mask)
+void setOrientationUpdateMask( Qt::ScreenOrientations mask )
 */
 HB_FUNC_STATIC( QSCREEN_SETORIENTATIONUPDATEMASK )
 {
@@ -704,7 +700,7 @@ HB_FUNC_STATIC( QSCREEN_SETORIENTATIONUPDATEMASK )
 }
 
 /*
-int angleBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b) const
+int angleBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b ) const
 */
 HB_FUNC_STATIC( QSCREEN_ANGLEBETWEEN )
 {
@@ -728,7 +724,7 @@ HB_FUNC_STATIC( QSCREEN_ANGLEBETWEEN )
 }
 
 /*
-QTransform transformBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &target) const
+QTransform transformBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & target ) const
 */
 HB_FUNC_STATIC( QSCREEN_TRANSFORMBETWEEN )
 {
@@ -753,7 +749,7 @@ HB_FUNC_STATIC( QSCREEN_TRANSFORMBETWEEN )
 }
 
 /*
-QRect mapBetween(Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect &rect) const
+QRect mapBetween( Qt::ScreenOrientation a, Qt::ScreenOrientation b, const QRect & rect ) const
 */
 HB_FUNC_STATIC( QSCREEN_MAPBETWEEN )
 {
@@ -778,7 +774,7 @@ HB_FUNC_STATIC( QSCREEN_MAPBETWEEN )
 }
 
 /*
-bool isPortrait(Qt::ScreenOrientation orientation) const
+bool isPortrait( Qt::ScreenOrientation orientation ) const
 */
 HB_FUNC_STATIC( QSCREEN_ISPORTRAIT )
 {
@@ -802,7 +798,7 @@ HB_FUNC_STATIC( QSCREEN_ISPORTRAIT )
 }
 
 /*
-bool isLandscape(Qt::ScreenOrientation orientation) const
+bool isLandscape( Qt::ScreenOrientation orientation ) const
 */
 HB_FUNC_STATIC( QSCREEN_ISLANDSCAPE )
 {
@@ -826,7 +822,7 @@ HB_FUNC_STATIC( QSCREEN_ISLANDSCAPE )
 }
 
 /*
-QPixmap grabWindow(WId window, int x = 0, int y = 0, int w = -1, int h = -1)
+QPixmap grabWindow( WId window, int x = 0, int y = 0, int w = -1, int h = -1 )
 */
 HB_FUNC_STATIC( QSCREEN_GRABWINDOW )
 {

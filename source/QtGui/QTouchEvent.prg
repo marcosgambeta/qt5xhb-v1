@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_DELETE )
 }
 
 /*
-QWindow *window() const
+QWindow * window() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_WINDOW )
 }
 
 /*
-QObject *target() const
+QObject * target() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_TARGET )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
 }
 
 /*
-QTouchDevice *device() const
+QTouchDevice * device() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_DEVICE )
 {

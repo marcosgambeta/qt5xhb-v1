@@ -81,7 +81,7 @@ void QTextOption_new1()
 }
 
 /*
-QTextOption(Qt::Alignment alignment)
+QTextOption( Qt::Alignment alignment )
 */
 void QTextOption_new2()
 {
@@ -90,19 +90,13 @@ void QTextOption_new2()
 }
 
 /*
-QTextOption(const QTextOption &o)
+QTextOption( const QTextOption & o )
 */
 void QTextOption_new3()
 {
   QTextOption * obj = new QTextOption( *PQTEXTOPTION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextOption()
-[2]QTextOption(Qt::Alignment alignment)
-[3]QTextOption(const QTextOption &o)
-*/
 
 HB_FUNC_STATIC( QTEXTOPTION_NEW )
 {
@@ -142,7 +136,7 @@ HB_FUNC_STATIC( QTEXTOPTION_DELETE )
 }
 
 /*
-void setAlignment(Qt::Alignment alignment)
+void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
 {
@@ -192,7 +186,7 @@ HB_FUNC_STATIC( QTEXTOPTION_ALIGNMENT )
 }
 
 /*
-void setTextDirection(Qt::LayoutDirection aDirection)
+void setTextDirection( Qt::LayoutDirection aDirection )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
 {
@@ -242,7 +236,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TEXTDIRECTION )
 }
 
 /*
-void setWrapMode(WrapMode wrap)
+void setWrapMode( QTextOption::WrapMode wrap )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
 {
@@ -268,7 +262,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
 }
 
 /*
-WrapMode wrapMode() const
+QTextOption::WrapMode wrapMode() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
 {
@@ -292,7 +286,7 @@ HB_FUNC_STATIC( QTEXTOPTION_WRAPMODE )
 }
 
 /*
-void setFlags(Flags flags)
+void setFlags( QTextOption::Flags flags )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
 {
@@ -318,7 +312,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
 }
 
 /*
-Flags flags() const
+QTextOption::Flags flags() const
 */
 HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
 {
@@ -342,7 +336,7 @@ HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
 }
 
 /*
-void setTabStop(qreal tabStop)
+void setTabStop( qreal tabStop )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
 {
@@ -392,7 +386,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABSTOP )
 }
 
 /*
-void setTabArray(const QList<qreal> &tabStops)
+void setTabArray( const QList<qreal> & tabStops )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
 {
@@ -453,7 +447,7 @@ HB_FUNC_STATIC( QTEXTOPTION_TABARRAY )
 }
 
 /*
-void setUseDesignMetrics(bool b)
+void setUseDesignMetrics( bool b )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
 {

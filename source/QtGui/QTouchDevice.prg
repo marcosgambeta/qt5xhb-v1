@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_NAME )
 }
 
 /*
-DeviceType type() const
+QTouchDevice::DeviceType type() const
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_TYPE )
 }
 
 /*
-Capabilities capabilities() const
+QTouchDevice::Capabilities capabilities() const
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_CAPABILITIES )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_SETNAME )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETNAME )
 }
 
 /*
-void setType(DeviceType devType)
+void setType( QTouchDevice::DeviceType devType )
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETTYPE )
 }
 
 /*
-void setCapabilities(Capabilities caps)
+void setCapabilities( QTouchDevice::Capabilities caps )
 */
 HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
 {
@@ -243,10 +243,6 @@ HB_FUNC_STATIC( QTOUCHDEVICE_SETCAPABILITIES )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-static QList<const QTouchDevice *> devices()
-*/
 
 HB_FUNC_STATIC( QTOUCHDEVICE_NEWFROM )
 {

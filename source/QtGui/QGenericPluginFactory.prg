@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_DELETE )
 }
 
 /*
-QObject * create ( const QString & key, const QString & specification )
+QObject * create( const QString & key, const QString & specification )
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 }
 
 /*
-QStringList keys ()
+QStringList keys()
 */
 HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
 {

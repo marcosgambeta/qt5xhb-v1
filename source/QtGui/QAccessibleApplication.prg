@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_NEW )
 }
 
 /*
-QWindow *window() const
+QWindow * window() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_WINDOW )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILDCOUNT )
 }
 
 /*
-int indexOfChild(const QAccessibleInterface*) const
+int indexOfChild( const QAccessibleInterface * ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_INDEXOFCHILD )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_INDEXOFCHILD )
 }
 
 /*
-QAccessibleInterface *focusChild() const
+QAccessibleInterface * focusChild() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_FOCUSCHILD )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_FOCUSCHILD )
 }
 
 /*
-QAccessibleInterface *parent() const
+QAccessibleInterface * parent() const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_PARENT )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_PARENT )
 }
 
 /*
-QAccessibleInterface *child(int index) const
+QAccessibleInterface * child( int index ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILD )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILD )
 }
 
 /*
-QString text(QAccessible::Text t) const
+QString text( QAccessible::Text t ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_TEXT )
 {

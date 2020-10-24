@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-QKeyEvent ( Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )
+QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )
 */
 HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QKEYEVENT_DELETE )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QKEYEVENT_COUNT )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QKEYEVENT_COUNT )
 }
 
 /*
-bool isAutoRepeat () const
+bool isAutoRepeat() const
 */
 HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 }
 
 /*
-int key () const
+int key() const
 */
 HB_FUNC_STATIC( QKEYEVENT_KEY )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QKEYEVENT_KEY )
 }
 
 /*
-bool matches ( QKeySequence::StandardKey key ) const
+bool matches( QKeySequence::StandardKey key ) const
 */
 HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 }
 
 /*
-Qt::KeyboardModifiers modifiers () const
+Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 }
 
 /*
-quint32 nativeModifiers () const
+quint32 nativeModifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 }
 
 /*
-quint32 nativeScanCode () const
+quint32 nativeScanCode() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 }
 
 /*
-quint32 nativeVirtualKey () const
+quint32 nativeVirtualKey() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 }
 
 /*
-QString text () const
+QString text() const
 */
 HB_FUNC_STATIC( QKEYEVENT_TEXT )
 {

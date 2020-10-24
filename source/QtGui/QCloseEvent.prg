@@ -47,7 +47,7 @@ RETURN
 #endif
 
 /*
-QCloseEvent ()
+QCloseEvent()
 */
 HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 {

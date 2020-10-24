@@ -66,7 +66,7 @@ RETURN
 #endif
 
 /*
-QGlyphRun ()
+QGlyphRun()
 */
 void QGlyphRun_new1()
 {
@@ -75,18 +75,13 @@ void QGlyphRun_new1()
 }
 
 /*
-QGlyphRun ( const QGlyphRun & other )
+QGlyphRun( const QGlyphRun & other )
 */
 void QGlyphRun_new2()
 {
   QGlyphRun * obj = new QGlyphRun( *PQGLYPHRUN(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGlyphRun ()
-[2]QGlyphRun ( const QGlyphRun & other )
-*/
 
 HB_FUNC_STATIC( QGLYPHRUN_NEW )
 {
@@ -122,7 +117,7 @@ HB_FUNC_STATIC( QGLYPHRUN_DELETE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 {
@@ -148,7 +143,7 @@ HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 }
 
 /*
-bool overline () const
+bool overline() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 {
@@ -172,7 +167,7 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 }
 
 /*
-QRawFont rawFont () const
+QRawFont rawFont() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 {
@@ -197,7 +192,7 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 }
 
 /*
-void setOverline ( bool overline )
+void setOverline( bool overline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 {
@@ -223,11 +218,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 }
 
 /*
-void setRawData ( const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size )
-*/
-
-/*
-void setRawFont ( const QRawFont & rawFont )
+void setRawFont( const QRawFont & rawFont )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 {
@@ -253,7 +244,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 }
 
 /*
-void setStrikeOut ( bool strikeOut )
+void setStrikeOut( bool strikeOut )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 {
@@ -279,7 +270,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 }
 
 /*
-void setUnderline ( bool underline )
+void setUnderline( bool underline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 {
@@ -305,7 +296,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 }
 
 /*
-bool strikeOut () const
+bool strikeOut() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 {
@@ -329,7 +320,7 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 }
 
 /*
-bool underline () const
+bool underline() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
 {

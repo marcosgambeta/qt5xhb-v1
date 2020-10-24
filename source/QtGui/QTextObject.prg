@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 }
 
 /*
-QTextDocument *document() const
+QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 {
@@ -151,9 +151,5 @@ HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
 #endif
   }
 }
-
-/*
-QTextDocumentPrivate *docHandle() const
-*/
 
 #pragma ENDDUMP

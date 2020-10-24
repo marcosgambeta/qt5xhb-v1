@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QAccessibleTextUpdateEvent(QObject *obj, int position, const QString &oldText, const QString &text)
+QAccessibleTextUpdateEvent( QObject * obj, int position, const QString & oldText, const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTUPDATEEVENT_NEW )
 {

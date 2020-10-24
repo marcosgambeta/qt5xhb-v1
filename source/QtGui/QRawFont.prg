@@ -102,7 +102,7 @@ void QRawFont_new1()
 }
 
 /*
-QRawFont(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting)
+QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
 void QRawFont_new2()
 {
@@ -111,7 +111,7 @@ void QRawFont_new2()
 }
 
 /*
-QRawFont(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting)
+QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
 void QRawFont_new3()
 {
@@ -120,20 +120,13 @@ void QRawFont_new3()
 }
 
 /*
-QRawFont(const QRawFont &other)
+QRawFont( const QRawFont & other )
 */
 void QRawFont_new4()
 {
   QRawFont * obj = new QRawFont( *PQRAWFONT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QRawFont()
-[2]QRawFont(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting)
-[3]QRawFont(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting)
-[4]QRawFont(const QRawFont &other)
-*/
 
 HB_FUNC_STATIC( QRAWFONT_NEW )
 {
@@ -201,7 +194,7 @@ HB_FUNC_STATIC( QRAWFONT_ISVALID )
 }
 
 /*
-void swap(QRawFont &other)
+void swap( QRawFont & other )
 */
 HB_FUNC_STATIC( QRAWFONT_SWAP )
 {
@@ -323,7 +316,7 @@ HB_FUNC_STATIC( QRAWFONT_WEIGHT )
 }
 
 /*
-QVector<quint32> glyphIndexesForString(const QString &text) const
+QVector<quint32> glyphIndexesForString( const QString & text ) const
 */
 HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 {
@@ -355,7 +348,7 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 }
 
 /*
-inline QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
+QVector<QPointF> advancesForGlyphIndexes( const QVector<quint32> & glyphIndexes ) const
 */
 void QRawFont_advancesForGlyphIndexes1()
 {
@@ -405,15 +398,6 @@ void QRawFont_advancesForGlyphIndexes1()
   }
 }
 
-/*
-bool advancesForGlyphIndexes(const quint32 *glyphIndexes, QPointF *advances, int numGlyphs) const
-*/
-
-/*
-[1]inline QVector<QPointF> advancesForGlyphIndexes(const QVector<quint32> &glyphIndexes) const
-[2]bool advancesForGlyphIndexes(const quint32 *glyphIndexes, QPointF *advances, int numGlyphs) const
-*/
-
 HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 {
   if( ISNUMPAR(1)  && ISARRAY(1) )
@@ -427,11 +411,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 }
 
 /*
-bool glyphIndexesForChars(const QChar *chars, int numChars, quint32 *glyphIndexes, int *numGlyphs) const
-*/
-
-/*
-QImage alphaMapForGlyph(quint32 glyphIndex,AntialiasingType antialiasingType = SubPixelAntialiasing,const QTransform &transform = QTransform()) const
+QImage alphaMapForGlyph( quint32 glyphIndex, QRawFont::AntialiasingType antialiasingType = QRawFont::SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
 */
 HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
 {
@@ -456,7 +436,7 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
 }
 
 /*
-QPainterPath pathForGlyph(quint32 glyphIndex) const
+QPainterPath pathForGlyph( quint32 glyphIndex ) const
 */
 HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
 {
@@ -481,7 +461,7 @@ HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
 }
 
 /*
-QRectF boundingRect(quint32 glyphIndex) const
+QRectF boundingRect( quint32 glyphIndex ) const
 */
 HB_FUNC_STATIC( QRAWFONT_BOUNDINGRECT )
 {
@@ -506,7 +486,7 @@ HB_FUNC_STATIC( QRAWFONT_BOUNDINGRECT )
 }
 
 /*
-void setPixelSize(qreal pixelSize)
+void setPixelSize( qreal pixelSize )
 */
 HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
 {
@@ -796,7 +776,7 @@ HB_FUNC_STATIC( QRAWFONT_UNITSPEREM )
 }
 
 /*
-void loadFromFile(const QString &fileName,qreal pixelSize,QFont::HintingPreference hintingPreference)
+void loadFromFile( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
 HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
 {
@@ -822,7 +802,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
 }
 
 /*
-void loadFromData(const QByteArray &fontData,qreal pixelSize,QFont::HintingPreference hintingPreference)
+void loadFromData( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
 HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
 {
@@ -848,7 +828,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
 }
 
 /*
-bool supportsCharacter(uint ucs4) const
+bool supportsCharacter( uint ucs4 ) const
 */
 void QRawFont_supportsCharacter1()
 {
@@ -861,7 +841,7 @@ void QRawFont_supportsCharacter1()
 }
 
 /*
-bool supportsCharacter(QChar character) const
+bool supportsCharacter( QChar character ) const
 */
 void QRawFont_supportsCharacter2()
 {
@@ -872,11 +852,6 @@ void QRawFont_supportsCharacter2()
     RBOOL( obj->supportsCharacter( *PQCHAR(1) ) );
   }
 }
-
-/*
-[1]bool supportsCharacter(uint ucs4) const
-[2]bool supportsCharacter(QChar character) const
-*/
 
 HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 {
@@ -927,7 +902,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 }
 
 /*
-QByteArray fontTable(const char *tagName) const
+QByteArray fontTable( const char * tagName ) const
 */
 HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
 {
@@ -952,7 +927,7 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
 }
 
 /*
-static QRawFont fromFont(const QFont &font,QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any)
+static QRawFont fromFont( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
 */
 HB_FUNC_STATIC( QRAWFONT_FROMFONT )
 {

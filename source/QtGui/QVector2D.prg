@@ -88,7 +88,7 @@ void QVector2D_new1()
 }
 
 /*
-QVector2D(float xpos, float ypos)
+QVector2D( float xpos, float ypos )
 */
 void QVector2D_new2()
 {
@@ -97,7 +97,7 @@ void QVector2D_new2()
 }
 
 /*
-QVector2D(const QPoint& point)
+QVector2D( const QPoint & point )
 */
 void QVector2D_new3()
 {
@@ -106,7 +106,7 @@ void QVector2D_new3()
 }
 
 /*
-QVector2D(const QPointF& point)
+QVector2D( const QPointF & point )
 */
 void QVector2D_new4()
 {
@@ -115,7 +115,7 @@ void QVector2D_new4()
 }
 
 /*
-QVector2D(const QVector3D& vector)
+QVector2D( const QVector3D & vector )
 */
 void QVector2D_new5()
 {
@@ -124,22 +124,13 @@ void QVector2D_new5()
 }
 
 /*
-QVector2D(const QVector4D& vector)
+QVector2D( const QVector4D & vector )
 */
 void QVector2D_new6()
 {
   QVector2D * obj = new QVector2D( *PQVECTOR4D(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVector2D()
-[2]QVector2D(float xpos, float ypos)
-[3]QVector2D(const QPoint& point)
-[4]QVector2D(const QPointF& point)
-[5]QVector2D(const QVector3D& vector)
-[6]QVector2D(const QVector4D& vector)
-*/
 
 HB_FUNC_STATIC( QVECTOR2D_NEW )
 {
@@ -263,7 +254,7 @@ HB_FUNC_STATIC( QVECTOR2D_Y )
 }
 
 /*
-void setX(float x)
+void setX( float x )
 */
 HB_FUNC_STATIC( QVECTOR2D_SETX )
 {
@@ -289,7 +280,7 @@ HB_FUNC_STATIC( QVECTOR2D_SETX )
 }
 
 /*
-void setY(float y)
+void setY( float y )
 */
 HB_FUNC_STATIC( QVECTOR2D_SETY )
 {
@@ -414,7 +405,7 @@ HB_FUNC_STATIC( QVECTOR2D_NORMALIZE )
 }
 
 /*
-float distanceToPoint(const QVector2D &point) const
+float distanceToPoint( const QVector2D & point ) const
 */
 HB_FUNC_STATIC( QVECTOR2D_DISTANCETOPOINT )
 {
@@ -438,7 +429,7 @@ HB_FUNC_STATIC( QVECTOR2D_DISTANCETOPOINT )
 }
 
 /*
-float distanceToLine(const QVector2D& point, const QVector2D& direction) const
+float distanceToLine( const QVector2D & point, const QVector2D & direction ) const
 */
 HB_FUNC_STATIC( QVECTOR2D_DISTANCETOLINE )
 {
@@ -562,7 +553,7 @@ HB_FUNC_STATIC( QVECTOR2D_TOPOINTF )
 }
 
 /*
-static float dotProduct(const QVector2D& v1, const QVector2D& v2)
+static float dotProduct( const QVector2D & v1, const QVector2D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR2D_DOTPRODUCT )
 {

@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-QOpenGLShader(QOpenGLShader::ShaderType type, QObject *parent = 0)
+QOpenGLShader( QOpenGLShader::ShaderType type, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOPENGLSHADER_NEW )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_SHADERTYPE )
 }
 
 /*
-bool compileSourceCode(const char *source)
+bool compileSourceCode( const char * source )
 */
 HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE1 )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE1 )
 }
 
 /*
-bool compileSourceCode(const QByteArray& source)
+bool compileSourceCode( const QByteArray & source )
 */
 HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE2 )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE2 )
 }
 
 /*
-bool compileSourceCode(const QString& source)
+bool compileSourceCode( const QString & source )
 */
 HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE3 )
 {
@@ -191,18 +191,12 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE3 )
   }
 }
 
-/*
-[1]bool compileSourceCode(const char *source)
-[2]bool compileSourceCode(const QByteArray& source)
-[3]bool compileSourceCode(const QString& source)
-*/
-
 HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE )
 {
 }
 
 /*
-bool compileSourceFile(const QString& fileName)
+bool compileSourceFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCEFILE )
 {
@@ -323,7 +317,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_SHADERID )
 }
 
 /*
-static bool hasOpenGLShaders(ShaderType type, QOpenGLContext *context = 0)
+static bool hasOpenGLShaders( QOpenGLShader::ShaderType type, QOpenGLContext * context = 0 )
 */
 HB_FUNC_STATIC( QOPENGLSHADER_HASOPENGLSHADERS )
 {

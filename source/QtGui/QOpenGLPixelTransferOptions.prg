@@ -82,18 +82,13 @@ void QOpenGLPixelTransferOptions_new1()
 }
 
 /*
-QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
+QOpenGLPixelTransferOptions( const QOpenGLPixelTransferOptions & )
 */
 void QOpenGLPixelTransferOptions_new2()
 {
   QOpenGLPixelTransferOptions * obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QOpenGLPixelTransferOptions()
-[2]QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions &)
-*/
 
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 {
@@ -129,7 +124,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_DELETE )
 }
 
 /*
-void swap(QOpenGLPixelTransferOptions &other)
+void swap( QOpenGLPixelTransferOptions & other )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SWAP )
 {
@@ -155,7 +150,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SWAP )
 }
 
 /*
-void setAlignment(int alignment)
+void setAlignment( int alignment )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETALIGNMENT )
 {
@@ -205,7 +200,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ALIGNMENT )
 }
 
 /*
-void setSkipImages(int skipImages)
+void setSkipImages( int skipImages )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPIMAGES )
 {
@@ -255,7 +250,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPIMAGES )
 }
 
 /*
-void setSkipRows(int skipRows)
+void setSkipRows( int skipRows )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPROWS )
 {
@@ -305,7 +300,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPROWS )
 }
 
 /*
-void setSkipPixels(int skipPixels)
+void setSkipPixels( int skipPixels )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSKIPPIXELS )
 {
@@ -355,7 +350,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SKIPPIXELS )
 }
 
 /*
-void setImageHeight(int imageHeight)
+void setImageHeight( int imageHeight )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETIMAGEHEIGHT )
 {
@@ -405,7 +400,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_IMAGEHEIGHT )
 }
 
 /*
-void setRowLength(int rowLength)
+void setRowLength( int rowLength )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETROWLENGTH )
 {
@@ -455,7 +450,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ROWLENGTH )
 }
 
 /*
-void setLeastSignificantByteFirst(bool lsbFirst)
+void setLeastSignificantByteFirst( bool lsbFirst )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETLEASTSIGNIFICANTBYTEFIRST )
 {
@@ -505,7 +500,7 @@ HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_ISLEASTSIGNIFICANTBITFIRST )
 }
 
 /*
-void setSwapBytesEnabled(bool swapBytes)
+void setSwapBytesEnabled( bool swapBytes )
 */
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_SETSWAPBYTESENABLED )
 {

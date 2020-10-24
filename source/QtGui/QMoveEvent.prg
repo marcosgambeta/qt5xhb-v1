@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QMoveEvent ( const QPoint & pos, const QPoint & oldPos )
+QMoveEvent( const QPoint & pos, const QPoint & oldPos )
 */
 HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QMOVEEVENT_DELETE )
 }
 
 /*
-const QPoint & oldPos () const
+const QPoint & oldPos() const
 */
 HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
 }
 
 /*
-const QPoint & pos () const
+const QPoint & pos() const
 */
 HB_FUNC_STATIC( QMOVEEVENT_POS )
 {

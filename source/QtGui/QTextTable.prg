@@ -70,7 +70,7 @@ RETURN
 #include <QtGui/QTextCursor>
 
 /*
-QTextTable(QTextDocument *doc)
+QTextTable( QTextDocument * doc )
 */
 HB_FUNC_STATIC( QTEXTTABLE_NEW )
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QTEXTTABLE_DELETE )
 }
 
 /*
-void resize(int rows, int cols)
+void resize( int rows, int cols )
 */
 HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
 }
 
 /*
-void insertRows(int pos, int num)
+void insertRows( int pos, int num )
 */
 HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
 }
 
 /*
-void insertColumns(int pos, int num)
+void insertColumns( int pos, int num )
 */
 HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
 }
 
 /*
-void appendRows(int count)
+void appendRows( int count )
 */
 HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
 }
 
 /*
-void appendColumns(int count)
+void appendColumns( int count )
 */
 HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
 }
 
 /*
-void removeRows(int pos, int num)
+void removeRows( int pos, int num )
 */
 HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
 }
 
 /*
-void removeColumns(int pos, int num)
+void removeColumns( int pos, int num )
 */
 HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
 }
 
 /*
-void mergeCells(int row, int col, int numRows, int numCols)
+void mergeCells( int row, int col, int numRows, int numCols )
 */
 void QTextTable_mergeCells1()
 {
@@ -302,7 +302,7 @@ void QTextTable_mergeCells1()
 }
 
 /*
-void mergeCells(const QTextCursor &cursor)
+void mergeCells( const QTextCursor & cursor )
 */
 void QTextTable_mergeCells2()
 {
@@ -315,11 +315,6 @@ void QTextTable_mergeCells2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void mergeCells(int row, int col, int numRows, int numCols)
-[2]void mergeCells(const QTextCursor &cursor)
-*/
 
 HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 {
@@ -338,7 +333,7 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 }
 
 /*
-void splitCell(int row, int col, int numRows, int numCols)
+void splitCell( int row, int col, int numRows, int numCols )
 */
 HB_FUNC_STATIC( QTEXTTABLE_SPLITCELL )
 {
@@ -412,7 +407,7 @@ HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
 }
 
 /*
-QTextTableCell cellAt(int row, int col) const
+QTextTableCell cellAt( int row, int col ) const
 */
 void QTextTable_cellAt1()
 {
@@ -426,7 +421,7 @@ void QTextTable_cellAt1()
 }
 
 /*
-QTextTableCell cellAt(int position) const
+QTextTableCell cellAt( int position ) const
 */
 void QTextTable_cellAt2()
 {
@@ -440,7 +435,7 @@ void QTextTable_cellAt2()
 }
 
 /*
-QTextTableCell cellAt(const QTextCursor &c) const
+QTextTableCell cellAt( const QTextCursor & c ) const
 */
 void QTextTable_cellAt3()
 {
@@ -452,12 +447,6 @@ void QTextTable_cellAt3()
     Qt5xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
   }
 }
-
-/*
-[1]QTextTableCell cellAt(int row, int col) const
-[2]QTextTableCell cellAt(int position) const
-[3]QTextTableCell cellAt(const QTextCursor &c) const
-*/
 
 HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 {
@@ -480,7 +469,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 }
 
 /*
-QTextCursor rowStart(const QTextCursor &c) const
+QTextCursor rowStart( const QTextCursor & c ) const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
 {
@@ -505,7 +494,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
 }
 
 /*
-QTextCursor rowEnd(const QTextCursor &c) const
+QTextCursor rowEnd( const QTextCursor & c ) const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
 {
@@ -530,7 +519,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
 }
 
 /*
-void setFormat(const QTextTableFormat &format)
+void setFormat( const QTextTableFormat & format )
 */
 HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
 {

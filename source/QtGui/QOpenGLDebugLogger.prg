@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QOpenGLDebugLogger(QObject *parent = 0)
+QOpenGLDebugLogger( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_NEW )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_ISLOGGING )
 }
 
 /*
-LoggingMode loggingMode() const
+QOpenGLDebugLogger::LoggingMode loggingMode() const
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGGINGMODE )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_MAXIMUMMESSAGELENGTH )
 }
 
 /*
-void pushGroup(const QString &name,GLuint id = 0,QOpenGLDebugMessage::Source source = QOpenGLDebugMessage::ApplicationSource)
+void pushGroup( const QString & name, GLuint id = 0, QOpenGLDebugMessage::Source source = QOpenGLDebugMessage::ApplicationSource )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_PUSHGROUP )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_POPGROUP )
 }
 
 /*
-void logMessage(const QOpenGLDebugMessage &debugMessage)
+void logMessage( const QOpenGLDebugMessage & debugMessage )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGMESSAGE )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_LOGMESSAGE )
 }
 
 /*
-void startLogging(LoggingMode loggingMode = AsynchronousLogging)
+void startLogging( QOpenGLDebugLogger::LoggingMode loggingMode = QOpenGLDebugLogger::AsynchronousLogging )
 */
 HB_FUNC_STATIC( QOPENGLDEBUGLOGGER_STARTLOGGING )
 {

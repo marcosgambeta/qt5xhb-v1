@@ -94,10 +94,6 @@ RETURN
 #include <QtGui/QTextList>
 
 /*
-QTextBlock(QTextDocumentPrivate *priv, int b)
-*/
-
-/*
 QTextBlock()
 */
 void QTextBlock_new2()
@@ -107,19 +103,13 @@ void QTextBlock_new2()
 }
 
 /*
-QTextBlock(const QTextBlock &o)
+QTextBlock( const QTextBlock & o )
 */
 void QTextBlock_new3()
 {
   QTextBlock * obj = new QTextBlock( *PQTEXTBLOCK(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextBlock(QTextDocumentPrivate *priv, int b)
-[2]QTextBlock()
-[3]QTextBlock(const QTextBlock &o)
-*/
 
 HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 {
@@ -227,7 +217,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
 }
 
 /*
-bool contains(int position) const
+bool contains( int position ) const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
 {
@@ -251,7 +241,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
 }
 
 /*
-QTextLayout *layout() const
+QTextLayout * layout() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
 {
@@ -448,7 +438,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
 }
 
 /*
-const QTextDocument *document() const
+const QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
 {
@@ -473,7 +463,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
 }
 
 /*
-QTextList *textList() const
+QTextList * textList() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
 {
@@ -498,7 +488,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
 }
 
 /*
-QTextBlockUserData *userData() const
+QTextBlockUserData * userData() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
 {
@@ -523,7 +513,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
 }
 
 /*
-void setUserData(QTextBlockUserData *data)
+void setUserData( QTextBlockUserData * data )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERDATA )
 {
@@ -573,7 +563,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
 }
 
 /*
-void setUserState(int state)
+void setUserState( int state )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERSTATE )
 {
@@ -623,7 +613,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
 }
 
 /*
-void setRevision(int rev)
+void setRevision( int rev )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETREVISION )
 {
@@ -673,7 +663,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
 }
 
 /*
-void setVisible(bool visible)
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
 {
@@ -747,7 +737,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
 }
 
 /*
-void setLineCount(int count)
+void setLineCount( int count )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETLINECOUNT )
 {
@@ -845,10 +835,6 @@ HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
 #endif
   }
 }
-
-/*
-QTextDocumentPrivate *docHandle() const
-*/
 
 /*
 int fragmentIndex() const

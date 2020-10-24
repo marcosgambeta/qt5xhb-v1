@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QWindowStateChangeEvent(Qt::WindowStates aOldState, bool isOverride = false)
+QWindowStateChangeEvent( Qt::WindowStates aOldState, bool isOverride = false )
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {

@@ -29,7 +29,7 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-    PHB_ITEM pnewSize = Signals_return_object( (void *) &newSize, "QSIZEF" );
+    PHB_ITEM pnewSize = Qt5xHb::Signals_return_object( (void *) &newSize, "QSIZEF" );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewSize );
 
@@ -65,7 +65,7 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-    PHB_ITEM prect = Signals_return_object( (void *) &rect, "QRECTF" );
+    PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
 
@@ -83,7 +83,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-    PHB_ITEM pblock = Signals_return_object( (void *) &block, "QTEXTBLOCK" );
+    PHB_ITEM pblock = Qt5xHb::Signals_return_object( (void *) &block, "QTEXTBLOCK" );
 
     hb_vmEvalBlockV( cb, 2, psender, pblock );
 

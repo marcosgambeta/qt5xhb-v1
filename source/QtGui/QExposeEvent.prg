@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QExposeEvent(const QRegion & rgn)
+QExposeEvent( const QRegion & rgn )
 */
 HB_FUNC_STATIC( QEXPOSEEVENT_NEW )
 {

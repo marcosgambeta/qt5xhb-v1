@@ -89,7 +89,7 @@ RETURN
 #include <QtGui/QPainterPath>
 
 /*
-QMatrix(Qt::Initialization)
+QMatrix( Qt::Initialization )
 */
 void QMatrix_new1()
 {
@@ -107,7 +107,7 @@ void QMatrix_new2()
 }
 
 /*
-QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
+QMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
 */
 void QMatrix_new3()
 {
@@ -116,20 +116,13 @@ void QMatrix_new3()
 }
 
 /*
-QMatrix(const QMatrix &matrix)
+QMatrix( const QMatrix & matrix )
 */
 void QMatrix_new4()
 {
   QMatrix * obj = new QMatrix( *PQMATRIX(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QMatrix(Qt::Initialization)
-[2]QMatrix()
-[3]QMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
-[4]QMatrix(const QMatrix &matrix)
-*/
 
 HB_FUNC_STATIC( QMATRIX_NEW )
 {
@@ -173,7 +166,7 @@ HB_FUNC_STATIC( QMATRIX_DELETE )
 }
 
 /*
-void setMatrix(qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy)
+void setMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QMATRIX_SETMATRIX )
 {
@@ -343,7 +336,7 @@ HB_FUNC_STATIC( QMATRIX_DY )
 }
 
 /*
-void map(int x, int y, int *tx, int *ty) const
+void map( int x, int y, int * tx, int * ty ) const
 */
 HB_FUNC_STATIC( QMATRIX_MAP1 )
 {
@@ -373,7 +366,7 @@ HB_FUNC_STATIC( QMATRIX_MAP1 )
 }
 
 /*
-void map(qreal x, qreal y, qreal *tx, qreal *ty) const
+void map( qreal x, qreal y, qreal * tx, qreal * ty ) const
 */
 HB_FUNC_STATIC( QMATRIX_MAP2 )
 {
@@ -403,7 +396,7 @@ HB_FUNC_STATIC( QMATRIX_MAP2 )
 }
 
 /*
-QPoint map(const QPoint &p) const
+QPoint map( const QPoint & p ) const
 */
 void QMatrix_map3()
 {
@@ -417,7 +410,7 @@ void QMatrix_map3()
 }
 
 /*
-QPointF map(const QPointF&p) const
+QPointF map( const QPointF & p ) const
 */
 void QMatrix_map4()
 {
@@ -431,7 +424,7 @@ void QMatrix_map4()
 }
 
 /*
-QLine map(const QLine &l) const
+QLine map( const QLine & l ) const
 */
 void QMatrix_map5()
 {
@@ -445,7 +438,7 @@ void QMatrix_map5()
 }
 
 /*
-QLineF map(const QLineF &l) const
+QLineF map( const QLineF & l ) const
 */
 void QMatrix_map6()
 {
@@ -459,7 +452,7 @@ void QMatrix_map6()
 }
 
 /*
-QPolygon map(const QPolygon &a) const
+QPolygon map( const QPolygon & a ) const
 */
 void QMatrix_map7()
 {
@@ -473,7 +466,7 @@ void QMatrix_map7()
 }
 
 /*
-QPolygonF map(const QPolygonF &a) const
+QPolygonF map( const QPolygonF & a ) const
 */
 void QMatrix_map8()
 {
@@ -487,7 +480,7 @@ void QMatrix_map8()
 }
 
 /*
-QRegion map(const QRegion &r) const
+QRegion map( const QRegion & r ) const
 */
 void QMatrix_map9()
 {
@@ -501,7 +494,7 @@ void QMatrix_map9()
 }
 
 /*
-QPainterPath map(const QPainterPath &p) const
+QPainterPath map( const QPainterPath & p ) const
 */
 void QMatrix_map10()
 {
@@ -513,19 +506,6 @@ void QMatrix_map10()
     Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
   }
 }
-
-/*
-[01]void map(int x, int y, int *tx, int *ty) const
-[02]void map(qreal x, qreal y, qreal *tx, qreal *ty) const
-[03]QPoint map(const QPoint &p) const
-[04]QPointF map(const QPointF&p) const
-[05]QLine map(const QLine &l) const
-[06]QLineF map(const QLineF &l) const
-[07]QPolygon map(const QPolygon &a) const
-[08]QPolygonF map(const QPolygonF &a) const
-[09]QRegion map(const QRegion &r) const
-[10]QPainterPath map(const QPainterPath &p) const
-*/
 
 HB_FUNC_STATIC( QMATRIX_MAP )
 {
@@ -576,7 +556,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
 }
 
 /*
-QRect mapRect(const QRect &) const
+QRect mapRect( const QRect & ) const
 */
 void QMatrix_mapRect1()
 {
@@ -590,7 +570,7 @@ void QMatrix_mapRect1()
 }
 
 /*
-QRectF mapRect(const QRectF &) const
+QRectF mapRect( const QRectF & ) const
 */
 void QMatrix_mapRect2()
 {
@@ -602,11 +582,6 @@ void QMatrix_mapRect2()
     Qt5xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRect mapRect(const QRect &) const
-[2]QRectF mapRect(const QRectF &) const
-*/
 
 HB_FUNC_STATIC( QMATRIX_MAPRECT )
 {
@@ -625,7 +600,7 @@ HB_FUNC_STATIC( QMATRIX_MAPRECT )
 }
 
 /*
-QPolygon mapToPolygon(const QRect &r) const
+QPolygon mapToPolygon( const QRect & r ) const
 */
 HB_FUNC_STATIC( QMATRIX_MAPTOPOLYGON )
 {
@@ -700,7 +675,7 @@ HB_FUNC_STATIC( QMATRIX_ISIDENTITY )
 }
 
 /*
-QMatrix &translate(qreal dx, qreal dy)
+QMatrix & translate( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QMATRIX_TRANSLATE )
 {
@@ -725,7 +700,7 @@ HB_FUNC_STATIC( QMATRIX_TRANSLATE )
 }
 
 /*
-QMatrix &scale(qreal sx, qreal sy)
+QMatrix & scale( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QMATRIX_SCALE )
 {
@@ -750,7 +725,7 @@ HB_FUNC_STATIC( QMATRIX_SCALE )
 }
 
 /*
-QMatrix &shear(qreal sh, qreal sv)
+QMatrix & shear( qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QMATRIX_SHEAR )
 {
@@ -775,7 +750,7 @@ HB_FUNC_STATIC( QMATRIX_SHEAR )
 }
 
 /*
-QMatrix &rotate(qreal a)
+QMatrix & rotate( qreal a )
 */
 HB_FUNC_STATIC( QMATRIX_ROTATE )
 {
@@ -848,7 +823,7 @@ HB_FUNC_STATIC( QMATRIX_DETERMINANT )
 }
 
 /*
-QMatrix inverted(bool *invertible = 0) const
+QMatrix inverted( bool * invertible = 0 ) const
 */
 HB_FUNC_STATIC( QMATRIX_INVERTED )
 {

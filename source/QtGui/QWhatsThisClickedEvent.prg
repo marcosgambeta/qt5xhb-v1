@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QWhatsThisClickedEvent(const QString &href)
+QWhatsThisClickedEvent( const QString & href )
 */
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 {

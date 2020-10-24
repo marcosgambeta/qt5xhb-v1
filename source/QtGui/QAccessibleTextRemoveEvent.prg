@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QAccessibleTextRemoveEvent(QObject *obj, int position, const QString &text)
+QAccessibleTextRemoveEvent( QObject * obj, int position, const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTREMOVEEVENT_NEW )
 {

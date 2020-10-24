@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QINPUTEVENT_DELETE )
 }
 
 /*
-Qt::KeyboardModifiers modifiers () const
+Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
 {

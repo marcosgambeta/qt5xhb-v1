@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSURFACE_DELETE )
 }
 
 /*
-SurfaceClass surfaceClass() const
+QSurface::SurfaceClass surfaceClass() const
 */
 HB_FUNC_STATIC( QSURFACE_SURFACECLASS )
 {
@@ -127,11 +127,7 @@ HB_FUNC_STATIC( QSURFACE_FORMAT )
 }
 
 /*
-virtual QPlatformSurface *surfaceHandle() const = 0
-*/
-
-/*
-virtual SurfaceType surfaceType() const = 0
+virtual QSurface::SurfaceType surfaceType() const = 0
 */
 HB_FUNC_STATIC( QSURFACE_SURFACETYPE )
 {

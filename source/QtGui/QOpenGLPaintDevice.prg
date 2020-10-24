@@ -72,7 +72,7 @@ void QOpenGLPaintDevice_new1()
 }
 
 /*
-QOpenGLPaintDevice(const QSize &size)
+QOpenGLPaintDevice( const QSize & size )
 */
 void QOpenGLPaintDevice_new2()
 {
@@ -81,19 +81,13 @@ void QOpenGLPaintDevice_new2()
 }
 
 /*
-QOpenGLPaintDevice(int width, int height)
+QOpenGLPaintDevice( int width, int height )
 */
 void QOpenGLPaintDevice_new3()
 {
   QOpenGLPaintDevice * obj = new QOpenGLPaintDevice( PINT(1), PINT(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QOpenGLPaintDevice()
-[2]QOpenGLPaintDevice(const QSize &size)
-[3]QOpenGLPaintDevice(int width, int height)
-*/
 
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_NEW )
 {
@@ -157,7 +151,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DEVTYPE )
 }
 
 /*
-QPaintEngine *paintEngine() const
+QPaintEngine * paintEngine() const
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTENGINE )
 {
@@ -182,7 +176,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_PAINTENGINE )
 }
 
 /*
-QOpenGLContext *context() const
+QOpenGLContext * context() const
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_CONTEXT )
 {
@@ -232,7 +226,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SIZE )
 }
 
 /*
-void setSize(const QSize &size)
+void setSize( const QSize & size )
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETSIZE )
 {
@@ -258,7 +252,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETSIZE )
 }
 
 /*
-void setDevicePixelRatio(qreal devicePixelRatio)
+void setDevicePixelRatio( qreal devicePixelRatio )
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDEVICEPIXELRATIO )
 {
@@ -332,7 +326,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_DOTSPERMETERY )
 }
 
 /*
-void setDotsPerMeterX(qreal)
+void setDotsPerMeterX( qreal )
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERX )
 {
@@ -358,7 +352,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERX )
 }
 
 /*
-void setDotsPerMeterY(qreal)
+void setDotsPerMeterY( qreal )
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERY )
 {
@@ -384,7 +378,7 @@ HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETDOTSPERMETERY )
 }
 
 /*
-void setPaintFlipped(bool flipped)
+void setPaintFlipped( bool flipped )
 */
 HB_FUNC_STATIC( QOPENGLPAINTDEVICE_SETPAINTFLIPPED )
 {

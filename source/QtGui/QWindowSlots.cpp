@@ -47,7 +47,7 @@ void QWindowSlots::focusObjectChanged( QObject * focusObject )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWINDOW" );
-    PHB_ITEM pfocusObject = Signals_return_qobject( (QObject *) focusObject, "QOBJECT" );
+    PHB_ITEM pfocusObject = Qt5xHb::Signals_return_qobject( (QObject *) focusObject, "QOBJECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfocusObject );
 
@@ -83,7 +83,7 @@ void QWindowSlots::screenChanged( QScreen * screen )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWINDOW" );
-    PHB_ITEM pscreen = Signals_return_qobject( (QObject *) screen, "QSCREEN" );
+    PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject( (QObject *) screen, "QSCREEN" );
 
     hb_vmEvalBlockV( cb, 2, psender, pscreen );
 

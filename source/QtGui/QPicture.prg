@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-QPicture ( int formatVersion = -1 )
+QPicture( int formatVersion = -1 )
 */
 void QPicture_new1()
 {
@@ -67,18 +67,13 @@ void QPicture_new1()
 }
 
 /*
-QPicture ( const QPicture & pic )
+QPicture( const QPicture & pic )
 */
 void QPicture_new2()
 {
   QPicture * obj = new QPicture( *PQPICTURE(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPicture ( int formatVersion = -1 )
-[2]QPicture ( const QPicture & pic )
-*/
 
 HB_FUNC_STATIC( QPICTURE_NEW )
 {
@@ -114,7 +109,7 @@ HB_FUNC_STATIC( QPICTURE_DELETE )
 }
 
 /*
-QRect boundingRect () const
+QRect boundingRect() const
 */
 HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 {
@@ -139,7 +134,7 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 }
 
 /*
-const char * data () const
+const char * data() const
 */
 HB_FUNC_STATIC( QPICTURE_DATA )
 {
@@ -163,7 +158,7 @@ HB_FUNC_STATIC( QPICTURE_DATA )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QPICTURE_ISNULL )
 {
@@ -187,7 +182,7 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
 }
 
 /*
-bool load ( const QString & fileName, const char * format = 0 )
+bool load( const QString & fileName, const char * format = 0 )
 */
 void QPicture_load1()
 {
@@ -200,7 +195,7 @@ void QPicture_load1()
 }
 
 /*
-bool load ( QIODevice * dev, const char * format = 0 )
+bool load( QIODevice * dev, const char * format = 0 )
 */
 void QPicture_load2()
 {
@@ -211,11 +206,6 @@ void QPicture_load2()
     RBOOL( obj->load( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
   }
 }
-
-/*
-[1]bool load ( const QString & fileName, const char * format = 0 )
-[2]bool load ( QIODevice * dev, const char * format = 0 )
-*/
 
 HB_FUNC_STATIC( QPICTURE_LOAD )
 {
@@ -234,7 +224,7 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
 }
 
 /*
-bool play ( QPainter * painter )
+bool play( QPainter * painter )
 */
 HB_FUNC_STATIC( QPICTURE_PLAY )
 {
@@ -258,7 +248,7 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
 }
 
 /*
-bool save ( const QString & fileName, const char * format = 0 )
+bool save( const QString & fileName, const char * format = 0 )
 */
 void QPicture_save1()
 {
@@ -271,7 +261,7 @@ void QPicture_save1()
 }
 
 /*
-bool save ( QIODevice * dev, const char * format = 0 )
+bool save( QIODevice * dev, const char * format = 0 )
 */
 void QPicture_save2()
 {
@@ -282,11 +272,6 @@ void QPicture_save2()
     RBOOL( obj->save( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
   }
 }
-
-/*
-[1]bool save ( const QString & fileName, const char * format = 0 )
-[2]bool save ( QIODevice * dev, const char * format = 0 )
-*/
 
 HB_FUNC_STATIC( QPICTURE_SAVE )
 {
@@ -305,7 +290,7 @@ HB_FUNC_STATIC( QPICTURE_SAVE )
 }
 
 /*
-void setBoundingRect ( const QRect & r )
+void setBoundingRect( const QRect & r )
 */
 HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 {
@@ -331,7 +316,7 @@ HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 }
 
 /*
-virtual void setData ( const char * data, uint size )
+virtual void setData( const char * data, uint size )
 */
 HB_FUNC_STATIC( QPICTURE_SETDATA )
 {
@@ -357,7 +342,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
 }
 
 /*
-uint size () const
+uint size() const
 */
 HB_FUNC_STATIC( QPICTURE_SIZE )
 {
@@ -381,7 +366,7 @@ HB_FUNC_STATIC( QPICTURE_SIZE )
 }
 
 /*
-void swap ( QPicture & other )
+void swap( QPicture & other )
 */
 HB_FUNC_STATIC( QPICTURE_SWAP )
 {

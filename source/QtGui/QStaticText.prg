@@ -80,7 +80,7 @@ void QStaticText_new1()
 }
 
 /*
-QStaticText(const QString &text)
+QStaticText( const QString & text )
 */
 void QStaticText_new2()
 {
@@ -89,19 +89,13 @@ void QStaticText_new2()
 }
 
 /*
-QStaticText(const QStaticText &other)
+QStaticText( const QStaticText & other )
 */
 void QStaticText_new3()
 {
   QStaticText * obj = new QStaticText( *PQSTATICTEXT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QStaticText()
-[2]QStaticText(const QString &text)
-[3]QStaticText(const QStaticText &other)
-*/
 
 HB_FUNC_STATIC( QSTATICTEXT_NEW )
 {
@@ -141,7 +135,7 @@ HB_FUNC_STATIC( QSTATICTEXT_DELETE )
 }
 
 /*
-void swap(QStaticText &other)
+void swap( QStaticText & other )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SWAP )
 {
@@ -167,7 +161,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SWAP )
 }
 
 /*
-void setText(const QString &text)
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
 {
@@ -217,7 +211,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXT )
 }
 
 /*
-void setTextFormat(Qt::TextFormat textFormat)
+void setTextFormat( Qt::TextFormat textFormat )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
 {
@@ -267,7 +261,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTFORMAT )
 }
 
 /*
-void setTextWidth(qreal textWidth)
+void setTextWidth( qreal textWidth )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
 {
@@ -317,7 +311,7 @@ HB_FUNC_STATIC( QSTATICTEXT_TEXTWIDTH )
 }
 
 /*
-void setTextOption(const QTextOption &textOption)
+void setTextOption( const QTextOption & textOption )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
 {
@@ -393,7 +387,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SIZE )
 }
 
 /*
-void prepare(const QTransform &matrix = QTransform(), const QFont &font = QFont())
+void prepare( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 */
 HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
 {
@@ -419,7 +413,7 @@ HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
 }
 
 /*
-void setPerformanceHint(PerformanceHint performanceHint)
+void setPerformanceHint( QStaticText::PerformanceHint performanceHint )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
 {
@@ -445,7 +439,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
 }
 
 /*
-PerformanceHint performanceHint() const
+QStaticText::PerformanceHint performanceHint() const
 */
 HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
 {

@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-static QAccessibleInterface *queryAccessibleInterface(QObject *)
+static QAccessibleInterface * queryAccessibleInterface( QObject * )
 */
 HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
 {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
 }
 
 /*
-static void updateAccessibility(QAccessibleEvent *event)
+static void updateAccessibility( QAccessibleEvent * event )
 */
 HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
 }
 
 /*
-static void setRootObject(QObject *object)
+static void setRootObject( QObject * object )
 */
 HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
 {

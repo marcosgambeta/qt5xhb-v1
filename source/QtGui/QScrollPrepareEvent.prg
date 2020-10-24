@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-QScrollPrepareEvent(const QPointF &startPos)
+QScrollPrepareEvent( const QPointF & startPos )
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_NEW )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_CONTENTPOS )
 }
 
 /*
-void setViewportSize(const QSizeF &size)
+void setViewportSize( const QSizeF & size )
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETVIEWPORTSIZE )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETVIEWPORTSIZE )
 }
 
 /*
-void setContentPosRange(const QRectF &rect)
+void setContentPosRange( const QRectF & rect )
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETCONTENTPOSRANGE )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETCONTENTPOSRANGE )
 }
 
 /*
-void setContentPos(const QPointF &pos)
+void setContentPos( const QPointF & pos )
 */
 HB_FUNC_STATIC( QSCROLLPREPAREEVENT_SETCONTENTPOS )
 {

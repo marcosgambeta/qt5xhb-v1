@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QTEXTLINE_LEADING )
 }
 
 /*
-void setLeadingIncluded(bool included)
+void setLeadingIncluded( bool included )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
 }
 
 /*
-qreal cursorToX(int *cursorPos, Edge edge = Leading) const
+qreal cursorToX( int * cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
 */
 void QTextLine_cursorToX1()
 {
@@ -469,7 +469,7 @@ void QTextLine_cursorToX1()
 }
 
 /*
-qreal cursorToX(int cursorPos, Edge edge = Leading) const
+qreal cursorToX( int cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
 */
 void QTextLine_cursorToX2()
 {
@@ -480,11 +480,6 @@ void QTextLine_cursorToX2()
     RQREAL( obj->cursorToX( PINT(1), ISNIL(2)? (QTextLine::Edge) QTextLine::Leading : (QTextLine::Edge) hb_parni(2) ) );
   }
 }
-
-/*
-[1]qreal cursorToX(int *cursorPos, Edge edge = Leading) const
-[2]qreal cursorToX(int cursorPos, Edge edge = Leading) const
-*/
 
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 {
@@ -503,7 +498,7 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 }
 
 /*
-int xToCursor(qreal x, CursorPosition = CursorBetweenCharacters) const
+int xToCursor( qreal x, QTextLine::CursorPosition = QTextLine::CursorBetweenCharacters ) const
 */
 HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
 {
@@ -527,7 +522,7 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
 }
 
 /*
-void setLineWidth(qreal width)
+void setLineWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
 {
@@ -553,7 +548,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
 }
 
 /*
-void setNumColumns(int columns)
+void setNumColumns( int columns )
 */
 void QTextLine_setNumColumns1()
 {
@@ -568,7 +563,7 @@ void QTextLine_setNumColumns1()
 }
 
 /*
-void setNumColumns(int columns, qreal alignmentWidth)
+void setNumColumns( int columns, qreal alignmentWidth )
 */
 void QTextLine_setNumColumns2()
 {
@@ -581,11 +576,6 @@ void QTextLine_setNumColumns2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setNumColumns(int columns)
-[2]void setNumColumns(int columns, qreal alignmentWidth)
-*/
 
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 {
@@ -604,7 +594,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 }
 
 /*
-void setPosition(const QPointF &pos)
+void setPosition( const QPointF & pos )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
 {
@@ -725,10 +715,6 @@ HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
 #endif
   }
 }
-
-/*
-void draw(QPainter *p, const QPointF &point, const QTextLayout::FormatRange *selection = 0) const
-*/
 
 HB_FUNC_STATIC( QTEXTLINE_NEWFROM )
 {

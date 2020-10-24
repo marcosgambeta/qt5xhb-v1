@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTEXTITEM_WIDTH )
 }
 
 /*
-RenderFlags renderFlags() const
+QTextItem::RenderFlags renderFlags() const
 */
 HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
 {

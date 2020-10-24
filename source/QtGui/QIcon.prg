@@ -79,7 +79,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QIcon ()
+QIcon()
 */
 void QIcon_new1()
 {
@@ -88,7 +88,7 @@ void QIcon_new1()
 }
 
 /*
-QIcon ( const QPixmap & pixmap )
+QIcon( const QPixmap & pixmap )
 */
 void QIcon_new2()
 {
@@ -97,7 +97,7 @@ void QIcon_new2()
 }
 
 /*
-QIcon ( const QIcon & other )
+QIcon( const QIcon & other )
 */
 void QIcon_new3()
 {
@@ -106,22 +106,13 @@ void QIcon_new3()
 }
 
 /*
-QIcon ( const QString & fileName )
+QIcon( const QString & fileName )
 */
 void QIcon_new4()
 {
   QIcon * obj = new QIcon( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QIcon ()
-[2]QIcon ( const QPixmap & pixmap )
-[3]QIcon ( const QIcon & other )
-[4]QIcon ( const QString & fileName )
-[5]QIcon ( QIconEngine * engine ) // TODO: implementar
-[6]QIcon ( QIconEngineV2 * engine ) // TODO: implementar
-*/
 
 HB_FUNC_STATIC( QICON_NEW )
 {
@@ -165,7 +156,7 @@ HB_FUNC_STATIC( QICON_DELETE )
 }
 
 /*
-QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) const
+QSize actualSize( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 HB_FUNC_STATIC( QICON_ACTUALSIZE )
 {
@@ -190,7 +181,7 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
 }
 
 /*
-void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
+void addFile( const QString & fileName, const QSize & size = QSize(), QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 */
 HB_FUNC_STATIC( QICON_ADDFILE )
 {
@@ -216,7 +207,7 @@ HB_FUNC_STATIC( QICON_ADDFILE )
 }
 
 /*
-void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
+void addPixmap( const QPixmap & pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 */
 HB_FUNC_STATIC( QICON_ADDPIXMAP )
 {
@@ -242,7 +233,7 @@ HB_FUNC_STATIC( QICON_ADDPIXMAP )
 }
 
 /*
-QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
+QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 {
@@ -294,7 +285,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 }
 
 /*
-qint64 cacheKey () const
+qint64 cacheKey() const
 */
 HB_FUNC_STATIC( QICON_CACHEKEY )
 {
@@ -318,7 +309,7 @@ HB_FUNC_STATIC( QICON_CACHEKEY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QICON_ISNULL )
 {
@@ -342,7 +333,7 @@ HB_FUNC_STATIC( QICON_ISNULL )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QICON_NAME )
 {
@@ -366,7 +357,7 @@ HB_FUNC_STATIC( QICON_NAME )
 }
 
 /*
-void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
+void paint( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_paint1()
 {
@@ -381,7 +372,7 @@ void QIcon_paint1()
 }
 
 /*
-void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
+void paint( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_paint2()
 {
@@ -394,11 +385,6 @@ void QIcon_paint2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
-[2]void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
-*/
 
 HB_FUNC_STATIC( QICON_PAINT )
 {
@@ -417,7 +403,7 @@ HB_FUNC_STATIC( QICON_PAINT )
 }
 
 /*
-QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
+QPixmap pixmap( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_pixmap1()
 {
@@ -431,7 +417,7 @@ void QIcon_pixmap1()
 }
 
 /*
-QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
+QPixmap pixmap( int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_pixmap2()
 {
@@ -445,7 +431,7 @@ void QIcon_pixmap2()
 }
 
 /*
-QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
+QPixmap pixmap( int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_pixmap3()
 {
@@ -457,12 +443,6 @@ void QIcon_pixmap3()
     Qt5xHb::createReturnClass( ptr, "QPIXMAP", true );
   }
 }
-
-/*
-[1]QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
-[2]QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
-[3]QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
-*/
 
 HB_FUNC_STATIC( QICON_PIXMAP )
 {
@@ -485,7 +465,7 @@ HB_FUNC_STATIC( QICON_PIXMAP )
 }
 
 /*
-static QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
+static QIcon fromTheme( const QString & name, const QIcon & fallback = QIcon() )
 */
 HB_FUNC_STATIC( QICON_FROMTHEME )
 {
@@ -505,7 +485,7 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
 }
 
 /*
-static bool hasThemeIcon ( const QString & name )
+static bool hasThemeIcon( const QString & name )
 */
 HB_FUNC_STATIC( QICON_HASTHEMEICON )
 {
@@ -524,7 +504,7 @@ HB_FUNC_STATIC( QICON_HASTHEMEICON )
 }
 
 /*
-static void setThemeName ( const QString & name )
+static void setThemeName( const QString & name )
 */
 HB_FUNC_STATIC( QICON_SETTHEMENAME )
 {
@@ -545,7 +525,7 @@ HB_FUNC_STATIC( QICON_SETTHEMENAME )
 }
 
 /*
-static void setThemeSearchPaths ( const QStringList & paths )
+static void setThemeSearchPaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 {
@@ -566,7 +546,7 @@ HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 }
 
 /*
-static QString themeName ()
+static QString themeName()
 */
 HB_FUNC_STATIC( QICON_THEMENAME )
 {
@@ -585,7 +565,7 @@ HB_FUNC_STATIC( QICON_THEMENAME )
 }
 
 /*
-static QStringList themeSearchPaths ()
+static QStringList themeSearchPaths()
 */
 HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 {
@@ -604,7 +584,7 @@ HB_FUNC_STATIC( QICON_THEMESEARCHPATHS )
 }
 
 /*
-static QString QIcon::fallbackThemeName()
+static QString fallbackThemeName()
 */
 HB_FUNC_STATIC( QICON_FALLBACKTHEMENAME )
 {
@@ -625,7 +605,7 @@ HB_FUNC_STATIC( QICON_FALLBACKTHEMENAME )
 }
 
 /*
-static void QIcon::setFallbackThemeName(const QString &name)
+static void setFallbackThemeName( const QString & name )
 */
 HB_FUNC_STATIC( QICON_SETFALLBACKTHEMENAME )
 {

@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
+QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 */
 void QContextMenuEvent_new1()
 {
@@ -64,7 +64,7 @@ void QContextMenuEvent_new1()
 }
 
 /*
-QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
+QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos )
 */
 void QContextMenuEvent_new2()
 {
@@ -73,19 +73,13 @@ void QContextMenuEvent_new2()
 }
 
 /*
-QContextMenuEvent ( Reason reason, const QPoint & pos )
+QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos )
 */
 void QContextMenuEvent_new3()
 {
   QContextMenuEvent * obj = new QContextMenuEvent( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
-[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
-[3]QContextMenuEvent ( Reason reason, const QPoint & pos )
-*/
 
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 {
@@ -125,7 +119,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_DELETE )
 }
 
 /*
-const QPoint & globalPos () const
+const QPoint & globalPos() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
 {
@@ -150,7 +144,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
 }
 
 /*
-int globalX () const
+int globalX() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
 {
@@ -174,7 +168,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALX )
 }
 
 /*
-int globalY () const
+int globalY() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
 {
@@ -198,7 +192,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
 }
 
 /*
-const QPoint & pos () const
+const QPoint & pos() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
 {
@@ -223,7 +217,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
 }
 
 /*
-Reason reason () const
+QContextMenuEvent::Reason reason() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
 {
@@ -247,7 +241,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_REASON )
 }
 
 /*
-int x () const
+int x() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
 {
@@ -271,7 +265,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_X )
 }
 
 /*
-int y () const
+int y() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_Y )
 {

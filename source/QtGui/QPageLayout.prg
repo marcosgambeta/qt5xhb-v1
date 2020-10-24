@@ -105,11 +105,7 @@ void QPageLayout_new1()
 }
 
 /*
-QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
-*/
-
-/*
-QPageLayout(const QPageLayout &other)
+QPageLayout( const QPageLayout & other )
 */
 void QPageLayout_new3()
 {
@@ -118,12 +114,6 @@ void QPageLayout_new3()
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
-
-/*
-[1]QPageLayout()
-[2]QPageLayout(const QPageSize &pageSize, Orientation orientation, const QMarginsF &margins, Unit units = Point, const QMarginsF &minMargins = QMarginsF(0, 0, 0, 0))
-[3]QPageLayout(const QPageLayout &other)
-*/
 
 HB_FUNC_STATIC( QPAGELAYOUT_NEW )
 {
@@ -161,7 +151,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_DELETE )
 }
 
 /*
-void swap(QPageLayout &other)
+void swap( QPageLayout & other )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SWAP )
 {
@@ -189,7 +179,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SWAP )
 }
 
 /*
-bool isEquivalentTo(const QPageLayout &other) const
+bool isEquivalentTo( const QPageLayout & other ) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_ISEQUIVALENTTO )
 {
@@ -241,7 +231,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_ISVALID )
 }
 
 /*
-Mode mode() const
+QPageLayout::Mode mode() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MODE )
 {
@@ -267,7 +257,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MODE )
 }
 
 /*
-void setMode(Mode mode)
+void setMode( QPageLayout::Mode mode )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETMODE )
 {
@@ -322,7 +312,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAGESIZE )
 }
 
 /*
-Orientation orientation() const
+QPageLayout::Orientation orientation() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_ORIENTATION )
 {
@@ -348,7 +338,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_ORIENTATION )
 }
 
 /*
-void setOrientation(Orientation orientation)
+void setOrientation( QPageLayout::Orientation orientation )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETORIENTATION )
 {
@@ -376,7 +366,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETORIENTATION )
 }
 
 /*
-Unit units() const
+QPageLayout::Unit units() const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_UNITS )
 {
@@ -402,7 +392,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_UNITS )
 }
 
 /*
-void setUnits(Unit units)
+void setUnits( QPageLayout::Unit units )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETUNITS )
 {
@@ -430,7 +420,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETUNITS )
 }
 
 /*
-bool setMargins(const QMarginsF &margins)
+bool setMargins( const QMarginsF & margins )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETMARGINS )
 {
@@ -456,7 +446,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETMARGINS )
 }
 
 /*
-bool setLeftMargin(qreal leftMargin)
+bool setLeftMargin( qreal leftMargin )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETLEFTMARGIN )
 {
@@ -482,7 +472,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETLEFTMARGIN )
 }
 
 /*
-bool setRightMargin(qreal rightMargin)
+bool setRightMargin( qreal rightMargin )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETRIGHTMARGIN )
 {
@@ -508,7 +498,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETRIGHTMARGIN )
 }
 
 /*
-bool setTopMargin(qreal topMargin)
+bool setTopMargin( qreal topMargin )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETTOPMARGIN )
 {
@@ -534,7 +524,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_SETTOPMARGIN )
 }
 
 /*
-bool setBottomMargin(qreal bottomMargin)
+bool setBottomMargin( qreal bottomMargin )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETBOTTOMMARGIN )
 {
@@ -576,7 +566,7 @@ void QPageLayout_margins1()
 }
 
 /*
-QMarginsF margins(Unit units) const
+QMarginsF margins( QPageLayout::Unit units ) const
 */
 void QPageLayout_margins2()
 {
@@ -590,11 +580,6 @@ void QPageLayout_margins2()
   }
 #endif
 }
-
-/*
-[1]QMarginsF margins() const
-[2]QMarginsF margins(Unit units) const
-*/
 
 HB_FUNC_STATIC( QPAGELAYOUT_MARGINS )
 {
@@ -640,7 +625,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPOINTS )
 }
 
 /*
-QMargins marginsPixels(int resolution) const
+QMargins marginsPixels( int resolution ) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPIXELS )
 {
@@ -667,7 +652,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_MARGINSPIXELS )
 }
 
 /*
-void setMinimumMargins(const QMarginsF &minMargins)
+void setMinimumMargins( const QMarginsF & minMargins )
 */
 HB_FUNC_STATIC( QPAGELAYOUT_SETMINIMUMMARGINS )
 {
@@ -765,7 +750,7 @@ void QPageLayout_fullRect1()
 }
 
 /*
-QRectF fullRect(Unit units) const
+QRectF fullRect( QPageLayout::Unit units ) const
 */
 void QPageLayout_fullRect2()
 {
@@ -779,11 +764,6 @@ void QPageLayout_fullRect2()
   }
 #endif
 }
-
-/*
-[1]QRectF fullRect() const
-[2]QRectF fullRect(Unit units) const
-*/
 
 HB_FUNC_STATIC( QPAGELAYOUT_FULLRECT )
 {
@@ -829,7 +809,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPOINTS )
 }
 
 /*
-QRect fullRectPixels(int resolution) const
+QRect fullRectPixels( int resolution ) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_FULLRECTPIXELS )
 {
@@ -872,7 +852,7 @@ void QPageLayout_paintRect1()
 }
 
 /*
-QRectF paintRect(Unit units) const
+QRectF paintRect( QPageLayout::Unit units ) const
 */
 void QPageLayout_paintRect2()
 {
@@ -886,11 +866,6 @@ void QPageLayout_paintRect2()
   }
 #endif
 }
-
-/*
-[1]QRectF paintRect() const
-[2]QRectF paintRect(Unit units) const
-*/
 
 HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECT )
 {
@@ -936,7 +911,7 @@ HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPOINTS )
 }
 
 /*
-QRect paintRectPixels(int resolution) const
+QRect paintRectPixels( int resolution ) const
 */
 HB_FUNC_STATIC( QPAGELAYOUT_PAINTRECTPIXELS )
 {

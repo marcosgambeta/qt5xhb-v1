@@ -152,7 +152,7 @@ RETURN
 #include <QtGui/QStyleHints>
 
 /*
-QGuiApplication(int & argc, char ** argv)
+QGuiApplication( int & argc, char ** argv )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_NEW )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_DELETE )
 }
 
 /*
-virtual bool notify(QObject * object, QEvent * event)
+virtual bool notify( QObject * object, QEvent * event )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_NOTIFY )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_APPLICATIONDISPLAYNAME )
 }
 
 /*
-static void changeOverrideCursor(const QCursor & cursor)
+static void changeOverrideCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_CHANGEOVERRIDECURSOR )
 {
@@ -604,10 +604,6 @@ HB_FUNC_STATIC( QGUIAPPLICATION_PLATFORMNAME )
 }
 
 /*
-static QPlatformNativeInterface * platformNativeInterface()
-*/
-
-/*
 static QScreen * primaryScreen()
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_PRIMARYSCREEN )
@@ -730,7 +726,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SCREENS )
 }
 
 /*
-static void setApplicationDisplayName(const QString & name)
+static void setApplicationDisplayName( const QString & name )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME )
 {
@@ -751,7 +747,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME )
 }
 
 /*
-static void setDesktopSettingsAware(bool on)
+static void setDesktopSettingsAware( bool on )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
@@ -772,7 +768,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE )
 }
 
 /*
-static void setFont(const QFont & font)
+static void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
 {
@@ -793,7 +789,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETFONT )
 }
 
 /*
-static void setLayoutDirection(Qt::LayoutDirection direction)
+static void setLayoutDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
 {
@@ -814,7 +810,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
 }
 
 /*
-static void setOverrideCursor(const QCursor & cursor)
+static void setOverrideCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
 {
@@ -835,7 +831,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETOVERRIDECURSOR )
 }
 
 /*
-static void setPalette(const QPalette & pal)
+static void setPalette( const QPalette & pal )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
 {
@@ -856,7 +852,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_SETPALETTE )
 }
 
 /*
-static void setQuitOnLastWindowClosed(bool quit)
+static void setQuitOnLastWindowClosed( bool quit )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
@@ -897,7 +893,7 @@ HB_FUNC_STATIC( QGUIAPPLICATION_STYLEHINTS )
 }
 
 /*
-static QWindow * topLevelAt(const QPoint & pos)
+static QWindow * topLevelAt( const QPoint & pos )
 */
 HB_FUNC_STATIC( QGUIAPPLICATION_TOPLEVELAT )
 {

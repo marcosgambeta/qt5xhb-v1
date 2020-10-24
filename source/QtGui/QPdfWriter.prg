@@ -65,7 +65,7 @@ RETURN
 #endif
 
 /*
-explicit QPdfWriter(const QString & filename)
+QPdfWriter( const QString & filename )
 */
 void QPdfWriter_new1()
 {
@@ -74,18 +74,13 @@ void QPdfWriter_new1()
 }
 
 /*
-explicit QPdfWriter(QIODevice * device)
+QPdfWriter( QIODevice * device )
 */
 void QPdfWriter_new2()
 {
   QPdfWriter * obj = new QPdfWriter( PQIODEVICE(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]explicit QPdfWriter(const QString & filename)
-[2]explicit QPdfWriter(QIODevice * device)
-*/
 
 HB_FUNC_STATIC( QPDFWRITER_NEW )
 {
@@ -147,7 +142,7 @@ HB_FUNC_STATIC( QPDFWRITER_TITLE )
 }
 
 /*
-void setTitle(const QString & title)
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QPDFWRITER_SETTITLE )
 {
@@ -197,7 +192,7 @@ HB_FUNC_STATIC( QPDFWRITER_CREATOR )
 }
 
 /*
-void setCreator(const QString & creator)
+void setCreator( const QString & creator )
 */
 HB_FUNC_STATIC( QPDFWRITER_SETCREATOR )
 {
@@ -247,7 +242,7 @@ HB_FUNC_STATIC( QPDFWRITER_NEWPAGE )
 }
 
 /*
-void setPageSize(PageSize size) (obsolet)
+void setPageSize( QPagedPaintDevice::PageSize size )
 */
 void QPdfWriter_setPageSize1()
 {
@@ -262,7 +257,7 @@ void QPdfWriter_setPageSize1()
 }
 
 /*
-bool setPageSize(const QPageSize &pageSize)
+bool setPageSize( const QPageSize & pageSize )
 */
 void QPdfWriter_setPageSize2()
 {
@@ -275,11 +270,6 @@ void QPdfWriter_setPageSize2()
   }
 #endif
 }
-
-/*
-[1]void setPageSize(PageSize size) (obsolet)
-[2]bool setPageSize(const QPageSize &pageSize)
-*/
 
 HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
 {
@@ -298,7 +288,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
 }
 
 /*
-void setPageSizeMM(const QSizeF & size) (obsolet)
+void setPageSizeMM( const QSizeF & size )
 */
 HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZEMM )
 {
@@ -350,7 +340,7 @@ HB_FUNC_STATIC( QPDFWRITER_RESOLUTION )
 }
 
 /*
-void setResolution(int resolution)
+void setResolution( int resolution )
 */
 HB_FUNC_STATIC( QPDFWRITER_SETRESOLUTION )
 {
@@ -405,7 +395,7 @@ HB_FUNC_STATIC( QPDFWRITER_PAGELAYOUT )
 }
 
 /*
-bool setPageLayout(const QPageLayout &newPageLayout)
+bool setPageLayout( const QPageLayout & newPageLayout )
 */
 HB_FUNC_STATIC( QPDFWRITER_SETPAGELAYOUT )
 {
@@ -431,7 +421,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGELAYOUT )
 }
 
 /*
-PdfVersion pdfVersion() const
+QPagedPaintDevice::PdfVersion pdfVersion() const
 */
 HB_FUNC_STATIC( QPDFWRITER_PDFVERSION )
 {
@@ -457,7 +447,7 @@ HB_FUNC_STATIC( QPDFWRITER_PDFVERSION )
 }
 
 /*
-bool setPageMargins(const QMarginsF &margins)
+bool setPageMargins( const QMarginsF & margins )
 */
 void QPdfWriter_setPageMargins1()
 {
@@ -472,7 +462,7 @@ void QPdfWriter_setPageMargins1()
 }
 
 /*
-bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
+bool setPageMargins( const QMarginsF & margins, QPageLayout::Unit units )
 */
 void QPdfWriter_setPageMargins2()
 {
@@ -485,11 +475,6 @@ void QPdfWriter_setPageMargins2()
   }
 #endif
 }
-
-/*
-[1]bool setPageMargins(const QMarginsF &margins)
-[2]bool setPageMargins(const QMarginsF &margins, QPageLayout::Unit units)
-*/
 
 HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
 {
@@ -508,7 +493,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
 }
 
 /*
-bool setPageOrientation(QPageLayout::Orientation orientation)
+bool setPageOrientation( QPageLayout::Orientation orientation )
 */
 HB_FUNC_STATIC( QPDFWRITER_SETPAGEORIENTATION )
 {
@@ -534,7 +519,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGEORIENTATION )
 }
 
 /*
-void setPdfVersion(PdfVersion version)
+void setPdfVersion( QPagedPaintDevice::PdfVersion version )
 */
 HB_FUNC_STATIC( QPDFWRITER_SETPDFVERSION )
 {
@@ -560,9 +545,5 @@ HB_FUNC_STATIC( QPDFWRITER_SETPDFVERSION )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-virtual void setMargins(const Margins &m) override (obsolete)
-*/
 
 #pragma ENDDUMP

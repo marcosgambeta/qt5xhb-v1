@@ -75,18 +75,13 @@ void QOpenGLFramebufferObjectFormat_new1()
 }
 
 /*
-QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
+QOpenGLFramebufferObjectFormat( const QOpenGLFramebufferObjectFormat & other )
 */
 void QOpenGLFramebufferObjectFormat_new2()
 {
   QOpenGLFramebufferObjectFormat * obj = new QOpenGLFramebufferObjectFormat( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QOpenGLFramebufferObjectFormat()
-[2]QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat &other)
-*/
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {
@@ -122,7 +117,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_DELETE )
 }
 
 /*
-void setSamples(int samples)
+void setSamples( int samples )
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETSAMPLES )
 {
@@ -172,7 +167,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SAMPLES )
 }
 
 /*
-void setMipmap(bool enabled)
+void setMipmap( bool enabled )
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETMIPMAP )
 {
@@ -222,7 +217,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_MIPMAP )
 }
 
 /*
-void setAttachment(QOpenGLFramebufferObject::Attachment attachment)
+void setAttachment( QOpenGLFramebufferObject::Attachment attachment )
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETATTACHMENT )
 {
@@ -272,7 +267,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_ATTACHMENT )
 }
 
 /*
-void setTextureTarget(GLenum target)
+void setTextureTarget( GLenum target )
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETTEXTURETARGET )
 {
@@ -322,7 +317,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_TEXTURETARGET )
 }
 
 /*
-void setInternalTextureFormat(GLenum internalTextureFormat)
+void setInternalTextureFormat( GLenum internalTextureFormat )
 */
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_SETINTERNALTEXTUREFORMAT )
 {

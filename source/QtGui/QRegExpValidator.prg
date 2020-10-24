@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QRegExpValidator ( QObject * parent = 0 )
+QRegExpValidator( QObject * parent = 0 )
 */
 void QRegExpValidator_new1()
 {
@@ -62,18 +62,13 @@ void QRegExpValidator_new1()
 }
 
 /*
-QRegExpValidator ( const QRegExp & rx, QObject * parent = 0 )
+QRegExpValidator( const QRegExp & rx, QObject * parent = 0 )
 */
 void QRegExpValidator_new2()
 {
   QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP(1), OPQOBJECT(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QRegExpValidator ( QObject * parent = 0 )
-[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
-*/
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
@@ -111,7 +106,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 }
 
 /*
-const QRegExp & regExp () const
+const QRegExp & regExp() const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
@@ -136,7 +131,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 }
 
 /*
-void setRegExp ( const QRegExp & rx )
+void setRegExp( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
@@ -162,7 +157,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 }
 
 /*
-virtual QValidator::State validate ( QString & input, int & pos ) const
+virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {

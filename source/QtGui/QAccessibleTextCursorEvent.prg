@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QAccessibleTextCursorEvent(QObject *obj, int cursorPos)
+QAccessibleTextCursorEvent( QObject * obj, int cursorPos )
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_NEW )
 {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_DELETE )
 }
 
 /*
-void setCursorPosition(int position)
+void setCursorPosition( int position )
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTCURSOREVENT_SETCURSORPOSITION )
 {

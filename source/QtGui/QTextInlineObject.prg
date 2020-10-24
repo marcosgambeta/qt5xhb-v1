@@ -71,10 +71,6 @@ RETURN
 #endif
 
 /*
-QTextInlineObject(int i, QTextEngine *e)
-*/
-
-/*
 QTextInlineObject()
 */
 void QTextInlineObject_new2()
@@ -82,11 +78,6 @@ void QTextInlineObject_new2()
   QTextInlineObject * obj = new QTextInlineObject();
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextInlineObject(int i, QTextEngine *e)
-[2]QTextInlineObject()
-*/
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEW )
 {
@@ -287,7 +278,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
 }
 
 /*
-void setWidth(qreal w)
+void setWidth( qreal w )
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETWIDTH )
 {
@@ -313,7 +304,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETWIDTH )
 }
 
 /*
-void setAscent(qreal a)
+void setAscent( qreal a )
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETASCENT )
 {
@@ -339,7 +330,7 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETASCENT )
 }
 
 /*
-void setDescent(qreal d)
+void setDescent( qreal d )
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETDESCENT )
 {

@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-QAccessibleEvent(QObject *obj, QAccessible::Event typ)
+QAccessibleEvent( QObject * obj, QAccessible::Event typ )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_TYPE )
 }
 
 /*
-QObject *object() const
+QObject * object() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_OBJECT )
 }
 
 /*
-void setChild(int chld)
+void setChild( int chld )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_SETCHILD )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 }
 
 /*
-virtual QAccessibleInterface *accessibleInterface() const
+virtual QAccessibleInterface * accessibleInterface() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_ACCESSIBLEINTERFACE )
 {

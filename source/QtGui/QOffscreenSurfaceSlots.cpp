@@ -29,7 +29,7 @@ void QOffscreenSurfaceSlots::screenChanged( QScreen * screen )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOFFSCREENSURFACE" );
-    PHB_ITEM pscreen = Signals_return_qobject( (QObject *) screen, "QSCREEN" );
+    PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject( (QObject *) screen, "QSCREEN" );
 
     hb_vmEvalBlockV( cb, 2, psender, pscreen );
 

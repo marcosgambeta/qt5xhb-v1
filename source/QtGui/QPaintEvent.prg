@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QPaintEvent ( const QRegion & paintRegion )
+QPaintEvent( const QRegion & paintRegion )
 */
 void QPaintEvent_new1()
 {
@@ -60,18 +60,13 @@ void QPaintEvent_new1()
 }
 
 /*
-QPaintEvent ( const QRect & paintRect )
+QPaintEvent( const QRect & paintRect )
 */
 void QPaintEvent_new2()
 {
   QPaintEvent * obj = new QPaintEvent( *PQRECT(1) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QPaintEvent ( const QRegion & paintRegion )
-[2]QPaintEvent ( const QRect & paintRect )
-*/
 
 HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {
@@ -107,7 +102,7 @@ HB_FUNC_STATIC( QPAINTEVENT_DELETE )
 }
 
 /*
-const QRect & rect () const
+const QRect & rect() const
 */
 HB_FUNC_STATIC( QPAINTEVENT_RECT )
 {
@@ -132,7 +127,7 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
 }
 
 /*
-const QRegion & region () const
+const QRegion & region() const
 */
 HB_FUNC_STATIC( QPAINTEVENT_REGION )
 {

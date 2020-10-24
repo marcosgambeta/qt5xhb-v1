@@ -57,7 +57,7 @@ RETURN
 #endif
 
 /*
-QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
+QMouseEvent( QEvent::Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
 */
 void QMouseEvent_new1()
 {
@@ -66,7 +66,7 @@ void QMouseEvent_new1()
 }
 
 /*
-QMouseEvent(Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
+QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
 */
 void QMouseEvent_new2()
 {
@@ -75,19 +75,13 @@ void QMouseEvent_new2()
 }
 
 /*
-QMouseEvent(Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
+QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
 */
 void QMouseEvent_new3()
 {
   QMouseEvent * obj = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), (Qt::MouseButton) hb_parni(5), (Qt::MouseButtons) hb_parni(6), (Qt::KeyboardModifiers) hb_parni(7) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QMouseEvent(Type type, const QPointF & localPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-[2]QMouseEvent(Type type, const QPointF & localPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-[3]QMouseEvent(Type type, const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-*/
 
 HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 {
@@ -127,7 +121,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 }
 
 /*
-Qt::MouseButton button () const
+Qt::MouseButton button() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 {
@@ -151,7 +145,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 }
 
 /*
-Qt::MouseButtons buttons () const
+Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 {
@@ -175,7 +169,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 }
 
 /*
-int globalX () const
+int globalX() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 {
@@ -199,7 +193,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 }
 
 /*
-int globalY () const
+int globalY() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 {
@@ -298,7 +292,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
 }
 
 /*
-int x () const
+int x() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_X )
 {
@@ -322,7 +316,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_X )
 }
 
 /*
-int y () const
+int y() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_Y )
 {

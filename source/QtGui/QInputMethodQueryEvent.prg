@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QInputMethodQueryEvent(Qt::InputMethodQueries queries)
+QInputMethodQueryEvent( Qt::InputMethodQueries queries )
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_NEW )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_QUERIES )
 }
 
 /*
-void setValue(Qt::InputMethodQuery query, const QVariant & value)
+void setValue( Qt::InputMethodQuery query, const QVariant & value )
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_SETVALUE )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_SETVALUE )
 }
 
 /*
-QVariant value(Qt::InputMethodQuery query) const
+QVariant value( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QINPUTMETHODQUERYEVENT_VALUE )
 {

@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QDragMoveEvent ( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Type type = DragMove )
+QDragMoveEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove )
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
 }
 
 /*
-void accept ( const QRect & rectangle )
+void accept( const QRect & rectangle )
 */
 void QDragMoveEvent_accept1()
 {
@@ -99,7 +99,7 @@ void QDragMoveEvent_accept1()
 }
 
 /*
-void accept ()
+void accept()
 */
 void QDragMoveEvent_accept2()
 {
@@ -112,11 +112,6 @@ void QDragMoveEvent_accept2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void accept ( const QRect & rectangle )
-[2]void accept ()
-*/
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 {
@@ -135,7 +130,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 }
 
 /*
-QRect answerRect () const
+QRect answerRect() const
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 {
@@ -160,7 +155,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 }
 
 /*
-void ignore ( const QRect & rectangle )
+void ignore( const QRect & rectangle )
 */
 void QDragMoveEvent_ignore1()
 {
@@ -175,7 +170,7 @@ void QDragMoveEvent_ignore1()
 }
 
 /*
-void ignore ()
+void ignore()
 */
 void QDragMoveEvent_ignore2()
 {
@@ -188,11 +183,6 @@ void QDragMoveEvent_ignore2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void ignore ( const QRect & rectangle )
-[2]void ignore ()
-*/
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
 {

@@ -52,7 +52,7 @@ RETURN
 #include <QtGui/QScreen>
 
 /*
-QScreenOrientationChangeEvent(QScreen *screen, Qt::ScreenOrientation orientation)
+QScreenOrientationChangeEvent( QScreen * screen, Qt::ScreenOrientation orientation )
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_NEW )
 {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_DELETE )
 }
 
 /*
-QScreen *screen() const
+QScreen * screen() const
 */
 HB_FUNC_STATIC( QSCREENORIENTATIONCHANGEEVENT_SCREEN )
 {

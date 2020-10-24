@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_ISVALID )
 }
 
 /*
-void setPosition(Position f)
+void setPosition( QTextFrameFormat::Position f )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
 }
 
 /*
-Position position() const
+QTextFrameFormat::Position position() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_POSITION )
 }
 
 /*
-void setBorder(qreal border)
+void setBorder( qreal border )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDER )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDER )
 }
 
 /*
-void setBorderBrush(const QBrush &brush)
+void setBorderBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERBRUSH )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
 }
 
 /*
-void setBorderStyle(BorderStyle style)
+void setBorderStyle( QTextFrameFormat::BorderStyle style )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
 }
 
 /*
-BorderStyle borderStyle() const
+QTextFrameFormat::BorderStyle borderStyle() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERSTYLE )
 }
 
 /*
-void setMargin(qreal margin)
+void setMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETMARGIN )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_MARGIN )
 }
 
 /*
-void setTopMargin(qreal margin)
+void setTopMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETTOPMARGIN )
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_TOPMARGIN )
 }
 
 /*
-void setBottomMargin(qreal margin)
+void setBottomMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBOTTOMMARGIN )
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BOTTOMMARGIN )
 }
 
 /*
-void setLeftMargin(qreal margin)
+void setLeftMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETLEFTMARGIN )
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_LEFTMARGIN )
 }
 
 /*
-void setRightMargin(qreal margin)
+void setRightMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETRIGHTMARGIN )
 {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_RIGHTMARGIN )
 }
 
 /*
-void setPadding(qreal padding)
+void setPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPADDING )
 {
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
 }
 
 /*
-void setWidth(qreal width)
+void setWidth( qreal width )
 */
 void QTextFrameFormat_setWidth1()
 {
@@ -649,7 +649,7 @@ void QTextFrameFormat_setWidth1()
 }
 
 /*
-void setWidth(const QTextLength &length)
+void setWidth( const QTextLength & length )
 */
 void QTextFrameFormat_setWidth2()
 {
@@ -662,11 +662,6 @@ void QTextFrameFormat_setWidth2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setWidth(qreal width)
-[2]void setWidth(const QTextLength &length)
-*/
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 {
@@ -710,7 +705,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
 }
 
 /*
-void setHeight(qreal height)
+void setHeight( qreal height )
 */
 void QTextFrameFormat_setHeight1()
 {
@@ -725,7 +720,7 @@ void QTextFrameFormat_setHeight1()
 }
 
 /*
-void setHeight(const QTextLength &height)
+void setHeight( const QTextLength & height )
 */
 void QTextFrameFormat_setHeight2()
 {
@@ -738,11 +733,6 @@ void QTextFrameFormat_setHeight2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setHeight(qreal height)
-[2]void setHeight(const QTextLength &height)
-*/
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 {
@@ -786,7 +776,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
 }
 
 /*
-void setPageBreakPolicy(PageBreakFlags flags)
+void setPageBreakPolicy( QTextFrameFormat::PageBreakFlags flags )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
 {
@@ -812,7 +802,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
 }
 
 /*
-PageBreakFlags pageBreakPolicy() const
+QTextFrameFormat::PageBreakFlags pageBreakPolicy() const
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PAGEBREAKPOLICY )
 {

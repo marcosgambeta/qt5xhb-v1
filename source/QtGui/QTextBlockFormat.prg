@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
 }
 
 /*
-void setAlignment(Qt::Alignment alignment)
+void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
 }
 
 /*
-void setTopMargin(qreal margin)
+void setTopMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
 }
 
 /*
-void setBottomMargin(qreal margin)
+void setBottomMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
 }
 
 /*
-void setLeftMargin(qreal margin)
+void setLeftMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
 }
 
 /*
-void setRightMargin(qreal margin)
+void setRightMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
 {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
 }
 
 /*
-void setTextIndent(qreal aindent)
+void setTextIndent( qreal aindent )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
 }
 
 /*
-void setIndent(int indent)
+void setIndent( int indent )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETINDENT )
 {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
 }
 
 /*
-void setLineHeight(qreal height, int heightType)
+void setLineHeight( qreal height, int heightType )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
 {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
 }
 
 /*
-qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
+qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
 */
 void QTextBlockFormat_lineHeight1()
 {
@@ -528,11 +528,6 @@ void QTextBlockFormat_lineHeight2()
     RQREAL( obj->lineHeight() );
   }
 }
-
-/*
-[1]qreal lineHeight(qreal scriptLineHeight, qreal scaling) const
-[2]qreal lineHeight() const
-*/
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {
@@ -575,7 +570,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
 }
 
 /*
-void setNonBreakableLines(bool b)
+void setNonBreakableLines( bool b )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
 {
@@ -625,7 +620,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
 }
 
 /*
-void setPageBreakPolicy(PageBreakFlags flags)
+void setPageBreakPolicy( QTextBlockFormat::PageBreakFlags flags )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
 {
@@ -651,7 +646,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
 }
 
 /*
-PageBreakFlags pageBreakPolicy() const
+QTextBlockFormat::PageBreakFlags pageBreakPolicy() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
 {
@@ -675,7 +670,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
 }
 
 /*
-int QTextBlockFormat::headingLevel() const
+int headingLevel() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_HEADINGLEVEL )
 {
@@ -701,7 +696,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_HEADINGLEVEL )
 }
 
 /*
-void QTextBlockFormat::setHeadingLevel(int level)
+void setHeadingLevel( int level )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETHEADINGLEVEL )
 {

@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QAccessibleTextSelectionEvent(QObject *obj, int start, int end)
+QAccessibleTextSelectionEvent( QObject * obj, int start, int end )
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
 {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_DELETE )
 }
 
 /*
-void setSelection(int start, int end)
+void setSelection( int start, int end )
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION )
 {

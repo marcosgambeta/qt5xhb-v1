@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
+QWheelEvent( const QPointF & pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
 */
 void QWheelEvent_new1()
 {
@@ -71,7 +71,7 @@ void QWheelEvent_new1()
 }
 
 /*
-QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
+QWheelEvent( const QPointF & pos, const QPointF & globalPos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
 */
 void QWheelEvent_new2()
 {
@@ -80,19 +80,13 @@ void QWheelEvent_new2()
 }
 
 /*
-QWheelEvent(const QPointF &pos, const QPointF& globalPos,QPoint pixelDelta, QPoint angleDelta, int qt4Delta, Qt::Orientation qt4Orientation,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
+QWheelEvent( const QPointF & pos, const QPointF & globalPos, QPoint pixelDelta, QPoint angleDelta, int qt4Delta, Qt::Orientation qt4Orientation, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
 */
 void QWheelEvent_new3()
 {
   QWheelEvent * obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), *PQPOINT(3), *PQPOINT(4), PINT(5), (Qt::Orientation) hb_parni(6), (Qt::MouseButtons) hb_parni(7), (Qt::KeyboardModifiers) hb_parni(8) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QWheelEvent(const QPointF &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical);
-[2]QWheelEvent(const QPointF &pos, const QPointF& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical);
-[3]QWheelEvent(const QPointF &pos, const QPointF& globalPos,QPoint pixelDelta, QPoint angleDelta, int qt4Delta, Qt::Orientation qt4Orientation,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers);
-*/
 
 HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {
@@ -376,7 +370,7 @@ HB_FUNC_STATIC( QWHEELEVENT_GLOBALY )
 }
 
 /*
-const QPointF &posF() const
+const QPointF & posF() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_POSF )
 {
@@ -401,7 +395,7 @@ HB_FUNC_STATIC( QWHEELEVENT_POSF )
 }
 
 /*
-const QPointF &globalPosF() const
+const QPointF & globalPosF() const
 */
 HB_FUNC_STATIC( QWHEELEVENT_GLOBALPOSF )
 {

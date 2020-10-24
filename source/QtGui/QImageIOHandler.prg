@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
 }
 
 /*
-virtual bool canRead () const = 0
+virtual bool canRead() const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 }
 
 /*
-virtual int currentImageNumber () const
+virtual int currentImageNumber() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 }
 
 /*
-virtual QRect currentImageRect () const
+virtual QRect currentImageRect() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 }
 
 /*
-QIODevice * device () const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 }
 
 /*
-QByteArray format () const
+QByteArray format() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 }
 
 /*
-virtual int imageCount () const
+virtual int imageCount() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 }
 
 /*
-virtual bool jumpToImage ( int imageNumber )
+virtual bool jumpToImage( int imageNumber )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 }
 
 /*
-virtual bool jumpToNextImage ()
+virtual bool jumpToNextImage()
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 }
 
 /*
-virtual int loopCount () const
+virtual int loopCount() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 }
 
 /*
-virtual int nextImageDelay () const
+virtual int nextImageDelay() const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 }
 
 /*
-virtual QVariant option ( ImageOption option ) const
+virtual QVariant option( QImageIOHandler::ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
 }
 
 /*
-virtual bool read ( QImage * image ) = 0
+virtual bool read( QImage * image ) = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
 }
 
 /*
-void setDevice ( QIODevice * device )
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
 }
 
 /*
-void setFormat ( const QByteArray & format )
+void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
 }
 
 /*
-virtual void setOption ( ImageOption option, const QVariant & value )
+virtual void setOption( QImageIOHandler::ImageOption option, const QVariant & value )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
 {
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
 }
 
 /*
-virtual bool supportsOption ( ImageOption option ) const
+virtual bool supportsOption( QImageIOHandler::ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 }
 
 /*
-virtual bool write ( const QImage & image )
+virtual bool write( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
 {

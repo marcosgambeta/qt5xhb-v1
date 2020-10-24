@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_DELETE )
 }
 
 /*
-virtual QAccessibleInterface *create(const QString &key, QObject *object) = 0
+virtual QAccessibleInterface * create( const QString & key, QObject * object ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
 {

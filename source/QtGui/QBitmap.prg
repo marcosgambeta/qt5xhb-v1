@@ -55,7 +55,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QBitmap ()
+QBitmap()
 */
 void QBitmap_new1()
 {
@@ -64,7 +64,7 @@ void QBitmap_new1()
 }
 
 /*
-QBitmap ( const QPixmap & pixmap )
+QBitmap( const QPixmap & pixmap )
 */
 void QBitmap_new2()
 {
@@ -73,7 +73,7 @@ void QBitmap_new2()
 }
 
 /*
-QBitmap ( int width, int height )
+QBitmap( int width, int height )
 */
 void QBitmap_new3()
 {
@@ -82,7 +82,7 @@ void QBitmap_new3()
 }
 
 /*
-QBitmap ( const QSize & size )
+QBitmap( const QSize & size )
 */
 void QBitmap_new4()
 {
@@ -91,21 +91,13 @@ void QBitmap_new4()
 }
 
 /*
-QBitmap ( const QString & fileName, const char * format = 0 )
+QBitmap( const QString & fileName, const char * format = 0 )
 */
 void QBitmap_new5()
 {
   QBitmap * obj = new QBitmap( PQSTRING(1), OPCONSTCHAR(2,0) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QBitmap ()
-[2]QBitmap ( const QPixmap & pixmap )
-[3]QBitmap ( int width, int height )
-[4]QBitmap ( const QSize & size )
-[5]QBitmap ( const QString & fileName, const char * format = 0 )
-*/
 
 HB_FUNC_STATIC( QBITMAP_NEW )
 {
@@ -153,7 +145,7 @@ HB_FUNC_STATIC( QBITMAP_DELETE )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
@@ -179,7 +171,7 @@ HB_FUNC_STATIC( QBITMAP_CLEAR )
 }
 
 /*
-QBitmap transformed ( const QTransform & matrix ) const
+QBitmap transformed( const QTransform & matrix ) const
 */
 HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
@@ -204,7 +196,7 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 }
 
 /*
-static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
+static QBitmap fromData( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 */
 HB_FUNC_STATIC( QBITMAP_FROMDATA )
 {
@@ -224,7 +216,7 @@ HB_FUNC_STATIC( QBITMAP_FROMDATA )
 }
 
 /*
-static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
+static QBitmap fromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 {
@@ -242,10 +234,6 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
   }
 #endif
 }
-
-/*
-static QBitmap QBitmap::fromImage(QImage &&image, Qt::ImageConversionFlags flags = Qt::AutoColor)
-*/
 
 /*
 QVariant toVariant()

@@ -76,7 +76,7 @@ RETURN
 #include <QtGui/QScreen>
 
 /*
-QOpenGLContext(QObject * parent = 0)
+QOpenGLContext( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_NEW )
 {
@@ -235,11 +235,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_FUNCTIONS )
 }
 
 /*
-QFunctionPointer getProcAddress(const QByteArray & procName) const
-*/
-
-/*
-bool hasExtension(const QByteArray & extension) const
+bool hasExtension( const QByteArray & extension ) const
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_HASEXTENSION )
 {
@@ -287,7 +283,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_ISVALID )
 }
 
 /*
-bool makeCurrent(QSurface * surface)
+bool makeCurrent( QSurface * surface )
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_MAKECURRENT )
 {
@@ -336,7 +332,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SCREEN )
 }
 
 /*
-void setFormat(const QSurfaceFormat & format)
+void setFormat( const QSurfaceFormat & format )
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_SETFORMAT )
 {
@@ -362,7 +358,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SETFORMAT )
 }
 
 /*
-void setScreen(QScreen * screen)
+void setScreen( QScreen * screen )
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_SETSCREEN )
 {
@@ -388,7 +384,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SETSCREEN )
 }
 
 /*
-void setShareContext(QOpenGLContext * shareContext)
+void setShareContext( QOpenGLContext * shareContext )
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_SETSHARECONTEXT )
 {
@@ -489,7 +485,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SURFACE )
 }
 
 /*
-void swapBuffers(QSurface * surface)
+void swapBuffers( QSurface * surface )
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_SWAPBUFFERS )
 {
@@ -515,7 +511,7 @@ HB_FUNC_STATIC( QOPENGLCONTEXT_SWAPBUFFERS )
 }
 
 /*
-static bool areSharing(QOpenGLContext * first, QOpenGLContext * second)
+static bool areSharing( QOpenGLContext * first, QOpenGLContext * second )
 */
 HB_FUNC_STATIC( QOPENGLCONTEXT_ARESHARING )
 {

@@ -47,7 +47,7 @@ RETURN
 #endif
 
 /*
-QApplicationStateChangeEvent(Qt::ApplicationState state)
+QApplicationStateChangeEvent( Qt::ApplicationState state )
 */
 HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_NEW )
 {

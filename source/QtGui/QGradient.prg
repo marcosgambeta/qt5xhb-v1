@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QGRADIENT_DELETE )
 }
 
 /*
-CoordinateMode coordinateMode () const
+QGradient::CoordinateMode coordinateMode() const
 */
 HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGRADIENT_COORDINATEMODE )
 }
 
 /*
-void setColorAt ( qreal position, const QColor & color )
+void setColorAt( qreal position, const QColor & color )
 */
 HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
 {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
 }
 
 /*
-void setCoordinateMode ( CoordinateMode mode )
+void setCoordinateMode( QGradient::CoordinateMode mode )
 */
 HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGRADIENT_SETCOORDINATEMODE )
 }
 
 /*
-void setSpread ( Spread method )
+void setSpread( QGradient::Spread method )
 */
 HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGRADIENT_SETSPREAD )
 }
 
 /*
-Spread spread () const
+QGradient::Spread spread() const
 */
 HB_FUNC_STATIC( QGRADIENT_SPREAD )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QGRADIENT_SPREAD )
 }
 
 /*
-Type type () const
+QGradient::Type type() const
 */
 HB_FUNC_STATIC( QGRADIENT_TYPE )
 {

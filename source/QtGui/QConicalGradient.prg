@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-QConicalGradient ()
+QConicalGradient()
 */
 void QConicalGradient_new1()
 {
@@ -61,7 +61,7 @@ void QConicalGradient_new1()
 }
 
 /*
-QConicalGradient ( const QPointF & center, qreal angle )
+QConicalGradient( const QPointF & center, qreal angle )
 */
 void QConicalGradient_new2()
 {
@@ -70,19 +70,13 @@ void QConicalGradient_new2()
 }
 
 /*
-QConicalGradient ( qreal cx, qreal cy, qreal angle )
+QConicalGradient( qreal cx, qreal cy, qreal angle )
 */
 void QConicalGradient_new3()
 {
   QConicalGradient * obj = new QConicalGradient( PQREAL(1), PQREAL(2), PQREAL(3) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QConicalGradient ()
-[2]QConicalGradient ( const QPointF & center, qreal angle )
-[3]QConicalGradient ( qreal cx, qreal cy, qreal angle )
-*/
 
 HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 {
@@ -122,7 +116,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_DELETE )
 }
 
 /*
-qreal angle () const
+qreal angle() const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 {
@@ -146,7 +140,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 }
 
 /*
-QPointF center () const
+QPointF center() const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 {
@@ -171,7 +165,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 }
 
 /*
-void setAngle ( qreal angle )
+void setAngle( qreal angle )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 {
@@ -197,7 +191,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 }
 
 /*
-void setCenter ( const QPointF & center )
+void setCenter( const QPointF & center )
 */
 void QConicalGradient_setCenter1()
 {
@@ -212,7 +206,7 @@ void QConicalGradient_setCenter1()
 }
 
 /*
-void setCenter ( qreal x, qreal y )
+void setCenter( qreal x, qreal y )
 */
 void QConicalGradient_setCenter2()
 {
@@ -225,11 +219,6 @@ void QConicalGradient_setCenter2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCenter ( const QPointF & center )
-[2]void setCenter ( qreal x, qreal y )
-*/
 
 HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
 {

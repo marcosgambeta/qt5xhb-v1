@@ -65,7 +65,7 @@ RETURN
 #include <QtCore/QList>
 
 /*
-QKeySequence ()
+QKeySequence()
 */
 void QKeySequence_new1()
 {
@@ -74,7 +74,7 @@ void QKeySequence_new1()
 }
 
 /*
-QKeySequence ( const QString & key )
+QKeySequence( const QString & key )
 */
 void QKeySequence_new2()
 {
@@ -83,7 +83,7 @@ void QKeySequence_new2()
 }
 
 /*
-QKeySequence ( const QString & key, SequenceFormat format )
+QKeySequence( const QString & key, QKeySequence::SequenceFormat format )
 */
 void QKeySequence_new3()
 {
@@ -92,7 +92,7 @@ void QKeySequence_new3()
 }
 
 /*
-QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
+QKeySequence( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
 void QKeySequence_new4()
 {
@@ -101,7 +101,7 @@ void QKeySequence_new4()
 }
 
 /*
-QKeySequence ( const QKeySequence & keysequence )
+QKeySequence( const QKeySequence & keysequence )
 */
 void QKeySequence_new5()
 {
@@ -110,22 +110,13 @@ void QKeySequence_new5()
 }
 
 /*
-QKeySequence ( StandardKey key )
+QKeySequence( QKeySequence::StandardKey key )
 */
 void QKeySequence_new6()
 {
   QKeySequence * obj = new QKeySequence( (QKeySequence::StandardKey) hb_parni(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QKeySequence ()
-[2]QKeySequence ( const QString & key )
-[3]QKeySequence ( const QString & key, SequenceFormat format )
-[4]QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
-[5]QKeySequence ( const QKeySequence & keysequence )
-[6]QKeySequence ( StandardKey key )
-*/
 
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 {
@@ -177,7 +168,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 }
 
 /*
-uint count () const
+uint count() const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {
@@ -201,7 +192,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {
@@ -225,7 +216,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 }
 
 /*
-SequenceMatch matches ( const QKeySequence & seq ) const
+QKeySequence::SequenceMatch matches( const QKeySequence & seq ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
@@ -249,7 +240,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 }
 
 /*
-QString toString ( SequenceFormat format = PortableText ) const
+QString toString( QKeySequence::SequenceFormat format = QKeySequence::PortableText ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
@@ -273,7 +264,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 }
 
 /*
-static QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
+static QKeySequence fromString( const QString & str, QKeySequence::SequenceFormat format = QKeySequence::PortableText )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {
@@ -293,7 +284,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 }
 
 /*
-static QList<QKeySequence> keyBindings ( StandardKey key )
+static QList<QKeySequence> keyBindings( QKeySequence::StandardKey key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {
@@ -340,7 +331,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 }
 
 /*
-static QKeySequence mnemonic ( const QString & text )
+static QKeySequence mnemonic( const QString & text )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
 {
