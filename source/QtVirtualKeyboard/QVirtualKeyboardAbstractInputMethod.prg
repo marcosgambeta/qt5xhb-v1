@@ -126,13 +126,10 @@ virtual bool reselect(int cursorPosition, const QVirtualKeyboardInputEngine::Res
 virtual bool clickPreeditText(int cursorPosition)
 */
 /*
-virtual void reset() [slot]
+virtual void reset() 
 */
 /*
-virtual void update() [slot]
-*/
-/*
-void setInputEngine(QVirtualKeyboardInputEngine *inputEngine) [private]
+virtual void update() 
 */
 
 void QVirtualKeyboardAbstractInputMethodSlots_connect_signal( const QString & signal, const QString & slot );

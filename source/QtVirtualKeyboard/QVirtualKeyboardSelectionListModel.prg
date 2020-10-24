@@ -105,12 +105,6 @@ Q_INVOKABLE void removeItem(int index)
 /*
 Q_INVOKABLE QVariant dataAt(int index, Role role = Role::Display) const
 */
-/*
-void selectionListChanged(Type type) [protected] [slot]
-*/
-/*
-void selectionListActiveItemChanged(Type type, int index) [protected] [slot]
-*/
 
 void QVirtualKeyboardSelectionListModelSlots_connect_signal( const QString & signal, const QString & slot );
 

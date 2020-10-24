@@ -153,24 +153,6 @@ Q_INVOKABLE bool reselect(int cursorPosition, const ReselectFlags &reselectFlags
 /*
 bool clickPreeditText(int cursorPosition)
 */
-/*
-void reset() [private] [slot]
-*/
-/*
-void update() [private] [slot]
-*/
-/*
-void shiftChanged() [private] [slot]
-*/
-/*
-void updateSelectionListModels() [private] [slot]
-*/
-/*
-void updateInputModes() [private] [slot]
-*/
-/*
-void timerEvent(QTimerEvent *timerEvent) [protected]
-*/
 
 void QVirtualKeyboardInputEngineSlots_connect_signal( const QString & signal, const QString & slot );
 
