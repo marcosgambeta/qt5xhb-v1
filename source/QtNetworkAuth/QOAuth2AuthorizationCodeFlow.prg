@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
 }
 
 /*
-void grant() override (slot)
+void grant() override 
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
 }
 
 /*
-void refreshAccessToken() (slot)
+void refreshAccessToken() 
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
 {
@@ -284,18 +284,6 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-QUrl buildAuthenticateUrl(const QVariantMap &parameters = QVariantMap()) [protected]
-*/
-
-/*
-void requestAccessToken(const QString &code) [protected]
-*/
-
-/*
-void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override [protected]
-*/
 
 void QOAuth2AuthorizationCodeFlowSlots_connect_signal( const QString & signal, const QString & slot );
 

@@ -118,12 +118,4 @@ HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_CALLBACK )
 #endif
 }
 
-/*
-void networkReplyFinished(QNetworkReply *reply) override [protected]
-*/
-
-/*
-QVariantMap parseResponse(const QByteArray &response) [private]
-*/
-
 #pragma ENDDUMP

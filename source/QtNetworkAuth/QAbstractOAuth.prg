@@ -80,10 +80,6 @@ RETURN
 #include <QtNetworkAuth/QAbstractOAuthReplyHandler>
 
 /*
-explicit QAbstractOAuth(QAbstractOAuthPrivate &, QObject *parent = nullptr) [protected]
-*/
-
-/*
 virtual ~QAbstractOAuth()
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_DELETE )
@@ -449,7 +445,7 @@ void setModifyParametersFunction(const ModifyParametersFunction &modifyParameter
 */
 
 /*
-virtual void grant() = 0 (slot)
+virtual void grant() = 0 
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
 {
@@ -475,22 +471,6 @@ HB_FUNC_STATIC( QABSTRACTOAUTH_GRANT )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-void setStatus(Status status) [protected]
-*/
-
-/*
-QString callback() const [protected]
-*/
-
-/*
-virtual void resourceOwnerAuthorization(const QUrl &url, const QVariantMap &parameters) [protected]
-*/
-
-/*
-static QByteArray generateRandomString(quint8 length) [protected]
-*/
 
 void QAbstractOAuthSlots_connect_signal( const QString & signal, const QString & slot );
 

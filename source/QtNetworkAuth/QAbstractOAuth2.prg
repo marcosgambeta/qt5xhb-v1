@@ -81,10 +81,6 @@ explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *parent = nullp
 */
 
 /*
-explicit QAbstractOAuth2(QAbstractOAuth2Private &, QObject *parent = nullptr) [protected]
-*/
-
-/*
 ~QAbstractOAuth2()
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_DELETE )
@@ -400,10 +396,6 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_RESPONSETYPE )
   }
 #endif
 }
-
-/*
-void setResponseType(const QString &responseType) [protected]
-*/
 
 /*
 QString refreshToken() const

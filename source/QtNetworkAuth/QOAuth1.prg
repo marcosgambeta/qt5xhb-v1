@@ -493,7 +493,7 @@ QNetworkReply *deleteResource(const QUrl &url, const QVariantMap &parameters = Q
 */
 
 /*
-void grant() override (slot)
+void grant() override 
 */
 HB_FUNC_STATIC( QOAUTH1_GRANT )
 {
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QOAUTH1_GRANT )
 }
 
 /*
-void continueGrantWithVerifier(const QString &verifier) (slot)
+void continueGrantWithVerifier(const QString &verifier) 
 */
 HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
 {
@@ -547,26 +547,6 @@ HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-QNetworkReply *requestTemporaryCredentials(QNetworkAccessManager::Operation operation, const QUrl &url, const QVariantMap &parameters = QVariantMap()) [protected]
-*/
-
-/*
-QNetworkReply *requestTokenCredentials(QNetworkAccessManager::Operation operation, const QUrl &url, const QPair<QString, QString> &temporaryToken, const QVariantMap &parameters = QVariantMap()) [protected]
-*/
-
-/*
-void setup(QNetworkRequest *request, const QVariantMap &signingParameters, QNetworkAccessManager::Operation operation) [protected]
-*/
-
-/*
-static QByteArray nonce() [protected]
-*/
-
-/*
-static QByteArray generateAuthorizationHeader(const QVariantMap &oauthParams) [protected]
-*/
 
 void QOAuth1Slots_connect_signal( const QString & signal, const QString & slot );
 
