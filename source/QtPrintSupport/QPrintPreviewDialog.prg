@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QPrintPreviewDialog( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewDialog_new1()
 {
@@ -65,18 +65,13 @@ void QPrintPreviewDialog_new1()
 }
 
 /*
-explicit QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QPrintPreviewDialog( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewDialog_new2()
 {
   QPrintPreviewDialog * obj = new QPrintPreviewDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]explicit QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-[2]explicit QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
 
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 {
@@ -114,7 +109,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 {
@@ -140,7 +135,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 }
 
 /*
-QPrinter * printer ()
+QPrinter * printer()
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 {
@@ -165,7 +160,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 }
 
 /*
-virtual void done ( int result )
+virtual void done( int result )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 {
@@ -191,7 +186,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
 {

@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 }
 
 /*
-virtual bool abort () = 0
+virtual bool abort() = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 }
 
 /*
-virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
+virtual int metric( QPaintDevice::PaintDeviceMetric id ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 }
 
 /*
-virtual bool newPage () = 0
+virtual bool newPage() = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 }
 
 /*
-virtual QPrinter::PrinterState printerState () const = 0
+virtual QPrinter::PrinterState printerState() const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 }
 
 /*
-virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
+virtual QVariant property( QPrintEngine::PrintEnginePropertyKey key ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 }
 
 /*
-virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) = 0
+virtual void setProperty( QPrintEngine::PrintEnginePropertyKey key, const QVariant & value ) = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
 {

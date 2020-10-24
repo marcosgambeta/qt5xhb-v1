@@ -81,7 +81,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QPrinterInfo ()
+QPrinterInfo()
 */
 void QPrinterInfo_new1()
 {
@@ -90,7 +90,7 @@ void QPrinterInfo_new1()
 }
 
 /*
-QPrinterInfo ( const QPrinterInfo & src )
+QPrinterInfo( const QPrinterInfo & src )
 */
 void QPrinterInfo_new2()
 {
@@ -99,19 +99,13 @@ void QPrinterInfo_new2()
 }
 
 /*
-explicit QPrinterInfo ( const QPrinter & printer )
+QPrinterInfo( const QPrinter & printer )
 */
 void QPrinterInfo_new3()
 {
   QPrinterInfo * obj = new QPrinterInfo( *PQPRINTER(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPrinterInfo ()
-[2]QPrinterInfo ( const QPrinterInfo & src )
-[3]explicit QPrinterInfo ( const QPrinter & printer )
-*/
 
 HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {
@@ -151,7 +145,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DELETE )
 }
 
 /*
-bool isDefault () const
+bool isDefault() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 {
@@ -175,7 +169,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 {
@@ -199,7 +193,7 @@ HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 }
 
 /*
-QString printerName () const
+QString printerName() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 {
@@ -223,7 +217,7 @@ HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 }
 
 /*
-QList<QPrinter::PaperSize> supportedPaperSizes () const
+QList<QPrinter::PaperSize> supportedPaperSizes() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 {
@@ -255,7 +249,7 @@ HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 }
 
 /*
-static QList<QPrinterInfo> availablePrinters ()
+static QList<QPrinterInfo> availablePrinters()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
@@ -302,7 +296,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 }
 
 /*
-static QPrinterInfo defaultPrinter ()
+static QPrinterInfo defaultPrinter()
 */
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
@@ -676,7 +670,7 @@ HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTERNAME )
 }
 
 /*
-static QPrinterInfo printerInfo(const QString &printerName)
+static QPrinterInfo printerInfo( const QString & printerName )
 */
 HB_FUNC_STATIC( QPRINTERINFO_PRINTERINFO )
 {

@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_DELETE )
 }
 
 /*
-virtual int exec () = 0
+virtual int exec() = 0
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
 }
 
 /*
-int fromPage () const
+int fromPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
 }
 
 /*
-int maxPage () const
+int maxPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
 }
 
 /*
-int minPage () const
+int minPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
 }
 
 /*
-PrintRange printRange () const
+QAbstractPrintDialog::PrintRange printRange() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
 {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
 }
 
 /*
-QPrinter * printer () const
+QPrinter * printer() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
 }
 
 /*
-void setFromTo ( int from, int to )
+void setFromTo( int from, int to )
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETFROMTO )
 {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETFROMTO )
 }
 
 /*
-void setMinMax ( int min, int max )
+void setMinMax( int min, int max )
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETMINMAX )
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETMINMAX )
 }
 
 /*
-void setOptionTabs ( const QList<QWidget *> & tabs )
+void setOptionTabs( const QList<QWidget *> & tabs )
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETOPTIONTABS )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETOPTIONTABS )
 }
 
 /*
-void setPrintRange ( PrintRange range )
+void setPrintRange( QAbstractPrintDialog::PrintRange range )
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
 }
 
 /*
-int toPage () const
+int toPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
 }
 
 /*
-void addEnabledOption(PrintDialogOption option)
+void addEnabledOption( QAbstractPrintDialog::PrintDialogOption option )
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ADDENABLEDOPTION )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ADDENABLEDOPTION )
 }
 
 /*
-void setEnabledOptions(PrintDialogOptions options)
+void setEnabledOptions( QAbstractPrintDialog::PrintDialogOptions options )
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETENABLEDOPTIONS )
 }
 
 /*
-PrintDialogOptions enabledOptions() const
+QAbstractPrintDialog::PrintDialogOptions enabledOptions() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ENABLEDOPTIONS )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ENABLEDOPTIONS )
 }
 
 /*
-bool isOptionEnabled(PrintDialogOption option) const
+bool isOptionEnabled( QAbstractPrintDialog::PrintDialogOption option ) const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_ISOPTIONENABLED )
 {
