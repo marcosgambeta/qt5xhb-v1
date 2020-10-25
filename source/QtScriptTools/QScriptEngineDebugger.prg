@@ -72,7 +72,7 @@ RETURN
 #include <QtWidgets/QMainWindow>
 
 /*
-QScriptEngineDebugger(QObject * parent = 0)
+QScriptEngineDebugger( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_NEW )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DELETE )
 }
 
 /*
-QAction * action(DebuggerAction action) const
+QAction * action( QScriptEngineDebugger::DebuggerAction action ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
 }
 
 /*
-void attachTo(QScriptEngine * engine)
+void attachTo( QScriptEngine * engine )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
 }
 
 /*
-QMenu * createStandardMenu(QWidget * parent = 0)
+QMenu * createStandardMenu( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 }
 
 /*
-QToolBar * createStandardToolBar(QWidget * parent = 0)
+QToolBar * createStandardToolBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
 }
 
 /*
-void setAutoShowStandardWindow(bool autoShow)
+void setAutoShowStandardWindow( bool autoShow )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
 }
 
 /*
-DebuggerState state() const
+QScriptEngineDebugger::DebuggerState state() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
 }
 
 /*
-QWidget * widget(DebuggerWidget widget) const
+QWidget * widget( QScriptEngineDebugger::DebuggerWidget widget ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
 {
