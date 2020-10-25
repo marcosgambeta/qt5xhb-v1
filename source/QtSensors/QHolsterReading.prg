@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QHOLSTERREADING_HOLSTERED )
 }
 
 /*
-void setHolstered(bool holstered)
+void setHolstered( bool holstered )
 */
 HB_FUNC_STATIC( QHOLSTERREADING_SETHOLSTERED )
 {

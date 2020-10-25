@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_STOP )
 }
 
 /*
-virtual bool isFeatureSupported(QSensor::Feature feature) const
+virtual bool isFeatureSupported( QSensor::Feature feature ) const
 */
 HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
 }
 
 /*
-void addDataRate(qreal min, qreal max)
+void addDataRate( qreal min, qreal max )
 */
 HB_FUNC_STATIC( QSENSORBACKEND_ADDDATARATE )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ADDDATARATE )
 }
 
 /*
-void setDataRates(const QSensor *otherSensor)
+void setDataRates( const QSensor * otherSensor )
 */
 HB_FUNC_STATIC( QSENSORBACKEND_SETDATARATES )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SETDATARATES )
 }
 
 /*
-void addOutputRange(qreal min, qreal max, qreal accuracy)
+void addOutputRange( qreal min, qreal max, qreal accuracy )
 */
 HB_FUNC_STATIC( QSENSORBACKEND_ADDOUTPUTRANGE )
 {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ADDOUTPUTRANGE )
 }
 
 /*
-void setDescription(const QString &description)
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QSENSORBACKEND_SETDESCRIPTION )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SETDESCRIPTION )
 }
 
 /*
-QSensorReading *reading() const
+QSensorReading * reading() const
 */
 HB_FUNC_STATIC( QSENSORBACKEND_READING )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_READING )
 }
 
 /*
-QSensor *sensor() const
+QSensor * sensor() const
 */
 HB_FUNC_STATIC( QSENSORBACKEND_SENSOR )
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORBUSY )
 }
 
 /*
-void sensorError(int error)
+void sensorError( int error )
 */
 HB_FUNC_STATIC( QSENSORBACKEND_SENSORERROR )
 {

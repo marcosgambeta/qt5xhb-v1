@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QAccelerometer(QObject *parent = 0)
+QAccelerometer( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QACCELEROMETER_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QACCELEROMETER_DELETE )
 }
 
 /*
-AccelerationMode accelerationMode() const
+QAccelerometer::AccelerationMode accelerationMode() const
 */
 HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QACCELEROMETER_ACCELERATIONMODE )
 }
 
 /*
-void setAccelerationMode(AccelerationMode accelerationMode)
+void setAccelerationMode( QAccelerometer::AccelerationMode accelerationMode )
 */
 HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QACCELEROMETER_SETACCELERATIONMODE )
 }
 
 /*
-QAccelerometerReading *reading() const
+QAccelerometerReading * reading() const
 */
 HB_FUNC_STATIC( QACCELEROMETER_READING )
 {

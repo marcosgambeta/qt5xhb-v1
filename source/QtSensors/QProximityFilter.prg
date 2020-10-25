@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QPROXIMITYFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QProximityReading *reading) = 0
+virtual bool filter( QProximityReading * reading ) = 0
 */
 HB_FUNC_STATIC( QPROXIMITYFILTER_FILTER )
 {

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QAmbientTemperatureReading *reading) = 0
+virtual bool filter( QAmbientTemperatureReading * reading ) = 0
 */
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREFILTER_FILTER )
 {

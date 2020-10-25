@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QMAGNETOMETERFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QMagnetometerReading *reading) = 0
+virtual bool filter( QMagnetometerReading * reading ) = 0
 */
 HB_FUNC_STATIC( QMAGNETOMETERFILTER_FILTER )
 {

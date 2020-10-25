@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QRotationSensor(QObject *parent = 0)
+QRotationSensor( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QROTATIONSENSOR_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_DELETE )
 }
 
 /*
-QRotationReading *reading() const
+QRotationReading * reading() const
 */
 HB_FUNC_STATIC( QROTATIONSENSOR_READING )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QROTATIONSENSOR_HASZ )
 }
 
 /*
-void setHasZ(bool hasZ)
+void setHasZ( bool hasZ )
 */
 HB_FUNC_STATIC( QROTATIONSENSOR_SETHASZ )
 {

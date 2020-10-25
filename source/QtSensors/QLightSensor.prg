@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QLightSensor(QObject *parent = 0)
+QLightSensor( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_DELETE )
 }
 
 /*
-QLightReading *reading() const
+QLightReading * reading() const
 */
 HB_FUNC_STATIC( QLIGHTSENSOR_READING )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_FIELDOFVIEW )
 }
 
 /*
-void setFieldOfView(qreal fieldOfView)
+void setFieldOfView( qreal fieldOfView )
 */
 HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
 {

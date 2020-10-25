@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSENSORREADING_TIMESTAMP )
 }
 
 /*
-void setTimestamp(quint64 timestamp)
+void setTimestamp( quint64 timestamp )
 */
 HB_FUNC_STATIC( QSENSORREADING_SETTIMESTAMP )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSENSORREADING_VALUECOUNT )
 }
 
 /*
-QVariant value(int index) const
+QVariant value( int index ) const
 */
 HB_FUNC_STATIC( QSENSORREADING_VALUE )
 {

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QTILTFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QTiltReading *reading) = 0
+virtual bool filter( QTiltReading * reading ) = 0
 */
 HB_FUNC_STATIC( QTILTFILTER_FILTER )
 {

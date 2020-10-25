@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QROTATIONFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QRotationReading *reading) = 0
+virtual bool filter( QRotationReading * reading ) = 0
 */
 HB_FUNC_STATIC( QROTATIONFILTER_FILTER )
 {

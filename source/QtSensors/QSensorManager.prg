@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_DELETE )
 }
 
 /*
-static void registerBackend(const QByteArray &type, const QByteArray &identifier, QSensorBackendFactory *factory)
+static void registerBackend( const QByteArray & type, const QByteArray & identifier, QSensorBackendFactory * factory )
 */
 HB_FUNC_STATIC( QSENSORMANAGER_REGISTERBACKEND )
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_REGISTERBACKEND )
 }
 
 /*
-static void unregisterBackend(const QByteArray &type, const QByteArray &identifier)
+static void unregisterBackend( const QByteArray & type, const QByteArray & identifier )
 */
 HB_FUNC_STATIC( QSENSORMANAGER_UNREGISTERBACKEND )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_UNREGISTERBACKEND )
 }
 
 /*
-static bool isBackendRegistered(const QByteArray &type, const QByteArray &identifier)
+static bool isBackendRegistered( const QByteArray & type, const QByteArray & identifier )
 */
 HB_FUNC_STATIC( QSENSORMANAGER_ISBACKENDREGISTERED )
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_ISBACKENDREGISTERED )
 }
 
 /*
-static QSensorBackend *createBackend(QSensor *sensor)
+static QSensorBackend * createBackend( QSensor * sensor )
 */
 HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSENSORMANAGER_CREATEBACKEND )
 }
 
 /*
-static void setDefaultBackend(const QByteArray &type, const QByteArray &identifier)
+static void setDefaultBackend( const QByteArray & type, const QByteArray & identifier )
 */
 HB_FUNC_STATIC( QSENSORMANAGER_SETDEFAULTBACKEND )
 {

@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QAmbientTemperatureSensor(QObject *parent = 0)
+QAmbientTemperatureSensor( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_DELETE )
 }
 
 /*
-QAmbientTemperatureReading *reading() const
+QAmbientTemperatureReading * reading() const
 */
 HB_FUNC_STATIC( QAMBIENTTEMPERATURESENSOR_READING )
 {

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTAPREADING_DELETE )
 }
 
 /*
-TapDirection tapDirection() const
+QTapReading::TapDirection tapDirection() const
 */
 HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
 {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTAPREADING_TAPDIRECTION )
 }
 
 /*
-void setTapDirection(TapDirection tapDirection)
+void setTapDirection( QTapReading::TapDirection tapDirection )
 */
 HB_FUNC_STATIC( QTAPREADING_SETTAPDIRECTION )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTAPREADING_ISDOUBLETAP )
 }
 
 /*
-void setDoubleTap(bool doubleTap)
+void setDoubleTap( bool doubleTap )
 */
 HB_FUNC_STATIC( QTAPREADING_SETDOUBLETAP )
 {

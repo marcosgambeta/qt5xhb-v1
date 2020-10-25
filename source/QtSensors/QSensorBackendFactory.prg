@@ -62,7 +62,7 @@ RETURN
 #include <QtSensors/QSensorBackend>
 
 /*
-virtual QSensorBackend *createBackend(QSensor *sensor) = 0
+virtual QSensorBackend * createBackend( QSensor * sensor ) = 0
 */
 HB_FUNC_STATIC( QSENSORBACKENDFACTORY_CREATEBACKEND )
 {

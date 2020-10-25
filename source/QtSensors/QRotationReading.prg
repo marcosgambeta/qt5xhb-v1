@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QROTATIONREADING_Z )
 }
 
 /*
-void setFromEuler(qreal x, qreal y, qreal z)
+void setFromEuler( qreal x, qreal y, qreal z )
 */
 HB_FUNC_STATIC( QROTATIONREADING_SETFROMEULER )
 {

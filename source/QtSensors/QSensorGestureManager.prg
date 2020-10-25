@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QSensorGestureManager(QObject *parent = 0)
+QSensorGestureManager( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_NEW )
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_DELETE )
 }
 
 /*
-bool registerSensorGestureRecognizer(QSensorGestureRecognizer *recognizer)
+bool registerSensorGestureRecognizer( QSensorGestureRecognizer * recognizer )
 */
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_REGISTERSENSORGESTURERECOGNIZER )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_GESTUREIDS )
 }
 
 /*
-QStringList recognizerSignals(const QString &recognizerId) const
+QStringList recognizerSignals( const QString & recognizerId ) const
 */
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSENSORGESTUREMANAGER_RECOGNIZERSIGNALS )
 }
 
 /*
-static QSensorGestureRecognizer *sensorGestureRecognizer(const QString &id)
+static QSensorGestureRecognizer * sensorGestureRecognizer( const QString & id )
 */
 HB_FUNC_STATIC( QSENSORGESTUREMANAGER_SENSORGESTURERECOGNIZER )
 {

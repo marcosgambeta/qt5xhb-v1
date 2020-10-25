@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QALTIMETERREADING_ALTITUDE )
 }
 
 /*
-void setAltitude(qreal altitude)
+void setAltitude( qreal altitude )
 */
 HB_FUNC_STATIC( QALTIMETERREADING_SETALTITUDE )
 {

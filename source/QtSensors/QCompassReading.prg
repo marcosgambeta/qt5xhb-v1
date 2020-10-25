@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_AZIMUTH )
 }
 
 /*
-void setAzimuth(qreal azimuth)
+void setAzimuth( qreal azimuth )
 */
 HB_FUNC_STATIC( QCOMPASSREADING_SETAZIMUTH )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_CALIBRATIONLEVEL )
 }
 
 /*
-void setCalibrationLevel(qreal calibrationLevel)
+void setCalibrationLevel( qreal calibrationLevel )
 */
 HB_FUNC_STATIC( QCOMPASSREADING_SETCALIBRATIONLEVEL )
 {

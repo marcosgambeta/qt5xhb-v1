@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-virtual bool filter(QSensorReading *reading) = 0
+virtual bool filter( QSensorReading * reading ) = 0
 */
 HB_FUNC_STATIC( QSENSORFILTER_FILTER )
 {

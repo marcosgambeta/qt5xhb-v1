@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_DELETE )
 }
 
 /*
-virtual QList <QSensorGestureRecognizer *> createRecognizers() = 0
+virtual QList<QSensorGestureRecognizer *> createRecognizers() = 0
 */
 HB_FUNC_STATIC( QSENSORGESTUREPLUGININTERFACE_CREATERECOGNIZERS )
 {

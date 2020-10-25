@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTILTREADING_YROTATION )
 }
 
 /*
-void setYRotation(qreal y)
+void setYRotation( qreal y )
 */
 HB_FUNC_STATIC( QTILTREADING_SETYROTATION )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTILTREADING_XROTATION )
 }
 
 /*
-void setXRotation(qreal x)
+void setXRotation( qreal x )
 */
 HB_FUNC_STATIC( QTILTREADING_SETXROTATION )
 {

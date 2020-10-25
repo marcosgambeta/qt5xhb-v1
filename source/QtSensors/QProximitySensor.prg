@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QProximitySensor(QObject *parent = 0)
+QProximitySensor( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPROXIMITYSENSOR_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QPROXIMITYSENSOR_DELETE )
 }
 
 /*
-QProximityReading *reading() const
+QProximityReading * reading() const
 */
 HB_FUNC_STATIC( QPROXIMITYSENSOR_READING )
 {

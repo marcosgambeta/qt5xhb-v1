@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QIRPROXIMITYREADING_REFLECTANCE )
 }
 
 /*
-void setReflectance(qreal reflectance)
+void setReflectance( qreal reflectance )
 */
 HB_FUNC_STATIC( QIRPROXIMITYREADING_SETREFLECTANCE )
 {

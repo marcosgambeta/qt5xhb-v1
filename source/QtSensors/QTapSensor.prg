@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QTapSensor(QObject *parent = 0)
+QTapSensor( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTAPSENSOR_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTAPSENSOR_DELETE )
 }
 
 /*
-QTapReading *reading() const
+QTapReading * reading() const
 */
 HB_FUNC_STATIC( QTAPSENSOR_READING )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTAPSENSOR_RETURNDOUBLETAPEVENTS )
 }
 
 /*
-void setReturnDoubleTapEvents(bool returnDoubleTapEvents)
+void setReturnDoubleTapEvents( bool returnDoubleTapEvents )
 */
 HB_FUNC_STATIC( QTAPSENSOR_SETRETURNDOUBLETAPEVENTS )
 {

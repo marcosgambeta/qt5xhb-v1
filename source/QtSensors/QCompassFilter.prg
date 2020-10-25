@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QCOMPASSFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QCompassReading *reading) = 0
+virtual bool filter( QCompassReading * reading ) = 0
 */
 HB_FUNC_STATIC( QCOMPASSFILTER_FILTER )
 {

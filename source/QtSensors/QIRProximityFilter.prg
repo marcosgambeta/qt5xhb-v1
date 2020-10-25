@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QIRPROXIMITYFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QIRProximityReading *reading) = 0
+virtual bool filter( QIRProximityReading * reading ) = 0
 */
 HB_FUNC_STATIC( QIRPROXIMITYFILTER_FILTER )
 {

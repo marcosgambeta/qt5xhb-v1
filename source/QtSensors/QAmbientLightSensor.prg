@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QAmbientLightSensor(QObject *parent = 0)
+QAmbientLightSensor( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_DELETE )
 }
 
 /*
-QAmbientLightReading *reading() const
+QAmbientLightReading * reading() const
 */
 HB_FUNC_STATIC( QAMBIENTLIGHTSENSOR_READING )
 {

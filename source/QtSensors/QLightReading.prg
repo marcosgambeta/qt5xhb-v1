@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QLIGHTREADING_LUX )
 }
 
 /*
-void setLux(qreal lux)
+void setLux( qreal lux )
 */
 HB_FUNC_STATIC( QLIGHTREADING_SETLUX )
 {

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QAmbientLightReading *reading) = 0
+virtual bool filter( QAmbientLightReading * reading ) = 0
 */
 HB_FUNC_STATIC( QAMBIENTLIGHTFILTER_FILTER )
 {

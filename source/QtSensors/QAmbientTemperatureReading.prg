@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_TEMPERATURE )
 }
 
 /*
-void setTemperature(qreal temperature)
+void setTemperature( qreal temperature )
 */
 HB_FUNC_STATIC( QAMBIENTTEMPERATUREREADING_SETTEMPERATURE )
 {

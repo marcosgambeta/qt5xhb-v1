@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QHolsterSensor(QObject *parent = 0)
+QHolsterSensor( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHOLSTERSENSOR_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QHOLSTERSENSOR_DELETE )
 }
 
 /*
-QHolsterReading *reading() const
+QHolsterReading * reading() const
 */
 HB_FUNC_STATIC( QHOLSTERSENSOR_READING )
 {

@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_X )
 }
 
 /*
-void setX(qreal x)
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QACCELEROMETERREADING_SETX )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_Y )
 }
 
 /*
-void setY(qreal y)
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QACCELEROMETERREADING_SETY )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QACCELEROMETERREADING_Z )
 }
 
 /*
-void setZ(qreal z)
+void setZ( qreal z )
 */
 HB_FUNC_STATIC( QACCELEROMETERREADING_SETZ )
 {

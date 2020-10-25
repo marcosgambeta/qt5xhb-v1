@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QPRESSUREFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QPressureReading *reading) = 0
+virtual bool filter( QPressureReading * reading ) = 0
 */
 HB_FUNC_STATIC( QPRESSUREFILTER_FILTER )
 {

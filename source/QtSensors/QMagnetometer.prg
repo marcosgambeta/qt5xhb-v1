@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QMagnetometer(QObject *parent = 0)
+QMagnetometer( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QMAGNETOMETER_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_DELETE )
 }
 
 /*
-QMagnetometerReading *reading() const
+QMagnetometerReading * reading() const
 */
 HB_FUNC_STATIC( QMAGNETOMETER_READING )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QMAGNETOMETER_RETURNGEOVALUES )
 }
 
 /*
-void setReturnGeoValues(bool returnGeoValues)
+void setReturnGeoValues( bool returnGeoValues )
 */
 HB_FUNC_STATIC( QMAGNETOMETER_SETRETURNGEOVALUES )
 {

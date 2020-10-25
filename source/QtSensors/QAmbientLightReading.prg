@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTREADING_DELETE )
 }
 
 /*
-LightLevel lightLevel() const
+QAmbientLightReading::LightLevel lightLevel() const
 */
 HB_FUNC_STATIC( QAMBIENTLIGHTREADING_LIGHTLEVEL )
 {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QAMBIENTLIGHTREADING_LIGHTLEVEL )
 }
 
 /*
-void setLightLevel(LightLevel lightLevel)
+void setLightLevel( QAmbientLightReading::LightLevel lightLevel )
 */
 HB_FUNC_STATIC( QAMBIENTLIGHTREADING_SETLIGHTLEVEL )
 {

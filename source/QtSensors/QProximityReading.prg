@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPROXIMITYREADING_CLOSE )
 }
 
 /*
-void setClose(bool close)
+void setClose( bool close )
 */
 HB_FUNC_STATIC( QPROXIMITYREADING_SETCLOSE )
 {

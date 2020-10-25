@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QHOLSTERFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QHolsterReading *reading) = 0
+virtual bool filter( QHolsterReading * reading ) = 0
 */
 HB_FUNC_STATIC( QHOLSTERFILTER_FILTER )
 {

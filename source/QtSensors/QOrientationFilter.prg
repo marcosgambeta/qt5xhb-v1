@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QORIENTATIONFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QOrientationReading *reading) = 0
+virtual bool filter( QOrientationReading * reading ) = 0
 */
 HB_FUNC_STATIC( QORIENTATIONFILTER_FILTER )
 {

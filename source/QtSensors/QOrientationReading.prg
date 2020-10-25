@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QORIENTATIONREADING_DELETE )
 }
 
 /*
-Orientation orientation() const
+QOrientationReading::Orientation orientation() const
 */
 HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
 {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QORIENTATIONREADING_ORIENTATION )
 }
 
 /*
-void setOrientation(Orientation orientation)
+void setOrientation( QOrientationReading::Orientation orientation )
 */
 HB_FUNC_STATIC( QORIENTATIONREADING_SETORIENTATION )
 {

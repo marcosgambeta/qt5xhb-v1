@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPRESSUREREADING_PRESSURE )
 }
 
 /*
-void setPressure(qreal pressure)
+void setPressure( qreal pressure )
 */
 HB_FUNC_STATIC( QPRESSUREREADING_SETPRESSURE )
 {

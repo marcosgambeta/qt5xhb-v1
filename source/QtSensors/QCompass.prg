@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QCompass(QObject *parent = 0)
+QCompass( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QCOMPASS_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QCOMPASS_DELETE )
 }
 
 /*
-QCompassReading *reading() const
+QCompassReading * reading() const
 */
 HB_FUNC_STATIC( QCOMPASS_READING )
 {

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QACCELEROMETERFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QAccelerometerReading *reading) = 0
+virtual bool filter( QAccelerometerReading * reading ) = 0
 */
 HB_FUNC_STATIC( QACCELEROMETERFILTER_FILTER )
 {

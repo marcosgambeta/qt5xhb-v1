@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QLIGHTFILTER_DELETE )
 }
 
 /*
-virtual bool filter(QLightReading *reading) = 0
+virtual bool filter( QLightReading * reading ) = 0
 */
 HB_FUNC_STATIC( QLIGHTFILTER_FILTER )
 {
