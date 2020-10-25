@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QScriptSyntaxCheckResult(const QScriptSyntaxCheckResult & other)
+QScriptSyntaxCheckResult( const QScriptSyntaxCheckResult & other )
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
 }
 
 /*
-State state() const
+QScriptSyntaxCheckResult::State state() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
 {

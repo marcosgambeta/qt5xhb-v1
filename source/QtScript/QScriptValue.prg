@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 }
 
 /*
-QScriptValue(const QScriptValue & other)
+QScriptValue( const QScriptValue & other )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 }
 
 /*
-QScriptValue(SpecialValue value)
+QScriptValue( QScriptValue::SpecialValue value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 }
 
 /*
-QScriptValue(bool value)
+QScriptValue( bool value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 }
 
 /*
-QScriptValue(int value)
+QScriptValue( int value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 }
 
 /*
-QScriptValue(uint value)
+QScriptValue( uint value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
@@ -169,11 +169,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 }
 
 /*
-QScriptValue(qsreal value)
-*/
-
-/*
-QScriptValue(const QString & value)
+QScriptValue( const QString & value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
@@ -182,7 +178,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 }
 
 /*
-QScriptValue(const QLatin1String & value)
+QScriptValue( const QLatin1String & value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW9 )
 {
@@ -191,26 +187,13 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW9 )
 }
 
 /*
-QScriptValue(const char * value)
+QScriptValue( const char * value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
   QScriptValue * obj = new QScriptValue( PCONSTCHAR(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QScriptValue()
-[2]QScriptValue(const QScriptValue & other)
-[3]QScriptValue(SpecialValue value)
-[4]QScriptValue(bool value)
-[5]QScriptValue(int value)
-[6]QScriptValue(uint value)
-[7]QScriptValue(qsreal value)
-[8]QScriptValue(const QString & value)
-[9]QScriptValue(const QLatin1String & value)
-[10]QScriptValue(const char * value)
-*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
@@ -258,11 +241,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DELETE )
 }
 
 /*
-QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
-*/
-
-/*
-QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
+QScriptValue call( const QScriptValue & thisObject, const QScriptValue & arguments )
 */
 void QScriptValue_call2()
 {
@@ -274,11 +253,6 @@ void QScriptValue_call2()
     Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
   }
 }
-
-/*
-[1]QScriptValue call(const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList())
-[2]QScriptValue call(const QScriptValue & thisObject, const QScriptValue & arguments)
-*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
@@ -293,11 +267,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 }
 
 /*
-QScriptValue construct(const QScriptValueList & args = QScriptValueList())
-*/
-
-/*
-QScriptValue construct(const QScriptValue & arguments)
+QScriptValue construct( const QScriptValue & arguments )
 */
 void QScriptValue_construct2()
 {
@@ -309,11 +279,6 @@ void QScriptValue_construct2()
     Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
   }
 }
-
-/*
-[1]QScriptValue construct(const QScriptValueList & args = QScriptValueList())
-[2]QScriptValue construct(const QScriptValue & arguments)
-*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
@@ -353,11 +318,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
 }
 
 /*
-QScriptEngine * engine() const
-*/
-
-/*
-bool equals(const QScriptValue & other) const
+bool equals( const QScriptValue & other ) const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_EQUALS )
 {
@@ -381,7 +342,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_EQUALS )
 }
 
 /*
-bool instanceOf(const QScriptValue & other) const
+bool instanceOf( const QScriptValue & other ) const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_INSTANCEOF )
 {
@@ -765,7 +726,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
 }
 
 /*
-bool lessThan(const QScriptValue & other) const
+bool lessThan( const QScriptValue & other ) const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
 {
@@ -788,41 +749,10 @@ HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
   }
 }
 
-/*
-QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
-
-/*
-QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
-
-/*
-QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
-*/
-
-/*
-[1]QScriptValue property(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-[2]QScriptValue property(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-[3]QScriptValue property(quint32 arrayIndex, const ResolveFlags & mode = ResolvePrototype) const
-*/
-
 HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTY )
 {
   hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 }
-
-/*
-QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
-
-/*
-QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
-
-/*
-[1]QScriptValue::PropertyFlags propertyFlags(const QString & name, const ResolveFlags & mode = ResolvePrototype) const
-[2]QScriptValue::PropertyFlags propertyFlags(const QScriptString & name, const ResolveFlags & mode = ResolvePrototype) const
-*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_PROPERTYFLAGS )
 {
@@ -880,7 +810,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
 }
 
 /*
-void setData(const QScriptValue & data)
+void setData( const QScriptValue & data )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_SETDATA )
 {
@@ -905,31 +835,13 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETDATA )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
-
-/*
-void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
-
-/*
-void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
-
-/*
-[1]void setProperty(const QString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-[2]void setProperty(const QScriptString & name, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-[3]void setProperty(quint32 arrayIndex, const QScriptValue & value, const PropertyFlags & flags = KeepExistingFlags)
-*/
-
 HB_FUNC_STATIC( QSCRIPTVALUE_SETPROPERTY )
 {
   hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 }
 
 /*
-void setPrototype(const QScriptValue & prototype)
+void setPrototype( const QScriptValue & prototype )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_SETPROTOTYPE )
 {
@@ -955,7 +867,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETPROTOTYPE )
 }
 
 /*
-void setScriptClass(QScriptClass * scriptClass)
+void setScriptClass( QScriptClass * scriptClass )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_SETSCRIPTCLASS )
 {
@@ -981,7 +893,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETSCRIPTCLASS )
 }
 
 /*
-bool strictlyEquals(const QScriptValue & other) const
+bool strictlyEquals( const QScriptValue & other ) const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_STRICTLYEQUALS )
 {
@@ -1076,14 +988,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
 #endif
   }
 }
-
-/*
-qsreal toInteger() const
-*/
-
-/*
-qsreal toNumber() const
-*/
 
 /*
 const QMetaObject * toQMetaObject() const

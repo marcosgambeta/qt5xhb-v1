@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_DELETE )
 }
 
 /*
-QScriptValue argument(int index) const
+QScriptValue argument( int index ) const
 */
 HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
 {

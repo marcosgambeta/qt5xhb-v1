@@ -66,7 +66,7 @@ RETURN
 #endif
 
 /*
-QScriptContextInfo(const QScriptContext * context)
+QScriptContextInfo( const QScriptContext * context )
 */
 void QScriptContextInfo_new1()
 {
@@ -75,7 +75,7 @@ void QScriptContextInfo_new1()
 }
 
 /*
-QScriptContextInfo(const QScriptContextInfo & other)
+QScriptContextInfo( const QScriptContextInfo & other )
 */
 void QScriptContextInfo_new2()
 {
@@ -91,12 +91,6 @@ void QScriptContextInfo_new3()
   QScriptContextInfo * obj = new QScriptContextInfo();
   Qt5xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QScriptContextInfo(const QScriptContext * context)
-[2]QScriptContextInfo(const QScriptContextInfo & other)
-[3]QScriptContextInfo()
-*/
 
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 {
@@ -280,7 +274,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONSTARTLINENUMBER )
 }
 
 /*
-FunctionType functionType() const
+QScriptContextInfo::FunctionType functionType() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_FUNCTIONTYPE )
 {

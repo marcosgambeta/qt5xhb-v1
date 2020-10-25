@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
 }
 
 /*
-QScriptValue argument(int index) const
+QScriptValue argument( int index ) const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
 }
 
 /*
-void setActivationObject(const QScriptValue & activation)
+void setActivationObject( const QScriptValue & activation )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
 }
 
 /*
-void setThisObject(const QScriptValue & thisObject)
+void setThisObject( const QScriptValue & thisObject )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
 }
 
 /*
-ExecutionState state() const
+QScriptContext::ExecutionState state() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
 }
 
 /*
-QScriptValue throwError(Error error, const QString & text)
+QScriptValue throwError( QScriptContext::Error error, const QString & text )
 */
 void QScriptContext_throwError1()
 {
@@ -430,7 +430,7 @@ void QScriptContext_throwError1()
 }
 
 /*
-QScriptValue throwError(const QString & text)
+QScriptValue throwError( const QString & text )
 */
 void QScriptContext_throwError2()
 {
@@ -442,11 +442,6 @@ void QScriptContext_throwError2()
     Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
   }
 }
-
-/*
-[1]QScriptValue throwError(Error error, const QString & text)
-[2]QScriptValue throwError(const QString & text)
-*/
 
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 {
@@ -465,7 +460,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 }
 
 /*
-QScriptValue throwValue(const QScriptValue & value)
+QScriptValue throwValue( const QScriptValue & value )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
 {
