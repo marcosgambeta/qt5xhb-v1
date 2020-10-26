@@ -70,7 +70,7 @@ void QWebSocketServerSlots::originAuthenticationRequired( QWebSocketCorsAuthenti
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBSOCKETSERVER" );
-    PHB_ITEM ppAuthenticator = Signals_return_object( (void *) pAuthenticator, "QWEBSOCKETCORSAUTHENTICATOR" );
+    PHB_ITEM ppAuthenticator = Qt5xHb::Signals_return_object( (void *) pAuthenticator, "QWEBSOCKETCORSAUTHENTICATOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppAuthenticator );
 
@@ -108,7 +108,7 @@ void QWebSocketServerSlots::peerVerifyError( const QSslError & error )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBSOCKETSERVER" );
-    PHB_ITEM perror = Signals_return_object( (void *) &error, "QSSLERROR" );
+    PHB_ITEM perror = Qt5xHb::Signals_return_object( (void *) &error, "QSSLERROR" );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
 

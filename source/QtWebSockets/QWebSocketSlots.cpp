@@ -104,8 +104,8 @@ void QWebSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & proxy, 
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
-    PHB_ITEM pproxy = Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
-    PHB_ITEM ppAuthenticator = Signals_return_object( (void *) pAuthenticator, "QAUTHENTICATOR" );
+    PHB_ITEM pproxy = Qt5xHb::Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
+    PHB_ITEM ppAuthenticator = Qt5xHb::Signals_return_object( (void *) pAuthenticator, "QAUTHENTICATOR" );
 
     hb_vmEvalBlockV( cb, 3, psender, pproxy, ppAuthenticator );
 
@@ -166,7 +166,7 @@ void QWebSocketSlots::binaryFrameReceived( const QByteArray & frame, bool isLast
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
-    PHB_ITEM pframe = Signals_return_object( (void *) &frame, "QBYTEARRAY" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_object( (void *) &frame, "QBYTEARRAY" );
     PHB_ITEM pisLastFrame = hb_itemPutL( NULL, isLastFrame );
 
     hb_vmEvalBlockV( cb, 3, psender, pframe, pisLastFrame );
@@ -208,7 +208,7 @@ void QWebSocketSlots::binaryMessageReceived( const QByteArray & message )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
-    PHB_ITEM pmessage = Signals_return_object( (void *) &message, "QBYTEARRAY" );
+    PHB_ITEM pmessage = Qt5xHb::Signals_return_object( (void *) &message, "QBYTEARRAY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmessage );
 
@@ -249,7 +249,7 @@ void QWebSocketSlots::pong( quint64 elapsedTime, const QByteArray & payload )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBSOCKET" );
     PHB_ITEM pelapsedTime = hb_itemPutNLL( NULL, elapsedTime );
-    PHB_ITEM ppayload = Signals_return_object( (void *) &payload, "QBYTEARRAY" );
+    PHB_ITEM ppayload = Qt5xHb::Signals_return_object( (void *) &payload, "QBYTEARRAY" );
 
     hb_vmEvalBlockV( cb, 3, psender, pelapsedTime, ppayload );
 
