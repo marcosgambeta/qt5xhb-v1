@@ -45,7 +45,7 @@ void QMediaVideoProbeControlSlots::videoFrameProbed( const QVideoFrame & frame )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAVIDEOPROBECONTROL" );
-    PHB_ITEM pframe = Signals_return_object( (void *) &frame, "QVIDEOFRAME" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_object( (void *) &frame, "QVIDEOFRAME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pframe );
 

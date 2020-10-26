@@ -85,7 +85,7 @@ void QMediaPlayerSlots::currentMediaChanged( const QMediaContent & media )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
-    PHB_ITEM pmedia = Signals_return_object( (void *) &media, "QMEDIACONTENT" );
+    PHB_ITEM pmedia = Qt5xHb::Signals_return_object( (void *) &media, "QMEDIACONTENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmedia );
 
@@ -139,7 +139,7 @@ void QMediaPlayerSlots::mediaChanged( const QMediaContent & media )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
-    PHB_ITEM pmedia = Signals_return_object( (void *) &media, "QMEDIACONTENT" );
+    PHB_ITEM pmedia = Qt5xHb::Signals_return_object( (void *) &media, "QMEDIACONTENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmedia );
 
@@ -193,7 +193,7 @@ void QMediaPlayerSlots::networkConfigurationChanged( const QNetworkConfiguration
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
-    PHB_ITEM pconfiguration = Signals_return_object( (void *) &configuration, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pconfiguration = Qt5xHb::Signals_return_object( (void *) &configuration, "QNETWORKCONFIGURATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconfiguration );
 

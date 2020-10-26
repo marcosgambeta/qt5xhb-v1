@@ -29,7 +29,7 @@ void QMediaRecorderControlSlots::actualLocationChanged( const QUrl & location )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
-    PHB_ITEM plocation = Signals_return_object( (void *) &location, "QURL" );
+    PHB_ITEM plocation = Qt5xHb::Signals_return_object( (void *) &location, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plocation );
 

@@ -46,7 +46,7 @@ void QMetaDataWriterControlSlots::metaDataChanged( const QString & key, const QV
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMETADATAWRITERCONTROL" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
+    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT" );
 
     hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
 

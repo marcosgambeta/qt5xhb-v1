@@ -47,7 +47,7 @@ void QMediaPlaylistSlots::currentMediaChanged( const QMediaContent & content )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
-    PHB_ITEM pcontent = Signals_return_object( (void *) &content, "QMEDIACONTENT" );
+    PHB_ITEM pcontent = Qt5xHb::Signals_return_object( (void *) &content, "QMEDIACONTENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcontent );
 

@@ -29,7 +29,7 @@ void QCameraFocusControlSlots::customFocusPointChanged( const QPointF & point )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAFOCUSCONTROL" );
-    PHB_ITEM ppoint = Signals_return_object( (void *) &point, "QPOINTF" );
+    PHB_ITEM ppoint = Qt5xHb::Signals_return_object( (void *) &point, "QPOINTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppoint );
 

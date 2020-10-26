@@ -115,7 +115,7 @@ void QAudioDecoderSlots::formatChanged( const QAudioFormat & format )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIODECODER" );
-    PHB_ITEM pformat = Signals_return_object( (void *) &format, "QAUDIOFORMAT" );
+    PHB_ITEM pformat = Qt5xHb::Signals_return_object( (void *) &format, "QAUDIOFORMAT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pformat );
 

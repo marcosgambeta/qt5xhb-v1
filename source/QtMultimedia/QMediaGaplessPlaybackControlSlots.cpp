@@ -63,7 +63,7 @@ void QMediaGaplessPlaybackControlSlots::nextMediaChanged( const QMediaContent & 
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAGAPLESSPLAYBACKCONTROL" );
-    PHB_ITEM pmedia = Signals_return_object( (void *) &media, "QMEDIACONTENT" );
+    PHB_ITEM pmedia = Qt5xHb::Signals_return_object( (void *) &media, "QMEDIACONTENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmedia );
 

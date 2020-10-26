@@ -29,7 +29,7 @@ void QMediaRecorderSlots::actualLocationChanged( const QUrl & location )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
-    PHB_ITEM plocation = Signals_return_object( (void *) &location, "QURL" );
+    PHB_ITEM plocation = Qt5xHb::Signals_return_object( (void *) &location, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plocation );
 
@@ -154,7 +154,7 @@ void QMediaRecorderSlots::metaDataChanged( const QString & key, const QVariant &
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
-    PHB_ITEM pvalue = Signals_return_object( (void *) &value, "QVARIANT" );
+    PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT" );
 
     hb_vmEvalBlockV( cb, 3, psender, pkey, pvalue );
 

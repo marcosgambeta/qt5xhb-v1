@@ -47,7 +47,7 @@ void QMediaPlayerControlSlots::availablePlaybackRangesChanged( const QMediaTimeR
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
-    PHB_ITEM pranges = Signals_return_object( (void *) &ranges, "QMEDIATIMERANGE" );
+    PHB_ITEM pranges = Qt5xHb::Signals_return_object( (void *) &ranges, "QMEDIATIMERANGE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pranges );
 
@@ -121,7 +121,7 @@ void QMediaPlayerControlSlots::mediaChanged( const QMediaContent & content )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
-    PHB_ITEM pcontent = Signals_return_object( (void *) &content, "QMEDIACONTENT" );
+    PHB_ITEM pcontent = Qt5xHb::Signals_return_object( (void *) &content, "QMEDIACONTENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcontent );
 
