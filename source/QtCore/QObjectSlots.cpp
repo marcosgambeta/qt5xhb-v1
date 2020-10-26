@@ -29,7 +29,7 @@ void QObjectSlots::destroyed( QObject * obj )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOBJECT" );
-    PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
+    PHB_ITEM pobj = Qt5xHb::Signals_return_qobject( (QObject *) obj, "QOBJECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pobj );
 
