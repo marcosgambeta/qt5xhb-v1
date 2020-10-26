@@ -87,8 +87,8 @@ void QDBusConnectionInterfaceSlots::callWithCallbackFailed( const QDBusError & e
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
-    PHB_ITEM perror = Signals_return_object( (void *) &error, "QDBUSERROR" );
-    PHB_ITEM pcall = Signals_return_object( (void *) &call, "QDBUSMESSAGE" );
+    PHB_ITEM perror = Qt5xHb::Signals_return_object( (void *) &error, "QDBUSERROR" );
+    PHB_ITEM pcall = Qt5xHb::Signals_return_object( (void *) &call, "QDBUSMESSAGE" );
 
     hb_vmEvalBlockV( cb, 3, psender, perror, pcall );
 
