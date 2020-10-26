@@ -29,7 +29,7 @@ void Q3DSurfaceSlots::axisXChanged( QValue3DAxis * axis )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSURFACE" );
-    PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
+    PHB_ITEM paxis = Qt5xHb::Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
 
     hb_vmEvalBlockV( cb, 2, psender, paxis );
 
@@ -47,7 +47,7 @@ void Q3DSurfaceSlots::axisYChanged( QValue3DAxis * axis )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSURFACE" );
-    PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
+    PHB_ITEM paxis = Qt5xHb::Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
 
     hb_vmEvalBlockV( cb, 2, psender, paxis );
 
@@ -65,7 +65,7 @@ void Q3DSurfaceSlots::axisZChanged( QValue3DAxis * axis )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSURFACE" );
-    PHB_ITEM paxis = Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
+    PHB_ITEM paxis = Qt5xHb::Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
 
     hb_vmEvalBlockV( cb, 2, psender, paxis );
 
@@ -101,7 +101,7 @@ void Q3DSurfaceSlots::selectedSeriesChanged( QSurface3DSeries * series )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSURFACE" );
-    PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSURFACE3DSERIES" );
+    PHB_ITEM pseries = Qt5xHb::Signals_return_qobject( (QObject *) series, "QSURFACE3DSERIES" );
 
     hb_vmEvalBlockV( cb, 2, psender, pseries );
 

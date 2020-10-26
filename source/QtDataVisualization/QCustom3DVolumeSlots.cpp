@@ -117,7 +117,7 @@ void QCustom3DVolumeSlots::sliceFrameColorChanged( const QColor & color )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DVOLUME" );
-    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
 
@@ -135,7 +135,7 @@ void QCustom3DVolumeSlots::sliceFrameGapsChanged( const QVector3D & values )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DVOLUME" );
-    PHB_ITEM pvalues = Signals_return_object( (void *) &values, "QVECTOR3D" );
+    PHB_ITEM pvalues = Qt5xHb::Signals_return_object( (void *) &values, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalues );
 
@@ -153,7 +153,7 @@ void QCustom3DVolumeSlots::sliceFrameThicknessesChanged( const QVector3D & value
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DVOLUME" );
-    PHB_ITEM pvalues = Signals_return_object( (void *) &values, "QVECTOR3D" );
+    PHB_ITEM pvalues = Qt5xHb::Signals_return_object( (void *) &values, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalues );
 
@@ -171,7 +171,7 @@ void QCustom3DVolumeSlots::sliceFrameWidthsChanged( const QVector3D & values )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DVOLUME" );
-    PHB_ITEM pvalues = Signals_return_object( (void *) &values, "QVECTOR3D" );
+    PHB_ITEM pvalues = Qt5xHb::Signals_return_object( (void *) &values, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalues );
 

@@ -29,7 +29,7 @@ void QBar3DSeriesSlots::dataProxyChanged( QBarDataProxy * proxy )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBAR3DSERIES" );
-    PHB_ITEM pproxy = Signals_return_qobject( (QObject *) proxy, "QBARDATAPROXY" );
+    PHB_ITEM pproxy = Qt5xHb::Signals_return_qobject( (QObject *) proxy, "QBARDATAPROXY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pproxy );
 
@@ -65,7 +65,7 @@ void QBar3DSeriesSlots::selectedBarChanged( const QPoint & position )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBAR3DSERIES" );
-    PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
 

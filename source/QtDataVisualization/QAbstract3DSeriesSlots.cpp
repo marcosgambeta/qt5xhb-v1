@@ -29,7 +29,7 @@ void QAbstract3DSeriesSlots::baseColorChanged( const QColor & color )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
-    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
 
@@ -47,7 +47,7 @@ void QAbstract3DSeriesSlots::baseGradientChanged( const QLinearGradient & gradie
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
-    PHB_ITEM pgradient = Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
+    PHB_ITEM pgradient = Qt5xHb::Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgradient );
 
@@ -155,7 +155,7 @@ void QAbstract3DSeriesSlots::meshRotationChanged( const QQuaternion & rotation )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
-    PHB_ITEM protation = Signals_return_object( (void *) &rotation, "QQUATERNION" );
+    PHB_ITEM protation = Qt5xHb::Signals_return_object( (void *) &rotation, "QQUATERNION" );
 
     hb_vmEvalBlockV( cb, 2, psender, protation );
 
@@ -191,7 +191,7 @@ void QAbstract3DSeriesSlots::multiHighlightColorChanged( const QColor & color )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
-    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
 
@@ -209,7 +209,7 @@ void QAbstract3DSeriesSlots::multiHighlightGradientChanged( const QLinearGradien
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
-    PHB_ITEM pgradient = Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
+    PHB_ITEM pgradient = Qt5xHb::Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgradient );
 
@@ -245,7 +245,7 @@ void QAbstract3DSeriesSlots::singleHighlightColorChanged( const QColor & color )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
-    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
 
@@ -263,7 +263,7 @@ void QAbstract3DSeriesSlots::singleHighlightGradientChanged( const QLinearGradie
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DSERIES" );
-    PHB_ITEM pgradient = Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
+    PHB_ITEM pgradient = Qt5xHb::Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgradient );
 

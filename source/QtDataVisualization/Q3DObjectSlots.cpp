@@ -29,7 +29,7 @@ void Q3DObjectSlots::positionChanged( const QVector3D & position )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DOBJECT" );
-    PHB_ITEM pposition = Signals_return_object( (void *) &position, "QVECTOR3D" );
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
 

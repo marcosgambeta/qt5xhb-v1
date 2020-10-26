@@ -83,7 +83,7 @@ void Q3DCameraSlots::targetChanged( const QVector3D & target )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DCAMERA" );
-    PHB_ITEM ptarget = Signals_return_object( (void *) &target, "QVECTOR3D" );
+    PHB_ITEM ptarget = Qt5xHb::Signals_return_object( (void *) &target, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, ptarget );
 

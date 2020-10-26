@@ -29,7 +29,7 @@ void QHeightMapSurfaceDataProxySlots::heightMapChanged( const QImage & image )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHEIGHTMAPSURFACEDATAPROXY" );
-    PHB_ITEM pimage = Signals_return_object( (void *) &image, "QIMAGE" );
+    PHB_ITEM pimage = Qt5xHb::Signals_return_object( (void *) &image, "QIMAGE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pimage );
 

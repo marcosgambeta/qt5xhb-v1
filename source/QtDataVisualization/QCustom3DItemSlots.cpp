@@ -65,7 +65,7 @@ void QCustom3DItemSlots::positionChanged( const QVector3D & position )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
-    PHB_ITEM pposition = Signals_return_object( (void *) &position, "QVECTOR3D" );
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
 
@@ -83,7 +83,7 @@ void QCustom3DItemSlots::rotationChanged( const QQuaternion & rotation )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
-    PHB_ITEM protation = Signals_return_object( (void *) &rotation, "QQUATERNION" );
+    PHB_ITEM protation = Qt5xHb::Signals_return_object( (void *) &rotation, "QQUATERNION" );
 
     hb_vmEvalBlockV( cb, 2, psender, protation );
 
@@ -119,7 +119,7 @@ void QCustom3DItemSlots::scalingChanged( const QVector3D & scaling )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DITEM" );
-    PHB_ITEM pscaling = Signals_return_object( (void *) &scaling, "QVECTOR3D" );
+    PHB_ITEM pscaling = Qt5xHb::Signals_return_object( (void *) &scaling, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pscaling );
 

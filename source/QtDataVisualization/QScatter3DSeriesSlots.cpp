@@ -29,7 +29,7 @@ void QScatter3DSeriesSlots::dataProxyChanged( QScatterDataProxy * proxy )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCATTER3DSERIES" );
-    PHB_ITEM pproxy = Signals_return_qobject( (QObject *) proxy, "QSCATTERDATAPROXY" );
+    PHB_ITEM pproxy = Qt5xHb::Signals_return_qobject( (QObject *) proxy, "QSCATTERDATAPROXY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pproxy );
 

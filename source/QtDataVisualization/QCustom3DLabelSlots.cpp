@@ -29,7 +29,7 @@ void QCustom3DLabelSlots::backgroundColorChanged( const QColor & color )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
-    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
 
@@ -101,7 +101,7 @@ void QCustom3DLabelSlots::fontChanged( const QFont & font )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
-    PHB_ITEM pfont = Signals_return_object( (void *) &font, "QFONT" );
+    PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
 
@@ -137,7 +137,7 @@ void QCustom3DLabelSlots::textColorChanged( const QColor & color )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCUSTOM3DLABEL" );
-    PHB_ITEM pcolor = Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
 

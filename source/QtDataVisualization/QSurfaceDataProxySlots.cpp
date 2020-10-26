@@ -181,7 +181,7 @@ void QSurfaceDataProxySlots::seriesChanged( QSurface3DSeries * series )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSURFACEDATAPROXY" );
-    PHB_ITEM pseries = Signals_return_qobject( (QObject *) series, "QSURFACE3DSERIES" );
+    PHB_ITEM pseries = Qt5xHb::Signals_return_qobject( (QObject *) series, "QSURFACE3DSERIES" );
 
     hb_vmEvalBlockV( cb, 2, psender, pseries );
 

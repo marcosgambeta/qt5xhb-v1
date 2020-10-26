@@ -29,7 +29,7 @@ void Q3DSceneSlots::activeCameraChanged( Q3DCamera * camera )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
-    PHB_ITEM pcamera = Signals_return_qobject( (QObject *) camera, "Q3DCAMERA" );
+    PHB_ITEM pcamera = Qt5xHb::Signals_return_qobject( (QObject *) camera, "Q3DCAMERA" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcamera );
 
@@ -47,7 +47,7 @@ void Q3DSceneSlots::activeLightChanged( Q3DLight * light )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
-    PHB_ITEM plight = Signals_return_qobject( (QObject *) light, "Q3DLIGHT" );
+    PHB_ITEM plight = Qt5xHb::Signals_return_qobject( (QObject *) light, "Q3DLIGHT" );
 
     hb_vmEvalBlockV( cb, 2, psender, plight );
 
@@ -83,7 +83,7 @@ void Q3DSceneSlots::graphPositionQueryChanged( const QPoint & position )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
-    PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
 
@@ -101,7 +101,7 @@ void Q3DSceneSlots::primarySubViewportChanged( const QRect & subViewport )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
-    PHB_ITEM psubViewport = Signals_return_object( (void *) &subViewport, "QRECT" );
+    PHB_ITEM psubViewport = Qt5xHb::Signals_return_object( (void *) &subViewport, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, psubViewport );
 
@@ -137,7 +137,7 @@ void Q3DSceneSlots::secondarySubViewportChanged( const QRect & subViewport )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
-    PHB_ITEM psubViewport = Signals_return_object( (void *) &subViewport, "QRECT" );
+    PHB_ITEM psubViewport = Qt5xHb::Signals_return_object( (void *) &subViewport, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, psubViewport );
 
@@ -155,7 +155,7 @@ void Q3DSceneSlots::selectionQueryPositionChanged( const QPoint & position )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
-    PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
 
@@ -191,7 +191,7 @@ void Q3DSceneSlots::viewportChanged( const QRect & viewport )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DSCENE" );
-    PHB_ITEM pviewport = Signals_return_object( (void *) &viewport, "QRECT" );
+    PHB_ITEM pviewport = Qt5xHb::Signals_return_object( (void *) &viewport, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pviewport );
 

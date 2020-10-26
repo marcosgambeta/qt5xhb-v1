@@ -29,7 +29,7 @@ void QAbstract3DGraphSlots::activeInputHandlerChanged( QAbstract3DInputHandler *
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
-    PHB_ITEM pinputHandler = Signals_return_qobject( (QObject *) inputHandler, "QABSTRACT3DINPUTHANDLER" );
+    PHB_ITEM pinputHandler = Qt5xHb::Signals_return_qobject( (QObject *) inputHandler, "QABSTRACT3DINPUTHANDLER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pinputHandler );
 
@@ -47,7 +47,7 @@ void QAbstract3DGraphSlots::activeThemeChanged( Q3DTheme * theme )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
-    PHB_ITEM ptheme = Signals_return_qobject( (QObject *) theme, "Q3DTHEME" );
+    PHB_ITEM ptheme = Qt5xHb::Signals_return_qobject( (QObject *) theme, "Q3DTHEME" );
 
     hb_vmEvalBlockV( cb, 2, psender, ptheme );
 
@@ -119,7 +119,7 @@ void QAbstract3DGraphSlots::localeChanged( const QLocale & locale )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
-    PHB_ITEM plocale = Signals_return_object( (void *) &locale, "QLOCALE" );
+    PHB_ITEM plocale = Qt5xHb::Signals_return_object( (void *) &locale, "QLOCALE" );
 
     hb_vmEvalBlockV( cb, 2, psender, plocale );
 
@@ -227,7 +227,7 @@ void QAbstract3DGraphSlots::queriedGraphPositionChanged( const QVector3D & data 
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
-    PHB_ITEM pdata = Signals_return_object( (void *) &data, "QVECTOR3D" );
+    PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdata );
 

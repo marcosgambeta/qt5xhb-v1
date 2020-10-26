@@ -29,7 +29,7 @@ void QSurface3DSeriesSlots::dataProxyChanged( QSurfaceDataProxy * proxy )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSURFACE3DSERIES" );
-    PHB_ITEM pproxy = Signals_return_qobject( (QObject *) proxy, "QSURFACEDATAPROXY" );
+    PHB_ITEM pproxy = Qt5xHb::Signals_return_qobject( (QObject *) proxy, "QSURFACEDATAPROXY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pproxy );
 
@@ -101,7 +101,7 @@ void QSurface3DSeriesSlots::selectedPointChanged( const QPoint & position )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSURFACE3DSERIES" );
-    PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
 
@@ -119,7 +119,7 @@ void QSurface3DSeriesSlots::textureChanged( const QImage & image )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSURFACE3DSERIES" );
-    PHB_ITEM pimage = Signals_return_object( (void *) &image, "QIMAGE" );
+    PHB_ITEM pimage = Qt5xHb::Signals_return_object( (void *) &image, "QIMAGE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pimage );
 

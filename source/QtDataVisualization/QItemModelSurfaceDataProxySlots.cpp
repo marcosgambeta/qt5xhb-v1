@@ -99,7 +99,7 @@ void QItemModelSurfaceDataProxySlots::columnRolePatternChanged( const QRegExp & 
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
-    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
 
@@ -135,7 +135,7 @@ void QItemModelSurfaceDataProxySlots::itemModelChanged( const QAbstractItemModel
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
-    PHB_ITEM pitemModel = Signals_return_qobject( (QObject *) itemModel, "QABSTRACTITEMMODEL" );
+    PHB_ITEM pitemModel = Qt5xHb::Signals_return_qobject( (QObject *) itemModel, "QABSTRACTITEMMODEL" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitemModel );
 
@@ -205,7 +205,7 @@ void QItemModelSurfaceDataProxySlots::rowRolePatternChanged( const QRegExp & pat
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
-    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
 
@@ -277,7 +277,7 @@ void QItemModelSurfaceDataProxySlots::xPosRolePatternChanged( const QRegExp & pa
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
-    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
 
@@ -331,7 +331,7 @@ void QItemModelSurfaceDataProxySlots::yPosRolePatternChanged( const QRegExp & pa
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
-    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
 
@@ -385,7 +385,7 @@ void QItemModelSurfaceDataProxySlots::zPosRolePatternChanged( const QRegExp & pa
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSURFACEDATAPROXY" );
-    PHB_ITEM ppattern = Signals_return_object( (void *) &pattern, "QREGEXP" );
+    PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
 

@@ -47,7 +47,7 @@ void QAbstract3DInputHandlerSlots::positionChanged( const QPoint & position )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
-    PHB_ITEM pposition = Signals_return_object( (void *) &position, "QPOINT" );
+    PHB_ITEM pposition = Qt5xHb::Signals_return_object( (void *) &position, "QPOINT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
 
@@ -65,7 +65,7 @@ void QAbstract3DInputHandlerSlots::sceneChanged( Q3DScene * scene )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DINPUTHANDLER" );
-    PHB_ITEM pscene = Signals_return_qobject( (QObject *) scene, "Q3DSCENE" );
+    PHB_ITEM pscene = Qt5xHb::Signals_return_qobject( (QObject *) scene, "Q3DSCENE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pscene );
 
