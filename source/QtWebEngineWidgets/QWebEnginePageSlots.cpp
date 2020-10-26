@@ -126,7 +126,7 @@ void QWebEnginePageSlots::geometryChangeRequested( const QRect & geom )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBENGINEPAGE" );
-    PHB_ITEM pgeom = Signals_return_object( (void *) &geom, "QRECT" );
+    PHB_ITEM pgeom = Qt5xHb::Signals_return_object( (void *) &geom, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgeom );
 
@@ -164,7 +164,7 @@ void QWebEnginePageSlots::featurePermissionRequested( const QUrl & securityOrigi
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBENGINEPAGE" );
-    PHB_ITEM psecurityOrigin = Signals_return_object( (void *) &securityOrigin, "QURL" );
+    PHB_ITEM psecurityOrigin = Qt5xHb::Signals_return_object( (void *) &securityOrigin, "QURL" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
 
     hb_vmEvalBlockV( cb, 3, psender, psecurityOrigin, pfeature );
@@ -186,7 +186,7 @@ void QWebEnginePageSlots::featurePermissionRequestCanceled( const QUrl & securit
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBENGINEPAGE" );
-    PHB_ITEM psecurityOrigin = Signals_return_object( (void *) &securityOrigin, "QURL" );
+    PHB_ITEM psecurityOrigin = Qt5xHb::Signals_return_object( (void *) &securityOrigin, "QURL" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
 
     hb_vmEvalBlockV( cb, 3, psender, psecurityOrigin, pfeature );
@@ -208,8 +208,8 @@ void QWebEnginePageSlots::authenticationRequired( const QUrl & requestUrl, QAuth
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBENGINEPAGE" );
-    PHB_ITEM prequestUrl = Signals_return_object( (void *) &requestUrl, "QURL" );
-    PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
+    PHB_ITEM prequestUrl = Qt5xHb::Signals_return_object( (void *) &requestUrl, "QURL" );
+    PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
 
     hb_vmEvalBlockV( cb, 3, psender, prequestUrl, pauthenticator );
 
@@ -230,8 +230,8 @@ void QWebEnginePageSlots::proxyAuthenticationRequired( const QUrl & requestUrl, 
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBENGINEPAGE" );
-    PHB_ITEM prequestUrl = Signals_return_object( (void *) &requestUrl, "QURL" );
-    PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
+    PHB_ITEM prequestUrl = Qt5xHb::Signals_return_object( (void *) &requestUrl, "QURL" );
+    PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
     PHB_ITEM pproxyHost = hb_itemPutC( NULL, QSTRINGTOSTRING(proxyHost) );
 
     hb_vmEvalBlockV( cb, 4, psender, prequestUrl, pauthenticator, pproxyHost );
@@ -274,7 +274,7 @@ void QWebEnginePageSlots::urlChanged( const QUrl & url )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBENGINEPAGE" );
-    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
 
@@ -294,7 +294,7 @@ void QWebEnginePageSlots::iconUrlChanged( const QUrl & url )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBENGINEPAGE" );
-    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
 
