@@ -95,8 +95,8 @@ void QAbstractSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & pr
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSOCKET" );
-    PHB_ITEM pproxy = Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
-    PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
+    PHB_ITEM pproxy = Qt5xHb::Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
+    PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
 
     hb_vmEvalBlockV( cb, 3, psender, pproxy, pauthenticator );
 

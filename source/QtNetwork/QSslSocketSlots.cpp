@@ -81,7 +81,7 @@ void QSslSocketSlots::peerVerifyError( const QSslError & error )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
-    PHB_ITEM perror = Signals_return_object( (void *) &error, "QSSLERROR" );
+    PHB_ITEM perror = Qt5xHb::Signals_return_object( (void *) &error, "QSSLERROR" );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
 
@@ -100,7 +100,7 @@ void QSslSocketSlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthen
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
-    PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QSSLPRESHAREDKEYAUTHENTICATOR" );
+    PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object( (void *) authenticator, "QSSLPRESHAREDKEYAUTHENTICATOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pauthenticator );
 

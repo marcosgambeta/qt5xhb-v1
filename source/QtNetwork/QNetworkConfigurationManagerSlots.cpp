@@ -29,7 +29,7 @@ void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfig
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
-    PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconfig );
 
@@ -47,7 +47,7 @@ void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConf
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
-    PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconfig );
 
@@ -65,7 +65,7 @@ void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConf
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
-    PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconfig );
 

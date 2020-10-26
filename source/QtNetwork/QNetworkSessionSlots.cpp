@@ -95,7 +95,7 @@ void QNetworkSessionSlots::preferredConfigurationChanged( const QNetworkConfigur
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
-    PHB_ITEM pconfig = Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
     PHB_ITEM pisSeamless = hb_itemPutL( NULL, isSeamless );
 
     hb_vmEvalBlockV( cb, 3, psender, pconfig, pisSeamless );

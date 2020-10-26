@@ -178,7 +178,7 @@ void QNetworkReplySlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAut
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKREPLY" );
-    PHB_ITEM pauthenticator = Signals_return_object( (void *) authenticator, "QSSLPRESHAREDKEYAUTHENTICATOR" );
+    PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object( (void *) authenticator, "QSSLPRESHAREDKEYAUTHENTICATOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pauthenticator );
 
@@ -198,7 +198,7 @@ void QNetworkReplySlots::redirected( const QUrl & url )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKREPLY" );
-    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
 

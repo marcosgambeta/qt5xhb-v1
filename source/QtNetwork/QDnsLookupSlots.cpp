@@ -63,7 +63,7 @@ void QDnsLookupSlots::nameserverChanged( const QHostAddress & nameserver )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDNSLOOKUP" );
-    PHB_ITEM pnameserver = Signals_return_object( (void *) &nameserver, "QHOSTADDRESS" );
+    PHB_ITEM pnameserver = Qt5xHb::Signals_return_object( (void *) &nameserver, "QHOSTADDRESS" );
 
     hb_vmEvalBlockV( cb, 2, psender, pnameserver );
 
