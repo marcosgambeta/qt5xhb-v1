@@ -454,31 +454,6 @@ namespace Qt5xHb
   }
 }
 
-bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock )
-{
-  return s_events->connectEvent( object, type, codeblock );
-}
-
-bool Events_disconnect_event( QObject * object, int type )
-{
-  return s_events->disconnectEvent( object, type );
-}
-
-void Events_disconnect_all_events( QObject * obj, bool children )
-{
-  s_events->disconnectAllEvents( obj, children );
-}
-
-PHB_ITEM Events_return_object( QEvent * ptr, const char * classname )
-{
-  return s_events->returnObject( ptr, classname );
-}
-
-PHB_ITEM Events_return_qobject( QObject * ptr, const char * classname )
-{
-  return s_events->returnQObject( ptr, classname );
-}
-
 /*
   Retorna o tamanho da lista de eventos.
   Atenção: está função não faz parte da API pública, podendo

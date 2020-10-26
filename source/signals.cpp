@@ -408,46 +408,6 @@ namespace Qt5xHb
   }
 }
 
-bool Signals_connect_signal( QObject * object, QString signal, PHB_ITEM codeblock )
-{
-  return s_signals->connectSignal( object, signal, codeblock );
-}
-
-bool Signals_disconnect_signal( QObject * object, QString signal )
-{
-  return s_signals->disconnectSignal( object, signal );
-}
-
-bool Signals_is_signal_connected( QObject * object, QString signal )
-{
-  return s_signals->isSignalConnected( object, signal );
-}
-
-PHB_ITEM Signals_return_codeblock( QObject * object, QString signal )
-{
-  return s_signals->returnCodeblock( object, signal );
-}
-
-void Signals_disconnect_all_signals( QObject * obj, bool children )
-{
-  s_signals->disconnectAllSignals( obj, children );
-}
-
-bool Signals_connection_disconnection( QObject * s, QString signal, QString slot )
-{
-  return s_signals->connectionDisconnection( s, signal, slot );
-}
-
-PHB_ITEM Signals_return_object( void * ptr, const char * classname )
-{
-  return s_signals->returnObject( ptr, classname );
-}
-
-PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
-{
-  return s_signals->returnQObject( ptr, classname );
-}
-
 /*
   Retorna o tamanho da lista de sinais.
   Atenção: está função não faz parte da API pública, podendo

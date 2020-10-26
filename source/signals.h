@@ -39,15 +39,6 @@ namespace Qt5xHb
   PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname );
 }
 
-bool Signals_connect_signal( QObject * object, QString signal, PHB_ITEM codeblock );
-bool Signals_disconnect_signal( QObject * object, QString signal );
-bool Signals_is_signal_connected( QObject * object, QString signal );
-PHB_ITEM Signals_return_codeblock( QObject * object, QString signal );
-void Signals_disconnect_all_signals( QObject * obj, bool children );
-bool Signals_connection_disconnection( QObject * s, QString signal, QString slot );
-PHB_ITEM Signals_return_object( void * ptr, const char * classname );
-PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname );
-
 class Signals: public QObject
 {
   public:
