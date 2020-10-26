@@ -30,8 +30,8 @@ void QQmlApplicationEngineSlots::objectCreated( QObject * obj, const QUrl & url 
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQMLAPPLICATIONENGINE" );
-    PHB_ITEM pobj = Signals_return_qobject( (QObject *) obj, "QOBJECT" );
-    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM pobj = Qt5xHb::Signals_return_qobject( (QObject *) obj, "QOBJECT" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 3, psender, pobj, purl );
 
