@@ -52,7 +52,7 @@ void QAbstractOAuth2Slots::error( const QString & error, const QString & errorDe
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH2" );
     PHB_ITEM perror = hb_itemPutC( NULL, QSTRINGTOSTRING(error) );
     PHB_ITEM perrorDescription = hb_itemPutC( NULL, QSTRINGTOSTRING(errorDescription) );
-    PHB_ITEM puri = Signals_return_object( (void *) &uri, "QURL" );
+    PHB_ITEM puri = Qt5xHb::Signals_return_object( (void *) &uri, "QURL" );
 
     hb_vmEvalBlockV( cb, 4, psender, perror, perrorDescription, puri );
 
@@ -74,7 +74,7 @@ void QAbstractOAuth2Slots::expirationAtChanged( const QDateTime & expiration )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH2" );
-    PHB_ITEM pexpiration = Signals_return_object( (void *) &expiration, "QDATETIME" );
+    PHB_ITEM pexpiration = Qt5xHb::Signals_return_object( (void *) &expiration, "QDATETIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pexpiration );
 

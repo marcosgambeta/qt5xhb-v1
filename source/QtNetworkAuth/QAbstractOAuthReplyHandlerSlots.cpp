@@ -30,7 +30,7 @@ void QAbstractOAuthReplyHandlerSlots::callbackDataReceived( const QByteArray & d
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTHREPLYHANDLER" );
-    PHB_ITEM pdata = Signals_return_object( (void *) &data, "QBYTEARRAY" );
+    PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdata );
 
@@ -50,7 +50,7 @@ void QAbstractOAuthReplyHandlerSlots::replyDataReceived( const QByteArray & data
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTHREPLYHANDLER" );
-    PHB_ITEM pdata = Signals_return_object( (void *) &data, "QBYTEARRAY" );
+    PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdata );
 

@@ -70,7 +70,7 @@ void QOAuth1Slots::temporaryCredentialsUrlChanged( const QUrl & url )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOAUTH1" );
-    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
 
@@ -90,7 +90,7 @@ void QOAuth1Slots::tokenCredentialsUrlChanged( const QUrl & url )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOAUTH1" );
-    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
 
