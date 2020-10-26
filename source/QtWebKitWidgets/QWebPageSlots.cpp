@@ -29,7 +29,7 @@ void QWebPageSlots::applicationCacheQuotaExceeded( QWebSecurityOrigin * origin, 
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM porigin = Signals_return_object( (void *) origin, "QWEBSECURITYORIGIN" );
+    PHB_ITEM porigin = Qt5xHb::Signals_return_object( (void *) origin, "QWEBSECURITYORIGIN" );
     PHB_ITEM pdefaultOriginQuota = hb_itemPutNLL( NULL, defaultOriginQuota );
     PHB_ITEM ptotalSpaceNeeded = hb_itemPutNLL( NULL, totalSpaceNeeded );
 
@@ -67,7 +67,7 @@ void QWebPageSlots::databaseQuotaExceeded( QWebFrame * frame, QString databaseNa
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
     PHB_ITEM pdatabaseName = hb_itemPutC( NULL, (const char *) databaseName.toLatin1().data() );
 
     hb_vmEvalBlockV( cb, 3, psender, pframe, pdatabaseName );
@@ -87,7 +87,7 @@ void QWebPageSlots::downloadRequested( const QNetworkRequest & request )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM prequest = Signals_return_object( (void *) &request, "QNETWORKREQUEST" );
+    PHB_ITEM prequest = Qt5xHb::Signals_return_object( (void *) &request, "QNETWORKREQUEST" );
 
     hb_vmEvalBlockV( cb, 2, psender, prequest );
 
@@ -105,7 +105,7 @@ void QWebPageSlots::featurePermissionRequestCanceled( QWebFrame * frame, QWebPag
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
 
     hb_vmEvalBlockV( cb, 3, psender, pframe, pfeature );
@@ -125,7 +125,7 @@ void QWebPageSlots::featurePermissionRequested( QWebFrame * frame, QWebPage::Fea
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
     PHB_ITEM pfeature = hb_itemPutNI( NULL, (int) feature );
 
     hb_vmEvalBlockV( cb, 3, psender, pframe, pfeature );
@@ -145,7 +145,7 @@ void QWebPageSlots::frameCreated( QWebFrame * frame )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pframe );
 
@@ -163,7 +163,7 @@ void QWebPageSlots::geometryChangeRequested( const QRect & geom )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM pgeom = Signals_return_object( (void *) &geom, "QRECT" );
+    PHB_ITEM pgeom = Qt5xHb::Signals_return_object( (void *) &geom, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgeom );
 
@@ -181,7 +181,7 @@ void QWebPageSlots::linkClicked( const QUrl & url )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM purl = Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
 
@@ -307,7 +307,7 @@ void QWebPageSlots::printRequested( QWebFrame * frame )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pframe );
 
@@ -325,7 +325,7 @@ void QWebPageSlots::repaintRequested( const QRect & dirtyRect )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM pdirtyRect = Signals_return_object( (void *) &dirtyRect, "QRECT" );
+    PHB_ITEM pdirtyRect = Qt5xHb::Signals_return_object( (void *) &dirtyRect, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdirtyRect );
 
@@ -343,7 +343,7 @@ void QWebPageSlots::restoreFrameStateRequested( QWebFrame * frame )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pframe );
 
@@ -361,8 +361,8 @@ void QWebPageSlots::saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem 
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
-    PHB_ITEM pitem = Signals_return_object( (void *) item, "QWEBHISTORYITEM" );
+    PHB_ITEM pframe = Qt5xHb::Signals_return_qobject( (QObject *) frame, "QWEBFRAME" );
+    PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QWEBHISTORYITEM" );
 
     hb_vmEvalBlockV( cb, 3, psender, pframe, pitem );
 
@@ -383,7 +383,7 @@ void QWebPageSlots::scrollRequested( int dx, int dy, const QRect & rectToScroll 
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
     PHB_ITEM pdx = hb_itemPutNI( NULL, dx );
     PHB_ITEM pdy = hb_itemPutNI( NULL, dy );
-    PHB_ITEM prectToScroll = Signals_return_object( (void *) &rectToScroll, "QRECT" );
+    PHB_ITEM prectToScroll = Qt5xHb::Signals_return_object( (void *) &rectToScroll, "QRECT" );
 
     hb_vmEvalBlockV( cb, 4, psender, pdx, pdy, prectToScroll );
 
@@ -473,7 +473,7 @@ void QWebPageSlots::unsupportedContent( QNetworkReply * reply )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBPAGE" );
-    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QNETWORKREPLY" );
+    PHB_ITEM preply = Qt5xHb::Signals_return_qobject( (QObject *) reply, "QNETWORKREPLY" );
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
 
