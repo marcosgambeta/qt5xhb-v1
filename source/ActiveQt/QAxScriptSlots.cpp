@@ -85,7 +85,7 @@ void QAxScriptSlots::finished( const QVariant & result )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
-    PHB_ITEM presult = Signals_return_object( (void *) &result, "QVARIANT" );
+    PHB_ITEM presult = Qt5xHb::Signals_return_object( (void *) &result, "QVARIANT" );
 
     hb_vmEvalBlockV( cb, 2, psender, presult );
 
