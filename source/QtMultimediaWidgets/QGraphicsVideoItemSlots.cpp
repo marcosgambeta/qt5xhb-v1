@@ -29,7 +29,7 @@ void QGraphicsVideoItemSlots::nativeSizeChanged( const QSizeF & size )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSVIDEOITEM" );
-    PHB_ITEM psize = Signals_return_object( (void *) &size, "QSIZEF" );
+    PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZEF" );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );
 
