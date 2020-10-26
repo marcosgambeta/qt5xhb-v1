@@ -30,7 +30,7 @@ void QGeoPositionInfoSourceSlots::positionUpdated( const QGeoPositionInfo & upda
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
-    PHB_ITEM pupdate = Signals_return_object( (void *) &update, "QGEOPOSITIONINFO" );
+    PHB_ITEM pupdate = Qt5xHb::Signals_return_object( (void *) &update, "QGEOPOSITIONINFO" );
 
     hb_vmEvalBlockV( cb, 2, psender, pupdate );
 
