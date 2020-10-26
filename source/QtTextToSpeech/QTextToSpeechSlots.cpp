@@ -30,7 +30,7 @@ void QTextToSpeechSlots::localeChanged( const QLocale & locale )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
-    PHB_ITEM plocale = Signals_return_object( (void *) &locale, "QLOCALE" );
+    PHB_ITEM plocale = Qt5xHb::Signals_return_object( (void *) &locale, "QLOCALE" );
 
     hb_vmEvalBlockV( cb, 2, psender, plocale );
 
@@ -110,7 +110,7 @@ void QTextToSpeechSlots::voiceChanged( const QVoice & voice )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECH" );
-    PHB_ITEM pvoice = Signals_return_object( (void *) &voice, "QVOICE" );
+    PHB_ITEM pvoice = Qt5xHb::Signals_return_object( (void *) &voice, "QVOICE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pvoice );
 
