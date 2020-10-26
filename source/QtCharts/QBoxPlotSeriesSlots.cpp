@@ -168,7 +168,7 @@ void QBoxPlotSeriesSlots::clicked( QBoxSet * boxset )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
-    PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
+    PHB_ITEM pboxset = Qt5xHb::Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pboxset );
 
@@ -206,7 +206,7 @@ void QBoxPlotSeriesSlots::doubleClicked( QBoxSet * boxset )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
-    PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
+    PHB_ITEM pboxset = Qt5xHb::Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pboxset );
 
@@ -227,7 +227,7 @@ void QBoxPlotSeriesSlots::hovered( bool status, QBoxSet * boxset )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
-    PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
+    PHB_ITEM pboxset = Qt5xHb::Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
     hb_vmEvalBlockV( cb, 3, psender, pstatus, pboxset );
 
@@ -266,7 +266,7 @@ void QBoxPlotSeriesSlots::pressed( QBoxSet * boxset )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
-    PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
+    PHB_ITEM pboxset = Qt5xHb::Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pboxset );
 
@@ -286,7 +286,7 @@ void QBoxPlotSeriesSlots::released( QBoxSet * boxset )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBOXPLOTSERIES" );
-    PHB_ITEM pboxset = Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
+    PHB_ITEM pboxset = Qt5xHb::Signals_return_qobject( (QObject *) boxset, "QBOXSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pboxset );
 

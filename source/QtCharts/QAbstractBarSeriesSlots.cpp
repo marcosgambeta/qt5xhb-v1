@@ -115,7 +115,7 @@ void QAbstractBarSeriesSlots::clicked( int index, QBarSet * barset )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
+    PHB_ITEM pbarset = Qt5xHb::Signals_return_qobject( (QObject *) barset, "QBARSET" );
 
     hb_vmEvalBlockV( cb, 3, psender, pindex, pbarset );
 
@@ -155,7 +155,7 @@ void QAbstractBarSeriesSlots::doubleClicked( int index, QBarSet * barset )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
+    PHB_ITEM pbarset = Qt5xHb::Signals_return_qobject( (QObject *) barset, "QBARSET" );
 
     hb_vmEvalBlockV( cb, 3, psender, pindex, pbarset );
 
@@ -178,7 +178,7 @@ void QAbstractBarSeriesSlots::hovered( bool status, int index, QBarSet * barset 
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
+    PHB_ITEM pbarset = Qt5xHb::Signals_return_qobject( (QObject *) barset, "QBARSET" );
 
     hb_vmEvalBlockV( cb, 4, psender, pstatus, pindex, pbarset );
 
@@ -279,7 +279,7 @@ void QAbstractBarSeriesSlots::pressed( int index, QBarSet * barset )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
+    PHB_ITEM pbarset = Qt5xHb::Signals_return_qobject( (QObject *) barset, "QBARSET" );
 
     hb_vmEvalBlockV( cb, 3, psender, pindex, pbarset );
 
@@ -301,7 +301,7 @@ void QAbstractBarSeriesSlots::released( int index, QBarSet * barset )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTBARSERIES" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
-    PHB_ITEM pbarset = Signals_return_qobject( (QObject *) barset, "QBARSET" );
+    PHB_ITEM pbarset = Qt5xHb::Signals_return_qobject( (QObject *) barset, "QBARSET" );
 
     hb_vmEvalBlockV( cb, 3, psender, pindex, pbarset );
 

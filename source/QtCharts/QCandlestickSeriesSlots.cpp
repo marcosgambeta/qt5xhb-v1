@@ -204,7 +204,7 @@ void QCandlestickSeriesSlots::clicked( QCandlestickSet * set )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
-    PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pset );
 
@@ -260,7 +260,7 @@ void QCandlestickSeriesSlots::doubleClicked( QCandlestickSet * set )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
-    PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pset );
 
@@ -281,7 +281,7 @@ void QCandlestickSeriesSlots::hovered( bool status, QCandlestickSet * set )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
-    PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
 
     hb_vmEvalBlockV( cb, 3, psender, pstatus, pset );
 
@@ -374,7 +374,7 @@ void QCandlestickSeriesSlots::pressed( QCandlestickSet * set )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
-    PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pset );
 
@@ -394,7 +394,7 @@ void QCandlestickSeriesSlots::released( QCandlestickSet * set )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANDLESTICKSERIES" );
-    PHB_ITEM pset = Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
+    PHB_ITEM pset = Qt5xHb::Signals_return_qobject( (QObject *) set, "QCANDLESTICKSET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pset );
 

@@ -50,7 +50,7 @@ void QDateTimeAxisSlots::maxChanged( QDateTime max )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEAXIS" );
-    PHB_ITEM pmax = Signals_return_object( (void *) &max, "QDATETIME" );
+    PHB_ITEM pmax = Qt5xHb::Signals_return_object( (void *) &max, "QDATETIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmax );
 
@@ -70,7 +70,7 @@ void QDateTimeAxisSlots::minChanged( QDateTime min )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEAXIS" );
-    PHB_ITEM pmin = Signals_return_object( (void *) &min, "QDATETIME" );
+    PHB_ITEM pmin = Qt5xHb::Signals_return_object( (void *) &min, "QDATETIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmin );
 
@@ -90,8 +90,8 @@ void QDateTimeAxisSlots::rangeChanged( QDateTime min, QDateTime max )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEAXIS" );
-    PHB_ITEM pmin = Signals_return_object( (void *) &min, "QDATETIME" );
-    PHB_ITEM pmax = Signals_return_object( (void *) &max, "QDATETIME" );
+    PHB_ITEM pmin = Qt5xHb::Signals_return_object( (void *) &min, "QDATETIME" );
+    PHB_ITEM pmax = Qt5xHb::Signals_return_object( (void *) &max, "QDATETIME" );
 
     hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
 

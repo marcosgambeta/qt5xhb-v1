@@ -72,7 +72,7 @@ void QPieSeriesSlots::clicked( QPieSlice * slice )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pslice );
 
@@ -110,7 +110,7 @@ void QPieSeriesSlots::doubleClicked( QPieSlice * slice )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pslice );
 
@@ -130,7 +130,7 @@ void QPieSeriesSlots::hovered( QPieSlice * slice, bool state )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
     PHB_ITEM pstate = hb_itemPutL( NULL, state );
 
     hb_vmEvalBlockV( cb, 3, psender, pslice, pstate );
@@ -152,7 +152,7 @@ void QPieSeriesSlots::pressed( QPieSlice * slice )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pslice );
 
@@ -172,7 +172,7 @@ void QPieSeriesSlots::released( QPieSlice * slice )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pslice );
 
