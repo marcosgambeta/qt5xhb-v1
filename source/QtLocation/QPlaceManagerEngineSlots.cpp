@@ -30,7 +30,7 @@ void QPlaceManagerEngineSlots::finished( QPlaceReply * reply )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
-    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
+    PHB_ITEM preply = Qt5xHb::Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
 
@@ -50,7 +50,7 @@ void QPlaceManagerEngineSlots::error( QPlaceReply * reply, QPlaceReply::Error er
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
-    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
+    PHB_ITEM preply = Qt5xHb::Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
 
@@ -134,7 +134,7 @@ void QPlaceManagerEngineSlots::categoryAdded( const QPlaceCategory & category, c
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
-    PHB_ITEM pcategory = Signals_return_object( (void *) &category, "QPLACECATEGORY" );
+    PHB_ITEM pcategory = Qt5xHb::Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentCategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentCategoryId) );
 
     hb_vmEvalBlockV( cb, 3, psender, pcategory, pparentCategoryId );
@@ -156,7 +156,7 @@ void QPlaceManagerEngineSlots::categoryUpdated( const QPlaceCategory & category,
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGERENGINE" );
-    PHB_ITEM pcategory = Signals_return_object( (void *) &category, "QPLACECATEGORY" );
+    PHB_ITEM pcategory = Qt5xHb::Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentCategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentCategoryId) );
 
     hb_vmEvalBlockV( cb, 3, psender, pcategory, pparentCategoryId );

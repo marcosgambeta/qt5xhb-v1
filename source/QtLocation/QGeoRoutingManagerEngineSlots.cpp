@@ -30,7 +30,7 @@ void QGeoRoutingManagerEngineSlots::finished( QGeoRouteReply * reply )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOROUTINGMANAGERENGINE" );
-    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOROUTEREPLY" );
+    PHB_ITEM preply = Qt5xHb::Signals_return_qobject( (QObject *) reply, "QGEOROUTEREPLY" );
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
 
@@ -50,7 +50,7 @@ void QGeoRoutingManagerEngineSlots::error( QGeoRouteReply * reply, QGeoRouteRepl
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOROUTINGMANAGERENGINE" );
-    PHB_ITEM preply = Signals_return_qobject( (QObject *) reply, "QGEOROUTEREPLY" );
+    PHB_ITEM preply = Qt5xHb::Signals_return_qobject( (QObject *) reply, "QGEOROUTEREPLY" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, (const char *) errorString.toLatin1().data() );
 
