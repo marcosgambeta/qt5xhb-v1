@@ -50,7 +50,7 @@ void QGamepadKeyNavigationSlots::gamepadChanged( QGamepad * gamepad )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
-    PHB_ITEM pgamepad = Signals_return_qobject( (QObject *) gamepad, "QGAMEPAD" );
+    PHB_ITEM pgamepad = Qt5xHb::Signals_return_qobject( (QObject *) gamepad, "QGAMEPAD" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgamepad );
 
