@@ -30,7 +30,7 @@ void QBluetoothTransferReplySlots::finished( QBluetoothTransferReply * r )
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHTRANSFERREPLY" );
-    PHB_ITEM pr = Signals_return_qobject( (QObject *) r, "QBLUETOOTHTRANSFERREPLY" );
+    PHB_ITEM pr = Qt5xHb::Signals_return_qobject( (QObject *) r, "QBLUETOOTHTRANSFERREPLY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pr );
 

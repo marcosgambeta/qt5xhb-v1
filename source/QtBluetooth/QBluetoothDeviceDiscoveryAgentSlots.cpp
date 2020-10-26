@@ -30,7 +30,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::deviceDiscovered( const QBluetoothDevi
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
-    PHB_ITEM pinfo = Signals_return_object( (void *) &info, "QBLUETOOTHDEVICEINFO" );
+    PHB_ITEM pinfo = Qt5xHb::Signals_return_object( (void *) &info, "QBLUETOOTHDEVICEINFO" );
 
     hb_vmEvalBlockV( cb, 2, psender, pinfo );
 

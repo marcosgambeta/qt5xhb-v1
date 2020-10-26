@@ -50,7 +50,7 @@ void QBluetoothLocalDeviceSlots::pairingFinished( const QBluetoothAddress & addr
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHLOCALDEVICE" );
-    PHB_ITEM paddress = Signals_return_object( (void *) &address, "QBLUETOOTHADDRESS" );
+    PHB_ITEM paddress = Qt5xHb::Signals_return_object( (void *) &address, "QBLUETOOTHADDRESS" );
     PHB_ITEM ppairing = hb_itemPutNI( NULL, (int) pairing );
 
     hb_vmEvalBlockV( cb, 3, psender, paddress, ppairing );
@@ -72,7 +72,7 @@ void QBluetoothLocalDeviceSlots::pairingDisplayPinCode( const QBluetoothAddress 
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHLOCALDEVICE" );
-    PHB_ITEM paddress = Signals_return_object( (void *) &address, "QBLUETOOTHADDRESS" );
+    PHB_ITEM paddress = Qt5xHb::Signals_return_object( (void *) &address, "QBLUETOOTHADDRESS" );
     PHB_ITEM ppin = hb_itemPutC( NULL, (const char *) pin.toLatin1().data() );
 
     hb_vmEvalBlockV( cb, 3, psender, paddress, ppin );
@@ -94,7 +94,7 @@ void QBluetoothLocalDeviceSlots::pairingDisplayConfirmation( const QBluetoothAdd
   if( cb )
   {
     PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHLOCALDEVICE" );
-    PHB_ITEM paddress = Signals_return_object( (void *) &address, "QBLUETOOTHADDRESS" );
+    PHB_ITEM paddress = Qt5xHb::Signals_return_object( (void *) &address, "QBLUETOOTHADDRESS" );
     PHB_ITEM ppin = hb_itemPutC( NULL, (const char *) pin.toLatin1().data() );
 
     hb_vmEvalBlockV( cb, 3, psender, paddress, ppin );
