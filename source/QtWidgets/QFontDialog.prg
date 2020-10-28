@@ -82,11 +82,11 @@ void QFontDialog_new2()
 
 HB_FUNC_STATIC( QFONTDIALOG_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QFontDialog_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQFONT(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISQFONT(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QFontDialog_new2();
   }
@@ -369,11 +369,11 @@ void QFontDialog_getFont2()
 
 HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 {
-  if( ISBETWEEN(1,2) && ISLOG(1) && ISOPTQWIDGET(2) )
+  if( ISBETWEEN(1,2) && ISLOG(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QFontDialog_getFont1();
   }
-  else if( ISBETWEEN(2,5) && ISLOG(1) && ISQFONT(2) && ISOPTQWIDGET(3) && ISOPTCHAR(4) && ISOPTNUM(5) )
+  else if( ISBETWEEN(2,5) && ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTNUM(5) )
   {
     QFontDialog_getFont2();
   }

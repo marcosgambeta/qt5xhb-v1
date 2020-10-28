@@ -81,15 +81,15 @@ void QCommandLinkButton_new3()
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QCommandLinkButton_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QCommandLinkButton_new2();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTQWIDGET(3) )
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
     QCommandLinkButton_new3();
   }

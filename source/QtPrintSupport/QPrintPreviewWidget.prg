@@ -94,11 +94,11 @@ void QPrintPreviewWidget_new2()
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 {
-  if( ISBETWEEN(1,3) && ISQPRINTER(1) && ISOPTQWIDGET(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
   {
     QPrintPreviewWidget_new1();
   }
-  else if( ISBETWEEN(0,2) && ISOPTQWIDGET(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     QPrintPreviewWidget_new2();
   }

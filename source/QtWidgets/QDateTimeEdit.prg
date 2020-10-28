@@ -145,19 +145,19 @@ void QDateTimeEdit_new4()
 
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QDateTimeEdit_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQDATETIME(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISQDATETIME(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QDateTimeEdit_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQDATE(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISQDATE(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QDateTimeEdit_new3();
   }
-  else if( ISBETWEEN(1,2) && ISQTIME(1) && ISOPTQWIDGET(2) )
+  else if( ISBETWEEN(1,2) && ISQTIME(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QDateTimeEdit_new4();
   }

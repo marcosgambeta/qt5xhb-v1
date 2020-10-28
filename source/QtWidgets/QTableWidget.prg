@@ -129,11 +129,11 @@ void QTableWidget_new2()
 
 HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QTableWidget_new1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTQWIDGET(3) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
     QTableWidget_new2();
   }

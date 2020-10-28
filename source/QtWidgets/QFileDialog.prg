@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
   {
     QFileDialog_new1();
   }
-  else if( ISBETWEEN(0,4) && ISOPTQWIDGET(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) )
+  else if( ISBETWEEN(0,4) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) )
   {
     QFileDialog_new2();
   }

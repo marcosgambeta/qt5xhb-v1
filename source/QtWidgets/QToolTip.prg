@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT )
   {
     QToolTip_showText1();
   }
-  else if( ISBETWEEN(2,3) && ISQPOINT(1) && ISCHAR(2) && ISOPTQWIDGET(3) )
+  else if( ISBETWEEN(2,3) && ISQPOINT(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
   {
     QToolTip_showText2();
   }

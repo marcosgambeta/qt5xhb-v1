@@ -80,11 +80,11 @@ void QPrintDialog_new2()
 
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQPRINTER(1) && ISOPTQWIDGET(2) )
+  if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
   {
     QPrintDialog_new1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTQWIDGET(1) )
+  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
   {
     QPrintDialog_new2();
   }
