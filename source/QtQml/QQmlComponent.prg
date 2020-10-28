@@ -124,23 +124,23 @@ void QQmlComponent_new5()
 
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && ISOPTQOBJECT(2) )
+  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QQmlComponent_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && ISCHAR(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QQmlComponent_new2();
   }
-  else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && ISCHAR(2) && ISNUM(3) && ISOPTQOBJECT(4) )
+  else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && ISCHAR(2) && ISNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QQmlComponent_new3();
   }
-  else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && ISQURL(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && ISQURL(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QQmlComponent_new4();
   }
-  else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && ISQURL(2) && ISNUM(3) && ISOPTQOBJECT(4) )
+  else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && ISQURL(2) && ISNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QQmlComponent_new5();
   }

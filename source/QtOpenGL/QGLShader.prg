@@ -84,11 +84,11 @@ void QGLShader_new2()
 
 HB_FUNC_STATIC( QGLSHADER_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QGLShader_new1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQGLCONTEXT(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQGLCONTEXT(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QGLShader_new2();
   }

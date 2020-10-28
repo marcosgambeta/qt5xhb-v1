@@ -144,15 +144,15 @@ void QSerialPort_new3()
 HB_FUNC_STATIC( QSERIALPORT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSerialPort_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSerialPort_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQSERIALPORTINFO(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQSERIALPORTINFO(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QSerialPort_new3();
   }

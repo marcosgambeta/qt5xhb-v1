@@ -88,11 +88,11 @@ void QDBusServiceWatcher_new2()
 
 HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QDBusServiceWatcher_new1();
   }
-  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISQDBUSCONNECTION(2) && ISOPTNUM(3) && ISOPTQOBJECT(4) )
+  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISQDBUSCONNECTION(2) && ISOPTNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QDBusServiceWatcher_new2();
   }

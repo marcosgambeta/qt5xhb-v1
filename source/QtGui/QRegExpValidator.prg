@@ -72,7 +72,7 @@ void QRegExpValidator_new2()
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QRegExpValidator_new1();
   }

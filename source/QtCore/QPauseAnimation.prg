@@ -75,11 +75,11 @@ void QPauseAnimation_new2()
 
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QPauseAnimation_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QPauseAnimation_new2();
   }

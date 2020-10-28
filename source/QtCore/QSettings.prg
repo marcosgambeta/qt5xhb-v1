@@ -137,23 +137,23 @@ void QSettings_new5()
 
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTQOBJECT(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QSettings_new1();
   }
-  else if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTQOBJECT(4) )
+  else if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && ISOPTCHAR(3) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QSettings_new2();
   }
-  else if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISCHAR(3) && ISOPTCHAR(4) && ISOPTQOBJECT(5) )
+  else if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISCHAR(3) && ISOPTCHAR(4) && (ISQOBJECT(5)||ISNIL(5)) )
   {
     QSettings_new3();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QSettings_new4();
   }
-  else if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSettings_new5();
   }

@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSAVEFILE_NEW )
   {
     QSaveFile_new1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QSaveFile_new2();
   }

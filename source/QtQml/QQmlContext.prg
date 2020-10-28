@@ -90,11 +90,11 @@ void QQmlContext_new2()
 
 HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && ISOPTQOBJECT(2) )
+  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QQmlContext_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQQMLCONTEXT(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQQMLCONTEXT(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QQmlContext_new2();
   }

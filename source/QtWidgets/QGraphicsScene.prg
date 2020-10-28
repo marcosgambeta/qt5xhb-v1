@@ -173,15 +173,15 @@ void QGraphicsScene_new3()
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QGraphicsScene_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQRECTF(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQRECTF(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QGraphicsScene_new2();
   }
-  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTQOBJECT(5) )
+  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISQOBJECT(5)||ISNIL(5)) )
   {
     QGraphicsScene_new3();
   }

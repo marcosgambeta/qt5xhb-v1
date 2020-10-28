@@ -140,19 +140,19 @@ void QCamera_new4()
 
 HB_FUNC_STATIC( QCAMERA_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QCamera_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QCamera_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQCAMERAINFO(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISQCAMERAINFO(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QCamera_new3();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTQOBJECT(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QCamera_new4();
   }

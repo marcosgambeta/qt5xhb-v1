@@ -123,15 +123,15 @@ void QMovie_new3()
 
 HB_FUNC_STATIC( QMOVIE_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTQOBJECT(1) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     QMovie_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QMovie_new2();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTQBYTEARRAY(2) && ISOPTQOBJECT(3) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTQBYTEARRAY(2) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QMovie_new3();
   }
