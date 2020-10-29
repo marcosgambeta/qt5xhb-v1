@@ -494,7 +494,7 @@ static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const Q
 HB_FUNC_STATIC( QAUDIODECODER_HASSUPPORT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTARRAY(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISARRAY(2)||ISNIL(2)) )
   {
 #endif
     RENUM( QAudioDecoder::hasSupport( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );

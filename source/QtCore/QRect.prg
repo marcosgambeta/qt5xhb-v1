@@ -405,7 +405,7 @@ void QRect_contains4()
 
 HB_FUNC_STATIC( QRECT_CONTAINS )
 {
-  if( ISBETWEEN(1,2) && ISQPOINT(1) && ISOPTLOG(2) )
+  if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISLOG(2)||ISNIL(2)) )
   {
     QRect_contains1();
   }
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
   {
     QRect_contains3();
   }
-  else if( ISBETWEEN(1,2) && ISQRECT(1) && ISOPTLOG(2) )
+  else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISLOG(2)||ISNIL(2)) )
   {
     QRect_contains4();
   }

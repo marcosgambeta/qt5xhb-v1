@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QCHART_SETBACKGROUNDVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setBackgroundVisible( OPBOOL(1,true) );
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QCHART_SETDROPSHADOWENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setDropShadowEnabled( OPBOOL(1,true) );
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setPlotAreaBackgroundVisible( OPBOOL(1,true) );

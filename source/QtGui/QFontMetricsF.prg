@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
   {
     QFontMetricsF_boundingRect2();
   }
-  else if( ISBETWEEN(3,5) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && ISOPTARRAY(5) )
+  else if( ISBETWEEN(3,5) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISARRAY(5)||ISNIL(5)) )
   {
     QFontMetricsF_boundingRect3();
   }

@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTLOG(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISLOG(3)||ISNIL(3)) )
     {
 #endif
       obj->removeRows( PINT(1), PINT(2), OPBOOL(3,true) );

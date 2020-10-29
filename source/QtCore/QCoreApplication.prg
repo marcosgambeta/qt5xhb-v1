@@ -782,7 +782,7 @@ static void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
 HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+  if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
   {
 #endif
     QCoreApplication::setAttribute( (Qt::ApplicationAttribute) hb_parni(1), OPBOOL(2,true) );

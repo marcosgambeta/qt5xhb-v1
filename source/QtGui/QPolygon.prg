@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   {
     QPolygon_new4();
   }
-  else if( ISBETWEEN(1,2) && ISQRECT(1) && ISOPTLOG(2) )
+  else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISLOG(2)||ISNIL(2)) )
   {
     QPolygon_new5();
   }

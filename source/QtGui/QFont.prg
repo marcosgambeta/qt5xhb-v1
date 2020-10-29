@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QFONT_NEW )
   {
     QFont_new1();
   }
-  else if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && ISOPTLOG(4) )
+  else if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISLOG(4)||ISNIL(4)) )
   {
     QFont_new2();
   }

@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setOption( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1), OPBOOL(2,true) );

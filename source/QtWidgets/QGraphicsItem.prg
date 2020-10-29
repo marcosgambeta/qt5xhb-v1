@@ -1437,7 +1437,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQGRAPHICSITEM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISQGRAPHICSITEM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -3186,7 +3186,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setFlag( (QGraphicsItem::GraphicsItemFlag) hb_parni(1), OPBOOL(2,true) );
@@ -3596,7 +3596,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setTransform( *PQTRANSFORM(1), OPBOOL(2,false) );

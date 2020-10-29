@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QPIXMAP_CREATEHEURISTICMASK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       QBitmap * ptr = new QBitmap( obj->createHeuristicMask( OPBOOL(1,true) ) );

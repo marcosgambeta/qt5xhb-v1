@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
   {
     QMediaContent_new6();
   }
-  else if( ISBETWEEN(1,3) && ISQMEDIAPLAYLIST(1) && (ISQURL(2)||ISNIL(2)) && ISOPTLOG(3) )
+  else if( ISBETWEEN(1,3) && ISQMEDIAPLAYLIST(1) && (ISQURL(2)||ISNIL(2)) && (ISLOG(3)||ISNIL(3)) )
   {
     QMediaContent_new7();
   }

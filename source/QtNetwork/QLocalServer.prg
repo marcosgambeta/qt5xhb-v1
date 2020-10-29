@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && ISOPTLOG(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       bool par2;

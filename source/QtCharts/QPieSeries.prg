@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setLabelsVisible( OPBOOL(1,true) );

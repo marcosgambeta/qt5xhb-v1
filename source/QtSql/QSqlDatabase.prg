@@ -1018,7 +1018,7 @@ static QSqlDatabase database ( const QString & connectionName = QLatin1String( d
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
-  if( (ISCHAR(1)||ISNIL(1)) && ISOPTLOG(2) )
+  if( (ISCHAR(1)||ISNIL(1)) && (ISLOG(2)||ISNIL(2)) )
   {
     QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );

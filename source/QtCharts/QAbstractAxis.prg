@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setVisible( OPBOOL(1,true) );
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setLineVisible( OPBOOL(1,true) );
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINEVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setGridLineVisible( OPBOOL(1,true) );
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINEVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setMinorGridLineVisible( OPBOOL(1,true) );
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setLabelsVisible( OPBOOL(1,true) );
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setTitleVisible( OPBOOL(1,true) );
@@ -1239,7 +1239,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setShadesVisible( OPBOOL(1,true) );
@@ -1565,7 +1565,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETREVERSE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
     {
 #endif
       obj->setReverse( OPBOOL(1,true) );

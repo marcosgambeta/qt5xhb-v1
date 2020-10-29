@@ -1306,7 +1306,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMATRIX(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISQMATRIX(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setMatrix( *PQMATRIX(1), OPBOOL(2,false) );
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setOptimizationFlag( (QGraphicsView::OptimizationFlag) hb_parni(1), OPBOOL(2,true) );
@@ -1384,7 +1384,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setRenderHint( (QPainter::RenderHint) hb_parni(1), OPBOOL(2,true) );
@@ -1560,7 +1560,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setTransform( *PQTRANSFORM(1), OPBOOL(2,false) );

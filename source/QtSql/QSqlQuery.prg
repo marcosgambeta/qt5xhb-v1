@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->seek( PINT(1), OPBOOL(2,false) ) );

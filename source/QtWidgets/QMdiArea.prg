@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QMDIAREA_SETOPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
     {
 #endif
       obj->setOption( (QMdiArea::AreaOption) hb_parni(1), OPBOOL(2,true) );

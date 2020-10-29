@@ -1004,7 +1004,7 @@ static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QS
 HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTARRAY(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISARRAY(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     RENUM( QMediaPlayer::hasSupport( PQSTRING(1), OPQSTRINGLIST(2,QStringList()), ISNIL(3)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(3) ) );

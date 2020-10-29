@@ -440,11 +440,11 @@ void QWinJumpListCategory_addLink2()
 
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTARRAY(3) )
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISARRAY(3)||ISNIL(3)) )
   {
     QWinJumpListCategory_addLink1();
   }
-  else if( ISBETWEEN(3,4) && ISQICON(1) && ISCHAR(2) && ISCHAR(3) && ISOPTARRAY(4) )
+  else if( ISBETWEEN(3,4) && ISQICON(1) && ISCHAR(2) && ISCHAR(3) && (ISARRAY(4)||ISNIL(4)) )
   {
     QWinJumpListCategory_addLink2();
   }

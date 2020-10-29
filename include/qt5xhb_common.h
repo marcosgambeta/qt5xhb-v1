@@ -24,8 +24,6 @@
 #define ISARRAY HB_ISARRAY
 #endif
 
-#define ISOPTARRAY(n) (ISARRAY(n)||ISNIL(n))
-
 // TOCHECK: for xHarbour compatibility
 #ifdef __XHARBOUR__
 #define hb_objGetClass(x) HB_OBJ_CLASS(x)

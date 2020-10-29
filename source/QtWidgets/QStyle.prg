@@ -686,7 +686,7 @@ static int sliderPositionFromValue( int min, int max, int logicalValue, int span
 HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
+  if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISLOG(5)||ISNIL(5)) )
   {
 #endif
     RINT( QStyle::sliderPositionFromValue( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
@@ -705,7 +705,7 @@ static int sliderValueFromPosition( int min, int max, int position, int span, bo
 HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTLOG(5) )
+  if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISLOG(5)||ISNIL(5)) )
   {
 #endif
     RINT( QStyle::sliderValueFromPosition( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
