@@ -24,7 +24,6 @@
 #define ISARRAY HB_ISARRAY
 #endif
 
-#define ISOPTOBJECT(n) (ISOBJECT(n)||ISNIL(n))
 #define ISOPTARRAY(n) (ISARRAY(n)||ISNIL(n))
 
 // TOCHECK: for xHarbour compatibility
