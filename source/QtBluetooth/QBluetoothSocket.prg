@@ -361,15 +361,15 @@ void QBluetoothSocket_connectToService3()
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE )
 {
-  if( ISBETWEEN(1,2) && ISQBLUETOOTHSERVICEINFO(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQBLUETOOTHSERVICEINFO(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QBluetoothSocket_connectToService1();
   }
-  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QBluetoothSocket_connectToService2();
   }
-  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QBluetoothSocket_connectToService3();
   }
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       RBOOL( obj->setSocketDescriptor( PINT(1), (QBluetoothServiceInfo::Protocol) hb_parni(2), ISNIL(3)? (QBluetoothSocket::SocketState) QBluetoothSocket::ConnectedState : (QBluetoothSocket::SocketState) hb_parni(3), ISNIL(4)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(4) ) );

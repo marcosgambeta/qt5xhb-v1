@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QWidget * ptr = obj->cornerWidget( ISNIL(1)? (Qt::Corner) Qt::TopRightCorner : (Qt::Corner) hb_parni(1) );
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QTABWIDGET_SETCORNERWIDGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setCornerWidget( PQWIDGET(1), ISNIL(2)? (Qt::Corner) Qt::TopRightCorner : (Qt::Corner) hb_parni(2) );

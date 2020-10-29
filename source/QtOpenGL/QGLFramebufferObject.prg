@@ -130,11 +130,11 @@ void QGLFramebufferObject_new6()
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQSIZE(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QGLFramebufferObject_new1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLFramebufferObject_new2();
   }
@@ -146,11 +146,11 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
   {
     QGLFramebufferObject_new4();
   }
-  else if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  else if( ISBETWEEN(3,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
     QGLFramebufferObject_new5();
   }
-  else if( ISBETWEEN(2,4) && ISQSIZE(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  else if( ISBETWEEN(2,4) && ISQSIZE(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QGLFramebufferObject_new6();
   }
@@ -262,11 +262,11 @@ void QGLFramebufferObject_drawTexture2()
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 {
-  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLFramebufferObject_drawTexture1();
   }
-  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLFramebufferObject_drawTexture2();
   }
@@ -502,7 +502,7 @@ static void blitFramebuffer ( QGLFramebufferObject * target, const QRect & targe
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,6) && ISQGLFRAMEBUFFEROBJECT(1) && ISQRECT(2) && ISQGLFRAMEBUFFEROBJECT(3) && ISQRECT(4) && ISOPTNUM(5) && ISOPTNUM(6) )
+  if( ISBETWEEN(4,6) && ISQGLFRAMEBUFFEROBJECT(1) && ISQRECT(2) && ISQGLFRAMEBUFFEROBJECT(3) && ISQRECT(4) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
   {
 #endif
     QGLFramebufferObject::blitFramebuffer( PQGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQGLFRAMEBUFFEROBJECT(3), *PQRECT(4), OPGLBITFIELD(5,GL_COLOR_BUFFER_BIT), OPGLENUM(6,GL_NEAREST) );

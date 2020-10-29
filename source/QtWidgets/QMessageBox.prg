@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW )
   {
     QMessageBox_new1();
   }
-  else if( ISBETWEEN(3,6) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && (ISQWIDGET(5)||ISNIL(5)) && ISOPTNUM(6) )
+  else if( ISBETWEEN(3,6) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISQWIDGET(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
   {
     QMessageBox_new2();
   }
@@ -1064,7 +1064,7 @@ static QMessageBox::StandardButton critical( QWidget * parent, const QString & t
 HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
 #endif
     RENUM( QMessageBox::critical( PQWIDGET(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::Ok : (QMessageBox::StandardButtons) hb_parni(4), ISNIL(5)? (QMessageBox::StandardButton) QMessageBox::NoButton : (QMessageBox::StandardButton) hb_parni(5) ) );
@@ -1083,7 +1083,7 @@ static QMessageBox::StandardButton information( QWidget * parent, const QString 
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
 #endif
     RENUM( QMessageBox::information( PQWIDGET(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::Ok : (QMessageBox::StandardButtons) hb_parni(4), ISNIL(5)? (QMessageBox::StandardButton) QMessageBox::NoButton : (QMessageBox::StandardButton) hb_parni(5) ) );
@@ -1102,7 +1102,7 @@ static QMessageBox::StandardButton question( QWidget * parent, const QString & t
 HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
 #endif
     RENUM( QMessageBox::question( PQWIDGET(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::Ok : (QMessageBox::StandardButtons) hb_parni(4), ISNIL(5)? (QMessageBox::StandardButton) QMessageBox::NoButton : (QMessageBox::StandardButton) hb_parni(5) ) );
@@ -1121,7 +1121,7 @@ static QMessageBox::StandardButton warning( QWidget * parent, const QString & ti
 HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(3,5) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
 #endif
     RENUM( QMessageBox::warning( PQWIDGET(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::Ok : (QMessageBox::StandardButtons) hb_parni(4), ISNIL(5)? (QMessageBox::StandardButton) QMessageBox::NoButton : (QMessageBox::StandardButton) hb_parni(5) ) );

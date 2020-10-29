@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       obj->showMessage( PQSTRING(1), PQSTRING(2), ISNIL(3)? (QSystemTrayIcon::MessageIcon) QSystemTrayIcon::Information : (QSystemTrayIcon::MessageIcon) hb_parni(3), OPINT(4,10000) );

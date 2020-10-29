@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QDIR_NEW )
   {
     QDir_new2();
   }
-  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QDir_new3();
   }
@@ -438,11 +438,11 @@ void QDir_entryInfoList2()
 
 HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 {
-  if( ISBETWEEN(1,3) && ISARRAY(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISARRAY(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QDir_entryInfoList1();
   }
-  else if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QDir_entryInfoList2();
   }
@@ -485,11 +485,11 @@ void QDir_entryList2()
 
 HB_FUNC_STATIC( QDIR_ENTRYLIST )
 {
-  if( ISBETWEEN(1,3) && ISARRAY(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISARRAY(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QDir_entryList1();
   }
-  else if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QDir_entryList2();
   }

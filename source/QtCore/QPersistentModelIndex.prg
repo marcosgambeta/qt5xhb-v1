@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( OPINT(1,Qt::DisplayRole) ) );

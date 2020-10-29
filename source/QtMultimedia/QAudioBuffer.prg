@@ -121,11 +121,11 @@ HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
   {
     QAudioBuffer_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISQAUDIOFORMAT(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISQAUDIOFORMAT(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QAudioBuffer_new3();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQAUDIOFORMAT(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQAUDIOFORMAT(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QAudioBuffer_new4();
   }

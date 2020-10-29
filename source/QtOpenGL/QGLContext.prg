@@ -192,11 +192,11 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
   {
     QGLContext_bindTexture2();
   }
-  else if( ISBETWEEN(1,3) && ISQIMAGE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLContext_bindTexture3();
   }
-  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLContext_bindTexture4();
   }
@@ -324,11 +324,11 @@ void QGLContext_drawTexture2()
 
 HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 {
-  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLContext_drawTexture1();
   }
-  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLContext_drawTexture2();
   }

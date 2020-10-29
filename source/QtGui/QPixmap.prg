@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPIXMAP_NEW )
   {
     QPixmap_new4();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QPixmap_new5();
   }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QPIXMAP_CREATEMASKFROMCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QBitmap * ptr = new QBitmap( obj->createMaskFromColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), ISNIL(2)? (Qt::MaskMode) Qt::MaskInColor : (Qt::MaskMode) hb_parni(2) ) );
@@ -677,11 +677,11 @@ void QPixmap_scaled2()
 
 HB_FUNC_STATIC( QPIXMAP_SCALED )
 {
-  if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QPixmap_scaled1();
   }
-  else if( ISBETWEEN(1,3) && ISQSIZE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QPixmap_scaled2();
   }
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QPIXMAP_SCALEDTOWIDTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->scaledToWidth( PINT(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QPIXMAP_SCALEDTOHEIGHT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->scaledToHeight( PINT(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
@@ -771,11 +771,11 @@ void QPixmap_transformed2()
 
 HB_FUNC_STATIC( QPIXMAP_TRANSFORMED )
 {
-  if( ISBETWEEN(1,2) && ISQMATRIX(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQMATRIX(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QPixmap_transformed1();
   }
-  else if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QPixmap_transformed2();
   }
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QPIXMAP_LOAD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->load( PQSTRING(1), OPCONSTCHAR(2,0), ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) ) );
@@ -862,11 +862,11 @@ void QPixmap_loadFromData2()
 
 HB_FUNC_STATIC( QPIXMAP_LOADFROMDATA )
 {
-  if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && ISOPTCHAR(3) && (ISNUM(4)||ISNIL(4)) )
   {
     QPixmap_loadFromData1();
   }
-  else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QPixmap_loadFromData2();
   }
@@ -904,11 +904,11 @@ void QPixmap_save2()
 
 HB_FUNC_STATIC( QPIXMAP_SAVE )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QPixmap_save1();
   }
-  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QPixmap_save2();
   }
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QPIXMAP_CONVERTFROMIMAGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->convertFromImage( *PQIMAGE(1), ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );
@@ -1180,7 +1180,7 @@ static QPixmap grabWindow( WId, int x = 0, int y = 0, int w = -1, int h = -1 )
 HB_FUNC_STATIC( QPIXMAP_GRABWINDOW )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,5) && ISPOINTER(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(1,5) && ISPOINTER(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
 #endif
     QPixmap * ptr = new QPixmap( QPixmap::grabWindow( (WId) hb_parptr(1), OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
@@ -1220,7 +1220,7 @@ HB_FUNC_STATIC( QPIXMAP_GRABWIDGET )
   {
     QPixmap_grabWidget1();
   }
-  else if( ISBETWEEN(1,5) && ISQOBJECT(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  else if( ISBETWEEN(1,5) && ISQOBJECT(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
     QPixmap_grabWidget2();
   }
@@ -1272,7 +1272,7 @@ static QPixmap fromImage( const QImage & image, Qt::ImageConversionFlags flags =
 HB_FUNC_STATIC( QPIXMAP_FROMIMAGE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     QPixmap * ptr = new QPixmap( QPixmap::fromImage( *PQIMAGE(1), ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );
@@ -1292,7 +1292,7 @@ static QPixmap fromImageReader( QImageReader * imageReader, Qt::ImageConversionF
 HB_FUNC_STATIC( QPIXMAP_FROMIMAGEREADER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQIMAGEREADER(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQIMAGEREADER(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     QPixmap * ptr = new QPixmap( QPixmap::fromImageReader( PQIMAGEREADER(1), ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );

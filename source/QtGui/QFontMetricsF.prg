@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
   {
     QFontMetricsF_boundingRect2();
   }
-  else if( ISBETWEEN(3,5) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTARRAY(5) )
+  else if( ISBETWEEN(3,5) && ISQRECTF(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && ISOPTARRAY(5) )
   {
     QFontMetricsF_boundingRect3();
   }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(3,4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       RQSTRING( obj->elidedText( PQSTRING(1), (Qt::TextElideMode) hb_parni(2), PQREAL(3), OPINT(4,0) ) );
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       int par4;

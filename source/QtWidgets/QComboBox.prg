@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQVARIANT(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISQVARIANT(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RINT( obj->findData( *PQVARIANT(1), OPINT(2,Qt::UserRole), ISNIL(3)? (Qt::MatchFlags) Qt::MatchExactly | Qt::MatchCaseSensitive : (Qt::MatchFlags) hb_parni(3) ) );
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->findText( PQSTRING(1), ISNIL(2)? (Qt::MatchFlags) Qt::MatchExactly | Qt::MatchCaseSensitive : (Qt::MatchFlags) hb_parni(2) ) );
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->itemData( PINT(1), OPINT(2,Qt::UserRole) ) );
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQVARIANT(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->setItemData( PINT(1), *PQVARIANT(2), OPINT(3,Qt::UserRole) );

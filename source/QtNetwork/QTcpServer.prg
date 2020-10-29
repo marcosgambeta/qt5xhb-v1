@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTCPSERVER_LISTEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->listen( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && ISOPTLOG(2) )
     {
 #endif
       bool par2;

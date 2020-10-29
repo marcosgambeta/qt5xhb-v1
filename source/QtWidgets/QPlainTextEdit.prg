@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->find( PQSTRING(1), ISNIL(2)? (QTextDocument::FindFlags) 0 : (QTextDocument::FindFlags) hb_parni(2) ) );
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MOVECURSOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->moveCursor( (QTextCursor::MoveOperation) hb_parni(1), ISNIL(2)? (QTextCursor::MoveMode) QTextCursor::MoveAnchor : (QTextCursor::MoveMode) hb_parni(2) );

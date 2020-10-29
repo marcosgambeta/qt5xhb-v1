@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOSTENCRYPTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && (ISQSSLCONFIGURATION(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISQSSLCONFIGURATION(3)||ISNIL(3)) )
     {
 #endif
       obj->connectToHostEncrypted( PQSTRING(1), OPQUINT16(2,443), ISNIL(3)? QSslConfiguration::defaultConfiguration() : *(QSslConfiguration *) Qt5xHb::itemGetPtr(3) );
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_CONNECTTOHOST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->connectToHost( PQSTRING(1), OPQUINT16(2,80) );

@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->findText( PQSTRING(1), ISNIL(2)? (QWebPage::FindFlags) 0 : (QWebPage::FindFlags) hb_parni(2) ) );
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
   {
     QWebView_load1();
   }
-  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ISOPTNUM(2) && (ISQBYTEARRAY(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (ISNUM(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
     QWebView_load2();
   }

@@ -296,7 +296,7 @@ void QBitArray_fill2()
 
 HB_FUNC_STATIC( QBITARRAY_FILL )
 {
-  if( ISBETWEEN(1,2) && ISLOG(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISLOG(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QBitArray_fill1();
   }

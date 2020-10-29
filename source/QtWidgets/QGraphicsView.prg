@@ -381,15 +381,15 @@ void QGraphicsView_ensureVisible3()
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_ENSUREVISIBLE )
 {
-  if( ISBETWEEN(1,3) && ISQRECTF(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QGraphicsView_ensureVisible1();
   }
-  else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) )
+  else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
   {
     QGraphicsView_ensureVisible2();
   }
-  else if( ISBETWEEN(1,3) && ISOBJECT(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISOBJECT(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QGraphicsView_ensureVisible3();
   }
@@ -446,15 +446,15 @@ void QGraphicsView_fitInView3()
 
 HB_FUNC_STATIC( QGRAPHICSVIEW_FITINVIEW )
 {
-  if( ISBETWEEN(1,2) && ISQRECTF(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQRECTF(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QGraphicsView_fitInView1();
   }
-  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
+  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
     QGraphicsView_fitInView2();
   }
-  else if( ISBETWEEN(1,2) && ISOBJECT(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISOBJECT(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QGraphicsView_fitInView3();
   }
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQRECTF(2)||ISNIL(2)) && (ISQRECT(3)||ISNIL(3)) && ISOPTNUM(4) )
+    if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQRECTF(2)||ISNIL(2)) && (ISQRECT(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       obj->render( PQPAINTER(1), ISNIL(2)? QRectF() : *(QRectF *) Qt5xHb::itemGetPtr(2), ISNIL(3)? QRect() : *(QRect *) Qt5xHb::itemGetPtr(3), ISNIL(4)? (Qt::AspectRatioMode) Qt::KeepAspectRatio : (Qt::AspectRatioMode) hb_parni(4) );
@@ -1838,7 +1838,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQRECTF(1)||ISNIL(1)) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISQRECTF(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->invalidateScene( ISNIL(1)? QRectF() : *(QRectF *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (QGraphicsScene::SceneLayers) QGraphicsScene::AllLayers : (QGraphicsScene::SceneLayers) hb_parni(2) );

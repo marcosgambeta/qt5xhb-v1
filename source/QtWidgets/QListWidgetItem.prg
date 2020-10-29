@@ -139,15 +139,15 @@ void QListWidgetItem_new4()
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQLISTWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,1) && (ISQLISTWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QListWidgetItem_new1();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQLISTWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQLISTWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QListWidgetItem_new2();
   }
-  else if( ISBETWEEN(2,4) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISQLISTWIDGET(3)||ISNIL(3)) && ISOPTNUM(4) )
+  else if( ISBETWEEN(2,4) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && (ISQLISTWIDGET(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QListWidgetItem_new3();
   }

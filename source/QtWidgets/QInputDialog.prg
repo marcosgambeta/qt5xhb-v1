@@ -109,7 +109,7 @@ QInputDialog( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QInputDialog * obj = new QInputDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -1225,7 +1225,7 @@ static double getDouble( QWidget * parent, const QString & title, const QString 
 HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) && ISOPTNUM(7) && ISOPTLOG(8) && ISOPTNUM(9) )
+  if( ISBETWEEN(3,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && ISOPTLOG(8) && (ISNUM(9)||ISNIL(9)) )
   {
 #endif
     bool par8;
@@ -1246,7 +1246,7 @@ static int getInt( QWidget * parent, const QString & title, const QString & labe
 HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) && ISOPTNUM(7) && ISOPTLOG(8) && ISOPTNUM(9) )
+  if( ISBETWEEN(3,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && ISOPTLOG(8) && (ISNUM(9)||ISNIL(9)) )
   {
 #endif
     bool par8;
@@ -1267,7 +1267,7 @@ static QString getItem( QWidget * parent, const QString & title, const QString &
 HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISARRAY(4) && ISOPTNUM(5) && ISOPTLOG(6) && ISOPTLOG(7) && ISOPTNUM(8) && ISOPTNUM(9) )
+  if( ISBETWEEN(4,9) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISARRAY(4) && (ISNUM(5)||ISNIL(5)) && ISOPTLOG(6) && ISOPTLOG(7) && (ISNUM(8)||ISNIL(8)) && (ISNUM(9)||ISNIL(9)) )
   {
 #endif
     bool par7;
@@ -1288,7 +1288,7 @@ static QString getText( QWidget * parent, const QString & title, const QString &
 HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,8) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTCHAR(5) && ISOPTLOG(6) && ISOPTNUM(7) && ISOPTNUM(8) )
+  if( ISBETWEEN(3,8) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && ISOPTCHAR(5) && ISOPTLOG(6) && (ISNUM(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) )
   {
 #endif
     bool par6;
@@ -1309,7 +1309,7 @@ static QString getMultiLineText( QWidget * parent, const QString & title, const 
 HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,7) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) && ISOPTLOG(5) && ISOPTNUM(6) && ISOPTNUM(7) )
+  if( ISBETWEEN(3,7) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) && ISOPTLOG(5) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) )
   {
 #endif
     bool par5;

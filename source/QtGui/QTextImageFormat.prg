@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETQUALITY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->setQuality( OPINT(1,100) );

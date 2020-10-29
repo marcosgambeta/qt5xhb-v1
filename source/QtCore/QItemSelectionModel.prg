@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QModelIndexList list = obj->selectedRows( OPINT(1,0) );
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QModelIndexList list = obj->selectedColumns( OPINT(1,0) );

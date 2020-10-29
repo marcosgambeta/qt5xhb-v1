@@ -97,7 +97,7 @@ void QHostInfo_new2()
 
 HB_FUNC_STATIC( QHOSTINFO_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QHostInfo_new1();
   }

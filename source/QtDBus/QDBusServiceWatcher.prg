@@ -92,7 +92,7 @@ HB_FUNC( QDBUSSERVICEWATCHER_NEW )
   {
     QDBusServiceWatcher_new1();
   }
-  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISQDBUSCONNECTION(2) && ISOPTNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISQDBUSCONNECTION(2) && (ISNUM(3)||ISNIL(3)) && (ISQOBJECT(4)||ISNIL(4)) )
   {
     QDBusServiceWatcher_new2();
   }

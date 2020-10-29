@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && ISOPTCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QObject * ptr = obj->findChild<QObject *>( OPQSTRING(1,QString()), ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
@@ -688,15 +688,15 @@ void QObject_findChildren3()
 
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {
-  if( ISBETWEEN(0,2) && ISOPTCHAR(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && ISOPTCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QObject_findChildren1();
   }
-  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QObject_findChildren2();
   }
-  else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QObject_findChildren3();
   }
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->startTimer( PINT(1), ISNIL(2)? (Qt::TimerType) Qt::CoarseTimer : (Qt::TimerType) hb_parni(2) ) );
@@ -1166,7 +1166,7 @@ static QString tr ( const char * sourceText, const char * disambiguation = 0, in
 HB_FUNC_STATIC( QOBJECT_TR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     RQSTRING( QObject::tr( PCONSTCHAR(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );

@@ -70,7 +70,7 @@ QQmlIncubator(IncubationMode mode = Asynchronous)
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QQmlIncubator * obj = new QQmlIncubator( ISNIL(1)? (QQmlIncubator::IncubationMode) QQmlIncubator::Asynchronous : (QQmlIncubator::IncubationMode) hb_parni(1) );
     Qt5xHb::returnNewObject( obj, true );

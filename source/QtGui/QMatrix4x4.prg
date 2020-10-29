@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
   {
     QMatrix4x4_rotate1();
   }
-  else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
+  else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
     QMatrix4x4_rotate2();
   }
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QMATRIX4X4_VIEWPORT )
   {
     QMatrix4x4_viewport1();
   }
-  else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) && ISOPTNUM(6) )
+  else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) && (ISNUM(6)||ISNIL(6)) )
   {
     QMatrix4x4_viewport2();
   }

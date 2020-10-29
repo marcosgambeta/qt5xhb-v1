@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_INDEX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISQMODELINDEX(3)||ISNIL(3)) )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), OPINT(2,0), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );

@@ -723,19 +723,19 @@ void QTextDocument_find4()
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QTextDocument_find1();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISQTEXTCURSOR(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISQTEXTCURSOR(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QTextDocument_find2();
   }
-  else if( ISBETWEEN(1,3) && ISQREGEXP(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQREGEXP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QTextDocument_find3();
   }
-  else if( ISBETWEEN(2,3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQREGEXP(1) && ISQTEXTCURSOR(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QTextDocument_find4();
   }
@@ -1706,7 +1706,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->clearUndoRedoStacks( ISNIL(1)? (QTextDocument::Stacks) QTextDocument::UndoAndRedoStacks : (QTextDocument::Stacks) hb_parni(1) );

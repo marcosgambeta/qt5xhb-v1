@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETHOST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setHost( PQSTRING(1), ISNIL(2)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(2) );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_HOST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->host( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::FullyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );

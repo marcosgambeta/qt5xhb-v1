@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       RBOOL( obj->setHeaderData( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );

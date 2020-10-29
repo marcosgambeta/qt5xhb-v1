@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISQOBJECT(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISQOBJECT(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->addToJavaScriptWindowObject( PQSTRING(1), PQOBJECT(2), ISNIL(3)? (QWebFrame::ValueOwnership) QWebFrame::QtOwnership : (QWebFrame::ValueOwnership) hb_parni(3) );
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QWEBFRAME_LOAD )
   {
     QWebFrame_load1();
   }
-  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ISOPTNUM(2) && (ISQBYTEARRAY(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (ISNUM(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
     QWebFrame_load2();
   }

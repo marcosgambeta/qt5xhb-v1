@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRINGLIST( obj->families( ISNIL(1)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(1) ) );

@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QBARSET_REMOVE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->remove( PINT(1), OPINT(2,1) );

@@ -321,7 +321,7 @@ QWidget( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QWIDGET_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QWidget * obj = new QWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -1570,7 +1570,7 @@ HB_FUNC_STATIC( QWIDGET_GRABGESTURE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->grabGesture( (Qt::GestureType) hb_parni(1), ISNIL(2)? (Qt::GestureFlags) Qt::GestureFlags() : (Qt::GestureFlags) hb_parni(2) );
@@ -1671,7 +1671,7 @@ HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQKEYSEQUENCE(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQKEYSEQUENCE(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->grabShortcut( *PQKEYSEQUENCE(1), ISNIL(2)? (Qt::ShortcutContext) Qt::WindowShortcut : (Qt::ShortcutContext) hb_parni(2) ) );
@@ -3457,11 +3457,11 @@ void QWidget_render2()
 
 HB_FUNC_STATIC( QWIDGET_RENDER )
 {
-  if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
+  if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QWidget_render2();
   }
-  else if( ISBETWEEN(1,4) && ISOBJECT(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && ISOPTNUM(4) )
+  else if( ISBETWEEN(1,4) && ISOBJECT(1) && (ISQPOINT(2)||ISNIL(2)) && (ISQREGION(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QWidget_render1();
   }
@@ -6663,7 +6663,7 @@ static QWidget * createWindowContainer( QWindow * window, QWidget * parent = 0, 
 HB_FUNC_STATIC( QWIDGET_CREATEWINDOWCONTAINER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && ISQWINDOW(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISQWINDOW(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     QWidget * ptr = QWidget::createWindowContainer( PQWINDOW(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );

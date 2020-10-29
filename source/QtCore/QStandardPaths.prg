@@ -105,7 +105,7 @@ static QString locate(StandardLocation type, const QString &fileName, LocateOpti
 HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     RQSTRING( QStandardPaths::locate( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );
@@ -124,7 +124,7 @@ static QStringList locateAll(StandardLocation type, const QString &fileName, Loc
 HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     RQSTRINGLIST( QStandardPaths::locateAll( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );

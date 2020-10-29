@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISQPOLYGON(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISQPOLYGON(3) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       obj->putPoints( PINT(1), PINT(2), *PQPOLYGON(3), OPINT(4,0) );

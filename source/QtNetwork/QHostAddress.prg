@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISEQUAL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQHOSTADDRESS(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQHOSTADDRESS(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->isEqual( *PQHOSTADDRESS(1), ISNIL(2)? (QHostAddress::ConversionMode) QHostAddress::TolerantConversion : (QHostAddress::ConversionMode) hb_parni(2) ) );

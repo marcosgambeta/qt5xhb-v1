@@ -168,11 +168,11 @@ void QGLPixelBuffer_bindTexture3()
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 {
-  if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QGLPixelBuffer_bindTexture1();
   }
-  else if( ISBETWEEN(1,2) && ISQPIXMAP(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QGLPixelBuffer_bindTexture2();
   }
@@ -297,11 +297,11 @@ void QGLPixelBuffer_drawTexture2()
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 {
-  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLPixelBuffer_drawTexture1();
   }
-  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLPixelBuffer_drawTexture2();
   }

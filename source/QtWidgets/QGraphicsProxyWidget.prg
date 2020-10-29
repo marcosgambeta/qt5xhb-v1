@@ -62,7 +62,7 @@ QGraphicsProxyWidget( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QGraphicsProxyWidget * obj = new QGraphicsProxyWidget( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );

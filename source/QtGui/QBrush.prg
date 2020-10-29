@@ -179,11 +179,11 @@ HB_FUNC_STATIC( QBRUSH_NEW )
   {
     QBrush_new2();
   }
-  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||ISCHAR(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QBrush_new3();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QBrush_new4();
   }

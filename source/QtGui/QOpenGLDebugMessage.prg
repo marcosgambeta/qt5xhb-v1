@@ -266,7 +266,7 @@ static QOpenGLDebugMessage createApplicationMessage( const QString & text, GLuin
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATEAPPLICATIONMESSAGE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
 #endif
     QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createApplicationMessage( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Severity) QOpenGLDebugMessage::NotificationSeverity : (QOpenGLDebugMessage::Severity) hb_parni(3), ISNIL(4)? (QOpenGLDebugMessage::Type) QOpenGLDebugMessage::OtherType : (QOpenGLDebugMessage::Type) hb_parni(4) ) );
@@ -286,7 +286,7 @@ static QOpenGLDebugMessage createThirdPartyMessage( const QString & text, GLuint
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_CREATETHIRDPARTYMESSAGE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
 #endif
     QOpenGLDebugMessage * ptr = new QOpenGLDebugMessage( QOpenGLDebugMessage::createThirdPartyMessage( PQSTRING(1), OPGLUINT(2,0), ISNIL(3)? (QOpenGLDebugMessage::Severity) QOpenGLDebugMessage::NotificationSeverity : (QOpenGLDebugMessage::Severity) hb_parni(3), ISNIL(4)? (QOpenGLDebugMessage::Type) QOpenGLDebugMessage::OtherType : (QOpenGLDebugMessage::Type) hb_parni(4) ) );

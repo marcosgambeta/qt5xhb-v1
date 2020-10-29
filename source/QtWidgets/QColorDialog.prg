@@ -441,7 +441,7 @@ static QColor getColor( const QColor & initial = Qt::white, QWidget * parent = 0
 HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,4) && (ISQCOLOR(1)||ISNIL(1)) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(0,4) && (ISQCOLOR(1)||ISNIL(1)) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTCHAR(3) && (ISNUM(4)||ISNIL(4)) )
   {
 #endif
     QColor * ptr = new QColor( QColorDialog::getColor( ISNIL(1)? Qt::white : *(QColor *) Qt5xHb::itemGetPtr(1), OPQWIDGET(2,0), OPQSTRING(3,QString()), ISNIL(4)? (QColorDialog::ColorDialogOptions) 0 : (QColorDialog::ColorDialogOptions) hb_parni(4) ) );

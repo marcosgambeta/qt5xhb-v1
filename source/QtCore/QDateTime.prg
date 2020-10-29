@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
   {
     QDateTime_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQDATE(1) && ISQTIME(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQDATE(1) && ISQTIME(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QDateTime_new3();
   }
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
   {
     QDateTime_toString1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QDateTime_toString2();
   }
@@ -896,7 +896,7 @@ void QDateTime_fromString2()
 
 HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QDateTime_fromString1();
   }

@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QCAMERAINFO_AVAILABLECAMERAS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
 #endif
     QList<QCameraInfo> list = QCameraInfo::availableCameras( ISNIL(1)? (QCamera::Position) QCamera::UnspecifiedPosition : (QCamera::Position) hb_parni(1) );

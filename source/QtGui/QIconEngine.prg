@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QList<QSize> list = obj->availableSizes( ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );

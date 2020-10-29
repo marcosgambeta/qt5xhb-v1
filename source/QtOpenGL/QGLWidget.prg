@@ -112,15 +112,15 @@ void QGLWidget_new3()
 
 HB_FUNC_STATIC( QGLWIDGET_NEW )
 {
-  if( ISBETWEEN(0,3) && (ISQWIDGET(1)||ISNIL(1)) && (ISQGLWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
+  if( ISBETWEEN(0,3) && (ISQWIDGET(1)||ISNIL(1)) && (ISQGLWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLWidget_new1();
   }
-  else if( ISBETWEEN(1,4) && ISQGLCONTEXT(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISQGLWIDGET(3)||ISNIL(3)) && ISOPTNUM(4) )
+  else if( ISBETWEEN(1,4) && ISQGLCONTEXT(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISQGLWIDGET(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QGLWidget_new2();
   }
-  else if( ISBETWEEN(1,4) && ISQGLFORMAT(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISQGLWIDGET(3)||ISNIL(3)) && ISOPTNUM(4) )
+  else if( ISBETWEEN(1,4) && ISQGLFORMAT(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISQGLWIDGET(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QGLWidget_new3();
   }
@@ -224,19 +224,19 @@ void QGLWidget_bindTexture5()
 
 HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 {
-  if( ISBETWEEN(1,3) && ISQIMAGE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLWidget_bindTexture1();
   }
-  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLWidget_bindTexture2();
   }
-  else if( ISBETWEEN(3,4) && ISQIMAGE(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
+  else if( ISBETWEEN(3,4) && ISQIMAGE(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
     QGLWidget_bindTexture3();
   }
-  else if( ISBETWEEN(3,4) && ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) && ISOPTNUM(4) )
+  else if( ISBETWEEN(3,4) && ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
   {
     QGLWidget_bindTexture4();
   }
@@ -413,11 +413,11 @@ void QGLWidget_drawTexture2()
 
 HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 {
-  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLWidget_drawTexture1();
   }
-  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QGLWidget_drawTexture2();
   }
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,3) && ISOPTNUM(1) && ISOPTNUM(2) && ISOPTLOG(3) )
+    if( ISBETWEEN(0,3) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) && ISOPTLOG(3) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->renderPixmap( OPINT(1,0), OPINT(2,0), OPBOOL(3,false) ) );

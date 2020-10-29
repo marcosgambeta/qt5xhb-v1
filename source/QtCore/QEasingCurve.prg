@@ -96,7 +96,7 @@ void QEasingCurve_new2()
 
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QEasingCurve_new1();
   }

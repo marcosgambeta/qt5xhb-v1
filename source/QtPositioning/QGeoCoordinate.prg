@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ATDISTANCEANDAZIMUTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       QGeoCoordinate * ptr = new QGeoCoordinate( obj->atDistanceAndAzimuth( PQREAL(1), PQREAL(2), OPQREAL(3,0.0) ) );
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_TOSTRING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->toString( ISNIL(1)? (QGeoCoordinate::CoordinateFormat) QGeoCoordinate::DegreesMinutesSecondsWithHemisphere : (QGeoCoordinate::CoordinateFormat) hb_parni(1) ) );

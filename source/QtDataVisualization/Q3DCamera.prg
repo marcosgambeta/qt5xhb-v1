@@ -606,7 +606,7 @@ HB_FUNC_STATIC( Q3DCAMERA_SETCAMERAPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->setCameraPosition( PFLOAT(1), PFLOAT(2), OPFLOAT(3,100.0f) );

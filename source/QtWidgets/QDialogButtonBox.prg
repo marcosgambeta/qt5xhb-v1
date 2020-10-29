@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
   {
     QDialogButtonBox_new2();
   }
-  else if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && (ISQWIDGET(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
   {
     QDialogButtonBox_new3();
   }

@@ -111,7 +111,7 @@ explicit QMediaPlayer(QObject *parent = Q_NULLPTR, Flags flags = Flags())
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QMediaPlayer * obj = new QMediaPlayer( OPQOBJECT(1,0), ISNIL(2)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -1004,7 +1004,7 @@ static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QS
 HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTARRAY(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTARRAY(2) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     RENUM( QMediaPlayer::hasSupport( PQSTRING(1), OPQSTRINGLIST(2,QStringList()), ISNIL(3)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(3) ) );
@@ -1023,7 +1023,7 @@ static QStringList supportedMimeTypes(Flags flags = Flags())
 HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDMIMETYPES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
 #endif
     RQSTRINGLIST( QMediaPlayer::supportedMimeTypes( ISNIL(1)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(1) ) );

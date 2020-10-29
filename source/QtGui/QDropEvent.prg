@@ -64,7 +64,7 @@ QDropEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * data,
 */
 HB_FUNC_STATIC( QDROPEVENT_NEW )
 {
-  if( ISBETWEEN(5,6) && ISQPOINT(1) && ISNUM(2) && ISQMIMEDATA(3) && ISNUM(4) && ISNUM(5) && ISOPTNUM(6) )
+  if( ISBETWEEN(5,6) && ISQPOINT(1) && ISNUM(2) && ISQMIMEDATA(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) )
   {
     QDropEvent * obj = new QDropEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (QEvent::Type) QEvent::Drop : (QEvent::Type) hb_parni(6) );
     Qt5xHb::returnNewObject( obj, false );

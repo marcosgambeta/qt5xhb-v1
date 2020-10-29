@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
   {
     QSqlError_new1();
   }
-  else if( ISBETWEEN(0,4) && ISOPTCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) && ISOPTCHAR(4) )
+  else if( ISBETWEEN(0,4) && ISOPTCHAR(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) && ISOPTCHAR(4) )
   {
     QSqlError_new2();
   }

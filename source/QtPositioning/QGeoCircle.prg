@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
   {
     QGeoCircle_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QGeoCircle_new2();
   }

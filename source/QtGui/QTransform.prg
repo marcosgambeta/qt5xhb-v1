@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
   {
     QTransform_new2();
   }
-  else if( ISBETWEEN(8,9) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && ISOPTNUM(9) )
+  else if( ISBETWEEN(8,9) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && (ISNUM(9)||ISNIL(9)) )
   {
     QTransform_new3();
   }
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QTransform * ptr = &obj->rotate( PQREAL(1), ISNIL(2)? (Qt::Axis) Qt::ZAxis : (Qt::Axis) hb_parni(2) );
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATERADIANS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QTransform * ptr = &obj->rotateRadians( PQREAL(1), ISNIL(2)? (Qt::Axis) Qt::ZAxis : (Qt::Axis) hb_parni(2) );

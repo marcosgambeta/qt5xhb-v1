@@ -364,7 +364,7 @@ void QScriptEngine_evaluate2()
 
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QScriptEngine_evaluate1();
   }
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->newArray( OPUINT(1,0) ) );
@@ -685,11 +685,11 @@ void QScriptEngine_newQObject2()
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWQOBJECT )
 {
-  if( ISBETWEEN(1,3) && ISQOBJECT(1) && ISOPTNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISQOBJECT(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QScriptEngine_newQObject1();
   }
-  else if( ISBETWEEN(2,4) && ISQSCRIPTVALUE(1) && ISQOBJECT(2) && ISOPTNUM(3) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISQSCRIPTVALUE(1) && ISQOBJECT(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QScriptEngine_newQObject2();
   }

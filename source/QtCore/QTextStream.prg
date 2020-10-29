@@ -164,11 +164,11 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
   {
     QTextStream_new2();
   }
-  else if( ISBETWEEN(1,2) && ISPOINTER(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QTextStream_new3();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QTextStream_new6();
   }
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SETSTRING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setString( NULL, ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->readLine( OPQINT64(1,0) ) );

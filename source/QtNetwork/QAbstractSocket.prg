@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->setSocketDescriptor( PQINTPTR(1), ISNIL(2)? (QAbstractSocket::SocketState) QAbstractSocket::ConnectedState : (QAbstractSocket::SocketState) hb_parni(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) ) );
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForConnected( OPINT(1,30000) ) );
@@ -931,7 +931,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
@@ -955,7 +955,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForDisconnected( OPINT(1,30000) ) );

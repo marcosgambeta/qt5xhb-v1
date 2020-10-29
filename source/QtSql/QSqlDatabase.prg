@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRINGLIST( obj->tables( ISNIL(1)? (QSql::TableType) QSql::Tables : (QSql::TableType) hb_parni(1) ) );

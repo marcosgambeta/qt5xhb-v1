@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QNetworkDatagram * ptr = new QNetworkDatagram( obj->receiveDatagram( OPQINT64(1,-1) ) );

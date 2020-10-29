@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QWINDOW_ISANCESTOROF )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWINDOW(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQWINDOW(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->isAncestorOf( PQWINDOW(1), ISNIL(2)? (QWindow::AncestorMode) QWindow::IncludeTransients : (QWindow::AncestorMode) hb_parni(2) ) );

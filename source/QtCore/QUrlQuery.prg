@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QURLQUERY_ALLQUERYITEMVALUES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RQSTRINGLIST( obj->allQueryItemValues( PQSTRING(1), ISNIL(2)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(2) ) );
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->query( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QURLQUERY_QUERYITEMVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RQSTRING( obj->queryItemValue( PQSTRING(1), ISNIL(2)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(2) ) );
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QURLQUERY_TOSTRING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->toString( ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::PrettyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );

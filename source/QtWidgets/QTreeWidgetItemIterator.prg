@@ -88,11 +88,11 @@ HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
   {
     QTreeWidgetItemIterator_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQTREEWIDGET(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQTREEWIDGET(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QTreeWidgetItemIterator_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QTreeWidgetItemIterator_new3();
   }

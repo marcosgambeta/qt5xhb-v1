@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RINT( obj->exec( ISNIL(1)? (QEventLoop::ProcessEventsFlags) QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->exit( OPINT(1,0) );
@@ -198,7 +198,7 @@ void QEventLoop_processEvents2()
 
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QEventLoop_processEvents1();
   }

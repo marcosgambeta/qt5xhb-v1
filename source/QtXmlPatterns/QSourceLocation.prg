@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
   {
     QSourceLocation_new2();
   }
-  else if( ISBETWEEN(1,3) && ISQURL(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISQURL(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QSourceLocation_new3();
   }

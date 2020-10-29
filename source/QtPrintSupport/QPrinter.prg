@@ -144,11 +144,11 @@ void QPrinter_new2()
 
 HB_FUNC_STATIC( QPRINTER_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QPrinter_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQPRINTERINFO(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQPRINTERINFO(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QPrinter_new2();
   }

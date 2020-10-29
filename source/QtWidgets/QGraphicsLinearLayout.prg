@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDSTRETCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->addStretch( OPINT(1,1) );
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->insertStretch( PINT(1), OPINT(2,1) );

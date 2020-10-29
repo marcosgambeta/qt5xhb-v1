@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QList<QGlyphRun> list = obj->glyphRuns( OPINT(1,-1), OPINT(2,-1) );

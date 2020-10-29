@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
   {
     QVideoSurfaceFormat_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQSIZE(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISQSIZE(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QVideoSurfaceFormat_new2();
   }

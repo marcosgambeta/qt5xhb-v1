@@ -128,15 +128,15 @@ HB_FUNC_STATIC( QREGION_NEW )
   {
     QRegion_new1();
   }
-  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISOPTNUM(5) )
+  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
   {
     QRegion_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQRECT(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QRegion_new3();
   }
-  else if( ISBETWEEN(1,2) && ISQPOLYGON(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISQPOLYGON(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QRegion_new4();
   }

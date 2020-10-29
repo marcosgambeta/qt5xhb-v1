@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QList<QNetworkConfiguration> list = obj->allConfigurations( ISNIL(1)? (QNetworkConfiguration::StateFlags) QNetworkConfiguration::StateFlags() : (QNetworkConfiguration::StateFlags) hb_parni(1) );

@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->sortItems( ISNIL(1)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(1) );
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQLISTWIDGETITEM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQLISTWIDGETITEM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->scrollToItem( PQLISTWIDGETITEM(1), ISNIL(2)? (QAbstractItemView::ScrollHint) QAbstractItemView::EnsureVisible : (QAbstractItemView::ScrollHint) hb_parni(2) );

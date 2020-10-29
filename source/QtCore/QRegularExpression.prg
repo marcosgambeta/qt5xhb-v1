@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
   {
     QRegularExpression_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QRegularExpression_new2();
   }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_GLOBALMATCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       QRegularExpressionMatchIterator * ptr = new QRegularExpressionMatchIterator( obj->globalMatch( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QRegularExpression::MatchType) QRegularExpression::NormalMatch : (QRegularExpression::MatchType) hb_parni(3), ISNIL(4)? (QRegularExpression::MatchOptions) QRegularExpression::NoMatchOption : (QRegularExpression::MatchOptions) hb_parni(4) ) );
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSION_MATCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       QRegularExpressionMatch * ptr = new QRegularExpressionMatch( obj->match( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QRegularExpression::MatchType) QRegularExpression::NormalMatch : (QRegularExpression::MatchType) hb_parni(3), ISNIL(4)? (QRegularExpression::MatchOptions) QRegularExpression::NoMatchOption : (QRegularExpression::MatchOptions) hb_parni(4) ) );

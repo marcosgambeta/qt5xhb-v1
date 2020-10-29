@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SCROLLTO )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->scrollTo( *PQMODELINDEX(1), ISNIL(2)? (QAbstractItemView::ScrollHint) QAbstractItemView::EnsureVisible : (QAbstractItemView::ScrollHint) hb_parni(2) );

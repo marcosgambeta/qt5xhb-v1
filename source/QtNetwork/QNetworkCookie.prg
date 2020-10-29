@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toRawForm( ISNIL(1)? (QNetworkCookie::RawForm) QNetworkCookie::Full : (QNetworkCookie::RawForm) hb_parni(1) ) );

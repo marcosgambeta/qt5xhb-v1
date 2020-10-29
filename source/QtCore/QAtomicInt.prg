@@ -102,7 +102,7 @@ void QAtomicInt_new2()
 
 HB_FUNC_STATIC( QATOMICINT_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QAtomicInt_new1();
   }

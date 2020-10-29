@@ -176,11 +176,11 @@ void QByteArrayMatcher_indexIn2()
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 {
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QByteArrayMatcher_indexIn1();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QByteArrayMatcher_indexIn2();
   }

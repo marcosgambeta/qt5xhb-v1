@@ -233,11 +233,11 @@ void QSslSocket_connectToHostEncrypted2()
 
 HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOSTENCRYPTED )
 {
-  if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QSslSocket_connectToHostEncrypted1();
   }
-  else if( ISBETWEEN(3,5) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  else if( ISBETWEEN(3,5) && ISCHAR(1) && ISNUM(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
     QSslSocket_connectToHostEncrypted2();
   }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->setSocketDescriptor( PQINTPTR(1), ISNIL(2)? (QAbstractSocket::SocketState) QAbstractSocket::ConnectedState : (QAbstractSocket::SocketState) hb_parni(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) ) );
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CONNECTTOHOST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       obj->connectToHost( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
   {
     QSslSocket_setLocalCertificate1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QSslSocket_setLocalCertificate2();
   }
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
   {
     QSslSocket_setPrivateKey1();
   }
-  else if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && (ISQBYTEARRAY(4)||ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISQBYTEARRAY(4)||ISNIL(4)) )
   {
     QSslSocket_setPrivateKey2();
   }
@@ -1566,7 +1566,7 @@ void QSslSocket_addCaCertificates2()
 
 HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATES )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QSslSocket_addCaCertificates1();
   }
@@ -1748,7 +1748,7 @@ void QSslSocket_addDefaultCaCertificates2()
 
 HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATES )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QSslSocket_addDefaultCaCertificates1();
   }
@@ -1895,7 +1895,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForConnected( OPINT(1,30000) ) );
@@ -1919,7 +1919,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForEncrypted( OPINT(1,30000) ) );
@@ -1943,7 +1943,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
@@ -1967,7 +1967,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
@@ -1991,7 +1991,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORDISCONNECTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForDisconnected( OPINT(1,30000) ) );

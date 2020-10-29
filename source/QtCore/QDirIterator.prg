@@ -107,19 +107,19 @@ void QDirIterator_new4()
 
 HB_FUNC_STATIC( QDIRITERATOR_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQDIR(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQDIR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QDirIterator_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QDirIterator_new2();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QDirIterator_new3();
   }
-  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISARRAY(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QDirIterator_new4();
   }

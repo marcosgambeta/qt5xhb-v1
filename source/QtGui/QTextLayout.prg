@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->nextCursorPosition( PINT(1), ISNIL(2)? (QTextLayout::CursorMode) QTextLayout::SkipCharacters : (QTextLayout::CursorMode) hb_parni(2) ) );
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RINT( obj->previousCursorPosition( PINT(1), ISNIL(2)? (QTextLayout::CursorMode) QTextLayout::SkipCharacters : (QTextLayout::CursorMode) hb_parni(2) ) );

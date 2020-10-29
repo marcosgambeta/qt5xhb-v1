@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSCROLLER_HANDLEINPUT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQPOINTF(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISNUM(1) && ISQPOINTF(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       RBOOL( obj->handleInput( (QScroller::Input) hb_parni(1), *PQPOINTF(2), OPQINT64(3,0) ) );
@@ -576,7 +576,7 @@ static Qt::GestureType grabGesture( QObject * target, QScroller::ScrollerGesture
 HB_FUNC_STATIC( QSCROLLER_GRABGESTURE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQOBJECT(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     RENUM( QScroller::grabGesture( PQOBJECT(1), ISNIL(2)? (QScroller::ScrollerGestureType) QScroller::TouchGesture : (QScroller::ScrollerGestureType) hb_parni(2) ) );

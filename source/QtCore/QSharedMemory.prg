@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->create( PINT(1), ISNIL(2)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(2) ) );
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->attach( ISNIL(1)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );

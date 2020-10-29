@@ -137,7 +137,7 @@ void QRegularExpressionMatch_captured2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTURED )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QRegularExpressionMatch_captured1();
   }
@@ -184,7 +184,7 @@ void QRegularExpressionMatch_capturedEnd2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDEND )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QRegularExpressionMatch_capturedEnd1();
   }
@@ -231,7 +231,7 @@ void QRegularExpressionMatch_capturedLength2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QRegularExpressionMatch_capturedLength1();
   }
@@ -280,7 +280,7 @@ void QRegularExpressionMatch_capturedRef2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QRegularExpressionMatch_capturedRef1();
   }
@@ -327,7 +327,7 @@ void QRegularExpressionMatch_capturedStart2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDSTART )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QRegularExpressionMatch_capturedStart1();
   }

@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQSIZE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       QSize * ptr = new QSize( obj->actualSize( *PQSIZE(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) ) );
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QICON_ADDFILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,4) && ISCHAR(1) && (ISQSIZE(2)||ISNIL(2)) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN(1,4) && ISCHAR(1) && (ISQSIZE(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
     {
 #endif
       obj->addFile( PQSTRING(1), ISNIL(2)? QSize() : *(QSize *) Qt5xHb::itemGetPtr(2), ISNIL(3)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(3), ISNIL(4)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(4) );
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QICON_ADDPIXMAP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQPIXMAP(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->addPixmap( *PQPIXMAP(1), ISNIL(2)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(2), ISNIL(3)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(3) );
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QICON_AVAILABLESIZES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       QList<QSize> list = obj->availableSizes( ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
@@ -388,11 +388,11 @@ void QIcon_paint2()
 
 HB_FUNC_STATIC( QICON_PAINT )
 {
-  if( ISBETWEEN(2,5) && ISQPAINTER(1) && ISQRECT(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  if( ISBETWEEN(2,5) && ISQPAINTER(1) && ISQRECT(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
     QIcon_paint1();
   }
-  else if( ISBETWEEN(5,8) && ISQPAINTER(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISOPTNUM(6) && ISOPTNUM(7) && ISOPTNUM(8) )
+  else if( ISBETWEEN(5,8) && ISQPAINTER(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) )
   {
     QIcon_paint2();
   }
@@ -446,15 +446,15 @@ void QIcon_pixmap3()
 
 HB_FUNC_STATIC( QICON_PIXMAP )
 {
-  if( ISBETWEEN(1,3) && ISQSIZE(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QIcon_pixmap1();
   }
-  else if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+  else if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QIcon_pixmap2();
   }
-  else if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QIcon_pixmap3();
   }

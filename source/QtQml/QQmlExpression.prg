@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->setSourceLocation( PQSTRING(1), PINT(2), OPINT(3,0) );

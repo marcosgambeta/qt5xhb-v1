@@ -126,11 +126,11 @@ void QSslCertificate_new3()
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QSslCertificate_new1();
   }
-  else if( ISBETWEEN(0,2) && (ISQBYTEARRAY(1)||ISNIL(1)) && ISOPTNUM(2) )
+  else if( ISBETWEEN(0,2) && (ISQBYTEARRAY(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QSslCertificate_new2();
   }
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->digest( ISNIL(1)? (QCryptographicHash::Algorithm) QCryptographicHash::Md5 : (QCryptographicHash::Algorithm) hb_parni(1) ) );
@@ -804,7 +804,7 @@ static QList<QSslCertificate> fromPath(const QString &path, QSsl::EncodingFormat
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
 #endif
     QList<QSslCertificate> list = QSslCertificate::fromPath( PQSTRING(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2), ISNIL(3)? (QRegExp::PatternSyntax) QRegExp::FixedString : (QRegExp::PatternSyntax) hb_parni(3) );
@@ -851,7 +851,7 @@ static QList<QSslCertificate> fromDevice(QIODevice * device, QSsl::EncodingForma
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     QList<QSslCertificate> list = QSslCertificate::fromDevice( PQIODEVICE(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );
@@ -898,7 +898,7 @@ static QList<QSslCertificate> fromData(const QByteArray &data, QSsl::EncodingFor
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
 #endif
     QList<QSslCertificate> list = QSslCertificate::fromData( *PQBYTEARRAY(1), ISNIL(2)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(2) );

@@ -543,7 +543,7 @@ static bool startServer ( ServerType type = MultipleInstances )
 HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
 #endif
     RBOOL( QAxFactory::startServer( ISNIL(1)? (QAxFactory::ServerType) QAxFactory::MultipleInstances : (QAxFactory::ServerType) hb_parni(1) ) );

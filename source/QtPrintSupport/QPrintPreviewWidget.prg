@@ -94,11 +94,11 @@ void QPrintPreviewWidget_new2()
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
 {
-  if( ISBETWEEN(1,3) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QPrintPreviewWidget_new1();
   }
-  else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QPrintPreviewWidget_new2();
   }
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->zoomIn( OPQREAL(1,1.1) );
@@ -697,7 +697,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->zoomOut( OPQREAL(1,1.1) );

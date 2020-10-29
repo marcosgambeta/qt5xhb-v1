@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->tryLock( OPINT(1,0) ) );

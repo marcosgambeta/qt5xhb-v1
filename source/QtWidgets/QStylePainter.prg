@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QSTYLEPAINTER_DRAWITEMTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(5,6) && ISQRECT(1) && ISNUM(2) && ISQPALETTE(3) && ISLOG(4) && ISCHAR(5) && ISOPTNUM(6) )
+    if( ISBETWEEN(5,6) && ISQRECT(1) && ISNUM(2) && ISQPALETTE(3) && ISLOG(4) && ISCHAR(5) && (ISNUM(6)||ISNIL(6)) )
     {
 #endif
       obj->drawItemText( *PQRECT(1), PINT(2), *PQPALETTE(3), PBOOL(4), PQSTRING(5), ISNIL(6)? (QPalette::ColorRole) QPalette::NoRole : (QPalette::ColorRole) hb_parni(6) );

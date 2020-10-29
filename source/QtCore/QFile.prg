@@ -441,11 +441,11 @@ HB_FUNC_STATIC( QFILE_OPEN )
   {
     QFile_open1();
   }
-  else if( ISBETWEEN(2,3) && ISPOINTER(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISPOINTER(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QFile_open2();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
   {
     QFile_open3();
   }

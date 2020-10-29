@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_LISTEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && ISOPTNUM(2) )
+    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->listen( ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );

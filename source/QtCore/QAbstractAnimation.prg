@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_START )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->start( ISNIL(1)? (QAbstractAnimation::DeletionPolicy) QAbstractAnimation::KeepWhenStopped : (QAbstractAnimation::DeletionPolicy) hb_parni(1) );

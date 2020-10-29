@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->setCommitString( PQSTRING(1), OPINT(2,0), OPINT(3,0) );

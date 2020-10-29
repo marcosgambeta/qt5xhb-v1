@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       obj->clear( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) );
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QImage * ptr = new QImage( obj->image( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       const QMimeData * ptr = obj->mimeData( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) );
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap( ISNIL(1)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(1) ) );
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setImage( *PQIMAGE(1), ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) );
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMIMEDATA(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQMIMEDATA(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setMimeData( PQMIMEDATA(1), ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) );
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQPIXMAP(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setPixmap( *PQPIXMAP(1), ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) );
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       obj->setText( PQSTRING(1), ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) );
@@ -427,11 +427,11 @@ void QClipboard_text2 ()
 
 HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
   {
     QClipboard_text1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QClipboard_text2();
   }

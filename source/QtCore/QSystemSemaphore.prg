@@ -66,7 +66,7 @@ QSystemSemaphore(const QString &key, int initialValue = 0, AccessMode mode = Ope
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QSystemSemaphore * obj = new QSystemSemaphore( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
     Qt5xHb::returnNewObject( obj, true );
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
     {
 #endif
       obj->setKey( PQSTRING(1), OPINT(2,0), ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->release( OPINT(1,1) ) );

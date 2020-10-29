@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,5) && ISQMODELINDEX(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+    if( ISBETWEEN(3,5) && ISQMODELINDEX(1) && ISNUM(2) && ISQVARIANT(3) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
     {
 #endif
       QModelIndexList list = obj->match( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), ISNIL(5)? (Qt::MatchFlags) Qt::MatchFlags(Qt::MatchStartsWith | Qt::MatchWrap) : (Qt::MatchFlags) hb_parni(5) );

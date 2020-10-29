@@ -75,7 +75,7 @@ QToolBox( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QTOOLBOX_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
   {
     QToolBox * obj = new QToolBox( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );

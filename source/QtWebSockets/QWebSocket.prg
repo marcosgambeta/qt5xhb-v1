@@ -114,7 +114,7 @@ explicit QWebSocket(const QString &origin = QString(),QWebSocketProtocol::Versio
 HB_FUNC_STATIC( QWEBSOCKET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( ISBETWEEN(0,3) && ISOPTCHAR(1) && ISOPTNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  if( ISBETWEEN(0,3) && ISOPTCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QWebSocket * obj = new QWebSocket( OPQSTRING(1,QString()), ISNIL(2)? (QWebSocketProtocol::Version) QWebSocketProtocol::VersionLatest : (QWebSocketProtocol::Version) hb_parni(2), OPQOBJECT(3,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QWEBSOCKET_CLOSE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && ISOPTCHAR(2) )
     {
 #endif
       obj->close( ISNIL(1)? (QWebSocketProtocol::CloseCode) QWebSocketProtocol::CloseCodeNormal : (QWebSocketProtocol::CloseCode) hb_parni(1), OPQSTRING(2,QString()) );

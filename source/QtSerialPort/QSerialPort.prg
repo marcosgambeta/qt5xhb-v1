@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETBAUDRATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
     {
 #endif
       RBOOL( obj->setBaudRate( PQINT32(1), ISNIL(2)? (QSerialPort::Directions) QSerialPort::AllDirections : (QSerialPort::Directions) hb_parni(2) ) );
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QSERIALPORT_BAUDRATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RQINT32( obj->baudRate( ISNIL(1)? (QSerialPort::Directions) QSerialPort::AllDirections : (QSerialPort::Directions) hb_parni(1) ) );
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QSERIALPORT_CLEAR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->clear( ISNIL(1)? (QSerialPort::Directions) QSerialPort::AllDirections : (QSerialPort::Directions) hb_parni(1) ) );
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QSERIALPORT_SETDATAERRORPOLICY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->setDataErrorPolicy( ISNIL(1)? (QSerialPort::DataErrorPolicy) QSerialPort::IgnorePolicy : (QSerialPort::DataErrorPolicy) hb_parni(1) ) );
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QSERIALPORT_SENDBREAK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
     {
 #endif
       RBOOL( obj->sendBreak( OPINT(1,0) ) );

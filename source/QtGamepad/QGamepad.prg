@@ -110,7 +110,7 @@ explicit QGamepad(int deviceId = 0, QObject *parent = nullptr)
 HB_FUNC_STATIC( QGAMEPAD_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
   {
     QGamepad * obj = new QGamepad( OPINT(1,0), OPQOBJECT(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
