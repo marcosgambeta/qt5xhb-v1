@@ -24,7 +24,6 @@
 #define ISARRAY HB_ISARRAY
 #endif
 
-#define ISOPTLOG(n) (ISLOG(n)||ISNIL(n))
 #define ISOPTPOINTER(n) (ISPOINTER(n)||ISNIL(n))
 #define ISOPTOBJECT(n) (ISOBJECT(n)||ISNIL(n))
 #define ISOPTARRAY(n) (ISARRAY(n)||ISNIL(n))
