@@ -66,8 +66,6 @@
 #define ISQDESIGNERFORMWINDOWINTERFACE(n)                   Qt5xHb::isObjectDerivedFrom(n,"QDesignerFormWindowInterface")
 #define PQDESIGNERFORMWINDOWINTERFACE(n)                   (QDesignerFormWindowInterface *) Qt5xHb::itemGetPtr(n)
 
-#define ISOPTQACTION(n)                                     (ISQACTION(n)||ISNIL(n))
-
 #define ISBETWEEN(a,b)                                      hb_pcount() >= a && hb_pcount() <= b
 #define ISNUMPAR(a)                                         hb_pcount() == a
 #define INHERITS(a,b)                                       Qt5xHb::isObjectDerivedFrom(a,b)

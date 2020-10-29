@@ -561,11 +561,11 @@ HB_FUNC_STATIC( QMENU_EXEC )
   {
     QMenu_exec1();
   }
-  else if( ISBETWEEN(1,2) && ISQPOINT(1) && ISOPTQACTION(2) )
+  else if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISQACTION(2)||ISNIL(2)) )
   {
     QMenu_exec2();
   }
-  else if( ISBETWEEN(2,4) && ISARRAY(1) && ISQPOINT(2) && ISOPTQACTION(3) && (ISQWIDGET(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISARRAY(1) && ISQPOINT(2) && (ISQACTION(3)||ISNIL(3)) && (ISQWIDGET(4)||ISNIL(4)) )
   {
     QMenu_exec3();
   }
