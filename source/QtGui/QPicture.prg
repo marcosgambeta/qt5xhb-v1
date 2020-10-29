@@ -209,11 +209,11 @@ void QPicture_load2()
 
 HB_FUNC_STATIC( QPICTURE_LOAD )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QPicture_load1();
   }
-  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QPicture_load2();
   }
@@ -275,11 +275,11 @@ void QPicture_save2()
 
 HB_FUNC_STATIC( QPICTURE_SAVE )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QPicture_save1();
   }
-  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QPicture_save2();
   }

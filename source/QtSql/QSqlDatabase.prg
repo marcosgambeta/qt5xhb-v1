@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       obj->setConnectOptions( OPQSTRING(1,QString()) );
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       QSqlQuery * ptr = new QSqlQuery( obj->exec( OPQSTRING(1,QString()) ) );
@@ -944,11 +944,11 @@ void QSqlDatabase_addDatabase2 ()
 
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QSqlDatabase_addDatabase1();
   }
-  else if( ISBETWEEN(1,2) && ISQSQLDRIVER(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQSQLDRIVER(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QSqlDatabase_addDatabase2();
   }
@@ -1002,7 +1002,7 @@ static bool contains ( const QString & connectionName = QLatin1String( defaultCo
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
-  if( ISOPTCHAR(1) )
+  if( (ISCHAR(1)||ISNIL(1)) )
   {
     QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
     RBOOL( QSqlDatabase::contains ( par1 ) );
@@ -1018,7 +1018,7 @@ static QSqlDatabase database ( const QString & connectionName = QLatin1String( d
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
-  if( ISOPTCHAR(1) && ISOPTLOG(2) )
+  if( (ISCHAR(1)||ISNIL(1)) && ISOPTLOG(2) )
   {
     QString par1 = ISNIL(1)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(1) );
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );

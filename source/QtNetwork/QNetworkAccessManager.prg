@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_ENABLESTRICTTRANSPORTSECURITYSTORE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISLOG(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISLOG(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       obj->enableStrictTransportSecurityStore( PBOOL(1), OPQSTRING(2,QString()) );

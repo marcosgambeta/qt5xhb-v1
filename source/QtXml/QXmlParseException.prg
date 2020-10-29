@@ -85,7 +85,7 @@ void QXmlParseException_new2()
 
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 {
-  if( ISBETWEEN(0,5) && ISOPTCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && ISOPTCHAR(4) && (ISNUM(5)||ISNIL(5)) )
+  if( ISBETWEEN(0,5) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
     QXmlParseException_new1();
   }

@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
   {
     QImage_new3();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     HB_FUNC_EXEC( QIMAGE_NEW9 );
   }
@@ -934,7 +934,7 @@ void QImage_load2()
 
 HB_FUNC_STATIC( QIMAGE_LOAD )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QImage_load1();
   }
@@ -976,11 +976,11 @@ void QImage_loadFromData2()
 
 HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTCHAR(3) )
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
   {
     QImage_loadFromData1();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QImage_loadFromData2();
   }
@@ -1202,11 +1202,11 @@ void QImage_save2()
 
 HB_FUNC_STATIC( QIMAGE_SAVE )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QImage_save1();
   }
-  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QImage_save2();
   }
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC( QIMAGE_TEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->text( OPQSTRING(1,QString()) ) );
@@ -1754,11 +1754,11 @@ void QImage_fromData2()
 
 HB_FUNC_STATIC( QIMAGE_FROMDATA )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTCHAR(3) )
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
   {
     QImage_fromData1();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QImage_fromData2();
   }

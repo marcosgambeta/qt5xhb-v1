@@ -73,7 +73,7 @@ void QSqlIndex_new2()
 
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISCHAR(2)||ISNIL(2)) )
   {
     QSqlIndex_new1();
   }

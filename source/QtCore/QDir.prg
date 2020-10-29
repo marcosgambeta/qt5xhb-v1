@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDIR_NEW )
   {
     QDir_new1();
   }
-  else if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+  else if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
   {
     QDir_new2();
   }

@@ -131,11 +131,11 @@ HB_FUNC_STATIC( QMEDIARESOURCE_NEW )
   {
     QMediaResource_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaResource_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaResource_new3();
   }

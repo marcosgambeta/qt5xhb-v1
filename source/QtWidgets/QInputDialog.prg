@@ -1288,7 +1288,7 @@ static QString getText( QWidget * parent, const QString & title, const QString &
 HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,8) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && ISOPTCHAR(5) && ISOPTLOG(6) && (ISNUM(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) )
+  if( ISBETWEEN(3,8) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) && (ISCHAR(5)||ISNIL(5)) && ISOPTLOG(6) && (ISNUM(7)||ISNIL(7)) && (ISNUM(8)||ISNIL(8)) )
   {
 #endif
     bool par6;
@@ -1309,7 +1309,7 @@ static QString getMultiLineText( QWidget * parent, const QString & title, const 
 HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,7) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) && ISOPTLOG(5) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) )
+  if( ISBETWEEN(3,7) && ISQWIDGET(1) && ISCHAR(2) && ISCHAR(3) && (ISCHAR(4)||ISNIL(4)) && ISOPTLOG(5) && (ISNUM(6)||ISNIL(6)) && (ISNUM(7)||ISNIL(7)) )
   {
 #endif
     bool par5;

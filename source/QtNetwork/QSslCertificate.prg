@@ -945,7 +945,7 @@ static QList<QSslError> verify(QList<QSslCertificate> certificateChain, const QS
 HB_FUNC_STATIC( QSSLCERTIFICATE_VERIFY )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISARRAY(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISARRAY(1) && (ISCHAR(2)||ISNIL(2)) )
   {
 #endif
     QList<QSslCertificate> par1;

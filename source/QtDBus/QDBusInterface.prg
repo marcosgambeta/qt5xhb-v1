@@ -56,7 +56,7 @@ QDBusInterface(const QString &service, const QString &path, const QString &inter
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
 {
-  if( ISBETWEEN(2,5) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && (ISQDBUSCONNECTION(4)||ISNIL(4)) && (ISQOBJECT(5)||ISNIL(5)) )
+  if( ISBETWEEN(2,5) && ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISQDBUSCONNECTION(4)||ISNIL(4)) && (ISQOBJECT(5)||ISNIL(5)) )
   {
     QDBusInterface * obj = new QDBusInterface( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) Qt5xHb::itemGetPtr(4), OPQOBJECT(5,0) );
     Qt5xHb::returnNewObject( obj, false );

@@ -323,7 +323,7 @@ static bool registerEngine ( const QString & name, const QString & extension, co
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) )
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) )
   {
 #endif
     RBOOL( QAxScriptManager::registerEngine( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );

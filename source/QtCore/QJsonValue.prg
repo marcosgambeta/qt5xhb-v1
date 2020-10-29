@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QJSONVALUE_TOSTRING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->toString( OPQSTRING(1,QString()) ) );

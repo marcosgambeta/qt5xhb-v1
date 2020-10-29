@@ -904,7 +904,7 @@ static QString translate(const char * context, const char * sourceText, const ch
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && (ISNUM(4)||ISNIL(4)) )
+  if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
 #endif
     RQSTRING( QCoreApplication::translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );

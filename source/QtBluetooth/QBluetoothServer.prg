@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN )
   {
     QBluetoothServer_listen1();
   }
-  else if( ISBETWEEN(1,2) && ISQBLUETOOTHUUID(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQBLUETOOTHUUID(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QBluetoothServer_listen2();
   }

@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
   {
     QSqlQuery_new1();
   }
-  else if( ISBETWEEN(1,2) && ISOPTCHAR(1) && (ISQSQLDATABASE(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && (ISCHAR(1)||ISNIL(1)) && (ISQSQLDATABASE(2)||ISNIL(2)) )
   {
     QSqlQuery_new2();
   }

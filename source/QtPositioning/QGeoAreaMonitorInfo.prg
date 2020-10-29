@@ -102,7 +102,7 @@ void QGeoAreaMonitorInfo_new2()
 
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+  if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
   {
     QGeoAreaMonitorInfo_new1();
   }

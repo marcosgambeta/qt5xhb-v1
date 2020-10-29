@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && ISOPTCHAR(4) )
+    if( ISBETWEEN(3,4) && ISNUM(1) && ISCHAR(2) && ISCHAR(3) && (ISCHAR(4)||ISNIL(4)) )
     {
 #endif
       obj->reportError( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING(4,QString()) );

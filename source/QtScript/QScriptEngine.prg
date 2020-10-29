@@ -364,7 +364,7 @@ void QScriptEngine_evaluate2()
 
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QScriptEngine_evaluate1();
   }

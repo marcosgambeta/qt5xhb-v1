@@ -146,11 +146,11 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
   {
     QPageSize_new2();
   }
-  else if( ISBETWEEN(1,3) && ISQSIZE(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QPageSize_new3();
   }
-  else if( ISBETWEEN(2,4) && ISQSIZEF(1) && ISNUM(2) && ISOPTCHAR(3) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISQSIZEF(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QPageSize_new4();
   }

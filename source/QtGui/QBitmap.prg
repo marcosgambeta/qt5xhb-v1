@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
   {
     QBitmap_new4();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QBitmap_new5();
   }

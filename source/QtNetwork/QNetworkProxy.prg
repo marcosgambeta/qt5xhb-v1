@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QNETWORKPROXY_NEW )
   {
     QNetworkProxy_new1();
   }
-  else if( ISBETWEEN(1,5) && ISNUM(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) && ISOPTCHAR(4) && ISOPTCHAR(5) )
+  else if( ISBETWEEN(1,5) && ISNUM(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISCHAR(5)||ISNIL(5)) )
   {
     QNetworkProxy_new2();
   }

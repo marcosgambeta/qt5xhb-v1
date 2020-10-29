@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVECATEGORY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQPLACECATEGORY(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISQPLACECATEGORY(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       QPlaceIdReply * ptr = obj->saveCategory( *PQPLACECATEGORY(1), OPQSTRING(2,QString()) );
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORYIDS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       RQSTRINGLIST( obj->childCategoryIds( OPQSTRING(1,QString()) ) );
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       QList<QPlaceCategory> list = obj->childCategories( OPQSTRING(1,QString()) );

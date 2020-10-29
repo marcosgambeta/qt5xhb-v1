@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
   {
     QXmlName_new1();
   }
-  else if( ISBETWEEN(2,4) && ISQXMLNAMEPOOL(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) )
+  else if( ISBETWEEN(2,4) && ISQXMLNAMEPOOL(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
   {
     QXmlName_new2();
   }

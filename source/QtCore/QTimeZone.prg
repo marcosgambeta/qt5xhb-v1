@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTIMEZONE_NEW )
   {
     QTimeZone_new3();
   }
-  else if( ISBETWEEN(4,6) && ISQBYTEARRAY(1) && ISNUM(2) && ISCHAR(3) && ISCHAR(4) && (ISNUM(5)||ISNIL(5)) && ISOPTCHAR(6) )
+  else if( ISBETWEEN(4,6) && ISQBYTEARRAY(1) && ISNUM(2) && ISCHAR(3) && ISCHAR(4) && (ISNUM(5)||ISNIL(5)) && (ISCHAR(6)||ISNIL(6)) )
   {
     QTimeZone_new4();
   }

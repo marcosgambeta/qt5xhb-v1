@@ -1669,7 +1669,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
   {
     QTextCursor_insertImage3();
   }
-  else if( ISBETWEEN(1,2) && ISQIMAGE(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QTextCursor_insertImage4();
   }

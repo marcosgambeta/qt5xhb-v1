@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
     {
 #endif
       RQREAL( obj->startValue( OPQSTRING(1,QString()) ) );

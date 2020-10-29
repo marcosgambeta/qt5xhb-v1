@@ -1043,7 +1043,7 @@ static void aboutQt( QWidget * parent, const QString & title = QString() )
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISQWIDGET(1) && (ISCHAR(2)||ISNIL(2)) )
   {
 #endif
     QMessageBox::aboutQt( PQWIDGET(1), OPQSTRING(2,QString()) );

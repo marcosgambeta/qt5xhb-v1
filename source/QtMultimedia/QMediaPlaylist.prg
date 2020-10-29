@@ -529,15 +529,15 @@ void QMediaPlaylist_load3()
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD )
 {
-  if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaPlaylist_load1();
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaPlaylist_load2();
   }
-  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ISOPTCHAR(2) )
+  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaPlaylist_load3();
   }
@@ -724,7 +724,7 @@ void QMediaPlaylist_save2()
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE )
 {
-  if( ISBETWEEN(1,2) && ISQURL(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN(1,2) && ISQURL(1) && (ISCHAR(2)||ISNIL(2)) )
   {
     QMediaPlaylist_save1();
   }

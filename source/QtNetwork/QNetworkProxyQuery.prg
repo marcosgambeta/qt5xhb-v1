@@ -168,11 +168,11 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
   {
     QNetworkProxyQuery_new2();
   }
-  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && ISOPTCHAR(3) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QNetworkProxyQuery_new3();
   }
-  else if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
   {
     QNetworkProxyQuery_new4();
   }
@@ -180,11 +180,11 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
   {
     QNetworkProxyQuery_new5();
   }
-  else if( ISBETWEEN(3,5) && ISQNETWORKCONFIGURATION(1) && ISCHAR(2) && ISNUM(3) && ISOPTCHAR(4) && (ISNUM(5)||ISNIL(5)) )
+  else if( ISBETWEEN(3,5) && ISQNETWORKCONFIGURATION(1) && ISCHAR(2) && ISNUM(3) && (ISCHAR(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
   {
     QNetworkProxyQuery_new6();
   }
-  else if( ISBETWEEN(2,4) && ISQNETWORKCONFIGURATION(1) && ISNUM(2) && ISOPTCHAR(3) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISQNETWORKCONFIGURATION(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
   {
     QNetworkProxyQuery_new7();
   }

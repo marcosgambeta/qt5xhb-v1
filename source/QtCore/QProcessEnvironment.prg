@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
     {
 #endif
       RQSTRING( obj->value( PQSTRING(1), OPQSTRING(2,QString()) ) );
