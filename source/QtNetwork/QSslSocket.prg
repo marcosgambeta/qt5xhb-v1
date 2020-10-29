@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
   {
     QSslSocket_setPrivateKey1();
   }
-  else if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTQBYTEARRAY(4) )
+  else if( ISBETWEEN(1,4) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) && (ISQBYTEARRAY(4)||ISNIL(4)) )
   {
     QSslSocket_setPrivateKey2();
   }
@@ -2242,7 +2242,7 @@ HB_FUNC_STATIC( QSSLSOCKET_STARTCLIENTENCRYPTION )
 }
 
 /*
-void startServerEncryption() 
+void startServerEncryption()
 */
 HB_FUNC_STATIC( QSSLSOCKET_STARTSERVERENCRYPTION )
 {

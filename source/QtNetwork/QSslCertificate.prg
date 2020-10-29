@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
   {
     QSslCertificate_new1();
   }
-  else if( ISBETWEEN(0,2) && ISOPTQBYTEARRAY(1) && ISOPTNUM(2) )
+  else if( ISBETWEEN(0,2) && (ISQBYTEARRAY(1)||ISNIL(1)) && ISOPTNUM(2) )
   {
     QSslCertificate_new2();
   }

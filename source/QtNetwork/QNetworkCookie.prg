@@ -104,7 +104,7 @@ void QNetworkCookie_new2()
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTQBYTEARRAY(1) && ISOPTQBYTEARRAY(2) )
+  if( ISBETWEEN(0,2) && (ISQBYTEARRAY(1)||ISNIL(1)) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
     QNetworkCookie_new1();
   }

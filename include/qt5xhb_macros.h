@@ -66,7 +66,6 @@
 #define ISQDESIGNERFORMWINDOWINTERFACE(n)                   Qt5xHb::isObjectDerivedFrom(n,"QDesignerFormWindowInterface")
 #define PQDESIGNERFORMWINDOWINTERFACE(n)                   (QDesignerFormWindowInterface *) Qt5xHb::itemGetPtr(n)
 
-#define ISOPTQBYTEARRAY(n)                                  (ISQBYTEARRAY(n)||ISNIL(n))
 #define ISOPTQACTION(n)                                     (ISQACTION(n)||ISNIL(n))
 
 #define ISBETWEEN(a,b)                                      hb_pcount() >= a && hb_pcount() <= b

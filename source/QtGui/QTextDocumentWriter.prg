@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
   {
     QTextDocumentWriter_new2();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTQBYTEARRAY(2) )
+  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
   {
     QTextDocumentWriter_new3();
   }

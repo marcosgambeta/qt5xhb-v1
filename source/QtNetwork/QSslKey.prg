@@ -124,11 +124,11 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
   {
     QSslKey_new1();
   }
-  else if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTQBYTEARRAY(5) )
+  else if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && (ISQBYTEARRAY(5)||ISNIL(5)) )
   {
     QSslKey_new2();
   }
-  else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTQBYTEARRAY(5) )
+  else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && (ISQBYTEARRAY(5)||ISNIL(5)) )
   {
     QSslKey_new3();
   }

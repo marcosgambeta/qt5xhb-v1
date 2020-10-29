@@ -127,11 +127,11 @@ HB_FUNC_STATIC( QMOVIE_NEW )
   {
     QMovie_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && ISOPTQBYTEARRAY(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QMovie_new2();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTQBYTEARRAY(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
   {
     QMovie_new3();
   }

@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
   {
     QGraphicsWebView_load1();
   }
-  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ISOPTNUM(2) && ISOPTQBYTEARRAY(3) )
+  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ISOPTNUM(2) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
     QGraphicsWebView_load2();
   }

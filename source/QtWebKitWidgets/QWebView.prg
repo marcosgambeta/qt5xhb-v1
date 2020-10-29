@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
   {
     QWebView_load1();
   }
-  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ISOPTNUM(2) && ISOPTQBYTEARRAY(3) )
+  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ISOPTNUM(2) && (ISQBYTEARRAY(3)||ISNIL(3)) )
   {
     QWebView_load2();
   }
