@@ -60,10 +60,6 @@ RETURN
 #endif
 
 /*
-QAndroidActivityResultReceiver()
-*/
-
-/*
 virtual ~QAndroidActivityResultReceiver()
 */
 HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_DELETE )

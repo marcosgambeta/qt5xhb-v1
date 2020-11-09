@@ -223,14 +223,6 @@ HB_FUNC_STATIC( QTANDROID_BINDSERVICE )
 }
 
 /*
-static void runOnAndroidThread(const Runnable &runnable)
-*/
-
-/*
-static void runOnAndroidThreadSync(const Runnable &runnable, int timeoutMs = INT_MAX)
-*/
-
-/*
 static void hideSplashScreen()
 */
 void QtAndroid_hideSplashScreen1()
@@ -256,11 +248,6 @@ void QtAndroid_hideSplashScreen2()
 #endif
 }
 
-/*
-[1]static void hideSplashScreen()
-[2]static void hideSplashScreen(int duration)
-*/
-
 HB_FUNC_STATIC( QTANDROID_HIDESPLASHSCREEN )
 {
   if( ISNUMPAR(0) )
@@ -276,14 +263,6 @@ HB_FUNC_STATIC( QTANDROID_HIDESPLASHSCREEN )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-static void requestPermissions(const QStringList &permissions, const PermissionResultCallback &callbackFunc)
-*/
-
-/*
-static PermissionResultMap requestPermissionsSync(const QStringList &permissions, int timeoutMs = INT_MAX)
-*/
 
 /*
 static PermissionResult checkPermission(const QString &permission)

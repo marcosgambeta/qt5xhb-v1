@@ -121,10 +121,6 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_JAVAVM )
 #endif
 }
 
-/*
-jclass findClass(const char *className)
-*/
-
 HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
