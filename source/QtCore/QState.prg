@@ -84,11 +84,6 @@ void QState_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QState ( QState * parent = 0 )
-[2]QState ( ChildMode childMode, QState * parent = 0 )
-*/
-
 HB_FUNC_STATIC( QSTATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
@@ -166,12 +161,6 @@ void QState_addTransition3()
     Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTTRANSITION" );
   }
 }
-
-/*
-[1]void addTransition ( QAbstractTransition * transition )
-[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
-[3]QAbstractTransition * addTransition ( QAbstractState * target )
-*/
 
 HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 {

@@ -91,12 +91,6 @@ void QCommandLineOption_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
-[2]QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
-[3]QCommandLineOption(const QCommandLineOption &other)
-*/
-
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 {
   if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )

@@ -91,13 +91,6 @@ void QTemporaryFile_new4()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QTemporaryFile()
-[2]QTemporaryFile(const QString & templateName)
-[3]QTemporaryFile(QObject * parent)
-[4]QTemporaryFile(const QString & templateName, QObject * parent)
-*/
-
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 {
   if( ISNUMPAR(0) )
@@ -308,11 +301,6 @@ void QTemporaryFile_createNativeFile2()
   QTemporaryFile * ptr = QTemporaryFile::createNativeFile( PQSTRING(1) );
   Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
 }
-
-/*
-[1]QTemporaryFile * createNativeFile(QFile & file)
-[2]QTemporaryFile * createNativeFile(const QString & fileName)
-*/
 
 HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
 {

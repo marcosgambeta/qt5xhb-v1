@@ -123,13 +123,6 @@ void QDateTime_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDateTime ()
-[2]QDateTime ( const QDate & date )
-[3]QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
-[4]QDateTime ( const QDateTime & other )
-*/
-
 HB_FUNC_STATIC( QDATETIME_NEW )
 {
   if( ISNUMPAR(0) )
@@ -695,11 +688,6 @@ void QDateTime_toString2()
   }
 }
 
-/*
-[1]QString toString ( const QString & format ) const
-[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
-*/
-
 HB_FUNC_STATIC( QDATETIME_TOSTRING )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
@@ -888,11 +876,6 @@ void QDateTime_fromString2()
   QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
 }
-
-/*
-[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
-[2]QDateTime fromString ( const QString & string, const QString & format )
-*/
 
 HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 {

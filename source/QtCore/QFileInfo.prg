@@ -149,14 +149,6 @@ void QFileInfo_new5()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QFileInfo()
-[2]QFileInfo(const QString & file)
-[3]QFileInfo(const QFile & file)
-[4]QFileInfo(const QDir & dir, const QString & file)
-[5]QFileInfo(const QFileInfo & fileinfo)
-*/
-
 HB_FUNC_STATIC( QFILEINFO_NEW )
 {
   if( ISNUMPAR(0) )
@@ -1191,12 +1183,6 @@ void QFileInfo_setFile3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setFile(const QString & file)
-[2]void setFile(const QFile & file)
-[3]void setFile(const QDir & dir, const QString & file)
-*/
 
 HB_FUNC_STATIC( QFILEINFO_SETFILE )
 {

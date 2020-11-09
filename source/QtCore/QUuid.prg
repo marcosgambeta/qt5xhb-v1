@@ -83,16 +83,6 @@ void QUuid_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-QUuid(const GUID & guid)
-*/
-
-/*
-[1]QUuid()
-[2]QUuid(const QByteArray & text)
-[3]QUuid(const GUID & guid) // TODO: implementar metodo
-*/
-
 HB_FUNC_STATIC( QUUID_NEW )
 {
   if( ISNUMPAR(0) )
@@ -292,11 +282,6 @@ void QUuid_createUuidV32()
   Qt5xHb::createReturnClass( ptr, "QUUID", true );
 }
 
-/*
-[1]QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
-[2]QUuid createUuidV3(const QUuid & ns, const QString & baseData)
-*/
-
 HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
 {
   if( ISNUMPAR(2) && ISQUUID(1) && ISQBYTEARRAY(2) )
@@ -332,11 +317,6 @@ void QUuid_createUuidV52()
   QUuid * ptr = new QUuid( QUuid::createUuidV5( *PQUUID(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QUUID", true );
 }
-
-/*
-[1]QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
-[2]QUuid createUuidV5(const QUuid & ns, const QString & baseData)
-*/
 
 HB_FUNC_STATIC( QUUID_CREATEUUIDV5 )
 {

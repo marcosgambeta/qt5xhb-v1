@@ -103,12 +103,6 @@ void QMarginsF_new3()
 #endif
 }
 
-/*
-[1]QMarginsF()
-[2]QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
-[3]QMarginsF(const QMargins &margins)
-*/
-
 HB_FUNC_STATIC( QMARGINSF_NEW )
 {
   if( ISNUMPAR(0) )

@@ -209,11 +209,6 @@ void QSortFilterProxyModel_setFilterRegExp2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void setFilterRegExp(const QRegExp &regExp)
-[2]void setFilterRegExp(const QString &pattern)
-*/
-
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {
   if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -296,11 +291,6 @@ void QSortFilterProxyModel_setFilterRegularExpression2()
 #endif
 #endif
 }
-
-/*
-[1]void setFilterRegularExpression(const QString &pattern);
-[2]void setFilterRegularExpression(const QRegularExpression &regularExpression);
-*/
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGULAREXPRESSION )
 {
@@ -1027,11 +1017,6 @@ void QSortFilterProxyModel_parent2()
     Qt5xHb::createReturnClass( ptr, "QMODELINDEX", true );
   }
 }
-
-/*
-[1]QObject *parent() const
-[2]QModelIndex parent(const QModelIndex &child) const
-*/
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT )
 {

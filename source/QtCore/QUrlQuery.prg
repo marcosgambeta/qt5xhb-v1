@@ -110,13 +110,6 @@ void QUrlQuery_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QUrlQuery()
-[2]QUrlQuery(const QUrl & url)
-[3]QUrlQuery(const QString & queryString)
-[4]QUrlQuery(const QUrlQuery & other)
-*/
-
 HB_FUNC_STATIC( QURLQUERY_NEW )
 {
   if( ISNUMPAR(0) )

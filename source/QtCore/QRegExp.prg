@@ -104,12 +104,6 @@ void QRegExp_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QRegExp ()
-[2]QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
-[3]QRegExp ( const QRegExp & rx )
-*/
-
 HB_FUNC_STATIC( QREGEXP_NEW )
 {
   if( ISNUMPAR(0) )

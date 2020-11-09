@@ -98,11 +98,6 @@ void QTextCodec_canEncode2()
   }
 }
 
-/*
-[1]bool canEncode(QChar) const
-[2]bool canEncode(const QString&) const
-*/
-
 HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 {
   if( ISNUMPAR(1) && ISQCHAR(1) )
@@ -145,12 +140,6 @@ void QTextCodec_toUnicode2()
   }
 }
 
-/*
-[1]QString toUnicode(const QByteArray&) const
-[2]QString toUnicode(const char* chars) const
-[3]QString toUnicode(const char *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
-*/
-
 HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -180,11 +169,6 @@ void QTextCodec_fromUnicode1()
     Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
-
-/*
-[1]QByteArray fromUnicode(const QString& uc) const
-[2]QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const // TODO: implementar(?)
-*/
 
 HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
 {
@@ -369,11 +353,6 @@ void QTextCodec_codecForName2()
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
-/*
-[1]static QTextCodec* codecForName(const QByteArray &name)
-[2]static QTextCodec* codecForName(const char *name)
-*/
-
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -538,11 +517,6 @@ void QTextCodec_codecForHtml2()
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
 
-/*
-[1]static QTextCodec *codecForHtml(const QByteArray &ba)
-[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
-*/
-
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -578,11 +552,6 @@ void QTextCodec_codecForUtfText2()
   QTextCodec * ptr = QTextCodec::codecForUtfText( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
   Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
-
-/*
-[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
-[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
-*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
 {

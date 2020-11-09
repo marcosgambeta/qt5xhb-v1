@@ -82,12 +82,6 @@ void QMessageLogger_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QMessageLogger()
-[2]QMessageLogger(const char *file, int line, const char *function)
-[3]QMessageLogger(const char *file, int line, const char *function, const char *category)
-*/
-
 HB_FUNC_STATIC( QMESSAGELOGGER_NEW )
 {
   if( ISNUMPAR(0) )

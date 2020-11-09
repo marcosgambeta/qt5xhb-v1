@@ -97,12 +97,6 @@ void QPersistentModelIndex_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QPersistentModelIndex()
-[2]QPersistentModelIndex(const QModelIndex &index)
-[3]QPersistentModelIndex(const QPersistentModelIndex &other)
-*/
-
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )

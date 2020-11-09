@@ -70,11 +70,6 @@ void QSignalTransition_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QSignalTransition(QState *sourceState = 0)
-[2]QSignalTransition(const QObject *sender, const char *signal,QState *sourceState = 0)
-*/
-
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )

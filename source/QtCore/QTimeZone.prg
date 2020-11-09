@@ -137,14 +137,6 @@ void QTimeZone_new5()
 #endif
 }
 
-/*
-[1]QTimeZone()
-[2]QTimeZone(const QByteArray &ianaId)
-[3]QTimeZone(int offsetSeconds)
-[4]QTimeZone(const QByteArray &zoneId, int offsetSeconds, const QString &name,const QString &abbreviation, QLocale::Country country = QLocale::AnyCountry,const QString &comment = QString())
-[5]QTimeZone(const QTimeZone &other)
-*/
-
 HB_FUNC_STATIC( QTIMEZONE_NEW )
 {
   if( ISNUMPAR(0) )
@@ -354,11 +346,6 @@ void QTimeZone_displayName2()
   }
 #endif
 }
-
-/*
-[1]QString displayName(const QDateTime &atDateTime,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
-[2]QString displayName(QTimeZone::TimeType timeType,QTimeZone::NameType nameType = QTimeZone::DefaultName,const QLocale &locale = QLocale()) const
-*/
 
 HB_FUNC_STATIC( QTIMEZONE_DISPLAYNAME )
 {
@@ -748,13 +735,7 @@ HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS3 )
 #endif
 }
 
-/*
-[1]static QList<QByteArray> availableTimeZoneIds()
-[2]static QList<QByteArray> availableTimeZoneIds(QLocale::Country country)
-[3]static QList<QByteArray> availableTimeZoneIds(int offsetSeconds)
-*/
-
-HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS ) // TODO: resolver conflito entre [2] e [3]
+HB_FUNC_STATIC( QTIMEZONE_AVAILABLETIMEZONEIDS )
 {
   if( ISNUMPAR(0) )
   {
@@ -819,11 +800,6 @@ void QTimeZone_windowsIdToDefaultIanaId2()
   Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #endif
 }
-
-/*
-[1]static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId)
-[2]static QByteArray windowsIdToDefaultIanaId(const QByteArray &windowsId,QLocale::Country country)
-*/
 
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID )
 {
@@ -918,11 +894,6 @@ void QTimeZone_windowsIdToIanaIds2()
   hb_itemReturnRelease(pArray);
 #endif
 }
-
-/*
-[1]static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId)
-[2]static QList<QByteArray> windowsIdToIanaIds(const QByteArray &windowsId,QLocale::Country country)
-*/
 
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
 {

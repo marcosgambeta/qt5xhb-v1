@@ -144,11 +144,6 @@ void QSemaphore_tryAcquire2()
   }
 }
 
-/*
-[1]bool tryAcquire(int n = 1)
-[2]bool tryAcquire(int n, int timeout)
-*/
-
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )

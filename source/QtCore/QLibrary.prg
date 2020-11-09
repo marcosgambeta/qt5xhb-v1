@@ -95,13 +95,6 @@ void QLibrary_new4()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QLibrary(QObject *parent = 0)
-[2]QLibrary(const QString& fileName, QObject *parent = 0)
-[3]QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
-[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
-*/
-
 HB_FUNC_STATIC( QLIBRARY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
@@ -297,11 +290,6 @@ void QLibrary_setFileNameAndVersion2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void setFileNameAndVersion(const QString &fileName, int verNum)
-[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
-*/
-
 HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
@@ -391,29 +379,6 @@ HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 #endif
   }
 }
-
-/*
-QFunctionPointer resolve(const char *symbol)
-*/
-
-/*
-static QFunctionPointer resolve(const QString &fileName, const char *symbol) // TODO: corrigir implementacao do metodo
-*/
-
-/*
-static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol) // TODO: corrigir implementacao do metodo
-*/
-
-/*
-static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol) // TODO: corrigir implementacao do metodo
-*/
-
-/*
-[1]QFunctionPointer resolve(const char *symbol)
-[2]static QFunctionPointer resolve(const QString &fileName, const char *symbol)
-[3]static QFunctionPointer resolve(const QString &fileName, int verNum, const char *symbol)
-[4]static QFunctionPointer resolve(const QString &fileName, const QString &version, const char *symbol)
-*/
 
 HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 {

@@ -61,15 +61,6 @@ void QWinEventNotifier_new1()
 #endif
 }
 
-/*
-explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0)
-*/
-
-/*
-[1]explicit QWinEventNotifier(QObject *parent = 0)
-[2]explicit QWinEventNotifier(HANDLE hEvent, QObject *parent = 0)
-*/
-
 HB_FUNC_STATIC( QWINEVENTNOTIFIER_NEW )
 {
 #ifdef Q_OS_WIN

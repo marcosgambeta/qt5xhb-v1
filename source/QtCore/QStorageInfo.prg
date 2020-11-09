@@ -121,13 +121,6 @@ void QStorageInfo_new4()
 #endif
 }
 
-/*
-[1]QStorageInfo()
-[2]explicit QStorageInfo(const QString &path)
-[3]explicit QStorageInfo(const QDir &dir)
-[4]QStorageInfo(const QStorageInfo &other)
-*/
-
 HB_FUNC_STATIC( QSTORAGEINFO_NEW )
 {
   if( ISNUMPAR(0) )

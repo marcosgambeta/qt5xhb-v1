@@ -680,12 +680,6 @@ void QObject_findChildren3()
 #endif
 }
 
-/*
-[1]QList<T> findChildren(const QString &aName = QString(), Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-[2]QList<T> findChildren(const QRegExp &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-[3]QList<T> findChildren(const QRegularExpression &re, Qt::FindChildOptions options = Qt::FindChildrenRecursively) const
-*/
-
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {
   if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )

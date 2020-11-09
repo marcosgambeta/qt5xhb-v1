@@ -80,11 +80,6 @@ void QBuffer_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QBuffer ( QObject * parent = 0 )
-[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
-*/
-
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
@@ -169,11 +164,6 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 #endif
   }
 }
-
-/*
-[1]QByteArray & buffer ()
-[2]const QByteArray & buffer () const
-*/
 
 HB_FUNC_STATIC( QBUFFER_BUFFER )
 {
@@ -260,11 +250,6 @@ void QBuffer_setData2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setData ( const QByteArray & data )
-[2]void setData ( const char * data, int size )
-*/
 
 HB_FUNC_STATIC( QBUFFER_SETDATA )
 {

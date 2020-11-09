@@ -161,18 +161,6 @@ HB_FUNC_STATIC( QJSONVALUE_NEW9 )
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QJsonValue(Type type = Null)
-[2]QJsonValue(bool b)
-[3]QJsonValue(double n)
-[4]QJsonValue(const QString & s)
-[5]QJsonValue(QLatin1String s)
-[6]QJsonValue(const QJsonArray & a)
-[7]QJsonValue(const QJsonObject & o)
-[8]QJsonValue(const QJsonValue & other)
-[9]QJsonValue(int n)
-*/
-
 HB_FUNC_STATIC( QJSONVALUE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
@@ -423,11 +411,6 @@ void QJsonValue_toArray2()
   }
 }
 
-/*
-[1]QJsonArray toArray(const QJsonArray & defaultValue) const
-[2]QJsonArray toArray() const
-*/
-
 HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
 {
   if( ISNUMPAR(1) && ISQJSONARRAY(1) )
@@ -519,11 +502,6 @@ void QJsonValue_toObject2()
     Qt5xHb::createReturnClass( ptr, "QJSONOBJECT", true );
   }
 }
-
-/*
-[1]QJsonObject toObject(const QJsonObject & defaultValue) const
-[2]QJsonObject toObject() const
-*/
 
 HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
 {

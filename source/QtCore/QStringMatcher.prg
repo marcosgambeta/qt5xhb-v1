@@ -220,11 +220,6 @@ void QStringMatcher_indexIn2()
   }
 }
 
-/*
-[1]int indexIn(const QString &str, int from = 0) const
-[2]int indexIn(const QChar *str, int length, int from = 0) const
-*/
-
 HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )

@@ -149,14 +149,6 @@ void QXmlStreamReader_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QXmlStreamReader()
-[2]QXmlStreamReader(QIODevice * device)
-[3]QXmlStreamReader(const QByteArray & data)
-[4]QXmlStreamReader(const QString & data)
-[5]QXmlStreamReader(const char * data) // INFO: nao implementado
-*/
-
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
 {
   if( ISNUMPAR(0) )
@@ -242,12 +234,6 @@ void QXmlStreamReader_addData3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addData(const QByteArray & data)
-[2]void addData(const QString & data)
-[3]void addData(const char * data)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 {

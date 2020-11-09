@@ -180,14 +180,6 @@ void QLocale_new5()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1] QLocale ()
-[2] QLocale ( const QString & name )
-[3] QLocale ( Language language, Country country = AnyCountry )
-[4] QLocale ( Language language, Script script, Country country )
-[5] QLocale ( const QLocale & other )
-*/
-
 HB_FUNC_STATIC( QLOCALE_NEW )
 {
   if( ISNUMPAR(0) )
@@ -839,11 +831,6 @@ HB_FUNC_STATIC( QLOCALE_QUOTESTRING2 )
   }
 }
 
-/*
-[1]QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
-[2]QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
-*/
-
 HB_FUNC_STATIC( QLOCALE_QUOTESTRING )
 {
   HB_FUNC_EXEC( QLOCALE_QUOTESTRING1 );
@@ -1186,20 +1173,9 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
 #endif
   }
 }
-
-/*
-[1]QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
-[2]QString toCurrencyString ( short value, const QString & symbol = QString() ) const
-[3]QString toCurrencyString ( ushort value, const QString & symbol = QString() ) const
-[4]QString toCurrencyString ( int value, const QString & symbol = QString() ) const
-[5]QString toCurrencyString ( uint value, const QString & symbol = QString() ) const
-[6]QString toCurrencyString ( float value, const QString & symbol = QString() ) const
-[7]QString toCurrencyString ( qulonglong value, const QString & symbol = QString() ) const
-[8]QString toCurrencyString ( double value, const QString & symbol = QString() ) const
-*/
-
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING )
 {
+  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 }
 
 /*
@@ -1229,11 +1205,6 @@ void QLocale_toDate2()
     Qt5xHb::createReturnClass( ptr, "QDATE", true );
   }
 }
-
-/*
-[1]QDate toDate ( const QString & string, FormatType format = LongFormat ) const
-[2]QDate toDate ( const QString & string, const QString & format ) const
-*/
 
 HB_FUNC_STATIC( QLOCALE_TODATE )
 {
@@ -1278,11 +1249,6 @@ void QLocale_toDateTime2()
     Qt5xHb::createReturnClass( ptr, "QDATETIME", true );
   }
 }
-
-/*
-[1]QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
-[2]QDateTime toDateTime ( const QString & string, const QString & format ) const
-*/
 
 HB_FUNC_STATIC( QLOCALE_TODATETIME )
 {
@@ -1792,11 +1758,6 @@ void QLocale_toTime2()
     Qt5xHb::createReturnClass( ptr, "QTIME", true );
   }
 }
-
-/*
-[1]QTime toTime ( const QString & string, FormatType format = LongFormat ) const
-[2]QTime toTime ( const QString & string, const QString & format ) const
-*/
 
 HB_FUNC_STATIC( QLOCALE_TOTIME )
 {

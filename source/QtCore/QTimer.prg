@@ -272,11 +272,6 @@ void QTimer_start2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void start ( int msec )
-[2]void start ()
-*/
-
 HB_FUNC_STATIC( QTIMER_START )
 {
   if( ISNUMPAR(1) && ISNUM(1) )

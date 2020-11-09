@@ -146,13 +146,6 @@ void QRect_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QRect ()
-[2]QRect ( const QPoint & topLeft, const QPoint & bottomRight )
-[3]QRect ( const QPoint & topLeft, const QSize & size )
-[4]QRect ( int x, int y, int width, int height )
-*/
-
 HB_FUNC_STATIC( QRECT_NEW )
 {
   if( ISNUMPAR(0) )
@@ -395,13 +388,6 @@ void QRect_contains4()
     RBOOL( obj->contains( *PQRECT(1), OPBOOL(2,false) ) );
   }
 }
-
-/*
-[1]bool contains ( const QPoint & point, bool proper = false ) const
-[2]bool contains ( int x, int y, bool proper ) const
-[3]bool contains ( int x, int y ) const
-[4]bool contains ( const QRect & rectangle, bool proper = false ) const
-*/
 
 HB_FUNC_STATIC( QRECT_CONTAINS )
 {
@@ -849,11 +835,6 @@ void QRect_moveTo2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void moveTo ( int x, int y )
-[2]void moveTo ( const QPoint & position )
-*/
 
 HB_FUNC_STATIC( QRECT_MOVETO )
 {
@@ -1517,11 +1498,6 @@ void QRect_translate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void translate ( int dx, int dy )
-[2]void translate ( const QPoint & offset )
-*/
-
 HB_FUNC_STATIC( QRECT_TRANSLATE )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -1565,11 +1541,6 @@ void QRect_translated2()
     Qt5xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
-
-/*
-[1]QRect translated ( int dx, int dy ) const
-[2]QRect translated ( const QPoint & offset ) const
-*/
 
 HB_FUNC_STATIC( QRECT_TRANSLATED )
 {

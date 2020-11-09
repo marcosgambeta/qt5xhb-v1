@@ -75,11 +75,6 @@ void QTextDecoder_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QTextDecoder(const QTextCodec * codec)
-[2]QTextDecoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
-*/
-
 HB_FUNC_STATIC( QTEXTDECODER_NEW )
 {
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
@@ -142,12 +137,6 @@ void QTextDecoder_toUnicode3()
     RQSTRING( obj->toUnicode( *PQBYTEARRAY(1) ) );
   }
 }
-
-/*
-[1]QString toUnicode(const char * chars, int len)
-[2]void toUnicode(QString * target, const char * chars, int len) // TODO: implementar(?)
-[3]QString toUnicode(const QByteArray & ba)
-*/
 
 HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 {

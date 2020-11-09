@@ -72,11 +72,6 @@ void QPropertyAnimation_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QPropertyAnimation ( QObject * parent = 0 )
-[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
-*/
-
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

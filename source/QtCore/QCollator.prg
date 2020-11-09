@@ -93,11 +93,6 @@ void QCollator_new2()
 #endif
 }
 
-/*
-[1]QCollator(const QLocale &locale = QLocale())
-[2]QCollator(const QCollator &)
-*/
-
 HB_FUNC_STATIC( QCOLLATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQLOCALE(1)||ISNIL(1)) )

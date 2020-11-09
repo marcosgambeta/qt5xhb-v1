@@ -77,11 +77,6 @@ void QXmlStreamNotationDeclaration_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QXmlStreamNotationDeclaration()
-[2]QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
-*/
-
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 {
   if( ISNUMPAR(0) )

@@ -71,11 +71,6 @@ void QHistoryState_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QHistoryState(QState *parent = 0)
-[2]QHistoryState(HistoryType type, QState *parent = 0)
-*/
-
 HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )

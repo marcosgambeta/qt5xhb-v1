@@ -80,15 +80,6 @@ HB_FUNC_STATIC( QSIGNALBLOCKER_NEW )
 }
 
 /*
-explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
-*/
-
-/*
-[1]explicit QSignalBlocker(QObject *o) Q_DECL_NOTHROW
-[2]explicit QSignalBlocker(QObject &o) Q_DECL_NOTHROW
-*/
-
-/*
 ~QSignalBlocker()
 */
 HB_FUNC_STATIC( QSIGNALBLOCKER_DELETE )

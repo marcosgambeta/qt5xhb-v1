@@ -465,11 +465,6 @@ void QIODevice_peek2()
   }
 }
 
-/*
-[1]qint64 peek ( char * data, qint64 maxSize )
-[2]QByteArray peek ( qint64 maxSize )
-*/
-
 HB_FUNC_STATIC( QIODEVICE_PEEK )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
@@ -561,11 +556,6 @@ void QIODevice_read2()
   }
 }
 
-/*
-[1]qint64 read ( char * data, qint64 maxSize )
-[2]QByteArray read ( qint64 maxSize )
-*/
-
 HB_FUNC_STATIC( QIODEVICE_READ )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
@@ -633,11 +623,6 @@ void QIODevice_readLine2()
     Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
-
-/*
-[1]qint64 readLine ( char * data, qint64 maxSize )
-[2]QByteArray readLine ( qint64 maxSize = 0 )
-*/
 
 HB_FUNC_STATIC( QIODEVICE_READLINE )
 {
@@ -865,12 +850,6 @@ void QIODevice_write3()
     RQINT64( obj->write( *PQBYTEARRAY(1) ) );
   }
 }
-
-/*
-[1]qint64 write ( const char * data, qint64 maxSize )
-[2]qint64 write ( const char * data )
-[3]qint64 write ( const QByteArray & byteArray )
-*/
 
 HB_FUNC_STATIC( QIODEVICE_WRITE )
 {

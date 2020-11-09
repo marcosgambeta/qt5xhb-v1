@@ -119,13 +119,6 @@ void QLineF_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QLineF()
-[2]QLineF(const QPointF & p1, const QPointF & p2)
-[3]QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
-[4]QLineF(const QLine & line)
-*/
-
 HB_FUNC_STATIC( QLINEF_NEW )
 {
   if( ISNUMPAR(0) )
@@ -742,11 +735,6 @@ void QLineF_translate2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void translate(const QPointF & offset)
-[2]void translate(qreal dx, qreal dy)
-*/
-
 HB_FUNC_STATIC( QLINEF_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
@@ -790,11 +778,6 @@ void QLineF_translated2()
     Qt5xHb::createReturnClass( ptr, "QLINEF", true );
   }
 }
-
-/*
-[1]QLineF translated(const QPointF & offset) const
-[2]QLineF translated(qreal dx, qreal dy) const
-*/
 
 HB_FUNC_STATIC( QLINEF_TRANSLATED )
 {

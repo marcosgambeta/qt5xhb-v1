@@ -89,11 +89,6 @@ void QEasingCurve_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QEasingCurve(Type type = Linear)
-[2]QEasingCurve(const QEasingCurve & other)
-*/
-
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )

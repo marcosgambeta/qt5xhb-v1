@@ -97,12 +97,6 @@ void QSizeF_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QSizeF()
-[2]QSizeF(const QSize &sz)
-[3]QSizeF(qreal w, qreal h)
-*/
-
 HB_FUNC_STATIC( QSIZEF_NEW )
 {
   if( ISNUMPAR(0) )
@@ -393,11 +387,6 @@ void QSizeF_scale2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void scale(qreal w, qreal h, Qt::AspectRatioMode mode)
-[2]void scale(const QSizeF &s, Qt::AspectRatioMode mode)
-*/
-
 HB_FUNC_STATIC( QSIZEF_SCALE )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
@@ -441,11 +430,6 @@ void QSizeF_scaled2()
     Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
   }
 }
-
-/*
-[1]QSizeF scaled(qreal w, qreal h, Qt::AspectRatioMode mode) const
-[2]QSizeF scaled(const QSizeF &s, Qt::AspectRatioMode mode) const
-*/
 
 HB_FUNC_STATIC( QSIZEF_SCALED )
 {

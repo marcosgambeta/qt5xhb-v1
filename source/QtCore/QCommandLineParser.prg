@@ -368,11 +368,6 @@ void QCommandLineParser_process2()
 #endif
 }
 
-/*
-[1]void process(const QStringList &arguments)
-[2]void process(const QCoreApplication &app)
-*/
-
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_PROCESS )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
@@ -471,11 +466,6 @@ void QCommandLineParser_isSet2()
 #endif
 }
 
-/*
-[1]bool isSet(const QString &name) const
-[2]bool isSet(const QCommandLineOption &option) const
-*/
-
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_ISSET )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
@@ -522,11 +512,6 @@ void QCommandLineParser_value2()
 #endif
 }
 
-/*
-[1]QString value(const QString &name) const
-[2]QString value(const QCommandLineOption &option) const
-*/
-
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUE )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
@@ -572,11 +557,6 @@ void QCommandLineParser_values2()
   }
 #endif
 }
-
-/*
-[1]QStringList values(const QString &name) const
-[2]QStringList values(const QCommandLineOption &option) const
-*/
 
 HB_FUNC_STATIC( QCOMMANDLINEPARSER_VALUES )
 {

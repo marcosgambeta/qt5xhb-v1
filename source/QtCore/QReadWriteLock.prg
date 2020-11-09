@@ -145,11 +145,6 @@ void QReadWriteLock_tryLockForRead2()
   }
 }
 
-/*
-[1]bool tryLockForRead()
-[2]bool tryLockForRead(int timeout)
-*/
-
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 {
   if( ISNUMPAR(0) )
@@ -217,11 +212,6 @@ void QReadWriteLock_tryLockForWrite2()
     RBOOL( obj->tryLockForWrite( PINT(1) ) );
   }
 }
-
-/*
-[1]bool tryLockForWrite()
-[2]bool tryLockForWrite(int timeout)
-*/
 
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 {

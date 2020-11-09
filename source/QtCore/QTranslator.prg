@@ -149,12 +149,6 @@ void QTranslator_load3()
   }
 }
 
-/*
-[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
-[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
-[3]bool load(const uchar * data, int len, const QString & directory = QString())
-*/
-
 HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
   if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )

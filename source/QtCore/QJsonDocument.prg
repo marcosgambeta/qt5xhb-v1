@@ -115,13 +115,6 @@ void QJsonDocument_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QJsonDocument()
-[2]QJsonDocument(const QJsonObject & object)
-[3]QJsonDocument(const QJsonArray & array)
-[4]QJsonDocument(const QJsonDocument & other)
-*/
-
 HB_FUNC_STATIC( QJSONDOCUMENT_NEW )
 {
   if( ISNUMPAR(0) )

@@ -320,11 +320,6 @@ void QAbstractEventDispatcher_registerTimer2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]int registerTimer(int interval, Qt::TimerType timerType, QObject * object)
-[2]virtual void registerTimer(int timerId, int interval, Qt::TimerType timerType, QObject * object) = 0
-*/
-
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQOBJECT(3) )

@@ -95,13 +95,6 @@ void QByteArrayMatcher_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QByteArrayMatcher()
-[2]QByteArrayMatcher(const QByteArray & pattern)
-[3]QByteArrayMatcher(const char * pattern, int length)
-[4]QByteArrayMatcher(const QByteArrayMatcher & other)
-*/
-
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 {
   if( ISNUMPAR(0) )
@@ -168,11 +161,6 @@ void QByteArrayMatcher_indexIn2()
     RINT( obj->indexIn( PCONSTCHAR(1), PINT(2), OPINT(3,0) ) );
   }
 }
-
-/*
-[1]int indexIn(const QByteArray & ba, int from = 0) const
-[2]int indexIn(const char * str, int len, int from = 0) const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 {

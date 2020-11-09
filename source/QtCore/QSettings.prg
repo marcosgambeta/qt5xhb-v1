@@ -127,14 +127,6 @@ void QSettings_new5()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-[4]QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
-[5]QSettings ( QObject * parent = 0 )
-*/
-
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {
   if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )

@@ -71,11 +71,6 @@ void QEventTransition_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QEventTransition(QState * sourceState = 0)
-[2]QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
-*/
-
 HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )

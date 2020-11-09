@@ -78,11 +78,6 @@ void QTemporaryDir_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QTemporaryDir()
-[2]QTemporaryDir(const QString & templateName)
-*/
-
 HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 {
   if( ISNUMPAR(0) )

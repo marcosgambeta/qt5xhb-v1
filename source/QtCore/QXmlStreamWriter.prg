@@ -110,17 +110,6 @@ void QXmlStreamWriter_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-QXmlStreamWriter(QString * string)
-*/
-
-/*
-[1]QXmlStreamWriter()
-[2]QXmlStreamWriter(QIODevice * device)
-[3]QXmlStreamWriter(QByteArray * array)
-[4]QXmlStreamWriter(QString * string)
-*/
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
 {
   if( ISNUMPAR(0) )
@@ -362,11 +351,6 @@ void QXmlStreamWriter_setCodec2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void setCodec(QTextCodec * codec)
-[2]void setCodec(const char * codecName)
-*/
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
 {
   if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
@@ -453,12 +437,6 @@ void QXmlStreamWriter_writeAttribute3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
-[2]void writeAttribute(const QString & qualifiedName, const QString & value)
-[3]void writeAttribute(const QXmlStreamAttribute & attribute)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 {
@@ -692,11 +670,6 @@ void QXmlStreamWriter_writeEmptyElement2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void writeEmptyElement(const QString & namespaceUri, const QString & name)
-[2]void writeEmptyElement(const QString & qualifiedName)
-*/
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
@@ -888,12 +861,6 @@ void QXmlStreamWriter_writeStartDocument3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void writeStartDocument(const QString & version)
-[2]void writeStartDocument(const QString & version, bool standalone)
-[3]void writeStartDocument()
-*/
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
@@ -944,11 +911,6 @@ void QXmlStreamWriter_writeStartElement2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void writeStartElement(const QString & namespaceUri, const QString & name)
-[2]void writeStartElement(const QString & qualifiedName)
-*/
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 {
   if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
@@ -994,11 +956,6 @@ void QXmlStreamWriter_writeTextElement2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
-[2]void writeTextElement(const QString & qualifiedName, const QString & text)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT )
 {

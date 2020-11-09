@@ -77,11 +77,6 @@ void QPluginLoader_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QPluginLoader ( QObject * parent = 0 )
-[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
-*/
-
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

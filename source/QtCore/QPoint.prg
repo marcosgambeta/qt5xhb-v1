@@ -79,11 +79,6 @@ void QPoint_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QPoint()
-[2]QPoint(int xpos, int ypos)
-*/
-
 HB_FUNC_STATIC( QPOINT_NEW )
 {
   if( ISNUMPAR(0) )
