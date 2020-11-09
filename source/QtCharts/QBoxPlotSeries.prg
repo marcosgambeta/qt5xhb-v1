@@ -410,11 +410,6 @@ void QBoxPlotSeries_append2()
 #endif
 }
 
-/*
-[1]bool append(QBoxSet *box)
-[2]bool append(QList<QBoxSet *> boxes)
-*/
-
 HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 {
   if( ISNUMPAR(1) && ISQBOXSET(1) )

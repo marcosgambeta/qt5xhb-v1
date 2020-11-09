@@ -137,11 +137,6 @@ void QPieSlice_new2()
 #endif
 }
 
-/*
-[1]explicit QPieSlice(QObject *parent = Q_NULLPTR)
-[2]QPieSlice(QString label, qreal value, QObject *parent = Q_NULLPTR)
-*/
-
 HB_FUNC_STATIC( QPIESLICE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

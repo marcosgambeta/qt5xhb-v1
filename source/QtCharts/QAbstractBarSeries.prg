@@ -442,11 +442,6 @@ void QAbstractBarSeries_append2()
 #endif
 }
 
-/*
-[1]bool append(QBarSet *set)
-[2]bool append(QList<QBarSet *> sets)
-*/
-
 HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
 {
   if( ISNUMPAR(1) && ISQBARSET(1) )

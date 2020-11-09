@@ -1507,11 +1507,6 @@ void QChart_zoomIn2()
 #endif
 }
 
-/*
-[1]void zoomIn()
-[2]void zoomIn(const QRectF &rect)
-*/
-
 HB_FUNC_STATIC( QCHART_ZOOMIN )
 {
   if( ISNUMPAR(0) )

@@ -365,11 +365,6 @@ void QBarCategoryAxis_append2()
 #endif
 }
 
-/*
-[1]void append(const QStringList &categories)
-[2]void append(const QString &category)
-*/
-
 HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 {
   if( ISNUMPAR(1) && ISARRAY(1) )
