@@ -271,11 +271,6 @@ void QAxBase_dynamicCall2()
   }
 }
 
-/*
-[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
-*/
-
 HB_FUNC_STATIC( QAXBASE_DYNAMICCALL )
 {
   if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
@@ -391,11 +386,6 @@ void QAxBase_querySubObject2()
     Qt5xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
   }
 }
-
-/*
-[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
-*/
 
 HB_FUNC_STATIC( QAXBASE_QUERYSUBOBJECT )
 {

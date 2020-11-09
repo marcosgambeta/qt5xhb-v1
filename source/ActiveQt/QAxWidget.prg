@@ -104,12 +104,6 @@ void QAxWidget_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QAxWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-[2]QAxWidget ( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-[3]QAxWidget ( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
-
 HB_FUNC_STATIC( QAXWIDGET_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
@@ -274,11 +268,6 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
   }
 }
 
-// QAxBase methods - begin
-
-// métodos da classe QAxBase, adicionados aqui, para
-// resolver problemas na utilização dos métodos
-
 /*
 QVariant asVariant () const
 */
@@ -434,11 +423,6 @@ void QAxWidget_dynamicCall2()
   }
 }
 
-/*
-[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
-*/
-
 HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL )
 {
   if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
@@ -555,11 +539,6 @@ void QAxWidget_querySubObject2()
   }
 }
 
-/*
-[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
-*/
-
 HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT )
 {
   if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
@@ -649,8 +628,6 @@ HB_FUNC_STATIC( QAXWIDGET_VERBS )
 #endif
   }
 }
-
-// QAxBase methods - end
 
 void QAxWidgetSlots_connect_signal( const QString & signal, const QString & slot );
 
