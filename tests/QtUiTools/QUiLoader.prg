@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -76,7 +76,7 @@ PROCEDURE Main ()
    oLCDNumber:display(1234)
 
    oApp:exec()
-   
+
    oWindow:delete()
 
    oApp:delete()

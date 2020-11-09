@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oToolBox
@@ -30,9 +30,14 @@ PROCEDURE Main ()
 
    oToolBox := QToolBox():new()
 
-   oWidget1 := QWidget():new():setObjectName("widget1")
-   oWidget2 := QWidget():new():setObjectName("widget2")
-   oWidget3 := QWidget():new():setObjectName("widget3")
+   oWidget1 := QWidget():new()
+   oWidget1:setObjectName("widget1")
+   
+   oWidget2 := QWidget():new()
+   oWidget2:setObjectName("widget2")
+   
+   oWidget3 := QWidget():new()
+   oWidget3:setObjectName("widget3")
 
    oToolBox:addItem(oWidget1, QIcon():new("../images/cut.png"), "Item 1")
    oToolBox:addItem(oWidget2, QIcon():new("../images/copy.png"), "Item 2")

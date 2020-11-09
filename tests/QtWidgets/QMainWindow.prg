@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    lOCAL oApp
    LOCAL oWindow
@@ -22,17 +22,15 @@ PROCEDURE Main ()
    oApp := QApplication():new()
 
    oWindow := QMainWindow():new()
-
    oWindow:setWindowTitle("Teste")
-
    oWindow:resize(640,480)
 
    oWindow:show()
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

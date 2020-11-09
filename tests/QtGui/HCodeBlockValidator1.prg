@@ -19,7 +19,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -27,9 +27,12 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():setWindowTitle("Teste"):resize(640,480)
+   oWindow := QWidget():new()
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640,480)
 
-   oButton := QPushButton():new("Diálogo",oWindow):move(20,20)
+   oButton := QPushButton():new("Diálogo",oWindow)
+   oButton:move(20,20)
    ? oButton:onClicked({||dialogo(oWindow)})
 
    oWindow:show()
@@ -42,7 +45,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION dialogo (oParent)
+STATIC FUNCTION dialogo(oParent)
 
    LOCAL oDialog
    LOCAL oCBValidator1
@@ -52,7 +55,9 @@ STATIC FUNCTION dialogo (oParent)
    LOCAL oLineEdit2
    LOCAL oLabel2
 
-   oDialog := QDialog():new(oParent):setWindowTitle("Diálogo"):resize(320,240)
+   oDialog := QDialog():new(oParent)
+   oDialog:setWindowTitle("Diálogo")
+   oDialog:resize(320,240)
 
    // aceita apenas letras e espaços
    // acentos são removidos
@@ -77,8 +82,12 @@ STATIC FUNCTION dialogo (oParent)
       RETURN {cString,nPos,nState}
       },oDialog)
    #endif
-   oLineEdit1 := QLineEdit():new(oDialog):move(10,10):setValidator(oCBValidator1)
-   oLabel1 := QLabel():new(oDialog):move(200,10):resize(40,30)
+   oLineEdit1 := QLineEdit():new(oDialog)
+   oLineEdit1:move(10,10)
+   oLineEdit1:setValidator(oCBValidator1)
+   oLabel1 := QLabel():new(oDialog)
+   oLabel1:move(200,10)
+   oLabel1:resize(40,30)
    ? oLineEdit1:onFocusOutEvent({||oLabel1:setText(iif(oLineEdit1:hasAcceptableInput(),".T.",".F."))})
 
    // aceita apenas numeros
@@ -98,8 +107,12 @@ STATIC FUNCTION dialogo (oParent)
       RETURN {cString,nPos,nState}
       },oDialog)
    #endif
-   oLineEdit2 := QLineEdit():new(oDialog):move(10,50):setValidator(oCBValidator2)
-   oLabel2 := QLabel():new(oDialog):move(200,50):resize(40,30)
+   oLineEdit2 := QLineEdit():new(oDialog)
+   oLineEdit2:move(10,50)
+   oLineEdit2:setValidator(oCBValidator2)
+   oLabel2 := QLabel():new(oDialog)
+   oLabel2:move(200,50)
+   oLabel2:resize(40,30)
    ? oLineEdit2:onFocusOutEvent({||oLabel2:setText(iif(oLineEdit2:hasAcceptableInput(),".T.",".F."))})
 
    oDialog:exec()
@@ -111,7 +124,7 @@ STATIC FUNCTION dialogo (oParent)
 
 RETURN NIL
 
-STATIC FUNCTION RemoveAcentos (cTexto)
+STATIC FUNCTION RemoveAcentos(cTexto)
 
    // acento agudo
    cTexto := strtran(cTexto,"á","a")

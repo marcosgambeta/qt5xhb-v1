@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -25,17 +25,17 @@ PROCEDURE Main ()
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640,480)
-   oWindow:show()
 
    oLCDNumber := QLCDNumber():new(oWindow)
    oLCDNumber:move(20,20)
    oLCDNumber:setTooltip("Eu sou um QLCDNumber")
-   oLCDNumber:show()
+
+   oWindow:show()
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

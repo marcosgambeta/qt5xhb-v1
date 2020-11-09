@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oMainWindow
@@ -29,7 +29,6 @@ PROCEDURE Main ()
    oMainWindow := QMainWindow():new()
    oMainWindow:setWindowTitle("Qt5xHb - teste com MDI")
    oMainWindow:resize(800,600)
-   oMainWindow:show()
 
    oMdiArea := QMdiArea():new()
    oMainWindow:setCentralWidget(oMdiArea)
@@ -50,10 +49,12 @@ PROCEDURE Main ()
    oMdiSubWindow4:setWindowTitle("Janela 4")
    oMdiSubWindow4:resize(320,240)
 
+   oMainWindow:show()
+
    oApp:exec()
-   
+
    oMainWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

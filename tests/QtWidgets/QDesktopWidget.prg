@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -29,10 +29,9 @@ PROCEDURE Main ()
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640,480)
-   oWindow:show()
 
    oDesktopWidget := QApplication():desktop()
-   
+
    ? "isVirtualDesktop = "
    ?? oDesktopWidget:isVirtualDesktop()
 
@@ -44,6 +43,8 @@ PROCEDURE Main ()
 
    ? "screenNumber = "
    ?? oDesktopWidget:screenNumber(oWindow)
+
+   oWindow:show()
 
    oApp:exec()
 

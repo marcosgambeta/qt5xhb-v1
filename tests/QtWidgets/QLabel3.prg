@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -27,16 +27,24 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():setWindowTitle("Teste"):resize(640,480)
+   oWindow := QWidget():new()
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640,480)
 
-   oLabel1 := QLabel():new("&Nome",oWindow):move(20,20)
-   oLineEdit1 := QLineEdit():new(oWindow):move(120,20)
+   oLabel1 := QLabel():new("&Nome",oWindow)
+   oLabel1:move(20,20)
+   oLineEdit1 := QLineEdit():new(oWindow)
+   oLineEdit1:move(120,20)
 
-   oLabel2 := QLabel():new("&Idade",oWindow):move(20,120)
-   oLineEdit2 := QLineEdit():new(oWindow):move(120,120)
+   oLabel2 := QLabel():new("&Idade",oWindow)
+   oLabel2:move(20,120)
+   oLineEdit2 := QLineEdit():new(oWindow)
+   oLineEdit2:move(120,120)
 
-   oLabel3 := QLabel():new("&Telefone",oWindow):move(20,220)
-   oLineEdit3 := QLineEdit():new(oWindow):move(120,220)
+   oLabel3 := QLabel():new("&Telefone",oWindow)
+   oLabel3:move(20,220)
+   oLineEdit3 := QLineEdit():new(oWindow)
+   oLineEdit3:move(120,220)
 
    o1 := olabel1:buddy()
    ? valtype(o1)

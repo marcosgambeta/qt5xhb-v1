@@ -16,7 +16,7 @@
 
 #define TOTAL_DE_SOCKETS 100
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -34,12 +34,27 @@ PROCEDURE Main ()
 
    // widgets
 
-   oWindow := QWidget():new():resize(640,480)
-   oButtonCreate := QPushButton():new("Create",oWindow):move(20,20)
-   oButtonOpen := QPushButton():new("Open",oWindow):move(20,120):setEnabled(.F.)
-   oButtonClose := QPushButton():new("Close",oWindow):move(20,220):setEnabled(.F.)
-   oButtonSend := QPushButton():new("Send",oWindow):move(20,320):setEnabled(.F.)
-   oLineEdit := QLineEdit():new("digite a mensagem aqui",oWindow):move(20,420):resize(220,30)
+   oWindow := QWidget():new()
+   oWindow:resize(640,480)
+
+   oButtonCreate := QPushButton():new("Create",oWindow)
+   oButtonCreate:move(20,20)
+
+   oButtonOpen := QPushButton():new("Open",oWindow)
+   oButtonOpen:move(20,120)
+   oButtonOpen:setEnabled(.F.)
+
+   oButtonClose := QPushButton():new("Close",oWindow)
+   oButtonClose:move(20,220)
+   oButtonClose:setEnabled(.F.)
+
+   oButtonSend := QPushButton():new("Send",oWindow)
+   oButtonSend:move(20,320)
+   oButtonSend:setEnabled(.F.)
+
+   oLineEdit := QLineEdit():new("digite a mensagem aqui",oWindow)
+   oLineEdit:move(20,420)
+   oLineEdit:resize(220,30)
 
    // sinais
 

@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -28,13 +28,11 @@ PROCEDURE Main ()
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640,480)
-   oWindow:show()
 
    // cria um label
    oLabel := QLabel():new(oWindow)
    oLabel:move(20,20)
    oLabel:resize(120,90)
-   oLabel:show()
 
    // cria um objeto da classe QMovie,
    // usando o arquivo impressora.gif
@@ -48,6 +46,9 @@ PROCEDURE Main ()
 
    // inicia a animação
    oMovie:start()
+
+   // mostra a janela
+   oWindow:show()
 
    // inicia o loop de eventos
    oApp:exec()

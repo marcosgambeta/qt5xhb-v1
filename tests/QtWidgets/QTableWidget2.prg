@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -31,9 +31,7 @@ PROCEDURE Main ()
    oWindow:resize(800,600)
 
    oTable := QTableWidget():new(nRows,nCols,oWindow)
-
    oTable:move(10,10)
-
    oTable:resize(800-20,600-20)
 
    FOR r := 1 TO nRows

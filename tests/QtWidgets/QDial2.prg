@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -29,7 +29,6 @@ PROCEDURE Main ()
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640,480)
-   oWindow:show()
 
    oDial := QDial():new(oWindow)
    oDial:move(20,20)
@@ -37,7 +36,8 @@ PROCEDURE Main ()
    ? oDial:onActionTriggered( {|oSender,nAction|test(oSender,nAction)} )
    ? oDial:onSliderPressed( {|oSender|test2(oSender)} )
    ? oDial:onSliderReleased( {|oSender|test3(oSender)} )
-   oDial:show()
+
+   oWindow:show()
 
    oApp:exec()
 
@@ -47,7 +47,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION test (oSender,nAction)
+STATIC FUNCTION test(oSender,nAction)
 
    qout("action triggered")
    qout(oSender:classname())
@@ -55,14 +55,14 @@ STATIC FUNCTION test (oSender,nAction)
 
 RETURN NIL
 
-STATIC FUNCTION test2 (oSender)
+STATIC FUNCTION test2(oSender)
 
    qout("slider pressed")
    qout(oSender:classname())
 
 RETURN NIL
 
-STATIC FUNCTION test3 (oSender)
+STATIC FUNCTION test3(oSender)
 
    qout("slider released")
    qout(oSender:classname())

@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -25,16 +25,16 @@ PROCEDURE Main ()
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640,480)
-   oWindow:show()
 
    oPTE := QPlainTextEdit():new(oWindow)
    oPTE:move(10,10)
-   oPTE:show()
+
+   oWindow:show()
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

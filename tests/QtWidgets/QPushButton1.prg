@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -28,7 +28,8 @@ PROCEDURE Main ()
 
    oWindow := QWidget():new()
 
-   oButton := QPushButton():new("Clique aqui",oWindow):move(20,20)
+   oButton := QPushButton():new("Clique aqui",oWindow)
+   oButton:move(20,20)
    ? oButton:onClicked({||qout("clicked")})
    ? oButton:onPressed({||qout("pressed")})
    ? oButton:onReleased({||qout("released")})

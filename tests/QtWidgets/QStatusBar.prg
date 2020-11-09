@@ -14,9 +14,9 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
-   lOCAL oApp
+   LOCAL oApp
    LOCAL oMainWindow
    LOCAL oStatusBar
 
@@ -25,15 +25,14 @@ PROCEDURE Main ()
    oMainWindow := QMainWindow():new()
 
    oStatusBar := oMainWindow:statusBar()
-
    oStatusBar:showMessage("teste")
 
    oMainWindow:show()
 
    oApp:exec()
-   
+
    oMainWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

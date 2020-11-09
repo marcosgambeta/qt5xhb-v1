@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -28,12 +28,12 @@ PROCEDURE Main ()
 
    oWindow := QWidget():new()
    oWindow:resize(640,480)
-   oWindow:show()
 
    oButton := QPushButton():new("Mostrar janela de diálogo",oWindow)
    oButton:move(20,20)
-   oButton:show()
    ? oButton:onClicked({||ShowColorDialog(oWindow)})
+
+   oWindow:show()
 
    oApp:exec()
 
@@ -43,7 +43,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION ShowColorDialog (oWindow)
+STATIC FUNCTION ShowColorDialog(oWindow)
 
    LOCAL oColorDialog
 
@@ -59,7 +59,7 @@ STATIC FUNCTION ShowColorDialog (oWindow)
 
 RETURN NIL
 
-STATIC FUNCTION ShowColorSelected (oColor)
+STATIC FUNCTION ShowColorSelected(oColor)
 
    ? "name=",oColor:name()
    ? "red=",oColor:red()

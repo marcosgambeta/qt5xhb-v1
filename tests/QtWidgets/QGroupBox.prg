@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -35,7 +35,7 @@ PROCEDURE Main ()
    oRadio2 := QRadioButton():new("R&adio button 2")
    oRadio3 := QRadioButton():new("Ra&dio button 3")
 
-   oRadio1:setChecked(.t.)
+   oRadio1:setChecked(.T.)
 
    oVBox := QVBoxLayout():new()
 
@@ -50,9 +50,9 @@ PROCEDURE Main ()
    oWindow:show()
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN

@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -32,14 +32,14 @@ PROCEDURE Main ()
    ? oButton:onClicked({||dialog(oWindow)})
 
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN
 
-STATIC FUNCTION dialog (oWindow)
+STATIC FUNCTION dialog(oWindow)
 
    LOCAL oPrintPreviewDialog
 

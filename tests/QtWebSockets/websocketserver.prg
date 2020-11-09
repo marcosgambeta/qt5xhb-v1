@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWebSocketServer
@@ -44,7 +44,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION newConnection (oWebSocketServer)
+STATIC FUNCTION newConnection(oWebSocketServer)
 
    LOCAL oSocket
 

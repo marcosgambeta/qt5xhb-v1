@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -22,9 +22,13 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():setWindowTitle("Teste"):resize(640,480)
+   oWindow := QWidget():new()
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640,480)
 
-   oCal := QCalendarWidget():new(oWindow):move(20,20):setTooltip("Eu sou um QCalendarWidget")
+   oCal := QCalendarWidget():new(oWindow)
+   oCal:move(20,20)
+   oCal:setTooltip("Eu sou um QCalendarWidget")
 
    oWindow:show()
 

@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -30,11 +30,17 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():resize(640,480)
+   oWindow := QWidget():new()
+   oWindow:resize(640,480)
 
-   oPushButton1 := QPushButton():new("1",oWindow):move(20,20)
-   oPushButton2 := QPushButton():new("2",oWindow):move(20,120)
-   oPushButton3 := QPushButton():new("3",oWindow):move(20,220)
+   oPushButton1 := QPushButton():new("1",oWindow)
+   oPushButton1:move(20,20)
+   
+   oPushButton2 := QPushButton():new("2",oWindow)
+   oPushButton2:move(20,120)
+   
+   oPushButton3 := QPushButton():new("3",oWindow)
+   oPushButton3:move(20,220)
 
    oButtonGroup := QButtonGroup():new()
    ? oButtonGroup:pointer

@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oToolBox
@@ -30,7 +30,7 @@ PROCEDURE Main ()
    oToolBox:addItem(QWidget():new(), QIcon():new("../images/cut.png"), "Item 1")
    oToolBox:addItem(QWidget():new(), QIcon():new("../images/copy.png"), "Item 2")
    oToolBox:addItem(QWidget():new(), QIcon():new("../images/paste.png"), "Item 3")
-   
+
    oToolBox:onCurrentChanged({|oSender,nItem|qout(nItem)})
 
    oToolBox:show()

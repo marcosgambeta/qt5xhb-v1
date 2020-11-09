@@ -23,7 +23,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -31,9 +31,12 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():setWindowTitle("Teste"):resize(640,480)
+   oWindow := QWidget():new()
+   oWindow:setWindowTitle("Teste")
+   oWindow:resize(640,480)
 
-   oButton := QPushButton():new("Inclusão",oWindow):move(20,20)
+   oButton := QPushButton():new("Inclusão",oWindow)
+   oButton:move(20,20)
    ? oButton:onClicked({||dialogo(oWindow)})
 
    oWindow:show()
@@ -46,7 +49,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION dialogo (oParent)
+STATIC FUNCTION dialogo(oParent)
 
    LOCAL oDialog
    LOCAL oCBValidator1
@@ -59,7 +62,9 @@ STATIC FUNCTION dialogo (oParent)
    LOCAL oButtonCancelar
    LOCAL nRet
 
-   oDialog := QDialog():new(oParent):setWindowTitle("Inclusão"):resize(320,240)
+   oDialog := QDialog():new(oParent)
+   oDialog:setWindowTitle("Inclusão")
+   oDialog:resize(320,240)
 
    // aceita apenas letras e espaços
    // acentos são removidos
@@ -84,8 +89,12 @@ STATIC FUNCTION dialogo (oParent)
       RETURN {cString,nPos,nState}
       },oDialog)
    #endif
-   oLabel1 := QLabel():new("Campo 1",oDialog):move(20,20):resize(60,30)
-   oLineEdit1 := QLineEdit():new(oDialog):move(100,20):setValidator(oCBValidator1)
+   oLabel1 := QLabel():new("Campo 1",oDialog)
+   oLabel1:move(20,20)
+   oLabel1:resize(60,30)
+   oLineEdit1 := QLineEdit():new(oDialog)
+   oLineEdit1:move(100,20)
+   oLineEdit1:setValidator(oCBValidator1)
 
    // aceita apenas numeros
    // campo não deve ser vazio
@@ -104,11 +113,17 @@ STATIC FUNCTION dialogo (oParent)
       RETURN {cString,nPos,nState}
       },oDialog)
    #endif
-   oLabel2 := QLabel():new("Campo 2",oDialog):move(20,60):resize(60,30)
-   oLineEdit2 := QLineEdit():new(oDialog):move(100,60):setValidator(oCBValidator2)
+   oLabel2 := QLabel():new("Campo 2",oDialog)
+   oLabel2:move(20,60)
+   oLabel2:resize(60,30)
+   oLineEdit2 := QLineEdit():new(oDialog)
+   oLineEdit2:move(100,60)
+   oLineEdit2:setValidator(oCBValidator2)
 
-   oButtonIncluir := QPushButton():new("Incluir",oDialog):move(20,240-40)
-   oButtonCancelar := QPushButton():new("Cancelar",oDialog):move(120,240-40)
+   oButtonIncluir := QPushButton():new("Incluir",oDialog)
+   oButtonIncluir:move(20,240-40)
+   oButtonCancelar := QPushButton():new("Cancelar",oDialog)
+   oButtonCancelar:move(120,240-40)
 
    ? oButtonIncluir:onClicked({||iif(oLineEdit1:hasAcceptableInput().and.oLineEdit2:hasAcceptableInput(),oDialog:accept(),qout("campos incorretos"))})
    ? oButtonCancelar:onClicked({||oDialog:reject()})
@@ -128,7 +143,7 @@ STATIC FUNCTION dialogo (oParent)
 
 RETURN NIL
 
-STATIC FUNCTION RemoveAcentos (cTexto)
+STATIC FUNCTION RemoveAcentos(cTexto)
 
    // acento agudo
    cTexto := strtran(cTexto,"á","a")

@@ -18,9 +18,9 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
-   lOCAL oApp
+   LOCAL oApp
    LOCAL oWindow
    LOCAL oButton1
    LOCAL oButton2

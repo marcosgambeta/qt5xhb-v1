@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oDB
@@ -26,7 +26,6 @@ PROCEDURE Main ()
 
    // cria um objeto da classe QSqlDatabase
    oDB := QSqlDatabase():addDatabase("QSQLITE","connection")
-
    oDB:setHostName("localhost")
    oDB:setDatabaseName("qtsqldemo.db")
    oDB:setUserName("usuario")

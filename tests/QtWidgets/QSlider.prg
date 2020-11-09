@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -29,14 +29,14 @@ PROCEDURE Main ()
    oWindow := QWidget():new()
    oWindow:setWindowTitle("Teste")
    oWindow:resize(640,480)
-   oWindow:show()
 
    oSlider := QSlider():new(oWindow)
    oSlider:move(20,20)
    oSlider:resize(20,400)
    oSlider:setTooltip("Eu sou um QSlider")
    ? oSlider:onSliderMoved( {|oSender,nValue|test(oSender,nValue)} )
-   oSlider:show()
+
+   oWindow:show()
 
    oApp:exec()
 
@@ -46,7 +46,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION test (oSender,nValue)
+STATIC FUNCTION test(oSender,nValue)
 
    qout("slider moved")
    qout(oSender:classname())

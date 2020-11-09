@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -22,9 +22,11 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():resize(640,480)
+   oWindow := QWidget():new()
+   oWindow:resize(640,480)
 
-   oButton := QPushButton():new("Mostrar janela de diálogo",oWindow):move(20,20)
+   oButton := QPushButton():new("Mostrar janela de diálogo",oWindow)
+   oButton:move(20,20)
    ? oButton:onClicked({||dialog(oWindow)})
 
    oWindow:show()
@@ -37,7 +39,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION dialog (oWindow)
+STATIC FUNCTION dialog(oWindow)
 
    LOCAL oMessageBox
    LOCAL oClickedButton

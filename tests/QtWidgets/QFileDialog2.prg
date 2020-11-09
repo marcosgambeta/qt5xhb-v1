@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -28,22 +28,22 @@ PROCEDURE Main ()
 
    oWindow := QWidget():new()
    oWindow:resize(640,480)
-   oWindow:show()
 
    oButton := QPushButton():new("Mostrar janela de diálogo",oWindow)
    oButton:move(20,20)
-   oButton:show()
    ? oButton:onClicked({||dialog(oWindow)})
 
+   oWindow:show()
+
    oApp:exec()
-   
+
    oWindow:delete()
-   
+
    oApp:delete()
 
 RETURN
 
-STATIC FUNCTION dialog (oWindow)
+STATIC FUNCTION dialog(oWindow)
 
    LOCAL oFileDialog
 
@@ -52,7 +52,7 @@ STATIC FUNCTION dialog (oWindow)
    ? oFileDialog:onFileSelected({|oSender,cFile|qout(oSender:classname()),qout(cFile)})
 
    oFileDialog:exec()
-   
+
    ? oFileDialog:onFileSelected()
 
    oFileDialog:delete()

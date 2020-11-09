@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -28,15 +28,22 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():resize(320,240)
+   oWindow := QWidget():new()
+   oWindow:resize(320,240)
 
-   oButton1 := QPushButton():new("PushButton 1",oWindow):move(20,20):setObjectName("button1")
+   oButton1 := QPushButton():new("PushButton 1",oWindow)
+   oButton1:move(20,20)
+   oButton1:setObjectName("button1")
    ? oButton1:connect( "clicked()", @buttonClicked() )
 
-   oButton2 := QPushButton():new("PushButton 2",oWindow):move(20,70):setObjectName("button2")
+   oButton2 := QPushButton():new("PushButton 2",oWindow)
+   oButton2:move(20,70)
+   oButton2:setObjectName("button2")
    ? oButton2:connect( "clicked()", @buttonClicked() )
 
-   oButton3 := QPushButton():new("PushButton 3",oWindow):move(20,120):setObjectName("button3")
+   oButton3 := QPushButton():new("PushButton 3",oWindow)
+   oButton3:move(20,120)
+   oButton3:setObjectName("button3")
    ? oButton3:connect( "clicked()", @buttonClicked() )
 
    oWindow:show()
@@ -49,7 +56,7 @@ PROCEDURE Main ()
 
 RETURN
 
-STATIC FUNCTION buttonClicked (oButton)
+STATIC FUNCTION buttonClicked(oButton)
 
    IF oButton:objectName() == "button1"
       ? "button 1 clicked"
