@@ -100,11 +100,6 @@ void QBluetoothSocket_new2()
 #endif
 }
 
-/*
-[1]QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
-[2]QBluetoothSocket(QObject *parent = 0)
-*/
-
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
@@ -352,12 +347,6 @@ void QBluetoothSocket_connectToService3()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
-[2]void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, OpenMode openMode = ReadWrite)
-[3]void connectToService(const QBluetoothAddress &address, quint16 port, OpenMode openMode = ReadWrite)
-*/
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE )
 {

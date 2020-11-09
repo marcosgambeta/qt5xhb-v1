@@ -149,18 +149,6 @@ void QBluetoothUuid_new9()
 #endif
 }
 
-/*
-[1]QBluetoothUuid()
-[2]QBluetoothUuid(ProtocolUuid uuid)
-[3]QBluetoothUuid(ServiceClassUuid uuid)
-[4]QBluetoothUuid(quint16 uuid)
-[5]QBluetoothUuid(quint32 uuid)
-[6]QBluetoothUuid(quint128 uuid)
-[7]QBluetoothUuid(const QString &uuid)
-[8]QBluetoothUuid(const QBluetoothUuid &uuid)
-[9]QBluetoothUuid(const QUuid &uuid)
-*/
-
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW )
 {
   if( ISNUMPAR(0) )
@@ -301,39 +289,5 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
   }
 #endif
 }
-
-/*
-convert QList<QBluetoothUuid> to array
-*/
-/*
-void _qt5xhb_convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> & list )
-{
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QBLUETOOTHUUID" );
-
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-
-  int i;
-
-  for(i=0; i<list.count(); i++)
-  {
-    if( pDynSym )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QBluetoothUuid *) new QBluetoothUuid ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-
-  hb_itemReturnRelease(pArray);
-}
-*/
 
 #pragma ENDDUMP
