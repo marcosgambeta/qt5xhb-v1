@@ -98,12 +98,6 @@ void QHeightMapSurfaceDataProxy_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QHeightMapSurfaceDataProxy(QObject *parent = Q_NULLPTR)
-[2]explicit QHeightMapSurfaceDataProxy(const QImage &image, QObject *parent = Q_NULLPTR)
-[3]explicit QHeightMapSurfaceDataProxy(const QString &filename, QObject *parent = Q_NULLPTR)
-*/
-
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

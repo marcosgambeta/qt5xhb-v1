@@ -81,11 +81,6 @@ void QBar3DSeries_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
-[2]explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
-*/
-
 HB_FUNC_STATIC( QBAR3DSERIES_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

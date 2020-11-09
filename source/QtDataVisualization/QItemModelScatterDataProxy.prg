@@ -129,13 +129,6 @@ void QItemModelScatterDataProxy_new4()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QItemModelScatterDataProxy(QObject *parent = Q_NULLPTR)
-[2]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = Q_NULLPTR)
-[3]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = Q_NULLPTR)
-[4]explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole, QObject *parent = Q_NULLPTR)
-*/
-
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

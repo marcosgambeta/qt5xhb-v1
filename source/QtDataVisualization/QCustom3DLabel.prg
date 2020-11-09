@@ -92,11 +92,6 @@ void QCustom3DLabel_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QCustom3DLabel(QObject *parent = Q_NULLPTR)
-[2]explicit QCustom3DLabel(const QString &text, const QFont &font, const QVector3D &position, const QVector3D &scaling, const QQuaternion &rotation, QObject *parent = Q_NULLPTR)
-*/
-
 HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

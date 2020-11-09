@@ -97,13 +97,6 @@ void QBarDataItem_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QBarDataItem()
-[2]QBarDataItem(float value)
-[3]QBarDataItem(float value, float angle)
-[4]QBarDataItem(const QBarDataItem &other)
-*/
-
 HB_FUNC_STATIC( QBARDATAITEM_NEW )
 {
   if( ISNUMPAR(0) )

@@ -182,10 +182,6 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
 }
 
 /*
-const QSurfaceDataArray *array() const
-*/
-
-/*
 const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
 */
 void QSurfaceDataProxy_itemAt1()
@@ -213,11 +209,6 @@ void QSurfaceDataProxy_itemAt2()
   }
 }
 
-/*
-[1]const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
-[2]const QSurfaceDataItem *itemAt(const QPoint &position) const
-*/
-
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 {
   if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
@@ -233,18 +224,6 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-void resetArray(QSurfaceDataArray *newArray)
-*/
-
-/*
-void setRow(int rowIndex, QSurfaceDataRow *row)
-*/
-
-/*
-void setRows(int rowIndex, const QSurfaceDataArray &rows)
-*/
 
 /*
 void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
@@ -276,11 +255,6 @@ void QSurfaceDataProxy_setItem2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
-[2]void setItem(const QPoint &position, const QSurfaceDataItem &item)
-*/
-
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQSURFACEDATAITEM(3) )
@@ -296,22 +270,6 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-int addRow(QSurfaceDataRow *row)
-*/
-
-/*
-int addRows(const QSurfaceDataArray &rows)
-*/
-
-/*
-void insertRow(int rowIndex, QSurfaceDataRow *row)
-*/
-
-/*
-void insertRows(int rowIndex, const QSurfaceDataArray &rows)
-*/
 
 /*
 void removeRows(int rowIndex, int removeCount)
