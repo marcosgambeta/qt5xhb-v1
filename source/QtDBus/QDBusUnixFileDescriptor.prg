@@ -89,12 +89,6 @@ void QDBusUnixFileDescriptor_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDBusUnixFileDescriptor()
-[2]explicit QDBusUnixFileDescriptor(int fileDescriptor)
-[3]QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &other)
-*/
-
 HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 {
   if( ISNUMPAR(0) )

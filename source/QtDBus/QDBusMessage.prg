@@ -96,11 +96,6 @@ void QDBusMessage_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDBusMessage()
-[2]QDBusMessage(const QDBusMessage &other)
-*/
-
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
 {
   if( ISNUMPAR(0) )
@@ -151,11 +146,6 @@ void QDBusMessage_createReply2()
     Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
   }
 }
-
-/*
-[1]QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
-[2]QDBusMessage createReply(const QVariant &argument) const
-*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
 {
@@ -210,12 +200,6 @@ void QDBusMessage_createErrorReply3()
     Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
   }
 }
-
-/*
-[1]QDBusMessage createErrorReply(const QString name, const QString &msg) const
-[2]QDBusMessage createErrorReply(const QDBusError &err) const
-[3]QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
-*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 {
@@ -680,12 +664,6 @@ void QDBusMessage_createError3()
   QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
   Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
 }
-
-/*
-[1]static QDBusMessage createError(const QString &name, const QString &msg)
-[2]static inline QDBusMessage createError(const QDBusError &err)
-[3]static inline QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
-*/
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
 {

@@ -100,14 +100,6 @@ void QDBusError_new5()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDBusError()
-[2]QDBusError(const DBusError *error)
-[3]QDBusError(const QDBusMessage& msg)
-[4]QDBusError(ErrorType error, const QString &message)
-[5]QDBusError(const QDBusError &other)
-*/
-
 HB_FUNC_STATIC( QDBUSERROR_NEW )
 {
   if( ISNUMPAR(0) )

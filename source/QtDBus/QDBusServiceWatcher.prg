@@ -81,11 +81,6 @@ void QDBusServiceWatcher_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit QDBusServiceWatcher(QObject *parent = 0)
-[2]QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, WatchMode watchMode = WatchForOwnerChange, QObject *parent = 0)
-*/
-
 HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

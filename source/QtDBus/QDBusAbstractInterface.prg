@@ -309,11 +309,6 @@ void QDBusAbstractInterface_call2()
   }
 }
 
-/*
-[1]QDBusMessage call(const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
-[2]QDBusMessage call(QDBus::CallMode mode,const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
-*/
-
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL )
 {
 }
@@ -392,11 +387,6 @@ void QDBusAbstractInterface_callWithCallback2()
     RBOOL( obj->callWithCallback( PQSTRING(1), par2, PQOBJECT(3), PCONSTCHAR(4) ) );
   }
 }
-
-/*
-[1]bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member, const char *errorSlot)
-[2]bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member)
-*/
 
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK )
 {

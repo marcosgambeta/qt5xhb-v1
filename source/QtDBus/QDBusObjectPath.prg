@@ -96,13 +96,6 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDBusObjectPath()
-[2]explicit QDBusObjectPath(const char *path)
-[3]explicit QDBusObjectPath(QLatin1String path)
-[4]explicit QDBusObjectPath(const QString &path)
-*/
-
 HB_FUNC( QDBUSOBJECTPATH_NEW )
 {
   if( ISNUMPAR(0) )
