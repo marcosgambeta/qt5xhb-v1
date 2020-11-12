@@ -381,11 +381,6 @@ void QSvgGenerator_setViewBox2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void setViewBox ( const QRect & viewBox )
-[2]void setViewBox ( const QRectF & viewBox )
-*/
-
 HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )

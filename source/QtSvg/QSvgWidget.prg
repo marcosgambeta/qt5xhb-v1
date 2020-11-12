@@ -73,11 +73,6 @@ void QSvgWidget_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QSvgWidget ( QWidget * parent = 0 )
-[2]QSvgWidget ( const QString & file, QWidget * parent = 0 )
-*/
-
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
@@ -192,11 +187,6 @@ void QSvgWidget_load2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void load ( const QString & file )
-[2]void load ( const QByteArray & contents )
-*/
 
 HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 {
