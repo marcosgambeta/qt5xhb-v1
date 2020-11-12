@@ -114,12 +114,6 @@ void QQuickWidget_new3()
 #endif
 }
 
-/*
-[1]explicit QQuickWidget(QWidget *parent = 0)
-[2]QQuickWidget(QQmlEngine* engine, QWidget *parent)
-[3]QQuickWidget(const QUrl &source, QWidget *parent = 0)
-*/
-
 HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
