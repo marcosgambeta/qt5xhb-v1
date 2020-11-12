@@ -86,11 +86,6 @@ void QPlaceContactDetail_new2()
 #endif
 }
 
-/*
-[1]QPlaceContactDetail()
-[2]QPlaceContactDetail(const QPlaceContactDetail &other)
-*/
-
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_NEW )
 {
   if( ISNUMPAR(0) )

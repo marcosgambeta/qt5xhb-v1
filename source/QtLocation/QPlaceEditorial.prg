@@ -78,11 +78,6 @@ void QPlaceEditorial_new2()
 #endif
 }
 
-/*
-[1]QPlaceEditorial()
-[2]QPlaceEditorial::QPlaceEditorial(const QPlaceContent &other)
-*/
-
 HB_FUNC_STATIC( QPLACEEDITORIAL_NEW )
 {
   if( ISNUMPAR(0) )

@@ -97,11 +97,6 @@ void QGeoManeuver_new2()
 #endif
 }
 
-/*
-[1]QGeoManeuver()
-[2]QGeoManeuver(const QGeoManeuver &other)
-*/
-
 HB_FUNC_STATIC( QGEOMANEUVER_NEW )
 {
   if( ISNUMPAR(0) )

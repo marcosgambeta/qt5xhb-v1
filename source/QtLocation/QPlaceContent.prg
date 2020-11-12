@@ -93,11 +93,6 @@ void QPlaceContent_new2()
 #endif
 }
 
-/*
-[1]QPlaceContent()
-[2]QPlaceContent(const QPlaceContent &other)
-*/
-
 HB_FUNC_STATIC( QPLACECONTENT_NEW )
 {
   if( ISNUMPAR(0) )

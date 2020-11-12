@@ -169,11 +169,6 @@ void QGeoCodingManager_geocode2()
 #endif
 }
 
-/*
-[1]QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds = QGeoShape())
-[2]QGeoCodeReply *geocode(const QString &searchString, int limit = -1, int offset = 0, const QGeoShape &bounds = QGeoShape())
-*/
-
 HB_FUNC_STATIC( QGEOCODINGMANAGER_GEOCODE )
 {
   if( ISBETWEEN(1,2) && ISQGEOADDRESS(1) && (ISQGEOSHAPE(2)||ISNIL(2)) )

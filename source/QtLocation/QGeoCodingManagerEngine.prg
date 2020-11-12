@@ -169,11 +169,6 @@ void QGeoCodingManagerEngine_geocode2()
 #endif
 }
 
-/*
-[1]virtual QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds)
-[2]virtual QGeoCodeReply *geocode(const QString &address, int limit, int offset, const QGeoShape &bounds)
-*/
-
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
 {
   if( ISNUMPAR(2) && ISQGEOADDRESS(1) && ISQGEOSHAPE(2) )

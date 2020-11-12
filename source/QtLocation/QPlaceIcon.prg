@@ -89,11 +89,6 @@ void QPlaceIcon_new2()
 #endif
 }
 
-/*
-[1]QPlaceIcon()
-[2]QPlaceIcon(const QPlaceIcon &other)
-*/
-
 HB_FUNC_STATIC( QPLACEICON_NEW )
 {
   if( ISNUMPAR(0) )

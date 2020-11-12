@@ -92,11 +92,6 @@ void QPlaceSupplier_new2()
 #endif
 }
 
-/*
-[1]QPlaceSupplier()
-[2]QPlaceSupplier(const QPlaceSupplier &other)
-*/
-
 HB_FUNC_STATIC( QPLACESUPPLIER_NEW )
 {
   if( ISNUMPAR(0) )

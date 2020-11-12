@@ -93,11 +93,6 @@ void QPlaceCategory_new2()
 #endif
 }
 
-/*
-[1]QPlaceCategory()
-[2]QPlaceCategory(const QPlaceCategory &other)
-*/
-
 HB_FUNC_STATIC( QPLACECATEGORY_NEW )
 {
   if( ISNUMPAR(0) )
