@@ -514,11 +514,6 @@ void QtWin_extendFrameIntoClientArea2()
 #endif
 }
 
-/*
-[1]void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
-[2]void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
-*/
-
 HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA )
 {
   if( ISNUMPAR(5) && ISQWINDOW(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
@@ -583,11 +578,6 @@ void QtWin_enableBlurBehindWindow2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void enableBlurBehindWindow(QWindow *window, const QRegion &region)
-[2]void enableBlurBehindWindow(QWindow *window)
-*/
 
 HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW )
 {
