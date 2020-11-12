@@ -1954,9 +1954,6 @@ void QImage_toVariant2()
   Qt5xHb::createReturnClass( variant, "QVARIANT", true );
 }
 
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant( const QImage & )
-
 HB_FUNC_STATIC( QIMAGE_TOVARIANT )
 {
   if( ISNUMPAR(0) )

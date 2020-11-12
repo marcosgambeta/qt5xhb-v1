@@ -53,11 +53,6 @@ void HCodeBlockValidator_new2()
   Qt5xHb::returnNewObject( o, false );
 }
 
-/*
-[1]explicit HCodeBlockValidator( QObject *parent = 0 )
-[2]HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = 0 )
-*/
-
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

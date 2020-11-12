@@ -646,9 +646,6 @@ void QBrush_toVariant2()
   Qt5xHb::createReturnClass( variant, "QVARIANT", true );
 }
 
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant( const QBrush & )
-
 HB_FUNC_STATIC( QBRUSH_TOVARIANT )
 {
   if( ISNUMPAR(0) )

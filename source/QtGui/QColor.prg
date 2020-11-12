@@ -2373,11 +2373,6 @@ HB_FUNC( QGRAY2 )
   }
 }
 
-/*
-[1]int qGray ( int r, int g, int b )
-[2]int qGray ( QRgb rgb )
-*/
-
 HB_FUNC( QGRAY )
 {
   if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
@@ -2479,9 +2474,6 @@ void QColor_toVariant2()
   variant->setValue<QColor>( *color );
   Qt5xHb::createReturnClass( variant, "QVARIANT", true );
 }
-
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant( const QColor & )
 
 HB_FUNC_STATIC( QCOLOR_TOVARIANT )
 {
