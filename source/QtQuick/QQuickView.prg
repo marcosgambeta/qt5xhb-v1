@@ -96,12 +96,6 @@ void QQuickView_new3()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QQuickView(QWindow * parent = 0)
-[2]QQuickView(QQmlEngine * engine, QWindow * parent)
-[3]QQuickView(const QUrl & source, QWindow * parent = 0)
-*/
-
 HB_FUNC_STATIC( QQUICKVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWINDOW(1)||ISNIL(1)) )
