@@ -83,11 +83,6 @@ void QNetworkAddressEntry_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QNetworkAddressEntry ()
-[2]QNetworkAddressEntry ( const QNetworkAddressEntry & other )
-*/
-
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 {
   if( ISNUMPAR(0) )

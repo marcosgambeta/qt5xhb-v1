@@ -80,11 +80,6 @@ void QDnsServiceRecord_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDnsServiceRecord()
-[2]QDnsServiceRecord(const QDnsServiceRecord & other)
-*/
-
 HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
 {
   if( ISNUMPAR(0) )

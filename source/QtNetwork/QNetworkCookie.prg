@@ -97,11 +97,6 @@ void QNetworkCookie_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
-[2]QNetworkCookie ( const QNetworkCookie & other )
-*/
-
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQBYTEARRAY(1)||ISNIL(1)) && (ISQBYTEARRAY(2)||ISNIL(2)) )

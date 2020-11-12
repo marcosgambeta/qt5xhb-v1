@@ -127,11 +127,6 @@ void QUdpSocket_joinMulticastGroup2()
   }
 }
 
-/*
-[1]bool joinMulticastGroup(const QHostAddress &groupAddress)
-[2]bool joinMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
-*/
-
 HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
 {
   if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
@@ -173,11 +168,6 @@ void QUdpSocket_leaveMulticastGroup2()
     RBOOL( obj->leaveMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
   }
 }
-
-/*
-[1]bool leaveMulticastGroup(const QHostAddress &groupAddress)
-[2]bool leaveMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
-*/
 
 HB_FUNC_STATIC( QUDPSOCKET_LEAVEMULTICASTGROUP )
 {
@@ -365,12 +355,6 @@ void QUdpSocket_writeDatagram3()
     RQINT64( obj->writeDatagram( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
   }
 }
-
-/*
-[1]qint64 writeDatagram(const QNetworkDatagram &datagram)
-[2]qint64 writeDatagram(const char *data, qint64 len, const QHostAddress &host, quint16 port)
-[3]qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
-*/
 
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 {

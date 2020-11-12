@@ -110,14 +110,6 @@ void QSslKey_new5()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QSslKey()
-[2]QSslKey( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat format = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-[3]QSslKey( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat format = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-[4]explicit QSslKey(Qt::HANDLE handle, QSsl::KeyType type = QSsl::PrivateKey)
-[5]QSslKey( const QSslKey & other )
-*/
-
 HB_FUNC_STATIC( QSSLKEY_NEW )
 {
   if( ISNUMPAR(0) )

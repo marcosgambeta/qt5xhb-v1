@@ -118,12 +118,6 @@ void QSslCertificate_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]explicit QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-[2]explicit QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
-[3]QSslCertificate ( const QSslCertificate & other )
-*/
-
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 {
   if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISNUM(2)||ISNIL(2)) )
@@ -417,11 +411,6 @@ void QSslCertificate_issuerInfo2()
   }
 }
 
-/*
-[1]QStringList issuerInfo ( SubjectInfo subject ) const
-[2]QStringList issuerInfo ( const QByteArray & tag ) const
-*/
-
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
@@ -463,11 +452,6 @@ void QSslCertificate_subjectInfo2()
     RQSTRINGLIST( obj->subjectInfo( *PQBYTEARRAY(1) ) );
   }
 }
-
-/*
-[1]QStringList subjectInfo(SubjectInfo subject) const
-[2]QStringList subjectInfo(const QByteArray & attribute) const
-*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
 {

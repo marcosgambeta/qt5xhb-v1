@@ -107,12 +107,6 @@ void QNetworkProxy_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QNetworkProxy ()
-[2]QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
-[3]QNetworkProxy ( const QNetworkProxy & other )
-*/
-
 HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 {
   if( ISNUMPAR(0) )
