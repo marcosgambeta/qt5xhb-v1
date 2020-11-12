@@ -72,12 +72,6 @@ void HStyledItemDelegate_new3 ()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]explicit HStyledItemDelegate( QObject *parent = 0 )
-[2]HStyledItemDelegate( PHB_ITEM paintBlock, QObject *parent = 0 )
-[3]HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0 )
-*/
-
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

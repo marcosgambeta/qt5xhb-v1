@@ -203,11 +203,6 @@ void QColorDialog_open2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void open ()
-[2]void open ( QObject * receiver, const char * member )
-*/
-
 HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
   if( ISNUMPAR(0) )
