@@ -937,11 +937,6 @@ void QSqlDatabase_addDatabase2 ()
   Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true );
 }
 
-/*
-[1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
-[2]QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
-*/
-
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {
   if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
