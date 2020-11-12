@@ -95,11 +95,6 @@ void QGeoLocation_new2()
 #endif
 }
 
-/*
-[1]QGeoLocation()
-[2]QGeoLocation(const QGeoLocation &other)
-*/
-
 HB_FUNC_STATIC( QGEOLOCATION_NEW )
 {
   if( ISNUMPAR(0) )

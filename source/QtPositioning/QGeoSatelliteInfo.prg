@@ -91,11 +91,6 @@ void QGeoSatelliteInfo_new2()
 #endif
 }
 
-/*
-[1]QGeoSatelliteInfo()
-[2]QGeoSatelliteInfo(const QGeoSatelliteInfo &other)
-*/
-
 HB_FUNC_STATIC( QGEOSATELLITEINFO_NEW )
 {
   if( ISNUMPAR(0) )

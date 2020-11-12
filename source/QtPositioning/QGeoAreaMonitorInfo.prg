@@ -95,11 +95,6 @@ void QGeoAreaMonitorInfo_new2()
 #endif
 }
 
-/*
-[1]QGeoAreaMonitorInfo(const QString &name = QString())
-[2]QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
-*/
-
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
 {
   if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )

@@ -125,14 +125,6 @@ void QGeoRectangle_new5()
 #endif
 }
 
-/*
-[1]QGeoRectangle()
-[2]QGeoRectangle(const QGeoCoordinate &center, double degreesWidth, double degreesHeight)
-[3]QGeoRectangle(const QGeoCoordinate &topLeft, const QGeoCoordinate &bottomRight)
-[4]QGeoRectangle(const QGeoRectangle &other)
-[5]QGeoRectangle(const QGeoShape &other)
-*/
-
 HB_FUNC_STATIC( QGEORECTANGLE_NEW )
 {
   if( ISNUMPAR(0) )
@@ -592,11 +584,6 @@ void QGeoRectangle_contains2()
   }
 #endif
 }
-
-/*
-[1]bool contains(const QGeoCoordinate &coordinate) const
-[2]bool contains(const QGeoRectangle &rectangle) const
-*/
 
 HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS )
 {

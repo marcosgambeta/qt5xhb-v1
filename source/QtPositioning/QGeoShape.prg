@@ -85,11 +85,6 @@ void QGeoShape_new2()
 #endif
 }
 
-/*
-[1]QGeoShape()
-[2]QGeoShape(const QGeoShape &other)
-*/
-
 HB_FUNC_STATIC( QGEOSHAPE_NEW )
 {
   if( ISNUMPAR(0) )

@@ -101,13 +101,6 @@ void QGeoCircle_new4()
 #endif
 }
 
-/*
-[1]QGeoCircle()
-[2]QGeoCircle(const QGeoCoordinate &center, qreal radius = -1.0)
-[3]QGeoCircle(const QGeoCircle &other)
-[4]QGeoCircle(const QGeoShape &other)
-*/
-
 HB_FUNC_STATIC( QGEOCIRCLE_NEW )
 {
   if( ISNUMPAR(0) )
