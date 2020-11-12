@@ -88,11 +88,6 @@ void QCanBusDeviceInfo_new2()
 #endif
 }
 
-/*
-[1]QCanBusDeviceInfo() = delete
-[2]QCanBusDeviceInfo(const QCanBusDeviceInfo &other)
-*/
-
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 {
   if( ISNUMPAR(0) )
