@@ -94,15 +94,6 @@ void QOAuth1_new2()
 #endif
 }
 
-/*
-QOAuth1(const QString &clientIdentifier, const QString &clientSharedSecret, QNetworkAccessManager *manager, QObject *parent = nullptr)
-*/
-
-/*
-[1]explicit QOAuth1(QObject *parent = nullptr)
-[2]explicit QOAuth1(QNetworkAccessManager *manager, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QOAUTH1_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
@@ -231,11 +222,6 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
 }
 
 /*
-[1]void setClientCredentials(const QPair<QString, QString> &clientCredentials)
-[2]void setClientCredentials(const QString &clientIdentifier, const QString &clientSharedSecret)
-*/
-
-/*
 QString tokenSecret() const
 */
 HB_FUNC_STATIC( QOAUTH1_TOKENSECRET )
@@ -324,11 +310,6 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void setTokenCredentials(const QPair<QString, QString> &tokenCredentials)
-[2]void setTokenCredentials(const QString &token, const QString &tokenSecret)
-*/
 
 /*
 QUrl temporaryCredentialsUrl() const
