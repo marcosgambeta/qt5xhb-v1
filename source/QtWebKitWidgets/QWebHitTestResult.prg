@@ -100,11 +100,6 @@ void QWebHitTestResult_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QWebHitTestResult ()
-[2]QWebHitTestResult ( const QWebHitTestResult & other )
-*/
-
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 {
   if( ISNUMPAR(0) )

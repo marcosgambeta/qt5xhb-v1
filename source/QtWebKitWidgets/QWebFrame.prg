@@ -731,11 +731,6 @@ void QWebFrame_load2()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void load ( const QUrl & url )
-[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
-
 HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
@@ -856,11 +851,6 @@ void QWebFrame_render2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void render(QPainter*, const QRegion& clip = QRegion())
-[2]void render(QPainter*, RenderLayers layer, const QRegion& clip = QRegion())
-*/
 
 HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {
