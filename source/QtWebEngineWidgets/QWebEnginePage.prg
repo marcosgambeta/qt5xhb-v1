@@ -709,15 +709,6 @@ void QWebEnginePage_runJavaScript1()
 #endif
 }
 
-/*
-void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
-*/
-
-/*
-[1]void runJavaScript(const QString& scriptSource)
-[2]void runJavaScript(const QString& scriptSource, const QWebEngineCallback<const QVariant &> &resultCallback)
-*/
-
 HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
