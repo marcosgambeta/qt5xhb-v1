@@ -88,12 +88,6 @@ void QMediaTimeInterval_new3()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QMediaTimeInterval()
-[2]QMediaTimeInterval(qint64 start, qint64 end)
-[3]QMediaTimeInterval(const QMediaTimeInterval & other)
-*/
-
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
 {
   if( ISNUMPAR(0) )

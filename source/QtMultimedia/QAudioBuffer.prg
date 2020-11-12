@@ -104,13 +104,6 @@ void QAudioBuffer_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QAudioBuffer()
-[2]QAudioBuffer(const QAudioBuffer & other)
-[3]QAudioBuffer(const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1)
-[4]QAudioBuffer(int numFrames, const QAudioFormat & format, qint64 startTime = -1)
-*/
-
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 {
   if( ISNUMPAR(0) )

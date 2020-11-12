@@ -60,14 +60,6 @@ RETURN
 #endif
 
 /*
-QCameraFocusZone()
-*/
-
-/*
-QCameraFocusZone(const QRectF &area, FocusZoneStatus status = Selected)
-*/
-
-/*
 QCameraFocusZone(const QCameraFocusZone &other)
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
@@ -82,12 +74,6 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 }
-
-/*
-[1]QCameraFocusZone()
-[2]QCameraFocusZone(const QRectF &area, FocusZoneStatus status = Selected)
-[3]QCameraFocusZone(const QCameraFocusZone &other)
-*/
 
 /*
 ~QCameraFocusZone()

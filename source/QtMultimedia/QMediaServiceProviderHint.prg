@@ -123,15 +123,6 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW6 )
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QMediaServiceProviderHint()
-[2]QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
-[3]QMediaServiceProviderHint(const QByteArray &device)
-[4]QMediaServiceProviderHint(QCamera::Position position)
-[5]QMediaServiceProviderHint(Features features)
-[6]QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
-*/
-
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW )
 {
   if( ISNUMPAR(0) )

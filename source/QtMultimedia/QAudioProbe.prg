@@ -141,11 +141,6 @@ void QAudioProbe_setSource2()
   }
 }
 
-/*
-[1]bool setSource(QMediaObject * source)
-[2]bool setSource(QMediaRecorder * mediaRecorder)
-*/
-
 HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 {
   if( ISNUMPAR(1) && ISQMEDIAOBJECT(1) )

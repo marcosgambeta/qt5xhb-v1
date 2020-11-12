@@ -88,11 +88,6 @@ void QAudioDeviceInfo_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QAudioDeviceInfo ()
-[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
-*/
-
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 {
   if( ISNUMPAR(0) )

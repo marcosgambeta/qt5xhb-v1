@@ -130,14 +130,6 @@ void QVideoFrame_new5()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QVideoFrame ()
-[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
-[3]QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
-[4]QVideoFrame ( const QImage & image )
-[5]QVideoFrame ( const QVideoFrame & other )
-*/
-
 HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
   if( ISNUMPAR(0) )
@@ -187,29 +179,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
 }
 
 /*
-uchar * bits ()
-*/
-
-/*
-uchar *bits(int plane)
-*/
-
-/*
-const uchar * bits () const
-*/
-
-/*
-const uchar *bits(int plane) const
-*/
-
-/*
-[1]uchar *bits()
-[2]uchar *bits(int plane)
-[3]const uchar *bits() const
-[4]const uchar *bits(int plane) const
-*/
-
-/*
 int bytesPerLine () const
 */
 void QVideoFrame_bytesPerLine1()
@@ -234,11 +203,6 @@ void QVideoFrame_bytesPerLine2()
     RINT( obj->bytesPerLine( PINT(1) ) );
   }
 }
-
-/*
-[1]int bytesPerLine () const
-[2]int bytesPerLine(int plane) const
-*/
 
 HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 {

@@ -282,11 +282,6 @@ void QMediaPlaylist_addMedia2()
   }
 }
 
-/*
-[1]bool addMedia(const QMediaContent & content)
-[2]bool addMedia(const QList<QMediaContent> & items)
-*/
-
 HB_FUNC_STATIC( QMEDIAPLAYLIST_ADDMEDIA )
 {
   if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
@@ -521,12 +516,6 @@ void QMediaPlaylist_load3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void load(const QNetworkRequest & request, const char * format = Q_NULLPTR)
-[2]void load(const QUrl & location, const char * format = Q_NULLPTR)
-[3]void load(QIODevice * device, const char * format = Q_NULLPTR)
-*/
-
 HB_FUNC_STATIC( QMEDIAPLAYLIST_LOAD )
 {
   if( ISBETWEEN(1,2) && ISQNETWORKREQUEST(1) && (ISCHAR(2)||ISNIL(2)) )
@@ -670,11 +659,6 @@ void QMediaPlaylist_removeMedia2()
   }
 }
 
-/*
-[1]bool removeMedia(int pos)
-[2]bool removeMedia(int start, int end)
-*/
-
 HB_FUNC_STATIC( QMEDIAPLAYLIST_REMOVEMEDIA )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
@@ -716,11 +700,6 @@ void QMediaPlaylist_save2()
     RBOOL( obj->save( PQIODEVICE(1), PCONSTCHAR(2) ) );
   }
 }
-
-/*
-[1]bool save(const QUrl & location, const char * format = Q_NULLPTR)
-[2]bool save(QIODevice * device, const char * format)
-*/
 
 HB_FUNC_STATIC( QMEDIAPLAYLIST_SAVE )
 {

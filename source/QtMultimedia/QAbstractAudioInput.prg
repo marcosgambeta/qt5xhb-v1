@@ -122,11 +122,6 @@ void QAbstractAudioInput_start2()
   }
 }
 
-/*
-[1]virtual void start(QIODevice *device) = 0
-[2]virtual QIODevice* start() = 0
-*/
-
 HB_FUNC_STATIC( QABSTRACTAUDIOINPUT_START )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )

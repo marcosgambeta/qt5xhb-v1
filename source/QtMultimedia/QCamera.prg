@@ -131,13 +131,6 @@ void QCamera_new4()
 #endif
 }
 
-/*
-[1]explicit QCamera(QObject *parent = Q_NULLPTR)
-[2]explicit QCamera(const QByteArray& deviceName, QObject *parent = Q_NULLPTR)
-[3]explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = Q_NULLPTR)
-[4]explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR)
-*/
-
 HB_FUNC_STATIC( QCAMERA_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
@@ -307,11 +300,6 @@ void QCamera_lockStatus2()
     RENUM( obj->lockStatus( (QCamera::LockType) hb_parni(1) ) );
   }
 }
-
-/*
-[1]QCamera::LockStatus lockStatus() const
-[2]QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
-*/
 
 HB_FUNC_STATIC( QCAMERA_LOCKSTATUS )
 {
@@ -545,12 +533,6 @@ void QCamera_setViewfinder3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void setViewfinder(QVideoWidget * viewfinder)
-[2]void setViewfinder(QGraphicsVideoItem * viewfinder)
-[3]void setViewfinder(QAbstractVideoSurface * surface)
-*/
-
 HB_FUNC_STATIC( QCAMERA_SETVIEWFINDER )
 {
   if( ISNUMPAR(1) && ISQVIDEOWIDGET(1) )
@@ -650,11 +632,6 @@ void QCamera_searchAndLock2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void searchAndLock()
-[2]void searchAndLock(QCamera::LockTypes locks)
-*/
 
 HB_FUNC_STATIC( QCAMERA_SEARCHANDLOCK )
 {
@@ -779,11 +756,6 @@ void QCamera_unlock2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void unlock()
-[2]void unlock(QCamera::LockTypes locks)
-*/
 
 HB_FUNC_STATIC( QCAMERA_UNLOCK )
 {
