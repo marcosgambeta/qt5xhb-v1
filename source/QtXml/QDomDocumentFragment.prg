@@ -65,11 +65,6 @@ void QDomDocumentFragment_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDomDocumentFragment ()
-[2]QDomDocumentFragment ( const QDomDocumentFragment & x )
-*/
-
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )

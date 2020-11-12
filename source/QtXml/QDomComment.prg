@@ -65,11 +65,6 @@ void QDomComment_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDomComment ()
-[2]QDomComment ( const QDomComment & x )
-*/
-
 HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 {
   if( ISNUMPAR(0) )

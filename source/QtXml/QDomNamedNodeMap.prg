@@ -86,11 +86,6 @@ void QDomNamedNodeMap_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDomNamedNodeMap ()
-[2]QDomNamedNodeMap ( const QDomNamedNodeMap & n )
-*/
-
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
 {
   if( ISNUMPAR(0) )

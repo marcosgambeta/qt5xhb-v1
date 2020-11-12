@@ -173,11 +173,6 @@ void QXmlNamespaceSupport_prefixes2()
   }
 }
 
-/*
-[1]QStringList prefixes () const
-[2]QStringList prefixes ( const QString & uri ) const
-*/
-
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 {
   if( ISNUMPAR(0) )

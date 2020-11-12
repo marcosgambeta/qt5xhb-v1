@@ -150,11 +150,6 @@ void QDomNode_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDomNode ()
-[2]QDomNode ( const QDomNode & n )
-*/
-
 HB_FUNC_STATIC( QDOMNODE_NEW )
 {
   if( ISNUMPAR(0) )
@@ -1344,11 +1339,6 @@ void QDomNode_save2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void save ( QTextStream & str, int indent ) const
-[2]void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
-*/
 
 HB_FUNC_STATIC( QDOMNODE_SAVE )
 {

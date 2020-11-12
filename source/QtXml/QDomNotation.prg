@@ -67,11 +67,6 @@ void QDomNotation_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDomNotation ()
-[2]QDomNotation ( const QDomNotation & x )
-*/
-
 HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {
   if( ISNUMPAR(0) )

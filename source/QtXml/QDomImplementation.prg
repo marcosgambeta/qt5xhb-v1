@@ -81,11 +81,6 @@ void QDomImplementation_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDomImplementation ()
-[2]QDomImplementation ( const QDomImplementation & x )
-*/
-
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 {
   if( ISNUMPAR(0) )

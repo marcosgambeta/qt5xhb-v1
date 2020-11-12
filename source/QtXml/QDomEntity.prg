@@ -68,11 +68,6 @@ void QDomEntity_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDomEntity ()
-[2]QDomEntity ( const QDomEntity & x )
-*/
-
 HB_FUNC_STATIC( QDOMENTITY_NEW )
 {
   if( ISNUMPAR(0) )

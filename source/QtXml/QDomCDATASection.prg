@@ -65,11 +65,6 @@ void QDomCDATASection_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QDomCDATASection ()
-[2]QDomCDATASection ( const QDomCDATASection & x )
-*/
-
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
   if( ISNUMPAR(0) )
