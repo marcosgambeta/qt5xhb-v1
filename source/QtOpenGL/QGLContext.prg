@@ -174,14 +174,6 @@ void QGLContext_bindTexture5()
   }
 }
 
-/*
-[1]GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
-[2]GLuint bindTexture ( const QString & fileName )
-[3]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-[4]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-[5]GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
-*/
-
 HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 {
   if( ISNUMPAR(4) && ISQIMAGE(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
@@ -316,11 +308,6 @@ void QGLContext_drawTexture2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
 
 HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 {

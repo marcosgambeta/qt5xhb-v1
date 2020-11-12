@@ -77,11 +77,6 @@ void QGLShader_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
-[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
-*/
-
 HB_FUNC_STATIC( QGLSHADER_NEW )
 {
   if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
@@ -188,12 +183,6 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
 #endif
   }
 }
-
-/*
-[1]bool compileSourceCode ( const char * source )
-[2]bool compileSourceCode ( const QByteArray & source )
-[3]bool compileSourceCode ( const QString & source )
-*/
 
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 {

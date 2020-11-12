@@ -119,15 +119,6 @@ void QGLFramebufferObject_new6()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
-[2]QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
-[3]QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
-[4]QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
-[5]QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-[6]QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-*/
-
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
 {
   if( ISBETWEEN(1,2) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) )
@@ -254,11 +245,6 @@ void QGLFramebufferObject_drawTexture2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 {
