@@ -112,11 +112,6 @@ void QScriptEngine_new2()
   Qt5xHb::returnNewObject( obj, false );
 }
 
-/*
-[1]QScriptEngine()
-[2]QScriptEngine(QObject * parent)
-*/
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR(0) )
@@ -356,11 +351,6 @@ void QScriptEngine_evaluate2()
     Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
   }
 }
-
-/*
-[1]QScriptValue evaluate(const QString & program, const QString & fileName = QString(), int lineNumber = 1)
-[2]QScriptValue evaluate(const QScriptProgram & program)
-*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
@@ -604,11 +594,6 @@ void QScriptEngine_newObject2()
   }
 }
 
-/*
-[1]QScriptValue newObject()
-[2]QScriptValue newObject(QScriptClass * scriptClass, const QScriptValue & data = QScriptValue())
-*/
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWOBJECT )
 {
   if( ISNUMPAR(0) )
@@ -678,11 +663,6 @@ void QScriptEngine_newQObject2()
   }
 }
 
-/*
-[1]QScriptValue newQObject(QObject * object, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
-[2]QScriptValue newQObject(const QScriptValue & scriptObject, QObject * qtObject, ValueOwnership ownership = QtOwnership, const QObjectWrapOptions & options = 0)
-*/
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWQOBJECT )
 {
   if( ISBETWEEN(1,3) && ISQOBJECT(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
@@ -727,11 +707,6 @@ void QScriptEngine_newRegExp2()
   }
 }
 
-/*
-[1]QScriptValue newRegExp(const QRegExp & regexp)
-[2]QScriptValue newRegExp(const QString & pattern, const QString & flags)
-*/
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 {
   if( ISNUMPAR(1) && ISQREGEXP(1) )
@@ -775,11 +750,6 @@ void QScriptEngine_newVariant2()
     Qt5xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
   }
 }
-
-/*
-[1]QScriptValue newVariant(const QVariant & value)
-[2]QScriptValue newVariant(const QScriptValue & object, const QVariant & value)
-*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 {
