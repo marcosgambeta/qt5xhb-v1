@@ -100,11 +100,6 @@ void QTextToSpeech_new2()
 #endif
 }
 
-/*
-[1]explicit QTextToSpeech(QObject *parent = nullptr)
-[2]explicit QTextToSpeech(const QString &engine, QObject *parent = nullptr)
-*/
-
 HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )

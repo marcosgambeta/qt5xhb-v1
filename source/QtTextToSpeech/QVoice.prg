@@ -82,11 +82,6 @@ void QVoice_new2()
 #endif
 }
 
-/*
-[1]QVoice()
-[2]QVoice(const QVoice &other)
-*/
-
 HB_FUNC_STATIC( QVOICE_NEW )
 {
   if( ISNUMPAR(0) )
