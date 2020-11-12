@@ -18,7 +18,7 @@ HB_FUNC( QT5XHB_VERSION )
 
 HB_FUNC( QT5XHB_VERSION_DATE )
 {
-  hb_retc( (const char *) "11/07/2019 04:30:00" );
+  hb_retc( (const char *) "12/11/2020 10:30:00" );
 }
 
 HB_FUNC( QT5XHB_ISCPP11 )
@@ -37,7 +37,7 @@ HB_FUNC( QT4XHB_VERSION )
 
 HB_FUNC( QT4XHB_VERSION_DATE )
 {
-  hb_retc( (const char *) "11/07/2019 04:30:00" );
+  hb_retc( (const char *) "12/11/2020 10:30:00" );
 }
 
 /*
