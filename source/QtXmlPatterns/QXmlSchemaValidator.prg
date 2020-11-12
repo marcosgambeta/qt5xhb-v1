@@ -93,11 +93,6 @@ void QXmlSchemaValidator_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QXmlSchemaValidator ()
-[2]QXmlSchemaValidator ( const QXmlSchema & schema )
-*/
-
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 {
   if( ISNUMPAR(0) )
@@ -398,12 +393,6 @@ void QXmlSchemaValidator_validate3()
     RBOOL( obj->validate( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
   }
 }
-
-/*
-[1]bool validate ( const QUrl & source ) const
-[2]bool validate ( QIODevice * source, const QUrl & documentUri = QUrl() ) const
-[3]bool validate ( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
-*/
 
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 {

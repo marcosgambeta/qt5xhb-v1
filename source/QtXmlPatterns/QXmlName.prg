@@ -80,11 +80,6 @@ void QXmlName_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QXmlName ()
-[2]QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
-*/
-
 HB_FUNC_STATIC( QXMLNAME_NEW )
 {
   if( ISNUMPAR(0) )

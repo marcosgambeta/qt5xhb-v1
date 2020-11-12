@@ -100,13 +100,6 @@ void QXmlItem_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QXmlItem ()
-[2]QXmlItem ( const QXmlItem & other )
-[3]QXmlItem ( const QXmlNodeModelIndex & node )
-[4]QXmlItem ( const QVariant & atomicValue )
-*/
-
 HB_FUNC_STATIC( QXMLITEM_NEW )
 {
   if( ISNUMPAR(0) )

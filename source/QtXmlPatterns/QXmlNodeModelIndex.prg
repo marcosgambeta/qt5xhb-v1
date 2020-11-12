@@ -79,11 +79,6 @@ void QXmlNodeModelIndex_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QXmlNodeModelIndex ()
-[2]QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
-*/
-
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )

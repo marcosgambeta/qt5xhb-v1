@@ -115,13 +115,6 @@ void QXmlQuery_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QXmlQuery ()
-[2]QXmlQuery ( const QXmlQuery & other )
-[3]QXmlQuery ( const QXmlNamePool & np )
-[4]QXmlQuery ( QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool() )
-*/
-
 HB_FUNC_STATIC( QXMLQUERY_NEW )
 {
   if( ISNUMPAR(0) )
@@ -253,15 +246,6 @@ void QXmlQuery_bindVariable6()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void bindVariable ( const QXmlName & name, const QXmlItem & value )
-[2]void bindVariable ( const QXmlName & name, QIODevice * device )
-[3]void bindVariable ( const QXmlName & name, const QXmlQuery & query )
-[4]void bindVariable ( const QString & localName, const QXmlItem & value )
-[5]void bindVariable ( const QString & localName, QIODevice * device )
-[6]void bindVariable ( const QString & localName, const QXmlQuery & query )
-*/
-
 HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
 {
   if( ISNUMPAR(2) && ISQXMLNAME(1) && ISQXMLITEM(2) )
@@ -342,14 +326,6 @@ void QXmlQuery_evaluateTo5()
     RBOOL( obj->evaluateTo( PQIODEVICE(1) ) );
   }
 }
-
-/*
-[1]void evaluateTo ( QXmlResultItems * result ) const
-[2]bool evaluateTo ( QAbstractXmlReceiver * callback ) const
-[3]bool evaluateTo ( QStringList * target ) const
-[4]bool evaluateTo ( QString * output ) const
-[5]bool evaluateTo ( QIODevice * target ) const
-*/
 
 HB_FUNC_STATIC( QXMLQUERY_EVALUATETO )
 {
@@ -573,13 +549,6 @@ void QXmlQuery_setFocus4()
   }
 }
 
-/*
-[1]void setFocus ( const QXmlItem & item )
-[2]bool setFocus ( const QUrl & documentURI )
-[3]bool setFocus ( QIODevice * document )
-[4]bool setFocus ( const QString & focus )
-*/
-
 HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
 {
   if( ISNUMPAR(1) && ISQXMLITEM(1) )
@@ -633,11 +602,6 @@ void QXmlQuery_setInitialTemplateName2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setInitialTemplateName ( const QXmlName & name )
-[2]void setInitialTemplateName ( const QString & localName )
-*/
 
 HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME )
 {
@@ -751,12 +715,6 @@ void QXmlQuery_setQuery3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setQuery ( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
-[2]void setQuery ( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
-[3]void setQuery ( const QString & sourceCode, const QUrl & documentURI = QUrl() )
-*/
 
 HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 {
