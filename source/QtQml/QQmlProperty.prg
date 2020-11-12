@@ -152,17 +152,6 @@ void QQmlProperty_new8()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QQmlProperty()
-[2]QQmlProperty(QObject * obj)
-[3]QQmlProperty(QObject * obj, QQmlContext * ctxt)
-[4]QQmlProperty(QObject * obj, QQmlEngine * engine)
-[5]QQmlProperty(QObject * obj, const QString & name)
-[6]QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
-[7]QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
-[8]QQmlProperty(const QQmlProperty & other)
-*/
-
 HB_FUNC_STATIC( QQMLPROPERTY_NEW )
 {
   if( ISNUMPAR(0) )
@@ -245,11 +234,6 @@ void QQmlProperty_connectNotifySignal2()
     RBOOL( obj->connectNotifySignal( PQOBJECT(1), PINT(2) ) );
   }
 }
-
-/*
-[1]bool connectNotifySignal(QObject * dest, const char * slot) const
-[2]bool connectNotifySignal(QObject * dest, int method) const
-*/
 
 HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
 {
@@ -698,13 +682,6 @@ void QQmlProperty_read4()
   Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
 }
 
-/*
-[1]QVariant read() const
-[2]QVariant read(QObject * object, const QString & name)
-[3]QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
-[4]QVariant read(QObject * object, const QString & name, QQmlEngine * engine)
-*/
-
 HB_FUNC_STATIC( QQMLPROPERTY_READ )
 {
   if( ISNUMPAR(0) )
@@ -816,13 +793,6 @@ void QQmlProperty_write4()
 
   RBOOL( QQmlProperty::write( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQQMLENGINE(4) ) );
 }
-
-/*
-[1]bool write(const QVariant & value) const
-[2]bool write(QObject * object, const QString & name, const QVariant & value)
-[3]bool write(QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt)
-[4]bool write(QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine)
-*/
 
 HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
 {

@@ -86,11 +86,6 @@ void QQmlListReference_new2()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QQmlListReference()
-[2]QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
-*/
-
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )

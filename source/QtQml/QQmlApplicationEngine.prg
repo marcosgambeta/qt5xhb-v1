@@ -91,12 +91,6 @@ void QQmlApplicationEngine_new3()
 #endif
 }
 
-/*
-[1]QQmlApplicationEngine(QObject *parent=0)
-[2]QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
-[3]QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
-*/
-
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
@@ -221,11 +215,6 @@ void QQmlApplicationEngine_load2()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-[1]void load(const QUrl &url)
-[2]void load(const QString &filePath)
-*/
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 {
