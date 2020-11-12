@@ -119,13 +119,6 @@ void QSerialPortInfo_new4()
 #endif
 }
 
-/*
-[1]QSerialPortInfo()
-[2]QSerialPortInfo(const QSerialPort &port)
-[3]QSerialPortInfo(const QString &name)
-[4]QSerialPortInfo(const QSerialPortInfo &other)
-*/
-
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
