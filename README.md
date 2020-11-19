@@ -87,3 +87,9 @@ Send you message to: marcosgambeta AT outlook DOT com
 Important:  
 Questions about the project will be responded **only by email**.  
 Qt5xHb is FOSS (Free and Open Source Software) and not a commercial project.  
+
+## More info and extra content
+
+Follow the blog below for more info and extra content:
+
+https://magsoftinfo.com/blog/
