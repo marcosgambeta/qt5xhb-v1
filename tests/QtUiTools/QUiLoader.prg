@@ -36,16 +36,16 @@ PROCEDURE Main()
    // aqui criamos a janela
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Qt5xHb - teste com a classe QUiLoader")
-   oWindow:resize(800,600)
+   oWindow:setWindowTitle( "Qt5xHb - teste com a classe QUiLoader" )
+   oWindow:resize( 800, 600 )
    oWindow:show()
 
    // aqui carregamos o conteúdo do arquivo quiloader.ui
 
    oLoader := QUiLoader():new()
-   oFile := QFile():new("QUiLoader.ui")
-   oFile:open(QIODevice_ReadOnly)
-   oWidgets := oLoader:load(oFile, oWindow)
+   oFile := QFile():new( "QUiLoader.ui" )
+   oFile:open( QIODevice_ReadOnly )
+   oWidgets := oLoader:load( oFile, oWindow )
    oWidgets:show()
    oFile:close()
    oFile:delete()
@@ -53,27 +53,27 @@ PROCEDURE Main()
 
    // aqui personalizamos os widgets (aparência, ações e eventos)
 
-   oPushButton := QPushButton():newFrom( oWidgets:findChild("pushButton") )
-   ? oPushButton:onClicked({||qout("PushButton clicked")})
+   oPushButton := QPushButton():newFrom( oWidgets:findChild( "pushButton" ) )
+   ? oPushButton:onClicked( {||qout( "PushButton clicked" )} )
 
-   oCommandLinkButton := QCommandLinkButton():newFrom( oWidgets:findChild("commandLinkButton") )
-   ? oCommandLinkButton:onClicked({||qout("CommandLinkButton clicked")})
-   oCommandLinkButton:setStyleSheet("background-color: yellow")
+   oCommandLinkButton := QCommandLinkButton():newFrom( oWidgets:findChild( "commandLinkButton" ) )
+   ? oCommandLinkButton:onClicked( {||qout( "CommandLinkButton clicked" )} )
+   oCommandLinkButton:setStyleSheet( "background-color: yellow" )
 
-   oComboBox := QComboBox():newFrom( oWidgets:findChild("comboBox") )
-   oComboBox:addItem("Item 1")
-   oComboBox:addItem("Item 2")
-   oComboBox:addItem("Item 3")
-   oComboBox:addItem("Item 4")
-   oComboBox:addItem("Item 5")
+   oComboBox := QComboBox():newFrom( oWidgets:findChild( "comboBox" ) )
+   oComboBox:addItem( "Item 1" )
+   oComboBox:addItem( "Item 2" )
+   oComboBox:addItem( "Item 3" )
+   oComboBox:addItem( "Item 4" )
+   oComboBox:addItem( "Item 5" )
 
-   oLineEdit := QLineEdit():newFrom( oWidgets:findChild("lineEdit") )
-   oLineEdit:setText("testando QLineEdit")
-   ? oLineEdit:onFocusInEvent({||qout("focusin")})
-   ? oLineEdit:onFocusOutEvent({||qout("focusout")})
+   oLineEdit := QLineEdit():newFrom( oWidgets:findChild( "lineEdit" ) )
+   oLineEdit:setText( "testando QLineEdit" )
+   ? oLineEdit:onFocusInEvent( {||qout( "focusin" )} )
+   ? oLineEdit:onFocusOutEvent( {||qout( "focusout" )} )
 
-   oLCDNumber := QLCDNumber():newFrom( oWidgets:findChild("lcdNumber") )
-   oLCDNumber:display(1234)
+   oLCDNumber := QLCDNumber():newFrom( oWidgets:findChild( "lcdNumber" ) )
+   oLCDNumber:display( 1234 )
 
    oApp:exec()
 

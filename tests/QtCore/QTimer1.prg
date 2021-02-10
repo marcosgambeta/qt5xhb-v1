@@ -20,21 +20,21 @@ REQUEST HB_GT_WIN
 
 PROCEDURE Main()
 
-   lOCAL oApp
+   LOCAL oApp
    LOCAL oWindow
    LOCAL oTimer
 
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(640,480)
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 640, 480 )
 
    oWindow:show()
 
-   oTimer := QTimer():new(oWindow)
-   ? oTimer:onTimeout({||qout("timer executado")})
-   oTimer:setInterval(1000)
+   oTimer := QTimer():new( oWindow )
+   ? oTimer:onTimeout( {||qout( "timer executado" )} )
+   oTimer:setInterval( 1000 )
    oTimer:start()
 
    oApp:exec()

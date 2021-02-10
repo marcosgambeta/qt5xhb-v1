@@ -32,49 +32,49 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste com a classe QTreeWidget")
-   oWindow:resize(800,600)
+   oWindow:setWindowTitle( "Teste com a classe QTreeWidget" )
+   oWindow:resize( 800, 600 )
 
    // cria um objeto da classe QTreeWidget
-   oTree := QTreeWidget():new(oWindow)
-   oTree:move(10,10)
-   oTree:resize(800-20,600-20)
+   oTree := QTreeWidget():new( oWindow )
+   oTree:move( 10, 10 )
+   oTree:resize( 800 - 20, 600 - 20 )
 
    // define o total de colunas
-   oTree:setColumnCount(3)
+   oTree:setColumnCount( 3 )
 
    // define o título de cada coluna
-   oTree:setHeaderLabels({"Código","Descrição","Valor"})
+   oTree:setHeaderLabels( { "Código", "Descrição", "Valor" } )
 
    // define o tamanho das colunas
-   oTree:setColumnWidth(0,200)
-   oTree:setColumnWidth(1,200)
-   oTree:setColumnWidth(2,200)
+   oTree:setColumnWidth( 0, 200 )
+   oTree:setColumnWidth( 1, 200 )
+   oTree:setColumnWidth( 2, 200 )
 
    // mostra linhas zebradas
-   oTree:setAlternatingRowColors(.T.)
+   oTree:setAlternatingRowColors( .T. )
 
    // usa animação quando abrir e fechar itens
-   oTree:setAnimated(.T.)
+   oTree:setAnimated( .T. )
 
    // cria um item no primeiro nível (tem o objeto oTree como parent)
-   oItem_001 := QTreeWidgetItem():new(oTree,{"001","Item 001","R$ 600,00"})
+   oItem_001 := QTreeWidgetItem():new( oTree, { "001", "Item 001", "R$ 600,00" } )
 
    // cria três itens no segundo nível (tem o objeto oItem_001 como parent)
-   oItem_001_001 := QTreeWidgetItem():new(oItem_001,{"001.001","Item 001.001","R$ 100,00"})
-   oItem_001_002 := QTreeWidgetItem():new(oItem_001,{"001.002","Item 001.002","R$ 200,00"})
-   oItem_001_003 := QTreeWidgetItem():new(oItem_001,{"001.003","Item 001.003","R$ 300,00"})
+   oItem_001_001 := QTreeWidgetItem():new( oItem_001, { "001.001", "Item 001.001", "R$ 100,00" } )
+   oItem_001_002 := QTreeWidgetItem():new( oItem_001, { "001.002", "Item 001.002", "R$ 200,00" } )
+   oItem_001_003 := QTreeWidgetItem():new( oItem_001, { "001.003", "Item 001.003", "R$ 300,00" } )
 
    // cria dois itens no terceiro nível (tem o objeto oItem_001_003 como parent)
-   oItem_001_003_001 := QTreeWidgetItem():new(oItem_001_003,{"001.003.001","Item 001.003.001","R$ 200,00"})
-   oItem_001_003_002 := QTreeWidgetItem():new(oItem_001_003,{"001.003.002","Item 001.003.002","R$ 100,00"})
+   oItem_001_003_001 := QTreeWidgetItem():new( oItem_001_003, { "001.003.001", "Item 001.003.001", "R$ 200,00" } )
+   oItem_001_003_002 := QTreeWidgetItem():new( oItem_001_003, { "001.003.002", "Item 001.003.002", "R$ 100,00" } )
 
    // cria um item no primeiro nível (tem o objeto oTree como parent)
-   oItem_002 := QTreeWidgetItem():new(oTree,{"002","Item 002","R$ 500,00"})
+   oItem_002 := QTreeWidgetItem():new( oTree, { "002", "Item 002", "R$ 500,00" } )
 
    // cria dois itens no segundo nível (tem o objeto oItem_002 como parent)
-   oItem_002_001 := QTreeWidgetItem():new(oItem_002,{"002.001","Item 002.001","R$ 300,00"})
-   oItem_002_002 := QTreeWidgetItem():new(oItem_002,{"002.002","Item 002.002","R$ 200,00"})
+   oItem_002_001 := QTreeWidgetItem():new( oItem_002, { "002.001", "Item 002.001", "R$ 300,00" } )
+   oItem_002_002 := QTreeWidgetItem():new( oItem_002, { "002.002", "Item 002.002", "R$ 200,00" } )
 
    // abre todos os itens
    oTree:expandAll()

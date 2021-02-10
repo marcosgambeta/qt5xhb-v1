@@ -41,48 +41,48 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oMainWindow := QMainWindow():new()
-   oMainWindow:setWindowTitle("Testando classes QMainWindow, QMenu, QMenuBar e QAction")
-   oMainWindow:resize(640,480)
+   oMainWindow:setWindowTitle( "Testando classes QMainWindow, QMenu, QMenuBar e QAction" )
+   oMainWindow:resize( 640, 480 )
 
    oMenuBar := oMainWindow:menuBar()
 
-   oMenuA := oMenuBar:addMenu("Menu&A")
+   oMenuA := oMenuBar:addMenu( "Menu&A" )
 
-   oActionA1 := oMenuA:addAction("Option 1")
-   ? oActionA1:onTriggered({||qout("Menu A/Option 1")})
+   oActionA1 := oMenuA:addAction( "Option 1" )
+   ? oActionA1:onTriggered( {||qout( "Menu A/Option 1" )} )
 
-   oActionA2 := oMenuA:addAction("Option 2")
-   ? oActionA2:onTriggered({||qout("Menu A/Option 2")})
+   oActionA2 := oMenuA:addAction( "Option 2" )
+   ? oActionA2:onTriggered( {||qout( "Menu A/Option 2" )} )
 
-   oActionA3 := oMenuA:addAction("Option 3")
-   ? oActionA3:onTriggered({||qout("Menu A/Option 3")})
+   oActionA3 := oMenuA:addAction( "Option 3" )
+   ? oActionA3:onTriggered( {||qout( "Menu A/Option 3" )} )
 
-   oActionA4 := oMenuA:addAction("Option 4")
-   ? oActionA4:onTriggered({||qout("Menu A/Option 4")})
+   oActionA4 := oMenuA:addAction( "Option 4" )
+   ? oActionA4:onTriggered( {||qout( "Menu A/Option 4" )} )
 
-   oMenuB := oMenuBar:addMenu("Menu&B")
+   oMenuB := oMenuBar:addMenu( "Menu&B" )
 
-   oActionB1 := oMenuB:addAction("Option 1")
-   ? oActionB1:onTriggered({||qout("Menu B/Option 1")})
+   oActionB1 := oMenuB:addAction( "Option 1" )
+   ? oActionB1:onTriggered( {||qout( "Menu B/Option 1" )} )
 
-   oActionB2 := oMenuB:addAction("Option 2")
-   ? oActionB2:onTriggered({||qout("Menu B/Option 2")})
+   oActionB2 := oMenuB:addAction( "Option 2" )
+   ? oActionB2:onTriggered( {||qout( "Menu B/Option 2" )} )
 
-   oActionB3 := oMenuB:addAction("Option 3")
-   ? oActionB3:onTriggered({||qout("Menu B/Option 3")})
+   oActionB3 := oMenuB:addAction( "Option 3" )
+   ? oActionB3:onTriggered( {||qout( "Menu B/Option 3" )} )
 
-   oMenuC := oMenuBar:addMenu("Menu&C")
+   oMenuC := oMenuBar:addMenu( "Menu&C" )
 
-   oActionC1 := oMenuC:addAction("Option 1")
-   ? oActionC1:onTriggered({||qout("Menu C/Option 1")})
+   oActionC1 := oMenuC:addAction( "Option 1" )
+   ? oActionC1:onTriggered( {||qout( "Menu C/Option 1" )} )
 
-   oActionC2 := oMenuC:addAction("Option 2")
-   ? oActionC2:onTriggered({||qout("Menu C/Option 2")})
+   oActionC2 := oMenuC:addAction( "Option 2" )
+   ? oActionC2:onTriggered( {||qout( "Menu C/Option 2" )} )
 
-   oMenuD := oMenuBar:addMenu("Menu&D")
+   oMenuD := oMenuBar:addMenu( "Menu&D" )
 
-   oActionD1 := oMenuD:addAction("Option 1")
-   ? oActionD1:onTriggered({||qout("Menu D/Option 1")})
+   oActionD1 := oMenuD:addAction( "Option 1" )
+   ? oActionD1:onTriggered( {||qout( "Menu D/Option 1" )} )
 
    oMainWindow:Show()
 

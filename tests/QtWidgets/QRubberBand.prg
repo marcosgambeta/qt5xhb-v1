@@ -24,9 +24,9 @@ PROCEDURE Main()
 
    oWindow := QWidget():new()
 
-   oRubberBand := QRubberBand():new(QRubberBand_Rectangle,oWindow)
-   oRubberBand:move(20,20)
-   oRubberBand:resize(100,100)
+   oRubberBand := QRubberBand():new( QRubberBand_Rectangle, oWindow )
+   oRubberBand:move( 20, 20 )
+   oRubberBand:resize( 100, 100 )
 
    oWindow:show()
 

@@ -27,25 +27,25 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:resize(320,240)
+   oWindow:resize( 320, 240 )
 
-   oGroupBox := QGroupBox():new("Radio Buttons",oWindow)
+   oGroupBox := QGroupBox():new( "Radio Buttons", oWindow )
 
-   oRadio1 := QRadioButton():new("&Radio button 1")
-   oRadio2 := QRadioButton():new("R&adio button 2")
-   oRadio3 := QRadioButton():new("Ra&dio button 3")
+   oRadio1 := QRadioButton():new( "&Radio button 1" )
+   oRadio2 := QRadioButton():new( "R&adio button 2" )
+   oRadio3 := QRadioButton():new( "Ra&dio button 3" )
 
-   oRadio1:setChecked(.T.)
+   oRadio1:setChecked( .T. )
 
    oVBox := QVBoxLayout():new()
 
-   oVBox:addWidget(oRadio1)
-   oVBox:addWidget(oRadio2)
-   oVBox:addWidget(oRadio3)
+   oVBox:addWidget( oRadio1 )
+   oVBox:addWidget( oRadio2 )
+   oVBox:addWidget( oRadio3 )
 
-   oVBox:addStretch(1)
+   oVBox:addStretch( 1 )
 
-   oGroupBox:setLayout(oVBox)
+   oGroupBox:setLayout( oVBox )
 
    oWindow:show()
 

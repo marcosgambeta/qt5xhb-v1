@@ -18,7 +18,7 @@
 REQUEST HB_GT_WIN
 #endif
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL aColorsNames
@@ -28,14 +28,14 @@ PROCEDURE Main ()
 
    aColorsNames := QColor():colorNames()
 
-   ? valtype(aColorsNames)
+   ? valtype( aColorsNames )
 
-   ? len(aColorsNames)
+   ? len( aColorsNames )
 
-   FOR nIndex := 1 TO len(aColorsNames)
+   FOR nIndex := 1 TO len( aColorsNames )
       ? nIndex
       ?? " = "
-      ?? aColorsNames[nIndex]
+      ?? aColorsNames[ nIndex ]
    NEXT nIndex
 
    WAIT

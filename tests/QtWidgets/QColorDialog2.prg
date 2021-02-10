@@ -27,11 +27,11 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:resize(640,480)
+   oWindow:resize( 640, 480 )
 
-   oButton := QPushButton():new("Mostrar janela de diálogo",oWindow)
-   oButton:move(20,20)
-   ? oButton:onClicked({||ShowColorDialog(oWindow)})
+   oButton := QPushButton():new( "Mostrar janela de diálogo", oWindow )
+   oButton:move( 20, 20 )
+   ? oButton:onClicked( {||ShowColorDialog( oWindow )} )
 
    oWindow:show()
 
@@ -43,13 +43,13 @@ PROCEDURE Main()
 
 RETURN
 
-STATIC FUNCTION ShowColorDialog(oWindow)
+STATIC FUNCTION ShowColorDialog( oWindow )
 
    LOCAL oColorDialog
 
-   oColorDialog := QColorDialog():new(oWindow)
+   oColorDialog := QColorDialog():new( oWindow )
 
-   ? oColorDialog:onColorSelected({|oSender,oColor|ShowColorSelected(oColor)})
+   ? oColorDialog:onColorSelected( {|oSender,oColor|ShowColorSelected( oColor )} )
 
    oColorDialog:exec()
 
@@ -59,13 +59,13 @@ STATIC FUNCTION ShowColorDialog(oWindow)
 
 RETURN NIL
 
-STATIC FUNCTION ShowColorSelected(oColor)
+STATIC FUNCTION ShowColorSelected( oColor )
 
-   ? "name=",oColor:name()
-   ? "red=",oColor:red()
-   ? "green=",oColor:green()
-   ? "blue=",oColor:blue()
-   ? "rgb=",oColor:rgb()
+   ? "name=", oColor:name()
+   ? "red=", oColor:red()
+   ? "green=", oColor:green()
+   ? "blue=", oColor:blue()
+   ? "rgb=", oColor:rgb()
    ?
 
 RETURN NIL

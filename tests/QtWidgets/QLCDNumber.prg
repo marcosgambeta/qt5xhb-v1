@@ -23,12 +23,12 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(640,480)
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 640, 480 )
 
-   oLCDNumber := QLCDNumber():new(oWindow)
-   oLCDNumber:move(20,20)
-   oLCDNumber:setTooltip("Eu sou um QLCDNumber")
+   oLCDNumber := QLCDNumber():new( oWindow )
+   oLCDNumber:move( 20, 20 )
+   oLCDNumber:setTooltip( "Eu sou um QLCDNumber" )
 
    oWindow:show()
 

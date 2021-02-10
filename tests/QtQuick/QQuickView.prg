@@ -22,7 +22,7 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oQuickView := QQuickView():new()
-   oQuickView:setSource(QUrl():fromLocalFile("QQuickView.qml"))
+   oQuickView:setSource( QUrl():fromLocalFile( "QQuickView.qml" ) )
    oQuickView:show()
 
    oApp:exec()

@@ -22,7 +22,7 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oQuickWidget := QQuickWidget():new()
-   oQuickWidget:setSource(QUrl():fromLocalFile("QQuickWidget.qml"))
+   oQuickWidget:setSource( QUrl():fromLocalFile( "QQuickWidget.qml" ) )
    oQuickWidget:show()
 
    oApp:exec()

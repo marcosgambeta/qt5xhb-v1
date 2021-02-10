@@ -51,21 +51,21 @@ PROCEDURE Main()
 
    oApp := QApplication():new()
 
-   oWindow := loadUI("HUiLoader.ui")
+   oWindow := loadUI( "HUiLoader.ui" )
 
-   oPushButton := oWindow:findChild("pushButton")
-   ? oPushButton:onClicked({||qout("PushButton clicked")})
+   oPushButton := oWindow:findChild( "pushButton" )
+   ? oPushButton:onClicked( {||qout( "PushButton clicked" )} )
 
-   oCommandLinkButton := oWindow:findChild("commandLinkButton")
-   ? oCommandLinkButton:onClicked({||qout("CommandLinkButton clicked")})
+   oCommandLinkButton := oWindow:findChild( "commandLinkButton" )
+   ? oCommandLinkButton:onClicked( {||qout( "CommandLinkButton clicked" )} )
 
-   oComboBox := oWindow:findChild("comboBox")
+   oComboBox := oWindow:findChild( "comboBox" )
 
-   oLineEdit := oWindow:findChild("lineEdit")
-   ? oLineEdit:onFocusInEvent({||qout("focusin")})
-   ? oLineEdit:onFocusOutEvent({||qout("focusout")})
+   oLineEdit := oWindow:findChild( "lineEdit" )
+   ? oLineEdit:onFocusInEvent( {||qout( "focusin" )} )
+   ? oLineEdit:onFocusOutEvent( {||qout( "focusout" )} )
 
-   oLCDNumber := oWindow:findChild("lcdNumber")
+   oLCDNumber := oWindow:findChild( "lcdNumber" )
 
    oWindow:show()
 
@@ -106,9 +106,9 @@ STATIC FUNCTION loadUI( cFileName )
       ?? oWidget:parent():metaObject():className()
       ?? " "
       } )
-   oFile := QFile():new(cFileName)
-   oFile:open(QIODevice_ReadOnly)
-   oUI := oLoader:load(oFile)
+   oFile := QFile():new( cFileName )
+   oFile:open( QIODevice_ReadOnly )
+   oUI := oLoader:load( oFile )
    oFile:close()
    oFile:delete()
    oLoader:delete()

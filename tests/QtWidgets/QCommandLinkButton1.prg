@@ -27,13 +27,13 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:resize(320,240)
+   oWindow:resize( 320, 240 )
 
-   oButton := QCommandLinkButton():new("texto","descrição",oWindow)
-   oButton:move(20,20)
-   ? oButton:onClicked({||qout("clicked")})
-   ? oButton:onPressed({||qout("pressed")})
-   ? oButton:onReleased({||qout("released")})
+   oButton := QCommandLinkButton():new( "texto", "descrição", oWindow )
+   oButton:move( 20, 20 )
+   ? oButton:onClicked( {||qout( "clicked" )} )
+   ? oButton:onPressed( {||qout( "pressed" )} )
+   ? oButton:onReleased( {||qout( "released" )} )
 
    oWindow:show()
 

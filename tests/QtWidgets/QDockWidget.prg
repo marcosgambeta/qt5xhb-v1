@@ -16,7 +16,7 @@
 
 PROCEDURE Main()
 
-   lOCAL oApp
+   LOCAL oApp
    LOCAL oMainWindow
    LOCAL oDockWidget
 
@@ -24,7 +24,7 @@ PROCEDURE Main()
 
    oMainWindow := QMainWindow():new()
 
-   oDockWidget := QDockWidget():new("Teste",oMainWindow)
+   oDockWidget := QDockWidget():new( "Teste", oMainWindow )
 
    oMainWindow:show()
 

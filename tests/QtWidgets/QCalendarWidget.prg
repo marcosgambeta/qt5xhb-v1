@@ -23,12 +23,12 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(640,480)
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 640, 480 )
 
-   oCal := QCalendarWidget():new(oWindow)
-   oCal:move(20,20)
-   oCal:setTooltip("Eu sou um QCalendarWidget")
+   oCal := QCalendarWidget():new( oWindow )
+   oCal:move( 20, 20 )
+   oCal:setTooltip( "Eu sou um QCalendarWidget" )
 
    oWindow:show()
 

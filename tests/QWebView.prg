@@ -14,7 +14,7 @@
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -23,12 +23,12 @@ PROCEDURE Main ()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste da classe QWebView")
-   oWindow:resize(800,600)
+   oWindow:setWindowTitle( "Teste da classe QWebView" )
+   oWindow:resize( 800, 600 )
    oWindow:show()
 
-   oWebView := QWebView():new(oWindow)
-   oWebView:setUrl(QUrl():new("https://github.com/marcosgambeta/qt5xhb"))
+   oWebView := QWebView():new( oWindow )
+   oWebView:setUrl( QUrl():new( "https://github.com/marcosgambeta/qt5xhb" ) )
    oWebView:show()
 
    oApp:exec()

@@ -21,9 +21,9 @@ PROCEDURE Main()
 
    oApp := QCoreApplication():new()
 
-   oWebSocketServer := QWebSocketServer():new("WebSocketServer", QWebSocketServer_NonSecureMode)
+   oWebSocketServer := QWebSocketServer():new( "WebSocketServer", QWebSocketServer_NonSecureMode )
 
-   IF oWebSocketServer:listen(QHostAddress():new("127.0.0.1"), 1234)
+   IF oWebSocketServer:listen( QHostAddress():new( "127.0.0.1" ), 1234 )
       ? "servidor ativo na porta 1234"
    ELSE
       ? "servidor inativo"
@@ -33,7 +33,7 @@ PROCEDURE Main()
       QUIT
    ENDIF
 
-   oWebSocketServer:onNewConnection( {||newConnection(oWebSocketServer)} )
+   oWebSocketServer:onNewConnection( {||newConnection( oWebSocketServer )} )
    oWebSocketServer:onClosed( {||oApp:quit()} )
 
    oApp:exec()
@@ -44,7 +44,7 @@ PROCEDURE Main()
 
 RETURN
 
-STATIC FUNCTION newConnection(oWebSocketServer)
+STATIC FUNCTION newConnection( oWebSocketServer )
 
    LOCAL oSocket
 
@@ -52,9 +52,9 @@ STATIC FUNCTION newConnection(oWebSocketServer)
 
    oSocket := oWebSocketServer:nextPendingConnection()
 
-   oSocket:onDestroyed( {|oSender|qout(oSender:pointer),qout("socket destruido"),oSender:disconnectAll(.T.)} )
-   oSocket:onTextMessageReceived( {|oSender, cText|qout(oSender:pointer),qout("textMessageReceived="+cText),oSender:sendTextMessage(cText)} )
-   oSocket:onDisconnected( {|oSender|qout(oSender:pointer),qout("socket desconectado"),oSender:delete()} )
+   oSocket:onDestroyed( {|oSender|qout( oSender:pointer ),qout( "socket destruido" ),oSender:disconnectAll( .T. )} )
+   oSocket:onTextMessageReceived( {|oSender, cText|qout( oSender:pointer ), qout( "textMessageReceived=" + cText ), oSender:sendTextMessage( cText )} )
+   oSocket:onDisconnected( {|oSender|qout( oSender:pointer ), qout( "socket desconectado" ), oSender:delete()} )
 
    ? "finalizando nova conexao"
 
