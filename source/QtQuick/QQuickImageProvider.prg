@@ -59,9 +59,9 @@ QQuickImageProvider(ImageType type, Flags flags = 0)
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
-    QQuickImageProvider * obj = new QQuickImageProvider( (QQmlImageProviderBase::ImageType) hb_parni(1), ISNIL(2)? (QQmlImageProviderBase::Flags) 0 : (QQmlImageProviderBase::Flags) hb_parni(2) );
+    QQuickImageProvider * obj = new QQuickImageProvider( (QQmlImageProviderBase::ImageType) hb_parni(1), HB_ISNIL(2)? (QQmlImageProviderBase::Flags) 0 : (QQmlImageProviderBase::Flags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
     {
 #endif
       QImage * ptr = new QImage( obj->requestImage( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->requestPixmap( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
     {
 #endif
       QQuickTextureFactory * ptr = obj->requestTexture( PQSTRING(1), PQSIZE(2), *PQSIZE(3) );

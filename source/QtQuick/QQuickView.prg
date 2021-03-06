@@ -98,7 +98,7 @@ void QQuickView_new3()
 
 HB_FUNC_STATIC( QQUICKVIEW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWINDOW(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWINDOW(1)||HB_ISNIL(1)) )
   {
     QQuickView_new1();
   }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QQUICKVIEW_NEW )
   {
     QQuickView_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWINDOW(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWINDOW(2)||HB_ISNIL(2)) )
   {
     QQuickView_new3();
   }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QQUICKVIEW_SETRESIZEMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setResizeMode( (QQuickView::ResizeMode) hb_parni(1) );

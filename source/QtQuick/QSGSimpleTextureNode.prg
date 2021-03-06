@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETFILTERING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setFiltering( (QSGTexture::Filtering) hb_parni(1) );
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT )
   {
     QSGSimpleTextureNode_setRect1();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QSGSimpleTextureNode_setRect2();
   }

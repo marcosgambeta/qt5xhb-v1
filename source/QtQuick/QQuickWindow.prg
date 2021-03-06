@@ -98,7 +98,7 @@ QQuickWindow(QWindow * parent = 0)
 */
 HB_FUNC_STATIC( QQUICKWINDOW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWINDOW(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWINDOW(1)||HB_ISNIL(1)) )
   {
     QQuickWindow * obj = new QQuickWindow( OPQWINDOW(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -237,10 +237,10 @@ HB_FUNC_STATIC( QQUICKWINDOW_CREATETEXTUREFROMID )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQSIZE(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQSIZE(2) && (ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
-      QSGTexture * ptr = obj->createTextureFromId( PUINT(1), *PQSIZE(2), ISNIL(3)? (QQuickWindow::CreateTextureOptions) QQuickWindow::CreateTextureOption( 0 ) : (QQuickWindow::CreateTextureOptions) hb_parni(3) );
+      QSGTexture * ptr = obj->createTextureFromId( PUINT(1), *PQSIZE(2), HB_ISNIL(3)? (QQuickWindow::CreateTextureOptions) QQuickWindow::CreateTextureOption( 0 ) : (QQuickWindow::CreateTextureOptions) hb_parni(3) );
       Qt5xHb::createReturnQObjectClass( ptr, "QSGTEXTURE" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETCLEARBEFORERENDERING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setClearBeforeRendering( PBOOL(1) );
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTOPENGLCONTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setPersistentOpenGLContext( PBOOL(1) );
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTSCENEGRAPH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setPersistentSceneGraph( PBOOL(1) );
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
   {
     QQuickWindow_setRenderTarget1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISQSIZE(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZE(2) )
   {
     QQuickWindow_setRenderTarget2();
   }

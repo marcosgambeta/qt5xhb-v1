@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETANTIALIASING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setAntialiasing( PBOOL(1) );
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETCONTENTSSCALE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setContentsScale( PQREAL(1) );
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETFILLCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setFillColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setFillColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETMIPMAP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setMipmap( PBOOL(1) );
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETOPAQUEPAINTING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setOpaquePainting( PBOOL(1) );
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setPerformanceHint( (QQuickPaintedItem::PerformanceHint) hb_parni(1), OPBOOL(2,true) );
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETPERFORMANCEHINTS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setPerformanceHints( (QQuickPaintedItem::PerformanceHints) hb_parni(1) );
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_SETRENDERTARGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setRenderTarget( (QQuickPaintedItem::RenderTarget) hb_parni(1) );
@@ -610,10 +610,10 @@ HB_FUNC_STATIC( QQUICKPAINTEDITEM_UPDATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQRECT(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISQRECT(1)||HB_ISNIL(1)) )
     {
 #endif
-      obj->update( ISNIL(1)? QRect() : *(QRect *) Qt5xHb::itemGetPtr(1) );
+      obj->update( HB_ISNIL(1)? QRect() : *(QRect *) Qt5xHb::itemGetPtr(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
