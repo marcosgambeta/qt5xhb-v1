@@ -85,11 +85,11 @@ void QQmlContext_new2()
 
 HB_FUNC_STATIC( QQMLCONTEXT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QQmlContext_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQQMLCONTEXT(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQQMLCONTEXT(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QQmlContext_new2();
   }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QQMLCONTEXT_CONTEXTPROPERTY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->contextProperty( PQSTRING(1) ) );
@@ -400,11 +400,11 @@ void QQmlContext_setContextProperty2()
 
 HB_FUNC_STATIC( QQMLCONTEXT_SETCONTEXTPROPERTY )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
     QQmlContext_setContextProperty1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
   {
     QQmlContext_setContextProperty2();
   }

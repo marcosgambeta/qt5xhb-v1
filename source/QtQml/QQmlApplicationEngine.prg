@@ -93,15 +93,15 @@ void QQmlApplicationEngine_new3()
 
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QQmlApplicationEngine_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QQmlApplicationEngine_new2();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QQmlApplicationEngine_new3();
   }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
   {
     QQmlApplicationEngine_load1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QQmlApplicationEngine_load2();
   }
@@ -243,10 +243,10 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||HB_ISNIL(2)) )
     {
 #endif
-      obj->loadData( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+      obj->loadData( *PQBYTEARRAY(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

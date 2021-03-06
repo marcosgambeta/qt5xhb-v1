@@ -93,7 +93,7 @@ QQmlEngine(QObject * parent = 0)
 */
 HB_FUNC_STATIC( QQMLENGINE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QQmlEngine * obj = new QQmlEngine( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QQMLENGINE_ADDIMAGEPROVIDER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQQMLIMAGEPROVIDERBASE(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQQMLIMAGEPROVIDERBASE(2) )
     {
 #endif
       obj->addImageProvider( PQSTRING(1), PQQMLIMAGEPROVIDERBASE(2) );
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QQMLENGINE_ADDIMPORTPATH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->addImportPath( PQSTRING(1) );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QQMLENGINE_ADDNAMEDBUNDLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       RBOOL( obj->addNamedBundle( PQSTRING(1), PQSTRING(2) ) );
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QQMLENGINE_ADDPLUGINPATH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->addPluginPath( PQSTRING(1) );
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QQMLENGINE_IMAGEPROVIDER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QQmlImageProviderBase * ptr = obj->imageProvider( PQSTRING(1) );
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QQMLENGINE_REMOVEIMAGEPROVIDER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->removeImageProvider( PQSTRING(1) );
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETIMPORTPATHLIST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setImportPathList( PQSTRINGLIST(1) );
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETOFFLINESTORAGEPATH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setOfflineStoragePath( PQSTRING(1) );
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setOutputWarningsToStandardError( PBOOL(1) );
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QQMLENGINE_SETPLUGINPATHLIST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setPluginPathList( PQSTRINGLIST(1) );
@@ -801,7 +801,7 @@ static void setObjectOwnership(QObject * object, ObjectOwnership ownership)
 HB_FUNC_STATIC( QQMLENGINE_SETOBJECTOWNERSHIP )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
   {
 #endif
     QQmlEngine::setObjectOwnership( PQOBJECT(1), (QQmlEngine::ObjectOwnership) hb_parni(2) );

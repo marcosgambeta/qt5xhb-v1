@@ -116,23 +116,23 @@ void QQmlComponent_new5()
 
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QQmlComponent_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QQmlComponent_new2();
   }
-  else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && ISCHAR(2) && ISNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && HB_ISCHAR(2) && HB_ISNUM(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
     QQmlComponent_new3();
   }
-  else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && ISQURL(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && ISQURL(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QQmlComponent_new4();
   }
-  else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && ISQURL(2) && ISNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && ISQURL(2) && HB_ISNUM(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
     QQmlComponent_new5();
   }
@@ -243,11 +243,11 @@ void QQmlComponent_create2()
 
 HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 {
-  if( ISBETWEEN(0,1) && (ISQQMLCONTEXT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQQMLCONTEXT(1)||HB_ISNIL(1)) )
   {
     QQmlComponent_create1();
   }
-  else if( ISBETWEEN(1,3) && ISQQMLINCUBATOR(1) && (ISQQMLCONTEXT(2)||ISNIL(2)) && (ISQQMLCONTEXT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQQMLINCUBATOR(1) && (ISQQMLCONTEXT(2)||HB_ISNIL(2)) && (ISQQMLCONTEXT(3)||HB_ISNIL(3)) )
   {
     QQmlComponent_create2();
   }
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
   {
     QQmlComponent_loadUrl1();
   }
-  else if( ISNUMPAR(2) && ISQURL(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQURL(1) && HB_ISNUM(2) )
   {
     QQmlComponent_loadUrl2();
   }

@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->evaluate( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->newArray( OPUINT(1,0) ) );

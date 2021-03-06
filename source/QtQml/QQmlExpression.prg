@@ -106,11 +106,11 @@ HB_FUNC_STATIC( QQMLEXPRESSION_NEW )
   {
     QQmlExpression_new1();
   }
-  else if( ISBETWEEN(3,4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && ISCHAR(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQQMLCONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
     QQmlExpression_new2();
   }
-  else if( ISBETWEEN(1,4) && ISQQMLSCRIPTSTRING(1) && (ISQQMLCONTEXT(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && ISQQMLSCRIPTSTRING(1) && (ISQQMLCONTEXT(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
     QQmlExpression_new3();
   }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setExpression( PQSTRING(1) );
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setNotifyOnValueChanged( PBOOL(1) );
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setSourceLocation( PQSTRING(1), PINT(2), OPINT(3,0) );
