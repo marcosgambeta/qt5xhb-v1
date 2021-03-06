@@ -203,7 +203,7 @@ void QDBusMessage_createErrorReply3()
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
     QDBusMessage_createErrorReply1();
   }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
   {
     QDBusMessage_createErrorReply2();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
   {
     QDBusMessage_createErrorReply3();
   }
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETDELAYEDREPLY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setDelayedReply( PBOOL(1) );
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETAUTOSTARTSERVICE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setAutoStartService( PBOOL(1) );
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETARGUMENTS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       QList<QVariant> par1;
@@ -601,7 +601,7 @@ static QDBusMessage createSignal(const QString &path, const QString &interface,c
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATESIGNAL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+  if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
   {
 #endif
     QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createSignal( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
@@ -621,7 +621,7 @@ static QDBusMessage createMethodCall(const QString &destination, const QString &
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEMETHODCALL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) )
+  if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
   {
 #endif
     QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createMethodCall( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
@@ -667,7 +667,7 @@ void QDBusMessage_createError3()
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
     QDBusMessage_createError1();
   }
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
   {
     QDBusMessage_createError2();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
   {
     QDBusMessage_createError3();
   }
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETINTERACTIVEAUTHORIZATIONALLOWED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setInteractiveAuthorizationAllowed( PBOOL(1) );
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

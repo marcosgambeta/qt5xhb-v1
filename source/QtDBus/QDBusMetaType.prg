@@ -80,7 +80,7 @@ static bool demarshall(const QDBusArgument &, int id, void *data)
 HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQDBUSARGUMENT(1) && ISNUM(2) && ISPOINTER(3) )
+  if( ISNUMPAR(3) && ISQDBUSARGUMENT(1) && HB_ISNUM(2) && HB_ISPOINTER(3) )
   {
 #endif
     RBOOL( QDBusMetaType::demarshall( *PQDBUSARGUMENT(1), PINT(2), (void *) hb_parptr(3) ) );
@@ -99,7 +99,7 @@ static int signatureToType(const char *signature)
 HB_FUNC_STATIC( QDBUSMETATYPE_SIGNATURETOTYPE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
     RINT( QDBusMetaType::signatureToType( PCONSTCHAR(1) ) );
@@ -118,7 +118,7 @@ static const char *typeToSignature(int type)
 HB_FUNC_STATIC( QDBUSMETATYPE_TYPETOSIGNATURE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     hb_retc( (const char *) QDBusMetaType::typeToSignature( PINT(1) ) );
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

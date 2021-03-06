@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SETTIMEOUT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTimeout( PINT(1) );
@@ -290,7 +290,7 @@ void QDBusAbstractInterface_call1()
 
   if( obj )
   {
-    QDBusMessage * ptr = new QDBusMessage( obj->call( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(9) ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->call( PQSTRING(1), HB_ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2), HB_ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3), HB_ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4), HB_ISNIL(5)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(5), HB_ISNIL(6)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(6), HB_ISNIL(7)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(7), HB_ISNIL(8)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(8), HB_ISNIL(9)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(9) ) );
     Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
   }
 }
@@ -304,7 +304,7 @@ void QDBusAbstractInterface_call2()
 
   if( obj )
   {
-    QDBusMessage * ptr = new QDBusMessage( obj->call( (QDBus::CallMode) hb_parni(1), PQSTRING(2), ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(9), ISNIL(10)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(10) ) );
+    QDBusMessage * ptr = new QDBusMessage( obj->call( (QDBus::CallMode) hb_parni(1), PQSTRING(2), HB_ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3), HB_ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4), HB_ISNIL(5)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(5), HB_ISNIL(6)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(6), HB_ISNIL(7)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(7), HB_ISNIL(8)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(8), HB_ISNIL(9)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(9), HB_ISNIL(10)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(10) ) );
     Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
   }
 }
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISCHAR(2) && ISARRAY(3) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISARRAY(3) )
     {
 #endif
       QList<QVariant> par3;
@@ -402,10 +402,10 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
+    if( ISBETWEEN(1,9) && HB_ISCHAR(1) && (ISQVARIANT(2)||HB_ISNIL(2)) && (ISQVARIANT(3)||HB_ISNIL(3)) && (ISQVARIANT(4)||HB_ISNIL(4)) && (ISQVARIANT(5)||HB_ISNIL(5)) && (ISQVARIANT(6)||HB_ISNIL(6)) && (ISQVARIANT(7)||HB_ISNIL(7)) && (ISQVARIANT(8)||HB_ISNIL(8)) && (ISQVARIANT(9)||HB_ISNIL(9)) )
     {
 #endif
-      QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall( PQSTRING(1), ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(9) ) );
+      QDBusPendingCall * ptr = new QDBusPendingCall( obj->asyncCall( PQSTRING(1), HB_ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2), HB_ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3), HB_ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4), HB_ISNIL(5)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(5), HB_ISNIL(6)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(6), HB_ISNIL(7)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(7), HB_ISNIL(8)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(8), HB_ISNIL(9)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(9) ) );
       Qt5xHb::createReturnClass( ptr, "QDBUSPENDINGCALL", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
     {
 #endif
       QList<QVariant> par2;

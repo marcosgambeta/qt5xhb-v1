@@ -77,17 +77,17 @@ QDBusServiceWatcher(const QString &service, const QDBusConnection &connection, W
 */
 void QDBusServiceWatcher_new2()
 {
-  QDBusServiceWatcher * obj = new QDBusServiceWatcher( PQSTRING(1), *PQDBUSCONNECTION(2), ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,0) );
+  QDBusServiceWatcher * obj = new QDBusServiceWatcher( PQSTRING(1), *PQDBUSCONNECTION(2), HB_ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QDBusServiceWatcher_new1();
   }
-  else if( ISBETWEEN(2,4) && ISCHAR(1) && ISQDBUSCONNECTION(2) && (ISNUM(3)||ISNIL(3)) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && HB_ISCHAR(1) && ISQDBUSCONNECTION(2) && (ISNUM(3)||HB_ISNIL(3)) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
     QDBusServiceWatcher_new2();
   }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHEDSERVICES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setWatchedServices( PQSTRINGLIST(1) );
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_ADDWATCHEDSERVICE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->addWatchedService( PQSTRING(1) );
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_REMOVEWATCHEDSERVICE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->removeWatchedService( PQSTRING(1) ) );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QDBUSSERVICEWATCHER_SETWATCHMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setWatchMode( (QDBusServiceWatcher::WatchMode) hb_parni(1) );
