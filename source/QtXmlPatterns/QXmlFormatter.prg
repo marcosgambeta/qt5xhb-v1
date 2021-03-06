@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setIndentationDepth( PINT(1) );
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->comment( PQSTRING(1) );
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQXMLNAME(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && ISQXMLNAME(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->processingInstruction( *PQXMLNAME(1), PQSTRING(2) );

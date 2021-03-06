@@ -111,7 +111,7 @@ QXmlQuery ( QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool(
 */
 void QXmlQuery_new4()
 {
-  QXmlQuery * obj = new QXmlQuery( (QXmlQuery::QueryLanguage) hb_parni(1), ISNIL(2)? QXmlNamePool() : *(QXmlNamePool *) Qt5xHb::itemGetPtr(2) );
+  QXmlQuery * obj = new QXmlQuery( (QXmlQuery::QueryLanguage) hb_parni(1), HB_ISNIL(2)? QXmlNamePool() : *(QXmlNamePool *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
   {
     QXmlQuery_new3();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQXMLNAMEPOOL(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQXMLNAMEPOOL(2)||HB_ISNIL(2)) )
   {
     QXmlQuery_new4();
   }
@@ -260,15 +260,15 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
   {
     QXmlQuery_bindVariable3();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISQXMLITEM(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLITEM(2) )
   {
     QXmlQuery_bindVariable4();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISQIODEVICE(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2) )
   {
     QXmlQuery_bindVariable5();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISQXMLQUERY(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLQUERY(2) )
   {
     QXmlQuery_bindVariable6();
   }
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
   {
     QXmlQuery_setFocus3();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QXmlQuery_setFocus4();
   }
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME )
   {
     QXmlQuery_setInitialTemplateName1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QXmlQuery_setInitialTemplateName2();
   }
@@ -680,7 +680,7 @@ void QXmlQuery_setQuery1()
 
   if( obj )
   {
-    obj->setQuery( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+    obj->setQuery( PQIODEVICE(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -695,7 +695,7 @@ void QXmlQuery_setQuery2()
 
   if( obj )
   {
-    obj->setQuery( *PQURL(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+    obj->setQuery( *PQURL(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -710,7 +710,7 @@ void QXmlQuery_setQuery3()
 
   if( obj )
   {
-    obj->setQuery( PQSTRING(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
+    obj->setQuery( PQSTRING(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -718,15 +718,15 @@ void QXmlQuery_setQuery3()
 
 HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 {
-  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||HB_ISNIL(2)) )
   {
     QXmlQuery_setQuery1();
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQURL(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQURL(2)||HB_ISNIL(2)) )
   {
     QXmlQuery_setQuery2();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQURL(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQURL(2)||HB_ISNIL(2)) )
   {
     QXmlQuery_setQuery3();
   }
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

@@ -196,7 +196,7 @@ void QXmlSchema_load2()
 
   if( obj )
   {
-    RBOOL( obj->load( PQIODEVICE(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
+    RBOOL( obj->load( PQIODEVICE(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
   }
 }
 
@@ -209,7 +209,7 @@ void QXmlSchema_load3()
 
   if( obj )
   {
-    RBOOL( obj->load( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
+    RBOOL( obj->load( *PQBYTEARRAY(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
   }
 }
 
@@ -219,11 +219,11 @@ HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
   {
     QXmlSchema_load1();
   }
-  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||HB_ISNIL(2)) )
   {
     QXmlSchema_load2();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||HB_ISNIL(2)) )
   {
     QXmlSchema_load3();
   }
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
   {
     QXmlName_new1();
   }
-  else if( ISBETWEEN(2,4) && ISQXMLNAMEPOOL(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISQXMLNAMEPOOL(1) && HB_ISCHAR(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISCHAR(4)||HB_ISNIL(4)) )
   {
     QXmlName_new2();
   }
@@ -239,7 +239,7 @@ static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & 
 HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISCHAR(1) && ISQXMLNAMEPOOL(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQXMLNAMEPOOL(2) )
   {
 #endif
     QXmlName * ptr = new QXmlName( QXmlName::fromClarkName( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
@@ -259,7 +259,7 @@ static bool isNCName ( const QString & candidate )
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
     RBOOL( QXmlName::isNCName( PQSTRING(1) ) );
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QXMLNAME_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QXMLNAME_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QXMLNAME_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
