@@ -75,7 +75,7 @@ QVideoWidget(QWidget *parent = 0)
 */
 HB_FUNC_STATIC( QVIDEOWIDGET_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QVideoWidget * obj = new QVideoWidget( OPQWIDGET(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SETFULLSCREEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setFullScreen( PBOOL(1) );
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SETASPECTRATIOMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAspectRatioMode( (Qt::AspectRatioMode) hb_parni(1) );
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SETBRIGHTNESS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBrightness( PINT(1) );
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SETCONTRAST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setContrast( PINT(1) );
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SETHUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setHue( PINT(1) );
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QVIDEOWIDGET_SETSATURATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSaturation( PINT(1) );
