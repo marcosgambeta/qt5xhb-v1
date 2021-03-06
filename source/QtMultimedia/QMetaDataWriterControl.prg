@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_METADATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->metaData( PQSTRING(1) ) );
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QMETADATAWRITERCONTROL_SETMETADATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
       obj->setMetaData( PQSTRING(1), *PQVARIANT(2) );

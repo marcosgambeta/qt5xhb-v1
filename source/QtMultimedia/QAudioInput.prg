@@ -73,7 +73,7 @@ explicit QAudioInput(const QAudioFormat &format = QAudioFormat(), QObject *paren
 */
 void QAudioInput_new1()
 {
-  QAudioInput * obj = new QAudioInput( ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(1), OPQOBJECT(2,0) );
+  QAudioInput * obj = new QAudioInput( HB_ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(1), OPQOBJECT(2,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -82,17 +82,17 @@ explicit QAudioInput(const QAudioDeviceInfo &audioDeviceInfo, const QAudioFormat
 */
 void QAudioInput_new2()
 {
-  QAudioInput * obj = new QAudioInput( *PQAUDIODEVICEINFO(1), ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  QAudioInput * obj = new QAudioInput( *PQAUDIODEVICEINFO(1), HB_ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQAUDIOFORMAT(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QAudioInput_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQAUDIODEVICEINFO(1) && (ISQAUDIOFORMAT(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QAudioInput_new2();
   }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBufferSize( PINT(1) );
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setNotifyInterval( PINT(1) );
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETVOLUME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setVolume( PQREAL(1) );

@@ -85,7 +85,7 @@ explicit QCameraImageCapture(QMediaObject * mediaObject, QObject * parent = Q_NU
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QCameraImageCapture * obj = new QCameraImageCapture( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_IMAGECODECDESCRIPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RQSTRING( obj->imageCodecDescription( PQSTRING(1) ) );
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_ISCAPTUREDESTINATIONSUPPORTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isCaptureDestinationSupported( (QCameraImageCapture::CaptureDestinations) hb_parni(1) ) );
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETBUFFERFORMAT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBufferFormat( (QVideoFrame::PixelFormat) hb_parni(1) );
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SETCAPTUREDESTINATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCaptureDestination( (QCameraImageCapture::CaptureDestinations) hb_parni(1) );
@@ -528,11 +528,11 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_SUPPORTEDRESOLUTIONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQIMAGEENCODERSETTINGS(1)||ISNIL(1)) && (ISLOG(2)||ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISQIMAGEENCODERSETTINGS(1)||HB_ISNIL(1)) && (ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       bool par2;
-      QList<QSize> list = obj->supportedResolutions( ISNIL(1)? QImageEncoderSettings() : *(QImageEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
+      QList<QSize> list = obj->supportedResolutions( HB_ISNIL(1)? QImageEncoderSettings() : *(QImageEncoderSettings *) Qt5xHb::itemGetPtr(1), &par2 );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURE_CAPTURE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       RINT( obj->capture( OPQSTRING(1,QString()) ) );

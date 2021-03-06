@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETMUTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setMuted( PBOOL(1) );
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETSTATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setState( (QMediaRecorder::State) hb_parni(1) );
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QMEDIARECORDERCONTROL_SETVOLUME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setVolume( PQREAL(1) );

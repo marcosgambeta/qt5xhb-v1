@@ -72,7 +72,7 @@ explicit QCameraInfo(const QByteArray &name = QByteArray())
 void QCameraInfo_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = new QCameraInfo( ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) );
+  QCameraInfo * obj = new QCameraInfo( HB_ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -300,10 +300,10 @@ HB_FUNC_STATIC( QCAMERAINFO_AVAILABLECAMERAS )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
   {
 #endif
-    QList<QCameraInfo> list = QCameraInfo::availableCameras( ISNIL(1)? (QCamera::Position) QCamera::UnspecifiedPosition : (QCamera::Position) hb_parni(1) );
+    QList<QCameraInfo> list = QCameraInfo::availableCameras( HB_ISNIL(1)? (QCamera::Position) QCamera::UnspecifiedPosition : (QCamera::Position) hb_parni(1) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QCAMERAINFO" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )

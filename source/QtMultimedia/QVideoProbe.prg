@@ -58,7 +58,7 @@ explicit QVideoProbe(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QVideoProbe * obj = new QVideoProbe( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );

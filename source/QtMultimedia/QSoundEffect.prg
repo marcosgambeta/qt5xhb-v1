@@ -81,7 +81,7 @@ explicit QSoundEffect(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QSoundEffect * obj = new QSoundEffect( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLoopCount( PINT(1) );
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setVolume( PQREAL(1) );
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setMuted( PBOOL(1) );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setCategory( PQSTRING(1) );

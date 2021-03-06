@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RENUM( obj->cameraPosition( PQSTRING(1) ) );
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QCAMERAINFOCONTROL_CAMERAORIENTATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RINT( obj->cameraOrientation( PQSTRING(1) ) );
