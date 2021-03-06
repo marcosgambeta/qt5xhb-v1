@@ -86,7 +86,7 @@ QTimeLine ( int duration = 1000, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMELINE_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISNUM(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QTimeLine * obj = new QTimeLine( OPINT(1,1000), OPQOBJECT(2,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RINT( obj->frameForTime( PINT(1) ) );
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCurveShape( (QTimeLine::CurveShape) hb_parni(1) );
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDirection( (QTimeLine::Direction) hb_parni(1) );
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDURATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDuration( PINT(1) );
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setEndFrame( PINT(1) );
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setFrameRange( PINT(1), PINT(2) );
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLoopCount( PINT(1) );
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setStartFrame( PINT(1) );
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setUpdateInterval( PINT(1) );
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQREAL( obj->valueForTime( PINT(1) ) );
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCurrentTime( PINT(1) );
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setPaused( PBOOL(1) );

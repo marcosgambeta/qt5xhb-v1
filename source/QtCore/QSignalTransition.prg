@@ -72,11 +72,11 @@ void QSignalTransition_new2()
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
   {
     QSignalTransition_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISCHAR(2) && (ISQSTATE(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQSTATE(3)||HB_ISNIL(3)) )
   {
     QSignalTransition_new2();
   }

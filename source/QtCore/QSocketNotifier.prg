@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setEnabled( PBOOL(1) );

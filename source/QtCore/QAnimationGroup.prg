@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QAbstractAnimation * ptr = obj->animationAt( PINT(1) );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQABSTRACTANIMATION(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTANIMATION(2) )
     {
 #endif
       obj->insertAnimation( PINT(1), PQABSTRACTANIMATION(2) );
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QAbstractAnimation * ptr = obj->takeAnimation( PINT(1) );

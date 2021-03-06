@@ -114,7 +114,7 @@ explicit QProcess ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPROCESS_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QProcess * obj = new QProcess( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->closeReadChannel( (QProcess::ProcessChannel) hb_parni(1) );
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setEnvironment( PQSTRINGLIST(1) );
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setNativeArguments( PQSTRING(1) );
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setProcessChannelMode( (QProcess::ProcessChannelMode) hb_parni(1) );
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setReadChannel( (QProcess::ProcessChannel) hb_parni(1) );
@@ -583,10 +583,10 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      obj->setStandardErrorFile( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
+      obj->setStandardErrorFile( PQSTRING(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setStandardInputFile( PQSTRING(1) );
@@ -635,10 +635,10 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      obj->setStandardOutputFile( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
+      obj->setStandardOutputFile( PQSTRING(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setWorkingDirectory( PQSTRING(1) );
@@ -712,7 +712,7 @@ void QProcess_start1()
 
   if( obj )
   {
-    obj->start( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    obj->start( PQSTRING(1), PQSTRINGLIST(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -727,7 +727,7 @@ void QProcess_start2()
 
   if( obj )
   {
-    obj->start( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+    obj->start( PQSTRING(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -743,7 +743,7 @@ void QProcess_start3()
 
   if( obj )
   {
-    obj->start( ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) );
+    obj->start( HB_ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -752,15 +752,15 @@ void QProcess_start3()
 
 HB_FUNC_STATIC( QPROCESS_START )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISARRAY(2) && (ISNUM(3)||HB_ISNIL(3)) )
   {
     QProcess_start1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QProcess_start2();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
   {
     QProcess_start3();
   }
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForFinished( OPINT(1,30000) ) );
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForStarted( OPINT(1,30000) ) );
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
@@ -1132,11 +1132,11 @@ void QProcess_execute2()
 
 HB_FUNC_STATIC( QPROCESS_EXECUTE )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
   {
     QProcess_execute1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QProcess_execute2();
   }
@@ -1175,15 +1175,15 @@ void QProcess_startDetached3()
 
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {
-  if( ISBETWEEN(3,4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) && (ISNUM(4)||ISNIL(4)) )
+  if( ISBETWEEN(3,4) && HB_ISCHAR(1) && HB_ISARRAY(2) && HB_ISCHAR(3) && (ISNUM(4)||HB_ISNIL(4)) )
   {
     QProcess_startDetached1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
   {
     QProcess_startDetached2();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QProcess_startDetached3();
   }
@@ -1222,10 +1222,10 @@ HB_FUNC_STATIC( QPROCESS_OPEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->open( ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) ) );
+      RBOOL( obj->open( HB_ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1271,7 +1271,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROGRAM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setProgram( PQSTRING(1) );
@@ -1323,7 +1323,7 @@ HB_FUNC_STATIC( QPROCESS_SETARGUMENTS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setArguments( PQSTRINGLIST(1) );
@@ -1374,7 +1374,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNELMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setReadChannelMode( (QProcess::ProcessChannelMode) hb_parni(1) );
@@ -1427,7 +1427,7 @@ HB_FUNC_STATIC( QPROCESS_SETINPUTCHANNELMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setInputChannelMode( (QProcess::InputChannelMode) hb_parni(1) );

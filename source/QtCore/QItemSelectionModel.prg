@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
       RBOOL( obj->isRowSelected( PINT(1), *PQMODELINDEX(2) ) );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
       RBOOL( obj->isColumnSelected( PINT(1), *PQMODELINDEX(2) ) );
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
       RBOOL( obj->rowIntersectsSelection( PINT(1), *PQMODELINDEX(2) ) );
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
       RBOOL( obj->columnIntersectsSelection( PINT(1), *PQMODELINDEX(2) ) );
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QModelIndexList list = obj->selectedRows( OPINT(1,0) );
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QModelIndexList list = obj->selectedColumns( OPINT(1,0) );
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setCurrentIndex( *PQMODELINDEX(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
@@ -560,11 +560,11 @@ void QItemSelectionModel_select2()
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 {
-  if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2) )
   {
     QItemSelectionModel_select1();
   }
-  else if( ISNUMPAR(2) && ISQITEMSELECTION(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQITEMSELECTION(1) && HB_ISNUM(2) )
   {
     QItemSelectionModel_select2();
   }

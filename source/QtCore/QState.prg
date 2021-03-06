@@ -86,11 +86,11 @@ void QState_new2()
 
 HB_FUNC_STATIC( QSTATE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
   {
     QState_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQSTATE(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQSTATE(2)||HB_ISNIL(2)) )
   {
     QState_new2();
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
   {
     QState_addTransition1();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQABSTRACTSTATE(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQABSTRACTSTATE(3) )
   {
     QState_addTransition2();
   }
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) )
+    if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) )
     {
 #endif
       obj->assignProperty( PQOBJECT(1), PCONSTCHAR(2), *PQVARIANT(3) );
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setChildMode( (QState::ChildMode) hb_parni(1) );

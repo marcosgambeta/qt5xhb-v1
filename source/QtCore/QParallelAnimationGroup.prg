@@ -54,7 +54,7 @@ QParallelAnimationGroup ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QParallelAnimationGroup * obj = new QParallelAnimationGroup( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );

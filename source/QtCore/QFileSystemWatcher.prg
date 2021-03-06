@@ -79,11 +79,11 @@ void QFileSystemWatcher_new2()
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QFileSystemWatcher_new1();
   }
-  else if( ISBETWEEN(1,2) && ISARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISARRAY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QFileSystemWatcher_new2();
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->addPath( PQSTRING(1) ) );
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       RQSTRINGLIST( obj->addPaths( PQSTRINGLIST(1) ) );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->removePath( PQSTRING(1) ) );
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       RQSTRINGLIST( obj->removePaths( PQSTRINGLIST(1) ) );

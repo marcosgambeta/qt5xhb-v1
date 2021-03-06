@@ -53,7 +53,7 @@ QFinalState(QState * parent = 0)
 */
 HB_FUNC_STATIC( QFINALSTATE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
   {
     QFinalState * obj = new QFinalState( OPQSTATE(1,0) );
     Qt5xHb::returnNewObject( obj, false );

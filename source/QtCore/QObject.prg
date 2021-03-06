@@ -284,7 +284,7 @@ Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOBJECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QObject * obj = new QObject( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       RBOOL( obj->blockSignals( PBOOL(1) ) );
@@ -550,10 +550,10 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISCHAR(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      QObject * ptr = obj->findChild<QObject *>( OPQSTRING(1,QString()), ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
+      QObject * ptr = obj->findChild<QObject *>( OPQSTRING(1,QString()), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
       Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -574,7 +574,7 @@ void QObject_findChildren1()
 
   if( obj )
   {
-    QList<QObject *> list = obj->findChildren<QObject *>( OPQSTRING(1,QString()), ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
+    QList<QObject *> list = obj->findChildren<QObject *>( OPQSTRING(1,QString()), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -612,7 +612,7 @@ void QObject_findChildren2()
 
   if( obj )
   {
-    QList<QObject *> list = obj->findChildren<QObject *>( *PQREGEXP(1), ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
+    QList<QObject *> list = obj->findChildren<QObject *>( *PQREGEXP(1), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -651,7 +651,7 @@ void QObject_findChildren3()
 
   if( obj )
   {
-    QList<QObject *> list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
+    QList<QObject *> list = obj->findChildren<QObject *>( *PQREGULAREXPRESSION(1), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
@@ -682,15 +682,15 @@ void QObject_findChildren3()
 
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {
-  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISCHAR(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QObject_findChildren1();
   }
-  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QObject_findChildren2();
   }
-  else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QObject_findChildren3();
   }
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->inherits( PCONSTCHAR(1) ) );
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QOBJECT_KILLTIMER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->killTimer( PINT(1) );
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setObjectName( PQSTRING(1) );
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->property( PCONSTCHAR(1) ) );
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
       RBOOL( obj->setProperty( PCONSTCHAR(1), *PQVARIANT(2) ) );
@@ -1089,10 +1089,10 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      RINT( obj->startTimer( PINT(1), ISNIL(2)? (Qt::TimerType) Qt::CoarseTimer : (Qt::TimerType) hb_parni(2) ) );
+      RINT( obj->startTimer( PINT(1), HB_ISNIL(2)? (Qt::TimerType) Qt::CoarseTimer : (Qt::TimerType) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1160,7 +1160,7 @@ static QString tr ( const char * sourceText, const char * disambiguation = 0, in
 HB_FUNC_STATIC( QOBJECT_TR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
   {
 #endif
     RQSTRING( QObject::tr( PCONSTCHAR(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALL )
       Qt5xHb::Events_disconnect_all_events( obj, false );
       Qt5xHb::Signals_disconnect_all_signals( obj, false );
     }
-    else if( hb_pcount() == 1 && ISLOG(1) )
+    else if( hb_pcount() == 1 && HB_ISLOG(1) )
     {
       Qt5xHb::Events_disconnect_all_events( obj, PBOOL(1) );
       Qt5xHb::Signals_disconnect_all_signals( obj, PBOOL(1) );
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLEVENTS )
     {
       Qt5xHb::Events_disconnect_all_events( obj, false );
     }
-    else if( hb_pcount() == 1 && ISLOG(1) )
+    else if( hb_pcount() == 1 && HB_ISLOG(1) )
     {
       Qt5xHb::Events_disconnect_all_events( obj, PBOOL(1) );
     }
@@ -1231,7 +1231,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECTALLSIGNALS )
     {
       Qt5xHb::Signals_disconnect_all_signals( obj, false );
     }
-    else if( hb_pcount() == 1 && ISLOG(1) )
+    else if( hb_pcount() == 1 && HB_ISLOG(1) )
     {
       Qt5xHb::Signals_disconnect_all_signals( obj, PBOOL(1) );
     }
@@ -2131,7 +2131,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
 
   if( obj )
   {
-    if( ISNUMPAR(2) && ISCHAR(1) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) )
     {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
@@ -2153,7 +2153,7 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    else if( ISNUMPAR(1) && ISCHAR(1) )
+    else if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
@@ -2173,12 +2173,12 @@ HB_FUNC_STATIC( QOBJECT_CONNECT )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    else if( ISNUMPAR(2) && ISNUM(1) )
+    else if( ISNUMPAR(2) && HB_ISNUM(1) )
     {
       int event = hb_parni(1);
       _qtxhb_processOnEventMethod2( (QEvent::Type) event );
     }
-    else if( ISNUMPAR(1) && ISNUM(1) )
+    else if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       int event = hb_parni(1);
       _qtxhb_processOnEventMethod2( (QEvent::Type) event );
@@ -2196,7 +2196,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
       QString signal = hb_parc(1);
       int pos = signal.indexOf("(");
@@ -2216,7 +2216,7 @@ HB_FUNC_STATIC( QOBJECT_DISCONNECT )
         hb_errRT_BASE( EG_NOFUNC, 1001, NULL, method.toLatin1().data(), HB_ERR_ARGS_BASEPARAMS );
       }
     }
-    else if( ISNUMPAR(1) && ISNUM(1) )
+    else if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       int event = hb_parni(1);
       _qtxhb_processOnEventMethod2( (QEvent::Type) event );
@@ -2244,7 +2244,7 @@ HB_FUNC_STATIC( QOBJECT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -2253,7 +2253,7 @@ HB_FUNC_STATIC( QOBJECT_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -2289,7 +2289,7 @@ HB_FUNC_STATIC( QOBJECT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

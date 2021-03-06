@@ -56,7 +56,7 @@ QChildEvent(Type type, QObject * child)
 */
 HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2) )
   {
     QChildEvent * obj = new QChildEvent( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
     Qt5xHb::returnNewObject( obj, false );

@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
   {
     QVariant_new1();
   }
-  else if( ISNUMPAR(1) && ISOBJECT(1) )
+  else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
   {
     if( ISQVARIANT(1) )
     {
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
       hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
     }
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     if( hb_param( 1, HB_IT_DOUBLE ) != NULL )
     {
@@ -744,23 +744,23 @@ HB_FUNC_STATIC( QVARIANT_NEW )
       HB_FUNC_EXEC( QVARIANT_NEW7 );
     }
   }
-  else if( ISNUMPAR(1) && ISLOG(1) )
+  else if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
     QVariant_new11();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     HB_FUNC_EXEC( QVARIANT_NEW17 );
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     HB_FUNC_EXEC( QVARIANT_NEW19 );
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2) )
   {
     QVariant_new3();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
   {
     QVariant_new4();
   }
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QVARIANT_CANCONVERT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->canConvert( PINT(1) ) );
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QVARIANT_CONVERT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->convert( PINT(1) ) );
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QVARIANT_TOINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QVARIANT_TOUINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC( QVARIANT_TOLONGLONG )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1153,7 +1153,7 @@ HB_FUNC_STATIC( QVARIANT_TOULONGLONG )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC( QVARIANT_TODOUBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QVARIANT_TOFLOAT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -1255,7 +1255,7 @@ HB_FUNC_STATIC( QVARIANT_TOREAL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -2074,7 +2074,7 @@ static const char *typeToName(int typeId)
 HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     hb_retc( (const char *) QVariant::typeToName( PINT(1) ) );
@@ -2093,7 +2093,7 @@ static Type nameToType(const char *name)
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
     RENUM( QVariant::nameToType( PCONSTCHAR(1) ) );
@@ -2110,7 +2110,7 @@ HB_FUNC_STATIC( QVARIANT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -2119,7 +2119,7 @@ HB_FUNC_STATIC( QVARIANT_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -2155,7 +2155,7 @@ HB_FUNC_STATIC( QVARIANT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

@@ -74,11 +74,11 @@ void QPropertyAnimation_new2()
 
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QPropertyAnimation_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QPropertyAnimation_new2();
   }

@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSIZEF_NEW )
   {
     QSizeF_new2();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QSizeF_new3();
   }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSIZEF_SETWIDTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setWidth( PQREAL(1) );
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setHeight( PQREAL(1) );
@@ -389,11 +389,11 @@ void QSizeF_scale2()
 
 HB_FUNC_STATIC( QSIZEF_SCALE )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QSizeF_scale1();
   }
-  else if( ISNUMPAR(2) && ISQSIZEF(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2) )
   {
     QSizeF_scale2();
   }
@@ -433,11 +433,11 @@ void QSizeF_scaled2()
 
 HB_FUNC_STATIC( QSIZEF_SCALED )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QSizeF_scaled1();
   }
-  else if( ISNUMPAR(2) && ISQSIZEF(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQSIZEF(1) && HB_ISNUM(2) )
   {
     QSizeF_scaled2();
   }
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QSIZEF_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QSIZEF_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QSIZEF_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

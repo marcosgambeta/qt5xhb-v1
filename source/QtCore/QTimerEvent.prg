@@ -52,7 +52,7 @@ QTimerEvent(int timerId)
 */
 HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QTimerEvent * obj = new QTimerEvent( PINT(1) );
     Qt5xHb::returnNewObject( obj, false );

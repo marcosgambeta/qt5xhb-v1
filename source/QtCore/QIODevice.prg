@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QIODEVICE_GETCHAR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->getChar( (char *) hb_parc(1) ) );
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->open( (QIODevice::OpenMode) hb_parni(1) ) );
@@ -467,11 +467,11 @@ void QIODevice_peek2()
 
 HB_FUNC_STATIC( QIODEVICE_PEEK )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
     QIODevice_peek1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QIODevice_peek2();
   }
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->putChar( PCHAR(1) ) );
@@ -558,11 +558,11 @@ void QIODevice_read2()
 
 HB_FUNC_STATIC( QIODEVICE_READ )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
     QIODevice_read1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QIODevice_read2();
   }
@@ -626,11 +626,11 @@ void QIODevice_readLine2()
 
 HB_FUNC_STATIC( QIODEVICE_READLINE )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
     QIODevice_readLine1();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
   {
     QIODevice_readLine2();
   }
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QIODEVICE_SEEK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->seek( PQINT64(1) ) );
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setTextModeEnabled( PBOOL(1) );
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->ungetChar( PCHAR(1) );
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->waitForBytesWritten( PINT(1) ) );
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->waitForReadyRead( PINT(1) ) );
@@ -853,11 +853,11 @@ void QIODevice_write3()
 
 HB_FUNC_STATIC( QIODEVICE_WRITE )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
     QIODevice_write1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QIODevice_write2();
   }

@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QURL_NEW )
   {
     QUrl_new1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QUrl_new2();
   }
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QURL_NEW )
   {
     QUrl_new3();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
     QUrl_new4();
   }
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QURL_PORT )
   {
     QUrl_port1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QUrl_port2();
   }
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QURL_SETAUTHORITY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setAuthority( PQSTRING(1) );
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QURL_SETFRAGMENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setFragment( PQSTRING(1) );
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QURL_SETHOST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setHost( PQSTRING(1) );
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QURL_SETPASSWORD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setPassword( PQSTRING(1) );
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QURL_SETPATH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setPath( PQSTRING(1) );
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QURL_SETPORT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setPort( PINT(1) );
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QURL_SETSCHEME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setScheme( PQSTRING(1) );
@@ -820,11 +820,11 @@ void QUrl_setUrl2()
 
 HB_FUNC_STATIC( QURL_SETURL )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QUrl_setUrl1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
     QUrl_setUrl2();
   }
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QURL_SETUSERINFO )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setUserInfo( PQSTRING(1) );
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QURL_SETUSERNAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setUserName( PQSTRING(1) );
@@ -922,10 +922,10 @@ HB_FUNC_STATIC( QURL_TOENCODED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toEncoded( ISNIL(1)? (QUrl::FormattingOptions) QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
+      QByteArray * ptr = new QByteArray( obj->toEncoded( HB_ISNIL(1)? (QUrl::FormattingOptions) QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
       Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -971,10 +971,10 @@ HB_FUNC_STATIC( QURL_TOSTRING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
-      RQSTRING( obj->toString( ISNIL(1)? (QUrl::FormattingOptions) QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
+      RQSTRING( obj->toString( HB_ISNIL(1)? (QUrl::FormattingOptions) QUrl::None : (QUrl::FormattingOptions) hb_parni(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
   {
     QUrl_fromEncoded1();
   }
-  else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2) )
   {
     QUrl_fromEncoded2();
   }
@@ -1118,7 +1118,7 @@ static QUrl fromLocalFile ( const QString & localFile )
 HB_FUNC_STATIC( QURL_FROMLOCALFILE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
     QUrl * ptr = new QUrl( QUrl::fromLocalFile( PQSTRING(1) ) );
@@ -1157,7 +1157,7 @@ static QUrl fromUserInput ( const QString & userInput )
 HB_FUNC_STATIC( QURL_FROMUSERINPUT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
     QUrl * ptr = new QUrl( QUrl::fromUserInput( PQSTRING(1) ) );
@@ -1177,7 +1177,7 @@ static void setIdnWhitelist ( const QStringList & list )
 HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
 #endif
     QUrl::setIdnWhitelist( PQSTRINGLIST(1) );
@@ -1198,7 +1198,7 @@ static QByteArray toAce ( const QString & domain )
 HB_FUNC_STATIC( QURL_TOACE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
     QByteArray * ptr = new QByteArray( QUrl::toAce( PQSTRING(1) ) );
@@ -1218,10 +1218,10 @@ static QByteArray toPercentEncoding ( const QString & input, const QByteArray & 
 HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQBYTEARRAY(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) && (ISQBYTEARRAY(3)||HB_ISNIL(3)) )
   {
 #endif
-    QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), ISNIL(3)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(3) ) );
+    QByteArray * ptr = new QByteArray( QUrl::toPercentEncoding( PQSTRING(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), HB_ISNIL(3)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(3) ) );
     Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QURL_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QURL_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1281,7 +1281,7 @@ HB_FUNC_STATIC( QURL_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

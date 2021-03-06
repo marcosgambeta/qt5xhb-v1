@@ -77,7 +77,7 @@ QCollator(const QLocale &locale = QLocale())
 void QCollator_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = new QCollator( ISNIL(1)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(1) );
+  QCollator * obj = new QCollator( HB_ISNIL(1)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(1) );
   Qt5xHb::returnNewObject( obj, true );
 #endif
 }
@@ -95,7 +95,7 @@ void QCollator_new2()
 
 HB_FUNC_STATIC( QCOLLATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQLOCALE(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQLOCALE(1)||HB_ISNIL(1)) )
   {
     QCollator_new1();
   }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETCASESENSITIVITY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCaseSensitivity( (Qt::CaseSensitivity) hb_parni(1) );
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETNUMERICMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setNumericMode( PBOOL(1) );
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETIGNOREPUNCTUATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setIgnorePunctuation( PBOOL(1) );
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QCOLLATOR_SORTKEY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QCollatorSortKey * ptr = new QCollatorSortKey( obj->sortKey( PQSTRING(1) ) );
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QCOLLATOR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

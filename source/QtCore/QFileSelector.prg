@@ -60,7 +60,7 @@ QFileSelector(QObject *parent = 0)
 */
 HB_FUNC_STATIC( QFILESELECTOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QFileSelector * obj = new QFileSelector( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -119,7 +119,7 @@ void QFileSelector_select2()
 
 HB_FUNC_STATIC( QFILESELECTOR_SELECT )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QFileSelector_select1();
   }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setExtraSelectors( PQSTRINGLIST(1) );
