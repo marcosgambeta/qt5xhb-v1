@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->addPluginPath( PQSTRING(1) );
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setPluginPath( PQSTRINGLIST(1) );
