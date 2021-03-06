@@ -64,7 +64,7 @@ explicit QModbusClient(QObject *parent = nullptr)
 HB_FUNC_STATIC( QMODBUSCLIENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QModbusClient * obj = new QModbusClient( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_SETTIMEOUT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTimeout( PINT(1) );
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_SETNUMBEROFRETRIES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setNumberOfRetries( PINT(1) );

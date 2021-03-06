@@ -67,7 +67,7 @@ QModbusReply(ReplyType type, int serverAddress, QObject *parent = nullptr)
 HB_FUNC_STATIC( QMODBUSREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QModbusReply * obj = new QModbusReply( (QModbusReply::ReplyType) hb_parni(1), PINT(2), OPQOBJECT(3,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_SETFINISHED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setFinished( PBOOL(1) );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_SETERROR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setError( (QModbusDevice::Error) hb_parni(1), PQSTRING(2) );
