@@ -66,7 +66,7 @@ explicit QWebChannel(QObject *parent = 0)
 HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QWebChannel * obj = new QWebChannel( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
     {
 #endif
       obj->registerObject( PQSTRING(1), PQOBJECT(2) );
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setBlockUpdates( PBOOL(1) );
