@@ -73,7 +73,7 @@ void QSqlIndex_new2()
 
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISCHAR(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISCHAR(1)||HB_ISNIL(1)) && (ISCHAR(2)||HB_ISNIL(2)) )
   {
     QSqlIndex_new1();
   }
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSQLINDEX_APPEND )
   {
     QSqlIndex_append1();
   }
-  else if( ISNUMPAR(2) && ISQSQLFIELD(1) && ISLOG(2) )
+  else if( ISNUMPAR(2) && ISQSQLFIELD(1) && HB_ISLOG(2) )
   {
     QSqlIndex_append2();
   }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setCursorName( PQSTRING(1) );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isDescending( PINT(1) ) );
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
     {
 #endif
       obj->setDescending( PINT(1), PBOOL(2) );
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSQLINDEX_SETNAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setName( PQSTRING(1) );

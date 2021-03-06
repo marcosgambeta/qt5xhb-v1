@@ -95,9 +95,9 @@ QSqlTableModel( QObject * parent = 0, QSqlDatabase db = QSqlDatabase() )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && (ISQSQLDATABASE(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQOBJECT(1)||HB_ISNIL(1)) && (ISQSQLDATABASE(2)||HB_ISNIL(2)) )
   {
-    QSqlTableModel * obj = new QSqlTableModel( OPQOBJECT(1,0), ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt5xHb::itemGetPtr(2) );
+    QSqlTableModel * obj = new QSqlTableModel( OPQOBJECT(1,0), HB_ISNIL(2)? QSqlDatabase() : *(QSqlDatabase *) Qt5xHb::itemGetPtr(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETEDITSTRATEGY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setEditStrategy( (QSqlTableModel::EditStrategy) hb_parni(1) );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FIELDINDEX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RINT( obj->fieldIndex( PQSTRING(1) ) );
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETFILTER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setFilter( PQSTRING(1) );
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTRECORD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQSQLRECORD(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2) )
     {
 #endif
       RBOOL( obj->insertRecord( PINT(1), *PQSQLRECORD(2) ) );
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REVERTROW )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->revertRow( PINT(1) );
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETRECORD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQSQLRECORD(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSQLRECORD(2) )
     {
 #endif
       RBOOL( obj->setRecord( PINT(1), *PQSQLRECORD(2) ) );
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SORT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->sort( PINT(1), (Qt::SortOrder) hb_parni(2) );
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETSORT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setSort( PINT(1), (Qt::SortOrder) hb_parni(2) );
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETTABLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setTable( PQSTRING(1) );
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
@@ -675,10 +675,10 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->insertRows( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->insertRows( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,10 +699,10 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->removeColumns( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->removeColumns( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -723,10 +723,10 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->removeRows( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      RBOOL( obj->removeRows( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -747,10 +747,10 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||HB_ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
+      RINT( obj->rowCount( HB_ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(1) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -895,7 +895,7 @@ HB_FUNC( QSQLTABLEMODEL_RECORD )
   {
     QSqlTableModel_record1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QSqlTableModel_record2();
   }
@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SELECTROW )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->selectRow( PINT(1) ) );
