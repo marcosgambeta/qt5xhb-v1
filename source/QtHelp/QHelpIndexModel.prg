@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->createIndex( PQSTRING(1) );
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->filter( PQSTRING(1), OPQSTRING(2,QString()) ) );
