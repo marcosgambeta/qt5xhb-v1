@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->buttonSymbols= (QAbstractSpinBox::ButtonSymbols) hb_parni(1);
     }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->stepEnabled= (QAbstractSpinBox::StepEnabled) hb_parni(1);
     }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETFRAME )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
       obj->frame= PBOOL(1);
     }

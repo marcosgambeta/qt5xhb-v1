@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSCROLLER_HANDLEINPUT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQPOINTF(2) && (ISNUM(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQPOINTF(2) && (ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       RBOOL( obj->handleInput( (QScroller::Input) hb_parni(1), *PQPOINTF(2), OPQINT64(3,0) ) );
@@ -213,11 +213,11 @@ void QScroller_setSnapPositionsX2()
 
 HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSX )
 {
-  if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QScroller_setSnapPositionsX1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QScroller_setSnapPositionsX2();
   }
@@ -269,11 +269,11 @@ void QScroller_setSnapPositionsY2()
 
 HB_FUNC_STATIC( QSCROLLER_SETSNAPPOSITIONSY )
 {
-  if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QScroller_setSnapPositionsY1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QScroller_setSnapPositionsY2();
   }
@@ -415,11 +415,11 @@ void QScroller_ensureVisible2()
 
 HB_FUNC_STATIC( QSCROLLER_ENSUREVISIBLE )
 {
-  if( ISNUMPAR(3) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QScroller_ensureVisible1();
   }
-  else if( ISNUMPAR(4) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QScroller_ensureVisible2();
   }
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QSCROLLER_SCROLLTO )
   {
     QScroller_scrollTo1();
   }
-  else if( ISNUMPAR(2) && ISQPOINTF(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
   {
     QScroller_scrollTo2();
   }
@@ -576,10 +576,10 @@ static Qt::GestureType grabGesture( QObject * target, QScroller::ScrollerGesture
 HB_FUNC_STATIC( QSCROLLER_GRABGESTURE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQOBJECT(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQOBJECT(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
 #endif
-    RENUM( QScroller::grabGesture( PQOBJECT(1), ISNIL(2)? (QScroller::ScrollerGestureType) QScroller::TouchGesture : (QScroller::ScrollerGestureType) hb_parni(2) ) );
+    RENUM( QScroller::grabGesture( PQOBJECT(1), HB_ISNIL(2)? (QScroller::ScrollerGestureType) QScroller::TouchGesture : (QScroller::ScrollerGestureType) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else

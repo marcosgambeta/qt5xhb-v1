@@ -68,11 +68,11 @@ void QDateEdit_new2()
 
 HB_FUNC_STATIC( QDATEEDIT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QDateEdit_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQDATE(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQDATE(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
     QDateEdit_new2();
   }

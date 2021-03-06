@@ -74,15 +74,15 @@ void HStyledItemDelegate_new3 ()
 
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     HStyledItemDelegate_new1();
   }
-  else if( ISBETWEEN(1,2) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     HStyledItemDelegate_new2();
   }
-  else if( ISBETWEEN(2,3) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     HStyledItemDelegate_new3();
   }

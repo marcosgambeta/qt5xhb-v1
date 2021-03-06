@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETMENUITEMTYPE )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->menuItemType= (QStyleOptionMenuItem::MenuItemType) hb_parni(1);
     }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETCHECKTYPE )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->checkType= (QStyleOptionMenuItem::CheckType) hb_parni(1);
     }
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETCHECKED )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
       obj->checked= PBOOL(1);
     }
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETMENUHASCHECKABLEITEMS )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
       obj->menuHasCheckableItems= PBOOL(1);
     }
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETTEXT )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
       obj->text= PQSTRING(1);
     }
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETMAXICONWIDTH )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->maxIconWidth= PINT(1);
     }
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_SETTABWIDTH )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->tabWidth= PINT(1);
     }

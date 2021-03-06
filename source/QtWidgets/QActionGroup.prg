@@ -134,7 +134,7 @@ void QActionGroup_addAction3()
 
   if( obj )
   {
-    QAction * ptr = obj->addAction( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+    QAction * ptr = obj->addAction( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
     Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
@@ -145,11 +145,11 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
   {
     QActionGroup_addAction1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QActionGroup_addAction2();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QActionGroup_addAction3();
   }
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setDisabled( PBOOL(1) );
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setEnabled( PBOOL(1) );
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setExclusive( PBOOL(1) );
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );

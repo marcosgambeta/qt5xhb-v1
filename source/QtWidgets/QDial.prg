@@ -63,7 +63,7 @@ QDial( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDIAL_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QDial * obj = new QDial( OPQWIDGET(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setNotchTarget( PDOUBLE(1) );
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setNotchesVisible( PBOOL(1) );
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QDIAL_SETWRAPPING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setWrapping( PBOOL(1) );

@@ -57,7 +57,7 @@ QRubberBand( QRubberBand::Shape s, QWidget * p = 0 )
 */
 HB_FUNC_STATIC( QRUBBERBAND_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
     QRubberBand * obj = new QRubberBand( (QRubberBand::Shape) hb_parni(1), OPQWIDGET(2,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -119,7 +119,7 @@ void QRubberBand_move2()
 
 HB_FUNC_STATIC( QRUBBERBAND_MOVE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QRubberBand_move1();
   }
@@ -165,7 +165,7 @@ void QRubberBand_resize2()
 
 HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QRubberBand_resize1();
   }
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
   {
     QRubberBand_setGeometry1();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QRubberBand_setGeometry2();
   }

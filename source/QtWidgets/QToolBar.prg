@@ -106,11 +106,11 @@ void QToolBar_new2()
 
 HB_FUNC_STATIC( QTOOLBAR_NEW )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
     QToolBar_new1();
   }
-  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QToolBar_new2();
   }
@@ -169,7 +169,7 @@ void QToolBar_actionAt2()
 
 HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QToolBar_actionAt1();
   }
@@ -221,7 +221,7 @@ void QToolBar_addAction3()
 
   if( obj )
   {
-    QAction * ptr = obj->addAction( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
+    QAction * ptr = obj->addAction( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) );
     Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
@@ -249,7 +249,7 @@ void QToolBar_addAction5()
 
   if( obj )
   {
-    QAction * ptr = obj->addAction( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
+    QAction * ptr = obj->addAction( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
     Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
@@ -260,19 +260,19 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
   {
     QToolBar_addAction1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QToolBar_addAction2();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QToolBar_addAction3();
   }
-  else if( ISNUMPAR(3) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) )
+  else if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) )
   {
     QToolBar_addAction4();
   }
-  else if( ISNUMPAR(4) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) && ISCHAR(4) )
+  else if( ISNUMPAR(4) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) )
   {
     QToolBar_addAction5();
   }
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isAreaAllowed( (Qt::ToolBarArea) hb_parni(1) ) );
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAllowedAreas( (Qt::ToolBarAreas) hb_parni(1) );
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setFloatable( PBOOL(1) );
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setMovable( PBOOL(1) );
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setOrientation( (Qt::Orientation) hb_parni(1) );
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setToolButtonStyle( (Qt::ToolButtonStyle) hb_parni(1) );

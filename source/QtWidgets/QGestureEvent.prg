@@ -64,7 +64,7 @@ QGestureEvent( const QList<QGesture *> & gestures )
 */
 HB_FUNC_STATIC( QGESTUREEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QList<QGesture *> par1;
     PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACCEPT )
   {
     QGestureEvent_accept2();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QGestureEvent_accept3();
   }
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QGesture * ptr = obj->gesture( (Qt::GestureType) hb_parni(1) );
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_IGNORE )
   {
     QGestureEvent_ignore2();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QGestureEvent_ignore3();
   }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
   {
     QGestureEvent_isAccepted2();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QGestureEvent_isAccepted3();
   }
@@ -530,15 +530,15 @@ void QGestureEvent_setAccepted3()
 
 HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 {
-  if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
     QGestureEvent_setAccepted1();
   }
-  else if( ISNUMPAR(2) && ISQGESTURE(1) && ISLOG(2) )
+  else if( ISNUMPAR(2) && ISQGESTURE(1) && HB_ISLOG(2) )
   {
     QGestureEvent_setAccepted2();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
   {
     QGestureEvent_setAccepted3();
   }

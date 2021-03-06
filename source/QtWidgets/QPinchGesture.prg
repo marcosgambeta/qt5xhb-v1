@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETCHANGEFLAGS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setChangeFlags( (QPinchGesture::ChangeFlags) hb_parni(1) );
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTROTATIONANGLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLastRotationAngle( PQREAL(1) );
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETLASTSCALEFACTOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLastScaleFactor( PQREAL(1) );
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETROTATIONANGLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setRotationAngle( PQREAL(1) );
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETSCALEFACTOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setScaleFactor( PQREAL(1) );
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALCHANGEFLAGS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTotalChangeFlags( (QPinchGesture::ChangeFlags) hb_parni(1) );
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALROTATIONANGLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTotalRotationAngle( PQREAL(1) );
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QPINCHGESTURE_SETTOTALSCALEFACTOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTotalScaleFactor( PQREAL(1) );

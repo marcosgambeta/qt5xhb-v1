@@ -62,7 +62,7 @@ QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new1()
 {
-  QSplashScreen * obj = new QSplashScreen( ISNIL(1)? QPixmap() : *(QPixmap *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+  QSplashScreen * obj = new QSplashScreen( HB_ISNIL(1)? QPixmap() : *(QPixmap *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -71,17 +71,17 @@ QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowF
 */
 void QSplashScreen_new2()
 {
-  QSplashScreen * obj = new QSplashScreen( PQWIDGET(1), ISNIL(2)? QPixmap() : *(QPixmap *) Qt5xHb::itemGetPtr(2), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+  QSplashScreen * obj = new QSplashScreen( PQWIDGET(1), HB_ISNIL(2)? QPixmap() : *(QPixmap *) Qt5xHb::itemGetPtr(2), HB_ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QSplashScreen_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISQPIXMAP(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISQPIXMAP(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
   {
     QSplashScreen_new2();
   }
@@ -249,10 +249,10 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) && (ISQCOLOR(3)||ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISQCOLOR(3)||HB_ISNIL(3)) )
     {
 #endif
-      obj->showMessage( PQSTRING(1), OPINT(2,Qt::AlignLeft), ISNIL(3)? Qt::black : *(QColor *) Qt5xHb::itemGetPtr(3) );
+      obj->showMessage( PQSTRING(1), OPINT(2,Qt::AlignLeft), HB_ISNIL(3)? Qt::black : *(QColor *) Qt5xHb::itemGetPtr(3) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

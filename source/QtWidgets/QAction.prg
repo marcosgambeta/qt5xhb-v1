@@ -139,7 +139,7 @@ QAction( const QIcon & icon, const QString & text, QObject * parent )
 */
 void QAction_new3()
 {
-  QAction * obj = new QAction( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3) );
+  QAction * obj = new QAction( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -149,11 +149,11 @@ HB_FUNC_STATIC( QACTION_NEW )
   {
     QAction_new1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
     QAction_new2();
   }
-  else if( ISNUMPAR(3) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) )
+  else if( ISNUMPAR(3) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) )
   {
     QAction_new3();
   }
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QACTION_ACTIVATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->activate( (QAction::ActionEvent) hb_parni(1) );
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QACTION_SETAUTOREPEAT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setAutoRepeat( PBOOL(1) );
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKABLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setCheckable( PBOOL(1) );
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QACTION_SETICON )
     if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setIcon( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QACTION_SETICONTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setIconText( PQSTRING(1) );
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QACTION_SETICONVISIBLEINMENU )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setIconVisibleInMenu( PBOOL(1) );
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QACTION_SETMENUROLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMenuRole( (QAction::MenuRole) hb_parni(1) );
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QACTION_SETPRIORITY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setPriority( (QAction::Priority) hb_parni(1) );
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QACTION_SETSEPARATOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setSeparator( PBOOL(1) );
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setShortcutContext( (Qt::ShortcutContext) hb_parni(1) );
@@ -1098,11 +1098,11 @@ void QAction_setShortcuts2()
 
 HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 {
-  if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QAction_setShortcuts1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QAction_setShortcuts2();
   }
@@ -1122,7 +1122,7 @@ HB_FUNC_STATIC( QACTION_SETSTATUSTIP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setStatusTip( PQSTRING(1) );
@@ -1148,7 +1148,7 @@ HB_FUNC_STATIC( QACTION_SETTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setText( PQSTRING(1) );
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QACTION_SETTOOLTIP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setToolTip( PQSTRING(1) );
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC( QACTION_SETWHATSTHIS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setWhatsThis( PQSTRING(1) );
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
     {
 #endif
       RBOOL( obj->showStatusText( OPQWIDGET(1,0) ) );
@@ -1473,7 +1473,7 @@ HB_FUNC_STATIC( QACTION_SETCHECKED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setChecked( PBOOL(1) );
@@ -1499,7 +1499,7 @@ HB_FUNC_STATIC( QACTION_SETDISABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setDisabled( PBOOL(1) );
@@ -1525,7 +1525,7 @@ HB_FUNC_STATIC( QACTION_SETENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setEnabled( PBOOL(1) );
@@ -1551,7 +1551,7 @@ HB_FUNC_STATIC( QACTION_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );

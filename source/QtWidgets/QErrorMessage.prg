@@ -55,7 +55,7 @@ QErrorMessage( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QErrorMessage * obj = new QErrorMessage( OPQWIDGET(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -117,11 +117,11 @@ void QErrorMessage_showMessage2()
 
 HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QErrorMessage_showMessage1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
     QErrorMessage_showMessage2();
   }

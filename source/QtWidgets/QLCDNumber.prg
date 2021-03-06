@@ -88,11 +88,11 @@ void QLCDNumber_new2()
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QLCDNumber_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
     QLCDNumber_new2();
   }
@@ -149,7 +149,7 @@ void QLCDNumber_checkOverflow2()
 
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
     if( pNum )
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDigitCount( PINT(1) );
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMode( (QLCDNumber::Mode) hb_parni(1) );
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSegmentStyle( (QLCDNumber::SegmentStyle) hb_parni(1) );
@@ -474,11 +474,11 @@ HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {
   if( ISNUMPAR(1) )
   {
-    if( ISCHAR(1) )
+    if( HB_ISCHAR(1) )
     {
       QLCDNumber_display1();
     }
-    else if( ISNUM(1) )
+    else if( HB_ISNUM(1) )
     {
       PHB_ITEM pNum = hb_param(1, HB_IT_NUMERIC);
       if( pNum )
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setSmallDecimalPoint( PBOOL(1) );

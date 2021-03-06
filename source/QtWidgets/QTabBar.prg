@@ -117,7 +117,7 @@ QTabBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABBAR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QTabBar * obj = new QTabBar( OPQWIDGET(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -169,17 +169,17 @@ void QTabBar_addTab2()
 
   if( obj )
   {
-    RINT( obj->addTab( ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) ) );
+    RINT( obj->addTab( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) ) );
   }
 }
 
 HB_FUNC_STATIC( QTABBAR_ADDTAB )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QTabBar_addTab1();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QTabBar_addTab2();
   }
@@ -380,17 +380,17 @@ void QTabBar_insertTab2()
 
   if( obj )
   {
-    RINT( obj->insertTab( PINT(1), ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
+    RINT( obj->insertTab( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
   }
 }
 
 HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(1) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(1) )
   {
     QTabBar_insertTab1();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) && ISCHAR(3) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) && HB_ISCHAR(3) )
   {
     QTabBar_insertTab2();
   }
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QTABBAR_ISTABENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isTabEnabled( PINT(1) ) );
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QTABBAR_MOVETAB )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->moveTab( PINT(1), PINT(2) );
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QTABBAR_REMOVETAB )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->removeTab( PINT(1) );
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QTABBAR_SETDOCUMENTMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setDocumentMode( PBOOL(1) );
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QTABBAR_SETDRAWBASE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setDrawBase( PBOOL(1) );
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QTABBAR_SETELIDEMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setElideMode( (Qt::TextElideMode) hb_parni(1) );
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QTABBAR_SETEXPANDING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setExpanding( PBOOL(1) );
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QTABBAR_SETMOVABLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setMovable( PBOOL(1) );
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QTABBAR_SETSELECTIONBEHAVIORONREMOVE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSelectionBehaviorOnRemove( (QTabBar::SelectionBehavior) hb_parni(1) );
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QTABBAR_SETSHAPE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setShape( (QTabBar::Shape) hb_parni(1) );
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABBUTTON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQWIDGET(3) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQWIDGET(3) )
     {
 #endif
       obj->setTabButton( PINT(1), (QTabBar::ButtonPosition) hb_parni(2), PQWIDGET(3) );
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
     {
 #endif
       obj->setTabData( PINT(1), *PQVARIANT(2) );
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
     {
 #endif
       obj->setTabEnabled( PINT(1), PBOOL(2) );
@@ -820,10 +820,10 @@ HB_FUNC_STATIC( QTABBAR_SETTABICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
     {
 #endif
-      obj->setTabIcon( PINT(1), ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );
+      obj->setTabIcon( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setTabText( PINT(1), PQSTRING(2) );
@@ -872,10 +872,10 @@ HB_FUNC_STATIC( QTABBAR_SETTABTEXTCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
     {
 #endif
-      obj->setTabTextColor( PINT(1), ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+      obj->setTabTextColor( PINT(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABTOOLTIP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setTabToolTip( PINT(1), PQSTRING(2) );
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABWHATSTHIS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setTabWhatsThis( PINT(1), PQSTRING(2) );
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QTABBAR_SETTABSCLOSABLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setTabsClosable( PBOOL(1) );
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setUsesScrollButtons( PBOOL(1) );
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       QWidget * ptr = obj->tabButton( PINT(1), (QTabBar::ButtonPosition) hb_parni(2) );
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QTABBAR_TABDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->tabData( PINT(1) ) );
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC( QTABBAR_TABICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QIcon * ptr = new QIcon( obj->tabIcon( PINT(1) ) );
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QTABBAR_TABRECT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QRect * ptr = new QRect( obj->tabRect( PINT(1) ) );
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QTABBAR_TABTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQSTRING( obj->tabText( PINT(1) ) );
@@ -1174,7 +1174,7 @@ HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QColor * ptr = new QColor( obj->tabTextColor( PINT(1) ) );
@@ -1199,7 +1199,7 @@ HB_FUNC_STATIC( QTABBAR_TABTOOLTIP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQSTRING( obj->tabToolTip( PINT(1) ) );
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQSTRING( obj->tabWhatsThis( PINT(1) ) );
@@ -1345,7 +1345,7 @@ HB_FUNC_STATIC( QTABBAR_SETCURRENTINDEX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCurrentIndex( PINT(1) );
@@ -1398,7 +1398,7 @@ HB_FUNC_STATIC( QTABBAR_SETAUTOHIDE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setAutoHide( PBOOL(1) );
@@ -1452,7 +1452,7 @@ HB_FUNC_STATIC( QTABBAR_SETCHANGECURRENTONDRAG )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setChangeCurrentOnDrag( PBOOL(1) );

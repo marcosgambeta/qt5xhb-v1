@@ -67,7 +67,7 @@ QGraphicsSimpleTextItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsSimpleTextItem_new1()
 {
-  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( HB_ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -76,17 +76,17 @@ QGraphicsSimpleTextItem( const QString & text, QGraphicsItem * parent = 0 )
 */
 void QGraphicsSimpleTextItem_new2()
 {
-  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( PQSTRING(1), HB_ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) )
   {
     QGraphicsSimpleTextItem_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2)||HB_ISNIL(2)) )
   {
     QGraphicsSimpleTextItem_new2();
   }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setText( PQSTRING(1) );

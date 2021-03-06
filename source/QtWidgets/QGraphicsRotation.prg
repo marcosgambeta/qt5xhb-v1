@@ -65,7 +65,7 @@ QGraphicsRotation( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QGraphicsRotation * obj = new QGraphicsRotation( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAngle( PQREAL(1) );
@@ -227,11 +227,11 @@ void QGraphicsRotation_setAxis2()
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {
-  if( ISNUMPAR(1) && ISOBJECT(1) )
+  if( ISNUMPAR(1) && HB_ISOBJECT(1) )
   {
     QGraphicsRotation_setAxis1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QGraphicsRotation_setAxis2();
   }

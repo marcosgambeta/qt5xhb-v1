@@ -72,9 +72,9 @@ QAccessibleWidget( QWidget * o, QAccessible::Role r = QAccessible::Client, const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
-  if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISNUM(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISCHAR(3)||HB_ISNIL(3)) )
   {
-    QAccessibleWidget * obj = new QAccessibleWidget( PQWIDGET(1), ISNIL(2)? (QAccessible::Role) QAccessible::Client : (QAccessible::Role) hb_parni(2), OPQSTRING(3,QString()) );
+    QAccessibleWidget * obj = new QAccessibleWidget( PQWIDGET(1), HB_ISNIL(2)? (QAccessible::Role) QAccessible::Client : (QAccessible::Role) hb_parni(2), OPQSTRING(3,QString()) );
     Qt5xHb::returnNewObject( obj, true );
   }
   else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QAccessibleInterface * ptr = obj->child( PINT(1) );
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQSTRING( obj->text( (QAccessible::Text) hb_parni(1) ) );
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_INTERFACE_CAST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       hb_retptr( (void *) obj->interface_cast( (QAccessible::InterfaceType) hb_parni(1) ) );
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->doAction( PQSTRING(1) );
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_KEYBINDINGSFORACTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RQSTRINGLIST( obj->keyBindingsForAction( PQSTRING(1) ) );

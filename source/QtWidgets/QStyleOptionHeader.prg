@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSECTION )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->section= PINT(1);
     }
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXT )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
       obj->text= PQSTRING(1);
     }
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETTEXTALIGNMENT )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->textAlignment= (Qt::Alignment) hb_parni(1);
     }
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETICONALIGNMENT )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->iconAlignment= (Qt::Alignment) hb_parni(1);
     }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETPOSITION )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->position= (QStyleOptionHeader::SectionPosition) hb_parni(1);
     }
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSELECTEDPOSITION )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->selectedPosition= (QStyleOptionHeader::SelectedPosition) hb_parni(1);
     }
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETSORTINDICATOR )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->sortIndicator= (QStyleOptionHeader::SortIndicator) hb_parni(1);
     }
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_SETORIENTATION )
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
       obj->orientation= (Qt::Orientation) hb_parni(1);
     }

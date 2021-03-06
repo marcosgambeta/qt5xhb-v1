@@ -76,7 +76,7 @@ QDoubleSpinBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QDoubleSpinBox * obj = new QDoubleSpinBox( OPQWIDGET(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDecimals( PINT(1) );
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMaximum( PDOUBLE(1) );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMinimum( PDOUBLE(1) );
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setPrefix( PQSTRING(1) );
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setRange( PDOUBLE(1), PDOUBLE(2) );
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSingleStep( PDOUBLE(1) );
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setSuffix( PQSTRING(1) );
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQSTRING( obj->textFromValue( PDOUBLE(1) ) );
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setValue( PDOUBLE(1) );
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RDOUBLE( obj->valueFromText( PQSTRING(1) ) );
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QString par1 = hb_parc(1);
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       QString par1 = hb_parc(1);
