@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       RQSTRING( obj->attribute( PQSTRING(1), OPQSTRING(2,QString()) ) );
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (ISCHAR(3)||HB_ISNIL(3)) )
     {
 #endif
       RQSTRING( obj->attributeNS( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()) ) );
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->attributeNode( PQSTRING(1) ) );
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENODENS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->attributeNodeNS( PQSTRING(1), PQSTRING(2) ) );
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName( PQSTRING(1) ) );
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ELEMENTSBYTAGNAMENS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS( PQSTRING(1), PQSTRING(2) ) );
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->hasAttribute( PQSTRING(1) ) );
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QDOMELEMENT_HASATTRIBUTENS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       RBOOL( obj->hasAttributeNS( PQSTRING(1), PQSTRING(2) ) );
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->removeAttribute( PQSTRING(1) );
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QDOMELEMENT_REMOVEATTRIBUTENS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->removeAttributeNS( PQSTRING(1), PQSTRING(2) );
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE1 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setAttribute( PQSTRING(1), PQSTRING(2) );
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE2 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setAttribute( PQSTRING(1), PINT(2) );
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE3 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setAttribute( PQSTRING(1), PUINT(2) );
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE4 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setAttribute( PQSTRING(1), PQLONGLONG(2) );
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE5 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setAttribute( PQSTRING(1), PQULONGLONG(2) );
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE6 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setAttribute( PQSTRING(1), PFLOAT(2) );
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setAttribute( PQSTRING(1), PDOUBLE(2) );
@@ -639,11 +639,11 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE7 )
 
 HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTE )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
     HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTE1 );
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
     HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTE2 );
   }
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS1 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
       obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS2 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
     {
 #endif
       obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PINT(3) );
@@ -715,7 +715,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS3 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
     {
 #endif
       obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PUINT(3) );
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS4 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
     {
 #endif
       obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PQLONGLONG(3) );
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS5 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
     {
 #endif
       obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PQULONGLONG(3) );
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
     {
 #endif
       obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PDOUBLE(3) );
@@ -811,11 +811,11 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS6 )
 
 HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
 {
-  if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+  if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
   {
     HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTENS1 );
   }
-  else if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
   {
     HB_FUNC_EXEC( QDOMELEMENT_SETATTRIBUTENS2 );
   }
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QDOMELEMENT_SETTAGNAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setTagName( PQSTRING(1) );
