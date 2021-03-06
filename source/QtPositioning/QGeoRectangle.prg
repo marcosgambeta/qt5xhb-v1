@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW )
   {
     QGeoRectangle_new1();
   }
-  else if( ISNUMPAR(3) && ISQGEOCOORDINATE(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && ISQGEOCOORDINATE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QGeoRectangle_new2();
   }
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_SETWIDTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setWidth( PDOUBLE(1) );
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_SETHEIGHT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setHeight( PDOUBLE(1) );
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_TRANSLATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->translate( PDOUBLE(1), PDOUBLE(2) );
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_TRANSLATED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       QGeoRectangle * ptr = new QGeoRectangle( obj->translated( PDOUBLE(1), PDOUBLE(2) ) );

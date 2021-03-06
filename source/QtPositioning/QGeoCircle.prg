@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_NEW )
   {
     QGeoCircle_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QGeoCircle_new2();
   }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_SETRADIUS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setRadius( PQREAL(1) );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->translate( PDOUBLE(1), PDOUBLE(2) );
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QGEOCIRCLE_TRANSLATED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       QGeoCircle * ptr = new QGeoCircle( obj->translated( PDOUBLE(1), PDOUBLE(2) ) );
