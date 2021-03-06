@@ -77,7 +77,7 @@ QBluetoothServer(QBluetoothServiceInfo::Protocol serverType, QObject *parent = 0
 HB_FUNC_STATIC( QBLUETOOTHSERVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QBluetoothServer * obj = new QBluetoothServer( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -148,7 +148,7 @@ void QBluetoothServer_listen1()
 
   if( obj )
   {
-    RBOOL( obj->listen( ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
+    RBOOL( obj->listen( HB_ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
   }
 #endif
 }
@@ -171,11 +171,11 @@ void QBluetoothServer_listen2()
 
 HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN )
 {
-  if( ISBETWEEN(0,2) && (ISQBLUETOOTHADDRESS(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQBLUETOOTHADDRESS(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QBluetoothServer_listen1();
   }
-  else if( ISBETWEEN(1,2) && ISQBLUETOOTHUUID(1) && (ISCHAR(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQBLUETOOTHUUID(1) && (ISCHAR(2)||HB_ISNIL(2)) )
   {
     QBluetoothServer_listen2();
   }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETMAXPENDINGCONNECTIONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMaxPendingConnections( PINT(1) );
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_SETSECURITYFLAGS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSecurityFlags( (QBluetooth::SecurityFlags) hb_parni(1) );

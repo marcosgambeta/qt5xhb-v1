@@ -155,23 +155,23 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW )
   {
     QBluetoothUuid_new1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     HB_FUNC_EXEC( QBLUETOOTHUUID_NEW2 );
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     HB_FUNC_EXEC( QBLUETOOTHUUID_NEW3 );
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     HB_FUNC_EXEC( QBLUETOOTHUUID_NEW4 );
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     HB_FUNC_EXEC( QBLUETOOTHUUID_NEW5 );
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QBluetoothUuid_new7();
   }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;

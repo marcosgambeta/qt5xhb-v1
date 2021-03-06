@@ -95,11 +95,11 @@ void QBluetoothServiceDiscoveryAgent_new2()
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QBluetoothServiceDiscoveryAgent_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QBluetoothServiceDiscoveryAgent_new2();
   }
@@ -306,7 +306,7 @@ void QBluetoothServiceDiscoveryAgent_setUuidFilter2()
 
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER )
 {
-  if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QBluetoothServiceDiscoveryAgent_setUuidFilter1();
   }
@@ -438,10 +438,10 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_START )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
-      obj->start( ISNIL(1)? (QBluetoothServiceDiscoveryAgent::DiscoveryMode) QBluetoothServiceDiscoveryAgent::MinimalDiscovery : (QBluetoothServiceDiscoveryAgent::DiscoveryMode) hb_parni(1) );
+      obj->start( HB_ISNIL(1)? (QBluetoothServiceDiscoveryAgent::DiscoveryMode) QBluetoothServiceDiscoveryAgent::MinimalDiscovery : (QBluetoothServiceDiscoveryAgent::DiscoveryMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else

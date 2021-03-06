@@ -94,11 +94,11 @@ void QBluetoothLocalDevice_new2()
 
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QBluetoothLocalDevice_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QBluetoothLocalDevice_new2();
   }
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_REQUESTPAIRING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBLUETOOTHADDRESS(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2) )
     {
 #endif
       obj->requestPairing( *PQBLUETOOTHADDRESS(1), (QBluetoothLocalDevice::Pairing) hb_parni(2) );
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_SETHOSTMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setHostMode( (QBluetoothLocalDevice::HostMode) hb_parni(1) );
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_PAIRINGCONFIRMATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->pairingConfirmation( PBOOL(1) );
