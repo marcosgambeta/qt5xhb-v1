@@ -79,11 +79,11 @@ void QGLShader_new2()
 
 HB_FUNC_STATIC( QGLSHADER_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QGLShader_new1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISQGLCONTEXT(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQGLCONTEXT(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QGLShader_new2();
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->compileSourceCode( PCONSTCHAR(1) ) );
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->compileSourceCode( PQSTRING(1) ) );
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
   {
     HB_FUNC_EXEC( QGLSHADER_COMPILESOURCECODE2 );
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     HB_FUNC_EXEC( QGLSHADER_COMPILESOURCECODE3 );
   }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->compileSourceFile( PQSTRING(1) ) );
