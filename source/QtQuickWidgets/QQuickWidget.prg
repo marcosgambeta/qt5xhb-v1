@@ -117,7 +117,7 @@ void QQuickWidget_new3()
 HB_FUNC_STATIC( QQUICKWIDGET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QQuickWidget_new1();
   }
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_NEW )
   {
     QQuickWidget_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
     QQuickWidget_new3();
   }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setResizeMode( (QQuickWidget::ResizeMode) hb_parni(1) );
