@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QINAPPTRANSACTION_PLATFORMPROPERTY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RQSTRING( obj->platformProperty( PQSTRING(1) ) );

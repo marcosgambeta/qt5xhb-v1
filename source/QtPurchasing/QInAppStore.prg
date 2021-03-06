@@ -62,7 +62,7 @@ explicit QInAppStore(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QINAPPSTORE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QInAppStore * obj = new QInAppStore( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTERPRODUCT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->registerProduct( (QInAppProduct::ProductType) hb_parni(1), PQSTRING(2) );
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QINAPPSTORE_REGISTEREDPRODUCT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QInAppProduct * ptr = obj->registeredProduct( PQSTRING(1) );
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QINAPPSTORE_SETPLATFORMPROPERTY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setPlatformProperty( PQSTRING(1), PQSTRING(2) );
