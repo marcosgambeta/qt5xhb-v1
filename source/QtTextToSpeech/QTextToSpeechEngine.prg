@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SAY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->say( PQSTRING(1) );
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETRATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->setRate( PDOUBLE(1) ) );
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETPITCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->setPitch( PDOUBLE(1) ) );
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QTEXTTOSPEECHENGINE_SETVOLUME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->setVolume( PDOUBLE(1) ) );
