@@ -173,15 +173,15 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
   {
     QDeclarativeProperty_new4();
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
   {
     QDeclarativeProperty_new5();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQDECLARATIVECONTEXT(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3) )
   {
     QDeclarativeProperty_new6();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQDECLARATIVEENGINE(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3) )
   {
     QDeclarativeProperty_new7();
   }
@@ -219,11 +219,11 @@ void QDeclarativeProperty_connectNotifySignal2()
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
 {
-  if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+  if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
   {
     QDeclarativeProperty_connectNotifySignal1();
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
   {
     QDeclarativeProperty_connectNotifySignal2();
   }
@@ -718,15 +718,15 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
   {
     QDeclarativeProperty_read1();
   }
-  else if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
   {
     QDeclarativeProperty_read2();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQDECLARATIVECONTEXT(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVECONTEXT(3) )
   {
     QDeclarativeProperty_read3();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQDECLARATIVEENGINE(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQDECLARATIVEENGINE(3) )
   {
     QDeclarativeProperty_read4();
   }
@@ -782,15 +782,15 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE )
   {
     QDeclarativeProperty_write1();
   }
-  else if( ISNUMPAR(3) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) )
+  else if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) )
   {
     QDeclarativeProperty_write2();
   }
-  else if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVECONTEXT(4) )
+  else if( ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVECONTEXT(4) )
   {
     QDeclarativeProperty_write3();
   }
-  else if( ISNUMPAR(4) && ISQOBJECT(1) && ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVEENGINE(4) )
+  else if( ISNUMPAR(4) && ISQOBJECT(1) && HB_ISCHAR(2) && ISQVARIANT(3) && ISQDECLARATIVEENGINE(4) )
   {
     QDeclarativeProperty_write4();
   }
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

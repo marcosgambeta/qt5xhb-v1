@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
   {
     QDeclarativeExpression_new1();
   }
-  else if( ISBETWEEN(3,4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && ISCHAR(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
     QDeclarativeExpression_new2();
   }
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setExpression( PQSTRING(1) );
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setNotifyOnValueChanged( PBOOL(1) );
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setSourceLocation( PQSTRING(1), PINT(2) );
