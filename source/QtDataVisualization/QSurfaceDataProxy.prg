@@ -75,7 +75,7 @@ explicit QSurfaceDataProxy(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QSURFACEDATAPROXY_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QSurfaceDataProxy * obj = new QSurfaceDataProxy( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -211,7 +211,7 @@ void QSurfaceDataProxy_itemAt2()
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QSurfaceDataProxy_itemAt1();
   }
@@ -257,7 +257,7 @@ void QSurfaceDataProxy_setItem2()
 
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQSURFACEDATAITEM(3) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSURFACEDATAITEM(3) )
   {
     QSurfaceDataProxy_setItem1();
   }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_REMOVEROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->removeRows( PINT(1), PINT(2) );

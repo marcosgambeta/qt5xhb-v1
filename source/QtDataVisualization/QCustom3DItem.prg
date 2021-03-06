@@ -102,11 +102,11 @@ void QCustom3DItem_new2()
 
 HB_FUNC_STATIC( QCUSTOM3DITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QCustom3DItem_new1();
   }
-  else if( ISBETWEEN(5,6) && ISCHAR(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) && ISQQUATERNION(4) && ISQIMAGE(5) && (ISQOBJECT(6)||ISNIL(6)) )
+  else if( ISBETWEEN(5,6) && HB_ISCHAR(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) && ISQQUATERNION(4) && ISQIMAGE(5) && (ISQOBJECT(6)||HB_ISNIL(6)) )
   {
     QCustom3DItem_new2();
   }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETMESHFILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setMeshFile( PQSTRING(1) );
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETTEXTUREFILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setTextureFile( PQSTRING(1) );
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETPOSITIONABSOLUTE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setPositionAbsolute( PBOOL(1) );
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSHADOWCASTING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setShadowCasting( PBOOL(1) );
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETSCALINGABSOLUTE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setScalingAbsolute( PBOOL(1) );
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QCUSTOM3DITEM_SETROTATIONAXISANDANGLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setRotationAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) );

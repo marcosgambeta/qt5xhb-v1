@@ -65,7 +65,7 @@ explicit QLogValue3DAxisFormatter(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QLogValue3DAxisFormatter * obj = new QLogValue3DAxisFormatter( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETBASE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBase( PQREAL(1) );
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETAUTOSUBGRID )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setAutoSubGrid( PBOOL(1) );
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QLOGVALUE3DAXISFORMATTER_SETSHOWEDGELABELS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setShowEdgeLabels( PBOOL(1) );

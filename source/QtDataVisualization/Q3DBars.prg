@@ -97,9 +97,9 @@ explicit Q3DBars(const QSurfaceFormat *format = Q_NULLPTR, QWindow *parent = Q_N
 */
 HB_FUNC_STATIC( Q3DBARS_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||ISNIL(1)) && (ISQWINDOW(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||HB_ISNIL(1)) && (ISQWINDOW(2)||HB_ISNIL(2)) )
   {
-    Q3DBars * obj = new Q3DBars( ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
+    Q3DBars * obj = new Q3DBars( HB_ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( Q3DBARS_SETMULTISERIESUNIFORM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setMultiSeriesUniform( PBOOL(1) );
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARTHICKNESS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBarThickness( PFLOAT(1) );
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACINGRELATIVE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setBarSpacingRelative( PBOOL(1) );
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( Q3DBARS_SETFLOORLEVEL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setFloorLevel( PFLOAT(1) );
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( Q3DBARS_INSERTSERIES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQBAR3DSERIES(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQBAR3DSERIES(2) )
     {
 #endif
       obj->insertSeries( PINT(1), PQBAR3DSERIES(2) );

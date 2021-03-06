@@ -92,7 +92,7 @@ explicit Q3DScene(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( Q3DSCENE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     Q3DScene * obj = new Q3DScene( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSECONDARYSUBVIEWONTOP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setSecondarySubviewOnTop( PBOOL(1) );
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETSLICINGACTIVE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setSlicingActive( PBOOL(1) );
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( Q3DSCENE_SETDEVICEPIXELRATIO )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDevicePixelRatio( PFLOAT(1) );

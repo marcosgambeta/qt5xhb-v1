@@ -59,7 +59,7 @@ explicit QCategory3DAxis(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QCATEGORY3DAXIS_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QCategory3DAxis * obj = new QCategory3DAxis( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCATEGORY3DAXIS_SETLABELS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setLabels( PQSTRINGLIST(1) );

@@ -86,7 +86,7 @@ explicit QBarDataProxy(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QBARDATAPROXY_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QBarDataProxy * obj = new QBarDataProxy( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setRowLabels( PQSTRINGLIST(1) );
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setColumnLabels( PQSTRINGLIST(1) );
@@ -306,7 +306,7 @@ void QBarDataProxy_itemAt2()
 
 HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QBarDataProxy_itemAt1();
   }
@@ -364,7 +364,7 @@ void QBarDataProxy_setItem2()
 
 HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQBARDATAITEM(3) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBARDATAITEM(3) )
   {
     QBarDataProxy_setItem1();
   }
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISLOG(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISLOG(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->removeRows( PINT(1), PINT(2), OPBOOL(3,true) );

@@ -75,9 +75,9 @@ explicit Q3DScatter(const QSurfaceFormat *format = Q_NULLPTR, QWindow *parent = 
 */
 HB_FUNC_STATIC( Q3DSCATTER_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||ISNIL(1)) && (ISQWINDOW(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||HB_ISNIL(1)) && (ISQWINDOW(2)||HB_ISNIL(2)) )
   {
-    Q3DScatter * obj = new Q3DScatter( ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
+    Q3DScatter * obj = new Q3DScatter( HB_ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else

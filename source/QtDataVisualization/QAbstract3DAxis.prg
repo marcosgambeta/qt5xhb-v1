@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setTitle( PQSTRING(1) );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setLabels( PQSTRINGLIST(1) );
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMIN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMin( PFLOAT(1) );
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETMAX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMax( PFLOAT(1) );
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETAUTOADJUSTRANGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setAutoAdjustRange( PBOOL(1) );
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETLABELAUTOROTATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLabelAutoRotation( PFLOAT(1) );
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setTitleVisible( PBOOL(1) );
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETTITLEFIXED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setTitleFixed( PBOOL(1) );
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QABSTRACT3DAXIS_SETRANGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setRange( PFLOAT(1), PFLOAT(2) );

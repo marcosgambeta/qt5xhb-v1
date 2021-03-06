@@ -65,7 +65,7 @@ explicit Q3DObject(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( Q3DOBJECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     Q3DObject * obj = new Q3DObject( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );

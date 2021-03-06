@@ -56,7 +56,7 @@ explicit QTouch3DInputHandler(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QTouch3DInputHandler * obj = new QTouch3DInputHandler( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );

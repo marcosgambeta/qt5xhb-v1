@@ -78,9 +78,9 @@ explicit Q3DSurface(const QSurfaceFormat *format = Q_NULLPTR, QWindow *parent = 
 */
 HB_FUNC_STATIC( Q3DSURFACE_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||ISNIL(1)) && (ISQWINDOW(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||HB_ISNIL(1)) && (ISQWINDOW(2)||HB_ISNIL(2)) )
   {
-    Q3DSurface * obj = new Q3DSurface( ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
+    Q3DSurface * obj = new Q3DSurface( HB_ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( Q3DSURFACE_SETFLIPHORIZONTALGRID )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setFlipHorizontalGrid( PBOOL(1) );

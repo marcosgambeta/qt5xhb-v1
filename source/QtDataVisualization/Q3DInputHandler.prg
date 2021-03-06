@@ -68,7 +68,7 @@ explicit Q3DInputHandler(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     Q3DInputHandler * obj = new Q3DInputHandler( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETROTATIONENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setRotationEnabled( PBOOL(1) );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setZoomEnabled( PBOOL(1) );
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETSELECTIONENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setSelectionEnabled( PBOOL(1) );
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setZoomAtTargetEnabled( PBOOL(1) );
