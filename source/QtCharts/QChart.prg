@@ -135,9 +135,9 @@ explicit QChart(QGraphicsItem *parent = Q_NULLPTR, Qt::WindowFlags wFlags = Qt::
 HB_FUNC_STATIC( QCHART_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
   {
-    QChart * obj = new QChart( ISNIL(1)? Q_NULLPTR : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
+    QChart * obj = new QChart( HB_ISNIL(1)? Q_NULLPTR : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QCHART_SETTHEME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTheme( (QChart::ChartTheme) hb_parni(1) );
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QCHART_SETBACKGROUNDVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setBackgroundVisible( OPBOOL(1,true) );
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QCHART_SETDROPSHADOWENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setDropShadowEnabled( OPBOOL(1,true) );
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QCHART_SETBACKGROUNDROUNDNESS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setBackgroundRoundness( PQREAL(1) );
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QCHART_SETANIMATIONOPTIONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAnimationOptions( (QChart::AnimationOptions) hb_parni(1) );
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QCHART_SETANIMATIONDURATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAnimationDuration( PINT(1) );
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QCHART_SETPLOTAREABACKGROUNDVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPlotAreaBackgroundVisible( OPBOOL(1,true) );
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QCHART_SETLOCALIZENUMBERS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setLocalizeNumbers( PBOOL(1) );
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QCHART_SETAXISX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setAxisX( PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2,Q_NULLPTR) );
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QCHART_SETAXISY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQABSTRACTAXIS(1) && (ISQABSTRACTSERIES(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setAxisY( PQABSTRACTAXIS(1), OPQABSTRACTSERIES(2,Q_NULLPTR) );
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC( QCHART_AXISX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||HB_ISNIL(1)) )
     {
 #endif
       QAbstractAxis * ptr = obj->axisX( OPQABSTRACTSERIES(1,Q_NULLPTR) );
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QCHART_AXISY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||HB_ISNIL(1)) )
     {
 #endif
       QAbstractAxis * ptr = obj->axisY( OPQABSTRACTSERIES(1,Q_NULLPTR) );
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QCHART_ADDAXIS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQABSTRACTAXIS(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISQABSTRACTAXIS(1) && HB_ISNUM(2) )
     {
 #endif
       obj->addAxis( PQABSTRACTAXIS(1), (Qt::Alignment) hb_parni(2) );
@@ -1158,10 +1158,10 @@ HB_FUNC_STATIC( QCHART_AXES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||HB_ISNIL(1)) && (ISQABSTRACTSERIES(2)||HB_ISNIL(2)) )
     {
 #endif
-      QList<QAbstractAxis *> list = obj->axes( ISNIL(1)? (Qt::Orientations) Qt::Horizontal | Qt::Vertical : (Qt::Orientations) hb_parni(1), OPQABSTRACTSERIES(2,Q_NULLPTR) );
+      QList<QAbstractAxis *> list = obj->axes( HB_ISNIL(1)? (Qt::Orientations) Qt::Horizontal | Qt::Vertical : (Qt::Orientations) hb_parni(1), OPQABSTRACTSERIES(2,Q_NULLPTR) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTAXIS" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QCHART_SETTITLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setTitle( PQSTRING(1) );
@@ -1562,7 +1562,7 @@ HB_FUNC_STATIC( QCHART_ZOOM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->zoom( PQREAL(1) );
@@ -1644,7 +1644,7 @@ HB_FUNC_STATIC( QCHART_SCROLL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->scroll( PQREAL(1), PQREAL(2) );
@@ -1809,7 +1809,7 @@ HB_FUNC_STATIC( QCHART_MAPTOVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2)||HB_ISNIL(2)) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->mapToValue( *PQPOINTF(1), OPQABSTRACTSERIES(2,Q_NULLPTR) ) );
@@ -1836,7 +1836,7 @@ HB_FUNC_STATIC( QCHART_MAPTOPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQPOINTF(1) && (ISQABSTRACTSERIES(2)||HB_ISNIL(2)) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->mapToPosition( *PQPOINTF(1), OPQABSTRACTSERIES(2,Q_NULLPTR) ) );

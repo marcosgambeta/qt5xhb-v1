@@ -102,11 +102,11 @@ void QBoxSet_new2()
 
 HB_FUNC_STATIC( QBOXSET_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISCHAR(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QBoxSet_new1();
   }
-  else if( ISBETWEEN(5,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISCHAR(6)||ISNIL(6)) && (ISQOBJECT(7)||ISNIL(7)) )
+  else if( ISBETWEEN(5,7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (ISCHAR(6)||HB_ISNIL(6)) && (ISQOBJECT(7)||HB_ISNIL(7)) )
   {
     QBoxSet_new2();
   }
@@ -296,11 +296,11 @@ void QBoxSet_append2()
 
 HB_FUNC_STATIC( QBOXSET_APPEND )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QBoxSet_append1();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QBoxSet_append2();
   }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QBOXSET_SETLABEL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setLabel( PQSTRING(1) );
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QBOXSET_SETVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setValue( PINT(1), PQREAL(2) );
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QBOXSET_AT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQREAL( obj->at( PINT(1) ) );

@@ -104,7 +104,7 @@ explicit QBarSet(const QString label, QObject *parent = Q_NULLPTR)
 HB_FUNC_STATIC( QBARSET_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QBarSet * obj = new QBarSet( PQSTRING(1), OPQOBJECT(2,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QBARSET_SETLABEL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setLabel( PQSTRING(1) );
@@ -625,11 +625,11 @@ void QBarSet_append2()
 
 HB_FUNC_STATIC( QBARSET_APPEND )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QBarSet_append1();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QBarSet_append2();
   }
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QBARSET_INSERT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->insert( PINT(1), PQREAL(2) );
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QBARSET_REMOVE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->remove( PINT(1), OPINT(2,1) );
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QBARSET_REPLACE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->replace( PINT(1), PQREAL(2) );
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QBARSET_AT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQREAL( obj->at( PINT(1) ) );

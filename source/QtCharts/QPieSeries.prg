@@ -95,7 +95,7 @@ explicit QPieSeries(QObject *parent = Q_NULLPTR)
 HB_FUNC_STATIC( QPIESERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QPieSeries * obj = new QPieSeries( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPIESERIES_SETHORIZONTALPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setHorizontalPosition( PQREAL(1) );
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPIESERIES_SETVERTICALPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setVerticalPosition( PQREAL(1) );
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QPIESERIES_SETPIESIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setPieSize( PQREAL(1) );
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QPIESERIES_SETPIESTARTANGLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setPieStartAngle( PQREAL(1) );
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QPIESERIES_SETPIEENDANGLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setPieEndAngle( PQREAL(1) );
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QPIESERIES_SETHOLESIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setHoleSize( PQREAL(1) );
@@ -593,11 +593,11 @@ HB_FUNC_STATIC( QPIESERIES_APPEND )
   {
     QPieSeries_append1();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QPieSeries_append2();
   }
-  else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
     QPieSeries_append3();
   }
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QPIESERIES_INSERT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQPIESLICE(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPIESLICE(2) )
     {
 #endif
       RBOOL( obj->insert( PINT(1), PQPIESLICE(2) ) );
@@ -800,7 +800,7 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setLabelsVisible( OPBOOL(1,true) );
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QPIESERIES_SETLABELSPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLabelsPosition( (QPieSlice::LabelPosition) hb_parni(1) );

@@ -109,11 +109,11 @@ void QCandlestickSet_new2()
 
 HB_FUNC_STATIC( QCANDLESTICKSET_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISNUM(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QCandlestickSet_new1();
   }
-  else if( ISBETWEEN(4,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) && (ISQOBJECT(6)||ISNIL(6)) )
+  else if( ISBETWEEN(4,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISNUM(5)||HB_ISNIL(5)) && (ISQOBJECT(6)||HB_ISNIL(6)) )
   {
     QCandlestickSet_new2();
   }
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETTIMESTAMP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setTimestamp( PQREAL(1) );
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETOPEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setOpen( PQREAL(1) );
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETHIGH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setHigh( PQREAL(1) );
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETLOW )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLow( PQREAL(1) );
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QCANDLESTICKSET_SETCLOSE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setClose( PQREAL(1) );

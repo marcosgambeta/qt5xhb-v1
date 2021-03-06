@@ -74,7 +74,7 @@ explicit QCategoryAxis(QObject *parent = Q_NULLPTR)
 HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QCategoryAxis * obj = new QCategoryAxis( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       RQREAL( obj->startValue( OPQSTRING(1,QString()) ) );
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETSTARTVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setStartValue( PQREAL(1) );
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLabelsPosition( (QCategoryAxis::AxisLabelsPosition) hb_parni(1) );
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_APPEND )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
       obj->append( PQSTRING(1), PQREAL(2) );
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REMOVE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->remove( PQSTRING(1) );
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REPLACELABEL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->replaceLabel( PQSTRING(1), PQSTRING(2) );
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RQREAL( obj->endValue( PQSTRING(1) ) );

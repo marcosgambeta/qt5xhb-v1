@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETLABEL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setLabel( PQSTRING(1) );
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QLEGENDMARKER_SETSHAPE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setShape( (QLegend::MarkerShape) hb_parni(1) );

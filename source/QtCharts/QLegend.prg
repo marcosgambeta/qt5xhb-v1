@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QLEGEND_SETBACKGROUNDVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setBackgroundVisible( OPBOOL(1,true) );
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QLEGEND_SETREVERSEMARKERS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setReverseMarkers( OPBOOL(1,true) );
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QLEGEND_SETSHOWTOOLTIPS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setShowToolTips( PBOOL(1) );
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QLEGEND_SETMARKERSHAPE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMarkerShape( (QLegend::MarkerShape) hb_parni(1) );
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QLEGEND_PAINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
+    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,Q_NULLPTR) );
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QLEGEND_SETALIGNMENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAlignment( (Qt::Alignment) hb_parni(1) );
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QLEGEND_MARKERS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISQABSTRACTSERIES(1)||HB_ISNIL(1)) )
     {
 #endif
       QList<QLegendMarker *> list = obj->markers( OPQABSTRACTSERIES(1,Q_NULLPTR) );

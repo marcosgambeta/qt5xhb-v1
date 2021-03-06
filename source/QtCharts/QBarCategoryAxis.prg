@@ -81,7 +81,7 @@ explicit QBarCategoryAxis(QObject *parent = Q_NULLPTR)
 HB_FUNC_STATIC( QBARCATEGORYAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QBarCategoryAxis * obj = new QBarCategoryAxis( OPQOBJECT(1,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETCATEGORIES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       obj->setCategories( PQSTRINGLIST(1) );
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMIN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setMin( PQSTRING(1) );
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETMAX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setMax( PQSTRING(1) );
@@ -367,11 +367,11 @@ void QBarCategoryAxis_append2()
 
 HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 {
-  if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QBarCategoryAxis_append1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QBarCategoryAxis_append2();
   }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_REMOVE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->remove( PQSTRING(1) );
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_INSERT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->insert( PINT(1), PQSTRING(2) );
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_REPLACE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->replace( PQSTRING(1), PQSTRING(2) );
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_AT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQSTRING( obj->at( PINT(1) ) );
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_SETRANGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setRange( PQSTRING(1), PQSTRING(2) );

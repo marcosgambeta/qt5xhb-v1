@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETNAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setName( PQSTRING(1) );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setVisible( OPBOOL(1,true) );
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETOPACITY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setOpacity( PQREAL(1) );
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QABSTRACTSERIES_SETUSEOPENGL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setUseOpenGL( OPBOOL(1,true) );

@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPointsVisible( OPBOOL(1,true) );
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFORMAT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setPointLabelsFormat( PQSTRING(1) );
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsVisible( OPBOOL(1,true) );
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setPointLabelsColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setPointLabelsColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsClipping( OPBOOL(1,true) );
@@ -570,7 +570,7 @@ void QXYSeries_append3()
 
 HB_FUNC_STATIC( QXYSERIES_APPEND )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QXYSeries_append1();
   }
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QXYSERIES_APPEND )
   {
     QXYSeries_append2();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QXYSeries_append3();
   }
@@ -708,7 +708,7 @@ void QXYSeries_replace6()
 
 HB_FUNC_STATIC( QXYSERIES_REPLACE )
 {
-  if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QXYSeries_replace1();
   }
@@ -716,19 +716,19 @@ HB_FUNC_STATIC( QXYSERIES_REPLACE )
   {
     QXYSeries_replace2();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QXYSeries_replace3();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISQPOINTF(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2) )
   {
     QXYSeries_replace4();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QXYSeries_replace5();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QXYSeries_replace6();
   }
@@ -791,7 +791,7 @@ void QXYSeries_remove3()
 
 HB_FUNC_STATIC( QXYSERIES_REMOVE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QXYSeries_remove1();
   }
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QXYSERIES_REMOVE )
   {
     QXYSeries_remove2();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QXYSeries_remove3();
   }
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QXYSERIES_REMOVEPOINTS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->removePoints( PINT(1), PINT(2) );
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QXYSERIES_INSERT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQPOINTF(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2) )
     {
 #endif
       obj->insert( PINT(1), *PQPOINTF(2) );
@@ -1038,7 +1038,7 @@ HB_FUNC_STATIC( QXYSERIES_AT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       const QPointF * ptr = &obj->at( PINT(1) );

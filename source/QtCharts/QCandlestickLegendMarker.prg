@@ -65,7 +65,7 @@ explicit QCandlestickLegendMarker(QCandlestickSeries *series, QLegend *legend, Q
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  if( ISBETWEEN(2,3) && ISQCANDLESTICKSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && ISQCANDLESTICKSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QCandlestickLegendMarker * obj = new QCandlestickLegendMarker( PQCANDLESTICKSERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
     Qt5xHb::returnNewObject( obj, false );

@@ -63,7 +63,7 @@ explicit QXYLegendMarker(QXYSeries *series, QLegend *legend, QObject *parent = Q
 HB_FUNC_STATIC( QXYLEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(2,3) && ISQXYSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && ISQXYSERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QXYLegendMarker * obj = new QXYLegendMarker( PQXYSERIES(1), PQLEGEND(2), OPQOBJECT(3,Q_NULLPTR) );
     Qt5xHb::returnNewObject( obj, false );
