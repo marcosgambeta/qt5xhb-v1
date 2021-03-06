@@ -80,11 +80,11 @@ void QPrintDialog_new2()
 
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
     QPrintDialog_new1();
   }
-  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QPrintDialog_new2();
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->open( PQOBJECT(1), PCONSTCHAR(2) );
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISLOG(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setOption( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1), OPBOOL(2,true) );
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setOptions( (QAbstractPrintDialog::PrintDialogOptions) hb_parni(1) );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->testOption( (QAbstractPrintDialog::PrintDialogOption) hb_parni(1) ) );
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_DONE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->done( PINT(1) );
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );

@@ -74,11 +74,11 @@ void QPageSetupDialog_new2()
 
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
     QPageSetupDialog_new1();
   }
-  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
     QPageSetupDialog_new2();
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->open( PQOBJECT(1), PCONSTCHAR(2) );
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_DONE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->done( PINT(1) );
