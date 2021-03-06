@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISCHAR(1) && ISQURL(2) && ISARRAY(3) && ISARRAY(4) )
+    if( ISNUMPAR(4) && HB_ISCHAR(1) && ISQURL(2) && HB_ISARRAY(3) && HB_ISARRAY(4) )
     {
 #endif
       QObject * ptr = obj->create( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
