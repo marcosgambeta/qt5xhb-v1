@@ -68,7 +68,7 @@ explicit QUdpSocket(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QUdpSocket * obj = new QUdpSocket( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QNetworkDatagram * ptr = new QNetworkDatagram( obj->receiveDatagram( OPQINT64(1,-1) ) );
@@ -362,11 +362,11 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
   {
     QUdpSocket_writeDatagram1();
   }
-  else if( ISNUMPAR(4) && ISCHAR(1) && ISNUM(2) && ISQHOSTADDRESS(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQHOSTADDRESS(3) && HB_ISNUM(4) )
   {
     QUdpSocket_writeDatagram2();
   }
-  else if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQHOSTADDRESS(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQHOSTADDRESS(2) && HB_ISNUM(3) )
   {
     QUdpSocket_writeDatagram3();
   }

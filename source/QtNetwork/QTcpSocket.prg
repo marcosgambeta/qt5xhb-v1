@@ -53,7 +53,7 @@ explicit QTcpSocket(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QTCPSOCKET_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QTcpSocket * obj = new QTcpSocket( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );

@@ -84,7 +84,7 @@ explicit QNetworkSession(const QNetworkConfiguration &connConfig, QObject *paren
 */
 HB_FUNC_STATIC( QNETWORKSESSION_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQNETWORKCONFIGURATION(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQNETWORKCONFIGURATION(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QNetworkSession * obj = new QNetworkSession( *PQNETWORKCONFIGURATION(1), OPQOBJECT(2,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->sessionProperty( PQSTRING(1) ) );
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
       obj->setSessionProperty( PQSTRING(1), *PQVARIANT(2) );
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RBOOL( obj->waitForOpened( OPINT(1,30000) ) );

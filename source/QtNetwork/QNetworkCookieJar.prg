@@ -61,7 +61,7 @@ explicit QNetworkCookieJar(QObject *parent = Q_NULLPTR)
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QNetworkCookieJar * obj = new QNetworkCookieJar( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISARRAY(1) && ISQURL(2) )
+    if( ISNUMPAR(2) && HB_ISARRAY(1) && ISQURL(2) )
     {
 #endif
       QList<QNetworkCookie> par1;
