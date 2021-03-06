@@ -116,23 +116,23 @@ void QOAuth2AuthorizationCodeFlow_new5()
 
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QOAuth2AuthorizationCodeFlow_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QOAuth2AuthorizationCodeFlow_new2();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISQNETWORKACCESSMANAGER(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && ISQNETWORKACCESSMANAGER(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QOAuth2AuthorizationCodeFlow_new3();
   }
-  else if( ISBETWEEN(3,4) && ISQURL(1) && ISQURL(2) && ISQNETWORKACCESSMANAGER(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQURL(1) && ISQURL(2) && ISQNETWORKACCESSMANAGER(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
     QOAuth2AuthorizationCodeFlow_new4();
   }
-  else if( ISBETWEEN(4,5) && ISCHAR(1) && ISQURL(2) && ISQURL(3) && ISQNETWORKACCESSMANAGER(4) && (ISQOBJECT(5)||ISNIL(5)) )
+  else if( ISBETWEEN(4,5) && HB_ISCHAR(1) && ISQURL(2) && ISQURL(3) && ISQNETWORKACCESSMANAGER(4) && (ISQOBJECT(5)||HB_ISNIL(5)) )
   {
     QOAuth2AuthorizationCodeFlow_new5();
   }

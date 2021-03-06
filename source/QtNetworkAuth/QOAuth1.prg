@@ -96,11 +96,11 @@ void QOAuth1_new2()
 
 HB_FUNC_STATIC( QOAUTH1_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QOAuth1_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QOAuth1_new2();
   }
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTSHAREDSECRET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setClientSharedSecret( PQSTRING(1) );
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QOAUTH1_SETCLIENTCREDENTIALS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setClientCredentials( PQSTRING(1), PQSTRING(2) );
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENSECRET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setTokenSecret( PQSTRING(1) );
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QOAUTH1_SETTOKENCREDENTIALS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setTokenCredentials( PQSTRING(1), PQSTRING(2) );
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QOAUTH1_SETSIGNATUREMETHOD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSignatureMethod( (QOAuth1::SignatureMethod) hb_parni(1) );
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QOAUTH1_CONTINUEGRANTWITHVERIFIER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->continueGrantWithVerifier( PQSTRING(1) );
