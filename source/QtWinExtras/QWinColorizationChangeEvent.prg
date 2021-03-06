@@ -58,7 +58,7 @@ QWinColorizationChangeEvent(QRgb color, bool opaque)
 HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
   {
     QWinColorizationChangeEvent * obj = new QWinColorizationChangeEvent( PQRGB(1), PBOOL(2) );
     Qt5xHb::returnNewObject( obj, false );

@@ -83,7 +83,7 @@ explicit QWinTaskbarProgress(QObject *parent = 0)
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QWinTaskbarProgress * obj = new QWinTaskbarProgress( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setValue( PINT(1) );
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMINIMUM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMinimum( PINT(1) );
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMAXIMUM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setMaximum( PINT(1) );
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETPAUSED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setPaused( PBOOL(1) );
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETRANGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setRange( PINT(1), PINT(2) );

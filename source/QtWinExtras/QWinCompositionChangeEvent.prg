@@ -57,7 +57,7 @@ explicit QWinCompositionChangeEvent(bool enabled)
 HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
     QWinCompositionChangeEvent * obj = new QWinCompositionChangeEvent( PBOOL(1) );
     Qt5xHb::returnNewObject( obj, false );
