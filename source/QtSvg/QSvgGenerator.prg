@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setDescription( PQSTRING(1) );
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setFileName( PQSTRING(1) );
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setResolution( PINT(1) );
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setTitle( PQSTRING(1) );
