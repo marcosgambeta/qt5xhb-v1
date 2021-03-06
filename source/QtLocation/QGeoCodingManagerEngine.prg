@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
   {
     QGeoCodingManagerEngine_geocode1();
   }
-  else if( ISNUMPAR(4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISQGEOSHAPE(4) )
+  else if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQGEOSHAPE(4) )
   {
     QGeoCodingManagerEngine_geocode2();
   }

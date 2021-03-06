@@ -60,7 +60,7 @@ explicit QPlaceSearchSuggestionReply(QObject *parent = 0)
 HB_FUNC_STATIC( QPLACESEARCHSUGGESTIONREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QPlaceSearchSuggestionReply * obj = new QPlaceSearchSuggestionReply( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );

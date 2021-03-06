@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLACERESULT_SETDISTANCE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDistance( PQREAL(1) );
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QPLACERESULT_SETSPONSORED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setSponsored( PBOOL(1) );

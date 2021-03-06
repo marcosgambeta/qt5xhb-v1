@@ -66,7 +66,7 @@ explicit QPlaceReply(QObject *parent = 0)
 HB_FUNC_STATIC( QPLACEREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QPlaceReply * obj = new QPlaceReply( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );

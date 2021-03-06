@@ -69,7 +69,7 @@ QGeoRouteReply(Error error, const QString &errorString, QObject *parent = 0)
 HB_FUNC_STATIC( QGEOROUTEREPLY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(2,3) && ISNUM(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QGeoRouteReply * obj = new QGeoRouteReply( (QGeoRouteReply::Error) hb_parni(1), PQSTRING(2), OPQOBJECT(3,0) );
     Qt5xHb::returnNewObject( obj, false );

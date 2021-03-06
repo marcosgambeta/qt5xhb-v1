@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_GETPLACEDETAILS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QPlaceDetailsReply * ptr = obj->getPlaceDetails( PQSTRING(1) );
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_REMOVEPLACE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QPlaceIdReply * ptr = obj->removePlace( PQSTRING(1) );
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SAVECATEGORY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPLACECATEGORY(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && ISQPLACECATEGORY(1) && HB_ISCHAR(2) )
     {
 #endif
       QPlaceIdReply * ptr = obj->saveCategory( *PQPLACECATEGORY(1), PQSTRING(2) );
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_REMOVECATEGORY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QPlaceIdReply * ptr = obj->removeCategory( PQSTRING(1) );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_PARENTCATEGORYID )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RQSTRING( obj->parentCategoryId( PQSTRING(1) ) );
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CHILDCATEGORYIDS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RQSTRINGLIST( obj->childCategoryIds( PQSTRING(1) ) );
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CATEGORY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QPlaceCategory * ptr = new QPlaceCategory( obj->category( PQSTRING(1) ) );
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_CHILDCATEGORIES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QList<QPlaceCategory> list = obj->childCategories( PQSTRING(1) );
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QPLACEMANAGERENGINE_SETLOCALES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       QList<QLocale> par1;
