@@ -64,7 +64,7 @@ QLightSensor( QObject * parent = 0 )
 HB_FUNC_STATIC( QLIGHTSENSOR_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QLightSensor * obj = new QLightSensor( OPQOBJECT(1,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QLIGHTSENSOR_SETFIELDOFVIEW )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setFieldOfView( PQREAL(1) );

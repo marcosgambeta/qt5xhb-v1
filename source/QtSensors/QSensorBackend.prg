@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ISFEATURESUPPORTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isFeatureSupported( (QSensor::Feature) hb_parni(1) ) );
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ADDDATARATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->addDataRate( PQREAL(1), PQREAL(2) );
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_ADDOUTPUTRANGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
       obj->addOutputRange( PQREAL(1), PQREAL(2), PQREAL(3) );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SETDESCRIPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setDescription( PQSTRING(1) );
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QSENSORBACKEND_SENSORERROR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->sensorError( PINT(1) );

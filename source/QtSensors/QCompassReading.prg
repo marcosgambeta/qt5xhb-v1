@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_SETAZIMUTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAzimuth( PQREAL(1) );
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QCOMPASSREADING_SETCALIBRATIONLEVEL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCalibrationLevel( PQREAL(1) );

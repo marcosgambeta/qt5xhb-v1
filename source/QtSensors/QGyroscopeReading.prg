@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_SETX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setX( PQREAL(1) );
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_SETY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setY( PQREAL(1) );
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QGYROSCOPEREADING_SETZ )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setZ( PQREAL(1) );

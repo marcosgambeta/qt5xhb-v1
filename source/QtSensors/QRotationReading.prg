@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QROTATIONREADING_SETFROMEULER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
       obj->setFromEuler( PQREAL(1), PQREAL(2), PQREAL(3) );
