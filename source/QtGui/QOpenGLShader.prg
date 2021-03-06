@@ -65,7 +65,7 @@ QOpenGLShader( QOpenGLShader::ShaderType type, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOPENGLSHADER_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QOpenGLShader * obj = new QOpenGLShader( (QOpenGLShader::ShaderType) hb_parni(1), OPQOBJECT(2,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE1 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->compileSourceCode( PCONSTCHAR(1) ) );
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCECODE3 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->compileSourceCode( PQSTRING(1) ) );
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QOPENGLSHADER_COMPILESOURCEFILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       RBOOL( obj->compileSourceFile( PQSTRING(1) ) );
@@ -322,7 +322,7 @@ static bool hasOpenGLShaders( QOpenGLShader::ShaderType type, QOpenGLContext * c
 HB_FUNC_STATIC( QOPENGLSHADER_HASOPENGLSHADERS )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOPENGLCONTEXT(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOPENGLCONTEXT(2)||HB_ISNIL(2)) )
   {
 #endif
     RBOOL( QOpenGLShader::hasOpenGLShaders( (QOpenGLShader::ShaderType) hb_parni(1), OPQOPENGLCONTEXT(2,0) ) );

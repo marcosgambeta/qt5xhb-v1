@@ -731,7 +731,7 @@ static void setApplicationDisplayName( const QString & name )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETAPPLICATIONDISPLAYNAME )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
     QGuiApplication::setApplicationDisplayName( PQSTRING(1) );
@@ -752,7 +752,7 @@ static void setDesktopSettingsAware( bool on )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
 #endif
     QGuiApplication::setDesktopSettingsAware( PBOOL(1) );
@@ -794,7 +794,7 @@ static void setLayoutDirection( Qt::LayoutDirection direction )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETLAYOUTDIRECTION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
     QGuiApplication::setLayoutDirection( (Qt::LayoutDirection) hb_parni(1) );
@@ -857,7 +857,7 @@ static void setQuitOnLastWindowClosed( bool quit )
 HB_FUNC_STATIC( QGUIAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
 #endif
     QGuiApplication::setQuitOnLastWindowClosed( PBOOL(1) );

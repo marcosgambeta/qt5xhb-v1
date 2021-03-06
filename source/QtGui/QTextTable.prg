@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->resize( PINT(1), PINT(2) );
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->insertRows( PINT(1), PINT(2) );
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->insertColumns( PINT(1), PINT(2) );
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->appendRows( PINT(1) );
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->appendColumns( PINT(1) );
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->removeRows( PINT(1), PINT(2) );
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->removeColumns( PINT(1), PINT(2) );
@@ -318,7 +318,7 @@ void QTextTable_mergeCells2()
 
 HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 {
-  if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QTextTable_mergeCells1();
   }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QTEXTTABLE_SPLITCELL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
       obj->splitCell( PINT(1), PINT(2), PINT(3), PINT(4) );
@@ -450,11 +450,11 @@ void QTextTable_cellAt3()
 
 HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QTextTable_cellAt1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QTextTable_cellAt2();
   }

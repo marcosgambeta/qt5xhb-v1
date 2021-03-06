@@ -58,7 +58,7 @@ QHelpEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos )
 */
 HB_FUNC_STATIC( QHELPEVENT_NEW )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
     QHelpEvent * obj = new QHelpEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
     Qt5xHb::returnNewObject( obj, false );

@@ -126,27 +126,27 @@ HB_FUNC_STATIC( QRADIALGRADIENT_NEW )
   {
     QRadialGradient_new1();
   }
-  else if( ISNUMPAR(3) && ISQPOINTF(1) && ISNUM(2) && ISQPOINTF(3) )
+  else if( ISNUMPAR(3) && ISQPOINTF(1) && HB_ISNUM(2) && ISQPOINTF(3) )
   {
     QRadialGradient_new2();
   }
-  else if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+  else if( ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) )
   {
     QRadialGradient_new3();
   }
-  else if( ISNUMPAR(2) && ISQPOINTF(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
   {
     QRadialGradient_new4();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QRadialGradient_new5();
   }
-  else if( ISNUMPAR(4) && ISQPOINTF(1) && ISNUM(2) && ISQPOINTF(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && ISQPOINTF(1) && HB_ISNUM(2) && ISQPOINTF(3) && HB_ISNUM(4) )
   {
     QRadialGradient_new6();
   }
-  else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
+  else if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
     QRadialGradient_new7();
   }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTER )
   {
     QRadialGradient_setCenter1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QRadialGradient_setCenter2();
   }
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTERRADIUS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCenterRadius( PQREAL(1) );
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALPOINT )
   {
     QRadialGradient_setFocalPoint1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QRadialGradient_setFocalPoint2();
   }
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALRADIUS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setFocalRadius( PQREAL(1) );
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_SETRADIUS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setRadius( PQREAL(1) );

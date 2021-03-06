@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_NEW )
   {
     QOpenGLBuffer_new1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QOpenGLBuffer_new2();
   }
@@ -157,11 +157,11 @@ void QOpenGLBuffer_allocate2()
 
 HB_FUNC_STATIC( QOPENGLBUFFER_ALLOCATE )
 {
-  if( ISNUMPAR(2) && ISPOINTER(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISNUM(2) )
   {
     QOpenGLBuffer_allocate1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QOpenGLBuffer_allocate2();
   }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_MAP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       hb_retptr( (void *) obj->map( (QOpenGLBuffer::Access) hb_parni(1) ) );
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_READ )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
     {
 #endif
       RBOOL( obj->read( PINT(1), (void *) hb_parptr(2), PINT(3) ) );
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_RELEASE )
   {
     QOpenGLBuffer_release1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QOpenGLBuffer_release2();
   }
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_SETUSAGEPATTERN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setUsagePattern( (QOpenGLBuffer::UsagePattern) hb_parni(1) );
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QOPENGLBUFFER_WRITE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISPOINTER(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
     {
 #endif
       obj->write( PINT(1), (const void *) hb_parptr(2), PINT(3) );

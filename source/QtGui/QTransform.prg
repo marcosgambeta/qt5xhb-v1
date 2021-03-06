@@ -163,7 +163,7 @@ void QTransform_new6()
 
 HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QTransform_new1();
   }
@@ -171,11 +171,11 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
   {
     QTransform_new2();
   }
-  else if( ISBETWEEN(8,9) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && (ISNUM(9)||ISNIL(9)) )
+  else if( ISBETWEEN(8,9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && (ISNUM(9)||HB_ISNIL(9)) )
   {
     QTransform_new3();
   }
-  else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
+  else if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
     QTransform_new4();
   }
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(9) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && ISNUM(9) )
+    if( ISNUMPAR(9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) )
     {
 #endif
       obj->setMatrix( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), PQREAL(9) );
@@ -726,7 +726,7 @@ HB_FUNC_STATIC( QTRANSFORM_INVERTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QTRANSFORM_TRANSLATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       QTransform * ptr = &obj->translate( PQREAL(1), PQREAL(2) );
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QTRANSFORM_SCALE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       QTransform * ptr = &obj->scale( PQREAL(1), PQREAL(2) );
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QTRANSFORM_SHEAR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       QTransform * ptr = &obj->shear( PQREAL(1), PQREAL(2) );
@@ -878,10 +878,10 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      QTransform * ptr = &obj->rotate( PQREAL(1), ISNIL(2)? (Qt::Axis) Qt::ZAxis : (Qt::Axis) hb_parni(2) );
+      QTransform * ptr = &obj->rotate( PQREAL(1), HB_ISNIL(2)? (Qt::Axis) Qt::ZAxis : (Qt::Axis) hb_parni(2) );
       Qt5xHb::createReturnClass( ptr, "QTRANSFORM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -903,10 +903,10 @@ HB_FUNC_STATIC( QTRANSFORM_ROTATERADIANS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      QTransform * ptr = &obj->rotateRadians( PQREAL(1), ISNIL(2)? (Qt::Axis) Qt::ZAxis : (Qt::Axis) hb_parni(2) );
+      QTransform * ptr = &obj->rotateRadians( PQREAL(1), HB_ISNIL(2)? (Qt::Axis) Qt::ZAxis : (Qt::Axis) hb_parni(2) );
       Qt5xHb::createReturnClass( ptr, "QTRANSFORM", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1128,11 +1128,11 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
   {
     QTransform_map8();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QTransform_map9();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QTransform_map10();
   }
@@ -1299,7 +1299,7 @@ static QTransform fromTranslate( qreal dx, qreal dy )
 HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
 #endif
     QTransform * ptr = new QTransform( QTransform::fromTranslate( PQREAL(1), PQREAL(2) ) );
@@ -1319,7 +1319,7 @@ static QTransform fromScale( qreal dx, qreal dy )
 HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
 #endif
     QTransform * ptr = new QTransform( QTransform::fromScale( PQREAL(1), PQREAL(2) ) );
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1346,7 +1346,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1382,7 +1382,7 @@ HB_FUNC_STATIC( QTRANSFORM_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

@@ -66,7 +66,7 @@ QWheelEvent( const QPointF & pos, int delta, Qt::MouseButtons buttons, Qt::Keybo
 */
 void QWheelEvent_new1()
 {
-  QWheelEvent * obj = new QWheelEvent( *PQPOINTF(1), PINT(2), (Qt::MouseButtons) hb_parni(3), (Qt::KeyboardModifiers) hb_parni(4), ISNIL(5)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(5) );
+  QWheelEvent * obj = new QWheelEvent( *PQPOINTF(1), PINT(2), (Qt::MouseButtons) hb_parni(3), (Qt::KeyboardModifiers) hb_parni(4), HB_ISNIL(5)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(5) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -75,7 +75,7 @@ QWheelEvent( const QPointF & pos, const QPointF & globalPos, int delta, Qt::Mous
 */
 void QWheelEvent_new2()
 {
-  QWheelEvent * obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), PINT(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(6) );
+  QWheelEvent * obj = new QWheelEvent( *PQPOINTF(1), *PQPOINTF(2), PINT(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), HB_ISNIL(6)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(6) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -90,15 +90,15 @@ void QWheelEvent_new3()
 
 HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {
-  if( ISBETWEEN(4,5) && ISQPOINTF(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
+  if( ISBETWEEN(4,5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISNUM(5)||HB_ISNIL(5)) )
   {
     QWheelEvent_new1();
   }
-  else if( ISBETWEEN(5,6) && ISQPOINTF(1) && ISQPOINTF(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && (ISNUM(6)||ISNIL(6)) )
+  else if( ISBETWEEN(5,6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (ISNUM(6)||HB_ISNIL(6)) )
   {
     QWheelEvent_new2();
   }
-  else if( ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) )
+  else if( ISNUMPAR(8) && ISQPOINTF(1) && ISQPOINTF(2) && ISQPOINT(3) && ISQPOINT(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) )
   {
     QWheelEvent_new2();
   }

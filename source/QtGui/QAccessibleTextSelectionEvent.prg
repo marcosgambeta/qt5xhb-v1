@@ -54,7 +54,7 @@ QAccessibleTextSelectionEvent( QObject * obj, int start, int end )
 */
 HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_NEW )
 {
-  if( ISNUMPAR(3) && ISQOBJECT(1) && ISNUM(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QAccessibleTextSelectionEvent * obj = new QAccessibleTextSelectionEvent( PQOBJECT(1), PINT(2), PINT(3) );
     Qt5xHb::returnNewObject( obj, true );
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QACCESSIBLETEXTSELECTIONEVENT_SETSELECTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setSelection( PINT(1), PINT(2) );

@@ -51,7 +51,7 @@ QDragEnterEvent( const QPoint & point, Qt::DropActions actions, const QMimeData 
 */
 HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
 {
-  if( ISNUMPAR(5) && ISQPOINT(1) && ISNUM(2) && ISQMIMEDATA(3) && ISNUM(4) && ISNUM(5) )
+  if( ISNUMPAR(5) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) )
   {
     QDragEnterEvent * obj = new QDragEnterEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
     Qt5xHb::returnNewObject( obj, false );

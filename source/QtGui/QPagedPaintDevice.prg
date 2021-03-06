@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGESIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setPageSize( (QPagedPaintDevice::PageSize) hb_parni(1) );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEORIENTATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->setPageOrientation( (QPageLayout::Orientation) hb_parni(1) ) );
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QPAGEDPAINTDEVICE_SETPAGEMARGINS )
   {
     QPagedPaintDevice_setPageMargins1();
   }
-  else if( ISNUMPAR(2) && ISQMARGINSF(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2) )
   {
     QPagedPaintDevice_setPageMargins2();
   }

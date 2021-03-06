@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setLeadingIncluded( PBOOL(1) );
@@ -463,7 +463,7 @@ void QTextLine_cursorToX1()
   if( obj )
   {
     int par1;
-    RQREAL( obj->cursorToX( &par1, ISNIL(2)? (QTextLine::Edge) QTextLine::Leading : (QTextLine::Edge) hb_parni(2) ) );
+    RQREAL( obj->cursorToX( &par1, HB_ISNIL(2)? (QTextLine::Edge) QTextLine::Leading : (QTextLine::Edge) hb_parni(2) ) );
     hb_storni( par1, 1 );
   }
 }
@@ -477,17 +477,17 @@ void QTextLine_cursorToX2()
 
   if( obj )
   {
-    RQREAL( obj->cursorToX( PINT(1), ISNIL(2)? (QTextLine::Edge) QTextLine::Leading : (QTextLine::Edge) hb_parni(2) ) );
+    RQREAL( obj->cursorToX( PINT(1), HB_ISNIL(2)? (QTextLine::Edge) QTextLine::Leading : (QTextLine::Edge) hb_parni(2) ) );
   }
 }
 
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QTextLine_cursorToX1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QTextLine_cursorToX2();
   }
@@ -507,10 +507,10 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      RINT( obj->xToCursor( PQREAL(1), ISNIL(2)? (QTextLine::CursorPosition) QTextLine::CursorBetweenCharacters : (QTextLine::CursorPosition) hb_parni(2) ) );
+      RINT( obj->xToCursor( PQREAL(1), HB_ISNIL(2)? (QTextLine::CursorPosition) QTextLine::CursorBetweenCharacters : (QTextLine::CursorPosition) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setLineWidth( PQREAL(1) );
@@ -579,11 +579,11 @@ void QTextLine_setNumColumns2()
 
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QTextLine_setNumColumns1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QTextLine_setNumColumns2();
   }
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QTEXTLINE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QTEXTLINE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

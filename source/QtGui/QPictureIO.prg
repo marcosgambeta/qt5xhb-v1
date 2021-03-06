@@ -114,11 +114,11 @@ HB_FUNC_STATIC( QPICTUREIO_NEW )
   {
     QPictureIO_new1();
   }
-  else if( ISNUMPAR(2) && ISQIODEVICE(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2) )
   {
     QPictureIO_new2();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
     QPictureIO_new3();
   }
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETSTATUS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setStatus( PINT(1) );
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETFORMAT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setFormat( PCONSTCHAR(1) );
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETFILENAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setFileName( PQSTRING(1) );
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETQUALITY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setQuality( PINT(1) );
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETDESCRIPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setDescription( PQSTRING(1) );
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETPARAMETERS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setParameters( PCONSTCHAR(1) );
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETGAMMA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setGamma( PFLOAT(1) );
@@ -667,7 +667,7 @@ void QPictureIO_pictureFormat2()
 
 HB_FUNC_STATIC( QPICTUREIO_PICTUREFORMAT )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QPictureIO_pictureFormat1();
   }
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QPICTUREIO_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QPICTUREIO_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -824,7 +824,7 @@ HB_FUNC_STATIC( QPICTUREIO_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

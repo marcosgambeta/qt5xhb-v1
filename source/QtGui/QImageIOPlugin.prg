@@ -103,10 +103,10 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) )
     {
 #endif
-      QImageIOHandler * ptr = obj->create( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+      QImageIOHandler * ptr = obj->create( PQIODEVICE(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
       Qt5xHb::createReturnClass( ptr, "QIMAGEIOHANDLER", false );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }

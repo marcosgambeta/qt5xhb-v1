@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
     {
 #endif
       QAccessibleInterface * ptr = obj->create( PQSTRING(1), PQOBJECT(2) );

@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QSCREEN_SETORIENTATIONUPDATEMASK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setOrientationUpdateMask( (Qt::ScreenOrientations) hb_parni(1) );
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QSCREEN_ANGLEBETWEEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       RINT( obj->angleBetween( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2) ) );
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QSCREEN_TRANSFORMBETWEEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQRECT(3) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3) )
     {
 #endif
       QTransform * ptr = new QTransform( obj->transformBetween( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2), *PQRECT(3) ) );
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QSCREEN_MAPBETWEEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQRECT(3) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQRECT(3) )
     {
 #endif
       QRect * ptr = new QRect( obj->mapBetween( (Qt::ScreenOrientation) hb_parni(1), (Qt::ScreenOrientation) hb_parni(2), *PQRECT(3) ) );
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QSCREEN_ISPORTRAIT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isPortrait( (Qt::ScreenOrientation) hb_parni(1) ) );
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QSCREEN_ISLANDSCAPE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isLandscape( (Qt::ScreenOrientation) hb_parni(1) ) );
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QSCREEN_GRABWINDOW )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,5) && ISPOINTER(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+    if( ISBETWEEN(1,5) && HB_ISPOINTER(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->grabWindow( (WId) hb_parptr(1), OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );

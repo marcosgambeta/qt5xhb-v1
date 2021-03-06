@@ -108,7 +108,7 @@ QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * 
 */
 void QMovie_new2()
 {
-  QMovie * obj = new QMovie( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  QMovie * obj = new QMovie( PQIODEVICE(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -117,21 +117,21 @@ QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObj
 */
 void QMovie_new3()
 {
-  QMovie * obj = new QMovie( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  QMovie * obj = new QMovie( PQSTRING(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QMOVIE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
     QMovie_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QMovie_new2();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QMovie_new3();
   }
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->jumpToFrame( PINT(1) ) );
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
     if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
     {
 #endif
-      obj->setBackgroundColor( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBackgroundColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCacheMode( (QMovie::CacheMode) hb_parni(1) );
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QMOVIE_SETFILENAME )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setFileName( PQSTRING(1) );
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QMOVIE_SETPAUSED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setPaused( PBOOL(1) );
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QMOVIE_SETSPEED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setSpeed( PINT(1) );

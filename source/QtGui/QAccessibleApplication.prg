@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_CHILD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QAccessibleInterface * ptr = obj->child( PINT(1) );
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QACCESSIBLEAPPLICATION_TEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQSTRING( obj->text( (QAccessible::Text) hb_parni(1) ) );

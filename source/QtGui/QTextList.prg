@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QTextBlock * ptr = new QTextBlock( obj->item( PINT(1) ) );
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->removeItem( PINT(1) );

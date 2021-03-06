@@ -211,15 +211,15 @@ HB_FUNC_STATIC( QIMAGE_NEW )
   {
     QImage_new1();
   }
-  else if( ISNUMPAR(2) && ISQSIZE(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2) )
   {
     QImage_new2();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QImage_new3();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) )
   {
     HB_FUNC_EXEC( QIMAGE_NEW9 );
   }
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QIMAGE_COLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQRGB( obj->color( PINT(1) ) );
@@ -459,7 +459,7 @@ void QImage_convertToFormat1()
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->convertToFormat( (QImage::Format) hb_parni(1), ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );
+    QImage * ptr = new QImage( obj->convertToFormat( (QImage::Format) hb_parni(1), HB_ISNIL(2)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(2) ) );
     Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
   }
 }
@@ -483,18 +483,18 @@ void QImage_convertToFormat2()
       temp2 = (QRgb) hb_arrayGetNI(aList2, i2+1);
       par2 << temp2;
     }
-    QImage * ptr = new QImage( obj->convertToFormat( (QImage::Format) hb_parni(1), par2, ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) ) );
+    QImage * ptr = new QImage( obj->convertToFormat( (QImage::Format) hb_parni(1), par2, HB_ISNIL(3)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(3) ) );
     Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
   }
 }
 
 HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QImage_convertToFormat1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISARRAY(2) && (ISNUM(3)||HB_ISNIL(3)) )
   {
     QImage_convertToFormat2();
   }
@@ -513,7 +513,7 @@ void QImage_copy1()
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->copy( ISNIL(1)? QRect() : *(QRect *) Qt5xHb::itemGetPtr(1) ) );
+    QImage * ptr = new QImage( obj->copy( HB_ISNIL(1)? QRect() : *(QRect *) Qt5xHb::itemGetPtr(1) ) );
     Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
   }
 }
@@ -534,11 +534,11 @@ void QImage_copy2()
 
 HB_FUNC_STATIC( QIMAGE_COPY )
 {
-  if( ISBETWEEN(0,1) && (ISQRECT(1)||ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (ISQRECT(1)||HB_ISNIL(1)) )
   {
     QImage_copy1();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QImage_copy2();
   }
@@ -558,10 +558,10 @@ HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->createAlphaMask( ISNIL(1)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(1) ) );
+      QImage * ptr = new QImage( obj->createAlphaMask( HB_ISNIL(1)? (Qt::ImageConversionFlags) Qt::AutoColor : (Qt::ImageConversionFlags) hb_parni(1) ) );
       Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       QImage * ptr = new QImage( obj->createHeuristicMask( OPBOOL(1,true) ) );
@@ -608,10 +608,10 @@ HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->createMaskFromColor( PQRGB(1), ISNIL(2)? (Qt::MaskMode) Qt::MaskInColor : (Qt::MaskMode) hb_parni(2) ) );
+      QImage * ptr = new QImage( obj->createMaskFromColor( PQRGB(1), HB_ISNIL(2)? (Qt::MaskMode) Qt::MaskInColor : (Qt::MaskMode) hb_parni(2) ) );
       Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -734,7 +734,7 @@ void QImage_fill3()
 
   if( obj )
   {
-    obj->fill( ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+    obj->fill( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -742,11 +742,11 @@ void QImage_fill3()
 
 HB_FUNC_STATIC( QIMAGE_FILL )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QImage_fill1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QImage_fill2();
   }
@@ -842,10 +842,10 @@ HB_FUNC_STATIC( QIMAGE_INVERTPIXELS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
-      obj->invertPixels( ISNIL(1)? (QImage::InvertMode) QImage::InvertRgb : (QImage::InvertMode) hb_parni(1) );
+      obj->invertPixels( HB_ISNIL(1)? (QImage::InvertMode) QImage::InvertRgb : (QImage::InvertMode) hb_parni(1) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -934,11 +934,11 @@ void QImage_load2()
 
 HB_FUNC_STATIC( QIMAGE_LOAD )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) )
   {
     QImage_load1();
   }
-  else if( ISNUMPAR(2) && ISQIODEVICE(1) && ISCHAR(2) )
+  else if( ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2) )
   {
     QImage_load2();
   }
@@ -976,11 +976,11 @@ void QImage_loadFromData2()
 
 HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISCHAR(3)||HB_ISNIL(3)) )
   {
     QImage_loadFromData1();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISCHAR(2)||HB_ISNIL(2)) )
   {
     QImage_loadFromData2();
   }
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QIMAGE_MIRRORED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISLOG(1)||ISNIL(1)) && (ISLOG(2)||ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISLOG(1)||HB_ISNIL(1)) && (ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       QImage * ptr = new QImage( obj->mirrored( OPBOOL(1,false), OPBOOL(2,true) ) );
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC( QIMAGE_PIXEL )
   {
     QImage_pixel1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QImage_pixel2();
   }
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
   {
     QImage_pixelIndex1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QImage_pixelIndex2();
   }
@@ -1202,11 +1202,11 @@ void QImage_save2()
 
 HB_FUNC_STATIC( QIMAGE_SAVE )
 {
-  if( ISBETWEEN(1,3) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
   {
     QImage_save1();
   }
-  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
   {
     QImage_save2();
   }
@@ -1225,7 +1225,7 @@ void QImage_scaled1()
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->scaled( *PQSIZE(1), ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2), ISNIL(3)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(3) ) );
+    QImage * ptr = new QImage( obj->scaled( *PQSIZE(1), HB_ISNIL(2)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(2), HB_ISNIL(3)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(3) ) );
     Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
   }
 }
@@ -1239,18 +1239,18 @@ void QImage_scaled2()
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->scaled( PINT(1), PINT(2), ISNIL(3)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(3), ISNIL(4)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(4) ) );
+    QImage * ptr = new QImage( obj->scaled( PINT(1), PINT(2), HB_ISNIL(3)? (Qt::AspectRatioMode) Qt::IgnoreAspectRatio : (Qt::AspectRatioMode) hb_parni(3), HB_ISNIL(4)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(4) ) );
     Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
   }
 }
 
 HB_FUNC_STATIC( QIMAGE_SCALED )
 {
-  if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
   {
     QImage_scaled1();
   }
-  else if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
   {
     QImage_scaled2();
   }
@@ -1270,10 +1270,10 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->scaledToHeight( PINT(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
+      QImage * ptr = new QImage( obj->scaledToHeight( PINT(1), HB_ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
       Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1295,10 +1295,10 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->scaledToWidth( PINT(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
+      QImage * ptr = new QImage( obj->scaledToWidth( PINT(1), HB_ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
       Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
@@ -1331,7 +1331,7 @@ HB_FUNC_STATIC( QIMAGE_SETCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->setColor( PINT(1), PQRGB(2) );
@@ -1357,7 +1357,7 @@ HB_FUNC_STATIC( QIMAGE_SETCOLORCOUNT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setColorCount( PINT(1) );
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERX )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDotsPerMeterX( PINT(1) );
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setDotsPerMeterY( PINT(1) );
@@ -1483,11 +1483,11 @@ void QImage_setPixel2()
 
 HB_FUNC_STATIC( QIMAGE_SETPIXEL )
 {
-  if( ISNUMPAR(2) && ISQPOINT(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISQPOINT(1) && HB_ISNUM(2) )
   {
     QImage_setPixel1();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QImage_setPixel2();
   }
@@ -1507,7 +1507,7 @@ HB_FUNC_STATIC( QIMAGE_SETTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setText( PQSTRING(1), PQSTRING(2) );
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC( QIMAGE_TEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->text( OPQSTRING(1,QString()) ) );
@@ -1631,7 +1631,7 @@ void QImage_transformed1()
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->transformed( *PQMATRIX(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
+    QImage * ptr = new QImage( obj->transformed( *PQMATRIX(1), HB_ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
     Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
   }
 }
@@ -1645,18 +1645,18 @@ void QImage_transformed2()
 
   if( obj )
   {
-    QImage * ptr = new QImage( obj->transformed( *PQTRANSFORM(1), ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
+    QImage * ptr = new QImage( obj->transformed( *PQTRANSFORM(1), HB_ISNIL(2)? (Qt::TransformationMode) Qt::FastTransformation : (Qt::TransformationMode) hb_parni(2) ) );
     Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
   }
 }
 
 HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 {
-  if( ISBETWEEN(1,2) && ISQMATRIX(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQMATRIX(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QImage_transformed1();
   }
-  else if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QImage_transformed2();
   }
@@ -1698,7 +1698,7 @@ HB_FUNC_STATIC( QIMAGE_VALID )
   {
     QImage_valid1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QImage_valid2();
   }
@@ -1754,11 +1754,11 @@ void QImage_fromData2()
 
 HB_FUNC_STATIC( QIMAGE_FROMDATA )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISCHAR(3)||ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISCHAR(3)||HB_ISNIL(3)) )
   {
     QImage_fromData1();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISCHAR(2)||HB_ISNIL(2)) )
   {
     QImage_fromData2();
   }
@@ -1790,11 +1790,11 @@ void QImage_trueMatrix2()
 
 HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
 {
-  if( ISNUMPAR(3) && ISQMATRIX(1) && ISNUM(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && ISQMATRIX(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QImage_trueMatrix1();
   }
-  else if( ISNUMPAR(3) && ISQTRANSFORM(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && ISQTRANSFORM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QImage_trueMatrix2();
   }
@@ -1842,7 +1842,7 @@ HB_FUNC_STATIC( QIMAGE_PIXELCOLOR )
   {
     QImage_pixelColor1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QImage_pixelColor2();
   }
@@ -1863,7 +1863,7 @@ HB_FUNC_STATIC( QIMAGE_REINTERPRETASFORMAT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->reinterpretAsFormat( (QImage::Format) hb_parni(1) ) );
@@ -1888,7 +1888,7 @@ void QImage_setPixelColor1()
 
   if( obj )
   {
-    obj->setPixelColor( *PQPOINT(1), ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+    obj->setPixelColor( *PQPOINT(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1905,7 +1905,7 @@ void QImage_setPixelColor2()
 
   if( obj )
   {
-    obj->setPixelColor( PINT(1), PINT(2), ISOBJECT(3)? *(QColor *) Qt5xHb::itemGetPtr(3) : QColor(hb_parc(3)) );
+    obj->setPixelColor( PINT(1), PINT(2), HB_ISOBJECT(3)? *(QColor *) Qt5xHb::itemGetPtr(3) : QColor(hb_parc(3)) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1918,7 +1918,7 @@ HB_FUNC_STATIC( QIMAGE_SETPIXELCOLOR )
   {
     QImage_setPixelColor1();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQCOLOR(3) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQCOLOR(3) )
   {
     QImage_setPixelColor2();
   }

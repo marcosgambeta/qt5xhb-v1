@@ -52,7 +52,7 @@ QToolBarChangeEvent( bool t )
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
     QToolBarChangeEvent * obj = new QToolBarChangeEvent( PBOOL(1) );
     Qt5xHb::returnNewObject( obj, false );

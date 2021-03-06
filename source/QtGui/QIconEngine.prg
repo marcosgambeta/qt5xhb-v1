@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
       QSize * ptr = new QSize( obj->actualSize( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QICONENGINE_ADDFILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISCHAR(1) && ISQSIZE(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR(4) && HB_ISCHAR(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
       obj->addFile( PQSTRING(1), *PQSIZE(2), (QIcon::Mode) hb_parni(3), (QIcon::State) hb_parni(4) );
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && ISQPIXMAP(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
       obj->addPixmap( *PQPIXMAP(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) );
@@ -172,10 +172,10 @@ HB_FUNC_STATIC( QICONENGINE_AVAILABLESIZES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISNUM(1)||ISNIL(1)) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISNUM(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      QList<QSize> list = obj->availableSizes( ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
+      QList<QSize> list = obj->availableSizes( HB_ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), HB_ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QICONENGINE_PAINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
       obj->paint( PQPAINTER(1), *PQRECT(2), (QIcon::Mode) hb_parni(3), (QIcon::State) hb_parni(4) );
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QICONENGINE_PIXMAP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && ISQSIZE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QICONENGINE_VIRTUAL_HOOK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2) )
     {
 #endif
       obj->virtual_hook( PINT(1), (void *) hb_parptr(2) );
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QICONENGINE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QICONENGINE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QICONENGINE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

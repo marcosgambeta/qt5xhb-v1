@@ -212,11 +212,11 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
   {
     QPainterPath_addEllipse1();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QPainterPath_addEllipse2();
   }
-  else if( ISNUMPAR(3) && ISQPOINTF(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QPainterPath_addEllipse2();
   }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDRECT )
   {
     QPainterPath_addRect1();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QPainterPath_addRect2();
   }
@@ -359,7 +359,7 @@ void QPainterPath_addRoundedRect1()
 
   if( obj )
   {
-    obj->addRoundedRect( *PQRECTF(1), PQREAL(2), PQREAL(3), ISNIL(4)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(4) );
+    obj->addRoundedRect( *PQRECTF(1), PQREAL(2), PQREAL(3), HB_ISNIL(4)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(4) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -374,7 +374,7 @@ void QPainterPath_addRoundedRect2()
 
   if( obj )
   {
-    obj->addRoundedRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), ISNIL(7)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(7) );
+    obj->addRoundedRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), HB_ISNIL(7)? (Qt::SizeMode) Qt::AbsoluteSize : (Qt::SizeMode) hb_parni(7) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -382,11 +382,11 @@ void QPainterPath_addRoundedRect2()
 
 HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
 {
-  if( ISBETWEEN(3,4) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
+  if( ISBETWEEN(3,4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISNUM(4)||HB_ISNIL(4)) )
   {
     QPainterPath_addRoundedRect1();
   }
-  else if( ISBETWEEN(6,7) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && (ISNUM(7)||ISNIL(7)) )
+  else if( ISBETWEEN(6,7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && (ISNUM(7)||HB_ISNIL(7)) )
   {
     QPainterPath_addRoundedRect2();
   }
@@ -428,11 +428,11 @@ void QPainterPath_addText2()
 
 HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
 {
-  if( ISNUMPAR(3) && ISQPOINTF(1) && ISQFONT(2) && ISCHAR(3) )
+  if( ISNUMPAR(3) && ISQPOINTF(1) && ISQFONT(2) && HB_ISCHAR(3) )
   {
     QPainterPath_addText1();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISQFONT(3) && ISCHAR(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQFONT(3) && HB_ISCHAR(4) )
   {
     QPainterPath_addText2();
   }
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQREAL( obj->angleAtPercent( PQREAL(1) ) );
@@ -498,11 +498,11 @@ void QPainterPath_arcMoveTo2()
 
 HB_FUNC_STATIC( QPAINTERPATH_ARCMOVETO )
 {
-  if( ISNUMPAR(2) && ISQRECTF(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && ISQRECTF(1) && HB_ISNUM(2) )
   {
     QPainterPath_arcMoveTo1();
   }
-  else if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+  else if( ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) )
   {
     QPainterPath_arcMoveTo2();
   }
@@ -544,11 +544,11 @@ void QPainterPath_arcTo2()
 
 HB_FUNC_STATIC( QPAINTERPATH_ARCTO )
 {
-  if( ISNUMPAR(3) && ISQRECTF(1) && ISNUM(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QPainterPath_arcTo1();
   }
-  else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
+  else if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
     QPainterPath_arcTo2();
   }
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CUBICTO )
   {
     QPainterPath_cubicTo1();
   }
-  else if( ISNUMPAR(6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) )
+  else if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
     QPainterPath_cubicTo2();
   }
@@ -989,7 +989,7 @@ HB_FUNC_STATIC( QPAINTERPATH_LINETO )
   {
     QPainterPath_lineTo1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QPainterPath_lineTo2();
   }
@@ -1035,7 +1035,7 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
   {
     QPainterPath_moveTo1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QPainterPath_moveTo2();
   }
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQREAL( obj->percentAtLength( PQREAL(1) ) );
@@ -1079,7 +1079,7 @@ HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->pointAtPercent( PQREAL(1) ) );
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QPAINTERPATH_QUADTO )
   {
     QPainterPath_quadTo1();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QPainterPath_quadTo2();
   }
@@ -1150,7 +1150,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETELEMENTPOSITIONAT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
       obj->setElementPositionAt( PINT(1), PQREAL(2), PQREAL(3) );
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETFILLRULE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setFillRule( (Qt::FillRule) hb_parni(1) );
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RQREAL( obj->slopeAtPercent( PQREAL(1) ) );
@@ -1315,7 +1315,7 @@ void QPainterPath_toFillPolygon2()
 
   if( obj )
   {
-    QPolygonF * ptr = new QPolygonF( obj->toFillPolygon( ISNIL(1)? QMatrix() : *(QMatrix *) Qt5xHb::itemGetPtr(1) ) );
+    QPolygonF * ptr = new QPolygonF( obj->toFillPolygon( HB_ISNIL(1)? QMatrix() : *(QMatrix *) Qt5xHb::itemGetPtr(1) ) );
     Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
   }
 }
@@ -1393,7 +1393,7 @@ void QPainterPath_translate2()
 
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QPainterPath_translate1();
   }
@@ -1437,7 +1437,7 @@ void QPainterPath_translated2()
 
 HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QPainterPath_translated1();
   }
@@ -1480,7 +1480,7 @@ HB_FUNC_STATIC( QPAINTERPATH_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1489,7 +1489,7 @@ HB_FUNC_STATIC( QPAINTERPATH_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1525,7 +1525,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

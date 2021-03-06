@@ -51,7 +51,7 @@ QApplicationStateChangeEvent( Qt::ApplicationState state )
 */
 HB_FUNC_STATIC( QAPPLICATIONSTATECHANGEEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QApplicationStateChangeEvent * obj = new QApplicationStateChangeEvent( (Qt::ApplicationState) hb_parni(1) );
     Qt5xHb::returnNewObject( obj, false );

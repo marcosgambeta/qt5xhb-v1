@@ -55,7 +55,7 @@ QScrollEvent( const QPointF & contentPos, const QPointF & overshoot, QScrollEven
 */
 HB_FUNC_STATIC( QSCROLLEVENT_NEW )
 {
-  if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) )
   {
     QScrollEvent * obj = new QScrollEvent( *PQPOINTF(1), *PQPOINTF(2), (QScrollEvent::ScrollState) hb_parni(3) );
     Qt5xHb::returnNewObject( obj, false );

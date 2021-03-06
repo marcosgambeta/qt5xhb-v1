@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setVisible( PBOOL(1) );
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_INVOKEACTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
       obj->invokeAction( (QInputMethod::Action) hb_parni(1), PINT(2) );
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QINPUTMETHOD_UPDATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->update( (Qt::InputMethodQueries) hb_parni(1) );

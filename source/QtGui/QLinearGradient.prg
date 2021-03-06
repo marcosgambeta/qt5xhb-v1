@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
   {
     QLinearGradient_new2();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QLinearGradient_new3();
   }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
   {
     QLinearGradient_setFinalStop1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QLinearGradient_setFinalStop2();
   }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
   {
     QLinearGradient_setStart1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QLinearGradient_setStart2();
   }

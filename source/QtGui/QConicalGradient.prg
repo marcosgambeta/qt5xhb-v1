@@ -84,11 +84,11 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
   {
     QConicalGradient_new1();
   }
-  else if( ISNUMPAR(2) && ISQPOINTF(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
   {
     QConicalGradient_new2();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QConicalGradient_new3();
   }
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setAngle( PQREAL(1) );
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
   {
     QConicalGradient_setCenter1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QConicalGradient_setCenter2();
   }

@@ -84,7 +84,7 @@ void QPdfWriter_new2()
 
 HB_FUNC_STATIC( QPDFWRITER_NEW )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QPdfWriter_new1();
   }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETTITLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setTitle( PQSTRING(1) );
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETCREATOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setCreator( PQSTRING(1) );
@@ -273,7 +273,7 @@ void QPdfWriter_setPageSize2()
 
 HB_FUNC_STATIC( QPDFWRITER_SETPAGESIZE )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QPdfWriter_setPageSize1();
   }
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETRESOLUTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setResolution( PINT(1) );
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGEMARGINS )
   {
     QPdfWriter_setPageMargins1();
   }
-  else if( ISNUMPAR(2) && ISQMARGINSF(1) && ISNUM(2) )
+  else if( ISNUMPAR(2) && ISQMARGINSF(1) && HB_ISNUM(2) )
   {
     QPdfWriter_setPageMargins2();
   }
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPAGEORIENTATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->setPageOrientation( (QPageLayout::Orientation) hb_parni(1) ) );
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QPDFWRITER_SETPDFVERSION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setPdfVersion( (QPagedPaintDevice::PdfVersion) hb_parni(1) );

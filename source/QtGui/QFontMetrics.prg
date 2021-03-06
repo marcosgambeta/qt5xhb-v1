@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW )
   {
     QFontMetrics_new1();
   }
-  else if( ISNUMPAR(2) && ISQFONT(1) && ISOBJECT(2) )
+  else if( ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2) )
   {
     QFontMetrics_new2();
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
   {
     QFontMetrics_boundingRect1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QFontMetrics_boundingRect2();
   }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && (ISNUM(4)||ISNIL(4)) )
+    if( ISBETWEEN(3,4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISNUM(4)||HB_ISNIL(4)) )
     {
 #endif
       RQSTRING( obj->elidedText( PQSTRING(1), (Qt::TextElideMode) hb_parni(2), PINT(3), OPINT(4,0) ) );
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QFONTMETRICS_INFONTUCS4 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->inFontUcs4( PUINT(1) ) );
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QFONTMETRICS_SIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+    if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
     {
 #endif
       int par4;
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QFONTMETRICS_TIGHTBOUNDINGRECT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       QRect * ptr = new QRect( obj->tightBoundingRect( PQSTRING(1) ) );
@@ -625,7 +625,7 @@ void QFontMetrics_width2()
 
 HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
   {
     QFontMetrics_width1();
   }
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QFONTMETRICS_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

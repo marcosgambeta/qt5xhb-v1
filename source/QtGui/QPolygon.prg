@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   {
     QPolygon_new1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QPolygon_new2();
   }
@@ -135,11 +135,11 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   {
     QPolygon_new3();
   }
-  else if( ISNUMPAR(1) && ISARRAY(1) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QPolygon_new4();
   }
-  else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISLOG(2)||ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISLOG(2)||HB_ISNIL(2)) )
   {
     QPolygon_new5();
   }
@@ -224,7 +224,7 @@ void QPolygon_translate2()
 
 HB_FUNC_STATIC( QPOLYGON_TRANSLATE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QPolygon_translate1();
   }
@@ -268,7 +268,7 @@ void QPolygon_translated2()
 
 HB_FUNC_STATIC( QPOLYGON_TRANSLATED )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QPolygon_translated1();
   }
@@ -342,11 +342,11 @@ void QPolygon_point2()
 
 HB_FUNC_STATIC( QPOLYGON_POINT )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QPolygon_point1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     QPolygon_point2();
   }
@@ -388,11 +388,11 @@ void QPolygon_setPoint2()
 
 HB_FUNC_STATIC( QPOLYGON_SETPOINT )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     QPolygon_setPoint1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISQPOINT(2) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINT(2) )
   {
     QPolygon_setPoint2();
   }
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISQPOLYGON(3) && (ISNUM(4)||ISNIL(4)) )
+    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQPOLYGON(3) && (ISNUM(4)||HB_ISNIL(4)) )
     {
 #endif
       obj->putPoints( PINT(1), PINT(2), *PQPOLYGON(3), OPINT(4,0) );
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPOINT(1) && ISNUM(2) )
+    if( ISNUMPAR(2) && ISQPOINT(1) && HB_ISNUM(2) )
     {
 #endif
       RBOOL( obj->containsPoint( *PQPOINT(1), (Qt::FillRule) hb_parni(2) ) );
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QPOLYGON_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QPOLYGON_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QPOLYGON_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

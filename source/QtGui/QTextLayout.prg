@@ -120,7 +120,7 @@ QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevic
 */
 void QTextLayout_new3()
 {
-  QTextLayout * obj = new QTextLayout( PQSTRING(1), *PQFONT(2), ISNIL(3)? 0 : (QPaintDevice *) Qt5xHb::itemGetPtr(3) );
+  QTextLayout * obj = new QTextLayout( PQSTRING(1), *PQFONT(2), HB_ISNIL(3)? 0 : (QPaintDevice *) Qt5xHb::itemGetPtr(3) );
   Qt5xHb::returnNewObject( obj, true );
 }
 
@@ -139,11 +139,11 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
   {
     QTextLayout_new1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QTextLayout_new2();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISQFONT(2) && (ISOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && ISQFONT(2) && (ISOBJECT(3)||HB_ISNIL(3)) )
   {
     QTextLayout_new3();
   }
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
       obj->setText( PQSTRING(1) );
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
       obj->setPreeditArea( PINT(1), PQSTRING(2) );
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
       obj->setCacheEnabled( PBOOL(1) );
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setCursorMoveStyle( (Qt::CursorMoveStyle) hb_parni(1) );
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QTextLine * ptr = new QTextLine( obj->lineAt( PINT(1) ) );
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       QTextLine * ptr = new QTextLine( obj->lineForTextPosition( PINT(1) ) );
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RBOOL( obj->isValidCursorPosition( PINT(1) ) );
@@ -763,10 +763,10 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      RINT( obj->nextCursorPosition( PINT(1), ISNIL(2)? (QTextLayout::CursorMode) QTextLayout::SkipCharacters : (QTextLayout::CursorMode) hb_parni(2) ) );
+      RINT( obj->nextCursorPosition( PINT(1), HB_ISNIL(2)? (QTextLayout::CursorMode) QTextLayout::SkipCharacters : (QTextLayout::CursorMode) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -787,10 +787,10 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
-      RINT( obj->previousCursorPosition( PINT(1), ISNIL(2)? (QTextLayout::CursorMode) QTextLayout::SkipCharacters : (QTextLayout::CursorMode) hb_parni(2) ) );
+      RINT( obj->previousCursorPosition( PINT(1), HB_ISNIL(2)? (QTextLayout::CursorMode) QTextLayout::SkipCharacters : (QTextLayout::CursorMode) hb_parni(2) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RINT( obj->leftCursorPosition( PINT(1) ) );
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       RINT( obj->rightCursorPosition( PINT(1) ) );
@@ -881,11 +881,11 @@ void QTextLayout_drawCursor2()
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 {
-  if( ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && ISNUM(3) )
+  if( ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) )
   {
     QTextLayout_drawCursor1();
   }
-  else if( ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     QTextLayout_drawCursor2();
   }
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETFLAGS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
       obj->setFlags( PINT(1) );
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
