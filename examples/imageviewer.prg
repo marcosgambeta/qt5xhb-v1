@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/marcosgambeta/qt5xhb
+  https://github.com/magsoftinfo/qt5xhb
 
   Users Groups:
   https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb    [ENGLISH]
