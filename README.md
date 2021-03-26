@@ -4,7 +4,7 @@ Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
 For Qt 5.7 or upper, you can use the project below:
 
-https://github.com/marcosgambeta/qt5xhb-cpp11
+https://github.com/magsoftinfo/qt5xhb-cpp11
 
 ## Basic steps
 
@@ -78,7 +78,7 @@ http://www.mediafire.com/file/82yql0w5t6a388u/harbour320dev-qt551-mingw492-32bit
 
 The version below use C++11 resources (lambda functions, nullptr, ...):
 
-https://github.com/marcosgambeta/qt5xhb-cpp11
+https://github.com/magsoftinfo/qt5xhb-cpp11
 
 ## To contact the developer
 
