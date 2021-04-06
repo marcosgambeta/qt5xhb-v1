@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_DELETE )
 }
 
 /*
-virtual QString resolveUndeclaredEntity(const QString & name)
+virtual QString resolveUndeclaredEntity( const QString & name )
 */
 HB_FUNC_STATIC( QXMLSTREAMENTITYRESOLVER_RESOLVEUNDECLAREDENTITY )
 {

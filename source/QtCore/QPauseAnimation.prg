@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QPauseAnimation ( QObject * parent = 0 )
+QPauseAnimation( QObject * parent = 0 )
 */
 void QPauseAnimation_new1()
 {
@@ -60,7 +60,7 @@ void QPauseAnimation_new1()
 }
 
 /*
-QPauseAnimation ( int msecs, QObject * parent = 0 )
+QPauseAnimation( int msecs, QObject * parent = 0 )
 */
 void QPauseAnimation_new2()
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 }
 
 /*
-void setDuration ( int msecs )
+void setDuration( int msecs )
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 }
 
 /*
-virtual int duration () const
+virtual int duration() const
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 {

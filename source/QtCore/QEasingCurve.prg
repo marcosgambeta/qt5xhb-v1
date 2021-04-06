@@ -72,7 +72,7 @@ RETURN
 #include <QtCore/QPointF>
 
 /*
-QEasingCurve ( Type type = Linear )
+QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
 */
 void QEasingCurve_new1()
 {
@@ -81,7 +81,7 @@ void QEasingCurve_new1()
 }
 
 /*
-QEasingCurve ( const QEasingCurve & other )
+QEasingCurve( const QEasingCurve & other )
 */
 void QEasingCurve_new2()
 {
@@ -91,7 +91,7 @@ void QEasingCurve_new2()
 
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QEasingCurve_new1();
   }
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QEASINGCURVE_DELETE )
 }
 
 /*
-void addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF & endPoint)
+void addCubicBezierSegment( const QPointF & c1, const QPointF & c2, const QPointF & endPoint )
 */
 HB_FUNC_STATIC( QEASINGCURVE_ADDCUBICBEZIERSEGMENT )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QEASINGCURVE_ADDCUBICBEZIERSEGMENT )
 }
 
 /*
-void addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b)
+void addTCBSegment( const QPointF & nextPoint, qreal t, qreal c, qreal b )
 */
 HB_FUNC_STATIC( QEASINGCURVE_ADDTCBSEGMENT )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 }
 
 /*
-void setAmplitude(qreal amplitude)
+void setAmplitude( qreal amplitude )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
 }
 
 /*
-void setOvershoot(qreal overshoot)
+void setOvershoot( qreal overshoot )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
 }
 
 /*
-void setPeriod(qreal period)
+void setPeriod( qreal period )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
 }
 
 /*
-void setType(Type type)
+void setType( QEasingCurve::Type type )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
 }
 
 /*
-void swap(QEasingCurve & other)
+void swap( QEasingCurve & other )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SWAP )
 {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TOCUBICSPLINE )
 }
 
 /*
-Type type() const
+QEasingCurve::Type type() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_TYPE )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QEASINGCURVE_TYPE )
 }
 
 /*
-qreal valueForProgress(qreal progress) const
+qreal valueForProgress( qreal progress ) const
 */
 HB_FUNC_STATIC( QEASINGCURVE_VALUEFORPROGRESS )
 {

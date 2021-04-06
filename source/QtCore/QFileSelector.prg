@@ -56,7 +56,7 @@ RETURN
 #include <QtCore/QUrl>
 
 /*
-QFileSelector(QObject *parent = 0)
+QFileSelector( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QFILESELECTOR_NEW )
 {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QFILESELECTOR_DELETE )
 }
 
 /*
-QString select(const QString &filePath) const
+QString select( const QString & filePath ) const
 */
 void QFileSelector_select1()
 {
@@ -104,7 +104,7 @@ void QFileSelector_select1()
 }
 
 /*
-QUrl select(const QUrl &filePath) const
+QUrl select( const QUrl & filePath ) const
 */
 void QFileSelector_select2()
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QFILESELECTOR_EXTRASELECTORS )
 }
 
 /*
-void setExtraSelectors(const QStringList &list)
+void setExtraSelectors( const QStringList & list )
 */
 HB_FUNC_STATIC( QFILESELECTOR_SETEXTRASELECTORS )
 {

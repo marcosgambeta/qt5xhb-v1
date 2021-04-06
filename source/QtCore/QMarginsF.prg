@@ -82,7 +82,7 @@ void QMarginsF_new1()
 }
 
 /*
-QMarginsF(qreal left, qreal top, qreal right, qreal bottom)
+QMarginsF( qreal left, qreal top, qreal right, qreal bottom )
 */
 void QMarginsF_new2()
 {
@@ -93,7 +93,7 @@ void QMarginsF_new2()
 }
 
 /*
-QMarginsF(const QMargins &margins)
+QMarginsF( const QMargins & margins )
 */
 void QMarginsF_new3()
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QMARGINSF_BOTTOM )
 }
 
 /*
-void setLeft(qreal left)
+void setLeft( qreal left )
 */
 HB_FUNC_STATIC( QMARGINSF_SETLEFT )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QMARGINSF_SETLEFT )
 }
 
 /*
-void setTop(qreal top)
+void setTop( qreal top )
 */
 HB_FUNC_STATIC( QMARGINSF_SETTOP )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QMARGINSF_SETTOP )
 }
 
 /*
-void setRight(qreal right)
+void setRight( qreal right )
 */
 HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QMARGINSF_SETRIGHT )
 }
 
 /*
-void setBottom(qreal bottom)
+void setBottom( qreal bottom )
 */
 HB_FUNC_STATIC( QMARGINSF_SETBOTTOM )
 {

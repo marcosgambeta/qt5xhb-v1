@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-QCryptographicHash(Algorithm method)
+QCryptographicHash( QCryptographicHash::Algorithm method )
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
 }
 
 /*
-void addData(const char *data, int length)
+void addData( const char * data, int length )
 */
 void QCryptographicHash_addData1()
 {
@@ -136,7 +136,7 @@ void QCryptographicHash_addData1()
 }
 
 /*
-void addData(const QByteArray &data)
+void addData( const QByteArray & data )
 */
 void QCryptographicHash_addData2()
 {
@@ -151,7 +151,7 @@ void QCryptographicHash_addData2()
 }
 
 /*
-bool addData(QIODevice* device)
+bool addData( QIODevice * device )
 */
 void QCryptographicHash_addData3()
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
 }
 
 /*
-static QByteArray hash(const QByteArray &data, Algorithm method)
+static QByteArray hash( const QByteArray & data, QCryptographicHash::Algorithm method )
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
 }
 
 /*
-static int QCryptographicHash::hashLength(QCryptographicHash::Algorithm method)
+static int hashLength( QCryptographicHash::Algorithm method )
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASHLENGTH )
 {

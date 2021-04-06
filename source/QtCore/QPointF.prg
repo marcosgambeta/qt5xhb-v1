@@ -73,7 +73,7 @@ void QPointF_new1()
 }
 
 /*
-QPointF(const QPoint & point)
+QPointF( const QPoint & point )
 */
 void QPointF_new2()
 {
@@ -82,7 +82,7 @@ void QPointF_new2()
 }
 
 /*
-QPointF(qreal xpos, qreal ypos)
+QPointF( qreal xpos, qreal ypos )
 */
 void QPointF_new3()
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
 }
 
 /*
-void setX(qreal x)
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QPOINTF_SETX )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QPOINTF_SETX )
 }
 
 /*
-void setY(qreal y)
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QPOINTF_SETY )
 {

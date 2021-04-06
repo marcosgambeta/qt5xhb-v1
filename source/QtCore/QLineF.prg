@@ -93,7 +93,7 @@ void QLineF_new1()
 }
 
 /*
-QLineF(const QPointF & p1, const QPointF & p2)
+QLineF( const QPointF & p1, const QPointF & p2 )
 */
 void QLineF_new2()
 {
@@ -102,7 +102,7 @@ void QLineF_new2()
 }
 
 /*
-QLineF(qreal x1, qreal y1, qreal x2, qreal y2)
+QLineF( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 void QLineF_new3()
 {
@@ -111,7 +111,7 @@ void QLineF_new3()
 }
 
 /*
-QLineF(const QLine & line)
+QLineF( const QLine & line )
 */
 void QLineF_new4()
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QLINEF_ANGLE )
 }
 
 /*
-qreal angleTo(const QLineF & line) const
+qreal angleTo( const QLineF & line ) const
 */
 HB_FUNC_STATIC( QLINEF_ANGLETO )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QLINEF_DY )
 }
 
 /*
-IntersectType intersect(const QLineF & line, QPointF * intersectionPoint) const
+QLineF::IntersectType intersect( const QLineF & line, QPointF * intersectionPoint ) const
 */
 HB_FUNC_STATIC( QLINEF_INTERSECT )
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
 }
 
 /*
-QPointF pointAt(qreal t) const
+QPointF pointAt( qreal t ) const
 */
 HB_FUNC_STATIC( QLINEF_POINTAT )
 {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QLINEF_POINTAT )
 }
 
 /*
-void setP1(const QPointF & p1)
+void setP1( const QPointF & p1 )
 */
 HB_FUNC_STATIC( QLINEF_SETP1 )
 {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QLINEF_SETP1 )
 }
 
 /*
-void setP2(const QPointF & p2)
+void setP2( const QPointF & p2 )
 */
 HB_FUNC_STATIC( QLINEF_SETP2 )
 {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QLINEF_SETP2 )
 }
 
 /*
-void setAngle(qreal angle)
+void setAngle( qreal angle )
 */
 HB_FUNC_STATIC( QLINEF_SETANGLE )
 {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QLINEF_SETANGLE )
 }
 
 /*
-void setLength(qreal length)
+void setLength( qreal length )
 */
 HB_FUNC_STATIC( QLINEF_SETLENGTH )
 {
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QLINEF_SETLENGTH )
 }
 
 /*
-void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
+void setLine( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 HB_FUNC_STATIC( QLINEF_SETLINE )
 {
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QLINEF_SETLINE )
 }
 
 /*
-void setPoints(const QPointF & p1, const QPointF & p2)
+void setPoints( const QPointF & p1, const QPointF & p2 )
 */
 HB_FUNC_STATIC( QLINEF_SETPOINTS )
 {
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QLINEF_TOLINE )
 }
 
 /*
-void translate(const QPointF & offset)
+void translate( const QPointF & offset )
 */
 void QLineF_translate1()
 {
@@ -721,7 +721,7 @@ void QLineF_translate1()
 }
 
 /*
-void translate(qreal dx, qreal dy)
+void translate( qreal dx, qreal dy )
 */
 void QLineF_translate2()
 {
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
 }
 
 /*
-QLineF translated(const QPointF & offset) const
+QLineF translated( const QPointF & offset ) const
 */
 void QLineF_translated1()
 {
@@ -766,7 +766,7 @@ void QLineF_translated1()
 }
 
 /*
-QLineF translated(qreal dx, qreal dy) const
+QLineF translated( qreal dx, qreal dy ) const
 */
 void QLineF_translated2()
 {
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QLINEF_UNITVECTOR )
 }
 
 /*
-static QLineF fromPolar(qreal length, qreal angle)
+static QLineF fromPolar( qreal length, qreal angle )
 */
 HB_FUNC_STATIC( QLINEF_FROMPOLAR )
 {

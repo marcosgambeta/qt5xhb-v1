@@ -83,7 +83,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+QSettings( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
 void QSettings_new1()
 {
@@ -92,7 +92,7 @@ void QSettings_new1()
 }
 
 /*
-QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+QSettings( QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
 void QSettings_new2()
 {
@@ -101,7 +101,7 @@ void QSettings_new2()
 }
 
 /*
-QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+QSettings( QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
 void QSettings_new3()
 {
@@ -110,7 +110,7 @@ void QSettings_new3()
 }
 
 /*
-QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
+QSettings( const QString & fileName, QSettings::Format format, QObject * parent = 0 )
 */
 void QSettings_new4()
 {
@@ -119,7 +119,7 @@ void QSettings_new4()
 }
 
 /*
-QSettings ( QObject * parent = 0 )
+QSettings( QObject * parent = 0 )
 */
 void QSettings_new5()
 {
@@ -129,15 +129,15 @@ void QSettings_new5()
 
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {
-  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
     QSettings_new1();
   }
-  else if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISQOBJECT(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
     QSettings_new2();
   }
-  else if( ISBETWEEN(3,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISCHAR(4)||HB_ISNIL(4)) && (ISQOBJECT(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN(3,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ( HB_ISCHAR(4)||HB_ISNIL(4)) && (ISQOBJECT(5)||HB_ISNIL(5)) )
   {
     QSettings_new3();
   }
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSETTINGS_DELETE )
 }
 
 /*
-QStringList allKeys () const
+QStringList allKeys() const
 */
 HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 }
 
 /*
-QString applicationName () const
+QString applicationName() const
 */
 HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 }
 
 /*
-void beginGroup ( const QString & prefix )
+void beginGroup( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
 }
 
 /*
-int beginReadArray ( const QString & prefix )
+int beginReadArray( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
 }
 
 /*
-void beginWriteArray ( const QString & prefix, int size = -1 )
+void beginWriteArray( const QString & prefix, int size = -1 )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->beginWriteArray( PQSTRING(1), OPINT(2,-1) );
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
 }
 
 /*
-QStringList childGroups () const
+QStringList childGroups() const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 }
 
 /*
-QStringList childKeys () const
+QStringList childKeys() const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QSETTINGS_CLEAR )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QSETTINGS_CLEAR )
 }
 
 /*
-bool contains ( const QString & key ) const
+bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QSETTINGS_CONTAINS )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QSETTINGS_CONTAINS )
 }
 
 /*
-void endArray ()
+void endArray()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
 }
 
 /*
-void endGroup ()
+void endGroup()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
 {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
 }
 
 /*
-bool fallbacksEnabled () const
+bool fallbacksEnabled() const
 */
 HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QSETTINGS_FILENAME )
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSETTINGS_FILENAME )
 }
 
 /*
-Format format () const
+QSettings::Format format() const
 */
 HB_FUNC_STATIC( QSETTINGS_FORMAT )
 {
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QSETTINGS_FORMAT )
 }
 
 /*
-QString group () const
+QString group() const
 */
 HB_FUNC_STATIC( QSETTINGS_GROUP )
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QSETTINGS_GROUP )
 }
 
 /*
-QTextCodec * iniCodec () const
+QTextCodec * iniCodec() const
 */
 HB_FUNC_STATIC( QSETTINGS_INICODEC )
 {
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QSETTINGS_INICODEC )
 }
 
 /*
-bool isWritable () const
+bool isWritable() const
 */
 HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 }
 
 /*
-QString organizationName () const
+QString organizationName() const
 */
 HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 {
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 }
 
 /*
-void remove ( const QString & key )
+void remove( const QString & key )
 */
 HB_FUNC_STATIC( QSETTINGS_REMOVE )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QSETTINGS_REMOVE )
 }
 
 /*
-Scope scope () const
+QSettings::Scope scope() const
 */
 HB_FUNC_STATIC( QSETTINGS_SCOPE )
 {
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QSETTINGS_SCOPE )
 }
 
 /*
-void setArrayIndex ( int i )
+void setArrayIndex( int i )
 */
 HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
 {
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
 }
 
 /*
-void setFallbacksEnabled ( bool b )
+void setFallbacksEnabled( bool b )
 */
 HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
 {
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
 }
 
 /*
-void setIniCodec ( QTextCodec * codec )
+void setIniCodec( QTextCodec * codec )
 */
 void QSettings_setIniCodec1()
 {
@@ -735,7 +735,7 @@ void QSettings_setIniCodec1()
 }
 
 /*
-void setIniCodec ( const char * codecName )
+void setIniCodec( const char * codecName )
 */
 void QSettings_setIniCodec2()
 {
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 }
 
 /*
-void setValue ( const QString & key, const QVariant & value )
+void setValue( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QSETTINGS_SETVALUE )
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QSETTINGS_SETVALUE )
 }
 
 /*
-Status status () const
+QSettings::Status status() const
 */
 HB_FUNC_STATIC( QSETTINGS_STATUS )
 {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QSETTINGS_STATUS )
 }
 
 /*
-void sync ()
+void sync()
 */
 HB_FUNC_STATIC( QSETTINGS_SYNC )
 {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QSETTINGS_SYNC )
 }
 
 /*
-QVariant value ( const QString & key, const QVariant & defaultValue = QVariant() ) const
+QVariant value( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC( QSETTINGS_VALUE )
 {
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QSETTINGS_VALUE )
 }
 
 /*
-static Format defaultFormat ()
+static QSettings::Format defaultFormat()
 */
 HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
 {
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
 }
 
 /*
-static void setDefaultFormat ( Format format )
+static void setDefaultFormat( QSettings::Format format )
 */
 HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
 }
 
 /*
-static void setPath ( Format format, Scope scope, const QString & path )
+static void setPath( QSettings::Format format, QSettings::Scope scope, const QString & path )
 */
 HB_FUNC_STATIC( QSETTINGS_SETPATH )
 {

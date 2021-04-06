@@ -75,7 +75,7 @@ RETURN
 #include <QtCore/QJsonObject>
 
 /*
-QJsonValueRef(QJsonArray *array, int idx)
+QJsonValueRef( QJsonArray * array, int idx )
 */
 void QJsonValueRef_new1()
 {
@@ -84,7 +84,7 @@ void QJsonValueRef_new1()
 }
 
 /*
-QJsonValueRef(QJsonObject *object, int idx)
+QJsonValueRef( QJsonObject * object, int idx )
 */
 void QJsonValueRef_new2()
 {

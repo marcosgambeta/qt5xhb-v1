@@ -82,7 +82,7 @@ void QTime_new1()
 }
 
 /*
-QTime(int h, int m, int s = 0, int ms = 0)
+QTime( int h, int m, int s = 0, int ms = 0 )
 */
 void QTime_new2()
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QTIME_NEW )
   {
     QTime_new1();
   }
-  else if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QTime_new2();
   }
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QTIME_DELETE )
 }
 
 /*
-QTime addMSecs(int ms) const
+QTime addMSecs( int ms ) const
 */
 HB_FUNC_STATIC( QTIME_ADDMSECS )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QTIME_ADDMSECS )
 }
 
 /*
-QTime addSecs(int s) const
+QTime addSecs( int s ) const
 */
 HB_FUNC_STATIC( QTIME_ADDSECS )
 {
@@ -259,7 +259,7 @@ void QTime_isValid1()
 }
 
 /*
-static bool isValid(int h, int m, int s, int ms = 0)
+static bool isValid( int h, int m, int s, int ms = 0 )
 */
 void QTime_isValid2()
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QTIME_ISVALID )
   {
     QTime_isValid1();
   }
-  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QTime_isValid2();
   }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QTIME_MSEC )
 }
 
 /*
-int msecsTo(const QTime & t) const
+int msecsTo( const QTime & t ) const
 */
 HB_FUNC_STATIC( QTIME_MSECSTO )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QTIME_SECOND )
 }
 
 /*
-int secsTo(const QTime & t) const
+int secsTo( const QTime & t ) const
 */
 HB_FUNC_STATIC( QTIME_SECSTO )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QTIME_SECSTO )
 }
 
 /*
-bool setHMS(int h, int m, int s, int ms = 0)
+bool setHMS( int h, int m, int s, int ms = 0 )
 */
 HB_FUNC_STATIC( QTIME_SETHMS )
 {
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QTIME_SETHMS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
     {
 #endif
       RBOOL( obj->setHMS( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QTIME_START )
 }
 
 /*
-QString toString(const QString & format) const
+QString toString( const QString & format ) const
 */
 void QTime_toString1()
 {
@@ -491,7 +491,7 @@ void QTime_toString1()
 }
 
 /*
-QString toString(Qt::DateFormat format = Qt::TextDate) const
+QString toString( Qt::DateFormat format = Qt::TextDate ) const
 */
 void QTime_toString2()
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
   {
     QTime_toString1();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QTime_toString2();
   }
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QTIME_CURRENTTIME )
 }
 
 /*
-static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
+static QTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
 void QTime_fromString1()
 {
@@ -550,7 +550,7 @@ void QTime_fromString1()
 }
 
 /*
-static QTime fromString(const QString & string, const QString & format)
+static QTime fromString( const QString & string, const QString & format )
 */
 void QTime_fromString2()
 {
@@ -561,7 +561,7 @@ void QTime_fromString2()
 
 HB_FUNC_STATIC( QTIME_FROMSTRING )
 {
-  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QTime_fromString1();
   }

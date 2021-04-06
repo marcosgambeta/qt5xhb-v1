@@ -89,7 +89,7 @@ void QJsonDocument_new1()
 }
 
 /*
-QJsonDocument(const QJsonObject & object)
+QJsonDocument( const QJsonObject & object )
 */
 void QJsonDocument_new2()
 {
@@ -98,7 +98,7 @@ void QJsonDocument_new2()
 }
 
 /*
-QJsonDocument(const QJsonArray & array)
+QJsonDocument( const QJsonArray & array )
 */
 void QJsonDocument_new3()
 {
@@ -107,7 +107,7 @@ void QJsonDocument_new3()
 }
 
 /*
-QJsonDocument(const QJsonDocument & other)
+QJsonDocument( const QJsonDocument & other )
 */
 void QJsonDocument_new4()
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_OBJECT )
 }
 
 /*
-const char * rawData(int * size) const
+const char * rawData( int * size ) const
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_RAWDATA )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_RAWDATA )
 }
 
 /*
-void setArray(const QJsonArray & array)
+void setArray( const QJsonArray & array )
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_SETARRAY )
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_SETARRAY )
 }
 
 /*
-void setObject(const QJsonObject & object)
+void setObject( const QJsonObject & object )
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_SETOBJECT )
 {
@@ -456,12 +456,12 @@ HB_FUNC_STATIC( QJSONDOCUMENT_TOVARIANT )
 }
 
 /*
-static QJsonDocument fromBinaryData(const QByteArray & data, DataValidation validation = Validate)
+static QJsonDocument fromBinaryData( const QByteArray & data, QJsonDocument::DataValidation validation = QJsonDocument::Validate )
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_FROMBINARYDATA )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
 #endif
     QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromBinaryData( *PQBYTEARRAY(1), HB_ISNIL(2)? (QJsonDocument::DataValidation) QJsonDocument::Validate : (QJsonDocument::DataValidation) hb_parni(2) ) );
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMBINARYDATA )
 }
 
 /*
-static QJsonDocument fromJson(const QByteArray & json, QJsonParseError * error = 0)
+static QJsonDocument fromJson( const QByteArray & json, QJsonParseError * error = 0 )
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_FROMJSON )
 {
@@ -496,12 +496,12 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMJSON )
 }
 
 /*
-static QJsonDocument fromRawData(const char * data, int size, DataValidation validation = Validate)
+static QJsonDocument fromRawData( const char * data, int size, QJsonDocument::DataValidation validation = QJsonDocument::Validate )
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_FROMRAWDATA )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
 #endif
     QJsonDocument * ptr = new QJsonDocument( QJsonDocument::fromRawData( PCONSTCHAR(1), PINT(2), HB_ISNIL(3)? (QJsonDocument::DataValidation) QJsonDocument::Validate : (QJsonDocument::DataValidation) hb_parni(3) ) );
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QJSONDOCUMENT_FROMRAWDATA )
 }
 
 /*
-static QJsonDocument fromVariant(const QVariant & variant)
+static QJsonDocument fromVariant( const QVariant & variant )
 */
 HB_FUNC_STATIC( QJSONDOCUMENT_FROMVARIANT )
 {

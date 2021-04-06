@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-QTranslator(QObject * parent = 0)
+QTranslator( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 }
 
 /*
-bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
+bool load( const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString() )
 */
 void QTranslator_load1()
 {
@@ -124,7 +124,7 @@ void QTranslator_load1()
 }
 
 /*
-bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
+bool load( const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString() )
 */
 void QTranslator_load2()
 {
@@ -137,7 +137,7 @@ void QTranslator_load2()
 }
 
 /*
-bool load(const uchar * data, int len, const QString & directory = QString())
+bool load( const uchar * data, int len, const QString & directory = QString() )
 */
 void QTranslator_load3()
 {
@@ -151,15 +151,15 @@ void QTranslator_load3()
 
 HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
-  if( ISBETWEEN(1,4) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISCHAR(3)||HB_ISNIL(3)) && (ISCHAR(4)||HB_ISNIL(4)) )
+  if( ISBETWEEN(1,4) && HB_ISCHAR(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISCHAR(4)||HB_ISNIL(4)) )
   {
     QTranslator_load1();
   }
-  else if( ISBETWEEN(2,5) && ISQLOCALE(1) && HB_ISCHAR(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISCHAR(4)||HB_ISNIL(4)) && (ISCHAR(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN(2,5) && ISQLOCALE(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISCHAR(4)||HB_ISNIL(4)) && ( HB_ISCHAR(5)||HB_ISNIL(5)) )
   {
     QTranslator_load2();
   }
-  else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISCHAR(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( HB_ISCHAR(3)||HB_ISNIL(3)) )
   {
     QTranslator_load3();
   }
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 }
 
 /*
-virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
+virtual QString translate( const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1 ) const
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN(2,4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )
     {
 #endif
       RQSTRING( obj->translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_DELETE )
 }
 
 /*
-void addAnimation ( QAbstractAnimation * animation )
+void addAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ADDANIMATION )
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ADDANIMATION )
 }
 
 /*
-QAbstractAnimation * animationAt ( int index ) const
+QAbstractAnimation * animationAt( int index ) const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
 }
 
 /*
-int animationCount () const
+int animationCount() const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
 }
 
 /*
-int indexOfAnimation ( QAbstractAnimation * animation ) const
+int indexOfAnimation( QAbstractAnimation * animation ) const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
 }
 
 /*
-void insertAnimation ( int index, QAbstractAnimation * animation )
+void insertAnimation( int index, QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
 }
 
 /*
-void removeAnimation ( QAbstractAnimation * animation )
+void removeAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_REMOVEANIMATION )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_REMOVEANIMATION )
 }
 
 /*
-QAbstractAnimation * takeAnimation ( int index )
+QAbstractAnimation * takeAnimation( int index )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
 {

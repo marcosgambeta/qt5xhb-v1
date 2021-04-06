@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_MEASUREMENTSYSTEM )
 }
 
 /*
-QVariant timeFormat(QLocale::FormatType)
+QVariant timeFormat( QLocale::FormatType )
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_TIMEFORMAT )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_TIMEFORMAT )
 }
 
 /*
-QVariant dateTimeFormat(QLocale::FormatType)
+QVariant dateTimeFormat( QLocale::FormatType )
 */
 HB_FUNC_STATIC( QBBSYSTEMLOCALEDATA_DATETIMEFORMAT )
 {

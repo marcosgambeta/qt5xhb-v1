@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QTimer ( QObject * parent = 0 )
+QTimer( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMER_NEW )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QTIMER_DELETE )
 }
 
 /*
-int interval () const
+int interval() const
 */
 HB_FUNC_STATIC( QTIMER_INTERVAL )
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTIMER_INTERVAL )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QTIMER_ISACTIVE )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTIMER_ISACTIVE )
 }
 
 /*
-bool isSingleShot () const
+bool isSingleShot() const
 */
 HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 }
 
 /*
-void setInterval ( int msec )
+void setInterval( int msec )
 */
 HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 }
 
 /*
-void setSingleShot ( bool singleShot )
+void setSingleShot( bool singleShot )
 */
 HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 }
 
 /*
-int timerId () const
+int timerId() const
 */
 HB_FUNC_STATIC( QTIMER_TIMERID )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
 }
 
 /*
-void start ( int msec )
+void start( int msec )
 */
 void QTimer_start1()
 {
@@ -258,7 +258,7 @@ void QTimer_start1()
 }
 
 /*
-void start ()
+void start()
 */
 void QTimer_start2()
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTIMER_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QTIMER_STOP )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QTIMER_STOP )
 }
 
 /*
-static void singleShot ( int msec, QObject * receiver, const char * member )
+static void singleShot( int msec, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {

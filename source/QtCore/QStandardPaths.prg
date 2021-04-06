@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-static QString writableLocation(StandardLocation type)
+static QString writableLocation( QStandardPaths::StandardLocation type )
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_WRITABLELOCATION )
 {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_WRITABLELOCATION )
 }
 
 /*
-static QStringList standardLocations(StandardLocation type)
+static QStringList standardLocations( QStandardPaths::StandardLocation type )
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_STANDARDLOCATIONS )
 {
@@ -100,12 +100,12 @@ HB_FUNC_STATIC( QSTANDARDPATHS_STANDARDLOCATIONS )
 }
 
 /*
-static QString locate(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
+static QString locate( QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
 #endif
     RQSTRING( QStandardPaths::locate( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), HB_ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );
@@ -119,12 +119,12 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATE )
 }
 
 /*
-static QStringList locateAll(StandardLocation type, const QString &fileName, LocateOptions options = LocateFile)
+static QStringList locateAll( QStandardPaths::StandardLocation type, const QString & fileName, QStandardPaths::LocateOptions options = QStandardPaths::LocateFile )
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
 #endif
     RQSTRINGLIST( QStandardPaths::locateAll( (QStandardPaths::StandardLocation) hb_parni(1), PQSTRING(2), HB_ISNIL(3)? (QStandardPaths::LocateOptions) QStandardPaths::LocateFile : (QStandardPaths::LocateOptions) hb_parni(3) ) );
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_LOCATEALL )
 }
 
 /*
-static QString displayName(StandardLocation type)
+static QString displayName( QStandardPaths::StandardLocation type )
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_DISPLAYNAME )
 {
@@ -157,12 +157,12 @@ HB_FUNC_STATIC( QSTANDARDPATHS_DISPLAYNAME )
 }
 
 /*
-static QString findExecutable(const QString &executableName, const QStringList &paths = QStringList())
+static QString findExecutable( const QString & executableName, const QStringList & paths = QStringList() )
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISARRAY(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISARRAY(2)||HB_ISNIL(2)) )
   {
 #endif
     RQSTRING( QStandardPaths::findExecutable( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSTANDARDPATHS_FINDEXECUTABLE )
 }
 
 /*
-static void setTestModeEnabled(bool testMode)
+static void setTestModeEnabled( bool testMode )
 */
 HB_FUNC_STATIC( QSTANDARDPATHS_SETTESTMODEENABLED )
 {

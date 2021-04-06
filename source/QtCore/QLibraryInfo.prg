@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_ISDEBUGBUILD )
 }
 
 /*
-static QString location(LibraryLocation)
+static QString location( QLibraryInfo::LibraryLocation )
 */
 HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
 {

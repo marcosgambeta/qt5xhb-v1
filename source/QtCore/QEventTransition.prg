@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-QEventTransition(QState * sourceState = 0)
+QEventTransition( QState * sourceState = 0 )
 */
 void QEventTransition_new1()
 {
@@ -63,7 +63,7 @@ void QEventTransition_new1()
 }
 
 /*
-QEventTransition(QObject * object, QEvent::Type type, QState * sourceState = 0)
+QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = 0 )
 */
 void QEventTransition_new2()
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 }
 
 /*
-void setEventSource(QObject * object)
+void setEventSource( QObject * object )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 }
 
 /*
-void setEventType(QEvent::Type type)
+void setEventType( QEvent::Type type )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
 {

@@ -71,7 +71,7 @@ void QXmlStreamEntityDeclaration_new1()
 }
 
 /*
-QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
+QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
 */
 void QXmlStreamEntityDeclaration_new2()
 {

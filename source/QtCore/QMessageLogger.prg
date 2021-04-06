@@ -65,7 +65,7 @@ void QMessageLogger_new1()
 }
 
 /*
-QMessageLogger(const char *file, int line, const char *function)
+QMessageLogger( const char * file, int line, const char * function )
 */
 void QMessageLogger_new2()
 {
@@ -74,7 +74,7 @@ void QMessageLogger_new2()
 }
 
 /*
-QMessageLogger(const char *file, int line, const char *function, const char *category)
+QMessageLogger( const char * file, int line, const char * function, const char * category )
 */
 void QMessageLogger_new3()
 {

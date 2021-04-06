@@ -111,7 +111,7 @@ RETURN
 #endif
 
 /*
-QRect ()
+QRect()
 */
 void QRect_new1()
 {
@@ -120,7 +120,7 @@ void QRect_new1()
 }
 
 /*
-QRect ( const QPoint & topLeft, const QPoint & bottomRight )
+QRect( const QPoint & topLeft, const QPoint & bottomRight )
 */
 void QRect_new2()
 {
@@ -129,7 +129,7 @@ void QRect_new2()
 }
 
 /*
-QRect ( const QPoint & topLeft, const QSize & size )
+QRect( const QPoint & topLeft, const QSize & size )
 */
 void QRect_new3()
 {
@@ -138,7 +138,7 @@ void QRect_new3()
 }
 
 /*
-QRect ( int x, int y, int width, int height )
+QRect( int x, int y, int width, int height )
 */
 void QRect_new4()
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QRECT_DELETE )
 }
 
 /*
-void adjust ( int dx1, int dy1, int dx2, int dy2 )
+void adjust( int dx1, int dy1, int dx2, int dy2 )
 */
 HB_FUNC_STATIC( QRECT_ADJUST )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QRECT_ADJUST )
 }
 
 /*
-QRect adjusted ( int dx1, int dy1, int dx2, int dy2 ) const
+QRect adjusted( int dx1, int dy1, int dx2, int dy2 ) const
 */
 HB_FUNC_STATIC( QRECT_ADJUSTED )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QRECT_ADJUSTED )
 }
 
 /*
-int bottom () const
+int bottom() const
 */
 HB_FUNC_STATIC( QRECT_BOTTOM )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QRECT_BOTTOM )
 }
 
 /*
-QPoint bottomLeft () const
+QPoint bottomLeft() const
 */
 HB_FUNC_STATIC( QRECT_BOTTOMLEFT )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QRECT_BOTTOMLEFT )
 }
 
 /*
-QPoint bottomRight () const
+QPoint bottomRight() const
 */
 HB_FUNC_STATIC( QRECT_BOTTOMRIGHT )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QRECT_BOTTOMRIGHT )
 }
 
 /*
-QPoint center () const
+QPoint center() const
 */
 HB_FUNC_STATIC( QRECT_CENTER )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QRECT_CENTER )
 }
 
 /*
-bool contains ( const QPoint & point, bool proper = false ) const
+bool contains( const QPoint & point, bool proper = false ) const
 */
 void QRect_contains1()
 {
@@ -351,7 +351,7 @@ void QRect_contains1()
 }
 
 /*
-bool contains ( int x, int y, bool proper ) const
+bool contains( int x, int y, bool proper ) const
 */
 void QRect_contains2()
 {
@@ -364,7 +364,7 @@ void QRect_contains2()
 }
 
 /*
-bool contains ( int x, int y ) const
+bool contains( int x, int y ) const
 */
 void QRect_contains3()
 {
@@ -377,7 +377,7 @@ void QRect_contains3()
 }
 
 /*
-bool contains ( const QRect & rectangle, bool proper = false ) const
+bool contains( const QRect & rectangle, bool proper = false ) const
 */
 void QRect_contains4()
 {
@@ -391,7 +391,7 @@ void QRect_contains4()
 
 HB_FUNC_STATIC( QRECT_CONTAINS )
 {
-  if( ISBETWEEN(1,2) && ISQPOINT(1) && (ISLOG(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQPOINT(1) && ( HB_ISLOG(2)||HB_ISNIL(2)) )
   {
     QRect_contains1();
   }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
   {
     QRect_contains3();
   }
-  else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISLOG(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQRECT(1) && ( HB_ISLOG(2)||HB_ISNIL(2)) )
   {
     QRect_contains4();
   }
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
 }
 
 /*
-void getCoords ( int * x1, int * y1, int * x2, int * y2 ) const
+void getCoords( int * x1, int * y1, int * x2, int * y2 ) const
 */
 HB_FUNC_STATIC( QRECT_GETCOORDS )
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QRECT_GETCOORDS )
 }
 
 /*
-void getRect ( int * x, int * y, int * width, int * height ) const
+void getRect( int * x, int * y, int * width, int * height ) const
 */
 HB_FUNC_STATIC( QRECT_GETRECT )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QRECT_GETRECT )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QRECT_HEIGHT )
 {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QRECT_HEIGHT )
 }
 
 /*
-QRect intersected ( const QRect & rectangle ) const
+QRect intersected( const QRect & rectangle ) const
 */
 HB_FUNC_STATIC( QRECT_INTERSECTED )
 {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTED )
 }
 
 /*
-bool intersects ( const QRect & rectangle ) const
+bool intersects( const QRect & rectangle ) const
 */
 HB_FUNC_STATIC( QRECT_INTERSECTS )
 {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTS )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QRECT_ISEMPTY )
 {
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QRECT_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QRECT_ISNULL )
 {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QRECT_ISNULL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QRECT_ISVALID )
 {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QRECT_ISVALID )
 }
 
 /*
-int left () const
+int left() const
 */
 HB_FUNC_STATIC( QRECT_LEFT )
 {
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QRECT_LEFT )
 }
 
 /*
-void moveBottom ( int y )
+void moveBottom( int y )
 */
 HB_FUNC_STATIC( QRECT_MOVEBOTTOM )
 {
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOM )
 }
 
 /*
-void moveBottomLeft ( const QPoint & position )
+void moveBottomLeft( const QPoint & position )
 */
 HB_FUNC_STATIC( QRECT_MOVEBOTTOMLEFT )
 {
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOMLEFT )
 }
 
 /*
-void moveBottomRight ( const QPoint & position )
+void moveBottomRight( const QPoint & position )
 */
 HB_FUNC_STATIC( QRECT_MOVEBOTTOMRIGHT )
 {
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QRECT_MOVEBOTTOMRIGHT )
 }
 
 /*
-void moveCenter ( const QPoint & position )
+void moveCenter( const QPoint & position )
 */
 HB_FUNC_STATIC( QRECT_MOVECENTER )
 {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QRECT_MOVECENTER )
 }
 
 /*
-void moveLeft ( int x )
+void moveLeft( int x )
 */
 HB_FUNC_STATIC( QRECT_MOVELEFT )
 {
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QRECT_MOVELEFT )
 }
 
 /*
-void moveRight ( int x )
+void moveRight( int x )
 */
 HB_FUNC_STATIC( QRECT_MOVERIGHT )
 {
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QRECT_MOVERIGHT )
 }
 
 /*
-void moveTo ( int x, int y )
+void moveTo( int x, int y )
 */
 void QRect_moveTo1()
 {
@@ -822,7 +822,7 @@ void QRect_moveTo1()
 }
 
 /*
-void moveTo ( const QPoint & position )
+void moveTo( const QPoint & position )
 */
 void QRect_moveTo2()
 {
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QRECT_MOVETO )
 }
 
 /*
-void moveTop ( int y )
+void moveTop( int y )
 */
 HB_FUNC_STATIC( QRECT_MOVETOP )
 {
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QRECT_MOVETOP )
 }
 
 /*
-void moveTopLeft ( const QPoint & position )
+void moveTopLeft( const QPoint & position )
 */
 HB_FUNC_STATIC( QRECT_MOVETOPLEFT )
 {
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QRECT_MOVETOPLEFT )
 }
 
 /*
-void moveTopRight ( const QPoint & position )
+void moveTopRight( const QPoint & position )
 */
 HB_FUNC_STATIC( QRECT_MOVETOPRIGHT )
 {
@@ -931,7 +931,7 @@ HB_FUNC_STATIC( QRECT_MOVETOPRIGHT )
 }
 
 /*
-QRect normalized () const
+QRect normalized() const
 */
 HB_FUNC_STATIC( QRECT_NORMALIZED )
 {
@@ -956,7 +956,7 @@ HB_FUNC_STATIC( QRECT_NORMALIZED )
 }
 
 /*
-int right () const
+int right() const
 */
 HB_FUNC_STATIC( QRECT_RIGHT )
 {
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QRECT_RIGHT )
 }
 
 /*
-void setBottom ( int y )
+void setBottom( int y )
 */
 HB_FUNC_STATIC( QRECT_SETBOTTOM )
 {
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC( QRECT_SETBOTTOM )
 }
 
 /*
-void setBottomLeft ( const QPoint & position )
+void setBottomLeft( const QPoint & position )
 */
 HB_FUNC_STATIC( QRECT_SETBOTTOMLEFT )
 {
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC( QRECT_SETBOTTOMLEFT )
 }
 
 /*
-void setBottomRight ( const QPoint & position )
+void setBottomRight( const QPoint & position )
 */
 HB_FUNC_STATIC( QRECT_SETBOTTOMRIGHT )
 {
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC( QRECT_SETBOTTOMRIGHT )
 }
 
 /*
-void setCoords ( int x1, int y1, int x2, int y2 )
+void setCoords( int x1, int y1, int x2, int y2 )
 */
 HB_FUNC_STATIC( QRECT_SETCOORDS )
 {
@@ -1084,7 +1084,7 @@ HB_FUNC_STATIC( QRECT_SETCOORDS )
 }
 
 /*
-void setHeight ( int height )
+void setHeight( int height )
 */
 HB_FUNC_STATIC( QRECT_SETHEIGHT )
 {
@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC( QRECT_SETHEIGHT )
 }
 
 /*
-void setLeft ( int x )
+void setLeft( int x )
 */
 HB_FUNC_STATIC( QRECT_SETLEFT )
 {
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QRECT_SETLEFT )
 }
 
 /*
-void setRect ( int x, int y, int width, int height )
+void setRect( int x, int y, int width, int height )
 */
 HB_FUNC_STATIC( QRECT_SETRECT )
 {
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC( QRECT_SETRECT )
 }
 
 /*
-void setRight ( int x )
+void setRight( int x )
 */
 HB_FUNC_STATIC( QRECT_SETRIGHT )
 {
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC( QRECT_SETRIGHT )
 }
 
 /*
-void setSize ( const QSize & size )
+void setSize( const QSize & size )
 */
 HB_FUNC_STATIC( QRECT_SETSIZE )
 {
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC( QRECT_SETSIZE )
 }
 
 /*
-void setTop ( int y )
+void setTop( int y )
 */
 HB_FUNC_STATIC( QRECT_SETTOP )
 {
@@ -1240,7 +1240,7 @@ HB_FUNC_STATIC( QRECT_SETTOP )
 }
 
 /*
-void setTopLeft ( const QPoint & position )
+void setTopLeft( const QPoint & position )
 */
 HB_FUNC_STATIC( QRECT_SETTOPLEFT )
 {
@@ -1266,7 +1266,7 @@ HB_FUNC_STATIC( QRECT_SETTOPLEFT )
 }
 
 /*
-void setTopRight ( const QPoint & position )
+void setTopRight( const QPoint & position )
 */
 HB_FUNC_STATIC( QRECT_SETTOPRIGHT )
 {
@@ -1292,7 +1292,7 @@ HB_FUNC_STATIC( QRECT_SETTOPRIGHT )
 }
 
 /*
-void setWidth ( int width )
+void setWidth( int width )
 */
 HB_FUNC_STATIC( QRECT_SETWIDTH )
 {
@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QRECT_SETWIDTH )
 }
 
 /*
-void setX ( int x )
+void setX( int x )
 */
 HB_FUNC_STATIC( QRECT_SETX )
 {
@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC( QRECT_SETX )
 }
 
 /*
-void setY ( int y )
+void setY( int y )
 */
 HB_FUNC_STATIC( QRECT_SETY )
 {
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC( QRECT_SETY )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QRECT_SIZE )
 {
@@ -1395,7 +1395,7 @@ HB_FUNC_STATIC( QRECT_SIZE )
 }
 
 /*
-int top () const
+int top() const
 */
 HB_FUNC_STATIC( QRECT_TOP )
 {
@@ -1419,7 +1419,7 @@ HB_FUNC_STATIC( QRECT_TOP )
 }
 
 /*
-QPoint topLeft () const
+QPoint topLeft() const
 */
 HB_FUNC_STATIC( QRECT_TOPLEFT )
 {
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC( QRECT_TOPLEFT )
 }
 
 /*
-QPoint topRight () const
+QPoint topRight() const
 */
 HB_FUNC_STATIC( QRECT_TOPRIGHT )
 {
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( QRECT_TOPRIGHT )
 }
 
 /*
-void translate ( int dx, int dy )
+void translate( int dx, int dy )
 */
 void QRect_translate1()
 {
@@ -1484,7 +1484,7 @@ void QRect_translate1()
 }
 
 /*
-void translate ( const QPoint & offset )
+void translate( const QPoint & offset )
 */
 void QRect_translate2()
 {
@@ -1515,7 +1515,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATE )
 }
 
 /*
-QRect translated ( int dx, int dy ) const
+QRect translated( int dx, int dy ) const
 */
 void QRect_translated1()
 {
@@ -1529,7 +1529,7 @@ void QRect_translated1()
 }
 
 /*
-QRect translated ( const QPoint & offset ) const
+QRect translated( const QPoint & offset ) const
 */
 void QRect_translated2()
 {
@@ -1559,7 +1559,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
 }
 
 /*
-QRect united ( const QRect & rectangle ) const
+QRect united( const QRect & rectangle ) const
 */
 HB_FUNC_STATIC( QRECT_UNITED )
 {
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC( QRECT_UNITED )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QRECT_WIDTH )
 {
@@ -1608,7 +1608,7 @@ HB_FUNC_STATIC( QRECT_WIDTH )
 }
 
 /*
-int x () const
+int x() const
 */
 HB_FUNC_STATIC( QRECT_X )
 {
@@ -1632,7 +1632,7 @@ HB_FUNC_STATIC( QRECT_X )
 }
 
 /*
-int y () const
+int y() const
 */
 HB_FUNC_STATIC( QRECT_Y )
 {

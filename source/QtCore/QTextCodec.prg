@@ -73,7 +73,7 @@ RETURN
 #endif
 
 /*
-bool canEncode(QChar) const
+bool canEncode( QChar ) const
 */
 void QTextCodec_canEncode1()
 {
@@ -86,7 +86,7 @@ void QTextCodec_canEncode1()
 }
 
 /*
-bool canEncode(const QString&) const
+bool canEncode( const QString & ) const
 */
 void QTextCodec_canEncode2()
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 }
 
 /*
-QString toUnicode(const QByteArray&) const
+QString toUnicode( const QByteArray & ) const
 */
 void QTextCodec_toUnicode1()
 {
@@ -128,7 +128,7 @@ void QTextCodec_toUnicode1()
 }
 
 /*
-QString toUnicode(const char* chars) const
+QString toUnicode( const char * chars ) const
 */
 void QTextCodec_toUnicode2()
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 }
 
 /*
-QByteArray fromUnicode(const QString& uc) const
+QByteArray fromUnicode( const QString & uc ) const
 */
 void QTextCodec_fromUnicode1()
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
 }
 
 /*
-QTextDecoder* makeDecoder(ConversionFlags flags = DefaultConversion) const
+QTextDecoder * makeDecoder( QTextCodec::ConversionFlags flags = QTextCodec::DefaultConversion ) const
 */
 HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QTextDecoder * ptr = obj->makeDecoder( HB_ISNIL(1)? (QTextCodec::ConversionFlags) QTextCodec::DefaultConversion : (QTextCodec::ConversionFlags) hb_parni(1) );
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
 }
 
 /*
-QTextEncoder* makeEncoder(ConversionFlags flags = DefaultConversion) const
+QTextEncoder * makeEncoder( QTextCodec::ConversionFlags flags = QTextCodec::DefaultConversion ) const
 */
 HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QTextEncoder * ptr = obj->makeEncoder( HB_ISNIL(1)? (QTextCodec::ConversionFlags) QTextCodec::DefaultConversion : (QTextCodec::ConversionFlags) hb_parni(1) );
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
 }
 
 /*
-static QTextCodec* codecForName(const QByteArray &name)
+static QTextCodec * codecForName( const QByteArray & name )
 */
 void QTextCodec_codecForName1()
 {
@@ -344,7 +344,7 @@ void QTextCodec_codecForName1()
 }
 
 /*
-static QTextCodec* codecForName(const char *name)
+static QTextCodec * codecForName( const char * name )
 */
 void QTextCodec_codecForName2()
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 }
 
 /*
-static QTextCodec* codecForMib(int mib)
+static QTextCodec * codecForMib( int mib )
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORMIB )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
 }
 
 /*
-static QTextCodec* codecForLocale()
+static QTextCodec * codecForLocale()
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
 }
 
 /*
-static void setCodecForLocale(QTextCodec *c)
+static void setCodecForLocale( QTextCodec * c )
 */
 HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
 }
 
 /*
-static QTextCodec *codecForHtml(const QByteArray &ba)
+static QTextCodec * codecForHtml( const QByteArray & ba )
 */
 void QTextCodec_codecForHtml1()
 {
@@ -508,7 +508,7 @@ void QTextCodec_codecForHtml1()
 }
 
 /*
-static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
+static QTextCodec * codecForHtml( const QByteArray & ba, QTextCodec * defaultCodec )
 */
 void QTextCodec_codecForHtml2()
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 }
 
 /*
-static QTextCodec *codecForUtfText(const QByteArray &ba)
+static QTextCodec * codecForUtfText( const QByteArray & ba )
 */
 void QTextCodec_codecForUtfText1()
 {
@@ -544,7 +544,7 @@ void QTextCodec_codecForUtfText1()
 }
 
 /*
-static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
+static QTextCodec * codecForUtfText( const QByteArray & ba, QTextCodec * defaultCodec )
 */
 void QTextCodec_codecForUtfText2()
 {

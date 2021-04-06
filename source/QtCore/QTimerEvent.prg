@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QTimerEvent(int timerId)
+QTimerEvent( int timerId )
 */
 HB_FUNC_STATIC( QTIMEREVENT_NEW )
 {

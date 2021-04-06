@@ -114,7 +114,7 @@ void QFileInfo_new1()
 }
 
 /*
-QFileInfo(const QString & file)
+QFileInfo( const QString & file )
 */
 void QFileInfo_new2()
 {
@@ -123,7 +123,7 @@ void QFileInfo_new2()
 }
 
 /*
-QFileInfo(const QFile & file)
+QFileInfo( const QFile & file )
 */
 void QFileInfo_new3()
 {
@@ -132,7 +132,7 @@ void QFileInfo_new3()
 }
 
 /*
-QFileInfo(const QDir & dir, const QString & file)
+QFileInfo( const QDir & dir, const QString & file )
 */
 void QFileInfo_new4()
 {
@@ -141,7 +141,7 @@ void QFileInfo_new4()
 }
 
 /*
-QFileInfo(const QFileInfo & fileinfo)
+QFileInfo( const QFileInfo & fileinfo )
 */
 void QFileInfo_new5()
 {
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QFILEINFO_PATH )
 }
 
 /*
-bool permission(QFile::Permissions permissions) const
+bool permission( QFile::Permissions permissions ) const
 */
 HB_FUNC_STATIC( QFILEINFO_PERMISSION )
 {
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QFILEINFO_REFRESH )
 }
 
 /*
-void setCaching(bool enable)
+void setCaching( bool enable )
 */
 HB_FUNC_STATIC( QFILEINFO_SETCACHING )
 {
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC( QFILEINFO_SETCACHING )
 }
 
 /*
-void setFile(const QString & file)
+void setFile( const QString & file )
 */
 void QFileInfo_setFile1()
 {
@@ -1155,7 +1155,7 @@ void QFileInfo_setFile1()
 }
 
 /*
-void setFile(const QFile & file)
+void setFile( const QFile & file )
 */
 void QFileInfo_setFile2()
 {
@@ -1170,7 +1170,7 @@ void QFileInfo_setFile2()
 }
 
 /*
-void setFile(const QDir & dir, const QString & file)
+void setFile( const QDir & dir, const QString & file )
 */
 void QFileInfo_setFile3()
 {
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QFILEINFO_SUFFIX )
 }
 
 /*
-void swap(QFileInfo & other)
+void swap( QFileInfo & other )
 */
 HB_FUNC_STATIC( QFILEINFO_SWAP )
 {

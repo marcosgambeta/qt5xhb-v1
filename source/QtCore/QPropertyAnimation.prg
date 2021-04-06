@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QPropertyAnimation ( QObject * parent = 0 )
+QPropertyAnimation( QObject * parent = 0 )
 */
 void QPropertyAnimation_new1()
 {
@@ -64,7 +64,7 @@ void QPropertyAnimation_new1()
 }
 
 /*
-QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 */
 void QPropertyAnimation_new2()
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 }
 
 /*
-QByteArray propertyName () const
+QByteArray propertyName() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 }
 
 /*
-void setPropertyName ( const QByteArray & propertyName )
+void setPropertyName( const QByteArray & propertyName )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 }
 
 /*
-void setTargetObject ( QObject * target )
+void setTargetObject( QObject * target )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 }
 
 /*
-QObject * targetObject () const
+QObject * targetObject() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
 {

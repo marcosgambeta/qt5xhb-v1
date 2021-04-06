@@ -82,7 +82,7 @@ void QMimeType_new1()
 }
 
 /*
-QMimeType(const QMimeType &other)
+QMimeType( const QMimeType & other )
 */
 void QMimeType_new2()
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QMIMETYPE_DELETE )
 }
 
 /*
-void swap(QMimeType &other)
+void swap( QMimeType & other )
 */
 HB_FUNC_STATIC( QMIMETYPE_SWAP )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QMIMETYPE_PREFERREDSUFFIX )
 }
 
 /*
-bool inherits(const QString &mimeTypeName) const
+bool inherits( const QString & mimeTypeName ) const
 */
 HB_FUNC_STATIC( QMIMETYPE_INHERITS )
 {

@@ -76,7 +76,7 @@ void QTextBoundaryFinder_new1()
 }
 
 /*
-QTextBoundaryFinder(const QTextBoundaryFinder &other)
+QTextBoundaryFinder( const QTextBoundaryFinder & other )
 */
 void QTextBoundaryFinder_new2()
 {
@@ -85,7 +85,7 @@ void QTextBoundaryFinder_new2()
 }
 
 /*
-QTextBoundaryFinder(BoundaryType type, const QString &string)
+QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
 */
 void QTextBoundaryFinder_new3()
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISVALID )
 }
 
 /*
-BoundaryType type() const
+QTextBoundaryFinder::BoundaryType type() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_TYPE )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
 }
 
 /*
-void setPosition(int position)
+void setPosition( int position )
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_ISATBOUNDARY )
 }
 
 /*
-BoundaryReasons boundaryReasons() const
+QTextBoundaryFinder::BoundaryReasons boundaryReasons() const
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_BOUNDARYREASONS )
 {

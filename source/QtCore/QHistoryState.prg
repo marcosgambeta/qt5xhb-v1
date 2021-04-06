@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-QHistoryState(QState *parent = 0)
+QHistoryState( QState * parent = 0 )
 */
 void QHistoryState_new1()
 {
@@ -63,7 +63,7 @@ void QHistoryState_new1()
 }
 
 /*
-QHistoryState(HistoryType type, QState *parent = 0)
+QHistoryState( QHistoryState::HistoryType type, QState * parent = 0 )
 */
 void QHistoryState_new2()
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DELETE )
 }
 
 /*
-QAbstractState *defaultState() const
+QAbstractState * defaultState() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 }
 
 /*
-void setDefaultState(QAbstractState *state)
+void setDefaultState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 }
 
 /*
-HistoryType historyType() const
+QHistoryState::HistoryType historyType() const
 */
 HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 }
 
 /*
-void setHistoryType(HistoryType type)
+void setHistoryType( QHistoryState::HistoryType type )
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
 {

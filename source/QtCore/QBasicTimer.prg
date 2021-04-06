@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QBasicTimer ()
+QBasicTimer()
 */
 HB_FUNC_STATIC( QBASICTIMER_NEW )
 {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QBASICTIMER_DELETE )
 }
 
 /*
-bool isActive () const
+bool isActive() const
 */
 HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 }
 
 /*
-void start ( int msec, QObject * object )
+void start( int msec, QObject * object )
 */
 HB_FUNC_STATIC( QBASICTIMER_START )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QBASICTIMER_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QBASICTIMER_STOP )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QBASICTIMER_STOP )
 }
 
 /*
-int timerId () const
+int timerId() const
 */
 HB_FUNC_STATIC( QBASICTIMER_TIMERID )
 {

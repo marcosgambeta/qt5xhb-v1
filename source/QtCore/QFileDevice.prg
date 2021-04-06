@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QFILEDEVICE_DELETE )
 }
 
 /*
-FileError error() const
+QFileDevice::FileError error() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_ERROR )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QFILEDEVICE_HANDLE )
 }
 
 /*
-virtual Permissions permissions() const
+virtual QFileDevice::Permissions permissions() const
 */
 HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QFILEDEVICE_PERMISSIONS )
 }
 
 /*
-virtual bool resize(qint64 sz)
+virtual bool resize( qint64 sz )
 */
 HB_FUNC_STATIC( QFILEDEVICE_RESIZE )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QFILEDEVICE_RESIZE )
 }
 
 /*
-virtual bool setPermissions(Permissions permissions)
+virtual bool setPermissions( QFileDevice::Permissions permissions )
 */
 HB_FUNC_STATIC( QFILEDEVICE_SETPERMISSIONS )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QFILEDEVICE_POS )
 }
 
 /*
-virtual bool seek(qint64 pos)
+virtual bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QFILEDEVICE_SEEK )
 {

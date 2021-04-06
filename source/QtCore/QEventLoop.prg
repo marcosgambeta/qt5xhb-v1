@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QEventLoop ( QObject * parent = 0 )
+QEventLoop( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_NEW )
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QEVENTLOOP_DELETE )
 }
 
 /*
-int exec ( ProcessEventsFlags flags = AllEvents )
+int exec( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RINT( obj->exec( HB_ISNIL(1)? (QEventLoop::ProcessEventsFlags) QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) ) );
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 }
 
 /*
-void exit ( int returnCode = 0 )
+void exit( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->exit( OPINT(1,0) );
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 }
 
 /*
-bool isRunning () const
+bool isRunning() const
 */
 HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 }
 
 /*
-bool processEvents ( ProcessEventsFlags flags = AllEvents )
+bool processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
 void QEventLoop_processEvents1()
 {
@@ -177,7 +177,7 @@ void QEventLoop_processEvents1()
 }
 
 /*
-void processEvents ( ProcessEventsFlags flags, int maxTime )
+void processEvents( QEventLoop::ProcessEventsFlags flags, int maxTime )
 */
 void QEventLoop_processEvents2()
 {
@@ -193,7 +193,7 @@ void QEventLoop_processEvents2()
 
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QEventLoop_processEvents1();
   }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 }
 
 /*
-void wakeUp ()
+void wakeUp()
 */
 HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 }
 
 /*
-void quit ()
+void quit()
 */
 HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 {

@@ -66,7 +66,7 @@ RETURN
 #endif
 
 /*
-QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator)
+QRegularExpressionMatchIterator( const QRegularExpressionMatchIterator & iterator )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_NEW )
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_REGULAREXPRESSION )
 }
 
 /*
-void swap(QRegularExpressionMatchIterator & other)
+void swap( QRegularExpressionMatchIterator & other )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCHITERATOR_SWAP )
 {

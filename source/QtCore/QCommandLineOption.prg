@@ -65,7 +65,7 @@ RETURN
 #endif
 
 /*
-QCommandLineOption(const QString &name, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
+QCommandLineOption( const QString & name, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
 */
 void QCommandLineOption_new1()
 {
@@ -74,7 +74,7 @@ void QCommandLineOption_new1()
 }
 
 /*
-QCommandLineOption(const QStringList &names, const QString &description = QString(),const QString &valueName = QString(),const QString &defaultValue = QString())
+QCommandLineOption( const QStringList & names, const QString & description = QString(), const QString & valueName = QString(), const QString & defaultValue = QString() )
 */
 void QCommandLineOption_new2()
 {
@@ -83,7 +83,7 @@ void QCommandLineOption_new2()
 }
 
 /*
-QCommandLineOption(const QCommandLineOption &other)
+QCommandLineOption( const QCommandLineOption & other )
 */
 void QCommandLineOption_new3()
 {
@@ -93,11 +93,11 @@ void QCommandLineOption_new3()
 
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_NEW )
 {
-  if( ISBETWEEN(1,4) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISCHAR(3)||HB_ISNIL(3)) && (ISCHAR(4)||HB_ISNIL(4)) )
+  if( ISBETWEEN(1,4) && HB_ISCHAR(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISCHAR(4)||HB_ISNIL(4)) )
   {
     QCommandLineOption_new1();
   }
-  else if( ISBETWEEN(1,4) && HB_ISARRAY(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISCHAR(3)||HB_ISNIL(3)) && (ISCHAR(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && HB_ISARRAY(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISCHAR(4)||HB_ISNIL(4)) )
   {
     QCommandLineOption_new2();
   }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DELETE )
 }
 
 /*
-void swap(QCommandLineOption &other)
+void swap( QCommandLineOption & other )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SWAP )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_NAMES )
 }
 
 /*
-void setValueName(const QString &name)
+void setValueName( const QString & name )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETVALUENAME )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_VALUENAME )
 }
 
 /*
-void setDescription(const QString &description)
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDESCRIPTION )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_DESCRIPTION )
 }
 
 /*
-void setDefaultValue(const QString &defaultValue)
+void setDefaultValue( const QString & defaultValue )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUE )
 }
 
 /*
-void setDefaultValues(const QStringList &defaultValues)
+void setDefaultValues( const QStringList & defaultValues )
 */
 HB_FUNC_STATIC( QCOMMANDLINEOPTION_SETDEFAULTVALUES )
 {

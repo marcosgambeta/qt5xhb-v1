@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_DELETE )
 }
 
 /*
-const char *name() const
+const char * name() const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_NAME )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NAME )
 }
 
 /*
-const char *typeName() const
+const char * typeName() const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_TYPENAME )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
 }
 
 /*
-bool isDesignable(const QObject *obj = 0) const
+bool isDesignable( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
 }
 
 /*
-bool isScriptable(const QObject *obj = 0) const
+bool isScriptable( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
 }
 
 /*
-bool isStored(const QObject *obj = 0) const
+bool isStored( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
 }
 
 /*
-bool isEditable(const QObject *obj = 0) const
+bool isEditable( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
 }
 
 /*
-bool isUser(const QObject *obj = 0) const
+bool isUser( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
 {
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
 }
 
 /*
-QVariant read(const QObject *obj) const
+QVariant read( const QObject * obj ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_READ )
 {
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_READ )
 }
 
 /*
-bool write(QObject *obj, const QVariant &value) const
+bool write( QObject * obj, const QVariant & value ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
 {
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
 }
 
 /*
-bool reset(QObject *obj) const
+bool reset( QObject * obj ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_RESET )
 {
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISVALID )
 }
 
 /*
-const QMetaObject *enclosingMetaObject() const
+const QMetaObject * enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ENCLOSINGMETAOBJECT )
 {

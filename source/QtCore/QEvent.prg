@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-QEvent ( Type type )
+QEvent( QEvent::Type type )
 */
 HB_FUNC_STATIC( QEVENT_NEW )
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QEVENT_DELETE )
 }
 
 /*
-void accept ()
+void accept()
 */
 HB_FUNC_STATIC( QEVENT_ACCEPT )
 {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QEVENT_ACCEPT )
 }
 
 /*
-void ignore ()
+void ignore()
 */
 HB_FUNC_STATIC( QEVENT_IGNORE )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QEVENT_IGNORE )
 }
 
 /*
-bool isAccepted () const
+bool isAccepted() const
 */
 HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 }
 
 /*
-void setAccepted ( bool accepted )
+void setAccepted( bool accepted )
 */
 HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 }
 
 /*
-bool spontaneous () const
+bool spontaneous() const
 */
 HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 }
 
 /*
-Type type () const
+QEvent::Type type() const
 */
 HB_FUNC_STATIC( QEVENT_TYPE )
 {
@@ -246,12 +246,12 @@ HB_FUNC_STATIC( QEVENT_TYPE )
 }
 
 /*
-static int registerEventType ( int hint = -1 )
+static int registerEventType( int hint = -1 )
 */
 HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
   {
 #endif
     RINT( QEvent::registerEventType( OPINT(1,-1) ) );

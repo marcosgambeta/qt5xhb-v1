@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QWriteLocker(QReadWriteLock * lock)
+QWriteLocker( QReadWriteLock * lock )
 */
 HB_FUNC_STATIC( QWRITELOCKER_NEW )
 {

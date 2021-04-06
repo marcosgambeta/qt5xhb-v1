@@ -68,7 +68,7 @@ void QXmlStreamNamespaceDeclaration_new1()
 }
 
 /*
-QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
+QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
 */
 void QXmlStreamNamespaceDeclaration_new2()
 {
@@ -77,7 +77,7 @@ void QXmlStreamNamespaceDeclaration_new2()
 }
 
 /*
-QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
+QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
 */
 void QXmlStreamNamespaceDeclaration_new3()
 {

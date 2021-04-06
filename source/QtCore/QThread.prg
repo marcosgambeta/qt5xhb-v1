@@ -74,7 +74,7 @@ RETURN
 #include <QtCore/QAbstractEventDispatcher>
 
 /*
-QThread(QObject * parent = 0)
+QThread( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTHREAD_NEW )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QTHREAD_EVENTDISPATCHER )
 }
 
 /*
-void exit(int returnCode = 0)
+void exit( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QTHREAD_EXIT )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QTHREAD_EXIT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->exit( OPINT(1,0) );
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QTHREAD_ISRUNNING )
 }
 
 /*
-Priority priority() const
+QThread::Priority priority() const
 */
 HB_FUNC_STATIC( QTHREAD_PRIORITY )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTHREAD_PRIORITY )
 }
 
 /*
-void setEventDispatcher(QAbstractEventDispatcher * eventDispatcher)
+void setEventDispatcher( QAbstractEventDispatcher * eventDispatcher )
 */
 HB_FUNC_STATIC( QTHREAD_SETEVENTDISPATCHER )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QTHREAD_SETEVENTDISPATCHER )
 }
 
 /*
-void setPriority(Priority priority)
+void setPriority( QThread::Priority priority )
 */
 HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
 }
 
 /*
-void setStackSize(uint stackSize)
+void setStackSize( uint stackSize )
 */
 HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QTHREAD_STACKSIZE )
 }
 
 /*
-virtual bool event(QEvent * event)
+virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QTHREAD_EVENT )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QTHREAD_QUIT )
 }
 
 /*
-void start(Priority priority = InheritPriority)
+void start( QThread::Priority priority = QThread::InheritPriority )
 */
 HB_FUNC_STATIC( QTHREAD_START )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QTHREAD_START )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->start( HB_ISNIL(1)? (QThread::Priority) QThread::InheritPriority : (QThread::Priority) hb_parni(1) );
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 }
 
 /*
-static void msleep(unsigned long msecs)
+static void msleep( unsigned long msecs )
 */
 HB_FUNC_STATIC( QTHREAD_MSLEEP )
 {
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QTHREAD_MSLEEP )
 }
 
 /*
-static void sleep(unsigned long secs)
+static void sleep( unsigned long secs )
 */
 HB_FUNC_STATIC( QTHREAD_SLEEP )
 {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QTHREAD_SLEEP )
 }
 
 /*
-static void usleep(unsigned long usecs)
+static void usleep( unsigned long usecs )
 */
 HB_FUNC_STATIC( QTHREAD_USLEEP )
 {

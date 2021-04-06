@@ -34,7 +34,6 @@ CLASS QMetaMethod
    METHOD methodIndex
    METHOD revision
    METHOD enclosingMetaObject
-   METHOD invoke
    METHOD methodSignature
    METHOD name
    METHOD returnType
@@ -109,7 +108,7 @@ HB_FUNC_STATIC( QMETAMETHOD_DELETE )
 }
 
 /*
-const char *typeName() const
+const char * typeName() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_TYPENAME )
 {
@@ -237,7 +236,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERNAMES )
 }
 
 /*
-const char *tag() const
+const char * tag() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_TAG )
 {
@@ -261,7 +260,7 @@ HB_FUNC_STATIC( QMETAMETHOD_TAG )
 }
 
 /*
-Access access() const
+QMetaMethod::Access access() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
 {
@@ -285,7 +284,7 @@ HB_FUNC_STATIC( QMETAMETHOD_ACCESS )
 }
 
 /*
-MethodType methodType() const
+QMetaMethod::MethodType methodType() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_METHODTYPE )
 {
@@ -381,7 +380,7 @@ HB_FUNC_STATIC( QMETAMETHOD_REVISION )
 }
 
 /*
-const QMetaObject *enclosingMetaObject() const
+const QMetaObject * enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
 {
@@ -403,11 +402,6 @@ HB_FUNC_STATIC( QMETAMETHOD_ENCLOSINGMETAOBJECT )
     }
 #endif
   }
-}
-
-HB_FUNC_STATIC( QMETAMETHOD_INVOKE )
-{
-  hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
 }
 
 /*
@@ -509,7 +503,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERCOUNT )
 }
 
 /*
-int parameterType(int index) const
+int parameterType( int index ) const
 */
 HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPE )
 {
@@ -533,7 +527,7 @@ HB_FUNC_STATIC( QMETAMETHOD_PARAMETERTYPE )
 }
 
 /*
-void getParameterTypes(int *types) const
+void getParameterTypes( int * types ) const
 */
 HB_FUNC_STATIC( QMETAMETHOD_GETPARAMETERTYPES )
 {

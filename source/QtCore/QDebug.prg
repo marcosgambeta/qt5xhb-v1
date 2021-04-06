@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-QDebug(QIODevice *device)
+QDebug( QIODevice * device )
 */
 void QDebug_new1()
 {
@@ -71,11 +71,7 @@ void QDebug_new1()
 }
 
 /*
-QDebug(QString *string)
-*/
-
-/*
-QDebug(QtMsgType t)
+QDebug( QtMsgType t )
 */
 void QDebug_new3()
 {
@@ -84,7 +80,7 @@ void QDebug_new3()
 }
 
 /*
-QDebug(const QDebug &o)
+QDebug( const QDebug & o )
 */
 void QDebug_new4()
 {
@@ -130,7 +126,7 @@ HB_FUNC_STATIC( QDEBUG_DELETE )
 }
 
 /*
-void swap(QDebug &other)
+void swap( QDebug & other )
 */
 HB_FUNC_STATIC( QDEBUG_SWAP )
 {
@@ -156,7 +152,7 @@ HB_FUNC_STATIC( QDEBUG_SWAP )
 }
 
 /*
-QDebug &space()
+QDebug & space()
 */
 HB_FUNC_STATIC( QDEBUG_SPACE )
 {
@@ -181,7 +177,7 @@ HB_FUNC_STATIC( QDEBUG_SPACE )
 }
 
 /*
-QDebug &nospace()
+QDebug & nospace()
 */
 HB_FUNC_STATIC( QDEBUG_NOSPACE )
 {
@@ -206,7 +202,7 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
 }
 
 /*
-QDebug &maybeSpace()
+QDebug & maybeSpace()
 */
 HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 {
@@ -255,7 +251,7 @@ HB_FUNC_STATIC( QDEBUG_AUTOINSERTSPACES )
 }
 
 /*
-void setAutoInsertSpaces(bool b)
+void setAutoInsertSpaces( bool b )
 */
 HB_FUNC_STATIC( QDEBUG_SETAUTOINSERTSPACES )
 {

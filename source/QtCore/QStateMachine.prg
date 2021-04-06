@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-QStateMachine(QObject *parent = 0)
+QStateMachine( QObject * parent = 0 )
 */
 void QStateMachine_new1()
 {
@@ -81,7 +81,7 @@ void QStateMachine_new1()
 }
 
 /*
-QStateMachine(QState::ChildMode childMode, QObject *parent = 0)
+QStateMachine( QState::ChildMode childMode, QObject * parent = 0 )
 */
 void QStateMachine_new2()
 {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
 }
 
 /*
-void addState(QAbstractState *state)
+void addState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ADDSTATE )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ADDSTATE )
 }
 
 /*
-void removeState(QAbstractState *state)
+void removeState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_REMOVESTATE )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_REMOVESTATE )
 }
 
 /*
-Error error() const
+QStateMachine::Error error() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
 }
 
 /*
-void setAnimated(bool enabled)
+void setAnimated( bool enabled )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
 }
 
 /*
-void addDefaultAnimation(QAbstractAnimation *animation)
+void addDefaultAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ADDDEFAULTANIMATION )
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 }
 
 /*
-void removeDefaultAnimation(QAbstractAnimation *animation)
+void removeDefaultAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_REMOVEDEFAULTANIMATION )
 {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
 }
 
 /*
-void setGlobalRestorePolicy(QState::RestorePolicy restorePolicy)
+void setGlobalRestorePolicy( QState::RestorePolicy restorePolicy )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
 {
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
 }
 
 /*
-void postEvent(QEvent *event, EventPriority priority = NormalPriority)
+void postEvent( QEvent * event, QStateMachine::EventPriority priority = QStateMachine::NormalPriority )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQEVENT(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQEVENT(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->postEvent( PQEVENT(1), HB_ISNIL(2)? (QStateMachine::EventPriority) QStateMachine::NormalPriority : (QStateMachine::EventPriority) hb_parni(2) );
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
 }
 
 /*
-int postDelayedEvent(QEvent *event, int delay)
+int postDelayedEvent( QEvent * event, int delay )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
 {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
 }
 
 /*
-bool cancelDelayedEvent(int id)
+bool cancelDelayedEvent( int id )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
 {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
 }
 
 /*
-bool eventFilter(QObject *watched, QEvent *event)
+bool eventFilter( QObject * watched, QEvent * event )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
 {

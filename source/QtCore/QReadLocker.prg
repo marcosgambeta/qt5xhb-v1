@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QReadLocker(QReadWriteLock *readWriteLock)
+QReadLocker( QReadWriteLock * readWriteLock )
 */
 HB_FUNC_STATIC( QREADLOCKER_NEW )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QREADLOCKER_RELOCK )
 }
 
 /*
-QReadWriteLock *readWriteLock() const
+QReadWriteLock * readWriteLock() const
 */
 HB_FUNC_STATIC( QREADLOCKER_READWRITELOCK )
 {

@@ -62,11 +62,11 @@ RETURN
 #endif
 
 /*
-QSystemSemaphore(const QString &key, int initialValue = 0, AccessMode mode = Open)
+QSystemSemaphore( const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open )
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_NEW )
 {
-  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QSystemSemaphore * obj = new QSystemSemaphore( PQSTRING(1), OPINT(2,0), HB_ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
     Qt5xHb::returnNewObject( obj, true );
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_DELETE )
 }
 
 /*
-void setKey(const QString &key, int initialValue = 0, AccessMode mode = Open)
+void setKey( const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open )
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_SETKEY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setKey( PQSTRING(1), OPINT(2,0), HB_ISNIL(3)? (QSystemSemaphore::AccessMode) QSystemSemaphore::Open : (QSystemSemaphore::AccessMode) hb_parni(3) );
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ACQUIRE )
 }
 
 /*
-bool release(int n = 1)
+bool release( int n = 1 )
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RBOOL( obj->release( OPINT(1,1) ) );
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QSYSTEMSEMAPHORE_RELEASE )
 }
 
 /*
-SystemSemaphoreError error() const
+QSystemSemaphore::SystemSemaphoreError error() const
 */
 HB_FUNC_STATIC( QSYSTEMSEMAPHORE_ERROR )
 {

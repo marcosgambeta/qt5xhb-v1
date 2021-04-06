@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-QCollatorSortKey(const QCollatorSortKey &other)
+QCollatorSortKey( const QCollatorSortKey & other )
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_NEW )
 {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_DELETE )
 }
 
 /*
-void swap(QCollatorSortKey &other)
+void swap( QCollatorSortKey & other )
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_SWAP )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCOLLATORSORTKEY_SWAP )
 }
 
 /*
-int compare(const QCollatorSortKey &key) const
+int compare( const QCollatorSortKey & key ) const
 */
 HB_FUNC_STATIC( QCOLLATORSORTKEY_COMPARE )
 {

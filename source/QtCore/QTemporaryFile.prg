@@ -65,7 +65,7 @@ void QTemporaryFile_new1()
 }
 
 /*
-QTemporaryFile(const QString & templateName)
+QTemporaryFile( const QString & templateName )
 */
 void QTemporaryFile_new2()
 {
@@ -74,7 +74,7 @@ void QTemporaryFile_new2()
 }
 
 /*
-QTemporaryFile(QObject * parent)
+QTemporaryFile( QObject * parent )
 */
 void QTemporaryFile_new3()
 {
@@ -83,7 +83,7 @@ void QTemporaryFile_new3()
 }
 
 /*
-QTemporaryFile(const QString & templateName, QObject * parent)
+QTemporaryFile( const QString & templateName, QObject * parent )
 */
 void QTemporaryFile_new4()
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 }
 
 /*
-void setAutoRemove(bool b)
+void setAutoRemove( bool b )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 }
 
 /*
-void setFileTemplate(const QString & name)
+void setFileTemplate( const QString & name )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 }
 
 /*
-static QTemporaryFile * createNativeFile(QFile & file)
+static QTemporaryFile * createNativeFile( QFile & file )
 */
 void QTemporaryFile_createNativeFile1()
 {
@@ -293,7 +293,7 @@ void QTemporaryFile_createNativeFile1()
 }
 
 /*
-static QTemporaryFile * createNativeFile(const QString & fileName)
+static QTemporaryFile * createNativeFile( const QString & fileName )
 */
 void QTemporaryFile_createNativeFile2()
 {

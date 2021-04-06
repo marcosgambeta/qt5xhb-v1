@@ -65,7 +65,7 @@ void QEventLoopLocker_new1()
 }
 
 /*
-QEventLoopLocker(QEventLoop * loop)
+QEventLoopLocker( QEventLoop * loop )
 */
 void QEventLoopLocker_new2()
 {
@@ -74,7 +74,7 @@ void QEventLoopLocker_new2()
 }
 
 /*
-QEventLoopLocker(QThread * thread)
+QEventLoopLocker( QThread * thread )
 */
 void QEventLoopLocker_new3()
 {

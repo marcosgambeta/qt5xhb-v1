@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QTextEncoder(const QTextCodec * codec)
+QTextEncoder( const QTextCodec * codec )
 */
 void QTextEncoder_new1()
 {
@@ -68,7 +68,7 @@ void QTextEncoder_new1()
 }
 
 /*
-QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
+QTextEncoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
 */
 void QTextEncoder_new2()
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTENCODER_DELETE )
 }
 
 /*
-QByteArray fromUnicode(const QString & str)
+QByteArray fromUnicode( const QString & str )
 */
 void QTextEncoder_fromUnicode1()
 {
@@ -124,7 +124,7 @@ void QTextEncoder_fromUnicode1()
 }
 
 /*
-QByteArray fromUnicode(const QChar * uc, int len)
+QByteArray fromUnicode( const QChar * uc, int len )
 */
 void QTextEncoder_fromUnicode2()
 {

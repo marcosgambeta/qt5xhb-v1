@@ -69,11 +69,11 @@ void QXmlStreamNotationDeclaration_new1()
 }
 
 /*
-QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
+QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
 */
 void QXmlStreamNotationDeclaration_new2()
 {
-  QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration();
+  QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION(1) );
   Qt5xHb::returnNewObject( obj, true );
 }
 

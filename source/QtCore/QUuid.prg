@@ -75,7 +75,7 @@ void QUuid_new1()
 }
 
 /*
-QUuid(const QByteArray & text)
+QUuid( const QByteArray & text )
 */
 void QUuid_new2()
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QUUID_VERSION )
 }
 
 /*
-static QUuid createUuidV3(const QUuid & ns, const QByteArray & baseData)
+static QUuid createUuidV3( const QUuid & ns, const QByteArray & baseData )
 */
 void QUuid_createUuidV31()
 {
@@ -273,7 +273,7 @@ void QUuid_createUuidV31()
 }
 
 /*
-static QUuid createUuidV3(const QUuid & ns, const QString & baseData)
+static QUuid createUuidV3( const QUuid & ns, const QString & baseData )
 */
 void QUuid_createUuidV32()
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV3 )
 }
 
 /*
-static QUuid createUuidV5(const QUuid & ns, const QByteArray & baseData)
+static QUuid createUuidV5( const QUuid & ns, const QByteArray & baseData )
 */
 void QUuid_createUuidV51()
 {
@@ -309,7 +309,7 @@ void QUuid_createUuidV51()
 }
 
 /*
-static QUuid createUuidV5(const QUuid & ns, const QString & baseData)
+static QUuid createUuidV5( const QUuid & ns, const QString & baseData )
 */
 void QUuid_createUuidV52()
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QUUID_CREATEUUIDV5 )
 }
 
 /*
-static QUuid fromRfc4122(const QByteArray & bytes)
+static QUuid fromRfc4122( const QByteArray & bytes )
 */
 HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {

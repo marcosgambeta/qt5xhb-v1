@@ -71,7 +71,7 @@ void QItemSelection_new1()
 }
 
 /*
-QItemSelection(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+QItemSelection( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 void QItemSelection_new2()
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QITEMSELECTION_DELETE )
 }
 
 /*
-void select(const QModelIndex &topLeft, const QModelIndex &bottomRight)
+void select( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 HB_FUNC_STATIC( QITEMSELECTION_SELECT )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QITEMSELECTION_SELECT )
 }
 
 /*
-bool contains(const QModelIndex &index) const
+bool contains( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QITEMSELECTION_CONTAINS )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QITEMSELECTION_INDEXES )
 }
 
 /*
-void merge(const QItemSelection &other, QItemSelectionModel::SelectionFlags command)
+void merge( const QItemSelection & other, QItemSelectionModel::SelectionFlags command )
 */
 HB_FUNC_STATIC( QITEMSELECTION_MERGE )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QITEMSELECTION_MERGE )
 }
 
 /*
-static void split(const QItemSelectionRange &range,const QItemSelectionRange &other,QItemSelection *result)
+static void split( const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result )
 */
 HB_FUNC_STATIC( QITEMSELECTION_SPLIT )
 {

@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
 }
 
 /*
-bool hasExpired(qint64 timeout) const
+bool hasExpired( qint64 timeout ) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
 }
 
 /*
-qint64 msecsTo(const QElapsedTimer & other) const
+qint64 msecsTo( const QElapsedTimer & other ) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
 }
 
 /*
-qint64 secsTo(const QElapsedTimer & other) const
+qint64 secsTo( const QElapsedTimer & other ) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_START )
 }
 
 /*
-static ClockType clockType()
+static QElapsedTimer::ClockType clockType()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_CLOCKTYPE )
 {

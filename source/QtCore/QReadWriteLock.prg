@@ -61,11 +61,11 @@ RETURN
 #endif
 
 /*
-QReadWriteLock(RecursionMode recursionMode = NonRecursive)
+QReadWriteLock( QReadWriteLock::RecursionMode recursionMode = QReadWriteLock::NonRecursive )
 */
 HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QReadWriteLock * obj = new QReadWriteLock( HB_ISNIL(1)? (QReadWriteLock::RecursionMode) QReadWriteLock::NonRecursive : (QReadWriteLock::RecursionMode) hb_parni(1) );
     Qt5xHb::returnNewObject( obj, true );
@@ -133,7 +133,7 @@ void QReadWriteLock_tryLockForRead1()
 }
 
 /*
-bool tryLockForRead(int timeout)
+bool tryLockForRead( int timeout )
 */
 void QReadWriteLock_tryLockForRead2()
 {
@@ -201,7 +201,7 @@ void QReadWriteLock_tryLockForWrite1()
 }
 
 /*
-bool tryLockForWrite(int timeout)
+bool tryLockForWrite( int timeout )
 */
 void QReadWriteLock_tryLockForWrite2()
 {

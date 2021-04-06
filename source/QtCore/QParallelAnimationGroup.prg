@@ -50,7 +50,7 @@ RETURN
 #endif
 
 /*
-QParallelAnimationGroup ( QObject * parent = 0 )
+QParallelAnimationGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 }
 
 /*
-virtual int duration () const
+virtual int duration() const
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 {

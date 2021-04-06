@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-QChildEvent(Type type, QObject * child)
+QChildEvent( QEvent::Type type, QObject * child )
 */
 HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {

@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_DELETE )
 }
 
 /*
-QVariant currentValue () const
+QVariant currentValue() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
 }
 
 /*
-QEasingCurve easingCurve () const
+QEasingCurve easingCurve() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
 }
 
 /*
-QVariant endValue () const
+QVariant endValue() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
 }
 
 /*
-QVariant keyValueAt ( qreal step ) const
+QVariant keyValueAt( qreal step ) const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
 }
 
 /*
-void setDuration ( int msecs )
+void setDuration( int msecs )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
 }
 
 /*
-void setEasingCurve ( const QEasingCurve & easing )
+void setEasingCurve( const QEasingCurve & easing )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETEASINGCURVE )
 }
 
 /*
-void setEndValue ( const QVariant & value )
+void setEndValue( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETENDVALUE )
 }
 
 /*
-void setKeyValueAt ( qreal step, const QVariant & value )
+void setKeyValueAt( qreal step, const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
 }
 
 /*
-void setStartValue ( const QVariant & value )
+void setStartValue( const QVariant & value )
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETSTARTVALUE )
 }
 
 /*
-QVariant startValue () const
+QVariant startValue() const
 */
 HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
 {

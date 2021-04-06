@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMETAENUM_DELETE )
 }
 
 /*
-const char *name() const
+const char * name() const
 */
 HB_FUNC_STATIC( QMETAENUM_NAME )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
 }
 
 /*
-const char *key(int index) const
+const char * key( int index ) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEY )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QMETAENUM_KEY )
 }
 
 /*
-int value(int index) const
+int value( int index ) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUE )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
 }
 
 /*
-const char *scope() const
+const char * scope() const
 */
 HB_FUNC_STATIC( QMETAENUM_SCOPE )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QMETAENUM_SCOPE )
 }
 
 /*
-int keyToValue(const char *key) const
+int keyToValue( const char * key ) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
 }
 
 /*
-const char* valueToKey(int value) const
+const char * valueToKey( int value ) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
 }
 
 /*
-int keysToValue(const char * keys) const
+int keysToValue( const char * keys ) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
 }
 
 /*
-QByteArray valueToKeys(int value) const
+QByteArray valueToKeys( int value ) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
 }
 
 /*
-const QMetaObject *enclosingMetaObject() const
+const QMetaObject * enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QMETAENUM_ISVALID )
 }
 
 /*
-const char *QMetaEnum::enumName() const
+const char * enumName() const
 */
 HB_FUNC_STATIC( QMETAENUM_ENUMNAME )
 {
@@ -421,11 +421,7 @@ HB_FUNC_STATIC( QMETAENUM_ENUMNAME )
 }
 
 /*
-static QMetaEnum QMetaEnum::fromType()
-*/
-
-/*
-bool QMetaEnum::isScoped() const
+bool isScoped() const
 */
 HB_FUNC_STATIC( QMETAENUM_ISSCOPED )
 {

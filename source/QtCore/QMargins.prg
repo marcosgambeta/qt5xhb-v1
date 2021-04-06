@@ -74,7 +74,7 @@ void QMargins_new1()
 }
 
 /*
-QMargins(int left, int top, int right, int bottom)
+QMargins( int left, int top, int right, int bottom )
 */
 void QMargins_new2()
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QMARGINS_BOTTOM )
 }
 
 /*
-void setLeft(int left)
+void setLeft( int left )
 */
 HB_FUNC_STATIC( QMARGINS_SETLEFT )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QMARGINS_SETLEFT )
 }
 
 /*
-void setTop(int top)
+void setTop( int top )
 */
 HB_FUNC_STATIC( QMARGINS_SETTOP )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QMARGINS_SETTOP )
 }
 
 /*
-void setRight(int right)
+void setRight( int right )
 */
 HB_FUNC_STATIC( QMARGINS_SETRIGHT )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QMARGINS_SETRIGHT )
 }
 
 /*
-void setBottom(int bottom)
+void setBottom( int bottom )
 */
 HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
 {

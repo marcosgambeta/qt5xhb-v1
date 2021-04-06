@@ -59,7 +59,7 @@ RETURN
 #include <QtCore/QPauseAnimation>
 
 /*
-QSequentialAnimationGroup ( QObject * parent = 0 )
+QSequentialAnimationGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DELETE )
 }
 
 /*
-QPauseAnimation * addPause ( int msecs )
+QPauseAnimation * addPause( int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 }
 
 /*
-QAbstractAnimation * currentAnimation () const
+QAbstractAnimation * currentAnimation() const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 }
 
 /*
-QPauseAnimation * insertPause ( int index, int msecs )
+QPauseAnimation * insertPause( int index, int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 }
 
 /*
-virtual int duration () const
+virtual int duration() const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
 {

@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-QRegularExpressionMatch(const QRegularExpressionMatch & match)
+QRegularExpressionMatch( const QRegularExpressionMatch & match )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_NEW )
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_DELETE )
 }
 
 /*
-QString captured(int nth = 0) const
+QString captured( int nth = 0 ) const
 */
 void QRegularExpressionMatch_captured1()
 {
@@ -118,7 +118,7 @@ void QRegularExpressionMatch_captured1()
 }
 
 /*
-QString captured(const QString & name) const
+QString captured( const QString & name ) const
 */
 void QRegularExpressionMatch_captured2()
 {
@@ -132,7 +132,7 @@ void QRegularExpressionMatch_captured2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTURED )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QRegularExpressionMatch_captured1();
   }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTURED )
 }
 
 /*
-int capturedEnd(int nth = 0) const
+int capturedEnd( int nth = 0 ) const
 */
 void QRegularExpressionMatch_capturedEnd1()
 {
@@ -160,7 +160,7 @@ void QRegularExpressionMatch_capturedEnd1()
 }
 
 /*
-int capturedEnd(const QString & name) const
+int capturedEnd( const QString & name ) const
 */
 void QRegularExpressionMatch_capturedEnd2()
 {
@@ -174,7 +174,7 @@ void QRegularExpressionMatch_capturedEnd2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDEND )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QRegularExpressionMatch_capturedEnd1();
   }
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDEND )
 }
 
 /*
-int capturedLength(int nth = 0) const
+int capturedLength( int nth = 0 ) const
 */
 void QRegularExpressionMatch_capturedLength1()
 {
@@ -202,7 +202,7 @@ void QRegularExpressionMatch_capturedLength1()
 }
 
 /*
-int capturedLength(const QString & name) const
+int capturedLength( const QString & name ) const
 */
 void QRegularExpressionMatch_capturedLength2()
 {
@@ -216,7 +216,7 @@ void QRegularExpressionMatch_capturedLength2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QRegularExpressionMatch_capturedLength1();
   }
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDLENGTH )
 }
 
 /*
-QStringRef capturedRef(int nth = 0) const
+QStringRef capturedRef( int nth = 0 ) const
 */
 void QRegularExpressionMatch_capturedRef1()
 {
@@ -245,7 +245,7 @@ void QRegularExpressionMatch_capturedRef1()
 }
 
 /*
-QStringRef capturedRef(const QString & name) const
+QStringRef capturedRef( const QString & name ) const
 */
 void QRegularExpressionMatch_capturedRef2()
 {
@@ -260,7 +260,7 @@ void QRegularExpressionMatch_capturedRef2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QRegularExpressionMatch_capturedRef1();
   }
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDREF )
 }
 
 /*
-int capturedStart(int nth = 0) const
+int capturedStart( int nth = 0 ) const
 */
 void QRegularExpressionMatch_capturedStart1()
 {
@@ -288,7 +288,7 @@ void QRegularExpressionMatch_capturedStart1()
 }
 
 /*
-int capturedStart(const QString & name) const
+int capturedStart( const QString & name ) const
 */
 void QRegularExpressionMatch_capturedStart2()
 {
@@ -302,7 +302,7 @@ void QRegularExpressionMatch_capturedStart2()
 
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_CAPTUREDSTART )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QRegularExpressionMatch_capturedStart1();
   }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_REGULAREXPRESSION )
 }
 
 /*
-void swap(QRegularExpressionMatch & other)
+void swap( QRegularExpressionMatch & other )
 */
 HB_FUNC_STATIC( QREGULAREXPRESSIONMATCH_SWAP )
 {

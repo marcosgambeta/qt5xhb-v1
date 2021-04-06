@@ -80,7 +80,7 @@ void QPersistentModelIndex_new1()
 }
 
 /*
-QPersistentModelIndex(const QModelIndex &index)
+QPersistentModelIndex( const QModelIndex & index )
 */
 void QPersistentModelIndex_new2()
 {
@@ -89,7 +89,7 @@ void QPersistentModelIndex_new2()
 }
 
 /*
-QPersistentModelIndex(const QPersistentModelIndex &other)
+QPersistentModelIndex( const QPersistentModelIndex & other )
 */
 void QPersistentModelIndex_new3()
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DELETE )
 }
 
 /*
-void swap(QPersistentModelIndex &other)
+void swap( QPersistentModelIndex & other )
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SWAP )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_COLUMN )
 }
 
 /*
-void *internalPointer() const
+void * internalPointer() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_INTERNALPOINTER )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_PARENT )
 }
 
 /*
-QModelIndex sibling(int row, int column) const
+QModelIndex sibling( int row, int column ) const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SIBLING )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_SIBLING )
 }
 
 /*
-QModelIndex child(int row, int column) const
+QModelIndex child( int row, int column ) const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_CHILD )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_CHILD )
 }
 
 /*
-QVariant data(int role = Qt::DisplayRole) const
+QVariant data( int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_DATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( OPINT(1,Qt::DisplayRole) ) );
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QPERSISTENTMODELINDEX_FLAGS )
 }
 
 /*
-const QAbstractItemModel *model() const
+const QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_MODEL )
 {

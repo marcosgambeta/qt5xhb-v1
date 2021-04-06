@@ -50,10 +50,6 @@ RETURN
 #include <QtCore/QSocketNotifier>
 #endif
 
-/*
-QSocketNotifier(qintptr socket, Type, QObject *parent = 0)
-*/
-
 HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 {
   QSocketNotifier * obj = (QSocketNotifier *) Qt5xHb::itemGetPtrStackSelfItem();
@@ -74,11 +70,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 }
 
 /*
-qintptr socket() const
-*/
-
-/*
-Type type() const
+QSocketNotifier::Type type() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
@@ -126,7 +118,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 }
 
 /*
-void setEnabled(bool)
+void setEnabled( bool )
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {

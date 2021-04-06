@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-QCollator(const QLocale &locale = QLocale())
+QCollator( const QLocale & locale = QLocale() )
 */
 void QCollator_new1()
 {
@@ -83,7 +83,7 @@ void QCollator_new1()
 }
 
 /*
-QCollator(const QCollator &)
+QCollator( const QCollator & )
 */
 void QCollator_new2()
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCOLLATOR_DELETE )
 }
 
 /*
-void swap(QCollator &other)
+void swap( QCollator & other )
 */
 HB_FUNC_STATIC( QCOLLATOR_SWAP )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QCOLLATOR_SWAP )
 }
 
 /*
-void setLocale(const QLocale &locale)
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QCOLLATOR_SETLOCALE )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QCOLLATOR_CASESENSITIVITY )
 }
 
 /*
-void setCaseSensitivity(Qt::CaseSensitivity cs)
+void setCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QCOLLATOR_SETCASESENSITIVITY )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QCOLLATOR_SETCASESENSITIVITY )
 }
 
 /*
-void setNumericMode(bool on)
+void setNumericMode( bool on )
 */
 HB_FUNC_STATIC( QCOLLATOR_SETNUMERICMODE )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QCOLLATOR_NUMERICMODE )
 }
 
 /*
-void setIgnorePunctuation(bool on)
+void setIgnorePunctuation( bool on )
 */
 HB_FUNC_STATIC( QCOLLATOR_SETIGNOREPUNCTUATION )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QCOLLATOR_IGNOREPUNCTUATION )
 }
 
 /*
-QCollatorSortKey sortKey(const QString &string) const
+QCollatorSortKey sortKey( const QString & string ) const
 */
 HB_FUNC_STATIC( QCOLLATOR_SORTKEY )
 {

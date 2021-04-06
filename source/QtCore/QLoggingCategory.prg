@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-QLoggingCategory(const char *category)
+QLoggingCategory( const char * category )
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_NEW )
 {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_DELETE )
 }
 
 /*
-bool isEnabled(QtMsgType type) const
+bool isEnabled( QtMsgType type ) const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_ISENABLED )
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISENABLED )
 }
 
 /*
-void setEnabled(QtMsgType type, bool enable)
+void setEnabled( QtMsgType type, bool enable )
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_SETENABLED )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_ISCRITICALENABLED )
 }
 
 /*
-const char *categoryName() const
+const char * categoryName() const
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_CATEGORYNAME )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_CATEGORYNAME )
 }
 
 /*
-static QLoggingCategory *defaultCategory()
+static QLoggingCategory * defaultCategory()
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_DEFAULTCATEGORY )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QLOGGINGCATEGORY_DEFAULTCATEGORY )
 }
 
 /*
-static void setFilterRules(const QString &rules)
+static void setFilterRules( const QString & rules )
 */
 HB_FUNC_STATIC( QLOGGINGCATEGORY_SETFILTERRULES )
 {

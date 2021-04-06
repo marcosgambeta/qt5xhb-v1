@@ -70,7 +70,7 @@ void QStringMatcher_new1()
 }
 
 /*
-QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
+QStringMatcher( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive )
 */
 void QStringMatcher_new2()
 {
@@ -79,7 +79,7 @@ void QStringMatcher_new2()
 }
 
 /*
-QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
+QStringMatcher( const QChar * uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive )
 */
 void QStringMatcher_new3()
 {
@@ -88,7 +88,7 @@ void QStringMatcher_new3()
 }
 
 /*
-QStringMatcher(const QStringMatcher &other)
+QStringMatcher( const QStringMatcher & other )
 */
 void QStringMatcher_new4()
 {
@@ -96,22 +96,17 @@ void QStringMatcher_new4()
   Qt5xHb::returnNewObject( obj, true );
 }
 
-//QStringMatcher()
-//QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
-//QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
-//QStringMatcher(const QStringMatcher &other)
-
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
 {
   if( ISNUMPAR(0) )
   {
     QStringMatcher_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QStringMatcher_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQCHAR(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQCHAR(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QStringMatcher_new3();
   }
@@ -143,7 +138,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_DELETE )
 }
 
 /*
-void setPattern(const QString &pattern)
+void setPattern( const QString & pattern )
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
 {
@@ -169,7 +164,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
 }
 
 /*
-void setCaseSensitivity(Qt::CaseSensitivity cs)
+void setCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
 {
@@ -195,7 +190,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
 }
 
 /*
-int indexIn(const QString &str, int from = 0) const
+int indexIn( const QString & str, int from = 0 ) const
 */
 void QStringMatcher_indexIn1()
 {
@@ -208,7 +203,7 @@ void QStringMatcher_indexIn1()
 }
 
 /*
-int indexIn(const QChar *str, int length, int from = 0) const
+int indexIn( const QChar * str, int length, int from = 0 ) const
 */
 void QStringMatcher_indexIn2()
 {
@@ -222,11 +217,11 @@ void QStringMatcher_indexIn2()
 
 HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
 {
-  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QStringMatcher_indexIn1();
   }
-  else if( ISBETWEEN(2,3) && ISQCHAR(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQCHAR(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QStringMatcher_indexIn2();
   }

@@ -70,7 +70,7 @@ void QTemporaryDir_new1()
 }
 
 /*
-QTemporaryDir(const QString & templateName)
+QTemporaryDir( const QString & templateName )
 */
 void QTemporaryDir_new2()
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QTEMPORARYDIR_REMOVE )
 }
 
 /*
-void setAutoRemove(bool b)
+void setAutoRemove( bool b )
 */
 HB_FUNC_STATIC( QTEMPORARYDIR_SETAUTOREMOVE )
 {

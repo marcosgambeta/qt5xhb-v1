@@ -123,7 +123,7 @@ void QXmlStreamReader_new1()
 }
 
 /*
-QXmlStreamReader(QIODevice * device)
+QXmlStreamReader( QIODevice * device )
 */
 void QXmlStreamReader_new2()
 {
@@ -132,7 +132,7 @@ void QXmlStreamReader_new2()
 }
 
 /*
-QXmlStreamReader(const QByteArray & data)
+QXmlStreamReader( const QByteArray & data )
 */
 void QXmlStreamReader_new3()
 {
@@ -141,7 +141,7 @@ void QXmlStreamReader_new3()
 }
 
 /*
-QXmlStreamReader(const QString & data)
+QXmlStreamReader( const QString & data )
 */
 void QXmlStreamReader_new4()
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DELETE )
 }
 
 /*
-void addData(const QByteArray & data)
+void addData( const QByteArray & data )
 */
 void QXmlStreamReader_addData1()
 {
@@ -206,7 +206,7 @@ void QXmlStreamReader_addData1()
 }
 
 /*
-void addData(const QString & data)
+void addData( const QString & data )
 */
 void QXmlStreamReader_addData2()
 {
@@ -221,7 +221,7 @@ void QXmlStreamReader_addData2()
 }
 
 /*
-void addData(const char * data)
+void addData( const char * data )
 */
 void QXmlStreamReader_addData3()
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 }
 
 /*
-void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration)
+void addExtraNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION )
 {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ENTITYRESOLVER )
 }
 
 /*
-Error error() const
+QXmlStreamReader::Error error() const
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_ERROR )
 {
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_QUALIFIEDNAME )
 }
 
 /*
-void raiseError(const QString & message = QString())
+void raiseError( const QString & message = QString() )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
 {
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->raiseError( OPQSTRING(1,QString()) );
@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
 }
 
 /*
-QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
+QString readElementText( QXmlStreamReader::ReadElementTextBehaviour behaviour = QXmlStreamReader::ErrorOnUnexpectedElement )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
 {
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->readElementText( HB_ISNIL(1)? (QXmlStreamReader::ReadElementTextBehaviour) QXmlStreamReader::ErrorOnUnexpectedElement : (QXmlStreamReader::ReadElementTextBehaviour) hb_parni(1) ) );
@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
 }
 
 /*
-TokenType readNext()
+QXmlStreamReader::TokenType readNext()
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXT )
 {
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXTSTARTELEMENT )
 }
 
 /*
-void setDevice(QIODevice * device)
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_SETDEVICE )
 {
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETDEVICE )
 }
 
 /*
-void setEntityResolver(QXmlStreamEntityResolver * resolver)
+void setEntityResolver( QXmlStreamEntityResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_SETENTITYRESOLVER )
 {
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETENTITYRESOLVER )
 }
 
 /*
-void setNamespaceProcessing(bool)
+void setNamespaceProcessing( bool )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_SETNAMESPACEPROCESSING )
 {
@@ -1545,7 +1545,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENSTRING )
 }
 
 /*
-TokenType tokenType() const
+QXmlStreamReader::TokenType tokenType() const
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_TOKENTYPE )
 {

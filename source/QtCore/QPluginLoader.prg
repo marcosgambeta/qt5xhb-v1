@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QPluginLoader ( QObject * parent = 0 )
+QPluginLoader( QObject * parent = 0 )
 */
 void QPluginLoader_new1()
 {
@@ -69,7 +69,7 @@ void QPluginLoader_new1()
 }
 
 /*
-QPluginLoader ( const QString & fileName, QObject * parent = 0 )
+QPluginLoader( const QString & fileName, QObject * parent = 0 )
 */
 void QPluginLoader_new2()
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 }
 
 /*
-QString errorString () const
+QString errorString() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 }
 
 /*
-QObject * instance ()
+QObject * instance()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 }
 
 /*
-bool isLoaded () const
+bool isLoaded() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 }
 
 /*
-bool load ()
+bool load()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 }
 
 /*
-QLibrary::LoadHints loadHints () const
+QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 }
 
 /*
-void setFileName ( const QString & fileName )
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 }
 
 /*
-void setLoadHints ( QLibrary::LoadHints loadHints )
+void setLoadHints( QLibrary::LoadHints loadHints )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 }
 
 /*
-bool unload ()
+bool unload()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 }
 
 /*
-QObjectList staticInstances ()
+QObjectList staticInstances()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_STATICINSTANCES )
 {

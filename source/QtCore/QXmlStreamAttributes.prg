@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
 }
 
 /*
-void append(const QString & namespaceUri, const QString & name, const QString & value)
+void append( const QString & namespaceUri, const QString & name, const QString & value )
 */
 void QXmlStreamAttributes_append1()
 {
@@ -113,7 +113,7 @@ void QXmlStreamAttributes_append1()
 }
 
 /*
-void append(const QXmlStreamAttribute & attribute)
+void append( const QXmlStreamAttribute & attribute )
 */
 void QXmlStreamAttributes_append2()
 {
@@ -128,7 +128,7 @@ void QXmlStreamAttributes_append2()
 }
 
 /*
-void append(const QString & qualifiedName, const QString & value)
+void append( const QString & qualifiedName, const QString & value )
 */
 void QXmlStreamAttributes_append3()
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 }
 
 /*
-bool hasAttribute(const QString & qualifiedName) const
+bool hasAttribute( const QString & qualifiedName ) const
 */
 void QXmlStreamAttributes_hasAttribute1()
 {
@@ -176,7 +176,7 @@ void QXmlStreamAttributes_hasAttribute1()
 }
 
 /*
-bool hasAttribute(QLatin1String qualifiedName) const
+bool hasAttribute( QLatin1String qualifiedName ) const
 */
 void QXmlStreamAttributes_hasAttribute2()
 {
@@ -189,7 +189,7 @@ void QXmlStreamAttributes_hasAttribute2()
 }
 
 /*
-bool hasAttribute(const QString & namespaceUri, const QString & name) const
+bool hasAttribute( const QString & namespaceUri, const QString & name ) const
 */
 void QXmlStreamAttributes_hasAttribute3()
 {
@@ -207,7 +207,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
   {
     QXmlStreamAttributes_hasAttribute1();
   }
-  //else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
   {
     QXmlStreamAttributes_hasAttribute2();
@@ -223,7 +222,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 }
 
 /*
-QStringRef value(const QString & namespaceUri, const QString & name) const
+QStringRef value( const QString & namespaceUri, const QString & name ) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
 {
@@ -248,7 +247,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE1 )
 }
 
 /*
-QStringRef value(const QString & namespaceUri, QLatin1String name) const
+QStringRef value( const QString & namespaceUri, QLatin1String name ) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
 {
@@ -273,7 +272,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE2 )
 }
 
 /*
-QStringRef value(QLatin1String namespaceUri, QLatin1String name) const
+QStringRef value( QLatin1String namespaceUri, QLatin1String name ) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
 {
@@ -298,7 +297,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE3 )
 }
 
 /*
-QStringRef value(const QString & qualifiedName) const
+QStringRef value( const QString & qualifiedName ) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
 {
@@ -323,7 +322,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE4 )
 }
 
 /*
-QStringRef value(QLatin1String qualifiedName) const
+QStringRef value( QLatin1String qualifiedName ) const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE5 )
 {
@@ -353,12 +352,10 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
   {
     HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE1 );
   }
-  //else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQLATIN1STRING(2) )
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISOBJECT(2) )
   {
     HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE2 );
   }
-  //else if( ISNUMPAR(2) && ISQLATIN1STRING(1) && ISQLATIN1STRING(2) )
   else if( ISNUMPAR(2) && HB_ISOBJECT(1) && HB_ISOBJECT(2) )
   {
     HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE3 );
@@ -367,7 +364,6 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
   {
     HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE4 );
   }
-  //else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
   {
     HB_FUNC_EXEC( QXMLSTREAMATTRIBUTES_VALUE5 );

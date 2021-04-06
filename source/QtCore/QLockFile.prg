@@ -67,7 +67,7 @@ RETURN
 #endif
 
 /*
-QLockFile(const QString &fileName)
+QLockFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QLOCKFILE_NEW )
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QLOCKFILE_LOCK )
 }
 
 /*
-bool tryLock(int timeout = 0)
+bool tryLock( int timeout = 0 )
 */
 HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QLOCKFILE_TRYLOCK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RBOOL( obj->tryLock( OPINT(1,0) ) );
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QLOCKFILE_UNLOCK )
 }
 
 /*
-void setStaleLockTime(int)
+void setStaleLockTime( int )
 */
 HB_FUNC_STATIC( QLOCKFILE_SETSTALELOCKTIME )
 {
@@ -262,10 +262,6 @@ HB_FUNC_STATIC( QLOCKFILE_ISLOCKED )
   }
 #endif
 }
-
-/*
-bool getLockInfo(qint64 *pid, QString *hostname, QString *appname) const
-*/
 
 /*
 bool removeStaleLockFile()

@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QSaveFile(const QString &name)
+QSaveFile( const QString & name )
 */
 void QSaveFile_new1()
 {
@@ -71,7 +71,7 @@ void QSaveFile_new1()
 }
 
 /*
-QSaveFile(QObject *parent = 0)
+QSaveFile( QObject * parent = 0 )
 */
 void QSaveFile_new2()
 {
@@ -82,7 +82,7 @@ void QSaveFile_new2()
 }
 
 /*
-QSaveFile(const QString &name, QObject *parent)
+QSaveFile( const QString & name, QObject * parent )
 */
 void QSaveFile_new3()
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QSAVEFILE_FILENAME )
 }
 
 /*
-void setFileName(const QString &name)
+void setFileName( const QString & name )
 */
 HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSAVEFILE_SETFILENAME )
 }
 
 /*
-bool open(OpenMode flags)
+bool open( QIODevice::OpenMode flags )
 */
 HB_FUNC_STATIC( QSAVEFILE_OPEN )
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSAVEFILE_CANCELWRITING )
 }
 
 /*
-void setDirectWriteFallback(bool enabled)
+void setDirectWriteFallback( bool enabled )
 */
 HB_FUNC_STATIC( QSAVEFILE_SETDIRECTWRITEFALLBACK )
 {

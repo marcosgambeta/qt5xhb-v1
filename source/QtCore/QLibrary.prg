@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QLibrary(QObject *parent = 0)
+QLibrary( QObject * parent = 0 )
 */
 void QLibrary_new1()
 {
@@ -69,7 +69,7 @@ void QLibrary_new1()
 }
 
 /*
-QLibrary(const QString& fileName, QObject *parent = 0)
+QLibrary( const QString & fileName, QObject * parent = 0 )
 */
 void QLibrary_new2()
 {
@@ -78,7 +78,7 @@ void QLibrary_new2()
 }
 
 /*
-QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
+QLibrary( const QString & fileName, int verNum, QObject * parent = 0 )
 */
 void QLibrary_new3()
 {
@@ -87,7 +87,7 @@ void QLibrary_new3()
 }
 
 /*
-QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
+QLibrary( const QString & fileName, const QString & version, QObject * parent = 0 )
 */
 void QLibrary_new4()
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
 }
 
 /*
-void setFileName(const QString &fileName)
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QLIBRARY_FILENAME )
 }
 
 /*
-void setFileNameAndVersion(const QString &fileName, int verNum)
+void setFileNameAndVersion( const QString & fileName, int verNum )
 */
 void QLibrary_setFileNameAndVersion1()
 {
@@ -276,7 +276,7 @@ void QLibrary_setFileNameAndVersion1()
 }
 
 /*
-void setFileNameAndVersion(const QString &fileName, const QString &version)
+void setFileNameAndVersion( const QString & fileName, const QString & version )
 */
 void QLibrary_setFileNameAndVersion2()
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
 }
 
 /*
-void setLoadHints(LoadHints hints)
+void setLoadHints( QLibrary::LoadHints hints )
 */
 HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 }
 
 /*
-LoadHints loadHints() const
+QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 }
 
 /*
-static bool isLibrary(const QString &fileName)
+static bool isLibrary( const QString & fileName )
 */
 HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {

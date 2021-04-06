@@ -67,7 +67,7 @@ RETURN
 #endif
 
 /*
-QSize ()
+QSize()
 */
 void QSize_new1()
 {
@@ -76,7 +76,7 @@ void QSize_new1()
 }
 
 /*
-QSize ( int width, int height )
+QSize( int width, int height )
 */
 void QSize_new2()
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSIZE_DELETE )
 }
 
 /*
-QSize boundedTo ( const QSize & otherSize ) const
+QSize boundedTo( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
 }
 
 /*
-QSize expandedTo ( const QSize & otherSize ) const
+QSize expandedTo( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
 }
 
 /*
-int height () const
+int height() const
 */
 HB_FUNC_STATIC( QSIZE_HEIGHT )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QSIZE_HEIGHT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QSIZE_ISEMPTY )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QSIZE_ISEMPTY )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSIZE_ISNULL )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QSIZE_ISNULL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSIZE_ISVALID )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
 }
 
 /*
-void scale ( int width, int height, Qt::AspectRatioMode mode )
+void scale( int width, int height, Qt::AspectRatioMode mode )
 */
 void QSize_scale1()
 {
@@ -279,7 +279,7 @@ void QSize_scale1()
 }
 
 /*
-void scale ( const QSize & size, Qt::AspectRatioMode mode )
+void scale( const QSize & size, Qt::AspectRatioMode mode )
 */
 void QSize_scale2()
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSIZE_SCALE )
 }
 
 /*
-void setHeight ( int height )
+void setHeight( int height )
 */
 HB_FUNC_STATIC( QSIZE_SETHEIGHT )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QSIZE_SETHEIGHT )
 }
 
 /*
-void setWidth ( int width )
+void setWidth( int width )
 */
 HB_FUNC_STATIC( QSIZE_SETWIDTH )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QSIZE_SETWIDTH )
 }
 
 /*
-void transpose ()
+void transpose()
 */
 HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 }
 
 /*
-int width () const
+int width() const
 */
 HB_FUNC_STATIC( QSIZE_WIDTH )
 {

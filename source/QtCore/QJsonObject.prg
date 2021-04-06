@@ -78,7 +78,7 @@ void QJsonObject_new1()
 }
 
 /*
-QJsonObject(const QJsonObject & other)
+QJsonObject( const QJsonObject & other )
 */
 void QJsonObject_new2()
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QJSONOBJECT_DELETE )
 }
 
 /*
-bool contains(const QString & key) const
+bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QJSONOBJECT_CONTAINS )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QJSONOBJECT_LENGTH )
 }
 
 /*
-void remove(const QString & key)
+void remove( const QString & key )
 */
 HB_FUNC_STATIC( QJSONOBJECT_REMOVE )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QJSONOBJECT_SIZE )
 }
 
 /*
-QJsonValue take(const QString & key)
+QJsonValue take( const QString & key )
 */
 HB_FUNC_STATIC( QJSONOBJECT_TAKE )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QJSONOBJECT_TAKE )
 }
 
 /*
-QJsonValue value(const QString & key) const
+QJsonValue value( const QString & key ) const
 */
 HB_FUNC_STATIC( QJSONOBJECT_VALUE )
 {

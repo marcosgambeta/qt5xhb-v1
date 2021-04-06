@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_DELETE )
 }
 
 /*
-const char *name() const
+const char * name() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_NAME )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_NAME )
 }
 
 /*
-const char *value() const
+const char * value() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QMETACLASSINFO_VALUE )
 }
 
 /*
-const QMetaObject *enclosingMetaObject() const
+const QMetaObject * enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETACLASSINFO_ENCLOSINGMETAOBJECT )
 {

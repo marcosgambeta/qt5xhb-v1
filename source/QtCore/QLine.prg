@@ -81,7 +81,7 @@ void QLine_new1()
 }
 
 /*
-QLine(const QPoint & p1, const QPoint & p2)
+QLine( const QPoint & p1, const QPoint & p2 )
 */
 void QLine_new2()
 {
@@ -90,7 +90,7 @@ void QLine_new2()
 }
 
 /*
-QLine(int x1, int y1, int x2, int y2)
+QLine( int x1, int y1, int x2, int y2 )
 */
 void QLine_new3()
 {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QLINE_ISNULL )
 }
 
 /*
-void setP1(const QPoint & p1)
+void setP1( const QPoint & p1 )
 */
 HB_FUNC_STATIC( QLINE_SETP1 )
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QLINE_SETP1 )
 }
 
 /*
-void setP2(const QPoint & p2)
+void setP2( const QPoint & p2 )
 */
 HB_FUNC_STATIC( QLINE_SETP2 )
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QLINE_SETP2 )
 }
 
 /*
-void setLine(int x1, int y1, int x2, int y2)
+void setLine( int x1, int y1, int x2, int y2 )
 */
 HB_FUNC_STATIC( QLINE_SETLINE )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QLINE_SETLINE )
 }
 
 /*
-void setPoints(const QPoint & p1, const QPoint & p2)
+void setPoints( const QPoint & p1, const QPoint & p2 )
 */
 HB_FUNC_STATIC( QLINE_SETPOINTS )
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QLINE_SETPOINTS )
 }
 
 /*
-void translate(const QPoint & offset)
+void translate( const QPoint & offset )
 */
 void QLine_translate1()
 {
@@ -473,7 +473,7 @@ void QLine_translate1()
 }
 
 /*
-void translate(int dx, int dy)
+void translate( int dx, int dy )
 */
 void QLine_translate2()
 {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
 }
 
 /*
-QLine translated(const QPoint & offset) const
+QLine translated( const QPoint & offset ) const
 */
 void QLine_translated1()
 {
@@ -518,7 +518,7 @@ void QLine_translated1()
 }
 
 /*
-QLine translated(int dx, int dy) const
+QLine translated( int dx, int dy ) const
 */
 void QLine_translated2()
 {

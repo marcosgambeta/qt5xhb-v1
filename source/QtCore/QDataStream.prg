@@ -83,7 +83,7 @@ void QDataStream_new1()
 }
 
 /*
-QDataStream(QIODevice *)
+QDataStream( QIODevice * )
 */
 void QDataStream_new2()
 {
@@ -92,7 +92,7 @@ void QDataStream_new2()
 }
 
 /*
-QDataStream(QByteArray *, QIODevice::OpenMode flags)
+QDataStream( QByteArray *, QIODevice::OpenMode flags )
 */
 void QDataStream_new3()
 {
@@ -101,7 +101,7 @@ void QDataStream_new3()
 }
 
 /*
-QDataStream(const QByteArray &)
+QDataStream( const QByteArray & )
 */
 void QDataStream_new4()
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDATASTREAM_DELETE )
 }
 
 /*
-QIODevice *device() const
+QIODevice * device() const
 */
 HB_FUNC_STATIC( QDATASTREAM_DEVICE )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDATASTREAM_DEVICE )
 }
 
 /*
-void setDevice(QIODevice *)
+void setDevice( QIODevice * )
 */
 HB_FUNC_STATIC( QDATASTREAM_SETDEVICE )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDATASTREAM_ATEND )
 }
 
 /*
-Status status() const
+QDataStream::Status status() const
 */
 HB_FUNC_STATIC( QDATASTREAM_STATUS )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QDATASTREAM_STATUS )
 }
 
 /*
-void setStatus(Status status)
+void setStatus( QDataStream::Status status )
 */
 HB_FUNC_STATIC( QDATASTREAM_SETSTATUS )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QDATASTREAM_RESETSTATUS )
 }
 
 /*
-FloatingPointPrecision floatingPointPrecision() const
+QDataStream::FloatingPointPrecision floatingPointPrecision() const
 */
 HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
 {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QDATASTREAM_FLOATINGPOINTPRECISION )
 }
 
 /*
-void setFloatingPointPrecision(FloatingPointPrecision precision)
+void setFloatingPointPrecision( QDataStream::FloatingPointPrecision precision )
 */
 HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
 {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETFLOATINGPOINTPRECISION )
 }
 
 /*
-ByteOrder byteOrder() const
+QDataStream::ByteOrder byteOrder() const
 */
 HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
 {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QDATASTREAM_BYTEORDER )
 }
 
 /*
-void setByteOrder(ByteOrder)
+void setByteOrder( QDataStream::ByteOrder )
 */
 HB_FUNC_STATIC( QDATASTREAM_SETBYTEORDER )
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QDATASTREAM_VERSION )
 }
 
 /*
-void setVersion(int)
+void setVersion( int )
 */
 HB_FUNC_STATIC( QDATASTREAM_SETVERSION )
 {
@@ -478,11 +478,7 @@ HB_FUNC_STATIC( QDATASTREAM_SETVERSION )
 }
 
 /*
-QDataStream &readBytes(char *&, uint &len)
-*/
-
-/*
-int readRawData(char *, int len)
+int readRawData( char *, int len )
 */
 HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
 {
@@ -506,7 +502,7 @@ HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
 }
 
 /*
-QDataStream &writeBytes(const char *, uint len)
+QDataStream & writeBytes( const char *, uint len )
 */
 HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
 {
@@ -531,7 +527,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITEBYTES )
 }
 
 /*
-int writeRawData(const char *, int len)
+int writeRawData( const char *, int len )
 */
 HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
 {
@@ -555,7 +551,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
 }
 
 /*
-int skipRawData(int len)
+int skipRawData( int len )
 */
 HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
 {

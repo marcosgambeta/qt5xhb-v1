@@ -280,7 +280,7 @@ void _qtxhb_processOnEventMethod (QEvent::Type event);
 void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
 /*
-Q_INVOKABLE explicit QObject ( QObject * parent = 0 )
+QObject( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOBJECT_NEW )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QOBJECT_DELETE )
 }
 
 /*
-bool blockSignals ( bool block )
+bool blockSignals( bool block )
 */
 HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
 }
 
 /*
-const QObjectList & children () const
+const QObjectList & children() const
 */
 HB_FUNC_STATIC( QOBJECT_CHILDREN )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
     if( ISNUMPAR(0) )
     {
 #endif
-      QObjectList list = obj->children();
+      const QObjectList list = obj->children();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QOBJECT" );
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QOBJECT_CHILDREN )
 }
 
 /*
-void dumpObjectInfo ()
+void dumpObjectInfo()
 */
 HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
 }
 
 /*
-void dumpObjectTree ()
+void dumpObjectTree()
 */
 HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
 }
 
 /*
-QList<QByteArray> dynamicPropertyNames () const
+QList<QByteArray> dynamicPropertyNames() const
 */
 HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 }
 
 /*
-virtual bool event ( QEvent * e )
+virtual bool event( QEvent * e )
 */
 HB_FUNC_STATIC( QOBJECT_EVENT )
 {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QOBJECT_EVENT )
 }
 
 /*
-virtual bool eventFilter ( QObject * watched, QEvent * event )
+virtual bool eventFilter( QObject * watched, QEvent * event )
 */
 HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISCHAR(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (HB_ISCHAR(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       QObject * ptr = obj->findChild<QObject *>( OPQSTRING(1,QString()), HB_ISNIL(2)? (Qt::FindChildOptions) Qt::FindChildrenRecursively : (Qt::FindChildOptions) hb_parni(2) );
@@ -682,15 +682,15 @@ void QObject_findChildren3()
 
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {
-  if( ISBETWEEN(0,2) && (ISCHAR(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && ( HB_ISCHAR(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QObject_findChildren1();
   }
-  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQREGEXP(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QObject_findChildren2();
   }
-  else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QObject_findChildren3();
   }
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 }
 
 /*
-bool inherits ( const char * className ) const
+bool inherits( const char * className ) const
 */
 HB_FUNC_STATIC( QOBJECT_INHERITS )
 {
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
 }
 
 /*
-void installEventFilter ( QObject * filterObj )
+void installEventFilter( QObject * filterObj )
 */
 HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
 {
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
 }
 
 /*
-bool isWidgetType () const
+bool isWidgetType() const
 */
 HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
 {
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QOBJECT_ISWINDOWTYPE )
 }
 
 /*
-void killTimer ( int id )
+void killTimer( int id )
 */
 HB_FUNC_STATIC( QOBJECT_KILLTIMER )
 {
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QOBJECT_KILLTIMER )
 }
 
 /*
-virtual const QMetaObject * metaObject () const
+virtual const QMetaObject * metaObject() const
 */
 HB_FUNC_STATIC( QOBJECT_METAOBJECT )
 {
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QOBJECT_METAOBJECT )
 }
 
 /*
-void moveToThread ( QThread * targetThread )
+void moveToThread( QThread * targetThread )
 */
 HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
 {
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
 }
 
 /*
-QString objectName () const
+QString objectName() const
 */
 HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 {
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 }
 
 /*
-void setObjectName ( const QString & name )
+void setObjectName( const QString & name )
 */
 HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
 {
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
 }
 
 /*
-QObject * parent () const
+QObject * parent() const
 */
 HB_FUNC_STATIC( QOBJECT_PARENT )
 {
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
 }
 
 /*
-void setParent ( QObject * parent )
+void setParent( QObject * parent )
 */
 HB_FUNC_STATIC( QOBJECT_SETPARENT )
 {
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
 }
 
 /*
-void removeEventFilter ( QObject * obj )
+void removeEventFilter( QObject * obj )
 */
 HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
 {
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
 }
 
 /*
-bool signalsBlocked () const
+bool signalsBlocked() const
 */
 HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
 {
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
 }
 
 /*
-int startTimer(int interval, Qt::TimerType timerType = Qt::CoarseTimer)
+int startTimer( int interval, Qt::TimerType timerType = Qt::CoarseTimer )
 */
 HB_FUNC_STATIC( QOBJECT_STARTTIMER )
 {
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RINT( obj->startTimer( PINT(1), HB_ISNIL(2)? (Qt::TimerType) Qt::CoarseTimer : (Qt::TimerType) hb_parni(2) ) );
@@ -1104,7 +1104,7 @@ HB_FUNC_STATIC( QOBJECT_STARTTIMER )
 }
 
 /*
-QThread * thread () const
+QThread * thread() const
 */
 HB_FUNC_STATIC( QOBJECT_THREAD )
 {
@@ -1129,7 +1129,7 @@ HB_FUNC_STATIC( QOBJECT_THREAD )
 }
 
 /*
-void deleteLater ()
+void deleteLater()
 */
 HB_FUNC_STATIC( QOBJECT_DELETELATER )
 {
@@ -1155,12 +1155,12 @@ HB_FUNC_STATIC( QOBJECT_DELETELATER )
 }
 
 /*
-static QString tr ( const char * sourceText, const char * disambiguation = 0, int n = -1 )
+static QString tr( const char * sourceText, const char * disambiguation = 0, int n = -1 )
 */
 HB_FUNC_STATIC( QOBJECT_TR )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
 #endif
     RQSTRING( QObject::tr( PCONSTCHAR(1), OPCONSTCHAR(2,0), OPINT(3,-1) ) );

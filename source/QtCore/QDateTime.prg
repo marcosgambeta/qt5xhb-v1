@@ -88,7 +88,7 @@ RETURN
 #endif
 
 /*
-QDateTime ()
+QDateTime()
 */
 void QDateTime_new1()
 {
@@ -97,7 +97,7 @@ void QDateTime_new1()
 }
 
 /*
-QDateTime ( const QDate & date )
+QDateTime( const QDate & date )
 */
 void QDateTime_new2()
 {
@@ -106,7 +106,7 @@ void QDateTime_new2()
 }
 
 /*
-QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
+QDateTime( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
 */
 void QDateTime_new3()
 {
@@ -115,7 +115,7 @@ void QDateTime_new3()
 }
 
 /*
-QDateTime ( const QDateTime & other )
+QDateTime( const QDateTime & other )
 */
 void QDateTime_new4()
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
   {
     QDateTime_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQDATE(1) && ISQTIME(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQDATE(1) && ISQTIME(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QDateTime_new3();
   }
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDATETIME_DELETE )
 }
 
 /*
-QDateTime addDays ( int ndays ) const
+QDateTime addDays( int ndays ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDDAYS )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QDATETIME_ADDDAYS )
 }
 
 /*
-QDateTime addMSecs ( qint64 msecs ) const
+QDateTime addMSecs( qint64 msecs ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDMSECS )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMSECS )
 }
 
 /*
-QDateTime addMonths ( int nmonths ) const
+QDateTime addMonths( int nmonths ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
 }
 
 /*
-QDateTime addSecs ( int s ) const
+QDateTime addSecs( int s ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDSECS )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QDATETIME_ADDSECS )
 }
 
 /*
-QDateTime addYears ( int nyears ) const
+QDateTime addYears( int nyears ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDYEARS )
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QDATETIME_ADDYEARS )
 }
 
 /*
-QDate date () const
+QDate date() const
 */
 HB_FUNC_STATIC( QDATETIME_DATE )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDATETIME_DATE )
 }
 
 /*
-int daysTo ( const QDateTime & other ) const
+int daysTo( const QDateTime & other ) const
 */
 HB_FUNC_STATIC( QDATETIME_DAYSTO )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QDATETIME_DAYSTO )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QDATETIME_ISNULL )
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QDATETIME_ISNULL )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QDATETIME_ISVALID )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QDATETIME_ISVALID )
 }
 
 /*
-qint64 msecsTo ( const QDateTime & other ) const
+qint64 msecsTo( const QDateTime & other ) const
 */
 HB_FUNC_STATIC( QDATETIME_MSECSTO )
 {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QDATETIME_MSECSTO )
 }
 
 /*
-int secsTo ( const QDateTime & other ) const
+int secsTo( const QDateTime & other ) const
 */
 HB_FUNC_STATIC( QDATETIME_SECSTO )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QDATETIME_SECSTO )
 }
 
 /*
-void setDate ( const QDate & date )
+void setDate( const QDate & date )
 */
 HB_FUNC_STATIC( QDATETIME_SETDATE )
 {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QDATETIME_SETDATE )
 }
 
 /*
-void setMSecsSinceEpoch ( qint64 msecs )
+void setMSecsSinceEpoch( qint64 msecs )
 */
 HB_FUNC_STATIC( QDATETIME_SETMSECSSINCEEPOCH )
 {
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QDATETIME_SETMSECSSINCEEPOCH )
 }
 
 /*
-void setTime ( const QTime & time )
+void setTime( const QTime & time )
 */
 HB_FUNC_STATIC( QDATETIME_SETTIME )
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QDATETIME_SETTIME )
 }
 
 /*
-void setTimeSpec ( Qt::TimeSpec spec )
+void setTimeSpec( Qt::TimeSpec spec )
 */
 HB_FUNC_STATIC( QDATETIME_SETTIMESPEC )
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QDATETIME_SETTIMESPEC )
 }
 
 /*
-void setTime_t ( uint seconds )
+void setTime_t( uint seconds )
 */
 HB_FUNC_STATIC( QDATETIME_SETTIME_T )
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QDATETIME_SETTIME_T )
 }
 
 /*
-QTime time () const
+QTime time() const
 */
 HB_FUNC_STATIC( QDATETIME_TIME )
 {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QDATETIME_TIME )
 }
 
 /*
-Qt::TimeSpec timeSpec () const
+Qt::TimeSpec timeSpec() const
 */
 HB_FUNC_STATIC( QDATETIME_TIMESPEC )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QDATETIME_TIMESPEC )
 }
 
 /*
-QDateTime toLocalTime () const
+QDateTime toLocalTime() const
 */
 HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
 }
 
 /*
-qint64 toMSecsSinceEpoch () const
+qint64 toMSecsSinceEpoch() const
 */
 HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
 {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
 }
 
 /*
-QString toString ( const QString & format ) const
+QString toString( const QString & format ) const
 */
 void QDateTime_toString1()
 {
@@ -676,7 +676,7 @@ void QDateTime_toString1()
 }
 
 /*
-QString toString ( Qt::DateFormat format = Qt::TextDate ) const
+QString toString( Qt::DateFormat format = Qt::TextDate ) const
 */
 void QDateTime_toString2()
 {
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
   {
     QDateTime_toString1();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QDateTime_toString2();
   }
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
 }
 
 /*
-QDateTime toTimeSpec ( Qt::TimeSpec specification ) const
+QDateTime toTimeSpec( Qt::TimeSpec specification ) const
 */
 HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
 {
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
 }
 
 /*
-uint toTime_t () const
+uint toTime_t() const
 */
 HB_FUNC_STATIC( QDATETIME_TOTIME_T )
 {
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIME_T )
 }
 
 /*
-QDateTime toUTC () const
+QDateTime toUTC() const
 */
 HB_FUNC_STATIC( QDATETIME_TOUTC )
 {
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QDATETIME_TOUTC )
 }
 
 /*
-static QDateTime currentDateTime ()
+static QDateTime currentDateTime()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
 {
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
 }
 
 /*
-static QDateTime currentDateTimeUtc ()
+static QDateTime currentDateTimeUtc()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
 {
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
 }
 
 /*
-static qint64 currentMSecsSinceEpoch ()
+static qint64 currentMSecsSinceEpoch()
 */
 HB_FUNC_STATIC( QDATETIME_CURRENTMSECSSINCEEPOCH )
 {
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QDATETIME_CURRENTMSECSSINCEEPOCH )
 }
 
 /*
-static QDateTime fromMSecsSinceEpoch ( qint64 msecs )
+static QDateTime fromMSecsSinceEpoch( qint64 msecs )
 */
 HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
 {
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
 }
 
 /*
-static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
+static QDateTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
 void QDateTime_fromString1()
 {
@@ -868,7 +868,7 @@ void QDateTime_fromString1()
 }
 
 /*
-static QDateTime fromString ( const QString & string, const QString & format )
+static QDateTime fromString( const QString & string, const QString & format )
 */
 void QDateTime_fromString2()
 {
@@ -879,7 +879,7 @@ void QDateTime_fromString2()
 
 HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 {
-  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QDateTime_fromString1();
   }
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 }
 
 /*
-static QDateTime fromTime_t ( uint seconds )
+static QDateTime fromTime_t( uint seconds )
 */
 HB_FUNC_STATIC( QDATETIME_FROMTIME_T )
 {

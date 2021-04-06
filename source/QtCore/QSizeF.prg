@@ -80,7 +80,7 @@ void QSizeF_new1()
 }
 
 /*
-QSizeF(const QSize &sz)
+QSizeF( const QSize & sz )
 */
 void QSizeF_new2()
 {
@@ -89,7 +89,7 @@ void QSizeF_new2()
 }
 
 /*
-QSizeF(qreal w, qreal h)
+QSizeF( qreal w, qreal h )
 */
 void QSizeF_new3()
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QSIZEF_HEIGHT )
 }
 
 /*
-void setWidth(qreal w)
+void setWidth( qreal w )
 */
 HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 }
 
 /*
-void setHeight(qreal h)
+void setHeight( qreal h )
 */
 HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QSIZEF_TRANSPOSED )
 }
 
 /*
-void scale(qreal w, qreal h, Qt::AspectRatioMode mode)
+void scale( qreal w, qreal h, Qt::AspectRatioMode mode )
 */
 void QSizeF_scale1()
 {
@@ -373,7 +373,7 @@ void QSizeF_scale1()
 }
 
 /*
-void scale(const QSizeF &s, Qt::AspectRatioMode mode)
+void scale( const QSizeF & s, Qt::AspectRatioMode mode )
 */
 void QSizeF_scale2()
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
 }
 
 /*
-QSizeF scaled(qreal w, qreal h, Qt::AspectRatioMode mode) const
+QSizeF scaled( qreal w, qreal h, Qt::AspectRatioMode mode ) const
 */
 void QSizeF_scaled1()
 {
@@ -418,7 +418,7 @@ void QSizeF_scaled1()
 }
 
 /*
-QSizeF scaled(const QSizeF &s, Qt::AspectRatioMode mode) const
+QSizeF scaled( const QSizeF & s, Qt::AspectRatioMode mode ) const
 */
 void QSizeF_scaled2()
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QSIZEF_SCALED )
 }
 
 /*
-QSizeF expandedTo(const QSizeF &) const
+QSizeF expandedTo( const QSizeF & ) const
 */
 HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 }
 
 /*
-QSizeF boundedTo(const QSizeF &) const
+QSizeF boundedTo( const QSizeF & ) const
 */
 HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
 {

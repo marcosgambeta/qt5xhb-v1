@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DELETE )
 }
 
 /*
-int currentLoop () const
+int currentLoop() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 }
 
 /*
-int currentLoopTime () const
+int currentLoopTime() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 }
 
 /*
-int currentTime () const
+int currentTime() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 }
 
 /*
-void setCurrentTime ( int msecs )
+void setCurrentTime( int msecs )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
 }
 
 /*
-Direction direction () const
+QAbstractAnimation::Direction direction() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
 }
 
 /*
-void  setDirection ( Direction direction )
+void setDirection( QAbstractAnimation::Direction direction )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
 }
 
 /*
-virtual int duration () const = 0
+virtual int duration() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 }
 
 /*
-QAnimationGroup * group () const
+QAnimationGroup * group() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
 }
 
 /*
-int loopCount () const
+int loopCount() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 }
 
 /*
-void setLoopCount ( int loopCount )
+void setLoopCount( int loopCount )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
 }
 
 /*
-State state () const
+QAbstractAnimation::State state() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
 }
 
 /*
-int totalDuration () const
+int totalDuration() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 }
 
 /*
-void pause ()
+void pause()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_PAUSE )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_PAUSE )
 }
 
 /*
-void resume ()
+void resume()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_RESUME )
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_RESUME )
 }
 
 /*
-void setPaused ( bool paused )
+void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
 }
 
 /*
-void start ( QAbstractAnimation::DeletionPolicy policy = KeepWhenStopped )
+void start( QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_START )
 {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_START )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->start( HB_ISNIL(1)? (QAbstractAnimation::DeletionPolicy) QAbstractAnimation::KeepWhenStopped : (QAbstractAnimation::DeletionPolicy) hb_parni(1) );
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_START )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STOP )
 {

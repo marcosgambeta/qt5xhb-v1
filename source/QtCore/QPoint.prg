@@ -71,7 +71,7 @@ void QPoint_new1()
 }
 
 /*
-QPoint(int xpos, int ypos)
+QPoint( int xpos, int ypos )
 */
 void QPoint_new2()
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
 }
 
 /*
-void setX(int x)
+void setX( int x )
 */
 HB_FUNC_STATIC( QPOINT_SETX )
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QPOINT_SETX )
 }
 
 /*
-void setY(int y)
+void setY( int y )
 */
 HB_FUNC_STATIC( QPOINT_SETY )
 {
