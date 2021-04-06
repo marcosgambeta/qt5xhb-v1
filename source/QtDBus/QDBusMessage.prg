@@ -88,7 +88,7 @@ void QDBusMessage_new1()
 }
 
 /*
-QDBusMessage(const QDBusMessage &other)
+QDBusMessage( const QDBusMessage & other )
 */
 void QDBusMessage_new2()
 {
@@ -130,11 +130,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_DELETE )
 }
 
 /*
-QDBusMessage createReply(const QList<QVariant> &arguments = QList<QVariant>()) const
-*/
-
-/*
-QDBusMessage createReply(const QVariant &argument) const
+QDBusMessage createReply( const QVariant & argument ) const
 */
 void QDBusMessage_createReply2()
 {
@@ -160,7 +156,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
 }
 
 /*
-QDBusMessage createErrorReply(const QString name, const QString &msg) const
+QDBusMessage createErrorReply( const QString name, const QString & msg ) const
 */
 void QDBusMessage_createErrorReply1()
 {
@@ -174,7 +170,7 @@ void QDBusMessage_createErrorReply1()
 }
 
 /*
-QDBusMessage createErrorReply(const QDBusError &err) const
+QDBusMessage createErrorReply( const QDBusError & err ) const
 */
 void QDBusMessage_createErrorReply2()
 {
@@ -188,7 +184,7 @@ void QDBusMessage_createErrorReply2()
 }
 
 /*
-QDBusMessage createErrorReply(QDBusError::ErrorType type, const QString &msg) const
+QDBusMessage createErrorReply( QDBusError::ErrorType type, const QString & msg ) const
 */
 void QDBusMessage_createErrorReply3()
 {
@@ -366,7 +362,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ERRORMESSAGE )
 }
 
 /*
-MessageType type() const
+QDBusMessage::MessageType type() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_TYPE )
 {
@@ -438,7 +434,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISREPLYREQUIRED )
 }
 
 /*
-void setDelayedReply(bool enable) const
+void setDelayedReply( bool enable ) const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_SETDELAYEDREPLY )
 {
@@ -488,7 +484,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISDELAYEDREPLY )
 }
 
 /*
-void setAutoStartService(bool enable)
+void setAutoStartService( bool enable )
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_SETAUTOSTARTSERVICE )
 {
@@ -538,7 +534,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_AUTOSTARTSERVICE )
 }
 
 /*
-void setArguments(const QList<QVariant> &arguments)
+void setArguments( const QList<QVariant> & arguments )
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_SETARGUMENTS )
 {
@@ -596,7 +592,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ARGUMENTS )
 }
 
 /*
-static QDBusMessage createSignal(const QString &path, const QString &interface,const QString &name)
+static QDBusMessage createSignal( const QString & path, const QString & interface, const QString & name )
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATESIGNAL )
 {
@@ -616,7 +612,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATESIGNAL )
 }
 
 /*
-static QDBusMessage createMethodCall(const QString &destination, const QString &path,const QString &interface, const QString &method)
+static QDBusMessage createMethodCall( const QString & destination, const QString & path, const QString & interface, const QString & method )
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEMETHODCALL )
 {
@@ -636,7 +632,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEMETHODCALL )
 }
 
 /*
-static QDBusMessage createError(const QString &name, const QString &msg)
+static QDBusMessage createError( const QString & name, const QString & msg )
 */
 void QDBusMessage_createError1()
 {
@@ -646,7 +642,7 @@ void QDBusMessage_createError1()
 }
 
 /*
-static inline QDBusMessage createError(const QDBusError &err)
+static QDBusMessage createError( const QDBusError & err )
 */
 void QDBusMessage_createError2()
 {
@@ -656,7 +652,7 @@ void QDBusMessage_createError2()
 }
 
 /*
-static inline QDBusMessage createError(QDBusError::ErrorType type, const QString &msg)
+static QDBusMessage createError( QDBusError::ErrorType type, const QString & msg )
 */
 void QDBusMessage_createError3()
 {
@@ -686,7 +682,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
 }
 
 /*
-bool QDBusMessage::isInteractiveAuthorizationAllowed() const
+bool isInteractiveAuthorizationAllowed() const
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_ISINTERACTIVEAUTHORIZATIONALLOWED )
 {
@@ -712,7 +708,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISINTERACTIVEAUTHORIZATIONALLOWED )
 }
 
 /*
-void QDBusMessage::setInteractiveAuthorizationAllowed(bool enable)
+void setInteractiveAuthorizationAllowed( bool enable )
 */
 HB_FUNC_STATIC( QDBUSMESSAGE_SETINTERACTIVEAUTHORIZATIONALLOWED )
 {

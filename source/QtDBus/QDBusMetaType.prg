@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_DELETE )
 }
 
 /*
-static bool demarshall(const QDBusArgument &, int id, void *data)
+static bool demarshall( const QDBusArgument &, int id, void * data )
 */
 HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
 {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_DEMARSHALL )
 }
 
 /*
-static int signatureToType(const char *signature)
+static int signatureToType( const char * signature )
 */
 HB_FUNC_STATIC( QDBUSMETATYPE_SIGNATURETOTYPE )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QDBUSMETATYPE_SIGNATURETOTYPE )
 }
 
 /*
-static const char *typeToSignature(int type)
+static const char * typeToSignature( int type )
 */
 HB_FUNC_STATIC( QDBUSMETATYPE_TYPETOSIGNATURE )
 {

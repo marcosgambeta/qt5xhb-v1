@@ -67,7 +67,7 @@ RETURN
 #endif
 
 /*
-QDBusPendingCall(const QDBusPendingCall &other)
+QDBusPendingCall( const QDBusPendingCall & other )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_NEW )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_DELETE )
 }
 
 /*
-void swap(QDBusPendingCall &other)
+void swap( QDBusPendingCall & other )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_SWAP )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_REPLY )
 }
 
 /*
-static QDBusPendingCall fromError(const QDBusError &error)
+static QDBusPendingCall fromError( const QDBusError & error )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMERROR )
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMERROR )
 }
 
 /*
-static QDBusPendingCall fromCompletedCall(const QDBusMessage &message)
+static QDBusPendingCall fromCompletedCall( const QDBusMessage & message )
 */
 HB_FUNC_STATIC( QDBUSPENDINGCALL_FROMCOMPLETEDCALL )
 {

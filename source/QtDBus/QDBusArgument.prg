@@ -79,7 +79,7 @@ void QDBusArgument_new1()
 }
 
 /*
-QDBusArgument(const QDBusArgument &other)
+QDBusArgument( const QDBusArgument & other )
 */
 void QDBusArgument_new2()
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
 }
 
 /*
-void beginArray(int elementMetaTypeId)
+void beginArray( int elementMetaTypeId )
 */
 void QDBusArgument_beginArray1()
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
 }
 
 /*
-void beginMap(int keyMetaTypeId, int valueMetaTypeId)
+void beginMap( int keyMetaTypeId, int valueMetaTypeId )
 */
 void QDBusArgument_beginMap1()
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDMAPENTRY )
 }
 
 /*
-void appendVariant(const QVariant &v)
+void appendVariant( const QVariant & v )
 */
 HB_FUNC_STATIC( QDBUSARGUMENT_APPENDVARIANT )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTSIGNATURE )
 }
 
 /*
-ElementType currentType() const
+QDBusArgument::ElementType currentType() const
 */
 HB_FUNC_STATIC( QDBUSARGUMENT_CURRENTTYPE )
 {

@@ -45,16 +45,4 @@ RETURN
 #include <QtDBus/QDBusVirtualObject>
 #endif
 
-/*
-explicit QDBusVirtualObject(QObject *parent = 0)
-*/
-
-/*
-virtual QString introspect(const QString &path) const = 0
-*/
-
-/*
-virtual bool handleMessage(const QDBusMessage &message, const QDBusConnection &connection) = 0
-*/
-
 #pragma ENDDUMP

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW1 )
 }
 
 /*
-explicit QDBusSignature(const char *signature)
+QDBusSignature( const char * signature )
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
 {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW2 )
 }
 
 /*
-explicit QDBusSignature(QLatin1String signature)
+QDBusSignature( QLatin1String signature )
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
 {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_NEW3 )
 }
 
 /*
-explicit QDBusSignature(const QString &signature)
+QDBusSignature( const QString & signature )
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_NEW4 )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDBUSSIGNATURE_SIGNATURE )
 }
 
 /*
-void setSignature(const QString &signature)
+void setSignature( const QString & signature )
 */
 HB_FUNC_STATIC( QDBUSSIGNATURE_SETSIGNATURE )
 {

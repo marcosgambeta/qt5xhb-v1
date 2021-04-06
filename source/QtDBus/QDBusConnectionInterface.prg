@@ -50,38 +50,6 @@ RETURN
 #include <QtDBus/QDBusConnectionInterface>
 #endif
 
-/*
-QDBusReply<QStringList> registeredServiceNames() const
-*/
-
-/*
-QDBusReply<bool> isServiceRegistered(const QString &serviceName) const
-*/
-
-/*
-QDBusReply<QString> serviceOwner(const QString &name) const
-*/
-
-/*
-QDBusReply<bool> unregisterService(const QString &serviceName)
-*/
-
-/*
-QDBusReply<QDBusConnectionInterface::RegisterServiceReply> registerService(const QString &serviceName,ServiceQueueOptions qoption = DontQueueService,ServiceReplacementOptions roption = DontAllowReplacement)
-*/
-
-/*
-QDBusReply<uint> servicePid(const QString &serviceName) const
-*/
-
-/*
-QDBusReply<uint> serviceUid(const QString &serviceName) const
-*/
-
-/*
-QDBusReply<void> startService(const QString &name)
-*/
-
 void QDBusConnectionInterfaceSlots_connect_signal( const QString & signal, const QString & slot );
 
 HB_FUNC_STATIC( QDBUSCONNECTIONINTERFACE_ONSERVICEREGISTERED )

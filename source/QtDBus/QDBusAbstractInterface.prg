@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_LASTERROR )
 }
 
 /*
-void setTimeout(int timeout)
+void setTimeout( int timeout )
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_SETTIMEOUT )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_TIMEOUT )
 }
 
 /*
-QDBusMessage call(const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
+QDBusMessage call( const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant() )
 */
 void QDBusAbstractInterface_call1()
 {
@@ -296,7 +296,7 @@ void QDBusAbstractInterface_call1()
 }
 
 /*
-QDBusMessage call(QDBus::CallMode mode,const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
+QDBusMessage call( QDBus::CallMode mode, const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant() )
 */
 void QDBusAbstractInterface_call2()
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALL )
 }
 
 /*
-QDBusMessage callWithArgumentList(QDBus::CallMode mode,const QString &method,const QList<QVariant> &args)
+QDBusMessage callWithArgumentList( QDBus::CallMode mode, const QString & method, const QList<QVariant> & args )
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHARGUMENTLIST )
 }
 
 /*
-bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member, const char *errorSlot)
+bool callWithCallback( const QString & method, const QList<QVariant> & args, QObject * receiver, const char * member, const char * errorSlot )
 */
 void QDBusAbstractInterface_callWithCallback1()
 {
@@ -368,7 +368,7 @@ void QDBusAbstractInterface_callWithCallback1()
 }
 
 /*
-bool callWithCallback(const QString &method,const QList<QVariant> &args,QObject *receiver, const char *member)
+bool callWithCallback( const QString & method, const QList<QVariant> & args, QObject * receiver, const char * member )
 */
 void QDBusAbstractInterface_callWithCallback2()
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_CALLWITHCALLBACK )
 }
 
 /*
-QDBusPendingCall asyncCall(const QString &method,const QVariant &arg1 = QVariant(),const QVariant &arg2 = QVariant(),const QVariant &arg3 = QVariant(),const QVariant &arg4 = QVariant(),const QVariant &arg5 = QVariant(),const QVariant &arg6 = QVariant(),const QVariant &arg7 = QVariant(),const QVariant &arg8 = QVariant())
+QDBusPendingCall asyncCall( const QString & method, const QVariant & arg1 = QVariant(), const QVariant & arg2 = QVariant(), const QVariant & arg3 = QVariant(), const QVariant & arg4 = QVariant(), const QVariant & arg5 = QVariant(), const QVariant & arg6 = QVariant(), const QVariant & arg7 = QVariant(), const QVariant & arg8 = QVariant() )
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALL )
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALL )
 }
 
 /*
-QDBusPendingCall asyncCallWithArgumentList(const QString &method,const QList<QVariant> &args)
+QDBusPendingCall asyncCallWithArgumentList( const QString & method, const QList<QVariant> & args )
 */
 HB_FUNC_STATIC( QDBUSABSTRACTINTERFACE_ASYNCCALLWITHARGUMENTLIST )
 {

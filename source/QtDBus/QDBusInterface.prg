@@ -52,11 +52,11 @@ RETURN
 #endif
 
 /*
-QDBusInterface(const QString &service, const QString &path, const QString &interface = QString(),const QDBusConnection &connection = QDBusConnection::sessionBus(),QObject *parent = 0)
+QDBusInterface( const QString & service, const QString & path, const QString & interface = QString(), const QDBusConnection & connection = QDBusConnection::sessionBus(), QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_NEW )
 {
-  if( ISBETWEEN(2,5) && HB_ISCHAR(1) && HB_ISCHAR(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISQDBUSCONNECTION(4)||HB_ISNIL(4)) && (ISQOBJECT(5)||HB_ISNIL(5)) )
+  if( ISBETWEEN(2,5) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3)||HB_ISNIL(3)) && (ISQDBUSCONNECTION(4)||HB_ISNIL(4)) && (ISQOBJECT(5)||HB_ISNIL(5)) )
   {
     QDBusInterface * obj = new QDBusInterface( PQSTRING(1), PQSTRING(2), OPQSTRING(3,QString()), HB_ISNIL(4)? QDBusConnection::sessionBus() : *(QDBusConnection *) Qt5xHb::itemGetPtr(4), OPQOBJECT(5,0) );
     Qt5xHb::returnNewObject( obj, false );
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_DELETE )
 }
 
 /*
-virtual const QMetaObject *metaObject() const
+virtual const QMetaObject * metaObject() const
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDBUSINTERFACE_METAOBJECT )
 }
 
 /*
-virtual void * qt_metacast ( const char * )
+virtual void * qt_metacast( const char * )
 */
 HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
 {
@@ -134,9 +134,5 @@ HB_FUNC_STATIC( QDBUSINTERFACE_QT_METACAST )
 #endif
   }
 }
-
-/*
-virtual int qt_metacall(QMetaObject::Call, int, void **)
-*/
 
 #pragma ENDDUMP

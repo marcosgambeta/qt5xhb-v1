@@ -57,7 +57,7 @@ RETURN
 #include <QtDBus/QDBusError>
 
 /*
-QDBusServer(const QString &address, QObject *parent = 0)
+QDBusServer( const QString & address, QObject * parent = 0 )
 */
 void QDBusServer_new1()
 {
@@ -66,7 +66,7 @@ void QDBusServer_new1()
 }
 
 /*
-QDBusServer(QObject *parent = 0)
+QDBusServer( QObject * parent = 0 )
 */
 void QDBusServer_new2()
 {

@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_CONNECTION )
 }
 
 /*
-const QDBusMessage &message() const
+const QDBusMessage & message() const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_MESSAGE )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_ISDELAYEDREPLY )
 }
 
 /*
-void setDelayedReply(bool enable) const
+void setDelayedReply( bool enable ) const
 */
 HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
 }
 
 /*
-void sendErrorReply(const QString &name, const QString &msg = QString()) const
+void sendErrorReply( const QString & name, const QString & msg = QString() ) const
 */
 void QDBusContext_sendErrorReply1()
 {
@@ -238,7 +238,7 @@ void QDBusContext_sendErrorReply1()
 }
 
 /*
-void sendErrorReply(QDBusError::ErrorType type, const QString &msg = QString()) const
+void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString() ) const
 */
 void QDBusContext_sendErrorReply2()
 {

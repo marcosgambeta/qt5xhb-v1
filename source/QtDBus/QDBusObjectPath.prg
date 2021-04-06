@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW1 )
 }
 
 /*
-explicit QDBusObjectPath(const char *path)
+QDBusObjectPath( const char * path )
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
 {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW2 )
 }
 
 /*
-explicit QDBusObjectPath(QLatin1String path)
+QDBusObjectPath( QLatin1String path )
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW3 )
 }
 
 /*
-explicit QDBusObjectPath(const QString &path)
+QDBusObjectPath( const QString & path )
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_NEW4 )
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDBUSOBJECTPATH_PATH )
 }
 
 /*
-void setPath(const QString &path)
+void setPath( const QString & path )
 */
 HB_FUNC_STATIC( QDBUSOBJECTPATH_SETPATH )
 {

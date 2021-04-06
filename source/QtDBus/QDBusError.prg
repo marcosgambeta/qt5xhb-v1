@@ -70,11 +70,7 @@ void QDBusError_new1()
 }
 
 /*
-QDBusError(const DBusError *error)
-*/
-
-/*
-QDBusError(const QDBusMessage& msg)
+QDBusError( const QDBusMessage & msg )
 */
 void QDBusError_new3()
 {
@@ -83,7 +79,7 @@ void QDBusError_new3()
 }
 
 /*
-QDBusError(ErrorType error, const QString &message)
+QDBusError( QDBusError::ErrorType error, const QString & message )
 */
 void QDBusError_new4()
 {
@@ -92,7 +88,7 @@ void QDBusError_new4()
 }
 
 /*
-QDBusError(const QDBusError &other)
+QDBusError( const QDBusError & other )
 */
 void QDBusError_new5()
 {
@@ -142,7 +138,7 @@ HB_FUNC_STATIC( QDBUSERROR_DELETE )
 }
 
 /*
-ErrorType type() const
+QDBusError::ErrorType type() const
 */
 HB_FUNC_STATIC( QDBUSERROR_TYPE )
 {
@@ -238,7 +234,7 @@ HB_FUNC_STATIC( QDBUSERROR_ISVALID )
 }
 
 /*
-static QString errorString(ErrorType error)
+static QString errorString( QDBusError::ErrorType error )
 */
 HB_FUNC_STATIC( QDBUSERROR_ERRORSTRING )
 {
