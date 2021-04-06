@@ -20,6 +20,7 @@ CLASS QAndroidActivityResultReceiver
    DATA pointer
    DATA self_destruction INIT .F.
 
+   METHOD new
    METHOD delete
    METHOD handleActivityResult
 
@@ -60,6 +61,24 @@ RETURN
 #endif
 
 /*
+QAndroidActivityResultReceiver()
+*/
+HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_NEW )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+  if( ISNUMPAR(0) )
+  {
+    QAndroidActivityResultReceiver * obj = new QAndroidActivityResultReceiver();
+    Qt5xHb::returnNewObject( obj, true );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
+
+/*
 virtual ~QAndroidActivityResultReceiver()
 */
 HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_DELETE )
@@ -82,7 +101,7 @@ HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_DELETE )
 }
 
 /*
-virtual void handleActivityResult(int receiverRequestCode, int resultCode, const QAndroidJniObject &data) = 0
+virtual void handleActivityResult( int receiverRequestCode, int resultCode, const QAndroidJniObject & data ) = 0
 */
 HB_FUNC_STATIC( QANDROIDACTIVITYRESULTRECEIVER_HANDLEACTIVITYRESULT )
 {

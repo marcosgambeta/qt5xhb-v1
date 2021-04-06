@@ -23,6 +23,7 @@ CLASS QAndroidJniEnvironment
    METHOD new
    METHOD delete
    METHOD javaVM
+   METHOD findClass
 
    METHOD newFrom
    METHOD newFromObject
@@ -101,7 +102,7 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_DELETE )
 }
 
 /*
-static JavaVM *javaVM()
+static JavaVM * javaVM()
 */
 HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_JAVAVM )
 {
@@ -118,6 +119,32 @@ HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_JAVAVM )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 #endif
+#endif
+}
+
+/*
+jclass findClass( const char * className )
+*/
+HB_FUNC_STATIC( QANDROIDJNIENVIRONMENT_FINDCLASS )
+{
+#if (QT_VERSION >= QT_VERSION_CHECK(5,12,0))
+  QAndroidJniEnvironment * obj = (QAndroidJniEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    {
+#endif
+      hb_retptr( (jclass) obj->findClass( PCONSTCHAR(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
 #endif
 }
 
