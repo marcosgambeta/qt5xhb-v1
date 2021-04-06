@@ -69,7 +69,7 @@ void QBluetoothUuid_new1()
 }
 
 /*
-QBluetoothUuid(ProtocolUuid uuid)
+QBluetoothUuid( QBluetoothUuid::ProtocolUuid uuid )
 */
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW2 )
 {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW2 )
 }
 
 /*
-QBluetoothUuid(ServiceClassUuid uuid)
+QBluetoothUuid( QBluetoothUuid::ServiceClassUuid uuid )
 */
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW3 )
 {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW3 )
 }
 
 /*
-QBluetoothUuid(quint16 uuid)
+QBluetoothUuid( quint16 uuid )
 */
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW4 )
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW4 )
 }
 
 /*
-QBluetoothUuid(quint32 uuid)
+QBluetoothUuid( quint32 uuid )
 */
 HB_FUNC_STATIC( QBLUETOOTHUUID_NEW5 )
 {
@@ -113,11 +113,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_NEW5 )
 }
 
 /*
-QBluetoothUuid(quint128 uuid)
-*/
-
-/*
-QBluetoothUuid(const QString &uuid)
+QBluetoothUuid( const QString & uuid )
 */
 void QBluetoothUuid_new7()
 {
@@ -128,7 +124,7 @@ void QBluetoothUuid_new7()
 }
 
 /*
-QBluetoothUuid(const QBluetoothUuid &uuid)
+QBluetoothUuid( const QBluetoothUuid & uuid )
 */
 void QBluetoothUuid_new8()
 {
@@ -139,7 +135,7 @@ void QBluetoothUuid_new8()
 }
 
 /*
-QBluetoothUuid(const QUuid &uuid)
+QBluetoothUuid( const QUuid & uuid )
 */
 void QBluetoothUuid_new9()
 {
@@ -235,7 +231,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_MINIMUMSIZE )
 }
 
 /*
-quint16 toUInt16(bool *ok = 0) const
+quint16 toUInt16( bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
 {
@@ -245,7 +241,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -263,7 +259,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT16 )
 }
 
 /*
-quint32 toUInt32(bool *ok = 0) const
+quint32 toUInt32( bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
 {
@@ -273,7 +269,7 @@ HB_FUNC_STATIC( QBLUETOOTHUUID_TOUINT32 )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;

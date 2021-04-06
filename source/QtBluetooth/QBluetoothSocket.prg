@@ -79,7 +79,7 @@ RETURN
 #endif
 
 /*
-QBluetoothSocket(QBluetoothServiceInfo::Protocol socketType, QObject *parent = 0)
+QBluetoothSocket( QBluetoothServiceInfo::Protocol socketType, QObject * parent = 0 )
 */
 void QBluetoothSocket_new1()
 {
@@ -90,7 +90,7 @@ void QBluetoothSocket_new1()
 }
 
 /*
-QBluetoothSocket(QObject *parent = 0)
+QBluetoothSocket( QObject * parent = 0 )
 */
 void QBluetoothSocket_new2()
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_CANREADLINE )
 }
 
 /*
-void connectToService(const QBluetoothServiceInfo &service, OpenMode openMode = ReadWrite)
+void connectToService( const QBluetoothServiceInfo & service, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QBluetoothSocket_connectToService1()
 {
@@ -315,7 +315,7 @@ void QBluetoothSocket_connectToService1()
 }
 
 /*
-void connectToService(const QBluetoothAddress &address, const QBluetoothUuid &uuid, OpenMode openMode = ReadWrite)
+void connectToService( const QBluetoothAddress & address, const QBluetoothUuid & uuid, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QBluetoothSocket_connectToService2()
 {
@@ -332,7 +332,7 @@ void QBluetoothSocket_connectToService2()
 }
 
 /*
-void connectToService(const QBluetoothAddress &address, quint16 port, OpenMode openMode = ReadWrite)
+void connectToService( const QBluetoothAddress & address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QBluetoothSocket_connectToService3()
 {
@@ -350,15 +350,15 @@ void QBluetoothSocket_connectToService3()
 
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE )
 {
-  if( ISBETWEEN(1,2) && ISQBLUETOOTHSERVICEINFO(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQBLUETOOTHSERVICEINFO(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QBluetoothSocket_connectToService1();
   }
-  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QBluetoothSocket_connectToService2();
   }
-  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QBluetoothSocket_connectToService3();
   }
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_PEERPORT )
 }
 
 /*
-bool setSocketDescriptor(int socketDescriptor, QBluetoothServiceInfo::Protocol socketType,SocketState socketState = ConnectedState,OpenMode openMode = ReadWrite)
+bool setSocketDescriptor( int socketDescriptor, QBluetoothServiceInfo::Protocol socketType, QBluetoothSocket::SocketState socketState = QBluetoothSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SETSOCKETDESCRIPTOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )
     {
 #endif
       RBOOL( obj->setSocketDescriptor( PINT(1), (QBluetoothServiceInfo::Protocol) hb_parni(2), HB_ISNIL(3)? (QBluetoothSocket::SocketState) QBluetoothSocket::ConnectedState : (QBluetoothSocket::SocketState) hb_parni(3), HB_ISNIL(4)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(4) ) );
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_SOCKETTYPE )
 }
 
 /*
-SocketState state() const
+QBluetoothSocket::SocketState state() const
 */
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_STATE )
 {
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_STATE )
 }
 
 /*
-SocketError error() const
+QBluetoothSocket::SocketError error() const
 */
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_ERROR )
 {

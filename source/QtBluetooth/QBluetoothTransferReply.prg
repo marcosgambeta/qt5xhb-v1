@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ISRUNNING )
 }
 
 /*
-QBluetoothTransferManager *manager() const
+QBluetoothTransferManager * manager() const
 */
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_MANAGER )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_MANAGER )
 }
 
 /*
-virtual TransferError error() const = 0
+virtual QBluetoothTransferReply::TransferError error() const = 0
 */
 HB_FUNC_STATIC( QBLUETOOTHTRANSFERREPLY_ERROR )
 {

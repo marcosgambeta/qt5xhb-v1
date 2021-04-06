@@ -75,7 +75,7 @@ void QBluetoothAddress_new1()
 }
 
 /*
-QBluetoothAddress(quint64 address)
+QBluetoothAddress( quint64 address )
 */
 void QBluetoothAddress_new2()
 {
@@ -86,7 +86,7 @@ void QBluetoothAddress_new2()
 }
 
 /*
-QBluetoothAddress(const QString &address)
+QBluetoothAddress( const QString & address )
 */
 void QBluetoothAddress_new3()
 {
@@ -97,7 +97,7 @@ void QBluetoothAddress_new3()
 }
 
 /*
-QBluetoothAddress(const QBluetoothAddress &other)
+QBluetoothAddress( const QBluetoothAddress & other )
 */
 void QBluetoothAddress_new4()
 {

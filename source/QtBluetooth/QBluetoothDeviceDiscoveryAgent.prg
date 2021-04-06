@@ -67,7 +67,7 @@ RETURN
 #endif
 
 /*
-QBluetoothDeviceDiscoveryAgent(QObject *parent = 0)
+QBluetoothDeviceDiscoveryAgent( QObject * parent = 0 )
 */
 void QBluetoothDeviceDiscoveryAgent_new1()
 {
@@ -78,7 +78,7 @@ void QBluetoothDeviceDiscoveryAgent_new1()
 }
 
 /*
-QBluetoothDeviceDiscoveryAgent(const QBluetoothAddress &deviceAdapter, QObject *parent = 0)
+QBluetoothDeviceDiscoveryAgent( const QBluetoothAddress & deviceAdapter, QObject * parent = 0 )
 */
 void QBluetoothDeviceDiscoveryAgent_new2()
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_INQUIRYTYPE )
 }
 
 /*
-void setInquiryType(QBluetoothDeviceDiscoveryAgent::InquiryType type)
+void setInquiryType( QBluetoothDeviceDiscoveryAgent::InquiryType type )
 */
 HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_SETINQUIRYTYPE )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ISACTIVE )
 }
 
 /*
-Error error() const
+QBluetoothDeviceDiscoveryAgent::Error error() const
 */
 HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_ERROR )
 {
