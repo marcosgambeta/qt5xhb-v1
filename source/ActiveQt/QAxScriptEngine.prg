@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-QAxScriptEngine ( const QString & language, QAxScript * script )
+QAxScriptEngine( const QString & language, QAxScript * script )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
 }
 
 /*
-void addItem ( const QString & name )
+void addItem( const QString & name )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 }
 
 /*
-bool hasIntrospection () const
+bool hasIntrospection() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 }
 
 /*
-QString scriptLanguage () const
+QString scriptLanguage() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 }
 
 /*
-void setState ( State st )
+void setState( QAxScriptEngine::State st )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 }
 
 /*
-State state () const
+QAxScriptEngine::State state() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 {
