@@ -102,11 +102,11 @@ void QBoxSet_new2()
 
 HB_FUNC_STATIC( QBOXSET_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISCHAR(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (HB_ISCHAR(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
     QBoxSet_new1();
   }
-  else if( ISBETWEEN(5,7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (ISCHAR(6)||HB_ISNIL(6)) && (ISQOBJECT(7)||HB_ISNIL(7)) )
+  else if( ISBETWEEN(5,7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISCHAR(6)||HB_ISNIL(6)) && (ISQOBJECT(7)||HB_ISNIL(7)) )
   {
     QBoxSet_new2();
   }

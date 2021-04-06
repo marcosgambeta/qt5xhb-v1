@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISVISIBLE )
 }
 
 /*
-void setVisible(bool visible = true)
+void setVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETVISIBLE )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setVisible( OPBOOL(1,true) );
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISLINEVISIBLE )
 }
 
 /*
-void setLineVisible(bool visible = true)
+void setLineVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEVISIBLE )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setLineVisible( OPBOOL(1,true) );
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LINEPEN )
 }
 
 /*
-void setLinePen(const QPen &pen)
+void setLinePen( const QPen & pen )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEPEN )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LINEPENCOLOR )
 }
 
 /*
-void setLinePenColor(QColor color)
+void setLinePenColor( QColor color )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETLINEPENCOLOR )
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISGRIDLINEVISIBLE )
 }
 
 /*
-void setGridLineVisible(bool visible = true)
+void setGridLineVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINEVISIBLE )
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINEVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setGridLineVisible( OPBOOL(1,true) );
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_GRIDLINEPEN )
 }
 
 /*
-void setGridLinePen(const QPen &pen)
+void setGridLinePen( const QPen & pen )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINEPEN )
 {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISMINORGRIDLINEVISIBLE )
 }
 
 /*
-void setMinorGridLineVisible(bool visible = true)
+void setMinorGridLineVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINEVISIBLE )
 {
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINEVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setMinorGridLineVisible( OPBOOL(1,true) );
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_MINORGRIDLINEPEN )
 }
 
 /*
-void setMinorGridLinePen(const QPen &pen)
+void setMinorGridLinePen( const QPen & pen )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINEPEN )
 {
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_GRIDLINECOLOR )
 }
 
 /*
-void setGridLineColor(const QColor &color)
+void setGridLineColor( const QColor & color )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINECOLOR )
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETGRIDLINECOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setGridLineColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_MINORGRIDLINECOLOR )
 }
 
 /*
-void setMinorGridLineColor(const QColor &color)
+void setMinorGridLineColor( const QColor & color )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINECOLOR )
 {
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMINORGRIDLINECOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setMinorGridLineColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSVISIBLE )
 }
 
 /*
-void setLabelsVisible(bool visible = true)
+void setLabelsVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSVISIBLE )
 {
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setLabelsVisible( OPBOOL(1,true) );
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSBRUSH )
 }
 
 /*
-void setLabelsBrush(const QBrush &brush)
+void setLabelsBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSBRUSH )
 {
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSFONT )
 }
 
 /*
-void setLabelsFont(const QFont &font)
+void setLabelsFont( const QFont & font )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSFONT )
 {
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSANGLE )
 }
 
 /*
-void setLabelsAngle(int angle)
+void setLabelsAngle( int angle )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSANGLE )
 {
@@ -957,7 +957,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_LABELSCOLOR )
 }
 
 /*
-void setLabelsColor(QColor color)
+void setLabelsColor( QColor color )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETLABELSCOLOR )
 {
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISTITLEVISIBLE )
 }
 
 /*
-void setTitleVisible(bool visible = true)
+void setTitleVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEVISIBLE )
 {
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setTitleVisible( OPBOOL(1,true) );
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_TITLEBRUSH )
 }
 
 /*
-void setTitleBrush(const QBrush &brush)
+void setTitleBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEBRUSH )
 {
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_TITLEFONT )
 }
 
 /*
-void setTitleFont(const QFont &font)
+void setTitleFont( const QFont & font )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLEFONT )
 {
@@ -1175,7 +1175,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_TITLETEXT )
 }
 
 /*
-void setTitleText(const QString &title)
+void setTitleText( const QString & title )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETTITLETEXT )
 {
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESVISIBLE )
 }
 
 /*
-void setShadesVisible(bool visible = true)
+void setShadesVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESVISIBLE )
 {
@@ -1239,7 +1239,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setShadesVisible( OPBOOL(1,true) );
@@ -1284,7 +1284,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESPEN )
 }
 
 /*
-void setShadesPen(const QPen &pen)
+void setShadesPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESPEN )
 {
@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESBRUSH )
 }
 
 /*
-void setShadesBrush(const QBrush &brush)
+void setShadesBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESBRUSH )
 {
@@ -1394,7 +1394,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESCOLOR )
 }
 
 /*
-void setShadesColor(QColor color)
+void setShadesColor( QColor color )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESCOLOR )
 {
@@ -1449,7 +1449,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SHADESBORDERCOLOR )
 }
 
 /*
-void setShadesBorderColor(QColor color)
+void setShadesBorderColor( QColor color )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETSHADESBORDERCOLOR )
 {
@@ -1555,7 +1555,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_ISREVERSE )
 }
 
 /*
-void setReverse(bool reverse = true)
+void setReverse( bool reverse = true )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETREVERSE )
 {
@@ -1565,7 +1565,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETREVERSE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setReverse( OPBOOL(1,true) );
@@ -1583,7 +1583,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETREVERSE )
 }
 
 /*
-virtual AxisType type() const = 0
+virtual QAbstractAxis::AxisType type() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_TYPE )
 {
@@ -1665,7 +1665,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_HIDE )
 }
 
 /*
-void setMin(const QVariant &min)
+void setMin( const QVariant & min )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETMIN )
 {
@@ -1693,7 +1693,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMIN )
 }
 
 /*
-void setMax(const QVariant &max)
+void setMax( const QVariant & max )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETMAX )
 {
@@ -1721,7 +1721,7 @@ HB_FUNC_STATIC( QABSTRACTAXIS_SETMAX )
 }
 
 /*
-void setRange(const QVariant &min, const QVariant &max)
+void setRange( const QVariant & min, const QVariant & max )
 */
 HB_FUNC_STATIC( QABSTRACTAXIS_SETRANGE )
 {

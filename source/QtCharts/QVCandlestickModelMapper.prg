@@ -79,7 +79,7 @@ using namespace QtCharts;
 #endif
 
 /*
-explicit QVCandlestickModelMapper(QObject *parent = nullptr)
+QVCandlestickModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_NEW )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_TIMESTAMPROW )
 }
 
 /*
-void setTimestampRow(int timestampRow)
+void setTimestampRow( int timestampRow )
 */
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETTIMESTAMPROW )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_OPENROW )
 }
 
 /*
-void setOpenRow(int openRow)
+void setOpenRow( int openRow )
 */
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETOPENROW )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_HIGHROW )
 }
 
 /*
-void setHighRow(int highRow)
+void setHighRow( int highRow )
 */
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETHIGHROW )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_LOWROW )
 }
 
 /*
-void setLowRow(int lowRow)
+void setLowRow( int lowRow )
 */
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETLOWROW )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_CLOSEROW )
 }
 
 /*
-void setCloseRow(int closeRow)
+void setCloseRow( int closeRow )
 */
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETCLOSEROW )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_FIRSTSETCOLUMN )
 }
 
 /*
-void setFirstSetColumn(int firstSetColumn)
+void setFirstSetColumn( int firstSetColumn )
 */
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETFIRSTSETCOLUMN )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_LASTSETCOLUMN )
 }
 
 /*
-void setLastSetColumn(int lastSetColumn)
+void setLastSetColumn( int lastSetColumn )
 */
 HB_FUNC_STATIC( QVCANDLESTICKMODELMAPPER_SETLASTSETCOLUMN )
 {

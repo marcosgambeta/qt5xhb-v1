@@ -78,14 +78,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QHXYModelMapper(QObject *parent = Q_NULLPTR)
+QHXYModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QHXYModelMapper * obj = new QHXYModelMapper( OPQOBJECT(1,Q_NULLPTR) );
+    QHXYModelMapper * obj = new QHXYModelMapper( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_NEW )
 }
 
 /*
-QXYSeries *series() const
+QXYSeries * series() const
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SERIES )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries(QXYSeries *series)
+void setSeries( QXYSeries * series )
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETSERIES )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_SETSERIES )
 }
 
 /*
-QAbstractItemModel *model() const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_MODEL )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_MODEL )
 }
 
 /*
-void setModel(QAbstractItemModel *model)
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETMODEL )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_XROW )
 }
 
 /*
-void setXRow(int xRow)
+void setXRow( int xRow )
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETXROW )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_YROW )
 }
 
 /*
-void setYRow(int yRow)
+void setYRow( int yRow )
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETYROW )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_FIRSTCOLUMN )
 }
 
 /*
-void setFirstColumn(int firstColumn)
+void setFirstColumn( int firstColumn )
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETFIRSTCOLUMN )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QHXYMODELMAPPER_COLUMNCOUNT )
 }
 
 /*
-void setColumnCount(int columnCount)
+void setColumnCount( int columnCount )
 */
 HB_FUNC_STATIC( QHXYMODELMAPPER_SETCOLUMNCOUNT )
 {

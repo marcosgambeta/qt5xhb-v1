@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_BARWIDTH )
 }
 
 /*
-void setBarWidth(qreal width)
+void setBarWidth( qreal width )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETBARWIDTH )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_ISLABELSVISIBLE )
 }
 
 /*
-void setLabelsVisible(bool visible = true)
+void setLabelsVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSVISIBLE )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setLabelsVisible( OPBOOL(1,true) );
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSFORMAT )
 }
 
 /*
-void setLabelsFormat(const QString &format)
+void setLabelsFormat( const QString & format )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSFORMAT )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSANGLE )
 }
 
 /*
-void setLabelsAngle(qreal angle)
+void setLabelsAngle( qreal angle )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSANGLE )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_LABELSPOSITION )
 }
 
 /*
-void setLabelsPosition(QAbstractBarSeries::LabelsPosition position)
+void setLabelsPosition( QAbstractBarSeries::LabelsPosition position )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_SETLABELSPOSITION )
 }
 
 /*
-bool append(QBarSet *set)
+bool append( QBarSet * set )
 */
 void QAbstractBarSeries_append1()
 {
@@ -420,7 +420,7 @@ void QAbstractBarSeries_append1()
 }
 
 /*
-bool append(QList<QBarSet *> sets)
+bool append( QList<QBarSet *> sets )
 */
 void QAbstractBarSeries_append2()
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_APPEND )
 }
 
 /*
-bool remove(QBarSet *set)
+bool remove( QBarSet * set )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_REMOVE )
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_REMOVE )
 }
 
 /*
-bool take(QBarSet *set)
+bool take( QBarSet * set )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_TAKE )
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QABSTRACTBARSERIES_TAKE )
 }
 
 /*
-bool insert(int index, QBarSet *set)
+bool insert( int index, QBarSet * set )
 */
 HB_FUNC_STATIC( QABSTRACTBARSERIES_INSERT )
 {

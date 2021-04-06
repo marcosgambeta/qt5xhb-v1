@@ -79,7 +79,7 @@ using namespace QtCharts;
 #endif
 
 /*
-explicit QHCandlestickModelMapper(QObject *parent = nullptr)
+QHCandlestickModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_NEW )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_TIMESTAMPCOLUMN )
 }
 
 /*
-void setTimestampColumn(int timestampColumn)
+void setTimestampColumn( int timestampColumn )
 */
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_SETTIMESTAMPCOLUMN )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_OPENCOLUMN )
 }
 
 /*
-void setOpenColumn(int openColumn)
+void setOpenColumn( int openColumn )
 */
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_SETOPENCOLUMN )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_HIGHCOLUMN )
 }
 
 /*
-void setHighColumn(int highColumn)
+void setHighColumn( int highColumn )
 */
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_SETHIGHCOLUMN )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_LOWCOLUMN )
 }
 
 /*
-void setLowColumn(int lowColumn)
+void setLowColumn( int lowColumn )
 */
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_SETLOWCOLUMN )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_CLOSECOLUMN )
 }
 
 /*
-void setCloseColumn(int closeColumn)
+void setCloseColumn( int closeColumn )
 */
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_SETCLOSECOLUMN )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_FIRSTSETROW )
 }
 
 /*
-void setFirstSetRow(int firstSetRow)
+void setFirstSetRow( int firstSetRow )
 */
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_SETFIRSTSETROW )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_LASTSETROW )
 }
 
 /*
-void setLastSetRow(int lastSetRow)
+void setLastSetRow( int lastSetRow )
 */
 HB_FUNC_STATIC( QHCANDLESTICKMODELMAPPER_SETLASTSETROW )
 {

@@ -78,14 +78,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QHPieModelMapper(QObject *parent = Q_NULLPTR)
+QHPieModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHPIEMODELMAPPER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QHPieModelMapper * obj = new QHPieModelMapper( OPQOBJECT(1,Q_NULLPTR) );
+    QHPieModelMapper * obj = new QHPieModelMapper( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_NEW )
 }
 
 /*
-QPieSeries *series() const
+QPieSeries * series() const
 */
 HB_FUNC_STATIC( QHPIEMODELMAPPER_SERIES )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries(QPieSeries *series)
+void setSeries( QPieSeries * series )
 */
 HB_FUNC_STATIC( QHPIEMODELMAPPER_SETSERIES )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_SETSERIES )
 }
 
 /*
-QAbstractItemModel *model() const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QHPIEMODELMAPPER_MODEL )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_MODEL )
 }
 
 /*
-void setModel(QAbstractItemModel *model)
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QHPIEMODELMAPPER_SETMODEL )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_VALUESROW )
 }
 
 /*
-void setValuesRow(int valuesRow)
+void setValuesRow( int valuesRow )
 */
 HB_FUNC_STATIC( QHPIEMODELMAPPER_SETVALUESROW )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_LABELSROW )
 }
 
 /*
-void setLabelsRow(int labelsRow)
+void setLabelsRow( int labelsRow )
 */
 HB_FUNC_STATIC( QHPIEMODELMAPPER_SETLABELSROW )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_FIRSTCOLUMN )
 }
 
 /*
-void setFirstColumn(int firstColumn)
+void setFirstColumn( int firstColumn )
 */
 HB_FUNC_STATIC( QHPIEMODELMAPPER_SETFIRSTCOLUMN )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QHPIEMODELMAPPER_COLUMNCOUNT )
 }
 
 /*
-void setColumnCount(int columnCount)
+void setColumnCount( int columnCount )
 */
 HB_FUNC_STATIC( QHPIEMODELMAPPER_SETCOLUMNCOUNT )
 {

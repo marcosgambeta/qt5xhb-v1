@@ -78,14 +78,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QVBoxPlotModelMapper(QObject *parent = Q_NULLPTR)
+QVBoxPlotModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QVBoxPlotModelMapper * obj = new QVBoxPlotModelMapper( OPQOBJECT(1,Q_NULLPTR) );
+    QVBoxPlotModelMapper * obj = new QVBoxPlotModelMapper( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_NEW )
 }
 
 /*
-QBoxPlotSeries *series() const
+QBoxPlotSeries * series() const
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SERIES )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries(QBoxPlotSeries *series)
+void setSeries( QBoxPlotSeries * series )
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETSERIES )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETSERIES )
 }
 
 /*
-QAbstractItemModel *model() const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_MODEL )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_MODEL )
 }
 
 /*
-void setModel(QAbstractItemModel *model)
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETMODEL )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_FIRSTBOXSETCOLUMN )
 }
 
 /*
-void setFirstBoxSetColumn(int firstBoxSetColumn)
+void setFirstBoxSetColumn( int firstBoxSetColumn )
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETFIRSTBOXSETCOLUMN )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_LASTBOXSETCOLUMN )
 }
 
 /*
-void setLastBoxSetColumn(int lastBoxSetColumn)
+void setLastBoxSetColumn( int lastBoxSetColumn )
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETLASTBOXSETCOLUMN )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_FIRSTROW )
 }
 
 /*
-void setFirstRow(int firstRow)
+void setFirstRow( int firstRow )
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETFIRSTROW )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_ROWCOUNT )
 }
 
 /*
-void setRowCount(int rowCount)
+void setRowCount( int rowCount )
 */
 HB_FUNC_STATIC( QVBOXPLOTMODELMAPPER_SETROWCOUNT )
 {

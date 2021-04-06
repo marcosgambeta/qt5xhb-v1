@@ -60,14 +60,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPieLegendMarker(QPieSeries *series, QPieSlice *slice, QLegend *legend, QObject *parent = Q_NULLPTR)
+QPieLegendMarker( QPieSeries * series, QPieSlice * slice, QLegend * legend, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(3,4) && ISQPIESERIES(1) && ISQPIESLICE(2) && ISQLEGEND(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
-    QPieLegendMarker * obj = new QPieLegendMarker( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT(4,Q_NULLPTR) );
+    QPieLegendMarker * obj = new QPieLegendMarker( PQPIESERIES(1), PQPIESLICE(2), PQLEGEND(3), OPQOBJECT(4,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_DELETE )
 }
 
 /*
-virtual LegendMarkerType type()
+virtual QLegendMarker::LegendMarkerType type()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_TYPE )
 }
 
 /*
-virtual QPieSeries* series()
+virtual QPieSeries * series()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QPIELEGENDMARKER_SERIES )
 }
 
 /*
-QPieSlice* slice()
+QPieSlice * slice()
 */
 HB_FUNC_STATIC( QPIELEGENDMARKER_SLICE )
 {

@@ -69,14 +69,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QCategoryAxis(QObject *parent = Q_NULLPTR)
+QCategoryAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QCategoryAxis * obj = new QCategoryAxis( OPQOBJECT(1,Q_NULLPTR) );
+    QCategoryAxis * obj = new QCategoryAxis( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_DELETE )
 }
 
 /*
-qreal startValue(const QString &categoryLabel = QString()) const
+qreal startValue( const QString & categoryLabel = QString() ) const
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       RQREAL( obj->startValue( OPQSTRING(1,QString()) ) );
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_STARTVALUE )
 }
 
 /*
-void setStartValue(qreal min)
+void setStartValue( qreal min )
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_SETSTARTVALUE )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_LABELSPOSITION )
 }
 
 /*
-void setLabelsPosition(QCategoryAxis::AxisLabelsPosition position)
+void setLabelsPosition( QCategoryAxis::AxisLabelsPosition position )
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
 {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_SETLABELSPOSITION )
 }
 
 /*
-AxisType type() const
+QAbstractAxis::AxisType type() const
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_TYPE )
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_TYPE )
 }
 
 /*
-void append(const QString &label, qreal categoryEndValue)
+void append( const QString & label, qreal categoryEndValue )
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_APPEND )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_APPEND )
 }
 
 /*
-void remove(const QString &label)
+void remove( const QString & label )
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_REMOVE )
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REMOVE )
 }
 
 /*
-void replaceLabel(const QString &oldLabel, const QString &newLabel)
+void replaceLabel( const QString & oldLabel, const QString & newLabel )
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_REPLACELABEL )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QCATEGORYAXIS_REPLACELABEL )
 }
 
 /*
-qreal endValue(const QString &categoryLabel) const
+qreal endValue( const QString & categoryLabel ) const
 */
 HB_FUNC_STATIC( QCATEGORYAXIS_ENDVALUE )
 {

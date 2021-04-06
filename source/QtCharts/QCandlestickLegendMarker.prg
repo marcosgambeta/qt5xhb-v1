@@ -60,7 +60,7 @@ using namespace QtCharts;
 #endif
 
 /*
-explicit QCandlestickLegendMarker(QCandlestickSeries *series, QLegend *legend, QObject *parent = nullptr)
+QCandlestickLegendMarker( QCandlestickSeries * series, QLegend * legend, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_NEW )
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_DELETE )
 }
 
 /*
-virtual LegendMarkerType type()
+virtual QLegendMarker::LegendMarkerType type()
 */
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_TYPE )
 {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_TYPE )
 }
 
 /*
-virtual QCandlestickSeries* series()
+virtual QCandlestickSeries * series()
 */
 HB_FUNC_STATIC( QCANDLESTICKLEGENDMARKER_SERIES )
 {

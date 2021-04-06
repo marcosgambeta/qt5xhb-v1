@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVISIBLE )
 }
 
 /*
-void setPointsVisible(bool visible = true)
+void setPointsVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPointsVisible( OPBOOL(1,true) );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QXYSERIES_COLOR )
 }
 
 /*
-virtual void setColor(const QColor &color)
+virtual void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QXYSERIES_SETCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSFORMAT )
 }
 
 /*
-void setPointLabelsFormat(const QString &format)
+void setPointLabelsFormat( const QString & format )
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFORMAT )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSVISIBLE )
 }
 
 /*
-void setPointLabelsVisible(bool visible = true)
+void setPointLabelsVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsVisible( OPBOOL(1,true) );
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSFONT )
 }
 
 /*
-void setPointLabelsFont(const QFont &font)
+void setPointLabelsFont( const QFont & font )
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSFONT )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSCOLOR )
 }
 
 /*
-void setPointLabelsColor(const QColor &color)
+void setPointLabelsColor( const QColor & color )
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setPointLabelsColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTLABELSCLIPPING )
 }
 
 /*
-void setPointLabelsClipping(bool enabled = true)
+void setPointLabelsClipping( bool enabled = true )
 */
 HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
 {
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsClipping( OPBOOL(1,true) );
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
 }
 
 /*
-void append(qreal x, qreal y)
+void append( qreal x, qreal y )
 */
 void QXYSeries_append1()
 {
@@ -527,7 +527,7 @@ void QXYSeries_append1()
 }
 
 /*
-void append(const QPointF &point)
+void append( const QPointF & point )
 */
 void QXYSeries_append2()
 {
@@ -544,7 +544,7 @@ void QXYSeries_append2()
 }
 
 /*
-void append(const QList<QPointF> &points)
+void append( const QList<QPointF> & points )
 */
 void QXYSeries_append3()
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QXYSERIES_APPEND )
 }
 
 /*
-void replace(qreal oldX, qreal oldY, qreal newX, qreal newY)
+void replace( qreal oldX, qreal oldY, qreal newX, qreal newY )
 */
 void QXYSeries_replace1()
 {
@@ -606,7 +606,7 @@ void QXYSeries_replace1()
 }
 
 /*
-void replace(const QPointF &oldPoint, const QPointF &newPoint)
+void replace( const QPointF & oldPoint, const QPointF & newPoint )
 */
 void QXYSeries_replace2()
 {
@@ -623,7 +623,7 @@ void QXYSeries_replace2()
 }
 
 /*
-void replace(int index, qreal newX, qreal newY)
+void replace( int index, qreal newX, qreal newY )
 */
 void QXYSeries_replace3()
 {
@@ -640,7 +640,7 @@ void QXYSeries_replace3()
 }
 
 /*
-void replace(int index, const QPointF &newPoint)
+void replace( int index, const QPointF & newPoint )
 */
 void QXYSeries_replace4()
 {
@@ -657,7 +657,7 @@ void QXYSeries_replace4()
 }
 
 /*
-void replace(QList<QPointF> points)
+void replace( QList<QPointF> points )
 */
 void QXYSeries_replace5()
 {
@@ -682,7 +682,7 @@ void QXYSeries_replace5()
 }
 
 /*
-void replace(QVector<QPointF> points)
+void replace( QVector<QPointF> points )
 */
 void QXYSeries_replace6()
 {
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QXYSERIES_REPLACE )
 }
 
 /*
-void remove(qreal x, qreal y)
+void remove( qreal x, qreal y )
 */
 void QXYSeries_remove1()
 {
@@ -756,7 +756,7 @@ void QXYSeries_remove1()
 }
 
 /*
-void remove(const QPointF &point)
+void remove( const QPointF & point )
 */
 void QXYSeries_remove2()
 {
@@ -773,7 +773,7 @@ void QXYSeries_remove2()
 }
 
 /*
-void remove(int index)
+void remove( int index )
 */
 void QXYSeries_remove3()
 {
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QXYSERIES_REMOVE )
 }
 
 /*
-void removePoints(int index, int count)
+void removePoints( int index, int count )
 */
 HB_FUNC_STATIC( QXYSERIES_REMOVEPOINTS )
 {
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QXYSERIES_REMOVEPOINTS )
 }
 
 /*
-void insert(int index, const QPointF &point)
+void insert( int index, const QPointF & point )
 */
 HB_FUNC_STATIC( QXYSERIES_INSERT )
 {
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC( QXYSERIES_POINTSVECTOR )
 }
 
 /*
-const QPointF &at(int index) const
+const QPointF & at( int index ) const
 */
 HB_FUNC_STATIC( QXYSERIES_AT )
 {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QXYSERIES_AT )
 }
 
 /*
-virtual void setPen(const QPen &pen)
+virtual void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QXYSERIES_SETPEN )
 {
@@ -1110,7 +1110,7 @@ HB_FUNC_STATIC( QXYSERIES_PEN )
 }
 
 /*
-virtual void setBrush(const QBrush &brush)
+virtual void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QXYSERIES_SETBRUSH )
 {

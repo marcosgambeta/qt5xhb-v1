@@ -108,7 +108,7 @@ using namespace QtCharts;
 #endif
 
 /*
-explicit QCandlestickSeries(QObject *parent = nullptr)
+QCandlestickSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_NEW )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_MAXIMUMCOLUMNWIDTH )
 }
 
 /*
-void setMaximumColumnWidth(qreal maximumColumnWidth)
+void setMaximumColumnWidth( qreal maximumColumnWidth )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMAXIMUMCOLUMNWIDTH )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_MINIMUMCOLUMNWIDTH )
 }
 
 /*
-void setMinimumColumnWidth(qreal minimumColumnWidth)
+void setMinimumColumnWidth( qreal minimumColumnWidth )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETMINIMUMCOLUMNWIDTH )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYWIDTH )
 }
 
 /*
-void setBodyWidth(qreal bodyWidth)
+void setBodyWidth( qreal bodyWidth )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYWIDTH )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BODYOUTLINEVISIBLE )
 }
 
 /*
-void setBodyOutlineVisible(bool bodyOutlineVisible)
+void setBodyOutlineVisible( bool bodyOutlineVisible )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBODYOUTLINEVISIBLE )
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSWIDTH )
 }
 
 /*
-void setCapsWidth(qreal capsWidth)
+void setCapsWidth( qreal capsWidth )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSWIDTH )
 {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_CAPSVISIBLE )
 }
 
 /*
-void setCapsVisible(bool capsVisible)
+void setCapsVisible( bool capsVisible )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETCAPSVISIBLE )
 {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_INCREASINGCOLOR )
 }
 
 /*
-void setIncreasingColor(const QColor &increasingColor)
+void setIncreasingColor( const QColor & increasingColor )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETINCREASINGCOLOR )
 {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETINCREASINGCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setIncreasingColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_DECREASINGCOLOR )
 }
 
 /*
-void setDecreasingColor(const QColor &decreasingColor)
+void setDecreasingColor( const QColor & decreasingColor )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETDECREASINGCOLOR )
 {
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETDECREASINGCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setDecreasingColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_BRUSH )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETBRUSH )
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_PEN )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
 {
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
 }
 
 /*
-bool append(QCandlestickSet *set)
+bool append( QCandlestickSet * set )
 */
 void QCandlestickSeries_append1()
 {
@@ -729,21 +729,13 @@ void QCandlestickSeries_append1()
 
   if( obj )
   {
-    QList<QCandlestickSet *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    RBOOL( obj->append( par1 ) );
+    RBOOL( obj->append( PQCANDLESTICKSET(1) ) );
   }
 #endif
 }
 
 /*
-bool append(const QList<QCandlestickSet *> &sets)
+bool append( const QList<QCandlestickSet *> & sets )
 */
 void QCandlestickSeries_append2()
 {
@@ -782,7 +774,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 }
 
 /*
-bool remove(QCandlestickSet *set)
+bool remove( QCandlestickSet * set )
 */
 void QCandlestickSeries_remove1()
 {
@@ -797,7 +789,7 @@ void QCandlestickSeries_remove1()
 }
 
 /*
-bool remove(const QList<QCandlestickSet *> &sets)
+bool remove( const QList<QCandlestickSet *> & sets )
 */
 void QCandlestickSeries_remove2()
 {
@@ -836,7 +828,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
 }
 
 /*
-bool insert(int index, QCandlestickSet *set)
+bool insert( int index, QCandlestickSet * set )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_INSERT )
 {
@@ -862,7 +854,7 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_INSERT )
 }
 
 /*
-bool take(QCandlestickSet *set)
+bool take( QCandlestickSet * set )
 */
 HB_FUNC_STATIC( QCANDLESTICKSERIES_TAKE )
 {

@@ -75,14 +75,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QValueAxis(QObject *parent = Q_NULLPTR)
+QValueAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVALUEAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QValueAxis * obj = new QValueAxis( OPQOBJECT(1,Q_NULLPTR) );
+    QValueAxis * obj = new QValueAxis( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QVALUEAXIS_TICKCOUNT )
 }
 
 /*
-void setTickCount(int count)
+void setTickCount( int count )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETTICKCOUNT )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QVALUEAXIS_MIN )
 }
 
 /*
-void setMin(qreal min)
+void setMin( qreal min )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETMIN )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QVALUEAXIS_MAX )
 }
 
 /*
-void setMax(qreal max)
+void setMax( qreal max )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETMAX )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QVALUEAXIS_LABELFORMAT )
 }
 
 /*
-void setLabelFormat(const QString &format)
+void setLabelFormat( const QString & format )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETLABELFORMAT )
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QVALUEAXIS_MINORTICKCOUNT )
 }
 
 /*
-void setMinorTickCount(int count)
+void setMinorTickCount( int count )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETMINORTICKCOUNT )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QVALUEAXIS_SETMINORTICKCOUNT )
 }
 
 /*
-AxisType type() const
+QAbstractAxis::AxisType type() const
 */
 HB_FUNC_STATIC( QVALUEAXIS_TYPE )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QVALUEAXIS_TYPE )
 }
 
 /*
-void setRange(qreal min, qreal max)
+void setRange( qreal min, qreal max )
 */
 HB_FUNC_STATIC( QVALUEAXIS_SETRANGE )
 {
@@ -445,6 +445,7 @@ void applyNiceNumbers()
 */
 HB_FUNC_STATIC( QVALUEAXIS_APPLYNICENUMBERS )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   QValueAxis * obj = (QValueAxis *) Qt5xHb::itemGetPtrStackSelfItem();
 
   if( obj )
@@ -464,6 +465,7 @@ HB_FUNC_STATIC( QVALUEAXIS_APPLYNICENUMBERS )
   }
 
   hb_itemReturn( hb_stackSelfItem() );
+#endif
 }
 
 void QValueAxisSlots_connect_signal( const QString & signal, const QString & slot );

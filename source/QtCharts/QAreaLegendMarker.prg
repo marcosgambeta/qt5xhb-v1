@@ -58,14 +58,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QAreaLegendMarker(QAreaSeries *series, QLegend *legend, QObject *parent = Q_NULLPTR)
+QAreaLegendMarker( QAreaSeries * series, QLegend * legend, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(2,3) && ISQAREASERIES(1) && ISQLEGEND(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QAreaLegendMarker * obj = new QAreaLegendMarker( PQAREASERIES(1), PQLEGEND(2), OPQOBJECT(3,Q_NULLPTR) );
+    QAreaLegendMarker * obj = new QAreaLegendMarker( PQAREASERIES(1), PQLEGEND(2), OPQOBJECT(3,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_DELETE )
 }
 
 /*
-virtual LegendMarkerType type()
+virtual QLegendMarker::LegendMarkerType type()
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_TYPE )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QAREALEGENDMARKER_TYPE )
 }
 
 /*
-virtual QAreaSeries* series()
+virtual QAreaSeries * series()
 */
 HB_FUNC_STATIC( QAREALEGENDMARKER_SERIES )
 {

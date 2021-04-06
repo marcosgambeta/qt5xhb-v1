@@ -101,23 +101,23 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QAreaSeries(QObject *parent = Q_NULLPTR)
+QAreaSeries( QObject * parent = nullptr )
 */
 void QAreaSeries_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * obj = new QAreaSeries( OPQOBJECT(1,Q_NULLPTR) );
+  QAreaSeries * obj = new QAreaSeries( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
 /*
-explicit QAreaSeries(QLineSeries *upperSeries, QLineSeries *lowerSeries = Q_NULLPTR)
+QAreaSeries( QLineSeries * upperSeries, QLineSeries * lowerSeries = nullptr )
 */
 void QAreaSeries_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QAreaSeries * obj = new QAreaSeries( PQLINESERIES(1), OPQLINESERIES(2,Q_NULLPTR) );
+  QAreaSeries * obj = new QAreaSeries( PQLINESERIES(1), OPQLINESERIES(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QAREASERIES_DELETE )
 }
 
 /*
-QLineSeries *upperSeries() const
+QLineSeries * upperSeries() const
 */
 HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QAREASERIES_UPPERSERIES )
 }
 
 /*
-QLineSeries *lowerSeries() const
+QLineSeries * lowerSeries() const
 */
 HB_FUNC_STATIC( QAREASERIES_LOWERSERIES )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QAREASERIES_COLOR )
 }
 
 /*
-void setColor(const QColor &color)
+void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QAREASERIES_SETCOLOR )
 {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QAREASERIES_SETCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QAREASERIES_BORDERCOLOR )
 }
 
 /*
-void setBorderColor(const QColor &color)
+void setBorderColor( const QColor & color )
 */
 HB_FUNC_STATIC( QAREASERIES_SETBORDERCOLOR )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QAREASERIES_SETBORDERCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setBorderColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFORMAT )
 }
 
 /*
-void setPointLabelsFormat(const QString &format)
+void setPointLabelsFormat( const QString & format )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFORMAT )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSVISIBLE )
 }
 
 /*
-void setPointLabelsVisible(bool visible = true)
+void setPointLabelsVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSVISIBLE )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsVisible( OPBOOL(1,true) );
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSFONT )
 }
 
 /*
-void setPointLabelsFont(const QFont &font)
+void setPointLabelsFont( const QFont & font )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSFONT )
 {
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCOLOR )
 }
 
 /*
-void setPointLabelsColor(const QColor &color)
+void setPointLabelsColor( const QColor & color )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCOLOR )
 {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setPointLabelsColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QAREASERIES_POINTLABELSCLIPPING )
 }
 
 /*
-void setPointLabelsClipping(bool enabled = true)
+void setPointLabelsClipping( bool enabled = true )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCLIPPING )
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTLABELSCLIPPING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPointLabelsClipping( OPBOOL(1,true) );
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QAREASERIES_TYPE )
 }
 
 /*
-void setUpperSeries(QLineSeries *series)
+void setUpperSeries( QLineSeries * series )
 */
 HB_FUNC_STATIC( QAREASERIES_SETUPPERSERIES )
 {
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QAREASERIES_SETUPPERSERIES )
 }
 
 /*
-void setLowerSeries(QLineSeries *series)
+void setLowerSeries( QLineSeries * series )
 */
 HB_FUNC_STATIC( QAREASERIES_SETLOWERSERIES )
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QAREASERIES_SETLOWERSERIES )
 }
 
 /*
-void setPen(const QPen &pen)
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPEN )
 {
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QAREASERIES_PEN )
 }
 
 /*
-void setBrush(const QBrush &brush)
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QAREASERIES_SETBRUSH )
 {
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QAREASERIES_BRUSH )
 }
 
 /*
-void setPointsVisible(bool visible = true)
+void setPointsVisible( bool visible = true )
 */
 HB_FUNC_STATIC( QAREASERIES_SETPOINTSVISIBLE )
 {
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QAREASERIES_SETPOINTSVISIBLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setPointsVisible( OPBOOL(1,true) );

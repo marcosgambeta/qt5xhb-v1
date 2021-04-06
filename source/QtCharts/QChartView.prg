@@ -59,23 +59,23 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QChartView(QWidget *parent = Q_NULLPTR)
+QChartView( QWidget * parent = nullptr )
 */
 void QChartView_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * obj = new QChartView( OPQWIDGET(1,Q_NULLPTR) );
+  QChartView * obj = new QChartView( OPQWIDGET(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
 /*
-explicit QChartView(QChart *chart, QWidget *parent = Q_NULLPTR)
+QChartView( QChart * chart, QWidget * parent = nullptr )
 */
 void QChartView_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChartView * obj = new QChartView( PQCHART(1), OPQWIDGET(2,Q_NULLPTR) );
+  QChartView * obj = new QChartView( PQCHART(1), OPQWIDGET(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -121,11 +121,7 @@ HB_FUNC_STATIC( QCHARTVIEW_DELETE )
 }
 
 /*
-void setRubberBand(const RubberBands &rubberBands)
-*/
-
-/*
-RubberBands rubberBand() const
+QChartView::RubberBands rubberBand() const
 */
 HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
 {
@@ -151,7 +147,7 @@ HB_FUNC_STATIC( QCHARTVIEW_RUBBERBAND )
 }
 
 /*
-QChart *chart() const
+QChart * chart() const
 */
 HB_FUNC_STATIC( QCHARTVIEW_CHART )
 {
@@ -178,7 +174,7 @@ HB_FUNC_STATIC( QCHARTVIEW_CHART )
 }
 
 /*
-void setChart(QChart *chart)
+void setChart( QChart * chart )
 */
 HB_FUNC_STATIC( QCHARTVIEW_SETCHART )
 {

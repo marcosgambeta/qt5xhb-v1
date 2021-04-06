@@ -74,14 +74,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QDateTimeAxis(QObject *parent = Q_NULLPTR)
+QDateTimeAxis( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QDateTimeAxis * obj = new QDateTimeAxis( OPQOBJECT(1,Q_NULLPTR) );
+    QDateTimeAxis * obj = new QDateTimeAxis( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_MIN )
 }
 
 /*
-void setMin(QDateTime min)
+void setMin( QDateTime min )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETMIN )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_MAX )
 }
 
 /*
-void setMax(QDateTime max)
+void setMax( QDateTime max )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETMAX )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_FORMAT )
 }
 
 /*
-void setFormat(QString format)
+void setFormat( QString format )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETFORMAT )
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_TICKCOUNT )
 }
 
 /*
-void setTickCount(int count)
+void setTickCount( int count )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETTICKCOUNT )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_SETTICKCOUNT )
 }
 
 /*
-AxisType type() const
+QAbstractAxis::AxisType type() const
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_TYPE )
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QDATETIMEAXIS_TYPE )
 }
 
 /*
-void setRange(QDateTime min, QDateTime max)
+void setRange( QDateTime min, QDateTime max )
 */
 HB_FUNC_STATIC( QDATETIMEAXIS_SETRANGE )
 {

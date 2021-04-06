@@ -24,7 +24,6 @@ CLASS QPercentBarSeries INHERIT QAbstractBarSeries
    DESTRUCTOR destroyObject
 
 END CLASS
-
 PROCEDURE destroyObject() CLASS QPercentBarSeries
    IF ::self_destruction
       ::delete()
@@ -56,14 +55,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPercentBarSeries(QObject *parent = Q_NULLPTR)
+QPercentBarSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QPERCENTBARSERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QPercentBarSeries * obj = new QPercentBarSeries( OPQOBJECT(1,Q_NULLPTR) );
+    QPercentBarSeries * obj = new QPercentBarSeries( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else

@@ -80,7 +80,7 @@ using namespace QtCharts;
 #endif
 
 /*
-explicit QHBoxPlotModelMapper(QObject *parent = nullptr)
+QHBoxPlotModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_NEW )
 }
 
 /*
-QBoxPlotSeries *series() const
+QBoxPlotSeries * series() const
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SERIES )
 {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries(QBoxPlotSeries *series)
+void setSeries( QBoxPlotSeries * series )
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETSERIES )
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETSERIES )
 }
 
 /*
-QAbstractItemModel *model() const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_MODEL )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_MODEL )
 }
 
 /*
-void setModel(QAbstractItemModel *model)
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETMODEL )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTBOXSETROW )
 }
 
 /*
-void setFirstBoxSetRow(int firstBoxSetRow)
+void setFirstBoxSetRow( int firstBoxSetRow )
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTBOXSETROW )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_LASTBOXSETROW )
 }
 
 /*
-void setLastBoxSetRow(int lastBoxSetRow)
+void setLastBoxSetRow( int lastBoxSetRow )
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETLASTBOXSETROW )
 {
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_FIRSTCOLUMN )
 }
 
 /*
-void setFirstColumn(int firstColumn)
+void setFirstColumn( int firstColumn )
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETFIRSTCOLUMN )
 {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_COLUMNCOUNT )
 }
 
 /*
-void setColumnCount(int rowCount)
+void setColumnCount( int rowCount )
 */
 HB_FUNC_STATIC( QHBOXPLOTMODELMAPPER_SETCOLUMNCOUNT )
 {

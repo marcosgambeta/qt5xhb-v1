@@ -52,14 +52,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QHorizontalBarSeries(QObject *parent = Q_NULLPTR)
+QHorizontalBarSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QHORIZONTALBARSERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QHorizontalBarSeries * obj = new QHorizontalBarSeries( OPQOBJECT(1,Q_NULLPTR) );
+    QHorizontalBarSeries * obj = new QHorizontalBarSeries( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else

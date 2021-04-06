@@ -56,14 +56,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QStackedBarSeries(QObject *parent = Q_NULLPTR)
+QStackedBarSeries( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSTACKEDBARSERIES_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QStackedBarSeries * obj = new QStackedBarSeries( OPQOBJECT(1,Q_NULLPTR) );
+    QStackedBarSeries * obj = new QStackedBarSeries( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else

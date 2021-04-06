@@ -78,14 +78,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QVBarModelMapper(QObject *parent = Q_NULLPTR)
+QVBarModelMapper( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QVBarModelMapper * obj = new QVBarModelMapper( OPQOBJECT(1,Q_NULLPTR) );
+    QVBarModelMapper * obj = new QVBarModelMapper( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_NEW )
 }
 
 /*
-QAbstractBarSeries *series() const
+QAbstractBarSeries * series() const
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_SERIES )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries(QAbstractBarSeries *series)
+void setSeries( QAbstractBarSeries * series )
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETSERIES )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_SETSERIES )
 }
 
 /*
-QAbstractItemModel *model() const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_MODEL )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_MODEL )
 }
 
 /*
-void setModel(QAbstractItemModel *model)
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETMODEL )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTBARSETCOLUMN )
 }
 
 /*
-void setFirstBarSetColumn(int firstBarSetColumn)
+void setFirstBarSetColumn( int firstBarSetColumn )
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTBARSETCOLUMN )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_LASTBARSETCOLUMN )
 }
 
 /*
-void setLastBarSetColumn(int lastBarSetColumn)
+void setLastBarSetColumn( int lastBarSetColumn )
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETLASTBARSETCOLUMN )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_FIRSTROW )
 }
 
 /*
-void setFirstRow(int firstRow)
+void setFirstRow( int firstRow )
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETFIRSTROW )
 {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QVBARMODELMAPPER_ROWCOUNT )
 }
 
 /*
-void setRowCount(int rowCount)
+void setRowCount( int rowCount )
 */
 HB_FUNC_STATIC( QVBARMODELMAPPER_SETROWCOUNT )
 {

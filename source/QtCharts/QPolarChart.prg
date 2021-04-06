@@ -57,14 +57,14 @@ RETURN
 using namespace QtCharts;
 
 /*
-explicit QPolarChart(QGraphicsItem *parent = Q_NULLPTR, Qt::WindowFlags wFlags = Qt::WindowFlags())
+QPolarChart( QGraphicsItem * parent = nullptr, Qt::WindowFlags wFlags = Qt::WindowFlags() )
 */
 HB_FUNC_STATIC( QPOLARCHART_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QPolarChart * obj = new QPolarChart( HB_ISNIL(1)? Q_NULLPTR : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
+    QPolarChart * obj = new QPolarChart( HB_ISNIL(1)? nullptr : (QGraphicsItem *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? (Qt::WindowFlags) Qt::WindowFlags() : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QPOLARCHART_DELETE )
 }
 
 /*
-void addAxis(QAbstractAxis *axis, PolarOrientation polarOrientation)
+void addAxis( QAbstractAxis * axis, QPolarChart::PolarOrientation polarOrientation )
 */
 HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
 {
@@ -127,14 +127,11 @@ HB_FUNC_STATIC( QPOLARCHART_ADDAXIS )
 }
 
 /*
-QList<QAbstractAxis*> axes(PolarOrientations polarOrientation = PolarOrientations(PolarOrientationRadial | PolarOrientationAngular), QAbstractSeries *series = Q_NULLPTR) const
-*/
-
-/*
-static PolarOrientation axisPolarOrientation(QAbstractAxis *axis)
+static QPolarChart::PolarOrientation axisPolarOrientation( QAbstractAxis * axis )
 */
 HB_FUNC_STATIC( QPOLARCHART_AXISPOLARORIENTATION )
 {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   if( ISNUMPAR(1) && ISQABSTRACTAXIS(1) )
   {
@@ -146,6 +143,7 @@ HB_FUNC_STATIC( QPOLARCHART_AXISPOLARORIENTATION )
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
+#endif
 #endif
 }
 

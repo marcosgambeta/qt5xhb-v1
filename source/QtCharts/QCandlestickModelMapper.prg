@@ -70,11 +70,7 @@ using namespace QtCharts;
 #endif
 
 /*
-explicit QCandlestickModelMapper(QObject *parent = nullptr) (abstract)
-*/
-
-/*
-QAbstractItemModel *model() const
+QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
 {
@@ -101,7 +97,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_MODEL )
 }
 
 /*
-void setModel(QAbstractItemModel *model)
+void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
 {
@@ -129,7 +125,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETMODEL )
 }
 
 /*
-QCandlestickSeries *series() const
+QCandlestickSeries * series() const
 */
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
 {
@@ -156,7 +152,7 @@ HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SERIES )
 }
 
 /*
-void setSeries(QCandlestickSeries *series)
+void setSeries( QCandlestickSeries * series )
 */
 HB_FUNC_STATIC( QCANDLESTICKMODELMAPPER_SETSERIES )
 {
