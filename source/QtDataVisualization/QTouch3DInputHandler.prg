@@ -52,13 +52,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QTouch3DInputHandler(QObject *parent = Q_NULLPTR)
+QTouch3DInputHandler( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QTouch3DInputHandler * obj = new QTouch3DInputHandler( OPQOBJECT(1,Q_NULLPTR) );
+    QTouch3DInputHandler * obj = new QTouch3DInputHandler( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_DELETE )
 }
 
 /*
-virtual void touchEvent(QTouchEvent *event)
+virtual void touchEvent( QTouchEvent * event )
 */
 HB_FUNC_STATIC( QTOUCH3DINPUTHANDLER_TOUCHEVENT )
 {

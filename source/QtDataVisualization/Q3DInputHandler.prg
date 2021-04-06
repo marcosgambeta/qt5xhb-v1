@@ -64,13 +64,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DInputHandler(QObject *parent = Q_NULLPTR)
+Q3DInputHandler( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    Q3DInputHandler * obj = new Q3DInputHandler( OPQOBJECT(1,Q_NULLPTR) );
+    Q3DInputHandler * obj = new Q3DInputHandler( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISROTATIONENABLED )
 }
 
 /*
-void setRotationEnabled(bool enable)
+void setRotationEnabled( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETROTATIONENABLED )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMENABLED )
 }
 
 /*
-void setZoomEnabled(bool enable)
+void setZoomEnabled( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMENABLED )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISSELECTIONENABLED )
 }
 
 /*
-void setSelectionEnabled(bool enable)
+void setSelectionEnabled( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETSELECTIONENABLED )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_ISZOOMATTARGETENABLED )
 }
 
 /*
-void setZoomAtTargetEnabled(bool enable)
+void setZoomAtTargetEnabled( bool enable )
 */
 HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
 {
@@ -300,22 +300,6 @@ HB_FUNC_STATIC( Q3DINPUTHANDLER_SETZOOMATTARGETENABLED )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-virtual void mousePressEvent(QMouseEvent *event, const QPoint &mousePos)
-*/
-
-/*
-virtual void mouseReleaseEvent(QMouseEvent *event, const QPoint &mousePos)
-*/
-
-/*
-virtual void mouseMoveEvent(QMouseEvent *event, const QPoint &mousePos)
-*/
-
-/*
-virtual void wheelEvent(QWheelEvent *event)
-*/
 
 void Q3DInputHandlerSlots_connect_signal( const QString & signal, const QString & slot );
 

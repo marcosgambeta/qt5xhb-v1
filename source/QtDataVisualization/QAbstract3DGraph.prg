@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_DELETE )
 }
 
 /*
-QAbstract3DInputHandler *activeInputHandler() const
+QAbstract3DInputHandler * activeInputHandler() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVEINPUTHANDLER )
 }
 
 /*
-void setActiveInputHandler(QAbstract3DInputHandler *inputHandler)
+void setActiveInputHandler( QAbstract3DInputHandler * inputHandler )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVEINPUTHANDLER )
 }
 
 /*
-Q3DTheme *activeTheme() const
+Q3DTheme * activeTheme() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVETHEME )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ACTIVETHEME )
 }
 
 /*
-void setActiveTheme(Q3DTheme *theme)
+void setActiveTheme( Q3DTheme * theme )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVETHEME )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETACTIVETHEME )
 }
 
 /*
-SelectionFlags selectionMode() const
+QAbstract3DGraph::SelectionFlags selectionMode() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTIONMODE )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTIONMODE )
 }
 
 /*
-void setSelectionMode(SelectionFlags mode)
+void setSelectionMode( QAbstract3DGraph::SelectionFlags mode )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSELECTIONMODE )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSELECTIONMODE )
 }
 
 /*
-ShadowQuality shadowQuality() const
+QAbstract3DGraph::ShadowQuality shadowQuality() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SHADOWQUALITY )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SHADOWQUALITY )
 }
 
 /*
-void setShadowQuality(ShadowQuality quality)
+void setShadowQuality( QAbstract3DGraph::ShadowQuality quality )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSHADOWQUALITY )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETSHADOWQUALITY )
 }
 
 /*
-Q3DScene *scene() const
+Q3DScene * scene() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SCENE )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_MEASUREFPS )
 }
 
 /*
-void setMeasureFps(bool enable)
+void setMeasureFps( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETMEASUREFPS )
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISORTHOPROJECTION )
 }
 
 /*
-void setOrthoProjection(bool enable)
+void setOrthoProjection( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETORTHOPROJECTION )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETORTHOPROJECTION )
 }
 
 /*
-ElementType selectedElement() const
+QAbstract3DGraph::ElementType selectedElement() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDELEMENT )
 {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ASPECTRATIO )
 }
 
 /*
-void setAspectRatio(qreal ratio)
+void setAspectRatio( qreal ratio )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETASPECTRATIO )
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETASPECTRATIO )
 }
 
 /*
-OptimizationHints optimizationHints() const
+QAbstract3DGraph::OptimizationHints optimizationHints() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_OPTIMIZATIONHINTS )
 {
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_OPTIMIZATIONHINTS )
 }
 
 /*
-void setOptimizationHints(OptimizationHints hints)
+void setOptimizationHints( QAbstract3DGraph::OptimizationHints hints )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETOPTIMIZATIONHINTS )
 {
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISPOLAR )
 }
 
 /*
-void setPolar(bool enable)
+void setPolar( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETPOLAR )
 {
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RADIALLABELOFFSET )
 }
 
 /*
-void setRadialLabelOffset(float offset)
+void setRadialLabelOffset( float offset )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETRADIALLABELOFFSET )
 {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_HORIZONTALASPECTRATIO )
 }
 
 /*
-void setHorizontalAspectRatio(qreal ratio)
+void setHorizontalAspectRatio( qreal ratio )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETHORIZONTALASPECTRATIO )
 {
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ISREFLECTION )
 }
 
 /*
-void setReflection(bool enable)
+void setReflection( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETREFLECTION )
 {
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REFLECTIVITY )
 }
 
 /*
-void setReflectivity(qreal reflectivity)
+void setReflectivity( qreal reflectivity )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETREFLECTIVITY )
 {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_LOCALE )
 }
 
 /*
-void setLocale(const QLocale &locale)
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETLOCALE )
 {
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_MARGIN )
 }
 
 /*
-void setMargin(qreal margin)
+void setMargin( qreal margin )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETMARGIN )
 {
@@ -1007,7 +1007,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SETMARGIN )
 }
 
 /*
-void addInputHandler(QAbstract3DInputHandler *inputHandler)
+void addInputHandler( QAbstract3DInputHandler * inputHandler )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDINPUTHANDLER )
 {
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDINPUTHANDLER )
 }
 
 /*
-void releaseInputHandler(QAbstract3DInputHandler *inputHandler)
+void releaseInputHandler( QAbstract3DInputHandler * inputHandler )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASEINPUTHANDLER )
 {
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_INPUTHANDLERS )
 }
 
 /*
-void addTheme(Q3DTheme *theme)
+void addTheme( Q3DTheme * theme )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDTHEME )
 {
@@ -1133,7 +1133,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDTHEME )
 }
 
 /*
-void releaseTheme(Q3DTheme *theme)
+void releaseTheme( Q3DTheme * theme )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASETHEME )
 {
@@ -1257,7 +1257,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CLEARSELECTION )
 }
 
 /*
-int addCustomItem(QCustom3DItem *item)
+int addCustomItem( QCustom3DItem * item )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_ADDCUSTOMITEM )
 {
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMS )
 }
 
 /*
-void removeCustomItem(QCustom3DItem *item)
+void removeCustomItem( QCustom3DItem * item )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEM )
 {
@@ -1333,7 +1333,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEM )
 }
 
 /*
-void removeCustomItemAt(const QVector3D &position)
+void removeCustomItemAt( const QVector3D & position )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT )
 {
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_REMOVECUSTOMITEMAT )
 }
 
 /*
-void releaseCustomItem(QCustom3DItem *item)
+void releaseCustomItem( QCustom3DItem * item )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_RELEASECUSTOMITEM )
 {
@@ -1433,7 +1433,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_CUSTOMITEMS )
 }
 
 /*
-QAbstract3DAxis *selectedAxis() const
+QAbstract3DAxis * selectedAxis() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDAXIS )
 {
@@ -1506,7 +1506,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEMINDEX )
 }
 
 /*
-QCustom3DItem *selectedCustomItem() const
+QCustom3DItem * selectedCustomItem() const
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM )
 {
@@ -1531,7 +1531,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_SELECTEDCUSTOMITEM )
 }
 
 /*
-QImage renderToImage(int msaaSamples = 0, const QSize &imageSize = QSize())
+QImage renderToImage( int msaaSamples = 0, const QSize & imageSize = QSize() )
 */
 HB_FUNC_STATIC( QABSTRACT3DGRAPH_RENDERTOIMAGE )
 {
@@ -1540,7 +1540,7 @@ HB_FUNC_STATIC( QABSTRACT3DGRAPH_RENDERTOIMAGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISNUM(1)||HB_ISNIL(1)) && (ISQSIZE(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (HB_ISNUM(1)||HB_ISNIL(1)) && (ISQSIZE(2)||HB_ISNIL(2)) )
     {
 #endif
       QImage * ptr = new QImage( obj->renderToImage( OPINT(1,0), HB_ISNIL(2)? QSize() : *(QSize *) Qt5xHb::itemGetPtr(2) ) );

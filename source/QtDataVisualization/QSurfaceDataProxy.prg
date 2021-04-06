@@ -71,13 +71,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QSurfaceDataProxy(QObject *parent = Q_NULLPTR)
+QSurfaceDataProxy( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSURFACEDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QSurfaceDataProxy * obj = new QSurfaceDataProxy( OPQOBJECT(1,Q_NULLPTR) );
+    QSurfaceDataProxy * obj = new QSurfaceDataProxy( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_COLUMNCOUNT )
 }
 
 /*
-QSurface3DSeries *series() const
+QSurface3DSeries * series() const
 */
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
 }
 
 /*
-const QSurfaceDataItem *itemAt(int rowIndex, int columnIndex) const
+const QSurfaceDataItem * itemAt( int rowIndex, int columnIndex ) const
 */
 void QSurfaceDataProxy_itemAt1()
 {
@@ -196,7 +196,7 @@ void QSurfaceDataProxy_itemAt1()
 }
 
 /*
-const QSurfaceDataItem *itemAt(const QPoint &position) const
+const QSurfaceDataItem * itemAt( const QPoint & position ) const
 */
 void QSurfaceDataProxy_itemAt2()
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 }
 
 /*
-void setItem(int rowIndex, int columnIndex, const QSurfaceDataItem &item)
+void setItem( int rowIndex, int columnIndex, const QSurfaceDataItem & item )
 */
 void QSurfaceDataProxy_setItem1()
 {
@@ -241,7 +241,7 @@ void QSurfaceDataProxy_setItem1()
 }
 
 /*
-void setItem(const QPoint &position, const QSurfaceDataItem &item)
+void setItem( const QPoint & position, const QSurfaceDataItem & item )
 */
 void QSurfaceDataProxy_setItem2()
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 }
 
 /*
-void removeRows(int rowIndex, int removeCount)
+void removeRows( int rowIndex, int removeCount )
 */
 HB_FUNC_STATIC( QSURFACEDATAPROXY_REMOVEROWS )
 {

@@ -79,7 +79,7 @@ void QScatterDataItem_new1()
 }
 
 /*
-QScatterDataItem(const QVector3D &position)
+QScatterDataItem( const QVector3D & position )
 */
 void QScatterDataItem_new2()
 {
@@ -88,7 +88,7 @@ void QScatterDataItem_new2()
 }
 
 /*
-QScatterDataItem(const QVector3D &position, const QQuaternion &rotation)
+QScatterDataItem( const QVector3D & position, const QQuaternion & rotation )
 */
 void QScatterDataItem_new3()
 {
@@ -97,7 +97,7 @@ void QScatterDataItem_new3()
 }
 
 /*
-QScatterDataItem(const QScatterDataItem &other)
+QScatterDataItem( const QScatterDataItem & other )
 */
 void QScatterDataItem_new4()
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_DELETE )
 }
 
 /*
-void setPosition(const QVector3D &pos)
+void setPosition( const QVector3D & pos )
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETPOSITION )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_POSITION )
 }
 
 /*
-void setRotation(const QQuaternion &rot)
+void setRotation( const QQuaternion & rot )
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETROTATION )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_ROTATION )
 }
 
 /*
-void setX(float value)
+void setX( float value )
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETX )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETX )
 }
 
 /*
-void setY(float value)
+void setY( float value )
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETY )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSCATTERDATAITEM_SETY )
 }
 
 /*
-void setZ(float value)
+void setZ( float value )
 */
 HB_FUNC_STATIC( QSCATTERDATAITEM_SETZ )
 {

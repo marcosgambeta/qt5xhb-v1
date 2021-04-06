@@ -76,20 +76,20 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QSurface3DSeries(QObject *parent = Q_NULLPTR)
+QSurface3DSeries( QObject * parent = nullptr )
 */
 void QSurface3DSeries_new1()
 {
-  QSurface3DSeries * obj = new QSurface3DSeries( OPQOBJECT(1,Q_NULLPTR) );
+  QSurface3DSeries * obj = new QSurface3DSeries( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QSurface3DSeries(QSurfaceDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+QSurface3DSeries( QSurfaceDataProxy * dataProxy, QObject * parent = nullptr )
 */
 void QSurface3DSeries_new2()
 {
-  QSurface3DSeries * obj = new QSurface3DSeries( PQSURFACEDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
+  QSurface3DSeries * obj = new QSurface3DSeries( PQSURFACEDATAPROXY(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DELETE )
 }
 
 /*
-QSurfaceDataProxy *dataProxy() const
+QSurfaceDataProxy * dataProxy() const
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_DATAPROXY )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DATAPROXY )
 }
 
 /*
-void setDataProxy(QSurfaceDataProxy *proxy)
+void setDataProxy( QSurfaceDataProxy * proxy )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETDATAPROXY )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_SELECTEDPOINT )
 }
 
 /*
-void setSelectedPoint(const QPoint &position)
+void setSelectedPoint( const QPoint & position )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETSELECTEDPOINT )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_ISFLATSHADINGENABLED )
 }
 
 /*
-void setFlatShadingEnabled(bool enabled)
+void setFlatShadingEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETFLATSHADINGENABLED )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_DRAWMODE )
 }
 
 /*
-void setDrawMode(DrawFlags mode)
+void setDrawMode( QSurface3DSeries::DrawFlags mode )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETDRAWMODE )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTURE )
 }
 
 /*
-void setTexture(const QImage &texture)
+void setTexture( const QImage & texture )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTURE )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QSURFACE3DSERIES_TEXTUREFILE )
 }
 
 /*
-void setTextureFile(const QString &filename)
+void setTextureFile( const QString & filename )
 */
 HB_FUNC_STATIC( QSURFACE3DSERIES_SETTEXTUREFILE )
 {

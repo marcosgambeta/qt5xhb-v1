@@ -94,38 +94,38 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QItemModelScatterDataProxy(QObject *parent = Q_NULLPTR)
+QItemModelScatterDataProxy( QObject * parent = nullptr )
 */
 void QItemModelScatterDataProxy_new1()
 {
-  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( OPQOBJECT(1,Q_NULLPTR) );
+  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, QObject *parent = Q_NULLPTR)
+QItemModelScatterDataProxy( QAbstractItemModel * itemModel, QObject * parent = nullptr )
 */
 void QItemModelScatterDataProxy_new2()
 {
-  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,Q_NULLPTR) );
+  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, QObject *parent = Q_NULLPTR)
+QItemModelScatterDataProxy( QAbstractItemModel * itemModel, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, QObject * parent = nullptr )
 */
 void QItemModelScatterDataProxy_new3()
 {
-  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,Q_NULLPTR) );
+  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QItemModelScatterDataProxy(QAbstractItemModel *itemModel, const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole, QObject *parent = Q_NULLPTR)
+QItemModelScatterDataProxy( QAbstractItemModel * itemModel, const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QString & rotationRole, QObject * parent = nullptr )
 */
 void QItemModelScatterDataProxy_new4()
 {
-  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,Q_NULLPTR) );
+  QItemModelScatterDataProxy * obj = new QItemModelScatterDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_DELETE )
 }
 
 /*
-QAbstractItemModel *itemModel() const
+QAbstractItemModel * itemModel() const
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ITEMMODEL )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ITEMMODEL )
 }
 
 /*
-void setItemModel(QAbstractItemModel *itemModel)
+void setItemModel( QAbstractItemModel * itemModel )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETITEMMODEL )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLE )
 }
 
 /*
-void setXPosRole(const QString &role)
+void setXPosRole( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLE )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLE )
 }
 
 /*
-void setYPosRole(const QString &role)
+void setYPosRole( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLE )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLE )
 }
 
 /*
-void setZPosRole(const QString &role)
+void setZPosRole( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLE )
 {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLE )
 }
 
 /*
-void setRotationRole(const QString &role)
+void setRotationRole( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLE )
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEPATTERN )
 }
 
 /*
-void setXPosRolePattern(const QRegExp &pattern)
+void setXPosRolePattern( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEPATTERN )
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEPATTERN )
 }
 
 /*
-void setYPosRolePattern(const QRegExp &pattern)
+void setYPosRolePattern( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEPATTERN )
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEPATTERN )
 }
 
 /*
-void setZPosRolePattern(const QRegExp &pattern)
+void setZPosRolePattern( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEPATTERN )
 {
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEPATTERN )
 }
 
 /*
-void setRotationRolePattern(const QRegExp &pattern)
+void setRotationRolePattern( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEPATTERN )
 {
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_XPOSROLEREPLACE )
 }
 
 /*
-void setXPosRoleReplace(const QString &replace)
+void setXPosRoleReplace( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETXPOSROLEREPLACE )
 {
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_YPOSROLEREPLACE )
 }
 
 /*
-void setYPosRoleReplace(const QString &replace)
+void setYPosRoleReplace( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETYPOSROLEREPLACE )
 {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ZPOSROLEREPLACE )
 }
 
 /*
-void setZPosRoleReplace(const QString &replace)
+void setZPosRoleReplace( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETZPOSROLEREPLACE )
 {
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_ROTATIONROLEREPLACE )
 }
 
 /*
-void setRotationRoleReplace(const QString &replace)
+void setRotationRoleReplace( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE )
 {
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_SETROTATIONROLEREPLACE )
 }
 
 /*
-void remap(const QString &xPosRole, const QString &yPosRole, const QString &zPosRole, const QString &rotationRole)
+void remap( const QString & xPosRole, const QString & yPosRole, const QString & zPosRole, const QString & rotationRole )
 */
 HB_FUNC_STATIC( QITEMMODELSCATTERDATAPROXY_REMAP )
 {

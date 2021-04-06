@@ -55,13 +55,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DLight(QObject *parent = Q_NULLPTR)
+Q3DLight( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DLIGHT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    Q3DLight * obj = new Q3DLight( OPQOBJECT(1,Q_NULLPTR) );
+    Q3DLight * obj = new Q3DLight( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( Q3DLIGHT_DELETE )
 }
 
 /*
-void setAutoPosition(bool enabled)
+void setAutoPosition( bool enabled )
 */
 HB_FUNC_STATIC( Q3DLIGHT_SETAUTOPOSITION )
 {

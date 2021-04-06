@@ -71,13 +71,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DScatter(const QSurfaceFormat *format = Q_NULLPTR, QWindow *parent = Q_NULLPTR)
+Q3DScatter( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DSCATTER_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||HB_ISNIL(1)) && (ISQWINDOW(2)||HB_ISNIL(2)) )
   {
-    Q3DScatter * obj = new Q3DScatter( HB_ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
+    Q3DScatter * obj = new Q3DScatter( HB_ISNIL(1)? nullptr : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( Q3DSCATTER_DELETE )
 }
 
 /*
-QValue3DAxis *axisX() const
+QValue3DAxis * axisX() const
 */
 HB_FUNC_STATIC( Q3DSCATTER_AXISX )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXISX )
 }
 
 /*
-void setAxisX(QValue3DAxis *axis)
+void setAxisX( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSCATTER_SETAXISX )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SETAXISX )
 }
 
 /*
-QValue3DAxis *axisY() const
+QValue3DAxis * axisY() const
 */
 HB_FUNC_STATIC( Q3DSCATTER_AXISY )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXISY )
 }
 
 /*
-void setAxisY(QValue3DAxis *axis)
+void setAxisY( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSCATTER_SETAXISY )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SETAXISY )
 }
 
 /*
-QValue3DAxis *axisZ() const
+QValue3DAxis * axisZ() const
 */
 HB_FUNC_STATIC( Q3DSCATTER_AXISZ )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( Q3DSCATTER_AXISZ )
 }
 
 /*
-void setAxisZ(QValue3DAxis *axis)
+void setAxisZ( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSCATTER_SETAXISZ )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SETAXISZ )
 }
 
 /*
-QScatter3DSeries *selectedSeries() const
+QScatter3DSeries * selectedSeries() const
 */
 HB_FUNC_STATIC( Q3DSCATTER_SELECTEDSERIES )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SELECTEDSERIES )
 }
 
 /*
-void addSeries(QScatter3DSeries *series)
+void addSeries( QScatter3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DSCATTER_ADDSERIES )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ADDSERIES )
 }
 
 /*
-void removeSeries(QScatter3DSeries *series)
+void removeSeries( QScatter3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DSCATTER_REMOVESERIES )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( Q3DSCATTER_SERIESLIST )
 }
 
 /*
-void addAxis(QValue3DAxis *axis)
+void addAxis( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSCATTER_ADDAXIS )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( Q3DSCATTER_ADDAXIS )
 }
 
 /*
-void releaseAxis(QValue3DAxis *axis)
+void releaseAxis( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DSCATTER_RELEASEAXIS )
 {

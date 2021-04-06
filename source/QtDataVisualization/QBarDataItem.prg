@@ -71,7 +71,7 @@ void QBarDataItem_new1()
 }
 
 /*
-QBarDataItem(float value)
+QBarDataItem( float value )
 */
 void QBarDataItem_new2()
 {
@@ -80,7 +80,7 @@ void QBarDataItem_new2()
 }
 
 /*
-QBarDataItem(float value, float angle)
+QBarDataItem( float value, float angle )
 */
 void QBarDataItem_new3()
 {
@@ -89,7 +89,7 @@ void QBarDataItem_new3()
 }
 
 /*
-QBarDataItem(const QBarDataItem &other)
+QBarDataItem( const QBarDataItem & other )
 */
 void QBarDataItem_new4()
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QBARDATAITEM_DELETE )
 }
 
 /*
-void setValue(float val)
+void setValue( float val )
 */
 HB_FUNC_STATIC( QBARDATAITEM_SETVALUE )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QBARDATAITEM_VALUE )
 }
 
 /*
-void setRotation(float angle)
+void setRotation( float angle )
 */
 HB_FUNC_STATIC( QBARDATAITEM_SETROTATION )
 {

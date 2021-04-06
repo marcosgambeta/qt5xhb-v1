@@ -114,65 +114,65 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QItemModelBarDataProxy(QObject *parent = Q_NULLPTR)
+QItemModelBarDataProxy( QObject * parent = nullptr )
 */
 void QItemModelBarDataProxy_new1()
 {
-  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( OPQOBJECT(1,Q_NULLPTR) );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, QObject *parent = Q_NULLPTR)
+QItemModelBarDataProxy( QAbstractItemModel * itemModel, QObject * parent = nullptr )
 */
 void QItemModelBarDataProxy_new2()
 {
-  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,Q_NULLPTR) );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &valueRole, QObject *parent = Q_NULLPTR)
+QItemModelBarDataProxy( QAbstractItemModel * itemModel, const QString & valueRole, QObject * parent = nullptr )
 */
 void QItemModelBarDataProxy_new3()
 {
-  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,Q_NULLPTR) );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, QObject *parent = Q_NULLPTR)
+QItemModelBarDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & valueRole, QObject * parent = nullptr )
 */
 void QItemModelBarDataProxy_new4()
 {
-  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,Q_NULLPTR) );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), OPQOBJECT(5,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole, QObject *parent = Q_NULLPTR)
+QItemModelBarDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & valueRole, const QString & rotationRole, QObject * parent = nullptr )
 */
 void QItemModelBarDataProxy_new5()
 {
-  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,Q_NULLPTR) );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), OPQOBJECT(6,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = Q_NULLPTR)
+QItemModelBarDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & valueRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr )
 */
 void QItemModelBarDataProxy_new6()
 {
-  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,Q_NULLPTR) );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRINGLIST(5), PQSTRINGLIST(6), OPQOBJECT(7,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QItemModelBarDataProxy(QAbstractItemModel *itemModel, const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList &columnCategories, QObject *parent = Q_NULLPTR)
+QItemModelBarDataProxy( QAbstractItemModel * itemModel, const QString & rowRole, const QString & columnRole, const QString & valueRole, const QString & rotationRole, const QStringList & rowCategories, const QStringList & columnCategories, QObject * parent = nullptr )
 */
 void QItemModelBarDataProxy_new7()
 {
-  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7), OPQOBJECT(8,Q_NULLPTR) );
+  QItemModelBarDataProxy * obj = new QItemModelBarDataProxy( PQABSTRACTITEMMODEL(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5), PQSTRINGLIST(6), PQSTRINGLIST(7), OPQOBJECT(8,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_DELETE )
 }
 
 /*
-QAbstractItemModel *itemModel() const
+QAbstractItemModel * itemModel() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ITEMMODEL )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ITEMMODEL )
 }
 
 /*
-void setItemModel(QAbstractItemModel *itemModel)
+void setItemModel( QAbstractItemModel * itemModel )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETITEMMODEL )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLE )
 }
 
 /*
-void setRowRole(const QString &role)
+void setRowRole( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLE )
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLE )
 }
 
 /*
-void setColumnRole(const QString &role)
+void setColumnRole( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLE )
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLE )
 }
 
 /*
-void setValueRole(const QString &role)
+void setValueRole( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLE )
 {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLE )
 }
 
 /*
-void setRotationRole(const QString &role)
+void setRotationRole( const QString & role )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLE )
 {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWCATEGORIES )
 }
 
 /*
-void setRowCategories(const QStringList &categories)
+void setRowCategories( const QStringList & categories )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWCATEGORIES )
 {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORIES )
 }
 
 /*
-void setColumnCategories(const QStringList &categories)
+void setColumnCategories( const QStringList & categories )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNCATEGORIES )
 {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_USEMODELCATEGORIES )
 }
 
 /*
-void setUseModelCategories(bool enable)
+void setUseModelCategories( bool enable )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETUSEMODELCATEGORIES )
 {
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_AUTOROWCATEGORIES )
 }
 
 /*
-void setAutoRowCategories(bool enable)
+void setAutoRowCategories( bool enable )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETAUTOROWCATEGORIES )
 {
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_AUTOCOLUMNCATEGORIES )
 }
 
 /*
-void setAutoColumnCategories(bool enable)
+void setAutoColumnCategories( bool enable )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETAUTOCOLUMNCATEGORIES )
 {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLEPATTERN )
 }
 
 /*
-void setRowRolePattern(const QRegExp &pattern)
+void setRowRolePattern( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLEPATTERN )
 {
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLEPATTERN )
 }
 
 /*
-void setColumnRolePattern(const QRegExp &pattern)
+void setColumnRolePattern( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLEPATTERN )
 {
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLEPATTERN )
 }
 
 /*
-void setValueRolePattern(const QRegExp &pattern)
+void setValueRolePattern( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLEPATTERN )
 {
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLEPATTERN )
 }
 
 /*
-void setRotationRolePattern(const QRegExp &pattern)
+void setRotationRolePattern( const QRegExp & pattern )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEPATTERN )
 {
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWROLEREPLACE )
 }
 
 /*
-void setRowRoleReplace(const QString &replace)
+void setRowRoleReplace( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROWROLEREPLACE )
 {
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNROLEREPLACE )
 }
 
 /*
-void setColumnRoleReplace(const QString &replace)
+void setColumnRoleReplace( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETCOLUMNROLEREPLACE )
 {
@@ -1064,7 +1064,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_VALUEROLEREPLACE )
 }
 
 /*
-void setValueRoleReplace(const QString &replace)
+void setValueRoleReplace( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETVALUEROLEREPLACE )
 {
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROTATIONROLEREPLACE )
 }
 
 /*
-void setRotationRoleReplace(const QString &replace)
+void setRotationRoleReplace( const QString & replace )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEREPLACE )
 {
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETROTATIONROLEREPLACE )
 }
 
 /*
-MultiMatchBehavior multiMatchBehavior() const
+QItemModelBarDataProxy::MultiMatchBehavior multiMatchBehavior() const
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR )
 {
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_MULTIMATCHBEHAVIOR )
 }
 
 /*
-void setMultiMatchBehavior(MultiMatchBehavior behavior)
+void setMultiMatchBehavior( QItemModelBarDataProxy::MultiMatchBehavior behavior )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR )
 {
@@ -1190,7 +1190,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_SETMULTIMATCHBEHAVIOR )
 }
 
 /*
-void remap(const QString &rowRole, const QString &columnRole, const QString &valueRole, const QString &rotationRole, const QStringList &rowCategories, const QStringList &columnCategories)
+void remap( const QString & rowRole, const QString & columnRole, const QString & valueRole, const QString & rotationRole, const QStringList & rowCategories, const QStringList & columnCategories )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_REMAP )
 {
@@ -1216,7 +1216,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_REMAP )
 }
 
 /*
-Q_INVOKABLE int rowCategoryIndex(const QString& category)
+Q_INVOKABLE int rowCategoryIndex( const QString & category )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWCATEGORYINDEX )
 {
@@ -1240,7 +1240,7 @@ HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_ROWCATEGORYINDEX )
 }
 
 /*
-Q_INVOKABLE int columnCategoryIndex(const QString& category)
+Q_INVOKABLE int columnCategoryIndex( const QString & category )
 */
 HB_FUNC_STATIC( QITEMMODELBARDATAPROXY_COLUMNCATEGORYINDEX )
 {

@@ -61,13 +61,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DObject(QObject *parent = Q_NULLPTR)
+Q3DObject( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DOBJECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    Q3DObject * obj = new Q3DObject( OPQOBJECT(1,Q_NULLPTR) );
+    Q3DObject * obj = new Q3DObject( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( Q3DOBJECT_DELETE )
 }
 
 /*
-Q3DScene *parentScene()
+Q3DScene * parentScene()
 */
 HB_FUNC_STATIC( Q3DOBJECT_PARENTSCENE )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( Q3DOBJECT_POSITION )
 }
 
 /*
-void setPosition(const QVector3D &position)
+void setPosition( const QVector3D & position )
 */
 HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( Q3DOBJECT_SETPOSITION )
 }
 
 /*
-virtual void copyValuesFrom(const Q3DObject &source)
+virtual void copyValuesFrom( const Q3DObject & source )
 */
 HB_FUNC_STATIC( Q3DOBJECT_COPYVALUESFROM )
 {

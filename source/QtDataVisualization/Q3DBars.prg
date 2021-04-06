@@ -93,13 +93,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit Q3DBars(const QSurfaceFormat *format = Q_NULLPTR, QWindow *parent = Q_NULLPTR)
+Q3DBars( const QSurfaceFormat * format = nullptr, QWindow * parent = nullptr )
 */
 HB_FUNC_STATIC( Q3DBARS_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQSURFACEFORMAT(1)||HB_ISNIL(1)) && (ISQWINDOW(2)||HB_ISNIL(2)) )
   {
-    Q3DBars * obj = new Q3DBars( HB_ISNIL(1)? Q_NULLPTR : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,Q_NULLPTR) );
+    Q3DBars * obj = new Q3DBars( HB_ISNIL(1)? nullptr : (QSurfaceFormat *) Qt5xHb::itemGetPtr(1), OPQWINDOW(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( Q3DBARS_ISMULTISERIESUNIFORM )
 }
 
 /*
-void setMultiSeriesUniform(bool uniform)
+void setMultiSeriesUniform( bool uniform )
 */
 HB_FUNC_STATIC( Q3DBARS_SETMULTISERIESUNIFORM )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( Q3DBARS_BARTHICKNESS )
 }
 
 /*
-void setBarThickness(float thicknessRatio)
+void setBarThickness( float thicknessRatio )
 */
 HB_FUNC_STATIC( Q3DBARS_SETBARTHICKNESS )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( Q3DBARS_BARSPACING )
 }
 
 /*
-void setBarSpacing(const QSizeF &spacing)
+void setBarSpacing( const QSizeF & spacing )
 */
 HB_FUNC_STATIC( Q3DBARS_SETBARSPACING )
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( Q3DBARS_ISBARSPACINGRELATIVE )
 }
 
 /*
-void setBarSpacingRelative(bool relative)
+void setBarSpacingRelative( bool relative )
 */
 HB_FUNC_STATIC( Q3DBARS_SETBARSPACINGRELATIVE )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( Q3DBARS_SETBARSPACINGRELATIVE )
 }
 
 /*
-QCategory3DAxis *rowAxis() const
+QCategory3DAxis * rowAxis() const
 */
 HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
 {
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( Q3DBARS_ROWAXIS )
 }
 
 /*
-void setRowAxis(QCategory3DAxis *axis)
+void setRowAxis( QCategory3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DBARS_SETROWAXIS )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( Q3DBARS_SETROWAXIS )
 }
 
 /*
-QCategory3DAxis *columnAxis() const
+QCategory3DAxis * columnAxis() const
 */
 HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( Q3DBARS_COLUMNAXIS )
 }
 
 /*
-void setColumnAxis(QCategory3DAxis *axis)
+void setColumnAxis( QCategory3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DBARS_SETCOLUMNAXIS )
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( Q3DBARS_SETCOLUMNAXIS )
 }
 
 /*
-QValue3DAxis *valueAxis() const
+QValue3DAxis * valueAxis() const
 */
 HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
 {
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( Q3DBARS_VALUEAXIS )
 }
 
 /*
-void setValueAxis(QValue3DAxis *axis)
+void setValueAxis( QValue3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DBARS_SETVALUEAXIS )
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( Q3DBARS_SETVALUEAXIS )
 }
 
 /*
-QBar3DSeries *primarySeries() const
+QBar3DSeries * primarySeries() const
 */
 HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
 {
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( Q3DBARS_PRIMARYSERIES )
 }
 
 /*
-void setPrimarySeries(QBar3DSeries *series)
+void setPrimarySeries( QBar3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DBARS_SETPRIMARYSERIES )
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( Q3DBARS_SETPRIMARYSERIES )
 }
 
 /*
-QBar3DSeries *selectedSeries() const
+QBar3DSeries * selectedSeries() const
 */
 HB_FUNC_STATIC( Q3DBARS_SELECTEDSERIES )
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( Q3DBARS_FLOORLEVEL )
 }
 
 /*
-void setFloorLevel(float level)
+void setFloorLevel( float level )
 */
 HB_FUNC_STATIC( Q3DBARS_SETFLOORLEVEL )
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( Q3DBARS_SETFLOORLEVEL )
 }
 
 /*
-void addSeries(QBar3DSeries *series)
+void addSeries( QBar3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DBARS_ADDSERIES )
 {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( Q3DBARS_ADDSERIES )
 }
 
 /*
-void removeSeries(QBar3DSeries *series)
+void removeSeries( QBar3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DBARS_REMOVESERIES )
 {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( Q3DBARS_REMOVESERIES )
 }
 
 /*
-void insertSeries(int index, QBar3DSeries *series)
+void insertSeries( int index, QBar3DSeries * series )
 */
 HB_FUNC_STATIC( Q3DBARS_INSERTSERIES )
 {
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( Q3DBARS_SERIESLIST )
 }
 
 /*
-void addAxis(QAbstract3DAxis *axis)
+void addAxis( QAbstract3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DBARS_ADDAXIS )
 {
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( Q3DBARS_ADDAXIS )
 }
 
 /*
-void releaseAxis(QAbstract3DAxis *axis)
+void releaseAxis( QAbstract3DAxis * axis )
 */
 HB_FUNC_STATIC( Q3DBARS_RELEASEAXIS )
 {

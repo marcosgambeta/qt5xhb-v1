@@ -76,7 +76,7 @@ void QSurfaceDataItem_new1()
 }
 
 /*
-QSurfaceDataItem(const QVector3D &position)
+QSurfaceDataItem( const QVector3D & position )
 */
 void QSurfaceDataItem_new2()
 {
@@ -85,7 +85,7 @@ void QSurfaceDataItem_new2()
 }
 
 /*
-QSurfaceDataItem(const QSurfaceDataItem &other)
+QSurfaceDataItem( const QSurfaceDataItem & other )
 */
 void QSurfaceDataItem_new3()
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_DELETE )
 }
 
 /*
-void setPosition(const QVector3D &pos)
+void setPosition( const QVector3D & pos )
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETPOSITION )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_POSITION )
 }
 
 /*
-void setX(float value)
+void setX( float value )
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETX )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETX )
 }
 
 /*
-void setY(float value)
+void setY( float value )
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETY )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSURFACEDATAITEM_SETY )
 }
 
 /*
-void setZ(float value)
+void setZ( float value )
 */
 HB_FUNC_STATIC( QSURFACEDATAITEM_SETZ )
 {

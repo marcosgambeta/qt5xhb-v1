@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QABSTRACTDATAPROXY_DELETE )
 }
 
 /*
-DataType type() const
+QAbstractDataProxy::DataType type() const
 */
 HB_FUNC_STATIC( QABSTRACTDATAPROXY_TYPE )
 {

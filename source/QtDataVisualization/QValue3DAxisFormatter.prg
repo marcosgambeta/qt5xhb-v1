@@ -51,13 +51,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QValue3DAxisFormatter(QObject *parent = Q_NULLPTR)
+QValue3DAxisFormatter( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVALUE3DAXISFORMATTER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QValue3DAxisFormatter * obj = new QValue3DAxisFormatter( OPQOBJECT(1,Q_NULLPTR) );
+    QValue3DAxisFormatter * obj = new QValue3DAxisFormatter( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else

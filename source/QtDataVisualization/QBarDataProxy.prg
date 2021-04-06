@@ -82,13 +82,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QBarDataProxy(QObject *parent = Q_NULLPTR)
+QBarDataProxy( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QBarDataProxy * obj = new QBarDataProxy( OPQOBJECT(1,Q_NULLPTR) );
+    QBarDataProxy * obj = new QBarDataProxy( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_ROWLABELS )
 }
 
 /*
-void setRowLabels(const QStringList &labels)
+void setRowLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_SETROWLABELS )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_COLUMNLABELS )
 }
 
 /*
-void setColumnLabels(const QStringList &labels)
+void setColumnLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETCOLUMNLABELS )
 }
 
 /*
-QBar3DSeries *series() const
+QBar3DSeries * series() const
 */
 HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
 {
@@ -269,15 +269,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
 }
 
 /*
-const QBarDataArray *array() const
-*/
-
-/*
-const QBarDataRow *rowAt(int rowIndex) const
-*/
-
-/*
-const QBarDataItem *itemAt(int rowIndex, int columnIndex) const
+const QBarDataItem * itemAt( int rowIndex, int columnIndex ) const
 */
 void QBarDataProxy_itemAt1()
 {
@@ -291,7 +283,7 @@ void QBarDataProxy_itemAt1()
 }
 
 /*
-const QBarDataItem *itemAt(const QPoint &position) const
+const QBarDataItem * itemAt( const QPoint & position ) const
 */
 void QBarDataProxy_itemAt2()
 {
@@ -333,7 +325,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
 }
 
 /*
-void setItem(int rowIndex, int columnIndex, const QBarDataItem &item)
+void setItem( int rowIndex, int columnIndex, const QBarDataItem & item )
 */
 void QBarDataProxy_setItem1()
 {
@@ -348,7 +340,7 @@ void QBarDataProxy_setItem1()
 }
 
 /*
-void setItem(const QPoint &position, const QBarDataItem &item)
+void setItem( const QPoint & position, const QBarDataItem & item )
 */
 void QBarDataProxy_setItem2()
 {
@@ -395,7 +387,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_INSERTROWS )
 }
 
 /*
-void removeRows(int rowIndex, int removeCount, bool removeLabels = true)
+void removeRows( int rowIndex, int removeCount, bool removeLabels = true )
 */
 HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
 {
@@ -404,7 +396,7 @@ HB_FUNC_STATIC( QBARDATAPROXY_REMOVEROWS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISLOG(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISLOG(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->removeRows( PINT(1), PINT(2), OPBOOL(3,true) );

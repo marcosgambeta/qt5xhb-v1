@@ -64,20 +64,20 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QBar3DSeries(QObject *parent = Q_NULLPTR)
+QBar3DSeries( QObject * parent = nullptr )
 */
 void QBar3DSeries_new1()
 {
-  QBar3DSeries * obj = new QBar3DSeries( OPQOBJECT(1,Q_NULLPTR) );
+  QBar3DSeries * obj = new QBar3DSeries( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QBar3DSeries(QBarDataProxy *dataProxy, QObject *parent = Q_NULLPTR)
+QBar3DSeries( QBarDataProxy * dataProxy, QObject * parent = nullptr )
 */
 void QBar3DSeries_new2()
 {
-  QBar3DSeries * obj = new QBar3DSeries( PQBARDATAPROXY(1), OPQOBJECT(2,Q_NULLPTR) );
+  QBar3DSeries * obj = new QBar3DSeries( PQBARDATAPROXY(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_DELETE )
 }
 
 /*
-QBarDataProxy *dataProxy() const
+QBarDataProxy * dataProxy() const
 */
 HB_FUNC_STATIC( QBAR3DSERIES_DATAPROXY )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_DATAPROXY )
 }
 
 /*
-void setDataProxy(QBarDataProxy *proxy)
+void setDataProxy( QBarDataProxy * proxy )
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SETDATAPROXY )
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_SETDATAPROXY )
 }
 
 /*
-QPoint selectedBar() const;
+QPoint selectedBar() const
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SELECTEDBAR )
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_SELECTEDBAR )
 }
 
 /*
-void setSelectedBar(const QPoint &position)
+void setSelectedBar( const QPoint & position )
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SETSELECTEDBAR )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QBAR3DSERIES_MESHANGLE )
 }
 
 /*
-void setMeshAngle(float angle)
+void setMeshAngle( float angle )
 */
 HB_FUNC_STATIC( QBAR3DSERIES_SETMESHANGLE )
 {

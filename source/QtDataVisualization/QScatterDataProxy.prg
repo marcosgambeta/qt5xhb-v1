@@ -70,13 +70,13 @@ RETURN
 using namespace QtDataVisualization;
 
 /*
-explicit QScatterDataProxy(QObject *parent = Q_NULLPTR)
+QScatterDataProxy( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QScatterDataProxy * obj = new QScatterDataProxy( OPQOBJECT(1,Q_NULLPTR) );
+    QScatterDataProxy * obj = new QScatterDataProxy( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMCOUNT )
 }
 
 /*
-QScatter3DSeries *series() const
+QScatter3DSeries * series() const
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_SERIES )
 {
@@ -157,11 +157,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SERIES )
 }
 
 /*
-const QScatterDataArray *array() const
-*/
-
-/*
-const QScatterDataItem *itemAt(int index) const
+const QScatterDataItem * itemAt( int index ) const
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMAT )
 {
@@ -186,11 +182,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ITEMAT )
 }
 
 /*
-void resetArray(QScatterDataArray *newArray)
-*/
-
-/*
-void setItem(int index, const QScatterDataItem &item)
+void setItem( int index, const QScatterDataItem & item )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_SETITEM )
 {
@@ -216,11 +208,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_SETITEM )
 }
 
 /*
-void setItems(int index, const QScatterDataArray &items)
-*/
-
-/*
-int addItem(const QScatterDataItem &item)
+int addItem( const QScatterDataItem & item )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_ADDITEM )
 {
@@ -244,11 +232,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_ADDITEM )
 }
 
 /*
-int addItems(const QScatterDataArray &items)
-*/
-
-/*
-void insertItem(int index, const QScatterDataItem &item)
+void insertItem( int index, const QScatterDataItem & item )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_INSERTITEM )
 {
@@ -274,11 +258,7 @@ HB_FUNC_STATIC( QSCATTERDATAPROXY_INSERTITEM )
 }
 
 /*
-void insertItems(int index, const QScatterDataArray &items)
-*/
-
-/*
-void removeItems(int index, int removeCount)
+void removeItems( int index, int removeCount )
 */
 HB_FUNC_STATIC( QSCATTERDATAPROXY_REMOVEITEMS )
 {
