@@ -10,10 +10,6 @@
   Website:
   https://github.com/magsoftinfo/qt5xhb
 
-  Users Groups:
-  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb    [ENGLISH]
-  https://groups.google.com/forum/?hl=pt-BR#!forum/qtxhb-br [PORTUGUESE]
-
 */
 
 /*
