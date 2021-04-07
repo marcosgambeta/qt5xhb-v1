@@ -70,7 +70,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QWebHistoryItem ( const QWebHistoryItem & other )
+QWebHistoryItem( const QWebHistoryItem & other )
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
 {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_DELETE )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
 {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ISVALID )
 }
 
 /*
-QDateTime lastVisited () const
+QDateTime lastVisited() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
 }
 
 /*
-QUrl originalUrl () const
+QUrl originalUrl() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 }
 
 /*
-void setUserData ( const QVariant & userData )
+void setUserData( const QVariant & userData )
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_TITLE )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
 }
 
 /*
-QVariant userData () const
+QVariant userData() const
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
 {

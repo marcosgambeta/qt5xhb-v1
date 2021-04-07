@@ -94,7 +94,7 @@ RETURN
 #include <QtCore/QUrl>
 
 /*
-QString defaultTextEncoding () const
+QString defaultTextEncoding() const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
 }
 
 /*
-QString fontFamily ( FontFamily which ) const
+QString fontFamily( QWebSettings::FontFamily which ) const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
 }
 
 /*
-int fontSize ( FontSize type ) const
+int fontSize( QWebSettings::FontSize type ) const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
 }
 
 /*
-QString localStoragePath () const
+QString localStoragePath() const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
 }
 
 /*
-void resetAttribute ( WebAttribute attribute )
+void resetAttribute( QWebSettings::WebAttribute attribute )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_RESETATTRIBUTE )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETATTRIBUTE )
 }
 
 /*
-void resetFontFamily ( FontFamily which )
+void resetFontFamily( QWebSettings::FontFamily which )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTFAMILY )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTFAMILY )
 }
 
 /*
-void resetFontSize ( FontSize type )
+void resetFontSize( QWebSettings::FontSize type )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTSIZE )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTSIZE )
 }
 
 /*
-void setAttribute ( WebAttribute attribute, bool on )
+void setAttribute( QWebSettings::WebAttribute attribute, bool on )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETATTRIBUTE )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETATTRIBUTE )
 }
 
 /*
-void setDefaultTextEncoding ( const QString & encoding )
+void setDefaultTextEncoding( const QString & encoding )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETDEFAULTTEXTENCODING )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETDEFAULTTEXTENCODING )
 }
 
 /*
-void setFontFamily ( FontFamily which, const QString & family )
+void setFontFamily( QWebSettings::FontFamily which, const QString & family )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETFONTFAMILY )
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTFAMILY )
 }
 
 /*
-void setFontSize ( FontSize type, int size )
+void setFontSize( QWebSettings::FontSize type, int size )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
 }
 
 /*
-void setLocalStoragePath ( const QString & path )
+void setLocalStoragePath( const QString & path )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETLOCALSTORAGEPATH )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETLOCALSTORAGEPATH )
 }
 
 /*
-void setUserStyleSheetUrl ( const QUrl & location )
+void setUserStyleSheetUrl( const QUrl & location )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETUSERSTYLESHEETURL )
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETUSERSTYLESHEETURL )
 }
 
 /*
-bool testAttribute ( WebAttribute attribute ) const
+bool testAttribute( QWebSettings::WebAttribute attribute ) const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
 }
 
 /*
-QUrl userStyleSheetUrl () const
+QUrl userStyleSheetUrl() const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
 }
 
 /*
-static void clearIconDatabase ()
+static void clearIconDatabase()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_CLEARICONDATABASE )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_CLEARICONDATABASE )
 }
 
 /*
-static void clearMemoryCaches ()
+static void clearMemoryCaches()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_CLEARMEMORYCACHES )
 {
@@ -515,12 +515,12 @@ HB_FUNC_STATIC( QWEBSETTINGS_CLEARMEMORYCACHES )
 }
 
 /*
-static void enablePersistentStorage ( const QString & path = QString() )
+static void enablePersistentStorage( const QString & path = QString() )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
   {
 #endif
     QWebSettings::enablePersistentStorage( OPQSTRING(1,QString()) );
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
 }
 
 /*
-static QWebSettings * globalSettings ()
+static QWebSettings * globalSettings()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_GLOBALSETTINGS )
 }
 
 /*
-static QString iconDatabasePath ()
+static QString iconDatabasePath()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ICONDATABASEPATH )
 {
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONDATABASEPATH )
 }
 
 /*
-static QIcon iconForUrl ( const QUrl & url )
+static QIcon iconForUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
 {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
 }
 
 /*
-static int maximumPagesInCache ()
+static int maximumPagesInCache()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_MAXIMUMPAGESINCACHE )
 }
 
 /*
-static qint64 offlineStorageDefaultQuota ()
+static qint64 offlineStorageDefaultQuota()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
 {
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEDEFAULTQUOTA )
 }
 
 /*
-static QString offlineStoragePath ()
+static QString offlineStoragePath()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
 {
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINESTORAGEPATH )
 }
 
 /*
-static QString offlineWebApplicationCachePath ()
+static QString offlineWebApplicationCachePath()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEPATH )
 }
 
 /*
-static qint64 offlineWebApplicationCacheQuota ()
+static qint64 offlineWebApplicationCacheQuota()
 */
 HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA )
 {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_OFFLINEWEBAPPLICATIONCACHEQUOTA )
 }
 
 /*
-static void setIconDatabasePath ( const QString & path )
+static void setIconDatabasePath( const QString & path )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETICONDATABASEPATH )
 {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETICONDATABASEPATH )
 }
 
 /*
-static void setMaximumPagesInCache ( int pages )
+static void setMaximumPagesInCache( int pages )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETMAXIMUMPAGESINCACHE )
 {
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETMAXIMUMPAGESINCACHE )
 }
 
 /*
-static void setObjectCacheCapacities ( int cacheMinDeadCapacity, int cacheMaxDead, int totalCapacity )
+static void setObjectCacheCapacities( int cacheMinDeadCapacity, int cacheMaxDead, int totalCapacity )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOBJECTCACHECAPACITIES )
 {
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOBJECTCACHECAPACITIES )
 }
 
 /*
-static void setOfflineStorageDefaultQuota ( qint64 maximumSize )
+static void setOfflineStorageDefaultQuota( qint64 maximumSize )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA )
 {
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEDEFAULTQUOTA )
 }
 
 /*
-static void setOfflineStoragePath ( const QString & path )
+static void setOfflineStoragePath( const QString & path )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEPATH )
 {
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINESTORAGEPATH )
 }
 
 /*
-static void setOfflineWebApplicationCachePath ( const QString & path )
+static void setOfflineWebApplicationCachePath( const QString & path )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH )
 {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEPATH )
 }
 
 /*
-static void setOfflineWebApplicationCacheQuota ( qint64 maximumSize )
+static void setOfflineWebApplicationCacheQuota( qint64 maximumSize )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA )
 {
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETOFFLINEWEBAPPLICATIONCACHEQUOTA )
 }
 
 /*
-static void setWebGraphic ( WebGraphic type, const QPixmap & graphic )
+static void setWebGraphic( QWebSettings::WebGraphic type, const QPixmap & graphic )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETWEBGRAPHIC )
 {
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_SETWEBGRAPHIC )
 }
 
 /*
-static QPixmap webGraphic ( WebGraphic type )
+static QPixmap webGraphic( QWebSettings::WebGraphic type )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_WEBGRAPHIC )
 {

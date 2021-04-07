@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
 }
 
 /*
-virtual QObject * create ( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
+virtual QObject * create( const QString & mimeType, const QUrl & url, const QStringList & argumentNames, const QStringList & argumentValues ) const = 0
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 }
 
 /*
-virtual void refreshPlugins ()
+virtual void refreshPlugins()
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {

@@ -67,7 +67,7 @@ RETURN
 #include <QtWebKit/QWebSecurityOrigin>
 
 /*
-QWebDatabase ( const QWebDatabase & other )
+QWebDatabase( const QWebDatabase & other )
 */
 HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DELETE )
 }
 
 /*
-QString displayName () const
+QString displayName() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 }
 
 /*
-qint64 expectedSize () const
+qint64 expectedSize() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 }
 
 /*
-QString fileName () const
+QString fileName() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_NAME )
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NAME )
 }
 
 /*
-QWebSecurityOrigin origin () const
+QWebSecurityOrigin origin() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 }
 
 /*
-qint64 size () const
+qint64 size() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 }
 
 /*
-static void removeAllDatabases ()
+static void removeAllDatabases()
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 }
 
 /*
-static void removeDatabase ( const QWebDatabase & db )
+static void removeDatabase( const QWebDatabase & db )
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
 {
