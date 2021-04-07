@@ -73,14 +73,6 @@ RETURN
 #endif
 
 /*
-explicit QAbstractOAuth2(QObject *parent = nullptr) (abstract)
-*/
-
-/*
-explicit QAbstractOAuth2(QNetworkAccessManager *manager, QObject *parent = nullptr) (abstract)
-*/
-
-/*
 ~QAbstractOAuth2()
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_DELETE )
@@ -131,7 +123,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_SCOPE )
 }
 
 /*
-void setScope(const QString &scope)
+void setScope( const QString & scope )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSCOPE )
 {
@@ -185,7 +177,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_USERAGENT )
 }
 
 /*
-void setUserAgent(const QString &userAgent)
+void setUserAgent( const QString & userAgent )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETUSERAGENT )
 {
@@ -239,7 +231,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_CLIENTIDENTIFIERSHAREDKEY )
 }
 
 /*
-void setClientIdentifierSharedKey(const QString &clientIdentifierSharedKey)
+void setClientIdentifierSharedKey( const QString & clientIdentifierSharedKey )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETCLIENTIDENTIFIERSHAREDKEY )
 {
@@ -293,7 +285,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_STATE )
 }
 
 /*
-void setState(const QString &state)
+void setState( const QString & state )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETSTATE )
 {
@@ -348,30 +340,6 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_EXPIRATIONAT )
 }
 
 /*
-Q_INVOKABLE virtual QUrl createAuthenticatedUrl(const QUrl &url, const QVariantMap &parameters = QVariantMap())
-*/
-
-/*
-Q_INVOKABLE QNetworkReply *head(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
-Q_INVOKABLE QNetworkReply *get(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
-Q_INVOKABLE QNetworkReply *post(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
-Q_INVOKABLE QNetworkReply *put(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
-Q_INVOKABLE QNetworkReply *deleteResource(const QUrl &url, const QVariantMap &parameters = QVariantMap()) override
-*/
-
-/*
 QString responseType() const
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_RESPONSETYPE )
@@ -424,7 +392,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTH2_REFRESHTOKEN )
 }
 
 /*
-void setRefreshToken(const QString &refreshToken)
+void setRefreshToken( const QString & refreshToken )
 */
 HB_FUNC_STATIC( QABSTRACTOAUTH2_SETREFRESHTOKEN )
 {

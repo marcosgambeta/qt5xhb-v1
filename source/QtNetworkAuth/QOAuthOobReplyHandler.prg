@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-explicit QOAuthOobReplyHandler(QObject *parent = nullptr)
+QOAuthOobReplyHandler( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QOAUTHOOBREPLYHANDLER_NEW )
 {

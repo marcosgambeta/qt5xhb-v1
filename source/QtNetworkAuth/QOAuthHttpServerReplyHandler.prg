@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-explicit QOAuthHttpServerReplyHandler(QObject *parent = nullptr)
+QOAuthHttpServerReplyHandler( QObject * parent = nullptr )
 */
 void QOAuthHttpServerReplyHandler_new1()
 {
@@ -73,7 +73,7 @@ void QOAuthHttpServerReplyHandler_new1()
 }
 
 /*
-explicit QOAuthHttpServerReplyHandler(quint16 port, QObject *parent = nullptr)
+QOAuthHttpServerReplyHandler( quint16 port, QObject * parent = nullptr )
 */
 void QOAuthHttpServerReplyHandler_new2()
 {
@@ -84,7 +84,7 @@ void QOAuthHttpServerReplyHandler_new2()
 }
 
 /*
-explicit QOAuthHttpServerReplyHandler(const QHostAddress &address, quint16 port, QObject *parent = nullptr)
+QOAuthHttpServerReplyHandler( const QHostAddress & address, quint16 port, QObject * parent = nullptr )
 */
 void QOAuthHttpServerReplyHandler_new3()
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKPATH )
 }
 
 /*
-void setCallbackPath(const QString &path)
+void setCallbackPath( const QString & path )
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKPATH )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_CALLBACKTEXT )
 }
 
 /*
-void setCallbackText(const QString &text)
+void setCallbackText( const QString & text )
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_SETCALLBACKTEXT )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_PORT )
 }
 
 /*
-bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
+bool listen( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
 */
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_LISTEN )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_LISTEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->listen( HB_ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );

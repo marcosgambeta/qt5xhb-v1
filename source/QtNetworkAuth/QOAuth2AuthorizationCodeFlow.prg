@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-explicit QOAuth2AuthorizationCodeFlow(QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new1()
 {
@@ -71,7 +71,7 @@ void QOAuth2AuthorizationCodeFlow_new1()
 }
 
 /*
-explicit QOAuth2AuthorizationCodeFlow(QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new2()
 {
@@ -82,7 +82,7 @@ void QOAuth2AuthorizationCodeFlow_new2()
 }
 
 /*
-QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( const QString & clientIdentifier, QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new3()
 {
@@ -93,7 +93,7 @@ void QOAuth2AuthorizationCodeFlow_new3()
 }
 
 /*
-QOAuth2AuthorizationCodeFlow(const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( const QUrl & authorizationUrl, const QUrl & accessTokenUrl, QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new4()
 {
@@ -104,7 +104,7 @@ void QOAuth2AuthorizationCodeFlow_new4()
 }
 
 /*
-QOAuth2AuthorizationCodeFlow(const QString &clientIdentifier, const QUrl &authorizationUrl, const QUrl &accessTokenUrl, QNetworkAccessManager *manager, QObject *parent = nullptr)
+QOAuth2AuthorizationCodeFlow( const QString & clientIdentifier, const QUrl & authorizationUrl, const QUrl & accessTokenUrl, QNetworkAccessManager * manager, QObject * parent = nullptr )
 */
 void QOAuth2AuthorizationCodeFlow_new5()
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL )
 }
 
 /*
-void setAccessTokenUrl(const QUrl &accessTokenUrl)
+void setAccessTokenUrl( const QUrl & accessTokenUrl )
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
 }
 
 /*
-void grant() override 
+void grant() override
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
 }
 
 /*
-void refreshAccessToken() 
+void refreshAccessToken()
 */
 HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
 {

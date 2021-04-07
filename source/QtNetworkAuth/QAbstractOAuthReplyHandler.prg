@@ -57,10 +57,6 @@ RETURN
 #endif
 
 /*
-explicit QAbstractOAuthReplyHandler(QObject *parent = nullptr) (abstract)
-*/
-
-/*
 virtual ~QAbstractOAuthReplyHandler()
 */
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_DELETE )
@@ -111,7 +107,7 @@ HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_CALLBACK )
 }
 
 /*
-virtual void networkReplyFinished(QNetworkReply *reply) = 0 
+virtual void networkReplyFinished( QNetworkReply * reply ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTOAUTHREPLYHANDLER_NETWORKREPLYFINISHED )
 {
