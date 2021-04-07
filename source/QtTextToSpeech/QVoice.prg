@@ -72,7 +72,7 @@ void QVoice_new1()
 }
 
 /*
-QVoice(const QVoice &other)
+QVoice( const QVoice & other )
 */
 void QVoice_new2()
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QVOICE_NAME )
 }
 
 /*
-Gender gender() const
+QVoice::Gender gender() const
 */
 HB_FUNC_STATIC( QVOICE_GENDER )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QVOICE_GENDER )
 }
 
 /*
-Age age() const
+QVoice::Age age() const
 */
 HB_FUNC_STATIC( QVOICE_AGE )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QVOICE_AGE )
 }
 
 /*
-static QString genderName(QVoice::Gender gender)
+static QString genderName( QVoice::Gender gender )
 */
 HB_FUNC_STATIC( QVOICE_GENDERNAME )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QVOICE_GENDERNAME )
 }
 
 /*
-static QString ageName(QVoice::Age age)
+static QString ageName( QVoice::Age age )
 */
 HB_FUNC_STATIC( QVOICE_AGENAME )
 {
