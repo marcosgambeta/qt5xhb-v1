@@ -75,18 +75,16 @@ void QSslCipher_new1()
 }
 
 /*
-explicit QSslCipher(const QString &name)
+QSslCipher( const QString & name )
 */
 void QSslCipher_new2()
 {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QSslCipher * obj = new QSslCipher( PQSTRING(1) );
   Qt5xHb::returnNewObject( obj, true );
-#endif
 }
 
 /*
-QSslCipher( const QString & name, QSsl::SslProtocol protocol )
+QSslCipher(  const QString & name, QSsl::SslProtocol protocol )
 */
 void QSslCipher_new3()
 {
@@ -148,7 +146,7 @@ HB_FUNC_STATIC( QSSLCIPHER_DELETE )
 }
 
 /*
-QString authenticationMethod () const
+QString authenticationMethod() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
 {
@@ -172,7 +170,7 @@ HB_FUNC_STATIC( QSSLCIPHER_AUTHENTICATIONMETHOD )
 }
 
 /*
-QString encryptionMethod () const
+QString encryptionMethod() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
 {
@@ -196,7 +194,7 @@ HB_FUNC_STATIC( QSSLCIPHER_ENCRYPTIONMETHOD )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
 {
@@ -220,7 +218,7 @@ HB_FUNC_STATIC( QSSLCIPHER_ISNULL )
 }
 
 /*
-QString keyExchangeMethod () const
+QString keyExchangeMethod() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
 {
@@ -244,7 +242,7 @@ HB_FUNC_STATIC( QSSLCIPHER_KEYEXCHANGEMETHOD )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_NAME )
 {
@@ -268,7 +266,7 @@ HB_FUNC_STATIC( QSSLCIPHER_NAME )
 }
 
 /*
-QSsl::SslProtocol protocol () const
+QSsl::SslProtocol protocol() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
 {
@@ -292,7 +290,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOL )
 }
 
 /*
-QString protocolString () const
+QString protocolString() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
 {
@@ -316,7 +314,7 @@ HB_FUNC_STATIC( QSSLCIPHER_PROTOCOLSTRING )
 }
 
 /*
-int supportedBits () const
+int supportedBits() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
 {
@@ -340,7 +338,7 @@ HB_FUNC_STATIC( QSSLCIPHER_SUPPORTEDBITS )
 }
 
 /*
-int usedBits () const
+int usedBits() const
 */
 HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
 {
@@ -364,7 +362,7 @@ HB_FUNC_STATIC( QSSLCIPHER_USEDBITS )
 }
 
 /*
-void swap(QSslCipher &other) Q_DECL_NOTHROW
+void swap( QSslCipher & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLCIPHER_SWAP )
 {

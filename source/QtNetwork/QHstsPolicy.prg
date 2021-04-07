@@ -82,7 +82,7 @@ void QHstsPolicy_new1()
 }
 
 /*
-QHstsPolicy(const QDateTime &expiry, PolicyFlags flags, const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
+QHstsPolicy( const QDateTime & expiry, QHstsPolicy::PolicyFlags flags, const QString & host, QUrl::ParsingMode mode = QUrl::DecodedMode )
 */
 void QHstsPolicy_new2()
 {
@@ -93,7 +93,7 @@ void QHstsPolicy_new2()
 }
 
 /*
-QHstsPolicy(const QHstsPolicy &rhs)
+QHstsPolicy( const QHstsPolicy & rhs )
 */
 void QHstsPolicy_new3()
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_NEW )
   {
     QHstsPolicy_new1();
   }
-  else if( ISBETWEEN(3,4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QHstsPolicy_new2();
   }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_DELETE )
 }
 
 /*
-void swap(QHstsPolicy &other) Q_DECL_NOTHROW
+void swap( QHstsPolicy & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QHSTSPOLICY_SWAP )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_SWAP )
 }
 
 /*
-void setHost(const QString &host, QUrl::ParsingMode mode = QUrl::DecodedMode)
+void setHost( const QString & host, QUrl::ParsingMode mode = QUrl::DecodedMode )
 */
 HB_FUNC_STATIC( QHSTSPOLICY_SETHOST )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETHOST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setHost( PQSTRING(1), HB_ISNIL(2)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(2) );
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_SETHOST )
 }
 
 /*
-QString host(QUrl::ComponentFormattingOptions options = QUrl::FullyDecoded) const
+QString host( QUrl::ComponentFormattingOptions options = QUrl::FullyDecoded ) const
 */
 HB_FUNC_STATIC( QHSTSPOLICY_HOST )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_HOST )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->host( HB_ISNIL(1)? (QUrl::ComponentFormattingOptions) QUrl::FullyDecoded : (QUrl::ComponentFormattingOptions) hb_parni(1) ) );
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_HOST )
 }
 
 /*
-void setExpiry(const QDateTime &expiry)
+void setExpiry( const QDateTime & expiry )
 */
 HB_FUNC_STATIC( QHSTSPOLICY_SETEXPIRY )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QHSTSPOLICY_EXPIRY )
 }
 
 /*
-void setIncludesSubDomains(bool include)
+void setIncludesSubDomains( bool include )
 */
 HB_FUNC_STATIC( QHSTSPOLICY_SETINCLUDESSUBDOMAINS )
 {

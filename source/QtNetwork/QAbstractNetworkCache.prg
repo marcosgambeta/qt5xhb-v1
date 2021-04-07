@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DELETE )
 }
 
 /*
-virtual qint64 cacheSize () const = 0
+virtual qint64 cacheSize() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
 }
 
 /*
-virtual QIODevice * data ( const QUrl & url ) = 0
+virtual QIODevice * data( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
 }
 
 /*
-virtual void insert ( QIODevice * device ) = 0
+virtual void insert( QIODevice * device ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_INSERT )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_INSERT )
 }
 
 /*
-virtual QNetworkCacheMetaData metaData ( const QUrl & url ) = 0
+virtual QNetworkCacheMetaData metaData( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
 }
 
 /*
-virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData ) = 0
+virtual QIODevice * prepare( const QNetworkCacheMetaData & metaData ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
 }
 
 /*
-virtual bool remove ( const QUrl & url ) = 0
+virtual bool remove( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
 }
 
 /*
-virtual void updateMetaData ( const QNetworkCacheMetaData & metaData ) = 0
+virtual void updateMetaData( const QNetworkCacheMetaData & metaData ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 }
 
 /*
-virtual void clear () = 0 
+virtual void clear () = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
 {

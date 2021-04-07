@@ -72,7 +72,7 @@ void QDnsServiceRecord_new1()
 }
 
 /*
-QDnsServiceRecord(const QDnsServiceRecord & other)
+QDnsServiceRecord( const QDnsServiceRecord & other )
 */
 void QDnsServiceRecord_new2()
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDNSSERVICERECORD_PRIORITY )
 }
 
 /*
-void swap(QDnsServiceRecord &other) Q_DECL_NOTHROW
+void swap( QDnsServiceRecord & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSSERVICERECORD_SWAP )
 {

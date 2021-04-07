@@ -80,7 +80,7 @@ RETURN
 #include <QtCore/QDateTime>
 
 /*
-explicit QNetworkCookie(const QByteArray &name = QByteArray(), const QByteArray &value = QByteArray())
+QNetworkCookie( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
 */
 void QNetworkCookie_new1()
 {
@@ -89,7 +89,7 @@ void QNetworkCookie_new1()
 }
 
 /*
-QNetworkCookie ( const QNetworkCookie & other )
+QNetworkCookie( const QNetworkCookie & other )
 */
 void QNetworkCookie_new2()
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_DELETE )
 }
 
 /*
-QString domain () const
+QString domain() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
 }
 
 /*
-QDateTime expirationDate () const
+QDateTime expirationDate() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
 }
 
 /*
-bool isHttpOnly () const
+bool isHttpOnly() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
 }
 
 /*
-bool isSecure () const
+bool isSecure() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
 {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
 }
 
 /*
-bool isSessionCookie () const
+bool isSessionCookie() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
 }
 
 /*
-QByteArray name () const
+QByteArray name() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
 }
 
 /*
-QString path () const
+QString path() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
 }
 
 /*
-void setDomain ( const QString & domain )
+void setDomain( const QString & domain )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETDOMAIN )
 {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETDOMAIN )
 }
 
 /*
-void setExpirationDate ( const QDateTime & date )
+void setExpirationDate( const QDateTime & date )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETEXPIRATIONDATE )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETEXPIRATIONDATE )
 }
 
 /*
-void setHttpOnly ( bool enable )
+void setHttpOnly( bool enable )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETHTTPONLY )
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETHTTPONLY )
 }
 
 /*
-void setName ( const QByteArray & cookieName )
+void setName( const QByteArray & cookieName )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETNAME )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETNAME )
 }
 
 /*
-void setPath ( const QString & path )
+void setPath( const QString & path )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETPATH )
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETPATH )
 }
 
 /*
-void setSecure ( bool enable )
+void setSecure( bool enable )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETSECURE )
 {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETSECURE )
 }
 
 /*
-void setValue ( const QByteArray & value )
+void setValue( const QByteArray & value )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETVALUE )
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETVALUE )
 }
 
 /*
-QByteArray toRawForm ( RawForm form = Full ) const
+QByteArray toRawForm( QNetworkCookie::RawForm form = QNetworkCookie::Full ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toRawForm( HB_ISNIL(1)? (QNetworkCookie::RawForm) QNetworkCookie::Full : (QNetworkCookie::RawForm) hb_parni(1) ) );
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
 }
 
 /*
-QByteArray value () const
+QByteArray value() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_VALUE )
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_VALUE )
 }
 
 /*
-static QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
+static QList<QNetworkCookie> parseCookies( const QByteArray & cookieString )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
 {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
 }
 
 /*
-void swap(QNetworkCookie &other) Q_DECL_NOTHROW
+void swap( QNetworkCookie & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SWAP )
 {
@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SWAP )
 }
 
 /*
-bool hasSameIdentifier(const QNetworkCookie &other) const
+bool hasSameIdentifier( const QNetworkCookie & other ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_HASSAMEIDENTIFIER )
 {
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_HASSAMEIDENTIFIER )
 }
 
 /*
-void normalize(const QUrl &url)
+void normalize( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_NORMALIZE )
 {

@@ -90,7 +90,7 @@ void QNetworkDatagram_new1()
 }
 
 /*
-QNetworkDatagram(const QByteArray &data, const QHostAddress &destinationAddress = QHostAddress(), quint16 port = 0) (implicit)
+QNetworkDatagram( const QByteArray & data, const QHostAddress & destinationAddress = QHostAddress(), quint16 port = 0 )
 */
 void QNetworkDatagram_new2()
 {
@@ -101,7 +101,7 @@ void QNetworkDatagram_new2()
 }
 
 /*
-QNetworkDatagram(const QNetworkDatagram &other)
+QNetworkDatagram( const QNetworkDatagram & other )
 */
 void QNetworkDatagram_new3()
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_NEW )
   {
     QNetworkDatagram_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (ISQHOSTADDRESS(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (ISQHOSTADDRESS(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QNetworkDatagram_new2();
   }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_DELETE )
 }
 
 /*
-void swap(QNetworkDatagram &other) Q_DECL_NOTHROW
+void swap( QNetworkDatagram & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SWAP )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_INTERFACEINDEX )
 }
 
 /*
-void setInterfaceIndex(uint index)
+void setInterfaceIndex( uint index )
 */
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETINTERFACEINDEX )
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_DESTINATIONPORT )
 }
 
 /*
-void setSender(const QHostAddress &address, quint16 port = 0)
+void setSender( const QHostAddress & address, quint16 port = 0 )
 */
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETSENDER )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_SETSENDER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQHOSTADDRESS(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQHOSTADDRESS(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setSender( *PQHOSTADDRESS(1), OPQUINT16(2,0) );
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_SETSENDER )
 }
 
 /*
-void setDestination(const QHostAddress &address, quint16 port)
+void setDestination( const QHostAddress & address, quint16 port )
 */
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETDESTINATION )
 {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_HOPLIMIT )
 }
 
 /*
-void setHopLimit(int count)
+void setHopLimit( int count )
 */
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETHOPLIMIT )
 {
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_DATA )
 }
 
 /*
-void setData(const QByteArray &data)
+void setData( const QByteArray & data )
 */
 HB_FUNC_STATIC( QNETWORKDATAGRAM_SETDATA )
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QNETWORKDATAGRAM_SETDATA )
 }
 
 /*
-QNetworkDatagram makeReply(const QByteArray &paylaod) const
+QNetworkDatagram makeReply( const QByteArray & paylaod ) const
 */
 HB_FUNC_STATIC( QNETWORKDATAGRAM_MAKEREPLY )
 {

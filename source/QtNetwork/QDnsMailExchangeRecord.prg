@@ -70,7 +70,7 @@ void QDnsMailExchangeRecord_new1()
 }
 
 /*
-QDnsMailExchangeRecord(const QDnsMailExchangeRecord & other)
+QDnsMailExchangeRecord( const QDnsMailExchangeRecord & other )
 */
 void QDnsMailExchangeRecord_new2()
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_PREFERENCE )
 }
 
 /*
-void swap(QDnsMailExchangeRecord &other) Q_DECL_NOTHROW
+void swap( QDnsMailExchangeRecord & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_SWAP )
 {

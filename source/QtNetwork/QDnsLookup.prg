@@ -80,30 +80,30 @@ RETURN
 #include <QtNetwork/QHostAddress>
 
 /*
-explicit QDnsLookup(QObject *parent = Q_NULLPTR)
+QDnsLookup( QObject * parent = nullptr )
 */
 void QDnsLookup_new1()
 {
-  QDnsLookup * obj = new QDnsLookup( OPQOBJECT(1,Q_NULLPTR) );
+  QDnsLookup * obj = new QDnsLookup( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-QDnsLookup(Type type, const QString &name, QObject *parent = Q_NULLPTR)
+QDnsLookup( QDnsLookup::Type type, const QString & name, QObject * parent = nullptr )
 */
 void QDnsLookup_new2()
 {
-  QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,Q_NULLPTR) );
+  QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-QDnsLookup(Type type, const QString &name, const QHostAddress &nameserver, QObject *parent = Q_NULLPTR)
+QDnsLookup( QDnsLookup::Type type, const QString & name, const QHostAddress & nameserver, QObject * parent = nullptr )
 */
 void QDnsLookup_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,Q_NULLPTR) );
+  QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_DELETE )
 }
 
 /*
-Error error() const
+QDnsLookup::Error error() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ERROR )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAME )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_SETNAME )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_SETNAME )
 }
 
 /*
-Type type() const
+QDnsLookup::Type type() const
 */
 HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TYPE )
 }
 
 /*
-void setType(QDnsLookup::Type)
+void setType( QDnsLookup::Type )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_SETTYPE )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_NAMESERVER )
 }
 
 /*
-void setNameserver(const QHostAddress &nameserver)
+void setNameserver( const QHostAddress & nameserver )
 */
 HB_FUNC_STATIC( QDNSLOOKUP_SETNAMESERVER )
 {
@@ -742,7 +742,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_TEXTRECORDS )
 }
 
 /*
-void abort() 
+void abort()
 */
 HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
 {
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QDNSLOOKUP_ABORT )
 }
 
 /*
-void lookup() 
+void lookup()
 */
 HB_FUNC_STATIC( QDNSLOOKUP_LOOKUP )
 {

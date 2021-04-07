@@ -62,13 +62,13 @@ RETURN
 #endif
 
 /*
-explicit QNetworkConfigurationManager(QObject *parent = Q_NULLPTR)
+QNetworkConfigurationManager( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QNetworkConfigurationManager * obj = new QNetworkConfigurationManager( OPQOBJECT(1,0) );
+    QNetworkConfigurationManager * obj = new QNetworkConfigurationManager( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DELETE )
 }
 
 /*
-QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = QNetworkConfiguration::StateFlags() ) const
+QList<QNetworkConfiguration> allConfigurations( QNetworkConfiguration::StateFlags filter = QNetworkConfiguration::StateFlags() ) const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QList<QNetworkConfiguration> list = obj->allConfigurations( HB_ISNIL(1)? (QNetworkConfiguration::StateFlags) QNetworkConfiguration::StateFlags() : (QNetworkConfiguration::StateFlags) hb_parni(1) );
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
 }
 
 /*
-QNetworkConfigurationManager::Capabilities capabilities () const
+QNetworkConfigurationManager::Capabilities capabilities() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CAPABILITIES )
 }
 
 /*
-QNetworkConfiguration configurationFromIdentifier ( const QString & identifier ) const
+QNetworkConfiguration configurationFromIdentifier( const QString & identifier ) const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
 }
 
 /*
-QNetworkConfiguration defaultConfiguration () const
+QNetworkConfiguration defaultConfiguration() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
 }
 
 /*
-bool isOnline () const
+bool isOnline() const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ISONLINE )
 }
 
 /*
-void updateConfigurations () 
+void updateConfigurations()
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
 {

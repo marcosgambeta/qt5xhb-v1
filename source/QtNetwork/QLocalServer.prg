@@ -70,13 +70,13 @@ RETURN
 #include <QtNetwork/QLocalSocket>
 
 /*
-explicit QLocalServer(QObject *parent = Q_NULLPTR)
+QLocalServer( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QLocalServer * obj = new QLocalServer( OPQOBJECT(1,0) );
+    QLocalServer * obj = new QLocalServer( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 }
 
 /*
-SocketOptions socketOptions() const
+QLocalServer::SocketOptions socketOptions() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SOCKETOPTIONS )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SOCKETOPTIONS )
 }
 
 /*
-void setSocketOptions(SocketOptions options)
+void setSocketOptions( QLocalServer::SocketOptions options )
 */
 HB_FUNC_STATIC( QLOCALSERVER_SETSOCKETOPTIONS )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
 }
 
 /*
-bool listen(const QString &name)
+bool listen( const QString & name )
 */
 void QLocalServer_listen1()
 {
@@ -269,7 +269,7 @@ void QLocalServer_listen1()
 }
 
 /*
-bool listen(qintptr socketDescriptor)
+bool listen( qintptr socketDescriptor )
 */
 void QLocalServer_listen2()
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 }
 
 /*
-virtual QLocalSocket *nextPendingConnection()
+virtual QLocalSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
 }
 
 /*
-static bool removeServer(const QString &name)
+static bool removeServer( const QString & name )
 */
 HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
 }
 
 /*
-void setMaxPendingConnections(int numConnections)
+void setMaxPendingConnections( int numConnections )
 */
 HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 }
 
 /*
-bool waitForNewConnection(int msec = 0, bool *timedOut = Q_NULLPTR)
+bool waitForNewConnection( int msec = 0, bool * timedOut = nullptr )
 */
 HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISNUM(1)||HB_ISNIL(1)) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (HB_ISNUM(1)||HB_ISNIL(1)) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       bool par2;

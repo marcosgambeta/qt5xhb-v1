@@ -64,13 +64,13 @@ RETURN
 #endif
 
 /*
-explicit QUdpSocket(QObject *parent = Q_NULLPTR)
+QUdpSocket( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QUdpSocket * obj = new QUdpSocket( OPQOBJECT(1,0) );
+    QUdpSocket * obj = new QUdpSocket( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QUDPSOCKET_DELETE )
 }
 
 /*
-bool joinMulticastGroup(const QHostAddress &groupAddress)
+bool joinMulticastGroup( const QHostAddress & groupAddress )
 */
 void QUdpSocket_joinMulticastGroup1()
 {
@@ -115,7 +115,7 @@ void QUdpSocket_joinMulticastGroup1()
 }
 
 /*
-bool joinMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
+bool joinMulticastGroup( const QHostAddress & groupAddress, const QNetworkInterface & iface )
 */
 void QUdpSocket_joinMulticastGroup2()
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
 }
 
 /*
-bool leaveMulticastGroup(const QHostAddress &groupAddress)
+bool leaveMulticastGroup( const QHostAddress & groupAddress )
 */
 void QUdpSocket_leaveMulticastGroup1()
 {
@@ -157,7 +157,7 @@ void QUdpSocket_leaveMulticastGroup1()
 }
 
 /*
-bool leaveMulticastGroup(const QHostAddress &groupAddress, const QNetworkInterface &iface)
+bool leaveMulticastGroup( const QHostAddress & groupAddress, const QNetworkInterface & iface )
 */
 void QUdpSocket_leaveMulticastGroup2()
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QUDPSOCKET_MULTICASTINTERFACE )
 }
 
 /*
-void setMulticastInterface(const QNetworkInterface &iface)
+void setMulticastInterface( const QNetworkInterface & iface )
 */
 HB_FUNC_STATIC( QUDPSOCKET_SETMULTICASTINTERFACE )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 }
 
 /*
-QNetworkDatagram receiveDatagram(qint64 maxSize = -1)
+QNetworkDatagram receiveDatagram( qint64 maxSize = -1 )
 */
 HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QNetworkDatagram * ptr = new QNetworkDatagram( obj->receiveDatagram( OPQINT64(1,-1) ) );
@@ -312,11 +312,7 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
 }
 
 /*
-qint64 readDatagram(char *data, qint64 maxlen, QHostAddress *host = Q_NULLPTR, quint16 *port = Q_NULLPTR)
-*/
-
-/*
-qint64 writeDatagram(const QNetworkDatagram &datagram)
+qint64 writeDatagram( const QNetworkDatagram & datagram )
 */
 void QUdpSocket_writeDatagram1()
 {
@@ -331,7 +327,7 @@ void QUdpSocket_writeDatagram1()
 }
 
 /*
-qint64 writeDatagram(const char *data, qint64 len, const QHostAddress &host, quint16 port)
+qint64 writeDatagram( const char * data, qint64 len, const QHostAddress & host, quint16 port )
 */
 void QUdpSocket_writeDatagram2()
 {
@@ -344,7 +340,7 @@ void QUdpSocket_writeDatagram2()
 }
 
 /*
-qint64 writeDatagram(const QByteArray &datagram, const QHostAddress &host, quint16 port)
+qint64 writeDatagram( const QByteArray & datagram, const QHostAddress & host, quint16 port )
 */
 void QUdpSocket_writeDatagram3()
 {

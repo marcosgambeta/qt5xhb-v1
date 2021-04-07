@@ -72,7 +72,7 @@ void QDnsHostAddressRecord_new1()
 }
 
 /*
-QDnsHostAddressRecord(const QDnsHostAddressRecord & other)
+QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
 */
 void QDnsHostAddressRecord_new2()
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NAME )
 }
 
 /*
-void swap(QDnsHostAddressRecord &other) Q_DECL_NOTHROW
+void swap( QDnsHostAddressRecord & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_SWAP )
 {

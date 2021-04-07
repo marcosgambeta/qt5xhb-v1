@@ -70,7 +70,7 @@ RETURN
 #include <QtCore/QDateTime>
 
 /*
-QNetworkCacheMetaData ()
+QNetworkCacheMetaData()
 */
 void QNetworkCacheMetaData_new1()
 {
@@ -79,7 +79,7 @@ void QNetworkCacheMetaData_new1()
 }
 
 /*
-QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
+QNetworkCacheMetaData( const QNetworkCacheMetaData & other )
 */
 void QNetworkCacheMetaData_new2()
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_DELETE )
 }
 
 /*
-void swap(QNetworkCacheMetaData &other) Q_DECL_NOTHROW
+void swap( QNetworkCacheMetaData & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SWAP )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
 }
 
 /*
-void setUrl(const QUrl &url)
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETURL )
 {
@@ -223,14 +223,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETURL )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-RawHeaderList rawHeaders() const
-*/
-
-/*
-void setRawHeaders(const RawHeaderList &headers)
-*/
 
 /*
 QDateTime lastModified() const
@@ -258,7 +250,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
 }
 
 /*
-void setLastModified(const QDateTime &dateTime)
+void setLastModified( const QDateTime & dateTime )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETLASTMODIFIED )
 {
@@ -309,7 +301,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
 }
 
 /*
-void setExpirationDate(const QDateTime &dateTime)
+void setExpirationDate( const QDateTime & dateTime )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETEXPIRATIONDATE )
 {
@@ -359,7 +351,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SAVETODISK )
 }
 
 /*
-void setSaveToDisk(bool allow)
+void setSaveToDisk( bool allow )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
 {
@@ -383,14 +375,6 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-AttributesMap attributes() const
-*/
-
-/*
-void setAttributes(const AttributesMap &attributes)
-*/
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEWFROM )
 {

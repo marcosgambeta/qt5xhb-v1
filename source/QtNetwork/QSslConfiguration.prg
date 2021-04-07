@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_DELETE )
 }
 
 /*
-void swap(QSslConfiguration &other) Q_DECL_NOTHROW
+void swap( QSslConfiguration & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SWAP )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
 }
 
 /*
-void setProtocol(QSsl::SslProtocol protocol)
+void setProtocol( QSsl::SslProtocol protocol )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
 }
 
 /*
-void setPeerVerifyMode(QSslSocket::PeerVerifyMode mode)
+void setPeerVerifyMode( QSslSocket::PeerVerifyMode mode )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
 }
 
 /*
-void setPeerVerifyDepth(int depth)
+void setPeerVerifyDepth( int depth )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATECHAIN )
 }
 
 /*
-void setLocalCertificateChain(const QList<QSslCertificate> &localChain)
+void setLocalCertificateChain( const QList<QSslCertificate> & localChain )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATECHAIN )
 {
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
 }
 
 /*
-void setLocalCertificate(const QSslCertificate &certificate)
+void setLocalCertificate( const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
 {
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
 }
 
 /*
-void setPrivateKey(const QSslKey &key)
+void setPrivateKey( const QSslKey & key )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
 {
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
 }
 
 /*
-void setCiphers(const QList<QSslCipher> &ciphers)
+void setCiphers( const QList<QSslCipher> & ciphers )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCIPHERS )
 {
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
 }
 
 /*
-void setCaCertificates(const QList<QSslCertificate> &certificates)
+void setCaCertificates( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
 {
@@ -945,7 +945,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SYSTEMCACERTIFICATES )
 }
 
 /*
-void setSslOption(QSsl::SslOption option, bool on)
+void setSslOption( QSsl::SslOption option, bool on )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETSSLOPTION )
 {
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETSSLOPTION )
 }
 
 /*
-bool testSslOption(QSsl::SslOption option) const
+bool testSslOption( QSsl::SslOption option ) const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_TESTSSLOPTION )
 {
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONTICKET )
 }
 
 /*
-void setSessionTicket(const QByteArray &sessionTicket)
+void setSessionTicket( const QByteArray & sessionTicket )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETSESSIONTICKET )
 {
@@ -1103,18 +1103,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_EPHEMERALSERVERKEY )
 }
 
 /*
-QVector<QSslEllipticCurve> ellipticCurves() const
-*/
-
-/*
-void setEllipticCurves(const QVector<QSslEllipticCurve> &curves)
-*/
-
-/*
-static QVector<QSslEllipticCurve> supportedEllipticCurves()
-*/
-
-/*
 QByteArray preSharedKeyIdentityHint() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PRESHAREDKEYIDENTITYHINT )
@@ -1142,7 +1130,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PRESHAREDKEYIDENTITYHINT )
 }
 
 /*
-void setPreSharedKeyIdentityHint(const QByteArray &hint)
+void setPreSharedKeyIdentityHint( const QByteArray & hint )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRESHAREDKEYIDENTITYHINT )
 {
@@ -1170,14 +1158,6 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRESHAREDKEYIDENTITYHINT )
 }
 
 /*
-QSslDiffieHellmanParameters diffieHellmanParameters() const
-*/
-
-/*
-void setDiffieHellmanParameters(const QSslDiffieHellmanParameters &dhparams)
-*/
-
-/*
 static QSslConfiguration defaultConfiguration()
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
@@ -1198,7 +1178,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
 }
 
 /*
-static void setDefaultConfiguration(const QSslConfiguration &configuration)
+static void setDefaultConfiguration( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
 {
@@ -1219,7 +1199,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
 }
 
 /*
-void setAllowedNextProtocols(QList<QByteArray> protocols)
+void setAllowedNextProtocols( QList<QByteArray> protocols )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETALLOWEDNEXTPROTOCOLS )
 {
@@ -1336,7 +1316,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEXTNEGOTIATEDPROTOCOL )
 }
 
 /*
-NextProtocolNegotiationStatus nextProtocolNegotiationStatus() const
+QSslConfiguration::NextProtocolNegotiationStatus nextProtocolNegotiationStatus() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEXTPROTOCOLNEGOTIATIONSTATUS )
 {

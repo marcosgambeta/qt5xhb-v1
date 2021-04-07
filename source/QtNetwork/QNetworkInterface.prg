@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-QNetworkInterface ()
+QNetworkInterface()
 */
 void QNetworkInterface_new1()
 {
@@ -81,7 +81,7 @@ void QNetworkInterface_new1()
 }
 
 /*
-QNetworkInterface ( const QNetworkInterface & other )
+QNetworkInterface( const QNetworkInterface & other )
 */
 void QNetworkInterface_new2()
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
 }
 
 /*
-QList<QNetworkAddressEntry> addressEntries () const
+QList<QNetworkAddressEntry> addressEntries() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 }
 
 /*
-InterfaceFlags flags () const
+QNetworkInterface::InterfaceFlags flags() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 }
 
 /*
-QString hardwareAddress () const
+QString hardwareAddress() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 }
 
 /*
-QString humanReadableName () const
+QString humanReadableName() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 }
 
 /*
-int index () const
+int index() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 }
 
 /*
-static QList<QHostAddress> allAddresses ()
+static QList<QHostAddress> allAddresses()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 }
 
 /*
-static QList<QNetworkInterface> allInterfaces ()
+static QList<QNetworkInterface> allInterfaces()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 }
 
 /*
-static QNetworkInterface interfaceFromIndex ( int index )
+static QNetworkInterface interfaceFromIndex( int index )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 }
 
 /*
-static QNetworkInterface interfaceFromName ( const QString & name )
+static QNetworkInterface interfaceFromName( const QString & name )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
 }
 
 /*
-static int interfaceIndexFromName(const QString &name)
+static int interfaceIndexFromName( const QString & name )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEINDEXFROMNAME )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEINDEXFROMNAME )
 }
 
 /*
-static QString interfaceNameFromIndex(int index)
+static QString interfaceNameFromIndex( int index )
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACENAMEFROMINDEX )
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACENAMEFROMINDEX )
 }
 
 /*
-void swap(QNetworkInterface &other) Q_DECL_NOTHROW
+void swap( QNetworkInterface & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_SWAP )
 {
