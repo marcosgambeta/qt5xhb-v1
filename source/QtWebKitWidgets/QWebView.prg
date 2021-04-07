@@ -104,7 +104,7 @@ RETURN
 #include <QtWidgets/QWidget>
 
 /*
-explicit QWebView ( QWidget * parent = 0 )
+QWebView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBVIEW_NEW )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QWEBVIEW_DELETE )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QWEBVIEW_TITLE )
 {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QWEBVIEW_TITLE )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QWEBVIEW_URL )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QWEBVIEW_URL )
 }
 
 /*
-void setUrl ( const QUrl & url )
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETURL )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETURL )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QWEBVIEW_ICON )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QWEBVIEW_ICON )
 }
 
 /*
-QString selectedText () const
+QString selectedText() const
 */
 HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QWEBVIEW_HASSELECTION )
 }
 
 /*
-bool isModified () const
+bool isModified() const
 */
 HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
 }
 
 /*
-qreal textSizeMultiplier () const
+qreal textSizeMultiplier() const
 */
 HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
 }
 
 /*
-void setTextSizeMultiplier ( qreal factor )
+void setTextSizeMultiplier( qreal factor )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
 }
 
 /*
-qreal zoomFactor () const
+qreal zoomFactor() const
 */
 HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
 }
 
 /*
-void setZoomFactor ( qreal factor )
+void setZoomFactor( qreal factor )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
 }
 
 /*
-QPainter::RenderHints renderHints () const
+QPainter::RenderHints renderHints() const
 */
 HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
 }
 
 /*
-void setRenderHints ( QPainter::RenderHints hints )
+void setRenderHints( QPainter::RenderHints hints )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
 {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
 }
 
 /*
-bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
+bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->findText( PQSTRING(1), HB_ISNIL(2)? (QWebPage::FindFlags) 0 : (QWebPage::FindFlags) hb_parni(2) ) );
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
 }
 
 /*
-QWebHistory * history () const
+QWebHistory * history() const
 */
 HB_FUNC_STATIC( QWEBVIEW_HISTORY )
 {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QWEBVIEW_HISTORY )
 }
 
 /*
-void load ( const QUrl & url )
+void load( const QUrl & url )
 */
 void QWebView_load1()
 {
@@ -552,7 +552,7 @@ void QWebView_load1()
 }
 
 /*
-void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
 void QWebView_load2()
 {
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
   {
     QWebView_load1();
   }
-  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISQBYTEARRAY(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && (ISQBYTEARRAY(3)||HB_ISNIL(3)) )
   {
     QWebView_load2();
   }
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QWEBVIEW_LOAD )
 }
 
 /*
-QWebPage * page () const
+QWebPage * page() const
 */
 HB_FUNC_STATIC( QWEBVIEW_PAGE )
 {
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGE )
 }
 
 /*
-QAction * pageAction ( QWebPage::WebAction action ) const
+QAction * pageAction( QWebPage::WebAction action ) const
 */
 HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
 {
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
 }
 
 /*
-void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
 }
 
 /*
-void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETHTML )
 {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETHTML )
 }
 
 /*
-void setPage ( QWebPage * page )
+void setPage( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
 {
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
 }
 
 /*
-void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
+void setRenderHint( QPainter::RenderHint hint, bool enabled = true )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
 {
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setRenderHint( (QPainter::RenderHint) hb_parni(1), OPBOOL(2,true) );
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
 }
 
 /*
-QWebSettings * settings () const
+QWebSettings * settings() const
 */
 HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
 }
 
 /*
-void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
+void triggerPageAction( QWebPage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
 {
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->triggerPageAction( (QWebPage::WebAction) hb_parni(1), OPBOOL(2,false) );
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
 }
 
 /*
-void back ()
+void back()
 */
 HB_FUNC_STATIC( QWEBVIEW_BACK )
 {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QWEBVIEW_BACK )
 }
 
 /*
-void forward ()
+void forward()
 */
 HB_FUNC_STATIC( QWEBVIEW_FORWARD )
 {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QWEBVIEW_FORWARD )
 }
 
 /*
-void print ( QPrinter * printer ) const
+void print( QPrinter * printer ) const
 */
 HB_FUNC_STATIC( QWEBVIEW_PRINT )
 {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QWEBVIEW_PRINT )
 }
 
 /*
-void reload ()
+void reload()
 */
 HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QWEBVIEW_STOP )
 {
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QWEBVIEW_STOP )
 }
 
 /*
-QVariant inputMethodQuery(Qt::InputMethodQuery property) const
+QVariant inputMethodQuery( Qt::InputMethodQuery property ) const
 */
 HB_FUNC_STATIC( QWEBVIEW_INPUTMETHODQUERY )
 {
@@ -970,7 +970,7 @@ HB_FUNC_STATIC( QWEBVIEW_SIZEHINT )
 }
 
 /*
-virtual bool event(QEvent*)
+virtual bool event( QEvent * )
 */
 HB_FUNC_STATIC( QWEBVIEW_EVENT )
 {

@@ -83,7 +83,7 @@ RETURN
 #include <QtWebKit/QWebElement>
 
 /*
-QWebHitTestResult ()
+QWebHitTestResult()
 */
 void QWebHitTestResult_new1()
 {
@@ -92,7 +92,7 @@ void QWebHitTestResult_new1()
 }
 
 /*
-QWebHitTestResult ( const QWebHitTestResult & other )
+QWebHitTestResult( const QWebHitTestResult & other )
 */
 void QWebHitTestResult_new2()
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_DELETE )
 }
 
 /*
-QString alternateText () const
+QString alternateText() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ALTERNATETEXT )
 }
 
 /*
-QRect boundingRect () const
+QRect boundingRect() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_BOUNDINGRECT )
 }
 
 /*
-QWebElement element () const
+QWebElement element() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ELEMENT )
 }
 
 /*
-QWebElement enclosingBlockElement () const
+QWebElement enclosingBlockElement() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ENCLOSINGBLOCKELEMENT )
 }
 
 /*
-QWebFrame * frame () const
+QWebFrame * frame() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_FRAME )
 }
 
 /*
-QUrl imageUrl () const
+QUrl imageUrl() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_IMAGEURL )
 }
 
 /*
-bool isContentEditable () const
+bool isContentEditable() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTEDITABLE )
 }
 
 /*
-bool isContentSelected () const
+bool isContentSelected() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISCONTENTSELECTED )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_ISNULL )
 }
 
 /*
-QWebElement linkElement () const
+QWebElement linkElement() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKELEMENT )
 }
 
 /*
-QWebFrame * linkTargetFrame () const
+QWebFrame * linkTargetFrame() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTARGETFRAME )
 }
 
 /*
-QString linkText () const
+QString linkText() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTEXT )
 }
 
 /*
-QUrl linkTitle () const
+QUrl linkTitle() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKTITLE )
 }
 
 /*
-QUrl linkUrl () const
+QUrl linkUrl() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_LINKURL )
 }
 
 /*
-QPixmap pixmap () const
+QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_PIXMAP )
 }
 
 /*
-QPoint pos () const
+QPoint pos() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QWEBHITTESTRESULT_POS )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QWEBHITTESTRESULT_TITLE )
 {

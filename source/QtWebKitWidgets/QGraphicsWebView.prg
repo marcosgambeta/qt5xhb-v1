@@ -57,7 +57,6 @@ CLASS QGraphicsWebView INHERIT QGraphicsWidget
    METHOD setGeometry
    METHOD updateGeometry
    METHOD paint
-   METHOD itemChange
    METHOD event
    METHOD sizeHint
    METHOD inputMethodQuery
@@ -103,7 +102,7 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-explicit QGraphicsWebView ( QGraphicsItem * parent = 0 )
+QGraphicsWebView( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
@@ -141,7 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_DELETE )
 }
 
 /*
-QString title () const
+QString title() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
 {
@@ -165,7 +164,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
 }
 
 /*
-QIcon icon () const
+QIcon icon() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
 {
@@ -190,7 +189,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ICON )
 }
 
 /*
-qreal zoomFactor () const
+qreal zoomFactor() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
 {
@@ -214,7 +213,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ZOOMFACTOR )
 }
 
 /*
-void setZoomFactor ( qreal )
+void setZoomFactor( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
 {
@@ -240,7 +239,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
 }
 
 /*
-QUrl url () const
+QUrl url() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
 {
@@ -265,7 +264,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_URL )
 }
 
 /*
-void setUrl ( const QUrl & )
+void setUrl( const QUrl & )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
 {
@@ -291,7 +290,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
 }
 
 /*
-bool isModified () const
+bool isModified() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
 {
@@ -315,7 +314,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISMODIFIED )
 }
 
 /*
-bool resizesToContents () const
+bool resizesToContents() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
 {
@@ -339,7 +338,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
 }
 
 /*
-void setResizesToContents ( bool enabled )
+void setResizesToContents( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
 {
@@ -365,7 +364,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
 }
 
 /*
-bool isTiledBackingStoreFrozen () const
+bool isTiledBackingStoreFrozen() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
 {
@@ -389,7 +388,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
 }
 
 /*
-void setTiledBackingStoreFrozen ( bool frozen )
+void setTiledBackingStoreFrozen( bool frozen )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
 {
@@ -439,7 +438,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RENDERHINTS )
 }
 
 /*
-void setRenderHints(QPainter::RenderHints)
+void setRenderHints( QPainter::RenderHints )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRENDERHINTS )
 {
@@ -465,7 +464,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRENDERHINTS )
 }
 
 /*
-bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
+bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
 {
@@ -474,7 +473,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->findText( PQSTRING(1), HB_ISNIL(2)? (QWebPage::FindFlags) 0 : (QWebPage::FindFlags) hb_parni(2) ) );
@@ -489,7 +488,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
 }
 
 /*
-QWebHistory * history () const
+QWebHistory * history() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
 {
@@ -514,7 +513,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_HISTORY )
 }
 
 /*
-void load ( const QUrl & url )
+void load( const QUrl & url )
 */
 void QGraphicsWebView_load1()
 {
@@ -529,7 +528,7 @@ void QGraphicsWebView_load1()
 }
 
 /*
-void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
 void QGraphicsWebView_load2()
 {
@@ -549,7 +548,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
   {
     QGraphicsWebView_load1();
   }
-  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISQBYTEARRAY(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && (ISQBYTEARRAY(3)||HB_ISNIL(3)) )
   {
     QGraphicsWebView_load2();
   }
@@ -560,7 +559,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 }
 
 /*
-QWebPage * page () const
+QWebPage * page() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
 {
@@ -585,7 +584,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
 }
 
 /*
-QAction * pageAction ( QWebPage::WebAction action ) const
+QAction * pageAction( QWebPage::WebAction action ) const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGEACTION )
 {
@@ -610,7 +609,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGEACTION )
 }
 
 /*
-void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
 {
@@ -619,7 +618,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
@@ -636,7 +635,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
 }
 
 /*
-void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
 {
@@ -662,7 +661,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
 }
 
 /*
-void setPage ( QWebPage * page )
+void setPage( QWebPage * page )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETPAGE )
 {
@@ -688,7 +687,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETPAGE )
 }
 
 /*
-QWebSettings * settings () const
+QWebSettings * settings() const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
 {
@@ -713,7 +712,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTINGS )
 }
 
 /*
-void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
+void triggerPageAction( QWebPage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
 {
@@ -722,7 +721,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->triggerPageAction( (QWebPage::WebAction) hb_parni(1), OPBOOL(2,false) );
@@ -739,7 +738,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
 }
 
 /*
-void back ()
+void back()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
 {
@@ -765,7 +764,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_BACK )
 }
 
 /*
-void forward ()
+void forward()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
 {
@@ -791,7 +790,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FORWARD )
 }
 
 /*
-void reload ()
+void reload()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
 {
@@ -817,7 +816,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RELOAD )
 }
 
 /*
-void stop ()
+void stop()
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_STOP )
 {
@@ -843,7 +842,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_STOP )
 }
 
 /*
-virtual void setGeometry(const QRectF& rect)
+virtual void setGeometry( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETGEOMETRY )
 {
@@ -895,7 +894,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_UPDATEGEOMETRY )
 }
 
 /*
-virtual void paint(QPainter*, const QStyleOptionGraphicsItem* options, QWidget* widget = 0)
+virtual void paint( QPainter *, const QStyleOptionGraphicsItem * options, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAINT )
 {
@@ -921,32 +920,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAINT )
 }
 
 /*
-virtual QVariant itemChange(GraphicsItemChange change, const QVariant& value)
-*/
-HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ITEMCHANGE )
-{
-  QGraphicsWebView * obj = (QGraphicsWebView *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
-    {
-#endif
-      QVariant * ptr = new QVariant( obj->itemChange( (QGraphicsItem::GraphicsItemChange) hb_parni(1), *PQVARIANT(2) ) );
-      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
-  }
-}
-
-/*
-virtual bool event(QEvent*)
+virtual bool event( QEvent * )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_EVENT )
 {
@@ -970,7 +944,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_EVENT )
 }
 
 /*
-virtual QSizeF sizeHint(Qt::SizeHint which, const QSizeF& constraint) const
+virtual QSizeF sizeHint( Qt::SizeHint which, const QSizeF & constraint ) const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SIZEHINT )
 {
@@ -995,7 +969,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SIZEHINT )
 }
 
 /*
-virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
+virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_INPUTMETHODQUERY )
 {
@@ -1020,7 +994,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_INPUTMETHODQUERY )
 }
 
 /*
-void setRenderHint(QPainter::RenderHint, bool enabled = true)
+void setRenderHint( QPainter::RenderHint, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRENDERHINT )
 {
@@ -1029,7 +1003,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRENDERHINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setRenderHint( (QPainter::RenderHint) hb_parni(1), OPBOOL(2,true) );

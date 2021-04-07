@@ -143,7 +143,7 @@ RETURN
 #include <QtWidgets/QMenu>
 
 /*
-explicit QWebPage ( QObject * parent = 0 )
+QWebPage( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBPAGE_NEW )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QWEBPAGE_DELETE )
 }
 
 /*
-bool isModified () const
+bool isModified() const
 */
 HB_FUNC_STATIC( QWEBPAGE_ISMODIFIED )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QWEBPAGE_ISMODIFIED )
 }
 
 /*
-QString selectedText () const
+QString selectedText() const
 */
 HB_FUNC_STATIC( QWEBPAGE_SELECTEDTEXT )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QWEBPAGE_HASSELECTION )
 }
 
 /*
-QSize viewportSize () const
+QSize viewportSize() const
 */
 HB_FUNC_STATIC( QWEBPAGE_VIEWPORTSIZE )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEWPORTSIZE )
 }
 
 /*
-void setViewportSize ( const QSize & size ) const
+void setViewportSize( const QSize & size ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_SETVIEWPORTSIZE )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEWPORTSIZE )
 }
 
 /*
-QSize preferredContentsSize () const
+QSize preferredContentsSize() const
 */
 HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QWEBPAGE_PREFERREDCONTENTSSIZE )
 }
 
 /*
-void setPreferredContentsSize ( const QSize & size ) const
+void setPreferredContentsSize( const QSize & size ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
 }
 
 /*
-bool forwardUnsupportedContent () const
+bool forwardUnsupportedContent() const
 */
 HB_FUNC_STATIC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
 }
 
 /*
-void setForwardUnsupportedContent ( bool forward )
+void setForwardUnsupportedContent( bool forward )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
 {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
 }
 
 /*
-LinkDelegationPolicy linkDelegationPolicy () const
+QWebPage::LinkDelegationPolicy linkDelegationPolicy() const
 */
 HB_FUNC_STATIC( QWEBPAGE_LINKDELEGATIONPOLICY )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QWEBPAGE_LINKDELEGATIONPOLICY )
 }
 
 /*
-void setLinkDelegationPolicy ( LinkDelegationPolicy policy )
+void setLinkDelegationPolicy( QWebPage::LinkDelegationPolicy policy )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
 {
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
 }
 
 /*
-QPalette palette () const
+QPalette palette() const
 */
 HB_FUNC_STATIC( QWEBPAGE_PALETTE )
 {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QWEBPAGE_PALETTE )
 }
 
 /*
-void setPalette ( const QPalette & palette )
+void setPalette( const QPalette & palette )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETPALETTE )
 {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETPALETTE )
 }
 
 /*
-bool isContentEditable () const
+bool isContentEditable() const
 */
 HB_FUNC_STATIC( QWEBPAGE_ISCONTENTEDITABLE )
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QWEBPAGE_ISCONTENTEDITABLE )
 }
 
 /*
-void setContentEditable ( bool editable )
+void setContentEditable( bool editable )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETCONTENTEDITABLE )
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETCONTENTEDITABLE )
 }
 
 /*
-VisibilityState visibilityState() const
+QWebPage::VisibilityState visibilityState() const
 */
 HB_FUNC_STATIC( QWEBPAGE_VISIBILITYSTATE )
 {
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QWEBPAGE_VISIBILITYSTATE )
 }
 
 /*
-void setVisibilityState(VisibilityState)
+void setVisibilityState( QWebPage::VisibilityState )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETVISIBILITYSTATE )
 {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
 }
 
 /*
-quint64 bytesReceived () const
+quint64 bytesReceived() const
 */
 HB_FUNC_STATIC( QWEBPAGE_BYTESRECEIVED )
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QWEBPAGE_BYTESRECEIVED )
 }
 
 /*
-QMenu * createStandardContextMenu ()
+QMenu * createStandardContextMenu()
 */
 HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
 {
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QWEBPAGE_CREATESTANDARDCONTEXTMENU )
 }
 
 /*
-QWebFrame * currentFrame () const
+QWebFrame * currentFrame() const
 */
 HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
 {
@@ -731,11 +731,7 @@ HB_FUNC_STATIC( QWEBPAGE_CURRENTFRAME )
 }
 
 /*
-virtual bool extension ( Extension extension, const ExtensionOption * option = 0, ExtensionReturn * output = 0 )
-*/
-
-/*
-bool findText ( const QString & subString, FindFlags options = 0 )
+bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
 {
@@ -744,7 +740,7 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->findText( PQSTRING(1), HB_ISNIL(2)? (QWebPage::FindFlags) 0 : (QWebPage::FindFlags) hb_parni(2) ) );
@@ -759,7 +755,7 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
 }
 
 /*
-bool focusNextPrevChild ( bool next )
+bool focusNextPrevChild( bool next )
 */
 HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
 {
@@ -783,7 +779,7 @@ HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
 }
 
 /*
-QWebFrame * frameAt ( const QPoint & pos ) const
+QWebFrame * frameAt( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
 {
@@ -808,7 +804,7 @@ HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
 }
 
 /*
-QWebHistory * history () const
+QWebHistory * history() const
 */
 HB_FUNC_STATIC( QWEBPAGE_HISTORY )
 {
@@ -833,7 +829,7 @@ HB_FUNC_STATIC( QWEBPAGE_HISTORY )
 }
 
 /*
-QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
+QVariant inputMethodQuery( Qt::InputMethodQuery property ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
 {
@@ -858,7 +854,7 @@ HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
 }
 
 /*
-QWebFrame * mainFrame () const
+QWebFrame * mainFrame() const
 */
 HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
 {
@@ -883,7 +879,7 @@ HB_FUNC_STATIC( QWEBPAGE_MAINFRAME )
 }
 
 /*
-QNetworkAccessManager * networkAccessManager () const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
 {
@@ -908,7 +904,7 @@ HB_FUNC_STATIC( QWEBPAGE_NETWORKACCESSMANAGER )
 }
 
 /*
-QWebPluginFactory * pluginFactory () const
+QWebPluginFactory * pluginFactory() const
 */
 HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
 {
@@ -933,7 +929,7 @@ HB_FUNC_STATIC( QWEBPAGE_PLUGINFACTORY )
 }
 
 /*
-void setNetworkAccessManager ( QNetworkAccessManager * manager )
+void setNetworkAccessManager( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETNETWORKACCESSMANAGER )
 {
@@ -959,7 +955,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETNETWORKACCESSMANAGER )
 }
 
 /*
-void setPluginFactory ( QWebPluginFactory * factory )
+void setPluginFactory( QWebPluginFactory * factory )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETPLUGINFACTORY )
 {
@@ -985,7 +981,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETPLUGINFACTORY )
 }
 
 /*
-void setView ( QWidget * view )
+void setView( QWidget * view )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETVIEW )
 {
@@ -1011,7 +1007,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEW )
 }
 
 /*
-QWebSettings * settings () const
+QWebSettings * settings() const
 */
 HB_FUNC_STATIC( QWEBPAGE_SETTINGS )
 {
@@ -1034,10 +1030,6 @@ HB_FUNC_STATIC( QWEBPAGE_SETTINGS )
 #endif
   }
 }
-
-/*
-virtual bool supportsExtension ( Extension extension ) const
-*/
 
 /*
 bool swallowContextMenuEvent ( QContextMenuEvent * event )
@@ -1066,7 +1058,7 @@ HB_FUNC_STATIC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
 }
 
 /*
-quint64 totalBytes () const
+quint64 totalBytes() const
 */
 HB_FUNC_STATIC( QWEBPAGE_TOTALBYTES )
 {
@@ -1090,7 +1082,7 @@ HB_FUNC_STATIC( QWEBPAGE_TOTALBYTES )
 }
 
 /*
-virtual void triggerAction ( WebAction action, bool checked = false )
+virtual void triggerAction( QWebPage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
 {
@@ -1099,7 +1091,7 @@ HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->triggerAction( (QWebPage::WebAction) hb_parni(1), OPBOOL(2,false) );
@@ -1143,7 +1135,7 @@ HB_FUNC_STATIC( QWEBPAGE_UNDOSTACK )
 }
 
 /*
-void updatePositionDependentActions ( const QPoint & pos )
+void updatePositionDependentActions( const QPoint & pos )
 */
 HB_FUNC_STATIC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
 {
@@ -1169,7 +1161,7 @@ HB_FUNC_STATIC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
 }
 
 /*
-QWidget * view () const
+QWidget * view() const
 */
 HB_FUNC_STATIC( QWEBPAGE_VIEW )
 {
@@ -1194,7 +1186,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEW )
 }
 
 /*
-virtual bool event ( QEvent * ev )
+virtual bool event( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBPAGE_EVENT )
 {
@@ -1218,7 +1210,7 @@ HB_FUNC_STATIC( QWEBPAGE_EVENT )
 }
 
 /*
-bool shouldInterruptJavaScript ()
+bool shouldInterruptJavaScript()
 */
 HB_FUNC_STATIC( QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT )
 {
@@ -1242,11 +1234,7 @@ HB_FUNC_STATIC( QWEBPAGE_SHOULDINTERRUPTJAVASCRIPT )
 }
 
 /*
-ViewportAttributes viewportAttributesForSize(const QSize& availableSize) const
-*/
-
-/*
-void setActualVisibleContentRect(const QRect& rect) const
+void setActualVisibleContentRect( const QRect & rect ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_SETACTUALVISIBLECONTENTRECT )
 {
@@ -1272,7 +1260,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETACTUALVISIBLECONTENTRECT )
 }
 
 /*
-void setFeaturePermission(QWebFrame* frame, Feature feature, PermissionPolicy policy)
+void setFeaturePermission( QWebFrame * frame, QWebPage::Feature feature, QWebPage::PermissionPolicy policy )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETFEATUREPERMISSION )
 {
@@ -1322,7 +1310,7 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTEDCONTENTTYPES )
 }
 
 /*
-bool supportsContentType(const QString& mimeType) const
+bool supportsContentType( const QString & mimeType ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_SUPPORTSCONTENTTYPE )
 {
@@ -1344,10 +1332,6 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSCONTENTTYPE )
 #endif
   }
 }
-
-/*
-QWebPageAdapter* handle() const
-*/
 
 void QWebPageSlots_connect_signal( const QString & signal, const QString & slot );
 
