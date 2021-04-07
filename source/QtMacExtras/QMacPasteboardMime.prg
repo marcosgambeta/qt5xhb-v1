@@ -69,7 +69,7 @@ RETURN
 #endif
 
 /*
-QMacPasteboardMime(char)
+QMacPasteboardMime( char )
 */
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_NEW )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTORNAME )
 }
 
 /*
-virtual bool canConvert(const QString &mime, QString flav) = 0
+virtual bool canConvert( const QString & mime, QString flav ) = 0
 */
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CANCONVERT )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CANCONVERT )
 }
 
 /*
-virtual QString mimeFor(QString flav) = 0
+virtual QString mimeFor( QString flav ) = 0
 */
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_MIMEFOR )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_MIMEFOR )
 }
 
 /*
-virtual QString flavorFor(const QString &mime) = 0
+virtual QString flavorFor( const QString & mime ) = 0
 */
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_FLAVORFOR )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_FLAVORFOR )
 }
 
 /*
-virtual QVariant convertToMime(const QString &mime, QList<QByteArray> data, QString flav) = 0
+virtual QVariant convertToMime( const QString & mime, QList<QByteArray> data, QString flav ) = 0
 */
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTTOMIME )
 }
 
 /*
-virtual QList<QByteArray> convertFromMime(const QString &mime, QVariant data, QString flav) = 0
+virtual QList<QByteArray> convertFromMime( const QString & mime, QVariant data, QString flav ) = 0
 */
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QMACPASTEBOARDMIME_CONVERTFROMMIME )
 }
 
 /*
-virtual int count(QMimeData *mimeData)
+virtual int count( QMimeData * mimeData )
 */
 HB_FUNC_STATIC( QMACPASTEBOARDMIME_COUNT )
 {
