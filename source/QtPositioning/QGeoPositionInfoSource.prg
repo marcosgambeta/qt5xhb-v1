@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_DELETE )
 }
 
 /*
-virtual void setUpdateInterval(int msec)
+virtual void setUpdateInterval( int msec )
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SETUPDATEINTERVAL )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_UPDATEINTERVAL )
 }
 
 /*
-virtual void setPreferredPositioningMethods(PositioningMethods methods)
+virtual void setPreferredPositioningMethods( QGeoPositionInfoSource::PositioningMethods methods )
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SETPREFERREDPOSITIONINGMETHODS )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SETPREFERREDPOSITIONINGMETHODS )
 }
 
 /*
-PositioningMethods preferredPositioningMethods() const
+QGeoPositionInfoSource::PositioningMethods preferredPositioningMethods() const
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_PREFERREDPOSITIONINGMETHODS )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_PREFERREDPOSITIONINGMETHODS )
 }
 
 /*
-virtual QGeoPositionInfo lastKnownPosition(bool fromSatellitePositioningMethodsOnly = false) const = 0
+virtual QGeoPositionInfo lastKnownPosition( bool fromSatellitePositioningMethodsOnly = false ) const = 0
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_LASTKNOWNPOSITION )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_LASTKNOWNPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       QGeoPositionInfo * ptr = new QGeoPositionInfo( obj->lastKnownPosition( OPBOOL(1,false) ) );
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_LASTKNOWNPOSITION )
 }
 
 /*
-virtual PositioningMethods supportedPositioningMethods() const = 0
+virtual QGeoPositionInfoSource::PositioningMethods supportedPositioningMethods() const = 0
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SUPPORTEDPOSITIONINGMETHODS )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_SOURCENAME )
 }
 
 /*
-virtual Error error() const = 0
+virtual QGeoPositionInfoSource::Error error() const = 0
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_ERROR )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_STOPUPDATES )
 }
 
 /*
-virtual void requestUpdate(int timeout = 0) = 0
+virtual void requestUpdate( int timeout = 0 ) = 0
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_REQUESTUPDATE )
 {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_REQUESTUPDATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->requestUpdate( OPINT(1,0) );
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_REQUESTUPDATE )
 }
 
 /*
-static QGeoPositionInfoSource *createDefaultSource(QObject *parent)
+static QGeoPositionInfoSource * createDefaultSource( QObject * parent )
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE )
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATEDEFAULTSOURCE )
 }
 
 /*
-static QGeoPositionInfoSource *createSource(const QString &sourceName, QObject *parent)
+static QGeoPositionInfoSource * createSource( const QString & sourceName, QObject * parent )
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCE_CREATESOURCE )
 {

@@ -83,7 +83,7 @@ void QGeoCoordinate_new1()
 }
 
 /*
-QGeoCoordinate(double latitude, double longitude)
+QGeoCoordinate( double latitude, double longitude )
 */
 void QGeoCoordinate_new2()
 {
@@ -94,7 +94,7 @@ void QGeoCoordinate_new2()
 }
 
 /*
-QGeoCoordinate(double latitude, double longitude, double altitude)
+QGeoCoordinate( double latitude, double longitude, double altitude )
 */
 void QGeoCoordinate_new3()
 {
@@ -105,7 +105,7 @@ void QGeoCoordinate_new3()
 }
 
 /*
-QGeoCoordinate(const QGeoCoordinate &other)
+QGeoCoordinate( const QGeoCoordinate & other )
 */
 void QGeoCoordinate_new4()
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ISVALID )
 }
 
 /*
-CoordinateType type() const
+QGeoCoordinate::CoordinateType type() const
 */
 HB_FUNC_STATIC( QGEOCOORDINATE_TYPE )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_TYPE )
 }
 
 /*
-void setLatitude(double latitude)
+void setLatitude( double latitude )
 */
 HB_FUNC_STATIC( QGEOCOORDINATE_SETLATITUDE )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_LATITUDE )
 }
 
 /*
-void setLongitude(double longitude)
+void setLongitude( double longitude )
 */
 HB_FUNC_STATIC( QGEOCOORDINATE_SETLONGITUDE )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_LONGITUDE )
 }
 
 /*
-void setAltitude(double altitude)
+void setAltitude( double altitude )
 */
 HB_FUNC_STATIC( QGEOCOORDINATE_SETALTITUDE )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ALTITUDE )
 }
 
 /*
-qreal distanceTo(const QGeoCoordinate &other) const
+qreal distanceTo( const QGeoCoordinate & other ) const
 */
 HB_FUNC_STATIC( QGEOCOORDINATE_DISTANCETO )
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_DISTANCETO )
 }
 
 /*
-qreal azimuthTo(const QGeoCoordinate &other) const
+qreal azimuthTo( const QGeoCoordinate & other ) const
 */
 HB_FUNC_STATIC( QGEOCOORDINATE_AZIMUTHTO )
 {
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_AZIMUTHTO )
 }
 
 /*
-QGeoCoordinate atDistanceAndAzimuth(qreal distance, qreal azimuth, qreal distanceUp = 0.0) const
+QGeoCoordinate atDistanceAndAzimuth( qreal distance, qreal azimuth, qreal distanceUp = 0.0 ) const
 */
 HB_FUNC_STATIC( QGEOCOORDINATE_ATDISTANCEANDAZIMUTH )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ATDISTANCEANDAZIMUTH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       QGeoCoordinate * ptr = new QGeoCoordinate( obj->atDistanceAndAzimuth( PQREAL(1), PQREAL(2), OPQREAL(3,0.0) ) );
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_ATDISTANCEANDAZIMUTH )
 }
 
 /*
-QString toString(CoordinateFormat format = DegreesMinutesSecondsWithHemisphere) const
+QString toString( QGeoCoordinate::CoordinateFormat format = QGeoCoordinate::DegreesMinutesSecondsWithHemisphere ) const
 */
 HB_FUNC_STATIC( QGEOCOORDINATE_TOSTRING )
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QGEOCOORDINATE_TOSTRING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->toString( HB_ISNIL(1)? (QGeoCoordinate::CoordinateFormat) QGeoCoordinate::DegreesMinutesSecondsWithHemisphere : (QGeoCoordinate::CoordinateFormat) hb_parni(1) ) );

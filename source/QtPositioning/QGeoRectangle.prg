@@ -82,7 +82,7 @@ void QGeoRectangle_new1()
 }
 
 /*
-QGeoRectangle(const QGeoCoordinate &center, double degreesWidth, double degreesHeight)
+QGeoRectangle( const QGeoCoordinate & center, double degreesWidth, double degreesHeight )
 */
 void QGeoRectangle_new2()
 {
@@ -93,7 +93,7 @@ void QGeoRectangle_new2()
 }
 
 /*
-QGeoRectangle(const QGeoCoordinate &topLeft, const QGeoCoordinate &bottomRight)
+QGeoRectangle( const QGeoCoordinate & topLeft, const QGeoCoordinate & bottomRight )
 */
 void QGeoRectangle_new3()
 {
@@ -104,7 +104,7 @@ void QGeoRectangle_new3()
 }
 
 /*
-QGeoRectangle(const QGeoRectangle &other)
+QGeoRectangle( const QGeoRectangle & other )
 */
 void QGeoRectangle_new4()
 {
@@ -115,7 +115,7 @@ void QGeoRectangle_new4()
 }
 
 /*
-QGeoRectangle(const QGeoShape &other)
+QGeoRectangle( const QGeoShape & other )
 */
 void QGeoRectangle_new5()
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_DELETE )
 }
 
 /*
-void setTopLeft(const QGeoCoordinate &topLeft)
+void setTopLeft( const QGeoCoordinate & topLeft )
 */
 HB_FUNC_STATIC( QGEORECTANGLE_SETTOPLEFT )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_TOPLEFT )
 }
 
 /*
-void setTopRight(const QGeoCoordinate &topRight)
+void setTopRight( const QGeoCoordinate & topRight )
 */
 HB_FUNC_STATIC( QGEORECTANGLE_SETTOPRIGHT )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_TOPRIGHT )
 }
 
 /*
-void setBottomLeft(const QGeoCoordinate &bottomLeft)
+void setBottomLeft( const QGeoCoordinate & bottomLeft )
 */
 HB_FUNC_STATIC( QGEORECTANGLE_SETBOTTOMLEFT )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_BOTTOMLEFT )
 }
 
 /*
-void setBottomRight(const QGeoCoordinate &bottomRight)
+void setBottomRight( const QGeoCoordinate & bottomRight )
 */
 HB_FUNC_STATIC( QGEORECTANGLE_SETBOTTOMRIGHT )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_BOTTOMRIGHT )
 }
 
 /*
-void setCenter(const QGeoCoordinate &center)
+void setCenter( const QGeoCoordinate & center )
 */
 HB_FUNC_STATIC( QGEORECTANGLE_SETCENTER )
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_CENTER )
 }
 
 /*
-void setWidth(double degreesWidth)
+void setWidth( double degreesWidth )
 */
 HB_FUNC_STATIC( QGEORECTANGLE_SETWIDTH )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_WIDTH )
 }
 
 /*
-void setHeight(double degreesHeight)
+void setHeight( double degreesHeight )
 */
 HB_FUNC_STATIC( QGEORECTANGLE_SETHEIGHT )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_HEIGHT )
 }
 
 /*
-bool contains(const QGeoCoordinate &coordinate) const
+bool contains( const QGeoCoordinate & coordinate ) const
 */
 void QGeoRectangle_contains1()
 {
@@ -571,7 +571,7 @@ void QGeoRectangle_contains1()
 }
 
 /*
-bool contains(const QGeoRectangle &rectangle) const
+bool contains( const QGeoRectangle & rectangle ) const
 */
 void QGeoRectangle_contains2()
 {
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS )
 }
 
 /*
-bool intersects(const QGeoRectangle &rectangle) const
+bool intersects( const QGeoRectangle & rectangle ) const
 */
 HB_FUNC_STATIC( QGEORECTANGLE_INTERSECTS )
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_INTERSECTS )
 }
 
 /*
-void translate(double degreesLatitude, double degreesLongitude)
+void translate( double degreesLatitude, double degreesLongitude )
 */
 HB_FUNC_STATIC( QGEORECTANGLE_TRANSLATE )
 {
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_TRANSLATE )
 }
 
 /*
-QGeoRectangle translated(double degreesLatitude, double degreesLongitude) const
+QGeoRectangle translated( double degreesLatitude, double degreesLongitude ) const
 */
 HB_FUNC_STATIC( QGEORECTANGLE_TRANSLATED )
 {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_TRANSLATED )
 }
 
 /*
-QGeoRectangle united(const QGeoRectangle &rectangle) const
+QGeoRectangle united( const QGeoRectangle & rectangle ) const
 */
 HB_FUNC_STATIC( QGEORECTANGLE_UNITED )
 {

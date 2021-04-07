@@ -82,7 +82,7 @@ void QGeoPositionInfo_new1()
 }
 
 /*
-QGeoPositionInfo(const QGeoCoordinate &coordinate, const QDateTime &updateTime)
+QGeoPositionInfo( const QGeoCoordinate & coordinate, const QDateTime & updateTime )
 */
 void QGeoPositionInfo_new2()
 {
@@ -93,7 +93,7 @@ void QGeoPositionInfo_new2()
 }
 
 /*
-QGeoPositionInfo(const QGeoPositionInfo &other)
+QGeoPositionInfo( const QGeoPositionInfo & other )
 */
 void QGeoPositionInfo_new3()
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ISVALID )
 }
 
 /*
-void setTimestamp(const QDateTime &timestamp)
+void setTimestamp( const QDateTime & timestamp )
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFO_SETTIMESTAMP )
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_TIMESTAMP )
 }
 
 /*
-void setCoordinate(const QGeoCoordinate &coordinate)
+void setCoordinate( const QGeoCoordinate & coordinate )
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFO_SETCOORDINATE )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_COORDINATE )
 }
 
 /*
-void setAttribute(Attribute attribute, qreal value)
+void setAttribute( QGeoPositionInfo::Attribute attribute, qreal value )
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFO_SETATTRIBUTE )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_SETATTRIBUTE )
 }
 
 /*
-qreal attribute(Attribute attribute) const
+qreal attribute( QGeoPositionInfo::Attribute attribute ) const
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFO_ATTRIBUTE )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_ATTRIBUTE )
 }
 
 /*
-void removeAttribute(Attribute attribute)
+void removeAttribute( QGeoPositionInfo::Attribute attribute )
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFO_REMOVEATTRIBUTE )
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFO_REMOVEATTRIBUTE )
 }
 
 /*
-bool hasAttribute(Attribute attribute) const
+bool hasAttribute( QGeoPositionInfo::Attribute attribute ) const
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFO_HASATTRIBUTE )
 {

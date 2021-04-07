@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-virtual QGeoPositionInfoSource *positionInfoSource(QObject *parent) = 0
+virtual QGeoPositionInfoSource * positionInfoSource( QObject * parent ) = 0
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE )
 {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_POSITIONINFOSOURCE )
 }
 
 /*
-virtual QGeoSatelliteInfoSource *satelliteInfoSource(QObject *parent) = 0
+virtual QGeoSatelliteInfoSource * satelliteInfoSource( QObject * parent ) = 0
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE )
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_SATELLITEINFOSOURCE )
 }
 
 /*
-virtual QGeoAreaMonitorSource *areaMonitor(QObject *parent) = 0
+virtual QGeoAreaMonitorSource * areaMonitor( QObject * parent ) = 0
 */
 HB_FUNC_STATIC( QGEOPOSITIONINFOSOURCEFACTORY_AREAMONITOR )
 {

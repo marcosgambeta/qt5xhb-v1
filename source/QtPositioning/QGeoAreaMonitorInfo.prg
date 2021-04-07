@@ -74,7 +74,7 @@ RETURN
 #include <QtCore/QDateTime>
 
 /*
-QGeoAreaMonitorInfo(const QString &name = QString())
+QGeoAreaMonitorInfo( const QString & name = QString() )
 */
 void QGeoAreaMonitorInfo_new1()
 {
@@ -85,7 +85,7 @@ void QGeoAreaMonitorInfo_new1()
 }
 
 /*
-QGeoAreaMonitorInfo(const QGeoAreaMonitorInfo &other)
+QGeoAreaMonitorInfo( const QGeoAreaMonitorInfo & other )
 */
 void QGeoAreaMonitorInfo_new2()
 {
@@ -97,7 +97,7 @@ void QGeoAreaMonitorInfo_new2()
 
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISCHAR(1)||HB_ISNIL(1)) )
   {
     QGeoAreaMonitorInfo_new1();
   }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_NAME )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETNAME )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_AREA )
 }
 
 /*
-void setArea(const QGeoShape &newShape)
+void setArea( const QGeoShape & newShape )
 */
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETAREA )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_EXPIRATION )
 }
 
 /*
-void setExpiration(const QDateTime &expiry)
+void setExpiration( const QDateTime & expiry )
 */
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETEXPIRATION )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORINFO_ISPERSISTENT )
 }
 
 /*
-void setPersistent(bool isPersistent)
+void setPersistent( bool isPersistent )
 */
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_SETPERSISTENT )
 {

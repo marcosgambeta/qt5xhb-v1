@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_DELETE )
 }
 
 /*
-virtual void setPositionInfoSource(QGeoPositionInfoSource *source)
+virtual void setPositionInfoSource( QGeoPositionInfoSource * source )
 */
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SETPOSITIONINFOSOURCE )
 }
 
 /*
-virtual QGeoPositionInfoSource* positionInfoSource() const
+virtual QGeoPositionInfoSource * positionInfoSource() const
 */
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_POSITIONINFOSOURCE )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SOURCENAME )
 }
 
 /*
-virtual Error error() const = 0
+virtual QGeoAreaMonitorSource::Error error() const = 0
 */
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ERROR )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ERROR )
 }
 
 /*
-virtual AreaMonitorFeatures supportedAreaMonitorFeatures() const = 0
+virtual QGeoAreaMonitorSource::AreaMonitorFeatures supportedAreaMonitorFeatures() const = 0
 */
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_SUPPORTEDAREAMONITORFEATURES )
 }
 
 /*
-virtual bool startMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
+virtual bool startMonitoring( const QGeoAreaMonitorInfo & monitor ) = 0
 */
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STARTMONITORING )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STARTMONITORING )
 }
 
 /*
-virtual bool stopMonitoring(const QGeoAreaMonitorInfo &monitor) = 0
+virtual bool stopMonitoring( const QGeoAreaMonitorInfo & monitor ) = 0
 */
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STOPMONITORING )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_STOPMONITORING )
 }
 
 /*
-virtual bool requestUpdate(const QGeoAreaMonitorInfo &monitor, const char *signal) = 0
+virtual bool requestUpdate( const QGeoAreaMonitorInfo & monitor, const char * signal ) = 0
 */
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_REQUESTUPDATE )
 {
@@ -346,7 +346,7 @@ void QGeoAreaMonitorSource_activeMonitors1()
 }
 
 /*
-virtual QList<QGeoAreaMonitorInfo> activeMonitors(const QGeoShape &lookupArea) const = 0
+virtual QList<QGeoAreaMonitorInfo> activeMonitors( const QGeoShape & lookupArea ) const = 0
 */
 void QGeoAreaMonitorSource_activeMonitors2()
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
 }
 
 /*
-static QGeoAreaMonitorSource *createDefaultSource(QObject *parent)
+static QGeoAreaMonitorSource * createDefaultSource( QObject * parent )
 */
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE )
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATEDEFAULTSOURCE )
 }
 
 /*
-static QGeoAreaMonitorSource *createSource(const QString& sourceName, QObject *parent)
+static QGeoAreaMonitorSource * createSource( const QString & sourceName, QObject * parent )
 */
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_CREATESOURCE )
 {

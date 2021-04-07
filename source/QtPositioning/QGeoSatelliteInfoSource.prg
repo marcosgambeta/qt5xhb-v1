@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SOURCENAME )
 }
 
 /*
-virtual void setUpdateInterval(int msec)
+virtual void setUpdateInterval( int msec )
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_SETUPDATEINTERVAL )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_MINIMUMUPDATEINTERVAL )
 }
 
 /*
-virtual Error error() const = 0
+virtual QGeoSatelliteInfoSource::Error error() const = 0
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_ERROR )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_STOPUPDATES )
 }
 
 /*
-virtual void requestUpdate(int timeout = 0) = 0
+virtual void requestUpdate( int timeout = 0 ) = 0
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_REQUESTUPDATE )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_REQUESTUPDATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->requestUpdate( OPINT(1,0) );
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_REQUESTUPDATE )
 }
 
 /*
-static QGeoSatelliteInfoSource *createDefaultSource(QObject *parent)
+static QGeoSatelliteInfoSource * createDefaultSource( QObject * parent )
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATEDEFAULTSOURCE )
 }
 
 /*
-static QGeoSatelliteInfoSource *createSource(const QString &sourceName, QObject *parent)
+static QGeoSatelliteInfoSource * createSource( const QString & sourceName, QObject * parent )
 */
 HB_FUNC_STATIC( QGEOSATELLITEINFOSOURCE_CREATESOURCE )
 {

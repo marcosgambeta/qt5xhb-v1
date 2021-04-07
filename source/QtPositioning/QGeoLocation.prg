@@ -85,7 +85,7 @@ void QGeoLocation_new1()
 }
 
 /*
-QGeoLocation(const QGeoLocation &other)
+QGeoLocation( const QGeoLocation & other )
 */
 void QGeoLocation_new2()
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGEOLOCATION_ADDRESS )
 }
 
 /*
-void setAddress(const QGeoAddress &address)
+void setAddress( const QGeoAddress & address )
 */
 HB_FUNC_STATIC( QGEOLOCATION_SETADDRESS )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGEOLOCATION_COORDINATE )
 }
 
 /*
-void setCoordinate(const QGeoCoordinate &position)
+void setCoordinate( const QGeoCoordinate & position )
 */
 HB_FUNC_STATIC( QGEOLOCATION_SETCOORDINATE )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGEOLOCATION_BOUNDINGBOX )
 }
 
 /*
-void setBoundingBox(const QGeoRectangle &box)
+void setBoundingBox( const QGeoRectangle & box )
 */
 HB_FUNC_STATIC( QGEOLOCATION_SETBOUNDINGBOX )
 {
