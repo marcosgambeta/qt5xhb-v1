@@ -82,7 +82,7 @@ RETURN
 #include <QtQuick/QQuickItem>
 
 /*
-explicit QQuickWidget(QWidget *parent = 0)
+QQuickWidget( QWidget * parent = 0 )
 */
 void QQuickWidget_new1()
 {
@@ -93,7 +93,7 @@ void QQuickWidget_new1()
 }
 
 /*
-QQuickWidget(QQmlEngine* engine, QWidget *parent)
+QQuickWidget( QQmlEngine * engine, QWidget * parent )
 */
 void QQuickWidget_new2()
 {
@@ -104,7 +104,7 @@ void QQuickWidget_new2()
 }
 
 /*
-QQuickWidget(const QUrl &source, QWidget *parent = 0)
+QQuickWidget( const QUrl & source, QWidget * parent = 0 )
 */
 void QQuickWidget_new3()
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SOURCE )
 }
 
 /*
-void setSource(const QUrl&)
+void setSource( const QUrl & )
 */
 HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETSOURCE )
 }
 
 /*
-QQmlEngine* engine() const
+QQmlEngine * engine() const
 */
 HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ENGINE )
 }
 
 /*
-QQmlContext* rootContext() const
+QQmlContext * rootContext() const
 */
 HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTCONTEXT )
 }
 
 /*
-QQuickItem *rootObject() const
+QQuickItem * rootObject() const
 */
 HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_ROOTOBJECT )
 }
 
 /*
-ResizeMode resizeMode() const
+QQuickWidget::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_RESIZEMODE )
 }
 
 /*
-void setResizeMode(ResizeMode)
+void setResizeMode( QQuickWidget::ResizeMode )
 */
 HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_SETRESIZEMODE )
 }
 
 /*
-Status status() const
+QQuickWidget::Status status() const
 */
 HB_FUNC_STATIC( QQUICKWIDGET_STATUS )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_INITIALSIZE )
 }
 
 /*
-void setContent(const QUrl& url, QQmlComponent *component, QObject *item)
+void setContent( const QUrl & url, QQmlComponent * component, QObject * item )
 */
 HB_FUNC_STATIC( QQUICKWIDGET_SETCONTENT )
 {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QQUICKWIDGET_FORMAT )
 }
 
 /*
-void setFormat(const QSurfaceFormat &format)
+void setFormat( const QSurfaceFormat & format )
 */
 HB_FUNC_STATIC( QQUICKWIDGET_SETFORMAT )
 {
