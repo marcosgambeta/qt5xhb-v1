@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSGNODE_DELETE )
 }
 
 /*
-void appendChildNode(QSGNode * node)
+void appendChildNode( QSGNode * node )
 */
 HB_FUNC_STATIC( QSGNODE_APPENDCHILDNODE )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSGNODE_APPENDCHILDNODE )
 }
 
 /*
-QSGNode * childAtIndex(int i) const
+QSGNode * childAtIndex( int i ) const
 */
 HB_FUNC_STATIC( QSGNODE_CHILDATINDEX )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSGNODE_FIRSTCHILD )
 }
 
 /*
-Flags flags() const
+QSGNode::Flags flags() const
 */
 HB_FUNC_STATIC( QSGNODE_FLAGS )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QSGNODE_FLAGS )
 }
 
 /*
-void insertChildNodeAfter(QSGNode * node, QSGNode * after)
+void insertChildNodeAfter( QSGNode * node, QSGNode * after )
 */
 HB_FUNC_STATIC( QSGNODE_INSERTCHILDNODEAFTER )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QSGNODE_INSERTCHILDNODEAFTER )
 }
 
 /*
-void insertChildNodeBefore(QSGNode * node, QSGNode * before)
+void insertChildNodeBefore( QSGNode * node, QSGNode * before )
 */
 HB_FUNC_STATIC( QSGNODE_INSERTCHILDNODEBEFORE )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QSGNODE_LASTCHILD )
 }
 
 /*
-void markDirty(DirtyState bits)
+void markDirty( QSGNode::DirtyState bits )
 */
 HB_FUNC_STATIC( QSGNODE_MARKDIRTY )
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSGNODE_PARENT )
 }
 
 /*
-void prependChildNode(QSGNode * node)
+void prependChildNode( QSGNode * node )
 */
 HB_FUNC_STATIC( QSGNODE_PREPENDCHILDNODE )
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QSGNODE_REMOVEALLCHILDNODES )
 }
 
 /*
-void removeChildNode(QSGNode * node)
+void removeChildNode( QSGNode * node )
 */
 HB_FUNC_STATIC( QSGNODE_REMOVECHILDNODE )
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QSGNODE_REMOVECHILDNODE )
 }
 
 /*
-void setFlag(Flag f, bool enabled = true)
+void setFlag( QSGNode::Flag f, bool enabled = true )
 */
 HB_FUNC_STATIC( QSGNODE_SETFLAG )
 {
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QSGNODE_SETFLAG )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setFlag( (QSGNode::Flag) hb_parni(1), OPBOOL(2,true) );
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QSGNODE_SETFLAG )
 }
 
 /*
-void setFlags(Flags f, bool enabled = true)
+void setFlags( QSGNode::Flags f, bool enabled = true )
 */
 HB_FUNC_STATIC( QSGNODE_SETFLAGS )
 {
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QSGNODE_SETFLAGS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setFlags( (QSGNode::Flags) hb_parni(1), OPBOOL(2,true) );
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QSGNODE_SETFLAGS )
 }
 
 /*
-NodeType type() const
+QSGNode::NodeType type() const
 */
 HB_FUNC_STATIC( QSGNODE_TYPE )
 {

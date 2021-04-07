@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_OPAQUEMATERIAL )
 }
 
 /*
-void setMaterial(QSGMaterial * material)
+void setMaterial( QSGMaterial * material )
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSGGEOMETRYNODE_SETMATERIAL )
 }
 
 /*
-void setOpaqueMaterial(QSGMaterial * material)
+void setOpaqueMaterial( QSGMaterial * material )
 */
 HB_FUNC_STATIC( QSGGEOMETRYNODE_SETOPAQUEMATERIAL )
 {

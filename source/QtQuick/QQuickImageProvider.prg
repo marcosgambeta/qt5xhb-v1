@@ -55,11 +55,11 @@ RETURN
 #endif
 
 /*
-QQuickImageProvider(ImageType type, Flags flags = 0)
+QQuickImageProvider( QQmlImageProviderBase::ImageType type, QQmlImageProviderBase::Flags flags = 0 )
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_NEW )
 {
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QQuickImageProvider * obj = new QQuickImageProvider( (QQmlImageProviderBase::ImageType) hb_parni(1), HB_ISNIL(2)? (QQmlImageProviderBase::Flags) 0 : (QQmlImageProviderBase::Flags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, true );
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_DELETE )
 }
 
 /*
-virtual Flags flags() const = 0
+virtual QQmlImageProviderBase::Flags flags() const = 0
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_FLAGS )
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_FLAGS )
 }
 
 /*
-virtual ImageType imageType() const = 0
+virtual QQmlImageProviderBase::ImageType imageType() const = 0
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_IMAGETYPE )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_IMAGETYPE )
 }
 
 /*
-virtual QImage requestImage(const QString & id, QSize * size, const QSize & requestedSize)
+virtual QImage requestImage( const QString & id, QSize * size, const QSize & requestedSize )
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTIMAGE )
 }
 
 /*
-virtual QPixmap requestPixmap(const QString & id, QSize * size, const QSize & requestedSize)
+virtual QPixmap requestPixmap( const QString & id, QSize * size, const QSize & requestedSize )
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTPIXMAP )
 }
 
 /*
-virtual QQuickTextureFactory * requestTexture(const QString & id, QSize * size, const QSize & requestedSize)
+virtual QQuickTextureFactory * requestTexture( const QString & id, QSize * size, const QSize & requestedSize )
 */
 HB_FUNC_STATIC( QQUICKIMAGEPROVIDER_REQUESTTEXTURE )
 {

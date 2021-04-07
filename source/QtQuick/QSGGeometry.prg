@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_DELETE )
 }
 
 /*
-void allocate(int vertexCount, int indexCount = 0)
+void allocate( int vertexCount, int indexCount = 0 )
 */
 HB_FUNC_STATIC( QSGGEOMETRY_ALLOCATE )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_ALLOCATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->allocate( PINT(1), OPINT(2,0) );
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_INDEXCOUNT )
 }
 
 /*
-DataPattern indexDataPattern() const
+QSGGeometry::DataPattern indexDataPattern() const
 */
 HB_FUNC_STATIC( QSGGEOMETRY_INDEXDATAPATTERN )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_MARKVERTEXDATADIRTY )
 }
 
 /*
-void setDrawingMode(GLenum mode)
+void setDrawingMode( GLenum mode )
 */
 HB_FUNC_STATIC( QSGGEOMETRY_SETDRAWINGMODE )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SETDRAWINGMODE )
 }
 
 /*
-void setIndexDataPattern(DataPattern p)
+void setIndexDataPattern( QSGGeometry::DataPattern p )
 */
 HB_FUNC_STATIC( QSGGEOMETRY_SETINDEXDATAPATTERN )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SETINDEXDATAPATTERN )
 }
 
 /*
-void setLineWidth(float width)
+void setLineWidth( float width )
 */
 HB_FUNC_STATIC( QSGGEOMETRY_SETLINEWIDTH )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_SETLINEWIDTH )
 }
 
 /*
-void setVertexDataPattern(DataPattern p)
+void setVertexDataPattern( QSGGeometry::DataPattern p )
 */
 HB_FUNC_STATIC( QSGGEOMETRY_SETVERTEXDATAPATTERN )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_VERTEXCOUNT )
 }
 
 /*
-DataPattern vertexDataPattern() const
+QSGGeometry::DataPattern vertexDataPattern() const
 */
 HB_FUNC_STATIC( QSGGEOMETRY_VERTEXDATAPATTERN )
 {
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_VERTEXDATAPATTERN )
 }
 
 /*
-static void updateRectGeometry(QSGGeometry * g, const QRectF & rect)
+static void updateRectGeometry( QSGGeometry * g, const QRectF & rect )
 */
 HB_FUNC_STATIC( QSGGEOMETRY_UPDATERECTGEOMETRY )
 {
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QSGGEOMETRY_UPDATERECTGEOMETRY )
 }
 
 /*
-static void updateTexturedRectGeometry(QSGGeometry * g, const QRectF & rect, const QRectF & textureRect)
+static void updateTexturedRectGeometry( QSGGeometry * g, const QRectF & rect, const QRectF & textureRect )
 */
 HB_FUNC_STATIC( QSGGEOMETRY_UPDATETEXTUREDRECTGEOMETRY )
 {

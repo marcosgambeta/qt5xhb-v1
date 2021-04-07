@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_DELETE )
 }
 
 /*
-virtual QSGTexture * createTexture(QQuickWindow * window) const = 0
+virtual QSGTexture * createTexture( QQuickWindow * window ) const = 0
 */
 HB_FUNC_STATIC( QQUICKTEXTUREFACTORY_CREATETEXTURE )
 {

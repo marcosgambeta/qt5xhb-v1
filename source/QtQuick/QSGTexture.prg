@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSGTEXTURE_BIND )
 }
 
 /*
-QRectF convertToNormalizedSourceRect(const QRectF & rect) const
+QRectF convertToNormalizedSourceRect( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QSGTEXTURE_CONVERTTONORMALIZEDSOURCERECT )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSGTEXTURE_REMOVEDFROMATLAS )
 }
 
 /*
-void setFiltering(Filtering filter)
+void setFiltering( QSGTexture::Filtering filter )
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETFILTERING )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QSGTEXTURE_SETFILTERING )
 }
 
 /*
-void setHorizontalWrapMode(WrapMode hwrap)
+void setHorizontalWrapMode( QSGTexture::WrapMode hwrap )
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETHORIZONTALWRAPMODE )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QSGTEXTURE_SETHORIZONTALWRAPMODE )
 }
 
 /*
-void setMipmapFiltering(Filtering filter)
+void setMipmapFiltering( QSGTexture::Filtering filter )
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETMIPMAPFILTERING )
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSGTEXTURE_SETMIPMAPFILTERING )
 }
 
 /*
-void setVerticalWrapMode(WrapMode vwrap)
+void setVerticalWrapMode( QSGTexture::WrapMode vwrap )
 */
 HB_FUNC_STATIC( QSGTEXTURE_SETVERTICALWRAPMODE )
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QSGTEXTURE_TEXTURESIZE )
 }
 
 /*
-void updateBindOptions(bool force = false)
+void updateBindOptions( bool force = false )
 */
 HB_FUNC_STATIC( QSGTEXTURE_UPDATEBINDOPTIONS )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QSGTEXTURE_UPDATEBINDOPTIONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->updateBindOptions( OPBOOL(1,false) );

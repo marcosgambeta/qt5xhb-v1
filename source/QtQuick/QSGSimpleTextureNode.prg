@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_RECT )
 }
 
 /*
-void setFiltering(QSGTexture::Filtering filtering)
+void setFiltering( QSGTexture::Filtering filtering )
 */
 HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETFILTERING )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETFILTERING )
 }
 
 /*
-void setRect(const QRectF & r)
+void setRect( const QRectF & r )
 */
 void QSGSimpleTextureNode_setRect1()
 {
@@ -178,7 +178,7 @@ void QSGSimpleTextureNode_setRect1()
 }
 
 /*
-void setRect(qreal x, qreal y, qreal w, qreal h)
+void setRect( qreal x, qreal y, qreal w, qreal h )
 */
 void QSGSimpleTextureNode_setRect2()
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT )
 }
 
 /*
-void setTexture(QSGTexture * texture)
+void setTexture( QSGTexture * texture )
 */
 HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETTEXTURE )
 {

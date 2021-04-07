@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSGOPACITYNODE_OPACITY )
 }
 
 /*
-void setOpacity(qreal opacity)
+void setOpacity( qreal opacity )
 */
 HB_FUNC_STATIC( QSGOPACITYNODE_SETOPACITY )
 {

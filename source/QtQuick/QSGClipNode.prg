@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_ISRECTANGULAR )
 }
 
 /*
-void setClipRect(const QRectF & rect)
+void setClipRect( const QRectF & rect )
 */
 HB_FUNC_STATIC( QSGCLIPNODE_SETCLIPRECT )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSGCLIPNODE_SETCLIPRECT )
 }
 
 /*
-void setIsRectangular(bool rectHint)
+void setIsRectangular( bool rectHint )
 */
 HB_FUNC_STATIC( QSGCLIPNODE_SETISRECTANGULAR )
 {

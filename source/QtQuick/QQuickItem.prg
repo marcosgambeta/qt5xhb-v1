@@ -143,7 +143,7 @@ RETURN
 #include <QtQuick/QQuickWindow>
 
 /*
-QQuickItem(QQuickItem * parent = 0)
+QQuickItem( QQuickItem * parent = 0 )
 */
 HB_FUNC_STATIC( QQUICKITEM_NEW )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QQUICKITEM_BASELINEOFFSET )
 }
 
 /*
-QQuickItem * childAt(qreal x, qreal y) const
+QQuickItem * childAt( qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_CHILDAT )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QQUICKITEM_CLIP )
 }
 
 /*
-virtual bool contains(const QPointF & point) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_CONTAINS )
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QQUICKITEM_FILTERSCHILDMOUSEEVENTS )
 }
 
 /*
-Flags flags() const
+QQuickItem::Flags flags() const
 */
 HB_FUNC_STATIC( QQUICKITEM_FLAGS )
 {
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QQUICKITEM_IMPLICITWIDTH )
 }
 
 /*
-virtual QVariant inputMethodQuery(Qt::InputMethodQuery query) const
+virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_INPUTMETHODQUERY )
 {
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QQUICKITEM_KEEPTOUCHGRAB )
 }
 
 /*
-QPointF mapFromItem(const QQuickItem * item, const QPointF & point) const
+QPointF mapFromItem( const QQuickItem * item, const QPointF & point ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPFROMITEM )
 {
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPFROMITEM )
 }
 
 /*
-QPointF mapFromScene(const QPointF & point) const
+QPointF mapFromScene( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPFROMSCENE )
 {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPFROMSCENE )
 }
 
 /*
-QRectF mapRectFromItem(const QQuickItem * item, const QRectF & rect) const
+QRectF mapRectFromItem( const QQuickItem * item, const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMITEM )
 {
@@ -861,7 +861,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMITEM )
 }
 
 /*
-QRectF mapRectFromScene(const QRectF & rect) const
+QRectF mapRectFromScene( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMSCENE )
 {
@@ -886,7 +886,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTFROMSCENE )
 }
 
 /*
-QRectF mapRectToItem(const QQuickItem * item, const QRectF & rect) const
+QRectF mapRectToItem( const QQuickItem * item, const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOITEM )
 {
@@ -911,7 +911,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOITEM )
 }
 
 /*
-QRectF mapRectToScene(const QRectF & rect) const
+QRectF mapRectToScene( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOSCENE )
 {
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPRECTTOSCENE )
 }
 
 /*
-QPointF mapToItem(const QQuickItem * item, const QPointF & point) const
+QPointF mapToItem( const QQuickItem * item, const QPointF & point ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPTOITEM )
 {
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QQUICKITEM_MAPTOITEM )
 }
 
 /*
-QPointF mapToScene(const QPointF & point) const
+QPointF mapToScene( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QQUICKITEM_MAPTOSCENE )
 {
@@ -1186,7 +1186,7 @@ HB_FUNC_STATIC( QQUICKITEM_SCOPEDFOCUSITEM )
 }
 
 /*
-void setAcceptHoverEvents(bool enabled)
+void setAcceptHoverEvents( bool enabled )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETACCEPTHOVEREVENTS )
 {
@@ -1212,7 +1212,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETACCEPTHOVEREVENTS )
 }
 
 /*
-void setAcceptedMouseButtons(Qt::MouseButtons buttons)
+void setAcceptedMouseButtons( Qt::MouseButtons buttons )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETACCEPTEDMOUSEBUTTONS )
 {
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETACCEPTEDMOUSEBUTTONS )
 }
 
 /*
-void setAntialiasing(bool)
+void setAntialiasing( bool )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETANTIALIASING )
 {
@@ -1264,7 +1264,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETANTIALIASING )
 }
 
 /*
-void setBaselineOffset(qreal)
+void setBaselineOffset( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETBASELINEOFFSET )
 {
@@ -1290,7 +1290,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETBASELINEOFFSET )
 }
 
 /*
-void setClip(bool)
+void setClip( bool )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETCLIP )
 {
@@ -1316,7 +1316,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETCLIP )
 }
 
 /*
-void setCursor(const QCursor & cursor)
+void setCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETCURSOR )
 {
@@ -1342,7 +1342,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETCURSOR )
 }
 
 /*
-void setEnabled(bool)
+void setEnabled( bool )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETENABLED )
 {
@@ -1368,7 +1368,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETENABLED )
 }
 
 /*
-void setFiltersChildMouseEvents(bool filter)
+void setFiltersChildMouseEvents( bool filter )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETFILTERSCHILDMOUSEEVENTS )
 {
@@ -1394,7 +1394,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFILTERSCHILDMOUSEEVENTS )
 }
 
 /*
-void setFlag(Flag flag, bool enabled = true)
+void setFlag( QQuickItem::Flag flag, bool enabled = true )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETFLAG )
 {
@@ -1403,7 +1403,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAG )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setFlag( (QQuickItem::Flag) hb_parni(1), OPBOOL(2,true) );
@@ -1420,7 +1420,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAG )
 }
 
 /*
-void setFlags(Flags flags)
+void setFlags( QQuickItem::Flags flags )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETFLAGS )
 {
@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFLAGS )
 }
 
 /*
-void setFocus(bool)
+void setFocus( bool )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETFOCUS )
 {
@@ -1472,7 +1472,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETFOCUS )
 }
 
 /*
-void setHeight(qreal)
+void setHeight( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETHEIGHT )
 {
@@ -1498,7 +1498,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETHEIGHT )
 }
 
 /*
-void setImplicitHeight(qreal)
+void setImplicitHeight( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITHEIGHT )
 {
@@ -1524,7 +1524,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITHEIGHT )
 }
 
 /*
-void setImplicitWidth(qreal)
+void setImplicitWidth( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITWIDTH )
 {
@@ -1550,7 +1550,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETIMPLICITWIDTH )
 }
 
 /*
-void setKeepMouseGrab(bool keep)
+void setKeepMouseGrab( bool keep )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETKEEPMOUSEGRAB )
 {
@@ -1576,7 +1576,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETKEEPMOUSEGRAB )
 }
 
 /*
-void setKeepTouchGrab(bool keep)
+void setKeepTouchGrab( bool keep )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETKEEPTOUCHGRAB )
 {
@@ -1602,7 +1602,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETKEEPTOUCHGRAB )
 }
 
 /*
-void setOpacity(qreal)
+void setOpacity( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETOPACITY )
 {
@@ -1628,7 +1628,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETOPACITY )
 }
 
 /*
-void setParentItem(QQuickItem * parent)
+void setParentItem( QQuickItem * parent )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETPARENTITEM )
 {
@@ -1654,7 +1654,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETPARENTITEM )
 }
 
 /*
-void setRotation(qreal)
+void setRotation( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETROTATION )
 {
@@ -1680,7 +1680,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETROTATION )
 }
 
 /*
-void setScale(qreal)
+void setScale( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETSCALE )
 {
@@ -1706,7 +1706,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETSCALE )
 }
 
 /*
-void setSmooth(bool)
+void setSmooth( bool )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETSMOOTH )
 {
@@ -1732,7 +1732,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETSMOOTH )
 }
 
 /*
-void setState(const QString &)
+void setState( const QString & )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETSTATE )
 {
@@ -1758,7 +1758,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETSTATE )
 }
 
 /*
-void setTransformOrigin(TransformOrigin)
+void setTransformOrigin( QQuickItem::TransformOrigin )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETTRANSFORMORIGIN )
 {
@@ -1784,7 +1784,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETTRANSFORMORIGIN )
 }
 
 /*
-void setVisible(bool)
+void setVisible( bool )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETVISIBLE )
 {
@@ -1810,7 +1810,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETVISIBLE )
 }
 
 /*
-void setWidth(qreal)
+void setWidth( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETWIDTH )
 {
@@ -1836,7 +1836,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETWIDTH )
 }
 
 /*
-void setX(qreal)
+void setX( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETX )
 {
@@ -1862,7 +1862,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETX )
 }
 
 /*
-void setY(qreal)
+void setY( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETY )
 {
@@ -1888,7 +1888,7 @@ HB_FUNC_STATIC( QQUICKITEM_SETY )
 }
 
 /*
-void setZ(qreal)
+void setZ( qreal )
 */
 HB_FUNC_STATIC( QQUICKITEM_SETZ )
 {
@@ -1938,7 +1938,7 @@ HB_FUNC_STATIC( QQUICKITEM_SMOOTH )
 }
 
 /*
-void stackAfter(const QQuickItem * sibling)
+void stackAfter( const QQuickItem * sibling )
 */
 HB_FUNC_STATIC( QQUICKITEM_STACKAFTER )
 {
@@ -1964,7 +1964,7 @@ HB_FUNC_STATIC( QQUICKITEM_STACKAFTER )
 }
 
 /*
-void stackBefore(const QQuickItem * sibling)
+void stackBefore( const QQuickItem * sibling )
 */
 HB_FUNC_STATIC( QQUICKITEM_STACKBEFORE )
 {
@@ -2039,7 +2039,7 @@ HB_FUNC_STATIC( QQUICKITEM_TEXTUREPROVIDER )
 }
 
 /*
-TransformOrigin transformOrigin() const
+QQuickItem::TransformOrigin transformOrigin() const
 */
 HB_FUNC_STATIC( QQUICKITEM_TRANSFORMORIGIN )
 {

@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_GEOMETRY )
 }
 
 /*
-void setGeometry(QSGGeometry * geometry)
+void setGeometry( QSGGeometry * geometry )
 */
 HB_FUNC_STATIC( QSGBASICGEOMETRYNODE_SETGEOMETRY )
 {

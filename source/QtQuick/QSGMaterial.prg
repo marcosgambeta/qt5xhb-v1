@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSGMATERIAL_DELETE )
 }
 
 /*
-virtual int compare(const QSGMaterial * other) const
+virtual int compare( const QSGMaterial * other ) const
 */
 HB_FUNC_STATIC( QSGMATERIAL_COMPARE )
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSGMATERIAL_FLAGS )
 }
 
 /*
-void setFlag(Flags flags, bool on = true)
+void setFlag( QSGMaterial::Flags flags, bool on = true )
 */
 HB_FUNC_STATIC( QSGMATERIAL_SETFLAG )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSGMATERIAL_SETFLAG )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setFlag( (QSGMaterial::Flags) hb_parni(1), OPBOOL(2,true) );
