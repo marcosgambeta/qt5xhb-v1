@@ -144,11 +144,11 @@ void QPrinter_new2()
 
 HB_FUNC_STATIC( QPRINTER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QPrinter_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQPRINTERINFO(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQPRINTERINFO(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QPrinter_new2();
   }
@@ -1382,6 +1382,7 @@ HB_FUNC_STATIC( QPRINTER_PRINTERSELECTIONOPTION )
   }
 #endif
 }
+
 /*
 QPrinter::PrinterState printerState() const
 */
@@ -1555,6 +1556,7 @@ HB_FUNC_STATIC( QPRINTER_SETPRINTERSELECTIONOPTION )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
+
 /*
 void setWinPageSize ( int pageSize )
 */
@@ -1582,6 +1584,7 @@ HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
+
 /*
 QList<PaperSource> supportedPaperSources () const
 */
@@ -1615,6 +1618,7 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
   }
 #endif
 }
+
 /*
 QList<int> supportedResolutions() const
 */
@@ -1713,6 +1717,7 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
   }
 #endif
 }
+
 /*
 QPaintEngine * paintEngine() const
 */
