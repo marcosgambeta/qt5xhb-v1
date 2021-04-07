@@ -24,7 +24,7 @@ enum class QVirtualKeyboardSelectionListModel::Role
 #define QVirtualKeyboardSelectionListModel_Display                   Qt_DisplayRole
 #define QVirtualKeyboardSelectionListModel_DisplayRole               QVirtualKeyboardSelectionListModel_Display
 #define QVirtualKeyboardSelectionListModel_WordCompletionLength      Qt_UserRole + 1
-#define QVirtualKeyboardSelectionListModel_WordCompletionLengthRole  WordCompletionLength
+#define QVirtualKeyboardSelectionListModel_WordCompletionLengthRole  QVirtualKeyboardSelectionListModel_WordCompletionLength
 #define QVirtualKeyboardSelectionListModel_Dictionary                QVirtualKeyboardSelectionListModel_WordCompletionLengthRole + 1
 #define QVirtualKeyboardSelectionListModel_CanRemoveSuggestion       QVirtualKeyboardSelectionListModel_WordCompletionLengthRole + 2
 
