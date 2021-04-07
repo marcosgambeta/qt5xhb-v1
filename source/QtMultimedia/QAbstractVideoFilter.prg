@@ -54,10 +54,6 @@ RETURN
 #endif
 
 /*
-explicit QAbstractVideoFilter(QObject *parent = Q_NULLPTR) (abstract)
-*/
-
-/*
 ~QAbstractVideoFilter()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_DELETE )
@@ -106,7 +102,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_ISACTIVE )
 }
 
 /*
-void setActive(bool v)
+void setActive( bool v )
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_SETACTIVE )
 {
@@ -134,7 +130,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_SETACTIVE )
 }
 
 /*
-virtual QVideoFilterRunnable *createFilterRunnable() = 0
+virtual QVideoFilterRunnable * createFilterRunnable() = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOFILTER_CREATEFILTERRUNNABLE )
 {

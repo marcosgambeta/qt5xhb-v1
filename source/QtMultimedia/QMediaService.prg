@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QMEDIASERVICE_DELETE )
 }
 
 /*
-virtual void releaseControl(QMediaControl * control) = 0
+virtual void releaseControl( QMediaControl * control ) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICE_RELEASECONTROL )
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QMEDIASERVICE_RELEASECONTROL )
 }
 
 /*
-virtual QMediaControl * requestControl(const char * interface) = 0
+virtual QMediaControl * requestControl( const char * interface ) = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICE_REQUESTCONTROL )
 {

@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_DISPLAYRECT )
 }
 
 /*
-virtual void setDisplayRect(const QRect &rect) = 0
+virtual void setDisplayRect( const QRect & rect ) = 0
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETDISPLAYRECT )
 {
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ISFULLSCREEN )
 }
 
 /*
-virtual void setFullScreen(bool fullScreen) = 0
+virtual void setFullScreen( bool fullScreen ) = 0
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETFULLSCREEN )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_ASPECTRATIOMODE )
 }
 
 /*
-virtual void setAspectRatioMode(Qt::AspectRatioMode mode) = 0
+virtual void setAspectRatioMode( Qt::AspectRatioMode mode ) = 0
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETASPECTRATIOMODE )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_BRIGHTNESS )
 }
 
 /*
-virtual void setBrightness(int brightness) = 0
+virtual void setBrightness( int brightness ) = 0
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETBRIGHTNESS )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_CONTRAST )
 }
 
 /*
-virtual void setContrast(int contrast) = 0
+virtual void setContrast( int contrast ) = 0
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETCONTRAST )
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_HUE )
 }
 
 /*
-virtual void setHue(int hue) = 0
+virtual void setHue( int hue ) = 0
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETHUE )
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SATURATION )
 }
 
 /*
-virtual void setSaturation(int saturation) = 0
+virtual void setSaturation( int saturation ) = 0
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETSATURATION )
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_WINID )
 }
 
 /*
-virtual void setWinId(WId id) = 0
+virtual void setWinId( WId id ) = 0
 */
 HB_FUNC_STATIC( QVIDEOWINDOWCONTROL_SETWINID )
 {

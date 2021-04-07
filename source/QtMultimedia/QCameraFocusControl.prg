@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_FOCUSZONES )
 }
 
 /*
-virtual bool isFocusModeSupported(QCameraFocus::FocusModes mode) const = 0
+virtual bool isFocusModeSupported( QCameraFocus::FocusModes mode ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ISFOCUSMODESUPPORTED )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ISFOCUSMODESUPPORTED )
 }
 
 /*
-virtual bool isFocusPointModeSupported(QCameraFocus::FocusPointMode mode) const = 0
+virtual bool isFocusPointModeSupported( QCameraFocus::FocusPointMode mode ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ISFOCUSPOINTMODESUPPORTED )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_ISFOCUSPOINTMODESUPPORTED )
 }
 
 /*
-virtual void setCustomFocusPoint(const QPointF & point) = 0
+virtual void setCustomFocusPoint( const QPointF & point ) = 0
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETCUSTOMFOCUSPOINT )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETCUSTOMFOCUSPOINT )
 }
 
 /*
-virtual void setFocusMode(QCameraFocus::FocusModes mode) = 0
+virtual void setFocusMode( QCameraFocus::FocusModes mode ) = 0
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETFOCUSMODE )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETFOCUSMODE )
 }
 
 /*
-virtual void setFocusPointMode(QCameraFocus::FocusPointMode mode) = 0
+virtual void setFocusPointMode( QCameraFocus::FocusPointMode mode ) = 0
 */
 HB_FUNC_STATIC( QCAMERAFOCUSCONTROL_SETFOCUSPOINTMODE )
 {

@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW1 )
 }
 
 /*
-QMediaServiceProviderHint(const QString &mimeType, const QStringList& codecs)
+QMediaServiceProviderHint( const QString & mimeType, const QStringList & codecs )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
 {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW2 )
 }
 
 /*
-QMediaServiceProviderHint(const QByteArray &device)
+QMediaServiceProviderHint( const QByteArray & device )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW3 )
 }
 
 /*
-QMediaServiceProviderHint(QCamera::Position position)
+QMediaServiceProviderHint( QCamera::Position position )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW4 )
 }
 
 /*
-QMediaServiceProviderHint(Features features)
+QMediaServiceProviderHint( QMediaServiceProviderHint::Features features )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW5 )
 }
 
 /*
-QMediaServiceProviderHint(const QMediaServiceProviderHint &other)
+QMediaServiceProviderHint( const QMediaServiceProviderHint & other )
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_NEW6 )
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_ISNULL )
 }
 
 /*
-Type type() const
+QMediaServiceProviderHint::Type type() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_TYPE )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_DEVICE )
 }
 
 /*
-Features features() const
+QMediaServiceProviderHint::Features features() const
 */
 HB_FUNC_STATIC( QMEDIASERVICEPROVIDERHINT_FEATURES )
 {

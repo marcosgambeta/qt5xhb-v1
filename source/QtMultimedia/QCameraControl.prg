@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_DELETE )
 }
 
 /*
-virtual bool canChangeProperty(PropertyChangeType changeType, QCamera::Status status) const = 0
+virtual bool canChangeProperty( QCameraControl::PropertyChangeType changeType, QCamera::Status status ) const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_CANCHANGEPROPERTY )
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_CAPTUREMODE )
 }
 
 /*
-virtual bool isCaptureModeSupported(QCamera::CaptureModes mode) const = 0
+virtual bool isCaptureModeSupported( QCamera::CaptureModes mode ) const = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_ISCAPTUREMODESUPPORTED )
 }
 
 /*
-virtual void setCaptureMode(QCamera::CaptureModes mode) = 0
+virtual void setCaptureMode( QCamera::CaptureModes mode ) = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCAMERACONTROL_SETCAPTUREMODE )
 }
 
 /*
-virtual void setState(QCamera::State state) = 0
+virtual void setState( QCamera::State state ) = 0
 */
 HB_FUNC_STATIC( QCAMERACONTROL_SETSTATE )
 {

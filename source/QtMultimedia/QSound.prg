@@ -56,13 +56,13 @@ RETURN
 #endif
 
 /*
-explicit QSound(const QString& filename, QObject* parent = Q_NULLPTR)
+QSound( const QString & filename, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSOUND_NEW )
 {
   if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QSound * obj = new QSound( PQSTRING(1), OPQOBJECT(2,0) );
+    QSound * obj = new QSound( PQSTRING(1), OPQOBJECT(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 }
 
 /*
-void setLoops(int)
+void setLoops( int )
 */
 HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {
@@ -257,7 +257,7 @@ void QSound_play1()
 }
 
 /*
-static void play(const QString& filename)
+static void play( const QString & filename )
 */
 void QSound_play2()
 {

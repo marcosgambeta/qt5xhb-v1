@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_VIEWFINDERSETTINGS )
 }
 
 /*
-virtual void setViewfinderSettings(const QCameraViewfinderSettings &settings) = 0
+virtual void setViewfinderSettings( const QCameraViewfinderSettings & settings ) = 0
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL2_SETVIEWFINDERSETTINGS )
 {

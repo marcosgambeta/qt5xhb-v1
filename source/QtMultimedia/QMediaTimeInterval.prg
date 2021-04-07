@@ -71,7 +71,7 @@ void QMediaTimeInterval_new1()
 }
 
 /*
-QMediaTimeInterval(qint64 start, qint64 end)
+QMediaTimeInterval( qint64 start, qint64 end )
 */
 void QMediaTimeInterval_new2()
 {
@@ -80,7 +80,7 @@ void QMediaTimeInterval_new2()
 }
 
 /*
-QMediaTimeInterval(const QMediaTimeInterval & other)
+QMediaTimeInterval( const QMediaTimeInterval & other )
 */
 void QMediaTimeInterval_new3()
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_DELETE )
 }
 
 /*
-bool contains(qint64 time) const
+bool contains( qint64 time ) const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_CONTAINS )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QMEDIATIMEINTERVAL_START )
 }
 
 /*
-QMediaTimeInterval translated(qint64 offset) const
+QMediaTimeInterval translated( qint64 offset ) const
 */
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_TRANSLATED )
 {

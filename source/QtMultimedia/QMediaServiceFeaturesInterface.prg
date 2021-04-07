@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_DELETE )
 }
 
 /*
-virtual QMediaServiceProviderHint::Features supportedFeatures(const QByteArray & service) const = 0
+virtual QMediaServiceProviderHint::Features supportedFeatures( const QByteArray & service ) const = 0
 */
 HB_FUNC_STATIC( QMEDIASERVICEFEATURESINTERFACE_SUPPORTEDFEATURES )
 {

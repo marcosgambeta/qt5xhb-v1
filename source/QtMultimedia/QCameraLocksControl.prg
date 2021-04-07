@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_DELETE )
 }
 
 /*
-virtual QCamera::LockStatus lockStatus(QCamera::LockType lock) const = 0
+virtual QCamera::LockStatus lockStatus( QCamera::LockType lock ) const = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_LOCKSTATUS )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_LOCKSTATUS )
 }
 
 /*
-virtual void searchAndLock(QCamera::LockTypes locks) = 0
+virtual void searchAndLock( QCamera::LockTypes locks ) = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SEARCHANDLOCK )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QCAMERALOCKSCONTROL_SUPPORTEDLOCKS )
 }
 
 /*
-virtual void unlock(QCamera::LockTypes locks) = 0
+virtual void unlock( QCamera::LockTypes locks ) = 0
 */
 HB_FUNC_STATIC( QCAMERALOCKSCONTROL_UNLOCK )
 {

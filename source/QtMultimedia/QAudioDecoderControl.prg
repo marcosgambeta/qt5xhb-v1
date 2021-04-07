@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_READ )
 }
 
 /*
-virtual void setAudioFormat(const QAudioFormat & format) = 0
+virtual void setAudioFormat( const QAudioFormat & format ) = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETAUDIOFORMAT )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_SOURCEDEVICE )
 }
 
 /*
-virtual void setSourceDevice(QIODevice * device) = 0
+virtual void setSourceDevice( QIODevice * device ) = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETSOURCEDEVICE )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETSOURCEDEVICE )
 }
 
 /*
-virtual void setSourceFilename(const QString & fileName) = 0
+virtual void setSourceFilename( const QString & fileName ) = 0
 */
 HB_FUNC_STATIC( QAUDIODECODERCONTROL_SETSOURCEFILENAME )
 {

@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QVIDEORENDERERCONTROL_DELETE )
 }
 
 /*
-virtual void setSurface(QAbstractVideoSurface * surface) = 0
+virtual void setSurface( QAbstractVideoSurface * surface ) = 0
 */
 HB_FUNC_STATIC( QVIDEORENDERERCONTROL_SETSURFACE )
 {

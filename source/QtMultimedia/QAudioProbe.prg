@@ -54,13 +54,13 @@ RETURN
 #endif
 
 /*
-explicit QAudioProbe(QObject * parent = Q_NULLPTR)
+QAudioProbe( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIOPROBE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QAudioProbe * obj = new QAudioProbe( OPQOBJECT(1,0) );
+    QAudioProbe * obj = new QAudioProbe( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
 }
 
 /*
-bool setSource(QMediaObject * source)
+bool setSource( QMediaObject * source )
 */
 void QAudioProbe_setSource1()
 {
@@ -129,7 +129,7 @@ void QAudioProbe_setSource1()
 }
 
 /*
-bool setSource(QMediaRecorder * source)
+bool setSource( QMediaRecorder * source )
 */
 void QAudioProbe_setSource2()
 {

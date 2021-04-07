@@ -77,7 +77,7 @@ void QMediaContent_new1()
 }
 
 /*
-QMediaContent(const QUrl & contentUrl)
+QMediaContent( const QUrl & contentUrl )
 */
 void QMediaContent_new2()
 {
@@ -86,7 +86,7 @@ void QMediaContent_new2()
 }
 
 /*
-QMediaContent(const QNetworkRequest & contentRequest)
+QMediaContent( const QNetworkRequest & contentRequest )
 */
 void QMediaContent_new3()
 {
@@ -95,7 +95,7 @@ void QMediaContent_new3()
 }
 
 /*
-QMediaContent(const QMediaResource & contentResource)
+QMediaContent( const QMediaResource & contentResource )
 */
 void QMediaContent_new4()
 {
@@ -104,7 +104,7 @@ void QMediaContent_new4()
 }
 
 /*
-QMediaContent(const QMediaResourceList & resources)
+QMediaContent( const QMediaResourceList & resources )
 */
 void QMediaContent_new5()
 {
@@ -121,7 +121,7 @@ void QMediaContent_new5()
 }
 
 /*
-QMediaContent(const QMediaContent & other)
+QMediaContent( const QMediaContent & other )
 */
 void QMediaContent_new6()
 {
@@ -130,7 +130,7 @@ void QMediaContent_new6()
 }
 
 /*
-QMediaContent(QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false)
+QMediaContent( QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false )
 */
 void QMediaContent_new7()
 {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QMEDIACONTENT_NEW )
   {
     QMediaContent_new6();
   }
-  else if( ISBETWEEN(1,3) && ISQMEDIAPLAYLIST(1) && (ISQURL(2)||HB_ISNIL(2)) && (ISLOG(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQMEDIAPLAYLIST(1) && (ISQURL(2)||HB_ISNIL(2)) && ( HB_ISLOG(3)||HB_ISNIL(3)) )
   {
     QMediaContent_new7();
   }

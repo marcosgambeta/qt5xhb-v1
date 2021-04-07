@@ -76,7 +76,7 @@ RETURN
 #endif
 
 /*
-QAudioFormat ()
+QAudioFormat()
 */
 void QAudioFormat_new1()
 {
@@ -85,7 +85,7 @@ void QAudioFormat_new1()
 }
 
 /*
-QAudioFormat ( const QAudioFormat & other )
+QAudioFormat( const QAudioFormat & other )
 */
 void QAudioFormat_new2()
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_DELETE )
 }
 
 /*
-QAudioFormat::Endian byteOrder () const
+QAudioFormat::Endian byteOrder() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
 }
 
 /*
-int channelCount () const
+int channelCount() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
 }
 
 /*
-QString codec () const
+QString codec() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
 }
 
 /*
-int sampleRate () const
+int sampleRate() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
 }
 
 /*
-int sampleSize () const
+int sampleSize() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
 }
 
 /*
-QAudioFormat::SampleType sampleType () const
+QAudioFormat::SampleType sampleType() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
 }
 
 /*
-void setByteOrder ( QAudioFormat::Endian byteOrder )
+void setByteOrder( QAudioFormat::Endian byteOrder )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
 {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
 }
 
 /*
-void setChannelCount ( int channelCount )
+void setChannelCount( int channelCount )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
 }
 
 /*
-void setCodec ( const QString & codec )
+void setCodec( const QString & codec )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
 {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
 }
 
 /*
-void setSampleRate ( int sampleRate )
+void setSampleRate( int sampleRate )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
 {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
 }
 
 /*
-void setSampleSize ( int sampleSize )
+void setSampleSize( int sampleSize )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
 }
 
 /*
-void setSampleType ( QAudioFormat::SampleType sampleType )
+void setSampleType( QAudioFormat::SampleType sampleType )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
 }
 
 /*
-qint32 bytesForDuration(qint64 duration) const
+qint32 bytesForDuration( qint64 duration ) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_BYTESFORDURATION )
 {
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_BYTESFORDURATION )
 }
 
 /*
-qint64 durationForBytes(qint32 byteCount) const
+qint64 durationForBytes( qint32 byteCount ) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_DURATIONFORBYTES )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_DURATIONFORBYTES )
 }
 
 /*
-qint32 bytesForFrames(qint32 frameCount) const
+qint32 bytesForFrames( qint32 frameCount ) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_BYTESFORFRAMES )
 {
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_BYTESFORFRAMES )
 }
 
 /*
-qint32 framesForBytes(qint32 byteCount) const
+qint32 framesForBytes( qint32 byteCount ) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_FRAMESFORBYTES )
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_FRAMESFORBYTES )
 }
 
 /*
-qint32 framesForDuration(qint64 duration) const
+qint32 framesForDuration( qint64 duration ) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_FRAMESFORDURATION )
 {
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_FRAMESFORDURATION )
 }
 
 /*
-qint64 durationForFrames(qint32 frameCount) const
+qint64 durationForFrames( qint32 frameCount ) const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_DURATIONFORFRAMES )
 {

@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_DELETE )
 }
 
 /*
-virtual bool isEventFeedbackEnabled(EventType event) const = 0
+virtual bool isEventFeedbackEnabled( QCameraFeedbackControl::EventType event ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKENABLED )
 }
 
 /*
-virtual bool isEventFeedbackLocked(EventType event) const = 0
+virtual bool isEventFeedbackLocked( QCameraFeedbackControl::EventType event ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_ISEVENTFEEDBACKLOCKED )
 }
 
 /*
-virtual void resetEventFeedback(EventType event) = 0
+virtual void resetEventFeedback( QCameraFeedbackControl::EventType event ) = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_RESETEVENTFEEDBACK )
 }
 
 /*
-virtual bool setEventFeedbackEnabled(EventType event, bool enabled) = 0
+virtual bool setEventFeedbackEnabled( QCameraFeedbackControl::EventType event, bool enabled ) = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKENABLED )
 }
 
 /*
-virtual bool setEventFeedbackSound(EventType event, const QString & filePath) = 0
+virtual bool setEventFeedbackSound( QCameraFeedbackControl::EventType event, const QString & filePath ) = 0
 */
 HB_FUNC_STATIC( QCAMERAFEEDBACKCONTROL_SETEVENTFEEDBACKSOUND )
 {

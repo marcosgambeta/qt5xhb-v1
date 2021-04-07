@@ -69,13 +69,13 @@ RETURN
 #endif
 
 /*
-explicit QRadioData(QMediaObject *mediaObject, QObject *parent = Q_NULLPTR)
+QRadioData( QMediaObject * mediaObject, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QRADIODATA_NEW )
 {
   if( ISBETWEEN(1,2) && ISQMEDIAOBJECT(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QRadioData * obj = new QRadioData( PQMEDIAOBJECT(1), OPQOBJECT(2,0) );
+    QRadioData * obj = new QRadioData( PQMEDIAOBJECT(1), OPQOBJECT(2,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QRADIODATA_STATIONID )
 }
 
 /*
-ProgramType programType() const
+QRadioData::ProgramType programType() const
 */
 HB_FUNC_STATIC( QRADIODATA_PROGRAMTYPE )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QRADIODATA_ISALTERNATIVEFREQUENCIESENABLED )
 }
 
 /*
-void setAlternativeFrequenciesEnabled(bool enabled)
+void setAlternativeFrequenciesEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QRADIODATA_SETALTERNATIVEFREQUENCIESENABLED )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QRADIODATA_AVAILABILITY )
 }
 
 /*
-QMediaObject *mediaObject() const override
+QMediaObject * mediaObject() const override
 */
 HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QRADIODATA_MEDIAOBJECT )
 }
 
 /*
-Error error() const
+QRadioData::Error error() const
 */
 HB_FUNC_STATIC( QRADIODATA_ERROR )
 {

@@ -57,13 +57,13 @@ RETURN
 #endif
 
 /*
-explicit QAudioRecorder(QObject *parent = Q_NULLPTR)
+QAudioRecorder( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QAudioRecorder * obj = new QAudioRecorder( OPQOBJECT(1,0) );
+    QAudioRecorder * obj = new QAudioRecorder( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUT )
 }
 
 /*
-void setAudioInput(const QString & name)
+void setAudioInput( const QString & name )
 */
 HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QAUDIORECORDER_SETAUDIOINPUT )
 }
 
 /*
-QString audioInputDescription(const QString & name) const
+QString audioInputDescription( const QString & name ) const
 */
 HB_FUNC_STATIC( QAUDIORECORDER_AUDIOINPUTDESCRIPTION )
 {

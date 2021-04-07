@@ -107,11 +107,11 @@ RETURN
 #include <QtMultimedia/QMediaPlaylist>
 
 /*
-explicit QMediaPlayer(QObject *parent = Q_NULLPTR, Flags flags = Flags())
+QMediaPlayer( QObject * parent = 0, QMediaPlayer::Flags flags = 0 )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQOBJECT(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQOBJECT(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QMediaPlayer * obj = new QMediaPlayer( OPQOBJECT(1,0), HB_ISNIL(2)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIA )
 }
 
 /*
-void setMedia(const QMediaContent &media, QIODevice *stream = Q_NULLPTR)
+void setMedia( const QMediaContent & media, QIODevice * stream = nullptr )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETMEDIA )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETMEDIA )
     if( ISBETWEEN(1,2) && ISQMEDIACONTENT(1) && (ISQIODEVICE(2)||HB_ISNIL(2)) )
     {
 #endif
-      obj->setMedia( *PQMEDIACONTENT(1), OPQIODEVICE(2,0) );
+      obj->setMedia( *PQMEDIACONTENT(1), OPQIODEVICE(2,nullptr) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAYLIST )
 }
 
 /*
-void setPlaylist(QMediaPlaylist * playlist)
+void setPlaylist( QMediaPlaylist * playlist )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETPLAYLIST )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_POSITION )
 }
 
 /*
-void setPosition(qint64 position)
+void setPosition( qint64 position )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETPOSITION )
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_VOLUME )
 }
 
 /*
-void setVolume(int volume)
+void setVolume( int volume )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETVOLUME )
 {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_ISMUTED )
 }
 
 /*
-void setMuted(bool muted)
+void setMuted( bool muted )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETMUTED )
 {
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAYBACKRATE )
 }
 
 /*
-State state() const
+QMediaPlayer::State state() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_STATE )
 {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_STATE )
 }
 
 /*
-MediaStatus mediaStatus() const
+QMediaPlayer::MediaStatus mediaStatus() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTATUS )
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_AUDIOROLE )
 }
 
 /*
-void setAudioRole(QAudio::Role audioRole)
+void setAudioRole( QAudio::Role audioRole )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETAUDIOROLE )
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_CURRENTNETWORKCONFIGURATION )
 }
 
 /*
-Error error() const
+QMediaPlayer::Error error() const
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_ERROR )
 {
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
 }
 
 /*
-void setVideoOutput(QVideoWidget * output)
+void setVideoOutput( QVideoWidget * output )
 */
 void QMediaPlayer_setVideoOutput1()
 {
@@ -781,7 +781,7 @@ void QMediaPlayer_setVideoOutput1()
 }
 
 /*
-void setVideoOutput(QGraphicsVideoItem * output)
+void setVideoOutput( QGraphicsVideoItem * output )
 */
 void QMediaPlayer_setVideoOutput2()
 {
@@ -796,7 +796,7 @@ void QMediaPlayer_setVideoOutput2()
 }
 
 /*
-void setVideoOutput(QAbstractVideoSurface * surface)
+void setVideoOutput( QAbstractVideoSurface * surface )
 */
 void QMediaPlayer_setVideoOutput3()
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_PLAY )
 }
 
 /*
-void setNetworkConfigurations(const QList<QNetworkConfiguration> & configurations)
+void setNetworkConfigurations( const QList<QNetworkConfiguration> & configurations )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETNETWORKCONFIGURATIONS )
 {
@@ -941,7 +941,7 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SETNETWORKCONFIGURATIONS )
 }
 
 /*
-void setPlaybackRate(qreal rate)
+void setPlaybackRate( qreal rate )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SETPLAYBACKRATE )
 {
@@ -993,12 +993,12 @@ HB_FUNC_STATIC( QMEDIAPLAYER_STOP )
 }
 
 /*
-static QMultimedia::SupportEstimate hasSupport(const QString &mimeType, const QStringList& codecs = QStringList(), Flags flags = Flags())
+static QMultimedia::SupportEstimate hasSupport( const QString & mimeType, const QStringList & codecs = QStringList(), QMediaPlayer::Flags flags = 0 )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISARRAY(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISARRAY(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
   {
 #endif
     RENUM( QMediaPlayer::hasSupport( PQSTRING(1), OPQSTRINGLIST(2,QStringList()), HB_ISNIL(3)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(3) ) );
@@ -1012,12 +1012,12 @@ HB_FUNC_STATIC( QMEDIAPLAYER_HASSUPPORT )
 }
 
 /*
-static QStringList supportedMimeTypes(Flags flags = Flags())
+static QStringList supportedMimeTypes( QMediaPlayer::Flags flags = 0 )
 */
 HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDMIMETYPES )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
   {
 #endif
     RQSTRINGLIST( QMediaPlayer::supportedMimeTypes( HB_ISNIL(1)? (QMediaPlayer::Flags) 0 : (QMediaPlayer::Flags) hb_parni(1) ) );
@@ -1063,14 +1063,6 @@ HB_FUNC_STATIC( QMEDIAPLAYER_SUPPORTEDAUDIOROLES )
   }
 #endif
 }
-
-/*
-bool bind(QObject *) override
-*/
-
-/*
-void unbind(QObject *) override
-*/
 
 void QMediaPlayerSlots_connect_signal( const QString & signal, const QString & slot );
 

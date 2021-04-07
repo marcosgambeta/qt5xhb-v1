@@ -84,7 +84,7 @@ void QCameraViewfinderSettings_new1()
 }
 
 /*
-QCameraViewfinderSettings(const QCameraViewfinderSettings& other)
+QCameraViewfinderSettings( const QCameraViewfinderSettings & other )
 */
 void QCameraViewfinderSettings_new2()
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_DELETE )
 }
 
 /*
-void swap(QCameraViewfinderSettings &other) Q_DECL_NOTHROW
+void swap( QCameraViewfinderSettings & other ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SWAP )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_RESOLUTION )
 }
 
 /*
-void setResolution(const QSize &)
+void setResolution( const QSize & )
 */
 void QCameraViewfinderSettings_setResolution1()
 {
@@ -231,7 +231,7 @@ void QCameraViewfinderSettings_setResolution1()
 }
 
 /*
-void setResolution(int width, int height)
+void setResolution( int width, int height )
 */
 void QCameraViewfinderSettings_setResolution2()
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_MINIMUMFRAMERATE )
 }
 
 /*
-void setMinimumFrameRate(qreal rate)
+void setMinimumFrameRate( qreal rate )
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETMINIMUMFRAMERATE )
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_MAXIMUMFRAMERATE )
 }
 
 /*
-void setMaximumFrameRate(qreal rate)
+void setMaximumFrameRate( qreal rate )
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETMAXIMUMFRAMERATE )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELFORMAT )
 }
 
 /*
-void setPixelFormat(QVideoFrame::PixelFormat format)
+void setPixelFormat( QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETPIXELFORMAT )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELASPECTRATIO )
 }
 
 /*
-void setPixelAspectRatio(const QSize &ratio)
+void setPixelAspectRatio( const QSize & ratio )
 */
 void QCameraViewfinderSettings_setPixelAspectRatio1()
 {
@@ -470,7 +470,7 @@ void QCameraViewfinderSettings_setPixelAspectRatio1()
 }
 
 /*
-void setPixelAspectRatio(int horizontal, int vertical)
+void setPixelAspectRatio( int horizontal, int vertical )
 */
 void QCameraViewfinderSettings_setPixelAspectRatio2()
 {

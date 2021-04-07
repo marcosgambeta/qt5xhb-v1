@@ -74,16 +74,16 @@ RETURN
 #endif
 
 /*
-explicit QAudioOutput(const QAudioFormat & format = QAudioFormat(), QObject * parent = Q_NULLPTR)
+QAudioOutput( const QAudioFormat & format = QAudioFormat(), QObject * parent = nullptr )
 */
 void QAudioOutput_new1()
 {
-  QAudioOutput * obj = new QAudioOutput( HB_ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(1), OPQOBJECT(2,0) );
+  QAudioOutput * obj = new QAudioOutput( HB_ISNIL(1)? QAudioFormat() : *(QAudioFormat *) Qt5xHb::itemGetPtr(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QAudioOutput(const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0)
+QAudioOutput( const QAudioDeviceInfo & audioDeviceInfo, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 */
 void QAudioOutput_new2()
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_RESUME )
 }
 
 /*
-void setBufferSize(int bytes)
+void setBufferSize( int bytes )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
 {
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
 }
 
 /*
-void setCategory(const QString & category)
+void setCategory( const QString & category )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETCATEGORY )
 {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETCATEGORY )
 }
 
 /*
-void setNotifyInterval(int milliSeconds)
+void setNotifyInterval( int milliSeconds )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
 }
 
 /*
-void setVolume(qreal volume)
+void setVolume( qreal volume )
 */
 HB_FUNC_STATIC( QAUDIOOUTPUT_SETVOLUME )
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETVOLUME )
 }
 
 /*
-void start(QIODevice * device)
+void start( QIODevice * device )
 */
 void QAudioOutput_start1()
 {

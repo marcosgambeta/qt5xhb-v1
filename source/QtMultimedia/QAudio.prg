@@ -55,23 +55,28 @@ RETURN
 #endif
 
 /*
-qreal convertVolume(qreal volume, VolumeScale from, VolumeScale to)
+qreal convertVolume( qreal volume, QAudio::VolumeScale from, QAudio::VolumeScale to )
 */
 HB_FUNC_STATIC( QAUDIO_CONVERTVOLUME )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  QAudio * obj = (QAudio *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
   {
-#endif
-    RQREAL( QAudio::convertVolume( PQREAL(1), (QAudio::VolumeScale) hb_parni(2), (QAudio::VolumeScale) hb_parni(3) ) );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    {
 #endif
+      RQREAL( obj->convertVolume( PQREAL(1), (QAudio::VolumeScale) hb_parni(2), (QAudio::VolumeScale) hb_parni(3) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
 #endif
 }
 

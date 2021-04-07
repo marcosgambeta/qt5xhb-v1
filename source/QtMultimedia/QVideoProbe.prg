@@ -54,13 +54,13 @@ RETURN
 #endif
 
 /*
-explicit QVideoProbe(QObject *parent = Q_NULLPTR)
+QVideoProbe( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QVIDEOPROBE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QVideoProbe * obj = new QVideoProbe( OPQOBJECT(1,0) );
+    QVideoProbe * obj = new QVideoProbe( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
 }
 
 /*
-bool setSource(QMediaObject * source)
+bool setSource( QMediaObject * source )
 */
 void QVideoProbe_setSource1()
 {
@@ -129,7 +129,7 @@ void QVideoProbe_setSource1()
 }
 
 /*
-bool setSource(QMediaRecorder * source)
+bool setSource( QMediaRecorder * source )
 */
 void QVideoProbe_setSource2()
 {

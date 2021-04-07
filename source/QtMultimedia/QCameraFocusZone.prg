@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QCameraFocusZone(const QCameraFocusZone &other)
+QCameraFocusZone( const QCameraFocusZone & other )
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEW )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_AREA )
 }
 
 /*
-FocusZoneStatus status() const
+QCameraFocusZone::FocusZoneStatus status() const
 */
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_STATUS )
 {
@@ -167,10 +167,6 @@ HB_FUNC_STATIC( QCAMERAFOCUSZONE_STATUS )
 #endif
   }
 }
-
-/*
-void setStatus(FocusZoneStatus status)
-*/
 
 HB_FUNC_STATIC( QCAMERAFOCUSZONE_NEWFROM )
 {

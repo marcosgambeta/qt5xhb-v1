@@ -71,7 +71,7 @@ RETURN
 #endif
 
 /*
-QAudioDeviceInfo ()
+QAudioDeviceInfo()
 */
 void QAudioDeviceInfo_new1()
 {
@@ -80,7 +80,7 @@ void QAudioDeviceInfo_new1()
 }
 
 /*
-QAudioDeviceInfo ( const QAudioDeviceInfo & other )
+QAudioDeviceInfo( const QAudioDeviceInfo & other )
 */
 void QAudioDeviceInfo_new2()
 {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DELETE )
 }
 
 /*
-QString deviceName () const
+QString deviceName() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEVICENAME )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEVICENAME )
 }
 
 /*
-bool isFormatSupported ( const QAudioFormat & format ) const
+bool isFormatSupported( const QAudioFormat & format ) const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_ISNULL )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISNULL )
 }
 
 /*
-QAudioFormat nearestFormat ( const QAudioFormat & format ) const
+QAudioFormat nearestFormat( const QAudioFormat & format ) const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
 }
 
 /*
-QAudioFormat preferredFormat () const
+QAudioFormat preferredFormat() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_PREFERREDFORMAT )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_PREFERREDFORMAT )
 }
 
 /*
-QList<QAudioFormat::Endian> supportedByteOrders () const
+QList<QAudioFormat::Endian> supportedByteOrders() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 }
 
 /*
-QList<int> supportedChannelCounts () const
+QList<int> supportedChannelCounts() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCHANNELCOUNTS )
 }
 
 /*
-QStringList supportedCodecs () const
+QStringList supportedCodecs() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCODECS )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCODECS )
 }
 
 /*
-QList<int> supportedSampleRates () const
+QList<int> supportedSampleRates() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLERATES )
 }
 
 /*
-QList<int> supportedSampleSizes () const
+QList<int> supportedSampleSizes() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
 {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLESIZES )
 }
 
 /*
-QList<QAudioFormat::SampleType> supportedSampleTypes () const
+QList<QAudioFormat::SampleType> supportedSampleTypes() const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 }
 
 /*
-static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
+static QList<QAudioDeviceInfo> availableDevices( QAudio::Mode mode )
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 }
 
 /*
-static QAudioDeviceInfo defaultInputDevice ()
+static QAudioDeviceInfo defaultInputDevice()
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTINPUTDEVICE )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTINPUTDEVICE )
 }
 
 /*
-static QAudioDeviceInfo defaultOutputDevice ()
+static QAudioDeviceInfo defaultOutputDevice()
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_DEFAULTOUTPUTDEVICE )
 {

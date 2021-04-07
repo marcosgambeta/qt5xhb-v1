@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_DELETE )
 }
 
 /*
-virtual bool isViewfinderParameterSupported(ViewfinderParameter parameter) const = 0
+virtual bool isViewfinderParameterSupported( QCameraViewfinderSettingsControl::ViewfinderParameter parameter ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_ISVIEWFINDERPARAMETERSUPPORTED 
 }
 
 /*
-virtual void setViewfinderParameter(ViewfinderParameter parameter, const QVariant & value) = 0
+virtual void setViewfinderParameter( QCameraViewfinderSettingsControl::ViewfinderParameter parameter, const QVariant & value ) = 0
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_SETVIEWFINDERPARAMETER )
 }
 
 /*
-virtual QVariant viewfinderParameter(ViewfinderParameter parameter) const = 0
+virtual QVariant viewfinderParameter( QCameraViewfinderSettingsControl::ViewfinderParameter parameter ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGSCONTROL_VIEWFINDERPARAMETER )
 {

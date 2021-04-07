@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CANCELCAPTURE )
 }
 
 /*
-virtual int capture(const QString & fileName) = 0
+virtual int capture( const QString & fileName ) = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_CAPTURE )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_ISREADYFORCAPTURE )
 }
 
 /*
-virtual void setDriveMode(QCameraImageCapture::DriveMode mode) = 0
+virtual void setDriveMode( QCameraImageCapture::DriveMode mode ) = 0
 */
 HB_FUNC_STATIC( QCAMERAIMAGECAPTURECONTROL_SETDRIVEMODE )
 {

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_FLASHMODE )
 }
 
 /*
-virtual bool isFlashModeSupported(QCameraExposure::FlashModes mode) const = 0
+virtual bool isFlashModeSupported( QCameraExposure::FlashModes mode ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHMODESUPPORTED )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QCAMERAFLASHCONTROL_ISFLASHREADY )
 }
 
 /*
-virtual void setFlashMode(QCameraExposure::FlashModes mode) = 0
+virtual void setFlashMode( QCameraExposure::FlashModes mode ) = 0
 */
 HB_FUNC_STATIC( QCAMERAFLASHCONTROL_SETFLASHMODE )
 {

@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_DEFAULTINPUT )
 }
 
 /*
-virtual QString inputDescription(const QString & name) const = 0
+virtual QString inputDescription( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_INPUTDESCRIPTION )
 }
 
 /*
-virtual void setActiveInput(const QString & name) = 0
+virtual void setActiveInput( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QAUDIOINPUTSELECTORCONTROL_SETACTIVEINPUT )
 {

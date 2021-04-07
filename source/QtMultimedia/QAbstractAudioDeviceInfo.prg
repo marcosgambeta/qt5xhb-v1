@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_PREFERREDFORMAT )
 }
 
 /*
-virtual bool isFormatSupported(const QAudioFormat &format) const = 0
+virtual bool isFormatSupported( const QAudioFormat & format ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTAUDIODEVICEINFO_ISFORMATSUPPORTED )
 {

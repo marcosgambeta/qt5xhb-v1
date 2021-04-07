@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QRADIODATACONTROL_RADIOTEXT )
 }
 
 /*
-virtual void setAlternativeFrequenciesEnabled(bool enabled) = 0
+virtual void setAlternativeFrequenciesEnabled( bool enabled ) = 0
 */
 HB_FUNC_STATIC( QRADIODATACONTROL_SETALTERNATIVEFREQUENCIESENABLED )
 {

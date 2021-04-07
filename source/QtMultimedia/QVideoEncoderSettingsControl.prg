@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_DELETE )
 }
 
 /*
-virtual void setVideoSettings(const QVideoEncoderSettings & settings) = 0
+virtual void setVideoSettings( const QVideoEncoderSettings & settings ) = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS )
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SETVIDEOSETTINGS )
 }
 
 /*
-virtual QList<qreal> supportedFrameRates(const QVideoEncoderSettings & settings, bool * continuous = Q_NULLPTR) const = 0
+virtual QList<qreal> supportedFrameRates( const QVideoEncoderSettings & settings, bool * continuous = nullptr ) const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQVIDEOENCODERSETTINGS(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQVIDEOENCODERSETTINGS(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDFRAMERATES )
 }
 
 /*
-virtual QList<QSize> supportedResolutions(const QVideoEncoderSettings & settings, bool * continuous = Q_NULLPTR) const = 0
+virtual QList<QSize> supportedResolutions( const QVideoEncoderSettings & settings, bool * continuous = nullptr ) const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDRESOLUTIONS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQVIDEOENCODERSETTINGS(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQVIDEOENCODERSETTINGS(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_SUPPORTEDVIDEOCODECS )
 }
 
 /*
-virtual QString videoCodecDescription(const QString & codecName) const = 0
+virtual QString videoCodecDescription( const QString & codecName ) const = 0
 */
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGSCONTROL_VIDEOCODECDESCRIPTION )
 {

@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QAUDIOROLECONTROL_AUDIOROLE )
 }
 
 /*
-virtual void setAudioRole(QAudio::Role role) = 0
+virtual void setAudioRole( QAudio::Role role ) = 0
 */
 HB_FUNC_STATIC( QAUDIOROLECONTROL_SETAUDIOROLE )
 {

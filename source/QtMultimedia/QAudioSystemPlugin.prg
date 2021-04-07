@@ -56,10 +56,6 @@ RETURN
 #endif
 
 /*
-explicit QAudioSystemPlugin(QObject *parent = Q_NULLPTR) (abstract)
-*/
-
-/*
 ~QAudioSystemPlugin()
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_DELETE )
@@ -82,7 +78,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_DELETE )
 }
 
 /*
-virtual QList<QByteArray> availableDevices(QAudio::Mode) const override = 0
+virtual QList<QByteArray> availableDevices( QAudio::Mode ) const override = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES )
 {
@@ -134,7 +130,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_AVAILABLEDEVICES )
 }
 
 /*
-virtual QAbstractAudioInput* createInput(const QByteArray& device) override = 0
+virtual QAbstractAudioInput * createInput( const QByteArray & device ) override = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEINPUT )
 {
@@ -159,7 +155,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEINPUT )
 }
 
 /*
-virtual QAbstractAudioOutput* createOutput(const QByteArray& device) override = 0
+virtual QAbstractAudioOutput * createOutput( const QByteArray & device ) override = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEOUTPUT )
 {
@@ -184,7 +180,7 @@ HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEOUTPUT )
 }
 
 /*
-virtual QAbstractAudioDeviceInfo* createDeviceInfo(const QByteArray& device, QAudio::Mode mode) override = 0
+virtual QAbstractAudioDeviceInfo * createDeviceInfo( const QByteArray & device, QAudio::Mode mode ) override = 0
 */
 HB_FUNC_STATIC( QAUDIOSYSTEMPLUGIN_CREATEDEVICEINFO )
 {

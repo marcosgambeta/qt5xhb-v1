@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_DELETE )
 }
 
 /*
-virtual QVariant actualValue(ExposureParameter parameter) const = 0
+virtual QVariant actualValue( QCameraExposureControl::ExposureParameter parameter ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ACTUALVALUE )
 }
 
 /*
-virtual bool isParameterSupported(ExposureParameter parameter) const = 0
+virtual bool isParameterSupported( QCameraExposureControl::ExposureParameter parameter ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED )
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_ISPARAMETERSUPPORTED )
 }
 
 /*
-virtual QVariant requestedValue(ExposureParameter parameter) const = 0
+virtual QVariant requestedValue( QCameraExposureControl::ExposureParameter parameter ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_REQUESTEDVALUE )
 }
 
 /*
-virtual bool setValue(ExposureParameter parameter, const QVariant & value) = 0
+virtual bool setValue( QCameraExposureControl::ExposureParameter parameter, const QVariant & value ) = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SETVALUE )
 }
 
 /*
-virtual QVariantList supportedParameterRange(ExposureParameter parameter, bool * continuous) const = 0
+virtual QVariantList supportedParameterRange( QCameraExposureControl::ExposureParameter parameter, bool * continuous ) const = 0
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURECONTROL_SUPPORTEDPARAMETERRANGE )
 {

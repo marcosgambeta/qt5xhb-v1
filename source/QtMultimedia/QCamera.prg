@@ -92,41 +92,41 @@ RETURN
 #endif
 
 /*
-explicit QCamera(QObject *parent = Q_NULLPTR)
+QCamera( QObject * parent = nullptr )
 */
 void QCamera_new1()
 {
-  QCamera * obj = new QCamera( OPQOBJECT(1,Q_NULLPTR) );
+  QCamera * obj = new QCamera( OPQOBJECT(1,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QCamera(const QByteArray& deviceName, QObject *parent = Q_NULLPTR)
+QCamera( const QByteArray & deviceName, QObject * parent = nullptr )
 */
 void QCamera_new2()
 {
-  QCamera * obj = new QCamera( *PQBYTEARRAY(1), OPQOBJECT(2,Q_NULLPTR) );
+  QCamera * obj = new QCamera( *PQBYTEARRAY(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 }
 
 /*
-explicit QCamera(const QCameraInfo& cameraInfo, QObject *parent = Q_NULLPTR)
+QCamera( const QCameraInfo & cameraInfo, QObject * parent = nullptr )
 */
 void QCamera_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCamera * obj = new QCamera( *PQCAMERAINFO(1), OPQOBJECT(2,Q_NULLPTR) );
+  QCamera * obj = new QCamera( *PQCAMERAINFO(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 
 /*
-explicit QCamera(QCamera::Position position, QObject *parent = Q_NULLPTR)
+QCamera( QCamera::Position position, QObject * parent = nullptr )
 */
 void QCamera_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCamera * obj = new QCamera( (QCamera::Position) hb_parni(1), OPQOBJECT(2,Q_NULLPTR) );
+  QCamera * obj = new QCamera( (QCamera::Position) hb_parni(1), OPQOBJECT(2,nullptr) );
   Qt5xHb::returnNewObject( obj, false );
 #endif
 }
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QCAMERA_DELETE )
 }
 
 /*
-State state() const
+QCamera::State state() const
 */
 HB_FUNC_STATIC( QCAMERA_STATE )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QCAMERA_STATE )
 }
 
 /*
-Status status() const
+QCamera::Status status() const
 */
 HB_FUNC_STATIC( QCAMERA_STATUS )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QCAMERA_STATUS )
 }
 
 /*
-CaptureModes captureMode() const
+QCamera::CaptureModes captureMode() const
 */
 HB_FUNC_STATIC( QCAMERA_CAPTUREMODE )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QCAMERA_CAPTUREMODE )
 }
 
 /*
-void setCaptureMode(QCamera::CaptureModes mode)
+void setCaptureMode( QCamera::CaptureModes mode )
 */
 HB_FUNC_STATIC( QCAMERA_SETCAPTUREMODE )
 {
@@ -289,7 +289,7 @@ void QCamera_lockStatus1()
 }
 
 /*
-QCamera::LockStatus lockStatus(QCamera::LockType lockType) const
+QCamera::LockStatus lockStatus( QCamera::LockType lockType ) const
 */
 void QCamera_lockStatus2()
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QCAMERA_LOCKSTATUS )
 }
 
 /*
-Error error() const
+QCamera::Error error() const
 */
 HB_FUNC_STATIC( QCAMERA_ERROR )
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QCAMERA_IMAGEPROCESSING )
 }
 
 /*
-bool isCaptureModeSupported(CaptureModes mode) const
+bool isCaptureModeSupported( QCamera::CaptureModes mode ) const
 */
 HB_FUNC_STATIC( QCAMERA_ISCAPTUREMODESUPPORTED )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QCAMERA_REQUESTEDLOCKS )
 }
 
 /*
-void setViewfinder(QVideoWidget * viewfinder)
+void setViewfinder( QVideoWidget * viewfinder )
 */
 void QCamera_setViewfinder1()
 {
@@ -504,7 +504,7 @@ void QCamera_setViewfinder1()
 }
 
 /*
-void setViewfinder(QGraphicsVideoItem * viewfinder)
+void setViewfinder( QGraphicsVideoItem * viewfinder )
 */
 void QCamera_setViewfinder2()
 {
@@ -519,7 +519,7 @@ void QCamera_setViewfinder2()
 }
 
 /*
-void setViewfinder(QAbstractVideoSurface * surface)
+void setViewfinder( QAbstractVideoSurface * surface )
 */
 void QCamera_setViewfinder3()
 {
@@ -619,7 +619,7 @@ void QCamera_searchAndLock1()
 }
 
 /*
-void searchAndLock(QCamera::LockTypes locks)
+void searchAndLock( QCamera::LockTypes locks )
 */
 void QCamera_searchAndLock2()
 {
@@ -743,7 +743,7 @@ void QCamera_unlock1()
 }
 
 /*
-void unlock(QCamera::LockTypes locks)
+void unlock( QCamera::LockTypes locks )
 */
 void QCamera_unlock2()
 {
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QCAMERA_VIEWFINDERSETTINGS )
 }
 
 /*
-void setViewfinderSettings(const QCameraViewfinderSettings &settings)
+void setViewfinderSettings( const QCameraViewfinderSettings & settings )
 */
 HB_FUNC_STATIC( QCAMERA_SETVIEWFINDERSETTINGS )
 {
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QCAMERA_SETVIEWFINDERSETTINGS )
 }
 
 /*
-QList<QCameraViewfinderSettings> supportedViewfinderSettings(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
+QList<QCameraViewfinderSettings> supportedViewfinderSettings( const QCameraViewfinderSettings & settings = QCameraViewfinderSettings() ) const
 */
 HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERSETTINGS )
 }
 
 /*
-QList<QSize> supportedViewfinderResolutions(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
+QList<QSize> supportedViewfinderResolutions( const QCameraViewfinderSettings & settings = QCameraViewfinderSettings() ) const
 */
 HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
 {
@@ -961,11 +961,7 @@ HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERRESOLUTIONS )
 }
 
 /*
-QList<FrameRateRange> supportedViewfinderFrameRateRanges(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
-*/
-
-/*
-QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats(const QCameraViewfinderSettings &settings = QCameraViewfinderSettings()) const
+QList<QVideoFrame::PixelFormat> supportedViewfinderPixelFormats( const QCameraViewfinderSettings & settings = QCameraViewfinderSettings() ) const
 */
 HB_FUNC_STATIC( QCAMERA_SUPPORTEDVIEWFINDERPIXELFORMATS )
 {
@@ -1046,7 +1042,7 @@ HB_FUNC_STATIC( QCAMERA_AVAILABLEDEVICES )
 }
 
 /*
-static QString deviceDescription(const QByteArray & device)
+static QString deviceDescription( const QByteArray & device )
 */
 HB_FUNC_STATIC( QCAMERA_DEVICEDESCRIPTION )
 {

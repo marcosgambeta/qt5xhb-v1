@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_DEFAULTOUTPUT )
 }
 
 /*
-virtual QString outputDescription(const QString & name) const = 0
+virtual QString outputDescription( const QString & name ) const = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_OUTPUTDESCRIPTION )
 }
 
 /*
-virtual void setActiveOutput(const QString & name) = 0
+virtual void setActiveOutput( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QAUDIOOUTPUTSELECTORCONTROL_SETACTIVEOUTPUT )
 {

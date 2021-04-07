@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_NOTIFYINTERVAL )
 }
 
 /*
-void setNotifyInterval(int milliSeconds)
+void setNotifyInterval( int milliSeconds )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_SETNOTIFYINTERVAL )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_AVAILABLEMETADATA )
 }
 
 /*
-virtual bool bind(QObject * object)
+virtual bool bind( QObject * object )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_BIND )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_ISMETADATAAVAILABLE )
 }
 
 /*
-QVariant metaData(const QString & key) const
+QVariant metaData( const QString & key ) const
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_METADATA )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QMEDIAOBJECT_SERVICE )
 }
 
 /*
-virtual void unbind(QObject * object)
+virtual void unbind( QObject * object )
 */
 HB_FUNC_STATIC( QMEDIAOBJECT_UNBIND )
 {

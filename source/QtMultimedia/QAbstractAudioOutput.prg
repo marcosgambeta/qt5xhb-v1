@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_DELETE )
 }
 
 /*
-virtual void start(QIODevice *device) = 0
+virtual void start( QIODevice * device ) = 0
 */
 void QAbstractAudioOutput_start1()
 {
@@ -111,7 +111,7 @@ void QAbstractAudioOutput_start1()
 }
 
 /*
-virtual QIODevice* start() = 0
+virtual QIODevice * start() = 0
 */
 void QAbstractAudioOutput_start2()
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_PERIODSIZE )
 }
 
 /*
-virtual void setBufferSize(int value) = 0
+virtual void setBufferSize( int value ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_SETBUFFERSIZE )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_BUFFERSIZE )
 }
 
 /*
-virtual void setNotifyInterval(int milliSeconds) = 0
+virtual void setNotifyInterval( int milliSeconds ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_SETNOTIFYINTERVAL )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_STATE )
 }
 
 /*
-virtual void setFormat(const QAudioFormat& fmt) = 0
+virtual void setFormat( const QAudioFormat & fmt ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_SETFORMAT )
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_FORMAT )
 }
 
 /*
-virtual void setVolume(qreal)
+virtual void setVolume( qreal )
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_SETVOLUME )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_CATEGORY )
 }
 
 /*
-virtual void setCategory(const QString &)
+virtual void setCategory( const QString & )
 */
 HB_FUNC_STATIC( QABSTRACTAUDIOOUTPUT_SETCATEGORY )
 {

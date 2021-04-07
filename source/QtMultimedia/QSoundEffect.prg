@@ -77,13 +77,13 @@ RETURN
 #endif
 
 /*
-explicit QSoundEffect(QObject *parent = Q_NULLPTR)
+QSoundEffect( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QSoundEffect * obj = new QSoundEffect( OPQOBJECT(1,0) );
+    QSoundEffect * obj = new QSoundEffect( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_SOURCE )
 }
 
 /*
-void setSource(const QUrl &url)
+void setSource( const QUrl & url )
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETSOURCE )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_LOOPCOUNT )
 }
 
 /*
-void setLoopCount(int loopCount)
+void setLoopCount( int loopCount )
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETLOOPCOUNT )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_VOLUME )
 }
 
 /*
-void setVolume(qreal volume)
+void setVolume( qreal volume )
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETVOLUME )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISMUTED )
 }
 
 /*
-void setMuted(bool muted)
+void setMuted( bool muted )
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETMUTED )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_ISPLAYING )
 }
 
 /*
-Status status() const
+QSoundEffect::Status status() const
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_STATUS )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QSOUNDEFFECT_CATEGORY )
 }
 
 /*
-void setCategory(const QString &category)
+void setCategory( const QString & category )
 */
 HB_FUNC_STATIC( QSOUNDEFFECT_SETCATEGORY )
 {

@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QCAMERAZOOMCONTROL_REQUESTEDOPTICALZOOM )
 }
 
 /*
-virtual void zoomTo(qreal optical, qreal digital) = 0
+virtual void zoomTo( qreal optical, qreal digital ) = 0
 */
 HB_FUNC_STATIC( QCAMERAZOOMCONTROL_ZOOMTO )
 {

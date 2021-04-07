@@ -38,6 +38,8 @@ CLASS QAudioDecoder INHERIT QMediaObject
    METHOD start
    METHOD stop
    METHOD hasSupport
+   METHOD bind
+   METHOD unbind
 
    METHOD onBufferAvailableChanged
    METHOD onBufferReady
@@ -78,13 +80,13 @@ RETURN
 #endif
 
 /*
-explicit QAudioDecoder(QObject *parent = Q_NULLPTR)
+QAudioDecoder( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QAUDIODECODER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QAudioDecoder * obj = new QAudioDecoder( OPQOBJECT(1,0) );
+    QAudioDecoder * obj = new QAudioDecoder( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -140,7 +142,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SOURCEFILENAME )
 }
 
 /*
-void setSourceFilename(const QString & fileName)
+void setSourceFilename( const QString & fileName )
 */
 HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEFILENAME )
 {
@@ -166,7 +168,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEFILENAME )
 }
 
 /*
-State state() const
+QAudioDecoder::State state() const
 */
 HB_FUNC_STATIC( QAUDIODECODER_STATE )
 {
@@ -263,7 +265,7 @@ HB_FUNC_STATIC( QAUDIODECODER_AUDIOFORMAT )
 }
 
 /*
-void setAudioFormat(const QAudioFormat & format)
+void setAudioFormat( const QAudioFormat & format )
 */
 HB_FUNC_STATIC( QAUDIODECODER_SETAUDIOFORMAT )
 {
@@ -313,7 +315,7 @@ HB_FUNC_STATIC( QAUDIODECODER_DURATION )
 }
 
 /*
-Error error() const
+QAudioDecoder::Error error() const
 */
 HB_FUNC_STATIC( QAUDIODECODER_ERROR )
 {
@@ -411,7 +413,7 @@ HB_FUNC_STATIC( QAUDIODECODER_SOURCEDEVICE )
 }
 
 /*
-void setSourceDevice(QIODevice * device)
+void setSourceDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QAUDIODECODER_SETSOURCEDEVICE )
 {
@@ -489,12 +491,12 @@ HB_FUNC_STATIC( QAUDIODECODER_STOP )
 }
 
 /*
-static QMultimedia::SupportEstimate hasSupport(const QString & mimeType, const QStringList & codecs = QStringList())
+static QMultimedia::SupportEstimate hasSupport( const QString & mimeType, const QStringList & codecs = QStringList() )
 */
 HB_FUNC_STATIC( QAUDIODECODER_HASSUPPORT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISARRAY(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISARRAY(2)||HB_ISNIL(2)) )
   {
 #endif
     RENUM( QAudioDecoder::hasSupport( PQSTRING(1), OPQSTRINGLIST(2,QStringList()) ) );
@@ -508,12 +510,54 @@ HB_FUNC_STATIC( QAUDIODECODER_HASSUPPORT )
 }
 
 /*
-bool bind(QObject *) override
+bool bind( QObject * ) override
 */
+HB_FUNC_STATIC( QAUDIODECODER_BIND )
+{
+  QAudioDecoder * obj = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    {
+#endif
+      RBOOL( obj->bind( PQOBJECT(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
-void unbind(QObject *) override
+void unbind( QObject * ) override
 */
+HB_FUNC_STATIC( QAUDIODECODER_UNBIND )
+{
+  QAudioDecoder * obj = (QAudioDecoder *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    {
+#endif
+      obj->unbind( PQOBJECT(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 void QAudioDecoderSlots_connect_signal( const QString & signal, const QString & slot );
 

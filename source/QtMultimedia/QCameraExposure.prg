@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSURECOMPENSATION )
 }
 
 /*
-void setExposureCompensation(qreal ev)
+void setExposureCompensation( qreal ev )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSURECOMPENSATION )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHREADY )
 }
 
 /*
-FlashModes flashMode() const
+QCameraExposure::FlashModes flashMode() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_FLASHMODE )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_FLASHMODE )
 }
 
 /*
-void setFlashMode(FlashModes mode)
+void setFlashMode( QCameraExposure::FlashModes mode )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETFLASHMODE )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETFLASHMODE )
 }
 
 /*
-ExposureMode exposureMode() const
+QCameraExposure::ExposureMode exposureMode() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSUREMODE )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_EXPOSUREMODE )
 }
 
 /*
-void setExposureMode(ExposureMode mode)
+void setExposureMode( QCameraExposure::ExposureMode mode )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSUREMODE )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETEXPOSUREMODE )
 }
 
 /*
-MeteringMode meteringMode() const
+QCameraExposure::MeteringMode meteringMode() const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_METERINGMODE )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_METERINGMODE )
 }
 
 /*
-void setMeteringMode(MeteringMode mode)
+void setMeteringMode( QCameraExposure::MeteringMode mode )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMETERINGMODE )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISAVAILABLE )
 }
 
 /*
-bool isExposureModeSupported(ExposureMode mode) const
+bool isExposureModeSupported( QCameraExposure::ExposureMode mode ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISEXPOSUREMODESUPPORTED )
 }
 
 /*
-bool isFlashModeSupported(FlashModes mode) const
+bool isFlashModeSupported( QCameraExposure::FlashModes mode ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHMODESUPPORTED )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_ISFLASHMODESUPPORTED )
 }
 
 /*
-bool isMeteringModeSupported(MeteringMode mode) const
+bool isMeteringModeSupported( QCameraExposure::MeteringMode mode ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_ISMETERINGMODESUPPORTED )
 {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_REQUESTEDSHUTTERSPEED )
 }
 
 /*
-void setSpotMeteringPoint(const QPointF & point)
+void setSpotMeteringPoint( const QPointF & point )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETSPOTMETERINGPOINT )
 {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SPOTMETERINGPOINT )
 }
 
 /*
-QList<qreal> supportedApertures(bool * continuous = Q_NULLPTR) const
+QList<qreal> supportedApertures( bool * continuous = nullptr ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
 {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDAPERTURES )
 }
 
 /*
-QList<int> supportedIsoSensitivities(bool * continuous = Q_NULLPTR) const
+QList<int> supportedIsoSensitivities( bool * continuous = nullptr ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDISOSENSITIVITIES )
 }
 
 /*
-QList<qreal> supportedShutterSpeeds(bool * continuous = Q_NULLPTR) const
+QList<qreal> supportedShutterSpeeds( bool * continuous = nullptr ) const
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SUPPORTEDSHUTTERSPEEDS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETAUTOSHUTTERSPEED )
 }
 
 /*
-void setManualAperture(qreal aperture)
+void setManualAperture( qreal aperture )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALAPERTURE )
 {
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALAPERTURE )
 }
 
 /*
-void setManualIsoSensitivity(int iso)
+void setManualIsoSensitivity( int iso )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY )
 {
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALISOSENSITIVITY )
 }
 
 /*
-void setManualShutterSpeed(qreal seconds)
+void setManualShutterSpeed( qreal seconds )
 */
 HB_FUNC_STATIC( QCAMERAEXPOSURE_SETMANUALSHUTTERSPEED )
 {

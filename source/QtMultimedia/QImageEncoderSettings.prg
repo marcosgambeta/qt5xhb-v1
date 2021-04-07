@@ -76,7 +76,7 @@ void QImageEncoderSettings_new1()
 }
 
 /*
-QImageEncoderSettings(const QImageEncoderSettings& other)
+QImageEncoderSettings( const QImageEncoderSettings & other )
 */
 void QImageEncoderSettings_new2()
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_CODEC )
 }
 
 /*
-void setCodec(const QString &)
+void setCodec( const QString & )
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETCODEC )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
 }
 
 /*
-void setResolution(const QSize &)
+void setResolution( const QSize & )
 */
 void QImageEncoderSettings_setResolution1()
 {
@@ -235,7 +235,7 @@ void QImageEncoderSettings_setResolution1()
 }
 
 /*
-void setResolution(int width, int height)
+void setResolution( int width, int height )
 */
 void QImageEncoderSettings_setResolution2()
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_QUALITY )
 }
 
 /*
-void setQuality(QMultimedia::EncodingQuality quality)
+void setQuality( QMultimedia::EncodingQuality quality )
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETQUALITY )
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETQUALITY )
 }
 
 /*
-QVariant encodingOption(const QString &option) const
+QVariant encodingOption( const QString & option ) const
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ENCODINGOPTION )
 {
@@ -341,11 +341,7 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_ENCODINGOPTION )
 }
 
 /*
-QVariantMap encodingOptions() const
-*/
-
-/*
-void setEncodingOption(const QString &option, const QVariant &value)
+void setEncodingOption( const QString & option, const QVariant & value )
 */
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETENCODINGOPTION )
 {
@@ -369,10 +365,6 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETENCODINGOPTION )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-void setEncodingOptions(const QVariantMap &options)
-*/
 
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEWFROM )
 {

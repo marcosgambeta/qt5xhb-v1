@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISAVAILABLE )
 }
 
 /*
-bool isWhiteBalanceModeSupported(WhiteBalanceMode mode) const
+bool isWhiteBalanceModeSupported( QCameraImageProcessing::WhiteBalanceMode mode ) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISWHITEBALANCEMODESUPPORTED )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SATURATION )
 }
 
 /*
-void setContrast(qreal value)
+void setContrast( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETCONTRAST )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETCONTRAST )
 }
 
 /*
-void setDenoisingLevel(qreal value)
+void setDenoisingLevel( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETDENOISINGLEVEL )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETDENOISINGLEVEL )
 }
 
 /*
-void setManualWhiteBalance(qreal colorTemperature)
+void setManualWhiteBalance( qreal colorTemperature )
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETMANUALWHITEBALANCE )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETMANUALWHITEBALANCE )
 }
 
 /*
-void setSaturation(qreal value)
+void setSaturation( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSATURATION )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSATURATION )
 }
 
 /*
-void setSharpeningLevel(qreal level)
+void setSharpeningLevel( qreal level )
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSHARPENINGLEVEL )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETSHARPENINGLEVEL )
 }
 
 /*
-void setWhiteBalanceMode(WhiteBalanceMode mode)
+void setWhiteBalanceMode( QCameraImageProcessing::WhiteBalanceMode mode )
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETWHITEBALANCEMODE )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SHARPENINGLEVEL )
 }
 
 /*
-WhiteBalanceMode whiteBalanceMode() const
+QCameraImageProcessing::WhiteBalanceMode whiteBalanceMode() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_WHITEBALANCEMODE )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_BRIGHTNESS )
 }
 
 /*
-void setBrightness(qreal value)
+void setBrightness( qreal value )
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETBRIGHTNESS )
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETBRIGHTNESS )
 }
 
 /*
-ColorFilter colorFilter() const
+QCameraImageProcessing::ColorFilter colorFilter() const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_COLORFILTER )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_COLORFILTER )
 }
 
 /*
-void setColorFilter(ColorFilter filter)
+void setColorFilter( QCameraImageProcessing::ColorFilter filter )
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETCOLORFILTER )
 {
@@ -522,7 +522,7 @@ HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_SETCOLORFILTER )
 }
 
 /*
-bool isColorFilterSupported(ColorFilter filter) const
+bool isColorFilterSupported( QCameraImageProcessing::ColorFilter filter ) const
 */
 HB_FUNC_STATIC( QCAMERAIMAGEPROCESSING_ISCOLORFILTERSUPPORTED )
 {

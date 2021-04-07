@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_CURRENTCONFIGURATION )
 }
 
 /*
-virtual void setConfigurations(const QList<QNetworkConfiguration> & configurations) = 0
+virtual void setConfigurations( const QList<QNetworkConfiguration> & configurations ) = 0
 */
 HB_FUNC_STATIC( QMEDIANETWORKACCESSCONTROL_SETCONFIGURATIONS )
 {
