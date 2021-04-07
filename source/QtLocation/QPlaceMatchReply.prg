@@ -58,7 +58,7 @@ RETURN
 #endif
 
 /*
-explicit QPlaceMatchReply(QObject *parent = 0)
+QPlaceMatchReply( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPLACEMATCHREPLY_NEW )
 {

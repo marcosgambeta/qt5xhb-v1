@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QPLACERESULT_DISTANCE )
 }
 
 /*
-void setDistance(qreal distance)
+void setDistance( qreal distance )
 */
 HB_FUNC_STATIC( QPLACERESULT_SETDISTANCE )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QPLACERESULT_PLACE )
 }
 
 /*
-void setPlace(const QPlace &place)
+void setPlace( const QPlace & place )
 */
 HB_FUNC_STATIC( QPLACERESULT_SETPLACE )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QPLACERESULT_ISSPONSORED )
 }
 
 /*
-void setSponsored(bool sponsored)
+void setSponsored( bool sponsored )
 */
 HB_FUNC_STATIC( QPLACERESULT_SETSPONSORED )
 {

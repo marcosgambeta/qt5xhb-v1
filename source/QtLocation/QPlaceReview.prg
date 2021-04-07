@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_DATETIME )
 }
 
 /*
-void setDateTime(const QDateTime &dt)
+void setDateTime( const QDateTime & dt )
 */
 HB_FUNC_STATIC( QPLACEREVIEW_SETDATETIME )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_TEXT )
 }
 
 /*
-void setText(const QString &text)
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QPLACEREVIEW_SETTEXT )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_LANGUAGE )
 }
 
 /*
-void setLanguage(const QString &data)
+void setLanguage( const QString & data )
 */
 HB_FUNC_STATIC( QPLACEREVIEW_SETLANGUAGE )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_RATING )
 }
 
 /*
-void setRating(qreal data)
+void setRating( qreal data )
 */
 HB_FUNC_STATIC( QPLACEREVIEW_SETRATING )
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_REVIEWID )
 }
 
 /*
-void setReviewId(const QString &identifier)
+void setReviewId( const QString & identifier )
 */
 HB_FUNC_STATIC( QPLACEREVIEW_SETREVIEWID )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QPLACEREVIEW_TITLE )
 }
 
 /*
-void setTitle(const QString &data)
+void setTitle( const QString & data )
 */
 HB_FUNC_STATIC( QPLACEREVIEW_SETTITLE )
 {

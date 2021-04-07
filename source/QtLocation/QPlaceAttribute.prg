@@ -76,7 +76,7 @@ void QPlaceAttribute_new1()
 }
 
 /*
-QPlaceAttribute(const QPlaceAttribute &other)
+QPlaceAttribute( const QPlaceAttribute & other )
 */
 void QPlaceAttribute_new2()
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_LABEL )
 }
 
 /*
-void setLabel(const QString &label)
+void setLabel( const QString & label )
 */
 HB_FUNC_STATIC( QPLACEATTRIBUTE_SETLABEL )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QPLACEATTRIBUTE_TEXT )
 }
 
 /*
-void setText(const QString &text)
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QPLACEATTRIBUTE_SETTEXT )
 {

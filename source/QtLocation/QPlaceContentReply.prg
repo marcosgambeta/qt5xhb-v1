@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-explicit QPlaceContentReply(QObject *parent = 0)
+QPlaceContentReply( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPLACECONTENTREPLY_NEW )
 {

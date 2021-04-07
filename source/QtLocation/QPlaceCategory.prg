@@ -83,7 +83,7 @@ void QPlaceCategory_new1()
 }
 
 /*
-QPlaceCategory(const QPlaceCategory &other)
+QPlaceCategory( const QPlaceCategory & other )
 */
 void QPlaceCategory_new2()
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_CATEGORYID )
 }
 
 /*
-void setCategoryId(const QString &identifier)
+void setCategoryId( const QString & identifier )
 */
 HB_FUNC_STATIC( QPLACECATEGORY_SETCATEGORYID )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_NAME )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QPLACECATEGORY_SETNAME )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_VISIBILITY )
 }
 
 /*
-void setVisibility(QLocation::Visibility visibility)
+void setVisibility( QLocation::Visibility visibility )
 */
 HB_FUNC_STATIC( QPLACECATEGORY_SETVISIBILITY )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QPLACECATEGORY_ICON )
 }
 
 /*
-void setIcon(const QPlaceIcon &icon)
+void setIcon( const QPlaceIcon & icon )
 */
 HB_FUNC_STATIC( QPLACECATEGORY_SETICON )
 {

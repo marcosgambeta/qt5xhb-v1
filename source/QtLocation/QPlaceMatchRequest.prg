@@ -13,7 +13,6 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
-REQUEST QPLACE
 #endif
 
 CLASS QPlaceMatchRequest
@@ -23,8 +22,6 @@ CLASS QPlaceMatchRequest
 
    METHOD new
    METHOD delete
-   METHOD places
-   METHOD setPlaces
    METHOD setResults
    METHOD clear
 
@@ -76,7 +73,7 @@ void QPlaceMatchRequest_new1()
 }
 
 /*
-QPlaceMatchRequest(const QPlaceMatchRequest &other)
+QPlaceMatchRequest( const QPlaceMatchRequest & other )
 */
 void QPlaceMatchRequest_new2()
 {
@@ -122,97 +119,7 @@ HB_FUNC_STATIC( QPLACEMATCHREQUEST_DELETE )
 }
 
 /*
-QList<QPlace> places() const
-*/
-HB_FUNC_STATIC( QPLACEMATCHREQUEST_PLACES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
-    {
-#endif
-      QList<QPlace> list = obj->places();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPLACE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
-      {
-        for( int i = 0; i < list.count(); i++ )
-        {
-          hb_vmPushDynSym( pDynSym );
-          hb_vmPushNil();
-          hb_vmDo( 0 );
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPlace *) new QPlace( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemNew( NULL );
-          hb_itemPutL( pDestroy, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
-        }
-      }
-      else
-      {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPLACE", HB_ERR_ARGS_BASEPARAMS );
-      }
-      hb_itemReturnRelease(pArray);
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
-  }
-#endif
-}
-
-/*
-void setPlaces(const QList<QPlace> places)
-*/
-HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETPLACES )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceMatchRequest * obj = (QPlaceMatchRequest *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
-    {
-#endif
-      QList<QPlace> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
-      {
-        par1 << *(QPlace *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-      }
-      obj->setPlaces( par1 );
-#ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-#endif
-}
-
-/*
-void setResults(const QList<QPlaceSearchResult> &results)
+void setResults( const QList<QPlaceSearchResult> & results )
 */
 HB_FUNC_STATIC( QPLACEMATCHREQUEST_SETRESULTS )
 {

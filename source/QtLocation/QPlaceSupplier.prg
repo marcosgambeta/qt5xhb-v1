@@ -82,7 +82,7 @@ void QPlaceSupplier_new1()
 }
 
 /*
-QPlaceSupplier(const QPlaceSupplier &other)
+QPlaceSupplier( const QPlaceSupplier & other )
 */
 void QPlaceSupplier_new2()
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_NAME )
 }
 
 /*
-void setName(const QString &data)
+void setName( const QString & data )
 */
 HB_FUNC_STATIC( QPLACESUPPLIER_SETNAME )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_SUPPLIERID )
 }
 
 /*
-void setSupplierId(const QString &identifier)
+void setSupplierId( const QString & identifier )
 */
 HB_FUNC_STATIC( QPLACESUPPLIER_SETSUPPLIERID )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_URL )
 }
 
 /*
-void setUrl(const QUrl &data)
+void setUrl( const QUrl & data )
 */
 HB_FUNC_STATIC( QPLACESUPPLIER_SETURL )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QPLACESUPPLIER_ICON )
 }
 
 /*
-void setIcon(const QPlaceIcon &icon)
+void setIcon( const QPlaceIcon & icon )
 */
 HB_FUNC_STATIC( QPLACESUPPLIER_SETICON )
 {

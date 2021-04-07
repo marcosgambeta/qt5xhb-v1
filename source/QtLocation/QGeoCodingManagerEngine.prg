@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_MANAGERVERSION )
 }
 
 /*
-virtual QGeoCodeReply *geocode(const QGeoAddress &address, const QGeoShape &bounds)
+virtual QGeoCodeReply * geocode( const QGeoAddress & address, const QGeoShape & bounds )
 */
 void QGeoCodingManagerEngine_geocode1()
 {
@@ -154,7 +154,7 @@ void QGeoCodingManagerEngine_geocode1()
 }
 
 /*
-virtual QGeoCodeReply *geocode(const QString &address, int limit, int offset, const QGeoShape &bounds)
+virtual QGeoCodeReply * geocode( const QString & address, int limit, int offset, const QGeoShape & bounds )
 */
 void QGeoCodingManagerEngine_geocode2()
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_GEOCODE )
 }
 
 /*
-virtual QGeoCodeReply *reverseGeocode(const QGeoCoordinate &coordinate, const QGeoShape &bounds)
+virtual QGeoCodeReply * reverseGeocode( const QGeoCoordinate & coordinate, const QGeoShape & bounds )
 */
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_REVERSEGEOCODE )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_REVERSEGEOCODE )
 }
 
 /*
-void setLocale(const QLocale &locale)
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QGEOCODINGMANAGERENGINE_SETLOCALE )
 {

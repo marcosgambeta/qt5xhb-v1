@@ -78,7 +78,7 @@ void QPlaceRatings_new1()
 }
 
 /*
-QPlaceRatings(const QPlaceRatings &other)
+QPlaceRatings( const QPlaceRatings & other )
 */
 void QPlaceRatings_new2()
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QPLACERATINGS_AVERAGE )
 }
 
 /*
-void setAverage(qreal average)
+void setAverage( qreal average )
 */
 HB_FUNC_STATIC( QPLACERATINGS_SETAVERAGE )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QPLACERATINGS_COUNT )
 }
 
 /*
-void setCount(int count)
+void setCount( int count )
 */
 HB_FUNC_STATIC( QPLACERATINGS_SETCOUNT )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QPLACERATINGS_MAXIMUM )
 }
 
 /*
-void setMaximum(qreal max)
+void setMaximum( qreal max )
 */
 HB_FUNC_STATIC( QPLACERATINGS_SETMAXIMUM )
 {

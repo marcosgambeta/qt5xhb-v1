@@ -83,7 +83,7 @@ void QPlaceContent_new1()
 }
 
 /*
-QPlaceContent(const QPlaceContent &other)
+QPlaceContent( const QPlaceContent & other )
 */
 void QPlaceContent_new2()
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QPLACECONTENT_SUPPLIER )
 }
 
 /*
-void setSupplier(const QPlaceSupplier &supplier)
+void setSupplier( const QPlaceSupplier & supplier )
 */
 HB_FUNC_STATIC( QPLACECONTENT_SETSUPPLIER )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QPLACECONTENT_USER )
 }
 
 /*
-void setUser(const QPlaceUser &user)
+void setUser( const QPlaceUser & user )
 */
 HB_FUNC_STATIC( QPLACECONTENT_SETUSER )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QPLACECONTENT_ATTRIBUTION )
 }
 
 /*
-void setAttribution(const QString &attribution)
+void setAttribution( const QString & attribution )
 */
 HB_FUNC_STATIC( QPLACECONTENT_SETATTRIBUTION )
 {

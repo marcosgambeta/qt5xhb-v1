@@ -18,7 +18,7 @@ REQUEST QPLACE
 
 CLASS QPlaceDetailsReply INHERIT QPlaceReply
 
-   METHOD new
+   METHOD new1
    METHOD delete
    METHOD type
    METHOD place
@@ -56,20 +56,13 @@ RETURN
 #endif
 
 /*
-explicit QPlaceDetailsReply(QObject *parent = 0)
+QPlaceDetailsReply( QObject * parent = 0 )
 */
-HB_FUNC_STATIC( QPLACEDETAILSREPLY_NEW )
+HB_FUNC_STATIC( QPLACEDETAILSREPLY_NEW1 )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
-  {
-    QPlaceDetailsReply * obj = new QPlaceDetailsReply( OPQOBJECT(1,0) );
-    Qt5xHb::returnNewObject( obj, false );
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
+  QPlaceDetailsReply * obj = new QPlaceDetailsReply( OPQOBJECT(1,0) );
+  Qt5xHb::returnNewObject( obj, false );
 #endif
 }
 

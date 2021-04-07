@@ -87,7 +87,7 @@ void QGeoManeuver_new1()
 }
 
 /*
-QGeoManeuver(const QGeoManeuver &other)
+QGeoManeuver( const QGeoManeuver & other )
 */
 void QGeoManeuver_new2()
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_ISVALID )
 }
 
 /*
-void setPosition(const QGeoCoordinate &position)
+void setPosition( const QGeoCoordinate & position )
 */
 HB_FUNC_STATIC( QGEOMANEUVER_SETPOSITION )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_POSITION )
 }
 
 /*
-void setInstructionText(const QString &instructionText)
+void setInstructionText( const QString & instructionText )
 */
 HB_FUNC_STATIC( QGEOMANEUVER_SETINSTRUCTIONTEXT )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_INSTRUCTIONTEXT )
 }
 
 /*
-void setDirection(InstructionDirection direction)
+void setDirection( QGeoManeuver::InstructionDirection direction )
 */
 HB_FUNC_STATIC( QGEOMANEUVER_SETDIRECTION )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_SETDIRECTION )
 }
 
 /*
-InstructionDirection direction() const
+QGeoManeuver::InstructionDirection direction() const
 */
 HB_FUNC_STATIC( QGEOMANEUVER_DIRECTION )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DIRECTION )
 }
 
 /*
-void setTimeToNextInstruction(int secs)
+void setTimeToNextInstruction( int secs )
 */
 HB_FUNC_STATIC( QGEOMANEUVER_SETTIMETONEXTINSTRUCTION )
 {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_TIMETONEXTINSTRUCTION )
 }
 
 /*
-void setDistanceToNextInstruction(qreal distance)
+void setDistanceToNextInstruction( qreal distance )
 */
 HB_FUNC_STATIC( QGEOMANEUVER_SETDISTANCETONEXTINSTRUCTION )
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QGEOMANEUVER_DISTANCETONEXTINSTRUCTION )
 }
 
 /*
-void setWaypoint(const QGeoCoordinate &coordinate)
+void setWaypoint( const QGeoCoordinate & coordinate )
 */
 HB_FUNC_STATIC( QGEOMANEUVER_SETWAYPOINT )
 {

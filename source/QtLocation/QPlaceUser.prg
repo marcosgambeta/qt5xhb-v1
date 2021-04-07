@@ -75,7 +75,7 @@ void QPlaceUser_new1()
 }
 
 /*
-QPlaceUser(const QPlaceUser &other)
+QPlaceUser( const QPlaceUser & other )
 */
 void QPlaceUser_new2()
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QPLACEUSER_USERID )
 }
 
 /*
-void setUserId(const QString &identifier)
+void setUserId( const QString & identifier )
 */
 HB_FUNC_STATIC( QPLACEUSER_SETUSERID )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QPLACEUSER_NAME )
 }
 
 /*
-void setName(const QString &name)
+void setName( const QString & name )
 */
 HB_FUNC_STATIC( QPLACEUSER_SETNAME )
 {

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_AVAILABLESERVICEPROVIDERS )
 }
 
 /*
-RoutingFeatures routingFeatures() const
+QGeoServiceProvider::RoutingFeatures routingFeatures() const
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ROUTINGFEATURES )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ROUTINGFEATURES )
 }
 
 /*
-GeocodingFeatures geocodingFeatures() const
+QGeoServiceProvider::GeocodingFeatures geocodingFeatures() const
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_GEOCODINGFEATURES )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_GEOCODINGFEATURES )
 }
 
 /*
-MappingFeatures mappingFeatures() const
+QGeoServiceProvider::MappingFeatures mappingFeatures() const
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_MAPPINGFEATURES )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_MAPPINGFEATURES )
 }
 
 /*
-PlacesFeatures placesFeatures() const
+QGeoServiceProvider::PlacesFeatures placesFeatures() const
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_PLACESFEATURES )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_PLACESFEATURES )
 }
 
 /*
-QGeoCodingManager *geocodingManager() const
+QGeoCodingManager * geocodingManager() const
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_GEOCODINGMANAGER )
 {
@@ -244,11 +244,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_GEOCODINGMANAGER )
 }
 
 /*
-QGeoMappingManager *mappingManager() const
-*/
-
-/*
-QGeoRoutingManager *routingManager() const
+QGeoRoutingManager * routingManager() const
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ROUTINGMANAGER )
 {
@@ -275,7 +271,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ROUTINGMANAGER )
 }
 
 /*
-QPlaceManager *placeManager() const
+QPlaceManager * placeManager() const
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_PLACEMANAGER )
 {
@@ -302,7 +298,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_PLACEMANAGER )
 }
 
 /*
-Error error() const
+QGeoServiceProvider::Error error() const
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ERROR )
 {
@@ -354,7 +350,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_ERRORSTRING )
 }
 
 /*
-void setLocale(const QLocale &locale)
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_SETLOCALE )
 {
@@ -382,7 +378,7 @@ HB_FUNC_STATIC( QGEOSERVICEPROVIDER_SETLOCALE )
 }
 
 /*
-void setAllowExperimental(bool allow)
+void setAllowExperimental( bool allow )
 */
 HB_FUNC_STATIC( QGEOSERVICEPROVIDER_SETALLOWEXPERIMENTAL )
 {

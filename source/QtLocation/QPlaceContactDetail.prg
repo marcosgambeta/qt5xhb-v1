@@ -76,7 +76,7 @@ void QPlaceContactDetail_new1()
 }
 
 /*
-QPlaceContactDetail(const QPlaceContactDetail &other)
+QPlaceContactDetail( const QPlaceContactDetail & other )
 */
 void QPlaceContactDetail_new2()
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_LABEL )
 }
 
 /*
-void setLabel(const QString &label)
+void setLabel( const QString & label )
 */
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETLABEL )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QPLACECONTACTDETAIL_VALUE )
 }
 
 /*
-void setValue(const QString &value)
+void setValue( const QString & value )
 */
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_SETVALUE )
 {

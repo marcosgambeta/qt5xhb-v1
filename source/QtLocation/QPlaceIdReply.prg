@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-explicit QPlaceIdReply(OperationType operationType, QObject *parent = 0)
+QPlaceIdReply( QPlaceIdReply::OperationType operationType, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPLACEIDREPLY_NEW )
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QPLACEIDREPLY_TYPE )
 }
 
 /*
-OperationType operationType() const
+QPlaceIdReply::OperationType operationType() const
 */
 HB_FUNC_STATIC( QPLACEIDREPLY_OPERATIONTYPE )
 {

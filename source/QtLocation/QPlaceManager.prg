@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_MANAGERVERSION )
 }
 
 /*
-QPlaceDetailsReply *getPlaceDetails(const QString &placeId) const
+QPlaceDetailsReply * getPlaceDetails( const QString & placeId ) const
 */
 HB_FUNC_STATIC( QPLACEMANAGER_GETPLACEDETAILS )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_GETPLACEDETAILS )
 }
 
 /*
-QPlaceContentReply *getPlaceContent(const QPlaceContentRequest &request) const
+QPlaceContentReply * getPlaceContent( const QPlaceContentRequest & request ) const
 */
 HB_FUNC_STATIC( QPLACEMANAGER_GETPLACECONTENT )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_GETPLACECONTENT )
 }
 
 /*
-QPlaceSearchReply *search(const QPlaceSearchRequest &query) const
+QPlaceSearchReply * search( const QPlaceSearchRequest & query ) const
 */
 HB_FUNC_STATIC( QPLACEMANAGER_SEARCH )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SEARCH )
 }
 
 /*
-QPlaceSearchSuggestionReply *searchSuggestions(const QPlaceSearchRequest &request) const
+QPlaceSearchSuggestionReply * searchSuggestions( const QPlaceSearchRequest & request ) const
 */
 HB_FUNC_STATIC( QPLACEMANAGER_SEARCHSUGGESTIONS )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SEARCHSUGGESTIONS )
 }
 
 /*
-QPlaceIdReply *savePlace(const QPlace &place)
+QPlaceIdReply * savePlace( const QPlace & place )
 */
 HB_FUNC_STATIC( QPLACEMANAGER_SAVEPLACE )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVEPLACE )
 }
 
 /*
-QPlaceIdReply *removePlace(const QString &placeId)
+QPlaceIdReply * removePlace( const QString & placeId )
 */
 HB_FUNC_STATIC( QPLACEMANAGER_REMOVEPLACE )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_REMOVEPLACE )
 }
 
 /*
-QPlaceIdReply *saveCategory(const QPlaceCategory &category, const QString &parentId = QString())
+QPlaceIdReply * saveCategory( const QPlaceCategory & category, const QString & parentId = QString() )
 */
 HB_FUNC_STATIC( QPLACEMANAGER_SAVECATEGORY )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVECATEGORY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQPLACECATEGORY(1) && (ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQPLACECATEGORY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       QPlaceIdReply * ptr = obj->saveCategory( *PQPLACECATEGORY(1), OPQSTRING(2,QString()) );
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SAVECATEGORY )
 }
 
 /*
-QPlaceIdReply *removeCategory(const QString &categoryId)
+QPlaceIdReply * removeCategory( const QString & categoryId )
 */
 HB_FUNC_STATIC( QPLACEMANAGER_REMOVECATEGORY )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_REMOVECATEGORY )
 }
 
 /*
-QPlaceReply *initializeCategories()
+QPlaceReply * initializeCategories()
 */
 HB_FUNC_STATIC( QPLACEMANAGER_INITIALIZECATEGORIES )
 {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_INITIALIZECATEGORIES )
 }
 
 /*
-QString parentCategoryId(const QString &categoryId) const
+QString parentCategoryId( const QString & categoryId ) const
 */
 HB_FUNC_STATIC( QPLACEMANAGER_PARENTCATEGORYID )
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_PARENTCATEGORYID )
 }
 
 /*
-QStringList childCategoryIds(const QString &parentId = QString()) const
+QStringList childCategoryIds( const QString & parentId = QString() ) const
 */
 HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORYIDS )
 {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORYIDS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       RQSTRINGLIST( obj->childCategoryIds( OPQSTRING(1,QString()) ) );
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORYIDS )
 }
 
 /*
-QPlaceCategory category(const QString &categoryId) const
+QPlaceCategory category( const QString & categoryId ) const
 */
 HB_FUNC_STATIC( QPLACEMANAGER_CATEGORY )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CATEGORY )
 }
 
 /*
-QList<QPlaceCategory> childCategories(const QString &parentId = QString()) const
+QList<QPlaceCategory> childCategories( const QString & parentId = QString() ) const
 */
 HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
 {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_CHILDCATEGORIES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       QList<QPlaceCategory> list = obj->childCategories( OPQSTRING(1,QString()) );
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_LOCALES )
 }
 
 /*
-void setLocales(const QList<QLocale> &locale)
+void setLocales( const QList<QLocale> & locale )
 */
 HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALES )
 {
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALES )
 }
 
 /*
-void setLocale(const QLocale &locale)
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALE )
 {
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_SETLOCALE )
 }
 
 /*
-QPlace compatiblePlace(const QPlace &place)
+QPlace compatiblePlace( const QPlace & place )
 */
 HB_FUNC_STATIC( QPLACEMANAGER_COMPATIBLEPLACE )
 {
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QPLACEMANAGER_COMPATIBLEPLACE )
 }
 
 /*
-QPlaceMatchReply *matchingPlaces(const QPlaceMatchRequest &request) const
+QPlaceMatchReply * matchingPlaces( const QPlaceMatchRequest & request ) const
 */
 HB_FUNC_STATIC( QPLACEMANAGER_MATCHINGPLACES )
 {
