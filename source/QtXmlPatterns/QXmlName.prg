@@ -63,7 +63,7 @@ RETURN
 #endif
 
 /*
-QXmlName ()
+QXmlName()
 */
 void QXmlName_new1()
 {
@@ -72,7 +72,7 @@ void QXmlName_new1()
 }
 
 /*
-QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
+QXmlName( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 */
 void QXmlName_new2()
 {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QXMLNAME_NEW )
   {
     QXmlName_new1();
   }
-  else if( ISBETWEEN(2,4) && ISQXMLNAMEPOOL(1) && HB_ISCHAR(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISCHAR(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISQXMLNAMEPOOL(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISCHAR(4)||HB_ISNIL(4)) )
   {
     QXmlName_new2();
   }
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QXMLNAME_DELETE )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QXMLNAME_ISNULL )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QXMLNAME_ISNULL )
 }
 
 /*
-QString localName ( const QXmlNamePool & namePool ) const
+QString localName( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
 }
 
 /*
-QString namespaceUri ( const QXmlNamePool & namePool ) const
+QString namespaceUri( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
 }
 
 /*
-QString prefix ( const QXmlNamePool & namePool ) const
+QString prefix( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_PREFIX )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QXMLNAME_PREFIX )
 }
 
 /*
-QString toClarkName ( const QXmlNamePool & namePool ) const
+QString toClarkName( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
 }
 
 /*
-static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
+static QXmlName fromClarkName( const QString & clarkName, const QXmlNamePool & namePool )
 */
 HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 }
 
 /*
-static bool isNCName ( const QString & candidate )
+static bool isNCName( const QString & candidate )
 */
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {

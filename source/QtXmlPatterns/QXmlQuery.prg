@@ -80,7 +80,7 @@ RETURN
 #include <QtXmlPatterns/QAbstractUriResolver>
 
 /*
-QXmlQuery ()
+QXmlQuery()
 */
 void QXmlQuery_new1()
 {
@@ -89,7 +89,7 @@ void QXmlQuery_new1()
 }
 
 /*
-QXmlQuery ( const QXmlQuery & other )
+QXmlQuery( const QXmlQuery & other )
 */
 void QXmlQuery_new2()
 {
@@ -98,7 +98,7 @@ void QXmlQuery_new2()
 }
 
 /*
-QXmlQuery ( const QXmlNamePool & np )
+QXmlQuery( const QXmlNamePool & np )
 */
 void QXmlQuery_new3()
 {
@@ -107,7 +107,7 @@ void QXmlQuery_new3()
 }
 
 /*
-QXmlQuery ( QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool() )
+QXmlQuery( QXmlQuery::QueryLanguage queryLanguage, const QXmlNamePool & np = QXmlNamePool() )
 */
 void QXmlQuery_new4()
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QXMLQUERY_DELETE )
 }
 
 /*
-void bindVariable ( const QXmlName & name, const QXmlItem & value )
+void bindVariable( const QXmlName & name, const QXmlItem & value )
 */
 void QXmlQuery_bindVariable1()
 {
@@ -172,7 +172,7 @@ void QXmlQuery_bindVariable1()
 }
 
 /*
-void bindVariable ( const QXmlName & name, QIODevice * device )
+void bindVariable( const QXmlName & name, QIODevice * device )
 */
 void QXmlQuery_bindVariable2()
 {
@@ -187,7 +187,7 @@ void QXmlQuery_bindVariable2()
 }
 
 /*
-void bindVariable ( const QXmlName & name, const QXmlQuery & query )
+void bindVariable( const QXmlName & name, const QXmlQuery & query )
 */
 void QXmlQuery_bindVariable3()
 {
@@ -202,7 +202,7 @@ void QXmlQuery_bindVariable3()
 }
 
 /*
-void bindVariable ( const QString & localName, const QXmlItem & value )
+void bindVariable( const QString & localName, const QXmlItem & value )
 */
 void QXmlQuery_bindVariable4()
 {
@@ -217,7 +217,7 @@ void QXmlQuery_bindVariable4()
 }
 
 /*
-void bindVariable ( const QString & localName, QIODevice * device )
+void bindVariable( const QString & localName, QIODevice * device )
 */
 void QXmlQuery_bindVariable5()
 {
@@ -232,7 +232,7 @@ void QXmlQuery_bindVariable5()
 }
 
 /*
-void bindVariable ( const QString & localName, const QXmlQuery & query )
+void bindVariable( const QString & localName, const QXmlQuery & query )
 */
 void QXmlQuery_bindVariable6()
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QXMLQUERY_BINDVARIABLE )
 }
 
 /*
-void evaluateTo ( QXmlResultItems * result ) const
+void evaluateTo( QXmlResultItems * result ) const
 */
 void QXmlQuery_evaluateTo1()
 {
@@ -294,7 +294,7 @@ void QXmlQuery_evaluateTo1()
 }
 
 /*
-bool evaluateTo ( QAbstractXmlReceiver * callback ) const
+bool evaluateTo( QAbstractXmlReceiver * callback ) const
 */
 void QXmlQuery_evaluateTo2()
 {
@@ -307,15 +307,7 @@ void QXmlQuery_evaluateTo2()
 }
 
 /*
-bool evaluateTo ( QStringList * target ) const
-*/
-
-/*
-bool evaluateTo ( QString * output ) const
-*/
-
-/*
-bool evaluateTo ( QIODevice * target ) const
+bool evaluateTo( QIODevice * target ) const
 */
 void QXmlQuery_evaluateTo5()
 {
@@ -348,7 +340,7 @@ HB_FUNC_STATIC( QXMLQUERY_EVALUATETO )
 }
 
 /*
-QXmlName initialTemplateName () const
+QXmlName initialTemplateName() const
 */
 HB_FUNC_STATIC( QXMLQUERY_INITIALTEMPLATENAME )
 {
@@ -373,7 +365,7 @@ HB_FUNC_STATIC( QXMLQUERY_INITIALTEMPLATENAME )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QXMLQUERY_ISVALID )
 {
@@ -397,7 +389,7 @@ HB_FUNC_STATIC( QXMLQUERY_ISVALID )
 }
 
 /*
-QAbstractMessageHandler * messageHandler () const
+QAbstractMessageHandler * messageHandler() const
 */
 HB_FUNC_STATIC( QXMLQUERY_MESSAGEHANDLER )
 {
@@ -422,7 +414,7 @@ HB_FUNC_STATIC( QXMLQUERY_MESSAGEHANDLER )
 }
 
 /*
-QXmlNamePool namePool () const
+QXmlNamePool namePool() const
 */
 HB_FUNC_STATIC( QXMLQUERY_NAMEPOOL )
 {
@@ -447,7 +439,7 @@ HB_FUNC_STATIC( QXMLQUERY_NAMEPOOL )
 }
 
 /*
-QNetworkAccessManager * networkAccessManager () const
+QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QXMLQUERY_NETWORKACCESSMANAGER )
 {
@@ -472,7 +464,7 @@ HB_FUNC_STATIC( QXMLQUERY_NETWORKACCESSMANAGER )
 }
 
 /*
-QueryLanguage queryLanguage () const
+QXmlQuery::QueryLanguage queryLanguage() const
 */
 HB_FUNC_STATIC( QXMLQUERY_QUERYLANGUAGE )
 {
@@ -496,7 +488,7 @@ HB_FUNC_STATIC( QXMLQUERY_QUERYLANGUAGE )
 }
 
 /*
-void setFocus ( const QXmlItem & item )
+void setFocus( const QXmlItem & item )
 */
 void QXmlQuery_setFocus1()
 {
@@ -511,7 +503,7 @@ void QXmlQuery_setFocus1()
 }
 
 /*
-bool setFocus ( const QUrl & documentURI )
+bool setFocus( const QUrl & documentURI )
 */
 void QXmlQuery_setFocus2()
 {
@@ -524,7 +516,7 @@ void QXmlQuery_setFocus2()
 }
 
 /*
-bool setFocus ( QIODevice * document )
+bool setFocus( QIODevice * document )
 */
 void QXmlQuery_setFocus3()
 {
@@ -537,7 +529,7 @@ void QXmlQuery_setFocus3()
 }
 
 /*
-bool setFocus ( const QString & focus )
+bool setFocus( const QString & focus )
 */
 void QXmlQuery_setFocus4()
 {
@@ -574,7 +566,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
 }
 
 /*
-void setInitialTemplateName ( const QXmlName & name )
+void setInitialTemplateName( const QXmlName & name )
 */
 void QXmlQuery_setInitialTemplateName1()
 {
@@ -589,7 +581,7 @@ void QXmlQuery_setInitialTemplateName1()
 }
 
 /*
-void setInitialTemplateName ( const QString & localName )
+void setInitialTemplateName( const QString & localName )
 */
 void QXmlQuery_setInitialTemplateName2()
 {
@@ -620,7 +612,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME )
 }
 
 /*
-void setMessageHandler ( QAbstractMessageHandler * aMessageHandler )
+void setMessageHandler( QAbstractMessageHandler * aMessageHandler )
 */
 HB_FUNC_STATIC( QXMLQUERY_SETMESSAGEHANDLER )
 {
@@ -646,7 +638,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETMESSAGEHANDLER )
 }
 
 /*
-void setNetworkAccessManager ( QNetworkAccessManager * newManager )
+void setNetworkAccessManager( QNetworkAccessManager * newManager )
 */
 HB_FUNC_STATIC( QXMLQUERY_SETNETWORKACCESSMANAGER )
 {
@@ -672,7 +664,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETNETWORKACCESSMANAGER )
 }
 
 /*
-void setQuery ( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
+void setQuery( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
 */
 void QXmlQuery_setQuery1()
 {
@@ -687,7 +679,7 @@ void QXmlQuery_setQuery1()
 }
 
 /*
-void setQuery ( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
+void setQuery( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
 */
 void QXmlQuery_setQuery2()
 {
@@ -702,7 +694,7 @@ void QXmlQuery_setQuery2()
 }
 
 /*
-void setQuery ( const QString & sourceCode, const QUrl & documentURI = QUrl() )
+void setQuery( const QString & sourceCode, const QUrl & documentURI = QUrl() )
 */
 void QXmlQuery_setQuery3()
 {
@@ -737,7 +729,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 }
 
 /*
-void setUriResolver ( const QAbstractUriResolver * resolver )
+void setUriResolver( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLQUERY_SETURIRESOLVER )
 {
@@ -763,7 +755,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETURIRESOLVER )
 }
 
 /*
-const QAbstractUriResolver * uriResolver () const
+const QAbstractUriResolver * uriResolver() const
 */
 HB_FUNC_STATIC( QXMLQUERY_URIRESOLVER )
 {

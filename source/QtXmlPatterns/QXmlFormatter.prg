@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
+QXmlFormatter( const QXmlQuery & query, QIODevice * outputDevice )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_DELETE )
 }
 
 /*
-int indentationDepth () const
+int indentationDepth() const
 */
 HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_INDENTATIONDEPTH )
 }
 
 /*
-void setIndentationDepth ( int depth )
+void setIndentationDepth( int depth )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_SETINDENTATIONDEPTH )
 }
 
 /*
-virtual void atomicValue ( const QVariant & value )
+virtual void atomicValue( const QVariant & value )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATOMICVALUE )
 }
 
 /*
-virtual void attribute ( const QXmlName & name, const QStringRef & value )
+virtual void attribute( const QXmlName & name, const QStringRef & value )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ATTRIBUTE )
 }
 
 /*
-virtual void characters ( const QStringRef & value )
+virtual void characters( const QStringRef & value )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_CHARACTERS )
 }
 
 /*
-virtual void comment ( const QString & value )
+virtual void comment( const QString & value )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_COMMENT )
 }
 
 /*
-virtual void endDocument ()
+virtual void endDocument()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDDOCUMENT )
 }
 
 /*
-virtual void endElement ()
+virtual void endElement()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDELEMENT )
 }
 
 /*
-virtual void endOfSequence ()
+virtual void endOfSequence()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_ENDOFSEQUENCE )
 }
 
 /*
-virtual void processingInstruction ( const QXmlName & name, const QString & value )
+virtual void processingInstruction( const QXmlName & name, const QString & value )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_PROCESSINGINSTRUCTION )
 }
 
 /*
-virtual void startDocument ()
+virtual void startDocument()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTDOCUMENT )
 }
 
 /*
-virtual void startElement ( const QXmlName & name )
+virtual void startElement( const QXmlName & name )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_STARTELEMENT )
 }
 
 /*
-virtual void startOfSequence ()
+virtual void startOfSequence()
 */
 HB_FUNC_STATIC( QXMLFORMATTER_STARTOFSEQUENCE )
 {

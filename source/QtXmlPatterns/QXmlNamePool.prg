@@ -56,7 +56,7 @@ RETURN
 #endif
 
 /*
-QXmlNamePool ()
+QXmlNamePool()
 */
 void QXmlNamePool_new1()
 {
@@ -65,7 +65,7 @@ void QXmlNamePool_new1()
 }
 
 /*
-QXmlNamePool ( const QXmlNamePool & other )
+QXmlNamePool( const QXmlNamePool & other )
 */
 void QXmlNamePool_new2()
 {

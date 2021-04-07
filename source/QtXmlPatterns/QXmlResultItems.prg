@@ -62,7 +62,7 @@ RETURN
 #include <QtXmlPatterns/QXmlItem>
 
 /*
-QXmlResultItems ()
+QXmlResultItems()
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEW )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_DELETE )
 }
 
 /*
-QXmlItem current () const
+QXmlItem current() const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_CURRENT )
 }
 
 /*
-bool hasError () const
+bool hasError() const
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QXMLRESULTITEMS_HASERROR )
 }
 
 /*
-QXmlItem next ()
+QXmlItem next()
 */
 HB_FUNC_STATIC( QXMLRESULTITEMS_NEXT )
 {
