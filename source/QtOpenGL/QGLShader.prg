@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
+QGLShader( QGLShader::ShaderType type, QObject * parent = 0 )
 */
 void QGLShader_new1()
 {
@@ -69,7 +69,7 @@ void QGLShader_new1()
 }
 
 /*
-QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
+QGLShader( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
 */
 void QGLShader_new2()
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QGLSHADER_DELETE )
 }
 
 /*
-bool compileSourceCode ( const char * source )
+bool compileSourceCode( const char * source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
 }
 
 /*
-bool compileSourceCode ( const QByteArray & source )
+bool compileSourceCode( const QByteArray & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
 }
 
 /*
-bool compileSourceCode ( const QString & source )
+bool compileSourceCode( const QString & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 }
 
 /*
-bool compileSourceFile ( const QString & fileName )
+bool compileSourceFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
 }
 
 /*
-bool isCompiled () const
+bool isCompiled() const
 */
 HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QGLSHADER_ISCOMPILED )
 }
 
 /*
-QString log () const
+QString log() const
 */
 HB_FUNC_STATIC( QGLSHADER_LOG )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QGLSHADER_LOG )
 }
 
 /*
-GLuint shaderId () const
+GLuint shaderId() const
 */
 HB_FUNC_STATIC( QGLSHADER_SHADERID )
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QGLSHADER_SHADERID )
 }
 
 /*
-QGLShader::ShaderType shaderType () const
+QGLShader::ShaderType shaderType() const
 */
 HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QGLSHADER_SHADERTYPE )
 }
 
 /*
-QByteArray sourceCode () const
+QByteArray sourceCode() const
 */
 HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
 {

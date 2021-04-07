@@ -66,7 +66,7 @@ RETURN
 #endif
 
 /*
-QGLPixelBuffer ( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+QGLPixelBuffer( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 */
 void QGLPixelBuffer_new1()
 {
@@ -75,7 +75,7 @@ void QGLPixelBuffer_new1()
 }
 
 /*
-QGLPixelBuffer ( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+QGLPixelBuffer( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
 */
 void QGLPixelBuffer_new2()
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DELETE )
 }
 
 /*
-GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D )
+GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D )
 */
 void QGLPixelBuffer_bindTexture1()
 {
@@ -130,7 +130,7 @@ void QGLPixelBuffer_bindTexture1()
 }
 
 /*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
+GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
 */
 void QGLPixelBuffer_bindTexture2()
 {
@@ -143,7 +143,7 @@ void QGLPixelBuffer_bindTexture2()
 }
 
 /*
-GLuint bindTexture ( const QString & fileName )
+GLuint bindTexture( const QString & fileName )
 */
 void QGLPixelBuffer_bindTexture3()
 {
@@ -157,11 +157,11 @@ void QGLPixelBuffer_bindTexture3()
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 {
-  if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQIMAGE(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QGLPixelBuffer_bindTexture1();
   }
-  else if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQPIXMAP(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QGLPixelBuffer_bindTexture2();
   }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 }
 
 /*
-bool bindToDynamicTexture ( GLuint texture_id )
+bool bindToDynamicTexture( GLuint texture_id )
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTODYNAMICTEXTURE )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTODYNAMICTEXTURE )
 }
 
 /*
-void deleteTexture ( GLuint texture_id )
+void deleteTexture( GLuint texture_id )
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_DELETETEXTURE )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DELETETEXTURE )
 }
 
 /*
-bool doneCurrent ()
+bool doneCurrent()
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
 }
 
 /*
-void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLPixelBuffer_drawTexture1()
 {
@@ -265,7 +265,7 @@ void QGLPixelBuffer_drawTexture1()
 }
 
 /*
-void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLPixelBuffer_drawTexture2()
 {
@@ -281,11 +281,11 @@ void QGLPixelBuffer_drawTexture2()
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 {
-  if( ISBETWEEN(2,3) && ISQRECTF(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(2,3) && ISQRECTF(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QGLPixelBuffer_drawTexture1();
   }
-  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QGLPixelBuffer_drawTexture2();
   }
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 }
 
 /*
-QGLFormat format () const
+QGLFormat format() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
 }
 
 /*
-GLuint generateDynamicTexture () const
+GLuint generateDynamicTexture() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_GENERATEDYNAMICTEXTURE )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
 {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_ISVALID )
 }
 
 /*
-bool makeCurrent ()
+bool makeCurrent()
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_MAKECURRENT )
 }
 
 /*
-void releaseFromDynamicTexture ()
+void releaseFromDynamicTexture()
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_RELEASEFROMDYNAMICTEXTURE )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_RELEASEFROMDYNAMICTEXTURE )
 }
 
 /*
-QSize size () const
+QSize size() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
 }
 
 /*
-QImage toImage () const
+QImage toImage() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
 }
 
 /*
-void updateDynamicTexture ( GLuint texture_id ) const
+void updateDynamicTexture( GLuint texture_id ) const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_UPDATEDYNAMICTEXTURE )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_UPDATEDYNAMICTEXTURE )
 }
 
 /*
-virtual QPaintEngine * paintEngine () const
+virtual QPaintEngine * paintEngine() const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
 }
 
 /*
-bool hasOpenGLPbuffers ()
+bool hasOpenGLPbuffers()
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_HASOPENGLPBUFFERS )
 {
