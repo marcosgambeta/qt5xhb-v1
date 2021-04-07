@@ -89,7 +89,7 @@ RETURN
 #include <QtWidgets/QAction>
 
 /*
-explicit QWebEngineView(QWidget* parent = 0)
+QWebEngineView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_NEW )
 {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_DELETE )
 }
 
 /*
-QWebEnginePage* page() const
+QWebEnginePage * page() const
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGE )
 }
 
 /*
-void setPage(QWebEnginePage* page)
+void setPage( QWebEnginePage * page )
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETPAGE )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETPAGE )
 }
 
 /*
-void load(const QUrl& url)
+void load( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_LOAD )
 }
 
 /*
-void setHtml(const QString& html, const QUrl& baseUrl = QUrl())
+void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETHTML )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETHTML )
 }
 
 /*
-void setContent(const QByteArray& data, const QString& mimeType = QString(), const QUrl& baseUrl = QUrl())
+void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETCONTENT )
 }
 
 /*
-QWebEngineHistory* history() const
+QWebEngineHistory * history() const
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_HISTORY )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_URL )
 }
 
 /*
-void setUrl(const QUrl &url)
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETURL )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_PAGEACTION )
 }
 
 /*
-void triggerPageAction(QWebEnginePage::WebAction action, bool checked = false)
+void triggerPageAction( QWebEnginePage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_TRIGGERPAGEACTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->triggerPageAction( (QWebEnginePage::WebAction) hb_parni(1), OPBOOL(2,false) );
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_ZOOMFACTOR )
 }
 
 /*
-void setZoomFactor(qreal factor)
+void setZoomFactor( qreal factor )
 */
 HB_FUNC_STATIC( QWEBENGINEVIEW_SETZOOMFACTOR )
 {
@@ -563,10 +563,6 @@ HB_FUNC_STATIC( QWEBENGINEVIEW_SETZOOMFACTOR )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-void findText(const QString &subString, QWebEnginePage::FindFlags options = 0, const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>())
-*/
 
 /*
 virtual QSize sizeHint() const

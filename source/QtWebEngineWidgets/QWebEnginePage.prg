@@ -99,7 +99,7 @@ RETURN
 #include <QtWidgets/QMenu>
 
 /*
-explicit QWebEnginePage(QObject *parent = 0)
+QWebEnginePage( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_NEW )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_DELETE )
 }
 
 /*
-QWebEngineHistory *history() const
+QWebEngineHistory * history() const
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_HISTORY )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_HISTORY )
 }
 
 /*
-QWidget *view() const
+QWidget * view() const
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_VIEW )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_VIEW )
 }
 
 /*
-void setView(QWidget *view)
+void setView( QWidget * view )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETVIEW )
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SELECTEDTEXT )
 }
 
 /*
-QAction *action(WebAction action) const
+QAction * action( QWebEnginePage::WebAction action ) const
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_ACTION )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ACTION )
 }
 
 /*
-virtual void triggerAction(WebAction action, bool checked = false)
+virtual void triggerAction( QWebEnginePage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_TRIGGERACTION )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_TRIGGERACTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->triggerAction( (QWebEnginePage::WebAction) hb_parni(1), OPBOOL(2,false) );
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_TRIGGERACTION )
 }
 
 /*
-virtual bool event(QEvent*)
+virtual bool event( QEvent * )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_EVENT )
 {
@@ -353,11 +353,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_EVENT )
 }
 
 /*
-void findText(const QString &subString, FindFlags options = 0, const QWebEngineCallback<bool> &resultCallback = QWebEngineCallback<bool>())
-*/
-
-/*
-QMenu *createStandardContextMenu()
+QMenu * createStandardContextMenu()
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU )
 {
@@ -384,7 +380,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_CREATESTANDARDCONTEXTMENU )
 }
 
 /*
-void setFeaturePermission(const QUrl &securityOrigin, Feature feature, PermissionPolicy policy)
+void setFeaturePermission( const QUrl & securityOrigin, QWebEnginePage::Feature feature, QWebEnginePage::PermissionPolicy policy )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETFEATUREPERMISSION )
 {
@@ -412,7 +408,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETFEATUREPERMISSION )
 }
 
 /*
-void load(const QUrl &url)
+void load( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_LOAD )
 {
@@ -440,7 +436,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_LOAD )
 }
 
 /*
-void setHtml(const QString &html, const QUrl &baseUrl = QUrl())
+void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETHTML )
 {
@@ -468,7 +464,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETHTML )
 }
 
 /*
-void setContent(const QByteArray &data, const QString &mimeType = QString(), const QUrl &baseUrl = QUrl())
+void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETCONTENT )
 {
@@ -478,7 +474,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETCONTENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (ISQURL(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setContent( *PQBYTEARRAY(1), OPQSTRING(2,QString()), HB_ISNIL(3)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(3) );
@@ -494,14 +490,6 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETCONTENT )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-void toHtml(const QWebEngineCallback<const QString &> &resultCallback) const
-*/
-
-/*
-void toPlainText(const QWebEngineCallback<const QString &> &resultCallback) const
-*/
 
 /*
 QString title() const
@@ -557,7 +545,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_URL )
 }
 
 /*
-void setUrl(const QUrl &url)
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETURL )
 {
@@ -665,7 +653,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_ZOOMFACTOR )
 }
 
 /*
-void setZoomFactor(qreal factor)
+void setZoomFactor( qreal factor )
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETZOOMFACTOR )
 {
@@ -693,7 +681,7 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETZOOMFACTOR )
 }
 
 /*
-void runJavaScript(const QString& scriptSource)
+void runJavaScript( const QString & scriptSource )
 */
 void QWebEnginePage_runJavaScript1()
 {
@@ -722,7 +710,7 @@ HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 }
 
 /*
-QWebEngineSettings *settings() const
+QWebEngineSettings * settings() const
 */
 HB_FUNC_STATIC( QWEBENGINEPAGE_SETTINGS )
 {

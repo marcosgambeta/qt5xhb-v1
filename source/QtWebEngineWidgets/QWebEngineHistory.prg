@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMS )
 }
 
 /*
-QList<QWebEngineHistoryItem> backItems(int maxItems) const
+QList<QWebEngineHistoryItem> backItems( int maxItems ) const
 */
 HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_BACKITEMS )
 }
 
 /*
-QList<QWebEngineHistoryItem> forwardItems(int maxItems) const
+QList<QWebEngineHistoryItem> forwardItems( int maxItems ) const
 */
 HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEMS )
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARD )
 }
 
 /*
-void goToItem(const QWebEngineHistoryItem &item)
+void goToItem( const QWebEngineHistoryItem & item )
 */
 HB_FUNC_STATIC( QWEBENGINEHISTORY_GOTOITEM )
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QWEBENGINEHISTORY_FORWARDITEM )
 }
 
 /*
-QWebEngineHistoryItem itemAt(int i) const
+QWebEngineHistoryItem itemAt( int i ) const
 */
 HB_FUNC_STATIC( QWEBENGINEHISTORY_ITEMAT )
 {

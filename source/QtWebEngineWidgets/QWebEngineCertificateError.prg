@@ -65,7 +65,7 @@ RETURN
 #endif
 
 /*
-QWebEngineCertificateError(int error, QUrl url, bool overridable, QString errorDescription)
+QWebEngineCertificateError( int error, QUrl url, bool overridable, QString errorDescription )
 */
 HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_NEW )
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_DELETE )
 }
 
 /*
-Error error() const
+QWebEngineCertificateError::Error error() const
 */
 HB_FUNC_STATIC( QWEBENGINECERTIFICATEERROR_ERROR )
 {
