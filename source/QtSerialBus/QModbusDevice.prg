@@ -64,7 +64,7 @@ RETURN
 #endif
 
 /*
-explicit QModbusDevice(QObject *parent = nullptr)
+QModbusDevice( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QMODBUSDEVICE_NEW )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_DELETE )
 }
 
 /*
-QVariant connectionParameter(int parameter) const
+QVariant connectionParameter( int parameter ) const
 */
 HB_FUNC_STATIC( QMODBUSDEVICE_CONNECTIONPARAMETER )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_CONNECTIONPARAMETER )
 }
 
 /*
-void setConnectionParameter(int parameter, const QVariant &value)
+void setConnectionParameter( int parameter, const QVariant & value )
 */
 HB_FUNC_STATIC( QMODBUSDEVICE_SETCONNECTIONPARAMETER )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_DISCONNECTDEVICE )
 }
 
 /*
-State state() const
+QModbusDevice::State state() const
 */
 HB_FUNC_STATIC( QMODBUSDEVICE_STATE )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QMODBUSDEVICE_STATE )
 }
 
 /*
-Error error() const
+QModbusDevice::Error error() const
 */
 HB_FUNC_STATIC( QMODBUSDEVICE_ERROR )
 {

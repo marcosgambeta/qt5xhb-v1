@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-explicit QModbusClient(QObject *parent = nullptr)
+QModbusClient( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QMODBUSCLIENT_NEW )
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_TIMEOUT )
 }
 
 /*
-void setTimeout(int newTimeout)
+void setTimeout( int newTimeout )
 */
 HB_FUNC_STATIC( QMODBUSCLIENT_SETTIMEOUT )
 {
@@ -153,22 +153,6 @@ HB_FUNC_STATIC( QMODBUSCLIENT_SETTIMEOUT )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-QModbusReply *sendReadRequest(const QModbusDataUnit &read, int serverAddress)
-*/
-
-/*
-QModbusReply *sendWriteRequest(const QModbusDataUnit &write, int serverAddress)
-*/
-
-/*
-QModbusReply *sendReadWriteRequest(const QModbusDataUnit &read, const QModbusDataUnit &write, int serverAddress)
-*/
-
-/*
-QModbusReply *sendRawRequest(const QModbusRequest &request, int serverAddress)
-*/
 
 /*
 int numberOfRetries() const
@@ -197,7 +181,7 @@ HB_FUNC_STATIC( QMODBUSCLIENT_NUMBEROFRETRIES )
 }
 
 /*
-void setNumberOfRetries(int number)
+void setNumberOfRetries( int number )
 */
 HB_FUNC_STATIC( QMODBUSCLIENT_SETNUMBEROFRETRIES )
 {

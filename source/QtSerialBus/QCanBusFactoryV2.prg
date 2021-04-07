@@ -47,12 +47,4 @@ RETURN
 #endif
 #endif
 
-/*
-virtual QCanBusDevice *createDevice(const QString &interfaceName, QString *errorMessage) const = 0
-*/
-
-/*
-virtual QList<QCanBusDeviceInfo> availableDevices(QString *errorMessage) const = 0
-*/
-
 #pragma ENDDUMP

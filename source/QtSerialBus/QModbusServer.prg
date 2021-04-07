@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-explicit QModbusServer(QObject *parent = nullptr)
+QModbusServer( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QMODBUSSERVER_NEW )
 {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_SERVERADDRESS )
 }
 
 /*
-void setServerAddress(int serverAddress)
+void setServerAddress( int serverAddress )
 */
 HB_FUNC_STATIC( QMODBUSSERVER_SETSERVERADDRESS )
 {
@@ -156,10 +156,6 @@ HB_FUNC_STATIC( QMODBUSSERVER_SETSERVERADDRESS )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-virtual bool setMap(const QModbusDataUnitMap &map)
-*/
 
 /*
 virtual bool processesBroadcast() const
@@ -188,7 +184,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_PROCESSESBROADCAST )
 }
 
 /*
-virtual QVariant value(int option) const
+virtual QVariant value( int option ) const
 */
 HB_FUNC_STATIC( QMODBUSSERVER_VALUE )
 {
@@ -215,7 +211,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_VALUE )
 }
 
 /*
-virtual bool setValue(int option, const QVariant &value)
+virtual bool setValue( int option, const QVariant & value )
 */
 HB_FUNC_STATIC( QMODBUSSERVER_SETVALUE )
 {
@@ -241,15 +237,7 @@ HB_FUNC_STATIC( QMODBUSSERVER_SETVALUE )
 }
 
 /*
-bool data(QModbusDataUnit *newData) const
-*/
-
-/*
-bool setData(const QModbusDataUnit &unit)
-*/
-
-/*
-bool setData(QModbusDataUnit::RegisterType table, quint16 address, quint16 data)
+bool setData( QModbusDataUnit::RegisterType table, quint16 address, quint16 data )
 */
 HB_FUNC_STATIC( QMODBUSSERVER_SETDATA )
 {
@@ -273,10 +261,6 @@ HB_FUNC_STATIC( QMODBUSSERVER_SETDATA )
   }
 #endif
 }
-
-/*
-bool data(QModbusDataUnit::RegisterType table, quint16 address, quint16 *data) const
-*/
 
 void QModbusServerSlots_connect_signal( const QString & signal, const QString & slot );
 

@@ -81,7 +81,7 @@ RETURN
 #endif
 
 /*
-explicit QCanBusFrame(FrameType type = DataFrame) Q_DECL_NOTHROW
+QCanBusFrame( QCanBusFrame::FrameType type = QCanBusFrame::DataFrame ) Q_DECL_NOTHROW
 */
 void QCanBusFrame_new1()
 {
@@ -92,7 +92,7 @@ void QCanBusFrame_new1()
 }
 
 /*
-explicit QCanBusFrame(quint32 identifier, const QByteArray &data)
+QCanBusFrame( quint32 identifier, const QByteArray & data )
 */
 void QCanBusFrame_new2()
 {
@@ -104,7 +104,7 @@ void QCanBusFrame_new2()
 
 HB_FUNC_STATIC( QCANBUSFRAME_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QCanBusFrame_new1();
   }
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_ISVALID )
 }
 
 /*
-FrameType frameType() const Q_DECL_NOTHROW
+QCanBusFrame::FrameType frameType() const Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCANBUSFRAME_FRAMETYPE )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_FRAMETYPE )
 }
 
 /*
-void setFrameType(FrameType newFormat) Q_DECL_NOTHROW
+void setFrameType( QCanBusFrame::FrameType newFormat ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCANBUSFRAME_SETFRAMETYPE )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASEXTENDEDFRAMEFORMAT )
 }
 
 /*
-void setExtendedFrameFormat(bool isExtended) Q_DECL_NOTHROW
+void setExtendedFrameFormat( bool isExtended ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCANBUSFRAME_SETEXTENDEDFRAMEFORMAT )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_FRAMEID )
 }
 
 /*
-void setFrameId(quint32 newFrameId)
+void setFrameId( quint32 newFrameId )
 */
 HB_FUNC_STATIC( QCANBUSFRAME_SETFRAMEID )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETFRAMEID )
 }
 
 /*
-void setPayload(const QByteArray &data)
+void setPayload( const QByteArray & data )
 */
 HB_FUNC_STATIC( QCANBUSFRAME_SETPAYLOAD )
 {
@@ -352,10 +352,6 @@ HB_FUNC_STATIC( QCANBUSFRAME_SETPAYLOAD )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
-/*
-void setTimeStamp(TimeStamp ts) Q_DECL_NOTHROW
-*/
 
 /*
 QByteArray payload() const
@@ -385,11 +381,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_PAYLOAD )
 }
 
 /*
-TimeStamp timeStamp() const Q_DECL_NOTHROW
-*/
-
-/*
-FrameErrors error() const Q_DECL_NOTHROW
+QCanBusFrame::FrameErrors error() const Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCANBUSFRAME_ERROR )
 {
@@ -415,7 +407,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_ERROR )
 }
 
 /*
-void setError(FrameErrors e)
+void setError( QCanBusFrame::FrameErrors e )
 */
 HB_FUNC_STATIC( QCANBUSFRAME_SETERROR )
 {
@@ -495,7 +487,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASFLEXIBLEDATARATEFORMAT )
 }
 
 /*
-void setFlexibleDataRateFormat(bool isFlexibleData) Q_DECL_NOTHROW
+void setFlexibleDataRateFormat( bool isFlexibleData ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCANBUSFRAME_SETFLEXIBLEDATARATEFORMAT )
 {
@@ -549,7 +541,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASBITRATESWITCH )
 }
 
 /*
-void setBitrateSwitch(bool bitrateSwitch) Q_DECL_NOTHROW
+void setBitrateSwitch( bool bitrateSwitch ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCANBUSFRAME_SETBITRATESWITCH )
 {
@@ -603,7 +595,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASERRORSTATEINDICATOR )
 }
 
 /*
-void setErrorStateIndicator(bool errorStateIndicator) Q_DECL_NOTHROW
+void setErrorStateIndicator( bool errorStateIndicator ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCANBUSFRAME_SETERRORSTATEINDICATOR )
 {
@@ -657,7 +649,7 @@ HB_FUNC_STATIC( QCANBUSFRAME_HASLOCALECHO )
 }
 
 /*
-void setLocalEcho(bool localEcho) Q_DECL_NOTHROW
+void setLocalEcho( bool localEcho ) Q_DECL_NOTHROW
 */
 HB_FUNC_STATIC( QCANBUSFRAME_SETLOCALECHO )
 {

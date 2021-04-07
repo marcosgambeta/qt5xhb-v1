@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-QModbusReply(ReplyType type, int serverAddress, QObject *parent = nullptr)
+QModbusReply( QModbusReply::ReplyType type, int serverAddress, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QMODBUSREPLY_NEW )
 {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_NEW )
 }
 
 /*
-ReplyType type() const
+QModbusReply::ReplyType type() const
 */
 HB_FUNC_STATIC( QMODBUSREPLY_TYPE )
 {
@@ -158,14 +158,6 @@ HB_FUNC_STATIC( QMODBUSREPLY_ISFINISHED )
 }
 
 /*
-QModbusDataUnit result() const
-*/
-
-/*
-QModbusResponse rawResult() const
-*/
-
-/*
 QString errorString() const
 */
 HB_FUNC_STATIC( QMODBUSREPLY_ERRORSTRING )
@@ -218,15 +210,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_ERROR )
 }
 
 /*
-void setResult(const QModbusDataUnit &unit)
-*/
-
-/*
-void setRawResult(const QModbusResponse &unit)
-*/
-
-/*
-void setFinished(bool isFinished)
+void setFinished( bool isFinished )
 */
 HB_FUNC_STATIC( QMODBUSREPLY_SETFINISHED )
 {
@@ -254,7 +238,7 @@ HB_FUNC_STATIC( QMODBUSREPLY_SETFINISHED )
 }
 
 /*
-void setError(QModbusDevice::Error error, const QString &errorText)
+void setError( QModbusDevice::Error error, const QString & errorText )
 */
 HB_FUNC_STATIC( QMODBUSREPLY_SETERROR )
 {

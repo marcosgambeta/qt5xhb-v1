@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-explicit QModbusRtuSerialMaster(QObject *parent = nullptr)
+QModbusRtuSerialMaster( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_NEW )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_INTERFRAMEDELAY )
 }
 
 /*
-void setInterFrameDelay(int microseconds)
+void setInterFrameDelay( int microseconds )
 */
 HB_FUNC_STATIC( QMODBUSRTUSERIALMASTER_SETINTERFRAMEDELAY )
 {

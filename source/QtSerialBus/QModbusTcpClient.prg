@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-explicit QModbusTcpClient(QObject *parent = nullptr)
+QModbusTcpClient( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QMODBUSTCPCLIENT_NEW )
 {

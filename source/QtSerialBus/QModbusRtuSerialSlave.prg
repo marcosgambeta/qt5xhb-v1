@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-explicit QModbusRtuSerialSlave(QObject *parent = nullptr)
+QModbusRtuSerialSlave( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QMODBUSRTUSERIALSLAVE_NEW )
 {
