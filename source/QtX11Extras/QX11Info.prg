@@ -114,13 +114,13 @@ HB_FUNC_STATIC( QX11INFO_ISPLATFORMX11 )
 }
 
 /*
-static int appDpiX(int screen=-1)
+static int appDpiX( int screen = -1 )
 */
 HB_FUNC_STATIC( QX11INFO_APPDPIX )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
   {
 #endif
     RINT( QX11Info::appDpiX( OPINT(1,-1) ) );
@@ -135,13 +135,13 @@ HB_FUNC_STATIC( QX11INFO_APPDPIX )
 }
 
 /*
-static int appDpiY(int screen=-1)
+static int appDpiY( int screen = -1 )
 */
 HB_FUNC_STATIC( QX11INFO_APPDPIY )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
   {
 #endif
     RINT( QX11Info::appDpiY( OPINT(1,-1) ) );
@@ -156,13 +156,13 @@ HB_FUNC_STATIC( QX11INFO_APPDPIY )
 }
 
 /*
-static unsigned long appRootWindow(int screen=-1)
+static unsigned long appRootWindow( int screen = -1 )
 */
 HB_FUNC_STATIC( QX11INFO_APPROOTWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
   {
 #endif
     RUNSIGNEDLONG( QX11Info::appRootWindow( OPINT(1,-1) ) );
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QX11INFO_APPUSERTIME )
 }
 
 /*
-static void setAppTime(unsigned long time)
+static void setAppTime( unsigned long time )
 */
 HB_FUNC_STATIC( QX11INFO_SETAPPTIME )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QX11INFO_SETAPPTIME )
 }
 
 /*
-static void setAppUserTime(unsigned long time)
+static void setAppUserTime( unsigned long time )
 */
 HB_FUNC_STATIC( QX11INFO_SETAPPUSERTIME )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QX11INFO_GETTIMESTAMP )
 }
 
 /*
-static Display *display()
+static Display * display()
 */
 HB_FUNC_STATIC( QX11INFO_DISPLAY )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QX11INFO_DISPLAY )
 }
 
 /*
-static xcb_connection_t *connection()
+static xcb_connection_t * connection()
 */
 HB_FUNC_STATIC( QX11INFO_CONNECTION )
 {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QX11INFO_NEXTSTARTUPID )
 }
 
 /*
-static void setNextStartupId(const QByteArray &id)
+static void setNextStartupId( const QByteArray & id )
 */
 HB_FUNC_STATIC( QX11INFO_SETNEXTSTARTUPID )
 {
