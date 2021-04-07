@@ -53,7 +53,7 @@ RETURN
 #endif
 
 /*
-QWinColorizationChangeEvent(QRgb color, bool opaque)
+QWinColorizationChangeEvent( QRgb color, bool opaque )
 */
 HB_FUNC_STATIC( QWINCOLORIZATIONCHANGEEVENT_NEW )
 {

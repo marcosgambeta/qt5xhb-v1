@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QWinEvent(int type)
+QWinEvent( int type )
 */
 HB_FUNC_STATIC( QWINEVENT_NEW )
 {

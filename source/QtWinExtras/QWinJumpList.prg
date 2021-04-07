@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-explicit QWinJumpList(QObject *parent = 0)
+QWinJumpList( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWINJUMPLIST_NEW )
 {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_IDENTIFIER )
 }
 
 /*
-void setIdentifier(const QString &identifier)
+void setIdentifier( const QString & identifier )
 */
 HB_FUNC_STATIC( QWINJUMPLIST_SETIDENTIFIER )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_SETIDENTIFIER )
 }
 
 /*
-QWinJumpListCategory *recent() const
+QWinJumpListCategory * recent() const
 */
 HB_FUNC_STATIC( QWINJUMPLIST_RECENT )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_RECENT )
 }
 
 /*
-QWinJumpListCategory *frequent() const
+QWinJumpListCategory * frequent() const
 */
 HB_FUNC_STATIC( QWINJUMPLIST_FREQUENT )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_FREQUENT )
 }
 
 /*
-QWinJumpListCategory *tasks() const
+QWinJumpListCategory * tasks() const
 */
 HB_FUNC_STATIC( QWINJUMPLIST_TASKS )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
 }
 
 /*
-void addCategory(QWinJumpListCategory *category)
+void addCategory( QWinJumpListCategory * category )
 */
 void QWinJumpList_addCategory1()
 {

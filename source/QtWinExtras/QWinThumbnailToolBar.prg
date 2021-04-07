@@ -65,7 +65,7 @@ RETURN
 #include <QtGui/QWindow>
 
 /*
-explicit QWinThumbnailToolBar(QObject *parent = 0)
+QWinThumbnailToolBar( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_NEW )
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_DELETE )
 }
 
 /*
-QWindow *window() const
+QWindow * window() const
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_WINDOW )
 }
 
 /*
-void setWindow(QWindow *window)
+void setWindow( QWindow * window )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETWINDOW )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETWINDOW )
 }
 
 /*
-void addButton(QWinThumbnailToolButton *button)
+void addButton( QWinThumbnailToolButton * button )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_ADDBUTTON )
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_ADDBUTTON )
 }
 
 /*
-void removeButton(QWinThumbnailToolButton *button)
+void removeButton( QWinThumbnailToolButton * button )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_REMOVEBUTTON )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_REMOVEBUTTON )
 }
 
 /*
-void setButtons(const QList<QWinThumbnailToolButton *> &buttons)
+void setButtons( const QList<QWinThumbnailToolButton *> & buttons )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBAR_SETBUTTONS )
 {

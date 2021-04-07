@@ -52,7 +52,7 @@ RETURN
 #endif
 
 /*
-explicit QWinCompositionChangeEvent(bool enabled)
+QWinCompositionChangeEvent( bool enabled )
 */
 HB_FUNC_STATIC( QWINCOMPOSITIONCHANGEEVENT_NEW )
 {

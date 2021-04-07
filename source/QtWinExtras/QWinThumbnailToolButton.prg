@@ -72,7 +72,7 @@ RETURN
 #endif
 
 /*
-explicit QWinThumbnailToolButton(QObject *parent = 0)
+QWinThumbnailToolButton( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_NEW )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_TOOLTIP )
 }
 
 /*
-void setToolTip(const QString &toolTip)
+void setToolTip( const QString & toolTip )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETTOOLTIP )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ICON )
 }
 
 /*
-void setIcon(const QIcon &icon)
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETICON )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISENABLED )
 }
 
 /*
-void setEnabled(bool enabled)
+void setEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETENABLED )
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISINTERACTIVE )
 }
 
 /*
-void setInteractive(bool interactive)
+void setInteractive( bool interactive )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETINTERACTIVE )
 {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISVISIBLE )
 }
 
 /*
-void setVisible(bool visible)
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETVISIBLE )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_DISMISSONCLICK )
 }
 
 /*
-void setDismissOnClick(bool dismiss)
+void setDismissOnClick( bool dismiss )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETDISMISSONCLICK )
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_ISFLAT )
 }
 
 /*
-void setFlat(bool flat)
+void setFlat( bool flat )
 */
 HB_FUNC_STATIC( QWINTHUMBNAILTOOLBUTTON_SETFLAT )
 {

@@ -74,12 +74,12 @@ RETURN
 #endif
 
 /*
-explicit QWinJumpListCategory(const QString &title = QString())
+QWinJumpListCategory( const QString & title = QString() )
 */
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
   {
     QWinJumpListCategory * obj = new QWinJumpListCategory( OPQSTRING(1,QString()) );
     Qt5xHb::returnNewObject( obj, true );
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_DELETE )
 }
 
 /*
-Type type() const
+QWinJumpListCategory::Type type() const
 */
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TYPE )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ISVISIBLE )
 }
 
 /*
-void setVisible(bool visible)
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETVISIBLE )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_TITLE )
 }
 
 /*
-void setTitle(const QString &title)
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_SETTITLE )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ITEMS )
 }
 
 /*
-void addItem(QWinJumpListItem *item)
+void addItem( QWinJumpListItem * item )
 */
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDITEM )
 {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDITEM )
 }
 
 /*
-QWinJumpListItem *addDestination(const QString &filePath)
+QWinJumpListItem * addDestination( const QString & filePath )
 */
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
 {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDDESTINATION )
 }
 
 /*
-QWinJumpListItem *addLink(const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
+QWinJumpListItem * addLink( const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
 */
 void QWinJumpListCategory_addLink1()
 {
@@ -418,7 +418,7 @@ void QWinJumpListCategory_addLink1()
 }
 
 /*
-QWinJumpListItem *addLink(const QIcon &icon, const QString &title, const QString &executablePath, const QStringList &arguments = QStringList())
+QWinJumpListItem * addLink( const QIcon & icon, const QString & title, const QString & executablePath, const QStringList & arguments = QStringList() )
 */
 void QWinJumpListCategory_addLink2()
 {
@@ -435,11 +435,11 @@ void QWinJumpListCategory_addLink2()
 
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 {
-  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (ISARRAY(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISARRAY(3)||HB_ISNIL(3)) )
   {
     QWinJumpListCategory_addLink1();
   }
-  else if( ISBETWEEN(3,4) && ISQICON(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (ISARRAY(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQICON(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ( HB_ISARRAY(4)||HB_ISNIL(4)) )
   {
     QWinJumpListCategory_addLink2();
   }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDLINK )
 }
 
 /*
-QWinJumpListItem *addSeparator()
+QWinJumpListItem * addSeparator()
 */
 HB_FUNC_STATIC( QWINJUMPLISTCATEGORY_ADDSEPARATOR )
 {

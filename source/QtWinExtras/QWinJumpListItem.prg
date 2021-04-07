@@ -75,7 +75,7 @@ RETURN
 #endif
 
 /*
-explicit QWinJumpListItem(Type type)
+QWinJumpListItem( QWinJumpListItem::Type type )
 */
 HB_FUNC_STATIC( QWINJUMPLISTITEM_NEW )
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_DELETE )
 }
 
 /*
-Type type() const
+QWinJumpListItem::Type type() const
 */
 HB_FUNC_STATIC( QWINJUMPLISTITEM_TYPE )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_TYPE )
 }
 
 /*
-void setType(Type type)
+void setType( QWinJumpListItem::Type type )
 */
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTYPE )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_FILEPATH )
 }
 
 /*
-void setFilePath(const QString &filePath)
+void setFilePath( const QString & filePath )
 */
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETFILEPATH )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_WORKINGDIRECTORY )
 }
 
 /*
-void setWorkingDirectory(const QString &workingDirectory)
+void setWorkingDirectory( const QString & workingDirectory )
 */
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETWORKINGDIRECTORY )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_ICON )
 }
 
 /*
-void setIcon(const QIcon &icon)
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETICON )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_SETICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_TITLE )
 }
 
 /*
-void setTitle(const QString &title)
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETTITLE )
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_DESCRIPTION )
 }
 
 /*
-void setDescription(const QString &description)
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETDESCRIPTION )
 {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QWINJUMPLISTITEM_ARGUMENTS )
 }
 
 /*
-void setArguments(const QStringList &arguments)
+void setArguments( const QStringList & arguments )
 */
 HB_FUNC_STATIC( QWINJUMPLISTITEM_SETARGUMENTS )
 {

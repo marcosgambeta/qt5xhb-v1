@@ -93,7 +93,7 @@ RETURN
 #endif
 
 /*
-static HBITMAP createMask(const QBitmap &bitmap)
+static HBITMAP createMask( const QBitmap & bitmap )
 */
 HB_FUNC_STATIC( QTWIN_CREATEMASK )
 {
@@ -114,13 +114,13 @@ HB_FUNC_STATIC( QTWIN_CREATEMASK )
 }
 
 /*
-static HBITMAP toHBITMAP(const QPixmap &p, HBitmapFormat format = HBitmapNoAlpha)
+static HBITMAP toHBITMAP( const QPixmap & p, QtWin::HBitmapFormat format = QtWin::HBitmapNoAlpha )
 */
 HB_FUNC_STATIC( QTWIN_TOHBITMAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
 #endif
     hb_retptr( (HBITMAP) QtWin::toHBITMAP( *PQPIXMAP(1), HB_ISNIL(2)? (QtWin::HBitmapFormat) QtWin::HBitmapNoAlpha : (QtWin::HBitmapFormat) hb_parni(2) ) );
@@ -135,13 +135,13 @@ HB_FUNC_STATIC( QTWIN_TOHBITMAP )
 }
 
 /*
-static QPixmap fromHBITMAP(HBITMAP bitmap, HBitmapFormat format = HBitmapNoAlpha)
+static QPixmap fromHBITMAP( HBITMAP bitmap, QtWin::HBitmapFormat format = QtWin::HBitmapNoAlpha )
 */
 HB_FUNC_STATIC( QTWIN_FROMHBITMAP )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && HB_ISPOINTER(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISPOINTER(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
 #endif
     QPixmap * ptr = new QPixmap( QtWin::fromHBITMAP( (HBITMAP) hb_parptr(1), HB_ISNIL(2)? (QtWin::HBitmapFormat) QtWin::HBitmapNoAlpha : (QtWin::HBitmapFormat) hb_parni(2) ) );
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTWIN_FROMHBITMAP )
 }
 
 /*
-static HICON toHICON(const QPixmap &p)
+static HICON toHICON( const QPixmap & p )
 */
 HB_FUNC_STATIC( QTWIN_TOHICON )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QTWIN_TOHICON )
 }
 
 /*
-static QImage imageFromHBITMAP(HDC hdc, HBITMAP bitmap, int width, int height)
+static QImage imageFromHBITMAP( HDC hdc, HBITMAP bitmap, int width, int height )
 */
 HB_FUNC_STATIC( QTWIN_IMAGEFROMHBITMAP )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QTWIN_IMAGEFROMHBITMAP )
 }
 
 /*
-static QPixmap fromHICON(HICON icon)
+static QPixmap fromHICON( HICON icon )
 */
 HB_FUNC_STATIC( QTWIN_FROMHICON )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTWIN_FROMHICON )
 }
 
 /*
-static HRGN toHRGN(const QRegion &region)
+static HRGN toHRGN( const QRegion & region )
 */
 HB_FUNC_STATIC( QTWIN_TOHRGN )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QTWIN_TOHRGN )
 }
 
 /*
-static QRegion fromHRGN(HRGN hrgn)
+static QRegion fromHRGN( HRGN hrgn )
 */
 HB_FUNC_STATIC( QTWIN_FROMHRGN )
 {
@@ -311,13 +311,13 @@ HB_FUNC_STATIC( QTWIN_ERRORSTRINGFROMHRESULT )
 }
 
 /*
-static QColor colorizationColor(bool *opaqueBlend = 0)
+static QColor colorizationColor( bool * opaqueBlend = 0 )
 */
 HB_FUNC_STATIC( QTWIN_COLORIZATIONCOLOR )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
   {
 #endif
     bool par1;
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QTWIN_REALCOLORIZATIONCOLOR )
 }
 
 /*
-static void setWindowExcludedFromPeek(QWindow *window, bool exclude)
+static void setWindowExcludedFromPeek( QWindow * window, bool exclude )
 */
 HB_FUNC_STATIC( QTWIN_SETWINDOWEXCLUDEDFROMPEEK )
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWEXCLUDEDFROMPEEK )
 }
 
 /*
-static bool isWindowExcludedFromPeek(QWindow *window)
+static bool isWindowExcludedFromPeek( QWindow * window )
 */
 HB_FUNC_STATIC( QTWIN_ISWINDOWEXCLUDEDFROMPEEK )
 {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QTWIN_ISWINDOWEXCLUDEDFROMPEEK )
 }
 
 /*
-static void setWindowDisallowPeek(QWindow *window, bool disallow)
+static void setWindowDisallowPeek( QWindow * window, bool disallow )
 */
 HB_FUNC_STATIC( QTWIN_SETWINDOWDISALLOWPEEK )
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWDISALLOWPEEK )
 }
 
 /*
-static bool isWindowPeekDisallowed(QWindow *window)
+static bool isWindowPeekDisallowed( QWindow * window )
 */
 HB_FUNC_STATIC( QTWIN_ISWINDOWPEEKDISALLOWED )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTWIN_ISWINDOWPEEKDISALLOWED )
 }
 
 /*
-static void setWindowFlip3DPolicy(QWindow *window, WindowFlip3DPolicy policy)
+static void setWindowFlip3DPolicy( QWindow * window, QtWin::WindowFlip3DPolicy policy )
 */
 HB_FUNC_STATIC( QTWIN_SETWINDOWFLIP3DPOLICY )
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QTWIN_SETWINDOWFLIP3DPOLICY )
 }
 
 /*
-static WindowFlip3DPolicy windowFlip3DPolicy(QWindow *)
+static QtWin::WindowFlip3DPolicy windowFlip3DPolicy( QWindow * )
 */
 HB_FUNC_STATIC( QTWIN_WINDOWFLIP3DPOLICY )
 {
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QTWIN_WINDOWFLIP3DPOLICY )
 }
 
 /*
-static void extendFrameIntoClientArea(QWindow *window, int left, int top, int right, int bottom)
+static void extendFrameIntoClientArea( QWindow * window, int left, int top, int right, int bottom )
 */
 void QtWin_extendFrameIntoClientArea1()
 {
@@ -502,7 +502,7 @@ void QtWin_extendFrameIntoClientArea1()
 }
 
 /*
-static void extendFrameIntoClientArea(QWindow *window, const QMargins &margins)
+static void extendFrameIntoClientArea( QWindow * window, const QMargins & margins )
 */
 void QtWin_extendFrameIntoClientArea2()
 {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA )
 }
 
 /*
-static void resetExtendedFrame(QWindow *window)
+static void resetExtendedFrame( QWindow * window )
 */
 HB_FUNC_STATIC( QTWIN_RESETEXTENDEDFRAME )
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QTWIN_RESETEXTENDEDFRAME )
 }
 
 /*
-static void enableBlurBehindWindow(QWindow *window, const QRegion &region)
+static void enableBlurBehindWindow( QWindow * window, const QRegion & region )
 */
 void QtWin_enableBlurBehindWindow1()
 {
@@ -567,7 +567,7 @@ void QtWin_enableBlurBehindWindow1()
 }
 
 /*
-static void enableBlurBehindWindow(QWindow *window)
+static void enableBlurBehindWindow( QWindow * window )
 */
 void QtWin_enableBlurBehindWindow2()
 {
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW )
 }
 
 /*
-static void disableBlurBehindWindow(QWindow *window)
+static void disableBlurBehindWindow( QWindow * window )
 */
 HB_FUNC_STATIC( QTWIN_DISABLEBLURBEHINDWINDOW )
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONENABLED )
 }
 
 /*
-static void setCompositionEnabled(bool enabled)
+static void setCompositionEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QTWIN_SETCOMPOSITIONENABLED )
 {
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QTWIN_ISCOMPOSITIONOPAQUE )
 }
 
 /*
-static void setCurrentProcessExplicitAppUserModelID(const QString &id)
+static void setCurrentProcessExplicitAppUserModelID( const QString & id )
 */
 HB_FUNC_STATIC( QTWIN_SETCURRENTPROCESSEXPLICITAPPUSERMODELID )
 {
@@ -707,13 +707,13 @@ HB_FUNC_STATIC( QTWIN_SETCURRENTPROCESSEXPLICITAPPUSERMODELID )
 }
 
 /*
-static void markFullscreenWindow(QWindow *, bool fullscreen = true)
+static void markFullscreenWindow( QWindow *, bool fullscreen = true )
 */
 HB_FUNC_STATIC( QTWIN_MARKFULLSCREENWINDOW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQWINDOW(1) && (ISLOG(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQWINDOW(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
   {
 #endif
     QtWin::markFullscreenWindow( PQWINDOW(1), OPBOOL(2,true) );
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QTWIN_MARKFULLSCREENWINDOW )
 }
 
 /*
-static void taskbarActivateTab(QWindow *)
+static void taskbarActivateTab( QWindow * )
 */
 HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETAB )
 {
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETAB )
 }
 
 /*
-static void taskbarActivateTabAlt(QWindow *)
+static void taskbarActivateTabAlt( QWindow * )
 */
 HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETABALT )
 {
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QTWIN_TASKBARACTIVATETABALT )
 }
 
 /*
-static void taskbarAddTab(QWindow *)
+static void taskbarAddTab( QWindow * )
 */
 HB_FUNC_STATIC( QTWIN_TASKBARADDTAB )
 {
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QTWIN_TASKBARADDTAB )
 }
 
 /*
-static void taskbarDeleteTab(QWindow *)
+static void taskbarDeleteTab( QWindow * )
 */
 HB_FUNC_STATIC( QTWIN_TASKBARDELETETAB )
 {

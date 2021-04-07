@@ -78,7 +78,7 @@ RETURN
 #endif
 
 /*
-explicit QWinTaskbarProgress(QObject *parent = 0)
+QWinTaskbarProgress( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_NEW )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_VALUE )
 }
 
 /*
-void setValue(int value)
+void setValue( int value )
 */
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVALUE )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_MINIMUM )
 }
 
 /*
-void setMinimum(int minimum)
+void setMinimum( int minimum )
 */
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMINIMUM )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_MAXIMUM )
 }
 
 /*
-void setMaximum(int maximum)
+void setMaximum( int maximum )
 */
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETMAXIMUM )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISVISIBLE )
 }
 
 /*
-void setVisible(bool visible)
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETVISIBLE )
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISPAUSED )
 }
 
 /*
-void setPaused(bool paused)
+void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETPAUSED )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QWINTASKBARPROGRESS_ISSTOPPED )
 }
 
 /*
-void setRange(int minimum, int maximum)
+void setRange( int minimum, int maximum )
 */
 HB_FUNC_STATIC( QWINTASKBARPROGRESS_SETRANGE )
 {
