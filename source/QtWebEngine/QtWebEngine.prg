@@ -22,11 +22,11 @@ CLASS QtWebEngine
 
    METHOD initialize
 
-//   METHOD newFrom
-//   METHOD newFromObject
-//   METHOD newFromPointer
-//   METHOD selfDestruction
-//   METHOD setSelfDestruction
+   METHOD newFrom
+   METHOD newFromObject
+   METHOD newFromPointer
+   METHOD selfDestruction
+   METHOD setSelfDestruction
 
    DESTRUCTOR destroyObject
 

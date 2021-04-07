@@ -74,14 +74,14 @@ RETURN
 #endif
 
 /*
-explicit QQuickWebEngineScript(QObject *parent = Q_NULLPTR)
+QQuickWebEngineScript( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QQuickWebEngineScript * obj = new QQuickWebEngineScript( OPQOBJECT(1,Q_NULLPTR) );
+    QQuickWebEngineScript * obj = new QQuickWebEngineScript( OPQOBJECT(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_NAME )
 }
 
 /*
-Q_INVOKABLE void setName(const QString &name)
+Q_INVOKABLE void setName( const QString & name )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETNAME )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCEURL )
 }
 
 /*
-Q_INVOKABLE void setSourceUrl(const QUrl &url)
+Q_INVOKABLE void setSourceUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCEURL )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SOURCECODE )
 }
 
 /*
-Q_INVOKABLE void setSourceCode(const QString &code)
+Q_INVOKABLE void setSourceCode( const QString & code )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCECODE )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETSOURCECODE )
 }
 
 /*
-InjectionPoint injectionPoint() const
+QQuickWebEngineScript::InjectionPoint injectionPoint() const
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_INJECTIONPOINT )
 {
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_INJECTIONPOINT )
 }
 
 /*
-Q_INVOKABLE void setInjectionPoint(InjectionPoint injectionPoint)
+Q_INVOKABLE void setInjectionPoint( QQuickWebEngineScript::InjectionPoint injectionPoint )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETINJECTIONPOINT )
 }
 
 /*
-ScriptWorldId worldId() const
+QQuickWebEngineScript::ScriptWorldId worldId() const
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_WORLDID )
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_WORLDID )
 }
 
 /*
-Q_INVOKABLE void setWorldId(ScriptWorldId scriptWorldId)
+Q_INVOKABLE void setWorldId( QQuickWebEngineScript::ScriptWorldId scriptWorldId )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETWORLDID )
 {
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_RUNONSUBFRAMES )
 }
 
 /*
-Q_INVOKABLE void setRunOnSubframes(bool on)
+Q_INVOKABLE void setRunOnSubframes( bool on )
 */
 HB_FUNC_STATIC( QQUICKWEBENGINESCRIPT_SETRUNONSUBFRAMES )
 {
