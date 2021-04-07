@@ -13,11 +13,36 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QRECTF
+REQUEST QVIRTUALKEYBOARDINPUTENGINE
 #endif
 
 CLASS QVirtualKeyboardInputContext INHERIT QObject
 
+   METHOD new
    METHOD delete
+   METHOD isShiftActive
+   METHOD isCapsLockActive
+   METHOD isUppercase
+   METHOD anchorPosition
+   METHOD cursorPosition
+   METHOD inputMethodHints
+   METHOD preeditText
+   METHOD surroundingText
+   METHOD selectedText
+   METHOD anchorRectangle
+   METHOD cursorRectangle
+   METHOD isAnimating
+   METHOD setAnimating
+   METHOD locale
+   METHOD inputEngine
+   METHOD isSelectionControlVisible
+   METHOD anchorRectIntersectsClipRect
+   METHOD cursorRectIntersectsClipRect
+   METHOD sendKeyClick
+   METHOD commit
+   METHOD clear
+   METHOD setSelectionOnFocusObject
 
    METHOD onPreeditTextChanged
    METHOD onInputMethodHintsChanged
@@ -65,8 +90,20 @@ RETURN
 #endif
 
 /*
-explicit QVirtualKeyboardInputContext(QObject *parent = nullptr)
+QVirtualKeyboardInputContext( QObject * parent = nullptr )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_NEW )
+{
+  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  {
+    QVirtualKeyboardInputContext * obj = new QVirtualKeyboardInputContext( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject( obj, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 ~QVirtualKeyboardInputContext()
@@ -93,99 +130,551 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_DELETE )
 /*
 bool isShiftActive() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISSHIFTACTIVE )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->isShiftActive() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 bool isCapsLockActive() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISCAPSLOCKACTIVE )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->isCapsLockActive() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 bool isUppercase() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISUPPERCASE )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->isUppercase() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 int anchorPosition() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORPOSITION )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RINT( obj->anchorPosition() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 int cursorPosition() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORPOSITION )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RINT( obj->cursorPosition() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 Qt::InputMethodHints inputMethodHints() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_INPUTMETHODHINTS )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RENUM( obj->inputMethodHints() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 QString preeditText() const
 */
-/*
-void setPreeditText(const QString &text, QList<QInputMethodEvent::Attribute> attributes = QList<QInputMethodEvent::Attribute>(), int replaceFrom = 0, int replaceLength = 0)
-*/
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_PREEDITTEXT )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RQSTRING( obj->preeditText() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 QString surroundingText() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SURROUNDINGTEXT )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RQSTRING( obj->surroundingText() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 QString selectedText() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SELECTEDTEXT )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RQSTRING( obj->selectedText() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 QRectF anchorRectangle() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTANGLE )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QRectF * ptr = new QRectF( obj->anchorRectangle() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 QRectF cursorRectangle() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTANGLE )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QRectF * ptr = new QRectF( obj->cursorRectangle() );
+      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 bool isAnimating() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISANIMATING )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->isAnimating() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
 /*
-void setAnimating(bool isAnimating)
+void setAnimating( bool isAnimating )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETANIMATING )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    {
+#endif
+      obj->setAnimating( PBOOL(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 /*
 QString locale() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_LOCALE )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RQSTRING( obj->locale() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
-QVirtualKeyboardInputEngine *inputEngine() const
+QVirtualKeyboardInputEngine * inputEngine() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_INPUTENGINE )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QVirtualKeyboardInputEngine * ptr = obj->inputEngine();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDINPUTENGINE" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 bool isSelectionControlVisible() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ISSELECTIONCONTROLVISIBLE )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->isSelectionControlVisible() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 bool anchorRectIntersectsClipRect() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_ANCHORRECTINTERSECTSCLIPRECT )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->anchorRectIntersectsClipRect() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 bool cursorRectIntersectsClipRect() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CURSORRECTINTERSECTSCLIPRECT )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->cursorRectIntersectsClipRect() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
-QVirtualKeyboardInputContextPrivate *priv() const
+Q_INVOKABLE void sendKeyClick( int key, const QString & text, int modifiers = 0 )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
 
-/*
-QList<QInputMethodEvent::Attribute> preeditTextAttributes() const
-*/
-/*
-Q_INVOKABLE void sendKeyClick(int key, const QString &text, int modifiers = 0)
-*/
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+    {
+#endif
+      obj->sendKeyClick( PINT(1), PQSTRING(2), OPINT(3,0) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
 /*
 Q_INVOKABLE void commit()
 */
+void QVirtualKeyboardInputContext_commit1()
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    obj->commit();
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
 /*
-Q_INVOKABLE void commit(const QString &text, int replaceFrom = 0, int replaceLength = 0)
+Q_INVOKABLE void commit( const QString & text, int replaceFrom = 0, int replaceLength = 0 )
 */
+void QVirtualKeyboardInputContext_commit2()
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    obj->commit( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
+STATIC_HB_FUNC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
+{
+}
+
 /*
 Q_INVOKABLE void clear()
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_CLEAR )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      obj->clear();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
 /*
-Q_INVOKABLE void setSelectionOnFocusObject(const QPointF &anchorPos, const QPointF &cursorPos)
+Q_INVOKABLE void setSelectionOnFocusObject( const QPointF & anchorPos, const QPointF & cursorPos )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SETSELECTIONONFOCUSOBJECT )
+{
+  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
+    {
+#endif
+      obj->setSelectionOnFocusObject( *PQPOINTF(1), *PQPOINTF(2) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 void QVirtualKeyboardInputContextSlots_connect_signal( const QString & signal, const QString & slot );
 

@@ -13,11 +13,33 @@
 #include "hbclass.ch"
 
 #ifndef QT5XHB_NO_REQUESTS
+REQUEST QVIRTUALKEYBOARDABSTRACTINPUTMETHOD
+REQUEST QVIRTUALKEYBOARDINPUTCONTEXT
+REQUEST QVIRTUALKEYBOARDSELECTIONLISTMODEL
 #endif
 
 CLASS QVirtualKeyboardInputEngine INHERIT QObject
 
+   METHOD new
    METHOD delete
+   METHOD activeKey
+   METHOD previousKey
+   METHOD inputMethod
+   METHOD setInputMethod
+   METHOD inputModes
+   METHOD inputMode
+   METHOD setInputMode
+   METHOD patternRecognitionModes
+   METHOD wordCandidateListModel
+   METHOD wordCandidateListVisibleHint
+   METHOD init
+   METHOD virtualKeyPress
+   METHOD virtualKeyCancel
+   METHOD virtualKeyRelease
+   METHOD virtualKeyClick
+   METHOD inputContext
+   METHOD traceEnd
+   METHOD clickPreeditText
 
    METHOD onVirtualKeyClicked
    METHOD onActiveKeyChanged
@@ -60,8 +82,20 @@ RETURN
 #endif
 
 /*
-explicit QVirtualKeyboardInputEngine(QVirtualKeyboardInputContext *parent = nullptr)
+QVirtualKeyboardInputEngine( QVirtualKeyboardInputContext * parent = nullptr )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_NEW )
+{
+  if( ISBETWEEN(0,1) && (ISQVIRTUALKEYBOARDINPUTCONTEXT(1)||HB_ISNIL(1)) )
+  {
+    QVirtualKeyboardInputEngine * obj = new QVirtualKeyboardInputEngine( OPQVIRTUALKEYBOARDINPUTCONTEXT(1,nullptr) );
+    Qt5xHb::returnNewObject( obj, false );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 ~QVirtualKeyboardInputEngine()
@@ -88,71 +122,447 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_DELETE )
 /*
 Qt::Key activeKey() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_ACTIVEKEY )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RENUM( obj->activeKey() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 Qt::Key previousKey() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PREVIOUSKEY )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RENUM( obj->previousKey() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
-QVirtualKeyboardAbstractInputMethod *inputMethod() const
+QVirtualKeyboardAbstractInputMethod * inputMethod() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMETHOD )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QVirtualKeyboardAbstractInputMethod * ptr = obj->inputMethod();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDABSTRACTINPUTMETHOD" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
 /*
-void setInputMethod(QVirtualKeyboardAbstractInputMethod *inputMethod)
+void setInputMethod( QVirtualKeyboardAbstractInputMethod * inputMethod )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMETHOD )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1) )
+    {
+#endif
+      obj->setInputMethod( PQVIRTUALKEYBOARDABSTRACTINPUTMETHOD(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 /*
 QList<int> inputModes() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMODES )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QList<int> list = obj->inputModes();
+      Qt5xHb::convert_qlist_int_to_array( list );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
-InputMode inputMode() const
+QVirtualKeyboardInputEngine::InputMode inputMode() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTMODE )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RENUM( obj->inputMode() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
 /*
-void setInputMode(InputMode inputMode)
+void setInputMode( QVirtualKeyboardInputEngine::InputMode inputMode )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_SETINPUTMODE )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    {
+#endif
+      obj->setInputMode( (QVirtualKeyboardInputEngine::InputMode) hb_parni(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 /*
 QList<int> patternRecognitionModes() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_PATTERNRECOGNITIONMODES )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QList<int> list = obj->patternRecognitionModes();
+      Qt5xHb::convert_qlist_int_to_array( list );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
-QVirtualKeyboardSelectionListModel *wordCandidateListModel() const
+QVirtualKeyboardSelectionListModel * wordCandidateListModel() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTMODEL )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QVirtualKeyboardSelectionListModel * ptr = obj->wordCandidateListModel();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDSELECTIONLISTMODEL" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 bool wordCandidateListVisibleHint() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_WORDCANDIDATELISTVISIBLEHINT )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      RBOOL( obj->wordCandidateListVisibleHint() );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 void init()
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INIT )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      obj->init();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
 /*
-Q_INVOKABLE bool virtualKeyPress(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers, bool repeat)
+Q_INVOKABLE bool virtualKeyPress( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers, bool repeat )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYPRESS )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISLOG(4) )
+    {
+#endif
+      RBOOL( obj->virtualKeyPress( (Qt::Key) hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers) hb_parni(3), PBOOL(4) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
 /*
 Q_INVOKABLE void virtualKeyCancel()
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCANCEL )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      obj->virtualKeyCancel();
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
+
 /*
-Q_INVOKABLE bool virtualKeyRelease(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers)
+Q_INVOKABLE bool virtualKeyRelease( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYRELEASE )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
+    {
+#endif
+      RBOOL( obj->virtualKeyRelease( (Qt::Key) hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers) hb_parni(3) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
 /*
-Q_INVOKABLE bool virtualKeyClick(Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers)
+Q_INVOKABLE bool virtualKeyClick( Qt::Key key, const QString & text, Qt::KeyboardModifiers modifiers )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_VIRTUALKEYCLICK )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
+    {
+#endif
+      RBOOL( obj->virtualKeyClick( (Qt::Key) hb_parni(1), PQSTRING(2), (Qt::KeyboardModifiers) hb_parni(3) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
 /*
-QVirtualKeyboardInputContext *inputContext() const
+QVirtualKeyboardInputContext * inputContext() const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_INPUTCONTEXT )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(0) )
+    {
+#endif
+      QVirtualKeyboardInputContext * ptr = obj->inputContext();
+      Qt5xHb::createReturnQObjectClass( ptr, "QVIRTUALKEYBOARDINPUTCONTEXT" );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
 /*
-Q_INVOKABLE QVirtualKeyboardTrace *traceBegin(int traceId, PatternRecognitionMode patternRecognitionMode, const QVariantMap &traceCaptureDeviceInfo, const QVariantMap &traceScreenInfo)
+Q_INVOKABLE bool traceEnd( QVirtualKeyboardTrace * trace )
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_TRACEEND )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISQVIRTUALKEYBOARDTRACE(1) )
+    {
+#endif
+      RBOOL( obj->traceEnd( PQVIRTUALKEYBOARDTRACE(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
+
 /*
-Q_INVOKABLE bool traceEnd(QVirtualKeyboardTrace *trace)
+bool clickPreeditText( int cursorPosition )
 */
-/*
-Q_INVOKABLE bool reselect(int cursorPosition, const ReselectFlags &reselectFlags)
-*/
-/*
-bool clickPreeditText(int cursorPosition)
-*/
+HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTENGINE_CLICKPREEDITTEXT )
+{
+  QVirtualKeyboardInputEngine * obj = (QVirtualKeyboardInputEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    {
+#endif
+      RBOOL( obj->clickPreeditText( PINT(1) ) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 void QVirtualKeyboardInputEngineSlots_connect_signal( const QString & signal, const QString & slot );
 

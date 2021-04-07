@@ -18,6 +18,7 @@
 CLASS QVirtualKeyboardExtensionPlugin INHERIT QObject
 
    METHOD delete
+   METHOD registerTypes
 
    DESTRUCTOR destroyObject
 
@@ -70,7 +71,29 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_DELETE )
 }
 
 /*
-virtual void registerTypes(const char *uri) const
+virtual void registerTypes( const char * uri ) const
 */
+HB_FUNC_STATIC( QVIRTUALKEYBOARDEXTENSIONPLUGIN_REGISTERTYPES )
+{
+  QVirtualKeyboardExtensionPlugin * obj = (QVirtualKeyboardExtensionPlugin *) Qt5xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    {
+#endif
+      obj->registerTypes( PCONSTCHAR(1) );
+#ifndef QT5XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+
+  hb_itemReturn( hb_stackSelfItem() );
+}
 
 #pragma ENDDUMP
