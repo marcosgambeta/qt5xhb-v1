@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQSQLFIELD(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQSQLFIELD(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       RQSTRING( obj->formatValue( *PQSQLFIELD(1), OPBOOL(2,false) ) );
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QSQLDRIVER_OPEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,6) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISCHAR(3)||HB_ISNIL(3)) && (ISCHAR(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) && (ISCHAR(6)||HB_ISNIL(6)) )
+    if( ISBETWEEN(1,6) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) && (HB_ISCHAR(3)||HB_ISNIL(3)) && (HB_ISCHAR(4)||HB_ISNIL(4)) && (HB_ISNUM(5)||HB_ISNIL(5)) && (HB_ISCHAR(6)||HB_ISNIL(6)) )
     {
 #endif
       RBOOL( obj->open( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );

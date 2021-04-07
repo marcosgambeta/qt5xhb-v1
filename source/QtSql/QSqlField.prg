@@ -102,7 +102,7 @@ void QSqlField_new2()
 
 HB_FUNC_STATIC( QSQLFIELD_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISCHAR(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && ( HB_ISCHAR(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QSqlField_new1();
   }

@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
   {
     QSqlQuery_new1();
   }
-  else if( ISBETWEEN(1,2) && (ISCHAR(1)||HB_ISNIL(1)) && (ISQSQLDATABASE(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ( HB_ISCHAR(1)||HB_ISNIL(1)) && (ISQSQLDATABASE(2)||HB_ISNIL(2)) )
   {
     QSqlQuery_new2();
   }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQVARIANT(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQVARIANT(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->addBindValue( *PQVARIANT(1), HB_ISNIL(2)? (QSql::ParamType) QSql::In : (QSql::ParamType) hb_parni(2) );
@@ -257,11 +257,11 @@ void QSqlQuery_bindValue2()
 
 HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 {
-  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && ISQVARIANT(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(2,3) && HB_ISCHAR(1) && ISQVARIANT(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QSqlQuery_bindValue1();
   }
-  else if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQVARIANT(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQVARIANT(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QSqlQuery_bindValue2();
   }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RBOOL( obj->execBatch( HB_ISNIL(1)? (QSqlQuery::BatchExecutionMode) QSqlQuery::ValuesAsRows : (QSqlQuery::BatchExecutionMode) hb_parni(1) ) );
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->seek( PINT(1), OPBOOL(2,false) ) );
