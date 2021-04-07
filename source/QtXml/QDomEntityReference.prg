@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QDomEntityReference ()
+QDomEntityReference()
 */
 void QDomEntityReference_new1()
 {
@@ -57,7 +57,7 @@ void QDomEntityReference_new1()
 }
 
 /*
-QDomEntityReference ( const QDomEntityReference & x )
+QDomEntityReference( const QDomEntityReference & x )
 */
 void QDomEntityReference_new2()
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDOMENTITYREFERENCE_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NODETYPE )
 {

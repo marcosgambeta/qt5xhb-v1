@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QDomProcessingInstruction ()
+QDomProcessingInstruction()
 */
 void QDomProcessingInstruction_new1()
 {
@@ -60,7 +60,7 @@ void QDomProcessingInstruction_new1()
 }
 
 /*
-QDomProcessingInstruction ( const QDomProcessingInstruction & x )
+QDomProcessingInstruction( const QDomProcessingInstruction & x )
 */
 void QDomProcessingInstruction_new2()
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DELETE )
 }
 
 /*
-QString data () const
+QString data() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 }
 
 /*
-void setData ( const QString & d )
+void setData( const QString & d )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 }
 
 /*
-QString target () const
+QString target() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {

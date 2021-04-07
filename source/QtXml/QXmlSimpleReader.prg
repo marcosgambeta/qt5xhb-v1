@@ -49,7 +49,7 @@ RETURN
 #endif
 
 /*
-QXmlSimpleReader ()
+QXmlSimpleReader()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
 }
 
 /*
-virtual bool parse ( const QXmlInputSource * input, bool incremental )
+virtual bool parse( const QXmlInputSource * input, bool incremental )
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 }
 
 /*
-virtual bool parseContinue ()
+virtual bool parseContinue()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
 {

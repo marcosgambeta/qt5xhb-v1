@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_DELETE )
 }
 
 /*
-virtual bool error ( const QXmlParseException & exception ) = 0
+virtual bool error( const QXmlParseException & exception ) = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERROR )
 }
 
 /*
-virtual QString errorString () const = 0
+virtual QString errorString() const = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_ERRORSTRING )
 }
 
 /*
-virtual bool fatalError ( const QXmlParseException & exception ) = 0
+virtual bool fatalError( const QXmlParseException & exception ) = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QXMLERRORHANDLER_FATALERROR )
 }
 
 /*
-virtual bool warning ( const QXmlParseException & exception ) = 0
+virtual bool warning( const QXmlParseException & exception ) = 0
 */
 HB_FUNC_STATIC( QXMLERRORHANDLER_WARNING )
 {

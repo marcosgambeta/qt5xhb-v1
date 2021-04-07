@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QDomEntity ()
+QDomEntity()
 */
 void QDomEntity_new1()
 {
@@ -60,7 +60,7 @@ void QDomEntity_new1()
 }
 
 /*
-QDomEntity ( const QDomEntity & x )
+QDomEntity( const QDomEntity & x )
 */
 void QDomEntity_new2()
 {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDOMENTITY_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 }
 
 /*
-QString notationName () const
+QString notationName() const
 */
 HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 }
 
 /*
-QString publicId () const
+QString publicId() const
 */
 HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 }
 
 /*
-QString systemId () const
+QString systemId() const
 */
 HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
 {

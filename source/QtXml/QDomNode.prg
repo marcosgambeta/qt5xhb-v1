@@ -133,7 +133,7 @@ RETURN
 #endif
 
 /*
-QDomNode ()
+QDomNode()
 */
 void QDomNode_new1()
 {
@@ -142,7 +142,7 @@ void QDomNode_new1()
 }
 
 /*
-QDomNode ( const QDomNode & n )
+QDomNode( const QDomNode & n )
 */
 void QDomNode_new2()
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QDOMNODE_DELETE )
 }
 
 /*
-QDomNode appendChild ( const QDomNode & newChild )
+QDomNode appendChild( const QDomNode & newChild )
 */
 HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
 }
 
 /*
-QDomNamedNodeMap attributes () const
+QDomNamedNodeMap attributes() const
 */
 HB_FUNC_STATIC( QDOMNODE_ATTRIBUTES )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QDOMNODE_ATTRIBUTES )
 }
 
 /*
-QDomNodeList childNodes () const
+QDomNodeList childNodes() const
 */
 HB_FUNC_STATIC( QDOMNODE_CHILDNODES )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDOMNODE_CHILDNODES )
 }
 
 /*
-void clear ()
+void clear()
 */
 HB_FUNC_STATIC( QDOMNODE_CLEAR )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QDOMNODE_CLEAR )
 }
 
 /*
-QDomNode cloneNode ( bool deep = true ) const
+QDomNode cloneNode( bool deep = true ) const
 */
 HB_FUNC_STATIC( QDOMNODE_CLONENODE )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QDOMNODE_CLONENODE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       QDomNode * ptr = new QDomNode( obj->cloneNode( OPBOOL(1,true) ) );
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDOMNODE_CLONENODE )
 }
 
 /*
-int columnNumber () const
+int columnNumber() const
 */
 HB_FUNC_STATIC( QDOMNODE_COLUMNNUMBER )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QDOMNODE_COLUMNNUMBER )
 }
 
 /*
-QDomNode firstChild () const
+QDomNode firstChild() const
 */
 HB_FUNC_STATIC( QDOMNODE_FIRSTCHILD )
 {
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILD )
 }
 
 /*
-QDomElement firstChildElement ( const QString & tagName = QString() ) const
+QDomElement firstChildElement( const QString & tagName = QString() ) const
 */
 HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->firstChildElement( OPQSTRING(1,QString()) ) );
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
 }
 
 /*
-bool hasAttributes () const
+bool hasAttributes() const
 */
 HB_FUNC_STATIC( QDOMNODE_HASATTRIBUTES )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QDOMNODE_HASATTRIBUTES )
 }
 
 /*
-bool hasChildNodes () const
+bool hasChildNodes() const
 */
 HB_FUNC_STATIC( QDOMNODE_HASCHILDNODES )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QDOMNODE_HASCHILDNODES )
 }
 
 /*
-QDomNode insertAfter ( const QDomNode & newChild, const QDomNode & refChild )
+QDomNode insertAfter( const QDomNode & newChild, const QDomNode & refChild )
 */
 HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
 }
 
 /*
-QDomNode insertBefore ( const QDomNode & newChild, const QDomNode & refChild )
+QDomNode insertBefore( const QDomNode & newChild, const QDomNode & refChild )
 */
 HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
 }
 
 /*
-bool isAttr () const
+bool isAttr() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISATTR )
 {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QDOMNODE_ISATTR )
 }
 
 /*
-bool isCDATASection () const
+bool isCDATASection() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISCDATASECTION )
 {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCDATASECTION )
 }
 
 /*
-bool isCharacterData () const
+bool isCharacterData() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISCHARACTERDATA )
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCHARACTERDATA )
 }
 
 /*
-bool isComment () const
+bool isComment() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISCOMMENT )
 {
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QDOMNODE_ISCOMMENT )
 }
 
 /*
-bool isDocument () const
+bool isDocument() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISDOCUMENT )
 {
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENT )
 }
 
 /*
-bool isDocumentFragment () const
+bool isDocumentFragment() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTFRAGMENT )
 {
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTFRAGMENT )
 }
 
 /*
-bool isDocumentType () const
+bool isDocumentType() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTTYPE )
 {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QDOMNODE_ISDOCUMENTTYPE )
 }
 
 /*
-bool isElement () const
+bool isElement() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISELEMENT )
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QDOMNODE_ISELEMENT )
 }
 
 /*
-bool isEntity () const
+bool isEntity() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISENTITY )
 {
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITY )
 }
 
 /*
-bool isEntityReference () const
+bool isEntityReference() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISENTITYREFERENCE )
 {
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QDOMNODE_ISENTITYREFERENCE )
 }
 
 /*
-bool isNotation () const
+bool isNotation() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISNOTATION )
 {
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QDOMNODE_ISNOTATION )
 }
 
 /*
-bool isNull () const
+bool isNull() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISNULL )
 {
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QDOMNODE_ISNULL )
 }
 
 /*
-bool isProcessingInstruction () const
+bool isProcessingInstruction() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISPROCESSINGINSTRUCTION )
 {
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QDOMNODE_ISPROCESSINGINSTRUCTION )
 }
 
 /*
-bool isSupported ( const QString & feature, const QString & version ) const
+bool isSupported( const QString & feature, const QString & version ) const
 */
 HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
 {
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
 }
 
 /*
-bool isText () const
+bool isText() const
 */
 HB_FUNC_STATIC( QDOMNODE_ISTEXT )
 {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QDOMNODE_ISTEXT )
 }
 
 /*
-QDomNode lastChild () const
+QDomNode lastChild() const
 */
 HB_FUNC_STATIC( QDOMNODE_LASTCHILD )
 {
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILD )
 }
 
 /*
-QDomElement lastChildElement ( const QString & tagName = QString() ) const
+QDomElement lastChildElement( const QString & tagName = QString() ) const
 */
 HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
 {
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->lastChildElement( OPQSTRING(1,QString()) ) );
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
 }
 
 /*
-int lineNumber () const
+int lineNumber() const
 */
 HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
 {
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QDOMNODE_LINENUMBER )
 }
 
 /*
-QString localName () const
+QString localName() const
 */
 HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
 {
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
 }
 
 /*
-QDomNode namedItem ( const QString & name ) const
+QDomNode namedItem( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
 {
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
 }
 
 /*
-QString namespaceURI () const
+QString namespaceURI() const
 */
 HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
 {
@@ -989,7 +989,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMESPACEURI )
 }
 
 /*
-QDomNode nextSibling () const
+QDomNode nextSibling() const
 */
 HB_FUNC_STATIC( QDOMNODE_NEXTSIBLING )
 {
@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLING )
 }
 
 /*
-QDomElement nextSiblingElement ( const QString & tagName = QString() ) const
+QDomElement nextSiblingElement( const QString & tagName = QString() ) const
 */
 HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
 {
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->nextSiblingElement( OPQSTRING(1,QString()) ) );
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
 }
 
 /*
-QString nodeName () const
+QString nodeName() const
 */
 HB_FUNC_STATIC( QDOMNODE_NODENAME )
 {
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QDOMNODE_NODENAME )
 }
 
 /*
-NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMNODE_NODETYPE )
 {
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QDOMNODE_NODETYPE )
 }
 
 /*
-QString nodeValue () const
+QString nodeValue() const
 */
 HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
 {
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QDOMNODE_NODEVALUE )
 }
 
 /*
-void normalize ()
+void normalize()
 */
 HB_FUNC_STATIC( QDOMNODE_NORMALIZE )
 {
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QDOMNODE_NORMALIZE )
 }
 
 /*
-QDomDocument ownerDocument () const
+QDomDocument ownerDocument() const
 */
 HB_FUNC_STATIC( QDOMNODE_OWNERDOCUMENT )
 {
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC( QDOMNODE_OWNERDOCUMENT )
 }
 
 /*
-QDomNode parentNode () const
+QDomNode parentNode() const
 */
 HB_FUNC_STATIC( QDOMNODE_PARENTNODE )
 {
@@ -1187,7 +1187,7 @@ HB_FUNC_STATIC( QDOMNODE_PARENTNODE )
 }
 
 /*
-QString prefix () const
+QString prefix() const
 */
 HB_FUNC_STATIC( QDOMNODE_PREFIX )
 {
@@ -1211,7 +1211,7 @@ HB_FUNC_STATIC( QDOMNODE_PREFIX )
 }
 
 /*
-QDomNode previousSibling () const
+QDomNode previousSibling() const
 */
 HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLING )
 {
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLING )
 }
 
 /*
-QDomElement previousSiblingElement ( const QString & tagName = QString() ) const
+QDomElement previousSiblingElement( const QString & tagName = QString() ) const
 */
 HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
 {
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISCHAR(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISCHAR(1)||HB_ISNIL(1)) )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->previousSiblingElement( OPQSTRING(1,QString()) ) );
@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
 }
 
 /*
-QDomNode removeChild ( const QDomNode & oldChild )
+QDomNode removeChild( const QDomNode & oldChild )
 */
 HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
 {
@@ -1286,7 +1286,7 @@ HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
 }
 
 /*
-QDomNode replaceChild ( const QDomNode & newChild, const QDomNode & oldChild )
+QDomNode replaceChild( const QDomNode & newChild, const QDomNode & oldChild )
 */
 HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
 {
@@ -1311,7 +1311,7 @@ HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
 }
 
 /*
-void save ( QTextStream & str, int indent ) const
+void save( QTextStream & str, int indent ) const
 */
 void QDomNode_save1()
 {
@@ -1326,7 +1326,7 @@ void QDomNode_save1()
 }
 
 /*
-void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
+void save( QTextStream & str, int indent, QDomNode::EncodingPolicy encodingPolicy ) const
 */
 void QDomNode_save2()
 {
@@ -1357,7 +1357,7 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
 }
 
 /*
-void setNodeValue ( const QString & v )
+void setNodeValue( const QString & v )
 */
 HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
 {
@@ -1383,7 +1383,7 @@ HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
 }
 
 /*
-void setPrefix ( const QString & pre )
+void setPrefix( const QString & pre )
 */
 HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
 {
@@ -1409,7 +1409,7 @@ HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
 }
 
 /*
-QDomAttr toAttr () const
+QDomAttr toAttr() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOATTR )
 {
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC( QDOMNODE_TOATTR )
 }
 
 /*
-QDomCDATASection toCDATASection () const
+QDomCDATASection toCDATASection() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOCDATASECTION )
 {
@@ -1459,7 +1459,7 @@ HB_FUNC_STATIC( QDOMNODE_TOCDATASECTION )
 }
 
 /*
-QDomCharacterData toCharacterData () const
+QDomCharacterData toCharacterData() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOCHARACTERDATA )
 {
@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC( QDOMNODE_TOCHARACTERDATA )
 }
 
 /*
-QDomComment toComment () const
+QDomComment toComment() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOCOMMENT )
 {
@@ -1509,7 +1509,7 @@ HB_FUNC_STATIC( QDOMNODE_TOCOMMENT )
 }
 
 /*
-QDomDocument toDocument () const
+QDomDocument toDocument() const
 */
 HB_FUNC_STATIC( QDOMNODE_TODOCUMENT )
 {
@@ -1534,7 +1534,7 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENT )
 }
 
 /*
-QDomDocumentFragment toDocumentFragment () const
+QDomDocumentFragment toDocumentFragment() const
 */
 HB_FUNC_STATIC( QDOMNODE_TODOCUMENTFRAGMENT )
 {
@@ -1559,7 +1559,7 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTFRAGMENT )
 }
 
 /*
-QDomDocumentType toDocumentType () const
+QDomDocumentType toDocumentType() const
 */
 HB_FUNC_STATIC( QDOMNODE_TODOCUMENTTYPE )
 {
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC( QDOMNODE_TODOCUMENTTYPE )
 }
 
 /*
-QDomElement toElement () const
+QDomElement toElement() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOELEMENT )
 {
@@ -1609,7 +1609,7 @@ HB_FUNC_STATIC( QDOMNODE_TOELEMENT )
 }
 
 /*
-QDomEntity toEntity () const
+QDomEntity toEntity() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOENTITY )
 {
@@ -1634,7 +1634,7 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITY )
 }
 
 /*
-QDomEntityReference toEntityReference () const
+QDomEntityReference toEntityReference() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOENTITYREFERENCE )
 {
@@ -1659,7 +1659,7 @@ HB_FUNC_STATIC( QDOMNODE_TOENTITYREFERENCE )
 }
 
 /*
-QDomNotation toNotation () const
+QDomNotation toNotation() const
 */
 HB_FUNC_STATIC( QDOMNODE_TONOTATION )
 {
@@ -1684,7 +1684,7 @@ HB_FUNC_STATIC( QDOMNODE_TONOTATION )
 }
 
 /*
-QDomProcessingInstruction toProcessingInstruction () const
+QDomProcessingInstruction toProcessingInstruction() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOPROCESSINGINSTRUCTION )
 {
@@ -1709,7 +1709,7 @@ HB_FUNC_STATIC( QDOMNODE_TOPROCESSINGINSTRUCTION )
 }
 
 /*
-QDomText toText () const
+QDomText toText() const
 */
 HB_FUNC_STATIC( QDOMNODE_TOTEXT )
 {

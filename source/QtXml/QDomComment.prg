@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QDomComment ()
+QDomComment()
 */
 void QDomComment_new1()
 {
@@ -57,7 +57,7 @@ void QDomComment_new1()
 }
 
 /*
-QDomComment ( const QDomComment & x )
+QDomComment( const QDomComment & x )
 */
 void QDomComment_new2()
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDOMCOMMENT_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () cons
+QDomNode::NodeType nodeType() cons
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {

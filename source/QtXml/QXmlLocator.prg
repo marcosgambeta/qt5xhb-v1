@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QXMLLOCATOR_DELETE )
 }
 
 /*
-virtual int columnNumber () const = 0
+virtual int columnNumber() const = 0
 */
 HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QXMLLOCATOR_COLUMNNUMBER )
 }
 
 /*
-virtual int lineNumber () const = 0
+virtual int lineNumber() const = 0
 */
 HB_FUNC_STATIC( QXMLLOCATOR_LINENUMBER )
 {

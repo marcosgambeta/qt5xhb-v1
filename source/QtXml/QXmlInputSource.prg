@@ -62,7 +62,7 @@ RETURN
 #endif
 
 /*
-QXmlInputSource ()
+QXmlInputSource()
 */
 void QXmlInputSource_new1()
 {
@@ -71,7 +71,7 @@ void QXmlInputSource_new1()
 }
 
 /*
-QXmlInputSource ( QIODevice * dev )
+QXmlInputSource( QIODevice * dev )
 */
 void QXmlInputSource_new2()
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DELETE )
 }
 
 /*
-virtual QString data () const
+virtual QString data() const
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_DATA )
 }
 
 /*
-virtual void fetchData ()
+virtual void fetchData()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_FETCHDATA )
 }
 
 /*
-virtual QChar next ()
+virtual QChar next()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_NEXT )
 }
 
 /*
-virtual void reset ()
+virtual void reset()
 */
 HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 }
 
 /*
-virtual void setData ( const QString & dat )
+virtual void setData( const QString & dat )
 */
 void QXmlInputSource_setData1()
 {
@@ -229,7 +229,7 @@ void QXmlInputSource_setData1()
 }
 
 /*
-virtual void setData ( const QByteArray & dat )
+virtual void setData( const QByteArray & dat )
 */
 void QXmlInputSource_setData2()
 {

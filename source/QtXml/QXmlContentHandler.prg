@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_DELETE )
 }
 
 /*
-virtual bool characters ( const QString & ch ) = 0
+virtual bool characters( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
 {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
 }
 
 /*
-virtual bool endDocument () = 0
+virtual bool endDocument() = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
 }
 
 /*
-virtual bool endElement ( const QString & namespaceURI, const QString & localName, const QString & qName ) = 0
+virtual bool endElement( const QString & namespaceURI, const QString & localName, const QString & qName ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
 }
 
 /*
-virtual bool endPrefixMapping ( const QString & prefix ) = 0
+virtual bool endPrefixMapping( const QString & prefix ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
 }
 
 /*
-virtual QString errorString () const = 0
+virtual QString errorString() const = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
 }
 
 /*
-virtual bool ignorableWhitespace ( const QString & ch ) = 0
+virtual bool ignorableWhitespace( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
 }
 
 /*
-virtual bool processingInstruction ( const QString & target, const QString & data ) = 0
+virtual bool processingInstruction( const QString & target, const QString & data ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
 }
 
 /*
-virtual void setDocumentLocator ( QXmlLocator * locator ) = 0
+virtual void setDocumentLocator( QXmlLocator * locator ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
 }
 
 /*
-virtual bool skippedEntity ( const QString & name ) = 0
+virtual bool skippedEntity( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
 }
 
 /*
-virtual bool startDocument () = 0
+virtual bool startDocument() = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
 }
 
 /*
-virtual bool startElement ( const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts ) = 0
+virtual bool startElement( const QString & namespaceURI, const QString & localName, const QString & qName, const QXmlAttributes & atts ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
 }
 
 /*
-virtual bool startPrefixMapping ( const QString & prefix, const QString & uri ) = 0
+virtual bool startPrefixMapping( const QString & prefix, const QString & uri ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTPREFIXMAPPING )
 {

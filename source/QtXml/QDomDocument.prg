@@ -81,7 +81,7 @@ RETURN
 #endif
 
 /*
-QDomDocument ()
+QDomDocument()
 */
 void QDomDocument_new1()
 {
@@ -90,7 +90,7 @@ void QDomDocument_new1()
 }
 
 /*
-QDomDocument ( const QString & name )
+QDomDocument( const QString & name )
 */
 void QDomDocument_new2()
 {
@@ -99,7 +99,7 @@ void QDomDocument_new2()
 }
 
 /*
-QDomDocument ( const QDomDocumentType & doctype )
+QDomDocument( const QDomDocumentType & doctype )
 */
 void QDomDocument_new3()
 {
@@ -108,7 +108,7 @@ void QDomDocument_new3()
 }
 
 /*
-QDomDocument ( const QDomDocument & x )
+QDomDocument( const QDomDocument & x )
 */
 void QDomDocument_new4()
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DELETE )
 }
 
 /*
-QDomAttr createAttribute ( const QString & name )
+QDomAttr createAttribute( const QString & name )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
 }
 
 /*
-QDomAttr createAttributeNS ( const QString & nsURI, const QString & qName )
+QDomAttr createAttributeNS( const QString & nsURI, const QString & qName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
 }
 
 /*
-QDomCDATASection createCDATASection ( const QString & value )
+QDomCDATASection createCDATASection( const QString & value )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
 }
 
 /*
-QDomComment createComment ( const QString & value )
+QDomComment createComment( const QString & value )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
 }
 
 /*
-QDomDocumentFragment createDocumentFragment ()
+QDomDocumentFragment createDocumentFragment()
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
 }
 
 /*
-QDomElement createElement ( const QString & tagName )
+QDomElement createElement( const QString & tagName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
 }
 
 /*
-QDomElement createElementNS ( const QString & nsURI, const QString & qName )
+QDomElement createElementNS( const QString & nsURI, const QString & qName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
 }
 
 /*
-QDomEntityReference createEntityReference ( const QString & name )
+QDomEntityReference createEntityReference( const QString & name )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
 }
 
 /*
-QDomProcessingInstruction createProcessingInstruction ( const QString & target, const QString & data )
+QDomProcessingInstruction createProcessingInstruction( const QString & target, const QString & data )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
 }
 
 /*
-QDomText createTextNode ( const QString & value )
+QDomText createTextNode( const QString & value )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
 }
 
 /*
-QDomDocumentType doctype () const
+QDomDocumentType doctype() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
 }
 
 /*
-QDomElement documentElement () const
+QDomElement documentElement() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
 }
 
 /*
-QDomElement elementById ( const QString & elementId )
+QDomElement elementById( const QString & elementId )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
 {
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
 }
 
 /*
-QDomNodeList elementsByTagName ( const QString & tagname ) const
+QDomNodeList elementsByTagName( const QString & tagname ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
 {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
 }
 
 /*
-QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName )
+QDomNodeList elementsByTagNameNS( const QString & nsURI, const QString & localName )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
 }
 
 /*
-QDomImplementation implementation () const
+QDomImplementation implementation() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
 {
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
 }
 
 /*
-QDomNode importNode ( const QDomNode & importedNode, bool deep )
+QDomNode importNode( const QDomNode & importedNode, bool deep )
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
 {
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
 {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
 }
 
 /*
-bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
 void QDomDocument_setContent1()
 {
@@ -624,7 +624,7 @@ void QDomDocument_setContent1()
 }
 
 /*
-bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
 void QDomDocument_setContent2()
 {
@@ -641,7 +641,7 @@ void QDomDocument_setContent2()
 }
 
 /*
-bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
 void QDomDocument_setContent3()
 {
@@ -658,7 +658,7 @@ void QDomDocument_setContent3()
 }
 
 /*
-bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
 void QDomDocument_setContent4()
 {
@@ -675,7 +675,7 @@ void QDomDocument_setContent4()
 }
 
 /*
-bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
 void QDomDocument_setContent5()
 {
@@ -692,7 +692,7 @@ void QDomDocument_setContent5()
 }
 
 /*
-bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
 void QDomDocument_setContent6()
 {
@@ -709,7 +709,7 @@ void QDomDocument_setContent6()
 }
 
 /*
-bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
 void QDomDocument_setContent7()
 {
@@ -726,7 +726,7 @@ void QDomDocument_setContent7()
 }
 
 /*
-bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
 void QDomDocument_setContent8()
 {
@@ -744,35 +744,35 @@ void QDomDocument_setContent8()
 
 HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 {
-  if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && HB_ISLOG(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) )
+  if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && HB_ISLOG(2) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) && ( HB_ISNUM(5)||HB_ISNIL(5)) )
   {
     QDomDocument_setContent1();
   }
-  else if( ISBETWEEN(2,5) && HB_ISCHAR(1) && HB_ISLOG(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN(2,5) && HB_ISCHAR(1) && HB_ISLOG(2) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) && ( HB_ISNUM(5)||HB_ISNIL(5)) )
   {
     QDomDocument_setContent2();
   }
-  else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && HB_ISLOG(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && HB_ISLOG(2) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) && ( HB_ISNUM(5)||HB_ISNIL(5)) )
   {
     QDomDocument_setContent3();
   }
-  else if( ISBETWEEN(2,5) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN(2,5) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) && ( HB_ISNUM(5)||HB_ISNIL(5)) )
   {
     QDomDocument_setContent4();
   }
-  else if( ISBETWEEN(1,4) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && HB_ISCHAR(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QDomDocument_setContent5();
   }
-  else if( ISBETWEEN(1,4) && ISQBYTEARRAY(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && ISQBYTEARRAY(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QDomDocument_setContent6();
   }
-  else if( ISBETWEEN(1,4) && ISQIODEVICE(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && ISQIODEVICE(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QDomDocument_setContent7();
   }
-  else if( ISBETWEEN(1,4) && ISQXMLINPUTSOURCE(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && ISQXMLINPUTSOURCE(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QDomDocument_setContent8();
   }
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 }
 
 /*
-QByteArray toByteArray ( int indent = 1 ) const
+QByteArray toByteArray( int indent = 1 ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toByteArray( OPINT(1,1) ) );
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
 }
 
 /*
-QString toString ( int indent = 1 ) const
+QString toString( int indent = 1 ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
 {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RQSTRING( obj->toString( OPINT(1,1) ) );

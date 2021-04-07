@@ -54,7 +54,7 @@ RETURN
 #endif
 
 /*
-QDomAttr ()
+QDomAttr()
 */
 void QDomAttr_new1()
 {
@@ -63,7 +63,7 @@ void QDomAttr_new1()
 }
 
 /*
-QDomAttr ( const QDomAttr & x )
+QDomAttr( const QDomAttr & x )
 */
 void QDomAttr_new2()
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDOMATTR_DELETE )
 }
 
 /*
-QString name () const
+QString name() const
 */
 HB_FUNC_STATIC( QDOMATTR_NAME )
 {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QDOMATTR_NAME )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMATTR_NODETYPE )
 {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QDOMATTR_NODETYPE )
 }
 
 /*
-QDomElement ownerElement () const
+QDomElement ownerElement() const
 */
 HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
 {
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
 }
 
 /*
-void setValue ( const QString & v )
+void setValue( const QString & v )
 */
 HB_FUNC_STATIC( QDOMATTR_SETVALUE )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDOMATTR_SETVALUE )
 }
 
 /*
-bool specified () const
+bool specified() const
 */
 HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QDOMATTR_SPECIFIED )
 }
 
 /*
-QString value () const
+QString value() const
 */
 HB_FUNC_STATIC( QDOMATTR_VALUE )
 {

@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QDomDocumentFragment ()
+QDomDocumentFragment()
 */
 void QDomDocumentFragment_new1()
 {
@@ -57,7 +57,7 @@ void QDomDocumentFragment_new1()
 }
 
 /*
-QDomDocumentFragment ( const QDomDocumentFragment & x )
+QDomDocumentFragment( const QDomDocumentFragment & x )
 */
 void QDomDocumentFragment_new2()
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
 {

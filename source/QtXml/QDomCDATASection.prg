@@ -48,7 +48,7 @@ RETURN
 #endif
 
 /*
-QDomCDATASection ()
+QDomCDATASection()
 */
 void QDomCDATASection_new1()
 {
@@ -57,7 +57,7 @@ void QDomCDATASection_new1()
 }
 
 /*
-QDomCDATASection ( const QDomCDATASection & x )
+QDomCDATASection( const QDomCDATASection & x )
 */
 void QDomCDATASection_new2()
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDOMCDATASECTION_DELETE )
 }
 
 /*
-QDomNode::NodeType nodeType () const
+QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {

@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_DELETE )
 }
 
 /*
-virtual bool attributeDecl ( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value ) = 0
+virtual bool attributeDecl( const QString & eName, const QString & aName, const QString & type, const QString & valueDefault, const QString & value ) = 0
 */
 HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
 }
 
 /*
-virtual QString errorString () const = 0
+virtual QString errorString() const = 0
 */
 HB_FUNC_STATIC( QXMLDECLHANDLER_ERRORSTRING )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_ERRORSTRING )
 }
 
 /*
-virtual bool externalEntityDecl ( const QString & name, const QString & publicId, const QString & systemId ) = 0
+virtual bool externalEntityDecl( const QString & name, const QString & publicId, const QString & systemId ) = 0
 */
 HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
 {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
 }
 
 /*
-virtual bool internalEntityDecl ( const QString & name, const QString & value ) = 0
+virtual bool internalEntityDecl( const QString & name, const QString & value ) = 0
 */
 HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
 {

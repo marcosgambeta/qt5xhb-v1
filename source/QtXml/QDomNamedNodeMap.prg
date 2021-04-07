@@ -69,7 +69,7 @@ RETURN
 #endif
 
 /*
-QDomNamedNodeMap ()
+QDomNamedNodeMap()
 */
 void QDomNamedNodeMap_new1()
 {
@@ -78,7 +78,7 @@ void QDomNamedNodeMap_new1()
 }
 
 /*
-QDomNamedNodeMap ( const QDomNamedNodeMap & n )
+QDomNamedNodeMap( const QDomNamedNodeMap & n )
 */
 void QDomNamedNodeMap_new2()
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_DELETE )
 }
 
 /*
-bool contains ( const QString & name ) const
+bool contains( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_CONTAINS )
 }
 
 /*
-int count () const
+int count() const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_COUNT )
 }
 
 /*
-bool isEmpty () const
+bool isEmpty() const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ISEMPTY )
 }
 
 /*
-QDomNode item ( int index ) const
+QDomNode item( int index ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_ITEM )
 }
 
 /*
-uint length () const
+uint length() const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_LENGTH )
 }
 
 /*
-QDomNode namedItem ( const QString & name ) const
+QDomNode namedItem( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEM )
 }
 
 /*
-QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
+QDomNode namedItemNS( const QString & nsURI, const QString & localName ) const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NAMEDITEMNS )
 }
 
 /*
-QDomNode removeNamedItem ( const QString & name )
+QDomNode removeNamedItem( const QString & name )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEM )
 }
 
 /*
-QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
+QDomNode removeNamedItemNS( const QString & nsURI, const QString & localName )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_REMOVENAMEDITEMNS )
 }
 
 /*
-QDomNode setNamedItem ( const QDomNode & newNode )
+QDomNode setNamedItem( const QDomNode & newNode )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEM )
 }
 
 /*
-QDomNode setNamedItemNS ( const QDomNode & newNode )
+QDomNode setNamedItemNS( const QDomNode & newNode )
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SETNAMEDITEMNS )
 }
 
 /*
-int size () const
+int size() const
 */
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_SIZE )
 {
