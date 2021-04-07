@@ -69,11 +69,7 @@ RETURN
 #endif
 
 /*
-const QList<int> connectedGamepads() const
-*/
-
-/*
-static QGamepadManager* instance()
+static QGamepadManager * instance()
 */
 HB_FUNC_STATIC( QGAMEPADMANAGER_INSTANCE )
 {
@@ -95,7 +91,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_INSTANCE )
 }
 
 /*
-bool isGamepadConnected(int deviceId) const
+bool isGamepadConnected( int deviceId ) const
 */
 HB_FUNC_STATIC( QGAMEPADMANAGER_ISGAMEPADCONNECTED )
 {
@@ -121,7 +117,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ISGAMEPADCONNECTED )
 }
 
 /*
-bool isConfigurationNeeded(int deviceId) const 
+bool isConfigurationNeeded( int deviceId ) const
 */
 HB_FUNC_STATIC( QGAMEPADMANAGER_ISCONFIGURATIONNEEDED )
 {
@@ -147,7 +143,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_ISCONFIGURATIONNEEDED )
 }
 
 /*
-bool configureButton(int deviceId, GamepadButton button) 
+bool configureButton( int deviceId, QGamepadManager::GamepadButton button )
 */
 HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREBUTTON )
 {
@@ -173,7 +169,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREBUTTON )
 }
 
 /*
-bool configureAxis(int deviceId, GamepadAxis axis) 
+bool configureAxis( int deviceId, QGamepadManager::GamepadAxis axis )
 */
 HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREAXIS )
 {
@@ -199,7 +195,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_CONFIGUREAXIS )
 }
 
 /*
-bool setCancelConfigureButton(int deviceId, GamepadButton button) 
+bool setCancelConfigureButton( int deviceId, QGamepadManager::GamepadButton button )
 */
 HB_FUNC_STATIC( QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON )
 {
@@ -225,7 +221,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_SETCANCELCONFIGUREBUTTON )
 }
 
 /*
-void resetConfiguration(int deviceId) 
+void resetConfiguration( int deviceId )
 */
 HB_FUNC_STATIC( QGAMEPADMANAGER_RESETCONFIGURATION )
 {
@@ -253,7 +249,7 @@ HB_FUNC_STATIC( QGAMEPADMANAGER_RESETCONFIGURATION )
 }
 
 /*
-void setSettingsFile(const QString &file) 
+void setSettingsFile( const QString & file )
 */
 HB_FUNC_STATIC( QGAMEPADMANAGER_SETSETTINGSFILE )
 {

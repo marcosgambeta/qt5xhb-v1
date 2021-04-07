@@ -113,7 +113,7 @@ RETURN
 #include <QtGamepad/QGamepad>
 
 /*
-explicit QGamepadKeyNavigation(QObject *parent = nullptr)
+QGamepadKeyNavigation( QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_NEW )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_ACTIVE )
 }
 
 /*
-void setActive(bool isActive) 
+void setActive( bool isActive )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETACTIVE )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETACTIVE )
 }
 
 /*
-QGamepad *gamepad() const
+QGamepad * gamepad() const
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_GAMEPAD )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_GAMEPAD )
 }
 
 /*
-void setGamepad(QGamepad *gamepad) 
+void setGamepad( QGamepad * gamepad )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETGAMEPAD )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_UPKEY )
 }
 
 /*
-void setUpKey(Qt::Key key) 
+void setUpKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETUPKEY )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_DOWNKEY )
 }
 
 /*
-void setDownKey(Qt::Key key) 
+void setDownKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETDOWNKEY )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_LEFTKEY )
 }
 
 /*
-void setLeftKey(Qt::Key key) 
+void setLeftKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETLEFTKEY )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_RIGHTKEY )
 }
 
 /*
-void setRightKey(Qt::Key key) 
+void setRightKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETRIGHTKEY )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONAKEY )
 }
 
 /*
-void setButtonAKey(Qt::Key key) 
+void setButtonAKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONAKEY )
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONBKEY )
 }
 
 /*
-void setButtonBKey(Qt::Key key) 
+void setButtonBKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONBKEY )
 {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONXKEY )
 }
 
 /*
-void setButtonXKey(Qt::Key key) 
+void setButtonXKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONXKEY )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONYKEY )
 }
 
 /*
-void setButtonYKey(Qt::Key key) 
+void setButtonYKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONYKEY )
 {
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONSELECTKEY )
 }
 
 /*
-void setButtonSelectKey(Qt::Key key) 
+void setButtonSelectKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONSELECTKEY )
 {
@@ -752,7 +752,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONSTARTKEY )
 }
 
 /*
-void setButtonStartKey(Qt::Key key) 
+void setButtonStartKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONSTARTKEY )
 {
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONGUIDEKEY )
 }
 
 /*
-void setButtonGuideKey(Qt::Key key) 
+void setButtonGuideKey( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONGUIDEKEY )
 {
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONL1KEY )
 }
 
 /*
-void setButtonL1Key(Qt::Key key) 
+void setButtonL1Key( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL1KEY )
 {
@@ -914,7 +914,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONR1KEY )
 }
 
 /*
-void setButtonR1Key(Qt::Key key) 
+void setButtonR1Key( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR1KEY )
 {
@@ -968,7 +968,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONL2KEY )
 }
 
 /*
-void setButtonL2Key(Qt::Key key) 
+void setButtonL2Key( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL2KEY )
 {
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONR2KEY )
 }
 
 /*
-void setButtonR2Key(Qt::Key key) 
+void setButtonR2Key( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR2KEY )
 {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONL3KEY )
 }
 
 /*
-void setButtonL3Key(Qt::Key key) 
+void setButtonL3Key( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONL3KEY )
 {
@@ -1130,7 +1130,7 @@ HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_BUTTONR3KEY )
 }
 
 /*
-void setButtonR3Key(Qt::Key key) 
+void setButtonR3Key( Qt::Key key )
 */
 HB_FUNC_STATIC( QGAMEPADKEYNAVIGATION_SETBUTTONR3KEY )
 {
