@@ -56,7 +56,7 @@ RETURN
 #include <QtSvg/QSvgRenderer>
 
 /*
-QSvgWidget ( QWidget * parent = 0 )
+QSvgWidget( QWidget * parent = 0 )
 */
 void QSvgWidget_new1()
 {
@@ -65,7 +65,7 @@ void QSvgWidget_new1()
 }
 
 /*
-QSvgWidget ( const QString & file, QWidget * parent = 0 )
+QSvgWidget( const QString & file, QWidget * parent = 0 )
 */
 void QSvgWidget_new2()
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 }
 
 /*
-QSvgRenderer * renderer () const
+QSvgRenderer * renderer() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 }
 
 /*
-void load ( const QString & file )
+void load( const QString & file )
 */
 void QSvgWidget_load1()
 {
@@ -174,7 +174,7 @@ void QSvgWidget_load1()
 }
 
 /*
-void load ( const QByteArray & contents )
+void load( const QByteArray & contents )
 */
 void QSvgWidget_load2()
 {

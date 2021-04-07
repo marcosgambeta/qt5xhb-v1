@@ -63,7 +63,7 @@ RETURN
 #include <QtSvg/QSvgRenderer>
 
 /*
-QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
+QGraphicsSvgItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsSvgItem_new1()
 {
@@ -72,7 +72,7 @@ void QGraphicsSvgItem_new1()
 }
 
 /*
-QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
+QGraphicsSvgItem( const QString & fileName, QGraphicsItem * parent = 0 )
 */
 void QGraphicsSvgItem_new2()
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_DELETE )
 }
 
 /*
-QString elementId () const
+QString elementId() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_ELEMENTID )
 }
 
 /*
-QSize maximumCacheSize () const
+QSize maximumCacheSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
 }
 
 /*
-QSvgRenderer * renderer () const
+QSvgRenderer * renderer() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
 }
 
 /*
-void setElementId ( const QString & id )
+void setElementId( const QString & id )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
 }
 
 /*
-void setMaximumCacheSize ( const QSize & size )
+void setMaximumCacheSize( const QSize & size )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
 }
 
 /*
-void setSharedRenderer ( QSvgRenderer * renderer )
+void setSharedRenderer( QSvgRenderer * renderer )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
 }
 
 /*
-virtual QRectF boundingRect () const
+virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_PAINT )
 }
 
 /*
-virtual int type () const
+virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_TYPE )
 {

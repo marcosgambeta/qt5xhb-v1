@@ -68,7 +68,7 @@ RETURN
 #endif
 
 /*
-QSvgRenderer ( QObject * parent = 0 )
+QSvgRenderer( QObject * parent = 0 )
 */
 void QSvgRenderer_new1()
 {
@@ -77,7 +77,7 @@ void QSvgRenderer_new1()
 }
 
 /*
-QSvgRenderer ( const QString & filename, QObject * parent = 0 )
+QSvgRenderer( const QString & filename, QObject * parent = 0 )
 */
 void QSvgRenderer_new2()
 {
@@ -86,7 +86,7 @@ void QSvgRenderer_new2()
 }
 
 /*
-QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
+QSvgRenderer( const QByteArray & contents, QObject * parent = 0 )
 */
 void QSvgRenderer_new3()
 {
@@ -95,7 +95,7 @@ void QSvgRenderer_new3()
 }
 
 /*
-QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
+QSvgRenderer( QXmlStreamReader * contents, QObject * parent = 0 )
 */
 void QSvgRenderer_new4()
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DELETE )
 }
 
 /*
-bool animated () const
+bool animated() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 }
 
 /*
-QRectF boundsOnElement ( const QString & id ) const
+QRectF boundsOnElement( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 }
 
 /*
-QSize defaultSize () const
+QSize defaultSize() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 }
 
 /*
-bool elementExists ( const QString & id ) const
+bool elementExists( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 }
 
 /*
-int framesPerSecond () const
+int framesPerSecond() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QSVGRENDERER_FRAMESPERSECOND )
 }
 
 /*
-bool isValid () const
+bool isValid() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 }
 
 /*
-QMatrix matrixForElement ( const QString & id ) const
+QMatrix matrixForElement( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 }
 
 /*
-void setFramesPerSecond ( int num )
+void setFramesPerSecond( int num )
 */
 HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
 }
 
 /*
-void setViewBox ( const QRect & viewbox )
+void setViewBox( const QRect & viewbox )
 */
 void QSvgRenderer_setViewBox1()
 {
@@ -359,7 +359,7 @@ void QSvgRenderer_setViewBox1()
 }
 
 /*
-void setViewBox ( const QRectF & viewbox )
+void setViewBox( const QRectF & viewbox )
 */
 void QSvgRenderer_setViewBox2()
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 }
 
 /*
-QRect viewBox () const
+QRect viewBox() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOX )
 }
 
 /*
-QRectF viewBoxF () const
+QRectF viewBoxF() const
 */
 HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
 }
 
 /*
-bool load ( const QString & filename )
+bool load( const QString & filename )
 */
 void QSvgRenderer_load1()
 {
@@ -453,7 +453,7 @@ void QSvgRenderer_load1()
 }
 
 /*
-bool load ( const QByteArray & contents )
+bool load( const QByteArray & contents )
 */
 void QSvgRenderer_load2()
 {
@@ -466,7 +466,7 @@ void QSvgRenderer_load2()
 }
 
 /*
-bool load ( QXmlStreamReader * contents )
+bool load( QXmlStreamReader * contents )
 */
 void QSvgRenderer_load3()
 {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD )
 }
 
 /*
-void render ( QPainter * painter )
+void render( QPainter * painter )
 */
 void QSvgRenderer_render1()
 {
@@ -514,7 +514,7 @@ void QSvgRenderer_render1()
 }
 
 /*
-void render ( QPainter * painter, const QRectF & bounds )
+void render( QPainter * painter, const QRectF & bounds )
 */
 void QSvgRenderer_render2()
 {
@@ -529,7 +529,7 @@ void QSvgRenderer_render2()
 }
 
 /*
-void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
+void render( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
 */
 void QSvgRenderer_render3()
 {
