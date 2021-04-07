@@ -13,10 +13,10 @@
 #ifndef QT5XHB_MACROS_QTQUICKWIDGETS_H
 #define QT5XHB_MACROS_QTQUICKWIDGETS_H
 
-#define ISQQUICKWIDGET(n)                                   Qt5xHb::isObjectDerivedFrom(n,"QQuickWidget")
+#define ISQQUICKWIDGET( n )                                 Qt5xHb::isObjectDerivedFrom( n, "QQuickWidget" )
 
-#define PQQUICKWIDGET(n)                                    (QQuickWidget *) Qt5xHb::itemGetPtr(n)
+#define PQQUICKWIDGET( n )                                  static_cast< QQuickWidget * >( Qt5xHb::itemGetPtr( n ) )
 
-#define OPQQUICKWIDGET(n,v)                                 ISNIL(n)? v : (QQuickWidget *) Qt5xHb::itemGetPtr(n)
+#define OPQQUICKWIDGET( n, v )                              HB_ISNIL( n ) ? v : static_cast< QQuickWidget * >( Qt5xHb::itemGetPtr( n ) )
 
 #endif /* QT5XHB_MACROS_QTQUICKWIDGETS_H */
