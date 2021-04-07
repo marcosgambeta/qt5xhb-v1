@@ -184,11 +184,11 @@ HB_FUNC_STATIC(QSTANDARDITEM_NEW )
   {
     QStandardItem_new2();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QStandardItem_new3();
   }
-  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QStandardItem_new4();
   }
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( OPINT(1,Qt::UserRole + 1) ) );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQVARIANT(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQVARIANT(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setData( *PQVARIANT(1), OPINT(2,Qt::UserRole + 1) );
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
@@ -1578,7 +1578,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       QStandardItem * ptr = obj->child( PINT(1), OPINT(2,0) );
@@ -2043,7 +2043,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       QStandardItem * ptr = obj->takeChild( PINT(1), OPINT(2,0) );
@@ -2164,7 +2164,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->sortChildren( PINT(1), HB_ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );

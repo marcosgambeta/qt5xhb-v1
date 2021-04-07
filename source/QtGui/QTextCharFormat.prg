@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setUnderlineColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setFontStyleHint( (QFont::StyleHint) hb_parni(1), HB_ISNIL(2)? (QFont::StyleStrategy) QFont::PreferDefault : (QFont::StyleStrategy) hb_parni(2) );

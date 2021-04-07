@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       RQSTRINGLIST( obj->families( HB_ISNIL(1)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(1) ) );
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->isBitmapScalable( PQSTRING(1), OPQSTRING(2,QString()) ) );
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->isFixedPitch( PQSTRING(1), OPQSTRING(2,QString()) ) );
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->isScalable( PQSTRING(1), OPQSTRING(2,QString()) ) );
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->isSmoothlyScalable( PQSTRING(1), OPQSTRING(2,QString()) ) );
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       QList<int> list = obj->pointSizes( PQSTRING(1), OPQSTRING(2,QString()) );

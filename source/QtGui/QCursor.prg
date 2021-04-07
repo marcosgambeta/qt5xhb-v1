@@ -123,11 +123,11 @@ HB_FUNC_STATIC( QCURSOR_NEW )
   {
     QCursor_new2();
   }
-  else if( ISBETWEEN(2,4) && ISQBITMAP(1) && ISQBITMAP(2) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISQBITMAP(1) && ISQBITMAP(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QCursor_new3();
   }
-  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QCursor_new4();
   }

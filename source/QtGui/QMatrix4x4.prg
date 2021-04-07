@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QMATRIX4X4_DETERMINANT )
 }
 
 /*
-QMatrix4x4 inverted( bool * invertible = Q_NULLPTR ) const
+QMatrix4x4 inverted( bool * invertible = nullptr ) const
 */
 HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -500,6 +500,7 @@ void QMatrix4x4_scale1()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
+
 /*
 void scale( float x, float y )
 */
@@ -585,6 +586,7 @@ void QMatrix4x4_translate1()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
+
 /*
 void translate( float x, float y )
 */
@@ -651,6 +653,7 @@ void QMatrix4x4_rotate1()
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
+
 /*
 void rotate( float angle, float x, float y, float z = 0.0f )
 */
@@ -689,7 +692,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
   {
     QMatrix4x4_rotate1();
   }
-  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QMatrix4x4_rotate2();
   }
@@ -888,7 +891,7 @@ HB_FUNC_STATIC( QMATRIX4X4_VIEWPORT )
   {
     QMatrix4x4_viewport1();
   }
-  else if( ISBETWEEN(4,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISNUM(5)||HB_ISNIL(5)) && (ISNUM(6)||HB_ISNIL(6)) )
+  else if( ISBETWEEN(4,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( HB_ISNUM(5)||HB_ISNIL(5)) && ( HB_ISNUM(6)||HB_ISNIL(6)) )
   {
     QMatrix4x4_viewport2();
   }

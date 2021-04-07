@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setPosition( PINT(1), HB_ISNIL(2)? (QTextCursor::MoveMode) QTextCursor::MoveAnchor : (QTextCursor::MoveMode) hb_parni(2) );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       RBOOL( obj->movePosition( (QTextCursor::MoveOperation) hb_parni(1), HB_ISNIL(2)? (QTextCursor::MoveMode) QTextCursor::MoveAnchor : (QTextCursor::MoveMode) hb_parni(2), OPINT(3,1) ) );
@@ -1669,7 +1669,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
   {
     QTextCursor_insertImage3();
   }
-  else if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISCHAR(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQIMAGE(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
     QTextCursor_insertImage4();
   }

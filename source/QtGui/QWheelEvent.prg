@@ -90,11 +90,11 @@ void QWheelEvent_new3()
 
 HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {
-  if( ISBETWEEN(4,5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISNUM(5)||HB_ISNIL(5)) )
+  if( ISBETWEEN(4,5) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( HB_ISNUM(5)||HB_ISNIL(5)) )
   {
     QWheelEvent_new1();
   }
-  else if( ISBETWEEN(5,6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (ISNUM(6)||HB_ISNIL(6)) )
+  else if( ISBETWEEN(5,6) && ISQPOINTF(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ( HB_ISNUM(6)||HB_ISNIL(6)) )
   {
     QWheelEvent_new2();
   }

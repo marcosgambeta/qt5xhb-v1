@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QFONT_NEW )
   {
     QFont_new1();
   }
-  else if( ISBETWEEN(1,4) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) && (ISLOG(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(1,4) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISLOG(4)||HB_ISNIL(4)) )
   {
     QFont_new2();
   }
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLEHINT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setStyleHint( (QFont::StyleHint) hb_parni(1), HB_ISNIL(2)? (QFont::StyleStrategy) QFont::PreferDefault : (QFont::StyleStrategy) hb_parni(2) );
@@ -1609,6 +1609,9 @@ void QFont_toVariant2()
   variant->setValue<QFont>( *font );
   Qt5xHb::createReturnClass( variant, "QVARIANT", true );
 }
+
+//[1]QVariant toVariant()
+//[2]static QVariant toVariant( const QFont & )
 
 HB_FUNC_STATIC( QFONT_TOVARIANT )
 {

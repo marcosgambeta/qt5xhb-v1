@@ -134,11 +134,11 @@ HB_FUNC_STATIC( QRAWFONT_NEW )
   {
     QRawFont_new1();
   }
-  else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QRawFont_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QRawFont_new3();
   }
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISQTRANSFORM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (ISQTRANSFORM(3)||HB_ISNIL(3)) )
     {
 #endif
       QImage * ptr = new QImage( obj->alphaMapForGlyph( PQUINT32(1), HB_ISNIL(2)? (QRawFont::AntialiasingType) QRawFont::SubPixelAntialiasing : (QRawFont::AntialiasingType) hb_parni(2), HB_ISNIL(3)? QTransform() : *(QTransform *) Qt5xHb::itemGetPtr(3) ) );
@@ -932,7 +932,7 @@ static QRawFont fromFont( const QFont & font, QFontDatabase::WritingSystem writi
 HB_FUNC_STATIC( QRAWFONT_FROMFONT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQFONT(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQFONT(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
 #endif
     QRawFont * ptr = new QRawFont( QRawFont::fromFont( *PQFONT(1), HB_ISNIL(2)? (QFontDatabase::WritingSystem) QFontDatabase::Any : (QFontDatabase::WritingSystem) hb_parni(2) ) );

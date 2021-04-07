@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
   {
     QPalette_new1();
   }
-  else if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+  else if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
   {
     QPalette_new2();
   }
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
   {
     QPalette_new3();
   }
-  else if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) && (ISQCOLOR(2)||ISCHAR(2)) )
+  else if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
   {
     QPalette_new4();
   }
@@ -828,11 +828,11 @@ void QPalette_setColor2()
 
 HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQCOLOR(3)||ISCHAR(3)) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQCOLOR(3)||HB_ISCHAR(3)) )
   {
     QPalette_setColor1();
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
   {
     QPalette_setColor2();
   }

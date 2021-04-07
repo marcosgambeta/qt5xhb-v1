@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setRange( PDOUBLE(1), PDOUBLE(2), OPINT(3,0) );

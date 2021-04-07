@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_NEW )
   {
     QOpenGLTexture_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQIMAGE(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QOpenGLTexture_new2();
   }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_BIND )
   {
     QOpenGLTexture_bind1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QOpenGLTexture_bind2();
   }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_RELEASE )
   {
     QOpenGLTexture_release1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QOpenGLTexture_release2();
   }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_SETSIZE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setSize( PINT(1), OPINT(2,1), OPINT(3,1) );
@@ -1100,7 +1100,7 @@ HB_FUNC_STATIC( QOPENGLTEXTURE_GENERATEMIPMAPS )
   {
     QOpenGLTexture_generateMipMaps1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && ( HB_ISLOG(2)||HB_ISNIL(2)) )
   {
     QOpenGLTexture_generateMipMaps2();
   }

@@ -146,11 +146,11 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
   {
     QPageSize_new2();
   }
-  else if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISCHAR(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQSIZE(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QPageSize_new3();
   }
-  else if( ISBETWEEN(2,4) && ISQSIZEF(1) && HB_ISNUM(2) && (ISCHAR(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && ISQSIZEF(1) && HB_ISNUM(2) && ( HB_ISCHAR(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QPageSize_new4();
   }
@@ -401,11 +401,11 @@ HB_FUNC_STATIC( QPAGESIZE_ID )
   {
     QPageSize_id1();
   }
-  else if( ISBETWEEN(1,2) && ISQSIZE(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQSIZE(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QPageSize_id2();
   }
-  else if( ISBETWEEN(2,3) && ISQSIZEF(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQSIZEF(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QPageSize_id3();
   }

@@ -60,7 +60,7 @@ QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QS
 */
 HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
-  if( ISBETWEEN(3,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISCHAR(4)||HB_ISNIL(4)) && (ISLOG(5)||HB_ISNIL(5)) && (ISNUM(6)||HB_ISNIL(6)) )
+  if( ISBETWEEN(3,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISCHAR(4)||HB_ISNIL(4)) && (HB_ISLOG(5)||HB_ISNIL(5)) && (HB_ISNUM(6)||HB_ISNIL(6)) )
   {
     QKeyEvent * obj = new QKeyEvent( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) hb_parni(3), OPQSTRING(4,QString()), OPBOOL(5,false), OPUSHORT(6,1) );
     Qt5xHb::returnNewObject( obj, false );

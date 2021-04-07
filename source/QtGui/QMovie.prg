@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setBackgroundColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );

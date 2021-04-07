@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
   {
     QPolygon_new4();
   }
-  else if( ISBETWEEN(1,2) && ISQRECT(1) && (ISLOG(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQRECT(1) && ( HB_ISLOG(2)||HB_ISNIL(2)) )
   {
     QPolygon_new5();
   }
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QPOLYGON_PUTPOINTS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQPOLYGON(3) && (ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQPOLYGON(3) && (HB_ISNUM(4)||HB_ISNIL(4)) )
     {
 #endif
       obj->putPoints( PINT(1), PINT(2), *PQPOLYGON(3), OPINT(4,0) );

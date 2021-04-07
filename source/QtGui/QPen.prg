@@ -133,11 +133,11 @@ HB_FUNC_STATIC( QPEN_NEW )
   {
     QPen_new2();
   }
-  else if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+  else if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
   {
     QPen_new3();
   }
-  else if( ISBETWEEN(2,5) && ISQBRUSH(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN(2,5) && ISQBRUSH(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) && ( HB_ISNUM(5)||HB_ISNIL(5)) )
   {
     QPen_new4();
   }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );

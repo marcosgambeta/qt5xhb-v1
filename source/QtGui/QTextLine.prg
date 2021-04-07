@@ -483,11 +483,11 @@ void QTextLine_cursorToX2()
 
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 {
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QTextLine_cursorToX1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QTextLine_cursorToX2();
   }
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RINT( obj->xToCursor( PQREAL(1), HB_ISNIL(2)? (QTextLine::CursorPosition) QTextLine::CursorBetweenCharacters : (QTextLine::CursorPosition) hb_parni(2) ) );
