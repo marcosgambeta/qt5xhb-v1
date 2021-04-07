@@ -74,7 +74,7 @@ RETURN
 #include <QtWidgets/QLayout>
 
 /*
-QUiLoader ( QObject * parent = 0 )
+QUiLoader( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_NEW )
 {
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QUILOADER_DELETE )
 }
 
 /*
-void addPluginPath ( const QString & path )
+void addPluginPath( const QString & path )
 */
 HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 }
 
 /*
-QStringList availableLayouts () const
+QStringList availableLayouts() const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 }
 
 /*
-QStringList availableWidgets () const
+QStringList availableWidgets() const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 }
 
 /*
-void clearPluginPaths ()
+void clearPluginPaths()
 */
 HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 }
 
 /*
-virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
+virtual QAction * createAction( QObject * parent = 0, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQOBJECT(1)||HB_ISNIL(1)) && (ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISQOBJECT(1)||HB_ISNIL(1)) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       QAction * ptr = obj->createAction( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 }
 
 /*
-virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
+virtual QActionGroup * createActionGroup( QObject * parent = 0, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQOBJECT(1)||HB_ISNIL(1)) && (ISCHAR(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISQOBJECT(1)||HB_ISNIL(1)) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
     {
 #endif
       QActionGroup * ptr = obj->createActionGroup( OPQOBJECT(1,0), OPQSTRING(2,QString()) );
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 }
 
 /*
-virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
+virtual QLayout * createLayout( const QString & className, QObject * parent = 0, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) && (ISCHAR(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) && (HB_ISCHAR(3)||HB_ISNIL(3)) )
     {
 #endif
       QLayout * ptr = obj->createLayout( PQSTRING(1), OPQOBJECT(2,0), OPQSTRING(3,QString()) );
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 }
 
 /*
-virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
+virtual QWidget * createWidget( const QString & className, QWidget * parent = 0, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) && (ISCHAR(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) && (HB_ISCHAR(3)||HB_ISNIL(3)) )
     {
 #endif
       QWidget * ptr = obj->createWidget( PQSTRING(1), OPQWIDGET(2,0), OPQSTRING(3,QString()) );
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 }
 
 /*
-bool isLanguageChangeEnabled () const
+bool isLanguageChangeEnabled() const
 */
 HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 }
 
 /*
-QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
+QWidget * load( QIODevice * device, QWidget * parentWidget = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_LOAD )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
 }
 
 /*
-QStringList pluginPaths () const
+QStringList pluginPaths() const
 */
 HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 }
 
 /*
-void setLanguageChangeEnabled ( bool enabled )
+void setLanguageChangeEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 }
 
 /*
-void setWorkingDirectory ( const QDir & dir )
+void setWorkingDirectory( const QDir & dir )
 */
 HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 {
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 }
 
 /*
-QDir workingDirectory () const
+QDir workingDirectory() const
 */
 HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 {
