@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,6) && ISQLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISNUM(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) && (ISNUM(6)||HB_ISNIL(6)) )
+    if( ISBETWEEN(3,6) && ISQLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4)||HB_ISNIL(4)) && (HB_ISNUM(5)||HB_ISNIL(5)) && (HB_ISNUM(6)||HB_ISNIL(6)) )
     {
 #endif
       obj->addItem( PQLAYOUTITEM(1), PINT(2), PINT(3), OPINT(4,1), OPINT(5,1), HB_ISNIL(6)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(6) );
@@ -198,11 +198,11 @@ void QGridLayout_addLayout2()
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 {
-  if( ISBETWEEN(3,4) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISNUM(4)||HB_ISNIL(4)) )
+  if( ISBETWEEN(3,4) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QGridLayout_addLayout1();
   }
-  else if( ISBETWEEN(5,6) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (ISNUM(6)||HB_ISNIL(6)) )
+  else if( ISBETWEEN(5,6) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ( HB_ISNUM(6)||HB_ISNIL(6)) )
   {
     QGridLayout_addLayout2();
   }
@@ -244,11 +244,11 @@ void QGridLayout_addWidget2()
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 {
-  if( ISBETWEEN(3,4) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISNUM(4)||HB_ISNIL(4)) )
+  if( ISBETWEEN(3,4) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QGridLayout_addWidget1();
   }
-  else if( ISBETWEEN(5,6) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (ISNUM(6)||HB_ISNIL(6)) )
+  else if( ISBETWEEN(5,6) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ( HB_ISNUM(6)||HB_ISNIL(6)) )
   {
     QGridLayout_addWidget2();
   }

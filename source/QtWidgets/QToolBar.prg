@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
   {
     QToolBar_addAction2();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QToolBar_addAction3();
   }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
   {
     QToolBar_addAction4();
   }
-  else if( ISNUMPAR(4) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) )
+  else if( ISNUMPAR(4) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) )
   {
     QToolBar_addAction5();
   }

@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQGRAPHICSITEM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->collidesWithItem( PQGRAPHICSITEM(1), HB_ISNIL(2)? (Qt::ItemSelectionMode) Qt::IntersectsItemShape : (Qt::ItemSelectionMode) hb_parni(2) ) );
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQPAINTERPATH(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQPAINTERPATH(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->collidesWithPath( *PQPAINTERPATH(1), HB_ISNIL(2)? (Qt::ItemSelectionMode) Qt::IntersectsItemShape : (Qt::ItemSelectionMode) hb_parni(2) ) );
@@ -742,11 +742,11 @@ void QGraphicsItem_ensureVisible2()
 
 HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 {
-  if( ISBETWEEN(0,3) && (ISQRECTF(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(0,3) && (ISQRECTF(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QGraphicsItem_ensureVisible1();
   }
-  if( ISBETWEEN(4,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISNUM(5)||HB_ISNIL(5)) && (ISNUM(6)||HB_ISNIL(6)) )
+  if( ISBETWEEN(4,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( HB_ISNUM(5)||HB_ISNIL(5)) && ( HB_ISNUM(6)||HB_ISNIL(6)) )
   {
     QGraphicsItem_ensureVisible2();
   }
@@ -1437,7 +1437,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQGRAPHICSITEM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQGRAPHICSITEM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -3186,7 +3186,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setFlag( (QGraphicsItem::GraphicsItemFlag) hb_parni(1), OPBOOL(2,true) );
@@ -3238,7 +3238,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setFocus( HB_ISNIL(1)? (Qt::FocusReason) Qt::OtherFocusReason : (Qt::FocusReason) hb_parni(1) );
@@ -3596,7 +3596,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQTRANSFORM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setTransform( *PQTRANSFORM(1), OPBOOL(2,false) );

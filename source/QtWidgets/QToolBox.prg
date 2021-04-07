@@ -75,7 +75,7 @@ QToolBox( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QTOOLBOX_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QToolBox * obj = new QToolBox( OPQWIDGET(1,0), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -133,7 +133,7 @@ void QToolBox_addItem2()
 
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
-  if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||ISCHAR(2)) && HB_ISCHAR(3) )
+  if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||HB_ISCHAR(2)) && HB_ISCHAR(3) )
   {
     QToolBox_addItem1();
   }
@@ -272,7 +272,7 @@ void QToolBox_insertItem2()
 
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {
-  if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||ISCHAR(3)) && HB_ISCHAR(4) )
+  if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||HB_ISCHAR(3)) && HB_ISCHAR(4) )
   {
     QToolBox_insertItem1();
   }
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setItemIcon( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );

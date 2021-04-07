@@ -70,7 +70,7 @@ void QStyleOptionComplex_new2()
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISNUM(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && ( HB_ISNUM(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QStyleOptionComplex_new1();
   }

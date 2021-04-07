@@ -96,7 +96,7 @@ void QProxyStyle_new2()
 
 HB_FUNC_STATIC( QPROXYSTYLE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISOBJECT(1)||HB_ISNIL(1)) )
   {
     QProxyStyle_new1();
   }
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QPROXYSTYLE_DRAWITEMTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(6,7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && HB_ISLOG(5) && HB_ISCHAR(6) && (ISNUM(7)||HB_ISNIL(7)) )
+    if( ISBETWEEN(6,7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && HB_ISLOG(5) && HB_ISCHAR(6) && (HB_ISNUM(7)||HB_ISNIL(7)) )
     {
 #endif
       obj->drawItemText( PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6), HB_ISNIL(7)? (QPalette::ColorRole) QPalette::NoRole : (QPalette::ColorRole) hb_parni(7) );

@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QCOLORMAP_PIXEL )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       RUINT( obj->pixel( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) ) );
@@ -277,7 +277,7 @@ static QColormap instance( int screen = -1 )
 HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
   {
 #endif
     QColormap * ptr = new QColormap( QColormap::instance( OPINT(1,-1) ) );

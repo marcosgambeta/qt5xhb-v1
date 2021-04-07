@@ -95,11 +95,11 @@ void QProgressDialog_new2()
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QProgressDialog_new1();
   }
-  else if( ISBETWEEN(4,6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQWIDGET(5)||HB_ISNIL(5)) && (ISNUM(6)||HB_ISNIL(6)) )
+  else if( ISBETWEEN(4,6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQWIDGET(5)||HB_ISNIL(5)) && ( HB_ISNUM(6)||HB_ISNIL(6)) )
   {
     QProgressDialog_new2();
   }

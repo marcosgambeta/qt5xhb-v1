@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW )
   {
     QSizePolicy_new1();
   }
-  else if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QSizePolicy_new2();
   }

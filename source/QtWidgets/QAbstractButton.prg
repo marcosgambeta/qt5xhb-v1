@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->animateClick( OPINT(1,100) );

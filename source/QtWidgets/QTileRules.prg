@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QTILERULES_NEW )
   {
     QTileRules_new1();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  else if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QTileRules_new2();
   }

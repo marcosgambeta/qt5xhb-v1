@@ -109,7 +109,7 @@ QInputDialog( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QInputDialog * obj = new QInputDialog( OPQWIDGET(1,0), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
     Qt5xHb::returnNewObject( obj, false );
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setOption( (QInputDialog::InputDialogOption) hb_parni(1), OPBOOL(2,true) );
@@ -1225,7 +1225,7 @@ static double getDouble( QWidget * parent, const QString & title, const QString 
 HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (ISNUM(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) && (ISNUM(6)||HB_ISNIL(6)) && (ISNUM(7)||HB_ISNIL(7)) && (ISLOG(8)||HB_ISNIL(8)) && (ISNUM(9)||HB_ISNIL(9)) )
+  if( ISBETWEEN(3,9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4)||HB_ISNIL(4)) && (HB_ISNUM(5)||HB_ISNIL(5)) && (HB_ISNUM(6)||HB_ISNIL(6)) && (HB_ISNUM(7)||HB_ISNIL(7)) && (HB_ISLOG(8)||HB_ISNIL(8)) && (HB_ISNUM(9)||HB_ISNIL(9)) )
   {
 #endif
     bool par8;
@@ -1246,7 +1246,7 @@ static int getInt( QWidget * parent, const QString & title, const QString & labe
 HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (ISNUM(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) && (ISNUM(6)||HB_ISNIL(6)) && (ISNUM(7)||HB_ISNIL(7)) && (ISLOG(8)||HB_ISNIL(8)) && (ISNUM(9)||HB_ISNIL(9)) )
+  if( ISBETWEEN(3,9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4)||HB_ISNIL(4)) && (HB_ISNUM(5)||HB_ISNIL(5)) && (HB_ISNUM(6)||HB_ISNIL(6)) && (HB_ISNUM(7)||HB_ISNIL(7)) && (HB_ISLOG(8)||HB_ISNIL(8)) && (HB_ISNUM(9)||HB_ISNIL(9)) )
   {
 #endif
     bool par8;
@@ -1267,7 +1267,7 @@ static QString getItem( QWidget * parent, const QString & title, const QString &
 HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISARRAY(4) && (ISNUM(5)||HB_ISNIL(5)) && (ISLOG(6)||HB_ISNIL(6)) && (ISLOG(7)||HB_ISNIL(7)) && (ISNUM(8)||HB_ISNIL(8)) && (ISNUM(9)||HB_ISNIL(9)) )
+  if( ISBETWEEN(4,9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISARRAY(4) && (HB_ISNUM(5)||HB_ISNIL(5)) && (HB_ISLOG(6)||HB_ISNIL(6)) && (HB_ISLOG(7)||HB_ISNIL(7)) && (HB_ISNUM(8)||HB_ISNIL(8)) && (HB_ISNUM(9)||HB_ISNIL(9)) )
   {
 #endif
     bool par7;
@@ -1288,7 +1288,7 @@ static QString getText( QWidget * parent, const QString & title, const QString &
 HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,8) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (ISNUM(4)||HB_ISNIL(4)) && (ISCHAR(5)||HB_ISNIL(5)) && (ISLOG(6)||HB_ISNIL(6)) && (ISNUM(7)||HB_ISNIL(7)) && (ISNUM(8)||HB_ISNIL(8)) )
+  if( ISBETWEEN(3,8) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISNUM(4)||HB_ISNIL(4)) && (HB_ISCHAR(5)||HB_ISNIL(5)) && (HB_ISLOG(6)||HB_ISNIL(6)) && (HB_ISNUM(7)||HB_ISNIL(7)) && (HB_ISNUM(8)||HB_ISNIL(8)) )
   {
 #endif
     bool par6;
@@ -1309,7 +1309,7 @@ static QString getMultiLineText( QWidget * parent, const QString & title, const 
 HB_FUNC_STATIC( QINPUTDIALOG_GETMULTILINETEXT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(3,7) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (ISCHAR(4)||HB_ISNIL(4)) && (ISLOG(5)||HB_ISNIL(5)) && (ISNUM(6)||HB_ISNIL(6)) && (ISNUM(7)||HB_ISNIL(7)) )
+  if( ISBETWEEN(3,7) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISCHAR(4)||HB_ISNIL(4)) && (HB_ISLOG(5)||HB_ISNIL(5)) && (HB_ISNUM(6)||HB_ISNIL(6)) && (HB_ISNUM(7)||HB_ISNIL(7)) )
   {
 #endif
     bool par5;

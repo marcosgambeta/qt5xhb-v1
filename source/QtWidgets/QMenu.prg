@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
   {
     QMenu_addAction1();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QMenu_addAction2();
   }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
   {
     QMenu_addAction3();
   }
-  else if( ISBETWEEN(4,5) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) && (ISQKEYSEQUENCE(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN(4,5) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) && (ISQKEYSEQUENCE(5)||HB_ISNIL(5)) )
   {
     QMenu_addAction4();
   }
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QMENU_ADDMENU )
   {
     QMenu_addMenu2();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QMenu_addMenu3();
   }
@@ -636,7 +636,7 @@ HB_FUNC_STATIC( QMENU_SETICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QMENU_ADDSECTION )
   {
     QMenu_addSection1();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QMenu_addSection2();
   }
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC( QMENU_INSERTSECTION )
   {
     QMenu_insertSection1();
   }
-  else if( ISNUMPAR(3) && ISQACTION(1) && (ISQICON(2)||ISCHAR(2)) && HB_ISCHAR(3) )
+  else if( ISNUMPAR(3) && ISQACTION(1) && (ISQICON(2)||HB_ISCHAR(2)) && HB_ISCHAR(3) )
   {
     QMenu_insertSection2();
   }

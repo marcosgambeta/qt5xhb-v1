@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QTREEWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QTreeWidget * obj = new QTreeWidget( OPQWIDGET(1,0) );
+    QTreeWidget * obj = new QTreeWidget( OPQWIDGET(1,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->closePersistentEditor( PQTREEWIDGETITEM(1), OPINT(2,0) );
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->editItem( PQTREEWIDGETITEM(1), OPINT(2,0) );
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->openPersistentEditor( PQTREEWIDGETITEM(1), OPINT(2,0) );
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->scrollToItem( PQTREEWIDGETITEM(1), HB_ISNIL(2)? (QAbstractItemView::ScrollHint) QAbstractItemView::EnsureVisible : (QAbstractItemView::ScrollHint) hb_parni(2) );

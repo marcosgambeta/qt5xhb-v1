@@ -77,11 +77,11 @@ void QSplashScreen_new2()
 
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,2) && (ISQPIXMAP(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QSplashScreen_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISQPIXMAP(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISQPIXMAP(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QSplashScreen_new2();
   }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISQCOLOR(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (ISQCOLOR(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->showMessage( PQSTRING(1), OPINT(2,Qt::AlignLeft), HB_ISNIL(3)? Qt::black : *(QColor *) Qt5xHb::itemGetPtr(3) );

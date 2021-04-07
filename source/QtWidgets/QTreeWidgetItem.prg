@@ -205,35 +205,35 @@ void QTreeWidgetItem_new9()
 
 HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QTreeWidgetItem_new1();
   }
-  else if( ISBETWEEN(1,2) && HB_ISARRAY(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && HB_ISARRAY(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QTreeWidgetItem_new2();
   }
-  else if( ISBETWEEN(1,2) && ISQTREEWIDGET(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQTREEWIDGET(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QTreeWidgetItem_new3();
   }
-  else if( ISBETWEEN(2,3) && ISQTREEWIDGET(1) && HB_ISARRAY(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQTREEWIDGET(1) && HB_ISARRAY(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QTreeWidgetItem_new4();
   }
-  else if( ISBETWEEN(2,3) && ISQTREEWIDGET(1) && ISQTREEWIDGETITEM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQTREEWIDGET(1) && ISQTREEWIDGETITEM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QTreeWidgetItem_new5();
   }
-  else if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(1,2) && ISQTREEWIDGETITEM(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QTreeWidgetItem_new6();
   }
-  else if( ISBETWEEN(2,3) && ISQTREEWIDGETITEM(1) && HB_ISARRAY(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQTREEWIDGETITEM(1) && HB_ISARRAY(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QTreeWidgetItem_new7();
   }
-  else if( ISBETWEEN(2,3) && ISQTREEWIDGETITEM(1) && ISQTREEWIDGETITEM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && ISQTREEWIDGETITEM(1) && ISQTREEWIDGETITEM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QTreeWidgetItem_new8();
   }
@@ -1196,7 +1196,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setIcon( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );
@@ -1748,7 +1748,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETBACKGROUNDCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setBackgroundColor( PINT(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
@@ -1799,7 +1799,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_SETTEXTCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setTextColor( PINT(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );

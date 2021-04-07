@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setOption( (QFontDialog::FontDialogOption) hb_parni(1), OPBOOL(2,true) );
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
   {
     QFontDialog_getFont1();
   }
-  else if( ISBETWEEN(2,5) && HB_ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3)||HB_ISNIL(3)) && (ISCHAR(4)||HB_ISNIL(4)) && (ISNUM(5)||HB_ISNIL(5)) )
+  else if( ISBETWEEN(2,5) && HB_ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3)||HB_ISNIL(3)) && ( HB_ISCHAR(4)||HB_ISNIL(4)) && ( HB_ISNUM(5)||HB_ISNIL(5)) )
   {
     QFontDialog_getFont2();
   }

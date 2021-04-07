@@ -443,7 +443,7 @@ static void alert( QWidget * widget, int msec = 0 )
 HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQWIDGET(1) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQWIDGET(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
   {
 #endif
     QApplication::alert( PQWIDGET(1), OPINT(2,0) );
@@ -1161,7 +1161,7 @@ static void setEffectEnabled( Qt::UIEffect effect, bool enable = true )
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISLOG(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISLOG(2)||HB_ISNIL(2)) )
   {
 #endif
     QApplication::setEffectEnabled( (Qt::UIEffect) hb_parni(1), OPBOOL(2,true) );
@@ -1182,7 +1182,7 @@ static void setFont( const QFont & font, const char * className = 0 )
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQFONT(1) && (ISCHAR(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQFONT(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
 #endif
     QApplication::setFont( *PQFONT(1), OPCONSTCHAR(2,0) );
@@ -1287,7 +1287,7 @@ static void setPalette( const QPalette & palette, const char * className = 0 )
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISQPALETTE(1) && (ISCHAR(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(1,2) && ISQPALETTE(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
 #endif
     QApplication::setPalette( *PQPALETTE(1), OPCONSTCHAR(2,0) );
@@ -1429,7 +1429,7 @@ static void setWindowIcon( const QIcon & icon )
 HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+  if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
   {
 #endif
     QApplication::setWindowIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );

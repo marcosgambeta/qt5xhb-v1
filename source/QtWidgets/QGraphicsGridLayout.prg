@@ -156,11 +156,11 @@ void QGraphicsGridLayout_addItem2()
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 {
-  if( ISBETWEEN(5,6) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (ISNUM(6)||HB_ISNIL(6)) )
+  if( ISBETWEEN(5,6) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ( HB_ISNUM(6)||HB_ISNIL(6)) )
   {
     QGraphicsGridLayout_addItem1();
   }
-  else if( ISBETWEEN(3,4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && ISQGRAPHICSLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QGraphicsGridLayout_addItem2();
   }

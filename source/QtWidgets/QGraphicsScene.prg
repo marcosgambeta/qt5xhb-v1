@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQWIDGET(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       QGraphicsProxyWidget * ptr = obj->addWidget( PQWIDGET(1), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
@@ -882,11 +882,11 @@ void QGraphicsScene_invalidate2()
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
 {
-  if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISNUM(5)||HB_ISNIL(5)) )
+  if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( HB_ISNUM(5)||HB_ISNIL(5)) )
   {
     QGraphicsScene_invalidate1();
   }
-  else if( ISBETWEEN(0,2) && (ISQRECTF(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  else if( ISBETWEEN(0,2) && (ISQRECTF(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QGraphicsScene_invalidate2();
   }
@@ -1123,7 +1123,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_RENDER )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQRECTF(2)||HB_ISNIL(2)) && (ISQRECTF(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN(1,4) && ISQPAINTER(1) && (ISQRECTF(2)||HB_ISNIL(2)) && (ISQRECTF(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )
     {
 #endif
       obj->render( PQPAINTER(1), HB_ISNIL(2)? QRectF() : *(QRectF *) Qt5xHb::itemGetPtr(2), HB_ISNIL(3)? QRectF() : *(QRectF *) Qt5xHb::itemGetPtr(3), HB_ISNIL(4)? (Qt::AspectRatioMode) Qt::KeepAspectRatio : (Qt::AspectRatioMode) hb_parni(4) );
@@ -1327,7 +1327,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUS )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->setFocus( HB_ISNIL(1)? (Qt::FocusReason) Qt::OtherFocusReason : (Qt::FocusReason) hb_parni(1) );
@@ -1353,7 +1353,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUSITEM )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQGRAPHICSITEM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setFocusItem( PQGRAPHICSITEM(1), HB_ISNIL(2)? (Qt::FocusReason) Qt::OtherFocusReason : (Qt::FocusReason) hb_parni(2) );

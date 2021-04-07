@@ -72,7 +72,7 @@ QAccessibleWidget( QWidget * o, QAccessible::Role r = QAccessible::Client, const
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
-  if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISCHAR(3)||HB_ISNIL(3)) )
+  if( ISBETWEEN(1,3) && ISQWIDGET(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISCHAR(3)||HB_ISNIL(3)) )
   {
     QAccessibleWidget * obj = new QAccessibleWidget( PQWIDGET(1), HB_ISNIL(2)? (QAccessible::Role) QAccessible::Client : (QAccessible::Role) hb_parni(2), OPQSTRING(3,QString()) );
     Qt5xHb::returnNewObject( obj, true );

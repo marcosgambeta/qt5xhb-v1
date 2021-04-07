@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
   {
     QMenuBar_addMenu2();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QMenuBar_addMenu3();
   }
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QMENUBAR_CORNERWIDGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       QWidget * ptr = obj->cornerWidget( HB_ISNIL(1)? (Qt::Corner) Qt::TopRightCorner : (Qt::Corner) hb_parni(1) );
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QMENUBAR_SETCORNERWIDGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQWIDGET(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->setCornerWidget( PQWIDGET(1), HB_ISNIL(2)? (Qt::Corner) Qt::TopRightCorner : (Qt::Corner) hb_parni(2) );

@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(6,7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && HB_ISLOG(5) && HB_ISCHAR(6) && (ISNUM(7)||HB_ISNIL(7)) )
+    if( ISBETWEEN(6,7) && ISQPAINTER(1) && ISQRECT(2) && HB_ISNUM(3) && ISQPALETTE(4) && HB_ISLOG(5) && HB_ISCHAR(6) && (HB_ISNUM(7)||HB_ISNIL(7)) )
     {
 #endif
       obj->drawItemText( PQPAINTER(1), *PQRECT(2), PINT(3), *PQPALETTE(4), PBOOL(5), PQSTRING(6), HB_ISNIL(7)? (QPalette::ColorRole) QPalette::NoRole : (QPalette::ColorRole) hb_parni(7) );
@@ -686,7 +686,7 @@ static int sliderPositionFromValue( int min, int max, int logicalValue, int span
 HB_FUNC_STATIC( QSTYLE_SLIDERPOSITIONFROMVALUE )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISLOG(5)||HB_ISNIL(5)) )
+  if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISLOG(5)||HB_ISNIL(5)) )
   {
 #endif
     RINT( QStyle::sliderPositionFromValue( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );
@@ -705,7 +705,7 @@ static int sliderValueFromPosition( int min, int max, int position, int span, bo
 HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISLOG(5)||HB_ISNIL(5)) )
+  if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISLOG(5)||HB_ISNIL(5)) )
   {
 #endif
     RINT( QStyle::sliderValueFromPosition( PINT(1), PINT(2), PINT(3), PINT(4), OPBOOL(5,false) ) );

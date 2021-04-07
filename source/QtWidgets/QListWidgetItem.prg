@@ -139,15 +139,15 @@ void QListWidgetItem_new4()
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQLISTWIDGET(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+  if( ISBETWEEN(0,1) && (ISQLISTWIDGET(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
     QListWidgetItem_new1();
   }
-  else if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQLISTWIDGET(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQLISTWIDGET(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
     QListWidgetItem_new2();
   }
-  else if( ISBETWEEN(2,4) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) && (ISQLISTWIDGET(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(2,4) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQLISTWIDGET(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
     QListWidgetItem_new3();
   }
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQICON(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setIcon( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETBACKGROUNDCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setBackgroundColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTCOLOR )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
     {
 #endif
       obj->setTextColor( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );

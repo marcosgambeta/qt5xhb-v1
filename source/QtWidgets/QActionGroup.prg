@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
   {
     QActionGroup_addAction2();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     QActionGroup_addAction3();
   }

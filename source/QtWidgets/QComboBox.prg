@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
   {
     QComboBox_addItem1();
   }
-  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) && (ISQVARIANT(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQVARIANT(3)||HB_ISNIL(3)) )
   {
     QComboBox_addItem2();
   }
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQVARIANT(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQVARIANT(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       RINT( obj->findData( *PQVARIANT(1), OPINT(2,Qt::UserRole), HB_ISNIL(3)? (Qt::MatchFlags) Qt::MatchExactly | Qt::MatchCaseSensitive : (Qt::MatchFlags) hb_parni(3) ) );
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RINT( obj->findText( PQSTRING(1), HB_ISNIL(2)? (Qt::MatchFlags) Qt::MatchExactly | Qt::MatchCaseSensitive : (Qt::MatchFlags) hb_parni(2) ) );
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
   {
     QComboBox_insertItem1();
   }
-  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) && HB_ISCHAR(3) && (ISQVARIANT(4)||HB_ISNIL(4)) )
+  else if( ISBETWEEN(3,4) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) && HB_ISCHAR(3) && (ISQVARIANT(4)||HB_ISNIL(4)) )
   {
     QComboBox_insertItem2();
   }
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->itemData( PINT(1), OPINT(2,Qt::UserRole) ) );
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQVARIANT(2) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQVARIANT(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setItemData( PINT(1), *PQVARIANT(2), OPINT(3,Qt::UserRole) );
@@ -1149,7 +1149,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETITEMICON )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) )
     {
 #endif
       obj->setItemIcon( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );

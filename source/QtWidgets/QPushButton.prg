@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
   {
     QPushButton_new2();
   }
-  else if( ISBETWEEN(2,3) && (ISQICON(1)||ISCHAR(1)) && HB_ISCHAR(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
+  else if( ISBETWEEN(2,3) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
   {
     QPushButton_new3();
   }

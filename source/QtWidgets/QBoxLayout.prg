@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQLAYOUT(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && ISQLAYOUT(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->addLayout( PQLAYOUT(1), OPINT(2,0) );
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
     {
 #endif
       obj->addStretch( OPINT(1,0) );
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQWIDGET(1) && (ISNUM(2)||HB_ISNIL(2)) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(1,3) && ISQWIDGET(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->addWidget( PQWIDGET(1), OPINT(2,0), HB_ISNIL(3)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(3) );
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQLAYOUT(2) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQLAYOUT(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->insertLayout( PINT(1), PQLAYOUT(2), OPINT(3,0) );
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       obj->insertStretch( PINT(1), OPINT(2,0) );
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISNUM(3)||HB_ISNIL(3)) && (ISNUM(4)||HB_ISNIL(4)) )
+    if( ISBETWEEN(2,4) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3)||HB_ISNIL(3)) && (HB_ISNUM(4)||HB_ISNIL(4)) )
     {
 #endif
       obj->insertWidget( PINT(1), PQWIDGET(2), OPINT(3,0), HB_ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
