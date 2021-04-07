@@ -90,7 +90,7 @@ void QQmlProperty_new1()
 }
 
 /*
-QQmlProperty(QObject * obj)
+QQmlProperty( QObject * obj )
 */
 void QQmlProperty_new2()
 {
@@ -99,7 +99,7 @@ void QQmlProperty_new2()
 }
 
 /*
-QQmlProperty(QObject * obj, QQmlContext * ctxt)
+QQmlProperty( QObject * obj, QQmlContext * ctxt )
 */
 void QQmlProperty_new3()
 {
@@ -108,7 +108,7 @@ void QQmlProperty_new3()
 }
 
 /*
-QQmlProperty(QObject * obj, QQmlEngine * engine)
+QQmlProperty( QObject * obj, QQmlEngine * engine )
 */
 void QQmlProperty_new4()
 {
@@ -117,7 +117,7 @@ void QQmlProperty_new4()
 }
 
 /*
-QQmlProperty(QObject * obj, const QString & name)
+QQmlProperty( QObject * obj, const QString & name )
 */
 void QQmlProperty_new5()
 {
@@ -126,7 +126,7 @@ void QQmlProperty_new5()
 }
 
 /*
-QQmlProperty(QObject * obj, const QString & name, QQmlContext * ctxt)
+QQmlProperty( QObject * obj, const QString & name, QQmlContext * ctxt )
 */
 void QQmlProperty_new6()
 {
@@ -135,7 +135,7 @@ void QQmlProperty_new6()
 }
 
 /*
-QQmlProperty(QObject * obj, const QString & name, QQmlEngine * engine)
+QQmlProperty( QObject * obj, const QString & name, QQmlEngine * engine )
 */
 void QQmlProperty_new7()
 {
@@ -144,7 +144,7 @@ void QQmlProperty_new7()
 }
 
 /*
-QQmlProperty(const QQmlProperty & other)
+QQmlProperty( const QQmlProperty & other )
 */
 void QQmlProperty_new8()
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_DELETE )
 }
 
 /*
-bool connectNotifySignal(QObject * dest, const char * slot) const
+bool connectNotifySignal( QObject * dest, const char * slot ) const
 */
 void QQmlProperty_connectNotifySignal1()
 {
@@ -223,7 +223,7 @@ void QQmlProperty_connectNotifySignal1()
 }
 
 /*
-bool connectNotifySignal(QObject * dest, int method) const
+bool connectNotifySignal( QObject * dest, int method ) const
 */
 void QQmlProperty_connectNotifySignal2()
 {
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPE )
 }
 
 /*
-PropertyTypeCategory propertyTypeCategory() const
+QQmlProperty::PropertyTypeCategory propertyTypeCategory() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPECATEGORY )
 {
@@ -653,7 +653,7 @@ void QQmlProperty_read1()
 }
 
 /*
-static QVariant read(QObject * object, const QString & name)
+static QVariant read( QObject * object, const QString & name )
 */
 void QQmlProperty_read2()
 {
@@ -663,7 +663,7 @@ void QQmlProperty_read2()
 }
 
 /*
-static QVariant read(QObject * object, const QString & name, QQmlContext * ctxt)
+static QVariant read( QObject * object, const QString & name, QQmlContext * ctxt )
 */
 void QQmlProperty_read3()
 {
@@ -673,7 +673,7 @@ void QQmlProperty_read3()
 }
 
 /*
-static QVariant read(QObject * object, const QString & name, QQmlEngine * engine)
+static QVariant read( QObject * object, const QString & name, QQmlEngine * engine )
 */
 void QQmlProperty_read4()
 {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_RESET )
 }
 
 /*
-Type type() const
+QQmlProperty::Type type() const
 */
 HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
 {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
 }
 
 /*
-bool write(const QVariant & value) const
+bool write( const QVariant & value ) const
 */
 void QQmlProperty_write1()
 {
@@ -768,7 +768,7 @@ void QQmlProperty_write1()
 }
 
 /*
-static bool write(QObject * object, const QString & name, const QVariant & value)
+static bool write( QObject * object, const QString & name, const QVariant & value )
 */
 void QQmlProperty_write2()
 {
@@ -777,7 +777,7 @@ void QQmlProperty_write2()
 }
 
 /*
-static bool write(QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt)
+static bool write( QObject * object, const QString & name, const QVariant & value, QQmlContext * ctxt )
 */
 void QQmlProperty_write3()
 {
@@ -786,7 +786,7 @@ void QQmlProperty_write3()
 }
 
 /*
-static bool write(QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine)
+static bool write( QObject * object, const QString & name, const QVariant & value, QQmlEngine * engine )
 */
 void QQmlProperty_write4()
 {

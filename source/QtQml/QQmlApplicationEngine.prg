@@ -59,7 +59,7 @@ RETURN
 #endif
 
 /*
-QQmlApplicationEngine(QObject *parent=0)
+QQmlApplicationEngine( QObject * parent = 0 )
 */
 void QQmlApplicationEngine_new1()
 {
@@ -70,7 +70,7 @@ void QQmlApplicationEngine_new1()
 }
 
 /*
-QQmlApplicationEngine(const QUrl &url, QObject *parent=0)
+QQmlApplicationEngine( const QUrl & url, QObject * parent = 0 )
 */
 void QQmlApplicationEngine_new2()
 {
@@ -81,7 +81,7 @@ void QQmlApplicationEngine_new2()
 }
 
 /*
-QQmlApplicationEngine(const QString &filePath, QObject *parent=0)
+QQmlApplicationEngine( const QString & filePath, QObject * parent = 0 )
 */
 void QQmlApplicationEngine_new3()
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_DELETE )
 }
 
 /*
-QList<QObject*> rootObjects()
+QList<QObject *> rootObjects()
 */
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_ROOTOBJECTS )
 }
 
 /*
-void load(const QUrl &url)
+void load( const QUrl & url )
 */
 void QQmlApplicationEngine_load1()
 {
@@ -200,7 +200,7 @@ void QQmlApplicationEngine_load1()
 }
 
 /*
-void load(const QString &filePath)
+void load( const QString & filePath )
 */
 void QQmlApplicationEngine_load2()
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOAD )
 }
 
 /*
-void loadData(const QByteArray &data, const QUrl &url = QUrl())
+void loadData( const QByteArray & data, const QUrl & url = QUrl() )
 */
 HB_FUNC_STATIC( QQMLAPPLICATIONENGINE_LOADDATA )
 {

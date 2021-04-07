@@ -78,7 +78,7 @@ void QQmlListReference_new1()
 }
 
 /*
-QQmlListReference(QObject * object, const char * property, QQmlEngine * engine = 0)
+QQmlListReference( QObject * object, const char * property, QQmlEngine * engine = 0 )
 */
 void QQmlListReference_new2()
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_DELETE )
 }
 
 /*
-bool append(QObject * object) const
+bool append( QObject * object ) const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
 {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QQMLLISTREFERENCE_APPEND )
 }
 
 /*
-QObject * at(int index) const
+QObject * at( int index ) const
 */
 HB_FUNC_STATIC( QQMLLISTREFERENCE_AT )
 {

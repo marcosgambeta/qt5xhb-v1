@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_DELETE )
 }
 
 /*
-virtual Flags flags() const = 0
+virtual QQmlImageProviderBase::Flags flags() const = 0
 */
 HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_FLAGS )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_FLAGS )
 }
 
 /*
-virtual ImageType imageType() const = 0
+virtual QQmlImageProviderBase::ImageType imageType() const = 0
 */
 HB_FUNC_STATIC( QQMLIMAGEPROVIDERBASE_IMAGETYPE )
 {

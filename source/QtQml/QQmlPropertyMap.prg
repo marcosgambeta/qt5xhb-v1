@@ -60,7 +60,7 @@ RETURN
 #endif
 
 /*
-QQmlPropertyMap(QObject * parent = 0)
+QQmlPropertyMap( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_NEW )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_DELETE )
 }
 
 /*
-void clear(const QString & key)
+void clear( const QString & key )
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_CLEAR )
 {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_CLEAR )
 }
 
 /*
-bool contains(const QString & key) const
+bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_CONTAINS )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_COUNT )
 }
 
 /*
-void insert(const QString & key, const QVariant & value)
+void insert( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_INSERT )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QQMLPROPERTYMAP_SIZE )
 }
 
 /*
-QVariant value(const QString & key) const
+QVariant value( const QString & key ) const
 */
 HB_FUNC_STATIC( QQMLPROPERTYMAP_VALUE )
 {

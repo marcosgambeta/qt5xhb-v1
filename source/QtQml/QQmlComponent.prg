@@ -70,7 +70,7 @@ RETURN
 #include <QtQml/QQmlContext>
 
 /*
-QQmlComponent(QQmlEngine * engine, QObject * parent = 0)
+QQmlComponent( QQmlEngine * engine, QObject * parent = 0 )
 */
 void QQmlComponent_new1()
 {
@@ -79,7 +79,7 @@ void QQmlComponent_new1()
 }
 
 /*
-QQmlComponent(QQmlEngine * engine, const QString & fileName, QObject * parent = 0)
+QQmlComponent( QQmlEngine * engine, const QString & fileName, QObject * parent = 0 )
 */
 void QQmlComponent_new2()
 {
@@ -88,7 +88,7 @@ void QQmlComponent_new2()
 }
 
 /*
-QQmlComponent(QQmlEngine * engine, const QString & fileName, CompilationMode mode, QObject * parent = 0)
+QQmlComponent( QQmlEngine * engine, const QString & fileName, QQmlComponent::CompilationMode mode, QObject * parent = 0)
 */
 void QQmlComponent_new3()
 {
@@ -97,7 +97,7 @@ void QQmlComponent_new3()
 }
 
 /*
-QQmlComponent(QQmlEngine * engine, const QUrl & url, QObject * parent = 0)
+QQmlComponent( QQmlEngine * engine, const QUrl & url, QObject * parent = 0 )
 */
 void QQmlComponent_new4()
 {
@@ -106,7 +106,7 @@ void QQmlComponent_new4()
 }
 
 /*
-QQmlComponent(QQmlEngine * engine, const QUrl & url, CompilationMode mode, QObject * parent = 0)
+QQmlComponent( QQmlEngine * engine, const QUrl & url, QQmlComponent::CompilationMode mode, QObject * parent = 0 )
 */
 void QQmlComponent_new5()
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_DELETE )
 }
 
 /*
-virtual QObject * beginCreate(QQmlContext * publicContext)
+virtual QObject * beginCreate( QQmlContext * publicContext )
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_BEGINCREATE )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_COMPLETECREATE )
 }
 
 /*
-virtual QObject * create(QQmlContext * context = 0)
+virtual QObject * create( QQmlContext * context = 0 )
 */
 void QQmlComponent_create1()
 {
@@ -227,7 +227,7 @@ void QQmlComponent_create1()
 }
 
 /*
-void create(QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0)
+void create( QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0 )
 */
 void QQmlComponent_create2()
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_PROGRESS )
 }
 
 /*
-Status status() const
+QQmlComponent::Status status() const
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_STATUS )
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_URL )
 }
 
 /*
-void loadUrl(const QUrl & url)
+void loadUrl( const QUrl & url )
 */
 void QQmlComponent_loadUrl1()
 {
@@ -467,7 +467,7 @@ void QQmlComponent_loadUrl1()
 }
 
 /*
-void loadUrl(const QUrl & url, CompilationMode mode)
+void loadUrl( const QUrl & url, QQmlComponent::CompilationMode mode )
 */
 void QQmlComponent_loadUrl2()
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
 }
 
 /*
-void setData(const QByteArray & data, const QUrl & url)
+void setData( const QByteArray & data, const QUrl & url )
 */
 HB_FUNC_STATIC( QQMLCOMPONENT_SETDATA )
 {

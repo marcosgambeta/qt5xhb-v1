@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_DELETE )
 }
 
 /*
-virtual void setTarget(const QQmlProperty & property) = 0
+virtual void setTarget( const QQmlProperty & property ) = 0
 */
 HB_FUNC_STATIC( QQMLPROPERTYVALUESOURCE_SETTARGET )
 {

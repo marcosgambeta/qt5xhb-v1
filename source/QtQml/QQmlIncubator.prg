@@ -66,11 +66,11 @@ RETURN
 #endif
 
 /*
-QQmlIncubator(IncubationMode mode = Asynchronous)
+QQmlIncubator( QQmlIncubator::IncubationMode mode = QQmlIncubator::Asynchronous )
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN(0,1) && (HB_ISNUM(1)||HB_ISNIL(1)) )
   {
     QQmlIncubator * obj = new QQmlIncubator( HB_ISNIL(1)? (QQmlIncubator::IncubationMode) QQmlIncubator::Asynchronous : (QQmlIncubator::IncubationMode) hb_parni(1) );
     Qt5xHb::returnNewObject( obj, true );
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_FORCECOMPLETION )
 }
 
 /*
-IncubationMode incubationMode() const
+QQmlIncubator::IncubationMode incubationMode() const
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_INCUBATIONMODE )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QQMLINCUBATOR_OBJECT )
 }
 
 /*
-Status status() const
+QQmlIncubator::Status status() const
 */
 HB_FUNC_STATIC( QQMLINCUBATOR_STATUS )
 {

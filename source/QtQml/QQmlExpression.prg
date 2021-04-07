@@ -83,7 +83,7 @@ void QQmlExpression_new1()
 }
 
 /*
-QQmlExpression(QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0)
+QQmlExpression( QQmlContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
 */
 void QQmlExpression_new2()
 {
@@ -92,7 +92,7 @@ void QQmlExpression_new2()
 }
 
 /*
-QQmlExpression(const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0)
+QQmlExpression( const QQmlScriptString & script, QQmlContext * ctxt = 0, QObject * scope = 0, QObject * parent = 0 )
 */
 void QQmlExpression_new3()
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_ERROR )
 }
 
 /*
-QVariant evaluate(bool * valueIsUndefined = 0)
+QVariant evaluate( bool * valueIsUndefined = 0 )
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_EVALUATE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISLOG(1)||HB_ISNIL(1)) )
+    if( ISBETWEEN(0,1) && (HB_ISLOG(1)||HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SCOPEOBJECT )
 }
 
 /*
-void setExpression(const QString & expression)
+void setExpression( const QString & expression )
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETEXPRESSION )
 }
 
 /*
-void setNotifyOnValueChanged(bool notifyOnChange)
+void setNotifyOnValueChanged( bool notifyOnChange )
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETNOTIFYONVALUECHANGED )
 }
 
 /*
-void setSourceLocation(const QString & url, int line, int column = 0)
+void setSourceLocation( const QString & url, int line, int column = 0 )
 */
 HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
 {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QQMLEXPRESSION_SETSOURCELOCATION )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISNUM(3)||HB_ISNIL(3)) )
+    if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3)||HB_ISNIL(3)) )
     {
 #endif
       obj->setSourceLocation( PQSTRING(1), PINT(2), OPINT(3,0) );

@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_ENGINE )
 }
 
 /*
-void incubateFor(int msecs)
+void incubateFor( int msecs )
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEFOR )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEFOR )
 }
 
 /*
-void incubateWhile(volatile bool * flag, int msecs = 0)
+void incubateWhile( bool * flag, int msecs = 0 )
 */
 HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QQMLINCUBATIONCONTROLLER_INCUBATEWHILE )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && HB_ISLOG(1) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(1,2) && HB_ISLOG(1) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       bool par1;

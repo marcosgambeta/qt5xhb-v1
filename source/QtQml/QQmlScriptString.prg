@@ -71,7 +71,7 @@ void QQmlScriptString_new1()
 }
 
 /*
-QQmlScriptString(const QQmlScriptString & other)
+QQmlScriptString( const QQmlScriptString & other )
 */
 void QQmlScriptString_new2()
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_DELETE )
 }
 
 /*
-bool booleanLiteral(bool * ok) const
+bool booleanLiteral( bool * ok ) const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_BOOLEANLITERAL )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QQMLSCRIPTSTRING_ISUNDEFINEDLITERAL )
 }
 
 /*
-qreal numberLiteral(bool * ok) const
+qreal numberLiteral( bool * ok ) const
 */
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NUMBERLITERAL )
 {

@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_DELETE )
 }
 
 /*
-virtual void initializeEngine(QQmlEngine * engine, const char * uri)
+virtual void initializeEngine( QQmlEngine * engine, const char * uri )
 */
 HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_INITIALIZEENGINE )
 {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_INITIALIZEENGINE )
 }
 
 /*
-virtual void registerTypes(const char * uri) = 0
+virtual void registerTypes( const char * uri ) = 0
 */
 HB_FUNC_STATIC( QQMLEXTENSIONPLUGIN_REGISTERTYPES )
 {
