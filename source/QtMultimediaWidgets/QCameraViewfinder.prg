@@ -51,7 +51,7 @@ RETURN
 #endif
 
 /*
-QCameraViewfinder(QWidget * parent = 0)
+QCameraViewfinder( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCAMERAVIEWFINDER_NEW )
 {

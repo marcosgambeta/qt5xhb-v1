@@ -65,7 +65,7 @@ RETURN
 #endif
 
 /*
-QGraphicsVideoItem(QGraphicsItem *parent = 0)
+QGraphicsVideoItem( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_NEW )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_DELETE )
 }
 
 /*
-QMediaObject *mediaObject() const
+QMediaObject * mediaObject() const
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_MEDIAOBJECT )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_ASPECTRATIOMODE )
 }
 
 /*
-void setAspectRatioMode(Qt::AspectRatioMode mode)
+void setAspectRatioMode( Qt::AspectRatioMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETASPECTRATIOMODE )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_OFFSET )
 }
 
 /*
-void setOffset(const QPointF &offset)
+void setOffset( const QPointF & offset )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETOFFSET )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SIZE )
 }
 
 /*
-void setSize(const QSizeF &size)
+void setSize( const QSizeF & size )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_SETSIZE )
 {
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_BOUNDINGRECT )
 }
 
 /*
-void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0)
+void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSVIDEOITEM_PAINT )
 {
