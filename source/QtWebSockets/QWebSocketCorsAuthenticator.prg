@@ -67,7 +67,7 @@ RETURN
 #include <QtCore/QLatin1String>
 
 /*
-explicit QWebSocketCorsAuthenticator(const QString &origin)
+QWebSocketCorsAuthenticator( const QString & origin )
 */
 void QWebSocketCorsAuthenticator_new1()
 {
@@ -78,7 +78,7 @@ void QWebSocketCorsAuthenticator_new1()
 }
 
 /*
-explicit QWebSocketCorsAuthenticator(const QWebSocketCorsAuthenticator &other)
+QWebSocketCorsAuthenticator( const QWebSocketCorsAuthenticator & other )
 */
 void QWebSocketCorsAuthenticator_new2()
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_DELETE )
 }
 
 /*
-void swap(QWebSocketCorsAuthenticator &other)
+void swap( QWebSocketCorsAuthenticator & other )
 */
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SWAP )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_ALLOWED )
 }
 
 /*
-void setAllowed(bool allowed)
+void setAllowed( bool allowed )
 */
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_SETALLOWED )
 {

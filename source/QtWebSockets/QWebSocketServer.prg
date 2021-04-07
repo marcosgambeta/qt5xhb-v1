@@ -91,14 +91,14 @@ RETURN
 #include <QtWebSockets/QWebSocket>
 
 /*
-explicit QWebSocketServer(const QString &serverName, SslMode secureMode, QObject *parent = Q_NULLPTR)
+QWebSocketServer( const QString & serverName, QWebSocketServer::SslMode secureMode, QObject * parent = nullptr )
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QWebSocketServer * obj = new QWebSocketServer( PQSTRING(1), (QWebSocketServer::SslMode) hb_parni(2), OPQOBJECT(3,Q_NULLPTR) );
+    QWebSocketServer * obj = new QWebSocketServer( PQSTRING(1), (QWebSocketServer::SslMode) hb_parni(2), OPQOBJECT(3,nullptr) );
     Qt5xHb::returnNewObject( obj, false );
   }
   else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_DELETE )
 }
 
 /*
-bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0)
+bool listen( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_LISTEN )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_LISTEN )
   if( obj )
   {
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||HB_ISNIL(1)) && (ISNUM(2)||HB_ISNIL(2)) )
+    if( ISBETWEEN(0,2) && (ISQHOSTADDRESS(1)||HB_ISNIL(1)) && (HB_ISNUM(2)||HB_ISNIL(2)) )
     {
 #endif
       RBOOL( obj->listen( HB_ISNIL(1)? QHostAddress::Any : *(QHostAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_MAXPENDINGCONNECTIONS )
 }
 
 /*
-void setMaxPendingConnections(int numConnections)
+void setMaxPendingConnections( int numConnections )
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_SETMAXPENDINGCONNECTIONS )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERADDRESS )
 }
 
 /*
-SslMode secureMode() const
+QWebSocketServer::SslMode secureMode() const
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_SECUREMODE )
 {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SOCKETDESCRIPTOR )
 }
 
 /*
-bool setSocketDescriptor(int socketDescriptor)
+bool setSocketDescriptor( int socketDescriptor )
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSOCKETDESCRIPTOR )
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_HASPENDINGCONNECTIONS )
 }
 
 /*
-virtual QWebSocket *nextPendingConnection()
+virtual QWebSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_NEXTPENDINGCONNECTION )
 {
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SERVERNAME )
 }
 
 /*
-void setServerName(const QString &serverName)
+void setServerName( const QString & serverName )
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSERVERNAME )
 {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_PROXY )
 }
 
 /*
-void setProxy(const QNetworkProxy &networkProxy)
+void setProxy( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_SETPROXY )
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QWEBSOCKETSERVER_SETPROXY )
 }
 
 /*
-void setSslConfiguration(const QSslConfiguration &sslConfiguration)
+void setSslConfiguration( const QSslConfiguration & sslConfiguration )
 */
 HB_FUNC_STATIC( QWEBSOCKETSERVER_SETSSLCONFIGURATION )
 {
