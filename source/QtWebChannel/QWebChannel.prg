@@ -61,7 +61,7 @@ RETURN
 #endif
 
 /*
-explicit QWebChannel(QObject *parent = 0)
+QWebChannel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBCHANNEL_NEW )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_DELETE )
 }
 
 /*
-Q_INVOKABLE void registerObject(const QString &id, QObject *object)
+Q_INVOKABLE void registerObject( const QString & id, QObject * object )
 */
 HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
 {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_REGISTEROBJECT )
 }
 
 /*
-Q_INVOKABLE void deregisterObject(QObject *object)
+Q_INVOKABLE void deregisterObject( QObject * object )
 */
 HB_FUNC_STATIC( QWEBCHANNEL_DEREGISTEROBJECT )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_BLOCKUPDATES )
 }
 
 /*
-void setBlockUpdates(bool block)
+void setBlockUpdates( bool block )
 */
 HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_SETBLOCKUPDATES )
 }
 
 /*
-void connectTo(QWebChannelAbstractTransport *transport)
+void connectTo( QWebChannelAbstractTransport * transport )
 */
 HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QWEBCHANNEL_CONNECTTO )
 }
 
 /*
-void disconnectFrom(QWebChannelAbstractTransport *transport)
+void disconnectFrom( QWebChannelAbstractTransport * transport )
 */
 HB_FUNC_STATIC( QWEBCHANNEL_DISCONNECTFROM )
 {

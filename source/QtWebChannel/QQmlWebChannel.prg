@@ -55,7 +55,7 @@ RETURN
 #endif
 
 /*
-explicit QQmlWebChannel(QObject *parent = 0)
+QQmlWebChannel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QQMLWEBCHANNEL_NEW )
 {
@@ -94,23 +94,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_DELETE )
 }
 
 /*
-Q_INVOKABLE void registerObjects(const QVariantMap &objects)
-*/
-
-/*
-QQmlListProperty<QObject> registeredObjects()
-*/
-
-/*
-QQmlListProperty<QObject> transports()
-*/
-
-/*
-static QQmlWebChannelAttached *qmlAttachedProperties(QObject *obj)
-*/
-
-/*
-Q_INVOKABLE void connectTo(QObject *transport)
+Q_INVOKABLE void connectTo( QObject * transport )
 */
 HB_FUNC_STATIC( QQMLWEBCHANNEL_CONNECTTO )
 {
@@ -138,7 +122,7 @@ HB_FUNC_STATIC( QQMLWEBCHANNEL_CONNECTTO )
 }
 
 /*
-Q_INVOKABLE void disconnectFrom(QObject *transport)
+Q_INVOKABLE void disconnectFrom( QObject * transport )
 */
 HB_FUNC_STATIC( QQMLWEBCHANNEL_DISCONNECTFROM )
 {

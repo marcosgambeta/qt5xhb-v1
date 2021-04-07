@@ -54,10 +54,6 @@ RETURN
 #endif
 #endif
 
-/*
-explicit QWebChannelAbstractTransport(QObject *parent = 0) (abstract)
-*/
-
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
@@ -80,7 +76,7 @@ HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_DELETE )
 }
 
 /*
-virtual void sendMessage(const QJsonObject &message) = 0
+virtual void sendMessage( const QJsonObject & message ) = 0
 */
 HB_FUNC_STATIC( QWEBCHANNELABSTRACTTRANSPORT_SENDMESSAGE )
 {
