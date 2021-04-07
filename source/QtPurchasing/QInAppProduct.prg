@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QINAPPPRODUCT_IDENTIFIER )
 }
 
 /*
-ProductType productType() const
+QInAppProduct::ProductType productType() const
 */
 HB_FUNC_STATIC( QINAPPPRODUCT_PRODUCTTYPE )
 {
