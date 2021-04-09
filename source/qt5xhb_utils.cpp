@@ -348,6 +348,14 @@ void * itemGetPtrStackSelfItem ()
 }
 
 /*
+  obtém e retorna o valor da propriedade POINTER do objeto hb_stackSelfItem() como QObject
+*/
+QObject * getQObjectPointerFromSelfItem()
+{
+  return ( ( QObject * ) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) ) );
+}
+
+/*
   armazena o ponteiro e a flag de destruição no objeto (função
   utilizada nos métodos construtores new)
 */
