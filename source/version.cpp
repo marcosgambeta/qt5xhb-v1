@@ -2,7 +2,7 @@
 
   Qt5xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 5
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -18,7 +18,7 @@ HB_FUNC( QT5XHB_VERSION )
 
 HB_FUNC( QT5XHB_VERSION_DATE )
 {
-  hb_retc( (const char *) "11/02/2021 19:18:00" );
+  hb_retc( (const char *) "05/12/2022 12:00:00" );
 }
 
 HB_FUNC( QT5XHB_ISCPP11 )
@@ -37,7 +37,7 @@ HB_FUNC( QT4XHB_VERSION )
 
 HB_FUNC( QT4XHB_VERSION_DATE )
 {
-  hb_retc( (const char *) "11/02/2021 19:18:00" );
+  hb_retc( (const char *) "05/12/2022 12:00:00" );
 }
 
 /*
