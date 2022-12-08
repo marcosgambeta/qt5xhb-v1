@@ -2,7 +2,7 @@
 
   Qt5xHb Project - Example Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta
+  Copyright (C) 2022 Marcos Antonio Gambeta
 
   E-mail:
   marcosgambeta AT outlook DOT com
