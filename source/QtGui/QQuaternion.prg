@@ -85,7 +85,7 @@ QQuaternion()
 void QQuaternion_new1()
 {
   QQuaternion * obj = new QQuaternion();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -94,7 +94,7 @@ QQuaternion( float scalar, float xpos, float ypos, float zpos )
 void QQuaternion_new2()
 {
   QQuaternion * obj = new QQuaternion( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -103,7 +103,7 @@ QQuaternion( float scalar, const QVector3D & vector )
 void QQuaternion_new3()
 {
   QQuaternion * obj = new QQuaternion( PFLOAT(1), *PQVECTOR3D(2) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -112,7 +112,7 @@ QQuaternion( const QVector4D & vector )
 void QQuaternion_new4()
 {
   QQuaternion * obj = new QQuaternion( *PQVECTOR4D(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QQUATERNION_NEW )
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QQUATERNION_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -148,12 +148,12 @@ HB_FUNC_STATIC( QQUATERNION_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QQUATERNION_ISNULL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QQUATERNION_ISIDENTITY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -218,12 +218,12 @@ HB_FUNC_STATIC( QQUATERNION_VECTOR )
     {
 #endif
       QVector3D * ptr = new QVector3D( obj->vector() );
-      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -241,7 +241,7 @@ void QQuaternion_setVector1()
     obj->setVector( *PQVECTOR3D(1) );
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -256,7 +256,7 @@ void QQuaternion_setVector2()
     obj->setVector( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QQUATERNION_X )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QQUATERNION_Y )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QQUATERNION_Z )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QQUATERNION_SCALAR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -389,12 +389,12 @@ HB_FUNC_STATIC( QQUATERNION_SETX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -415,12 +415,12 @@ HB_FUNC_STATIC( QQUATERNION_SETY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -441,12 +441,12 @@ HB_FUNC_STATIC( QQUATERNION_SETZ )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -467,12 +467,12 @@ HB_FUNC_STATIC( QQUATERNION_SETSCALAR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QQUATERNION_LENGTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QQUATERNION_LENGTHSQUARED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -537,12 +537,12 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZED )
     {
 #endif
       QQuaternion * ptr = new QQuaternion( obj->normalized() );
-      Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
+      Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -566,12 +566,12 @@ HB_FUNC_STATIC( QQUATERNION_NORMALIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -588,12 +588,12 @@ HB_FUNC_STATIC( QQUATERNION_CONJUGATE )
     {
 #endif
       QQuaternion * ptr = new QQuaternion( obj->conjugate() );
-      Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
+      Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -613,12 +613,12 @@ HB_FUNC_STATIC( QQUATERNION_ROTATEDVECTOR )
     {
 #endif
       QVector3D * ptr = new QVector3D( obj->rotatedVector( *PQVECTOR3D(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QVECTOR3D", true );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -638,12 +638,12 @@ HB_FUNC_STATIC( QQUATERNION_TOVECTOR4D )
     {
 #endif
       QVector4D * ptr = new QVector4D( obj->toVector4D() );
-      Qt5xHb::createReturnClass( ptr, "QVECTOR4D", true );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -656,7 +656,7 @@ void QQuaternion_fromAxisAndAngle1()
 {
 
   QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) ) );
-  Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
+  Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 }
 
 /*
@@ -666,7 +666,7 @@ void QQuaternion_fromAxisAndAngle2()
 {
 
   QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) ) );
-  Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
+  Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 }
 
 HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -695,12 +695,12 @@ HB_FUNC_STATIC( QQUATERNION_SLERP )
   {
 #endif
     QQuaternion * ptr = new QQuaternion( QQuaternion::slerp( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
-    Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
+    Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -715,12 +715,12 @@ HB_FUNC_STATIC( QQUATERNION_NLERP )
   {
 #endif
     QQuaternion * ptr = new QQuaternion( QQuaternion::nlerp( *PQQUATERNION(1), *PQQUATERNION(2), PFLOAT(3) ) );
-    Qt5xHb::createReturnClass( ptr, "QQUATERNION", true );
+    Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -731,28 +731,28 @@ HB_FUNC_STATIC( QQUATERNION_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QQUATERNION_NEWFROMOBJECT )
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QQUATERNION_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QQUATERNION_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl((bool) hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QQUATERNION_SETSELFDESTRUCTION )
@@ -776,16 +776,16 @@ HB_FUNC_STATIC( QQUATERNION_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

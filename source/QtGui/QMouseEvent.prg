@@ -62,7 +62,7 @@ QMouseEvent( QEvent::Type type, const QPointF & localPos, Qt::MouseButton button
 void QMouseEvent_new1()
 {
   QMouseEvent * obj = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), (Qt::MouseButton) hb_parni(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 /*
@@ -71,7 +71,7 @@ QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & screen
 void QMouseEvent_new2()
 {
   QMouseEvent * obj = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), (Qt::MouseButton) hb_parni(4), (Qt::MouseButtons) hb_parni(5), (Qt::KeyboardModifiers) hb_parni(6) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 /*
@@ -80,7 +80,7 @@ QMouseEvent( QEvent::Type type, const QPointF & localPos, const QPointF & window
 void QMouseEvent_new3()
 {
   QMouseEvent * obj = new QMouseEvent( (QEvent::Type) hb_parni(1), *PQPOINTF(2), *PQPOINTF(3), *PQPOINTF(4), (Qt::MouseButton) hb_parni(5), (Qt::MouseButtons) hb_parni(6), (Qt::KeyboardModifiers) hb_parni(7) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 HB_FUNC_STATIC( QMOUSEEVENT_NEW )
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -112,12 +112,12 @@ HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -230,12 +230,12 @@ HB_FUNC_STATIC( QMOUSEEVENT_LOCALPOS )
     {
 #endif
       const QPointF * ptr = &obj->localPos();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -255,12 +255,12 @@ HB_FUNC_STATIC( QMOUSEEVENT_SCREENPOS )
     {
 #endif
       const QPointF * ptr = &obj->screenPos();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -280,12 +280,12 @@ HB_FUNC_STATIC( QMOUSEEVENT_WINDOWPOS )
     {
 #endif
       const QPointF * ptr = &obj->windowPos();
-      Qt5xHb::createReturnClass( ptr, "QPOINTF", false );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_X )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_Y )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

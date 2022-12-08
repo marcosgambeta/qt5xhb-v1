@@ -58,7 +58,7 @@ QCommandLinkButton( QWidget * parent = 0 )
 void QCommandLinkButton_new1()
 {
   QCommandLinkButton * obj = new QCommandLinkButton( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 /*
@@ -67,7 +67,7 @@ QCommandLinkButton( const QString & text, QWidget * parent = 0 )
 void QCommandLinkButton_new2()
 {
   QCommandLinkButton * obj = new QCommandLinkButton( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 /*
@@ -76,7 +76,7 @@ QCommandLinkButton( const QString & text, const QString & description, QWidget *
 void QCommandLinkButton_new3()
 {
   QCommandLinkButton * obj = new QCommandLinkButton( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DELETE )
 
   if( obj )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -160,12 +160,12 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -210,12 +210,12 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

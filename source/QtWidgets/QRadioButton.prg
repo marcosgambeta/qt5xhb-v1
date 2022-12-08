@@ -57,7 +57,7 @@ QRadioButton( QWidget * parent = 0 )
 void QRadioButton_new1()
 {
   QRadioButton * obj = new QRadioButton( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 /*
@@ -66,7 +66,7 @@ QRadioButton( const QString & text, QWidget * parent = 0 )
 void QRadioButton_new2()
 {
   QRadioButton * obj = new QRadioButton( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -91,17 +91,17 @@ HB_FUNC_STATIC( QRADIOBUTTON_DELETE )
 
   if( obj )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -118,12 +118,12 @@ HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -143,12 +143,12 @@ HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

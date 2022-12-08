@@ -95,7 +95,7 @@ QPalette()
 void QPalette_new1()
 {
   QPalette * obj = new QPalette();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -104,7 +104,7 @@ QPalette( const QColor & button )
 void QPalette_new2()
 {
   QPalette * obj = new QPalette( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -113,7 +113,7 @@ QPalette( Qt::GlobalColor button )
 void QPalette_new3()
 {
   QPalette * obj = new QPalette( (Qt::GlobalColor) hb_parni(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -122,7 +122,7 @@ QPalette( const QColor & button, const QColor & window )
 void QPalette_new4()
 {
   QPalette * obj = new QPalette( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -131,7 +131,7 @@ QPalette( const QBrush & windowText, const QBrush & button, const QBrush & light
 void QPalette_new5()
 {
   QPalette * obj = new QPalette( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -140,7 +140,7 @@ QPalette( const QPalette & p )
 void QPalette_new6()
 {
   QPalette * obj = new QPalette( *PQPALETTE(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QPALETTE_NEW )
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -184,12 +184,12 @@ HB_FUNC_STATIC( QPALETTE_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -206,12 +206,12 @@ HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
     {
 #endif
       const QBrush * ptr = &obj->alternateBase();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -231,12 +231,12 @@ HB_FUNC_STATIC( QPALETTE_BASE )
     {
 #endif
       const QBrush * ptr = &obj->base();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -256,12 +256,12 @@ HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
     {
 #endif
       const QBrush * ptr = &obj->brightText();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -277,7 +277,7 @@ void QPalette_brush1()
   if( obj )
   {
     const QBrush * ptr = &obj->brush( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) );
-    Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+    Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
   }
 }
 
@@ -291,7 +291,7 @@ void QPalette_brush2()
   if( obj )
   {
     const QBrush * ptr = &obj->brush( (QPalette::ColorRole) hb_parni(1) );
-    Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+    Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
   }
 }
 
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QPALETTE_BRUSH )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -325,12 +325,12 @@ HB_FUNC_STATIC( QPALETTE_BUTTON )
     {
 #endif
       const QBrush * ptr = &obj->button();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -350,12 +350,12 @@ HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
     {
 #endif
       const QBrush * ptr = &obj->buttonText();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QPALETTE_CACHEKEY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -395,7 +395,7 @@ void QPalette_color1()
   if( obj )
   {
     const QColor * ptr = &obj->color( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) );
-    Qt5xHb::createReturnClass( ptr, "QCOLOR", false );
+    Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
   }
 }
 
@@ -409,7 +409,7 @@ void QPalette_color2()
   if( obj )
   {
     const QColor * ptr = &obj->color( (QPalette::ColorRole) hb_parni(1) );
-    Qt5xHb::createReturnClass( ptr, "QCOLOR", false );
+    Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
   }
 }
 
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QPALETTE_COLOR )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -467,12 +467,12 @@ HB_FUNC_STATIC( QPALETTE_DARK )
     {
 #endif
       const QBrush * ptr = &obj->dark();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -492,12 +492,12 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
     {
 #endif
       const QBrush * ptr = &obj->highlight();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -517,12 +517,12 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
     {
 #endif
       const QBrush * ptr = &obj->highlightedText();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QPALETTE_ISEQUAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -614,12 +614,12 @@ HB_FUNC_STATIC( QPALETTE_LIGHT )
     {
 #endif
       const QBrush * ptr = &obj->light();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -639,12 +639,12 @@ HB_FUNC_STATIC( QPALETTE_LINK )
     {
 #endif
       const QBrush * ptr = &obj->link();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -664,12 +664,12 @@ HB_FUNC_STATIC( QPALETTE_LINKVISITED )
     {
 #endif
       const QBrush * ptr = &obj->linkVisited();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -689,12 +689,12 @@ HB_FUNC_STATIC( QPALETTE_MID )
     {
 #endif
       const QBrush * ptr = &obj->mid();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -714,12 +714,12 @@ HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
     {
 #endif
       const QBrush * ptr = &obj->midlight();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -739,12 +739,12 @@ HB_FUNC_STATIC( QPALETTE_RESOLVE )
     {
 #endif
       QPalette * ptr = new QPalette( obj->resolve( *PQPALETTE(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QPALETTE", true );
+      Qt5xHb::createReturnClass(ptr, "QPALETTE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -762,7 +762,7 @@ void QPalette_setBrush1()
     obj->setBrush( (QPalette::ColorRole) hb_parni(1), *PQBRUSH(2) );
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -777,7 +777,7 @@ void QPalette_setBrush2()
     obj->setBrush( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2), *PQBRUSH(3) );
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QPALETTE_SETBRUSH )
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -808,7 +808,7 @@ void QPalette_setColor1()
     obj->setColor( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2), HB_ISOBJECT(3)? *(QColor *) Qt5xHb::itemGetPtr(3) : QColor(hb_parc(3)) );
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -823,7 +823,7 @@ void QPalette_setColor2()
     obj->setColor( (QPalette::ColorRole) hb_parni(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QPALETTE_SETCOLOR )
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -860,12 +860,12 @@ HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -886,12 +886,12 @@ HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -908,12 +908,12 @@ HB_FUNC_STATIC( QPALETTE_SHADOW )
     {
 #endif
       const QBrush * ptr = &obj->shadow();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -933,12 +933,12 @@ HB_FUNC_STATIC( QPALETTE_TEXT )
     {
 #endif
       const QBrush * ptr = &obj->text();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -958,12 +958,12 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
     {
 #endif
       const QBrush * ptr = &obj->toolTipBase();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -983,12 +983,12 @@ HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
     {
 #endif
       const QBrush * ptr = &obj->toolTipText();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1008,12 +1008,12 @@ HB_FUNC_STATIC( QPALETTE_WINDOW )
     {
 #endif
       const QBrush * ptr = &obj->window();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1033,12 +1033,12 @@ HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
     {
 #endif
       const QBrush * ptr = &obj->windowText();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1059,12 +1059,12 @@ HB_FUNC_STATIC( QPALETTE_PLACEHOLDERTEXT )
     {
 #endif
       const QBrush * ptr = &obj->placeholderText();
-      Qt5xHb::createReturnClass( ptr, "QBRUSH", false );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1077,28 +1077,28 @@ HB_FUNC_STATIC( QPALETTE_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QPALETTE_NEWFROMOBJECT )
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QPALETTE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QPALETTE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl((bool) hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QPALETTE_SETSELFDESTRUCTION )
@@ -1122,16 +1122,16 @@ HB_FUNC_STATIC( QPALETTE_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

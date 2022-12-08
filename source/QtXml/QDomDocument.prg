@@ -86,7 +86,7 @@ QDomDocument()
 void QDomDocument_new1()
 {
   QDomDocument * obj = new QDomDocument();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -95,7 +95,7 @@ QDomDocument( const QString & name )
 void QDomDocument_new2()
 {
   QDomDocument * obj = new QDomDocument( PQSTRING(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -104,7 +104,7 @@ QDomDocument( const QDomDocumentType & doctype )
 void QDomDocument_new3()
 {
   QDomDocument * obj = new QDomDocument( *PQDOMDOCUMENTTYPE(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -113,7 +113,7 @@ QDomDocument( const QDomDocument & x )
 void QDomDocument_new4()
 {
   QDomDocument * obj = new QDomDocument( *PQDOMDOCUMENT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -149,12 +149,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -171,12 +171,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->createAttribute( PQSTRING(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMATTR", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -196,12 +196,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->createAttributeNS( PQSTRING(1), PQSTRING(2) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMATTR", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -221,12 +221,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
     {
 #endif
       QDomCDATASection * ptr = new QDomCDATASection( obj->createCDATASection( PQSTRING(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMCDATASECTION", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMCDATASECTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -246,12 +246,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
     {
 #endif
       QDomComment * ptr = new QDomComment( obj->createComment( PQSTRING(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMCOMMENT", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMCOMMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -271,12 +271,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
     {
 #endif
       QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment() );
-      Qt5xHb::createReturnClass( ptr, "QDOMDOCUMENTFRAGMENT", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMDOCUMENTFRAGMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -296,12 +296,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->createElement( PQSTRING(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -321,12 +321,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->createElementNS( PQSTRING(1), PQSTRING(2) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -346,12 +346,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
     {
 #endif
       QDomEntityReference * ptr = new QDomEntityReference( obj->createEntityReference( PQSTRING(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMENTITYREFERENCE", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMENTITYREFERENCE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -371,12 +371,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
     {
 #endif
       QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->createProcessingInstruction( PQSTRING(1), PQSTRING(2) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMPROCESSINGINSTRUCTION", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMPROCESSINGINSTRUCTION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -396,12 +396,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
     {
 #endif
       QDomText * ptr = new QDomText( obj->createTextNode( PQSTRING(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMTEXT", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMTEXT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -421,12 +421,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
     {
 #endif
       QDomDocumentType * ptr = new QDomDocumentType( obj->doctype() );
-      Qt5xHb::createReturnClass( ptr, "QDOMDOCUMENTTYPE", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMDOCUMENTTYPE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -446,12 +446,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->documentElement() );
-      Qt5xHb::createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -471,12 +471,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->elementById( PQSTRING(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -496,12 +496,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName( PQSTRING(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMNODELIST", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMNODELIST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -521,12 +521,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS( PQSTRING(1), PQSTRING(2) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMNODELIST", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMNODELIST", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -546,12 +546,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
     {
 #endif
       QDomImplementation * ptr = new QDomImplementation( obj->implementation() );
-      Qt5xHb::createReturnClass( ptr, "QDOMIMPLEMENTATION", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMIMPLEMENTATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -571,12 +571,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
     {
 #endif
       QDomNode * ptr = new QDomNode( obj->importNode( *PQDOMNODE(1), PBOOL(2) ) );
-      Qt5xHb::createReturnClass( ptr, "QDOMNODE", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -796,12 +796,12 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toByteArray( OPINT(1,1) ) );
-      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

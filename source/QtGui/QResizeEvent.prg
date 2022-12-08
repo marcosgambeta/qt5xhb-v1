@@ -57,11 +57,11 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
   if( ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2) )
   {
     QResizeEvent * obj = new QResizeEvent( *PQSIZE(1), *PQSIZE(2) );
-    Qt5xHb::returnNewObject( obj, false );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -74,12 +74,12 @@ HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -96,12 +96,12 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
     {
 #endif
       const QSize * ptr = &obj->size();
-      Qt5xHb::createReturnClass( ptr, "QSIZE", false );
+      Qt5xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -121,12 +121,12 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
     {
 #endif
       const QSize * ptr = &obj->oldSize();
-      Qt5xHb::createReturnClass( ptr, "QSIZE", false );
+      Qt5xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

@@ -86,7 +86,7 @@ QQmlProperty()
 void QQmlProperty_new1()
 {
   QQmlProperty * obj = new QQmlProperty();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -95,7 +95,7 @@ QQmlProperty( QObject * obj )
 void QQmlProperty_new2()
 {
   QQmlProperty * obj = new QQmlProperty( PQOBJECT(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -104,7 +104,7 @@ QQmlProperty( QObject * obj, QQmlContext * ctxt )
 void QQmlProperty_new3()
 {
   QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQQMLCONTEXT(2) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -113,7 +113,7 @@ QQmlProperty( QObject * obj, QQmlEngine * engine )
 void QQmlProperty_new4()
 {
   QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQQMLENGINE(2) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -122,7 +122,7 @@ QQmlProperty( QObject * obj, const QString & name )
 void QQmlProperty_new5()
 {
   QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -131,7 +131,7 @@ QQmlProperty( QObject * obj, const QString & name, QQmlContext * ctxt )
 void QQmlProperty_new6()
 {
   QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -140,7 +140,7 @@ QQmlProperty( QObject * obj, const QString & name, QQmlEngine * engine )
 void QQmlProperty_new7()
 {
   QQmlProperty * obj = new QQmlProperty( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -149,7 +149,7 @@ QQmlProperty( const QQmlProperty & other )
 void QQmlProperty_new8()
 {
   QQmlProperty * obj = new QQmlProperty( *PQQMLPROPERTY(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QQMLPROPERTY_NEW )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -201,12 +201,12 @@ HB_FUNC_STATIC( QQMLPROPERTY_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_CONNECTNOTIFYSIGNAL )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_HASNOTIFYSIGNAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_INDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISDESIGNABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISPROPERTY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISRESETTABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISSIGNALPROPERTY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_ISWRITABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -457,12 +457,12 @@ HB_FUNC_STATIC( QQMLPROPERTY_METHOD )
     {
 #endif
       QMetaMethod * ptr = new QMetaMethod( obj->method() );
-      Qt5xHb::createReturnClass( ptr, "QMETAMETHOD", true );
+      Qt5xHb::createReturnClass(ptr, "QMETAMETHOD", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEEDSNOTIFYSIGNAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_OBJECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -555,12 +555,12 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTY )
     {
 #endif
       QMetaProperty * ptr = new QMetaProperty( obj->property() );
-      Qt5xHb::createReturnClass( ptr, "QMETAPROPERTY", true );
+      Qt5xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPECATEGORY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_PROPERTYTYPENAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -648,7 +648,7 @@ void QQmlProperty_read1()
   if( obj )
   {
     QVariant * ptr = new QVariant( obj->read() );
-    Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+    Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
   }
 }
 
@@ -659,7 +659,7 @@ void QQmlProperty_read2()
 {
 
   QVariant * ptr = new QVariant( QQmlProperty::read( PQOBJECT(1), PQSTRING(2) ) );
-  Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+  Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 }
 
 /*
@@ -669,7 +669,7 @@ void QQmlProperty_read3()
 {
 
   QVariant * ptr = new QVariant( QQmlProperty::read( PQOBJECT(1), PQSTRING(2), PQQMLCONTEXT(3) ) );
-  Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+  Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 }
 
 /*
@@ -679,7 +679,7 @@ void QQmlProperty_read4()
 {
 
   QVariant * ptr = new QVariant( QQmlProperty::read( PQOBJECT(1), PQSTRING(2), PQQMLENGINE(3) ) );
-  Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+  Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 }
 
 HB_FUNC_STATIC( QQMLPROPERTY_READ )
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_READ )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_RESET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_TYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_WRITE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -824,28 +824,28 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QQMLPROPERTY_NEWFROMOBJECT )
@@ -860,7 +860,7 @@ HB_FUNC_STATIC( QQMLPROPERTY_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QQMLPROPERTY_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl((bool) hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QQMLPROPERTY_SETSELFDESTRUCTION )
@@ -869,16 +869,16 @@ HB_FUNC_STATIC( QQMLPROPERTY_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

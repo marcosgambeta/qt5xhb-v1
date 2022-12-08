@@ -61,7 +61,7 @@ QJSEngine()
 void QJSEngine_new1()
 {
   QJSEngine * obj = new QJSEngine();
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 /*
@@ -70,7 +70,7 @@ QJSEngine( QObject * parent )
 void QJSEngine_new2()
 {
   QJSEngine * obj = new QJSEngine( PQOBJECT(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 HB_FUNC_STATIC( QJSENGINE_NEW )
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QJSENGINE_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -95,17 +95,17 @@ HB_FUNC_STATIC( QJSENGINE_DELETE )
 
   if( obj )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -126,12 +126,12 @@ HB_FUNC_STATIC( QJSENGINE_COLLECTGARBAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -148,12 +148,12 @@ HB_FUNC_STATIC( QJSENGINE_EVALUATE )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->evaluate( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
-      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -173,12 +173,12 @@ HB_FUNC_STATIC( QJSENGINE_GLOBALOBJECT )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->globalObject() );
-      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -198,12 +198,12 @@ HB_FUNC_STATIC( QJSENGINE_NEWARRAY )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->newArray( OPUINT(1,0) ) );
-      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -223,12 +223,12 @@ HB_FUNC_STATIC( QJSENGINE_NEWOBJECT )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->newObject() );
-      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -248,12 +248,12 @@ HB_FUNC_STATIC( QJSENGINE_NEWQOBJECT )
     {
 #endif
       QJSValue * ptr = new QJSValue( obj->newQObject( PQOBJECT(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QJSVALUE", true );
+      Qt5xHb::createReturnClass(ptr, "QJSVALUE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

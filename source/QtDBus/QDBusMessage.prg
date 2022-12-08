@@ -84,7 +84,7 @@ QDBusMessage()
 void QDBusMessage_new1()
 {
   QDBusMessage * obj = new QDBusMessage();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -93,7 +93,7 @@ QDBusMessage( const QDBusMessage & other )
 void QDBusMessage_new2()
 {
   QDBusMessage * obj = new QDBusMessage( *PQDBUSMESSAGE(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -121,12 +121,12 @@ HB_FUNC_STATIC( QDBUSMESSAGE_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -139,7 +139,7 @@ void QDBusMessage_createReply2()
   if( obj )
   {
     QDBusMessage * ptr = new QDBusMessage( obj->createReply( *PQVARIANT(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
   }
 }
 
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEREPLY )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -165,7 +165,7 @@ void QDBusMessage_createErrorReply1()
   if( obj )
   {
     QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply( PQSTRING(1), PQSTRING(2) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
   }
 }
 
@@ -179,7 +179,7 @@ void QDBusMessage_createErrorReply2()
   if( obj )
   {
     QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply( *PQDBUSERROR(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
   }
 }
 
@@ -193,7 +193,7 @@ void QDBusMessage_createErrorReply3()
   if( obj )
   {
     QDBusMessage * ptr = new QDBusMessage( obj->createErrorReply( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
   }
 }
 
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERRORREPLY )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SERVICE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_PATH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_INTERFACE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_MEMBER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ERRORNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ERRORMESSAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_TYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SIGNATURE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISREPLYREQUIRED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -451,12 +451,12 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETDELAYEDREPLY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISDELAYEDREPLY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -501,12 +501,12 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETAUTOSTARTSERVICE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_AUTOSTARTSERVICE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -559,12 +559,12 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETARGUMENTS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ARGUMENTS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -601,12 +601,12 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATESIGNAL )
   {
 #endif
     QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createSignal( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -621,12 +621,12 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEMETHODCALL )
   {
 #endif
     QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createMethodCall( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
-    Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+    Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -638,7 +638,7 @@ void QDBusMessage_createError1()
 {
 
   QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError( PQSTRING(1), PQSTRING(2) ) );
-  Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+  Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 }
 
 /*
@@ -648,7 +648,7 @@ void QDBusMessage_createError2()
 {
 
   QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError( *PQDBUSERROR(1) ) );
-  Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+  Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 }
 
 /*
@@ -658,7 +658,7 @@ void QDBusMessage_createError3()
 {
 
   QDBusMessage * ptr = new QDBusMessage( QDBusMessage::createError( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) ) );
-  Qt5xHb::createReturnClass( ptr, "QDBUSMESSAGE", true );
+  Qt5xHb::createReturnClass(ptr, "QDBUSMESSAGE", true);
 }
 
 HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_CREATEERROR )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_ISINTERACTIVEAUTHORIZATIONALLOWED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -726,12 +726,12 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETINTERACTIVEAUTHORIZATIONALLOWED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -741,28 +741,28 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QDBUSMESSAGE_NEWFROMOBJECT )
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QDBUSMESSAGE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDBUSMESSAGE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl((bool) hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QDBUSMESSAGE_SETSELFDESTRUCTION )
@@ -786,16 +786,16 @@ HB_FUNC_STATIC( QDBUSMESSAGE_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

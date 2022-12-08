@@ -94,7 +94,7 @@ QMatrix( Qt::Initialization )
 void QMatrix_new1()
 {
   QMatrix * obj = new QMatrix( (Qt::Initialization) hb_parni(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -103,7 +103,7 @@ QMatrix()
 void QMatrix_new2()
 {
   QMatrix * obj = new QMatrix();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -112,7 +112,7 @@ QMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
 void QMatrix_new3()
 {
   QMatrix * obj = new QMatrix( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -121,7 +121,7 @@ QMatrix( const QMatrix & matrix )
 void QMatrix_new4()
 {
   QMatrix * obj = new QMatrix( *PQMATRIX(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QMATRIX_NEW )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QMATRIX_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -157,12 +157,12 @@ HB_FUNC_STATIC( QMATRIX_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -183,12 +183,12 @@ HB_FUNC_STATIC( QMATRIX_SETMATRIX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QMATRIX_M11 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QMATRIX_M12 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QMATRIX_M21 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QMATRIX_M22 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QMATRIX_DX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QMATRIX_DY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -357,12 +357,12 @@ HB_FUNC_STATIC( QMATRIX_MAP1 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -387,12 +387,12 @@ HB_FUNC_STATIC( QMATRIX_MAP2 )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -405,7 +405,7 @@ void QMatrix_map3()
   if( obj )
   {
     QPoint * ptr = new QPoint( obj->map( *PQPOINT(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QPOINT", true );
+    Qt5xHb::createReturnClass(ptr, "QPOINT", true);
   }
 }
 
@@ -419,7 +419,7 @@ void QMatrix_map4()
   if( obj )
   {
     QPointF * ptr = new QPointF( obj->map( *PQPOINTF(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QPOINTF", true );
+    Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
   }
 }
 
@@ -433,7 +433,7 @@ void QMatrix_map5()
   if( obj )
   {
     QLine * ptr = new QLine( obj->map( *PQLINE(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QLINE", true );
+    Qt5xHb::createReturnClass(ptr, "QLINE", true);
   }
 }
 
@@ -447,7 +447,7 @@ void QMatrix_map6()
   if( obj )
   {
     QLineF * ptr = new QLineF( obj->map( *PQLINEF(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QLINEF", true );
+    Qt5xHb::createReturnClass(ptr, "QLINEF", true);
   }
 }
 
@@ -461,7 +461,7 @@ void QMatrix_map7()
   if( obj )
   {
     QPolygon * ptr = new QPolygon( obj->map( *PQPOLYGON(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QPOLYGON", true );
+    Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
   }
 }
 
@@ -475,7 +475,7 @@ void QMatrix_map8()
   if( obj )
   {
     QPolygonF * ptr = new QPolygonF( obj->map( *PQPOLYGONF(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QPOLYGONF", true );
+    Qt5xHb::createReturnClass(ptr, "QPOLYGONF", true);
   }
 }
 
@@ -489,7 +489,7 @@ void QMatrix_map9()
   if( obj )
   {
     QRegion * ptr = new QRegion( obj->map( *PQREGION(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QREGION", true );
+    Qt5xHb::createReturnClass(ptr, "QREGION", true);
   }
 }
 
@@ -503,7 +503,7 @@ void QMatrix_map10()
   if( obj )
   {
     QPainterPath * ptr = new QPainterPath( obj->map( *PQPAINTERPATH(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+    Qt5xHb::createReturnClass(ptr, "QPAINTERPATH", true);
   }
 }
 
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QMATRIX_MAP )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -565,7 +565,7 @@ void QMatrix_mapRect1()
   if( obj )
   {
     QRect * ptr = new QRect( obj->mapRect( *PQRECT(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QRECT", true );
+    Qt5xHb::createReturnClass(ptr, "QRECT", true);
   }
 }
 
@@ -579,7 +579,7 @@ void QMatrix_mapRect2()
   if( obj )
   {
     QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QRECTF", true );
+    Qt5xHb::createReturnClass(ptr, "QRECTF", true);
   }
 }
 
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QMATRIX_MAPRECT )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -613,12 +613,12 @@ HB_FUNC_STATIC( QMATRIX_MAPTOPOLYGON )
     {
 #endif
       QPolygon * ptr = new QPolygon( obj->mapToPolygon( *PQRECT(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QPOLYGON", true );
+      Qt5xHb::createReturnClass(ptr, "QPOLYGON", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -642,12 +642,12 @@ HB_FUNC_STATIC( QMATRIX_RESET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QMATRIX_ISIDENTITY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -688,12 +688,12 @@ HB_FUNC_STATIC( QMATRIX_TRANSLATE )
     {
 #endif
       QMatrix * ptr = &obj->translate( PQREAL(1), PQREAL(2) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", false );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -713,12 +713,12 @@ HB_FUNC_STATIC( QMATRIX_SCALE )
     {
 #endif
       QMatrix * ptr = &obj->scale( PQREAL(1), PQREAL(2) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", false );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -738,12 +738,12 @@ HB_FUNC_STATIC( QMATRIX_SHEAR )
     {
 #endif
       QMatrix * ptr = &obj->shear( PQREAL(1), PQREAL(2) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", false );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -763,12 +763,12 @@ HB_FUNC_STATIC( QMATRIX_ROTATE )
     {
 #endif
       QMatrix * ptr = &obj->rotate( PQREAL(1) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", false );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QMATRIX_ISINVERTIBLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QMATRIX_DETERMINANT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -837,13 +837,13 @@ HB_FUNC_STATIC( QMATRIX_INVERTED )
 #endif
       bool par1;
       QMatrix * ptr = new QMatrix( obj->inverted( &par1 ) );
-      Qt5xHb::createReturnClass( ptr, "QMATRIX", true );
+      Qt5xHb::createReturnClass(ptr, "QMATRIX", true);
       hb_storl( par1, 1 );
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -855,28 +855,28 @@ HB_FUNC_STATIC( QMATRIX_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QMATRIX_NEWFROMOBJECT )
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QMATRIX_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QMATRIX_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl((bool) hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QMATRIX_SETSELFDESTRUCTION )
@@ -900,16 +900,16 @@ HB_FUNC_STATIC( QMATRIX_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

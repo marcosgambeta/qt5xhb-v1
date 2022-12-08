@@ -76,12 +76,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -98,12 +98,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
     {
 #endif
       QUrl * ptr = new QUrl( obj->baseUri( *PQXMLNODEMODELINDEX(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -147,12 +147,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
     {
 #endif
       QUrl * ptr = new QUrl( obj->documentUri( *PQXMLNODEMODELINDEX(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -172,12 +172,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
     {
 #endif
       QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById( *PQXMLNAME(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
+      Qt5xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_KIND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -221,12 +221,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
     {
 #endif
       QXmlName * ptr = new QXmlName( obj->name( *PQXMLNODEMODELINDEX(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QXMLNAME", true );
+      Qt5xHb::createReturnClass(ptr, "QXMLNAME", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -350,12 +350,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
     {
 #endif
       QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->root( *PQXMLNODEMODELINDEX(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
+      Qt5xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -375,12 +375,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
     {
 #endif
       QSourceLocation * ptr = new QSourceLocation( obj->sourceLocation( *PQXMLNODEMODELINDEX(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QSOURCELOCATION", true );
+      Qt5xHb::createReturnClass(ptr, "QSOURCELOCATION", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -424,12 +424,12 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->typedValue( *PQXMLNODEMODELINDEX(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

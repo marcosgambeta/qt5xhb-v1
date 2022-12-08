@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -166,7 +166,7 @@ void QTextCodec_fromUnicode1()
   if( obj )
   {
     QByteArray * ptr = new QByteArray( obj->fromUnicode( PQSTRING(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
   }
 }
 
@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -196,12 +196,12 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
     {
 #endif
       QTextDecoder * ptr = obj->makeDecoder( HB_ISNIL(1)? (QTextCodec::ConversionFlags) QTextCodec::DefaultConversion : (QTextCodec::ConversionFlags) hb_parni(1) );
-      Qt5xHb::createReturnClass( ptr, "QTEXTDECODER", false );
+      Qt5xHb::createReturnClass(ptr, "QTEXTDECODER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -221,12 +221,12 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
     {
 #endif
       QTextEncoder * ptr = obj->makeEncoder( HB_ISNIL(1)? (QTextCodec::ConversionFlags) QTextCodec::DefaultConversion : (QTextCodec::ConversionFlags) hb_parni(1) );
-      Qt5xHb::createReturnClass( ptr, "QTEXTENCODER", false );
+      Qt5xHb::createReturnClass(ptr, "QTEXTENCODER", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -246,12 +246,12 @@ HB_FUNC_STATIC( QTEXTCODEC_NAME )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->name() );
-      Qt5xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -340,7 +340,7 @@ void QTextCodec_codecForName1()
 {
 
   QTextCodec * ptr = QTextCodec::codecForName( *PQBYTEARRAY(1) );
-  Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+  Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 }
 
 /*
@@ -350,7 +350,7 @@ void QTextCodec_codecForName2()
 {
 
   QTextCodec * ptr = QTextCodec::codecForName( PCONSTCHAR(1) );
-  Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+  Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 }
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -379,12 +379,12 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORMIB )
   {
 #endif
     QTextCodec * ptr = QTextCodec::codecForMib( PINT(1) );
-    Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+    Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLEMIBS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -466,12 +466,12 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
   {
 #endif
     QTextCodec * ptr = QTextCodec::codecForLocale();
-    Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+    Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -490,11 +490,11 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -504,7 +504,7 @@ void QTextCodec_codecForHtml1()
 {
 
   QTextCodec * ptr = QTextCodec::codecForHtml( *PQBYTEARRAY(1) );
-  Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+  Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 }
 
 /*
@@ -514,7 +514,7 @@ void QTextCodec_codecForHtml2()
 {
 
   QTextCodec * ptr = QTextCodec::codecForHtml( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
-  Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+  Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 }
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
@@ -529,7 +529,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -540,7 +540,7 @@ void QTextCodec_codecForUtfText1()
 {
 
   QTextCodec * ptr = QTextCodec::codecForUtfText( *PQBYTEARRAY(1) );
-  Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+  Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 }
 
 /*
@@ -550,7 +550,7 @@ void QTextCodec_codecForUtfText2()
 {
 
   QTextCodec * ptr = QTextCodec::codecForUtfText( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
-  Qt5xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+  Qt5xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 }
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -575,28 +575,28 @@ HB_FUNC_STATIC( QTEXTCODEC_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QTEXTCODEC_NEWFROMOBJECT )
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QTEXTCODEC_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTEXTCODEC_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl((bool) hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QTEXTCODEC_SETSELFDESTRUCTION )
@@ -620,16 +620,16 @@ HB_FUNC_STATIC( QTEXTCODEC_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

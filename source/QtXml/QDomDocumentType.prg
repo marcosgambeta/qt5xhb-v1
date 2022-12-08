@@ -60,7 +60,7 @@ QDomDocumentType()
 void QDomDocumentType_new1()
 {
   QDomDocumentType * obj = new QDomDocumentType();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -69,7 +69,7 @@ QDomDocumentType( const QDomDocumentType & n )
 void QDomDocumentType_new2()
 {
   QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -97,12 +97,12 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -119,12 +119,12 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities() );
-      Qt5xHb::createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -216,12 +216,12 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations() );
-      Qt5xHb::createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
+      Qt5xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

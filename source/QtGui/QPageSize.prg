@@ -88,7 +88,7 @@ void QPageSize_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * obj = new QPageSize();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -99,7 +99,7 @@ void QPageSize_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * obj = new QPageSize( (QPageSize::PageSizeId) hb_parni(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -110,7 +110,7 @@ void QPageSize_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * obj = new QPageSize( *PQSIZE(1), OPQSTRING(2,QString()), HB_ISNIL(3)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(3) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -121,7 +121,7 @@ void QPageSize_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * obj = new QPageSize( *PQSIZEF(1), (QPageSize::Unit) hb_parni(2), OPQSTRING(3,QString()), HB_ISNIL(4)? (QPageSize::SizeMatchPolicy) QPageSize::FuzzyMatch : (QPageSize::SizeMatchPolicy) hb_parni(4) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -132,7 +132,7 @@ void QPageSize_new5()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   QPageSize * obj = new QPageSize( *PQPAGESIZE(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -174,12 +174,12 @@ HB_FUNC_STATIC( QPAGESIZE_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -202,12 +202,12 @@ HB_FUNC_STATIC( QPAGESIZE_SWAP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QPAGESIZE_ISEQUIVALENTTO )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QPAGESIZE_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPAGESIZE_KEY )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QPAGESIZE_NAME )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QPAGESIZE_ID )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QPAGESIZE_WINDOWSID )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -472,7 +472,7 @@ void QPageSize_definitionSize1()
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->definitionSize() );
-    Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
+    Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
   }
 #endif
 }
@@ -485,7 +485,7 @@ void QPageSize_definitionSize2()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
   QSizeF * ptr = new QSizeF( QPageSize::definitionSize( (QPageSize::PageSizeId) hb_parni(1) ) );
-  Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
+  Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #endif
 }
 
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONSIZE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QPAGESIZE_DEFINITIONUNITS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -558,7 +558,7 @@ void QPageSize_size1()
   if( obj )
   {
     QSizeF * ptr = new QSizeF( obj->size( (QPageSize::Unit) hb_parni(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
+    Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
   }
 #endif
 }
@@ -571,7 +571,7 @@ void QPageSize_size2()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
   QSizeF * ptr = new QSizeF( QPageSize::size( (QPageSize::PageSizeId) hb_parni(1), (QPageSize::Unit) hb_parni(2) ) );
-  Qt5xHb::createReturnClass( ptr, "QSIZEF", true );
+  Qt5xHb::createReturnClass(ptr, "QSIZEF", true);
 #endif
 }
 
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZE )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -602,7 +602,7 @@ void QPageSize_sizePoints1()
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizePoints() );
-    Qt5xHb::createReturnClass( ptr, "QSIZE", true );
+    Qt5xHb::createReturnClass(ptr, "QSIZE", true);
   }
 #endif
 }
@@ -615,7 +615,7 @@ void QPageSize_sizePoints2()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
   QSize * ptr = new QSize( QPageSize::sizePoints( (QPageSize::PageSizeId) hb_parni(1) ) );
-  Qt5xHb::createReturnClass( ptr, "QSIZE", true );
+  Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #endif
 }
 
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPOINTS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -646,7 +646,7 @@ void QPageSize_sizePixels1()
   if( obj )
   {
     QSize * ptr = new QSize( obj->sizePixels( PINT(1) ) );
-    Qt5xHb::createReturnClass( ptr, "QSIZE", true );
+    Qt5xHb::createReturnClass(ptr, "QSIZE", true);
   }
 #endif
 }
@@ -659,7 +659,7 @@ void QPageSize_sizePixels2()
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
 
   QSize * ptr = new QSize( QPageSize::sizePixels( (QPageSize::PageSizeId) hb_parni(1), PINT(2) ) );
-  Qt5xHb::createReturnClass( ptr, "QSIZE", true );
+  Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #endif
 }
 
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QPAGESIZE_SIZEPIXELS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -694,12 +694,12 @@ HB_FUNC_STATIC( QPAGESIZE_RECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->rect( (QPageSize::Unit) hb_parni(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -721,12 +721,12 @@ HB_FUNC_STATIC( QPAGESIZE_RECTPOINTS )
     {
 #endif
       QRect * ptr = new QRect( obj->rectPoints() );
-      Qt5xHb::createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -748,12 +748,12 @@ HB_FUNC_STATIC( QPAGESIZE_RECTPIXELS )
     {
 #endif
       QRect * ptr = new QRect( obj->rectPixels( PINT(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QRECT", true );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -766,28 +766,28 @@ HB_FUNC_STATIC( QPAGESIZE_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QPAGESIZE_NEWFROMOBJECT )
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QPAGESIZE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QPAGESIZE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl((bool) hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QPAGESIZE_SETSELFDESTRUCTION )
@@ -811,16 +811,16 @@ HB_FUNC_STATIC( QPAGESIZE_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

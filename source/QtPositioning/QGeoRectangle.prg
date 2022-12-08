@@ -77,7 +77,7 @@ void QGeoRectangle_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * obj = new QGeoRectangle();
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -88,7 +88,7 @@ void QGeoRectangle_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * obj = new QGeoRectangle( *PQGEOCOORDINATE(1), PDOUBLE(2), PDOUBLE(3) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -99,7 +99,7 @@ void QGeoRectangle_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * obj = new QGeoRectangle( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -110,7 +110,7 @@ void QGeoRectangle_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * obj = new QGeoRectangle( *PQGEORECTANGLE(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -121,7 +121,7 @@ void QGeoRectangle_new5()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   QGeoRectangle * obj = new QGeoRectangle( *PQGEOSHAPE(1) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 #endif
 }
 
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -163,12 +163,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -191,12 +191,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_SETTOPLEFT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -215,12 +215,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_TOPLEFT )
     {
 #endif
       QGeoCoordinate * ptr = new QGeoCoordinate( obj->topLeft() );
-      Qt5xHb::createReturnClass( ptr, "QGEOCOORDINATE", true );
+      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -246,12 +246,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_SETTOPRIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -270,12 +270,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_TOPRIGHT )
     {
 #endif
       QGeoCoordinate * ptr = new QGeoCoordinate( obj->topRight() );
-      Qt5xHb::createReturnClass( ptr, "QGEOCOORDINATE", true );
+      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -301,12 +301,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_SETBOTTOMLEFT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -325,12 +325,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_BOTTOMLEFT )
     {
 #endif
       QGeoCoordinate * ptr = new QGeoCoordinate( obj->bottomLeft() );
-      Qt5xHb::createReturnClass( ptr, "QGEOCOORDINATE", true );
+      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -356,12 +356,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_SETBOTTOMRIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -380,12 +380,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_BOTTOMRIGHT )
     {
 #endif
       QGeoCoordinate * ptr = new QGeoCoordinate( obj->bottomRight() );
-      Qt5xHb::createReturnClass( ptr, "QGEOCOORDINATE", true );
+      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -411,12 +411,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_SETCENTER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -435,12 +435,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_CENTER )
     {
 #endif
       QGeoCoordinate * ptr = new QGeoCoordinate( obj->center() );
-      Qt5xHb::createReturnClass( ptr, "QGEOCOORDINATE", true );
+      Qt5xHb::createReturnClass(ptr, "QGEOCOORDINATE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -466,12 +466,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_SETWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_WIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -520,12 +520,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_SETHEIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -548,7 +548,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_HEIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QGEORECTANGLE_INTERSECTS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -646,12 +646,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_TRANSLATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -670,12 +670,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_TRANSLATED )
     {
 #endif
       QGeoRectangle * ptr = new QGeoRectangle( obj->translated( PDOUBLE(1), PDOUBLE(2) ) );
-      Qt5xHb::createReturnClass( ptr, "QGEORECTANGLE", true );
+      Qt5xHb::createReturnClass(ptr, "QGEORECTANGLE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -697,12 +697,12 @@ HB_FUNC_STATIC( QGEORECTANGLE_UNITED )
     {
 #endif
       QGeoRectangle * ptr = new QGeoRectangle( obj->united( *PQGEORECTANGLE(1) ) );
-      Qt5xHb::createReturnClass( ptr, "QGEORECTANGLE", true );
+      Qt5xHb::createReturnClass(ptr, "QGEORECTANGLE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

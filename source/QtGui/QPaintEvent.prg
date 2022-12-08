@@ -56,7 +56,7 @@ QPaintEvent( const QRegion & paintRegion )
 void QPaintEvent_new1()
 {
   QPaintEvent * obj = new QPaintEvent( *PQREGION(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 /*
@@ -65,7 +65,7 @@ QPaintEvent( const QRect & paintRect )
 void QPaintEvent_new2()
 {
   QPaintEvent * obj = new QPaintEvent( *PQRECT(1) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 }
 
 HB_FUNC_STATIC( QPAINTEVENT_NEW )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -93,12 +93,12 @@ HB_FUNC_STATIC( QPAINTEVENT_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -115,12 +115,12 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
     {
 #endif
       const QRect * ptr = &obj->rect();
-      Qt5xHb::createReturnClass( ptr, "QRECT", false );
+      Qt5xHb::createReturnClass(ptr, "QRECT", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -140,12 +140,12 @@ HB_FUNC_STATIC( QPAINTEVENT_REGION )
     {
 #endif
       const QRegion * ptr = &obj->region();
-      Qt5xHb::createReturnClass( ptr, "QREGION", false );
+      Qt5xHb::createReturnClass(ptr, "QREGION", false);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

@@ -66,7 +66,7 @@ void QOAuth2AuthorizationCodeFlow_new1()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = new QOAuth2AuthorizationCodeFlow( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 #endif
 }
 
@@ -77,7 +77,7 @@ void QOAuth2AuthorizationCodeFlow_new2()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = new QOAuth2AuthorizationCodeFlow( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 #endif
 }
 
@@ -88,7 +88,7 @@ void QOAuth2AuthorizationCodeFlow_new3()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = new QOAuth2AuthorizationCodeFlow( PQSTRING(1), PQNETWORKACCESSMANAGER(2), OPQOBJECT(3,nullptr) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 #endif
 }
 
@@ -99,7 +99,7 @@ void QOAuth2AuthorizationCodeFlow_new4()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = new QOAuth2AuthorizationCodeFlow( *PQURL(1), *PQURL(2), PQNETWORKACCESSMANAGER(3), OPQOBJECT(4,nullptr) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 #endif
 }
 
@@ -110,7 +110,7 @@ void QOAuth2AuthorizationCodeFlow_new5()
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
   QOAuth2AuthorizationCodeFlow * obj = new QOAuth2AuthorizationCodeFlow( PQSTRING(1), *PQURL(2), *PQURL(3), PQNETWORKACCESSMANAGER(4), OPQOBJECT(5,nullptr) );
-  Qt5xHb::returnNewObject( obj, false );
+  Qt5xHb::returnNewObject(obj, false);
 #endif
 }
 
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -152,17 +152,17 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_DELETE )
 
   if( obj )
   {
-    Qt5xHb::Events_disconnect_all_events( obj, true );
-    Qt5xHb::Signals_disconnect_all_signals( obj, true );
+    Qt5xHb::Events_disconnect_all_events(obj, true);
+    Qt5xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -181,12 +181,12 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_ACCESSTOKENURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->accessTokenUrl() );
-      Qt5xHb::createReturnClass( ptr, "QURL", true );
+      Qt5xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -212,12 +212,12 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_SETACCESSTOKENURL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -240,12 +240,12 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_GRANT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 
@@ -268,12 +268,12 @@ HB_FUNC_STATIC( QOAUTH2AUTHORIZATIONCODEFLOW_REFRESHACCESSTOKEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 #endif
 }
 

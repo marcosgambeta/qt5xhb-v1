@@ -91,7 +91,7 @@ QOpenGLFramebufferObject( const QSize & size, GLenum target = GL_TEXTURE_2D )
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW1 )
 {
   QOpenGLFramebufferObject * obj = new QOpenGLFramebufferObject( *PQSIZE(1), OPGLENUM(2,GL_TEXTURE_2D) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -100,7 +100,7 @@ QOpenGLFramebufferObject( int width, int height, GLenum target = GL_TEXTURE_2D )
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW2 )
 {
   QOpenGLFramebufferObject * obj = new QOpenGLFramebufferObject( PINT(1), PINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 #if !defined(QT_OPENGL_ES) || defined(Q_QDOC)
@@ -111,7 +111,7 @@ QOpenGLFramebufferObject( const QSize & size, QOpenGLFramebufferObject::Attachme
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW3 )
 {
   QOpenGLFramebufferObject * obj = new QOpenGLFramebufferObject( *PQSIZE(1), (QOpenGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA8) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -120,7 +120,7 @@ QOpenGLFramebufferObject( int width, int height, QOpenGLFramebufferObject::Attac
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW4 )
 {
   QOpenGLFramebufferObject * obj = new QOpenGLFramebufferObject( PINT(1), PINT(2), (QOpenGLFramebufferObject::Attachment) hb_parni(3), OPGLENUM(4,GL_TEXTURE_2D), OPGLENUM(5,GL_RGBA8) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
@@ -147,7 +147,7 @@ QOpenGLFramebufferObject( const QSize & size, QOpenGLFramebufferObject::Attachme
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW5 )
 {
   QOpenGLFramebufferObject * obj = new QOpenGLFramebufferObject( *PQSIZE(1), (QOpenGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -156,7 +156,7 @@ QOpenGLFramebufferObject( int width, int height, QOpenGLFramebufferObject::Attac
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW6 )
 {
   QOpenGLFramebufferObject * obj = new QOpenGLFramebufferObject( PINT(1), PINT(2), (QOpenGLFramebufferObject::Attachment) hb_parni(3), OPGLENUM(4,GL_TEXTURE_2D), OPGLENUM(5,GL_RGBA) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 #endif
@@ -167,7 +167,7 @@ QOpenGLFramebufferObject( const QSize & size, const QOpenGLFramebufferObjectForm
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW7 )
 {
   QOpenGLFramebufferObject * obj = new QOpenGLFramebufferObject( *PQSIZE(1), *PQOPENGLFRAMEBUFFEROBJECTFORMAT(2) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -176,7 +176,7 @@ QOpenGLFramebufferObject( int width, int height, const QOpenGLFramebufferObjectF
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW8 )
 {
   QOpenGLFramebufferObject * obj = new QOpenGLFramebufferObject( PINT(1), PINT(2), *PQOPENGLFRAMEBUFFEROBJECTFORMAT(3) );
-  Qt5xHb::returnNewObject( obj, true );
+  Qt5xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW )
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -231,12 +231,12 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_DELETE )
     delete obj;
     obj = NULL;
     PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -253,12 +253,12 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_FORMAT )
     {
 #endif
       QOpenGLFramebufferObjectFormat * ptr = new QOpenGLFramebufferObjectFormat( obj->format() );
-      Qt5xHb::createReturnClass( ptr, "QOPENGLFRAMEBUFFEROBJECTFORMAT", true );
+      Qt5xHb::createReturnClass(ptr, "QOPENGLFRAMEBUFFEROBJECTFORMAT", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ISBOUND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BIND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_RELEASE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_WIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HEIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_TEXTURE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -446,12 +446,12 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_SIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->size() );
-      Qt5xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt5xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -471,12 +471,12 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_TOIMAGE )
     {
 #endif
       QImage * ptr = new QImage( obj->toImage() );
-      Qt5xHb::createReturnClass( ptr, "QIMAGE", true );
+      Qt5xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT5XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_ATTACHMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -524,12 +524,12 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_SETATTACHMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HANDLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BINDDEFAULT )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFEROBJECTS )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_HASOPENGLFRAMEBUFFERBLIT )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -621,7 +621,7 @@ void QOpenGLFramebufferObject_blitFramebuffer1()
 
   QOpenGLFramebufferObject::blitFramebuffer( PQOPENGLFRAMEBUFFEROBJECT(1), *PQRECT(2), PQOPENGLFRAMEBUFFEROBJECT(3), *PQRECT(4), OPGLBITFIELD(5,GL_COLOR_BUFFER_BIT), OPGLENUM(6,GL_NEAREST) );
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -632,7 +632,7 @@ void QOpenGLFramebufferObject_blitFramebuffer2()
 
   QOpenGLFramebufferObject::blitFramebuffer( PQOPENGLFRAMEBUFFEROBJECT(1), PQOPENGLFRAMEBUFFEROBJECT(2), OPGLBITFIELD(3,GL_COLOR_BUFFER_BIT), OPGLENUM(4,GL_NEAREST) );
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_BLITFRAMEBUFFER )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -657,28 +657,28 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, (void *) hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEWFROMOBJECT )
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl((bool) hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_SETSELFDESTRUCTION )
@@ -702,16 +702,16 @@ HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECT_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP
