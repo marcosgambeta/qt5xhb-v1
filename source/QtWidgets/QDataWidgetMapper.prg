@@ -118,45 +118,35 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addMapping( QWidget * widget, int section )
-*/
-void QDataWidgetMapper_addMapping1()
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addMapping( PQWIDGET(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void addMapping( QWidget * widget, int section, const QByteArray & propertyName )
-*/
-void QDataWidgetMapper_addMapping2()
-{
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addMapping( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2) )
   {
-    QDataWidgetMapper_addMapping1();
+    /*
+    void addMapping( QWidget * widget, int section )
+    */
+    QDataWidgetMapper * obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->addMapping( PQWIDGET(1), PINT(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3) )
   {
-    QDataWidgetMapper_addMapping2();
+    /*
+    void addMapping( QWidget * widget, int section, const QByteArray & propertyName )
+    */
+    QDataWidgetMapper * obj = (QDataWidgetMapper *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->addMapping( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

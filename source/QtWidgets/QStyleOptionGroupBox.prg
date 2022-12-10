@@ -58,33 +58,23 @@ RETURN
 #include <QtWidgets/QStyleOptionGroupBox>
 #endif
 
-/*
-QStyleOptionGroupBox()
-*/
-void QStyleOptionGroupBox_new1()
-{
-  QStyleOptionGroupBox * obj = new QStyleOptionGroupBox();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
-*/
-void QStyleOptionGroupBox_new2()
-{
-  QStyleOptionGroupBox * obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionGroupBox_new1();
+    /*
+    QStyleOptionGroupBox()
+    */
+    QStyleOptionGroupBox * obj = new QStyleOptionGroupBox();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1) )
   {
-    QStyleOptionGroupBox_new2();
+    /*
+    QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
+    */
+    QStyleOptionGroupBox * obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

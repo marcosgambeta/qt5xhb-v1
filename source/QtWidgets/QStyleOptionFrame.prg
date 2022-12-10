@@ -53,33 +53,23 @@ RETURN
 #include <QtWidgets/QStyleOptionFrame>
 #endif
 
-/*
-QStyleOptionFrame()
-*/
-void QStyleOptionFrame_new1()
-{
-  QStyleOptionFrame * obj = new QStyleOptionFrame();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionFrame( const QStyleOptionFrame & other )
-*/
-void QStyleOptionFrame_new2()
-{
-  QStyleOptionFrame * obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionFrame_new1();
+    /*
+    QStyleOptionFrame()
+    */
+    QStyleOptionFrame * obj = new QStyleOptionFrame();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONFRAME(1) )
   {
-    QStyleOptionFrame_new2();
+    /*
+    QStyleOptionFrame( const QStyleOptionFrame & other )
+    */
+    QStyleOptionFrame * obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

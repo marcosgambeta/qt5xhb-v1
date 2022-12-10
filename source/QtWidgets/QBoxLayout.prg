@@ -504,41 +504,31 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool setStretchFactor( QWidget * widget, int stretch )
-*/
-void QBoxLayout_setStretchFactor1()
-{
-  QBoxLayout * obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setStretchFactor( PQWIDGET(1), PINT(2) ) );
-  }
-}
-
-/*
-bool setStretchFactor( QLayout * layout, int stretch )
-*/
-void QBoxLayout_setStretchFactor2()
-{
-  QBoxLayout * obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setStretchFactor( PQLAYOUT(1), PINT(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2) )
   {
-    QBoxLayout_setStretchFactor1();
+    /*
+    bool setStretchFactor( QWidget * widget, int stretch )
+    */
+    QBoxLayout * obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RBOOL( obj->setStretchFactor( PQWIDGET(1), PINT(2) ) );
+    }
   }
   else if( ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2) )
   {
-    QBoxLayout_setStretchFactor2();
+    /*
+    bool setStretchFactor( QLayout * layout, int stretch )
+    */
+    QBoxLayout * obj = (QBoxLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RBOOL( obj->setStretchFactor( PQLAYOUT(1), PINT(2) ) );
+    }
   }
   else
   {

@@ -579,45 +579,35 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_REMOVEACTION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void resize( const QSizeF & size )
-*/
-void QGraphicsWidget_resize1()
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->resize( *PQSIZEF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void resize( qreal w, qreal h )
-*/
-void QGraphicsWidget_resize2()
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->resize( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
-    QGraphicsWidget_resize1();
+    /*
+    void resize( const QSizeF & size )
+    */
+    QGraphicsWidget * obj = (QGraphicsWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->resize( *PQSIZEF(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QGraphicsWidget_resize2();
+    /*
+    void resize( qreal w, qreal h )
+    */
+    QGraphicsWidget * obj = (QGraphicsWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->resize( PQREAL(1), PQREAL(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -755,45 +745,35 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFONT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setGeometry( qreal x, qreal y, qreal w, qreal h )
-*/
-void QGraphicsWidget_setGeometry1()
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setGeometry( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-virtual void setGeometry( const QRectF & rect )
-*/
-void QGraphicsWidget_setGeometry2()
-{
-  QGraphicsWidget * obj = (QGraphicsWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setGeometry( *PQRECTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
 {
   if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QGraphicsWidget_setGeometry1();
+    /*
+    void setGeometry( qreal x, qreal y, qreal w, qreal h )
+    */
+    QGraphicsWidget * obj = (QGraphicsWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setGeometry( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QGraphicsWidget_setGeometry2();
+    /*
+    virtual void setGeometry( const QRectF & rect )
+    */
+    QGraphicsWidget * obj = (QGraphicsWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setGeometry( *PQRECTF(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

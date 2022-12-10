@@ -195,45 +195,35 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setAxis( const QVector3D & axis )
-*/
-void QGraphicsRotation_setAxis1()
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAxis( *PQVECTOR3D(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setAxis( Qt::Axis axis )
-*/
-void QGraphicsRotation_setAxis2()
-{
-  QGraphicsRotation * obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAxis( (Qt::Axis) hb_parni(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {
   if( ISNUMPAR(1) && HB_ISOBJECT(1) )
   {
-    QGraphicsRotation_setAxis1();
+    /*
+    void setAxis( const QVector3D & axis )
+    */
+    QGraphicsRotation * obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setAxis( *PQVECTOR3D(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QGraphicsRotation_setAxis2();
+    /*
+    void setAxis( Qt::Axis axis )
+    */
+    QGraphicsRotation * obj = (QGraphicsRotation *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setAxis( (Qt::Axis) hb_parni(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

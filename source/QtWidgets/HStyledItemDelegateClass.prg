@@ -45,46 +45,31 @@ RETURN
 #include "qt5xhb_events.h"
 #include "qt5xhb_signals.h"
 
-/*
-explicit HStyledItemDelegate( QObject *parent = 0 )
-*/
-void HStyledItemDelegate_new1 ()
-{
-  HStyledItemDelegate * obj = new HStyledItemDelegate( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-HStyledItemDelegate( PHB_ITEM paintBlock, QObject *parent = 0 )
-*/
-void HStyledItemDelegate_new2 ()
-{
-  HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0 )
-*/
-void HStyledItemDelegate_new3 ()
-{
-  HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    HStyledItemDelegate_new1();
+    /*
+    explicit HStyledItemDelegate( QObject *parent = 0 )
+    */
+    HStyledItemDelegate * obj = new HStyledItemDelegate( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    HStyledItemDelegate_new2();
+    /*
+    HStyledItemDelegate( PHB_ITEM paintBlock, QObject *parent = 0 )
+    */
+    HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,3) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    HStyledItemDelegate_new3();
+    /*
+    HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0 )
+    */
+    HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

@@ -79,61 +79,46 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-const QRect availableGeometry( int screen = -1 ) const
-*/
-void QDesktopWidget_availableGeometry1()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->availableGeometry( OPINT(1,-1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
-/*
-const QRect availableGeometry( const QWidget * widget ) const
-*/
-void QDesktopWidget_availableGeometry2()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->availableGeometry( PQWIDGET(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
-/*
-const QRect availableGeometry( const QPoint & p ) const
-*/
-void QDesktopWidget_availableGeometry3()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->availableGeometry( *PQPOINT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
 HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
   if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QDesktopWidget_availableGeometry1();
+    /*
+    const QRect availableGeometry( int screen = -1 ) const
+    */
+    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->availableGeometry( OPINT(1,-1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QDesktopWidget_availableGeometry2();
+    /*
+    const QRect availableGeometry( const QWidget * widget ) const
+    */
+    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->availableGeometry( PQWIDGET(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QDesktopWidget_availableGeometry3();
+    /*
+    const QRect availableGeometry( const QPoint & p ) const
+    */
+    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->availableGeometry( *PQPOINT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else
   {
@@ -238,61 +223,46 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
   }
 }
 
-/*
-const QRect screenGeometry( int screen = -1 ) const
-*/
-void QDesktopWidget_screenGeometry1()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->screenGeometry( OPINT(1,-1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
-/*
-const QRect screenGeometry( const QWidget * widget ) const
-*/
-void QDesktopWidget_screenGeometry2()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->screenGeometry( PQWIDGET(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
-/*
-const QRect screenGeometry( const QPoint & p ) const
-*/
-void QDesktopWidget_screenGeometry3()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->screenGeometry( *PQPOINT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
   if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QDesktopWidget_screenGeometry1();
+    /*
+    const QRect screenGeometry( int screen = -1 ) const
+    */
+    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->screenGeometry( OPINT(1,-1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QDesktopWidget_screenGeometry2();
+    /*
+    const QRect screenGeometry( const QWidget * widget ) const
+    */
+    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->screenGeometry( PQWIDGET(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QDesktopWidget_screenGeometry3();
+    /*
+    const QRect screenGeometry( const QPoint & p ) const
+    */
+    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->screenGeometry( *PQPOINT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else
   {
@@ -300,41 +270,31 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
   }
 }
 
-/*
-int screenNumber( const QWidget * widget = 0 ) const
-*/
-void QDesktopWidget_screenNumber1()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->screenNumber( OPQWIDGET(1,0) ) );
-  }
-}
-
-/*
-int screenNumber( const QPoint & point ) const
-*/
-void QDesktopWidget_screenNumber2()
-{
-  QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->screenNumber( *PQPOINT(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QDesktopWidget_screenNumber1();
+    /*
+    int screenNumber( const QWidget * widget = 0 ) const
+    */
+    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RINT( obj->screenNumber( OPQWIDGET(1,0) ) );
+    }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QDesktopWidget_screenNumber2();
+    /*
+    int screenNumber( const QPoint & point ) const
+    */
+    QDesktopWidget * obj = (QDesktopWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RINT( obj->screenNumber( *PQPOINT(1) ) );
+    }
   }
   else
   {

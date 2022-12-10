@@ -124,33 +124,23 @@ RETURN
 #include <QtPrintSupport/QPrinter>
 #include <QtWidgets/QMenu>
 
-/*
-QPlainTextEdit( QWidget * parent = 0 )
-*/
-void QPlainTextEdit_new1()
-{
-  QPlainTextEdit * obj = new QPlainTextEdit( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QPlainTextEdit( const QString & text, QWidget * parent = 0 )
-*/
-void QPlainTextEdit_new2()
-{
-  QPlainTextEdit * obj = new QPlainTextEdit( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QPlainTextEdit_new1();
+    /*
+    QPlainTextEdit( QWidget * parent = 0 )
+    */
+    QPlainTextEdit * obj = new QPlainTextEdit( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QPlainTextEdit_new2();
+    /*
+    QPlainTextEdit( const QString & text, QWidget * parent = 0 )
+    */
+    QPlainTextEdit * obj = new QPlainTextEdit( PQSTRING(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -372,43 +362,33 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORFORPOSITION )
   }
 }
 
-/*
-QRect cursorRect( const QTextCursor & cursor ) const
-*/
-void QPlainTextEdit_cursorRect1()
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
-/*
-QRect cursorRect() const
-*/
-void QPlainTextEdit_cursorRect2()
-{
-  QPlainTextEdit * obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->cursorRect() );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 {
   if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    QPlainTextEdit_cursorRect1();
+    /*
+    QRect cursorRect( const QTextCursor & cursor ) const
+    */
+    QPlainTextEdit * obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else if( ISNUMPAR(0) )
   {
-    QPlainTextEdit_cursorRect2();
+    /*
+    QRect cursorRect() const
+    */
+    QPlainTextEdit * obj = (QPlainTextEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->cursorRect() );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else
   {

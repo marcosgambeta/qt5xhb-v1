@@ -107,59 +107,39 @@ RETURN
 
 #include <QtWidgets/QCalendarWidget>
 
-/*
-QDateTimeEdit( QWidget * parent = 0 )
-*/
-void QDateTimeEdit_new1()
-{
-  QDateTimeEdit * obj = new QDateTimeEdit( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDateTimeEdit( const QDateTime & datetime, QWidget * parent = 0 )
-*/
-void QDateTimeEdit_new2()
-{
-  QDateTimeEdit * obj = new QDateTimeEdit( *PQDATETIME(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDateTimeEdit( const QDate & date, QWidget * parent = 0 )
-*/
-void QDateTimeEdit_new3()
-{
-  QDateTimeEdit * obj = new QDateTimeEdit( *PQDATE(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDateTimeEdit( const QTime & time, QWidget * parent = 0 )
-*/
-void QDateTimeEdit_new4()
-{
-  QDateTimeEdit * obj = new QDateTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QDateTimeEdit_new1();
+    /*
+    QDateTimeEdit( QWidget * parent = 0 )
+    */
+    QDateTimeEdit * obj = new QDateTimeEdit( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQDATETIME(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QDateTimeEdit_new2();
+    /*
+    QDateTimeEdit( const QDateTime & datetime, QWidget * parent = 0 )
+    */
+    QDateTimeEdit * obj = new QDateTimeEdit( *PQDATETIME(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQDATE(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QDateTimeEdit_new3();
+    /*
+    QDateTimeEdit( const QDate & date, QWidget * parent = 0 )
+    */
+    QDateTimeEdit * obj = new QDateTimeEdit( *PQDATE(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQTIME(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QDateTimeEdit_new4();
+    /*
+    QDateTimeEdit( const QTime & time, QWidget * parent = 0 )
+    */
+    QDateTimeEdit * obj = new QDateTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

@@ -96,59 +96,39 @@ RETURN
 #include <QtWidgets/QTableWidgetItem>
 #endif
 
-/*
-QTableWidgetItem( int type = QTableWidgetItem::Type )
-*/
-void QTableWidgetItem_new1()
-{
-  QTableWidgetItem * obj = new QTableWidgetItem( OPINT(1,QTableWidgetItem::Type) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QTableWidgetItem( const QString & text, int type = QTableWidgetItem::Type )
-*/
-void QTableWidgetItem_new2()
-{
-  QTableWidgetItem * obj = new QTableWidgetItem( PQSTRING(1), OPINT(2,QTableWidgetItem::Type) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QTableWidgetItem( const QIcon & icon, const QString & text, int type = QTableWidgetItem::Type )
-*/
-void QTableWidgetItem_new3()
-{
-  QTableWidgetItem * obj = new QTableWidgetItem( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPINT(3,QTableWidgetItem::Type) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QTableWidgetItem( const QTableWidgetItem & other )
-*/
-void QTableWidgetItem_new4()
-{
-  QTableWidgetItem * obj = new QTableWidgetItem( *PQTABLEWIDGETITEM(1) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
 {
   if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QTableWidgetItem_new1();
+    /*
+    QTableWidgetItem( int type = QTableWidgetItem::Type )
+    */
+    QTableWidgetItem * obj = new QTableWidgetItem( OPINT(1,QTableWidgetItem::Type) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QTableWidgetItem_new2();
+    /*
+    QTableWidgetItem( const QString & text, int type = QTableWidgetItem::Type )
+    */
+    QTableWidgetItem * obj = new QTableWidgetItem( PQSTRING(1), OPINT(2,QTableWidgetItem::Type) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,3) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QTableWidgetItem_new3();
+    /*
+    QTableWidgetItem( const QIcon & icon, const QString & text, int type = QTableWidgetItem::Type )
+    */
+    QTableWidgetItem * obj = new QTableWidgetItem( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPINT(3,QTableWidgetItem::Type) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
   {
-    QTableWidgetItem_new4();
+    /*
+    QTableWidgetItem( const QTableWidgetItem & other )
+    */
+    QTableWidgetItem * obj = new QTableWidgetItem( *PQTABLEWIDGETITEM(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

@@ -63,33 +63,23 @@ RETURN
 #include <QtWidgets/QStyleOptionProgressBar>
 #endif
 
-/*
-QStyleOptionProgressBar()
-*/
-void QStyleOptionProgressBar_new1()
-{
-  QStyleOptionProgressBar * obj = new QStyleOptionProgressBar();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
-*/
-void QStyleOptionProgressBar_new2()
-{
-  QStyleOptionProgressBar * obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionProgressBar_new1();
+    /*
+    QStyleOptionProgressBar()
+    */
+    QStyleOptionProgressBar * obj = new QStyleOptionProgressBar();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONPROGRESSBAR(1) )
   {
-    QStyleOptionProgressBar_new2();
+    /*
+    QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
+    */
+    QStyleOptionProgressBar * obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

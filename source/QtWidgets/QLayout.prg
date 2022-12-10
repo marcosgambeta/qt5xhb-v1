@@ -428,60 +428,45 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool setAlignment( QWidget * w, Qt::Alignment alignment )
-*/
-void QLayout_setAlignment1()
-{
-  QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setAlignment( PQWIDGET(1), (Qt::Alignment) hb_parni(2) ) );
-  }
-}
-
-/*
-void setAlignment( Qt::Alignment alignment )
-*/
-void QLayout_setAlignment2()
-{
-  QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setAlignment( (Qt::Alignment) hb_parni(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-bool setAlignment( QLayout * l, Qt::Alignment alignment )
-*/
-void QLayout_setAlignment3()
-{
-  QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setAlignment( PQLAYOUT(1), (Qt::Alignment) hb_parni(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2) )
   {
-    QLayout_setAlignment1();
+    /*
+    bool setAlignment( QWidget * w, Qt::Alignment alignment )
+    */
+    QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RBOOL( obj->setAlignment( PQWIDGET(1), (Qt::Alignment) hb_parni(2) ) );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QLayout_setAlignment2();
+    /*
+    void setAlignment( Qt::Alignment alignment )
+    */
+    QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && ISQLAYOUT(1) && HB_ISNUM(2) )
   {
-    QLayout_setAlignment3();
+    /*
+    bool setAlignment( QLayout * l, Qt::Alignment alignment )
+    */
+    QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RBOOL( obj->setAlignment( PQLAYOUT(1), (Qt::Alignment) hb_parni(2) ) );
+    }
   }
   else
   {
@@ -489,45 +474,35 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
   }
 }
 
-/*
-void setContentsMargins( int left, int top, int right, int bottom )
-*/
-void QLayout_setContentsMargins1()
-{
-  QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setContentsMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setContentsMargins( const QMargins & margins )
-*/
-void QLayout_setContentsMargins2()
-{
-  QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setContentsMargins( *PQMARGINS(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 {
   if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QLayout_setContentsMargins1();
+    /*
+    void setContentsMargins( int left, int top, int right, int bottom )
+    */
+    QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setContentsMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQMARGINS(1) )
   {
-    QLayout_setContentsMargins2();
+    /*
+    void setContentsMargins( const QMargins & margins )
+    */
+    QLayout * obj = (QLayout *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setContentsMargins( *PQMARGINS(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

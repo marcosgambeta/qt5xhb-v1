@@ -55,33 +55,23 @@ RETURN
 #include <QtWidgets/QStyleOptionButton>
 #endif
 
-/*
-QStyleOptionButton()
-*/
-void QStyleOptionButton_new1()
-{
-  QStyleOptionButton * obj = new QStyleOptionButton();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionButton( const QStyleOptionButton & other )
-*/
-void QStyleOptionButton_new2()
-{
-  QStyleOptionButton * obj = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionButton_new1();
+    /*
+    QStyleOptionButton()
+    */
+    QStyleOptionButton * obj = new QStyleOptionButton();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONBUTTON(1) )
   {
-    QStyleOptionButton_new2();
+    /*
+    QStyleOptionButton( const QStyleOptionButton & other )
+    */
+    QStyleOptionButton * obj = new QStyleOptionButton( *PQSTYLEOPTIONBUTTON(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

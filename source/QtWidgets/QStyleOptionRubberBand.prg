@@ -49,33 +49,23 @@ RETURN
 #include <QtWidgets/QStyleOptionRubberBand>
 #endif
 
-/*
-QStyleOptionRubberBand()
-*/
-void QStyleOptionRubberBand_new1()
-{
-  QStyleOptionRubberBand * obj = new QStyleOptionRubberBand();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
-*/
-void QStyleOptionRubberBand_new2()
-{
-  QStyleOptionRubberBand * obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionRubberBand_new1();
+    /*
+    QStyleOptionRubberBand()
+    */
+    QStyleOptionRubberBand * obj = new QStyleOptionRubberBand();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONRUBBERBAND(1) )
   {
-    QStyleOptionRubberBand_new2();
+    /*
+    QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
+    */
+    QStyleOptionRubberBand * obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

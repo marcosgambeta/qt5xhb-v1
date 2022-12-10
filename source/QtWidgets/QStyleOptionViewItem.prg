@@ -84,33 +84,23 @@ RETURN
 #include <QtWidgets/QStyleOptionViewItem>
 #endif
 
-/*
-QStyleOptionViewItem()
-*/
-void QStyleOptionViewItem_new1()
-{
-  QStyleOptionViewItem * obj = new QStyleOptionViewItem();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionViewItem( const QStyleOptionViewItem & other )
-*/
-void QStyleOptionViewItem_new2()
-{
-  QStyleOptionViewItem * obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionViewItem_new1();
+    /*
+    QStyleOptionViewItem()
+    */
+    QStyleOptionViewItem * obj = new QStyleOptionViewItem();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONVIEWITEM(1) )
   {
-    QStyleOptionViewItem_new2();
+    /*
+    QStyleOptionViewItem( const QStyleOptionViewItem & other )
+    */
+    QStyleOptionViewItem * obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -173,45 +173,35 @@ HB_FUNC_STATIC( QCOMBOBOX_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addItem( const QString & text, const QVariant & userData = QVariant() )
-*/
-void QComboBox_addItem1()
-{
-  QComboBox * obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addItem( PQSTRING(1), HB_ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void addItem( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
-*/
-void QComboBox_addItem2()
-{
-  QComboBox * obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addItem( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), HB_ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
 {
   if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQVARIANT(2)||HB_ISNIL(2)) )
   {
-    QComboBox_addItem1();
+    /*
+    void addItem( const QString & text, const QVariant & userData = QVariant() )
+    */
+    QComboBox * obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->addItem( PQSTRING(1), HB_ISNIL(2)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISBETWEEN(2,3) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQVARIANT(3)||HB_ISNIL(3)) )
   {
-    QComboBox_addItem2();
+    /*
+    void addItem( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+    */
+    QComboBox * obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->addItem( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), HB_ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -489,45 +479,35 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
   }
 }
 
-/*
-void insertItem( int index, const QString & text, const QVariant & userData = QVariant() )
-*/
-void QComboBox_insertItem1()
-{
-  QComboBox * obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->insertItem( PINT(1), PQSTRING(2), HB_ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void insertItem( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
-*/
-void QComboBox_insertItem2()
-{
-  QComboBox * obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->insertItem( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3), HB_ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 {
   if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQVARIANT(3)||HB_ISNIL(3)) )
   {
-    QComboBox_insertItem1();
+    /*
+    void insertItem( int index, const QString & text, const QVariant & userData = QVariant() )
+    */
+    QComboBox * obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->insertItem( PINT(1), PQSTRING(2), HB_ISNIL(3)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(3) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISBETWEEN(3,4) && HB_ISNUM(1) && (ISQICON(2)||HB_ISCHAR(2)) && HB_ISCHAR(3) && (ISQVARIANT(4)||HB_ISNIL(4)) )
   {
-    QComboBox_insertItem2();
+    /*
+    void insertItem( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+    */
+    QComboBox * obj = (QComboBox *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->insertItem( PINT(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3), HB_ISNIL(4)? QVariant() : *(QVariant *) Qt5xHb::itemGetPtr(4) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

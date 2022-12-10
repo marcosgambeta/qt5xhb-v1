@@ -584,45 +584,35 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMaximumSize( const QSizeF & size )
-*/
-void QGraphicsLayoutItem_setMaximumSize1()
-{
-  QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMaximumSize( *PQSIZEF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setMaximumSize( qreal w, qreal h )
-*/
-void QGraphicsLayoutItem_setMaximumSize2()
-{
-  QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMaximumSize( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
-    QGraphicsLayoutItem_setMaximumSize1();
+    /*
+    void setMaximumSize( const QSizeF & size )
+    */
+    QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setMaximumSize( *PQSIZEF(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QGraphicsLayoutItem_setMaximumSize2();
+    /*
+    void setMaximumSize( qreal w, qreal h )
+    */
+    QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setMaximumSize( PQREAL(1), PQREAL(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -682,45 +672,35 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setMinimumSize( const QSizeF & size )
-*/
-void QGraphicsLayoutItem_setMinimumSize1()
-{
-  QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMinimumSize( *PQSIZEF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setMinimumSize( qreal w, qreal h )
-*/
-void QGraphicsLayoutItem_setMinimumSize2()
-{
-  QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setMinimumSize( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
-    QGraphicsLayoutItem_setMinimumSize1();
+    /*
+    void setMinimumSize( const QSizeF & size )
+    */
+    QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setMinimumSize( *PQSIZEF(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QGraphicsLayoutItem_setMinimumSize2();
+    /*
+    void setMinimumSize( qreal w, qreal h )
+    */
+    QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setMinimumSize( PQREAL(1), PQREAL(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -806,45 +786,35 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setPreferredSize( const QSizeF & size )
-*/
-void QGraphicsLayoutItem_setPreferredSize1()
-{
-  QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPreferredSize( *PQSIZEF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setPreferredSize( qreal w, qreal h )
-*/
-void QGraphicsLayoutItem_setPreferredSize2()
-{
-  QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPreferredSize( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 {
   if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
-    QGraphicsLayoutItem_setPreferredSize1();
+    /*
+    void setPreferredSize( const QSizeF & size )
+    */
+    QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setPreferredSize( *PQSIZEF(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QGraphicsLayoutItem_setPreferredSize2();
+    /*
+    void setPreferredSize( qreal w, qreal h )
+    */
+    QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setPreferredSize( PQREAL(1), PQREAL(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -878,45 +848,35 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSizePolicy( const QSizePolicy & policy )
-*/
-void QGraphicsLayoutItem_setSizePolicy1()
-{
-  QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSizePolicy( *PQSIZEPOLICY(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setSizePolicy( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
-*/
-void QGraphicsLayoutItem_setSizePolicy2()
-{
-  QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), HB_ISNIL(3)? (QSizePolicy::ControlType) QSizePolicy::DefaultType : (QSizePolicy::ControlType) hb_parni(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 {
   if( ISNUMPAR(1) && ISQSIZEPOLICY(1) )
   {
-    QGraphicsLayoutItem_setSizePolicy1();
+    /*
+    void setSizePolicy( const QSizePolicy & policy )
+    */
+    QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setSizePolicy( *PQSIZEPOLICY(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
-    QGraphicsLayoutItem_setSizePolicy2();
+    /*
+    void setSizePolicy( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )
+    */
+    QGraphicsLayoutItem * obj = (QGraphicsLayoutItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), HB_ISNIL(3)? (QSizePolicy::ControlType) QSizePolicy::DefaultType : (QSizePolicy::ControlType) hb_parni(3) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

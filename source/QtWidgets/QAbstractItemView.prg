@@ -801,43 +801,33 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
   }
 }
 
-/*
-QAbstractItemDelegate * itemDelegate() const
-*/
-void QAbstractItemView_itemDelegate1()
-{
-  QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractItemDelegate * ptr = obj->itemDelegate();
-    Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
-  }
-}
-
-/*
-QAbstractItemDelegate * itemDelegate( const QModelIndex & index ) const
-*/
-void QAbstractItemView_itemDelegate2()
-{
-  QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAbstractItemDelegate * ptr = obj->itemDelegate( *PQMODELINDEX(1) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
-  }
-}
-
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {
   if( ISNUMPAR(0) )
   {
-    QAbstractItemView_itemDelegate1();
+    /*
+    QAbstractItemDelegate * itemDelegate() const
+    */
+    QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QAbstractItemDelegate * ptr = obj->itemDelegate();
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+    }
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    QAbstractItemView_itemDelegate2();
+    /*
+    QAbstractItemDelegate * itemDelegate( const QModelIndex & index ) const
+    */
+    QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QAbstractItemDelegate * ptr = obj->itemDelegate( *PQMODELINDEX(1) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+    }
   }
   else
   {
@@ -1783,102 +1773,77 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTALL )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void update( int x, int y, int w, int h )
-*/
-void QAbstractItemView_update1()
-{
-  QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->update( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void update( const QRect & rect )
-*/
-void QAbstractItemView_update2()
-{
-  QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->update( *PQRECT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void update( const QRegion & rgn )
-*/
-void QAbstractItemView_update3()
-{
-  QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->update( *PQREGION(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void update()
-*/
-void QAbstractItemView_update4()
-{
-  QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->update();
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void update( const QModelIndex & index )
-*/
-void QAbstractItemView_update5()
-{
-  QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->update( *PQMODELINDEX(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
 {
   if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QAbstractItemView_update1();
+    /*
+    void update( int x, int y, int w, int h )
+    */
+    QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->update( PINT(1), PINT(2), PINT(3), PINT(4) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QAbstractItemView_update2();
+    /*
+    void update( const QRect & rect )
+    */
+    QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->update( *PQRECT(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQREGION(1) )
   {
-    QAbstractItemView_update3();
+    /*
+    void update( const QRegion & rgn )
+    */
+    QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->update( *PQREGION(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(0) )
   {
-    QAbstractItemView_update4();
+    /*
+    void update()
+    */
+    QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->update();
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    QAbstractItemView_update5();
+    /*
+    void update( const QModelIndex & index )
+    */
+    QAbstractItemView * obj = (QAbstractItemView *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->update( *PQMODELINDEX(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

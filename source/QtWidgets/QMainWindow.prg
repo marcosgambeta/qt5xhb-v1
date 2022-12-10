@@ -142,45 +142,35 @@ HB_FUNC_STATIC( QMAINWINDOW_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget )
-*/
-void QMainWindow_addDockWidget1()
-{
-  QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addDockWidget( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
-*/
-void QMainWindow_addDockWidget2()
-{
-  QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addDockWidget( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && ISQDOCKWIDGET(2) )
   {
-    QMainWindow_addDockWidget1();
+    /*
+    void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget )
+    */
+    QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->addDockWidget( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && ISQDOCKWIDGET(2) && HB_ISNUM(3) )
   {
-    QMainWindow_addDockWidget2();
+    /*
+    void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
+    */
+    QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->addDockWidget( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -188,63 +178,48 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
   }
 }
 
-/*
-void addToolBar( Qt::ToolBarArea area, QToolBar * toolbar )
-*/
-void QMainWindow_addToolBar1()
-{
-  QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addToolBar( (Qt::ToolBarArea) hb_parni(1), PQTOOLBAR(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void addToolBar( QToolBar * toolbar )
-*/
-void QMainWindow_addToolBar2()
-{
-  QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addToolBar( PQTOOLBAR(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-QToolBar * addToolBar( const QString & title )
-*/
-void QMainWindow_addToolBar3()
-{
-  QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QToolBar * ptr = obj->addToolBar( PQSTRING(1) );
-    Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR" );
-  }
-}
-
 HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && ISQTOOLBAR(2) )
   {
-    QMainWindow_addToolBar1();
+    /*
+    void addToolBar( Qt::ToolBarArea area, QToolBar * toolbar )
+    */
+    QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->addToolBar( (Qt::ToolBarArea) hb_parni(1), PQTOOLBAR(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQTOOLBAR(1) )
   {
-    QMainWindow_addToolBar2();
+    /*
+    void addToolBar( QToolBar * toolbar )
+    */
+    QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->addToolBar( PQTOOLBAR(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QMainWindow_addToolBar3();
+    /*
+    QToolBar * addToolBar( const QString & title )
+    */
+    QMainWindow * obj = (QMainWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QToolBar * ptr = obj->addToolBar( PQSTRING(1) );
+      Qt5xHb::createReturnQWidgetClass( ptr, "QTOOLBAR" );
+    }
   }
   else
   {

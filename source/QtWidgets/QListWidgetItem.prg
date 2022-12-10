@@ -101,59 +101,39 @@ RETURN
 #include <QtWidgets/QListWidgetItem>
 #endif
 
-/*
-QListWidgetItem( QListWidget * parent = 0, int type = QListWidgetItem::Type )
-*/
-void QListWidgetItem_new1()
-{
-  QListWidgetItem * obj = new QListWidgetItem( OPQLISTWIDGET(1,0), OPINT(2,QListWidgetItem::Type) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QListWidgetItem( const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
-*/
-void QListWidgetItem_new2()
-{
-  QListWidgetItem * obj = new QListWidgetItem( PQSTRING(1), OPQLISTWIDGET(2,0), OPINT(3,QListWidgetItem::Type) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QListWidgetItem( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
-*/
-void QListWidgetItem_new3()
-{
-  QListWidgetItem * obj = new QListWidgetItem( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQLISTWIDGET(3,0), OPINT(4,QListWidgetItem::Type) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QListWidgetItem( const QListWidgetItem & other )
-*/
-void QListWidgetItem_new4()
-{
-  QListWidgetItem * obj = new QListWidgetItem( *PQLISTWIDGETITEM(1) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQLISTWIDGET(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QListWidgetItem_new1();
+    /*
+    QListWidgetItem( QListWidget * parent = 0, int type = QListWidgetItem::Type )
+    */
+    QListWidgetItem * obj = new QListWidgetItem( OPQLISTWIDGET(1,0), OPINT(2,QListWidgetItem::Type) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQLISTWIDGET(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QListWidgetItem_new2();
+    /*
+    QListWidgetItem( const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
+    */
+    QListWidgetItem * obj = new QListWidgetItem( PQSTRING(1), OPQLISTWIDGET(2,0), OPINT(3,QListWidgetItem::Type) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,4) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQLISTWIDGET(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
-    QListWidgetItem_new3();
+    /*
+    QListWidgetItem( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
+    */
+    QListWidgetItem * obj = new QListWidgetItem( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQLISTWIDGET(3,0), OPINT(4,QListWidgetItem::Type) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
   {
-    QListWidgetItem_new4();
+    /*
+    QListWidgetItem( const QListWidgetItem & other )
+    */
+    QListWidgetItem * obj = new QListWidgetItem( *PQLISTWIDGETITEM(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

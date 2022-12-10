@@ -85,45 +85,35 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showMessage( const QString & message )
-*/
-void QErrorMessage_showMessage1()
-{
-  QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showMessage( PQSTRING(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void showMessage( const QString & message, const QString & type )
-*/
-void QErrorMessage_showMessage2()
-{
-  QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showMessage( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QErrorMessage_showMessage1();
+    /*
+    void showMessage( const QString & message )
+    */
+    QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->showMessage( PQSTRING(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QErrorMessage_showMessage2();
+    /*
+    void showMessage( const QString & message, const QString & type )
+    */
+    QErrorMessage * obj = (QErrorMessage *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->showMessage( PQSTRING(1), PQSTRING(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

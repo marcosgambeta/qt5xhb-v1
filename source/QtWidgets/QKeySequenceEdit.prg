@@ -59,38 +59,28 @@ RETURN
 #endif
 #endif
 
-/*
-QKeySequenceEdit( QWidget * parent = 0 )
-*/
-void QKeySequenceEdit_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = new QKeySequenceEdit( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = 0 )
-*/
-void QKeySequenceEdit_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QKeySequenceEdit * obj = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QKEYSEQUENCEEDIT_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QKeySequenceEdit_new1();
+    /*
+    QKeySequenceEdit( QWidget * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QKeySequenceEdit * obj = new QKeySequenceEdit( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(1,2) && ISQKEYSEQUENCE(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QKeySequenceEdit_new2();
+    /*
+    QKeySequenceEdit( const QKeySequence & keySequence, QWidget * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QKeySequenceEdit * obj = new QKeySequenceEdit( *PQKEYSEQUENCE(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {

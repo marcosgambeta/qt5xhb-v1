@@ -63,33 +63,24 @@ RETURN
 #include <QtWidgets/QGroupBox>
 #endif
 
-/*
-QGroupBox( QWidget * parent = 0 )
-*/
-void QGroupBox_new1()
-{
-  QGroupBox * obj = new QGroupBox( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QGroupBox( const QString & title, QWidget * parent = 0 )
-*/
-void QGroupBox_new2()
-{
-  QGroupBox * obj = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
 
 HB_FUNC_STATIC( QGROUPBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QGroupBox_new1();
+    /*
+    QGroupBox( QWidget * parent = 0 )
+    */
+    QGroupBox * obj = new QGroupBox( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QGroupBox_new2();
+    /*
+    QGroupBox( const QString & title, QWidget * parent = 0 )
+    */
+    QGroupBox * obj = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

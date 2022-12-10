@@ -57,33 +57,23 @@ RETURN
 #include <QtWidgets/QStyleOptionToolBar>
 #endif
 
-/*
-QStyleOptionToolBar()
-*/
-void QStyleOptionToolBar_new1()
-{
-  QStyleOptionToolBar * obj = new QStyleOptionToolBar();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionToolBar( const QStyleOptionToolBar & other )
-*/
-void QStyleOptionToolBar_new2()
-{
-  QStyleOptionToolBar * obj = new QStyleOptionToolBar( *PQSTYLEOPTIONTOOLBAR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionToolBar_new1();
+    /*
+    QStyleOptionToolBar()
+    */
+    QStyleOptionToolBar * obj = new QStyleOptionToolBar();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBAR(1) )
   {
-    QStyleOptionToolBar_new2();
+    /*
+    QStyleOptionToolBar( const QStyleOptionToolBar & other )
+    */
+    QStyleOptionToolBar * obj = new QStyleOptionToolBar( *PQSTYLEOPTIONTOOLBAR(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

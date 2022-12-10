@@ -48,33 +48,23 @@ RETURN
 #include <QtWidgets/QStyleOptionFocusRect>
 #endif
 
-/*
-QStyleOptionFocusRect()
-*/
-void QStyleOptionFocusRect_new1()
-{
-  QStyleOptionFocusRect * obj = new QStyleOptionFocusRect();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
-*/
-void QStyleOptionFocusRect_new2()
-{
-  QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionFocusRect_new1();
+    /*
+    QStyleOptionFocusRect()
+    */
+    QStyleOptionFocusRect * obj = new QStyleOptionFocusRect();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1) )
   {
-    QStyleOptionFocusRect_new2();
+    /*
+    QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
+    */
+    QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

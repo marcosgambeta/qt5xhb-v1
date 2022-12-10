@@ -55,33 +55,23 @@ RETURN
 #include <QtWidgets/QStyleOptionDockWidget>
 #endif
 
-/*
-QStyleOptionDockWidget()
-*/
-void QStyleOptionDockWidget_new1()
-{
-  QStyleOptionDockWidget * obj = new QStyleOptionDockWidget();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
-*/
-void QStyleOptionDockWidget_new2()
-{
-  QStyleOptionDockWidget * obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionDockWidget_new1();
+    /*
+    QStyleOptionDockWidget()
+    */
+    QStyleOptionDockWidget * obj = new QStyleOptionDockWidget();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1) )
   {
-    QStyleOptionDockWidget_new2();
+    /*
+    QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
+    */
+    QStyleOptionDockWidget * obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -60,33 +60,23 @@ RETURN
 #include <QtWidgets/QScrollerProperties>
 #endif
 
-/*
-QScrollerProperties()
-*/
-void QScrollerProperties_new1()
-{
-  QScrollerProperties * obj = new QScrollerProperties();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QScrollerProperties( const QScrollerProperties & sp )
-*/
-void QScrollerProperties_new2()
-{
-  QScrollerProperties * obj = new QScrollerProperties( *PQSCROLLERPROPERTIES(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSCROLLERPROPERTIES_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QScrollerProperties_new1();
+    /*
+    QScrollerProperties()
+    */
+    QScrollerProperties * obj = new QScrollerProperties();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSCROLLERPROPERTIES(1) )
   {
-    QScrollerProperties_new2();
+    /*
+    QScrollerProperties( const QScrollerProperties & sp )
+    */
+    QScrollerProperties * obj = new QScrollerProperties( *PQSCROLLERPROPERTIES(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

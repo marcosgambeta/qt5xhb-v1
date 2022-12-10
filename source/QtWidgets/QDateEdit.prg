@@ -48,33 +48,23 @@ RETURN
 #include <QtWidgets/QDateEdit>
 #endif
 
-/*
-QDateEdit( QWidget * parent = 0 )
-*/
-void QDateEdit_new1()
-{
-  QDateEdit * obj = new QDateEdit( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDateEdit( const QDate & date, QWidget * parent = 0 )
-*/
-void QDateEdit_new2()
-{
-  QDateEdit * obj = new QDateEdit( *PQDATE(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QDATEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QDateEdit_new1();
+    /*
+    QDateEdit( QWidget * parent = 0 )
+    */
+    QDateEdit * obj = new QDateEdit( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQDATE(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QDateEdit_new2();
+    /*
+    QDateEdit( const QDate & date, QWidget * parent = 0 )
+    */
+    QDateEdit * obj = new QDateEdit( *PQDATE(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

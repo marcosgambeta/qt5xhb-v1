@@ -233,45 +233,35 @@ HB_FUNC_STATIC( QTOOLTIP_SETPALETTE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void showText( const QPoint & pos, const QString & text, QWidget * w, const QRect & rect )
-*/
-void QToolTip_showText1()
-{
-  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showText( *PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void showText( const QPoint & pos, const QString & text, QWidget * w = 0 )
-*/
-void QToolTip_showText2()
-{
-  QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->showText( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QTOOLTIP_SHOWTEXT )
 {
   if( ISNUMPAR(4) && ISQPOINT(1) && HB_ISCHAR(2) && ISQWIDGET(3) && ISQRECT(4) )
   {
-    QToolTip_showText1();
+    /*
+    void showText( const QPoint & pos, const QString & text, QWidget * w, const QRect & rect )
+    */
+    QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->showText( *PQPOINT(1), PQSTRING(2), PQWIDGET(3), *PQRECT(4) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISBETWEEN(2,3) && ISQPOINT(1) && HB_ISCHAR(2) && (ISQWIDGET(3)||HB_ISNIL(3)) )
   {
-    QToolTip_showText2();
+    /*
+    void showText( const QPoint & pos, const QString & text, QWidget * w = 0 )
+    */
+    QToolTip * obj = (QToolTip *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->showText( *PQPOINT(1), PQSTRING(2), OPQWIDGET(3,0) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

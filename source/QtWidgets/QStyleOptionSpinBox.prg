@@ -51,33 +51,23 @@ RETURN
 #include <QtWidgets/QStyleOptionSpinBox>
 #endif
 
-/*
-QStyleOptionSpinBox()
-*/
-void QStyleOptionSpinBox_new1()
-{
-  QStyleOptionSpinBox * obj = new QStyleOptionSpinBox();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionSpinBox( const QStyleOptionSpinBox & other )
-*/
-void QStyleOptionSpinBox_new2()
-{
-  QStyleOptionSpinBox * obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionSpinBox_new1();
+    /*
+    QStyleOptionSpinBox()
+    */
+    QStyleOptionSpinBox * obj = new QStyleOptionSpinBox();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONSPINBOX(1) )
   {
-    QStyleOptionSpinBox_new2();
+    /*
+    QStyleOptionSpinBox( const QStyleOptionSpinBox & other )
+    */
+    QStyleOptionSpinBox * obj = new QStyleOptionSpinBox( *PQSTYLEOPTIONSPINBOX(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

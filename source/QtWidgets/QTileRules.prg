@@ -55,33 +55,23 @@ RETURN
 #include <QtWidgets/QTileRules>
 #endif
 
-/*
-QTileRules( Qt::TileRule horizontalRule, Qt::TileRule verticalRule )
-*/
-void QTileRules_new1()
-{
-  QTileRules * obj = new QTileRules( (Qt::TileRule) hb_parni(1), (Qt::TileRule) hb_parni(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTileRules( Qt::TileRule rule = Qt::StretchTile )
-*/
-void QTileRules_new2()
-{
-  QTileRules * obj = new QTileRules( HB_ISNIL(1)? (Qt::TileRule) Qt::StretchTile : (Qt::TileRule) hb_parni(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QTILERULES_NEW )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QTileRules_new1();
+    /*
+    QTileRules( Qt::TileRule horizontalRule, Qt::TileRule verticalRule )
+    */
+    QTileRules * obj = new QTileRules( (Qt::TileRule) hb_parni(1), (Qt::TileRule) hb_parni(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QTileRules_new2();
+    /*
+    QTileRules( Qt::TileRule rule = Qt::StretchTile )
+    */
+    QTileRules * obj = new QTileRules( HB_ISNIL(1)? (Qt::TileRule) Qt::StretchTile : (Qt::TileRule) hb_parni(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

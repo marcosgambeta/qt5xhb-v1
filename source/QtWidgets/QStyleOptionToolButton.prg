@@ -65,33 +65,23 @@ RETURN
 #include <QtWidgets/QStyleOptionToolButton>
 #endif
 
-/*
-QStyleOptionToolButton()
-*/
-void QStyleOptionToolButton_new1()
-{
-  QStyleOptionToolButton * obj = new QStyleOptionToolButton();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionToolButton( const QStyleOptionToolButton & other )
-*/
-void QStyleOptionToolButton_new2()
-{
-  QStyleOptionToolButton * obj = new QStyleOptionToolButton( *PQSTYLEOPTIONTOOLBUTTON(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionToolButton_new1();
+    /*
+    QStyleOptionToolButton()
+    */
+    QStyleOptionToolButton * obj = new QStyleOptionToolButton();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBUTTON(1) )
   {
-    QStyleOptionToolButton_new2();
+    /*
+    QStyleOptionToolButton( const QStyleOptionToolButton & other )
+    */
+    QStyleOptionToolButton * obj = new QStyleOptionToolButton( *PQSTYLEOPTIONTOOLBUTTON(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

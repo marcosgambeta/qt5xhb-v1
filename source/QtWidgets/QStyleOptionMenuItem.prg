@@ -68,33 +68,23 @@ RETURN
 #include <QtWidgets/QStyleOptionMenuItem>
 #endif
 
-/*
-QStyleOptionMenuItem()
-*/
-void QStyleOptionMenuItem_new1()
-{
-  QStyleOptionMenuItem * obj = new QStyleOptionMenuItem();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
-*/
-void QStyleOptionMenuItem_new2()
-{
-  QStyleOptionMenuItem * obj = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionMenuItem_new1();
+    /*
+    QStyleOptionMenuItem()
+    */
+    QStyleOptionMenuItem * obj = new QStyleOptionMenuItem();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONMENUITEM(1) )
   {
-    QStyleOptionMenuItem_new2();
+    /*
+    QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
+    */
+    QStyleOptionMenuItem * obj = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

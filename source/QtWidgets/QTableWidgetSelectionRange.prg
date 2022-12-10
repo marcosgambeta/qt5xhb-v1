@@ -61,46 +61,31 @@ RETURN
 #include <QtWidgets/QTableWidgetSelectionRange>
 #endif
 
-/*
-QTableWidgetSelectionRange()
-*/
-void QTableWidgetSelectionRange_new1()
-{
-  QTableWidgetSelectionRange * obj = new QTableWidgetSelectionRange();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTableWidgetSelectionRange( int top, int left, int bottom, int right )
-*/
-void QTableWidgetSelectionRange_new2()
-{
-  QTableWidgetSelectionRange * obj = new QTableWidgetSelectionRange( PINT(1), PINT(2), PINT(3), PINT(4) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTableWidgetSelectionRange( const QTableWidgetSelectionRange & other )
-*/
-void QTableWidgetSelectionRange_new3()
-{
-  QTableWidgetSelectionRange * obj = new QTableWidgetSelectionRange( *PQTABLEWIDGETSELECTIONRANGE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QTABLEWIDGETSELECTIONRANGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTableWidgetSelectionRange_new1();
+    /*
+    QTableWidgetSelectionRange()
+    */
+    QTableWidgetSelectionRange * obj = new QTableWidgetSelectionRange();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QTableWidgetSelectionRange_new2();
+    /*
+    QTableWidgetSelectionRange( int top, int left, int bottom, int right )
+    */
+    QTableWidgetSelectionRange * obj = new QTableWidgetSelectionRange( PINT(1), PINT(2), PINT(3), PINT(4) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTABLEWIDGETSELECTIONRANGE(1) )
   {
-    QTableWidgetSelectionRange_new3();
+    /*
+    QTableWidgetSelectionRange( const QTableWidgetSelectionRange & other )
+    */
+    QTableWidgetSelectionRange * obj = new QTableWidgetSelectionRange( *PQTABLEWIDGETSELECTIONRANGE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

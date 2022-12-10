@@ -67,33 +67,23 @@ RETURN
 #include <QtWidgets/QColorDialog>
 #endif
 
-/*
-QColorDialog( QWidget * parent = 0 )
-*/
-void QColorDialog_new1()
-{
-  QColorDialog * obj = new QColorDialog( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QColorDialog( const QColor & initial, QWidget * parent = 0 )
-*/
-void QColorDialog_new2()
-{
-  QColorDialog * obj = new QColorDialog( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QColorDialog_new1();
+    /*
+    QColorDialog( QWidget * parent = 0 )
+    */
+    QColorDialog * obj = new QColorDialog( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && (ISQCOLOR(1)||HB_ISCHAR(1)) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QColorDialog_new2();
+    /*
+    QColorDialog( const QColor & initial, QWidget * parent = 0 )
+    */
+    QColorDialog * obj = new QColorDialog( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -172,38 +162,6 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
 }
 
 /*
-void open ()
-*/
-void QColorDialog_open1()
-{
-#ifdef Q_NO_USING_KEYWORD
-  QColorDialog * obj = (QColorDialog *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->open();
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void open ( QObject * receiver, const char * member )
-*/
-void QColorDialog_open2()
-{
-  QColorDialog * obj = (QColorDialog *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->open( PQOBJECT(1), PCONSTCHAR(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
 [1]void open ()
 [2]void open ( QObject * receiver, const char * member )
 */
@@ -212,11 +170,33 @@ HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
   if( ISNUMPAR(0) )
   {
-    QColorDialog_open1();
+    /*
+    void open ()
+    */
+#ifdef Q_NO_USING_KEYWORD
+    QColorDialog * obj = (QColorDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->open();
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
   {
-    QColorDialog_open2();
+    /*
+    void open ( QObject * receiver, const char * member )
+    */
+    QColorDialog * obj = (QColorDialog *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

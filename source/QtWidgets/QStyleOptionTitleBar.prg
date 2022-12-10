@@ -54,33 +54,23 @@ RETURN
 #include <QtWidgets/QStyleOptionTitleBar>
 #endif
 
-/*
-QStyleOptionTitleBar()
-*/
-void QStyleOptionTitleBar_new1()
-{
-  QStyleOptionTitleBar * obj = new QStyleOptionTitleBar();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
-*/
-void QStyleOptionTitleBar_new2()
-{
-  QStyleOptionTitleBar * obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionTitleBar_new1();
+    /*
+    QStyleOptionTitleBar()
+    */
+    QStyleOptionTitleBar * obj = new QStyleOptionTitleBar();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTITLEBAR(1) )
   {
-    QStyleOptionTitleBar_new2();
+    /*
+    QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
+    */
+    QStyleOptionTitleBar * obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

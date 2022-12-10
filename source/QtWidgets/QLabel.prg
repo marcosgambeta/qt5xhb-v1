@@ -92,33 +92,23 @@ RETURN
 
 #include <QtGui/QMovie>
 
-/*
-QLabel( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
-void QLabel_new1()
-{
-  QLabel * obj = new QLabel( OPQWIDGET(1,0), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QLabel( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
-void QLabel_new2()
-{
-  QLabel * obj = new QLabel( PQSTRING(1), OPQWIDGET(2,0), HB_ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QLABEL_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QLabel_new1();
+    /*
+    QLabel( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    */
+    QLabel * obj = new QLabel( OPQWIDGET(1,0), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QLabel_new2();
+    /*
+    QLabel( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    */
+    QLabel * obj = new QLabel( PQSTRING(1), OPQWIDGET(2,0), HB_ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -895,36 +885,6 @@ HB_FUNC_STATIC( QLABEL_SETMOVIE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setNum( int num )
-*/
-void QLabel_setNum1()
-{
-  QLabel * obj = (QLabel *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setNum( PINT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setNum( double num )
-*/
-void QLabel_setNum2()
-{
-  QLabel * obj = (QLabel *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setNum( PDOUBLE(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QLABEL_SETNUM )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -935,11 +895,31 @@ HB_FUNC_STATIC( QLABEL_SETNUM )
     {
       if( HB_IS_DOUBLE(pNum) )
       {
-        QLabel_setNum2();
+        /*
+        void setNum( double num )
+        */
+        QLabel * obj = (QLabel *) Qt5xHb::itemGetPtrStackSelfItem();
+
+        if( obj )
+        {
+          obj->setNum( PDOUBLE(1) );
+        }
+
+        hb_itemReturn(hb_stackSelfItem());
       }
       else if( HB_IS_INTEGER(pNum) )
       {
-        QLabel_setNum1();
+        /*
+        void setNum( int num )
+        */
+        QLabel * obj = (QLabel *) Qt5xHb::itemGetPtrStackSelfItem();
+
+        if( obj )
+        {
+          obj->setNum( PINT(1) );
+        }
+
+        hb_itemReturn(hb_stackSelfItem());
       }
       else
       {

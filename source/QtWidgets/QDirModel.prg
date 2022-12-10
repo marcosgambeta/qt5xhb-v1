@@ -88,33 +88,23 @@ RETURN
 #include <QtWidgets/QDirModel>
 #endif
 
-/*
-QDirModel( const QStringList & nameFilters, QDir::Filters filters, QDir::SortFlags sort, QObject * parent = 0 )
-*/
-void QDirModel_new1()
-{
-  QDirModel * obj = new QDirModel( PQSTRINGLIST(1), (QDir::Filters) hb_parni(2), (QDir::SortFlags) hb_parni(3), OPQOBJECT(4,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDirModel( QObject * parent = 0 )
-*/
-void QDirModel_new2()
-{
-  QDirModel * obj = new QDirModel( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QDIRMODEL_NEW )
 {
   if( ISBETWEEN(3,4) && HB_ISARRAY(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
-    QDirModel_new1();
+    /*
+    QDirModel( const QStringList & nameFilters, QDir::Filters filters, QDir::SortFlags sort, QObject * parent = 0 )
+    */
+    QDirModel * obj = new QDirModel( PQSTRINGLIST(1), (QDir::Filters) hb_parni(2), (QDir::SortFlags) hb_parni(3), OPQOBJECT(4,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QDirModel_new2();
+    /*
+    QDirModel( QObject * parent = 0 )
+    */
+    QDirModel * obj = new QDirModel( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -141,43 +131,33 @@ HB_FUNC_STATIC( QDIRMODEL_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-*/
-void QDirModel_index1()
-{
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
-    Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
-  }
-}
-
-/*
-QModelIndex index( const QString & path, int column = 0 ) const
-*/
-void QDirModel_index2()
-{
-  QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING(1), OPINT(2,0) ) );
-    Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
-  }
-}
-
 HB_FUNC_STATIC( QDIRMODEL_INDEX )
 {
   if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3)||HB_ISNIL(3)) )
   {
-    QDirModel_index1();
+    /*
+    QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+    */
+    QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt5xHb::itemGetPtr(3) ) );
+      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+    }
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QDirModel_index2();
+    /*
+    QModelIndex index( const QString & path, int column = 0 ) const
+    */
+    QDirModel * obj = (QDirModel *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING(1), OPINT(2,0) ) );
+      Qt5xHb::createReturnClass(ptr, "QMODELINDEX", true);
+    }
   }
   else
   {

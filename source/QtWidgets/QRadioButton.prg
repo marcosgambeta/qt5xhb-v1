@@ -51,33 +51,23 @@ RETURN
 #include <QtWidgets/QRadioButton>
 #endif
 
-/*
-QRadioButton( QWidget * parent = 0 )
-*/
-void QRadioButton_new1()
-{
-  QRadioButton * obj = new QRadioButton( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QRadioButton( const QString & text, QWidget * parent = 0 )
-*/
-void QRadioButton_new2()
-{
-  QRadioButton * obj = new QRadioButton( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QRadioButton_new1();
+    /*
+    QRadioButton( QWidget * parent = 0 )
+    */
+    QRadioButton * obj = new QRadioButton( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QRadioButton_new2();
+    /*
+    QRadioButton( const QString & text, QWidget * parent = 0 )
+    */
+    QRadioButton * obj = new QRadioButton( PQSTRING(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

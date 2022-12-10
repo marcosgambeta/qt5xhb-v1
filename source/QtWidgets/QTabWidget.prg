@@ -140,41 +140,31 @@ HB_FUNC_STATIC( QTABWIDGET_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int addTab( QWidget * page, const QString & label )
-*/
-void QTabWidget_addTab1()
-{
-  QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->addTab( PQWIDGET(1), PQSTRING(2) ) );
-  }
-}
-
-/*
-int addTab( QWidget * page, const QIcon & icon, const QString & label )
-*/
-void QTabWidget_addTab2()
-{
-  QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->addTab( PQWIDGET(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
 {
   if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2) )
   {
-    QTabWidget_addTab1();
+    /*
+    int addTab( QWidget * page, const QString & label )
+    */
+    QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RINT( obj->addTab( PQWIDGET(1), PQSTRING(2) ) );
+    }
   }
   else if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2)||HB_ISCHAR(2)) && HB_ISCHAR(3) )
   {
-    QTabWidget_addTab2();
+    /*
+    int addTab( QWidget * page, const QIcon & icon, const QString & label )
+    */
+    QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RINT( obj->addTab( PQWIDGET(1), HB_ISOBJECT(2)? *(QIcon *) Qt5xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
+    }
   }
   else
   {
@@ -559,41 +549,31 @@ HB_FUNC_STATIC( QTABWIDGET_INDEXOF )
   }
 }
 
-/*
-int insertTab( int index, QWidget * page, const QString & label )
-*/
-void QTabWidget_insertTab1()
-{
-  QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->insertTab( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
-  }
-}
-
-/*
-int insertTab( int index, QWidget * page, const QIcon & icon, const QString & label )
-*/
-void QTabWidget_insertTab2()
-{
-  QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->insertTab( PINT(1), PQWIDGET(2), HB_ISOBJECT(3)? *(QIcon *) Qt5xHb::itemGetPtr(3) : QIcon(hb_parc(3)), PQSTRING(4) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
 {
   if( ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3) )
   {
-    QTabWidget_insertTab1();
+    /*
+    int insertTab( int index, QWidget * page, const QString & label )
+    */
+    QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RINT( obj->insertTab( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
+    }
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3)||HB_ISCHAR(3)) && HB_ISCHAR(4) )
   {
-    QTabWidget_insertTab2();
+    /*
+    int insertTab( int index, QWidget * page, const QIcon & icon, const QString & label )
+    */
+    QTabWidget * obj = (QTabWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RINT( obj->insertTab( PINT(1), PQWIDGET(2), HB_ISOBJECT(3)? *(QIcon *) Qt5xHb::itemGetPtr(3) : QIcon(hb_parc(3)), PQSTRING(4) ) );
+    }
   }
   else
   {

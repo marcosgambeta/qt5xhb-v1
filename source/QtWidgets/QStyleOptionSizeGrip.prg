@@ -47,33 +47,23 @@ RETURN
 #include <QtWidgets/QStyleOptionSizeGrip>
 #endif
 
-/*
-QStyleOptionSizeGrip()
-*/
-void QStyleOptionSizeGrip_new1()
-{
-  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
-*/
-void QStyleOptionSizeGrip_new2()
-{
-  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionSizeGrip_new1();
+    /*
+    QStyleOptionSizeGrip()
+    */
+    QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1) )
   {
-    QStyleOptionSizeGrip_new2();
+    /*
+    QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
+    */
+    QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

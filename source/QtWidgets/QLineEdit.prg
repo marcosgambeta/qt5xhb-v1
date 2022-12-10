@@ -134,33 +134,23 @@ RETURN
 #include <QtWidgets/QAction>
 #include <QtWidgets/QMenu>
 
-/*
-QLineEdit( QWidget * parent = 0 )
-*/
-void QLineEdit_new1()
-{
-  QLineEdit * obj = new QLineEdit( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QLineEdit( const QString & contents, QWidget * parent = 0 )
-*/
-void QLineEdit_new2()
-{
-  QLineEdit * obj = new QLineEdit( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QLineEdit_new1();
+    /*
+    QLineEdit( QWidget * parent = 0 )
+    */
+    QLineEdit * obj = new QLineEdit( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QLineEdit_new2();
+    /*
+    QLineEdit( const QString & contents, QWidget * parent = 0 )
+    */
+    QLineEdit * obj = new QLineEdit( PQSTRING(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -1300,45 +1290,35 @@ HB_FUNC_STATIC( QLINEEDIT_SETSELECTION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setTextMargins( int left, int top, int right, int bottom )
-*/
-void QLineEdit_setTextMargins1()
-{
-  QLineEdit * obj = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setTextMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setTextMargins( const QMargins & margins )
-*/
-void QLineEdit_setTextMargins2()
-{
-  QLineEdit * obj = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setTextMargins( *PQMARGINS(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {
   if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QLineEdit_setTextMargins1();
+    /*
+    void setTextMargins( int left, int top, int right, int bottom )
+    */
+    QLineEdit * obj = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setTextMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQMARGINS(1) )
   {
-    QLineEdit_setTextMargins2();
+    /*
+    void setTextMargins( const QMargins & margins )
+    */
+    QLineEdit * obj = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setTextMargins( *PQMARGINS(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -1778,44 +1758,34 @@ HB_FUNC_STATIC( QLINEEDIT_CLEAR )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addAction( QAction * action, QLineEdit::ActionPosition position )
-*/
-void QLineEdit_addAction1()
-{
-  QLineEdit * obj = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addAction( PQACTION(1), (QLineEdit::ActionPosition) hb_parni(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-QAction * addAction( const QIcon & icon, QLineEdit::ActionPosition position )
-*/
-void QLineEdit_addAction2()
-{
-  QLineEdit * obj = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), (QLineEdit::ActionPosition) hb_parni(2) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
 HB_FUNC_STATIC( QLINEEDIT_ADDACTION )
 {
   if( ISNUMPAR(2) && ISQACTION(1) && HB_ISNUM(2) )
   {
-    QLineEdit_addAction1();
+    /*
+    void addAction( QAction * action, QLineEdit::ActionPosition position )
+    */
+    QLineEdit * obj = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->addAction( PQACTION(1), (QLineEdit::ActionPosition) hb_parni(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && (ISQICON(1)||HB_ISCHAR(1)) && HB_ISNUM(2) )
   {
-    QLineEdit_addAction2();
+    /*
+    QAction * addAction( const QIcon & icon, QLineEdit::ActionPosition position )
+    */
+    QLineEdit * obj = (QLineEdit *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QAction * ptr = obj->addAction( HB_ISOBJECT(1)? *(QIcon *) Qt5xHb::itemGetPtr(1) : QIcon(hb_parc(1)), (QLineEdit::ActionPosition) hb_parni(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
   }
   else
   {

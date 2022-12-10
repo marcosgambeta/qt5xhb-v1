@@ -54,33 +54,23 @@ RETURN
 #include <QtWidgets/QStyleOptionGraphicsItem>
 #endif
 
-/*
-QStyleOptionGraphicsItem()
-*/
-void QStyleOptionGraphicsItem_new1()
-{
-  QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
-*/
-void QStyleOptionGraphicsItem_new2()
-{
-  QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionGraphicsItem_new1();
+    /*
+    QStyleOptionGraphicsItem()
+    */
+    QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1) )
   {
-    QStyleOptionGraphicsItem_new2();
+    /*
+    QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
+    */
+    QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

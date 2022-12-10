@@ -71,33 +71,23 @@ RETURN
 #include <QtWidgets/QSizePolicy>
 #endif
 
-/*
-QSizePolicy()
-*/
-void QSizePolicy_new1()
-{
-  QSizePolicy * obj = new QSizePolicy();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type = QSizePolicy::DefaultType )
-*/
-void QSizePolicy_new2()
-{
-  QSizePolicy * obj = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), HB_ISNIL(3)? (QSizePolicy::ControlType) QSizePolicy::DefaultType : (QSizePolicy::ControlType) hb_parni(3) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSizePolicy_new1();
+    /*
+    QSizePolicy()
+    */
+    QSizePolicy * obj = new QSizePolicy();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QSizePolicy_new2();
+    /*
+    QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type = QSizePolicy::DefaultType )
+    */
+    QSizePolicy * obj = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), HB_ISNIL(3)? (QSizePolicy::ControlType) QSizePolicy::DefaultType : (QSizePolicy::ControlType) hb_parni(3) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -53,46 +53,31 @@ RETURN
 #include <QtWidgets/QStylePainter>
 #endif
 
-/*
-QStylePainter()
-*/
-void QStylePainter_new1()
-{
-  QStylePainter * obj = new QStylePainter();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStylePainter( QWidget * w )
-*/
-void QStylePainter_new2()
-{
-  QStylePainter * obj = new QStylePainter( PQWIDGET(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStylePainter( QPaintDevice * pd, QWidget * w )
-*/
-void QStylePainter_new3()
-{
-  QStylePainter * obj = new QStylePainter( PQPAINTDEVICE(1), PQWIDGET(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStylePainter_new1();
+    /*
+    QStylePainter()
+    */
+    QStylePainter * obj = new QStylePainter();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QStylePainter_new2();
+    /*
+    QStylePainter( QWidget * w )
+    */
+    QStylePainter * obj = new QStylePainter( PQWIDGET(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQPAINTDEVICE(1) && ISQWIDGET(2) )
   {
-    QStylePainter_new3();
+    /*
+    QStylePainter( QPaintDevice * pd, QWidget * w )
+    */
+    QStylePainter * obj = new QStylePainter( PQPAINTDEVICE(1), PQWIDGET(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -100,41 +85,31 @@ HB_FUNC_STATIC( QSTYLEPAINTER_NEW )
   }
 }
 
-/*
-bool begin( QWidget * w )
-*/
-void QStylePainter_begin1()
-{
-  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->begin( PQWIDGET(1) ) );
-  }
-}
-
-/*
-bool begin( QPaintDevice * pd, QWidget * w )
-*/
-void QStylePainter_begin2()
-{
-  QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->begin( PQPAINTDEVICE(1), PQWIDGET(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSTYLEPAINTER_BEGIN )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QStylePainter_begin1();
+    /*
+    bool begin( QWidget * w )
+    */
+    QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RBOOL( obj->begin( PQWIDGET(1) ) );
+    }
   }
   else if( ISNUMPAR(2) && ISQPAINTDEVICE(1) && ISQWIDGET(2) )
   {
-    QStylePainter_begin2();
+    /*
+    bool begin( QPaintDevice * pd, QWidget * w )
+    */
+    QStylePainter * obj = (QStylePainter *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RBOOL( obj->begin( PQPAINTDEVICE(1), PQWIDGET(2) ) );
+    }
   }
   else
   {

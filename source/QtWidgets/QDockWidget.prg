@@ -70,33 +70,23 @@ RETURN
 
 #include <QtWidgets/QAction>
 
-/*
-QDockWidget( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
-void QDockWidget_new1()
-{
-  QDockWidget * obj = new QDockWidget( PQSTRING(1), OPQWIDGET(2,0), HB_ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDockWidget( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
-void QDockWidget_new2()
-{
-  QDockWidget * obj = new QDockWidget( OPQWIDGET(1,0), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 {
   if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QDockWidget_new1();
+    /*
+    QDockWidget( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+    */
+    QDockWidget * obj = new QDockWidget( PQSTRING(1), OPQWIDGET(2,0), HB_ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(0,2) && (ISQWIDGET(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QDockWidget_new2();
+    /*
+    QDockWidget( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+    */
+    QDockWidget * obj = new QDockWidget( OPQWIDGET(1,0), HB_ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

@@ -63,46 +63,31 @@ RETURN
 
 #include <QtGui/QPen>
 
-/*
-QGraphicsLineItem( QGraphicsItem * parent = 0 )
-*/
-void QGraphicsLineItem_new1()
-{
-  QGraphicsLineItem * obj = new QGraphicsLineItem( HB_ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QGraphicsLineItem( const QLineF & line, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsLineItem_new2()
-{
-  QGraphicsLineItem * obj = new QGraphicsLineItem( *PQLINEF(1), HB_ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsLineItem_new3()
-{
-  QGraphicsLineItem * obj = new QGraphicsLineItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(5) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) )
   {
-    QGraphicsLineItem_new1();
+    /*
+    QGraphicsLineItem( QGraphicsItem * parent = 0 )
+    */
+    QGraphicsLineItem * obj = new QGraphicsLineItem( HB_ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,2) && ISQLINEF(1) && (ISQGRAPHICSITEM(2)||HB_ISNIL(2)) )
   {
-    QGraphicsLineItem_new2();
+    /*
+    QGraphicsLineItem( const QLineF & line, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsLineItem * obj = new QGraphicsLineItem( *PQLINEF(1), HB_ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(4,5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQGRAPHICSITEM(5)||HB_ISNIL(5)) )
   {
-    QGraphicsLineItem_new3();
+    /*
+    QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsLineItem * obj = new QGraphicsLineItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(5) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -177,45 +162,35 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
   }
 }
 
-/*
-void setLine( const QLineF & line )
-*/
-void QGraphicsLineItem_setLine1()
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setLine( *PQLINEF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setLine( qreal x1, qreal y1, qreal x2, qreal y2 )
-*/
-void QGraphicsLineItem_setLine2()
-{
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setLine( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 {
   if( ISNUMPAR(1) && ISQLINEF(1) )
   {
-    QGraphicsLineItem_setLine1();
+    /*
+    void setLine( const QLineF & line )
+    */
+    QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setLine( *PQLINEF(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QGraphicsLineItem_setLine2();
+    /*
+    void setLine( qreal x1, qreal y1, qreal x2, qreal y2 )
+    */
+    QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->setLine( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

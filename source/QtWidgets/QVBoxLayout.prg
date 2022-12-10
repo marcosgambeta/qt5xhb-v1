@@ -48,33 +48,23 @@ RETURN
 #include <QtWidgets/QVBoxLayout>
 #endif
 
-/*
-QVBoxLayout()
-*/
-void QVBoxLayout_new1()
-{
-  QVBoxLayout * obj = new QVBoxLayout();
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QVBoxLayout( QWidget * parent )
-*/
-void QVBoxLayout_new2()
-{
-  QVBoxLayout * obj = new QVBoxLayout( PQWIDGET(1) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QVBoxLayout_new1();
+    /*
+    QVBoxLayout()
+    */
+    QVBoxLayout * obj = new QVBoxLayout();
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QVBoxLayout_new2();
+    /*
+    QVBoxLayout( QWidget * parent )
+    */
+    QVBoxLayout * obj = new QVBoxLayout( PQWIDGET(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

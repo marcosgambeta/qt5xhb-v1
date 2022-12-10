@@ -64,33 +64,23 @@ RETURN
 #include <QtWidgets/QStyleOptionHeader>
 #endif
 
-/*
-QStyleOptionHeader()
-*/
-void QStyleOptionHeader_new1()
-{
-  QStyleOptionHeader * obj = new QStyleOptionHeader();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QStyleOptionHeader( const QStyleOptionHeader & other )
-*/
-void QStyleOptionHeader_new2()
-{
-  QStyleOptionHeader * obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QStyleOptionHeader_new1();
+    /*
+    QStyleOptionHeader()
+    */
+    QStyleOptionHeader * obj = new QStyleOptionHeader();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONHEADER(1) )
   {
-    QStyleOptionHeader_new2();
+    /*
+    QStyleOptionHeader( const QStyleOptionHeader & other )
+    */
+    QStyleOptionHeader * obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -57,33 +57,23 @@ RETURN
 #include <QtWidgets/QCheckBox>
 #endif
 
-/*
-QCheckBox( QWidget * parent = 0 )
-*/
-void QCheckBox_new1()
-{
-  QCheckBox * obj = new QCheckBox( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QCheckBox( const QString & text, QWidget * parent = 0 )
-*/
-void QCheckBox_new2()
-{
-  QCheckBox * obj = new QCheckBox( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QCheckBox_new1 ();
+    /*
+    QCheckBox( QWidget * parent = 0 )
+    */
+    QCheckBox * obj = new QCheckBox( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QCheckBox_new2 ();
+    /*
+    QCheckBox( const QString & text, QWidget * parent = 0 )
+    */
+    QCheckBox * obj = new QCheckBox( PQSTRING(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

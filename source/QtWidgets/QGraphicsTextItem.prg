@@ -87,33 +87,23 @@ RETURN
 #include <QtGui/QTextCursor>
 #include <QtGui/QTextDocument>
 
-/*
-QGraphicsTextItem( QGraphicsItem * parent = 0 )
-*/
-void QGraphicsTextItem_new1()
-{
-  QGraphicsTextItem * obj = new QGraphicsTextItem( HB_ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QGraphicsTextItem( const QString & text, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsTextItem_new2()
-{
-  QGraphicsTextItem * obj = new QGraphicsTextItem( PQSTRING(1), HB_ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) )
   {
-    QGraphicsTextItem_new1();
+    /*
+    QGraphicsTextItem( QGraphicsItem * parent = 0 )
+    */
+    QGraphicsTextItem * obj = new QGraphicsTextItem( HB_ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,2)&& HB_ISCHAR(1) && (ISQGRAPHICSITEM(2)||HB_ISNIL(2)) )
   {
-    QGraphicsTextItem_new2();
+    /*
+    QGraphicsTextItem( const QString & text, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsTextItem * obj = new QGraphicsTextItem( PQSTRING(1), HB_ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
