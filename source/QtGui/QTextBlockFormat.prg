@@ -503,41 +503,31 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
-*/
-void QTextBlockFormat_lineHeight1()
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->lineHeight( PQREAL(1), PQREAL(2) ) );
-  }
-}
-
-/*
-qreal lineHeight() const
-*/
-void QTextBlockFormat_lineHeight2()
-{
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQREAL( obj->lineHeight() );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QTextBlockFormat_lineHeight1();
+    /*
+    qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
+    */
+    QTextBlockFormat * obj = (QTextBlockFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQREAL( obj->lineHeight( PQREAL(1), PQREAL(2) ) );
+    }
   }
   else if( ISNUMPAR(0) )
   {
-    QTextBlockFormat_lineHeight2();
+    /*
+    qreal lineHeight() const
+    */
+    QTextBlockFormat * obj = (QTextBlockFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQREAL( obj->lineHeight() );
+    }
   }
   else
   {

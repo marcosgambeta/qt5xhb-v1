@@ -58,33 +58,23 @@ RETURN
 #include <QtGui/QTextLength>
 #endif
 
-/*
-QTextLength()
-*/
-void QTextLength_new1()
-{
-  QTextLength * obj = new QTextLength();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTextLength( QTextLength::Type type, qreal value )
-*/
-void QTextLength_new2()
-{
-  QTextLength * obj = new QTextLength( (QTextLength::Type) hb_parni(1), PQREAL(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextLength_new1();
+    /*
+    QTextLength()
+    */
+    QTextLength * obj = new QTextLength();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QTextLength_new2();
+    /*
+    QTextLength( QTextLength::Type type, qreal value )
+    */
+    QTextLength * obj = new QTextLength( (QTextLength::Type) hb_parni(1), PQREAL(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

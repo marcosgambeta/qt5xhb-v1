@@ -84,46 +84,31 @@ RETURN
 #include <QtGui/QSurfaceFormat>
 #endif
 
-/*
-QSurfaceFormat()
-*/
-void QSurfaceFormat_new1()
-{
-  QSurfaceFormat * obj = new QSurfaceFormat();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSurfaceFormat( QSurfaceFormat::FormatOptions options )
-*/
-void QSurfaceFormat_new2()
-{
-  QSurfaceFormat * obj = new QSurfaceFormat( (QSurfaceFormat::FormatOptions) hb_parni(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSurfaceFormat( const QSurfaceFormat & other )
-*/
-void QSurfaceFormat_new3()
-{
-  QSurfaceFormat * obj = new QSurfaceFormat( *PQSURFACEFORMAT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSURFACEFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSurfaceFormat_new1();
+    /*
+    QSurfaceFormat()
+    */
+    QSurfaceFormat * obj = new QSurfaceFormat();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QSurfaceFormat_new2();
+    /*
+    QSurfaceFormat( QSurfaceFormat::FormatOptions options )
+    */
+    QSurfaceFormat * obj = new QSurfaceFormat( (QSurfaceFormat::FormatOptions) hb_parni(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSURFACEFORMAT(1) )
   {
-    QSurfaceFormat_new3();
+    /*
+    QSurfaceFormat( const QSurfaceFormat & other )
+    */
+    QSurfaceFormat * obj = new QSurfaceFormat( *PQSURFACEFORMAT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

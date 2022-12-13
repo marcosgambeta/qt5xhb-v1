@@ -356,41 +356,31 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
   }
 }
 
-/*
-QString styleString( const QFont & font )
-*/
-void QFontDatabase_styleString1()
-{
-  QFontDatabase * obj = (QFontDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->styleString( *PQFONT(1) ) );
-  }
-}
-
-/*
-QString styleString( const QFontInfo & fontInfo )
-*/
-void QFontDatabase_styleString2()
-{
-  QFontDatabase * obj = (QFontDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->styleString( *PQFONTINFO(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {
   if( ISNUMPAR(1) && ISQFONT(1) )
   {
-    QFontDatabase_styleString1();
+    /*
+    QString styleString( const QFont & font )
+    */
+    QFontDatabase * obj = (QFontDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RQSTRING( obj->styleString( *PQFONT(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && ISQFONTINFO(1) )
   {
-    QFontDatabase_styleString2();
+    /*
+    QString styleString( const QFontInfo & fontInfo )
+    */
+    QFontDatabase * obj = (QFontDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->styleString( *PQFONTINFO(1) ) );
+    }
   }
   else
   {

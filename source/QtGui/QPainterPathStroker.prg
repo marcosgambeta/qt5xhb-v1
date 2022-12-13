@@ -71,36 +71,26 @@ RETURN
 #include <QtGui/QPainterPathStroker>
 #endif
 
-/*
-QPainterPathStroker()
-*/
-void QPainterPathStroker_new1()
-{
-  QPainterPathStroker * obj = new QPainterPathStroker();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPainterPathStroker( const QPen & pen )
-*/
-void QPainterPathStroker_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QPainterPathStroker * obj = new QPainterPathStroker( *PQPEN(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPainterPathStroker_new1();
+    /*
+    QPainterPathStroker()
+    */
+    QPainterPathStroker * obj = new QPainterPathStroker();
+    Qt5xHb::returnNewObject(obj, true);
   }
 #if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
   else if( ISNUMPAR(1) && ISQPEN(1) )
   {
-    QPainterPathStroker_new2();
+    /*
+    QPainterPathStroker( const QPen & pen )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QPainterPathStroker * obj = new QPainterPathStroker( *PQPEN(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
 #endif
   else
@@ -381,55 +371,45 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setDashPattern( Qt::PenStyle style )
-*/
-void QPainterPathStroker_setDashPattern1()
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setDashPattern( (Qt::PenStyle) hb_parni(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setDashPattern( const QVector<qreal> & dashPattern )
-*/
-void QPainterPathStroker_setDashPattern2()
-{
-  QPainterPathStroker * obj = (QPainterPathStroker *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVector<qreal> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    qreal temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetND(aList1, i1+1);
-      par1 << temp1;
-    }
-    obj->setDashPattern( par1 );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QPainterPathStroker_setDashPattern1();
+    /*
+    void setDashPattern( Qt::PenStyle style )
+    */
+    QPainterPathStroker * obj = (QPainterPathStroker *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setDashPattern( (Qt::PenStyle) hb_parni(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QPainterPathStroker_setDashPattern2();
+    /*
+    void setDashPattern( const QVector<qreal> & dashPattern )
+    */
+    QPainterPathStroker * obj = (QPainterPathStroker *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QVector<qreal> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      qreal temp1;
+      for (i1=0;i1<nLen1;i1++)
+      {
+        temp1 = hb_arrayGetND(aList1, i1+1);
+        par1 << temp1;
+      }
+      obj->setDashPattern( par1 );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

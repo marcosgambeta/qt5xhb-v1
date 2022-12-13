@@ -52,33 +52,23 @@ RETURN
 #include <QtGui/QRegExpValidator>
 #endif
 
-/*
-QRegExpValidator( QObject * parent = 0 )
-*/
-void QRegExpValidator_new1()
-{
-  QRegExpValidator * obj = new QRegExpValidator( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QRegExpValidator( const QRegExp & rx, QObject * parent = 0 )
-*/
-void QRegExpValidator_new2()
-{
-  QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QRegExpValidator_new1();
+    /*
+    QRegExpValidator( QObject * parent = 0 )
+    */
+    QRegExpValidator * obj = new QRegExpValidator( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2) )
   {
-    QRegExpValidator_new2();
+    /*
+    QRegExpValidator( const QRegExp & rx, QObject * parent = 0 )
+    */
+    QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

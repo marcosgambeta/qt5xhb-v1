@@ -94,59 +94,39 @@ RETURN
 #include <QtGui/QMatrix>
 #include <QtGui/QTransform>
 
-/*
-QMatrix4x4()
-*/
-void QMatrix4x4_new1()
-{
-  QMatrix4x4 * obj = new QMatrix4x4();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMatrix4x4( float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44 )
-*/
-void QMatrix4x4_new3()
-{
-  QMatrix4x4 * obj = new QMatrix4x4( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6), PFLOAT(7), PFLOAT(8), PFLOAT(9), PFLOAT(10), PFLOAT(11), PFLOAT(12), PFLOAT(13), PFLOAT(14), PFLOAT(15), PFLOAT(16) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMatrix4x4( const QTransform & transform )
-*/
-void QMatrix4x4_new5()
-{
-  QMatrix4x4 * obj = new QMatrix4x4( *PQTRANSFORM(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMatrix4x4( const QMatrix & matrix )
-*/
-void QMatrix4x4_new6()
-{
-  QMatrix4x4 * obj = new QMatrix4x4( *PQMATRIX(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QMATRIX4X4_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMatrix4x4_new1();
+    /*
+    QMatrix4x4()
+    */
+    QMatrix4x4 * obj = new QMatrix4x4();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(16) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) && HB_ISNUM(10) && HB_ISNUM(11) && HB_ISNUM(12) && HB_ISNUM(13) && HB_ISNUM(14) && HB_ISNUM(15) && HB_ISNUM(16) )
   {
-    QMatrix4x4_new3();
+    /*
+    QMatrix4x4( float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44 )
+    */
+    QMatrix4x4 * obj = new QMatrix4x4( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6), PFLOAT(7), PFLOAT(8), PFLOAT(9), PFLOAT(10), PFLOAT(11), PFLOAT(12), PFLOAT(13), PFLOAT(14), PFLOAT(15), PFLOAT(16) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTRANSFORM(1) )
   {
-    QMatrix4x4_new5();
+    /*
+    QMatrix4x4( const QTransform & transform )
+    */
+    QMatrix4x4 * obj = new QMatrix4x4( *PQTRANSFORM(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMATRIX(1) )
   {
-    QMatrix4x4_new6();
+    /*
+    QMatrix4x4( const QMatrix & matrix )
+    */
+    QMatrix4x4 * obj = new QMatrix4x4( *PQMATRIX(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -484,221 +464,171 @@ HB_FUNC_STATIC( QMATRIX4X4_NORMALMATRIX )
   }
 }
 
-/*
-void scale(const QVector3D& vector)
-*/
-void QMatrix4x4_scale1()
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->scale( *PQVECTOR3D(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void scale( float x, float y )
-*/
-void QMatrix4x4_scale2()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->scale( PFLOAT(1), PFLOAT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void scale( float x, float y, float z )
-*/
-void QMatrix4x4_scale3()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->scale( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void scale( float factor )
-*/
-void QMatrix4x4_scale4()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->scale( PFLOAT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 {
   if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    QMatrix4x4_scale1();
+    /*
+    void scale(const QVector3D& vector)
+    */
+#ifndef QT_NO_VECTOR3D
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->scale( *PQVECTOR3D(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QMatrix4x4_scale2();
+    /*
+    void scale( float x, float y )
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->scale( PFLOAT(1), PFLOAT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
-    QMatrix4x4_scale3();
+    /*
+    void scale( float x, float y, float z )
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->scale( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QMatrix4x4_scale4();
+    /*
+    void scale( float factor )
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->scale( PFLOAT(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
-}
-
-/*
-void translate(const QVector3D& vector)
-*/
-void QMatrix4x4_translate1()
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate( *PQVECTOR3D(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void translate( float x, float y )
-*/
-void QMatrix4x4_translate2()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate( PFLOAT(1), PFLOAT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void translate( float x, float y, float z )
-*/
-void QMatrix4x4_translate3()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    QMatrix4x4_translate1();
+    /*
+    void translate(const QVector3D& vector)
+    */
+#ifndef QT_NO_VECTOR3D
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->translate( *PQVECTOR3D(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QMatrix4x4_translate2();
+    /*
+    void translate( float x, float y )
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->translate( PFLOAT(1), PFLOAT(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
-    QMatrix4x4_translate3();
+    /*
+    void translate( float x, float y, float z )
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->translate( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
-}
-
-/*
-void rotate(float angle, const QVector3D& vector)
-*/
-void QMatrix4x4_rotate1()
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->rotate( PFLOAT(1), *PQVECTOR3D(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void rotate( float angle, float x, float y, float z = 0.0f )
-*/
-void QMatrix4x4_rotate2()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->rotate( PFLOAT(1), PFLOAT(2), PFLOAT(3), OPFLOAT(4,0.0f) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void rotate(const QQuaternion& quaternion)
-*/
-void QMatrix4x4_rotate3()
-{
-#ifndef QT_NO_QUATERNION
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->rotate( *PQQUATERNION(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
 }
 
 HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVECTOR3D(2) )
   {
-    QMatrix4x4_rotate1();
+    /*
+    void rotate(float angle, const QVector3D& vector)
+    */
+#ifndef QT_NO_VECTOR3D
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->rotate( PFLOAT(1), *PQVECTOR3D(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
-    QMatrix4x4_rotate2();
+    /*
+    void rotate( float angle, float x, float y, float z = 0.0f )
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->rotate( PFLOAT(1), PFLOAT(2), PFLOAT(3), OPFLOAT(4,0.0f) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQQUATERNION(1) )
   {
-    QMatrix4x4_rotate3();
+    /*
+    void rotate(const QQuaternion& quaternion)
+    */
+#ifndef QT_NO_QUATERNION
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->rotate( *PQQUATERNION(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {
@@ -706,64 +636,49 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
   }
 }
 
-/*
-void ortho( const QRect & rect )
-*/
-void QMatrix4x4_ortho1()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ortho( *PQRECT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void ortho( const QRectF & rect )
-*/
-void QMatrix4x4_ortho2()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ortho( *PQRECTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void ortho( float left, float right, float bottom, float top, float nearPlane, float farPlane )
-*/
-void QMatrix4x4_ortho3()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ortho( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QMatrix4x4_ortho1();
+    /*
+    void ortho( const QRect & rect )
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->ortho( *PQRECT(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QMatrix4x4_ortho2();
+    /*
+    void ortho( const QRectF & rect )
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->ortho( *PQRECTF(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
-    QMatrix4x4_ortho3();
+    /*
+    void ortho( float left, float right, float bottom, float top, float nearPlane, float farPlane )
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->ortho( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), PFLOAT(5), PFLOAT(6) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -851,49 +766,39 @@ HB_FUNC_STATIC( QMATRIX4X4_LOOKAT )
 #endif
 }
 
-/*
-void viewport( const QRectF & rect )
-*/
-void QMatrix4x4_viewport1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->viewport( *PQRECTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void viewport( float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f )
-*/
-void QMatrix4x4_viewport2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->viewport( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), OPFLOAT(5,0.0f), OPFLOAT(6,1.0f) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QMATRIX4X4_VIEWPORT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QMatrix4x4_viewport1();
+    /*
+    void viewport( const QRectF & rect )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->viewport( *PQRECTF(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISBETWEEN(4,6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( HB_ISNUM(5)||HB_ISNIL(5)) && ( HB_ISNUM(6)||HB_ISNIL(6)) )
   {
-    QMatrix4x4_viewport2();
+    /*
+    void viewport( float left, float bottom, float width, float height, float nearPlane = 0.0f, float farPlane = 1.0f )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->viewport( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4), OPFLOAT(5,0.0f), OPFLOAT(6,1.0f) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {
@@ -952,43 +857,33 @@ HB_FUNC_STATIC( QMATRIX4X4_TOAFFINE )
   }
 }
 
-/*
-QTransform toTransform() const
-*/
-void QMatrix4x4_toTransform1()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->toTransform() );
-    Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
-  }
-}
-
-/*
-QTransform toTransform( float distanceToPlane ) const
-*/
-void QMatrix4x4_toTransform2()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QTransform * ptr = new QTransform( obj->toTransform( PFLOAT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
-  }
-}
-
 HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
 {
   if( ISNUMPAR(0) )
   {
-    QMatrix4x4_toTransform1();
+    /*
+    QTransform toTransform() const
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QTransform * ptr = new QTransform( obj->toTransform() );
+      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QMatrix4x4_toTransform2();
+    /*
+    QTransform toTransform( float distanceToPlane ) const
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QTransform * ptr = new QTransform( obj->toTransform( PFLOAT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QTRANSFORM", true);
+    }
   }
   else
   {
@@ -996,83 +891,63 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
   }
 }
 
-/*
-QPoint map( const QPoint & point ) const
-*/
-void QMatrix4x4_map1()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->map( *PQPOINT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QPOINT", true);
-  }
-}
-
-/*
-QPointF map( const QPointF & point ) const
-*/
-void QMatrix4x4_map2()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->map( *PQPOINTF(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
-  }
-}
-
-/*
-QVector3D map(const QVector3D& point) const
-*/
-void QMatrix4x4_map3()
-{
-#ifndef QT_NO_VECTOR3D
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVector3D * ptr = new QVector3D( obj->map( *PQVECTOR3D(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
-  }
-#endif
-}
-
-/*
-QVector4D map(const QVector4D& point) const
-*/
-void QMatrix4x4_map4()
-{
-#ifndef QT_NO_VECTOR4D
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVector4D * ptr = new QVector4D( obj->map( *PQVECTOR4D(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QMATRIX4X4_MAP )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QMatrix4x4_map1();
+    /*
+    QPoint map( const QPoint & point ) const
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QPoint * ptr = new QPoint( obj->map( *PQPOINT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QPOINT", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    QMatrix4x4_map2();
+    /*
+    QPointF map( const QPointF & point ) const
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QPointF * ptr = new QPointF( obj->map( *PQPOINTF(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QPOINTF", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    QMatrix4x4_map3();
+    /*
+    QVector3D map(const QVector3D& point) const
+    */
+#ifndef QT_NO_VECTOR3D
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QVector3D * ptr = new QVector3D( obj->map( *PQVECTOR3D(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
+    }
+#endif
   }
   else if( ISNUMPAR(1) && ISQVECTOR4D(1) )
   {
-    QMatrix4x4_map4();
+    /*
+    QVector4D map(const QVector4D& point) const
+    */
+#ifndef QT_NO_VECTOR4D
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QVector4D * ptr = new QVector4D( obj->map( *PQVECTOR4D(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QVECTOR4D", true);
+    }
+#endif
   }
   else
   {
@@ -1107,43 +982,33 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPVECTOR )
 #endif
 }
 
-/*
-QRect mapRect( const QRect & rect ) const
-*/
-void QMatrix4x4_mapRect1()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->mapRect( *PQRECT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
-/*
-QRectF mapRect( const QRectF & rect ) const
-*/
-void QMatrix4x4_mapRect2()
-{
-  QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECTF", true);
-  }
-}
-
 HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QMatrix4x4_mapRect1();
+    /*
+    QRect mapRect( const QRect & rect ) const
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->mapRect( *PQRECT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QMatrix4x4_mapRect2();
+    /*
+    QRect mapRect( const QRect & rect ) const
+    */
+    QMatrix4x4 * obj = (QMatrix4x4 *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->mapRect( *PQRECT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else
   {

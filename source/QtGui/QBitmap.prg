@@ -54,72 +54,47 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QBitmap()
-*/
-void QBitmap_new1()
-{
-  QBitmap * obj = new QBitmap();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QBitmap( const QPixmap & pixmap )
-*/
-void QBitmap_new2()
-{
-  QBitmap * obj = new QBitmap( *PQPIXMAP(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QBitmap( int width, int height )
-*/
-void QBitmap_new3()
-{
-  QBitmap * obj = new QBitmap( PINT(1), PINT(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QBitmap( const QSize & size )
-*/
-void QBitmap_new4()
-{
-  QBitmap * obj = new QBitmap( *PQSIZE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QBitmap( const QString & fileName, const char * format = 0 )
-*/
-void QBitmap_new5()
-{
-  QBitmap * obj = new QBitmap( PQSTRING(1), OPCONSTCHAR(2,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QBITMAP_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBitmap_new1();
+    /*
+    QBitmap()
+    */
+    QBitmap * obj = new QBitmap();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
   {
-    QBitmap_new2();
+    /*
+    QBitmap( const QPixmap & pixmap )
+    */
+    QBitmap * obj = new QBitmap( *PQPIXMAP(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QBitmap_new3();
+    /*
+    QBitmap( int width, int height )
+    */
+    QBitmap * obj = new QBitmap( PINT(1), PINT(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    QBitmap_new4();
+    /*
+    QBitmap( const QSize & size )
+    */
+    QBitmap * obj = new QBitmap( *PQSIZE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
-    QBitmap_new5();
+    /*
+    QBitmap( const QString & fileName, const char * format = 0 )
+    */
+    QBitmap * obj = new QBitmap( PQSTRING(1), OPCONSTCHAR(2,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -235,44 +210,31 @@ HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 #endif
 }
 
-/*
-QVariant toVariant()
-*/
-void QBitmap_toVariant1()
-{
-  QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * variant = new QVariant();
-    variant->setValue<QBitmap>( *obj );
-    Qt5xHb::createReturnClass( variant, "QVARIANT", true);
-  }
-}
-
-/*
-static QVariant toVariant( const QBitmap & )
-*/
-void QBitmap_toVariant2()
-{
-  QBitmap * bitmap = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVariant * variant = new QVariant();
-  variant->setValue<QBitmap>( *bitmap );
-  Qt5xHb::createReturnClass( variant, "QVARIANT", true);
-}
-
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant( const QBitmap & )
-
 HB_FUNC_STATIC( QBITMAP_TOVARIANT )
 {
   if( ISNUMPAR(0) )
   {
-    QBitmap_toVariant1();
+    /*
+    QVariant toVariant()
+    */
+    QBitmap * obj = (QBitmap *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QVariant * variant = new QVariant();
+      variant->setValue<QBitmap>( *obj );
+      Qt5xHb::createReturnClass( variant, "QVARIANT", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQBITMAP(1) )
   {
-    QBitmap_toVariant2();
+    /*
+    static QVariant toVariant( const QBitmap & )
+    */
+    QBitmap * bitmap = (QBitmap *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QVariant * variant = new QVariant();
+    variant->setValue<QBitmap>( *bitmap );
+    Qt5xHb::createReturnClass( variant, "QVARIANT", true);
   }
   else
   {

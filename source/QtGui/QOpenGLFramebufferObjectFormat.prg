@@ -65,33 +65,23 @@ RETURN
 #include <QtGui/QOpenGLFramebufferObjectFormat>
 #endif
 
-/*
-QOpenGLFramebufferObjectFormat()
-*/
-void QOpenGLFramebufferObjectFormat_new1()
-{
-  QOpenGLFramebufferObjectFormat * obj = new QOpenGLFramebufferObjectFormat();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QOpenGLFramebufferObjectFormat( const QOpenGLFramebufferObjectFormat & other )
-*/
-void QOpenGLFramebufferObjectFormat_new2()
-{
-  QOpenGLFramebufferObjectFormat * obj = new QOpenGLFramebufferObjectFormat( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QOPENGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QOpenGLFramebufferObjectFormat_new1();
+    /*
+    QOpenGLFramebufferObjectFormat()
+    */
+    QOpenGLFramebufferObjectFormat * obj = new QOpenGLFramebufferObjectFormat();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQOPENGLFRAMEBUFFEROBJECTFORMAT(1) )
   {
-    QOpenGLFramebufferObjectFormat_new2();
+    /*
+    QOpenGLFramebufferObjectFormat( const QOpenGLFramebufferObjectFormat & other )
+    */
+    QOpenGLFramebufferObjectFormat * obj = new QOpenGLFramebufferObjectFormat( *PQOPENGLFRAMEBUFFEROBJECTFORMAT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

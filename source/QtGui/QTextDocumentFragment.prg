@@ -60,59 +60,39 @@ RETURN
 #include <QtGui/QTextDocumentFragment>
 #endif
 
-/*
-QTextDocumentFragment()
-*/
-void QTextDocumentFragment_new1()
-{
-  QTextDocumentFragment * obj = new QTextDocumentFragment();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTextDocumentFragment( const QTextDocument * document )
-*/
-void QTextDocumentFragment_new2()
-{
-  QTextDocumentFragment * obj = new QTextDocumentFragment( PQTEXTDOCUMENT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTextDocumentFragment( const QTextCursor & range )
-*/
-void QTextDocumentFragment_new3()
-{
-  QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTCURSOR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTextDocumentFragment( const QTextDocumentFragment & rhs )
-*/
-void QTextDocumentFragment_new4()
-{
-  QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTDOCUMENTFRAGMENT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextDocumentFragment_new1();
+    /*
+    QTextDocumentFragment()
+    */
+    QTextDocumentFragment * obj = new QTextDocumentFragment();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    QTextDocumentFragment_new2();
+    /*
+    QTextDocumentFragment( const QTextDocument * document )
+    */
+    QTextDocumentFragment * obj = new QTextDocumentFragment( PQTEXTDOCUMENT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
   {
-    QTextDocumentFragment_new3();
+    /*
+    QTextDocumentFragment( const QTextCursor & range )
+    */
+    QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTCURSOR(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1) )
   {
-    QTextDocumentFragment_new4();
+    /*
+    QTextDocumentFragment( const QTextDocumentFragment & rhs )
+    */
+    QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTDOCUMENTFRAGMENT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -229,35 +209,23 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
 #endif
 }
 
-/*
-static QTextDocumentFragment fromHtml( const QString & html )
-*/
-void QTextDocumentFragment_fromHtml1()
-{
-
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING(1) ) );
-  Qt5xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
-}
-
-/*
-static QTextDocumentFragment fromHtml( const QString & html, const QTextDocument * resourceProvider )
-*/
-void QTextDocumentFragment_fromHtml2()
-{
-
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING(1), PQTEXTDOCUMENT(2) ) );
-  Qt5xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QTextDocumentFragment_fromHtml1();
+    /*
+    static QTextDocumentFragment fromHtml( const QString & html )
+    */
+    QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING(1) ) );
+    Qt5xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQTEXTDOCUMENT(2) )
   {
-    QTextDocumentFragment_fromHtml2();
+    /*
+    static QTextDocumentFragment fromHtml( const QString & html, const QTextDocument * resourceProvider )
+    */
+    QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING(1), PQTEXTDOCUMENT(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QTEXTDOCUMENTFRAGMENT", true);
   }
   else
   {

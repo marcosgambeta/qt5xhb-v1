@@ -88,59 +88,39 @@ RETURN
 
 #include <QtGui/QPainterPath>
 
-/*
-QMatrix( Qt::Initialization )
-*/
-void QMatrix_new1()
-{
-  QMatrix * obj = new QMatrix( (Qt::Initialization) hb_parni(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMatrix()
-*/
-void QMatrix_new2()
-{
-  QMatrix * obj = new QMatrix();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
-*/
-void QMatrix_new3()
-{
-  QMatrix * obj = new QMatrix( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMatrix( const QMatrix & matrix )
-*/
-void QMatrix_new4()
-{
-  QMatrix * obj = new QMatrix( *PQMATRIX(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QMATRIX_NEW )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QMatrix_new1();
+    /*
+    QMatrix( Qt::Initialization )
+    */
+    QMatrix * obj = new QMatrix( (Qt::Initialization) hb_parni(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(0) )
   {
-    QMatrix_new2();
+    /*
+    QMatrix()
+    */
+    QMatrix * obj = new QMatrix();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
-    QMatrix_new3();
+    /*
+    QMatrix( qreal m11, qreal m12, qreal m21, qreal m22,qreal dx, qreal dy )
+    */
+    QMatrix * obj = new QMatrix( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMATRIX(1) )
   {
-    QMatrix_new4();
+    /*
+    QMatrix( const QMatrix & matrix )
+    */
+    QMatrix * obj = new QMatrix( *PQMATRIX(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -555,43 +535,33 @@ HB_FUNC_STATIC( QMATRIX_MAP )
   }
 }
 
-/*
-QRect mapRect( const QRect & ) const
-*/
-void QMatrix_mapRect1()
-{
-  QMatrix * obj = (QMatrix *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->mapRect( *PQRECT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECT", true);
-  }
-}
-
-/*
-QRectF mapRect( const QRectF & ) const
-*/
-void QMatrix_mapRect2()
-{
-  QMatrix * obj = (QMatrix *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QRECTF", true);
-  }
-}
-
 HB_FUNC_STATIC( QMATRIX_MAPRECT )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QMatrix_mapRect1();
+    /*
+    QRect mapRect( const QRect & ) const
+    */
+    QMatrix * obj = (QMatrix *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QRect * ptr = new QRect( obj->mapRect( *PQRECT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECT", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QMatrix_mapRect2();
+    /*
+    QRectF mapRect( const QRectF & ) const
+    */
+    QMatrix * obj = (QMatrix *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QRECTF", true);
+    }
   }
   else
   {

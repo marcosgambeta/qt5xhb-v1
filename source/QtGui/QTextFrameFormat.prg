@@ -633,45 +633,35 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_PADDING )
   }
 }
 
-/*
-void setWidth( qreal width )
-*/
-void QTextFrameFormat_setWidth1()
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setWidth( PQREAL(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setWidth( const QTextLength & length )
-*/
-void QTextFrameFormat_setWidth2()
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setWidth( *PQTEXTLENGTH(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QTextFrameFormat_setWidth1();
+    /*
+    void setWidth( qreal width )
+    */
+    QTextFrameFormat * obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setWidth( PQREAL(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQTEXTLENGTH(1) )
   {
-    QTextFrameFormat_setWidth2();
+    /*
+    void setWidth( const QTextLength & length )
+    */
+    QTextFrameFormat * obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setWidth( *PQTEXTLENGTH(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -704,45 +694,35 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
   }
 }
 
-/*
-void setHeight( qreal height )
-*/
-void QTextFrameFormat_setHeight1()
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setHeight( PQREAL(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setHeight( const QTextLength & height )
-*/
-void QTextFrameFormat_setHeight2()
-{
-  QTextFrameFormat * obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setHeight( *PQTEXTLENGTH(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QTextFrameFormat_setHeight1();
+    /*
+    void setHeight( qreal height )
+    */
+    QTextFrameFormat * obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setHeight( PQREAL(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQTEXTLENGTH(1) )
   {
-    QTextFrameFormat_setHeight2();
+    /*
+    void setHeight( const QTextLength & height )
+    */
+    QTextFrameFormat * obj = (QTextFrameFormat *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setHeight( *PQTEXTLENGTH(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

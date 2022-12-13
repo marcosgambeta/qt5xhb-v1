@@ -57,33 +57,23 @@ RETURN
 #include <QtGui/QPicture>
 #endif
 
-/*
-QPicture( int formatVersion = -1 )
-*/
-void QPicture_new1()
-{
-  QPicture * obj = new QPicture( OPINT(1,-1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPicture( const QPicture & pic )
-*/
-void QPicture_new2()
-{
-  QPicture * obj = new QPicture( *PQPICTURE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QPICTURE_NEW )
 {
   if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QPicture_new1();
+    /*
+    QPicture( int formatVersion = -1 )
+    */
+    QPicture * obj = new QPicture( OPINT(1,-1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPICTURE(1) )
   {
-    QPicture_new2();
+    /*
+    QPicture( const QPicture & pic )
+    */
+    QPicture * obj = new QPicture( *PQPICTURE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -181,41 +171,31 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
   }
 }
 
-/*
-bool load( const QString & fileName, const char * format = 0 )
-*/
-void QPicture_load1()
-{
-  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->load( PQSTRING(1), OPCONSTCHAR(2,0) ) );
-  }
-}
-
-/*
-bool load( QIODevice * dev, const char * format = 0 )
-*/
-void QPicture_load2()
-{
-  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->load( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
-  }
-}
-
 HB_FUNC_STATIC( QPICTURE_LOAD )
 {
   if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
-    QPicture_load1();
+    /*
+    bool load( const QString & fileName, const char * format = 0 )
+    */
+    QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->load( PQSTRING(1), OPCONSTCHAR(2,0) ) );
+    }
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
-    QPicture_load2();
+    /*
+    bool load( QIODevice * dev, const char * format = 0 )
+    */
+    QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->load( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
+    }
   }
   else
   {
@@ -247,41 +227,31 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
   }
 }
 
-/*
-bool save( const QString & fileName, const char * format = 0 )
-*/
-void QPicture_save1()
-{
-  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->save( PQSTRING(1), OPCONSTCHAR(2,0) ) );
-  }
-}
-
-/*
-bool save( QIODevice * dev, const char * format = 0 )
-*/
-void QPicture_save2()
-{
-  QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->save( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
-  }
-}
-
 HB_FUNC_STATIC( QPICTURE_SAVE )
 {
   if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
-    QPicture_save1();
+    /*
+    bool save( const QString & fileName, const char * format = 0 )
+    */
+    QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->save( PQSTRING(1), OPCONSTCHAR(2,0) ) );
+    }
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
-    QPicture_save2();
+    /*
+    bool save( QIODevice * dev, const char * format = 0 )
+    */
+    QPicture * obj = (QPicture *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->save( PQIODEVICE(1), OPCONSTCHAR(2,0) ) );
+    }
   }
   else
   {

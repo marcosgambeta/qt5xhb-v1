@@ -71,33 +71,23 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
-/*
-QTextTableCell()
-*/
-void QTextTableCell_new1()
-{
-  QTextTableCell * obj = new QTextTableCell();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTextTableCell( const QTextTableCell & o )
-*/
-void QTextTableCell_new2()
-{
-  QTextTableCell * obj = new QTextTableCell( *PQTEXTTABLECELL(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextTableCell_new1();
+    /*
+    QTextTableCell()
+    */
+    QTextTableCell * obj = new QTextTableCell();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTEXTTABLECELL(1) )
   {
-    QTextTableCell_new2();
+    /*
+    QTextTableCell( const QTextTableCell & o )
+    */
+    QTextTableCell * obj = new QTextTableCell( *PQTEXTTABLECELL(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

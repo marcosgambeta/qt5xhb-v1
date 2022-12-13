@@ -64,85 +64,55 @@ RETURN
 
 #include <QtCore/QList>
 
-/*
-QKeySequence()
-*/
-void QKeySequence_new1()
-{
-  QKeySequence * obj = new QKeySequence();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QKeySequence( const QString & key )
-*/
-void QKeySequence_new2()
-{
-  QKeySequence * obj = new QKeySequence( PQSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QKeySequence( const QString & key, QKeySequence::SequenceFormat format )
-*/
-void QKeySequence_new3()
-{
-  QKeySequence * obj = new QKeySequence( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QKeySequence( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
-*/
-void QKeySequence_new4()
-{
-  QKeySequence * obj = new QKeySequence( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QKeySequence( const QKeySequence & keysequence )
-*/
-void QKeySequence_new5()
-{
-  QKeySequence * obj = new QKeySequence( *PQKEYSEQUENCE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QKeySequence( QKeySequence::StandardKey key )
-*/
-void QKeySequence_new6()
-{
-  QKeySequence * obj = new QKeySequence( (QKeySequence::StandardKey) hb_parni(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QKeySequence_new1();
+    /*
+    QKeySequence()
+    */
+    QKeySequence * obj = new QKeySequence();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QKeySequence_new2();
+    /*
+    QKeySequence( const QString & key )
+    */
+    QKeySequence * obj = new QKeySequence( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
-    QKeySequence_new3();
+    /*
+    QKeySequence( const QString & key, QKeySequence::SequenceFormat format )
+    */
+    QKeySequence * obj = new QKeySequence( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,4) && HB_ISNUM(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
-    QKeySequence_new4();
+    /*
+    QKeySequence( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
+    */
+    QKeySequence * obj = new QKeySequence( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
   {
-    QKeySequence_new5();
+    /*
+    QKeySequence( const QKeySequence & keysequence )
+    */
+    QKeySequence * obj = new QKeySequence( *PQKEYSEQUENCE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QKeySequence_new6();
+    /*
+    QKeySequence( QKeySequence::StandardKey key )
+    */
+    QKeySequence * obj = new QKeySequence( (QKeySequence::StandardKey) hb_parni(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

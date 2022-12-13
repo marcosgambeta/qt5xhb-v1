@@ -117,59 +117,39 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtCore/QVariant>
 
-/*
-QFont()
-*/
-void QFont_new1()
-{
-  QFont * obj = new QFont();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QFont( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
-*/
-void QFont_new2()
-{
-  QFont * obj = new QFont( PQSTRING(1), OPINT(2,-1), OPINT(3,-1), OPBOOL(4,false) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QFont( const QFont & font, QPaintDevice * pd )
-*/
-void QFont_new3()
-{
-  QFont * obj = new QFont( *PQFONT(1), PQPAINTDEVICE(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QFont( const QFont & font )
-*/
-void QFont_new4()
-{
-  QFont * obj = new QFont( *PQFONT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QFONT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QFont_new1();
+    /*
+    QFont()
+    */
+    QFont * obj = new QFont();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,4) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISLOG(4)||HB_ISNIL(4)) )
   {
-    QFont_new2();
+    /*
+    QFont( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
+    */
+    QFont * obj = new QFont( PQSTRING(1), OPINT(2,-1), OPINT(3,-1), OPBOOL(4,false) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2) )
   {
-    QFont_new3();
+    /*
+    QFont( const QFont & font, QPaintDevice * pd )
+    */
+    QFont * obj = new QFont( *PQFONT(1), PQPAINTDEVICE(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQFONT(1) )
   {
-    QFont_new4();
+    /*
+    QFont( const QFont & font )
+    */
+    QFont * obj = new QFont( *PQFONT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -1584,44 +1564,31 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTIONS )
 #endif
 }
 
-/*
-QVariant toVariant()
-*/
-void QFont_toVariant1()
-{
-  QFont * obj = (QFont *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * variant = new QVariant();
-    variant->setValue<QFont>( *obj );
-    Qt5xHb::createReturnClass( variant, "QVARIANT", true);
-  }
-}
-
-/*
-static QVariant toVariant( const QFont & )
-*/
-void QFont_toVariant2()
-{
-  QFont * font = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
-  QVariant * variant = new QVariant();
-  variant->setValue<QFont>( *font );
-  Qt5xHb::createReturnClass( variant, "QVARIANT", true);
-}
-
-//[1]QVariant toVariant()
-//[2]static QVariant toVariant( const QFont & )
-
 HB_FUNC_STATIC( QFONT_TOVARIANT )
 {
   if( ISNUMPAR(0) )
   {
-    QFont_toVariant1();
+    /*
+    QVariant toVariant()
+    */
+    QFont * obj = (QFont *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QVariant * variant = new QVariant();
+      variant->setValue<QFont>( *obj );
+      Qt5xHb::createReturnClass( variant, "QVARIANT", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQFONT(1) )
   {
-    QFont_toVariant2();
+    /*
+    static QVariant toVariant( const QFont & )
+    */
+    QFont * font = (QFont *) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QVariant * variant = new QVariant();
+    variant->setValue<QFont>( *font );
+    Qt5xHb::createReturnClass( variant, "QVARIANT", true);
   }
   else
   {

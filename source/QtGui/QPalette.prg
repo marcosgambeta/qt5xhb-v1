@@ -89,85 +89,55 @@ RETURN
 #include <QtGui/QPalette>
 #endif
 
-/*
-QPalette()
-*/
-void QPalette_new1()
-{
-  QPalette * obj = new QPalette();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPalette( const QColor & button )
-*/
-void QPalette_new2()
-{
-  QPalette * obj = new QPalette( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPalette( Qt::GlobalColor button )
-*/
-void QPalette_new3()
-{
-  QPalette * obj = new QPalette( (Qt::GlobalColor) hb_parni(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPalette( const QColor & button, const QColor & window )
-*/
-void QPalette_new4()
-{
-  QPalette * obj = new QPalette( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPalette( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
-*/
-void QPalette_new5()
-{
-  QPalette * obj = new QPalette( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPalette( const QPalette & p )
-*/
-void QPalette_new6()
-{
-  QPalette * obj = new QPalette( *PQPALETTE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QPALETTE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPalette_new1();
+    /*
+    QPalette()
+    */
+    QPalette * obj = new QPalette();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) )
   {
-    QPalette_new2();
+    /*
+    QPalette( const QColor & button )
+    */
+    QPalette * obj = new QPalette( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QPalette_new3();
+    /*
+    QPalette( Qt::GlobalColor button )
+    */
+    QPalette * obj = new QPalette( (Qt::GlobalColor) hb_parni(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && (ISQCOLOR(1)||HB_ISCHAR(1)) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
   {
-    QPalette_new4();
+    /*
+    QPalette( const QColor & button, const QColor & window )
+    */
+    QPalette * obj = new QPalette( HB_ISOBJECT(1)? *(QColor *) Qt5xHb::itemGetPtr(1) : QColor(hb_parc(1)), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(9) && ISQBRUSH(1) && ISQBRUSH(2) && ISQBRUSH(3) && ISQBRUSH(4) && ISQBRUSH(5) && ISQBRUSH(6) && ISQBRUSH(7) && ISQBRUSH(8) && ISQBRUSH(9) )
   {
-    QPalette_new5();
+    /*
+    QPalette( const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
+    */
+    QPalette * obj = new QPalette( *PQBRUSH(1), *PQBRUSH(2), *PQBRUSH(3), *PQBRUSH(4), *PQBRUSH(5), *PQBRUSH(6), *PQBRUSH(7), *PQBRUSH(8), *PQBRUSH(9) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPALETTE(1) )
   {
-    QPalette_new6();
+    /*
+    QPalette( const QPalette & p )
+    */
+    QPalette * obj = new QPalette( *PQPALETTE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -267,43 +237,33 @@ HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
   }
 }
 
-/*
-const QBrush & brush( QPalette::ColorGroup group, QPalette::ColorRole role ) const
-*/
-void QPalette_brush1()
-{
-  QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QBrush * ptr = &obj->brush( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) );
-    Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
-  }
-}
-
-/*
-const QBrush & brush( QPalette::ColorRole role ) const
-*/
-void QPalette_brush2()
-{
-  QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QBrush * ptr = &obj->brush( (QPalette::ColorRole) hb_parni(1) );
-    Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
-  }
-}
-
 HB_FUNC_STATIC( QPALETTE_BRUSH )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QPalette_brush1();
+    /*
+    const QBrush & brush( QPalette::ColorGroup group, QPalette::ColorRole role ) const
+    */
+    QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      const QBrush * ptr = &obj->brush( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QPalette_brush2();
+    /*
+    const QBrush & brush( QPalette::ColorRole role ) const
+    */
+    QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      const QBrush * ptr = &obj->brush( (QPalette::ColorRole) hb_parni(1) );
+      Qt5xHb::createReturnClass(ptr, "QBRUSH", false);
+    }
   }
   else
   {
@@ -385,43 +345,33 @@ HB_FUNC_STATIC( QPALETTE_CACHEKEY )
   }
 }
 
-/*
-const QColor & color( QPalette::ColorGroup group, QPalette::ColorRole role ) const
-*/
-void QPalette_color1()
-{
-  QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QColor * ptr = &obj->color( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) );
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
-  }
-}
-
-/*
-const QColor & color( QPalette::ColorRole role ) const
-*/
-void QPalette_color2()
-{
-  QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QColor * ptr = &obj->color( (QPalette::ColorRole) hb_parni(1) );
-    Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
-  }
-}
-
 HB_FUNC_STATIC( QPALETTE_COLOR )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QPalette_color1();
+    /*
+    const QColor & color( QPalette::ColorGroup group, QPalette::ColorRole role ) const
+    */
+    QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      const QColor * ptr = &obj->color( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2) );
+      Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QPalette_color2();
+    /*
+    const QColor & color( QPalette::ColorRole role ) const
+    */
+    QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      const QColor * ptr = &obj->color( (QPalette::ColorRole) hb_parni(1) );
+      Qt5xHb::createReturnClass(ptr, "QCOLOR", false);
+    }
   }
   else
   {
@@ -750,45 +700,35 @@ HB_FUNC_STATIC( QPALETTE_RESOLVE )
   }
 }
 
-/*
-void setBrush( QPalette::ColorRole role, const QBrush & brush )
-*/
-void QPalette_setBrush1()
-{
-  QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setBrush( (QPalette::ColorRole) hb_parni(1), *PQBRUSH(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setBrush( QPalette::ColorGroup group, QPalette::ColorRole role, const QBrush & brush )
-*/
-void QPalette_setBrush2()
-{
-  QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setBrush( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2), *PQBRUSH(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QPALETTE_SETBRUSH )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && ISQBRUSH(2) )
   {
-    QPalette_setBrush1();
+    /*
+    void setBrush( QPalette::ColorRole role, const QBrush & brush )
+    */
+    QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setBrush( (QPalette::ColorRole) hb_parni(1), *PQBRUSH(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBRUSH(3) )
   {
-    QPalette_setBrush2();
+    /*
+    void setBrush( QPalette::ColorGroup group, QPalette::ColorRole role, const QBrush & brush )
+    */
+    QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setBrush( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2), *PQBRUSH(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -796,45 +736,35 @@ HB_FUNC_STATIC( QPALETTE_SETBRUSH )
   }
 }
 
-/*
-void setColor( QPalette::ColorGroup group, QPalette::ColorRole role, const QColor & color )
-*/
-void QPalette_setColor1()
-{
-  QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setColor( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2), HB_ISOBJECT(3)? *(QColor *) Qt5xHb::itemGetPtr(3) : QColor(hb_parc(3)) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setColor( QPalette::ColorRole role, const QColor & color )
-*/
-void QPalette_setColor2()
-{
-  QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setColor( (QPalette::ColorRole) hb_parni(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 {
   if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQCOLOR(3)||HB_ISCHAR(3)) )
   {
-    QPalette_setColor1();
+    /*
+    void setColor( QPalette::ColorGroup group, QPalette::ColorRole role, const QColor & color )
+    */
+    QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setColor( (QPalette::ColorGroup) hb_parni(1), (QPalette::ColorRole) hb_parni(2), HB_ISOBJECT(3)? *(QColor *) Qt5xHb::itemGetPtr(3) : QColor(hb_parc(3)) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2)||HB_ISCHAR(2)) )
   {
-    QPalette_setColor2();
+    /*
+    void setColor( QPalette::ColorRole role, const QColor & color )
+    */
+    QPalette * obj = (QPalette *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setColor( (QPalette::ColorRole) hb_parni(1), HB_ISOBJECT(2)? *(QColor *) Qt5xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

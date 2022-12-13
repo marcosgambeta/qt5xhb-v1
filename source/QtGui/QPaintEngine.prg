@@ -116,45 +116,35 @@ HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
   }
 }
 
-/*
-virtual void drawEllipse( const QRectF & rect )
-*/
-void QPaintEngine_drawEllipse1()
-{
-  QPaintEngine * obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->drawEllipse( *PQRECTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-virtual void drawEllipse( const QRect & rect )
-*/
-void QPaintEngine_drawEllipse2()
-{
-  QPaintEngine * obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->drawEllipse( *PQRECT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QPaintEngine_drawEllipse1();
+    /*
+    virtual void drawEllipse( const QRectF & rect )
+    */
+    QPaintEngine * obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->drawEllipse( *PQRECTF(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QPaintEngine_drawEllipse2();
+    /*
+    virtual void drawEllipse( const QRect & rect )
+    */
+    QPaintEngine * obj = (QPaintEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->drawEllipse( *PQRECT(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

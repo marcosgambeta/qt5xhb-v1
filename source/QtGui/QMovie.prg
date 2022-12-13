@@ -94,46 +94,31 @@ RETURN
 #include <QtGui/QColor>
 #include <QtGui/QPixmap>
 
-/*
-QMovie( QObject * parent = 0 )
-*/
-void QMovie_new1()
-{
-  QMovie * obj = new QMovie( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-*/
-void QMovie_new2()
-{
-  QMovie * obj = new QMovie( PQIODEVICE(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-*/
-void QMovie_new3()
-{
-  QMovie * obj = new QMovie( PQSTRING(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QMOVIE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QMovie_new1();
+    /*
+    QMovie( QObject * parent = 0 )
+    */
+    QMovie * obj = new QMovie( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QMovie_new2();
+    /*
+    QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+    */
+    QMovie * obj = new QMovie( PQIODEVICE(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QMovie_new3();
+    /*
+    QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+    */
+    QMovie * obj = new QMovie( PQSTRING(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

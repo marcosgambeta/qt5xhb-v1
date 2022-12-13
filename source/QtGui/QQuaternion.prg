@@ -79,59 +79,39 @@ RETURN
 #include <QtGui/QQuaternion>
 #endif
 
-/*
-QQuaternion()
-*/
-void QQuaternion_new1()
-{
-  QQuaternion * obj = new QQuaternion();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QQuaternion( float scalar, float xpos, float ypos, float zpos )
-*/
-void QQuaternion_new2()
-{
-  QQuaternion * obj = new QQuaternion( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QQuaternion( float scalar, const QVector3D & vector )
-*/
-void QQuaternion_new3()
-{
-  QQuaternion * obj = new QQuaternion( PFLOAT(1), *PQVECTOR3D(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QQuaternion( const QVector4D & vector )
-*/
-void QQuaternion_new4()
-{
-  QQuaternion * obj = new QQuaternion( *PQVECTOR4D(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QQUATERNION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QQuaternion_new1();
+    /*
+    QQuaternion()
+    */
+    QQuaternion * obj = new QQuaternion();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QQuaternion_new2();
+    /*
+    QQuaternion( float scalar, float xpos, float ypos, float zpos )
+    */
+    QQuaternion * obj = new QQuaternion( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISOBJECT(2) )
   {
-    QQuaternion_new3();
+    /*
+    QQuaternion( float scalar, const QVector3D & vector )
+    */
+    QQuaternion * obj = new QQuaternion( PFLOAT(1), *PQVECTOR3D(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
   {
-    QQuaternion_new4();
+    /*
+    QQuaternion( const QVector4D & vector )
+    */
+    QQuaternion * obj = new QQuaternion( *PQVECTOR4D(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -229,45 +209,35 @@ HB_FUNC_STATIC( QQUATERNION_VECTOR )
   }
 }
 
-/*
-void setVector( const QVector3D & vector )
-*/
-void QQuaternion_setVector1()
-{
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setVector( *PQVECTOR3D(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setVector( float x, float y, float z )
-*/
-void QQuaternion_setVector2()
-{
-  QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setVector( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QQUATERNION_SETVECTOR )
 {
   if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    QQuaternion_setVector1();
+    /*
+    void setVector( const QVector3D & vector )
+    */
+    QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setVector( *PQVECTOR3D(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
-    QQuaternion_setVector2();
+    /*
+    void setVector( float x, float y, float z )
+    */
+    QQuaternion * obj = (QQuaternion *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setVector( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -649,35 +619,23 @@ HB_FUNC_STATIC( QQUATERNION_TOVECTOR4D )
   }
 }
 
-/*
-static QQuaternion fromAxisAndAngle( const QVector3D & axis, float angle )
-*/
-void QQuaternion_fromAxisAndAngle1()
-{
-
-  QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) ) );
-  Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
-}
-
-/*
-static QQuaternion fromAxisAndAngle( float x, float y, float z, float angle )
-*/
-void QQuaternion_fromAxisAndAngle2()
-{
-
-  QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) ) );
-  Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
-}
-
 HB_FUNC_STATIC( QQUATERNION_FROMAXISANDANGLE )
 {
   if( ISNUMPAR(2) && ISQVECTOR3D(1) && HB_ISNUM(2) )
   {
-    QQuaternion_fromAxisAndAngle1();
+    /*
+    static QQuaternion fromAxisAndAngle( const QVector3D & axis, float angle )
+    */
+    QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( *PQVECTOR3D(1), PFLOAT(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QQuaternion_fromAxisAndAngle2();
+    /*
+    static QQuaternion fromAxisAndAngle( float x, float y, float z, float angle )
+    */
+    QQuaternion * ptr = new QQuaternion( QQuaternion::fromAxisAndAngle( PFLOAT(1), PFLOAT(2), PFLOAT(3), PFLOAT(4) ) );
+    Qt5xHb::createReturnClass(ptr, "QQUATERNION", true);
   }
   else
   {

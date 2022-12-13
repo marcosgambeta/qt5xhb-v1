@@ -77,46 +77,31 @@ RETURN
 #include <QtGui/QImageWriter>
 #endif
 
-/*
-QImageWriter()
-*/
-void QImageWriter_new1()
-{
-  QImageWriter * obj = new QImageWriter();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QImageWriter( QIODevice * device, const QByteArray & format )
-*/
-void QImageWriter_new2()
-{
-  QImageWriter * obj = new QImageWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QImageWriter( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
-void QImageWriter_new3()
-{
-  QImageWriter * obj = new QImageWriter( PQSTRING(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QImageWriter_new1();
+    /*
+    QImageWriter()
+    */
+    QImageWriter * obj = new QImageWriter();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
   {
-    QImageWriter_new2();
+    /*
+    QImageWriter( QIODevice * device, const QByteArray & format )
+    */
+    QImageWriter * obj = new QImageWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) )
   {
-    QImageWriter_new3();
+    /*
+    QImageWriter( const QString & fileName, const QByteArray & format = QByteArray() )
+    */
+    QImageWriter * obj = new QImageWriter( PQSTRING(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -156,41 +156,31 @@ HB_FUNC_STATIC( QDRAG_DRAGCURSOR )
   }
 }
 
-/*
-Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
-*/
-void QDrag_exec1()
-{
-  QDrag * obj = (QDrag *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RENUM( obj->exec( HB_ISNIL(1)? (Qt::DropActions) Qt::MoveAction : (Qt::DropActions) hb_parni(1) ) );
-  }
-}
-
-/*
-Qt::DropAction exec( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
-*/
-void QDrag_exec2()
-{
-  QDrag * obj = (QDrag *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RENUM( obj->exec( (Qt::DropActions) hb_parni(1), (Qt::DropAction) hb_parni(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QDRAG_EXEC )
 {
   if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QDrag_exec1();
+    /*
+    Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
+    */
+    QDrag * obj = (QDrag *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RENUM( obj->exec( HB_ISNIL(1)? (Qt::DropActions) Qt::MoveAction : (Qt::DropActions) hb_parni(1) ) );
+    }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QDrag_exec2();
+    /*
+    Qt::DropAction exec( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
+    */
+    QDrag * obj = (QDrag *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      RENUM( obj->exec( (Qt::DropActions) hb_parni(1), (Qt::DropAction) hb_parni(2) ) );
+    }
   }
   else
   {

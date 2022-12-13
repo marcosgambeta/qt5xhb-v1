@@ -72,33 +72,23 @@ RETURN
 #include <QtGui/QOpenGLPixelTransferOptions>
 #endif
 
-/*
-QOpenGLPixelTransferOptions()
-*/
-void QOpenGLPixelTransferOptions_new1()
-{
-  QOpenGLPixelTransferOptions * obj = new QOpenGLPixelTransferOptions();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QOpenGLPixelTransferOptions( const QOpenGLPixelTransferOptions & )
-*/
-void QOpenGLPixelTransferOptions_new2()
-{
-  QOpenGLPixelTransferOptions * obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QOPENGLPIXELTRANSFEROPTIONS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QOpenGLPixelTransferOptions_new1();
+    /*
+    QOpenGLPixelTransferOptions()
+    */
+    QOpenGLPixelTransferOptions * obj = new QOpenGLPixelTransferOptions();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQOPENGLPIXELTRANSFEROPTIONS(1) )
   {
-    QOpenGLPixelTransferOptions_new2();
+    /*
+    QOpenGLPixelTransferOptions( const QOpenGLPixelTransferOptions & )
+    */
+    QOpenGLPixelTransferOptions * obj = new QOpenGLPixelTransferOptions( *PQOPENGLPIXELTRANSFEROPTIONS(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

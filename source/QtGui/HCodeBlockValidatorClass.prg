@@ -35,33 +35,23 @@ RETURN
 #include "qt5xhb_events.h"
 #include "qt5xhb_signals.h"
 
-/*
-explicit HCodeBlockValidator( QObject *parent = 0 )
-*/
-void HCodeBlockValidator_new1()
-{
-  HCodeBlockValidator * o = new HCodeBlockValidator( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject( o, false );
-}
-
-/*
-HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = 0 )
-*/
-void HCodeBlockValidator_new2()
-{
-  HCodeBlockValidator * o = new HCodeBlockValidator( PBLOCKORSYMBOL(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject( o, false );
-}
-
 HB_FUNC_STATIC( HCODEBLOCKVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    HCodeBlockValidator_new1();
+    /*
+    explicit HCodeBlockValidator( QObject *parent = 0 )
+    */
+    HCodeBlockValidator * o = new HCodeBlockValidator( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject( o, false );
   }
   else if( ISBETWEEN(1,2) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    HCodeBlockValidator_new2();
+    /*
+    HCodeBlockValidator( PHB_ITEM codeblock, QObject *parent = 0 )
+    */
+    HCodeBlockValidator * o = new HCodeBlockValidator( PBLOCKORSYMBOL(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject( o, false );
   }
   else
   {

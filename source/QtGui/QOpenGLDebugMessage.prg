@@ -63,33 +63,23 @@ RETURN
 #include <QtGui/QOpenGLDebugMessage>
 #endif
 
-/*
-QOpenGLDebugMessage()
-*/
-void QOpenGLDebugMessage_new1()
-{
-  QOpenGLDebugMessage * obj = new QOpenGLDebugMessage();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QOpenGLDebugMessage( const QOpenGLDebugMessage & debugMessage )
-*/
-void QOpenGLDebugMessage_new2()
-{
-  QOpenGLDebugMessage * obj = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QOPENGLDEBUGMESSAGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QOpenGLDebugMessage_new1();
+    /*
+    QOpenGLDebugMessage()
+    */
+    QOpenGLDebugMessage * obj = new QOpenGLDebugMessage();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQOPENGLDEBUGMESSAGE(1) )
   {
-    QOpenGLDebugMessage_new2();
+    /*
+    QOpenGLDebugMessage( const QOpenGLDebugMessage & debugMessage )
+    */
+    QOpenGLDebugMessage * obj = new QOpenGLDebugMessage( *PQOPENGLDEBUGMESSAGE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

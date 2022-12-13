@@ -83,98 +83,63 @@ RETURN
 #include <QtGui/QVector2D>
 #include <QtGui/QVector4D>
 
-/*
-QVector3D()
-*/
-void QVector3D_new1()
-{
-  QVector3D * obj = new QVector3D();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVector3D( float xpos, float ypos, float zpos )
-*/
-void QVector3D_new2()
-{
-  QVector3D * obj = new QVector3D( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVector3D( const QPoint & point )
-*/
-void QVector3D_new3()
-{
-  QVector3D * obj = new QVector3D( *PQPOINT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVector3D( const QPointF & point )
-*/
-void QVector3D_new4()
-{
-  QVector3D * obj = new QVector3D( *PQPOINTF(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVector3D( const QVector2D & vector )
-*/
-void QVector3D_new5()
-{
-  QVector3D * obj = new QVector3D( *PQVECTOR2D(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVector3D( const QVector2D & vector, float zpos )
-*/
-void QVector3D_new6()
-{
-  QVector3D * obj = new QVector3D( *PQVECTOR2D(1), PFLOAT(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVector3D( const QVector4D & vector )
-*/
-void QVector3D_new7()
-{
-  QVector3D * obj = new QVector3D( *PQVECTOR4D(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QVECTOR3D_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QVector3D_new1();
+    /*
+    QVector3D()
+    */
+    QVector3D * obj = new QVector3D();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
-    QVector3D_new2();
+    /*
+    QVector3D( float xpos, float ypos, float zpos )
+    */
+    QVector3D * obj = new QVector3D( PFLOAT(1), PFLOAT(2), PFLOAT(3) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QVector3D_new3();
+    /*
+    QVector3D( const QPoint & point )
+    */
+    QVector3D * obj = new QVector3D( *PQPOINT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    QVector3D_new4();
+    /*
+    QVector3D( const QPointF & point )
+    */
+    QVector3D * obj = new QVector3D( *PQPOINTF(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQVECTOR2D(1) )
   {
-    QVector3D_new5();
+    /*
+    QVector3D( const QVector2D & vector )
+    */
+    QVector3D * obj = new QVector3D( *PQVECTOR2D(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQVECTOR2D(1) && HB_ISNUM(2) )
   {
-    QVector3D_new6();
+    /*
+    QVector3D( const QVector2D & vector, float zpos )
+    */
+    QVector3D * obj = new QVector3D( *PQVECTOR2D(1), PFLOAT(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQVECTOR4D(1) )
   {
-    QVector3D_new7();
+    /*
+    QVector3D( const QVector4D & vector )
+    */
+    QVector3D * obj = new QVector3D( *PQVECTOR4D(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -496,41 +461,31 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPOINT )
   }
 }
 
-/*
-float distanceToPlane( const QVector3D & plane, const QVector3D & normal ) const
-*/
-void QVector3D_distanceToPlane1()
-{
-  QVector3D * obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RFLOAT( obj->distanceToPlane( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
-  }
-}
-
-/*
-float distanceToPlane( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
-*/
-void QVector3D_distanceToPlane2()
-{
-  QVector3D * obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RFLOAT( obj->distanceToPlane( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
-  }
-}
-
 HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 {
   if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
   {
-    QVector3D_distanceToPlane1();
+    /*
+    float distanceToPlane( const QVector3D & plane, const QVector3D & normal ) const
+    */
+    QVector3D * obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RFLOAT( obj->distanceToPlane( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+    }
   }
   else if( ISNUMPAR(3) && ISQVECTOR3D(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) )
   {
-    QVector3D_distanceToPlane2();
+    /*
+    float distanceToPlane( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
+    */
+    QVector3D * obj = (QVector3D *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RFLOAT( obj->distanceToPlane( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
+    }
   }
   else
   {
@@ -701,35 +656,23 @@ HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
 #endif
 }
 
-/*
-static QVector3D normal( const QVector3D & v1, const QVector3D & v2 )
-*/
-void QVector3D_normal1()
-{
-
-  QVector3D * ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
-  Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
-}
-
-/*
-static QVector3D normal( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
-*/
-void QVector3D_normal2()
-{
-
-  QVector3D * ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
-  Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
-}
-
 HB_FUNC_STATIC( QVECTOR3D_NORMAL )
 {
   if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQVECTOR3D(2) )
   {
-    QVector3D_normal1();
+    /*
+    static QVector3D normal( const QVector3D & v1, const QVector3D & v2 )
+    */
+    QVector3D * ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
   }
   else if( ISNUMPAR(3) && ISQVECTOR3D(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) )
   {
-    QVector3D_normal2();
+    /*
+    static QVector3D normal( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
+    */
+    QVector3D * ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
+    Qt5xHb::createReturnClass(ptr, "QVECTOR3D", true);
   }
   else
   {

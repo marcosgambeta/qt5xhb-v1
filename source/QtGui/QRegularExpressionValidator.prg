@@ -53,33 +53,23 @@ RETURN
 #include <QtGui/QRegularExpressionValidator>
 #endif
 
-/*
-QRegularExpressionValidator( QObject * parent = 0 )
-*/
-void QRegularExpressionValidator_new1()
-{
-  QRegularExpressionValidator * obj = new QRegularExpressionValidator( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = 0 )
-*/
-void QRegularExpressionValidator_new2()
-{
-  QRegularExpressionValidator * obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QREGULAREXPRESSIONVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QRegularExpressionValidator_new1();
+    /*
+    QRegularExpressionValidator( QObject * parent = 0 )
+    */
+    QRegularExpressionValidator * obj = new QRegularExpressionValidator( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQREGULAREXPRESSION(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QRegularExpressionValidator_new2();
+    /*
+    QRegularExpressionValidator( const QRegularExpression & re, QObject * parent = 0 )
+    */
+    QRegularExpressionValidator * obj = new QRegularExpressionValidator( *PQREGULAREXPRESSION(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

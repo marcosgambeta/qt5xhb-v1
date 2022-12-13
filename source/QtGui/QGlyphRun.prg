@@ -65,33 +65,23 @@ RETURN
 #include <QtGui/QGlyphRun>
 #endif
 
-/*
-QGlyphRun()
-*/
-void QGlyphRun_new1()
-{
-  QGlyphRun * obj = new QGlyphRun();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QGlyphRun( const QGlyphRun & other )
-*/
-void QGlyphRun_new2()
-{
-  QGlyphRun * obj = new QGlyphRun( *PQGLYPHRUN(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QGLYPHRUN_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGlyphRun_new1();
+    /*
+    QGlyphRun()
+    */
+    QGlyphRun * obj = new QGlyphRun();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQGLYPHRUN(1) )
   {
-    QGlyphRun_new2();
+    /*
+    QGlyphRun( const QGlyphRun & other )
+    */
+    QGlyphRun * obj = new QGlyphRun( *PQGLYPHRUN(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

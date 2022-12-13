@@ -60,33 +60,23 @@ RETURN
 #include <QtGui/QIntValidator>
 #endif
 
-/*
-QIntValidator( QObject * parent = 0 )
-*/
-void QIntValidator_new1()
-{
-  QIntValidator * obj = new QIntValidator( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QIntValidator( int minimum, int maximum, QObject * parent = 0 )
-*/
-void QIntValidator_new2()
-{
-  QIntValidator * obj = new QIntValidator( PINT(1), PINT(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QIntValidator_new1();
+    /*
+    QIntValidator( QObject * parent = 0 )
+    */
+    QIntValidator * obj = new QIntValidator( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QIntValidator_new2();
+    /*
+    QIntValidator( int minimum, int maximum, QObject * parent = 0 )
+    */
+    QIntValidator * obj = new QIntValidator( PINT(1), PINT(2), OPQOBJECT(3,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
