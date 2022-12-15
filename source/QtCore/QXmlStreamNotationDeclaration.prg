@@ -59,33 +59,23 @@ RETURN
 #include <QtCore/QXmlStreamNotationDeclaration>
 #endif
 
-/*
-QXmlStreamNotationDeclaration()
-*/
-void QXmlStreamNotationDeclaration_new1()
-{
-  QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
-*/
-void QXmlStreamNotationDeclaration_new2()
-{
-  QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlStreamNotationDeclaration_new1();
+    /*
+    QXmlStreamNotationDeclaration()
+    */
+    QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMNOTATIONDECLARATION(1) )
   {
-    QXmlStreamNotationDeclaration_new2();
+    /*
+    QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
+    */
+    QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

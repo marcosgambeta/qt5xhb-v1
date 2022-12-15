@@ -71,33 +71,23 @@ RETURN
 #include <QtCore/QStateMachine>
 #endif
 
-/*
-QStateMachine( QObject * parent = 0 )
-*/
-void QStateMachine_new1()
-{
-  QStateMachine * obj = new QStateMachine( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QStateMachine( QState::ChildMode childMode, QObject * parent = 0 )
-*/
-void QStateMachine_new2()
-{
-  QStateMachine * obj = new QStateMachine( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QStateMachine_new1();
+    /*
+    QStateMachine( QObject * parent = 0 )
+    */
+    QStateMachine * obj = new QStateMachine( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QStateMachine_new2();
+    /*
+    QStateMachine( QState::ChildMode childMode, QObject * parent = 0 )
+    */
+    QStateMachine * obj = new QStateMachine( (QState::ChildMode) hb_parni(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

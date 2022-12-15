@@ -146,62 +146,47 @@ HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_SETKEY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addData( const char * data, int length )
-*/
-void QMessageAuthenticationCode_addData1()
-{
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addData( PCONSTCHAR(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void addData( const QByteArray & data )
-*/
-void QMessageAuthenticationCode_addData2()
-{
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addData( *PQBYTEARRAY(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-bool addData( QIODevice * device )
-*/
-void QMessageAuthenticationCode_addData3()
-{
-  QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->addData( PQIODEVICE(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QMESSAGEAUTHENTICATIONCODE_ADDDATA )
 {
   if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
-    QMessageAuthenticationCode_addData1();
+    /*
+    void addData( const char * data, int length )
+    */
+    QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addData( PCONSTCHAR(1), PINT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QMessageAuthenticationCode_addData2();
+    /*
+    void addData( const QByteArray & data )
+    */
+    QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addData( *PQBYTEARRAY(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    QMessageAuthenticationCode_addData3();
+    /*
+    bool addData( QIODevice * device )
+    */
+    QMessageAuthenticationCode * obj = (QMessageAuthenticationCode *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->addData( PQIODEVICE(1) ) );
+    }
   }
   else
   {

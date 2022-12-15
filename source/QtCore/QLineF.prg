@@ -83,59 +83,39 @@ RETURN
 #include <QtCore/QLineF>
 #endif
 
-/*
-QLineF()
-*/
-void QLineF_new1()
-{
-  QLineF * obj = new QLineF();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QLineF( const QPointF & p1, const QPointF & p2 )
-*/
-void QLineF_new2()
-{
-  QLineF * obj = new QLineF( *PQPOINTF(1), *PQPOINTF(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QLineF( qreal x1, qreal y1, qreal x2, qreal y2 )
-*/
-void QLineF_new3()
-{
-  QLineF * obj = new QLineF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QLineF( const QLine & line )
-*/
-void QLineF_new4()
-{
-  QLineF * obj = new QLineF( *PQLINE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QLINEF_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QLineF_new1();
+    /*
+    QLineF()
+    */
+    QLineF * obj = new QLineF();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
   {
-    QLineF_new2();
+    /*
+    QLineF( const QPointF & p1, const QPointF & p2 )
+    */
+    QLineF * obj = new QLineF( *PQPOINTF(1), *PQPOINTF(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QLineF_new3();
+    /*
+    QLineF( qreal x1, qreal y1, qreal x2, qreal y2 )
+    */
+    QLineF * obj = new QLineF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQLINE(1) )
   {
-    QLineF_new4();
+    /*
+    QLineF( const QLine & line )
+    */
+    QLineF * obj = new QLineF( *PQLINE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -705,45 +685,35 @@ HB_FUNC_STATIC( QLINEF_TOLINE )
   }
 }
 
-/*
-void translate( const QPointF & offset )
-*/
-void QLineF_translate1()
-{
-  QLineF * obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void translate( qreal dx, qreal dy )
-*/
-void QLineF_translate2()
-{
-  QLineF * obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QLINEF_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    QLineF_translate1();
+    /*
+    void translate( const QPointF & offset )
+    */
+    QLineF * obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->translate( *PQPOINTF(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QLineF_translate2();
+    /*
+    void translate( qreal dx, qreal dy )
+    */
+    QLineF * obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->translate( PQREAL(1), PQREAL(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -751,43 +721,33 @@ HB_FUNC_STATIC( QLINEF_TRANSLATE )
   }
 }
 
-/*
-QLineF translated( const QPointF & offset ) const
-*/
-void QLineF_translated1()
-{
-  QLineF * obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->translated( *PQPOINTF(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QLINEF", true);
-  }
-}
-
-/*
-QLineF translated( qreal dx, qreal dy ) const
-*/
-void QLineF_translated2()
-{
-  QLineF * obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->translated( PQREAL(1), PQREAL(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QLINEF", true);
-  }
-}
-
 HB_FUNC_STATIC( QLINEF_TRANSLATED )
 {
   if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    QLineF_translated1();
+    /*
+    QLineF translated( const QPointF & offset ) const
+    */
+    QLineF * obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QLineF * ptr = new QLineF( obj->translated( *PQPOINTF(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+    }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QLineF_translated2();
+    /*
+    QLineF translated( qreal dx, qreal dy ) const
+    */
+    QLineF * obj = (QLineF *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QLineF * ptr = new QLineF( obj->translated( PQREAL(1), PQREAL(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QLINEF", true);
+    }
   }
   else
   {

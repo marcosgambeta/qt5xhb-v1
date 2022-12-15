@@ -52,33 +52,23 @@ RETURN
 #include <QtCore/QSignalTransition>
 #endif
 
-/*
-QSignalTransition( QState * sourceState = 0 )
-*/
-void QSignalTransition_new1()
-{
-  QSignalTransition * obj = new QSignalTransition( OPQSTATE(1,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSignalTransition( const QObject * sender, const char * signal, QState * sourceState = 0 )
-*/
-void QSignalTransition_new2()
-{
-  QSignalTransition * obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
   {
-    QSignalTransition_new1();
+    /*
+    QSignalTransition( QState * sourceState = 0 )
+    */
+    QSignalTransition * obj = new QSignalTransition( OPQSTATE(1,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQSTATE(3)||HB_ISNIL(3)) )
   {
-    QSignalTransition_new2();
+    /*
+    QSignalTransition( const QObject * sender, const char * signal, QState * sourceState = 0 )
+    */
+    QSignalTransition * obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

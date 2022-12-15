@@ -118,41 +118,31 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool tryAcquire( int n = 1 )
-*/
-void QSemaphore_tryAcquire1()
-{
-  QSemaphore * obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryAcquire( OPINT(1,1) ) );
-  }
-}
-
-/*
-bool tryAcquire( int n, int timeout )
-*/
-void QSemaphore_tryAcquire2()
-{
-  QSemaphore * obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryAcquire( PINT(1), PINT(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
   if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QSemaphore_tryAcquire1();
+    /*
+    bool tryAcquire( int n = 1 )
+    */
+    QSemaphore * obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->tryAcquire( OPINT(1,1) ) );
+    }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QSemaphore_tryAcquire2();
+    /*
+    bool tryAcquire( int n, int timeout )
+    */
+    QSemaphore * obj = (QSemaphore *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->tryAcquire( PINT(1), PINT(2) ) );
+    }
   }
   else
   {

@@ -74,59 +74,39 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QUrlQuery()
-*/
-void QUrlQuery_new1()
-{
-  QUrlQuery * obj = new QUrlQuery();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QUrlQuery( const QUrl & url )
-*/
-void QUrlQuery_new2()
-{
-  QUrlQuery * obj = new QUrlQuery( *PQURL(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QUrlQuery( const QString & queryString )
-*/
-void QUrlQuery_new3()
-{
-  QUrlQuery * obj = new QUrlQuery( PQSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QUrlQuery( const QUrlQuery & other )
-*/
-void QUrlQuery_new4()
-{
-  QUrlQuery * obj = new QUrlQuery( *PQURLQUERY(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QURLQUERY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QUrlQuery_new1();
+    /*
+    QUrlQuery()
+    */
+    QUrlQuery * obj = new QUrlQuery();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
   {
-    QUrlQuery_new2();
+    /*
+    QUrlQuery( const QUrl & url )
+    */
+    QUrlQuery * obj = new QUrlQuery( *PQURL(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QUrlQuery_new3();
+    /*
+    QUrlQuery( const QString & queryString )
+    */
+    QUrlQuery * obj = new QUrlQuery( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQURLQUERY(1) )
   {
-    QUrlQuery_new4();
+    /*
+    QUrlQuery( const QUrlQuery & other )
+    */
+    QUrlQuery * obj = new QUrlQuery( *PQURLQUERY(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

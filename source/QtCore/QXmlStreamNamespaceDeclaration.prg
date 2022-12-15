@@ -58,46 +58,31 @@ RETURN
 #include <QtCore/QXmlStreamNamespaceDeclaration>
 #endif
 
-/*
-QXmlStreamNamespaceDeclaration()
-*/
-void QXmlStreamNamespaceDeclaration_new1()
-{
-  QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
-*/
-void QXmlStreamNamespaceDeclaration_new2()
-{
-  QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
-*/
-void QXmlStreamNamespaceDeclaration_new3()
-{
-  QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration( PQSTRING(1), PQSTRING(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlStreamNamespaceDeclaration_new1();
+    /*
+    QXmlStreamNamespaceDeclaration()
+    */
+    QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMNAMESPACEDECLARATION(1) )
   {
-    QXmlStreamNamespaceDeclaration_new2();
+    /*
+    QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
+    */
+    QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QXmlStreamNamespaceDeclaration_new3();
+    /*
+    QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
+    */
+    QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration( PQSTRING(1), PQSTRING(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

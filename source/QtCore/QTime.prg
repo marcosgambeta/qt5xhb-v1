@@ -72,33 +72,23 @@ RETURN
 #include <QtCore/QTime>
 #endif
 
-/*
-QTime()
-*/
-void QTime_new1()
-{
-  QTime * obj = new QTime();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTime( int h, int m, int s = 0, int ms = 0 )
-*/
-void QTime_new2()
-{
-  QTime * obj = new QTime( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QTIME_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTime_new1();
+    /*
+    QTime()
+    */
+    QTime * obj = new QTime();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
-    QTime_new2();
+    /*
+    QTime( int h, int m, int s = 0, int ms = 0 )
+    */
+    QTime * obj = new QTime( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -245,37 +235,26 @@ HB_FUNC_STATIC( QTIME_ISNULL )
   }
 }
 
-/*
-bool isValid() const
-*/
-void QTime_isValid1()
-{
-  QTime * obj = (QTime *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isValid() );
-  }
-}
-
-/*
-static bool isValid( int h, int m, int s, int ms = 0 )
-*/
-void QTime_isValid2()
-{
-
-  RBOOL( QTime::isValid( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
-}
-
 HB_FUNC_STATIC( QTIME_ISVALID )
 {
   if( ISNUMPAR(0) )
   {
-    QTime_isValid1();
+    /*
+    bool isValid() const
+    */
+    QTime * obj = (QTime *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->isValid() );
+    }
   }
   else if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
-    QTime_isValid2();
+    /*
+    static bool isValid( int h, int m, int s, int ms = 0 )
+    */
+    RBOOL( QTime::isValid( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
   }
   else
   {
@@ -477,41 +456,31 @@ HB_FUNC_STATIC( QTIME_START )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-QString toString( const QString & format ) const
-*/
-void QTime_toString1()
-{
-  QTime * obj = (QTime *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toString( PQSTRING(1) ) );
-  }
-}
-
-/*
-QString toString( Qt::DateFormat format = Qt::TextDate ) const
-*/
-void QTime_toString2()
-{
-  QTime * obj = (QTime *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->toString( HB_ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTIME_TOSTRING )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QTime_toString1();
+    /*
+    QString toString( const QString & format ) const
+    */
+    QTime * obj = (QTime *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->toString( PQSTRING(1) ) );
+    }
   }
   else if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QTime_toString2();
+    /*
+    QString toString( Qt::DateFormat format = Qt::TextDate ) const
+    */
+    QTime * obj = (QTime *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->toString( HB_ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
+    }
   }
   else
   {
@@ -539,35 +508,23 @@ HB_FUNC_STATIC( QTIME_CURRENTTIME )
 #endif
 }
 
-/*
-static QTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
-*/
-void QTime_fromString1()
-{
-
-  QTime * ptr = new QTime( QTime::fromString( PQSTRING(1), HB_ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
-  Qt5xHb::createReturnClass(ptr, "QTIME", true);
-}
-
-/*
-static QTime fromString( const QString & string, const QString & format )
-*/
-void QTime_fromString2()
-{
-
-  QTime * ptr = new QTime( QTime::fromString( PQSTRING(1), PQSTRING(2) ) );
-  Qt5xHb::createReturnClass(ptr, "QTIME", true);
-}
-
 HB_FUNC_STATIC( QTIME_FROMSTRING )
 {
   if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QTime_fromString1();
+    /*
+    static QTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
+    */
+    QTime * ptr = new QTime( QTime::fromString( PQSTRING(1), HB_ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QTIME", true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QTime_fromString2();
+    /*
+    static QTime fromString( const QString & string, const QString & format )
+    */
+    QTime * ptr = new QTime( QTime::fromString( PQSTRING(1), PQSTRING(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QTIME", true);
   }
   else
   {

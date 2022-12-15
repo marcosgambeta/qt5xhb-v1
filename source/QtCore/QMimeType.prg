@@ -72,33 +72,23 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QMimeType()
-*/
-void QMimeType_new1()
-{
-  QMimeType * obj = new QMimeType();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMimeType( const QMimeType & other )
-*/
-void QMimeType_new2()
-{
-  QMimeType * obj = new QMimeType( *PQMIMETYPE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QMIMETYPE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMimeType_new1();
+    /*
+    QMimeType()
+    */
+    QMimeType * obj = new QMimeType();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMIMETYPE(1) )
   {
-    QMimeType_new2();
+    /*
+    QMimeType( const QMimeType & other )
+    */
+    QMimeType * obj = new QMimeType( *PQMIMETYPE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

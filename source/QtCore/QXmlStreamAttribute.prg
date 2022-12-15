@@ -62,59 +62,39 @@ RETURN
 #include <QtCore/QXmlStreamAttribute>
 #endif
 
-/*
-QXmlStreamAttribute()
-*/
-void QXmlStreamAttribute_new1()
-{
-  QXmlStreamAttribute * obj = new QXmlStreamAttribute();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamAttribute( const QString & qualifiedName, const QString & value )
-*/
-void QXmlStreamAttribute_new2()
-{
-  QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamAttribute( const QString & namespaceUri, const QString & name, const QString & value )
-*/
-void QXmlStreamAttribute_new3()
-{
-  QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamAttribute( const QXmlStreamAttribute & other )
-*/
-void QXmlStreamAttribute_new4()
-{
-  QXmlStreamAttribute * obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlStreamAttribute_new1();
+    /*
+    QXmlStreamAttribute()
+    */
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QXmlStreamAttribute_new2();
+    /*
+    QXmlStreamAttribute( const QString & qualifiedName, const QString & value )
+    */
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
   {
-    QXmlStreamAttribute_new3();
+    /*
+    QXmlStreamAttribute( const QString & namespaceUri, const QString & name, const QString & value )
+    */
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTES(1) )
   {
-    QXmlStreamAttribute_new4();
+    /*
+    QXmlStreamAttribute( const QXmlStreamAttribute & other )
+    */
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

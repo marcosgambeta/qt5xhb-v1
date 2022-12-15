@@ -55,46 +55,31 @@ RETURN
 #include <QtCore/QEventLoopLocker>
 #endif
 
-/*
-QEventLoopLocker()
-*/
-void QEventLoopLocker_new1()
-{
-  QEventLoopLocker * obj = new QEventLoopLocker();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QEventLoopLocker( QEventLoop * loop )
-*/
-void QEventLoopLocker_new2()
-{
-  QEventLoopLocker * obj = new QEventLoopLocker( PQEVENTLOOP(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QEventLoopLocker( QThread * thread )
-*/
-void QEventLoopLocker_new3()
-{
-  QEventLoopLocker * obj = new QEventLoopLocker( PQTHREAD(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QEVENTLOOPLOCKER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QEventLoopLocker_new1();
+    /*
+    QEventLoopLocker()
+    */
+    QEventLoopLocker * obj = new QEventLoopLocker();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQEVENTLOOP(1) )
   {
-    QEventLoopLocker_new2();
+    /*
+    QEventLoopLocker( QEventLoop * loop )
+    */
+    QEventLoopLocker * obj = new QEventLoopLocker( PQEVENTLOOP(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTHREAD(1) )
   {
-    QEventLoopLocker_new3();
+    /*
+    QEventLoopLocker( QThread * thread )
+    */
+    QEventLoopLocker * obj = new QEventLoopLocker( PQTHREAD(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

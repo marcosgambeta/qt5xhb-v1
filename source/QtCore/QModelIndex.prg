@@ -68,33 +68,23 @@ RETURN
 #include <QtCore/QModelIndex>
 #endif
 
-/*
-QModelIndex()
-*/
-void QModelIndex_new1()
-{
-  QModelIndex * obj = new QModelIndex();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QModelIndex( const QModelIndex & other )
-*/
-void QModelIndex_new2()
-{
-  QModelIndex * obj = new QModelIndex( *PQMODELINDEX(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QModelIndex_new1();
+    /*
+    QModelIndex()
+    */
+    QModelIndex * obj = new QModelIndex();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    QModelIndex_new2();
+    /*
+    QModelIndex( const QModelIndex & other )
+    */
+    QModelIndex * obj = new QModelIndex( *PQMODELINDEX(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

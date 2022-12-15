@@ -119,41 +119,31 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORREAD )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool tryLockForRead()
-*/
-void QReadWriteLock_tryLockForRead1()
-{
-  QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForRead() );
-  }
-}
-
-/*
-bool tryLockForRead( int timeout )
-*/
-void QReadWriteLock_tryLockForRead2()
-{
-  QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForRead( PINT(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 {
   if( ISNUMPAR(0) )
   {
-    QReadWriteLock_tryLockForRead1();
+    /*
+    bool tryLockForRead()
+    */
+    QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->tryLockForRead() );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QReadWriteLock_tryLockForRead2();
+    /*
+    bool tryLockForRead( int timeout )
+    */
+    QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->tryLockForRead( PINT(1) ) );
+    }
   }
   else
   {
@@ -187,41 +177,31 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool tryLockForWrite()
-*/
-void QReadWriteLock_tryLockForWrite1()
-{
-  QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForWrite() );
-  }
-}
-
-/*
-bool tryLockForWrite( int timeout )
-*/
-void QReadWriteLock_tryLockForWrite2()
-{
-  QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForWrite( PINT(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 {
   if( ISNUMPAR(0) )
   {
-    QReadWriteLock_tryLockForWrite1();
+    /*
+    bool tryLockForWrite()
+    */
+    QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->tryLockForWrite() );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QReadWriteLock_tryLockForWrite2();
+    /*
+    bool tryLockForWrite( int timeout )
+    */
+    QReadWriteLock * obj = (QReadWriteLock *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->tryLockForWrite( PINT(1) ) );
+    }
   }
   else
   {

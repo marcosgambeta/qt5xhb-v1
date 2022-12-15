@@ -379,43 +379,33 @@ HB_FUNC_STATIC( QJSONVALUE_ISUNDEFINED )
   }
 }
 
-/*
-QJsonArray toArray( const QJsonArray & defaultValue ) const
-*/
-void QJsonValue_toArray1()
-{
-  QJsonValue * obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonArray * ptr = new QJsonArray( obj->toArray( *PQJSONARRAY(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
-  }
-}
-
-/*
-QJsonArray toArray() const
-*/
-void QJsonValue_toArray2()
-{
-  QJsonValue * obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonArray * ptr = new QJsonArray( obj->toArray() );
-    Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
-  }
-}
-
 HB_FUNC_STATIC( QJSONVALUE_TOARRAY )
 {
   if( ISNUMPAR(1) && ISQJSONARRAY(1) )
   {
-    QJsonValue_toArray1();
+    /*
+    QJsonArray toArray( const QJsonArray & defaultValue ) const
+    */
+    QJsonValue * obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QJsonArray * ptr = new QJsonArray( obj->toArray( *PQJSONARRAY(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
+    }
   }
   else if( ISNUMPAR(0) )
   {
-    QJsonValue_toArray2();
+    /*
+    QJsonArray toArray() const
+    */
+    QJsonValue * obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QJsonArray * ptr = new QJsonArray( obj->toArray() );
+      Qt5xHb::createReturnClass(ptr, "QJSONARRAY", true);
+    }
   }
   else
   {
@@ -471,43 +461,33 @@ HB_FUNC_STATIC( QJSONVALUE_TODOUBLE )
   }
 }
 
-/*
-QJsonObject toObject( const QJsonObject & defaultValue ) const
-*/
-void QJsonValue_toObject1()
-{
-  QJsonValue * obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonObject * ptr = new QJsonObject( obj->toObject( *PQJSONOBJECT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
-  }
-}
-
-/*
-QJsonObject toObject() const
-*/
-void QJsonValue_toObject2()
-{
-  QJsonValue * obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QJsonObject * ptr = new QJsonObject( obj->toObject() );
-    Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
-  }
-}
-
 HB_FUNC_STATIC( QJSONVALUE_TOOBJECT )
 {
   if( ISNUMPAR(1) && ISQJSONOBJECT(1) )
   {
-    QJsonValue_toObject1();
+    /*
+    QJsonObject toObject( const QJsonObject & defaultValue ) const
+    */
+    QJsonValue * obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QJsonObject * ptr = new QJsonObject( obj->toObject( *PQJSONOBJECT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
+    }
   }
   else if( ISNUMPAR(0) )
   {
-    QJsonValue_toObject2();
+    /*
+    QJsonObject toObject() const
+    */
+    QJsonValue * obj = (QJsonValue *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QJsonObject * ptr = new QJsonObject( obj->toObject() );
+      Qt5xHb::createReturnClass(ptr, "QJSONOBJECT", true);
+    }
   }
   else
   {

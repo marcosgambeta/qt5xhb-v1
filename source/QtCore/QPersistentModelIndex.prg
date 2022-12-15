@@ -70,46 +70,31 @@ RETURN
 #include <QtCore/QPersistentModelIndex>
 #endif
 
-/*
-QPersistentModelIndex()
-*/
-void QPersistentModelIndex_new1()
-{
-  QPersistentModelIndex * obj = new QPersistentModelIndex();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPersistentModelIndex( const QModelIndex & index )
-*/
-void QPersistentModelIndex_new2()
-{
-  QPersistentModelIndex * obj = new QPersistentModelIndex( *PQMODELINDEX(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPersistentModelIndex( const QPersistentModelIndex & other )
-*/
-void QPersistentModelIndex_new3()
-{
-  QPersistentModelIndex * obj = new QPersistentModelIndex( *PQPERSISTENTMODELINDEX(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QPERSISTENTMODELINDEX_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPersistentModelIndex_new1();
+    /*
+    QPersistentModelIndex()
+    */
+    QPersistentModelIndex * obj = new QPersistentModelIndex();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
-    QPersistentModelIndex_new2();
+    /*
+    QPersistentModelIndex( const QModelIndex & index )
+    */
+    QPersistentModelIndex * obj = new QPersistentModelIndex( *PQMODELINDEX(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPERSISTENTMODELINDEX(1) )
   {
-    QPersistentModelIndex_new3();
+    /*
+    QPersistentModelIndex( const QPersistentModelIndex & other )
+    */
+    QPersistentModelIndex * obj = new QPersistentModelIndex( *PQPERSISTENTMODELINDEX(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

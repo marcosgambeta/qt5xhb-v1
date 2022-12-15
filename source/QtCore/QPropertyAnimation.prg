@@ -54,33 +54,23 @@ RETURN
 #include <QtCore/QPropertyAnimation>
 #endif
 
-/*
-QPropertyAnimation( QObject * parent = 0 )
-*/
-void QPropertyAnimation_new1()
-{
-  QPropertyAnimation * obj = new QPropertyAnimation( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
-*/
-void QPropertyAnimation_new2()
-{
-  QPropertyAnimation * obj = new QPropertyAnimation( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QPropertyAnimation_new1();
+    /*
+    QPropertyAnimation( QObject * parent = 0 )
+    */
+    QPropertyAnimation * obj = new QPropertyAnimation( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QPropertyAnimation_new2();
+    /*
+    QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+    */
+    QPropertyAnimation * obj = new QPropertyAnimation( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

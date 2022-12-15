@@ -55,59 +55,39 @@ RETURN
 #include <QtCore/QTemporaryFile>
 #endif
 
-/*
-QTemporaryFile()
-*/
-void QTemporaryFile_new1()
-{
-  QTemporaryFile * obj = new QTemporaryFile();
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QTemporaryFile( const QString & templateName )
-*/
-void QTemporaryFile_new2()
-{
-  QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QTemporaryFile( QObject * parent )
-*/
-void QTemporaryFile_new3()
-{
-  QTemporaryFile * obj = new QTemporaryFile( PQOBJECT(1) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QTemporaryFile( const QString & templateName, QObject * parent )
-*/
-void QTemporaryFile_new4()
-{
-  QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1), PQOBJECT(2) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTemporaryFile_new1();
+    /*
+    QTemporaryFile()
+    */
+    QTemporaryFile * obj = new QTemporaryFile();
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QTemporaryFile_new2();
+    /*
+    QTemporaryFile( const QString & templateName )
+    */
+    QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    QTemporaryFile_new3();
+    /*
+    QTemporaryFile( QObject * parent )
+    */
+    QTemporaryFile * obj = new QTemporaryFile( PQOBJECT(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
-    QTemporaryFile_new4();
+    /*
+    QTemporaryFile( const QString & templateName, QObject * parent )
+    */
+    QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1), PQOBJECT(2) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -282,35 +262,23 @@ HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
   }
 }
 
-/*
-static QTemporaryFile * createNativeFile( QFile & file )
-*/
-void QTemporaryFile_createNativeFile1()
-{
-
-  QTemporaryFile * ptr = QTemporaryFile::createNativeFile( *PQFILE(1) );
-  Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
-}
-
-/*
-static QTemporaryFile * createNativeFile( const QString & fileName )
-*/
-void QTemporaryFile_createNativeFile2()
-{
-
-  QTemporaryFile * ptr = QTemporaryFile::createNativeFile( PQSTRING(1) );
-  Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
-}
-
 HB_FUNC_STATIC( QTEMPORARYFILE_CREATENATIVEFILE )
 {
   if( ISNUMPAR(1) && ISQFILE(1) )
   {
-    QTemporaryFile_createNativeFile1();
+    /*
+    static QTemporaryFile * createNativeFile( QFile & file )
+    */
+    QTemporaryFile * ptr = QTemporaryFile::createNativeFile( *PQFILE(1) );
+    Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QTemporaryFile_createNativeFile2();
+    /*
+    static QTemporaryFile * createNativeFile( const QString & fileName )
+    */
+    QTemporaryFile * ptr = QTemporaryFile::createNativeFile( PQSTRING(1) );
+    Qt5xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
   }
   else
   {

@@ -65,33 +65,23 @@ RETURN
 #include <QtCore/QProcessEnvironment>
 #endif
 
-/*
-QProcessEnvironment()
-*/
-void QProcessEnvironment_new1()
-{
-  QProcessEnvironment * obj = new QProcessEnvironment();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QProcessEnvironment( const QProcessEnvironment & other )
-*/
-void QProcessEnvironment_new2()
-{
-  QProcessEnvironment * obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QProcessEnvironment_new1();
+    /*
+    QProcessEnvironment()
+    */
+    QProcessEnvironment * obj = new QProcessEnvironment();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
   {
-    QProcessEnvironment_new2();
+    /*
+    QProcessEnvironment( const QProcessEnvironment & other )
+    */
+    QProcessEnvironment * obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -216,45 +206,35 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
   }
 }
 
-/*
-void insert( const QString & name, const QString & value )
-*/
-void QProcessEnvironment_insert1()
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->insert( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void insert( const QProcessEnvironment & e )
-*/
-void QProcessEnvironment_insert2()
-{
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->insert( *PQPROCESSENVIRONMENT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {
   if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QProcessEnvironment_insert1();
+    /*
+    void insert( const QString & name, const QString & value )
+    */
+    QProcessEnvironment * obj = (QProcessEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->insert( PQSTRING(1), PQSTRING(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
   {
-    QProcessEnvironment_insert2();
+    /*
+    void insert( const QProcessEnvironment & e )
+    */
+    QProcessEnvironment * obj = (QProcessEnvironment *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->insert( *PQPROCESSENVIRONMENT(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

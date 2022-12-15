@@ -501,37 +501,25 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 #endif
 }
 
-/*
-static void postEvent( QObject * receiver, QEvent * event )
-*/
-void QCoreApplication_postEvent1()
-{
-
-  QCoreApplication::postEvent( PQOBJECT(1), PQEVENT(2) );
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-static void postEvent( QObject * receiver, QEvent * event, int priority )
-*/
-void QCoreApplication_postEvent2()
-{
-
-  QCoreApplication::postEvent( PQOBJECT(1), PQEVENT(2), PINT(3) );
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
   {
-    QCoreApplication_postEvent1();
+    /*
+    static void postEvent( QObject * receiver, QEvent * event )
+    */
+    QCoreApplication::postEvent( PQOBJECT(1), PQEVENT(2) );
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(3) && ISQOBJECT(1) && ISQEVENT(2) && HB_ISNUM(3) )
   {
-    QCoreApplication_postEvent2();
+    /*
+    static void postEvent( QObject * receiver, QEvent * event, int priority )
+    */
+    QCoreApplication::postEvent( PQOBJECT(1), PQEVENT(2), PINT(3) );
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -539,37 +527,25 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
   }
 }
 
-/*
-static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-*/
-void QCoreApplication_processEvents1()
-{
-
-  QCoreApplication::processEvents( HB_ISNIL(1)? (QEventLoop::ProcessEventsFlags) QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) );
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-static void processEvents( QEventLoop::ProcessEventsFlags flags, int maxtime )
-*/
-void QCoreApplication_processEvents2()
-{
-
-  QCoreApplication::processEvents( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
   if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QCoreApplication_processEvents1();
+    /*
+    static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+    */
+    QCoreApplication::processEvents( HB_ISNIL(1)? (QEventLoop::ProcessEventsFlags) QEventLoop::AllEvents : (QEventLoop::ProcessEventsFlags) hb_parni(1) );
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QCoreApplication_processEvents2();
+    /*
+    static void processEvents( QEventLoop::ProcessEventsFlags flags, int maxtime )
+    */
+    QCoreApplication::processEvents( (QEventLoop::ProcessEventsFlags) hb_parni(1), PINT(2) );
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -598,37 +574,25 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static void removePostedEvents( QObject * receiver )
-*/
-void QCoreApplication_removePostedEvents1()
-{
-
-  QCoreApplication::removePostedEvents( PQOBJECT(1) );
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-static void removePostedEvents( QObject * receiver, int eventType )
-*/
-void QCoreApplication_removePostedEvents2()
-{
-
-  QCoreApplication::removePostedEvents( PQOBJECT(1), PINT(2) );
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 {
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    QCoreApplication_removePostedEvents1();
+    /*
+    static void removePostedEvents( QObject * receiver )
+    */
+    QCoreApplication::removePostedEvents( PQOBJECT(1) );
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
   {
-    QCoreApplication_removePostedEvents2();
+    /*
+    static void removePostedEvents( QObject * receiver, int eventType )
+    */
+    QCoreApplication::removePostedEvents( PQOBJECT(1), PINT(2) );
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -676,37 +640,25 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 #endif
 }
 
-/*
-static void sendPostedEvents( QObject * receiver, int event_type )
-*/
-void QCoreApplication_sendPostedEvents1()
-{
-
-  QCoreApplication::sendPostedEvents( PQOBJECT(1), PINT(2) );
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-static void sendPostedEvents()
-*/
-void QCoreApplication_sendPostedEvents2()
-{
-
-  QCoreApplication::sendPostedEvents();
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 {
   if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISNUM(2) )
   {
-    QCoreApplication_sendPostedEvents1();
+    /*
+    static void sendPostedEvents( QObject * receiver, int event_type )
+    */
+    QCoreApplication::sendPostedEvents( PQOBJECT(1), PINT(2) );
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(0) )
   {
-    QCoreApplication_sendPostedEvents2();
+    /*
+    static void sendPostedEvents()
+    */
+    QCoreApplication::sendPostedEvents();
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

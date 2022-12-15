@@ -73,59 +73,39 @@ RETURN
 #include <QtCore/QDataStream>
 #endif
 
-/*
-QDataStream()
-*/
-void QDataStream_new1()
-{
-  QDataStream * obj = new QDataStream();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDataStream( QIODevice * )
-*/
-void QDataStream_new2()
-{
-  QDataStream * obj = new QDataStream( PQIODEVICE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDataStream( QByteArray *, QIODevice::OpenMode flags )
-*/
-void QDataStream_new3()
-{
-  QDataStream * obj = new QDataStream( PQBYTEARRAY(1), (QIODevice::OpenMode) hb_parni(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDataStream( const QByteArray & )
-*/
-void QDataStream_new4()
-{
-  QDataStream * obj = new QDataStream( *PQBYTEARRAY(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDATASTREAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDataStream_new1();
+    /*
+    QDataStream()
+    */
+    QDataStream * obj = new QDataStream();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    QDataStream_new2();
+    /*
+    QDataStream( QIODevice * )
+    */
+    QDataStream * obj = new QDataStream( PQIODEVICE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2) )
   {
-    QDataStream_new3();
+    /*
+    QDataStream( QByteArray *, QIODevice::OpenMode flags )
+    */
+    QDataStream * obj = new QDataStream( PQBYTEARRAY(1), (QIODevice::OpenMode) hb_parni(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QDataStream_new4();
+    /*
+    QDataStream( const QByteArray & )
+    */
+    QDataStream * obj = new QDataStream( *PQBYTEARRAY(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

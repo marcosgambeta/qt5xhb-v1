@@ -66,46 +66,31 @@ RETURN
 #include <QtCore/QTextBoundaryFinder>
 #endif
 
-/*
-QTextBoundaryFinder()
-*/
-void QTextBoundaryFinder_new1()
-{
-  QTextBoundaryFinder * obj = new QTextBoundaryFinder();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTextBoundaryFinder( const QTextBoundaryFinder & other )
-*/
-void QTextBoundaryFinder_new2()
-{
-  QTextBoundaryFinder * obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
-*/
-void QTextBoundaryFinder_new3()
-{
-  QTextBoundaryFinder * obj = new QTextBoundaryFinder( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTextBoundaryFinder_new1();
+    /*
+    QTextBoundaryFinder()
+    */
+    QTextBoundaryFinder * obj = new QTextBoundaryFinder();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTEXTBOUNDARYFINDER(1) )
   {
-    QTextBoundaryFinder_new2();
+    /*
+    QTextBoundaryFinder( const QTextBoundaryFinder & other )
+    */
+    QTextBoundaryFinder * obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
   {
-    QTextBoundaryFinder_new3();
+    /*
+    QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
+    */
+    QTextBoundaryFinder * obj = new QTextBoundaryFinder( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

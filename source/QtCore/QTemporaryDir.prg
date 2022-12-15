@@ -60,33 +60,23 @@ RETURN
 #include <QtCore/QTemporaryDir>
 #endif
 
-/*
-QTemporaryDir()
-*/
-void QTemporaryDir_new1()
-{
-  QTemporaryDir * obj = new QTemporaryDir();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QTemporaryDir( const QString & templateName )
-*/
-void QTemporaryDir_new2()
-{
-  QTemporaryDir * obj = new QTemporaryDir( PQSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QTEMPORARYDIR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTemporaryDir_new1();
+    /*
+    QTemporaryDir()
+    */
+    QTemporaryDir * obj = new QTemporaryDir();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QTemporaryDir_new2();
+    /*
+    QTemporaryDir( const QString & templateName )
+    */
+    QTemporaryDir * obj = new QTemporaryDir( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

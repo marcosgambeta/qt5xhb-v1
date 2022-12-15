@@ -71,46 +71,31 @@ RETURN
 #include <QtCore/QRegularExpression>
 #endif
 
-/*
-QRegularExpression()
-*/
-void QRegularExpression_new1()
-{
-  QRegularExpression * obj = new QRegularExpression();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QRegularExpression( const QString & pattern, QRegularExpression::PatternOptions options = QRegularExpression::NoPatternOption )
-*/
-void QRegularExpression_new2()
-{
-  QRegularExpression * obj = new QRegularExpression( PQSTRING(1), HB_ISNIL(2)? (QRegularExpression::PatternOptions) QRegularExpression::NoPatternOption : (QRegularExpression::PatternOptions) hb_parni(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QRegularExpression( const QRegularExpression & re )
-*/
-void QRegularExpression_new3()
-{
-  QRegularExpression * obj = new QRegularExpression( *PQREGULAREXPRESSION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QREGULAREXPRESSION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QRegularExpression_new1();
+    /*
+    QRegularExpression()
+    */
+    QRegularExpression * obj = new QRegularExpression();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QRegularExpression_new2();
+    /*
+    QRegularExpression( const QString & pattern, QRegularExpression::PatternOptions options = QRegularExpression::NoPatternOption )
+    */
+    QRegularExpression * obj = new QRegularExpression( PQSTRING(1), HB_ISNIL(2)? (QRegularExpression::PatternOptions) QRegularExpression::NoPatternOption : (QRegularExpression::PatternOptions) hb_parni(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQREGULAREXPRESSION(1) )
   {
-    QRegularExpression_new3();
+    /*
+    QRegularExpression( const QRegularExpression & re )
+    */
+    QRegularExpression * obj = new QRegularExpression( *PQREGULAREXPRESSION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

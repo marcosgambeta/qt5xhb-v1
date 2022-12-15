@@ -61,46 +61,31 @@ RETURN
 #include <QtCore/QDebug>
 #endif
 
-/*
-QDebug( QIODevice * device )
-*/
-void QDebug_new1()
-{
-  QDebug * obj = new QDebug( PQIODEVICE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDebug( QtMsgType t )
-*/
-void QDebug_new3()
-{
-  QDebug * obj = new QDebug( (QtMsgType) hb_parni(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDebug( const QDebug & o )
-*/
-void QDebug_new4()
-{
-  QDebug * obj = new QDebug( *PQDEBUG(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDEBUG_NEW )
 {
   if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    QDebug_new1();
+    /*
+    QDebug( QIODevice * device )
+    */
+    QDebug * obj = new QDebug( PQIODEVICE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QDebug_new3();
+    /*
+    QDebug( QtMsgType t )
+    */
+    QDebug * obj = new QDebug( (QtMsgType) hb_parni(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDEBUG(1) )
   {
-    QDebug_new4();
+    /*
+    QDebug( const QDebug & o )
+    */
+    QDebug * obj = new QDebug( *PQDEBUG(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

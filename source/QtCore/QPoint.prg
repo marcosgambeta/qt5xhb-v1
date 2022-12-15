@@ -61,33 +61,23 @@ RETURN
 #include <QtCore/QPoint>
 #endif
 
-/*
-QPoint()
-*/
-void QPoint_new1()
-{
-  QPoint * obj = new QPoint();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPoint( int xpos, int ypos )
-*/
-void QPoint_new2()
-{
-  QPoint * obj = new QPoint( PINT(1), PINT(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QPOINT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPoint_new1();
+    /*
+    QPoint()
+    */
+    QPoint * obj = new QPoint();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QPoint_new2();
+    /*
+    QPoint( int xpos, int ypos )
+    */
+    QPoint * obj = new QPoint( PINT(1), PINT(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

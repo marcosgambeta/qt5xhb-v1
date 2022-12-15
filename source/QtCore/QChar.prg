@@ -20,7 +20,6 @@ CLASS QChar
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
    METHOD new2
    METHOD new3
    METHOD new4
@@ -96,15 +95,6 @@ RETURN
 #ifdef __XHARBOUR__
 #include <QtCore/QChar>
 #endif
-
-/*
-QChar()
-*/
-HB_FUNC_STATIC( QCHAR_NEW1 )
-{
-  QChar * obj = new QChar();
-  Qt5xHb::returnNewObject(obj, true);
-}
 
 /*
 QChar( char ch )
@@ -189,7 +179,18 @@ HB_FUNC_STATIC( QCHAR_NEW10 )
 
 HB_FUNC_STATIC( QCHAR_NEW )
 {
-  HB_FUNC_EXEC( QCHAR_NEW1 );
+  if( ISNUMPAR(0) )
+  {
+    /*
+    QChar()
+    */
+    QChar * obj = new QChar();
+    Qt5xHb::returnNewObject(obj, true);
+  }
+  else
+  {
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
 }
 
 HB_FUNC_STATIC( QCHAR_DELETE )

@@ -71,37 +71,27 @@ RETURN
 #endif
 #endif
 
-/*
-QCollator( const QLocale & locale = QLocale() )
-*/
-void QCollator_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = new QCollator( HB_ISNIL(1)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QCollator( const QCollator & )
-*/
-void QCollator_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QCollator * obj = new QCollator( *PQCOLLATOR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QCOLLATOR_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQLOCALE(1)||HB_ISNIL(1)) )
   {
-    QCollator_new1();
+    /*
+    QCollator( const QLocale & locale = QLocale() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QCollator * obj = new QCollator( HB_ISNIL(1)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQCOLLATOR(1) )
   {
-    QCollator_new2();
+    /*
+    QCollator( const QCollator & )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QCollator * obj = new QCollator( *PQCOLLATOR(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

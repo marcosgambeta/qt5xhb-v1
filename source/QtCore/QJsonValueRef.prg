@@ -74,33 +74,23 @@ RETURN
 #include <QtCore/QJsonArray>
 #include <QtCore/QJsonObject>
 
-/*
-QJsonValueRef( QJsonArray * array, int idx )
-*/
-void QJsonValueRef_new1()
-{
-  QJsonValueRef * obj = new QJsonValueRef( PQJSONARRAY(1), PINT(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QJsonValueRef( QJsonObject * object, int idx )
-*/
-void QJsonValueRef_new2()
-{
-  QJsonValueRef * obj = new QJsonValueRef( PQJSONOBJECT(1), PINT(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QJSONVALUEREF_NEW )
 {
   if( ISNUMPAR(2) && ISQJSONARRAY(1) && HB_ISNUM(2) )
   {
-    QJsonValueRef_new1();
+    /*
+    QJsonValueRef( QJsonArray * array, int idx )
+    */
+    QJsonValueRef * obj = new QJsonValueRef( PQJSONARRAY(1), PINT(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQJSONOBJECT(1) && HB_ISNUM(2) )
   {
-    QJsonValueRef_new2();
+    /*
+    QJsonValueRef( QJsonObject * object, int idx )
+    */
+    QJsonValueRef * obj = new QJsonValueRef( PQJSONOBJECT(1), PINT(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

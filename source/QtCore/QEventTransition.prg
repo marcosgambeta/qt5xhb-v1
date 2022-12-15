@@ -53,33 +53,23 @@ RETURN
 #include <QtCore/QEventTransition>
 #endif
 
-/*
-QEventTransition( QState * sourceState = 0 )
-*/
-void QEventTransition_new1()
-{
-  QEventTransition * obj = new QEventTransition( OPQSTATE(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = 0 )
-*/
-void QEventTransition_new2()
-{
-  QEventTransition * obj = new QEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQSTATE(1)||HB_ISNIL(1)) )
   {
-    QEventTransition_new1();
+    /*
+    QEventTransition( QState * sourceState = 0 )
+    */
+    QEventTransition * obj = new QEventTransition( OPQSTATE(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && HB_ISNUM(2) && (ISQSTATE(3)||HB_ISNIL(3)) )
   {
-    QEventTransition_new2();
+    /*
+    QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = 0 )
+    */
+    QEventTransition * obj = new QEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

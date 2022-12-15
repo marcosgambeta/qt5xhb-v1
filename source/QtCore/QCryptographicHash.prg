@@ -120,62 +120,47 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addData( const char * data, int length )
-*/
-void QCryptographicHash_addData1()
-{
-  QCryptographicHash * obj = (QCryptographicHash *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addData( PCONSTCHAR(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void addData( const QByteArray & data )
-*/
-void QCryptographicHash_addData2()
-{
-  QCryptographicHash * obj = (QCryptographicHash *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addData( *PQBYTEARRAY(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-bool addData( QIODevice * device )
-*/
-void QCryptographicHash_addData3()
-{
-  QCryptographicHash * obj = (QCryptographicHash *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->addData( PQIODEVICE(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 {
   if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
-    QCryptographicHash_addData1();
+    /*
+    void addData( const char * data, int length )
+    */
+    QCryptographicHash * obj = (QCryptographicHash *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addData( PCONSTCHAR(1), PINT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QCryptographicHash_addData2();
+    /*
+    void addData( const QByteArray & data )
+    */
+    QCryptographicHash * obj = (QCryptographicHash *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addData( *PQBYTEARRAY(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    QCryptographicHash_addData3();
+    /*
+    bool addData( QIODevice * device )
+    */
+    QCryptographicHash * obj = (QCryptographicHash *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->addData( PQIODEVICE(1) ) );
+    }
   }
   else
   {

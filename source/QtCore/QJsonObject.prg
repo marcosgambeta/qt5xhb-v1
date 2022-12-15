@@ -68,33 +68,23 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QJsonObject()
-*/
-void QJsonObject_new1()
-{
-  QJsonObject * obj = new QJsonObject();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QJsonObject( const QJsonObject & other )
-*/
-void QJsonObject_new2()
-{
-  QJsonObject * obj = new QJsonObject( *PQJSONOBJECT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QJSONOBJECT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QJsonObject_new1();
+    /*
+    QJsonObject()
+    */
+    QJsonObject * obj = new QJsonObject();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQJSONOBJECT(1) )
   {
-    QJsonObject_new2();
+    /*
+    QJsonObject( const QJsonObject & other )
+    */
+    QJsonObject * obj = new QJsonObject( *PQJSONOBJECT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

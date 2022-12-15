@@ -97,64 +97,49 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void append( const QString & namespaceUri, const QString & name, const QString & value )
-*/
-void QXmlStreamAttributes_append1()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void append( const QXmlStreamAttribute & attribute )
-*/
-void QXmlStreamAttributes_append2()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( *PQXMLSTREAMATTRIBUTE(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void append( const QString & qualifiedName, const QString & value )
-*/
-void QXmlStreamAttributes_append3()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( PQSTRING(1), PQSTRING(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
 {
   if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
   {
-    QXmlStreamAttributes_append1();
+    /*
+    void append( const QString & namespaceUri, const QString & name, const QString & value )
+    */
+    QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->append( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1) )
   {
-    QXmlStreamAttributes_append2();
+    /*
+    void append( const QXmlStreamAttribute & attribute )
+    */
+    QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->append( *PQXMLSTREAMATTRIBUTE(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QXmlStreamAttributes_append3();
+    /*
+    void append( const QString & qualifiedName, const QString & value )
+    */
+    QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->append( PQSTRING(1), PQSTRING(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -162,58 +147,43 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_APPEND )
   }
 }
 
-/*
-bool hasAttribute( const QString & qualifiedName ) const
-*/
-void QXmlStreamAttributes_hasAttribute1()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasAttribute( PQSTRING(1) ) );
-  }
-}
-
-/*
-bool hasAttribute( QLatin1String qualifiedName ) const
-*/
-void QXmlStreamAttributes_hasAttribute2()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasAttribute( *PQLATIN1STRING(1) ) );
-  }
-}
-
-/*
-bool hasAttribute( const QString & namespaceUri, const QString & name ) const
-*/
-void QXmlStreamAttributes_hasAttribute3()
-{
-  QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->hasAttribute( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QXmlStreamAttributes_hasAttribute1();
+    /*
+    bool hasAttribute( const QString & qualifiedName ) const
+    */
+    QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->hasAttribute( PQSTRING(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
   {
-    QXmlStreamAttributes_hasAttribute2();
+    /*
+    bool hasAttribute( QLatin1String qualifiedName ) const
+    */
+    QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->hasAttribute( *PQLATIN1STRING(1) ) );
+    }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QXmlStreamAttributes_hasAttribute3();
+    /*
+    bool hasAttribute( const QString & namespaceUri, const QString & name ) const
+    */
+    QXmlStreamAttributes * obj = (QXmlStreamAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->hasAttribute( PQSTRING(1), PQSTRING(2) ) );
+    }
   }
   else
   {

@@ -82,82 +82,57 @@ RETURN
 #endif
 #endif
 
-/*
-QTimeZone()
-*/
-void QTimeZone_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = new QTimeZone();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QTimeZone( const QByteArray & ianaId )
-*/
-void QTimeZone_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = new QTimeZone( *PQBYTEARRAY(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QTimeZone( int offsetSeconds )
-*/
-void QTimeZone_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = new QTimeZone( PINT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QTimeZone( const QByteArray & zoneId, int offsetSeconds, const QString & name, const QString & abbreviation, QLocale::Country country = QLocale::AnyCountry, const QString & comment = QString() )
-*/
-void QTimeZone_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = new QTimeZone( *PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4), HB_ISNIL(5)? (QLocale::Country) QLocale::AnyCountry : (QLocale::Country) hb_parni(5), OPQSTRING(6,QString()) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QTimeZone( const QTimeZone & other )
-*/
-void QTimeZone_new5()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = new QTimeZone( *PQTIMEZONE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QTIMEZONE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QTimeZone_new1();
+    /*
+    QTimeZone()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QTimeZone * obj = new QTimeZone();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QTimeZone_new2();
+    /*
+    QTimeZone( const QByteArray & ianaId )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QTimeZone * obj = new QTimeZone( *PQBYTEARRAY(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QTimeZone_new3();
+    /*
+    QTimeZone( int offsetSeconds )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QTimeZone * obj = new QTimeZone( PINT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISBETWEEN(4,6) && ISQBYTEARRAY(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && ( HB_ISNUM(5)||HB_ISNIL(5)) && ( HB_ISCHAR(6)||HB_ISNIL(6)) )
   {
-    QTimeZone_new4();
+    /*
+    QTimeZone( const QByteArray & zoneId, int offsetSeconds, const QString & name, const QString & abbreviation, QLocale::Country country = QLocale::AnyCountry, const QString & comment = QString() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QTimeZone * obj = new QTimeZone( *PQBYTEARRAY(1), PINT(2), PQSTRING(3), PQSTRING(4), HB_ISNIL(5)? (QLocale::Country) QLocale::AnyCountry : (QLocale::Country) hb_parni(5), OPQSTRING(6,QString()) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQTIMEZONE(1) )
   {
-    QTimeZone_new5();
+    /*
+    QTimeZone( const QTimeZone & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QTimeZone * obj = new QTimeZone( *PQTIMEZONE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
@@ -317,45 +292,35 @@ HB_FUNC_STATIC( QTIMEZONE_COMMENT )
 #endif
 }
 
-/*
-QString displayName( const QDateTime & atDateTime, QTimeZone::NameType nameType = QTimeZone::DefaultName, const QLocale & locale = QLocale() ) const
-*/
-void QTimeZone_displayName1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->displayName( *PQDATETIME(1), HB_ISNIL(2)? (QTimeZone::NameType) QTimeZone::DefaultName : (QTimeZone::NameType) hb_parni(2), HB_ISNIL(3)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(3) ) );
-  }
-#endif
-}
-
-/*
-QString displayName( QTimeZone::TimeType timeType, QTimeZone::NameType nameType = QTimeZone::DefaultName, const QLocale & locale = QLocale() ) const
-*/
-void QTimeZone_displayName2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QTimeZone * obj = (QTimeZone *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->displayName( (QTimeZone::TimeType) hb_parni(1), HB_ISNIL(2)? (QTimeZone::NameType) QTimeZone::DefaultName : (QTimeZone::NameType) hb_parni(2), HB_ISNIL(3)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(3) ) );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QTIMEZONE_DISPLAYNAME )
 {
   if( ISBETWEEN(1,3) && ISQDATETIME(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && (ISQLOCALE(3)||HB_ISNIL(3)) )
   {
-    QTimeZone_displayName1();
+    /*
+    QString displayName( const QDateTime & atDateTime, QTimeZone::NameType nameType = QTimeZone::DefaultName, const QLocale & locale = QLocale() ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QTimeZone * obj = (QTimeZone *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->displayName( *PQDATETIME(1), HB_ISNIL(2)? (QTimeZone::NameType) QTimeZone::DefaultName : (QTimeZone::NameType) hb_parni(2), HB_ISNIL(3)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(3) ) );
+    }
+#endif
   }
   else if( ISBETWEEN(1,3) && HB_ISNUM(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && (ISQLOCALE(3)||HB_ISNIL(3)) )
   {
-    QTimeZone_displayName2();
+    /*
+    QString displayName( QTimeZone::TimeType timeType, QTimeZone::NameType nameType = QTimeZone::DefaultName, const QLocale & locale = QLocale() ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QTimeZone * obj = (QTimeZone *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->displayName( (QTimeZone::TimeType) hb_parni(1), HB_ISNIL(2)? (QTimeZone::NameType) QTimeZone::DefaultName : (QTimeZone::NameType) hb_parni(2), HB_ISNIL(3)? QLocale() : *(QLocale *) Qt5xHb::itemGetPtr(3) ) );
+    }
+#endif
   }
   else
   {
@@ -777,39 +742,27 @@ HB_FUNC_STATIC( QTIMEZONE_IANAIDTOWINDOWSID )
 #endif
 }
 
-/*
-static QByteArray windowsIdToDefaultIanaId( const QByteArray & windowsId )
-*/
-void QTimeZone_windowsIdToDefaultIanaId1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
-  QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY(1) ) );
-  Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
-#endif
-}
-
-/*
-static QByteArray windowsIdToDefaultIanaId( const QByteArray & windowsId, QLocale::Country country )
-*/
-void QTimeZone_windowsIdToDefaultIanaId2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
-  QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) ) );
-  Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
-#endif
-}
-
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QTimeZone_windowsIdToDefaultIanaId1();
+    /*
+    static QByteArray windowsIdToDefaultIanaId( const QByteArray & windowsId )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY(1) ) );
+    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+#endif
   }
   else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2) )
   {
-    QTimeZone_windowsIdToDefaultIanaId2();
+    /*
+    static QByteArray windowsIdToDefaultIanaId( const QByteArray & windowsId, QLocale::Country country )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QByteArray * ptr = new QByteArray( QTimeZone::windowsIdToDefaultIanaId( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+#endif
   }
   else
   {
@@ -817,93 +770,81 @@ HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTODEFAULTIANAID )
   }
 }
 
-/*
-static QList<QByteArray> windowsIdToIanaIds( const QByteArray & windowsId )
-*/
-void QTimeZone_windowsIdToIanaIds1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
-  QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1) );
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  if( pDynSym )
-  {
-    for( int i = 0; i < list.count(); i++ )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  else
-  {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
-  }
-  hb_itemReturnRelease(pArray);
-#endif
-}
-
-/*
-static QList<QByteArray> windowsIdToIanaIds( const QByteArray & windowsId, QLocale::Country country )
-*/
-void QTimeZone_windowsIdToIanaIds2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
-  QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) );
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-  PHB_ITEM pArray = hb_itemArrayNew(0);
-  if( pDynSym )
-  {
-    for( int i = 0; i < list.count(); i++ )
-    {
-      hb_vmPushDynSym( pDynSym );
-      hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemNew( NULL );
-      hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemNew( NULL );
-      hb_itemPutL( pDestroy, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
-    }
-  }
-  else
-  {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
-  }
-  hb_itemReturnRelease(pArray);
-#endif
-}
-
 HB_FUNC_STATIC( QTIMEZONE_WINDOWSIDTOIANAIDS )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QTimeZone_windowsIdToIanaIds1();
+    /*
+    static QList<QByteArray> windowsIdToIanaIds( const QByteArray & windowsId )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1) );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
+      {
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
+      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
+#endif
   }
   else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2) )
   {
-    QTimeZone_windowsIdToIanaIds2();
+    /*
+    static QList<QByteArray> windowsIdToIanaIds( const QByteArray & windowsId, QLocale::Country country )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QList<QByteArray> list = QTimeZone::windowsIdToIanaIds( *PQBYTEARRAY(1), (QLocale::Country) hb_parni(2) );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_ITEM pArray = hb_itemArrayNew(0);
+    if( pDynSym )
+    {
+      for( int i = 0; i < list.count(); i++ )
+      {
+        hb_vmPushDynSym( pDynSym );
+        hb_vmPushNil();
+        hb_vmDo( 0 );
+        PHB_ITEM pObject = hb_itemNew( NULL );
+        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pItem = hb_itemNew( NULL );
+        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
+        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+        hb_itemRelease( pItem );
+        PHB_ITEM pDestroy = hb_itemNew( NULL );
+        hb_itemPutL( pDestroy, true );
+        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+        hb_itemRelease( pDestroy );
+        hb_arrayAddForward( pArray, pObject );
+        hb_itemRelease( pObject );
+      }
+    }
+    else
+    {
+      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+    }
+    hb_itemReturnRelease(pArray);
+#endif
   }
   else
   {

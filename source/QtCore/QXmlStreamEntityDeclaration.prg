@@ -61,33 +61,23 @@ RETURN
 #include <QtCore/QXmlStreamEntityDeclaration>
 #endif
 
-/*
-QXmlStreamEntityDeclaration()
-*/
-void QXmlStreamEntityDeclaration_new1()
-{
-  QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
-*/
-void QXmlStreamEntityDeclaration_new2()
-{
-  QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlStreamEntityDeclaration_new1();
+    /*
+    QXmlStreamEntityDeclaration()
+    */
+    QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQXMLSTREAMENTITYDECLARATION(1) )
   {
-    QXmlStreamEntityDeclaration_new2();
+    /*
+    QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
+    */
+    QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

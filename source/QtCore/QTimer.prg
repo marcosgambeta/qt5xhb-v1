@@ -242,45 +242,35 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
   }
 }
 
-/*
-void start( int msec )
-*/
-void QTimer_start1()
-{
-  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->start( PINT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void start()
-*/
-void QTimer_start2()
-{
-  QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->start();
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QTIMER_START )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QTimer_start1();
+    /*
+    void start( int msec )
+    */
+    QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->start( PINT(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(0) )
   {
-    QTimer_start2();
+    /*
+    void start()
+    */
+    QTimer * obj = (QTimer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->start();
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

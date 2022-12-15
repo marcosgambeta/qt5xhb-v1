@@ -113,59 +113,39 @@ RETURN
 #include <QtCore/QXmlStreamReader>
 #endif
 
-/*
-QXmlStreamReader()
-*/
-void QXmlStreamReader_new1()
-{
-  QXmlStreamReader * obj = new QXmlStreamReader();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamReader( QIODevice * device )
-*/
-void QXmlStreamReader_new2()
-{
-  QXmlStreamReader * obj = new QXmlStreamReader( PQIODEVICE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamReader( const QByteArray & data )
-*/
-void QXmlStreamReader_new3()
-{
-  QXmlStreamReader * obj = new QXmlStreamReader( *PQBYTEARRAY(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlStreamReader( const QString & data )
-*/
-void QXmlStreamReader_new4()
-{
-  QXmlStreamReader * obj = new QXmlStreamReader( PQSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlStreamReader_new1();
+    /*
+    QXmlStreamReader()
+    */
+    QXmlStreamReader * obj = new QXmlStreamReader();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    QXmlStreamReader_new2();
+    /*
+    QXmlStreamReader( QIODevice * device )
+    */
+    QXmlStreamReader * obj = new QXmlStreamReader( PQIODEVICE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QXmlStreamReader_new3();
+    /*
+    QXmlStreamReader( const QByteArray & data )
+    */
+    QXmlStreamReader * obj = new QXmlStreamReader( *PQBYTEARRAY(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QXmlStreamReader_new4();
+    /*
+    QXmlStreamReader( const QString & data )
+    */
+    QXmlStreamReader * obj = new QXmlStreamReader( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -190,64 +170,49 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addData( const QByteArray & data )
-*/
-void QXmlStreamReader_addData1()
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addData( *PQBYTEARRAY(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void addData( const QString & data )
-*/
-void QXmlStreamReader_addData2()
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addData( PQSTRING(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void addData( const char * data )
-*/
-void QXmlStreamReader_addData3()
-{
-  QXmlStreamReader * obj = (QXmlStreamReader *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addData( PCONSTCHAR(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QXmlStreamReader_addData1();
+    /*
+    void addData( const QByteArray & data )
+    */
+    QXmlStreamReader * obj = (QXmlStreamReader *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addData( *PQBYTEARRAY(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QXmlStreamReader_addData2();
+    /*
+    void addData( const QString & data )
+    */
+    QXmlStreamReader * obj = (QXmlStreamReader *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addData( PQSTRING(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QXmlStreamReader_addData3();
+    /*
+    void addData( const char * data )
+    */
+    QXmlStreamReader * obj = (QXmlStreamReader *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addData( PCONSTCHAR(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

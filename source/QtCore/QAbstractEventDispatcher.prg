@@ -292,43 +292,33 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int registerTimer( int interval, Qt::TimerType timerType, QObject * object )
-*/
-void QAbstractEventDispatcher_registerTimer1()
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->registerTimer( PINT(1), (Qt::TimerType) hb_parni(2), PQOBJECT(3) ) );
-  }
-}
-
-/*
-virtual void registerTimer( int timerId, int interval, Qt::TimerType timerType, QObject * object ) = 0
-*/
-void QAbstractEventDispatcher_registerTimer2()
-{
-  QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->registerTimer( PINT(1), PINT(2), (Qt::TimerType) hb_parni(3), PQOBJECT(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 {
   if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3) )
   {
-    QAbstractEventDispatcher_registerTimer1();
+    /*
+    int registerTimer( int interval, Qt::TimerType timerType, QObject * object )
+    */
+    QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RINT( obj->registerTimer( PINT(1), (Qt::TimerType) hb_parni(2), PQOBJECT(3) ) );
+    }
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ISQOBJECT(4) )
   {
-    QAbstractEventDispatcher_registerTimer2();
+    /*
+    virtual void registerTimer( int timerId, int interval, Qt::TimerType timerType, QObject * object ) = 0
+    */
+    QAbstractEventDispatcher * obj = (QAbstractEventDispatcher *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->registerTimer( PINT(1), PINT(2), (Qt::TimerType) hb_parni(3), PQOBJECT(4) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

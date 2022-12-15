@@ -71,33 +71,23 @@ RETURN
 
 #include <QtCore/QPointF>
 
-/*
-QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
-*/
-void QEasingCurve_new1()
-{
-  QEasingCurve * obj = new QEasingCurve( HB_ISNIL(1)? (QEasingCurve::Type) QEasingCurve::Linear : (QEasingCurve::Type) hb_parni(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QEasingCurve( const QEasingCurve & other )
-*/
-void QEasingCurve_new2()
-{
-  QEasingCurve * obj = new QEasingCurve( *PQEASINGCURVE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {
   if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QEasingCurve_new1();
+    /*
+    QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
+    */
+    QEasingCurve * obj = new QEasingCurve( HB_ISNIL(1)? (QEasingCurve::Type) QEasingCurve::Linear : (QEasingCurve::Type) hb_parni(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
   {
-    QEasingCurve_new2();
+    /*
+    QEasingCurve( const QEasingCurve & other )
+    */
+    QEasingCurve * obj = new QEasingCurve( *PQEASINGCURVE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

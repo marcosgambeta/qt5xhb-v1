@@ -62,33 +62,23 @@ RETURN
 #include <QtCore/QBuffer>
 #endif
 
-/*
-QBuffer( QObject * parent = 0 )
-*/
-void QBuffer_new1()
-{
-  QBuffer * obj = new QBuffer( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QBuffer( QByteArray * byteArray, QObject * parent = 0 )
-*/
-void QBuffer_new2()
-{
-  QBuffer * obj = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QBuffer_new1();
+    /*
+    QBuffer( QObject * parent = 0 )
+    */
+    QBuffer * obj = new QBuffer( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QBuffer_new2();
+    /*
+    QBuffer( QByteArray * byteArray, QObject * parent = 0 )
+    */
+    QBuffer * obj = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -221,45 +211,35 @@ HB_FUNC_STATIC( QBUFFER_SETBUFFER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setData( const QByteArray & data )
-*/
-void QBuffer_setData1()
-{
-  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setData( *PQBYTEARRAY(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setData( const char * data, int size )
-*/
-void QBuffer_setData2()
-{
-  QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setData( PCONSTCHAR(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QBUFFER_SETDATA )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QBuffer_setData1();
+    /*
+    void setData( const QByteArray & data )
+    */
+    QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setData( *PQBYTEARRAY(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
-    QBuffer_setData2();
+    /*
+    void setData( const char * data, int size )
+    */
+    QBuffer * obj = (QBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setData( PCONSTCHAR(1), PINT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

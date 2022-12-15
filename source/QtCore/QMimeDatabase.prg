@@ -122,43 +122,33 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORNAME )
   }
 }
 
-/*
-QMimeType mimeTypeForFile( const QString & fileName, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault ) const
-*/
-void QMimeDatabase_mimeTypeForFile1()
-{
-  QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFile( PQSTRING(1), HB_ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
-  }
-}
-
-/*
-QMimeType mimeTypeForFile( const QFileInfo & fileInfo, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault ) const
-*/
-void QMimeDatabase_mimeTypeForFile2()
-{
-  QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFile( *PQFILEINFO(1), HB_ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
-  }
-}
-
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILE )
 {
   if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QMimeDatabase_mimeTypeForFile1();
+    /*
+    QMimeType mimeTypeForFile( const QString & fileName, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault ) const
+    */
+    QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QMimeType * ptr = new QMimeType( obj->mimeTypeForFile( PQSTRING(1), HB_ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+    }
   }
   else if( ISBETWEEN(1,2) && ISQFILEINFO(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QMimeDatabase_mimeTypeForFile2();
+    /*
+    QMimeType mimeTypeForFile( const QFileInfo & fileInfo, QMimeDatabase::MatchMode mode = QMimeDatabase::MatchDefault ) const
+    */
+    QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QMimeType * ptr = new QMimeType( obj->mimeTypeForFile( *PQFILEINFO(1), HB_ISNIL(2)? (QMimeDatabase::MatchMode) QMimeDatabase::MatchDefault : (QMimeDatabase::MatchMode) hb_parni(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+    }
   }
   else
   {
@@ -218,43 +208,33 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPESFORFILENAME )
   }
 }
 
-/*
-QMimeType mimeTypeForData( const QByteArray & data ) const
-*/
-void QMimeDatabase_mimeTypeForData1()
-{
-  QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForData( *PQBYTEARRAY(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
-  }
-}
-
-/*
-QMimeType mimeTypeForData( QIODevice * device ) const
-*/
-void QMimeDatabase_mimeTypeForData2()
-{
-  QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForData( PQIODEVICE(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
-  }
-}
-
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORDATA )
 {
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QMimeDatabase_mimeTypeForData1();
+    /*
+    QMimeType mimeTypeForData( const QByteArray & data ) const
+    */
+    QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QMimeType * ptr = new QMimeType( obj->mimeTypeForData( *PQBYTEARRAY(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
   {
-    QMimeDatabase_mimeTypeForData2();
+    /*
+    QMimeType mimeTypeForData( QIODevice * device ) const
+    */
+    QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QMimeType * ptr = new QMimeType( obj->mimeTypeForData( PQIODEVICE(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+    }
   }
   else
   {
@@ -287,43 +267,33 @@ HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORURL )
   }
 }
 
-/*
-QMimeType mimeTypeForFileNameAndData( const QString & fileName, QIODevice * device ) const
-*/
-void QMimeDatabase_mimeTypeForFileNameAndData1()
-{
-  QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData( PQSTRING(1), PQIODEVICE(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
-  }
-}
-
-/*
-QMimeType mimeTypeForFileNameAndData( const QString & fileName, const QByteArray & data ) const
-*/
-void QMimeDatabase_mimeTypeForFileNameAndData2()
-{
-  QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData( PQSTRING(1), *PQBYTEARRAY(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
-  }
-}
-
 HB_FUNC_STATIC( QMIMEDATABASE_MIMETYPEFORFILENAMEANDDATA )
 {
   if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQIODEVICE(2) )
   {
-    QMimeDatabase_mimeTypeForFileNameAndData1();
+    /*
+    QMimeType mimeTypeForFileNameAndData( const QString & fileName, QIODevice * device ) const
+    */
+    QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData( PQSTRING(1), PQIODEVICE(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+    }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQBYTEARRAY(2) )
   {
-    QMimeDatabase_mimeTypeForFileNameAndData2();
+    /*
+    QMimeType mimeTypeForFileNameAndData( const QString & fileName, const QByteArray & data ) const
+    */
+    QMimeDatabase * obj = (QMimeDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QMimeType * ptr = new QMimeType( obj->mimeTypeForFileNameAndData( PQSTRING(1), *PQBYTEARRAY(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QMIMETYPE", true);
+    }
   }
   else
   {

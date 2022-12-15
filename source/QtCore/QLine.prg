@@ -71,46 +71,31 @@ RETURN
 #include <QtCore/QLine>
 #endif
 
-/*
-QLine()
-*/
-void QLine_new1()
-{
-  QLine * obj = new QLine();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QLine( const QPoint & p1, const QPoint & p2 )
-*/
-void QLine_new2()
-{
-  QLine * obj = new QLine( *PQPOINT(1), *PQPOINT(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QLine( int x1, int y1, int x2, int y2 )
-*/
-void QLine_new3()
-{
-  QLine * obj = new QLine( PINT(1), PINT(2), PINT(3), PINT(4) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QLINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QLine_new1();
+    /*
+    QLine()
+    */
+    QLine * obj = new QLine();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
-    QLine_new2();
+    /*
+    QLine( const QPoint & p1, const QPoint & p2 )
+    */
+    QLine * obj = new QLine( *PQPOINT(1), *PQPOINT(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QLine_new3();
+    /*
+    QLine( int x1, int y1, int x2, int y2 )
+    */
+    QLine * obj = new QLine( PINT(1), PINT(2), PINT(3), PINT(4) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -457,45 +442,35 @@ HB_FUNC_STATIC( QLINE_SETPOINTS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void translate( const QPoint & offset )
-*/
-void QLine_translate1()
-{
-  QLine * obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate( *PQPOINT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void translate( int dx, int dy )
-*/
-void QLine_translate2()
-{
-  QLine * obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->translate( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QLINE_TRANSLATE )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QLine_translate1();
+    /*
+    void translate( const QPoint & offset )
+    */
+    QLine * obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->translate( *PQPOINT(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QLine_translate2();
+    /*
+    void translate( int dx, int dy )
+    */
+    QLine * obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->translate( PINT(1), PINT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -503,43 +478,33 @@ HB_FUNC_STATIC( QLINE_TRANSLATE )
   }
 }
 
-/*
-QLine translated( const QPoint & offset ) const
-*/
-void QLine_translated1()
-{
-  QLine * obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->translated( *PQPOINT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QLINE", true);
-  }
-}
-
-/*
-QLine translated( int dx, int dy ) const
-*/
-void QLine_translated2()
-{
-  QLine * obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->translated( PINT(1), PINT(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QLINE", true);
-  }
-}
-
 HB_FUNC_STATIC( QLINE_TRANSLATED )
 {
   if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QLine_translated1();
+    /*
+    QLine translated( const QPoint & offset ) const
+    */
+    QLine * obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QLine * ptr = new QLine( obj->translated( *PQPOINT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+    }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QLine_translated2();
+    /*
+    QLine translated( int dx, int dy ) const
+    */
+    QLine * obj = (QLine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QLine * ptr = new QLine( obj->translated( PINT(1), PINT(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QLINE", true);
+    }
   }
   else
   {

@@ -66,33 +66,23 @@ RETURN
 #include <QtCore/QSize>
 #endif
 
-/*
-QSize()
-*/
-void QSize_new1()
-{
-  QSize * obj = new QSize();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSize( int width, int height )
-*/
-void QSize_new2()
-{
-  QSize * obj = new QSize( PINT(1), PINT(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSIZE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSize_new1();
+    /*
+    QSize()
+    */
+    QSize * obj = new QSize();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QSize_new2();
+    /*
+    QSize( int width, int height )
+    */
+    QSize * obj = new QSize( PINT(1), PINT(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -263,45 +253,35 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
   }
 }
 
-/*
-void scale( int width, int height, Qt::AspectRatioMode mode )
-*/
-void QSize_scale1()
-{
-  QSize * obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->scale( PINT(1), PINT(2), (Qt::AspectRatioMode) hb_parni(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void scale( const QSize & size, Qt::AspectRatioMode mode )
-*/
-void QSize_scale2()
-{
-  QSize * obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->scale( *PQSIZE(1), (Qt::AspectRatioMode) hb_parni(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QSIZE_SCALE )
 {
   if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
-    QSize_scale1();
+    /*
+    void scale( int width, int height, Qt::AspectRatioMode mode )
+    */
+    QSize * obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->scale( PINT(1), PINT(2), (Qt::AspectRatioMode) hb_parni(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && ISQSIZE(1) && HB_ISNUM(2) )
   {
-    QSize_scale2();
+    /*
+    void scale( const QSize & size, Qt::AspectRatioMode mode )
+    */
+    QSize * obj = (QSize *) Qt5xHb::itemGetPtrStackSelfItem();
+    
+    if( obj )
+    {
+      obj->scale( *PQSIZE(1), (Qt::AspectRatioMode) hb_parni(2) );
+    }
+    
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
