@@ -372,53 +372,43 @@ HB_FUNC_STATIC( QBOXPLOTSERIES_SETPEN )
 #endif
 }
 
-/*
-bool append( QBoxSet * box )
-*/
-void QBoxPlotSeries_append1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->append( PQBOXSET(1) ) );
-  }
-#endif
-}
-
-/*
-bool append( QList<QBoxSet *> boxes )
-*/
-void QBoxPlotSeries_append2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QBoxSet *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QBoxSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    RBOOL( obj->append( par1 ) );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QBOXPLOTSERIES_APPEND )
 {
   if( ISNUMPAR(1) && ISQBOXSET(1) )
   {
-    QBoxPlotSeries_append1();
+    /*
+    bool append( QBoxSet * box )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->append( PQBOXSET(1) ) );
+    }
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QBoxPlotSeries_append2();
+    /*
+    bool append( QList<QBoxSet *> boxes )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBoxPlotSeries * obj = (QBoxPlotSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<QBoxSet *> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << (QBoxSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      RBOOL( obj->append( par1 ) );
+    }
+#endif
   }
   else
   {

@@ -509,228 +509,183 @@ HB_FUNC_STATIC( QXYSERIES_SETPOINTLABELSCLIPPING )
 #endif
 }
 
-/*
-void append( qreal x, qreal y )
-*/
-void QXYSeries_append1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void append( const QPointF & point )
-*/
-void QXYSeries_append2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void append( const QList<QPointF> & points )
-*/
-void QXYSeries_append3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QPointF> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->append( par1 );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QXYSERIES_APPEND )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QXYSeries_append1();
+    /*
+    void append( qreal x, qreal y )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->append( PQREAL(1), PQREAL(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    QXYSeries_append2();
+    /*
+    void append( const QPointF & point )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->append( *PQPOINTF(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QXYSeries_append3();
+    /*
+    void append( const QList<QPointF> & points )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QList<QPointF> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      obj->append( par1 );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
-}
-
-/*
-void replace( qreal oldX, qreal oldY, qreal newX, qreal newY )
-*/
-void QXYSeries_replace1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->replace( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void replace( const QPointF & oldPoint, const QPointF & newPoint )
-*/
-void QXYSeries_replace2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->replace( *PQPOINTF(1), *PQPOINTF(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void replace( int index, qreal newX, qreal newY )
-*/
-void QXYSeries_replace3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->replace( PINT(1), PQREAL(2), PQREAL(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void replace( int index, const QPointF & newPoint )
-*/
-void QXYSeries_replace4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->replace( PINT(1), *PQPOINTF(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void replace( QList<QPointF> points )
-*/
-void QXYSeries_replace5()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QPointF> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->replace( par1 );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void replace( QVector<QPointF> points )
-*/
-void QXYSeries_replace6()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVector<QPointF> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->replace( par1 );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
 }
 
 HB_FUNC_STATIC( QXYSERIES_REPLACE )
 {
   if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QXYSeries_replace1();
+    /*
+    void replace( qreal oldX, qreal oldY, qreal newX, qreal newY )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->replace( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
   {
-    QXYSeries_replace2();
+    /*
+    void replace( const QPointF & oldPoint, const QPointF & newPoint )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->replace( *PQPOINTF(1), *PQPOINTF(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
-    QXYSeries_replace3();
+    /*
+    void replace( int index, qreal newX, qreal newY )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->replace( PINT(1), PQREAL(2), PQREAL(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPOINTF(2) )
   {
-    QXYSeries_replace4();
+    /*
+    void replace( int index, const QPointF & newPoint )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->replace( PINT(1), *PQPOINTF(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QXYSeries_replace5();
+    /*
+    void replace( QList<QPointF> points )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<QPointF> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      obj->replace( par1 );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QXYSeries_replace6();
+    /*
+    void replace( QVector<QPointF> points )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QVector<QPointF> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QPointF *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      obj->replace( par1 );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {
@@ -738,70 +693,55 @@ HB_FUNC_STATIC( QXYSERIES_REPLACE )
   }
 }
 
-/*
-void remove( qreal x, qreal y )
-*/
-void QXYSeries_remove1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->remove( PQREAL(1), PQREAL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void remove( const QPointF & point )
-*/
-void QXYSeries_remove2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->remove( *PQPOINTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void remove( int index )
-*/
-void QXYSeries_remove3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->remove( PINT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QXYSERIES_REMOVE )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QXYSeries_remove1();
+    /*
+    void remove( qreal x, qreal y )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->remove( PQREAL(1), PQREAL(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
-    QXYSeries_remove2();
+    /*
+    void remove( const QPointF & point )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->remove( *PQPOINTF(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QXYSeries_remove3();
+    /*
+    void remove( int index )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QXYSeries * obj = (QXYSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->remove( PINT(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {

@@ -1473,49 +1473,39 @@ HB_FUNC_STATIC( QCHART_BACKGROUNDPEN )
 #endif
 }
 
-/*
-void zoomIn()
-*/
-void QChart_zoomIn1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChart * obj = (QChart *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->zoomIn();
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void zoomIn( const QRectF & rect )
-*/
-void QChart_zoomIn2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QChart * obj = (QChart *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->zoomIn( *PQRECTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QCHART_ZOOMIN )
 {
   if( ISNUMPAR(0) )
   {
-    QChart_zoomIn1();
+    /*
+    void zoomIn()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QChart * obj = (QChart *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->zoomIn();
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QChart_zoomIn2();
+    /*
+    void zoomIn( const QRectF & rect )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QChart * obj = (QChart *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->zoomIn( *PQRECTF(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {

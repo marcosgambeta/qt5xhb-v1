@@ -115,37 +115,27 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-QPieSlice( QObject * parent = nullptr )
-*/
-void QPieSlice_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = new QPieSlice( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QPieSlice( QString label, qreal value, QObject * parent = nullptr )
-*/
-void QPieSlice_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSlice * obj = new QPieSlice( PQSTRING(1), PQREAL(2), OPQOBJECT(3,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QPIESLICE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QPieSlice_new1();
+    /*
+    QPieSlice( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QPieSlice * obj = new QPieSlice( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(2,3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QPieSlice_new2();
+    /*
+    QPieSlice( QString label, qreal value, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QPieSlice * obj = new QPieSlice( PQSTRING(1), PQREAL(2), OPQOBJECT(3,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {

@@ -78,37 +78,27 @@ RETURN
 
 using namespace QtCharts;
 
-/*
-explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
-*/
-void QBoxSet_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = new QBoxSet( OPQSTRING(1,QString()), OPQOBJECT(2,Q_NULLPTR) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
-*/
-void QBoxSet_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = new QBoxSet( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,Q_NULLPTR) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QBOXSET_NEW )
 {
   if( ISBETWEEN(0,2) && (HB_ISCHAR(1)||HB_ISNIL(1)) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QBoxSet_new1();
+    /*
+    explicit QBoxSet(const QString label = QString(), QObject *parent = Q_NULLPTR)
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBoxSet * obj = new QBoxSet( OPQSTRING(1,QString()), OPQOBJECT(2,Q_NULLPTR) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(5,7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISCHAR(6)||HB_ISNIL(6)) && (ISQOBJECT(7)||HB_ISNIL(7)) )
   {
-    QBoxSet_new2();
+    /*
+    explicit QBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label = QString(), QObject *parent = Q_NULLPTR)
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBoxSet * obj = new QBoxSet( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), OPQSTRING(6,QString()), OPQOBJECT(7,Q_NULLPTR) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {
@@ -250,59 +240,49 @@ HB_FUNC_STATIC( QBOXSET_SETBRUSH )
 #endif
 }
 
-/*
-void append(const qreal value)
-*/
-void QBoxSet_append1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( PQREAL(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void append(const QList<qreal> &values)
-*/
-void QBoxSet_append2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<qreal> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    qreal temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetND(aList1, i1+1);
-      par1 << temp1;
-    }
-    obj->append( par1 );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QBOXSET_APPEND )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QBoxSet_append1();
+    /*
+    void append(const qreal value)
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->append( PQREAL(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QBoxSet_append2();
+    /*
+    void append(const QList<qreal> &values)
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBoxSet * obj = (QBoxSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<qreal> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      qreal temp1;
+      for (i1=0;i1<nLen1;i1++)
+      {
+        temp1 = hb_arrayGetND(aList1, i1+1);
+        par1 << temp1;
+      }
+      obj->append( par1 );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {

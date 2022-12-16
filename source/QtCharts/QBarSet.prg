@@ -579,59 +579,49 @@ HB_FUNC_STATIC( QBARSET_SETLABELCOLOR )
 #endif
 }
 
-/*
-void append( const qreal value )
-*/
-void QBarSet_append1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( PQREAL(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void append( const QList<qreal> & values )
-*/
-void QBarSet_append2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarSet * obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<qreal> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    qreal temp1;
-    for (i1=0;i1<nLen1;i1++)
-    {
-      temp1 = hb_arrayGetND(aList1, i1+1);
-      par1 << temp1;
-    }
-    obj->append( par1 );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QBARSET_APPEND )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QBarSet_append1();
+    /*
+    void append( const qreal value )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBarSet * obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->append( PQREAL(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QBarSet_append2();
+    /*
+    void append( const QList<qreal> & values )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBarSet * obj = (QBarSet *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<qreal> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      qreal temp1;
+      for (i1=0;i1<nLen1;i1++)
+      {
+        temp1 = hb_arrayGetND(aList1, i1+1);
+        par1 << temp1;
+      }
+      obj->append( par1 );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {

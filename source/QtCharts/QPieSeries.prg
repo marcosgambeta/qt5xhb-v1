@@ -533,73 +533,58 @@ HB_FUNC_STATIC( QPIESERIES_TYPE )
 #endif
 }
 
-/*
-bool append( QPieSlice * slice )
-*/
-void QPieSeries_append1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeries * obj = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->append( PQPIESLICE(1) ) );
-  }
-#endif
-}
-
-/*
-bool append( QList<QPieSlice *> slices )
-*/
-void QPieSeries_append2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeries * obj = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QPieSlice *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    RBOOL( obj->append( par1 ) );
-  }
-#endif
-}
-
-/*
-QPieSlice * append( QString label, qreal value )
-*/
-void QPieSeries_append3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QPieSeries * obj = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QPieSlice * ptr = obj->append( PQSTRING(1), PQREAL(2) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QPIESLICE" );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QPIESERIES_APPEND )
 {
   if( ISNUMPAR(1) && ISQPIESLICE(1) )
   {
-    QPieSeries_append1();
+    /*
+    bool append( QPieSlice * slice )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QPieSeries * obj = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->append( PQPIESLICE(1) ) );
+    }
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QPieSeries_append2();
+    /*
+    bool append( QList<QPieSlice *> slices )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QPieSeries * obj = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<QPieSlice *> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << (QPieSlice *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      RBOOL( obj->append( par1 ) );
+    }
+#endif
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
-    QPieSeries_append3();
+    /*
+    QPieSlice * append( QString label, qreal value )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QPieSeries * obj = (QPieSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QPieSlice * ptr = obj->append( PQSTRING(1), PQREAL(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QPIESLICE" );
+    }
+#endif
   }
   else
   {

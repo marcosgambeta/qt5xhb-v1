@@ -719,53 +719,43 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_SETPEN )
 #endif
 }
 
-/*
-bool append( QCandlestickSet * set )
-*/
-void QCandlestickSeries_append1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->append( PQCANDLESTICKSET(1) ) );
-  }
-#endif
-}
-
-/*
-bool append( const QList<QCandlestickSet *> & sets )
-*/
-void QCandlestickSeries_append2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QCandlestickSet *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    RBOOL( obj->append( par1 ) );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
 {
   if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
   {
-    QCandlestickSeries_append1();
+    /*
+    bool append( QCandlestickSet * set )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->append( PQCANDLESTICKSET(1) ) );
+    }
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QCandlestickSeries_append2();
+    /*
+    bool append( const QList<QCandlestickSet *> & sets )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QList<QCandlestickSet *> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      RBOOL( obj->append( par1 ) );
+    }
+#endif
   }
   else
   {
@@ -773,53 +763,43 @@ HB_FUNC_STATIC( QCANDLESTICKSERIES_APPEND )
   }
 }
 
-/*
-bool remove( QCandlestickSet * set )
-*/
-void QCandlestickSeries_remove1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->remove( PQCANDLESTICKSET(1) ) );
-  }
-#endif
-}
-
-/*
-bool remove( const QList<QCandlestickSet *> & sets )
-*/
-void QCandlestickSeries_remove2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QCandlestickSet *> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    RBOOL( obj->remove( par1 ) );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QCANDLESTICKSERIES_REMOVE )
 {
   if( ISNUMPAR(1) && ISQCANDLESTICKSET(1) )
   {
-    QCandlestickSeries_remove1();
+    /*
+    bool remove( QCandlestickSet * set )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->remove( PQCANDLESTICKSET(1) ) );
+    }
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QCandlestickSeries_remove2();
+  /*
+  bool remove( const QList<QCandlestickSet *> & sets )
+  */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QCandlestickSeries * obj = (QCandlestickSeries *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<QCandlestickSet *> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << (QCandlestickSet *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      RBOOL( obj->remove( par1 ) );
+    }
+#endif
   }
   else
   {

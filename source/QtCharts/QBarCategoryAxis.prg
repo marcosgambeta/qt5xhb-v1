@@ -331,49 +331,39 @@ HB_FUNC_STATIC( QBARCATEGORYAXIS_TYPE )
 #endif
 }
 
-/*
-void append( const QStringList & categories )
-*/
-void QBarCategoryAxis_append1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarCategoryAxis * obj = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( PQSTRINGLIST(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void append( const QString & category )
-*/
-void QBarCategoryAxis_append2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
-  QBarCategoryAxis * obj = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( PQSTRING(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QBARCATEGORYAXIS_APPEND )
 {
   if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QBarCategoryAxis_append1();
+    /*
+    void append( const QStringList & categories )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBarCategoryAxis * obj = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->append( PQSTRINGLIST(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QBarCategoryAxis_append2();
+    /*
+    void append( const QString & category )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+    QBarCategoryAxis * obj = (QBarCategoryAxis *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->append( PQSTRING(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {
