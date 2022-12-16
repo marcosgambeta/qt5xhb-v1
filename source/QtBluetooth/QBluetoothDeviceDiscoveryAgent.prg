@@ -66,37 +66,27 @@ RETURN
 #endif
 #endif
 
-/*
-QBluetoothDeviceDiscoveryAgent( QObject * parent = 0 )
-*/
-void QBluetoothDeviceDiscoveryAgent_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothDeviceDiscoveryAgent * obj = new QBluetoothDeviceDiscoveryAgent( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QBluetoothDeviceDiscoveryAgent( const QBluetoothAddress & deviceAdapter, QObject * parent = 0 )
-*/
-void QBluetoothDeviceDiscoveryAgent_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothDeviceDiscoveryAgent * obj = new QBluetoothDeviceDiscoveryAgent( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHDEVICEDISCOVERYAGENT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QBluetoothDeviceDiscoveryAgent_new1();
+    /*
+    QBluetoothDeviceDiscoveryAgent( QObject * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothDeviceDiscoveryAgent * obj = new QBluetoothDeviceDiscoveryAgent( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QBluetoothDeviceDiscoveryAgent_new2();
+    /*
+    QBluetoothDeviceDiscoveryAgent( const QBluetoothAddress & deviceAdapter, QObject * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothDeviceDiscoveryAgent * obj = new QBluetoothDeviceDiscoveryAgent( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {

@@ -78,37 +78,27 @@ RETURN
 #endif
 #endif
 
-/*
-QBluetoothSocket( QBluetoothServiceInfo::Protocol socketType, QObject * parent = 0 )
-*/
-void QBluetoothSocket_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = new QBluetoothSocket( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QBluetoothSocket( QObject * parent = 0 )
-*/
-void QBluetoothSocket_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = new QBluetoothSocket( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_NEW )
 {
   if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QBluetoothSocket_new1();
+    /*
+    QBluetoothSocket( QBluetoothServiceInfo::Protocol socketType, QObject * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothSocket * obj = new QBluetoothSocket( (QBluetoothServiceInfo::Protocol) hb_parni(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QBluetoothSocket_new2();
+    /*
+    QBluetoothSocket( QObject * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothSocket * obj = new QBluetoothSocket( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {
@@ -297,70 +287,55 @@ HB_FUNC_STATIC( QBLUETOOTHSOCKET_CANREADLINE )
 #endif
 }
 
-/*
-void connectToService( const QBluetoothServiceInfo & service, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QBluetoothSocket_connectToService1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->connectToService( *PQBLUETOOTHSERVICEINFO(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void connectToService( const QBluetoothAddress & address, const QBluetoothUuid & uuid, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QBluetoothSocket_connectToService2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->connectToService( *PQBLUETOOTHADDRESS(1), *PQBLUETOOTHUUID(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void connectToService( const QBluetoothAddress & address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QBluetoothSocket_connectToService3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothSocket * obj = (QBluetoothSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->connectToService( *PQBLUETOOTHADDRESS(1), PQUINT16(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHSOCKET_CONNECTTOSERVICE )
 {
   if( ISBETWEEN(1,2) && ISQBLUETOOTHSERVICEINFO(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QBluetoothSocket_connectToService1();
+    /*
+    void connectToService( const QBluetoothServiceInfo & service, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothSocket * obj = (QBluetoothSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->connectToService( *PQBLUETOOTHSERVICEINFO(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && ISQBLUETOOTHUUID(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QBluetoothSocket_connectToService2();
+    /*
+    void connectToService( const QBluetoothAddress & address, const QBluetoothUuid & uuid, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothSocket * obj = (QBluetoothSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->connectToService( *PQBLUETOOTHADDRESS(1), *PQBLUETOOTHUUID(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISBETWEEN(2,3) && ISQBLUETOOTHADDRESS(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QBluetoothSocket_connectToService3();
+    /*
+    void connectToService( const QBluetoothAddress & address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothSocket * obj = (QBluetoothSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->connectToService( *PQBLUETOOTHADDRESS(1), PQUINT16(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {

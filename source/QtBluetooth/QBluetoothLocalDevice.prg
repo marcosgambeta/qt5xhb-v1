@@ -70,37 +70,27 @@ RETURN
 #endif
 #endif
 
-/*
-QBluetoothLocalDevice( QObject * parent = 0 )
-*/
-void QBluetoothLocalDevice_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = new QBluetoothLocalDevice( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QBluetoothLocalDevice( const QBluetoothAddress & address, QObject * parent = 0 )
-*/
-void QBluetoothLocalDevice_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothLocalDevice * obj = new QBluetoothLocalDevice( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHLOCALDEVICE_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QBluetoothLocalDevice_new1();
+    /*
+    QBluetoothLocalDevice( QObject * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothLocalDevice * obj = new QBluetoothLocalDevice( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QBluetoothLocalDevice_new2();
+    /*
+    QBluetoothLocalDevice( const QBluetoothAddress & address, QObject * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothLocalDevice * obj = new QBluetoothLocalDevice( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {

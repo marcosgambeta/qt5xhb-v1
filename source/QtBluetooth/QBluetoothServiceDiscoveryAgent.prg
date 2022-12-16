@@ -71,37 +71,27 @@ RETURN
 #endif
 #endif
 
-/*
-QBluetoothServiceDiscoveryAgent( QObject * parent = 0 )
-*/
-void QBluetoothServiceDiscoveryAgent_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceDiscoveryAgent * obj = new QBluetoothServiceDiscoveryAgent( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QBluetoothServiceDiscoveryAgent( const QBluetoothAddress & deviceAdapter, QObject * parent = 0 )
-*/
-void QBluetoothServiceDiscoveryAgent_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceDiscoveryAgent * obj = new QBluetoothServiceDiscoveryAgent( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QBluetoothServiceDiscoveryAgent_new1();
+    /*
+    QBluetoothServiceDiscoveryAgent( QObject * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothServiceDiscoveryAgent * obj = new QBluetoothServiceDiscoveryAgent( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(1,2) && ISQBLUETOOTHADDRESS(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QBluetoothServiceDiscoveryAgent_new2();
+    /*
+    QBluetoothServiceDiscoveryAgent( const QBluetoothAddress & deviceAdapter, QObject * parent = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothServiceDiscoveryAgent * obj = new QBluetoothServiceDiscoveryAgent( *PQBLUETOOTHADDRESS(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {
@@ -262,57 +252,47 @@ HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_DISCOVEREDSERVICES )
 #endif
 }
 
-/*
-void setUuidFilter( const QList<QBluetoothUuid> & uuids )
-*/
-void QBluetoothServiceDiscoveryAgent_setUuidFilter1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceDiscoveryAgent * obj = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QBluetoothUuid> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QBluetoothUuid *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->setUuidFilter( par1 );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void setUuidFilter( const QBluetoothUuid & uuid )
-*/
-void QBluetoothServiceDiscoveryAgent_setUuidFilter2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServiceDiscoveryAgent * obj = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setUuidFilter( *PQBLUETOOTHUUID(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHSERVICEDISCOVERYAGENT_SETUUIDFILTER )
 {
   if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QBluetoothServiceDiscoveryAgent_setUuidFilter1();
+    /*
+    void setUuidFilter( const QList<QBluetoothUuid> & uuids )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothServiceDiscoveryAgent * obj = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<QBluetoothUuid> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QBluetoothUuid *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      obj->setUuidFilter( par1 );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && ISQBLUETOOTHUUID(1) )
   {
-    QBluetoothServiceDiscoveryAgent_setUuidFilter2();
+    /*
+    void setUuidFilter( const QBluetoothUuid & uuid )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothServiceDiscoveryAgent * obj = (QBluetoothServiceDiscoveryAgent *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setUuidFilter( *PQBLUETOOTHUUID(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {

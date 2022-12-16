@@ -63,67 +63,47 @@ RETURN
 #endif
 #endif
 
-/*
-QBluetoothAddress()
-*/
-void QBluetoothAddress_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * obj = new QBluetoothAddress();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QBluetoothAddress( quint64 address )
-*/
-void QBluetoothAddress_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * obj = new QBluetoothAddress( PQUINT64(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QBluetoothAddress( const QString & address )
-*/
-void QBluetoothAddress_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * obj = new QBluetoothAddress( PQSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QBluetoothAddress( const QBluetoothAddress & other )
-*/
-void QBluetoothAddress_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothAddress * obj = new QBluetoothAddress( *PQBLUETOOTHADDRESS(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHADDRESS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBluetoothAddress_new1();
+    /*
+    QBluetoothAddress()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothAddress * obj = new QBluetoothAddress();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QBluetoothAddress_new2();
+    /*
+    QBluetoothAddress( quint64 address )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothAddress * obj = new QBluetoothAddress( PQUINT64(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QBluetoothAddress_new3();
+    /*
+    QBluetoothAddress( const QString & address )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothAddress * obj = new QBluetoothAddress( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQBLUETOOTHADDRESS(1) )
   {
-    QBluetoothAddress_new4();
+    /*
+    QBluetoothAddress( const QBluetoothAddress & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothAddress * obj = new QBluetoothAddress( *PQBLUETOOTHADDRESS(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

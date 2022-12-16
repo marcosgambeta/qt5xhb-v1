@@ -84,69 +84,49 @@ RETURN
 #include <QtBluetooth/QBluetoothAddress>
 #include <QtBluetooth/QBluetoothUuid>
 
-/*
-QBluetoothDeviceInfo()
-*/
-void QBluetoothDeviceInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothDeviceInfo * obj = new QBluetoothDeviceInfo();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QBluetoothDeviceInfo( const QBluetoothAddress & address, const QString & name, quint32 classOfDevice )
-*/
-void QBluetoothDeviceInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothDeviceInfo * obj = new QBluetoothDeviceInfo( *PQBLUETOOTHADDRESS(1), PQSTRING(2), PQUINT32(3) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QBluetoothDeviceInfo( const QBluetoothUuid & uuid, const QString & name, quint32 classOfDevice )
-*/
-void QBluetoothDeviceInfo_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QBluetoothDeviceInfo * obj = new QBluetoothDeviceInfo( *PQBLUETOOTHUUID(1), PQSTRING(2), PQUINT32(3) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QBluetoothDeviceInfo( const QBluetoothDeviceInfo & other )
-*/
-void QBluetoothDeviceInfo_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothDeviceInfo * obj = new QBluetoothDeviceInfo( *PQBLUETOOTHDEVICEINFO(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHDEVICEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBluetoothDeviceInfo_new1();
+    /*
+    QBluetoothDeviceInfo()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothDeviceInfo * obj = new QBluetoothDeviceInfo();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(3) && ISQBLUETOOTHADDRESS(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
   {
-    QBluetoothDeviceInfo_new2();
+    /*
+    QBluetoothDeviceInfo( const QBluetoothAddress & address, const QString & name, quint32 classOfDevice )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothDeviceInfo * obj = new QBluetoothDeviceInfo( *PQBLUETOOTHADDRESS(1), PQSTRING(2), PQUINT32(3) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
 #if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
   else if( ISNUMPAR(3) && ISQBLUETOOTHUUID(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
   {
-    QBluetoothDeviceInfo_new3();
+    /*
+    QBluetoothDeviceInfo( const QBluetoothUuid & uuid, const QString & name, quint32 classOfDevice )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    QBluetoothDeviceInfo * obj = new QBluetoothDeviceInfo( *PQBLUETOOTHUUID(1), PQSTRING(2), PQUINT32(3) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
 #endif
   else if( ISNUMPAR(1) && ISQBLUETOOTHDEVICEINFO(1) )
   {
-    QBluetoothDeviceInfo_new4();
+    /*
+    QBluetoothDeviceInfo( const QBluetoothDeviceInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothDeviceInfo * obj = new QBluetoothDeviceInfo( *PQBLUETOOTHDEVICEINFO(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

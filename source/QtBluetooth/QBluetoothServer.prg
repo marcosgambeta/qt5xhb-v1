@@ -138,46 +138,36 @@ HB_FUNC_STATIC( QBLUETOOTHSERVER_CLOSE )
 #endif
 }
 
-/*
-bool listen( const QBluetoothAddress & address = QBluetoothAddress(), quint16 port = 0 )
-*/
-void QBluetoothServer_listen1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServer * obj = (QBluetoothServer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->listen( HB_ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
-  }
-#endif
-}
-
-/*
-QBluetoothServiceInfo listen( const QBluetoothUuid & uuid, const QString & serviceName = QString() )
-*/
-void QBluetoothServer_listen2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QBluetoothServer * obj = (QBluetoothServer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen( *PQBLUETOOTHUUID(1), OPQSTRING(2,QString()) ) );
-    Qt5xHb::createReturnClass(ptr, "QBLUETOOTHSERVICEINFO", true);
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QBLUETOOTHSERVER_LISTEN )
 {
   if( ISBETWEEN(0,2) && (ISQBLUETOOTHADDRESS(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QBluetoothServer_listen1();
+    /*
+    bool listen( const QBluetoothAddress & address = QBluetoothAddress(), quint16 port = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothServer * obj = (QBluetoothServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->listen( HB_ISNIL(1)? QBluetoothAddress() : *(QBluetoothAddress *) Qt5xHb::itemGetPtr(1), OPQUINT16(2,0) ) );
+    }
+#endif
   }
   else if( ISBETWEEN(1,2) && ISQBLUETOOTHUUID(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
-    QBluetoothServer_listen2();
+    /*
+    QBluetoothServiceInfo listen( const QBluetoothUuid & uuid, const QString & serviceName = QString() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QBluetoothServer * obj = (QBluetoothServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QBluetoothServiceInfo * ptr = new QBluetoothServiceInfo( obj->listen( *PQBLUETOOTHUUID(1), OPQSTRING(2,QString()) ) );
+      Qt5xHb::createReturnClass(ptr, "QBLUETOOTHSERVICEINFO", true);
+    }
+#endif
   }
   else
   {
