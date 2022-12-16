@@ -76,28 +76,6 @@ RETURN
 #endif
 
 /*
-QAndroidJniObject()
-*/
-void QAndroidJniObject_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = new QAndroidJniObject();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QAndroidJniObject( const char * className )
-*/
-void QAndroidJniObject_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = new QAndroidJniObject( PCONSTCHAR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
 QAndroidJniObject( jclass clazz )
 */
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW4 )
@@ -119,30 +97,37 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW6 )
 #endif
 }
 
-/*
-QAndroidJniObject( int object )
-*/
-void QAndroidJniObject_new7()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = new QAndroidJniObject( PINT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAndroidJniObject_new1();
+    /*
+    QAndroidJniObject()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QAndroidJniObject * obj = new QAndroidJniObject();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QAndroidJniObject_new2();
+    /*
+    QAndroidJniObject( const char * className )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QAndroidJniObject * obj = new QAndroidJniObject( PCONSTCHAR(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QAndroidJniObject_new7();
+    /*
+    QAndroidJniObject( int object )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QAndroidJniObject * obj = new QAndroidJniObject( PINT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
@@ -200,7 +185,7 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QAndroidJniObject_callObjectMethod1();
+    HB_FUNC_EXEC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD1 );
   }
   else
   {
@@ -208,47 +193,37 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLOBJECTMETHOD )
   }
 }
 
-/*
-QAndroidJniObject getObjectField( const char * fieldName ) const
-*/
-void QAndroidJniObject_getObjectField1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField( PCONSTCHAR(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
-  }
-#endif
-}
-
-/*
-QAndroidJniObject getObjectField( const char * fieldName, const char * signature ) const
-*/
-void QAndroidJniObject_getObjectField2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField( PCONSTCHAR(1), PCONSTCHAR(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETOBJECTFIELD )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QAndroidJniObject_getObjectField1();
+    /*
+    QAndroidJniObject getObjectField( const char * fieldName ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField( PCONSTCHAR(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+    }
+#endif
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QAndroidJniObject_getObjectField2();
+    /*
+    QAndroidJniObject getObjectField( const char * fieldName, const char * signature ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QAndroidJniObject * obj = (QAndroidJniObject *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QAndroidJniObject * ptr = new QAndroidJniObject( obj->getObjectField( PCONSTCHAR(1), PCONSTCHAR(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+    }
+#endif
   }
   else
   {
@@ -308,23 +283,17 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_ISVALID )
 #endif
 }
 
-/*
-static QAndroidJniObject callStaticObjectMethod( const char * className, const char * methodName )
-*/
-void QAndroidJniObject_callStaticObjectMethod1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
-  QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::callStaticObjectMethod( PCONSTCHAR(1), PCONSTCHAR(2) ) );
-  Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
-#endif
-}
-
 HB_FUNC_STATIC( QANDROIDJNIOBJECT_CALLSTATICOBJECTMETHOD )
 {
   if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QAndroidJniObject_callStaticObjectMethod1();
+    /*
+    static QAndroidJniObject callStaticObjectMethod( const char * className, const char * methodName )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QAndroidJniObject * ptr = new QAndroidJniObject( QAndroidJniObject::callStaticObjectMethod( PCONSTCHAR(1), PCONSTCHAR(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QANDROIDJNIOBJECT", true);
+#endif
   }
   else
   {
@@ -468,19 +437,19 @@ HB_FUNC_STATIC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD )
 {
   if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QAndroidJniObject_getStaticObjectField1();
+    HB_FUNC_EXEC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD1 );
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
   {
-    QAndroidJniObject_getStaticObjectField2();
+    HB_FUNC_EXEC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD2 );
   }
   else if( ISNUMPAR(2) && HB_ISPOINTER(1) && HB_ISCHAR(2) )
   {
-    QAndroidJniObject_getStaticObjectField3();
+    HB_FUNC_EXEC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD3 );
   }
   else if( ISNUMPAR(3) && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
   {
-    QAndroidJniObject_getStaticObjectField4();
+    HB_FUNC_EXEC( QANDROIDJNIOBJECT_GETSTATICOBJECTFIELD4 );
   }
   else
   {

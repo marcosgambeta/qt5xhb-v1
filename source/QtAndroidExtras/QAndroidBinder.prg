@@ -22,7 +22,6 @@ CLASS QAndroidBinder
    DATA self_destruction INIT .F.
 
    METHOD new
-   METHOD new2
    METHOD delete
    METHOD onTransact
    METHOD transact
@@ -64,37 +63,27 @@ RETURN
 #endif
 #endif
 
-/*
-QAndroidBinder()
-*/
-void QAndroidBinder_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidBinder * obj = new QAndroidBinder();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QAndroidBinder( const QAndroidJniObject & binder )
-*/
-HB_FUNC_STATIC( QANDROIDBINDER_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidBinder * obj = new QAndroidBinder( *PQANDROIDJNIOBJECT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QANDROIDBINDER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAndroidBinder_new1();
+    /*
+    QAndroidBinder()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidBinder * obj = new QAndroidBinder();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1) )
   {
-    QAndroidBinder_new2();
+    /*
+    QAndroidBinder( const QAndroidJniObject & binder )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidBinder * obj = new QAndroidBinder( *PQANDROIDJNIOBJECT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

@@ -66,67 +66,47 @@ RETURN
 #endif
 #endif
 
-/*
-QAndroidIntent()
-*/
-void QAndroidIntent_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidIntent * obj = new QAndroidIntent();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QAndroidIntent( const QAndroidJniObject & intent )
-*/
-void QAndroidIntent_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidIntent * obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QAndroidIntent( const QString & action )
-*/
-void QAndroidIntent_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidIntent * obj = new QAndroidIntent( PQSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QAndroidIntent( const QAndroidJniObject & packageContext, const char * className )
-*/
-void QAndroidIntent_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidIntent * obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1), PCONSTCHAR(2) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QANDROIDINTENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAndroidIntent_new1();
+    /*
+    QAndroidIntent()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidIntent * obj = new QAndroidIntent();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1) )
   {
-    QAndroidIntent_new2();
+    /*
+    QAndroidIntent( const QAndroidJniObject & intent )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidIntent * obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QAndroidIntent_new3();
+    /*
+    QAndroidIntent( const QString & action )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidIntent * obj = new QAndroidIntent( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(2) && ISQANDROIDJNIOBJECT(1) && HB_ISCHAR(2) )
   {
-    QAndroidIntent_new4();
+    /*
+    QAndroidIntent( const QAndroidJniObject & packageContext, const char * className )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidIntent * obj = new QAndroidIntent( *PQANDROIDJNIOBJECT(1), PCONSTCHAR(2) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

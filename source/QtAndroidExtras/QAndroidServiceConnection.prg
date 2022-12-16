@@ -61,37 +61,27 @@ RETURN
 #endif
 #endif
 
-/*
-QAndroidServiceConnection()
-*/
-void QAndroidServiceConnection_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidServiceConnection * obj = new QAndroidServiceConnection();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QAndroidServiceConnection( const QAndroidJniObject & serviceConnection )
-*/
-void QAndroidServiceConnection_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidServiceConnection * obj = new QAndroidServiceConnection( *PQANDROIDJNIOBJECT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QANDROIDSERVICECONNECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAndroidServiceConnection_new1();
+    /*
+    QAndroidServiceConnection()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidServiceConnection * obj = new QAndroidServiceConnection();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1) )
   {
-    QAndroidServiceConnection_new2();
+    /*
+    QAndroidServiceConnection( const QAndroidJniObject & serviceConnection )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidServiceConnection * obj = new QAndroidServiceConnection( *PQANDROIDJNIOBJECT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

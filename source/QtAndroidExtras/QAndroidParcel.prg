@@ -24,8 +24,6 @@ CLASS QAndroidParcel
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD delete
    METHOD writeData
    METHOD writeVariant
@@ -73,37 +71,27 @@ RETURN
 #endif
 #endif
 
-/*
-QAndroidParcel()
-*/
-HB_FUNC_STATIC( QANDROIDPARCEL_NEW1 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidParcel * obj = new QAndroidParcel();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QAndroidParcel( const QAndroidJniObject & parcel )
-*/
-HB_FUNC_STATIC( QANDROIDPARCEL_NEW2 )
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QAndroidParcel * obj = new QAndroidParcel( *PQANDROIDJNIOBJECT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QANDROIDPARCEL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAndroidParcel_new1();
+    /*
+    QAndroidParcel()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidParcel * obj = new QAndroidParcel();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQANDROIDJNIOBJECT(1) )
   {
-    QAndroidParcel_new2();
+    /*
+    QAndroidParcel( const QAndroidJniObject & parcel )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QAndroidParcel * obj = new QAndroidParcel( *PQANDROIDJNIOBJECT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
