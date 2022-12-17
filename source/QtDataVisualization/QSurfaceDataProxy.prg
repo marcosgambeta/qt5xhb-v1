@@ -181,43 +181,33 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_SERIES )
   }
 }
 
-/*
-const QSurfaceDataItem * itemAt( int rowIndex, int columnIndex ) const
-*/
-void QSurfaceDataProxy_itemAt1()
-{
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QSurfaceDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
-    Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
-  }
-}
-
-/*
-const QSurfaceDataItem * itemAt( const QPoint & position ) const
-*/
-void QSurfaceDataProxy_itemAt2()
-{
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QSurfaceDataItem * ptr = obj->itemAt( *PQPOINT(1) );
-    Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
-  }
-}
-
 HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QSurfaceDataProxy_itemAt1();
+    /*
+    const QSurfaceDataItem * itemAt( int rowIndex, int columnIndex ) const
+    */
+    QSurfaceDataProxy * obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      const QSurfaceDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+      Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
+    }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QSurfaceDataProxy_itemAt2();
+    /*
+    const QSurfaceDataItem * itemAt( const QPoint & position ) const
+    */
+    QSurfaceDataProxy * obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      const QSurfaceDataItem * ptr = obj->itemAt( *PQPOINT(1) );
+      Qt5xHb::createReturnClass(ptr, "QSURFACEDATAITEM", false);
+    }
   }
   else
   {
@@ -225,45 +215,35 @@ HB_FUNC_STATIC( QSURFACEDATAPROXY_ITEMAT )
   }
 }
 
-/*
-void setItem( int rowIndex, int columnIndex, const QSurfaceDataItem & item )
-*/
-void QSurfaceDataProxy_setItem1()
-{
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setItem( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setItem( const QPoint & position, const QSurfaceDataItem & item )
-*/
-void QSurfaceDataProxy_setItem2()
-{
-  QSurfaceDataProxy * obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setItem( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QSURFACEDATAPROXY_SETITEM )
 {
   if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSURFACEDATAITEM(3) )
   {
-    QSurfaceDataProxy_setItem1();
+    /*
+    void setItem( int rowIndex, int columnIndex, const QSurfaceDataItem & item )
+    */
+    QSurfaceDataProxy * obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setItem( PINT(1), PINT(2), *PQSURFACEDATAITEM(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQSURFACEDATAITEM(2) )
   {
-    QSurfaceDataProxy_setItem2();
+    /*
+    void setItem( const QPoint & position, const QSurfaceDataItem & item )
+    */
+    QSurfaceDataProxy * obj = (QSurfaceDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setItem( *PQPOINT(1), *PQSURFACEDATAITEM(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

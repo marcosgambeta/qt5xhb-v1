@@ -63,33 +63,23 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QBar3DSeries( QObject * parent = nullptr )
-*/
-void QBar3DSeries_new1()
-{
-  QBar3DSeries * obj = new QBar3DSeries( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QBar3DSeries( QBarDataProxy * dataProxy, QObject * parent = nullptr )
-*/
-void QBar3DSeries_new2()
-{
-  QBar3DSeries * obj = new QBar3DSeries( PQBARDATAPROXY(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QBAR3DSERIES_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QBar3DSeries_new1();
+    /*
+    QBar3DSeries( QObject * parent = nullptr )
+    */
+    QBar3DSeries * obj = new QBar3DSeries( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQBARDATAPROXY(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QBar3DSeries_new2();
+    /*
+    QBar3DSeries( QBarDataProxy * dataProxy, QObject * parent = nullptr )
+    */
+    QBar3DSeries * obj = new QBar3DSeries( PQBARDATAPROXY(1), OPQOBJECT(2,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

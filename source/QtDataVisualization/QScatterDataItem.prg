@@ -69,59 +69,39 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QScatterDataItem()
-*/
-void QScatterDataItem_new1()
-{
-  QScatterDataItem * obj = new QScatterDataItem();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QScatterDataItem( const QVector3D & position )
-*/
-void QScatterDataItem_new2()
-{
-  QScatterDataItem * obj = new QScatterDataItem( *PQVECTOR3D(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QScatterDataItem( const QVector3D & position, const QQuaternion & rotation )
-*/
-void QScatterDataItem_new3()
-{
-  QScatterDataItem * obj = new QScatterDataItem( *PQVECTOR3D(1), *PQQUATERNION(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QScatterDataItem( const QScatterDataItem & other )
-*/
-void QScatterDataItem_new4()
-{
-  QScatterDataItem * obj = new QScatterDataItem( *PQSCATTERDATAITEM(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSCATTERDATAITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QScatterDataItem_new1();
+    /*
+    QScatterDataItem()
+    */
+    QScatterDataItem * obj = new QScatterDataItem();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    QScatterDataItem_new2();
+    /*
+    QScatterDataItem( const QVector3D & position )
+    */
+    QScatterDataItem * obj = new QScatterDataItem( *PQVECTOR3D(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQVECTOR3D(1) && ISQQUATERNION(2) )
   {
-    QScatterDataItem_new3();
+    /*
+    QScatterDataItem( const QVector3D & position, const QQuaternion & rotation )
+    */
+    QScatterDataItem * obj = new QScatterDataItem( *PQVECTOR3D(1), *PQQUATERNION(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSCATTERDATAITEM(1) )
   {
-    QScatterDataItem_new4();
+    /*
+    QScatterDataItem( const QScatterDataItem & other )
+    */
+    QScatterDataItem * obj = new QScatterDataItem( *PQSCATTERDATAITEM(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

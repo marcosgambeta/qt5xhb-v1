@@ -82,33 +82,23 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QCustom3DItem( QObject * parent = nullptr )
-*/
-void QCustom3DItem_new1()
-{
-  QCustom3DItem * obj = new QCustom3DItem( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QCustom3DItem( const QString & meshFile, const QVector3D & position, const QVector3D & scaling, const QQuaternion & rotation, const QImage & texture, QObject * parent = nullptr )
-*/
-void QCustom3DItem_new2()
-{
-  QCustom3DItem * obj = new QCustom3DItem( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QCUSTOM3DITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QCustom3DItem_new1();
+    /*
+    QCustom3DItem( QObject * parent = nullptr )
+    */
+    QCustom3DItem * obj = new QCustom3DItem( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(5,6) && HB_ISCHAR(1) && ISQVECTOR3D(2) && ISQVECTOR3D(3) && ISQQUATERNION(4) && ISQIMAGE(5) && (ISQOBJECT(6)||HB_ISNIL(6)) )
   {
-    QCustom3DItem_new2();
+    /*
+    QCustom3DItem( const QString & meshFile, const QVector3D & position, const QVector3D & scaling, const QQuaternion & rotation, const QImage & texture, QObject * parent = nullptr )
+    */
+    QCustom3DItem * obj = new QCustom3DItem( PQSTRING(1), *PQVECTOR3D(2), *PQVECTOR3D(3), *PQQUATERNION(4), *PQIMAGE(5), OPQOBJECT(6,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

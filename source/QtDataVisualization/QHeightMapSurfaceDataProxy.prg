@@ -71,46 +71,31 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QHeightMapSurfaceDataProxy( QObject * parent = nullptr )
-*/
-void QHeightMapSurfaceDataProxy_new1()
-{
-  QHeightMapSurfaceDataProxy * obj = new QHeightMapSurfaceDataProxy( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QHeightMapSurfaceDataProxy( const QImage & image, QObject * parent = nullptr )
-*/
-void QHeightMapSurfaceDataProxy_new2()
-{
-  QHeightMapSurfaceDataProxy * obj = new QHeightMapSurfaceDataProxy( *PQIMAGE(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QHeightMapSurfaceDataProxy( const QString & filename, QObject * parent = nullptr )
-*/
-void QHeightMapSurfaceDataProxy_new3()
-{
-  QHeightMapSurfaceDataProxy * obj = new QHeightMapSurfaceDataProxy( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QHEIGHTMAPSURFACEDATAPROXY_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QHeightMapSurfaceDataProxy_new1();
+    /*
+    QHeightMapSurfaceDataProxy( QObject * parent = nullptr )
+    */
+    QHeightMapSurfaceDataProxy * obj = new QHeightMapSurfaceDataProxy( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QHeightMapSurfaceDataProxy_new2();
+    /*
+    QHeightMapSurfaceDataProxy( const QImage & image, QObject * parent = nullptr )
+    */
+    QHeightMapSurfaceDataProxy * obj = new QHeightMapSurfaceDataProxy( *PQIMAGE(1), OPQOBJECT(2,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QHeightMapSurfaceDataProxy_new3();
+    /*
+    QHeightMapSurfaceDataProxy( const QString & filename, QObject * parent = nullptr )
+    */
+    QHeightMapSurfaceDataProxy * obj = new QHeightMapSurfaceDataProxy( PQSTRING(1), OPQOBJECT(2,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

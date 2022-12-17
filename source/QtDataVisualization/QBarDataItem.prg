@@ -61,59 +61,39 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QBarDataItem()
-*/
-void QBarDataItem_new1()
-{
-  QBarDataItem * obj = new QBarDataItem();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QBarDataItem( float value )
-*/
-void QBarDataItem_new2()
-{
-  QBarDataItem * obj = new QBarDataItem( PFLOAT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QBarDataItem( float value, float angle )
-*/
-void QBarDataItem_new3()
-{
-  QBarDataItem * obj = new QBarDataItem( PFLOAT(1), PFLOAT(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QBarDataItem( const QBarDataItem & other )
-*/
-void QBarDataItem_new4()
-{
-  QBarDataItem * obj = new QBarDataItem( *PQBARDATAITEM(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QBARDATAITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QBarDataItem_new1();
+    /*
+    QBarDataItem()
+    */
+    QBarDataItem * obj = new QBarDataItem();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QBarDataItem_new2();
+    /*
+    QBarDataItem( float value )
+    */
+    QBarDataItem * obj = new QBarDataItem( PFLOAT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QBarDataItem_new3();
+    /*
+    QBarDataItem( float value, float angle )
+    */
+    QBarDataItem * obj = new QBarDataItem( PFLOAT(1), PFLOAT(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQBARDATAITEM(1) )
   {
-    QBarDataItem_new4();
+    /*
+    QBarDataItem( const QBarDataItem & other )
+    */
+    QBarDataItem * obj = new QBarDataItem( *PQBARDATAITEM(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

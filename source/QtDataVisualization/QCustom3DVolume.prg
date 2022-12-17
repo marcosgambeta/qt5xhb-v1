@@ -108,20 +108,15 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QCustom3DVolume( QObject * parent = nullptr )
-*/
-void QCustom3DVolume_new1()
-{
-  QCustom3DVolume * obj = new QCustom3DVolume( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QCustom3DVolume_new1();
+    /*
+    QCustom3DVolume( QObject * parent = nullptr )
+    */
+    QCustom3DVolume * obj = new QCustom3DVolume( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -981,45 +976,35 @@ HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSLICEINDICES )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setSubTextureData( Qt::Axis axis, int index, const uchar * data )
-*/
-void QCustom3DVolume_setSubTextureData1()
-{
-  QCustom3DVolume * obj = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSubTextureData( (Qt::Axis) hb_parni(1), PINT(2), PCONSTUCHAR(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setSubTextureData( Qt::Axis axis, int index, const QImage & image )
-*/
-void QCustom3DVolume_setSubTextureData2()
-{
-  QCustom3DVolume * obj = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setSubTextureData( (Qt::Axis) hb_parni(1), PINT(2), *PQIMAGE(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QCUSTOM3DVOLUME_SETSUBTEXTUREDATA )
 {
   if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) )
   {
-    QCustom3DVolume_setSubTextureData1();
+    /*
+    void setSubTextureData( Qt::Axis axis, int index, const uchar * data )
+    */
+    QCustom3DVolume * obj = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setSubTextureData( (Qt::Axis) hb_parni(1), PINT(2), PCONSTUCHAR(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQIMAGE(3) )
   {
-    QCustom3DVolume_setSubTextureData2();
+    /*
+    void setSubTextureData( Qt::Axis axis, int index, const QImage & image )
+    */
+    QCustom3DVolume * obj = (QCustom3DVolume *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setSubTextureData( (Qt::Axis) hb_parni(1), PINT(2), *PQIMAGE(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

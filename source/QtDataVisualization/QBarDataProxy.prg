@@ -268,43 +268,33 @@ HB_FUNC_STATIC( QBARDATAPROXY_SERIES )
   }
 }
 
-/*
-const QBarDataItem * itemAt( int rowIndex, int columnIndex ) const
-*/
-void QBarDataProxy_itemAt1()
-{
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QBarDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
-    Qt5xHb::createReturnClass(ptr, "QBARDATAITEM", false);
-  }
-}
-
-/*
-const QBarDataItem * itemAt( const QPoint & position ) const
-*/
-void QBarDataProxy_itemAt2()
-{
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    const QBarDataItem * ptr = obj->itemAt( *PQPOINT(1) );
-    Qt5xHb::createReturnClass(ptr, "QBARDATAITEM", false);
-  }
-}
-
 HB_FUNC_STATIC( QBARDATAPROXY_ITEMAT )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QBarDataProxy_itemAt1();
+    /*
+    const QBarDataItem * itemAt( int rowIndex, int columnIndex ) const
+    */
+    QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      const QBarDataItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+      Qt5xHb::createReturnClass(ptr, "QBARDATAITEM", false);
+    }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
-    QBarDataProxy_itemAt2();
+    /*
+    const QBarDataItem * itemAt( const QPoint & position ) const
+    */
+    QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      const QBarDataItem * ptr = obj->itemAt( *PQPOINT(1) );
+      Qt5xHb::createReturnClass(ptr, "QBARDATAITEM", false);
+    }
   }
   else
   {
@@ -324,45 +314,35 @@ HB_FUNC_STATIC( QBARDATAPROXY_SETROWS )
 {
 }
 
-/*
-void setItem( int rowIndex, int columnIndex, const QBarDataItem & item )
-*/
-void QBarDataProxy_setItem1()
-{
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setItem( PINT(1), PINT(2), *PQBARDATAITEM(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setItem( const QPoint & position, const QBarDataItem & item )
-*/
-void QBarDataProxy_setItem2()
-{
-  QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setItem( *PQPOINT(1), *PQBARDATAITEM(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QBARDATAPROXY_SETITEM )
 {
   if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQBARDATAITEM(3) )
   {
-    QBarDataProxy_setItem1();
+    /*
+    void setItem( int rowIndex, int columnIndex, const QBarDataItem & item )
+    */
+    QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setItem( PINT(1), PINT(2), *PQBARDATAITEM(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQBARDATAITEM(2) )
   {
-    QBarDataProxy_setItem2();
+    /*
+    void setItem( const QPoint & position, const QBarDataItem & item )
+    */
+    QBarDataProxy * obj = (QBarDataProxy *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setItem( *PQPOINT(1), *PQBARDATAITEM(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

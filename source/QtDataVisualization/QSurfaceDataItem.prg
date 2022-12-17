@@ -66,46 +66,31 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QSurfaceDataItem()
-*/
-void QSurfaceDataItem_new1()
-{
-  QSurfaceDataItem * obj = new QSurfaceDataItem();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSurfaceDataItem( const QVector3D & position )
-*/
-void QSurfaceDataItem_new2()
-{
-  QSurfaceDataItem * obj = new QSurfaceDataItem( *PQVECTOR3D(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSurfaceDataItem( const QSurfaceDataItem & other )
-*/
-void QSurfaceDataItem_new3()
-{
-  QSurfaceDataItem * obj = new QSurfaceDataItem( *PQSURFACEDATAITEM(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSURFACEDATAITEM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSurfaceDataItem_new1();
+    /*
+    QSurfaceDataItem()
+    */
+    QSurfaceDataItem * obj = new QSurfaceDataItem();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQVECTOR3D(1) )
   {
-    QSurfaceDataItem_new2();
+    /*
+    QSurfaceDataItem( const QVector3D & position )
+    */
+    QSurfaceDataItem * obj = new QSurfaceDataItem( *PQVECTOR3D(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSURFACEDATAITEM(1) )
   {
-    QSurfaceDataItem_new3();
+    /*
+    QSurfaceDataItem( const QSurfaceDataItem & other )
+    */
+    QSurfaceDataItem * obj = new QSurfaceDataItem( *PQSURFACEDATAITEM(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

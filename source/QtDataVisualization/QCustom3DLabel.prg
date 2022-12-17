@@ -74,33 +74,23 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-QCustom3DLabel( QObject * parent = nullptr )
-*/
-void QCustom3DLabel_new1()
-{
-  QCustom3DLabel * obj = new QCustom3DLabel( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QCustom3DLabel( const QString & text, const QFont & font, const QVector3D & position, const QVector3D & scaling, const QQuaternion & rotation, QObject * parent = nullptr )
-*/
-void QCustom3DLabel_new2()
-{
-  QCustom3DLabel * obj = new QCustom3DLabel( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QCUSTOM3DLABEL_NEW  )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QCustom3DLabel_new1();
+    /*
+    QCustom3DLabel( QObject * parent = nullptr )
+    */
+    QCustom3DLabel * obj = new QCustom3DLabel( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(5,6) && HB_ISCHAR(1) && ISQFONT(2) && ISQVECTOR3D(3) && ISQVECTOR3D(4) && ISQQUATERNION(5) && (ISQOBJECT(6)||HB_ISNIL(6)) )
   {
-    QCustom3DLabel_new2();
+    /*
+    QCustom3DLabel( const QString & text, const QFont & font, const QVector3D & position, const QVector3D & scaling, const QQuaternion & rotation, QObject * parent = nullptr )
+    */
+    QCustom3DLabel * obj = new QCustom3DLabel( PQSTRING(1), *PQFONT(2), *PQVECTOR3D(3), *PQVECTOR3D(4), *PQQUATERNION(5), OPQOBJECT(6,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

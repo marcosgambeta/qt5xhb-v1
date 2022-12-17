@@ -120,33 +120,23 @@ RETURN
 
 using namespace QtDataVisualization;
 
-/*
-Q3DTheme( QObject * parent = nullptr )
-*/
-void Q3DTheme_new1()
-{
-  Q3DTheme * obj = new Q3DTheme( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-Q3DTheme( Q3DTheme::Theme themeType, QObject * parent = nullptr )
-*/
-void Q3DTheme_new2()
-{
-  Q3DTheme * obj = new Q3DTheme( (Q3DTheme::Theme) hb_parni(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( Q3DTHEME_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    Q3DTheme_new1();
+    /*
+    Q3DTheme( QObject * parent = nullptr )
+    */
+    Q3DTheme * obj = new Q3DTheme( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    Q3DTheme_new2();
+    /*
+    Q3DTheme( Q3DTheme::Theme themeType, QObject * parent = nullptr )
+    */
+    Q3DTheme * obj = new Q3DTheme( (Q3DTheme::Theme) hb_parni(1), OPQOBJECT(2,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
