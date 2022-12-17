@@ -64,33 +64,23 @@ RETURN
 
 #include <QtDeclarative/QDeclarativeEngine>
 
-/*
-QDeclarativeContext( QDeclarativeEngine * engine, QObject * parent = 0 )
-*/
-void QDeclarativeContext_new1()
-{
-  QDeclarativeContext * obj = new QDeclarativeContext( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDeclarativeContext( QDeclarativeContext * parentContext, QObject * parent = 0 )
-*/
-void QDeclarativeContext_new2()
-{
-  QDeclarativeContext * obj = new QDeclarativeContext( PQDECLARATIVECONTEXT(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {
   if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QDeclarativeContext_new1();
+    /*
+    QDeclarativeContext( QDeclarativeEngine * engine, QObject * parent = 0 )
+    */
+    QDeclarativeContext * obj = new QDeclarativeContext( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQDECLARATIVECONTEXT(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QDeclarativeContext_new2();
+    /*
+    QDeclarativeContext( QDeclarativeContext * parentContext, QObject * parent = 0 )
+    */
+    QDeclarativeContext * obj = new QDeclarativeContext( PQDECLARATIVECONTEXT(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -343,45 +333,35 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setContextProperty( const QString & name, QObject * value )
-*/
-void QDeclarativeContext_setContextProperty1()
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setContextProperty( PQSTRING(1), PQOBJECT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setContextProperty( const QString & name, const QVariant & value )
-*/
-void QDeclarativeContext_setContextProperty2()
-{
-  QDeclarativeContext * obj = (QDeclarativeContext *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setContextProperty( PQSTRING(1), *PQVARIANT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
 {
   if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
-    QDeclarativeContext_setContextProperty1();
+    /*
+    void setContextProperty( const QString & name, QObject * value )
+    */
+    QDeclarativeContext * obj = (QDeclarativeContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setContextProperty( PQSTRING(1), PQOBJECT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
   {
-    QDeclarativeContext_setContextProperty2();
+    /*
+    void setContextProperty( const QString & name, const QVariant & value )
+    */
+    QDeclarativeContext * obj = (QDeclarativeContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setContextProperty( PQSTRING(1), *PQVARIANT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

@@ -65,33 +65,23 @@ RETURN
 #include <QtDeclarative/QDeclarativeListReference>
 #endif
 
-/*
-QDeclarativeListReference()
-*/
-void QDeclarativeListReference_new1()
-{
-  QDeclarativeListReference * obj = new QDeclarativeListReference();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
-*/
-void QDeclarativeListReference_new2()
-{
-  QDeclarativeListReference * obj = new QDeclarativeListReference( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDeclarativeListReference_new1();
+    /*
+    QDeclarativeListReference()
+    */
+    QDeclarativeListReference * obj = new QDeclarativeListReference();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQDECLARATIVEENGINE(3)||HB_ISNIL(3)) )
   {
-    QDeclarativeListReference_new2();
+    /*
+    QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
+    */
+    QDeclarativeListReference * obj = new QDeclarativeListReference( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

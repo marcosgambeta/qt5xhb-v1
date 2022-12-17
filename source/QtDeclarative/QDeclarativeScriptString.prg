@@ -64,33 +64,23 @@ RETURN
 
 #include <QtDeclarative/QDeclarativeContext>
 
-/*
-QDeclarativeScriptString()
-*/
-void QDeclarativeScriptString_new1()
-{
-  QDeclarativeScriptString * obj = new QDeclarativeScriptString();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDeclarativeScriptString( const QDeclarativeScriptString & other )
-*/
-void QDeclarativeScriptString_new2()
-{
-  QDeclarativeScriptString * obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDeclarativeScriptString_new1();
+    /*
+    QDeclarativeScriptString()
+    */
+    QDeclarativeScriptString * obj = new QDeclarativeScriptString();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVESCRIPTSTRING(1) )
   {
-    QDeclarativeScriptString_new2();
+    /*
+    QDeclarativeScriptString( const QDeclarativeScriptString & other )
+    */
+    QDeclarativeScriptString * obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -65,33 +65,23 @@ RETURN
 #include <QtDeclarative/QDeclarativeError>
 #endif
 
-/*
-QDeclarativeError()
-*/
-void QDeclarativeError_new1()
-{
-  QDeclarativeError * obj = new QDeclarativeError();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDeclarativeError( const QDeclarativeError & other )
-*/
-void QDeclarativeError_new2()
-{
-  QDeclarativeError * obj = new QDeclarativeError( *PQDECLARATIVEERROR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDeclarativeError_new1();
+    /*
+    QDeclarativeError()
+    */
+    QDeclarativeError * obj = new QDeclarativeError();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDECLARATIVEERROR(1) )
   {
-    QDeclarativeError_new2();
+    /*
+    QDeclarativeError( const QDeclarativeError & other )
+    */
+    QDeclarativeError * obj = new QDeclarativeError( *PQDECLARATIVEERROR(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
