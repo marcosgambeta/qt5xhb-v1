@@ -67,106 +67,71 @@ RETURN
 
 #include <QtMultimedia/QMediaPlaylist>
 
-/*
-QMediaContent()
-*/
-void QMediaContent_new1()
-{
-  QMediaContent * obj = new QMediaContent();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaContent( const QUrl & contentUrl )
-*/
-void QMediaContent_new2()
-{
-  QMediaContent * obj = new QMediaContent( *PQURL(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaContent( const QNetworkRequest & contentRequest )
-*/
-void QMediaContent_new3()
-{
-  QMediaContent * obj = new QMediaContent( *PQNETWORKREQUEST(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaContent( const QMediaResource & contentResource )
-*/
-void QMediaContent_new4()
-{
-  QMediaContent * obj = new QMediaContent( *PQMEDIARESOURCE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaContent( const QMediaResourceList & resources )
-*/
-void QMediaContent_new5()
-{
-  QMediaResourceList par1;
-  PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-  int i1;
-  int nLen1 = hb_arrayLen(aList1);
-  for (i1=0;i1<nLen1;i1++)
-  {
-    par1 << *(QMediaResource *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-  }
-  QMediaContent * obj = new QMediaContent( par1 );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaContent( const QMediaContent & other )
-*/
-void QMediaContent_new6()
-{
-  QMediaContent * obj = new QMediaContent( *PQMEDIACONTENT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaContent( QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false )
-*/
-void QMediaContent_new7()
-{
-  QMediaContent * obj = new QMediaContent( PQMEDIAPLAYLIST(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2), OPBOOL(3,false) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QMEDIACONTENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMediaContent_new1();
+    /*
+    QMediaContent()
+    */
+    QMediaContent * obj = new QMediaContent();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
   {
-    QMediaContent_new2();
+    /*
+    QMediaContent( const QUrl & contentUrl )
+    */
+    QMediaContent * obj = new QMediaContent( *PQURL(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQNETWORKREQUEST(1) )
   {
-    QMediaContent_new3();
+    /*
+    QMediaContent( const QNetworkRequest & contentRequest )
+    */
+    QMediaContent * obj = new QMediaContent( *PQNETWORKREQUEST(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMEDIARESOURCE(1) )
   {
-    QMediaContent_new4();
+    /*
+    QMediaContent( const QMediaResource & contentResource )
+    */
+    QMediaContent * obj = new QMediaContent( *PQMEDIARESOURCE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QMediaContent_new5();
+    /*
+    QMediaContent( const QMediaResourceList & resources )
+    */
+    QMediaResourceList par1;
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    int i1;
+    int nLen1 = hb_arrayLen(aList1);
+    for (i1=0;i1<nLen1;i1++)
+    {
+      par1 << *(QMediaResource *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    }
+    QMediaContent * obj = new QMediaContent( par1 );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMEDIACONTENT(1) )
   {
-    QMediaContent_new6();
+    /*
+    QMediaContent( const QMediaContent & other )
+    */
+    QMediaContent * obj = new QMediaContent( *PQMEDIACONTENT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,3) && ISQMEDIAPLAYLIST(1) && (ISQURL(2)||HB_ISNIL(2)) && ( HB_ISLOG(3)||HB_ISNIL(3)) )
   {
-    QMediaContent_new7();
+    /*
+    QMediaContent( QMediaPlaylist * playlist, const QUrl & contentUrl = QUrl(), bool takeOwnership = false )
+    */
+    QMediaContent * obj = new QMediaContent( PQMEDIAPLAYLIST(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2), OPBOOL(3,false) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

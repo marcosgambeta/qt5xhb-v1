@@ -72,37 +72,27 @@ RETURN
 #endif
 #endif
 
-/*
-QCameraViewfinderSettings()
-*/
-void QCameraViewfinderSettings_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = new QCameraViewfinderSettings();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QCameraViewfinderSettings( const QCameraViewfinderSettings & other )
-*/
-void QCameraViewfinderSettings_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = new QCameraViewfinderSettings( *PQCAMERAVIEWFINDERSETTINGS(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QCameraViewfinderSettings_new1();
+    /*
+    QCameraViewfinderSettings()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    QCameraViewfinderSettings * obj = new QCameraViewfinderSettings();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQCAMERAVIEWFINDERSETTINGS(1) )
   {
-    QCameraViewfinderSettings_new2();
+    /*
+    QCameraViewfinderSettings( const QCameraViewfinderSettings & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    QCameraViewfinderSettings * obj = new QCameraViewfinderSettings( *PQCAMERAVIEWFINDERSETTINGS(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
@@ -213,49 +203,39 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_RESOLUTION )
 #endif
 }
 
-/*
-void setResolution( const QSize & )
-*/
-void QCameraViewfinderSettings_setResolution1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setResolution( *PQSIZE(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void setResolution( int width, int height )
-*/
-void QCameraViewfinderSettings_setResolution2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setResolution( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETRESOLUTION )
 {
   if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    QCameraViewfinderSettings_setResolution1();
+    /*
+    void setResolution( const QSize & )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setResolution( *PQSIZE(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QCameraViewfinderSettings_setResolution2();
+    /*
+    void setResolution( int width, int height )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setResolution( PINT(1), PINT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {
@@ -452,49 +432,39 @@ HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_PIXELASPECTRATIO )
 #endif
 }
 
-/*
-void setPixelAspectRatio( const QSize & ratio )
-*/
-void QCameraViewfinderSettings_setPixelAspectRatio1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPixelAspectRatio( *PQSIZE(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void setPixelAspectRatio( int horizontal, int vertical )
-*/
-void QCameraViewfinderSettings_setPixelAspectRatio2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
-  QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setPixelAspectRatio( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QCAMERAVIEWFINDERSETTINGS_SETPIXELASPECTRATIO )
 {
   if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    QCameraViewfinderSettings_setPixelAspectRatio1();
+    /*
+    void setPixelAspectRatio( const QSize & ratio )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setPixelAspectRatio( *PQSIZE(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QCameraViewfinderSettings_setPixelAspectRatio2();
+    /*
+    void setPixelAspectRatio( int horizontal, int vertical )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,5,0))
+    QCameraViewfinderSettings * obj = (QCameraViewfinderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setPixelAspectRatio( PINT(1), PINT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {

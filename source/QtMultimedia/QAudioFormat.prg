@@ -75,33 +75,23 @@ RETURN
 #include <QtMultimedia/QAudioFormat>
 #endif
 
-/*
-QAudioFormat()
-*/
-void QAudioFormat_new1()
-{
-  QAudioFormat * obj = new QAudioFormat();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QAudioFormat( const QAudioFormat & other )
-*/
-void QAudioFormat_new2()
-{
-  QAudioFormat * obj = new QAudioFormat( *PQAUDIOFORMAT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAudioFormat_new1();
+    /*
+    QAudioFormat()
+    */
+    QAudioFormat * obj = new QAudioFormat();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQAUDIOFORMAT(1) )
   {
-    QAudioFormat_new2();
+    /*
+    QAudioFormat( const QAudioFormat & other )
+    */
+    QAudioFormat * obj = new QAudioFormat( *PQAUDIOFORMAT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

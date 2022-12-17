@@ -64,59 +64,39 @@ RETURN
 #include <QtMultimedia/QAudioBuffer>
 #endif
 
-/*
-QAudioBuffer()
-*/
-void QAudioBuffer_new1()
-{
-  QAudioBuffer * obj = new QAudioBuffer();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QAudioBuffer( const QAudioBuffer & other )
-*/
-void QAudioBuffer_new2()
-{
-  QAudioBuffer * obj = new QAudioBuffer( *PQAUDIOBUFFER(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QAudioBuffer( const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1 )
-*/
-void QAudioBuffer_new3()
-{
-  QAudioBuffer * obj = new QAudioBuffer( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QAudioBuffer( int numFrames, const QAudioFormat & format, qint64 startTime = -1 )
-*/
-void QAudioBuffer_new4()
-{
-  QAudioBuffer * obj = new QAudioBuffer( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QAUDIOBUFFER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAudioBuffer_new1();
+    /*
+    QAudioBuffer()
+    */
+    QAudioBuffer * obj = new QAudioBuffer();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQAUDIOBUFFER(1) )
   {
-    QAudioBuffer_new2();
+    /*
+    QAudioBuffer( const QAudioBuffer & other )
+    */
+    QAudioBuffer * obj = new QAudioBuffer( *PQAUDIOBUFFER(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISQAUDIOFORMAT(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QAudioBuffer_new3();
+    /*
+    QAudioBuffer( const QByteArray & data, const QAudioFormat & format, qint64 startTime = -1 )
+    */
+    QAudioBuffer * obj = new QAudioBuffer( *PQBYTEARRAY(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,3) && HB_ISNUM(1) && ISQAUDIOFORMAT(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QAudioBuffer_new4();
+    /*
+    QAudioBuffer( int numFrames, const QAudioFormat & format, qint64 startTime = -1 )
+    */
+    QAudioBuffer * obj = new QAudioBuffer( PINT(1), *PQAUDIOFORMAT(2), OPQINT64(3,-1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

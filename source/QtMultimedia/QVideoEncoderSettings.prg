@@ -72,33 +72,23 @@ RETURN
 #include <QtMultimedia/QVideoEncoderSettings>
 #endif
 
-/*
-QVideoEncoderSettings()
-*/
-void QVideoEncoderSettings_new1()
-{
-  QVideoEncoderSettings * obj = new QVideoEncoderSettings();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVideoEncoderSettings( const QVideoEncoderSettings & other )
-*/
-void QVideoEncoderSettings_new2()
-{
-  QVideoEncoderSettings * obj = new QVideoEncoderSettings( *PQVIDEOENCODERSETTINGS(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QVideoEncoderSettings_new1();
+    /*
+    QVideoEncoderSettings()
+    */
+    QVideoEncoderSettings * obj = new QVideoEncoderSettings();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQVIDEOENCODERSETTINGS(1) )
   {
-    QVideoEncoderSettings_new2();
+    /*
+    QVideoEncoderSettings( const QVideoEncoderSettings & other )
+    */
+    QVideoEncoderSettings * obj = new QVideoEncoderSettings( *PQVIDEOENCODERSETTINGS(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -476,45 +466,35 @@ HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETQUALITY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setResolution( const QSize & resolution )
-*/
-void QVideoEncoderSettings_setResolution1()
-{
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setResolution( *PQSIZE(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setResolution( int width, int height )
-*/
-void QVideoEncoderSettings_setResolution2()
-{
-  QVideoEncoderSettings * obj = (QVideoEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setResolution( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QVIDEOENCODERSETTINGS_SETRESOLUTION )
 {
   if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    QVideoEncoderSettings_setResolution1();
+    /*
+    void setResolution( const QSize & resolution )
+    */
+    QVideoEncoderSettings * obj = (QVideoEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setResolution( *PQSIZE(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QVideoEncoderSettings_setResolution2();
+    /*
+    void setResolution( int width, int height )
+    */
+    QVideoEncoderSettings * obj = (QVideoEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setResolution( PINT(1), PINT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

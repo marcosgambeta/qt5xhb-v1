@@ -765,64 +765,49 @@ HB_FUNC_STATIC( QMEDIAPLAYER_MEDIASTREAM )
   }
 }
 
-/*
-void setVideoOutput( QVideoWidget * output )
-*/
-void QMediaPlayer_setVideoOutput1()
-{
-  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setVideoOutput( PQVIDEOWIDGET(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setVideoOutput( QGraphicsVideoItem * output )
-*/
-void QMediaPlayer_setVideoOutput2()
-{
-  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setVideoOutput( PQGRAPHICSVIDEOITEM(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setVideoOutput( QAbstractVideoSurface * surface )
-*/
-void QMediaPlayer_setVideoOutput3()
-{
-  QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setVideoOutput( PQABSTRACTVIDEOSURFACE(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QMEDIAPLAYER_SETVIDEOOUTPUT )
 {
   if( ISNUMPAR(1) && ISQVIDEOWIDGET(1) )
   {
-    QMediaPlayer_setVideoOutput1();
+    /*
+    void setVideoOutput( QVideoWidget * output )
+    */
+    QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setVideoOutput( PQVIDEOWIDGET(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQGRAPHICSVIDEOITEM(1) )
   {
-    QMediaPlayer_setVideoOutput2();
+    /*
+    void setVideoOutput( QGraphicsVideoItem * output )
+    */
+    QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setVideoOutput( PQGRAPHICSVIDEOITEM(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQABSTRACTVIDEOSURFACE(1) )
   {
-    QMediaPlayer_setVideoOutput3();
+    /*
+    void setVideoOutput( QAbstractVideoSurface * surface )
+    */
+    QMediaPlayer * obj = (QMediaPlayer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setVideoOutput( PQABSTRACTVIDEOSURFACE(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

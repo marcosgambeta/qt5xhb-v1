@@ -115,41 +115,31 @@ HB_FUNC_STATIC( QAUDIOPROBE_ISACTIVE )
   }
 }
 
-/*
-bool setSource( QMediaObject * source )
-*/
-void QAudioProbe_setSource1()
-{
-  QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
-  }
-}
-
-/*
-bool setSource( QMediaRecorder * source )
-*/
-void QAudioProbe_setSource2()
-{
-  QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QAUDIOPROBE_SETSOURCE )
 {
   if( ISNUMPAR(1) && ISQMEDIAOBJECT(1) )
   {
-    QAudioProbe_setSource1();
+    /*
+    bool setSource( QMediaObject * source )
+    */
+    QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && ISQMEDIARECORDER(1) )
   {
-    QAudioProbe_setSource2();
+    /*
+    bool setSource( QMediaRecorder * source )
+    */
+    QAudioProbe * obj = (QAudioProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
+    }
   }
   else
   {

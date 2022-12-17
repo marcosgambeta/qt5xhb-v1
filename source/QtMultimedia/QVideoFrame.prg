@@ -85,72 +85,47 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QVideoFrame()
-*/
-void QVideoFrame_new1()
-{
-  QVideoFrame * obj = new QVideoFrame();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVideoFrame( QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format )
-*/
-void QVideoFrame_new2()
-{
-  QVideoFrame * obj = new QVideoFrame( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVideoFrame( int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format )
-*/
-void QVideoFrame_new3()
-{
-  QVideoFrame * obj = new QVideoFrame( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVideoFrame( const QImage & image )
-*/
-void QVideoFrame_new4()
-{
-  QVideoFrame * obj = new QVideoFrame( *PQIMAGE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QVideoFrame( const QVideoFrame & other )
-*/
-void QVideoFrame_new5()
-{
-  QVideoFrame * obj = new QVideoFrame( *PQVIDEOFRAME(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QVideoFrame_new1();
+    /*
+    QVideoFrame()
+    */
+    QVideoFrame * obj = new QVideoFrame();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(3) && ISQABSTRACTVIDEOBUFFER(1) && ISQSIZE(2) && HB_ISNUM(3)  )
   {
-    QVideoFrame_new2();
+    /*
+    QVideoFrame( QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format )
+    */
+    QVideoFrame * obj = new QVideoFrame( PQABSTRACTVIDEOBUFFER(1), *PQSIZE(2), (QVideoFrame::PixelFormat) hb_parni(3) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && ISQSIZE(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QVideoFrame_new3();
+    /*
+    QVideoFrame( int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format )
+    */
+    QVideoFrame * obj = new QVideoFrame( PINT(1), *PQSIZE(2), PINT(3), (QVideoFrame::PixelFormat) hb_parni(4) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
   {
-    QVideoFrame_new4();
+    /*
+    QVideoFrame( const QImage & image )
+    */
+    QVideoFrame * obj = new QVideoFrame( *PQIMAGE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQVIDEOFRAME(1) )
   {
-    QVideoFrame_new5();
+    /*
+    QVideoFrame( const QVideoFrame & other )
+    */
+    QVideoFrame * obj = new QVideoFrame( *PQVIDEOFRAME(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -178,41 +153,31 @@ HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-int bytesPerLine() const
-*/
-void QVideoFrame_bytesPerLine1()
-{
-  QVideoFrame * obj = (QVideoFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->bytesPerLine() );
-  }
-}
-
-/*
-int bytesPerLine( int plane ) const
-*/
-void QVideoFrame_bytesPerLine2()
-{
-  QVideoFrame * obj = (QVideoFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->bytesPerLine( PINT(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QVIDEOFRAME_BYTESPERLINE )
 {
   if( ISNUMPAR(0) )
   {
-    QVideoFrame_bytesPerLine1();
+    /*
+    int bytesPerLine() const
+    */
+    QVideoFrame * obj = (QVideoFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RINT( obj->bytesPerLine() );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QVideoFrame_bytesPerLine2();
+    /*
+    int bytesPerLine( int plane ) const
+    */
+    QVideoFrame * obj = (QVideoFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RINT( obj->bytesPerLine( PINT(1) ) );
+    }
   }
   else
   {

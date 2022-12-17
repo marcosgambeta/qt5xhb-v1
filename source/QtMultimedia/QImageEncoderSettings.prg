@@ -66,33 +66,23 @@ RETURN
 #include <QtMultimedia/QImageEncoderSettings>
 #endif
 
-/*
-QImageEncoderSettings()
-*/
-void QImageEncoderSettings_new1()
-{
-  QImageEncoderSettings * obj = new QImageEncoderSettings();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QImageEncoderSettings( const QImageEncoderSettings & other )
-*/
-void QImageEncoderSettings_new2()
-{
-  QImageEncoderSettings * obj = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QImageEncoderSettings_new1();
+    /*
+    QImageEncoderSettings()
+    */
+    QImageEncoderSettings * obj = new QImageEncoderSettings();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQIMAGEENCODERSETTINGS(1) )
   {
-    QImageEncoderSettings_new2();
+    /*
+    QImageEncoderSettings( const QImageEncoderSettings & other )
+    */
+    QImageEncoderSettings * obj = new QImageEncoderSettings( *PQIMAGEENCODERSETTINGS(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -219,45 +209,35 @@ HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_RESOLUTION )
   }
 }
 
-/*
-void setResolution( const QSize & )
-*/
-void QImageEncoderSettings_setResolution1()
-{
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setResolution( *PQSIZE(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setResolution( int width, int height )
-*/
-void QImageEncoderSettings_setResolution2()
-{
-  QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setResolution( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QIMAGEENCODERSETTINGS_SETRESOLUTION )
 {
   if( ISNUMPAR(1) && ISQSIZE(1) )
   {
-    QImageEncoderSettings_setResolution1();
+    /*
+    void setResolution( const QSize & )
+    */
+    QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setResolution( *PQSIZE(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QImageEncoderSettings_setResolution2();
+    /*
+    void setResolution( int width, int height )
+    */
+    QImageEncoderSettings * obj = (QImageEncoderSettings *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setResolution( PINT(1), PINT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

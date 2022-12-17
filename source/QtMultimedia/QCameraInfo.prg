@@ -66,52 +66,37 @@ RETURN
 #endif
 #endif
 
-/*
-QCameraInfo( const QByteArray & name = QByteArray() )
-*/
-void QCameraInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = new QCameraInfo( HB_ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QCameraInfo( const QCamera & camera )
-*/
-void QCameraInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = new QCameraInfo( *PQCAMERA(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QCameraInfo( const QCameraInfo & other )
-*/
-void QCameraInfo_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QCameraInfo * obj = new QCameraInfo( *PQCAMERAINFO(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QCAMERAINFO_NEW )
 {
   if( ISBETWEEN(0,1) && ISQBYTEARRAY(1) )
   {
-    QCameraInfo_new1();
+    /*
+    QCameraInfo( const QByteArray & name = QByteArray() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QCameraInfo * obj = new QCameraInfo( HB_ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQCAMERA(1) )
   {
-    QCameraInfo_new2();
+    /*
+    QCameraInfo( const QCamera & camera )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QCameraInfo * obj = new QCameraInfo( *PQCAMERA(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQCAMERAINFO(1) )
   {
-    QCameraInfo_new3();
+    /*
+    QCameraInfo( const QCameraInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QCameraInfo * obj = new QCameraInfo( *PQCAMERAINFO(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

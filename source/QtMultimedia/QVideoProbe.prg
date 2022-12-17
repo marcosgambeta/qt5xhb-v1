@@ -115,41 +115,31 @@ HB_FUNC_STATIC( QVIDEOPROBE_ISACTIVE )
   }
 }
 
-/*
-bool setSource( QMediaObject * source )
-*/
-void QVideoProbe_setSource1()
-{
-  QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
-  }
-}
-
-/*
-bool setSource( QMediaRecorder * source )
-*/
-void QVideoProbe_setSource2()
-{
-  QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QVIDEOPROBE_SETSOURCE )
 {
   if( ISNUMPAR(1) && ISQMEDIAOBJECT(1) )
   {
-    QVideoProbe_setSource1();
+    /*
+    bool setSource( QMediaObject * source )
+    */
+    QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->setSource( PQMEDIAOBJECT(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && ISQMEDIARECORDER(1) )
   {
-    QVideoProbe_setSource2();
+    /*
+    bool setSource( QMediaRecorder * source )
+    */
+    QVideoProbe * obj = (QVideoProbe *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->setSource( PQMEDIARECORDER(1) ) );
+    }
   }
   else
   {

@@ -61,46 +61,31 @@ RETURN
 #include <QtMultimedia/QMediaTimeInterval>
 #endif
 
-/*
-QMediaTimeInterval()
-*/
-void QMediaTimeInterval_new1()
-{
-  QMediaTimeInterval * obj = new QMediaTimeInterval();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaTimeInterval( qint64 start, qint64 end )
-*/
-void QMediaTimeInterval_new2()
-{
-  QMediaTimeInterval * obj = new QMediaTimeInterval( PQINT64(1), PQINT64(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaTimeInterval( const QMediaTimeInterval & other )
-*/
-void QMediaTimeInterval_new3()
-{
-  QMediaTimeInterval * obj = new QMediaTimeInterval( *PQMEDIATIMEINTERVAL(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QMEDIATIMEINTERVAL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMediaTimeInterval_new1();
+    /*
+    QMediaTimeInterval()
+    */
+    QMediaTimeInterval * obj = new QMediaTimeInterval();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QMediaTimeInterval_new2();
+    /*
+    QMediaTimeInterval( qint64 start, qint64 end )
+    */
+    QMediaTimeInterval * obj = new QMediaTimeInterval( PQINT64(1), PQINT64(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1) )
   {
-    QMediaTimeInterval_new3();
+    /*
+    QMediaTimeInterval( const QMediaTimeInterval & other )
+    */
+    QMediaTimeInterval * obj = new QMediaTimeInterval( *PQMEDIATIMEINTERVAL(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

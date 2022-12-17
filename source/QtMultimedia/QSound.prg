@@ -241,41 +241,29 @@ HB_FUNC_STATIC( QSOUND_STOP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void play()
-*/
-void QSound_play1()
-{
-  QSound * obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->play();
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-static void play( const QString & filename )
-*/
-void QSound_play2()
-{
-
-  QSound::play( PQSTRING(1) );
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QSOUND_PLAY )
 {
   if( ISNUMPAR(0) )
   {
-    QSound_play1();
+    /*
+    void play()
+    */
+    QSound * obj = (QSound *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->play();
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QSound_play2();
+    /*
+    static void play( const QString & filename )
+    */
+    QSound::play( PQSTRING(1) );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

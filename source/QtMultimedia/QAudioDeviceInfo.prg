@@ -70,33 +70,23 @@ RETURN
 #include <QtMultimedia/QAudioDeviceInfo>
 #endif
 
-/*
-QAudioDeviceInfo()
-*/
-void QAudioDeviceInfo_new1()
-{
-  QAudioDeviceInfo * obj = new QAudioDeviceInfo();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QAudioDeviceInfo( const QAudioDeviceInfo & other )
-*/
-void QAudioDeviceInfo_new2()
-{
-  QAudioDeviceInfo * obj = new QAudioDeviceInfo( *PQAUDIODEVICEINFO(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAudioDeviceInfo_new1();
+    /*
+    QAudioDeviceInfo()
+    */
+    QAudioDeviceInfo * obj = new QAudioDeviceInfo();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQAUDIODEVICEINFO(1) )
   {
-    QAudioDeviceInfo_new2();
+    /*
+    QAudioDeviceInfo( const QAudioDeviceInfo & other )
+    */
+    QAudioDeviceInfo * obj = new QAudioDeviceInfo( *PQAUDIODEVICEINFO(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

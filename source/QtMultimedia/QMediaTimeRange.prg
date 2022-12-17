@@ -69,59 +69,39 @@ RETURN
 
 #include <QtCore/QList>
 
-/*
-QMediaTimeRange()
-*/
-void QMediaTimeRange_new1()
-{
-  QMediaTimeRange * obj = new QMediaTimeRange();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaTimeRange( qint64 start, qint64 end )
-*/
-void QMediaTimeRange_new2()
-{
-  QMediaTimeRange * obj = new QMediaTimeRange( PQINT64(1), PQINT64(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaTimeRange( const QMediaTimeInterval & interval )
-*/
-void QMediaTimeRange_new3()
-{
-  QMediaTimeRange * obj = new QMediaTimeRange( *PQMEDIATIMEINTERVAL(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QMediaTimeRange( const QMediaTimeRange & range )
-*/
-void QMediaTimeRange_new4()
-{
-  QMediaTimeRange * obj = new QMediaTimeRange( *PQMEDIATIMERANGE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QMEDIATIMERANGE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QMediaTimeRange_new1();
+    /*
+    QMediaTimeRange()
+    */
+    QMediaTimeRange * obj = new QMediaTimeRange();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QMediaTimeRange_new2();
+    /*
+    QMediaTimeRange( qint64 start, qint64 end )
+    */
+    QMediaTimeRange * obj = new QMediaTimeRange( PQINT64(1), PQINT64(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1) )
   {
-    QMediaTimeRange_new3();
+    /*
+    QMediaTimeRange( const QMediaTimeInterval & interval )
+    */
+    QMediaTimeRange * obj = new QMediaTimeRange( *PQMEDIATIMEINTERVAL(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQMEDIATIMERANGE(1) )
   {
-    QMediaTimeRange_new4();
+    /*
+    QMediaTimeRange( const QMediaTimeRange & range )
+    */
+    QMediaTimeRange * obj = new QMediaTimeRange( *PQMEDIATIMERANGE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -149,45 +129,35 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void addInterval( const QMediaTimeInterval & interval )
-*/
-void QMediaTimeRange_addInterval1()
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addInterval( *PQMEDIATIMEINTERVAL(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void addInterval( qint64 start, qint64 end )
-*/
-void QMediaTimeRange_addInterval2()
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addInterval( PQINT64(1), PQINT64(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QMEDIATIMERANGE_ADDINTERVAL )
 {
   if( ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1) )
   {
-    QMediaTimeRange_addInterval1();
+    /*
+    void addInterval( const QMediaTimeInterval & interval )
+    */
+    QMediaTimeRange * obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addInterval( *PQMEDIATIMEINTERVAL(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QMediaTimeRange_addInterval2();
+    /*
+    void addInterval( qint64 start, qint64 end )
+    */
+    QMediaTimeRange * obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addInterval( PQINT64(1), PQINT64(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -419,45 +389,35 @@ HB_FUNC_STATIC( QMEDIATIMERANGE_LATESTTIME )
   }
 }
 
-/*
-void removeInterval( const QMediaTimeInterval & interval )
-*/
-void QMediaTimeRange_removeInterval1()
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->removeInterval( *PQMEDIATIMEINTERVAL(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void removeInterval( qint64 start, qint64 end )
-*/
-void QMediaTimeRange_removeInterval2()
-{
-  QMediaTimeRange * obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->removeInterval( PQINT64(1), PQINT64(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QMEDIATIMERANGE_REMOVEINTERVAL )
 {
   if( ISNUMPAR(1) && ISQMEDIATIMEINTERVAL(1) )
   {
-    QMediaTimeRange_removeInterval1();
+    /*
+    void removeInterval( const QMediaTimeInterval & interval )
+    */
+    QMediaTimeRange * obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->removeInterval( *PQMEDIATIMEINTERVAL(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QMediaTimeRange_removeInterval2();
+    /*
+    void removeInterval( qint64 start, qint64 end )
+    */
+    QMediaTimeRange * obj = (QMediaTimeRange *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->removeInterval( PQINT64(1), PQINT64(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

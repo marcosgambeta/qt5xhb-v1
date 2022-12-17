@@ -71,33 +71,23 @@ RETURN
 #include <QtMultimedia/QAudioEncoderSettings>
 #endif
 
-/*
-QAudioEncoderSettings()
-*/
-void QAudioEncoderSettings_new1()
-{
-  QAudioEncoderSettings * obj = new QAudioEncoderSettings();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QAudioEncoderSettings( const QAudioEncoderSettings & other )
-*/
-void QAudioEncoderSettings_new2()
-{
-  QAudioEncoderSettings * obj = new QAudioEncoderSettings( *PQAUDIOENCODERSETTINGS(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QAUDIOENCODERSETTINGS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAudioEncoderSettings_new1();
+    /*
+    QAudioEncoderSettings()
+    */
+    QAudioEncoderSettings * obj = new QAudioEncoderSettings();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQAUDIOENCODERSETTINGS(1) )
   {
-    QAudioEncoderSettings_new2();
+    /*
+    QAudioEncoderSettings( const QAudioEncoderSettings & other )
+    */
+    QAudioEncoderSettings * obj = new QAudioEncoderSettings( *PQAUDIOENCODERSETTINGS(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
