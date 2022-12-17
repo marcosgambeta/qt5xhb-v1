@@ -107,37 +107,27 @@ RETURN
 #include <QtLocation/QPlaceSupplier>
 #include <QtLocation/QPlaceIcon>
 
-/*
-QPlace()
-*/
-void QPlace_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlace * obj = new QPlace();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QPlace( const QPlace & other )
-*/
-void QPlace_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlace * obj = new QPlace( *PQPLACE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QPLACE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPlace_new1();
+    /*
+    QPlace()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlace * obj = new QPlace();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQPLACE(1) )
   {
-    QPlace_new2();
+    /*
+    QPlace( const QPlace & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlace * obj = new QPlace( *PQPLACE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

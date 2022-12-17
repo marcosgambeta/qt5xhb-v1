@@ -66,37 +66,27 @@ RETURN
 #endif
 #endif
 
-/*
-QPlaceRatings()
-*/
-void QPlaceRatings_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * obj = new QPlaceRatings();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QPlaceRatings( const QPlaceRatings & other )
-*/
-void QPlaceRatings_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceRatings * obj = new QPlaceRatings( *PQPLACERATINGS(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QPLACERATINGS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPlaceRatings_new1();
+    /*
+    QPlaceRatings()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceRatings * obj = new QPlaceRatings();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQPLACERATINGS(1) )
   {
-    QPlaceRatings_new2();
+    /*
+    QPlaceRatings( const QPlaceRatings & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceRatings * obj = new QPlaceRatings( *PQPLACERATINGS(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

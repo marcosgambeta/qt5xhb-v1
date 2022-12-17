@@ -70,37 +70,27 @@ RETURN
 #endif
 #endif
 
-/*
-QPlaceSupplier()
-*/
-void QPlaceSupplier_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = new QPlaceSupplier();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QPlaceSupplier( const QPlaceSupplier & other )
-*/
-void QPlaceSupplier_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceSupplier * obj = new QPlaceSupplier( *PQPLACESUPPLIER(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QPLACESUPPLIER_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPlaceSupplier_new1();
+    /*
+    QPlaceSupplier()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceSupplier * obj = new QPlaceSupplier();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQPLACESUPPLIER(1) )
   {
-    QPlaceSupplier_new2();
+    /*
+    QPlaceSupplier( const QPlaceSupplier & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceSupplier * obj = new QPlaceSupplier( *PQPLACESUPPLIER(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

@@ -71,37 +71,27 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QPlaceContentRequest()
-*/
-void QPlaceContentRequest_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = new QPlaceContentRequest();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QPlaceContentRequest( const QPlaceContentRequest & other )
-*/
-void QPlaceContentRequest_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContentRequest * obj = new QPlaceContentRequest( *PQPLACECONTENTREQUEST(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QPLACECONTENTREQUEST_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPlaceContentRequest_new1();
+    /*
+    QPlaceContentRequest()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceContentRequest * obj = new QPlaceContentRequest();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQPLACECONTENTREQUEST(1) )
   {
-    QPlaceContentRequest_new2();
+    /*
+    QPlaceContentRequest( const QPlaceContentRequest & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceContentRequest * obj = new QPlaceContentRequest( *PQPLACECONTENTREQUEST(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

@@ -71,37 +71,27 @@ RETURN
 #include <QtLocation/QPlaceSupplier>
 #include <QtLocation/QPlaceUser>
 
-/*
-QPlaceContent()
-*/
-void QPlaceContent_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = new QPlaceContent();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QPlaceContent( const QPlaceContent & other )
-*/
-void QPlaceContent_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContent * obj = new QPlaceContent( *PQPLACECONTENT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QPLACECONTENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPlaceContent_new1();
+    /*
+    QPlaceContent()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceContent * obj = new QPlaceContent();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQPLACECONTENT(1) )
   {
-    QPlaceContent_new2();
+    /*
+    QPlaceContent( const QPlaceContent & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceContent * obj = new QPlaceContent( *PQPLACECONTENT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

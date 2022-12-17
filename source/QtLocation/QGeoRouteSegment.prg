@@ -76,37 +76,27 @@ RETURN
 #include <QtLocation/QGeoManeuver>
 #include <QtPositioning/QGeoCoordinate>
 
-/*
-QGeoRouteSegment()
-*/
-void QGeoRouteSegment_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteSegment * obj = new QGeoRouteSegment();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoRouteSegment( const QGeoRouteSegment & other )
-*/
-void QGeoRouteSegment_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRouteSegment * obj = new QGeoRouteSegment( *PQGEOROUTESEGMENT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QGEOROUTESEGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGeoRouteSegment_new1();
+    /*
+    QGeoRouteSegment()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QGeoRouteSegment * obj = new QGeoRouteSegment();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOROUTESEGMENT(1) )
   {
-    QGeoRouteSegment_new2();
+    /*
+    QGeoRouteSegment( const QGeoRouteSegment & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QGeoRouteSegment * obj = new QGeoRouteSegment( *PQGEOROUTESEGMENT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

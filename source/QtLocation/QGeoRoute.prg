@@ -82,37 +82,27 @@ RETURN
 #include <QtPositioning/QGeoRectangle>
 #include <QtLocation/QGeoRouteSegment>
 
-/*
-QGeoRoute()
-*/
-void QGeoRoute_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoute * obj = new QGeoRoute();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoRoute( const QGeoRoute & other )
-*/
-void QGeoRoute_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QGeoRoute * obj = new QGeoRoute( *PQGEOROUTE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QGEOROUTE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGeoRoute_new1();
+    /*
+    QGeoRoute()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QGeoRoute * obj = new QGeoRoute();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOMANEUVER(1) )
   {
-    QGeoRoute_new2();
+    /*
+    QGeoRoute( const QGeoRoute & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QGeoRoute * obj = new QGeoRoute( *PQGEOROUTE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

@@ -64,37 +64,27 @@ RETURN
 #endif
 #endif
 
-/*
-QPlaceContactDetail()
-*/
-void QPlaceContactDetail_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = new QPlaceContactDetail();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QPlaceContactDetail( const QPlaceContactDetail & other )
-*/
-void QPlaceContactDetail_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QPlaceContactDetail * obj = new QPlaceContactDetail( *PQPLACECONTACTDETAIL(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QPLACECONTACTDETAIL_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPlaceContactDetail_new1();
+    /*
+    QPlaceContactDetail()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceContactDetail * obj = new QPlaceContactDetail();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQPLACECONTACTDETAIL(1) )
   {
-    QPlaceContactDetail_new2();
+    /*
+    QPlaceContactDetail( const QPlaceContactDetail & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QPlaceContactDetail * obj = new QPlaceContactDetail( *PQPLACECONTACTDETAIL(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
