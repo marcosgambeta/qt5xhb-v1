@@ -55,33 +55,23 @@ RETURN
 #include <QtHelp/QHelpSearchQuery>
 #endif
 
-/*
-QHelpSearchQuery()
-*/
-void QHelpSearchQuery_new1()
-{
-  QHelpSearchQuery * obj = new QHelpSearchQuery();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QHelpSearchQuery( QHelpSearchQuery::FieldName field, const QStringList & wordList )
-*/
-void QHelpSearchQuery_new2()
-{
-  QHelpSearchQuery * obj = new QHelpSearchQuery( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QHELPSEARCHQUERY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QHelpSearchQuery_new1();
+    /*
+    QHelpSearchQuery()
+    */
+    QHelpSearchQuery * obj = new QHelpSearchQuery();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2) )
   {
-    QHelpSearchQuery_new2();
+    /*
+    QHelpSearchQuery( QHelpSearchQuery::FieldName field, const QStringList & wordList )
+    */
+    QHelpSearchQuery * obj = new QHelpSearchQuery( (QHelpSearchQuery::FieldName) hb_parni(1), PQSTRINGLIST(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

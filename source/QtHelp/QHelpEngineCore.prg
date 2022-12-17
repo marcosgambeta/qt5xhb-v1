@@ -359,41 +359,31 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
   }
 }
 
-/*
-QStringList filterAttributes() const
-*/
-void QHelpEngineCore_filterAttributes1()
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->filterAttributes() );
-  }
-}
-
-/*
-QStringList filterAttributes( const QString & filterName ) const
-*/
-void QHelpEngineCore_filterAttributes2()
-{
-  QHelpEngineCore * obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->filterAttributes( PQSTRING(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 {
   if( ISNUMPAR(0) )
   {
-    QHelpEngineCore_filterAttributes1();
+    /*
+    QStringList filterAttributes() const
+    */
+    QHelpEngineCore * obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRINGLIST( obj->filterAttributes() );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QHelpEngineCore_filterAttributes2();
+    /*
+    QStringList filterAttributes( const QString & filterName ) const
+    */
+    QHelpEngineCore * obj = (QHelpEngineCore *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRINGLIST( obj->filterAttributes( PQSTRING(1) ) );
+    }
   }
   else
   {
