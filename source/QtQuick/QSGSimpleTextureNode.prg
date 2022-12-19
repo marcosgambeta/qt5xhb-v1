@@ -162,45 +162,35 @@ HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETFILTERING )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRect( const QRectF & r )
-*/
-void QSGSimpleTextureNode_setRect1()
-{
-  QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setRect( *PQRECTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setRect( qreal x, qreal y, qreal w, qreal h )
-*/
-void QSGSimpleTextureNode_setRect2()
-{
-  QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QSGSIMPLETEXTURENODE_SETRECT )
 {
   if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QSGSimpleTextureNode_setRect1();
+    /*
+    void setRect( const QRectF & r )
+    */
+    QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setRect( *PQRECTF(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
-    QSGSimpleTextureNode_setRect2();
+    /*
+    void setRect( qreal x, qreal y, qreal w, qreal h )
+    */
+    QSGSimpleTextureNode * obj = (QSGSimpleTextureNode *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

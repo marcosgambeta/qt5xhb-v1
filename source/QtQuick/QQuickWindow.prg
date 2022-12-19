@@ -627,45 +627,35 @@ HB_FUNC_STATIC( QQUICKWINDOW_SETPERSISTENTSCENEGRAPH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setRenderTarget( QOpenGLFramebufferObject * fbo )
-*/
-void QQuickWindow_setRenderTarget1()
-{
-  QQuickWindow * obj = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setRenderTarget( PQOPENGLFRAMEBUFFEROBJECT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setRenderTarget( uint fboId, const QSize & size )
-*/
-void QQuickWindow_setRenderTarget2()
-{
-  QQuickWindow * obj = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setRenderTarget( PUINT(1), *PQSIZE(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QQUICKWINDOW_SETRENDERTARGET )
 {
   if( ISNUMPAR(1) && ISQOPENGLFRAMEBUFFEROBJECT(1) )
   {
-    QQuickWindow_setRenderTarget1();
+    /*
+    void setRenderTarget( QOpenGLFramebufferObject * fbo )
+    */
+    QQuickWindow * obj = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setRenderTarget( PQOPENGLFRAMEBUFFEROBJECT(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSIZE(2) )
   {
-    QQuickWindow_setRenderTarget2();
+    /*
+    void setRenderTarget( uint fboId, const QSize & size )
+    */
+    QQuickWindow * obj = (QQuickWindow *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setRenderTarget( PUINT(1), *PQSIZE(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

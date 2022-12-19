@@ -69,46 +69,31 @@ RETURN
 #include <QtQml/QQmlContext>
 #include <QtQuick/QQuickItem>
 
-/*
-QQuickView( QWindow * parent = 0 )
-*/
-void QQuickView_new1()
-{
-  QQuickView * obj = new QQuickView( OPQWINDOW(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QQuickView( QQmlEngine * engine, QWindow * parent )
-*/
-void QQuickView_new2()
-{
-  QQuickView * obj = new QQuickView( PQQMLENGINE(1), PQWINDOW(2) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QQuickView( const QUrl & source, QWindow * parent = 0 )
-*/
-void QQuickView_new3()
-{
-  QQuickView * obj = new QQuickView( *PQURL(1), OPQWINDOW(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QQUICKVIEW_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWINDOW(1)||HB_ISNIL(1)) )
   {
-    QQuickView_new1();
+    /*
+    QQuickView( QWindow * parent = 0 )
+    */
+    QQuickView * obj = new QQuickView( OPQWINDOW(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(2) && ISQQMLENGINE(1) && ISQWINDOW(2) )
   {
-    QQuickView_new2();
+    /*
+    QQuickView( QQmlEngine * engine, QWindow * parent )
+    */
+    QQuickView * obj = new QQuickView( PQQMLENGINE(1), PQWINDOW(2) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && ISQURL(1) && (ISQWINDOW(2)||HB_ISNIL(2)) )
   {
-    QQuickView_new3();
+    /*
+    QQuickView( const QUrl & source, QWindow * parent = 0 )
+    */
+    QQuickView * obj = new QQuickView( *PQURL(1), OPQWINDOW(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
