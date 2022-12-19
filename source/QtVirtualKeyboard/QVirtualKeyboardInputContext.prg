@@ -590,38 +590,40 @@ HB_FUNC_STATIC( QVIRTUALKEYBOARDINPUTCONTEXT_SENDKEYCLICK )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-Q_INVOKABLE void commit()
-*/
-void QVirtualKeyboardInputContext_commit1()
-{
-  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->commit();
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-Q_INVOKABLE void commit( const QString & text, int replaceFrom = 0, int replaceLength = 0 )
-*/
-void QVirtualKeyboardInputContext_commit2()
-{
-  QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->commit( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 STATIC_HB_FUNC( QVIRTUALKEYBOARDINPUTCONTEXT_COMMIT )
 {
+  if( ISNUMPAR(0) )
+  {
+    /*
+    Q_INVOKABLE void commit()
+    */
+    QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->commit();
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+  }
+  else if( ISBETWEEN(1,3) && HB_ISCHAR(1) && (HB_ISNUM(2)||HB_ISNIL(2)) && (HB_ISNUM(3)||HB_ISNIL(3)) )
+  {
+    /*
+    Q_INVOKABLE void commit( const QString & text, int replaceFrom = 0, int replaceLength = 0 )
+    */
+    QVirtualKeyboardInputContext * obj = (QVirtualKeyboardInputContext *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->commit( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+  }
+  else
+  {
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
 }
 
 /*
