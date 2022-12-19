@@ -55,33 +55,23 @@ RETURN
 #include <QtQml/QJSEngine>
 #endif
 
-/*
-QJSEngine()
-*/
-void QJSEngine_new1()
-{
-  QJSEngine * obj = new QJSEngine();
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QJSEngine( QObject * parent )
-*/
-void QJSEngine_new2()
-{
-  QJSEngine * obj = new QJSEngine( PQOBJECT(1) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QJSENGINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QJSEngine_new1();
+    /*
+    QJSEngine()
+    */
+    QJSEngine * obj = new QJSEngine();
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    QJSEngine_new2();
+    /*
+    QJSEngine( QObject * parent )
+    */
+    QJSEngine * obj = new QJSEngine( PQOBJECT(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

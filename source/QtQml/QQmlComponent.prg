@@ -69,72 +69,47 @@ RETURN
 
 #include <QtQml/QQmlContext>
 
-/*
-QQmlComponent( QQmlEngine * engine, QObject * parent = 0 )
-*/
-void QQmlComponent_new1()
-{
-  QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QQmlComponent( QQmlEngine * engine, const QString & fileName, QObject * parent = 0 )
-*/
-void QQmlComponent_new2()
-{
-  QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QQmlComponent( QQmlEngine * engine, const QString & fileName, QQmlComponent::CompilationMode mode, QObject * parent = 0)
-*/
-void QQmlComponent_new3()
-{
-  QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QQmlComponent( QQmlEngine * engine, const QUrl & url, QObject * parent = 0 )
-*/
-void QQmlComponent_new4()
-{
-  QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QQmlComponent( QQmlEngine * engine, const QUrl & url, QQmlComponent::CompilationMode mode, QObject * parent = 0 )
-*/
-void QQmlComponent_new5()
-{
-  QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QQMLCOMPONENT_NEW )
 {
   if( ISBETWEEN(1,2) && ISQQMLENGINE(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QQmlComponent_new1();
+    /*
+    QQmlComponent( QQmlEngine * engine, QObject * parent = 0 )
+    */
+    QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QQmlComponent_new2();
+    /*
+    QQmlComponent( QQmlEngine * engine, const QString & fileName, QObject * parent = 0 )
+    */
+    QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && HB_ISCHAR(2) && HB_ISNUM(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
-    QQmlComponent_new3();
+    /*
+    QQmlComponent( QQmlEngine * engine, const QString & fileName, QQmlComponent::CompilationMode mode, QObject * parent = 0)
+    */
+    QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), PQSTRING(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,3) && ISQQMLENGINE(1) && ISQURL(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QQmlComponent_new4();
+    /*
+    QQmlComponent( QQmlEngine * engine, const QUrl & url, QObject * parent = 0 )
+    */
+    QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(3,4) && ISQQMLENGINE(1) && ISQURL(2) && HB_ISNUM(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
-    QQmlComponent_new5();
+    /*
+    QQmlComponent( QQmlEngine * engine, const QUrl & url, QQmlComponent::CompilationMode mode, QObject * parent = 0 )
+    */
+    QQmlComponent * obj = new QQmlComponent( PQQMLENGINE(1), *PQURL(2), (QQmlComponent::CompilationMode) hb_parni(3), OPQOBJECT(4,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -212,44 +187,34 @@ HB_FUNC_STATIC( QQMLCOMPONENT_COMPLETECREATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-virtual QObject * create( QQmlContext * context = 0 )
-*/
-void QQmlComponent_create1()
-{
-  QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QObject * ptr = obj->create( OPQQMLCONTEXT(1,0) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
-  }
-}
-
-/*
-void create( QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0 )
-*/
-void QQmlComponent_create2()
-{
-  QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->create( *PQQMLINCUBATOR(1), OPQQMLCONTEXT(2,0), OPQQMLCONTEXT(3,0) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QQMLCOMPONENT_CREATE )
 {
   if( ISBETWEEN(0,1) && (ISQQMLCONTEXT(1)||HB_ISNIL(1)) )
   {
-    QQmlComponent_create1();
+    /*
+    virtual QObject * create( QQmlContext * context = 0 )
+    */
+    QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QObject * ptr = obj->create( OPQQMLCONTEXT(1,0) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+    }
   }
   else if( ISBETWEEN(1,3) && ISQQMLINCUBATOR(1) && (ISQQMLCONTEXT(2)||HB_ISNIL(2)) && (ISQQMLCONTEXT(3)||HB_ISNIL(3)) )
   {
-    QQmlComponent_create2();
+    /*
+    void create( QQmlIncubator & incubator, QQmlContext * context = 0, QQmlContext * forContext = 0 )
+    */
+    QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->create( *PQQMLINCUBATOR(1), OPQQMLCONTEXT(2,0), OPQQMLCONTEXT(3,0) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -451,45 +416,35 @@ HB_FUNC_STATIC( QQMLCOMPONENT_URL )
   }
 }
 
-/*
-void loadUrl( const QUrl & url )
-*/
-void QQmlComponent_loadUrl1()
-{
-  QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->loadUrl( *PQURL(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void loadUrl( const QUrl & url, QQmlComponent::CompilationMode mode )
-*/
-void QQmlComponent_loadUrl2()
-{
-  QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->loadUrl( *PQURL(1), (QQmlComponent::CompilationMode) hb_parni(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QQMLCOMPONENT_LOADURL )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    QQmlComponent_loadUrl1();
+    /*
+    void loadUrl( const QUrl & url )
+    */
+    QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->loadUrl( *PQURL(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && ISQURL(1) && HB_ISNUM(2) )
   {
-    QQmlComponent_loadUrl2();
+    /*
+    void loadUrl( const QUrl & url, QQmlComponent::CompilationMode mode )
+    */
+    QQmlComponent * obj = (QQmlComponent *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->loadUrl( *PQURL(1), (QQmlComponent::CompilationMode) hb_parni(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

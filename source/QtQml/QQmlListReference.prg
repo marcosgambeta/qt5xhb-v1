@@ -68,33 +68,23 @@ RETURN
 #include <QtQml/QQmlListReference>
 #endif
 
-/*
-QQmlListReference()
-*/
-void QQmlListReference_new1()
-{
-  QQmlListReference * obj = new QQmlListReference();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QQmlListReference( QObject * object, const char * property, QQmlEngine * engine = 0 )
-*/
-void QQmlListReference_new2()
-{
-  QQmlListReference * obj = new QQmlListReference( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QQMLLISTREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QQmlListReference_new1();
+    /*
+    QQmlListReference()
+    */
+    QQmlListReference * obj = new QQmlListReference();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQQMLENGINE(3)||HB_ISNIL(3)) )
   {
-    QQmlListReference_new2();
+    /*
+    QQmlListReference( QObject * object, const char * property, QQmlEngine * engine = 0 )
+    */
+    QQmlListReference * obj = new QQmlListReference( PQOBJECT(1), PCONSTCHAR(2), OPQQMLENGINE(3,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

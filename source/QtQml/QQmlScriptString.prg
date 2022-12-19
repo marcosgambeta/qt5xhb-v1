@@ -61,33 +61,23 @@ RETURN
 #include <QtQml/QQmlScriptString>
 #endif
 
-/*
-QQmlScriptString()
-*/
-void QQmlScriptString_new1()
-{
-  QQmlScriptString * obj = new QQmlScriptString();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QQmlScriptString( const QQmlScriptString & other )
-*/
-void QQmlScriptString_new2()
-{
-  QQmlScriptString * obj = new QQmlScriptString( *PQQMLSCRIPTSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QQMLSCRIPTSTRING_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QQmlScriptString_new1();
+    /*
+    QQmlScriptString()
+    */
+    QQmlScriptString * obj = new QQmlScriptString();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQQMLSCRIPTSTRING(1) )
   {
-    QQmlScriptString_new2();
+    /*
+    QQmlScriptString( const QQmlScriptString & other )
+    */
+    QQmlScriptString * obj = new QQmlScriptString( *PQQMLSCRIPTSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

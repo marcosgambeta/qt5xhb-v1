@@ -66,33 +66,23 @@ RETURN
 #include <QtQml/QQmlError>
 #endif
 
-/*
-QQmlError()
-*/
-void QQmlError_new1()
-{
-  QQmlError * obj = new QQmlError();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QQmlError( const QQmlError & other )
-*/
-void QQmlError_new2()
-{
-  QQmlError * obj = new QQmlError( *PQQMLERROR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QQMLERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QQmlError_new1();
+    /*
+    QQmlError()
+    */
+    QQmlError * obj = new QQmlError();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQQMLERROR(1) )
   {
-    QQmlError_new2();
+    /*
+    QQmlError( const QQmlError & other )
+    */
+    QQmlError * obj = new QQmlError( *PQQMLERROR(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
