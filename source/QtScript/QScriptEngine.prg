@@ -93,33 +93,23 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QScriptEngine()
-*/
-void QScriptEngine_new1()
-{
-  QScriptEngine * obj = new QScriptEngine();
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QScriptEngine( QObject * parent )
-*/
-void QScriptEngine_new2()
-{
-  QScriptEngine * obj = new QScriptEngine( PQOBJECT(1) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QScriptEngine_new1();
+    /*
+    QScriptEngine()
+    */
+    QScriptEngine * obj = new QScriptEngine();
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
-    QScriptEngine_new2();
+    /*
+    QScriptEngine( QObject * parent )
+    */
+    QScriptEngine * obj = new QScriptEngine( PQOBJECT(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -323,43 +313,33 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
   }
 }
 
-/*
-QScriptValue evaluate( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
-*/
-void QScriptEngine_evaluate1()
-{
-  QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->evaluate( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
-/*
-QScriptValue evaluate( const QScriptProgram & program )
-*/
-void QScriptEngine_evaluate2()
-{
-  QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->evaluate( *PQSCRIPTPROGRAM(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
   if( ISBETWEEN(1,3) && HB_ISCHAR(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QScriptEngine_evaluate1();
+    /*
+    QScriptValue evaluate( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
+    */
+    QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->evaluate( PQSTRING(1), OPQSTRING(2,QString()), OPINT(3,1) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else if( ISNUMPAR(1) && ISQSCRIPTPROGRAM(1) )
   {
-    QScriptEngine_evaluate2();
+    /*
+    QScriptValue evaluate( const QScriptProgram & program )
+    */
+    QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->evaluate( *PQSCRIPTPROGRAM(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else
   {
@@ -565,43 +545,33 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWDATE )
   }
 }
 
-/*
-QScriptValue newObject()
-*/
-void QScriptEngine_newObject1()
-{
-  QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newObject() );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
-/*
-QScriptValue newObject( QScriptClass * scriptClass, const QScriptValue & data = QScriptValue() )
-*/
-void QScriptEngine_newObject2()
-{
-  QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newObject( PQSCRIPTCLASS(1), HB_ISNIL(2)? QScriptValue() : *(QScriptValue *) Qt5xHb::itemGetPtr(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWOBJECT )
 {
   if( ISNUMPAR(0) )
   {
-    QScriptEngine_newObject1();
+    /*
+    QScriptValue newObject()
+    */
+    QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newObject() );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else if( ISBETWEEN(1,2) && ISQSCRIPTCLASS(1) && (ISQSCRIPTVALUE(2)||HB_ISNIL(2))  )
   {
-    QScriptEngine_newObject2();
+    /*
+    QScriptValue newObject( QScriptClass * scriptClass, const QScriptValue & data = QScriptValue() )
+    */
+    QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newObject( PQSCRIPTCLASS(1), HB_ISNIL(2)? QScriptValue() : *(QScriptValue *) Qt5xHb::itemGetPtr(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else
   {
@@ -634,43 +604,33 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWQMETAOBJECT )
   }
 }
 
-/*
-QScriptValue newRegExp( const QRegExp & regexp )
-*/
-void QScriptEngine_newRegExp1()
-{
-  QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newRegExp( *PQREGEXP(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
-/*
-QScriptValue newRegExp( const QString & pattern, const QString & flags )
-*/
-void QScriptEngine_newRegExp2()
-{
-  QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newRegExp( PQSTRING(1), PQSTRING(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 {
   if( ISNUMPAR(1) && ISQREGEXP(1) )
   {
-    QScriptEngine_newRegExp1();
+    /*
+    QScriptValue newRegExp( const QRegExp & regexp )
+    */
+    QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newRegExp( *PQREGEXP(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QScriptEngine_newRegExp2();
+    /*
+    QScriptValue newRegExp( const QString & pattern, const QString & flags )
+    */
+    QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newRegExp( PQSTRING(1), PQSTRING(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else
   {
@@ -678,43 +638,33 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
   }
 }
 
-/*
-QScriptValue newVariant( const QVariant & value )
-*/
-void QScriptEngine_newVariant1()
-{
-  QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQVARIANT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
-/*
-QScriptValue newVariant( const QScriptValue & object, const QVariant & value )
-*/
-void QScriptEngine_newVariant2()
-{
-  QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQSCRIPTVALUE(1), *PQVARIANT(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    QScriptEngine_newVariant1();
+    /*
+    QScriptValue newVariant( const QVariant & value )
+    */
+    QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQVARIANT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2) )
   {
-    QScriptEngine_newVariant2();
+    /*
+    QScriptValue newVariant( const QScriptValue & object, const QVariant & value )
+    */
+    QScriptEngine * obj = (QScriptEngine *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQSCRIPTVALUE(1), *PQVARIANT(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else
   {

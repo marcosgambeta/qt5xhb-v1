@@ -415,43 +415,33 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
   }
 }
 
-/*
-QScriptValue throwError( QScriptContext::Error error, const QString & text )
-*/
-void QScriptContext_throwError1()
-{
-  QScriptContext * obj = (QScriptContext *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->throwError( (QScriptContext::Error) hb_parni(1), PQSTRING(2) ) );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
-/*
-QScriptValue throwError( const QString & text )
-*/
-void QScriptContext_throwError2()
-{
-  QScriptContext * obj = (QScriptContext *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->throwError( PQSTRING(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
   {
-    QScriptContext_throwError1();
+    /*
+    QScriptValue throwError( QScriptContext::Error error, const QString & text )
+    */
+    QScriptContext * obj = (QScriptContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->throwError( (QScriptContext::Error) hb_parni(1), PQSTRING(2) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QScriptContext_throwError2();
+    /*
+    QScriptValue throwError( const QString & text )
+    */
+    QScriptContext * obj = (QScriptContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->throwError( PQSTRING(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
+    }
   }
   else
   {

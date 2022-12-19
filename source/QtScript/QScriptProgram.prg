@@ -59,33 +59,23 @@ RETURN
 #include <QtScript/QScriptProgram>
 #endif
 
-/*
-QScriptProgram()
-*/
-void QScriptProgram_new1()
-{
-  QScriptProgram * obj = new QScriptProgram();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QScriptProgram( const QScriptProgram & other )
-*/
-void QScriptProgram_new3()
-{
-  QScriptProgram * obj = new QScriptProgram( *PQSCRIPTPROGRAM(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QScriptProgram_new1();
+    /*
+    QScriptProgram()
+    */
+    QScriptProgram * obj = new QScriptProgram();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSCRIPTPROGRAM(1) )
   {
-    QScriptProgram_new3();
+    /*
+    QScriptProgram( const QScriptProgram & other )
+    */
+    QScriptProgram * obj = new QScriptProgram( *PQSCRIPTPROGRAM(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
