@@ -106,33 +106,23 @@ RETURN
 #include <QtSql/QSqlRecord>
 #include <QtCore/QStringList>
 
-/*
-QSqlDatabase()
-*/
-void QSqlDatabase_new1()
-{
-  QSqlDatabase * obj = new QSqlDatabase();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSqlDatabase( const QSqlDatabase & other )
-*/
-void QSqlDatabase_new2()
-{
-  QSqlDatabase * obj = new QSqlDatabase( *PQSQLDATABASE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSQLDATABASE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSqlDatabase_new1();
+    /*
+    QSqlDatabase()
+    */
+    QSqlDatabase * obj = new QSqlDatabase();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSQLDATABASE(1) )
   {
-    QSqlDatabase_new2();
+    /*
+    QSqlDatabase( const QSqlDatabase & other )
+    */
+    QSqlDatabase * obj = new QSqlDatabase( *PQSQLDATABASE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -602,41 +592,31 @@ HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool open()
-*/
-void QSqlDatabase_open1()
-{
-  QSqlDatabase * obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->open() );
-  }
-}
-
-/*
-bool open( const QString & user, const QString & password )
-*/
-void QSqlDatabase_open2()
-{
-  QSqlDatabase * obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->open( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 {
   if( ISNUMPAR(0) )
   {
-    QSqlDatabase_open1();
+    /*
+    bool open()
+    */
+    QSqlDatabase * obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->open() );
+    }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QSqlDatabase_open2();
+    /*
+    bool open( const QString & user, const QString & password )
+    */
+    QSqlDatabase * obj = (QSqlDatabase *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->open( PQSTRING(1), PQSTRING(2) ) );
+    }
   }
   else
   {
@@ -916,41 +896,26 @@ HB_FUNC_STATIC( QSQLDATABASE_SETUSERNAME )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-static QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
-*/
-void QSqlDatabase_addDatabase1 ()
-{
-  QString par2 = HB_ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
-  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( PQSTRING(1), par2 ) );
-  Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true);
-}
-
-/*
-static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
-*/
-void QSqlDatabase_addDatabase2 ()
-{
-  QSqlDriver * par1 = (QSqlDriver *) Qt5xHb::itemGetPtr(1);
-  QString par2 = HB_ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
-  QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
-  Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true);
-}
-
-/*
-[1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
-[2]QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
-*/
-
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {
   if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
-    QSqlDatabase_addDatabase1();
+    /*
+    static QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
+    */
+    QString par2 = HB_ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( PQSTRING(1), par2 ) );
+    Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true);
   }
   else if( ISBETWEEN(1,2) && ISQSQLDRIVER(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
-    QSqlDatabase_addDatabase2();
+    /*
+    static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
+    */
+    QSqlDriver * par1 = (QSqlDriver *) Qt5xHb::itemGetPtr(1);
+    QString par2 = HB_ISNIL(2)? QLatin1String(QSqlDatabase::defaultConnection) : QLatin1String( hb_parc(2) );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
+    Qt5xHb::createReturnClass ( ptr, "QSQLDATABASE", true);
   }
   else
   {

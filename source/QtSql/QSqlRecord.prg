@@ -79,33 +79,23 @@ RETURN
 #include <QtSql/QSqlField>
 #include <QtCore/QVariant>
 
-/*
-QSqlRecord()
-*/
-void QSqlRecord_new1()
-{
-  QSqlRecord * obj = new QSqlRecord();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSqlRecord( const QSqlRecord & other )
-*/
-void QSqlRecord_new2()
-{
-  QSqlRecord * obj = new QSqlRecord( *PQSQLRECORD(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSQLRECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSqlRecord_new1();
+    /*
+    QSqlRecord()
+    */
+    QSqlRecord * obj = new QSqlRecord();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSQLRECORD(1) )
   {
-    QSqlRecord_new2();
+    /*
+    QSqlRecord( const QSqlRecord & other )
+    */
+    QSqlRecord * obj = new QSqlRecord( *PQSQLRECORD(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -256,43 +246,33 @@ HB_FUNC_STATIC( QSQLRECORD_COUNT )
   }
 }
 
-/*
-QSqlField field( int index ) const
-*/
-void QSqlRecord_field1()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSqlField * ptr = new QSqlField( obj->field( PINT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QSQLFIELD", true);
-  }
-}
-
-/*
-QSqlField field( const QString & name ) const
-*/
-void QSqlRecord_field2()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QSqlField * ptr = new QSqlField( obj->field( PQSTRING(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QSQLFIELD", true);
-  }
-}
-
 HB_FUNC_STATIC( QSQLRECORD_FIELD )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QSqlRecord_field1();
+    /*
+    QSqlField field( int index ) const
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QSqlField * ptr = new QSqlField( obj->field( PINT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QSQLFIELD", true);
+    }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QSqlRecord_field2();
+    /*
+    QSqlField field( const QString & name ) const
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QSqlField * ptr = new QSqlField( obj->field( PQSTRING(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QSQLFIELD", true);
+    }
   }
   else
   {
@@ -398,41 +378,31 @@ HB_FUNC_STATIC( QSQLRECORD_ISEMPTY )
   }
 }
 
-/*
-bool isGenerated( const QString & name ) const
-*/
-void QSqlRecord_isGenerated1()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isGenerated( PQSTRING(1) ) );
-  }
-}
-
-/*
-bool isGenerated( int index ) const
-*/
-void QSqlRecord_isGenerated2()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isGenerated( PINT(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSQLRECORD_ISGENERATED )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QSqlRecord_isGenerated1();
+    /*
+    bool isGenerated( const QString & name ) const
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->isGenerated( PQSTRING(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QSqlRecord_isGenerated2();
+    /*
+    bool isGenerated( int index ) const
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->isGenerated( PINT(1) ) );
+    }
   }
   else
   {
@@ -440,41 +410,31 @@ HB_FUNC_STATIC( QSQLRECORD_ISGENERATED )
   }
 }
 
-/*
-bool isNull( const QString & name ) const
-*/
-void QSqlRecord_isNull1()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull( PQSTRING(1) ) );
-  }
-}
-
-/*
-bool isNull( int index ) const
-*/
-void QSqlRecord_isNull2()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->isNull( PINT(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSQLRECORD_ISNULL )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QSqlRecord_isNull1();
+    /*
+    bool isNull( const QString & name ) const
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->isNull( PQSTRING(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QSqlRecord_isNull2();
+    /*
+    bool isNull( int index ) const
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->isNull( PINT(1) ) );
+    }
   }
   else
   {
@@ -534,169 +494,111 @@ HB_FUNC_STATIC( QSQLRECORD_REPLACE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setGenerated( const QString & name, bool generated )
-*/
-void QSqlRecord_setGenerated1()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setGenerated( PQSTRING(1), PBOOL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setGenerated( int index, bool generated )
-*/
-void QSqlRecord_setGenerated2()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setGenerated( PINT(1), PBOOL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QSQLRECORD_SETGENERATED )
 {
   if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2) )
   {
-    QSqlRecord_setGenerated1();
+    /*
+    void setGenerated( const QString & name, bool generated )
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setGenerated( PQSTRING(1), PBOOL(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
   {
-    QSqlRecord_setGenerated2();
+    /*
+    void setGenerated( int index, bool generated )
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setGenerated( PINT(1), PBOOL(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
-}
-
-/*
-void setNull( int index )
-*/
-void QSqlRecord_setNull1()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setNull( PINT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setNull( const QString & name )
-*/
-void QSqlRecord_setNull2()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setNull( PQSTRING(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QSQLRECORD_SETNULL )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QSqlRecord_setNull1();
+    /*
+    void setNull( int index )
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setNull( PINT(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QSqlRecord_setNull2();
+    /*
+    void setNull( const QString & name )
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setNull( PQSTRING(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
-}
-
-/*
-void setValue( int index, const QVariant & val )
-*/
-void QSqlRecord_setValue1()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setValue( PINT(1), *PQVARIANT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setValue( const QString & name, const QVariant & val )
-*/
-void QSqlRecord_setValue2()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setValue( PQSTRING(1), *PQVARIANT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QSQLRECORD_SETVALUE )
 {
   if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
   {
-    QSqlRecord_setValue1();
+    /*
+    void setValue( int index, const QVariant & val )
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setValue( PINT(1), *PQVARIANT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
   {
-    QSqlRecord_setValue2();
+    /*
+    void setValue( const QString & name, const QVariant & val )
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setValue( PQSTRING(1), *PQVARIANT(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
-  }
-}
-
-/*
-QVariant value( int index ) const
-*/
-void QSqlRecord_value1()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->value( PINT(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
-  }
-}
-
-/*
-QVariant value( const QString & name ) const
-*/
-void QSqlRecord_value2()
-{
-  QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->value( PQSTRING(1) ) );
-    Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
   }
 }
 
@@ -704,11 +606,29 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QSqlRecord_value1();
+    /*
+    QVariant value( int index ) const
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QVariant * ptr = new QVariant( obj->value( PINT(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+    }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QSqlRecord_value2();
+    /*
+    QVariant value( const QString & name ) const
+    */
+    QSqlRecord * obj = (QSqlRecord *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QVariant * ptr = new QVariant( obj->value( PQSTRING(1) ) );
+      Qt5xHb::createReturnClass(ptr, "QVARIANT", true);
+    }
   }
   else
   {

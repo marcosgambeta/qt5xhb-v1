@@ -53,33 +53,23 @@ RETURN
 #include <QtSql/QSqlIndex>
 #endif
 
-/*
-QSqlIndex( const QString & cursorname = QString(), const QString & name = QString() )
-*/
-void QSqlIndex_new1()
-{
-  QSqlIndex * obj = new QSqlIndex( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSqlIndex( const QSqlIndex & other )
-*/
-void QSqlIndex_new2()
-{
-  QSqlIndex * obj = new QSqlIndex( *PQSQLINDEX(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
   if( ISBETWEEN(0,2) && ( HB_ISCHAR(1)||HB_ISNIL(1)) && ( HB_ISCHAR(2)||HB_ISNIL(2)) )
   {
-    QSqlIndex_new1();
+    /*
+    QSqlIndex( const QString & cursorname = QString(), const QString & name = QString() )
+    */
+    QSqlIndex * obj = new QSqlIndex( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSQLINDEX(1) )
   {
-    QSqlIndex_new2();
+    /*
+    QSqlIndex( const QSqlIndex & other )
+    */
+    QSqlIndex * obj = new QSqlIndex( *PQSQLINDEX(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -104,45 +94,35 @@ HB_FUNC_STATIC( QSQLINDEX_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void append( const QSqlField & field )
-*/
-void QSqlIndex_append1()
-{
-  QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( *PQSQLFIELD(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void append( const QSqlField & field, bool desc )
-*/
-void QSqlIndex_append2()
-{
-  QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->append( *PQSQLFIELD(1), PBOOL(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QSQLINDEX_APPEND )
 {
   if( ISNUMPAR(1) && ISQSQLFIELD(1) )
   {
-    QSqlIndex_append1();
+    /*
+    void append( const QSqlField & field )
+    */
+    QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->append( *PQSQLFIELD(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(2) && ISQSQLFIELD(1) && HB_ISLOG(2) )
   {
-    QSqlIndex_append2();
+    /*
+    void append( const QSqlField & field, bool desc )
+    */
+    QSqlIndex * obj = (QSqlIndex *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->append( *PQSQLFIELD(1), PBOOL(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

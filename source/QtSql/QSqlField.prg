@@ -82,33 +82,23 @@ RETURN
 #include <QtSql/QSqlField>
 #endif
 
-/*
-QSqlField( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
-*/
-void QSqlField_new1()
-{
-  QSqlField * obj = new QSqlField( OPQSTRING(1,QString()), HB_ISNIL(2)? (QVariant::Type) QVariant::Invalid : (QVariant::Type) hb_parni(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSqlField( const QSqlField & other )
-*/
-void QSqlField_new2()
-{
-  QSqlField * obj = new QSqlField( *PQSQLFIELD(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSQLFIELD_NEW )
 {
   if( ISBETWEEN(0,2) && ( HB_ISCHAR(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QSqlField_new1();
+    /*
+    QSqlField( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
+    */
+    QSqlField * obj = new QSqlField( OPQSTRING(1,QString()), HB_ISNIL(2)? (QVariant::Type) QVariant::Invalid : (QVariant::Type) hb_parni(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSQLFIELD(1) )
   {
-    QSqlField_new2();
+    /*
+    QSqlField( const QSqlField & other )
+    */
+    QSqlField * obj = new QSqlField( *PQSQLFIELD(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
