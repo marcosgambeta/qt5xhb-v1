@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QMETAMETHOD_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QMETAMETHOD_SELFDESTRUCTION )
 {
-  hb_retl((bool) hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QMETAMETHOD_SETSELFDESTRUCTION )
