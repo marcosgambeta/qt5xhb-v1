@@ -47,33 +47,23 @@ RETURN
 #include <QtXml/QDomCDATASection>
 #endif
 
-/*
-QDomCDATASection()
-*/
-void QDomCDATASection_new1()
-{
-  QDomCDATASection * obj = new QDomCDATASection();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomCDATASection( const QDomCDATASection & x )
-*/
-void QDomCDATASection_new2()
-{
-  QDomCDATASection * obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomCDATASection_new1();
+    /*
+    QDomCDATASection()
+    */
+    QDomCDATASection * obj = new QDomCDATASection();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMCDATASECTION(1) )
   {
-    QDomCDATASection_new2();
+    /*
+    QDomCDATASection( const QDomCDATASection & x )
+    */
+    QDomCDATASection * obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

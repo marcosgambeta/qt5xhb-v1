@@ -62,33 +62,23 @@ RETURN
 #include <QtXml/QDomNodeList>
 #endif
 
-/*
-QDomNodeList()
-*/
-void QDomNodeList_new1()
-{
-  QDomNodeList * obj = new QDomNodeList();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomNodeList( const QDomNodeList & n )
-*/
-void QDomNodeList_new2()
-{
-  QDomNodeList * obj = new QDomNodeList( *PQDOMNODELIST(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomNodeList_new1();
+    /*
+    QDomNodeList()
+    */
+    QDomNodeList * obj = new QDomNodeList();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMNODELIST(1) )
   {
-    QDomNodeList_new2();
+    /*
+    QDomNodeList( const QDomNodeList & n )
+    */
+    QDomNodeList * obj = new QDomNodeList( *PQDOMNODELIST(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

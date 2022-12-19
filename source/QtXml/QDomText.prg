@@ -48,33 +48,23 @@ RETURN
 #include <QtXml/QDomText>
 #endif
 
-/*
-QDomText()
-*/
-void QDomText_new1()
-{
-  QDomText * obj = new QDomText();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomText( const QDomText & x )
-*/
-void QDomText_new2()
-{
-  QDomText * obj = new QDomText( *PQDOMTEXT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMTEXT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomText_new1();
+    /*
+    QDomText()
+    */
+    QDomText * obj = new QDomText();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMTEXT(1) )
   {
-    QDomText_new2();
+    /*
+    QDomText( const QDomText & x )
+    */
+    QDomText * obj = new QDomText( *PQDOMTEXT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

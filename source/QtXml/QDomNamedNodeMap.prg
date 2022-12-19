@@ -68,33 +68,23 @@ RETURN
 #include <QtXml/QDomNamedNodeMap>
 #endif
 
-/*
-QDomNamedNodeMap()
-*/
-void QDomNamedNodeMap_new1()
-{
-  QDomNamedNodeMap * obj = new QDomNamedNodeMap();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomNamedNodeMap( const QDomNamedNodeMap & n )
-*/
-void QDomNamedNodeMap_new2()
-{
-  QDomNamedNodeMap * obj = new QDomNamedNodeMap( *PQDOMNAMEDNODEMAP(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomNamedNodeMap_new1();
+    /*
+    QDomNamedNodeMap()
+    */
+    QDomNamedNodeMap * obj = new QDomNamedNodeMap();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMNAMEDNODEMAP(1) )
   {
-    QDomNamedNodeMap_new2();
+    /*
+    QDomNamedNodeMap( const QDomNamedNodeMap & n )
+    */
+    QDomNamedNodeMap * obj = new QDomNamedNodeMap( *PQDOMNAMEDNODEMAP(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -50,33 +50,23 @@ RETURN
 #include <QtXml/QDomEntity>
 #endif
 
-/*
-QDomEntity()
-*/
-void QDomEntity_new1()
-{
-  QDomEntity * obj = new QDomEntity();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomEntity( const QDomEntity & x )
-*/
-void QDomEntity_new2()
-{
-  QDomEntity * obj = new QDomEntity( *PQDOMENTITY(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMENTITY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomEntity_new1();
+    /*
+    QDomEntity()
+    */
+    QDomEntity * obj = new QDomEntity();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMENTITY(1) )
   {
-    QDomEntity_new2();
+    /*
+    QDomEntity( const QDomEntity & x )
+    */
+    QDomEntity * obj = new QDomEntity( *PQDOMENTITY(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

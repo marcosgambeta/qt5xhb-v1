@@ -49,33 +49,23 @@ RETURN
 #include <QtXml/QDomNotation>
 #endif
 
-/*
-QDomNotation()
-*/
-void QDomNotation_new1()
-{
-  QDomNotation * obj = new QDomNotation();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomNotation( const QDomNotation & x )
-*/
-void QDomNotation_new2()
-{
-  QDomNotation * obj = new QDomNotation( *PQDOMNOTATION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomNotation_new1();
+    /*
+    QDomNotation()
+    */
+    QDomNotation * obj = new QDomNotation();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMNOTATION(1) )
   {
-    QDomNotation_new2();
+    /*
+    QDomNotation( const QDomNotation & x )
+    */
+    QDomNotation * obj = new QDomNotation( *PQDOMNOTATION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

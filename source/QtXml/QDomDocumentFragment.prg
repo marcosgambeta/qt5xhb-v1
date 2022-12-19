@@ -47,33 +47,23 @@ RETURN
 #include <QtXml/QDomDocumentFragment>
 #endif
 
-/*
-QDomDocumentFragment()
-*/
-void QDomDocumentFragment_new1()
-{
-  QDomDocumentFragment * obj = new QDomDocumentFragment();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomDocumentFragment( const QDomDocumentFragment & x )
-*/
-void QDomDocumentFragment_new2()
-{
-  QDomDocumentFragment * obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomDocumentFragment_new1();
+    /*
+    QDomDocumentFragment()
+    */
+    QDomDocumentFragment * obj = new QDomDocumentFragment();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1) )
   {
-    QDomDocumentFragment_new2();
+    /*
+    QDomDocumentFragment( const QDomDocumentFragment & x )
+    */
+    QDomDocumentFragment * obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

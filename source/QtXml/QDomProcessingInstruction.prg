@@ -50,33 +50,23 @@ RETURN
 #include <QtXml/QDomProcessingInstruction>
 #endif
 
-/*
-QDomProcessingInstruction()
-*/
-void QDomProcessingInstruction_new1()
-{
-  QDomProcessingInstruction * obj = new QDomProcessingInstruction();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomProcessingInstruction( const QDomProcessingInstruction & x )
-*/
-void QDomProcessingInstruction_new2()
-{
-  QDomProcessingInstruction * obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomProcessingInstruction_new1();
+    /*
+    QDomProcessingInstruction()
+    */
+    QDomProcessingInstruction * obj = new QDomProcessingInstruction();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1) )
   {
-    QDomProcessingInstruction_new2();
+    /*
+    QDomProcessingInstruction( const QDomProcessingInstruction & x )
+    */
+    QDomProcessingInstruction * obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

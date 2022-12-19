@@ -60,33 +60,23 @@ RETURN
 #include <QtXml/QXmlParseException>
 #endif
 
-/*
-QXmlParseException( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
-*/
-void QXmlParseException_new1()
-{
-  QXmlParseException * obj = new QXmlParseException( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlParseException( const QXmlParseException & other )
-*/
-void QXmlParseException_new2()
-{
-  QXmlParseException * obj = new QXmlParseException( *PQXMLPARSEEXCEPTION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 {
   if( ISBETWEEN(0,5) && ( HB_ISCHAR(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISCHAR(4)||HB_ISNIL(4)) && ( HB_ISNUM(5)||HB_ISNIL(5)) )
   {
-    QXmlParseException_new1();
+    /*
+    QXmlParseException( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
+    */
+    QXmlParseException * obj = new QXmlParseException( OPQSTRING(1,QString()), OPINT(2,-1), OPINT(3,-1), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
   {
-    QXmlParseException_new2();
+    /*
+    QXmlParseException( const QXmlParseException & other )
+    */
+    QXmlParseException * obj = new QXmlParseException( *PQXMLPARSEEXCEPTION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

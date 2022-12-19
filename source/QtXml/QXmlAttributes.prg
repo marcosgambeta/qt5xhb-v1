@@ -174,58 +174,43 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
   }
 }
 
-/*
-int index( const QString & qName ) const
-*/
-void QXmlAttributes_index1()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->index( PQSTRING(1) ) );
-  }
-}
-
-/*
-int index( const QLatin1String & qName ) const
-*/
-void QXmlAttributes_index2()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->index( *PQLATIN1STRING(1) ) );
-  }
-}
-
-/*
-int index( const QString & uri, const QString & localPart ) const
-*/
-void QXmlAttributes_index3()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RINT( obj->index( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QXmlAttributes_index1();
+    /*
+    int index( const QString & qName ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RINT( obj->index( PQSTRING(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   {
-    QXmlAttributes_index2();
+    /*
+    int index( const QLatin1String & qName ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RINT( obj->index( *PQLATIN1STRING(1) ) );
+    }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QXmlAttributes_index3();
+    /*
+    int index( const QString & uri, const QString & localPart ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RINT( obj->index( PQSTRING(1), PQSTRING(2) ) );
+    }
   }
   else
   {
@@ -305,58 +290,43 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
   }
 }
 
-/*
-QString type( int index ) const
-*/
-void QXmlAttributes_type1()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->type( PINT(1) ) );
-  }
-}
-
-/*
-QString type( const QString & qName ) const
-*/
-void QXmlAttributes_type2()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->type( PQSTRING(1) ) );
-  }
-}
-
-/*
-QString type( const QString & uri, const QString & localName ) const
-*/
-void QXmlAttributes_type3()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->type( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QXmlAttributes_type1();
+    /*
+    QString type( int index ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->type( PINT(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QXmlAttributes_type2();
+    /*
+    QString type( const QString & qName ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->type( PQSTRING(1) ) );
+    }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QXmlAttributes_type3();
+    /*
+    QString type( const QString & uri, const QString & localName ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->type( PQSTRING(1), PQSTRING(2) ) );
+    }
   }
   else
   {
@@ -388,75 +358,55 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
   }
 }
 
-/*
-QString value( int index ) const
-*/
-void QXmlAttributes_value1()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->value( PINT(1) ) );
-  }
-}
-
-/*
-QString value( const QString & qName ) const
-*/
-void QXmlAttributes_value2()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->value( PQSTRING(1) ) );
-  }
-}
-
-/*
-QString value( const QLatin1String & qName ) const
-*/
-void QXmlAttributes_value3()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->value( *PQLATIN1STRING(1) ) );
-  }
-}
-
-/*
-QString value( const QString & uri, const QString & localName ) const
-*/
-void QXmlAttributes_value4()
-{
-  QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQSTRING( obj->value( PQSTRING(1), PQSTRING(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 {
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QXmlAttributes_value1();
+    /*
+    QString value( int index ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->value( PINT(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QXmlAttributes_value2();
+    /*
+    QString value( const QString & qName ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->value( PQSTRING(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISOBJECT(1) )
   {
-    QXmlAttributes_value3();
+    /*
+    QString value( const QLatin1String & qName ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->value( *PQLATIN1STRING(1) ) );
+    }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QXmlAttributes_value4();
+    /*
+    QString value( const QString & uri, const QString & localName ) const
+    */
+    QXmlAttributes * obj = (QXmlAttributes *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQSTRING( obj->value( PQSTRING(1), PQSTRING(2) ) );
+    }
   }
   else
   {

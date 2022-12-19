@@ -47,33 +47,23 @@ RETURN
 #include <QtXml/QDomEntityReference>
 #endif
 
-/*
-QDomEntityReference()
-*/
-void QDomEntityReference_new1()
-{
-  QDomEntityReference * obj = new QDomEntityReference();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomEntityReference( const QDomEntityReference & x )
-*/
-void QDomEntityReference_new2()
-{
-  QDomEntityReference * obj = new QDomEntityReference( *PQDOMENTITYREFERENCE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomEntityReference_new1();
+    /*
+    QDomEntityReference()
+    */
+    QDomEntityReference * obj = new QDomEntityReference();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMENTITYREFERENCE(1) )
   {
-    QDomEntityReference_new2();
+    /*
+    QDomEntityReference( const QDomEntityReference & x )
+    */
+    QDomEntityReference * obj = new QDomEntityReference( *PQDOMENTITYREFERENCE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

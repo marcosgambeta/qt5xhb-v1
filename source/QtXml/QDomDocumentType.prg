@@ -54,33 +54,23 @@ RETURN
 #include <QtXml/QDomDocumentType>
 #endif
 
-/*
-QDomDocumentType()
-*/
-void QDomDocumentType_new1()
-{
-  QDomDocumentType * obj = new QDomDocumentType();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomDocumentType( const QDomDocumentType & n )
-*/
-void QDomDocumentType_new2()
-{
-  QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomDocumentType_new1();
+    /*
+    QDomDocumentType()
+    */
+    QDomDocumentType * obj = new QDomDocumentType();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
   {
-    QDomDocumentType_new2();
+    /*
+    QDomDocumentType( const QDomDocumentType & n )
+    */
+    QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

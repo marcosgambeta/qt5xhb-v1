@@ -55,33 +55,23 @@ RETURN
 #include <QtXml/QDomCharacterData>
 #endif
 
-/*
-QDomCharacterData()
-*/
-void QDomCharacterData_new1()
-{
-  QDomCharacterData * obj = new QDomCharacterData();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomCharacterData( const QDomCharacterData & x )
-*/
-void QDomCharacterData_new2()
-{
-  QDomCharacterData * obj = new QDomCharacterData( *PQDOMCHARACTERDATA(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomCharacterData_new1();
+    /*
+    QDomCharacterData()
+    */
+    QDomCharacterData * obj = new QDomCharacterData();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMCHARACTERDATA(1) )
   {
-    QDomCharacterData_new2();
+    /*
+    QDomCharacterData( const QDomCharacterData & x )
+    */
+    QDomCharacterData * obj = new QDomCharacterData( *PQDOMCHARACTERDATA(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

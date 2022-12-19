@@ -63,33 +63,23 @@ RETURN
 #include <QtXml/QDomImplementation>
 #endif
 
-/*
-QDomImplementation()
-*/
-void QDomImplementation_new1()
-{
-  QDomImplementation * obj = new QDomImplementation();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomImplementation( const QDomImplementation & x )
-*/
-void QDomImplementation_new2()
-{
-  QDomImplementation * obj = new QDomImplementation( *PQDOMIMPLEMENTATION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomImplementation_new1();
+    /*
+    QDomImplementation()
+    */
+    QDomImplementation * obj = new QDomImplementation();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMIMPLEMENTATION(1) )
   {
-    QDomImplementation_new2();
+    /*
+    QDomImplementation( const QDomImplementation & x )
+    */
+    QDomImplementation * obj = new QDomImplementation( *PQDOMIMPLEMENTATION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -82,33 +82,23 @@ RETURN
 #include <QtXml/QDomElement>
 #endif
 
-/*
-QDomElement()
-*/
-void QDomElement_new1()
-{
-  QDomElement * obj = new QDomElement();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDomElement( const QDomElement & x )
-*/
-void QDomElement_new2()
-{
-  QDomElement * obj = new QDomElement( *PQDOMELEMENT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDOMELEMENT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDomElement_new1();
+    /*
+    QDomElement()
+    */
+    QDomElement * obj = new QDomElement();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMELEMENT(1) )
   {
-    QDomElement_new2();
+    /*
+    QDomElement( const QDomElement & x )
+    */
+    QDomElement * obj = new QDomElement( *PQDOMELEMENT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
