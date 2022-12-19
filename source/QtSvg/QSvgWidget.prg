@@ -55,33 +55,23 @@ RETURN
 
 #include <QtSvg/QSvgRenderer>
 
-/*
-QSvgWidget( QWidget * parent = 0 )
-*/
-void QSvgWidget_new1()
-{
-  QSvgWidget * obj = new QSvgWidget( OPQWIDGET(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QSvgWidget( const QString & file, QWidget * parent = 0 )
-*/
-void QSvgWidget_new2()
-{
-  QSvgWidget * obj = new QSvgWidget( PQSTRING(1), OPQWIDGET(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQWIDGET(1)||HB_ISNIL(1)) )
   {
-    QSvgWidget_new1();
+    /*
+    QSvgWidget( QWidget * parent = 0 )
+    */
+    QSvgWidget * obj = new QSvgWidget( OPQWIDGET(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQWIDGET(2)||HB_ISNIL(2)) )
   {
-    QSvgWidget_new2();
+    /*
+    QSvgWidget( const QString & file, QWidget * parent = 0 )
+    */
+    QSvgWidget * obj = new QSvgWidget( PQSTRING(1), OPQWIDGET(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -158,45 +148,35 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
   }
 }
 
-/*
-void load( const QString & file )
-*/
-void QSvgWidget_load1()
-{
-  QSvgWidget * obj = (QSvgWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->load( PQSTRING(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void load( const QByteArray & contents )
-*/
-void QSvgWidget_load2()
-{
-  QSvgWidget * obj = (QSvgWidget *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->load( *PQBYTEARRAY(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QSvgWidget_load1();
+    /*
+    void load( const QString & file )
+    */
+    QSvgWidget * obj = (QSvgWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->load( PQSTRING(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
-    QSvgWidget_load2();
+    /*
+    void load( const QByteArray & contents )
+    */
+    QSvgWidget * obj = (QSvgWidget *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->load( *PQBYTEARRAY(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

@@ -62,33 +62,23 @@ RETURN
 
 #include <QtSvg/QSvgRenderer>
 
-/*
-QGraphicsSvgItem( QGraphicsItem * parent = 0 )
-*/
-void QGraphicsSvgItem_new1()
-{
-  QGraphicsSvgItem * obj = new QGraphicsSvgItem( HB_ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QGraphicsSvgItem( const QString & fileName, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsSvgItem_new2()
-{
-  QGraphicsSvgItem * obj = new QGraphicsSvgItem( PQSTRING(1), HB_ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||HB_ISNIL(1)) )
   {
-    QGraphicsSvgItem_new1();
+    /*
+    QGraphicsSvgItem( QGraphicsItem * parent = 0 )
+    */
+    QGraphicsSvgItem * obj = new QGraphicsSvgItem( HB_ISNIL(1)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(1) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2)||HB_ISNIL(2)) )
   {
-    QGraphicsSvgItem_new2();
+    /*
+    QGraphicsSvgItem( const QString & fileName, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsSvgItem * obj = new QGraphicsSvgItem( PQSTRING(1), HB_ISNIL(2)? 0 : (QGraphicsItem *) Qt5xHb::itemGetPtr(2) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

@@ -351,45 +351,35 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void setViewBox( const QRect & viewBox )
-*/
-void QSvgGenerator_setViewBox1()
-{
-  QSvgGenerator * obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setViewBox( *PQRECT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void setViewBox( const QRectF & viewBox )
-*/
-void QSvgGenerator_setViewBox2()
-{
-  QSvgGenerator * obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->setViewBox( *PQRECTF(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 {
   if( ISNUMPAR(1) && ISQRECT(1) )
   {
-    QSvgGenerator_setViewBox1();
+    /*
+    void setViewBox( const QRect & viewBox )
+    */
+    QSvgGenerator * obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setViewBox( *PQRECT(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
-    QSvgGenerator_setViewBox2();
+    /*
+    void setViewBox( const QRectF & viewBox )
+    */
+    QSvgGenerator * obj = (QSvgGenerator *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->setViewBox( *PQRECTF(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
