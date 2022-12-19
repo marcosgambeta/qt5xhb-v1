@@ -73,37 +73,27 @@ RETURN
 
 #include <QtCore/QDateTime>
 
-/*
-QGeoAreaMonitorInfo( const QString & name = QString() )
-*/
-void QGeoAreaMonitorInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorInfo * obj = new QGeoAreaMonitorInfo( OPQSTRING(1,QString()) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoAreaMonitorInfo( const QGeoAreaMonitorInfo & other )
-*/
-void QGeoAreaMonitorInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorInfo * obj = new QGeoAreaMonitorInfo( *PQGEOAREAMONITORINFO(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QGEOAREAMONITORINFO_NEW )
 {
   if( ISBETWEEN(0,1) && ( HB_ISCHAR(1)||HB_ISNIL(1)) )
   {
-    QGeoAreaMonitorInfo_new1();
+    /*
+    QGeoAreaMonitorInfo( const QString & name = QString() )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoAreaMonitorInfo * obj = new QGeoAreaMonitorInfo( OPQSTRING(1,QString()) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOAREAMONITORINFO(1) )
   {
-    QGeoAreaMonitorInfo_new2();
+    /*
+    QGeoAreaMonitorInfo( const QGeoAreaMonitorInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoAreaMonitorInfo * obj = new QGeoAreaMonitorInfo( *PQGEOAREAMONITORINFO(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

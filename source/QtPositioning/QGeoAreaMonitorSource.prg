@@ -302,101 +302,91 @@ HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_REQUESTUPDATE )
 #endif
 }
 
-/*
-virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
-*/
-void QGeoAreaMonitorSource_activeMonitors1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
-    {
-      for( int i = 0; i < list.count(); i++ )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGeoAreaMonitorInfo *) new QGeoAreaMonitorInfo( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    else
-    {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
-    }
-    hb_itemReturnRelease(pArray);
-  }
-#endif
-}
-
-/*
-virtual QList<QGeoAreaMonitorInfo> activeMonitors( const QGeoShape & lookupArea ) const = 0
-*/
-void QGeoAreaMonitorSource_activeMonitors2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QGeoAreaMonitorInfo> list = obj->activeMonitors( *PQGEOSHAPE(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
-    {
-      for( int i = 0; i < list.count(); i++ )
-      {
-        hb_vmPushDynSym( pDynSym );
-        hb_vmPushNil();
-        hb_vmDo( 0 );
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QGeoAreaMonitorInfo *) new QGeoAreaMonitorInfo( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemNew( NULL );
-        hb_itemPutL( pDestroy, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
-      }
-    }
-    else
-    {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
-    }
-    hb_itemReturnRelease(pArray);
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QGEOAREAMONITORSOURCE_ACTIVEMONITORS )
 {
   if( ISNUMPAR(0) )
   {
-    QGeoAreaMonitorSource_activeMonitors1();
+    /*
+    virtual QList<QGeoAreaMonitorInfo> activeMonitors() const = 0
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<QGeoAreaMonitorInfo> list = obj->activeMonitors();
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      if( pDynSym )
+      {
+        for( int i = 0; i < list.count(); i++ )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QGeoAreaMonitorInfo *) new QGeoAreaMonitorInfo( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
+      }
+      hb_itemReturnRelease(pArray);
+    }
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    QGeoAreaMonitorSource_activeMonitors2();
+    /*
+    virtual QList<QGeoAreaMonitorInfo> activeMonitors( const QGeoShape & lookupArea ) const = 0
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoAreaMonitorSource * obj = (QGeoAreaMonitorSource *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<QGeoAreaMonitorInfo> list = obj->activeMonitors( *PQGEOSHAPE(1) );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOAREAMONITORINFO" );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
+      if( pDynSym )
+      {
+        for( int i = 0; i < list.count(); i++ )
+        {
+          hb_vmPushDynSym( pDynSym );
+          hb_vmPushNil();
+          hb_vmDo( 0 );
+          PHB_ITEM pObject = hb_itemNew( NULL );
+          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pItem = hb_itemNew( NULL );
+          hb_itemPutPtr( pItem, (QGeoAreaMonitorInfo *) new QGeoAreaMonitorInfo( list[i] ) );
+          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
+          hb_itemRelease( pItem );
+          PHB_ITEM pDestroy = hb_itemNew( NULL );
+          hb_itemPutL( pDestroy, true );
+          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
+          hb_itemRelease( pDestroy );
+          hb_arrayAddForward( pArray, pObject );
+          hb_itemRelease( pObject );
+        }
+      }
+      else
+      {
+        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGEOAREAMONITORINFO", HB_ERR_ARGS_BASEPARAMS );
+      }
+      hb_itemReturnRelease(pArray);
+    }
+#endif
   }
   else
   {

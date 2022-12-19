@@ -57,67 +57,47 @@ RETURN
 #endif
 #endif
 
-/*
-QGeoCircle()
-*/
-void QGeoCircle_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = new QGeoCircle();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoCircle( const QGeoCoordinate & center, qreal radius = -1.0 )
-*/
-void QGeoCircle_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = new QGeoCircle( *PQGEOCOORDINATE(1), OPQREAL(2,-1.0) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoCircle( const QGeoCircle & other )
-*/
-void QGeoCircle_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = new QGeoCircle( *PQGEOCIRCLE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoCircle( const QGeoShape & other )
-*/
-void QGeoCircle_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCircle * obj = new QGeoCircle( *PQGEOSHAPE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QGEOCIRCLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGeoCircle_new1();
+    /*
+    QGeoCircle()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoCircle * obj = new QGeoCircle();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISBETWEEN(1,2) && ISQGEOCOORDINATE(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QGeoCircle_new2();
+    /*
+    QGeoCircle( const QGeoCoordinate & center, qreal radius = -1.0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoCircle * obj = new QGeoCircle( *PQGEOCOORDINATE(1), OPQREAL(2,-1.0) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOCIRCLE(1) )
   {
-    QGeoCircle_new3();
+    /*
+    QGeoCircle( const QGeoCircle & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoCircle * obj = new QGeoCircle( *PQGEOCIRCLE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    QGeoCircle_new4();
+    /*
+    QGeoCircle( const QGeoShape & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoCircle * obj = new QGeoCircle( *PQGEOSHAPE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

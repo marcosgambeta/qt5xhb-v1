@@ -63,37 +63,27 @@ RETURN
 #endif
 #endif
 
-/*
-QGeoShape()
-*/
-void QGeoShape_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = new QGeoShape();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoShape( const QGeoShape & other )
-*/
-void QGeoShape_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoShape * obj = new QGeoShape( *PQGEOSHAPE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QGEOSHAPE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGeoShape_new1();
+    /*
+    QGeoShape()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoShape * obj = new QGeoShape();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    QGeoShape_new2();
+    /*
+    QGeoShape( const QGeoShape & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoShape * obj = new QGeoShape( *PQGEOSHAPE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

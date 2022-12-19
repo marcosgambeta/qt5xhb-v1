@@ -70,52 +70,37 @@ RETURN
 #endif
 #endif
 
-/*
-QGeoPositionInfo()
-*/
-void QGeoPositionInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * obj = new QGeoPositionInfo();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoPositionInfo( const QGeoCoordinate & coordinate, const QDateTime & updateTime )
-*/
-void QGeoPositionInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * obj = new QGeoPositionInfo( *PQGEOCOORDINATE(1), *PQDATETIME(2) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoPositionInfo( const QGeoPositionInfo & other )
-*/
-void QGeoPositionInfo_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoPositionInfo * obj = new QGeoPositionInfo( *PQGEOPOSITIONINFO(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QGEOPOSITIONINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGeoPositionInfo_new1();
+    /*
+    QGeoPositionInfo()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoPositionInfo * obj = new QGeoPositionInfo();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQDATETIME(2) )
   {
-    QGeoPositionInfo_new2();
+    /*
+    QGeoPositionInfo( const QGeoCoordinate & coordinate, const QDateTime & updateTime )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoPositionInfo * obj = new QGeoPositionInfo( *PQGEOCOORDINATE(1), *PQDATETIME(2) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOPOSITIONINFO(1) )
   {
-    QGeoPositionInfo_new3();
+    /*
+    QGeoPositionInfo( const QGeoPositionInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoPositionInfo * obj = new QGeoPositionInfo( *PQGEOPOSITIONINFO(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

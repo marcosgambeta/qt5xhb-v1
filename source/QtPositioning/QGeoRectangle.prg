@@ -70,82 +70,57 @@ RETURN
 #endif
 #endif
 
-/*
-QGeoRectangle()
-*/
-void QGeoRectangle_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * obj = new QGeoRectangle();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoRectangle( const QGeoCoordinate & center, double degreesWidth, double degreesHeight )
-*/
-void QGeoRectangle_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * obj = new QGeoRectangle( *PQGEOCOORDINATE(1), PDOUBLE(2), PDOUBLE(3) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoRectangle( const QGeoCoordinate & topLeft, const QGeoCoordinate & bottomRight )
-*/
-void QGeoRectangle_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * obj = new QGeoRectangle( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoRectangle( const QGeoRectangle & other )
-*/
-void QGeoRectangle_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * obj = new QGeoRectangle( *PQGEORECTANGLE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoRectangle( const QGeoShape & other )
-*/
-void QGeoRectangle_new5()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * obj = new QGeoRectangle( *PQGEOSHAPE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QGEORECTANGLE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGeoRectangle_new1();
+    /*
+    QGeoRectangle()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoRectangle * obj = new QGeoRectangle();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(3) && ISQGEOCOORDINATE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
-    QGeoRectangle_new2();
+    /*
+    QGeoRectangle( const QGeoCoordinate & center, double degreesWidth, double degreesHeight )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoRectangle * obj = new QGeoRectangle( *PQGEOCOORDINATE(1), PDOUBLE(2), PDOUBLE(3) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(2) && ISQGEOCOORDINATE(1) && ISQGEOCOORDINATE(2) )
   {
-    QGeoRectangle_new3();
+    /*
+    QGeoRectangle( const QGeoCoordinate & topLeft, const QGeoCoordinate & bottomRight )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoRectangle * obj = new QGeoRectangle( *PQGEOCOORDINATE(1), *PQGEOCOORDINATE(2) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEORECTANGLE(1) )
   {
-    QGeoRectangle_new4();
+    /*
+    QGeoRectangle( const QGeoRectangle & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoRectangle * obj = new QGeoRectangle( *PQGEORECTANGLE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOSHAPE(1) )
   {
-    QGeoRectangle_new5();
+    /*
+    QGeoRectangle( const QGeoShape & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoRectangle * obj = new QGeoRectangle( *PQGEOSHAPE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
@@ -555,45 +530,35 @@ HB_FUNC_STATIC( QGEORECTANGLE_HEIGHT )
 #endif
 }
 
-/*
-bool contains( const QGeoCoordinate & coordinate ) const
-*/
-void QGeoRectangle_contains1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * obj = (QGeoRectangle *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->contains( *PQGEOCOORDINATE(1) ) );
-  }
-#endif
-}
-
-/*
-bool contains( const QGeoRectangle & rectangle ) const
-*/
-void QGeoRectangle_contains2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoRectangle * obj = (QGeoRectangle *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->contains( *PQGEORECTANGLE(1) ) );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QGEORECTANGLE_CONTAINS )
 {
   if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
   {
-    QGeoRectangle_contains1();
+    /*
+    bool contains( const QGeoCoordinate & coordinate ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoRectangle * obj = (QGeoRectangle *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->contains( *PQGEOCOORDINATE(1) ) );
+    }
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEORECTANGLE(1) )
   {
-    QGeoRectangle_contains2();
+    /*
+    bool contains( const QGeoRectangle & rectangle ) const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoRectangle * obj = (QGeoRectangle *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->contains( *PQGEORECTANGLE(1) ) );
+    }
+#endif
   }
   else
   {

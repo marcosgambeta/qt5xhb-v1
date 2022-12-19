@@ -71,67 +71,47 @@ RETURN
 #endif
 #endif
 
-/*
-QGeoCoordinate()
-*/
-void QGeoCoordinate_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = new QGeoCoordinate();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoCoordinate( double latitude, double longitude )
-*/
-void QGeoCoordinate_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = new QGeoCoordinate( PDOUBLE(1), PDOUBLE(2) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoCoordinate( double latitude, double longitude, double altitude )
-*/
-void QGeoCoordinate_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = new QGeoCoordinate( PDOUBLE(1), PDOUBLE(2), PDOUBLE(3) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QGeoCoordinate( const QGeoCoordinate & other )
-*/
-void QGeoCoordinate_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QGeoCoordinate * obj = new QGeoCoordinate( *PQGEOCOORDINATE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QGEOCOORDINATE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGeoCoordinate_new1();
+    /*
+    QGeoCoordinate()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoCoordinate * obj = new QGeoCoordinate();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QGeoCoordinate_new2();
+    /*
+    QGeoCoordinate( double latitude, double longitude )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoCoordinate * obj = new QGeoCoordinate( PDOUBLE(1), PDOUBLE(2) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
-    QGeoCoordinate_new3();
+    /*
+    QGeoCoordinate( double latitude, double longitude, double altitude )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoCoordinate * obj = new QGeoCoordinate( PDOUBLE(1), PDOUBLE(2), PDOUBLE(3) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQGEOCOORDINATE(1) )
   {
-    QGeoCoordinate_new4();
+    /*
+    QGeoCoordinate( const QGeoCoordinate & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QGeoCoordinate * obj = new QGeoCoordinate( *PQGEOCOORDINATE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
