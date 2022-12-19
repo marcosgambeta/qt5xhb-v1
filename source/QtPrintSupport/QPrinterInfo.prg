@@ -80,46 +80,31 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QPrinterInfo()
-*/
-void QPrinterInfo_new1()
-{
-  QPrinterInfo * obj = new QPrinterInfo();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPrinterInfo( const QPrinterInfo & src )
-*/
-void QPrinterInfo_new2()
-{
-  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTERINFO(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QPrinterInfo( const QPrinter & printer )
-*/
-void QPrinterInfo_new3()
-{
-  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTER(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QPrinterInfo_new1();
+    /*
+    QPrinterInfo()
+    */
+    QPrinterInfo * obj = new QPrinterInfo();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPRINTERINFO(1) )
   {
-    QPrinterInfo_new2();
+    /*
+    QPrinterInfo( const QPrinterInfo & src )
+    */
+    QPrinterInfo * obj = new QPrinterInfo( *PQPRINTERINFO(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPRINTER(1) )
   {
-    QPrinterInfo_new3();
+    /*
+    QPrinterInfo( const QPrinter & printer )
+    */
+    QPrinterInfo * obj = new QPrinterInfo( *PQPRINTER(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
