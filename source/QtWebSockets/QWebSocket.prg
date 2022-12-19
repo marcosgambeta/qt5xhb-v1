@@ -892,57 +892,47 @@ HB_FUNC_STATIC( QWEBSOCKET_SENDBINARYMESSAGE )
 #endif
 }
 
-/*
-void ignoreSslErrors( const QList<QSslError> & errors )
-*/
-void QWebSocket_ignoreSslErrors1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QList<QSslError> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
-    {
-      par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
-    }
-    obj->ignoreSslErrors( par1 );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-void ignoreSslErrors()
-*/
-void QWebSocket_ignoreSslErrors2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocket * obj = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->ignoreSslErrors();
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QWEBSOCKET_IGNORESSLERRORS )
 {
   if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
-    QWebSocket_ignoreSslErrors1();
+    /*
+    void ignoreSslErrors( const QList<QSslError> & errors )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QWebSocket * obj = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QList<QSslError> par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      obj->ignoreSslErrors( par1 );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(0) )
   {
-    QWebSocket_ignoreSslErrors2();
+    /*
+    void ignoreSslErrors()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QWebSocket * obj = (QWebSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->ignoreSslErrors();
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {

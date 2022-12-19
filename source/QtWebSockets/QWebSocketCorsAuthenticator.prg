@@ -66,37 +66,27 @@ RETURN
 #include <QtCore/QString>
 #include <QtCore/QLatin1String>
 
-/*
-QWebSocketCorsAuthenticator( const QString & origin )
-*/
-void QWebSocketCorsAuthenticator_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * obj = new QWebSocketCorsAuthenticator( PQSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QWebSocketCorsAuthenticator( const QWebSocketCorsAuthenticator & other )
-*/
-void QWebSocketCorsAuthenticator_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
-  QWebSocketCorsAuthenticator * obj = new QWebSocketCorsAuthenticator( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QWEBSOCKETCORSAUTHENTICATOR_NEW )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QWebSocketCorsAuthenticator_new1();
+    /*
+    QWebSocketCorsAuthenticator( const QString & origin )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QWebSocketCorsAuthenticator * obj = new QWebSocketCorsAuthenticator( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQWEBSOCKETCORSAUTHENTICATOR(1) )
   {
-    QWebSocketCorsAuthenticator_new2();
+    /*
+    QWebSocketCorsAuthenticator( const QWebSocketCorsAuthenticator & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,3,0))
+    QWebSocketCorsAuthenticator * obj = new QWebSocketCorsAuthenticator( *PQWEBSOCKETCORSAUTHENTICATOR(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
