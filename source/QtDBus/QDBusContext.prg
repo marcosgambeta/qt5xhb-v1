@@ -222,38 +222,40 @@ HB_FUNC_STATIC( QDBUSCONTEXT_SETDELAYEDREPLY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void sendErrorReply( const QString & name, const QString & msg = QString() ) const
-*/
-void QDBusContext_sendErrorReply1()
-{
-  QDBusContext * obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->sendErrorReply( PQSTRING(1), OPQSTRING(2,QString()) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString() ) const
-*/
-void QDBusContext_sendErrorReply2()
-{
-  QDBusContext * obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->sendErrorReply( (QDBusError::ErrorType) hb_parni(1), OPQSTRING(2,QString()) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QDBUSCONTEXT_SENDERRORREPLY )
 {
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
+  {
+    /*
+    void sendErrorReply( const QString & name, const QString & msg = QString() ) const
+    */
+    QDBusContext * obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->sendErrorReply( PQSTRING(1), OPQSTRING(2,QString()) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  }
+  else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (HB_ISCHAR(2)||HB_ISNIL(2)) )
+  {
+    /*
+    void sendErrorReply( QDBusError::ErrorType type, const QString & msg = QString() ) const
+    */
+    QDBusContext * obj = (QDBusContext *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->sendErrorReply( (QDBusError::ErrorType) hb_parni(1), OPQSTRING(2,QString()) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  }
+  else
+  {
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
 }
 
 HB_FUNC_STATIC( QDBUSCONTEXT_NEWFROM )

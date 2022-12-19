@@ -62,46 +62,31 @@ RETURN
 #include <QtDBus/QDBusUnixFileDescriptor>
 #endif
 
-/*
-QDBusUnixFileDescriptor()
-*/
-void QDBusUnixFileDescriptor_new1()
-{
-  QDBusUnixFileDescriptor * obj = new QDBusUnixFileDescriptor();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDBusUnixFileDescriptor( int fileDescriptor )
-*/
-void QDBusUnixFileDescriptor_new2()
-{
-  QDBusUnixFileDescriptor * obj = new QDBusUnixFileDescriptor( PINT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor & other )
-*/
-void QDBusUnixFileDescriptor_new3()
-{
-  QDBusUnixFileDescriptor * obj = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC( QDBUSUNIXFILEDESCRIPTOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDBusUnixFileDescriptor_new1();
+    /*
+    QDBusUnixFileDescriptor()
+    */
+    QDBusUnixFileDescriptor * obj = new QDBusUnixFileDescriptor();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QDBusUnixFileDescriptor_new2();
+    /*
+    QDBusUnixFileDescriptor( int fileDescriptor )
+    */
+    QDBusUnixFileDescriptor * obj = new QDBusUnixFileDescriptor( PINT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDBUSUNIXFILEDESCRIPTOR(1) )
   {
-    QDBusUnixFileDescriptor_new3();
+    /*
+    QDBusUnixFileDescriptor( const QDBusUnixFileDescriptor & other )
+    */
+    QDBusUnixFileDescriptor * obj = new QDBusUnixFileDescriptor( *PQDBUSUNIXFILEDESCRIPTOR(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

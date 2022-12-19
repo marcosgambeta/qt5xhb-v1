@@ -56,26 +56,28 @@ RETURN
 
 #include <QtDBus/QDBusError>
 
-/*
-QDBusServer( const QString & address, QObject * parent = 0 )
-*/
-void QDBusServer_new1()
-{
-  QDBusServer * obj = new QDBusServer( PQSTRING(1), OPQOBJECT(2,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDBusServer( QObject * parent = 0 )
-*/
-void QDBusServer_new2()
-{
-  QDBusServer * obj = new QDBusServer( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QDBUSSERVER_NEW )
 {
+  if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
+  {
+    /*
+    QDBusServer( const QString & address, QObject * parent = 0 )
+    */
+    QDBusServer * obj = new QDBusServer( PQSTRING(1), OPQOBJECT(2,0) );
+    Qt5xHb::returnNewObject(obj, false);
+  }
+  else if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  {
+    /*
+    QDBusServer( QObject * parent = 0 )
+    */
+    QDBusServer * obj = new QDBusServer( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
+  }
+  else
+  {
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
 }
 
 HB_FUNC_STATIC( QDBUSSERVER_DELETE )

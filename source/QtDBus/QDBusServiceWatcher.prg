@@ -63,33 +63,23 @@ RETURN
 
 #include <QtDBus/QDBusConnection>
 
-/*
-QDBusServiceWatcher( QObject * parent = 0 )
-*/
-void QDBusServiceWatcher_new1()
-{
-  QDBusServiceWatcher * obj = new QDBusServiceWatcher( OPQOBJECT(1,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDBusServiceWatcher( const QString & service, const QDBusConnection & connection, QDBusServiceWatcher::WatchMode watchMode = QDBusServiceWatcher::WatchForOwnerChange, QObject * parent = 0 )
-*/
-void QDBusServiceWatcher_new2()
-{
-  QDBusServiceWatcher * obj = new QDBusServiceWatcher( PQSTRING(1), *PQDBUSCONNECTION(2), HB_ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,0) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC( QDBUSSERVICEWATCHER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QDBusServiceWatcher_new1();
+    /*
+    QDBusServiceWatcher( QObject * parent = 0 )
+    */
+    QDBusServiceWatcher * obj = new QDBusServiceWatcher( OPQOBJECT(1,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,4) && HB_ISCHAR(1) && ISQDBUSCONNECTION(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
-    QDBusServiceWatcher_new2();
+    /*
+    QDBusServiceWatcher( const QString & service, const QDBusConnection & connection, QDBusServiceWatcher::WatchMode watchMode = QDBusServiceWatcher::WatchForOwnerChange, QObject * parent = 0 )
+    */
+    QDBusServiceWatcher * obj = new QDBusServiceWatcher( PQSTRING(1), *PQDBUSCONNECTION(2), HB_ISNIL(3)? (QDBusServiceWatcher::WatchMode) QDBusServiceWatcher::WatchForOwnerChange : (QDBusServiceWatcher::WatchMode) hb_parni(3), OPQOBJECT(4,0) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

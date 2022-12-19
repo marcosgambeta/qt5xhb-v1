@@ -69,26 +69,28 @@ RETURN
 #include <QtDBus/QDBusArgument>
 #endif
 
-/*
-QDBusArgument()
-*/
-void QDBusArgument_new1()
-{
-  QDBusArgument * obj = new QDBusArgument();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDBusArgument( const QDBusArgument & other )
-*/
-void QDBusArgument_new2()
-{
-  QDBusArgument * obj = new QDBusArgument( *PQDBUSARGUMENT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDBUSARGUMENT_NEW )
 {
+  if( ISNUMPAR(0) )
+  {
+    /*
+    QDBusArgument()
+    */
+    QDBusArgument * obj = new QDBusArgument();
+    Qt5xHb::returnNewObject(obj, true);
+  }
+  else if( ISNUMPAR(1) && ISQDBUSARGUMENT(1) )
+  {
+    /*
+    QDBusArgument( const QDBusArgument & other )
+    */
+    QDBusArgument * obj = new QDBusArgument( *PQDBUSARGUMENT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+  }
+  else
+  {
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
 }
 
 HB_FUNC_STATIC( QDBUSARGUMENT_DELETE )
@@ -160,38 +162,40 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDSTRUCTURE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void beginArray( int elementMetaTypeId )
-*/
-void QDBusArgument_beginArray1()
-{
-  QDBusArgument * obj = (QDBusArgument *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->beginArray( PINT(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void beginArray() const
-*/
-void QDBusArgument_beginArray2()
-{
-  QDBusArgument * obj = (QDBusArgument *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->beginArray();
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINARRAY )
 {
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  {
+    /*
+    void beginArray( int elementMetaTypeId )
+    */
+    QDBusArgument * obj = (QDBusArgument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->beginArray( PINT(1) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  }
+  else if( ISNUMPAR(0) )
+  {
+    /*
+    void beginArray() const
+    */
+    QDBusArgument * obj = (QDBusArgument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->beginArray();
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  }
+  else
+  {
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
 }
 
 /*
@@ -220,38 +224,40 @@ HB_FUNC_STATIC( QDBUSARGUMENT_ENDARRAY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void beginMap( int keyMetaTypeId, int valueMetaTypeId )
-*/
-void QDBusArgument_beginMap1()
-{
-  QDBusArgument * obj = (QDBusArgument *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->beginMap( PINT(1), PINT(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void beginMap() const
-*/
-void QDBusArgument_beginMap2()
-{
-  QDBusArgument * obj = (QDBusArgument *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->beginMap();
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QDBUSARGUMENT_BEGINMAP )
 {
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  {
+    /*
+    void beginMap( int keyMetaTypeId, int valueMetaTypeId )
+    */
+    QDBusArgument * obj = (QDBusArgument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->beginMap( PINT(1), PINT(2) );
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  }
+  else if( ISNUMPAR(0) )
+  {
+    /*
+    void beginMap() const
+    */
+    QDBusArgument * obj = (QDBusArgument *) Qt5xHb::itemGetPtrStackSelfItem();
+
+    if( obj )
+    {
+      obj->beginMap();
+    }
+
+    hb_itemReturn(hb_stackSelfItem());
+  }
+  else
+  {
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
+  }
 }
 
 /*

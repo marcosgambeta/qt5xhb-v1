@@ -60,59 +60,39 @@ RETURN
 #include <QtDBus/QDBusError>
 #endif
 
-/*
-QDBusError()
-*/
-void QDBusError_new1()
-{
-  QDBusError * obj = new QDBusError();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDBusError( const QDBusMessage & msg )
-*/
-void QDBusError_new3()
-{
-  QDBusError * obj = new QDBusError( *PQDBUSMESSAGE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDBusError( QDBusError::ErrorType error, const QString & message )
-*/
-void QDBusError_new4()
-{
-  QDBusError * obj = new QDBusError( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDBusError( const QDBusError & other )
-*/
-void QDBusError_new5()
-{
-  QDBusError * obj = new QDBusError( *PQDBUSERROR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDBUSERROR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDBusError_new1();
+    /*
+    QDBusError()
+    */
+    QDBusError * obj = new QDBusError();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDBUSMESSAGE(1) )
   {
-    QDBusError_new3();
+    /*
+    QDBusError( const QDBusMessage & msg )
+    */
+    QDBusError * obj = new QDBusError( *PQDBUSMESSAGE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
   {
-    QDBusError_new4();
+    /*
+    QDBusError( QDBusError::ErrorType error, const QString & message )
+    */
+    QDBusError * obj = new QDBusError( (QDBusError::ErrorType) hb_parni(1), PQSTRING(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDBUSERROR(1) )
   {
-    QDBusError_new5();
+    /*
+    QDBusError( const QDBusError & other )
+    */
+    QDBusError * obj = new QDBusError( *PQDBUSERROR(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
