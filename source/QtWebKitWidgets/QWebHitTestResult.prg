@@ -82,33 +82,23 @@ RETURN
 
 #include <QtWebKit/QWebElement>
 
-/*
-QWebHitTestResult()
-*/
-void QWebHitTestResult_new1()
-{
-  QWebHitTestResult * obj = new QWebHitTestResult();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QWebHitTestResult( const QWebHitTestResult & other )
-*/
-void QWebHitTestResult_new2()
-{
-  QWebHitTestResult * obj = new QWebHitTestResult( *PQWEBHITTESTRESULT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QWebHitTestResult_new1();
+    /*
+    QWebHitTestResult()
+    */
+    QWebHitTestResult * obj = new QWebHitTestResult();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQWEBHITTESTRESULT(1) )
   {
-    QWebHitTestResult_new2();
+    /*
+    QWebHitTestResult( const QWebHitTestResult & other )
+    */
+    QWebHitTestResult * obj = new QWebHitTestResult( *PQWEBHITTESTRESULT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

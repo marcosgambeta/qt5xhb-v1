@@ -689,45 +689,35 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
   }
 }
 
-/*
-void load( const QUrl & url )
-*/
-void QWebFrame_load1()
-{
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->load( *PQURL(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
-void QWebFrame_load2()
-{
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), HB_ISNIL(3)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    QWebFrame_load1();
+    /*
+    void load( const QUrl & url )
+    */
+    QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->load( *PQURL(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISBETWEEN(1,3) && ISQNETWORKREQUEST(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && (ISQBYTEARRAY(3)||HB_ISNIL(3)) )
   {
-    QWebFrame_load2();
+    /*
+    void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    */
+    QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2)? (QNetworkAccessManager::Operation) QNetworkAccessManager::GetOperation : (QNetworkAccessManager::Operation) hb_parni(2), HB_ISNIL(3)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
@@ -810,45 +800,35 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
   }
 }
 
-/*
-void render( QPainter *, const QRegion & clip = QRegion() )
-*/
-void QWebFrame_render1()
-{
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->render( PQPAINTER(1), HB_ISNIL(2)? QRegion() : *(QRegion *) Qt5xHb::itemGetPtr(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void render( QPainter *, QWebFrame::RenderLayers layer, const QRegion & clip = QRegion() )
-*/
-void QWebFrame_render2()
-{
-  QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->render( PQPAINTER(1), (QWebFrame::RenderLayers) hb_parni(2), HB_ISNIL(3)? QRegion() : *(QRegion *) Qt5xHb::itemGetPtr(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {
   if( ISBETWEEN(1,2) && ISQPAINTER(1) && (ISQREGION(2)||HB_ISNIL(2)) )
   {
-    QWebFrame_render1();
+    /*
+    void render( QPainter *, const QRegion & clip = QRegion() )
+    */
+    QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->render( PQPAINTER(1), HB_ISNIL(2)? QRegion() : *(QRegion *) Qt5xHb::itemGetPtr(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISBETWEEN(2,3) && ISQPAINTER(1) && HB_ISNUM(2) && (ISQREGION(3)||HB_ISNIL(3)) )
   {
-    QWebFrame_render2();
+    /*
+    void render( QPainter *, QWebFrame::RenderLayers layer, const QRegion & clip = QRegion() )
+    */
+    QWebFrame * obj = (QWebFrame *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->render( PQPAINTER(1), (QWebFrame::RenderLayers) hb_parni(2), HB_ISNIL(3)? QRegion() : *(QRegion *) Qt5xHb::itemGetPtr(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
