@@ -488,41 +488,29 @@ HB_FUNC_STATIC( QTWIN_WINDOWFLIP3DPOLICY )
 #endif
 }
 
-/*
-static void extendFrameIntoClientArea( QWindow * window, int left, int top, int right, int bottom )
-*/
-void QtWin_extendFrameIntoClientArea1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
-  QtWin::extendFrameIntoClientArea( PQWINDOW(1), PINT(2), PINT(3), PINT(4), PINT(5) );
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-static void extendFrameIntoClientArea( QWindow * window, const QMargins & margins )
-*/
-void QtWin_extendFrameIntoClientArea2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
-  QtWin::extendFrameIntoClientArea( PQWINDOW(1), *PQMARGINS(2) );
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QTWIN_EXTENDFRAMEINTOCLIENTAREA )
 {
   if( ISNUMPAR(5) && ISQWINDOW(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) )
   {
-    QtWin_extendFrameIntoClientArea1();
+    /*
+    static void extendFrameIntoClientArea( QWindow * window, int left, int top, int right, int bottom )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QtWin::extendFrameIntoClientArea( PQWINDOW(1), PINT(2), PINT(3), PINT(4), PINT(5) );
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(2) && ISQWINDOW(1) && ISQMARGINS(2) )
   {
-    QtWin_extendFrameIntoClientArea2();
+    /*
+    static void extendFrameIntoClientArea( QWindow * window, const QMargins & margins )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QtWin::extendFrameIntoClientArea( PQWINDOW(1), *PQMARGINS(2) );
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {
@@ -553,41 +541,29 @@ HB_FUNC_STATIC( QTWIN_RESETEXTENDEDFRAME )
 #endif
 }
 
-/*
-static void enableBlurBehindWindow( QWindow * window, const QRegion & region )
-*/
-void QtWin_enableBlurBehindWindow1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
-  QtWin::enableBlurBehindWindow( PQWINDOW(1), *PQREGION(2) );
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
-/*
-static void enableBlurBehindWindow( QWindow * window )
-*/
-void QtWin_enableBlurBehindWindow2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-
-  QtWin::enableBlurBehindWindow( PQWINDOW(1) );
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QTWIN_ENABLEBLURBEHINDWINDOW )
 {
   if( ISNUMPAR(1) && ISQWINDOW(1) && ISQREGION(2) )
   {
-    QtWin_enableBlurBehindWindow1();
+    /*
+    static void enableBlurBehindWindow( QWindow * window, const QRegion & region )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QtWin::enableBlurBehindWindow( PQWINDOW(1), *PQREGION(2) );
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else if( ISNUMPAR(1) && ISQWINDOW(1) )
   {
-    QtWin_enableBlurBehindWindow2();
+    /*
+    static void enableBlurBehindWindow( QWindow * window )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QtWin::enableBlurBehindWindow( PQWINDOW(1) );
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {

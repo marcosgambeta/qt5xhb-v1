@@ -285,28 +285,23 @@ HB_FUNC_STATIC( QWINJUMPLIST_CATEGORIES )
 #endif
 }
 
-/*
-void addCategory( QWinJumpListCategory * category )
-*/
-void QWinJumpList_addCategory1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
-  QWinJumpList * obj = (QWinJumpList *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->addCategory( PQWINJUMPLISTCATEGORY(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
-
 HB_FUNC_STATIC( QWINJUMPLIST_ADDCATEGORY )
 {
   if( ISNUMPAR(1) && ISQWINJUMPLISTCATEGORY(1) )
   {
-    QWinJumpList_addCategory1();
+    /*
+    void addCategory( QWinJumpListCategory * category )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,2,0))
+    QWinJumpList * obj = (QWinJumpList *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->addCategory( PQWINJUMPLISTCATEGORY(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {
