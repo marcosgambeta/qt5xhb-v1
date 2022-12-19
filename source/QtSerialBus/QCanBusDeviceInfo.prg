@@ -66,37 +66,27 @@ RETURN
 #endif
 #endif
 
-/*
-QCanBusDeviceInfo()
-*/
-void QCanBusDeviceInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBusDeviceInfo * obj = new QCanBusDeviceInfo();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QCanBusDeviceInfo( const QCanBusDeviceInfo & other )
-*/
-void QCanBusDeviceInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QCanBusDeviceInfo * obj = new QCanBusDeviceInfo( *PQCANBUSDEVICEINFO(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QCANBUSDEVICEINFO_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QCanBusDeviceInfo_new1();
+    /*
+    QCanBusDeviceInfo()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+    QCanBusDeviceInfo * obj = new QCanBusDeviceInfo();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQCANBUSDEVICEINFO(1) )
   {
-    QCanBusDeviceInfo_new2();
+    /*
+    QCanBusDeviceInfo( const QCanBusDeviceInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+    QCanBusDeviceInfo * obj = new QCanBusDeviceInfo( *PQCANBUSDEVICEINFO(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
