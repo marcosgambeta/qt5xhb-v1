@@ -512,43 +512,32 @@ HB_FUNC_STATIC( QOAUTH1SIGNATURE_RSASHA1 )
 #endif
 }
 
-/*
-QByteArray plainText() const
-*/
-void QOAuth1Signature_plainText1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QByteArray * ptr = new QByteArray( obj->plainText() );
-    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
-  }
-#endif
-}
-
-/*
-static QByteArray plainText( const QString & clientSharedSecret, const QString & tokenSecret )
-*/
-void QOAuth1Signature_plainText2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-
-  QByteArray * ptr = new QByteArray( QOAuth1Signature::plainText( PQSTRING(1), PQSTRING(2) ) );
-  Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
-#endif
-}
-
 HB_FUNC_STATIC( QOAUTH1SIGNATURE_PLAINTEXT )
 {
   if( ISNUMPAR(0) )
   {
-    QOAuth1Signature_plainText1();
+    /*
+    QByteArray plainText() const
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QOAuth1Signature * obj = (QOAuth1Signature *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QByteArray * ptr = new QByteArray( obj->plainText() );
+      Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+    }
+#endif
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
-    QOAuth1Signature_plainText2();
+    /*
+    static QByteArray plainText( const QString & clientSharedSecret, const QString & tokenSecret )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QByteArray * ptr = new QByteArray( QOAuth1Signature::plainText( PQSTRING(1), PQSTRING(2) ) );
+    Qt5xHb::createReturnClass(ptr, "QBYTEARRAY", true);
+#endif
   }
   else
   {

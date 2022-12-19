@@ -61,52 +61,37 @@ RETURN
 #endif
 #endif
 
-/*
-QOAuthHttpServerReplyHandler( QObject * parent = nullptr )
-*/
-void QOAuthHttpServerReplyHandler_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = new QOAuthHttpServerReplyHandler( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QOAuthHttpServerReplyHandler( quint16 port, QObject * parent = nullptr )
-*/
-void QOAuthHttpServerReplyHandler_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = new QOAuthHttpServerReplyHandler( PQUINT16(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QOAuthHttpServerReplyHandler( const QHostAddress & address, quint16 port, QObject * parent = nullptr )
-*/
-void QOAuthHttpServerReplyHandler_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuthHttpServerReplyHandler * obj = new QOAuthHttpServerReplyHandler( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QOAUTHHTTPSERVERREPLYHANDLER_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QOAuthHttpServerReplyHandler_new1();
+    /*
+    QOAuthHttpServerReplyHandler( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QOAuthHttpServerReplyHandler * obj = new QOAuthHttpServerReplyHandler( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QOAuthHttpServerReplyHandler_new2();
+    /*
+    QOAuthHttpServerReplyHandler( quint16 port, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QOAuthHttpServerReplyHandler * obj = new QOAuthHttpServerReplyHandler( PQUINT16(1), OPQOBJECT(2,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(2,3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QOAuthHttpServerReplyHandler_new3();
+    /*
+    QOAuthHttpServerReplyHandler( const QHostAddress & address, quint16 port, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QOAuthHttpServerReplyHandler * obj = new QOAuthHttpServerReplyHandler( *PQHOSTADDRESS(1), PQUINT16(2), OPQOBJECT(3,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {

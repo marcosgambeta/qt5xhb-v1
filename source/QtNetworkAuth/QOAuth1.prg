@@ -72,37 +72,27 @@ RETURN
 #endif
 #endif
 
-/*
-QOAuth1( QObject * parent = nullptr )
-*/
-void QOAuth1_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = new QOAuth1( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QOAuth1( QNetworkAccessManager * manager, QObject * parent = nullptr )
-*/
-void QOAuth1_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QOAuth1 * obj = new QOAuth1( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QOAUTH1_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QOAuth1_new1();
+    /*
+    QOAuth1( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QOAuth1 * obj = new QOAuth1( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(1,2) && ISQNETWORKACCESSMANAGER(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QOAuth1_new2();
+    /*
+    QOAuth1( QNetworkAccessManager * manager, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QOAuth1 * obj = new QOAuth1( PQNETWORKACCESSMANAGER(1), OPQOBJECT(2,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {
