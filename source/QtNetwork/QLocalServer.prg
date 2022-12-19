@@ -255,41 +255,31 @@ HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
   }
 }
 
-/*
-bool listen( const QString & name )
-*/
-void QLocalServer_listen1()
-{
-  QLocalServer * obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->listen( PQSTRING(1) ) );
-  }
-}
-
-/*
-bool listen( qintptr socketDescriptor )
-*/
-void QLocalServer_listen2()
-{
-  QLocalServer * obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->listen( PQINTPTR(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QLocalServer_listen1();
+    /*
+    bool listen( const QString & name )
+    */
+    QLocalServer * obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->listen( PQSTRING(1) ) );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
-    QLocalServer_listen2();
+    /*
+    bool listen( qintptr socketDescriptor )
+    */
+    QLocalServer * obj = (QLocalServer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->listen( PQINTPTR(1) ) );
+    }
   }
   else
   {

@@ -62,33 +62,23 @@ RETURN
 #include <QtNetwork/QDnsServiceRecord>
 #endif
 
-/*
-QDnsServiceRecord()
-*/
-void QDnsServiceRecord_new1()
-{
-  QDnsServiceRecord * obj = new QDnsServiceRecord();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDnsServiceRecord( const QDnsServiceRecord & other )
-*/
-void QDnsServiceRecord_new2()
-{
-  QDnsServiceRecord * obj = new QDnsServiceRecord( *PQDNSSERVICERECORD(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDNSSERVICERECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDnsServiceRecord_new1();
+    /*
+    QDnsServiceRecord()
+    */
+    QDnsServiceRecord * obj = new QDnsServiceRecord();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDNSSERVICERECORD(1) )
   {
-    QDnsServiceRecord_new2();
+    /*
+    QDnsServiceRecord( const QDnsServiceRecord & other )
+    */
+    QDnsServiceRecord * obj = new QDnsServiceRecord( *PQDNSSERVICERECORD(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -65,72 +65,47 @@ RETURN
 #include <QtNetwork/QSslKey>
 #endif
 
-/*
-QSslKey()
-*/
-void QSslKey_new1()
-{
-  QSslKey * obj = new QSslKey();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSslKey( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-*/
-void QSslKey_new2()
-{
-  QSslKey * obj = new QSslKey( *PQBYTEARRAY(1), (QSsl::KeyAlgorithm) hb_parni(2), HB_ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), HB_ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), HB_ISNIL(5)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(5) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSslKey( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
-*/
-void QSslKey_new3()
-{
-  QSslKey * obj = new QSslKey( PQIODEVICE(1), (QSsl::KeyAlgorithm) hb_parni(2), HB_ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), HB_ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), HB_ISNIL(5)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(5) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSslKey( Qt::HANDLE handle, QSsl::KeyType type = QSsl::PrivateKey )
-*/
-void QSslKey_new4()
-{
-  QSslKey * obj = new QSslKey( (Qt::HANDLE) hb_parptr(1), HB_ISNIL(2)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSslKey( const QSslKey & other )
-*/
-void QSslKey_new5()
-{
-  QSslKey * obj = new QSslKey( *PQSSLKEY(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSSLKEY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSslKey_new1();
+    /*
+    QSslKey()
+    */
+    QSslKey * obj = new QSslKey();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) && (ISQBYTEARRAY(5)||HB_ISNIL(5)) )
   {
-    QSslKey_new2();
+    /*
+    QSslKey( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
+    */
+    QSslKey * obj = new QSslKey( *PQBYTEARRAY(1), (QSsl::KeyAlgorithm) hb_parni(2), HB_ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), HB_ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), HB_ISNIL(5)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(5) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) && (ISQBYTEARRAY(5)||HB_ISNIL(5)) )
   {
-    QSslKey_new3();
+    /*
+    QSslKey( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat encoding = QSsl::Pem, QSsl::KeyType type = QSsl::PrivateKey, const QByteArray & passPhrase = QByteArray() )
+    */
+    QSslKey * obj = new QSslKey( PQIODEVICE(1), (QSsl::KeyAlgorithm) hb_parni(2), HB_ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), HB_ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), HB_ISNIL(5)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(5) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,2) && HB_ISPOINTER(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QSslKey_new4();
+    /*
+    QSslKey( Qt::HANDLE handle, QSsl::KeyType type = QSsl::PrivateKey )
+    */
+    QSslKey * obj = new QSslKey( (Qt::HANDLE) hb_parptr(1), HB_ISNIL(2)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSSLKEY(1) )
   {
-    QSslKey_new5();
+    /*
+    QSslKey( const QSslKey & other )
+    */
+    QSslKey * obj = new QSslKey( *PQSSLKEY(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -59,33 +59,23 @@ RETURN
 #include <QtNetwork/QDnsDomainNameRecord>
 #endif
 
-/*
-QDnsDomainNameRecord()
-*/
-void QDnsDomainNameRecord_new1()
-{
-  QDnsDomainNameRecord * obj = new QDnsDomainNameRecord();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDnsDomainNameRecord( const QDnsDomainNameRecord & other )
-*/
-void QDnsDomainNameRecord_new2()
-{
-  QDnsDomainNameRecord * obj = new QDnsDomainNameRecord( *PQDNSDOMAINNAMERECORD(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDNSDOMAINNAMERECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDnsDomainNameRecord_new1();
+    /*
+    QDnsDomainNameRecord()
+    */
+    QDnsDomainNameRecord * obj = new QDnsDomainNameRecord();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDNSDOMAINNAMERECORD(1) )
   {
-    QDnsDomainNameRecord_new2();
+    /*
+    QDnsDomainNameRecord( const QDnsDomainNameRecord & other )
+    */
+    QDnsDomainNameRecord * obj = new QDnsDomainNameRecord( *PQDNSDOMAINNAMERECORD(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

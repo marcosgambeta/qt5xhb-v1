@@ -115,45 +115,35 @@ HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-void connectToServer( QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QLocalSocket_connectToServer1()
-{
-  QLocalSocket * obj = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->connectToServer( HB_ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void connectToServer( const QString & name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QLocalSocket_connectToServer2()
-{
-  QLocalSocket * obj = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->connectToServer( PQSTRING(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 {
   if( ISBETWEEN(0,1) && ( HB_ISNUM(1)||HB_ISNIL(1)) )
   {
-    QLocalSocket_connectToServer1();
+    /*
+    void connectToServer( QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+    QLocalSocket * obj = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->connectToServer( HB_ISNIL(1)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QLocalSocket_connectToServer2();
+    /*
+    void connectToServer( const QString & name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+    QLocalSocket * obj = (QLocalSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->connectToServer( PQSTRING(1), HB_ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

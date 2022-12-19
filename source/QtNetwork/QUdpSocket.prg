@@ -101,41 +101,31 @@ HB_FUNC_STATIC( QUDPSOCKET_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool joinMulticastGroup( const QHostAddress & groupAddress )
-*/
-void QUdpSocket_joinMulticastGroup1()
-{
-  QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->joinMulticastGroup( *PQHOSTADDRESS(1) ) );
-  }
-}
-
-/*
-bool joinMulticastGroup( const QHostAddress & groupAddress, const QNetworkInterface & iface )
-*/
-void QUdpSocket_joinMulticastGroup2()
-{
-  QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->joinMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
 {
   if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
   {
-    QUdpSocket_joinMulticastGroup1();
+    /*
+    bool joinMulticastGroup( const QHostAddress & groupAddress )
+    */
+    QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->joinMulticastGroup( *PQHOSTADDRESS(1) ) );
+    }
   }
   else if( ISNUMPAR(2) && ISQHOSTADDRESS(1) && ISQNETWORKINTERFACE(2) )
   {
-    QUdpSocket_joinMulticastGroup2();
+    /*
+    bool joinMulticastGroup( const QHostAddress & groupAddress, const QNetworkInterface & iface )
+    */
+    QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->joinMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
+    }
   }
   else
   {
@@ -143,41 +133,31 @@ HB_FUNC_STATIC( QUDPSOCKET_JOINMULTICASTGROUP )
   }
 }
 
-/*
-bool leaveMulticastGroup( const QHostAddress & groupAddress )
-*/
-void QUdpSocket_leaveMulticastGroup1()
-{
-  QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->leaveMulticastGroup( *PQHOSTADDRESS(1) ) );
-  }
-}
-
-/*
-bool leaveMulticastGroup( const QHostAddress & groupAddress, const QNetworkInterface & iface )
-*/
-void QUdpSocket_leaveMulticastGroup2()
-{
-  QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->leaveMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QUDPSOCKET_LEAVEMULTICASTGROUP )
 {
   if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
   {
-    QUdpSocket_leaveMulticastGroup1();
+    /*
+    bool leaveMulticastGroup( const QHostAddress & groupAddress )
+    */
+    QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->leaveMulticastGroup( *PQHOSTADDRESS(1) ) );
+    }
   }
   else if( ISNUMPAR(2) && ISQHOSTADDRESS(1) && ISQNETWORKINTERFACE(2) )
   {
-    QUdpSocket_leaveMulticastGroup2();
+    /*
+    bool leaveMulticastGroup( const QHostAddress & groupAddress, const QNetworkInterface & iface )
+    */
+    QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->leaveMulticastGroup( *PQHOSTADDRESS(1), *PQNETWORKINTERFACE(2) ) );
+    }
   }
   else
   {
@@ -311,60 +291,45 @@ HB_FUNC_STATIC( QUDPSOCKET_RECEIVEDATAGRAM )
 #endif
 }
 
-/*
-qint64 writeDatagram( const QNetworkDatagram & datagram )
-*/
-void QUdpSocket_writeDatagram1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->writeDatagram( *PQNETWORKDATAGRAM(1) ) );
-  }
-#endif
-}
-
-/*
-qint64 writeDatagram( const char * data, qint64 len, const QHostAddress & host, quint16 port )
-*/
-void QUdpSocket_writeDatagram2()
-{
-  QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->writeDatagram( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4) ) );
-  }
-}
-
-/*
-qint64 writeDatagram( const QByteArray & datagram, const QHostAddress & host, quint16 port )
-*/
-void QUdpSocket_writeDatagram3()
-{
-  QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RQINT64( obj->writeDatagram( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
-  }
-}
-
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 {
   if( ISNUMPAR(1) && ISQNETWORKDATAGRAM(1) )
   {
-    QUdpSocket_writeDatagram1();
+    /*
+    qint64 writeDatagram( const QNetworkDatagram & datagram )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQINT64( obj->writeDatagram( *PQNETWORKDATAGRAM(1) ) );
+    }
+#endif
   }
   else if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISNUM(2) && ISQHOSTADDRESS(3) && HB_ISNUM(4) )
   {
-    QUdpSocket_writeDatagram2();
+    /*
+    qint64 writeDatagram( const char * data, qint64 len, const QHostAddress & host, quint16 port )
+    */
+    QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQINT64( obj->writeDatagram( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4) ) );
+    }
   }
   else if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQHOSTADDRESS(2) && HB_ISNUM(3) )
   {
-    QUdpSocket_writeDatagram3();
+    /*
+    qint64 writeDatagram( const QByteArray & datagram, const QHostAddress & host, quint16 port )
+    */
+    QUdpSocket * obj = (QUdpSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RQINT64( obj->writeDatagram( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
+    }
   }
   else
   {

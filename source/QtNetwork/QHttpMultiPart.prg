@@ -53,33 +53,23 @@ RETURN
 #include <QtNetwork/QHttpMultiPart>
 #endif
 
-/*
-QHttpMultiPart( QObject * parent = nullptr )
-*/
-void QHttpMultiPart_new1()
-{
-  QHttpMultiPart * obj = new QHttpMultiPart( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = nullptr )
-*/
-void QHttpMultiPart_new2()
-{
-  QHttpMultiPart * obj = new QHttpMultiPart( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QHttpMultiPart_new1();
+    /*
+    QHttpMultiPart( QObject * parent = nullptr )
+    */
+    QHttpMultiPart * obj = new QHttpMultiPart( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1,2) && HB_ISNUM(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QHttpMultiPart_new2();
+    /*
+    QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = nullptr )
+    */
+    QHttpMultiPart * obj = new QHttpMultiPart( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else
   {

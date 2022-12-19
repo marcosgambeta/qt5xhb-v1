@@ -79,33 +79,23 @@ RETURN
 
 #include <QtCore/QDateTime>
 
-/*
-QNetworkCookie( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
-*/
-void QNetworkCookie_new1()
-{
-  QNetworkCookie * obj = new QNetworkCookie( HB_ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QNetworkCookie( const QNetworkCookie & other )
-*/
-void QNetworkCookie_new2()
-{
-  QNetworkCookie * obj = new QNetworkCookie( *PQNETWORKCOOKIE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 {
   if( ISBETWEEN(0,2) && (ISQBYTEARRAY(1)||HB_ISNIL(1)) && (ISQBYTEARRAY(2)||HB_ISNIL(2)) )
   {
-    QNetworkCookie_new1();
+    /*
+    QNetworkCookie( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
+    */
+    QNetworkCookie * obj = new QNetworkCookie( HB_ISNIL(1)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(1), HB_ISNIL(2)? QByteArray() : *(QByteArray *) Qt5xHb::itemGetPtr(2) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
   {
-    QNetworkCookie_new2();
+    /*
+    QNetworkCookie( const QNetworkCookie & other )
+    */
+    QNetworkCookie * obj = new QNetworkCookie( *PQNETWORKCOOKIE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

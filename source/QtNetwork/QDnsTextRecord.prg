@@ -60,33 +60,23 @@ RETURN
 #include <QtNetwork/QDnsTextRecord>
 #endif
 
-/*
-QDnsTextRecord()
-*/
-void QDnsTextRecord_new1()
-{
-  QDnsTextRecord * obj = new QDnsTextRecord();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDnsTextRecord( const QDnsTextRecord & other )
-*/
-void QDnsTextRecord_new2()
-{
-  QDnsTextRecord * obj = new QDnsTextRecord( *PQDNSTEXTRECORD(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDNSTEXTRECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDnsTextRecord_new1();
+    /*
+    QDnsTextRecord()
+    */
+    QDnsTextRecord * obj = new QDnsTextRecord();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDNSTEXTRECORD(1) )
   {
-    QDnsTextRecord_new2();
+    /*
+    QDnsTextRecord( const QDnsTextRecord & other )
+    */
+    QDnsTextRecord * obj = new QDnsTextRecord( *PQDNSTEXTRECORD(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

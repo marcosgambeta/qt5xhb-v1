@@ -62,33 +62,23 @@ RETURN
 #include <QtNetwork/QSslCertificateExtension>
 #endif
 
-/*
-QSslCertificateExtension()
-*/
-void QSslCertificateExtension_new1()
-{
-  QSslCertificateExtension * obj = new QSslCertificateExtension();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSslCertificateExtension( const QSslCertificateExtension & other )
-*/
-void QSslCertificateExtension_new2()
-{
-  QSslCertificateExtension * obj = new QSslCertificateExtension( *PQSSLCERTIFICATEEXTENSION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSSLCERTIFICATEEXTENSION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSslCertificateExtension_new1();
+    /*
+    QSslCertificateExtension()
+    */
+    QSslCertificateExtension * obj = new QSslCertificateExtension();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSSLCERTIFICATEEXTENSION(1) )
   {
-    QSslCertificateExtension_new2();
+    /*
+    QSslCertificateExtension( const QSslCertificateExtension & other )
+    */
+    QSslCertificateExtension * obj = new QSslCertificateExtension( *PQSSLCERTIFICATEEXTENSION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

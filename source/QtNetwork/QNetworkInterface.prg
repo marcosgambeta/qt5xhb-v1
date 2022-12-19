@@ -71,33 +71,23 @@ RETURN
 #include <QtNetwork/QNetworkInterface>
 #endif
 
-/*
-QNetworkInterface()
-*/
-void QNetworkInterface_new1()
-{
-  QNetworkInterface * obj = new QNetworkInterface();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QNetworkInterface( const QNetworkInterface & other )
-*/
-void QNetworkInterface_new2()
-{
-  QNetworkInterface * obj = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QNetworkInterface_new1();
+    /*
+    QNetworkInterface()
+    */
+    QNetworkInterface * obj = new QNetworkInterface();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQNETWORKINTERFACE(1) )
   {
-    QNetworkInterface_new2();
+    /*
+    QNetworkInterface( const QNetworkInterface & other )
+    */
+    QNetworkInterface * obj = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

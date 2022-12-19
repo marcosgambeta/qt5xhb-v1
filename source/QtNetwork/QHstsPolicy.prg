@@ -70,52 +70,37 @@ RETURN
 
 #include <QtCore/QDateTime>
 
-/*
-QHstsPolicy()
-*/
-void QHstsPolicy_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QHstsPolicy * obj = new QHstsPolicy();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QHstsPolicy( const QDateTime & expiry, QHstsPolicy::PolicyFlags flags, const QString & host, QUrl::ParsingMode mode = QUrl::DecodedMode )
-*/
-void QHstsPolicy_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QHstsPolicy * obj = new QHstsPolicy( *PQDATETIME(1), (QHstsPolicy::PolicyFlags) hb_parni(2), PQSTRING(3), HB_ISNIL(4)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(4) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QHstsPolicy( const QHstsPolicy & rhs )
-*/
-void QHstsPolicy_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
-  QHstsPolicy * obj = new QHstsPolicy( *PQHSTSPOLICY(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QHSTSPOLICY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QHstsPolicy_new1();
+    /*
+    QHstsPolicy()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+    QHstsPolicy * obj = new QHstsPolicy();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISBETWEEN(3,4) && ISQDATETIME(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
-    QHstsPolicy_new2();
+    /*
+    QHstsPolicy( const QDateTime & expiry, QHstsPolicy::PolicyFlags flags, const QString & host, QUrl::ParsingMode mode = QUrl::DecodedMode )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+    QHstsPolicy * obj = new QHstsPolicy( *PQDATETIME(1), (QHstsPolicy::PolicyFlags) hb_parni(2), PQSTRING(3), HB_ISNIL(4)? (QUrl::ParsingMode) QUrl::DecodedMode : (QUrl::ParsingMode) hb_parni(4) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQHSTSPOLICY(1) )
   {
-    QHstsPolicy_new3();
+    /*
+    QHstsPolicy( const QHstsPolicy & rhs )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,9,0))
+    QHstsPolicy * obj = new QHstsPolicy( *PQHSTSPOLICY(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

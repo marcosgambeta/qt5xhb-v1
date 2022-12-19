@@ -80,46 +80,31 @@ RETURN
 #include <QtNetwork/QNetworkProxy>
 #endif
 
-/*
-QNetworkProxy()
-*/
-void QNetworkProxy_new1()
-{
-  QNetworkProxy * obj = new QNetworkProxy();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QNetworkProxy( QNetworkProxy::ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
-*/
-void QNetworkProxy_new2()
-{
-  QNetworkProxy * obj = new QNetworkProxy( (QNetworkProxy::ProxyType) hb_parni(1), OPQSTRING(2,QString()), OPQUINT16(3,0), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QNetworkProxy( const QNetworkProxy & other )
-*/
-void QNetworkProxy_new3()
-{
-  QNetworkProxy * obj = new QNetworkProxy( *PQNETWORKPROXY(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QNetworkProxy_new1();
+    /*
+    QNetworkProxy()
+    */
+    QNetworkProxy * obj = new QNetworkProxy();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,5) && HB_ISNUM(1) && ( HB_ISCHAR(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISCHAR(4)||HB_ISNIL(4)) && ( HB_ISCHAR(5)||HB_ISNIL(5)) )
   {
-    QNetworkProxy_new2();
+    /*
+    QNetworkProxy( QNetworkProxy::ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
+    */
+    QNetworkProxy * obj = new QNetworkProxy( (QNetworkProxy::ProxyType) hb_parni(1), OPQSTRING(2,QString()), OPQUINT16(3,0), OPQSTRING(4,QString()), OPQSTRING(5,QString()) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQNETWORKPROXY(1) )
   {
-    QNetworkProxy_new3();
+    /*
+    QNetworkProxy( const QNetworkProxy & other )
+    */
+    QNetworkProxy * obj = new QNetworkProxy( *PQNETWORKPROXY(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

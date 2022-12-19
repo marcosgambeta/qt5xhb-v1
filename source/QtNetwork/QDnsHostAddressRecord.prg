@@ -62,33 +62,23 @@ RETURN
 
 #include <QtNetwork/QHostAddress>
 
-/*
-QDnsHostAddressRecord()
-*/
-void QDnsHostAddressRecord_new1()
-{
-  QDnsHostAddressRecord * obj = new QDnsHostAddressRecord();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
-*/
-void QDnsHostAddressRecord_new2()
-{
-  QDnsHostAddressRecord * obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDNSHOSTADDRESSRECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDnsHostAddressRecord_new1();
+    /*
+    QDnsHostAddressRecord()
+    */
+    QDnsHostAddressRecord * obj = new QDnsHostAddressRecord();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDNSHOSTADDRESSRECORD(1) )
   {
-    QDnsHostAddressRecord_new2();
+    /*
+    QDnsHostAddressRecord( const QDnsHostAddressRecord & other )
+    */
+    QDnsHostAddressRecord * obj = new QDnsHostAddressRecord( *PQDNSHOSTADDRESSRECORD(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

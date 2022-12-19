@@ -60,33 +60,23 @@ RETURN
 #include <QtNetwork/QDnsMailExchangeRecord>
 #endif
 
-/*
-QDnsMailExchangeRecord()
-*/
-void QDnsMailExchangeRecord_new1()
-{
-  QDnsMailExchangeRecord * obj = new QDnsMailExchangeRecord();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QDnsMailExchangeRecord( const QDnsMailExchangeRecord & other )
-*/
-void QDnsMailExchangeRecord_new2()
-{
-  QDnsMailExchangeRecord * obj = new QDnsMailExchangeRecord( *PQDNSMAILEXCHANGERECORD(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QDNSMAILEXCHANGERECORD_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QDnsMailExchangeRecord_new1();
+    /*
+    QDnsMailExchangeRecord()
+    */
+    QDnsMailExchangeRecord * obj = new QDnsMailExchangeRecord();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDNSMAILEXCHANGERECORD(1) )
   {
-    QDnsMailExchangeRecord_new2();
+    /*
+    QDnsMailExchangeRecord( const QDnsMailExchangeRecord & other )
+    */
+    QDnsMailExchangeRecord * obj = new QDnsMailExchangeRecord( *PQDNSMAILEXCHANGERECORD(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

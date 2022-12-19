@@ -69,33 +69,23 @@ RETURN
 #include <QtNetwork/QNetworkConfiguration>
 #endif
 
-/*
-QNetworkConfiguration()
-*/
-void QNetworkConfiguration_new1()
-{
-  QNetworkConfiguration * obj = new QNetworkConfiguration();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QNetworkConfiguration( const QNetworkConfiguration & other )
-*/
-void QNetworkConfiguration_new2()
-{
-  QNetworkConfiguration * obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QNetworkConfiguration_new1();
+    /*
+    QNetworkConfiguration()
+    */
+    QNetworkConfiguration * obj = new QNetworkConfiguration();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQNETWORKCONFIGURATION(1) )
   {
-    QNetworkConfiguration_new2();
+    /*
+    QNetworkConfiguration( const QNetworkConfiguration & other )
+    */
+    QNetworkConfiguration * obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

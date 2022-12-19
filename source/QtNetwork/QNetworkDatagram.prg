@@ -78,52 +78,37 @@ RETURN
 #endif
 #endif
 
-/*
-QNetworkDatagram()
-*/
-void QNetworkDatagram_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = new QNetworkDatagram();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QNetworkDatagram( const QByteArray & data, const QHostAddress & destinationAddress = QHostAddress(), quint16 port = 0 )
-*/
-void QNetworkDatagram_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = new QNetworkDatagram( *PQBYTEARRAY(1), HB_ISNIL(2)? QHostAddress() : *(QHostAddress *) Qt5xHb::itemGetPtr(2), OPQUINT16(3,0) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QNetworkDatagram( const QNetworkDatagram & other )
-*/
-void QNetworkDatagram_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkDatagram * obj = new QNetworkDatagram( *PQNETWORKDATAGRAM(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QNETWORKDATAGRAM_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QNetworkDatagram_new1();
+    /*
+    QNetworkDatagram()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QNetworkDatagram * obj = new QNetworkDatagram();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISBETWEEN(1,3) && ISQBYTEARRAY(1) && (ISQHOSTADDRESS(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QNetworkDatagram_new2();
+    /*
+    QNetworkDatagram( const QByteArray & data, const QHostAddress & destinationAddress = QHostAddress(), quint16 port = 0 )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QNetworkDatagram * obj = new QNetworkDatagram( *PQBYTEARRAY(1), HB_ISNIL(2)? QHostAddress() : *(QHostAddress *) Qt5xHb::itemGetPtr(2), OPQUINT16(3,0) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQNETWORKDATAGRAM(1) )
   {
-    QNetworkDatagram_new3();
+    /*
+    QNetworkDatagram( const QNetworkDatagram & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QNetworkDatagram * obj = new QNetworkDatagram( *PQNETWORKDATAGRAM(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {

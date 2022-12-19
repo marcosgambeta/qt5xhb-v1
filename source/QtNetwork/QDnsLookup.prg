@@ -79,48 +79,33 @@ RETURN
 
 #include <QtNetwork/QHostAddress>
 
-/*
-QDnsLookup( QObject * parent = nullptr )
-*/
-void QDnsLookup_new1()
-{
-  QDnsLookup * obj = new QDnsLookup( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDnsLookup( QDnsLookup::Type type, const QString & name, QObject * parent = nullptr )
-*/
-void QDnsLookup_new2()
-{
-  QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-}
-
-/*
-QDnsLookup( QDnsLookup::Type type, const QString & name, const QHostAddress & nameserver, QObject * parent = nullptr )
-*/
-void QDnsLookup_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QDNSLOOKUP_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QDnsLookup_new1();
+    /*
+    QDnsLookup( QObject * parent = nullptr )
+    */
+    QDnsLookup * obj = new QDnsLookup( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2,3) && HB_ISNUM(1) && HB_ISCHAR(2) && (ISQOBJECT(3)||HB_ISNIL(3)) )
   {
-    QDnsLookup_new2();
+    /*
+    QDnsLookup( QDnsLookup::Type type, const QString & name, QObject * parent = nullptr )
+    */
+    QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), OPQOBJECT(3,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(3,4) && HB_ISNUM(1) && HB_ISCHAR(2) && ISQHOSTADDRESS(3) && (ISQOBJECT(4)||HB_ISNIL(4)) )
   {
-    QDnsLookup_new3();
+    /*
+    QDnsLookup( QDnsLookup::Type type, const QString & name, const QHostAddress & nameserver, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QDnsLookup * obj = new QDnsLookup( (QDnsLookup::Type) hb_parni(1), PQSTRING(2), *PQHOSTADDRESS(3), OPQOBJECT(4,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {

@@ -66,33 +66,23 @@ RETURN
 #include <QtNetwork/QAuthenticator>
 #endif
 
-/*
-QAuthenticator()
-*/
-void QAuthenticator_new1()
-{
-  QAuthenticator * obj = new QAuthenticator();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QAuthenticator( const QAuthenticator & other )
-*/
-void QAuthenticator_new2()
-{
-  QAuthenticator * obj = new QAuthenticator( *PQAUTHENTICATOR(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QAuthenticator_new1();
+    /*
+    QAuthenticator()
+    */
+    QAuthenticator * obj = new QAuthenticator();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQAUTHENTICATOR(1) )
   {
-    QAuthenticator_new2();
+    /*
+    QAuthenticator( const QAuthenticator & other )
+    */
+    QAuthenticator * obj = new QAuthenticator( *PQAUTHENTICATOR(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

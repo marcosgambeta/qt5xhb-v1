@@ -60,33 +60,23 @@ RETURN
 #include <QtNetwork/QHttpPart>
 #endif
 
-/*
-QHttpPart()
-*/
-void QHttpPart_new1()
-{
-  QHttpPart * obj = new QHttpPart();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QHttpPart( const QHttpPart & other )
-*/
-void QHttpPart_new2()
-{
-  QHttpPart * obj = new QHttpPart( *PQHTTPPART(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QHTTPPART_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QHttpPart_new1();
+    /*
+    QHttpPart()
+    */
+    QHttpPart * obj = new QHttpPart();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQHTTPPART(1) )
   {
-    QHttpPart_new2();
+    /*
+    QHttpPart( const QHttpPart & other )
+    */
+    QHttpPart * obj = new QHttpPart( *PQHTTPPART(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

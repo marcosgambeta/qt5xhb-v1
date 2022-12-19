@@ -727,61 +727,46 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_GET )
   }
 }
 
-/*
-QNetworkReply * post( const QNetworkRequest & request, QIODevice * data )
-*/
-void QNetworkAccessManager_post1()
-{
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
-/*
-QNetworkReply * post( const QNetworkRequest & request, const QByteArray & data )
-*/
-void QNetworkAccessManager_post2()
-{
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
-/*
-QNetworkReply * post( const QNetworkRequest & request, QHttpMultiPart * multiPart )
-*/
-void QNetworkAccessManager_post3()
-{
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
   if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2) )
   {
-    QNetworkAccessManager_post1();
+    /*
+    QNetworkReply * post( const QNetworkRequest & request, QIODevice * data )
+    */
+    QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) )
   {
-    QNetworkAccessManager_post2();
+    /*
+    QNetworkReply * post( const QNetworkRequest & request, const QByteArray & data )
+    */
+    QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQHTTPMULTIPART(2) )
   {
-    QNetworkAccessManager_post3();
+    /*
+    QNetworkReply * post( const QNetworkRequest & request, QHttpMultiPart * multiPart )
+    */
+    QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else
   {
@@ -789,61 +774,46 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
   }
 }
 
-/*
-QNetworkReply * put( const QNetworkRequest & request, QIODevice * data )
-*/
-void QNetworkAccessManager_put1()
-{
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
-/*
-QNetworkReply * put( const QNetworkRequest & request, const QByteArray & data )
-*/
-void QNetworkAccessManager_put2()
-{
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
-/*
-QNetworkReply * put( const QNetworkRequest & request, QHttpMultiPart * multiPart )
-*/
-void QNetworkAccessManager_put3()
-{
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {
   if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQIODEVICE(2) )
   {
-    QNetworkAccessManager_put1();
+    /*
+    QNetworkReply * put( const QNetworkRequest & request, QIODevice * data )
+    */
+    QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST(1), PQIODEVICE(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) )
   {
-    QNetworkAccessManager_put2();
+    /*
+    QNetworkReply * put( const QNetworkRequest & request, const QByteArray & data )
+    */
+    QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else if( ISNUMPAR(2) && ISQNETWORKREQUEST(1) && ISQHTTPMULTIPART(2) )
   {
-    QNetworkAccessManager_put3();
+    /*
+    QNetworkReply * put( const QNetworkRequest & request, QHttpMultiPart * multiPart )
+    */
+    QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST(1), PQHTTPMULTIPART(2) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else
   {
@@ -876,65 +846,50 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
   }
 }
 
-/*
-QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = nullptr )
-*/
-void QNetworkAccessManager_sendCustomRequest1()
-{
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->sendCustomRequest( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3,nullptr) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
-/*
-QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, const QByteArray & data )
-*/
-void QNetworkAccessManager_sendCustomRequest2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->sendCustomRequest( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), *PQBYTEARRAY(3) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-#endif
-}
-
-/*
-QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QHttpMultiPart * multiPart )
-*/
-void QNetworkAccessManager_sendCustomRequest3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
-  QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->sendCustomRequest( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), PQHTTPMULTIPART(3) );
-    Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-#endif
-}
-
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 {
   if( ISBETWEEN(2,3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQIODEVICE(3)||HB_ISNIL(3)) )
   {
-    QNetworkAccessManager_sendCustomRequest1();
+    /*
+    QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = nullptr )
+    */
+    QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QNetworkReply * ptr = obj->sendCustomRequest( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), OPQIODEVICE(3,nullptr) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else if( ISBETWEEN(2,3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQBYTEARRAY(3)||HB_ISNIL(3)) )
   {
-    QNetworkAccessManager_sendCustomRequest2();
+    /*
+    QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, const QByteArray & data )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QNetworkReply * ptr = obj->sendCustomRequest( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), *PQBYTEARRAY(3) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
+#endif
   }
   else if( ISBETWEEN(2,3) && ISQNETWORKREQUEST(1) && ISQBYTEARRAY(2) && (ISQHTTPMULTIPART(3)||HB_ISNIL(3)) )
   {
-    QNetworkAccessManager_sendCustomRequest3();
+    /*
+    QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QHttpMultiPart * multiPart )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,8,0))
+    QNetworkAccessManager * obj = (QNetworkAccessManager *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      QNetworkReply * ptr = obj->sendCustomRequest( *PQNETWORKREQUEST(1), *PQBYTEARRAY(2), PQHTTPMULTIPART(3) );
+      Qt5xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
+#endif
   }
   else
   {

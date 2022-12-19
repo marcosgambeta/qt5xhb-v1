@@ -210,41 +210,31 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETPAUSEMODE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-bool bind( const QHostAddress & address, quint16 port = 0, QAbstractSocket::BindMode mode = QAbstractSocket::DefaultForPlatform )
-*/
-void QAbstractSocket_bind1()
-{
-  QAbstractSocket * obj = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->bind( *PQHOSTADDRESS(1), OPQUINT16(2,0), HB_ISNIL(3)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(3) ) );
-  }
-}
-
-/*
-bool bind( quint16 port = 0, QAbstractSocket::BindMode mode = QAbstractSocket::DefaultForPlatform )
-*/
-void QAbstractSocket_bind2()
-{
-  QAbstractSocket * obj = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->bind( OPQUINT16(1,0), HB_ISNIL(2)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QABSTRACTSOCKET_BIND )
 {
   if( ISBETWEEN(1,3) && ISQHOSTADDRESS(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QAbstractSocket_bind1();
+    /*
+    bool bind( const QHostAddress & address, quint16 port = 0, QAbstractSocket::BindMode mode = QAbstractSocket::DefaultForPlatform )
+    */
+    QAbstractSocket * obj = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->bind( *PQHOSTADDRESS(1), OPQUINT16(2,0), HB_ISNIL(3)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(3) ) );
+    }
   }
   else if( ISBETWEEN(0,2) && ( HB_ISNUM(1)||HB_ISNIL(1)) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QAbstractSocket_bind2();
+    /*
+    bool bind( quint16 port = 0, QAbstractSocket::BindMode mode = QAbstractSocket::DefaultForPlatform )
+    */
+    QAbstractSocket * obj = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->bind( OPQUINT16(1,0), HB_ISNIL(2)? (QAbstractSocket::BindMode) QAbstractSocket::DefaultForPlatform : (QAbstractSocket::BindMode) hb_parni(2) ) );
+    }
   }
   else
   {
@@ -252,45 +242,35 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_BIND )
   }
 }
 
-/*
-virtual void connectToHost( const QString & hostName, quint16 port, QIODevice::OpenMode mode = QIODevice::ReadWrite, QAbstractSocket::NetworkLayerProtocol protocol = QAbstractSocket::AnyIPProtocol )
-*/
-void QAbstractSocket_connectToHost1()
-{
-  QAbstractSocket * obj = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->connectToHost( PQSTRING(1), PQUINT16(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), HB_ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-virtual void connectToHost( const QHostAddress & address, quint16 port, QIODevice::OpenMode mode = QIODevice::ReadWrite )
-*/
-void QAbstractSocket_connectToHost2()
-{
-  QAbstractSocket * obj = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->connectToHost( *PQHOSTADDRESS(1), PQUINT16(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST )
 {
   if( ISBETWEEN(2,4) && HB_ISCHAR(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) && ( HB_ISNUM(4)||HB_ISNIL(4)) )
   {
-    QAbstractSocket_connectToHost1();
+    /*
+    virtual void connectToHost( const QString & hostName, quint16 port, QIODevice::OpenMode mode = QIODevice::ReadWrite, QAbstractSocket::NetworkLayerProtocol protocol = QAbstractSocket::AnyIPProtocol )
+    */
+    QAbstractSocket * obj = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->connectToHost( PQSTRING(1), PQUINT16(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3), HB_ISNIL(4)? (QAbstractSocket::NetworkLayerProtocol) QAbstractSocket::AnyIPProtocol : (QAbstractSocket::NetworkLayerProtocol) hb_parni(4) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISBETWEEN(2,3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QAbstractSocket_connectToHost2();
+    /*
+    virtual void connectToHost( const QHostAddress & address, quint16 port, QIODevice::OpenMode mode = QIODevice::ReadWrite )
+    */
+    QAbstractSocket * obj = (QAbstractSocket *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->connectToHost( *PQHOSTADDRESS(1), PQUINT16(2), HB_ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {

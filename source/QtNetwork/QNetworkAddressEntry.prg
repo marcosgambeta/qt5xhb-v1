@@ -65,33 +65,23 @@ RETURN
 #include <QtNetwork/QNetworkAddressEntry>
 #endif
 
-/*
-QNetworkAddressEntry()
-*/
-void QNetworkAddressEntry_new1()
-{
-  QNetworkAddressEntry * obj = new QNetworkAddressEntry();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QNetworkAddressEntry( const QNetworkAddressEntry & other )
-*/
-void QNetworkAddressEntry_new2()
-{
-  QNetworkAddressEntry * obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QNetworkAddressEntry_new1();
+    /*
+    QNetworkAddressEntry()
+    */
+    QNetworkAddressEntry * obj = new QNetworkAddressEntry();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1) )
   {
-    QNetworkAddressEntry_new2();
+    /*
+    QNetworkAddressEntry( const QNetworkAddressEntry & other )
+    */
+    QNetworkAddressEntry * obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

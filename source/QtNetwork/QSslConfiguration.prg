@@ -100,33 +100,23 @@ RETURN
 #include <QtNetwork/QSslKey>
 #include <QtNetwork/QSslCipher>
 
-/*
-QSslConfiguration()
-*/
-void QSslConfiguration_new1()
-{
-  QSslConfiguration * obj = new QSslConfiguration();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QSslConfiguration( const QSslConfiguration & other )
-*/
-void QSslConfiguration_new2()
-{
-  QSslConfiguration * obj = new QSslConfiguration( *PQSSLCONFIGURATION(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QSslConfiguration_new1();
+    /*
+    QSslConfiguration()
+    */
+    QSslConfiguration * obj = new QSslConfiguration();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
   {
-    QSslConfiguration_new2();
+    /*
+    QSslConfiguration( const QSslConfiguration & other )
+    */
+    QSslConfiguration * obj = new QSslConfiguration( *PQSSLCONFIGURATION(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
