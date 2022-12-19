@@ -75,33 +75,23 @@ RETURN
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtXmlPatterns/QAbstractUriResolver>
 
-/*
-QXmlSchemaValidator()
-*/
-void QXmlSchemaValidator_new1()
-{
-  QXmlSchemaValidator * obj = new QXmlSchemaValidator();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QXmlSchemaValidator( const QXmlSchema & schema )
-*/
-void QXmlSchemaValidator_new2()
-{
-  QXmlSchemaValidator * obj = new QXmlSchemaValidator( *PQXMLSCHEMA(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QXmlSchemaValidator_new1();
+    /*
+    QXmlSchemaValidator()
+    */
+    QXmlSchemaValidator * obj = new QXmlSchemaValidator();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQXMLSCHEMA(1) )
   {
-    QXmlSchemaValidator_new2();
+    /*
+    QXmlSchemaValidator( const QXmlSchema & schema )
+    */
+    QXmlSchemaValidator * obj = new QXmlSchemaValidator( *PQXMLSCHEMA(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -355,58 +345,43 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_URIRESOLVER )
   }
 }
 
-/*
-bool validate( const QUrl & source ) const
-*/
-void QXmlSchemaValidator_validate1()
-{
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->validate( *PQURL(1) ) );
-  }
-}
-
-/*
-bool validate( QIODevice * source, const QUrl & documentUri = QUrl() ) const
-*/
-void QXmlSchemaValidator_validate2()
-{
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->validate( PQIODEVICE(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
-  }
-}
-
-/*
-bool validate( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
-*/
-void QXmlSchemaValidator_validate3()
-{
-  QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RBOOL( obj->validate( *PQBYTEARRAY(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 {
   if( ISNUMPAR(1) && ISQURL(1) )
   {
-    QXmlSchemaValidator_validate1();
+    /*
+    bool validate( const QUrl & source ) const
+    */
+    QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->validate( *PQURL(1) ) );
+    }
   }
   else if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQURL(2)||HB_ISNIL(2)) )
   {
-    QXmlSchemaValidator_validate2();
+    /*
+    bool validate( QIODevice * source, const QUrl & documentUri = QUrl() ) const
+    */
+    QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->validate( PQIODEVICE(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
+    }
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQURL(2)||HB_ISNIL(2)) )
   {
-    QXmlSchemaValidator_validate3();
+    /*
+    bool validate( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
+    */
+    QXmlSchemaValidator * obj = (QXmlSchemaValidator *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RBOOL( obj->validate( *PQBYTEARRAY(1), HB_ISNIL(2)? QUrl() : *(QUrl *) Qt5xHb::itemGetPtr(2) ) );
+    }
   }
   else
   {
