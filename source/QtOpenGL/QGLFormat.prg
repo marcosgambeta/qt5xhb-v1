@@ -109,46 +109,31 @@ RETURN
 #include <QtOpenGL/QGLFormat>
 #endif
 
-/*
-QGLFormat()
-*/
-void QGLFormat_new1()
-{
-  QGLFormat * obj = new QGLFormat();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QGLFormat( QGL::FormatOptions options, int plane = 0 )
-*/
-void QGLFormat_new2()
-{
-  QGLFormat * obj = new QGLFormat( (QGL::FormatOptions) hb_parni(1), OPINT(2,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QGLFormat( const QGLFormat & other )
-*/
-void QGLFormat_new3()
-{
-  QGLFormat * obj = new QGLFormat( *PQGLFORMAT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QGLFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGLFormat_new1();
+    /*
+    QGLFormat()
+    */
+    QGLFormat * obj = new QGLFormat();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1,2) && HB_ISNUM(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QGLFormat_new2();
+    /*
+    QGLFormat( QGL::FormatOptions options, int plane = 0 )
+    */
+    QGLFormat * obj = new QGLFormat( (QGL::FormatOptions) hb_parni(1), OPINT(2,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
-    QGLFormat_new3();
+    /*
+    QGLFormat( const QGLFormat & other )
+    */
+    QGLFormat * obj = new QGLFormat( *PQGLFORMAT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

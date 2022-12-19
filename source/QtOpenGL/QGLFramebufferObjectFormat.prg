@@ -54,33 +54,23 @@ RETURN
 #include <QtOpenGL/QGLFramebufferObjectFormat>
 #endif
 
-/*
-QGLFramebufferObjectFormat()
-*/
-void QGLFramebufferObjectFormat_new1()
-{
-  QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat & other )
-*/
-void QGLFramebufferObjectFormat_new2()
-{
-  QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGLFramebufferObjectFormat_new1();
+    /*
+    QGLFramebufferObjectFormat()
+    */
+    QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(1) )
   {
-    QGLFramebufferObjectFormat_new2();
+    /*
+    QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat & other )
+    */
+    QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -110,33 +110,23 @@ RETURN
 #include <QtOpenGL/QGLFunctions>
 #endif
 
-/*
-QGLFunctions()
-*/
-void QGLFunctions_new1()
-{
-  QGLFunctions * obj = new QGLFunctions();
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QGLFunctions( const QGLContext * context )
-*/
-void QGLFunctions_new2()
-{
-  QGLFunctions * obj = new QGLFunctions( PQGLCONTEXT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QGLFunctions_new1();
+    /*
+    QGLFunctions()
+    */
+    QGLFunctions * obj = new QGLFunctions();
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQGLCONTEXT(1) )
   {
-    QGLFunctions_new2();
+    /*
+    QGLFunctions( const QGLContext * context )
+    */
+    QGLFunctions * obj = new QGLFunctions( PQGLCONTEXT(1) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {

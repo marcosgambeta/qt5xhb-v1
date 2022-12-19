@@ -65,33 +65,23 @@ RETURN
 #include <QtOpenGL/QGLPixelBuffer>
 #endif
 
-/*
-QGLPixelBuffer( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
-*/
-void QGLPixelBuffer_new1()
-{
-  QGLPixelBuffer * obj = new QGLPixelBuffer( *PQSIZE(1), HB_ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(2), OPQGLWIDGET(3,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
-/*
-QGLPixelBuffer( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
-*/
-void QGLPixelBuffer_new2()
-{
-  QGLPixelBuffer * obj = new QGLPixelBuffer( PINT(1), PINT(2), HB_ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(3), OPQGLWIDGET(4,0) );
-  Qt5xHb::returnNewObject(obj, true);
-}
-
 HB_FUNC_STATIC( QGLPIXELBUFFER_NEW )
 {
   if( ISBETWEEN(1,3) && ISQSIZE(1) && (ISQGLFORMAT(2)||HB_ISNIL(2)) && (ISQGLWIDGET(3)||HB_ISNIL(3)) )
   {
-    QGLPixelBuffer_new1();
+    /*
+    QGLPixelBuffer( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+    */
+    QGLPixelBuffer * obj = new QGLPixelBuffer( *PQSIZE(1), HB_ISNIL(2)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(2), OPQGLWIDGET(3,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2,4) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQGLFORMAT(3)||HB_ISNIL(3)) && (ISQGLWIDGET(4)||HB_ISNIL(4)) )
   {
-    QGLPixelBuffer_new2();
+    /*
+    QGLPixelBuffer( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
+    */
+    QGLPixelBuffer * obj = new QGLPixelBuffer( PINT(1), PINT(2), HB_ISNIL(3)? QGLFormat::defaultFormat() : *(QGLFormat *) Qt5xHb::itemGetPtr(3), OPQGLWIDGET(4,0) );
+    Qt5xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -116,58 +106,43 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-/*
-GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D )
-*/
-void QGLPixelBuffer_bindTexture1()
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
-*/
-void QGLPixelBuffer_bindTexture2()
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
-  }
-}
-
-/*
-GLuint bindTexture( const QString & fileName )
-*/
-void QGLPixelBuffer_bindTexture3()
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    RGLUINT( obj->bindTexture( PQSTRING(1) ) );
-  }
-}
-
 HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 {
   if( ISBETWEEN(1,2) && ISQIMAGE(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QGLPixelBuffer_bindTexture1();
+    /*
+    GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D )
+    */
+    QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RGLUINT( obj->bindTexture( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
+    }
   }
   else if( ISBETWEEN(1,2) && ISQPIXMAP(1) && ( HB_ISNUM(2)||HB_ISNIL(2)) )
   {
-    QGLPixelBuffer_bindTexture2();
+    /*
+    GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D )
+    */
+    QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RGLUINT( obj->bindTexture( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D) ) );
+    }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QGLPixelBuffer_bindTexture3();
+    /*
+    GLuint bindTexture( const QString & fileName )
+    */
+    QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      RGLUINT( obj->bindTexture( PQSTRING(1) ) );
+    }
   }
   else
   {
@@ -249,45 +224,35 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_DONECURRENT )
   }
 }
 
-/*
-void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
-void QGLPixelBuffer_drawTexture1()
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
-/*
-void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
-void QGLPixelBuffer_drawTexture2()
-{
-  QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-}
-
 HB_FUNC_STATIC( QGLPIXELBUFFER_DRAWTEXTURE )
 {
   if( ISBETWEEN(2,3) && ISQRECTF(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QGLPixelBuffer_drawTexture1();
+    /*
+    void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    */
+    QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else if( ISBETWEEN(2,3) && ISQPOINTF(1) && HB_ISNUM(2) && ( HB_ISNUM(3)||HB_ISNIL(3)) )
   {
-    QGLPixelBuffer_drawTexture2();
+    /*
+    void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+    */
+    QGLPixelBuffer * obj = (QGLPixelBuffer *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
