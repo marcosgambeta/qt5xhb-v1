@@ -78,37 +78,27 @@ RETURN
 #include <QtCore/QLocale>
 #include <QtTextToSpeech/QVoice>
 
-/*
-QTextToSpeech( QObject * parent = nullptr )
-*/
-void QTextToSpeech_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = new QTextToSpeech( OPQOBJECT(1,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
-/*
-QTextToSpeech( const QString & engine, QObject * parent = nullptr )
-*/
-void QTextToSpeech_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QTextToSpeech * obj = new QTextToSpeech( PQSTRING(1), OPQOBJECT(2,nullptr) );
-  Qt5xHb::returnNewObject(obj, false);
-#endif
-}
-
 HB_FUNC_STATIC( QTEXTTOSPEECH_NEW )
 {
   if( ISBETWEEN(0,1) && (ISQOBJECT(1)||HB_ISNIL(1)) )
   {
-    QTextToSpeech_new1();
+    /*
+    QTextToSpeech( QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QTextToSpeech * obj = new QTextToSpeech( OPQOBJECT(1,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else if( ISBETWEEN(1,2) && HB_ISCHAR(1) && (ISQOBJECT(2)||HB_ISNIL(2)) )
   {
-    QTextToSpeech_new2();
+    /*
+    QTextToSpeech( const QString & engine, QObject * parent = nullptr )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QTextToSpeech * obj = new QTextToSpeech( PQSTRING(1), OPQOBJECT(2,nullptr) );
+    Qt5xHb::returnNewObject(obj, false);
+#endif
   }
   else
   {

@@ -60,37 +60,27 @@ RETURN
 #include <QtTextToSpeech/QVoice>
 #endif
 
-/*
-QVoice()
-*/
-void QVoice_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * obj = new QVoice();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QVoice( const QVoice & other )
-*/
-void QVoice_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
-  QVoice * obj = new QVoice( *PQVOICE(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QVOICE_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    QVoice_new1();
+    /*
+    QVoice()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QVoice * obj = new QVoice();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQVOICE(1) )
   {
-    QVoice_new2();
+    /*
+    QVoice( const QVoice & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,10,0))
+    QVoice * obj = new QVoice( *PQVOICE(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
