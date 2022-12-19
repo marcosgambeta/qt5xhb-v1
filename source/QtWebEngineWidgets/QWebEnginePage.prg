@@ -680,28 +680,24 @@ HB_FUNC_STATIC( QWEBENGINEPAGE_SETZOOMFACTOR )
 #endif
 }
 
-/*
-void runJavaScript( const QString & scriptSource )
-*/
-void QWebEnginePage_runJavaScript1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
-  QWebEnginePage * obj = (QWebEnginePage *) Qt5xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    obj->runJavaScript( PQSTRING(1) );
-  }
-
-  hb_itemReturn(hb_stackSelfItem());
-#endif
-}
 
 HB_FUNC( QWEBENGINEPAGE_RUNJAVASCRIPT )
 {
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QWebEnginePage_runJavaScript1();
+    /*
+    void runJavaScript( const QString & scriptSource )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,4,0))
+    QWebEnginePage * obj = (QWebEnginePage *) Qt5xHb::itemGetPtrStackSelfItem();
+  
+    if( obj )
+    {
+      obj->runJavaScript( PQSTRING(1) );
+    }
+  
+    hb_itemReturn(hb_stackSelfItem());
+#endif
   }
   else
   {
