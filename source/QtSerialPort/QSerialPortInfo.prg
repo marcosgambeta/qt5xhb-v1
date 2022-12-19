@@ -75,68 +75,48 @@ RETURN
 
 #include <QtCore/QString>
 
-/*
-QSerialPortInfo()
-*/
-void QSerialPortInfo_new1()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = new QSerialPortInfo();
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QSerialPortInfo( const QSerialPort & port )
-*/
-void QSerialPortInfo_new2()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = new QSerialPortInfo( *PQSERIALPORT(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QSerialPortInfo( const QString & name )
-*/
-void QSerialPortInfo_new3()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = new QSerialPortInfo( PQSTRING(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
-/*
-QSerialPortInfo( const QSerialPortInfo & other )
-*/
-void QSerialPortInfo_new4()
-{
-#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
-  QSerialPortInfo * obj = new QSerialPortInfo( *PQSERIALPORTINFO(1) );
-  Qt5xHb::returnNewObject(obj, true);
-#endif
-}
-
 HB_FUNC_STATIC( QSERIALPORTINFO_NEW )
 {
 #if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
   if( ISNUMPAR(0) )
   {
-    QSerialPortInfo_new1();
+    /*
+    QSerialPortInfo()
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    QSerialPortInfo * obj = new QSerialPortInfo();
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQSERIALPORT(1) )
   {
-    QSerialPortInfo_new2();
+    /*
+    QSerialPortInfo( const QSerialPort & port )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    QSerialPortInfo * obj = new QSerialPortInfo( *PQSERIALPORT(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QSerialPortInfo_new3();
+    /*
+    QSerialPortInfo( const QString & name )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    QSerialPortInfo * obj = new QSerialPortInfo( PQSTRING(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else if( ISNUMPAR(1) && ISQSERIALPORTINFO(1) )
   {
-    QSerialPortInfo_new4();
+    /*
+    QSerialPortInfo( const QSerialPortInfo & other )
+    */
+#if (QT_VERSION >= QT_VERSION_CHECK(5,1,0))
+    QSerialPortInfo * obj = new QSerialPortInfo( *PQSERIALPORTINFO(1) );
+    Qt5xHb::returnNewObject(obj, true);
+#endif
   }
   else
   {
