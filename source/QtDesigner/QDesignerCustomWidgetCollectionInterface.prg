@@ -45,7 +45,11 @@ RETURN
 #include <QtCore/Qt>
 
 #ifndef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
+#else
 #include <QtDesigner/QDesignerCustomWidgetCollectionInterface>
+#endif
 #endif
 
 #include "qt5xhb_common.h"
@@ -53,7 +57,11 @@ RETURN
 #include "qt5xhb_utils.h"
 
 #ifdef __XHARBOUR__
+#if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
+#include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
+#else
 #include <QtDesigner/QDesignerCustomWidgetCollectionInterface>
+#endif
 #endif
 
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETCOLLECTIONINTERFACE_DELETE )
