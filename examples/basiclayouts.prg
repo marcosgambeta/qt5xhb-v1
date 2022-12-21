@@ -8,21 +8,19 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/magsoftinfo/qt5xhb
+  https://github.com/magsoftinfo/qt5xhb-v1
 
 */
 
 /*
-
   Exemplo de uso de leiautes
   Baseado no exemplo "Basic Layouts" do Qt Framework
-
 */
 
 #include "qt5xhb.ch"
 #include "hbclass.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oDialog
@@ -59,16 +57,16 @@ CLASS Dialog INHERIT QDialog
    DATA oFileMenu                          // QMenu
    DATA oExitAction                        // QAction
 
-   METHOD new ()
-   METHOD createMenu ()
-   METHOD createHorizontalGroupBox ()
-   METHOD createGridGroupBox ()
-   METHOD createFormGroupBox ()
-   METHOD delete ()
+   METHOD new()
+   METHOD createMenu()
+   METHOD createHorizontalGroupBox()
+   METHOD createGridGroupBox()
+   METHOD createFormGroupBox()
+   METHOD delete()
 
 END CLASS
 
-METHOD new () CLASS Dialog
+METHOD new() CLASS Dialog
 
    LOCAL oMainLayout
 
@@ -100,7 +98,7 @@ METHOD new () CLASS Dialog
 
 RETURN SELF
 
-METHOD createMenu () CLASS Dialog
+METHOD createMenu() CLASS Dialog
 
    ::oMenuBar := QMenuBar():new()
 
@@ -112,7 +110,7 @@ METHOD createMenu () CLASS Dialog
 
 RETURN NIL
 
-METHOD createHorizontalGroupBox () CLASS Dialog
+METHOD createHorizontalGroupBox() CLASS Dialog
 
    LOCAL oLayout
    LOCAL nIndex
@@ -121,7 +119,7 @@ METHOD createHorizontalGroupBox () CLASS Dialog
    oLayout := QHBoxLayout():new()
 
    FOR nIndex := 1 TO NumButtons
-      ::aButtons[nIndex] := QPushButton():new("Button "+alltrim(str(nIndex)))
+      ::aButtons[nIndex] := QPushButton():new("Button " + alltrim(str(nIndex)))
       oLayout:addWidget(::aButtons[nIndex])
    NEXT nIndex
 
@@ -129,7 +127,7 @@ METHOD createHorizontalGroupBox () CLASS Dialog
 
 RETURN NIL
 
-METHOD createGridGroupBox () CLASS Dialog
+METHOD createGridGroupBox() CLASS Dialog
 
    LOCAL oLayout
    LOCAL nIndex
@@ -138,7 +136,7 @@ METHOD createGridGroupBox () CLASS Dialog
    oLayout := QGridLayout():new()
 
    FOR nIndex := 1 TO NumGridRows
-      ::aLabels[nIndex] := QLabel():new("Line "+alltrim(str(nIndex))+":")
+      ::aLabels[nIndex] := QLabel():new("Line " + alltrim(str(nIndex)) + ":")
       ::aLineEdits[nIndex] := QLineEdit():new()
       oLayout:addWidget(::aLabels[nIndex], nIndex, 0)
       oLayout:addWidget(::aLineEdits[nIndex], nIndex, 1)
@@ -154,7 +152,7 @@ METHOD createGridGroupBox () CLASS Dialog
 
 RETURN NIL
 
-METHOD createFormGroupBox () CLASS Dialog
+METHOD createFormGroupBox() CLASS Dialog
 
    LOCAL oLayout
 
@@ -167,7 +165,7 @@ METHOD createFormGroupBox () CLASS Dialog
 
 RETURN NIL
 
-METHOD delete () CLASS Dialog
+METHOD delete() CLASS Dialog
 
    // desconecta sinais
    ::oButtonBox:onAccepted()

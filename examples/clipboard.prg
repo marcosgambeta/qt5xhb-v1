@@ -8,13 +8,13 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/magsoftinfo/qt5xhb
+  https://github.com/magsoftinfo/qt5xhb-v1
 
 */
 
 #include "qt5xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -26,15 +26,22 @@ PROCEDURE Main ()
 
    oApp := QApplication():new()
 
-   oWindow := QWidget():new():setWindowTitle("Exemplo de uso do objeto QClipboard"):resize(640,480)
+   oWindow := QWidget():new()
+   oWindow:setWindowTitle("Exemplo de uso do objeto QClipboard")
+   oWindow:resize(640, 480)
 
-   oLineEdit1 := QLineEdit():new(oWindow):move(20,20):setText("teste")
+   oLineEdit1 := QLineEdit():new(oWindow)
+   oLineEdit1:move(20, 20)
+   oLineEdit1:setText("teste")
 
-   oPushButtonCopy := QPushButton():new("Copiar",oWindow):move(20,120)
+   oPushButtonCopy := QPushButton():new("Copiar", oWindow)
+   oPushButtonCopy:move(20, 120)
 
-   oLineEdit2 := QLineEdit():new(oWindow):move(20,220)
+   oLineEdit2 := QLineEdit():new(oWindow)
+   oLineEdit2:move(20, 220)
 
-   oPushButtonPaste := QPushButton():new("Colar",oWindow):move(20,320)
+   oPushButtonPaste := QPushButton():new("Colar", oWindow)
+   oPushButtonPaste:move(20, 320)
 
    // Obtém o objeto QClipboard.
    oClipboard := oApp:clipboard()
@@ -48,7 +55,7 @@ PROCEDURE Main ()
    oPushButtonPaste:onClicked({||oLineEdit2:setText(oClipboard:text())})
 
    // avisa se o dados no clipboard foram modificados
-   oClipboard:onDataChanged({||qout("os dados no clipboard foram alterados"),qout("conteudo atual="+oClipboard:text())})
+   oClipboard:onDataChanged({||qout("os dados no clipboard foram alterados"), qout("conteudo atual=" + oClipboard:text())})
 
    oWindow:show()
 

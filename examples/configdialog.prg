@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/magsoftinfo/qt5xhb
+  https://github.com/magsoftinfo/qt5xhb-v1
 
 */
 
@@ -19,7 +19,7 @@
 #include "qt5xhb.ch"
 #include "hbclass.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oDialog
@@ -47,16 +47,16 @@ CLASS ConfigDialog INHERIT QDialog
    DATA oPagesWidget    // objeto da classe QStackedWidget
    DATA oCloseButton    // objeto da classe QPushButton
 
-   METHOD new (oParent, nFlags)
-   METHOD changePage (pCurrent, pPrevious)
-   METHOD createIcons ()
-   METHOD delete ()
+   METHOD new(oParent, nFlags)
+   METHOD changePage(pCurrent, pPrevious)
+   METHOD createIcons()
+   METHOD delete()
 
 END CLASS
 
 // o método new cria a janela principal e os objetos presentes nela
 
-METHOD new (oParent, nFlags) CLASS ConfigDialog
+METHOD new(oParent, nFlags) CLASS ConfigDialog
 
    LOCAL oHorizontalLayout
    LOCAL oButtonsLayout
@@ -67,7 +67,7 @@ METHOD new (oParent, nFlags) CLASS ConfigDialog
    // cria a lista de opções, usando a classe QListWidget
    ::oContentsWidget := QListWidget():new()
    ::oContentsWidget:setViewMode(QListView_IconMode)
-   ::oContentsWidget:setIconSize(QSize():new(96,84))
+   ::oContentsWidget:setIconSize(QSize():new(96, 84))
    ::oContentsWidget:setMovement(QListView_Static)
    ::oContentsWidget:setMaximumWidth(128)
    ::oContentsWidget:setSpacing(12)
@@ -120,7 +120,7 @@ RETURN SELF
 
 // o método createIcons cria os ícones que aparecem na lista de opções
 
-METHOD createIcons () CLASS ConfigDialog
+METHOD createIcons() CLASS ConfigDialog
 
    LOCAL oConfigButton
    LOCAL oUpdateButton
@@ -148,14 +148,14 @@ METHOD createIcons () CLASS ConfigDialog
    oQueryButton:setFlags(Qt_ItemIsSelectable + Qt_ItemIsEnabled)
 
    // sempre que a opção corrente mudar, será executado o método changePage
-   ::oContentsWidget:onCurrentItemChanged({|pWidget,pCurrent,pPrevious|HB_SYMBOL_UNUSED(pWidget),::changePage(pCurrent,pPrevious)})
+   ::oContentsWidget:onCurrentItemChanged({|pWidget, pCurrent, pPrevious|HB_SYMBOL_UNUSED(pWidget), ::changePage(pCurrent, pPrevious)})
 
 RETURN NIL
 
 // o método changePage mostra a página (1, 2 ou 3), conforme
 // a opção selecionada na lista de opções
 
-METHOD changePage (pCurrent, pPrevious) CLASS ConfigDialog
+METHOD changePage(pCurrent, pPrevious) CLASS ConfigDialog
 
    LOCAL oCurrent
    LOCAL oPrevious
@@ -173,7 +173,7 @@ RETURN NIL
 
 // o método delete desconecta os sinais usados e destrói o objeto ConfigDialog
 
-METHOD delete () CLASS ConfigDialog
+METHOD delete() CLASS ConfigDialog
 
    // desconecta sinais
    ::oCloseButton:onClicked()
@@ -188,11 +188,11 @@ RETURN NIL
 
 CLASS ConfigurationPage INHERIT QWidget
 
-   METHOD new (oParent, nFlags)
+   METHOD new(oParent, nFlags)
 
 END CLASS
 
-METHOD new (oParent, nFlags) CLASS ConfigurationPage
+METHOD new(oParent, nFlags) CLASS ConfigurationPage
 
    LOCAL oConfigGroup
    LOCAL oServerLabel
@@ -232,11 +232,11 @@ RETURN SELF
 
 CLASS UpdatePage INHERIT QWidget
 
-   METHOD new (oParent, nFlags)
+   METHOD new(oParent, nFlags)
 
 END CLASS
 
-METHOD new (oParent, nFlags) CLASS UpdatePage
+METHOD new(oParent, nFlags) CLASS UpdatePage
 
    LOCAL oUpdateGroup
    LOCAL oSystemCheckBox
@@ -295,11 +295,11 @@ RETURN SELF
 
 CLASS QueryPage INHERIT QWidget
 
-   METHOD new (oParent, nFlags)
+   METHOD new(oParent, nFlags)
 
 END CLASS
 
-METHOD new (oParent, nFlags) CLASS QueryPage
+METHOD new(oParent, nFlags) CLASS QueryPage
 
    LOCAL oPackagesGroup
    LOCAL oNameLabel
