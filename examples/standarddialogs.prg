@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/magsoftinfo/qt5xhb
+  https://github.com/magsoftinfo/qt5xhb-v1
 
 */
 
@@ -19,12 +19,12 @@
 #include "qt5xhb.ch"
 #include "hbclass.ch"
 
-#define MESSAGE "<p>Message boxes have a caption, a text, "+;
-                "and any number of buttons, each with standard or custom texts."+;
-                "<p>Click a button to close the message box. Pressing the Esc button "+;
+#define MESSAGE "<p>Message boxes have a caption, a text, " + ;
+                "and any number of buttons, each with standard or custom texts." + ;
+                "<p>Click a button to close the message box. Pressing the Esc button " + ;
                 "will activate the detected escape button (if any)."
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oDialog
@@ -83,28 +83,28 @@ CLASS Dialog INHERIT QWidget
 
    DATA cOpenFilesPath INIT ""
 
-   METHOD new (oParent)
-   METHOD setInteger ()
-   METHOD setDouble ()
-   METHOD setItem ()
-   METHOD setText ()
-   METHOD setColor ()
-   METHOD setFont ()
-   METHOD setExistingDirectory ()
-   METHOD setOpenFileName ()
-   METHOD setOpenFileNames ()
-   METHOD setSaveFileName ()
-   METHOD criticalMessage ()
-   METHOD informationMessage ()
-   METHOD questionMessage ()
-   METHOD warningMessage ()
-   METHOD errorMessage ()
+   METHOD new(oParent)
+   METHOD setInteger()
+   METHOD setDouble()
+   METHOD setItem()
+   METHOD setText()
+   METHOD setColor()
+   METHOD setFont()
+   METHOD setExistingDirectory()
+   METHOD setOpenFileName()
+   METHOD setOpenFileNames()
+   METHOD setSaveFileName()
+   METHOD criticalMessage()
+   METHOD informationMessage()
+   METHOD questionMessage()
+   METHOD warningMessage()
+   METHOD errorMessage()
 
-   METHOD delete ()
+   METHOD delete()
 
 END CLASS
 
-METHOD new (oParent) CLASS Dialog
+METHOD new(oParent) CLASS Dialog
 
    LOCAL nFrameStyle
    LOCAL oLayout
@@ -235,7 +235,7 @@ METHOD new (oParent) CLASS Dialog
 
 RETURN SELF
 
-METHOD setInteger () CLASS Dialog
+METHOD setInteger() CLASS Dialog
 
    LOCAL lOk := .F.
    LOCAL nValue
@@ -248,7 +248,7 @@ METHOD setInteger () CLASS Dialog
 
 RETURN NIL
 
-METHOD setDouble () CLASS Dialog
+METHOD setDouble() CLASS Dialog
 
    LOCAL lOk := .F.
    LOCAL nValue
@@ -261,9 +261,9 @@ METHOD setDouble () CLASS Dialog
 
 RETURN NIL
 
-METHOD setItem () CLASS Dialog
+METHOD setItem() CLASS Dialog
 
-   LOCAL aItems := {"Spring","Summer","Fall","Winter"}
+   LOCAL aItems := {"Spring", "Summer", "Fall", "Winter"}
    LOCAL lOk := .F.
    LOCAL cItem
 
@@ -275,7 +275,7 @@ METHOD setItem () CLASS Dialog
 
 RETURN NIL
 
-METHOD setText () CLASS Dialog
+METHOD setText() CLASS Dialog
 
    LOCAL lOk := .F.
    LOCAL cText
@@ -288,14 +288,14 @@ METHOD setText () CLASS Dialog
 
 RETURN NIL
 
-METHOD setColor () CLASS Dialog
+METHOD setColor() CLASS Dialog
 
    LOCAL oColor
 
    IF ::oNative:isChecked()
-      oColor := QColorDialog():getColor("green", SELF)
+      oColor := QColorDialog():getColor(QColor():new("green"), SELF)
    ELSE
-      oColor := QColorDialog():getColor("green", SELF, "Select Color", QColorDialog_DontUseNativeDialog)
+      oColor := QColorDialog():getColor(QColor():new("green"), SELF, "Select Color", QColorDialog_DontUseNativeDialog)
    ENDIF
 
    IF oColor:isValid()
@@ -306,7 +306,7 @@ METHOD setColor () CLASS Dialog
 
 RETURN NIL
 
-METHOD setFont () CLASS Dialog
+METHOD setFont() CLASS Dialog
 
    LOCAL lOk := .F.
    LOCAL oFont
@@ -320,7 +320,7 @@ METHOD setFont () CLASS Dialog
 
 RETURN NIL
 
-METHOD setExistingDirectory () CLASS Dialog
+METHOD setExistingDirectory() CLASS Dialog
 
    LOCAL nOptions := QFileDialog_DontResolveSymlinks + QFileDialog_ShowDirsOnly
    LOCAl cDirectory
@@ -337,7 +337,7 @@ METHOD setExistingDirectory () CLASS Dialog
 
 RETURN NIL
 
-METHOD setOpenFileName () CLASS Dialog
+METHOD setOpenFileName() CLASS Dialog
 
    LOCAL nOptions := 0
    LOCAL cSelectedFilter := ""
@@ -355,7 +355,7 @@ METHOD setOpenFileName () CLASS Dialog
 
 RETURN NIL
 
-METHOD setOpenFileNames () CLASS Dialog
+METHOD setOpenFileNames() CLASS Dialog
 
    LOCAL nOptions := 0
    LOCAL cSelectedFilter := ""
@@ -369,12 +369,12 @@ METHOD setOpenFileNames () CLASS Dialog
 
    IF len(afiles) > 0
       ::cOpenFilesPath := aFiles[1]
-      ::oOpenFileNamesLabel:setText("["+join(aFiles,", ")+"]")
+      ::oOpenFileNamesLabel:setText("[" + join(aFiles,", ") + "]")
    ENDIF
 
 RETURN NIL
 
-STATIC FUNCTION Join (aItens, cDelim)
+STATIC FUNCTION Join(aItens, cDelim)
 
    LOCAL nIndex
    LOCAL cRet := ""
@@ -389,7 +389,7 @@ STATIC FUNCTION Join (aItens, cDelim)
 
 RETURN cRet
 
-METHOD setSaveFileName () CLASS Dialog
+METHOD setSaveFileName() CLASS Dialog
 
    LOCAL nOptions := 0
    LOCAL cSelectedFilter := ""
@@ -407,7 +407,7 @@ METHOD setSaveFileName () CLASS Dialog
 
 RETURN NIL
 
-METHOD criticalMessage () CLASS Dialog
+METHOD criticalMessage() CLASS Dialog
 
    LOCAL nReply
 
@@ -423,7 +423,7 @@ METHOD criticalMessage () CLASS Dialog
 
 RETURN NIL
 
-METHOD informationMessage () CLASS Dialog
+METHOD informationMessage() CLASS Dialog
 
    LOCAL nReply
 
@@ -437,7 +437,7 @@ METHOD informationMessage () CLASS Dialog
 
 RETURN NIL
 
-METHOD questionMessage () CLASS Dialog
+METHOD questionMessage() CLASS Dialog
 
    LOCAL nReply
 
@@ -453,7 +453,7 @@ METHOD questionMessage () CLASS Dialog
 
 RETURN NIL
 
-METHOD warningMessage () CLASS Dialog
+METHOD warningMessage() CLASS Dialog
 
    LOCAL oMsgBox
 
@@ -469,7 +469,7 @@ METHOD warningMessage () CLASS Dialog
 
 RETURN NIL
 
-METHOD errorMessage () CLASS Dialog
+METHOD errorMessage() CLASS Dialog
 
    ::oErrorMessageDialog:showMessage(;
             "This dialog shows and remembers error messages. "+;
@@ -483,7 +483,7 @@ METHOD errorMessage () CLASS Dialog
 
 RETURN NIL
 
-METHOD delete () CLASS Dialog
+METHOD delete() CLASS Dialog
 
    // desconecta sinais
    ::oIntegerButton:onClicked()
