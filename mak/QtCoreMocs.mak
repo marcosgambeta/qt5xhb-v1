@@ -50,3 +50,5 @@ $(QT5XHB_OBJ_DIR)/HAbstractTableModelMoc.cpp            : $(QT5XHB_SRC_DIR)/QtCo
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
 $(QT5XHB_OBJ_DIR)/HAbstractTableModelV2Moc.cpp          : $(QT5XHB_SRC_DIR)/QtCore/HAbstractTableModelV2.h
 	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
+$(QT5XHB_OBJ_DIR)/HEventFilterMoc.cpp                   : $(QT5XHB_SRC_DIR)/QtCore/HEventFilter.h
+	$(MOC) $(MOCFLAGS) $(MOCINCLUDES) $^ -o $@
