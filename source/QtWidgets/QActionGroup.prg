@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
 
 HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
     /*
     QAction * addAction( QAction * action )
     */
-    QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+    QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if( obj )
     {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
     /*
     QAction * addAction( const QString & text )
     */
-    QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+    QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if( obj )
     {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
     /*
     QAction * addAction( const QIcon & icon, const QString & text )
     */
-    QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+    QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
     if( obj )
     {
@@ -149,7 +149,7 @@ QAction * checkedAction() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
@@ -174,7 +174,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
@@ -198,7 +198,7 @@ bool isExclusive() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
@@ -222,7 +222,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
@@ -246,7 +246,7 @@ void removeAction( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
@@ -272,7 +272,7 @@ void setDisabled( bool b )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
@@ -298,7 +298,7 @@ void setEnabled( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
@@ -324,7 +324,7 @@ void setExclusive( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
@@ -350,7 +350,7 @@ void setVisible( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
 {
-  QActionGroup * obj = (QActionGroup *) Qt5xHb::itemGetPtrStackSelfItem();
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt5xHb::getQObjectPointerFromSelfItem());
 
   if( obj )
   {
