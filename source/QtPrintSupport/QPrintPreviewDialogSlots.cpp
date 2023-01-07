@@ -28,7 +28,7 @@ void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPRINTPREVIEWDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTPREVIEWDIALOG");
     PHB_ITEM pprinter = Qt5xHb::Signals_return_object( (void *) printer, "QPRINTER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pprinter );

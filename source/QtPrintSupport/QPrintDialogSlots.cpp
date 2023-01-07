@@ -28,7 +28,7 @@ void QPrintDialogSlots::accepted( QPrinter * printer )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPRINTDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPRINTDIALOG");
     PHB_ITEM pprinter = Qt5xHb::Signals_return_object( (void *) printer, "QPRINTER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pprinter );
