@@ -28,7 +28,7 @@ void QTcpServerSlots::acceptError( QAbstractSocket::SocketError socketError )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTCPSERVER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTCPSERVER");
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
 
     hb_vmEvalBlockV( cb, 2, psender, psocketError );
@@ -46,7 +46,7 @@ void QTcpServerSlots::newConnection()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTCPSERVER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTCPSERVER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

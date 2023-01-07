@@ -28,7 +28,7 @@ void QAbstractSocketSlots::connected()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QAbstractSocketSlots::disconnected()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -60,7 +60,7 @@ void QAbstractSocketSlots::error( QAbstractSocket::SocketError socketError )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
 
     hb_vmEvalBlockV( cb, 2, psender, psocketError );
@@ -78,7 +78,7 @@ void QAbstractSocketSlots::hostFound()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -94,7 +94,7 @@ void QAbstractSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & pr
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
     PHB_ITEM pproxy = Qt5xHb::Signals_return_object( (void *) &proxy, "QNETWORKPROXY" );
     PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object( (void *) authenticator, "QAUTHENTICATOR" );
 
@@ -114,7 +114,7 @@ void QAbstractSocketSlots::stateChanged( QAbstractSocket::SocketState socketStat
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
     PHB_ITEM psocketState = hb_itemPutNI( NULL, (int) socketState );
 
     hb_vmEvalBlockV( cb, 2, psender, psocketState );

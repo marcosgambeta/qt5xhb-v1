@@ -28,7 +28,7 @@ void QLocalServerSlots::newConnection()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLOCALSERVER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLOCALSERVER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

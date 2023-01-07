@@ -28,7 +28,7 @@ void QNetworkSessionSlots::closed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QNetworkSessionSlots::error( QNetworkSession::SessionError error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -62,7 +62,7 @@ void QNetworkSessionSlots::newConfigurationActivated()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -78,7 +78,7 @@ void QNetworkSessionSlots::opened()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -94,7 +94,7 @@ void QNetworkSessionSlots::preferredConfigurationChanged( const QNetworkConfigur
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
     PHB_ITEM pisSeamless = hb_itemPutL( NULL, isSeamless );
 
@@ -114,7 +114,7 @@ void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -132,7 +132,7 @@ void QNetworkSessionSlots::usagePoliciesChanged( QNetworkSession::UsagePolicies 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKSESSION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKSESSION");
     PHB_ITEM pusagePolicies = hb_itemPutNI( NULL, (int) usagePolicies );
 
     hb_vmEvalBlockV( cb, 2, psender, pusagePolicies );

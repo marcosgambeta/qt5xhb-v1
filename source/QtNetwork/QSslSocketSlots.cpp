@@ -28,7 +28,7 @@ void QSslSocketSlots::encrypted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QSslSocketSlots::encryptedBytesWritten( qint64 written )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM pwritten = hb_itemPutNLL( NULL, written );
 
     hb_vmEvalBlockV( cb, 2, psender, pwritten );
@@ -62,7 +62,7 @@ void QSslSocketSlots::modeChanged( QSslSocket::SslMode mode )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
 
     hb_vmEvalBlockV( cb, 2, psender, pmode );
@@ -80,7 +80,7 @@ void QSslSocketSlots::peerVerifyError( const QSslError & error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM perror = Qt5xHb::Signals_return_object( (void *) &error, "QSSLERROR" );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -99,7 +99,7 @@ void QSslSocketSlots::preSharedKeyAuthenticationRequired( QSslPreSharedKeyAuthen
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_ITEM pauthenticator = Qt5xHb::Signals_return_object( (void *) authenticator, "QSSLPRESHAREDKEYAUTHENTICATOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pauthenticator );
@@ -118,7 +118,7 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSSLSOCKET");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
     PHB_ITEM perrors = hb_itemArrayNew(0);
     if( pDynSym )

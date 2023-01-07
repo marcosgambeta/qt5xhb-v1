@@ -28,7 +28,7 @@ void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfig
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconfig );
@@ -46,7 +46,7 @@ void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConf
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconfig );
@@ -64,7 +64,7 @@ void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConf
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pconfig = Qt5xHb::Signals_return_object( (void *) &config, "QNETWORKCONFIGURATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconfig );
@@ -82,7 +82,7 @@ void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pisOnline = hb_itemPutL( NULL, isOnline );
 
     hb_vmEvalBlockV( cb, 2, psender, pisOnline );
@@ -100,7 +100,7 @@ void QNetworkConfigurationManagerSlots::updateCompleted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QNETWORKCONFIGURATIONMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
