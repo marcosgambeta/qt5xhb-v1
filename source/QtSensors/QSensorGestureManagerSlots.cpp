@@ -29,7 +29,7 @@ void QSensorGestureManagerSlots::newSensorGestureAvailable()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSENSORGESTUREMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTUREMANAGER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

@@ -29,7 +29,7 @@ void QMagnetometerSlots::returnGeoValuesChanged( bool returnGeoValues )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMAGNETOMETER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMAGNETOMETER");
     PHB_ITEM preturnGeoValues = hb_itemPutL( NULL, returnGeoValues );
 
     hb_vmEvalBlockV( cb, 2, psender, preturnGeoValues );

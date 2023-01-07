@@ -29,7 +29,7 @@ void QAccelerometerSlots::accelerationModeChanged( QAccelerometer::AccelerationM
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QACCELEROMETER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACCELEROMETER");
     PHB_ITEM paccelerationMode = hb_itemPutNI( NULL, (int) accelerationMode );
 
     hb_vmEvalBlockV( cb, 2, psender, paccelerationMode );

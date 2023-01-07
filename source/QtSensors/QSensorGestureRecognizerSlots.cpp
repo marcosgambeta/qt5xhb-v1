@@ -29,7 +29,7 @@ void QSensorGestureRecognizerSlots::detected( const QString & s )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSENSORGESTURERECOGNIZER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSENSORGESTURERECOGNIZER");
     PHB_ITEM ps = hb_itemPutC( NULL, QSTRINGTOSTRING(s) );
 
     hb_vmEvalBlockV( cb, 2, psender, ps );
