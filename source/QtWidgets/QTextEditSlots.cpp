@@ -28,7 +28,7 @@ void QTextEditSlots::copyAvailable( bool yes )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
     PHB_ITEM pyes = hb_itemPutL( NULL, yes );
 
     hb_vmEvalBlockV( cb, 2, psender, pyes );
@@ -46,7 +46,7 @@ void QTextEditSlots::currentCharFormatChanged( const QTextCharFormat & f )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
     PHB_ITEM pf = Qt5xHb::Signals_return_object( (void *) &f, "QTEXTCHARFORMAT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pf );
@@ -64,7 +64,7 @@ void QTextEditSlots::cursorPositionChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -80,7 +80,7 @@ void QTextEditSlots::redoAvailable( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -98,7 +98,7 @@ void QTextEditSlots::selectionChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -114,7 +114,7 @@ void QTextEditSlots::textChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -130,7 +130,7 @@ void QTextEditSlots::undoAvailable( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTEDIT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );

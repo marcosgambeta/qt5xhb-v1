@@ -28,7 +28,7 @@ void QFontDialogSlots::currentFontChanged( const QFont & font )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QFONTDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFONTDIALOG");
     PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
@@ -46,7 +46,7 @@ void QFontDialogSlots::fontSelected( const QFont & font )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QFONTDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QFONTDIALOG");
     PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );

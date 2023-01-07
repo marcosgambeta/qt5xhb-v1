@@ -28,8 +28,8 @@ void QMenuBarSlots::hovered( QAction * action )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMENUBAR" );
-    PHB_ITEM paction = Qt5xHb::Signals_return_qobject( (QObject *) action, "QACTION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMENUBAR");
+    PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 
@@ -46,8 +46,8 @@ void QMenuBarSlots::triggered( QAction * action )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMENUBAR" );
-    PHB_ITEM paction = Qt5xHb::Signals_return_qobject( (QObject *) action, "QACTION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMENUBAR");
+    PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 

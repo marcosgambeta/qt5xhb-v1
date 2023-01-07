@@ -28,7 +28,7 @@ void QUndoStackSlots::canRedoChanged( bool canRedo )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pcanRedo = hb_itemPutL( NULL, canRedo );
 
     hb_vmEvalBlockV( cb, 2, psender, pcanRedo );
@@ -46,7 +46,7 @@ void QUndoStackSlots::canUndoChanged( bool canUndo )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pcanUndo = hb_itemPutL( NULL, canUndo );
 
     hb_vmEvalBlockV( cb, 2, psender, pcanUndo );
@@ -64,7 +64,7 @@ void QUndoStackSlots::cleanChanged( bool clean )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pclean = hb_itemPutL( NULL, clean );
 
     hb_vmEvalBlockV( cb, 2, psender, pclean );
@@ -82,7 +82,7 @@ void QUndoStackSlots::indexChanged( int idx )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pidx = hb_itemPutNI( NULL, idx );
 
     hb_vmEvalBlockV( cb, 2, psender, pidx );
@@ -100,7 +100,7 @@ void QUndoStackSlots::redoTextChanged( const QString & redoText )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM predoText = hb_itemPutC( NULL, QSTRINGTOSTRING(redoText) );
 
     hb_vmEvalBlockV( cb, 2, psender, predoText );
@@ -118,7 +118,7 @@ void QUndoStackSlots::undoTextChanged( const QString & undoText )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOSTACK");
     PHB_ITEM pundoText = hb_itemPutC( NULL, QSTRINGTOSTRING(undoText) );
 
     hb_vmEvalBlockV( cb, 2, psender, pundoText );

@@ -28,7 +28,7 @@ void QDialogSlots::accepted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QDialogSlots::finished( int result )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
     PHB_ITEM presult = hb_itemPutNI( NULL, result );
 
     hb_vmEvalBlockV( cb, 2, psender, presult );
@@ -62,7 +62,7 @@ void QDialogSlots::rejected()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDIALOG");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

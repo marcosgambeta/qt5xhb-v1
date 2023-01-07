@@ -28,8 +28,8 @@ void QButtonGroupSlots::buttonClicked( QAbstractButton * button )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBUTTONGROUP" );
-    PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
+    PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
     hb_vmEvalBlockV( cb, 2, psender, pbutton );
 
@@ -46,7 +46,7 @@ void QButtonGroupSlots::buttonClicked( int id )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBUTTONGROUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, psender, pid );
@@ -64,8 +64,8 @@ void QButtonGroupSlots::buttonPressed( QAbstractButton * button )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBUTTONGROUP" );
-    PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
+    PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
     hb_vmEvalBlockV( cb, 2, psender, pbutton );
 
@@ -82,7 +82,7 @@ void QButtonGroupSlots::buttonPressed( int id )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBUTTONGROUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, psender, pid );
@@ -100,8 +100,8 @@ void QButtonGroupSlots::buttonReleased( QAbstractButton * button )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBUTTONGROUP" );
-    PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
+    PHB_ITEM pbutton = Qt5xHb::Signals_return_qobject(button, "QABSTRACTBUTTON");
 
     hb_vmEvalBlockV( cb, 2, psender, pbutton );
 
@@ -118,7 +118,7 @@ void QButtonGroupSlots::buttonReleased( int id )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBUTTONGROUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBUTTONGROUP");
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, psender, pid );

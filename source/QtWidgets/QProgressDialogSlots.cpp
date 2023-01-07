@@ -28,7 +28,7 @@ void QProgressDialogSlots::canceled()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPROGRESSDIALOG" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPROGRESSDIALOG");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

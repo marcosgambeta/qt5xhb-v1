@@ -28,8 +28,8 @@ void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMDIAREA" );
-    PHB_ITEM pwindow = Qt5xHb::Signals_return_qobject( (QObject *) window, "QMDISUBWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDIAREA");
+    PHB_ITEM pwindow = Qt5xHb::Signals_return_qobject(window, "QMDISUBWINDOW");
 
     hb_vmEvalBlockV( cb, 2, psender, pwindow );
 

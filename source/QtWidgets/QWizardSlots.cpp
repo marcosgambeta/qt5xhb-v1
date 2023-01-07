@@ -28,7 +28,7 @@ void QWizardSlots::currentIdChanged( int id )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, psender, pid );
@@ -46,7 +46,7 @@ void QWizardSlots::customButtonClicked( int which )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pwhich = hb_itemPutNI( NULL, which );
 
     hb_vmEvalBlockV( cb, 2, psender, pwhich );
@@ -64,7 +64,7 @@ void QWizardSlots::helpRequested()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -80,7 +80,7 @@ void QWizardSlots::pageAdded( int id )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, psender, pid );
@@ -98,7 +98,7 @@ void QWizardSlots::pageRemoved( int id )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, psender, pid );

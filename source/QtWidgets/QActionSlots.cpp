@@ -28,7 +28,7 @@ void QActionSlots::changed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QACTION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QActionSlots::hovered()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QACTION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -60,7 +60,7 @@ void QActionSlots::toggled( bool checked )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QACTION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
 
     hb_vmEvalBlockV( cb, 2, psender, pchecked );
@@ -78,7 +78,7 @@ void QActionSlots::triggered( bool checked )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QACTION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QACTION");
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
 
     hb_vmEvalBlockV( cb, 2, psender, pchecked );

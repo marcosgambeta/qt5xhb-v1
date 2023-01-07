@@ -28,7 +28,7 @@ void QMdiSubWindowSlots::aboutToActivate()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMDISUBWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::Wind
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMDISUBWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
     PHB_ITEM poldState = hb_itemPutNI( NULL, (int) oldState );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
 

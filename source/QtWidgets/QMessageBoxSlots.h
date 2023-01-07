@@ -16,6 +16,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
+#include <QtWidgets/QAbstractButton>
 
 #include <QtWidgets/QMessageBox>
 

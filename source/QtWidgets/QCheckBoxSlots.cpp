@@ -28,7 +28,7 @@ void QCheckBoxSlots::stateChanged( int state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCHECKBOX" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCHECKBOX");
     PHB_ITEM pstate = hb_itemPutNI( NULL, state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );

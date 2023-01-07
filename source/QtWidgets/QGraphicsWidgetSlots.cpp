@@ -28,7 +28,7 @@ void QGraphicsWidgetSlots::geometryChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSWIDGET");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

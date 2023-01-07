@@ -28,7 +28,7 @@ void QStackedLayoutSlots::setCurrentIndex( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTACKEDLAYOUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDLAYOUT");
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -46,8 +46,8 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTACKEDLAYOUT" );
-    PHB_ITEM pwidget = Qt5xHb::Signals_return_qobject( (QObject *) widget, "QWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTACKEDLAYOUT");
+    PHB_ITEM pwidget = Qt5xHb::Signals_return_qobject(widget, "QWIDGET");
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
 

@@ -28,8 +28,8 @@ void QToolButtonSlots::triggered( QAction * action )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTOOLBUTTON" );
-    PHB_ITEM paction = Qt5xHb::Signals_return_qobject( (QObject *) action, "QACTION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTOOLBUTTON");
+    PHB_ITEM paction = Qt5xHb::Signals_return_qobject(action, "QACTION");
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 

@@ -28,7 +28,7 @@ void QAbstractSliderSlots::actionTriggered( int action )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM paction = hb_itemPutNI( NULL, action );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
@@ -46,7 +46,7 @@ void QAbstractSliderSlots::rangeChanged( int min, int max )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM pmin = hb_itemPutNI( NULL, min );
     PHB_ITEM pmax = hb_itemPutNI( NULL, max );
 
@@ -66,7 +66,7 @@ void QAbstractSliderSlots::sliderMoved( int value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -84,7 +84,7 @@ void QAbstractSliderSlots::sliderPressed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -100,7 +100,7 @@ void QAbstractSliderSlots::sliderReleased()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -116,7 +116,7 @@ void QAbstractSliderSlots::valueChanged( int value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSLIDER");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );

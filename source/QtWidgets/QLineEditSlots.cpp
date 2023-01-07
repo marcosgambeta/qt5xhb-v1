@@ -28,7 +28,7 @@ void QLineEditSlots::cursorPositionChanged( int iold, int inew )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLINEEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
     PHB_ITEM piold = hb_itemPutNI( NULL, iold );
     PHB_ITEM pinew = hb_itemPutNI( NULL, inew );
 
@@ -48,7 +48,7 @@ void QLineEditSlots::editingFinished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLINEEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -64,7 +64,7 @@ void QLineEditSlots::returnPressed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLINEEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -80,7 +80,7 @@ void QLineEditSlots::selectionChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLINEEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -96,7 +96,7 @@ void QLineEditSlots::textChanged( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLINEEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -114,7 +114,7 @@ void QLineEditSlots::textEdited( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLINEEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLINEEDIT");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );

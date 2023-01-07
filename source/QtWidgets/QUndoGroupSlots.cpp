@@ -28,8 +28,8 @@ void QUndoGroupSlots::activeStackChanged( QUndoStack * stack )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOGROUP" );
-    PHB_ITEM pstack = Qt5xHb::Signals_return_qobject( (QObject *) stack, "QUNDOSTACK" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOGROUP");
+    PHB_ITEM pstack = Qt5xHb::Signals_return_qobject(stack, "QUNDOSTACK");
 
     hb_vmEvalBlockV( cb, 2, psender, pstack );
 
@@ -46,7 +46,7 @@ void QUndoGroupSlots::canRedoChanged( bool canRedo )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOGROUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pcanRedo = hb_itemPutL( NULL, canRedo );
 
     hb_vmEvalBlockV( cb, 2, psender, pcanRedo );
@@ -64,7 +64,7 @@ void QUndoGroupSlots::canUndoChanged( bool canUndo )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOGROUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pcanUndo = hb_itemPutL( NULL, canUndo );
 
     hb_vmEvalBlockV( cb, 2, psender, pcanUndo );
@@ -82,7 +82,7 @@ void QUndoGroupSlots::cleanChanged( bool clean )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOGROUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pclean = hb_itemPutL( NULL, clean );
 
     hb_vmEvalBlockV( cb, 2, psender, pclean );
@@ -100,7 +100,7 @@ void QUndoGroupSlots::indexChanged( int idx )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOGROUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pidx = hb_itemPutNI( NULL, idx );
 
     hb_vmEvalBlockV( cb, 2, psender, pidx );
@@ -118,7 +118,7 @@ void QUndoGroupSlots::redoTextChanged( const QString & redoText )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOGROUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM predoText = hb_itemPutC( NULL, QSTRINGTOSTRING(redoText) );
 
     hb_vmEvalBlockV( cb, 2, psender, predoText );
@@ -136,7 +136,7 @@ void QUndoGroupSlots::undoTextChanged( const QString & undoText )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QUNDOGROUP" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pundoText = hb_itemPutC( NULL, QSTRINGTOSTRING(undoText) );
 
     hb_vmEvalBlockV( cb, 2, psender, pundoText );

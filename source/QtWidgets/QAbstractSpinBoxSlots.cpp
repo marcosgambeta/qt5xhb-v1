@@ -28,7 +28,7 @@ void QAbstractSpinBoxSlots::editingFinished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSPINBOX" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSPINBOX");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

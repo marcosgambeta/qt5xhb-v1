@@ -28,7 +28,7 @@ void QPlainTextEditSlots::blockCountChanged( int newBlockCount )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pnewBlockCount = hb_itemPutNI( NULL, newBlockCount );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewBlockCount );
@@ -46,7 +46,7 @@ void QPlainTextEditSlots::copyAvailable( bool yes )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pyes = hb_itemPutL( NULL, yes );
 
     hb_vmEvalBlockV( cb, 2, psender, pyes );
@@ -64,7 +64,7 @@ void QPlainTextEditSlots::cursorPositionChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -80,7 +80,7 @@ void QPlainTextEditSlots::modificationChanged( bool changed )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pchanged = hb_itemPutL( NULL, changed );
 
     hb_vmEvalBlockV( cb, 2, psender, pchanged );
@@ -98,7 +98,7 @@ void QPlainTextEditSlots::redoAvailable( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -116,7 +116,7 @@ void QPlainTextEditSlots::selectionChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -132,7 +132,7 @@ void QPlainTextEditSlots::textChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -148,7 +148,7 @@ void QPlainTextEditSlots::undoAvailable( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -166,7 +166,7 @@ void QPlainTextEditSlots::updateRequest( const QRect & rect, int dy )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLAINTEXTEDIT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLAINTEXTEDIT");
     PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECT" );
     PHB_ITEM pdy = hb_itemPutNI( NULL, dy );
 

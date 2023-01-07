@@ -28,7 +28,7 @@ void QScrollerSlots::scrollerPropertiesChanged( const QScrollerProperties & newP
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCROLLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCROLLER");
     PHB_ITEM pnewProperties = Qt5xHb::Signals_return_object( (void *) &newProperties, "QSCROLLERPROPERTIES" );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewProperties );
@@ -46,7 +46,7 @@ void QScrollerSlots::stateChanged( QScroller::State newState )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCROLLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCROLLER");
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewState );

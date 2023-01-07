@@ -28,7 +28,7 @@ void QTreeWidgetSlots::currentItemChanged( QTreeWidgetItem * current, QTreeWidge
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) current, "QTREEWIDGETITEM" );
     PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) previous, "QTREEWIDGETITEM" );
 
@@ -48,7 +48,7 @@ void QTreeWidgetSlots::itemActivated( QTreeWidgetItem * item, int column )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
 
@@ -68,7 +68,7 @@ void QTreeWidgetSlots::itemChanged( QTreeWidgetItem * item, int column )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
 
@@ -88,7 +88,7 @@ void QTreeWidgetSlots::itemClicked( QTreeWidgetItem * item, int column )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
 
@@ -108,7 +108,7 @@ void QTreeWidgetSlots::itemCollapsed( QTreeWidgetItem * item )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
@@ -126,7 +126,7 @@ void QTreeWidgetSlots::itemDoubleClicked( QTreeWidgetItem * item, int column )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
 
@@ -146,7 +146,7 @@ void QTreeWidgetSlots::itemEntered( QTreeWidgetItem * item, int column )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
 
@@ -166,7 +166,7 @@ void QTreeWidgetSlots::itemExpanded( QTreeWidgetItem * item )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
@@ -184,7 +184,7 @@ void QTreeWidgetSlots::itemPressed( QTreeWidgetItem * item, int column )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QTREEWIDGETITEM" );
     PHB_ITEM pcolumn = hb_itemPutNI( NULL, column );
 
@@ -204,7 +204,7 @@ void QTreeWidgetSlots::itemSelectionChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTREEWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTREEWIDGET");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

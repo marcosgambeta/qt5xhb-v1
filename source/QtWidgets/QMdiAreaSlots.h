@@ -16,6 +16,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
+#include <QtWidgets/QMdiSubWindow>
 
 #include <QtWidgets/QMdiArea>
 

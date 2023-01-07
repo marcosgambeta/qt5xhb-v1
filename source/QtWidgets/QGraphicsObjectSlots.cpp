@@ -28,7 +28,7 @@ void QGraphicsObjectSlots::enabledChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QGraphicsObjectSlots::opacityChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -60,7 +60,7 @@ void QGraphicsObjectSlots::parentChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -76,7 +76,7 @@ void QGraphicsObjectSlots::rotationChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -92,7 +92,7 @@ void QGraphicsObjectSlots::scaleChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -108,7 +108,7 @@ void QGraphicsObjectSlots::visibleChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -124,7 +124,7 @@ void QGraphicsObjectSlots::xChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -140,7 +140,7 @@ void QGraphicsObjectSlots::yChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -156,7 +156,7 @@ void QGraphicsObjectSlots::zChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGRAPHICSOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

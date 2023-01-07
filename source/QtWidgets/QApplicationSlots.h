@@ -16,6 +16,8 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
+#include <QtGui/QSessionManager>
+#include <QtWidgets/QWidget>
 
 #include <QtWidgets/QApplication>
 
