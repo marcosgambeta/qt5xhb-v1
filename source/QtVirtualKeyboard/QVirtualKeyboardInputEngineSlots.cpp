@@ -28,7 +28,7 @@ void QVirtualKeyboardInputEngineSlots::virtualKeyClicked( Qt::Key key, const QSt
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
     PHB_ITEM pmodifiers = hb_itemPutNI( NULL, (int) modifiers );
@@ -52,7 +52,7 @@ void QVirtualKeyboardInputEngineSlots::activeKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -70,7 +70,7 @@ void QVirtualKeyboardInputEngineSlots::previousKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -88,7 +88,7 @@ void QVirtualKeyboardInputEngineSlots::inputMethodChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -104,7 +104,7 @@ void QVirtualKeyboardInputEngineSlots::inputMethodReset()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -120,7 +120,7 @@ void QVirtualKeyboardInputEngineSlots::inputMethodUpdate()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -136,7 +136,7 @@ void QVirtualKeyboardInputEngineSlots::inputModesChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -152,7 +152,7 @@ void QVirtualKeyboardInputEngineSlots::inputModeChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -168,7 +168,7 @@ void QVirtualKeyboardInputEngineSlots::patternRecognitionModesChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -184,7 +184,7 @@ void QVirtualKeyboardInputEngineSlots::wordCandidateListModelChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -200,7 +200,7 @@ void QVirtualKeyboardInputEngineSlots::wordCandidateListVisibleHintChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDINPUTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDINPUTENGINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

@@ -28,7 +28,7 @@ void QVirtualKeyboardTraceSlots::traceIdChanged( int traceId )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM ptraceId = hb_itemPutNI( NULL, traceId );
 
     hb_vmEvalBlockV( cb, 2, psender, ptraceId );
@@ -46,7 +46,7 @@ void QVirtualKeyboardTraceSlots::channelsChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -62,7 +62,7 @@ void QVirtualKeyboardTraceSlots::lengthChanged( int length )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM plength = hb_itemPutNI( NULL, length );
 
     hb_vmEvalBlockV( cb, 2, psender, plength );
@@ -80,7 +80,7 @@ void QVirtualKeyboardTraceSlots::finalChanged( bool isFinal )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM pisFinal = hb_itemPutL( NULL, isFinal );
 
     hb_vmEvalBlockV( cb, 2, psender, pisFinal );
@@ -98,7 +98,7 @@ void QVirtualKeyboardTraceSlots::canceledChanged( bool isCanceled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM pisCanceled = hb_itemPutL( NULL, isCanceled );
 
     hb_vmEvalBlockV( cb, 2, psender, pisCanceled );
@@ -116,7 +116,7 @@ void QVirtualKeyboardTraceSlots::opacityChanged( qreal opacity )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIRTUALKEYBOARDTRACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIRTUALKEYBOARDTRACE");
     PHB_ITEM popacity = hb_itemPutND( NULL, opacity );
 
     hb_vmEvalBlockV( cb, 2, psender, popacity );
