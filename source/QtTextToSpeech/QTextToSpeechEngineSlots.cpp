@@ -29,7 +29,7 @@ void QTextToSpeechEngineSlots::stateChanged( QTextToSpeech::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTEXTTOSPEECHENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTEXTTOSPEECHENGINE");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
