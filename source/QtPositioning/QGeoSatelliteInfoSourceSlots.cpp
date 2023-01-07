@@ -29,7 +29,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInViewUpdated( const QList<QGeoSate
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
     PHB_ITEM psatellites = hb_itemArrayNew(0);
     if( pDynSym )
@@ -71,7 +71,7 @@ void QGeoSatelliteInfoSourceSlots::satellitesInUseUpdated( const QList<QGeoSatel
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QGEOSATELLITEINFO" );
     PHB_ITEM psatellites = hb_itemArrayNew(0);
     if( pDynSym )
@@ -113,7 +113,7 @@ void QGeoSatelliteInfoSourceSlots::requestTimeout()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -131,7 +131,7 @@ void QGeoSatelliteInfoSourceSlots::error( QGeoSatelliteInfoSource::Error error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOSATELLITEINFOSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOSATELLITEINFOSOURCE");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );

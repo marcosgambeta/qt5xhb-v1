@@ -29,7 +29,7 @@ void QGeoPositionInfoSourceSlots::positionUpdated( const QGeoPositionInfo & upda
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOPOSITIONINFOSOURCE");
     PHB_ITEM pupdate = Qt5xHb::Signals_return_object( (void *) &update, "QGEOPOSITIONINFO" );
 
     hb_vmEvalBlockV( cb, 2, psender, pupdate );
@@ -49,7 +49,7 @@ void QGeoPositionInfoSourceSlots::updateTimeout()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOPOSITIONINFOSOURCE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -67,7 +67,7 @@ void QGeoPositionInfoSourceSlots::error( QGeoPositionInfoSource::Error error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOPOSITIONINFOSOURCE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOPOSITIONINFOSOURCE");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
