@@ -28,7 +28,7 @@ void QScriptEngineDebuggerSlots::evaluationResumed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINEDEBUGGER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCRIPTENGINEDEBUGGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINEDEBUGGER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
