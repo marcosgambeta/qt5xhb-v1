@@ -29,7 +29,7 @@ void QModbusClientSlots::timeoutChanged( int newTimeout )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMODBUSCLIENT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSCLIENT");
     PHB_ITEM pnewTimeout = hb_itemPutNI( NULL, newTimeout );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewTimeout );

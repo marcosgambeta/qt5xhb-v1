@@ -29,7 +29,7 @@ void QModbusDeviceSlots::errorOccurred( QModbusDevice::Error error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMODBUSDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSDEVICE");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -49,7 +49,7 @@ void QModbusDeviceSlots::stateChanged( QModbusDevice::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMODBUSDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSDEVICE");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );

@@ -29,7 +29,7 @@ void QModbusServerSlots::dataWritten( QModbusDataUnit::RegisterType table, int a
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMODBUSSERVER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMODBUSSERVER");
     PHB_ITEM ptable = hb_itemPutNI( NULL, (int) table );
     PHB_ITEM paddress = hb_itemPutNI( NULL, address );
     PHB_ITEM psize = hb_itemPutNI( NULL, size );

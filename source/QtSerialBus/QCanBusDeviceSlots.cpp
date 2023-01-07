@@ -29,7 +29,7 @@ void QCanBusDeviceSlots::errorOccurred( QCanBusDevice::CanBusError )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
 
     hb_vmEvalBlockV( cb, 1, psender,  );
 
@@ -47,7 +47,7 @@ void QCanBusDeviceSlots::framesReceived()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -65,7 +65,7 @@ void QCanBusDeviceSlots::framesWritten( qint64 framesCount )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
     PHB_ITEM pframesCount = hb_itemPutNLL( NULL, framesCount );
 
     hb_vmEvalBlockV( cb, 2, psender, pframesCount );
@@ -85,7 +85,7 @@ void QCanBusDeviceSlots::stateChanged( QCanBusDevice::CanBusDeviceState state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANBUSDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANBUSDEVICE");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
