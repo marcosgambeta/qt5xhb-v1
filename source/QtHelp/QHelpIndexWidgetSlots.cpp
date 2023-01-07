@@ -28,7 +28,7 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPINDEXWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPINDEXWIDGET");
     PHB_ITEM plink = Qt5xHb::Signals_return_object( (void *) &link, "QURL" );
     PHB_ITEM pkeyword = hb_itemPutC( NULL, QSTRINGTOSTRING(keyword) );
 

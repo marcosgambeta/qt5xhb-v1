@@ -28,7 +28,7 @@ void QHelpIndexModelSlots::indexCreated()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPINDEXMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPINDEXMODEL");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QHelpIndexModelSlots::indexCreationStarted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPINDEXMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPINDEXMODEL");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

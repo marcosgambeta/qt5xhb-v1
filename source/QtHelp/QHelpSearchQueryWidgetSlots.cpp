@@ -28,7 +28,7 @@ void QHelpSearchQueryWidgetSlots::search()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHQUERYWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPSEARCHQUERYWIDGET");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

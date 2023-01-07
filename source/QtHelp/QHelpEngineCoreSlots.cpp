@@ -28,7 +28,7 @@ void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPENGINECORE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPENGINECORE");
     PHB_ITEM pnewFilter = hb_itemPutC( NULL, QSTRINGTOSTRING(newFilter) );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewFilter );
@@ -46,7 +46,7 @@ void QHelpEngineCoreSlots::setupFinished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPENGINECORE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPENGINECORE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -62,7 +62,7 @@ void QHelpEngineCoreSlots::setupStarted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPENGINECORE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPENGINECORE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -78,7 +78,7 @@ void QHelpEngineCoreSlots::warning( const QString & msg )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPENGINECORE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPENGINECORE");
     PHB_ITEM pmsg = hb_itemPutC( NULL, QSTRINGTOSTRING(msg) );
 
     hb_vmEvalBlockV( cb, 2, psender, pmsg );

@@ -28,7 +28,7 @@ void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPCONTENTWIDGET" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTWIDGET");
     PHB_ITEM plink = Qt5xHb::Signals_return_object( (void *) &link, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );

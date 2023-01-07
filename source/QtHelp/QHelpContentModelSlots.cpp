@@ -28,7 +28,7 @@ void QHelpContentModelSlots::contentsCreated()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPCONTENTMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTMODEL");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QHelpContentModelSlots::contentsCreationStarted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QHELPCONTENTMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QHELPCONTENTMODEL");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
