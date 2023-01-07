@@ -28,7 +28,7 @@ void QAxScriptSlots::entered()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QAxScriptSlots::error( int code, const QString & description, int sourcePos
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
     PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING(description) );
     PHB_ITEM psourcePosition = hb_itemPutNI( NULL, sourcePosition );
@@ -68,7 +68,7 @@ void QAxScriptSlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -84,7 +84,7 @@ void QAxScriptSlots::finished( const QVariant & result )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM presult = Qt5xHb::Signals_return_object( (void *) &result, "QVARIANT" );
 
     hb_vmEvalBlockV( cb, 2, psender, presult );
@@ -102,7 +102,7 @@ void QAxScriptSlots::finished( int code, const QString & source, const QString &
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
     PHB_ITEM psource = hb_itemPutC( NULL, QSTRINGTOSTRING(source) );
     PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING(description) );
@@ -126,7 +126,7 @@ void QAxScriptSlots::stateChanged( int state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAXSCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAXSCRIPT");
     PHB_ITEM pstate = hb_itemPutNI( NULL, state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
