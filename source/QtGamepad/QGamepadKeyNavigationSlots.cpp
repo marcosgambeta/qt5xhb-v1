@@ -29,7 +29,7 @@ void QGamepadKeyNavigationSlots::activeChanged( bool isActive )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pisActive = hb_itemPutL( NULL, isActive );
 
     hb_vmEvalBlockV( cb, 2, psender, pisActive );
@@ -49,8 +49,8 @@ void QGamepadKeyNavigationSlots::gamepadChanged( QGamepad * gamepad )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
-    PHB_ITEM pgamepad = Qt5xHb::Signals_return_qobject( (QObject *) gamepad, "QGAMEPAD" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
+    PHB_ITEM pgamepad = Qt5xHb::Signals_return_qobject(gamepad, "QGAMEPAD");
 
     hb_vmEvalBlockV( cb, 2, psender, pgamepad );
 
@@ -69,7 +69,7 @@ void QGamepadKeyNavigationSlots::upKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -89,7 +89,7 @@ void QGamepadKeyNavigationSlots::downKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -109,7 +109,7 @@ void QGamepadKeyNavigationSlots::leftKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -129,7 +129,7 @@ void QGamepadKeyNavigationSlots::rightKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -149,7 +149,7 @@ void QGamepadKeyNavigationSlots::buttonAKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -169,7 +169,7 @@ void QGamepadKeyNavigationSlots::buttonBKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -189,7 +189,7 @@ void QGamepadKeyNavigationSlots::buttonXKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -209,7 +209,7 @@ void QGamepadKeyNavigationSlots::buttonYKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -229,7 +229,7 @@ void QGamepadKeyNavigationSlots::buttonSelectKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -249,7 +249,7 @@ void QGamepadKeyNavigationSlots::buttonStartKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -269,7 +269,7 @@ void QGamepadKeyNavigationSlots::buttonGuideKeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -289,7 +289,7 @@ void QGamepadKeyNavigationSlots::buttonL1KeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -309,7 +309,7 @@ void QGamepadKeyNavigationSlots::buttonR1KeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -329,7 +329,7 @@ void QGamepadKeyNavigationSlots::buttonL2KeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -349,7 +349,7 @@ void QGamepadKeyNavigationSlots::buttonR2KeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -369,7 +369,7 @@ void QGamepadKeyNavigationSlots::buttonL3KeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
@@ -389,7 +389,7 @@ void QGamepadKeyNavigationSlots::buttonR3KeyChanged( Qt::Key key )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGAMEPADKEYNAVIGATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGAMEPADKEYNAVIGATION");
     PHB_ITEM pkey = hb_itemPutNI( NULL, (int) key );
 
     hb_vmEvalBlockV( cb, 2, psender, pkey );
