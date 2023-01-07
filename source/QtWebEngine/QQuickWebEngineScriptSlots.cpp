@@ -28,7 +28,7 @@ void QQuickWebEngineScriptSlots::injectionPointChanged( QQuickWebEngineScript::I
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWEBENGINESCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pinjectionPoint = hb_itemPutNI( NULL, (int) injectionPoint );
 
     hb_vmEvalBlockV( cb, 2, psender, pinjectionPoint );
@@ -46,7 +46,7 @@ void QQuickWebEngineScriptSlots::nameChanged( const QString & name )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWEBENGINESCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
@@ -64,7 +64,7 @@ void QQuickWebEngineScriptSlots::runOnSubframesChanged( bool on )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWEBENGINESCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pon = hb_itemPutL( NULL, on );
 
     hb_vmEvalBlockV( cb, 2, psender, pon );
@@ -82,7 +82,7 @@ void QQuickWebEngineScriptSlots::sourceCodeChanged( const QString & code )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWEBENGINESCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pcode = hb_itemPutC( NULL, QSTRINGTOSTRING(code) );
 
     hb_vmEvalBlockV( cb, 2, psender, pcode );
@@ -100,7 +100,7 @@ void QQuickWebEngineScriptSlots::sourceUrlChanged( const QUrl & url )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWEBENGINESCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
@@ -118,7 +118,7 @@ void QQuickWebEngineScriptSlots::worldIdChanged( QQuickWebEngineScript::ScriptWo
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWEBENGINESCRIPT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWEBENGINESCRIPT");
     PHB_ITEM pscriptWorldId = hb_itemPutNI( NULL, (int) scriptWorldId );
 
     hb_vmEvalBlockV( cb, 2, psender, pscriptWorldId );
