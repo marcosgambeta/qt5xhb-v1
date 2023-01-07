@@ -28,7 +28,7 @@ void QMediaPlayerControlSlots::audioAvailableChanged( bool audio )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM paudio = hb_itemPutL( NULL, audio );
 
     hb_vmEvalBlockV( cb, 2, psender, paudio );
@@ -46,7 +46,7 @@ void QMediaPlayerControlSlots::availablePlaybackRangesChanged( const QMediaTimeR
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pranges = Qt5xHb::Signals_return_object( (void *) &ranges, "QMEDIATIMERANGE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pranges );
@@ -64,7 +64,7 @@ void QMediaPlayerControlSlots::bufferStatusChanged( int progress )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
 
     hb_vmEvalBlockV( cb, 2, psender, pprogress );
@@ -82,7 +82,7 @@ void QMediaPlayerControlSlots::durationChanged( qint64 duration )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
 
     hb_vmEvalBlockV( cb, 2, psender, pduration );
@@ -100,7 +100,7 @@ void QMediaPlayerControlSlots::error( int error, const QString & errorString )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
 
@@ -120,7 +120,7 @@ void QMediaPlayerControlSlots::mediaChanged( const QMediaContent & content )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pcontent = Qt5xHb::Signals_return_object( (void *) &content, "QMEDIACONTENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcontent );
@@ -138,7 +138,7 @@ void QMediaPlayerControlSlots::mediaStatusChanged( QMediaPlayer::MediaStatus sta
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -156,7 +156,7 @@ void QMediaPlayerControlSlots::mutedChanged( bool mute )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pmute = hb_itemPutL( NULL, mute );
 
     hb_vmEvalBlockV( cb, 2, psender, pmute );
@@ -174,7 +174,7 @@ void QMediaPlayerControlSlots::playbackRateChanged( qreal rate )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM prate = hb_itemPutND( NULL, rate );
 
     hb_vmEvalBlockV( cb, 2, psender, prate );
@@ -192,7 +192,7 @@ void QMediaPlayerControlSlots::positionChanged( qint64 position )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pposition = hb_itemPutNLL( NULL, position );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
@@ -210,7 +210,7 @@ void QMediaPlayerControlSlots::seekableChanged( bool seekable )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pseekable = hb_itemPutL( NULL, seekable );
 
     hb_vmEvalBlockV( cb, 2, psender, pseekable );
@@ -228,7 +228,7 @@ void QMediaPlayerControlSlots::stateChanged( QMediaPlayer::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -246,7 +246,7 @@ void QMediaPlayerControlSlots::videoAvailableChanged( bool video )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pvideo = hb_itemPutL( NULL, video );
 
     hb_vmEvalBlockV( cb, 2, psender, pvideo );
@@ -264,7 +264,7 @@ void QMediaPlayerControlSlots::volumeChanged( int volume )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYERCONTROL");
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
 
     hb_vmEvalBlockV( cb, 2, psender, pvolume );

@@ -28,7 +28,7 @@ void QAbstractAudioInputSlots::errorChanged( QAudio::Error error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOINPUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAUDIOINPUT");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -46,7 +46,7 @@ void QAbstractAudioInputSlots::stateChanged( QAudio::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOINPUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAUDIOINPUT");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -64,7 +64,7 @@ void QAbstractAudioInputSlots::notify()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTAUDIOINPUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTAUDIOINPUT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

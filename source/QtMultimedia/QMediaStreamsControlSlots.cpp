@@ -28,7 +28,7 @@ void QMediaStreamsControlSlots::activeStreamsChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIASTREAMSCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIASTREAMSCONTROL");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QMediaStreamsControlSlots::streamsChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIASTREAMSCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIASTREAMSCONTROL");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

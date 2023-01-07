@@ -28,7 +28,7 @@ void QCameraExposureSlots::apertureChanged( qreal value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -46,7 +46,7 @@ void QCameraExposureSlots::apertureRangeChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -62,7 +62,7 @@ void QCameraExposureSlots::exposureCompensationChanged( qreal value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -80,7 +80,7 @@ void QCameraExposureSlots::flashReady( bool ready )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
     PHB_ITEM pready = hb_itemPutL( NULL, ready );
 
     hb_vmEvalBlockV( cb, 2, psender, pready );
@@ -98,7 +98,7 @@ void QCameraExposureSlots::isoSensitivityChanged( int value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -116,7 +116,7 @@ void QCameraExposureSlots::shutterSpeedChanged( qreal speed )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
     PHB_ITEM pspeed = hb_itemPutND( NULL, speed );
 
     hb_vmEvalBlockV( cb, 2, psender, pspeed );
@@ -134,7 +134,7 @@ void QCameraExposureSlots::shutterSpeedRangeChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAEXPOSURE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAEXPOSURE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

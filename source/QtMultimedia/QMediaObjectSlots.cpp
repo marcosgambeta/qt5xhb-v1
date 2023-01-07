@@ -28,7 +28,7 @@ void QMediaObjectSlots::availabilityChanged( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -46,7 +46,7 @@ void QMediaObjectSlots::availabilityChanged( QMultimedia::AvailabilityStatus ava
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailability );
@@ -64,7 +64,7 @@ void QMediaObjectSlots::metaDataAvailableChanged( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -82,7 +82,7 @@ void QMediaObjectSlots::metaDataChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -98,7 +98,7 @@ void QMediaObjectSlots::metaDataChanged( const QString & key, const QVariant & v
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT" );
 
@@ -118,7 +118,7 @@ void QMediaObjectSlots::notifyIntervalChanged( int milliseconds )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAOBJECT");
     PHB_ITEM pmilliseconds = hb_itemPutNI( NULL, milliseconds );
 
     hb_vmEvalBlockV( cb, 2, psender, pmilliseconds );

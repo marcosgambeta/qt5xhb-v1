@@ -28,7 +28,7 @@ void QMediaPlayerSlots::audioAvailableChanged( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -47,7 +47,7 @@ void QMediaPlayerSlots::audioRoleChanged( QAudio::Role role )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM prole = hb_itemPutNI( NULL, (int) role );
 
     hb_vmEvalBlockV( cb, 2, psender, prole );
@@ -66,7 +66,7 @@ void QMediaPlayerSlots::bufferStatusChanged( int percentFilled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM ppercentFilled = hb_itemPutNI( NULL, percentFilled );
 
     hb_vmEvalBlockV( cb, 2, psender, ppercentFilled );
@@ -84,7 +84,7 @@ void QMediaPlayerSlots::currentMediaChanged( const QMediaContent & media )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pmedia = Qt5xHb::Signals_return_object( (void *) &media, "QMEDIACONTENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmedia );
@@ -102,7 +102,7 @@ void QMediaPlayerSlots::durationChanged( qint64 duration )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
 
     hb_vmEvalBlockV( cb, 2, psender, pduration );
@@ -120,7 +120,7 @@ void QMediaPlayerSlots::error( QMediaPlayer::Error error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -138,7 +138,7 @@ void QMediaPlayerSlots::mediaChanged( const QMediaContent & media )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pmedia = Qt5xHb::Signals_return_object( (void *) &media, "QMEDIACONTENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmedia );
@@ -156,7 +156,7 @@ void QMediaPlayerSlots::mediaStatusChanged( QMediaPlayer::MediaStatus status )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -174,7 +174,7 @@ void QMediaPlayerSlots::mutedChanged( bool muted )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
 
     hb_vmEvalBlockV( cb, 2, psender, pmuted );
@@ -192,7 +192,7 @@ void QMediaPlayerSlots::networkConfigurationChanged( const QNetworkConfiguration
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pconfiguration = Qt5xHb::Signals_return_object( (void *) &configuration, "QNETWORKCONFIGURATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconfiguration );
@@ -210,7 +210,7 @@ void QMediaPlayerSlots::playbackRateChanged( qreal rate )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM prate = hb_itemPutND( NULL, rate );
 
     hb_vmEvalBlockV( cb, 2, psender, prate );
@@ -228,7 +228,7 @@ void QMediaPlayerSlots::positionChanged( qint64 position )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pposition = hb_itemPutNLL( NULL, position );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
@@ -246,7 +246,7 @@ void QMediaPlayerSlots::seekableChanged( bool seekable )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pseekable = hb_itemPutL( NULL, seekable );
 
     hb_vmEvalBlockV( cb, 2, psender, pseekable );
@@ -264,7 +264,7 @@ void QMediaPlayerSlots::stateChanged( QMediaPlayer::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -282,7 +282,7 @@ void QMediaPlayerSlots::videoAvailableChanged( bool videoAvailable )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pvideoAvailable = hb_itemPutL( NULL, videoAvailable );
 
     hb_vmEvalBlockV( cb, 2, psender, pvideoAvailable );
@@ -300,7 +300,7 @@ void QMediaPlayerSlots::volumeChanged( int volume )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYER");
     PHB_ITEM pvolume = hb_itemPutNI( NULL, volume );
 
     hb_vmEvalBlockV( cb, 2, psender, pvolume );

@@ -28,7 +28,7 @@ void QMediaRecorderControlSlots::actualLocationChanged( const QUrl & location )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDERCONTROL");
     PHB_ITEM plocation = Qt5xHb::Signals_return_object( (void *) &location, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plocation );
@@ -46,7 +46,7 @@ void QMediaRecorderControlSlots::durationChanged( qint64 duration )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDERCONTROL");
     PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
 
     hb_vmEvalBlockV( cb, 2, psender, pduration );
@@ -64,7 +64,7 @@ void QMediaRecorderControlSlots::error( int error, const QString & errorString )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDERCONTROL");
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
 
@@ -84,7 +84,7 @@ void QMediaRecorderControlSlots::mutedChanged( bool muted )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDERCONTROL");
     PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
 
     hb_vmEvalBlockV( cb, 2, psender, pmuted );
@@ -102,7 +102,7 @@ void QMediaRecorderControlSlots::stateChanged( QMediaRecorder::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDERCONTROL");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -120,7 +120,7 @@ void QMediaRecorderControlSlots::statusChanged( QMediaRecorder::Status status )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDERCONTROL");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -138,7 +138,7 @@ void QMediaRecorderControlSlots::volumeChanged( qreal gain )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDERCONTROL");
     PHB_ITEM pgain = hb_itemPutND( NULL, gain );
 
     hb_vmEvalBlockV( cb, 2, psender, pgain );

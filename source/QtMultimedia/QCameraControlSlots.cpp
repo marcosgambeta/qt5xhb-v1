@@ -28,7 +28,7 @@ void QCameraControlSlots::captureModeChanged( QCamera::CaptureModes mode )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERACONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACONTROL");
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
 
     hb_vmEvalBlockV( cb, 2, psender, pmode );
@@ -46,7 +46,7 @@ void QCameraControlSlots::error( int error, const QString & errorString )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERACONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACONTROL");
     PHB_ITEM perror = hb_itemPutNI( NULL, error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
 
@@ -66,7 +66,7 @@ void QCameraControlSlots::stateChanged( QCamera::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERACONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACONTROL");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -84,7 +84,7 @@ void QCameraControlSlots::statusChanged( QCamera::Status status )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERACONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERACONTROL");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );

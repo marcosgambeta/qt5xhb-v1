@@ -28,7 +28,7 @@ void QAudioOutputSlots::notify()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIOOUTPUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOOUTPUT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QAudioOutputSlots::stateChanged( QAudio::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIOOUTPUT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOOUTPUT");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );

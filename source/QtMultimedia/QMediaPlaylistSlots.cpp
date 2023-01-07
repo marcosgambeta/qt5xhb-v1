@@ -28,7 +28,7 @@ void QMediaPlaylistSlots::currentIndexChanged( int position )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
     PHB_ITEM pposition = hb_itemPutNI( NULL, position );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );
@@ -46,7 +46,7 @@ void QMediaPlaylistSlots::currentMediaChanged( const QMediaContent & content )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
     PHB_ITEM pcontent = Qt5xHb::Signals_return_object( (void *) &content, "QMEDIACONTENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcontent );
@@ -64,7 +64,7 @@ void QMediaPlaylistSlots::loadFailed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -80,7 +80,7 @@ void QMediaPlaylistSlots::loaded()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -96,7 +96,7 @@ void QMediaPlaylistSlots::mediaAboutToBeInserted( int start, int end )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -116,7 +116,7 @@ void QMediaPlaylistSlots::mediaAboutToBeRemoved( int start, int end )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -136,7 +136,7 @@ void QMediaPlaylistSlots::mediaChanged( int start, int end )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -156,7 +156,7 @@ void QMediaPlaylistSlots::mediaInserted( int start, int end )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -176,7 +176,7 @@ void QMediaPlaylistSlots::mediaRemoved( int start, int end )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
     PHB_ITEM pstart = hb_itemPutNI( NULL, start );
     PHB_ITEM pend = hb_itemPutNI( NULL, end );
 
@@ -196,7 +196,7 @@ void QMediaPlaylistSlots::playbackModeChanged( QMediaPlaylist::PlaybackMode mode
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAPLAYLIST" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAPLAYLIST");
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
 
     hb_vmEvalBlockV( cb, 2, psender, pmode );

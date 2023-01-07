@@ -28,7 +28,7 @@ void QMediaRecorderSlots::actualLocationChanged( const QUrl & location )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM plocation = Qt5xHb::Signals_return_object( (void *) &location, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plocation );
@@ -46,7 +46,7 @@ void QMediaRecorderSlots::availabilityChanged( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -64,7 +64,7 @@ void QMediaRecorderSlots::availabilityChanged( QMultimedia::AvailabilityStatus a
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailability );
@@ -82,7 +82,7 @@ void QMediaRecorderSlots::durationChanged( qint64 duration )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pduration = hb_itemPutNLL( NULL, duration );
 
     hb_vmEvalBlockV( cb, 2, psender, pduration );
@@ -100,7 +100,7 @@ void QMediaRecorderSlots::error( QMediaRecorder::Error error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -118,7 +118,7 @@ void QMediaRecorderSlots::metaDataAvailableChanged( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -136,7 +136,7 @@ void QMediaRecorderSlots::metaDataChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -152,7 +152,7 @@ void QMediaRecorderSlots::metaDataChanged( const QString & key, const QVariant &
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT" );
 
@@ -172,7 +172,7 @@ void QMediaRecorderSlots::metaDataWritableChanged( bool writable )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pwritable = hb_itemPutL( NULL, writable );
 
     hb_vmEvalBlockV( cb, 2, psender, pwritable );
@@ -190,7 +190,7 @@ void QMediaRecorderSlots::mutedChanged( bool muted )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pmuted = hb_itemPutL( NULL, muted );
 
     hb_vmEvalBlockV( cb, 2, psender, pmuted );
@@ -208,7 +208,7 @@ void QMediaRecorderSlots::stateChanged( QMediaRecorder::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -226,7 +226,7 @@ void QMediaRecorderSlots::statusChanged( QMediaRecorder::Status status )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -244,7 +244,7 @@ void QMediaRecorderSlots::volumeChanged( qreal volume )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIARECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIARECORDER");
     PHB_ITEM pvolume = hb_itemPutND( NULL, volume );
 
     hb_vmEvalBlockV( cb, 2, psender, pvolume );

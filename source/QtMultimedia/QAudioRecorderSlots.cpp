@@ -28,7 +28,7 @@ void QAudioRecorderSlots::audioInputChanged( const QString & name )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIORECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIORECORDER");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
@@ -46,7 +46,7 @@ void QAudioRecorderSlots::availableAudioInputsChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIORECORDER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIORECORDER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

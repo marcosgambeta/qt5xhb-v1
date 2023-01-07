@@ -28,7 +28,7 @@ void QCameraFocusSlots::digitalZoomChanged( qreal value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -46,7 +46,7 @@ void QCameraFocusSlots::focusZonesChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -62,7 +62,7 @@ void QCameraFocusSlots::maximumDigitalZoomChanged( qreal zoom )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
 
     hb_vmEvalBlockV( cb, 2, psender, pzoom );
@@ -80,7 +80,7 @@ void QCameraFocusSlots::maximumOpticalZoomChanged( qreal zoom )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
     PHB_ITEM pzoom = hb_itemPutND( NULL, zoom );
 
     hb_vmEvalBlockV( cb, 2, psender, pzoom );
@@ -98,7 +98,7 @@ void QCameraFocusSlots::opticalZoomChanged( qreal value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCAMERAFOCUS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCAMERAFOCUS");
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );

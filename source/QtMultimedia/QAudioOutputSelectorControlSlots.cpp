@@ -28,7 +28,7 @@ void QAudioOutputSelectorControlSlots::activeOutputChanged( const QString & name
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIOOUTPUTSELECTORCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOOUTPUTSELECTORCONTROL");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
@@ -46,7 +46,7 @@ void QAudioOutputSelectorControlSlots::availableOutputsChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIOOUTPUTSELECTORCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOOUTPUTSELECTORCONTROL");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

@@ -28,7 +28,7 @@ void QMediaAvailabilityControlSlots::availabilityChanged( QMultimedia::Availabil
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMEDIAAVAILABILITYCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMEDIAAVAILABILITYCONTROL");
     PHB_ITEM pavailability = hb_itemPutNI( NULL, (int) availability );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailability );

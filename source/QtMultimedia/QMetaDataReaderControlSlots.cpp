@@ -28,7 +28,7 @@ void QMetaDataReaderControlSlots::metaDataChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMETADATAREADERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAREADERCONTROL");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QMetaDataReaderControlSlots::metaDataChanged( const QString & key, const QV
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMETADATAREADERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAREADERCONTROL");
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING(key) );
     PHB_ITEM pvalue = Qt5xHb::Signals_return_object( (void *) &value, "QVARIANT" );
 
@@ -64,7 +64,7 @@ void QMetaDataReaderControlSlots::metaDataAvailableChanged( bool available )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMETADATAREADERCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMETADATAREADERCONTROL");
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );

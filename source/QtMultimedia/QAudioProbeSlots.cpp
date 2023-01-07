@@ -28,7 +28,7 @@ void QAudioProbeSlots::audioBufferProbed( const QAudioBuffer & buffer )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIOPROBE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOPROBE");
     PHB_ITEM pbuffer = Qt5xHb::Signals_return_object( (void *) &buffer, "QAUDIOBUFFER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pbuffer );
@@ -46,7 +46,7 @@ void QAudioProbeSlots::flush()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QAUDIOPROBE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QAUDIOPROBE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

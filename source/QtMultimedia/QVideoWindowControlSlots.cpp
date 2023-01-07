@@ -28,7 +28,7 @@ void QVideoWindowControlSlots::fullScreenChanged( bool fullScreen )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWINDOWCONTROL");
     PHB_ITEM pfullScreen = hb_itemPutL( NULL, fullScreen );
 
     hb_vmEvalBlockV( cb, 2, psender, pfullScreen );
@@ -46,7 +46,7 @@ void QVideoWindowControlSlots::brightnessChanged( int brightness )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWINDOWCONTROL");
     PHB_ITEM pbrightness = hb_itemPutNI( NULL, brightness );
 
     hb_vmEvalBlockV( cb, 2, psender, pbrightness );
@@ -64,7 +64,7 @@ void QVideoWindowControlSlots::contrastChanged( int contrast )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWINDOWCONTROL");
     PHB_ITEM pcontrast = hb_itemPutNI( NULL, contrast );
 
     hb_vmEvalBlockV( cb, 2, psender, pcontrast );
@@ -82,7 +82,7 @@ void QVideoWindowControlSlots::hueChanged( int hue )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWINDOWCONTROL");
     PHB_ITEM phue = hb_itemPutNI( NULL, hue );
 
     hb_vmEvalBlockV( cb, 2, psender, phue );
@@ -100,7 +100,7 @@ void QVideoWindowControlSlots::saturationChanged( int saturation )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWINDOWCONTROL");
     PHB_ITEM psaturation = hb_itemPutNI( NULL, saturation );
 
     hb_vmEvalBlockV( cb, 2, psender, psaturation );
@@ -118,7 +118,7 @@ void QVideoWindowControlSlots::nativeSizeChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVIDEOWINDOWCONTROL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVIDEOWINDOWCONTROL");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
