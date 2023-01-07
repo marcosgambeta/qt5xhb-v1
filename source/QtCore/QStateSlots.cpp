@@ -28,7 +28,7 @@ void QStateSlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTATE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QStateSlots::propertiesAssigned()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTATE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

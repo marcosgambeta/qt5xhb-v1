@@ -28,7 +28,7 @@ void QThreadSlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTHREAD" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTHREAD");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QThreadSlots::started()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QTHREAD" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QTHREAD");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

@@ -28,7 +28,7 @@ void QAbstractTransitionSlots::triggered()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTRANSITION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTTRANSITION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

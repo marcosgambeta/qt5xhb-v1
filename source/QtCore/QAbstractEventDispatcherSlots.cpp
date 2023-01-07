@@ -28,7 +28,7 @@ void QAbstractEventDispatcherSlots::aboutToBlock()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QAbstractEventDispatcherSlots::awake()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTEVENTDISPATCHER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

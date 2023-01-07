@@ -28,7 +28,7 @@ void QStateMachineSlots::started()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTATEMACHINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATEMACHINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QStateMachineSlots::stopped()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTATEMACHINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTATEMACHINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

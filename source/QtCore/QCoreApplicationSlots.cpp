@@ -28,7 +28,7 @@ void QCoreApplicationSlots::aboutToQuit()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCOREAPPLICATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCOREAPPLICATION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

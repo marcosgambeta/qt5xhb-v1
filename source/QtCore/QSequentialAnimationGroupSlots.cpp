@@ -28,8 +28,8 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSEQUENTIALANIMATIONGROUP" );
-    PHB_ITEM pcurrent = Qt5xHb::Signals_return_qobject( (QObject *) current, "QABSTRACTANIMATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSEQUENTIALANIMATIONGROUP");
+    PHB_ITEM pcurrent = Qt5xHb::Signals_return_qobject(current, "QABSTRACTANIMATION");
 
     hb_vmEvalBlockV( cb, 2, psender, pcurrent );
 

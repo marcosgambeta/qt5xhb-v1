@@ -28,7 +28,7 @@ void QAnimationDriverSlots::started()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QANIMATIONDRIVER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QANIMATIONDRIVER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QAnimationDriverSlots::stopped()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QANIMATIONDRIVER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QANIMATIONDRIVER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

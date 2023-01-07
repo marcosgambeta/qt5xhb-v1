@@ -28,8 +28,8 @@ void QObjectSlots::destroyed( QObject * obj )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOBJECT" );
-    PHB_ITEM pobj = Qt5xHb::Signals_return_qobject( (QObject *) obj, "QOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT" );
+    PHB_ITEM pobj = Qt5xHb::Signals_return_qobject(obj, "QOBJECT");
 
     hb_vmEvalBlockV( cb, 2, psender, pobj );
 
@@ -47,7 +47,7 @@ void QObjectSlots::objectNameChanged( const QString & objectName )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOBJECT" );
     PHB_ITEM pobjectName = hb_itemPutC( NULL, QSTRINGTOSTRING(objectName) );
 
     hb_vmEvalBlockV( cb, 2, psender, pobjectName );

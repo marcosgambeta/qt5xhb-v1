@@ -28,7 +28,7 @@ void QAbstractStateSlots::entered()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSTATE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QAbstractStateSlots::exited()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSTATE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

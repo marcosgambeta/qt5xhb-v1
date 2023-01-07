@@ -28,7 +28,7 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pselected = Qt5xHb::Signals_return_object( (void *) &selected, "QITEMSELECTION" );
     PHB_ITEM pdeselected = Qt5xHb::Signals_return_object( (void *) &deselected, "QITEMSELECTION" );
 
@@ -48,7 +48,7 @@ void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, cons
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) &previous, "QMODELINDEX" );
 
@@ -68,7 +68,7 @@ void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, c
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) &previous, "QMODELINDEX" );
 
@@ -88,7 +88,7 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
     PHB_ITEM pcurrent = Qt5xHb::Signals_return_object( (void *) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Qt5xHb::Signals_return_object( (void *) &previous, "QMODELINDEX" );
 
