@@ -28,7 +28,7 @@ void QSvgRendererSlots::repaintNeeded()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSVGRENDERER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSVGRENDERER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
