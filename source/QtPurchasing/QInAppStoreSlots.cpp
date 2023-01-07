@@ -28,8 +28,8 @@ void QInAppStoreSlots::productRegistered( QInAppProduct * product )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINAPPSTORE" );
-    PHB_ITEM pproduct = Qt5xHb::Signals_return_qobject( (QObject *) product, "QINAPPPRODUCT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINAPPSTORE");
+    PHB_ITEM pproduct = Qt5xHb::Signals_return_qobject(product, "QINAPPPRODUCT");
 
     hb_vmEvalBlockV( cb, 2, psender, pproduct );
 
@@ -46,7 +46,7 @@ void QInAppStoreSlots::productUnknown( QInAppProduct::ProductType productType, c
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINAPPSTORE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINAPPSTORE");
     PHB_ITEM pproductType = hb_itemPutNI( NULL, (int) productType );
     PHB_ITEM pidentifier = hb_itemPutC( NULL, QSTRINGTOSTRING(identifier) );
 
@@ -66,8 +66,8 @@ void QInAppStoreSlots::transactionReady( QInAppTransaction * transaction )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINAPPSTORE" );
-    PHB_ITEM ptransaction = Qt5xHb::Signals_return_qobject( (QObject *) transaction, "QINAPPTRANSACTION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINAPPSTORE");
+    PHB_ITEM ptransaction = Qt5xHb::Signals_return_qobject(transaction, "QINAPPTRANSACTION");
 
     hb_vmEvalBlockV( cb, 2, psender, ptransaction );
 
