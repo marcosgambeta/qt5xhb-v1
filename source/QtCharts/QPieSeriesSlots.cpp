@@ -29,7 +29,7 @@ void QPieSeriesSlots::added( QList<QPieSlice*> slices )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
     PHB_ITEM pslices = hb_itemArrayNew(0);
     if( pDynSym )
@@ -71,8 +71,8 @@ void QPieSeriesSlots::clicked( QPieSlice * slice )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
 
     hb_vmEvalBlockV( cb, 2, psender, pslice );
 
@@ -91,7 +91,7 @@ void QPieSeriesSlots::countChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -109,8 +109,8 @@ void QPieSeriesSlots::doubleClicked( QPieSlice * slice )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
 
     hb_vmEvalBlockV( cb, 2, psender, pslice );
 
@@ -129,8 +129,8 @@ void QPieSeriesSlots::hovered( QPieSlice * slice, bool state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
     PHB_ITEM pstate = hb_itemPutL( NULL, state );
 
     hb_vmEvalBlockV( cb, 3, psender, pslice, pstate );
@@ -151,8 +151,8 @@ void QPieSeriesSlots::pressed( QPieSlice * slice )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
 
     hb_vmEvalBlockV( cb, 2, psender, pslice );
 
@@ -171,8 +171,8 @@ void QPieSeriesSlots::released( QPieSlice * slice )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
-    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject( (QObject *) slice, "QPIESLICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
+    PHB_ITEM pslice = Qt5xHb::Signals_return_qobject(slice, "QPIESLICE");
 
     hb_vmEvalBlockV( cb, 2, psender, pslice );
 
@@ -191,7 +191,7 @@ void QPieSeriesSlots::removed( QList<QPieSlice*> slices )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QPIESLICE" );
     PHB_ITEM pslices = hb_itemArrayNew(0);
     if( pDynSym )
@@ -233,7 +233,7 @@ void QPieSeriesSlots::sumChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPIESERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPIESERIES");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

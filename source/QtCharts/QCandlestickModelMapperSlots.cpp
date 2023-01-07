@@ -29,7 +29,7 @@ void QCandlestickModelMapperSlots::modelReplaced()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANDLESTICKMODELMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKMODELMAPPER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -47,7 +47,7 @@ void QCandlestickModelMapperSlots::seriesReplaced()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCANDLESTICKMODELMAPPER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCANDLESTICKMODELMAPPER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

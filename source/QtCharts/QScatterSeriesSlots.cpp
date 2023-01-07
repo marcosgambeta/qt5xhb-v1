@@ -29,7 +29,7 @@ void QScatterSeriesSlots::borderColorChanged( QColor color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -49,7 +49,7 @@ void QScatterSeriesSlots::colorChanged( QColor color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -69,7 +69,7 @@ void QScatterSeriesSlots::markerShapeChanged( QScatterSeries::MarkerShape shape 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
     PHB_ITEM pshape = hb_itemPutNI( NULL, (int) shape );
 
     hb_vmEvalBlockV( cb, 2, psender, pshape );
@@ -89,7 +89,7 @@ void QScatterSeriesSlots::markerSizeChanged( qreal size )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCATTERSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCATTERSERIES");
     PHB_ITEM psize = hb_itemPutND( NULL, size );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );

@@ -29,7 +29,7 @@ void QCategoryAxisSlots::categoriesChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCATEGORYAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORYAXIS");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -47,7 +47,7 @@ void QCategoryAxisSlots::labelsPositionChanged( QCategoryAxis::AxisLabelsPositio
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCATEGORYAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORYAXIS");
     PHB_ITEM pposition = hb_itemPutNI( NULL, (int) position );
 
     hb_vmEvalBlockV( cb, 2, psender, pposition );

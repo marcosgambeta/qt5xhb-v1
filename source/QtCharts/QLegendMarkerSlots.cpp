@@ -29,7 +29,7 @@ void QLegendMarkerSlots::brushChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGENDMARKER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGENDMARKER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -47,7 +47,7 @@ void QLegendMarkerSlots::clicked()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGENDMARKER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGENDMARKER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -65,7 +65,7 @@ void QLegendMarkerSlots::fontChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGENDMARKER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGENDMARKER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -83,7 +83,7 @@ void QLegendMarkerSlots::hovered( bool status )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGENDMARKER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGENDMARKER");
     PHB_ITEM pstatus = hb_itemPutL( NULL, status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -103,7 +103,7 @@ void QLegendMarkerSlots::labelBrushChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGENDMARKER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGENDMARKER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -121,7 +121,7 @@ void QLegendMarkerSlots::labelChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGENDMARKER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGENDMARKER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -139,7 +139,7 @@ void QLegendMarkerSlots::penChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGENDMARKER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGENDMARKER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -157,7 +157,7 @@ void QLegendMarkerSlots::shapeChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGENDMARKER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGENDMARKER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -175,7 +175,7 @@ void QLegendMarkerSlots::visibleChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGENDMARKER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGENDMARKER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

@@ -29,7 +29,7 @@ void QValueAxisSlots::labelFormatChanged( const QString & format )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pformat = hb_itemPutC( NULL, QSTRINGTOSTRING(format) );
 
     hb_vmEvalBlockV( cb, 2, psender, pformat );
@@ -49,7 +49,7 @@ void QValueAxisSlots::maxChanged( qreal max )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pmax = hb_itemPutND( NULL, max );
 
     hb_vmEvalBlockV( cb, 2, psender, pmax );
@@ -69,7 +69,7 @@ void QValueAxisSlots::minChanged( qreal min )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
 
     hb_vmEvalBlockV( cb, 2, psender, pmin );
@@ -89,7 +89,7 @@ void QValueAxisSlots::minorTickCountChanged( int tickCount )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM ptickCount = hb_itemPutNI( NULL, tickCount );
 
     hb_vmEvalBlockV( cb, 2, psender, ptickCount );
@@ -109,7 +109,7 @@ void QValueAxisSlots::rangeChanged( qreal min, qreal max )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM pmin = hb_itemPutND( NULL, min );
     PHB_ITEM pmax = hb_itemPutND( NULL, max );
 
@@ -131,7 +131,7 @@ void QValueAxisSlots::tickCountChanged( int tickCount )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QVALUEAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QVALUEAXIS");
     PHB_ITEM ptickCount = hb_itemPutNI( NULL, tickCount );
 
     hb_vmEvalBlockV( cb, 2, psender, ptickCount );

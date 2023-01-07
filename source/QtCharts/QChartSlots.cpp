@@ -29,7 +29,7 @@ void QChartSlots::plotAreaChanged( const QRectF & plotArea )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCHART" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCHART");
     PHB_ITEM pplotArea = Qt5xHb::Signals_return_object( (void *) &plotArea, "QRECTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, pplotArea );

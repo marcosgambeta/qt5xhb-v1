@@ -29,7 +29,7 @@ void QLegendSlots::backgroundVisibleChanged( bool visible )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGEND");
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
 
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
@@ -49,7 +49,7 @@ void QLegendSlots::borderColorChanged( QColor color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGEND");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -69,7 +69,7 @@ void QLegendSlots::colorChanged( QColor color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGEND");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -89,7 +89,7 @@ void QLegendSlots::fontChanged( QFont font )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGEND");
     PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
@@ -109,7 +109,7 @@ void QLegendSlots::labelColorChanged( QColor color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGEND");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -129,7 +129,7 @@ void QLegendSlots::markerShapeChanged( QLegend::MarkerShape shape )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGEND");
     PHB_ITEM pshape = hb_itemPutNI( NULL, (int) shape );
 
     hb_vmEvalBlockV( cb, 2, psender, pshape );
@@ -149,7 +149,7 @@ void QLegendSlots::reverseMarkersChanged( bool reverseMarkers )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGEND");
     PHB_ITEM preverseMarkers = hb_itemPutL( NULL, reverseMarkers );
 
     hb_vmEvalBlockV( cb, 2, psender, preverseMarkers );
@@ -169,7 +169,7 @@ void QLegendSlots::showToolTipsChanged( bool showToolTips )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QLEGEND" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QLEGEND");
     PHB_ITEM pshowToolTips = hb_itemPutL( NULL, showToolTips );
 
     hb_vmEvalBlockV( cb, 2, psender, pshowToolTips );

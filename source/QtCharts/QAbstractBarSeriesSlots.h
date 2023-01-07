@@ -19,6 +19,7 @@
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5,7,0))
 #include <QtCharts/QAbstractBarSeries>
+#include <QtCharts/QBarSet>
 #endif
 
 #include "qt5xhb_common.h"
