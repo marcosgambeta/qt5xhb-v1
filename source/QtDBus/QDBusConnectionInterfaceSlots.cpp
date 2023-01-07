@@ -28,7 +28,7 @@ void QDBusConnectionInterfaceSlots::serviceRegistered( const QString & service )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
 
     hb_vmEvalBlockV( cb, 2, psender, pservice );
@@ -46,7 +46,7 @@ void QDBusConnectionInterfaceSlots::serviceUnregistered( const QString & service
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM pservice = hb_itemPutC( NULL, QSTRINGTOSTRING(service) );
 
     hb_vmEvalBlockV( cb, 2, psender, pservice );
@@ -64,7 +64,7 @@ void QDBusConnectionInterfaceSlots::serviceOwnerChanged( const QString & name, c
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM poldOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(oldOwner) );
     PHB_ITEM pnewOwner = hb_itemPutC( NULL, QSTRINGTOSTRING(newOwner) );
@@ -86,7 +86,7 @@ void QDBusConnectionInterfaceSlots::callWithCallbackFailed( const QDBusError & e
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDBUSCONNECTIONINTERFACE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSCONNECTIONINTERFACE");
     PHB_ITEM perror = Qt5xHb::Signals_return_object( (void *) &error, "QDBUSERROR" );
     PHB_ITEM pcall = Qt5xHb::Signals_return_object( (void *) &call, "QDBUSMESSAGE" );
 

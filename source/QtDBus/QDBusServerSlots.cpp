@@ -28,7 +28,7 @@ void QDBusServerSlots::newConnection( const QDBusConnection & connection )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QDBUSSERVER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QDBUSSERVER");
     PHB_ITEM pconnection = Qt5xHb::Signals_return_object( (void *) &connection, "QDBUSCONNECTION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pconnection );
