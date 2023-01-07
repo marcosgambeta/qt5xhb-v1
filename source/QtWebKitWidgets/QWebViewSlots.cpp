@@ -28,7 +28,7 @@ void QWebViewSlots::iconChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBVIEW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QWebViewSlots::linkClicked( const QUrl & url )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBVIEW");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
@@ -62,7 +62,7 @@ void QWebViewSlots::loadFinished( bool ok )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBVIEW");
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
 
     hb_vmEvalBlockV( cb, 2, psender, pok );
@@ -80,7 +80,7 @@ void QWebViewSlots::loadProgress( int progress )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBVIEW");
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
 
     hb_vmEvalBlockV( cb, 2, psender, pprogress );
@@ -98,7 +98,7 @@ void QWebViewSlots::loadStarted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBVIEW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -114,7 +114,7 @@ void QWebViewSlots::selectionChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBVIEW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -130,7 +130,7 @@ void QWebViewSlots::statusBarMessage( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBVIEW");
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -148,7 +148,7 @@ void QWebViewSlots::titleChanged( const QString & title )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBVIEW");
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptitle );
@@ -166,7 +166,7 @@ void QWebViewSlots::urlChanged( const QUrl & url )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBVIEW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBVIEW");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
