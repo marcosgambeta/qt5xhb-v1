@@ -29,8 +29,8 @@ void QPlaceManagerSlots::finished( QPlaceReply * reply )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
-    PHB_ITEM preply = Qt5xHb::Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
+    PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QPLACEREPLY");
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
 
@@ -49,8 +49,8 @@ void QPlaceManagerSlots::error( QPlaceReply * reply, QPlaceReply::Error error, c
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
-    PHB_ITEM preply = Qt5xHb::Signals_return_qobject( (QObject *) reply, "QPLACEREPLY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
+    PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QPLACEREPLY");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
 
@@ -73,7 +73,7 @@ void QPlaceManagerSlots::placeAdded( const QString & placeId )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
 
     hb_vmEvalBlockV( cb, 2, psender, pplaceId );
@@ -93,7 +93,7 @@ void QPlaceManagerSlots::placeUpdated( const QString & placeId )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
 
     hb_vmEvalBlockV( cb, 2, psender, pplaceId );
@@ -113,7 +113,7 @@ void QPlaceManagerSlots::placeRemoved( const QString & placeId )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pplaceId = hb_itemPutC( NULL, QSTRINGTOSTRING(placeId) );
 
     hb_vmEvalBlockV( cb, 2, psender, pplaceId );
@@ -133,7 +133,7 @@ void QPlaceManagerSlots::categoryAdded( const QPlaceCategory & category, const Q
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pcategory = Qt5xHb::Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
 
@@ -155,7 +155,7 @@ void QPlaceManagerSlots::categoryUpdated( const QPlaceCategory & category, const
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pcategory = Qt5xHb::Signals_return_object( (void *) &category, "QPLACECATEGORY" );
     PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
 
@@ -177,7 +177,7 @@ void QPlaceManagerSlots::categoryRemoved( const QString & categoryId, const QStr
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
     PHB_ITEM pcategoryId = hb_itemPutC( NULL, QSTRINGTOSTRING(categoryId) );
     PHB_ITEM pparentId = hb_itemPutC( NULL, QSTRINGTOSTRING(parentId) );
 
@@ -199,7 +199,7 @@ void QPlaceManagerSlots::dataChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QPLACEMANAGER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QPLACEMANAGER");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

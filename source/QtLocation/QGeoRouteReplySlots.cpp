@@ -29,7 +29,7 @@ void QGeoRouteReplySlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOROUTEREPLY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTEREPLY");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -47,7 +47,7 @@ void QGeoRouteReplySlots::error( QGeoRouteReply::Error error, const QString & er
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGEOROUTEREPLY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGEOROUTEREPLY");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
     PHB_ITEM perrorString = hb_itemPutC( NULL, QSTRINGTOSTRING(errorString) );
 
