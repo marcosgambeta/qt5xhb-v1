@@ -28,7 +28,7 @@ void QQmlEngineSlots::quit()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQMLENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLENGINE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

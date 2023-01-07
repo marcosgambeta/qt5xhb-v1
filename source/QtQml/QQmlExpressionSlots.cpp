@@ -28,7 +28,7 @@ void QQmlExpressionSlots::valueChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQMLEXPRESSION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQMLEXPRESSION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
