@@ -28,7 +28,7 @@ void QQuickWindowSlots::afterRendering()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QQuickWindowSlots::beforeRendering()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -60,7 +60,7 @@ void QQuickWindowSlots::beforeSynchronizing()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -76,7 +76,7 @@ void QQuickWindowSlots::colorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -94,7 +94,7 @@ void QQuickWindowSlots::frameSwapped()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -110,7 +110,7 @@ void QQuickWindowSlots::sceneGraphInitialized()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -126,7 +126,7 @@ void QQuickWindowSlots::sceneGraphInvalidated()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKWINDOW");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

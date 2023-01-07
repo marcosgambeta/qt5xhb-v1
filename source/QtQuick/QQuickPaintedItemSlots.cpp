@@ -28,7 +28,7 @@ void QQuickPaintedItemSlots::contentsScaleChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QQuickPaintedItemSlots::contentsSizeChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -60,7 +60,7 @@ void QQuickPaintedItemSlots::fillColorChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -76,7 +76,7 @@ void QQuickPaintedItemSlots::renderTargetChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QQUICKPAINTEDITEM" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QQUICKPAINTEDITEM");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
