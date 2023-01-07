@@ -29,9 +29,9 @@ void QWebChannelAbstractTransportSlots::messageReceived( const QJsonObject & mes
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWEBCHANNELABSTRACTTRANSPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWEBCHANNELABSTRACTTRANSPORT");
     PHB_ITEM pmessage = Qt5xHb::Signals_return_object( (void *) &message, "QJSONOBJECT" );
-    PHB_ITEM ptransport = Qt5xHb::Signals_return_qobject( (QObject *) transport, "QWEBCHANNELABSTRACTTRANSPORT" );
+    PHB_ITEM ptransport = Qt5xHb::Signals_return_qobject(transport, "QWEBCHANNELABSTRACTTRANSPORT");
 
     hb_vmEvalBlockV( cb, 3, psender, pmessage, ptransport );
 
