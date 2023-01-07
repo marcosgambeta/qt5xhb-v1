@@ -29,7 +29,7 @@ void QSerialPortSlots::baudRateChanged( qint32 baudRate, QSerialPort::Directions
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pbaudRate = hb_itemPutNI( NULL, baudRate );
     PHB_ITEM pdir = hb_itemPutNI( NULL, (int) dir );
 
@@ -51,7 +51,7 @@ void QSerialPortSlots::dataBitsChanged( QSerialPort::DataBits dataBits )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pdataBits = hb_itemPutNI( NULL, (int) dataBits );
 
     hb_vmEvalBlockV( cb, 2, psender, pdataBits );
@@ -71,7 +71,7 @@ void QSerialPortSlots::parityChanged( QSerialPort::Parity parity )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pparity = hb_itemPutNI( NULL, (int) parity );
 
     hb_vmEvalBlockV( cb, 2, psender, pparity );
@@ -91,7 +91,7 @@ void QSerialPortSlots::stopBitsChanged( QSerialPort::StopBits stopBits )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pstopBits = hb_itemPutNI( NULL, (int) stopBits );
 
     hb_vmEvalBlockV( cb, 2, psender, pstopBits );
@@ -111,7 +111,7 @@ void QSerialPortSlots::flowControlChanged( QSerialPort::FlowControl flow )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pflow = hb_itemPutNI( NULL, (int) flow );
 
     hb_vmEvalBlockV( cb, 2, psender, pflow );
@@ -131,7 +131,7 @@ void QSerialPortSlots::dataErrorPolicyChanged( QSerialPort::DataErrorPolicy poli
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM ppolicy = hb_itemPutNI( NULL, (int) policy );
 
     hb_vmEvalBlockV( cb, 2, psender, ppolicy );
@@ -151,7 +151,7 @@ void QSerialPortSlots::dataTerminalReadyChanged( bool set )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pset = hb_itemPutL( NULL, set );
 
     hb_vmEvalBlockV( cb, 2, psender, pset );
@@ -171,7 +171,7 @@ void QSerialPortSlots::requestToSendChanged( bool set )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pset = hb_itemPutL( NULL, set );
 
     hb_vmEvalBlockV( cb, 2, psender, pset );
@@ -191,7 +191,7 @@ void QSerialPortSlots::error( QSerialPort::SerialPortError serialPortError )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM pserialPortError = hb_itemPutNI( NULL, (int) serialPortError );
 
     hb_vmEvalBlockV( cb, 2, psender, pserialPortError );
@@ -211,7 +211,7 @@ void QSerialPortSlots::settingsRestoredOnCloseChanged( bool restore )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSERIALPORT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSERIALPORT");
     PHB_ITEM prestore = hb_itemPutL( NULL, restore );
 
     hb_vmEvalBlockV( cb, 2, psender, prestore );
