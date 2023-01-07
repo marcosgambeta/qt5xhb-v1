@@ -28,7 +28,7 @@ void Q3DBarsSlots::barSpacingChanged( const QSizeF & spacing )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
     PHB_ITEM pspacing = Qt5xHb::Signals_return_object( (void *) &spacing, "QSIZEF" );
 
     hb_vmEvalBlockV( cb, 2, psender, pspacing );
@@ -46,7 +46,7 @@ void Q3DBarsSlots::barSpacingRelativeChanged( bool relative )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
     PHB_ITEM prelative = hb_itemPutL( NULL, relative );
 
     hb_vmEvalBlockV( cb, 2, psender, prelative );
@@ -64,7 +64,7 @@ void Q3DBarsSlots::barThicknessChanged( float thicknessRatio )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
     PHB_ITEM pthicknessRatio = hb_itemPutND( NULL, thicknessRatio );
 
     hb_vmEvalBlockV( cb, 2, psender, pthicknessRatio );
@@ -82,8 +82,8 @@ void Q3DBarsSlots::columnAxisChanged( QCategory3DAxis * axis )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
-    PHB_ITEM paxis = Qt5xHb::Signals_return_qobject( (QObject *) axis, "QCATEGORY3DAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
+    PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QCATEGORY3DAXIS");
 
     hb_vmEvalBlockV( cb, 2, psender, paxis );
 
@@ -100,7 +100,7 @@ void Q3DBarsSlots::floorLevelChanged( float level )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
     PHB_ITEM plevel = hb_itemPutND( NULL, level );
 
     hb_vmEvalBlockV( cb, 2, psender, plevel );
@@ -118,7 +118,7 @@ void Q3DBarsSlots::multiSeriesUniformChanged( bool uniform )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
     PHB_ITEM puniform = hb_itemPutL( NULL, uniform );
 
     hb_vmEvalBlockV( cb, 2, psender, puniform );
@@ -136,8 +136,8 @@ void Q3DBarsSlots::primarySeriesChanged( QBar3DSeries * series )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
-    PHB_ITEM pseries = Qt5xHb::Signals_return_qobject( (QObject *) series, "QBAR3DSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
+    PHB_ITEM pseries = Qt5xHb::Signals_return_qobject(series, "QBAR3DSERIES");
 
     hb_vmEvalBlockV( cb, 2, psender, pseries );
 
@@ -154,8 +154,8 @@ void Q3DBarsSlots::rowAxisChanged( QCategory3DAxis * axis )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
-    PHB_ITEM paxis = Qt5xHb::Signals_return_qobject( (QObject *) axis, "QCATEGORY3DAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
+    PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QCATEGORY3DAXIS");
 
     hb_vmEvalBlockV( cb, 2, psender, paxis );
 
@@ -172,8 +172,8 @@ void Q3DBarsSlots::selectedSeriesChanged( QBar3DSeries * series )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
-    PHB_ITEM pseries = Qt5xHb::Signals_return_qobject( (QObject *) series, "QBAR3DSERIES" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
+    PHB_ITEM pseries = Qt5xHb::Signals_return_qobject(series, "QBAR3DSERIES");
 
     hb_vmEvalBlockV( cb, 2, psender, pseries );
 
@@ -190,8 +190,8 @@ void Q3DBarsSlots::valueAxisChanged( QValue3DAxis * axis )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DBARS" );
-    PHB_ITEM paxis = Qt5xHb::Signals_return_qobject( (QObject *) axis, "QVALUE3DAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DBARS");
+    PHB_ITEM paxis = Qt5xHb::Signals_return_qobject(axis, "QVALUE3DAXIS");
 
     hb_vmEvalBlockV( cb, 2, psender, paxis );
 

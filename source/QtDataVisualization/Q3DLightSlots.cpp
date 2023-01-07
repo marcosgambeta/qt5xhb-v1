@@ -29,7 +29,7 @@ void Q3DLightSlots::autoPositionChanged( bool autoPosition )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DLIGHT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DLIGHT");
     PHB_ITEM pautoPosition = hb_itemPutL( NULL, autoPosition );
 
     hb_vmEvalBlockV( cb, 2, psender, pautoPosition );

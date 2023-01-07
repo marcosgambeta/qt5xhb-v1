@@ -16,6 +16,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
+#include <QtDataVisualization/QScatter3DSeries>
 
 #include <QtDataVisualization/QScatterDataProxy>
 

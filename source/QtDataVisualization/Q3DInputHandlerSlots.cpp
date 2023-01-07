@@ -28,7 +28,7 @@ void Q3DInputHandlerSlots::rotationEnabledChanged( bool enable )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DINPUTHANDLER");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
 
     hb_vmEvalBlockV( cb, 2, psender, penable );
@@ -46,7 +46,7 @@ void Q3DInputHandlerSlots::selectionEnabledChanged( bool enable )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DINPUTHANDLER");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
 
     hb_vmEvalBlockV( cb, 2, psender, penable );
@@ -64,7 +64,7 @@ void Q3DInputHandlerSlots::zoomAtTargetEnabledChanged( bool enable )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DINPUTHANDLER");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
 
     hb_vmEvalBlockV( cb, 2, psender, penable );
@@ -82,7 +82,7 @@ void Q3DInputHandlerSlots::zoomEnabledChanged( bool enable )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DINPUTHANDLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DINPUTHANDLER");
     PHB_ITEM penable = hb_itemPutL( NULL, enable );
 
     hb_vmEvalBlockV( cb, 2, psender, penable );

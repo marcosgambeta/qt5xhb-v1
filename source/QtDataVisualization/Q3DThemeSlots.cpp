@@ -28,7 +28,7 @@ void Q3DThemeSlots::ambientLightStrengthChanged( float strength )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
 
     hb_vmEvalBlockV( cb, 2, psender, pstrength );
@@ -46,7 +46,7 @@ void Q3DThemeSlots::backgroundColorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -64,7 +64,7 @@ void Q3DThemeSlots::backgroundEnabledChanged( bool enabled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -82,7 +82,7 @@ void Q3DThemeSlots::baseColorsChanged( const QList<QColor> & colors )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QCOLOR" );
     PHB_ITEM pcolors = hb_itemArrayNew(0);
     if( pDynSym )
@@ -122,7 +122,7 @@ void Q3DThemeSlots::baseGradientsChanged( const QList<QLinearGradient> & gradien
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_DYNS pDynSym = hb_dynsymFindName( "QLINEARGRADIENT" );
     PHB_ITEM pgradients = hb_itemArrayNew(0);
     if( pDynSym )
@@ -162,7 +162,7 @@ void Q3DThemeSlots::colorStyleChanged( Q3DTheme::ColorStyle style )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pstyle = hb_itemPutNI( NULL, (int) style );
 
     hb_vmEvalBlockV( cb, 2, psender, pstyle );
@@ -180,7 +180,7 @@ void Q3DThemeSlots::fontChanged( const QFont & font )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pfont = Qt5xHb::Signals_return_object( (void *) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
@@ -198,7 +198,7 @@ void Q3DThemeSlots::gridEnabledChanged( bool enabled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -216,7 +216,7 @@ void Q3DThemeSlots::gridLineColorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -234,7 +234,7 @@ void Q3DThemeSlots::highlightLightStrengthChanged( float strength )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
 
     hb_vmEvalBlockV( cb, 2, psender, pstrength );
@@ -252,7 +252,7 @@ void Q3DThemeSlots::labelBackgroundColorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -270,7 +270,7 @@ void Q3DThemeSlots::labelBackgroundEnabledChanged( bool enabled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -288,7 +288,7 @@ void Q3DThemeSlots::labelBorderEnabledChanged( bool enabled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -306,7 +306,7 @@ void Q3DThemeSlots::labelTextColorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -324,7 +324,7 @@ void Q3DThemeSlots::lightColorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -342,7 +342,7 @@ void Q3DThemeSlots::lightStrengthChanged( float strength )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
 
     hb_vmEvalBlockV( cb, 2, psender, pstrength );
@@ -360,7 +360,7 @@ void Q3DThemeSlots::multiHighlightColorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -378,7 +378,7 @@ void Q3DThemeSlots::multiHighlightGradientChanged( const QLinearGradient & gradi
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pgradient = Qt5xHb::Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgradient );
@@ -396,7 +396,7 @@ void Q3DThemeSlots::singleHighlightColorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -414,7 +414,7 @@ void Q3DThemeSlots::singleHighlightGradientChanged( const QLinearGradient & grad
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pgradient = Qt5xHb::Signals_return_object( (void *) &gradient, "QLINEARGRADIENT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgradient );
@@ -432,7 +432,7 @@ void Q3DThemeSlots::typeChanged( Q3DTheme::Theme themeType )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pthemeType = hb_itemPutNI( NULL, (int) themeType );
 
     hb_vmEvalBlockV( cb, 2, psender, pthemeType );
@@ -450,7 +450,7 @@ void Q3DThemeSlots::windowColorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "Q3DTHEME");
     PHB_ITEM pcolor = Qt5xHb::Signals_return_object( (void *) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );

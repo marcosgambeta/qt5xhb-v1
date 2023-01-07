@@ -28,7 +28,7 @@ void QCategory3DAxisSlots::labelsChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QCATEGORY3DAXIS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QCATEGORY3DAXIS");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

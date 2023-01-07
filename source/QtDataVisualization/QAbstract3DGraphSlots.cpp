@@ -28,8 +28,8 @@ void QAbstract3DGraphSlots::activeInputHandlerChanged( QAbstract3DInputHandler *
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
-    PHB_ITEM pinputHandler = Qt5xHb::Signals_return_qobject( (QObject *) inputHandler, "QABSTRACT3DINPUTHANDLER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
+    PHB_ITEM pinputHandler = Qt5xHb::Signals_return_qobject(inputHandler, "QABSTRACT3DINPUTHANDLER");
 
     hb_vmEvalBlockV( cb, 2, psender, pinputHandler );
 
@@ -46,8 +46,8 @@ void QAbstract3DGraphSlots::activeThemeChanged( Q3DTheme * theme )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
-    PHB_ITEM ptheme = Qt5xHb::Signals_return_qobject( (QObject *) theme, "Q3DTHEME" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
+    PHB_ITEM ptheme = Qt5xHb::Signals_return_qobject(theme, "Q3DTHEME");
 
     hb_vmEvalBlockV( cb, 2, psender, ptheme );
 
@@ -64,7 +64,7 @@ void QAbstract3DGraphSlots::aspectRatioChanged( qreal ratio )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pratio = hb_itemPutND( NULL, ratio );
 
     hb_vmEvalBlockV( cb, 2, psender, pratio );
@@ -82,7 +82,7 @@ void QAbstract3DGraphSlots::currentFpsChanged( qreal fps )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pfps = hb_itemPutND( NULL, fps );
 
     hb_vmEvalBlockV( cb, 2, psender, pfps );
@@ -100,7 +100,7 @@ void QAbstract3DGraphSlots::horizontalAspectRatioChanged( qreal ratio )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pratio = hb_itemPutND( NULL, ratio );
 
     hb_vmEvalBlockV( cb, 2, psender, pratio );
@@ -118,7 +118,7 @@ void QAbstract3DGraphSlots::localeChanged( const QLocale & locale )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM plocale = Qt5xHb::Signals_return_object( (void *) &locale, "QLOCALE" );
 
     hb_vmEvalBlockV( cb, 2, psender, plocale );
@@ -136,7 +136,7 @@ void QAbstract3DGraphSlots::marginChanged( qreal margin )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pmargin = hb_itemPutND( NULL, margin );
 
     hb_vmEvalBlockV( cb, 2, psender, pmargin );
@@ -154,7 +154,7 @@ void QAbstract3DGraphSlots::measureFpsChanged( bool enabled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -172,7 +172,7 @@ void QAbstract3DGraphSlots::optimizationHintsChanged( QAbstract3DGraph::Optimiza
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM phints = hb_itemPutNI( NULL, (int) hints );
 
     hb_vmEvalBlockV( cb, 2, psender, phints );
@@ -190,7 +190,7 @@ void QAbstract3DGraphSlots::orthoProjectionChanged( bool enabled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -208,7 +208,7 @@ void QAbstract3DGraphSlots::polarChanged( bool enabled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -226,7 +226,7 @@ void QAbstract3DGraphSlots::queriedGraphPositionChanged( const QVector3D & data 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QVECTOR3D" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdata );
@@ -244,7 +244,7 @@ void QAbstract3DGraphSlots::radialLabelOffsetChanged( float offset )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM poffset = hb_itemPutND( NULL, offset );
 
     hb_vmEvalBlockV( cb, 2, psender, poffset );
@@ -262,7 +262,7 @@ void QAbstract3DGraphSlots::reflectionChanged( bool enabled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -280,7 +280,7 @@ void QAbstract3DGraphSlots::reflectivityChanged( qreal reflectivity )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM preflectivity = hb_itemPutND( NULL, reflectivity );
 
     hb_vmEvalBlockV( cb, 2, psender, preflectivity );
@@ -298,7 +298,7 @@ void QAbstract3DGraphSlots::selectedElementChanged( QAbstract3DGraph::ElementTyp
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM ptype = hb_itemPutNI( NULL, (int) type );
 
     hb_vmEvalBlockV( cb, 2, psender, ptype );
@@ -316,7 +316,7 @@ void QAbstract3DGraphSlots::selectionModeChanged( QAbstract3DGraph::SelectionFla
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
 
     hb_vmEvalBlockV( cb, 2, psender, pmode );
@@ -334,7 +334,7 @@ void QAbstract3DGraphSlots::shadowQualityChanged( QAbstract3DGraph::ShadowQualit
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACT3DGRAPH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACT3DGRAPH");
     PHB_ITEM pquality = hb_itemPutNI( NULL, (int) quality );
 
     hb_vmEvalBlockV( cb, 2, psender, pquality );

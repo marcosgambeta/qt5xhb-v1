@@ -28,8 +28,8 @@ void QItemModelScatterDataProxySlots::itemModelChanged( const QAbstractItemModel
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
-    PHB_ITEM pitemModel = Qt5xHb::Signals_return_qobject( (QObject *) itemModel, "QABSTRACTITEMMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
+    PHB_ITEM pitemModel = Qt5xHb::Signals_return_qobject(const_cast<QAbstractItemModel*>(itemModel), "QABSTRACTITEMMODEL");
 
     hb_vmEvalBlockV( cb, 2, psender, pitemModel );
 
@@ -46,7 +46,7 @@ void QItemModelScatterDataProxySlots::rotationRoleChanged( const QString & role 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
     hb_vmEvalBlockV( cb, 2, psender, prole );
@@ -64,7 +64,7 @@ void QItemModelScatterDataProxySlots::rotationRolePatternChanged( const QRegExp 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
@@ -82,7 +82,7 @@ void QItemModelScatterDataProxySlots::rotationRoleReplaceChanged( const QString 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
     hb_vmEvalBlockV( cb, 2, psender, preplace );
@@ -100,7 +100,7 @@ void QItemModelScatterDataProxySlots::xPosRoleChanged( const QString & role )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
     hb_vmEvalBlockV( cb, 2, psender, prole );
@@ -118,7 +118,7 @@ void QItemModelScatterDataProxySlots::xPosRolePatternChanged( const QRegExp & pa
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
@@ -136,7 +136,7 @@ void QItemModelScatterDataProxySlots::xPosRoleReplaceChanged( const QString & re
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
     hb_vmEvalBlockV( cb, 2, psender, preplace );
@@ -154,7 +154,7 @@ void QItemModelScatterDataProxySlots::yPosRoleChanged( const QString & role )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
     hb_vmEvalBlockV( cb, 2, psender, prole );
@@ -172,7 +172,7 @@ void QItemModelScatterDataProxySlots::yPosRolePatternChanged( const QRegExp & pa
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
@@ -190,7 +190,7 @@ void QItemModelScatterDataProxySlots::yPosRoleReplaceChanged( const QString & re
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
     hb_vmEvalBlockV( cb, 2, psender, preplace );
@@ -208,7 +208,7 @@ void QItemModelScatterDataProxySlots::zPosRoleChanged( const QString & role )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM prole = hb_itemPutC( NULL, QSTRINGTOSTRING(role) );
 
     hb_vmEvalBlockV( cb, 2, psender, prole );
@@ -226,7 +226,7 @@ void QItemModelScatterDataProxySlots::zPosRolePatternChanged( const QRegExp & pa
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM ppattern = Qt5xHb::Signals_return_object( (void *) &pattern, "QREGEXP" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppattern );
@@ -244,7 +244,7 @@ void QItemModelScatterDataProxySlots::zPosRoleReplaceChanged( const QString & re
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QITEMMODELSCATTERDATAPROXY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QITEMMODELSCATTERDATAPROXY");
     PHB_ITEM preplace = hb_itemPutC( NULL, QSTRINGTOSTRING(replace) );
 
     hb_vmEvalBlockV( cb, 2, psender, preplace );
