@@ -29,7 +29,7 @@ void QWinTaskbarProgressSlots::valueChanged( int value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWINTASKBARPROGRESS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -49,7 +49,7 @@ void QWinTaskbarProgressSlots::minimumChanged( int minimum )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWINTASKBARPROGRESS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pminimum = hb_itemPutNI( NULL, minimum );
 
     hb_vmEvalBlockV( cb, 2, psender, pminimum );
@@ -69,7 +69,7 @@ void QWinTaskbarProgressSlots::maximumChanged( int maximum )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWINTASKBARPROGRESS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pmaximum = hb_itemPutNI( NULL, maximum );
 
     hb_vmEvalBlockV( cb, 2, psender, pmaximum );
@@ -89,7 +89,7 @@ void QWinTaskbarProgressSlots::visibilityChanged( bool visible )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWINTASKBARPROGRESS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
 
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
@@ -109,7 +109,7 @@ void QWinTaskbarProgressSlots::pausedChanged( bool paused )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWINTASKBARPROGRESS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM ppaused = hb_itemPutL( NULL, paused );
 
     hb_vmEvalBlockV( cb, 2, psender, ppaused );
@@ -129,7 +129,7 @@ void QWinTaskbarProgressSlots::stoppedChanged( bool stopped )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QWINTASKBARPROGRESS" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QWINTASKBARPROGRESS");
     PHB_ITEM pstopped = hb_itemPutL( NULL, stopped );
 
     hb_vmEvalBlockV( cb, 2, psender, pstopped );
