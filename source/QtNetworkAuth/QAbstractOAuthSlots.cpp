@@ -29,7 +29,7 @@ void QAbstractOAuthSlots::authorizationUrlChanged( const QUrl & url )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
@@ -49,7 +49,7 @@ void QAbstractOAuthSlots::authorizeWithBrowser( const QUrl & url )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM purl = Qt5xHb::Signals_return_object( (void *) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
@@ -69,7 +69,7 @@ void QAbstractOAuthSlots::clientIdentifierChanged( const QString & clientIdentif
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM pclientIdentifier = hb_itemPutC( NULL, QSTRINGTOSTRING(clientIdentifier) );
 
     hb_vmEvalBlockV( cb, 2, psender, pclientIdentifier );
@@ -89,7 +89,7 @@ void QAbstractOAuthSlots::contentTypeChanged( QAbstractOAuth::ContentType conten
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM pcontentType = hb_itemPutNI( NULL, (int) contentType );
 
     hb_vmEvalBlockV( cb, 2, psender, pcontentType );
@@ -109,8 +109,8 @@ void QAbstractOAuthSlots::finished( QNetworkReply * reply )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
-    PHB_ITEM preply = Qt5xHb::Signals_return_qobject( (QObject *) reply, "QNETWORKREPLY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
+    PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QNETWORKREPLY");
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
 
@@ -129,7 +129,7 @@ void QAbstractOAuthSlots::granted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -147,7 +147,7 @@ void QAbstractOAuthSlots::replyDataReceived( const QByteArray & data )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM pdata = Qt5xHb::Signals_return_object( (void *) &data, "QBYTEARRAY" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdata );
@@ -167,7 +167,7 @@ void QAbstractOAuthSlots::statusChanged( QAbstractOAuth::Status status )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -187,7 +187,7 @@ void QAbstractOAuthSlots::tokenChanged( const QString & token )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH");
     PHB_ITEM ptoken = hb_itemPutC( NULL, QSTRINGTOSTRING(token) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptoken );

@@ -29,7 +29,7 @@ void QAbstractOAuth2Slots::clientIdentifierSharedKeyChanged( const QString & cli
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH2" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM pclientIdentifierSharedKey = hb_itemPutC( NULL, QSTRINGTOSTRING(clientIdentifierSharedKey) );
 
     hb_vmEvalBlockV( cb, 2, psender, pclientIdentifierSharedKey );
@@ -49,7 +49,7 @@ void QAbstractOAuth2Slots::error( const QString & error, const QString & errorDe
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH2" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM perror = hb_itemPutC( NULL, QSTRINGTOSTRING(error) );
     PHB_ITEM perrorDescription = hb_itemPutC( NULL, QSTRINGTOSTRING(errorDescription) );
     PHB_ITEM puri = Qt5xHb::Signals_return_object( (void *) &uri, "QURL" );
@@ -73,7 +73,7 @@ void QAbstractOAuth2Slots::expirationAtChanged( const QDateTime & expiration )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH2" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM pexpiration = Qt5xHb::Signals_return_object( (void *) &expiration, "QDATETIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pexpiration );
@@ -93,7 +93,7 @@ void QAbstractOAuth2Slots::responseTypeChanged( const QString & responseType )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH2" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM presponseType = hb_itemPutC( NULL, QSTRINGTOSTRING(responseType) );
 
     hb_vmEvalBlockV( cb, 2, psender, presponseType );
@@ -113,7 +113,7 @@ void QAbstractOAuth2Slots::scopeChanged( const QString & scope )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH2" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM pscope = hb_itemPutC( NULL, QSTRINGTOSTRING(scope) );
 
     hb_vmEvalBlockV( cb, 2, psender, pscope );
@@ -133,7 +133,7 @@ void QAbstractOAuth2Slots::stateChanged( const QString & state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH2" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM pstate = hb_itemPutC( NULL, QSTRINGTOSTRING(state) );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -153,7 +153,7 @@ void QAbstractOAuth2Slots::userAgentChanged( const QString & userAgent )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTOAUTH2" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QABSTRACTOAUTH2");
     PHB_ITEM puserAgent = hb_itemPutC( NULL, QSTRINGTOSTRING(userAgent) );
 
     hb_vmEvalBlockV( cb, 2, psender, puserAgent );
