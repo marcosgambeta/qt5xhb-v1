@@ -28,8 +28,8 @@ void QGuiApplicationSlots::focusObjectChanged( QObject * focusObject )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
-    PHB_ITEM pfocusObject = Qt5xHb::Signals_return_qobject( (QObject *) focusObject, "QOBJECT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
+    PHB_ITEM pfocusObject = Qt5xHb::Signals_return_qobject(focusObject, "QOBJECT");
 
     hb_vmEvalBlockV( cb, 2, psender, pfocusObject );
 
@@ -46,8 +46,8 @@ void QGuiApplicationSlots::focusWindowChanged( QWindow * focusWindow )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
-    PHB_ITEM pfocusWindow = Qt5xHb::Signals_return_qobject( (QObject *) focusWindow, "QWINDOW" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
+    PHB_ITEM pfocusWindow = Qt5xHb::Signals_return_qobject(focusWindow, "QWINDOW");
 
     hb_vmEvalBlockV( cb, 2, psender, pfocusWindow );
 
@@ -64,7 +64,7 @@ void QGuiApplicationSlots::fontDatabaseChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -80,7 +80,7 @@ void QGuiApplicationSlots::lastWindowClosed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -96,8 +96,8 @@ void QGuiApplicationSlots::screenAdded( QScreen * screen )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QGUIAPPLICATION" );
-    PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject( (QObject *) screen, "QSCREEN" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QGUIAPPLICATION");
+    PHB_ITEM pscreen = Qt5xHb::Signals_return_qobject(screen, "QSCREEN");
 
     hb_vmEvalBlockV( cb, 2, psender, pscreen );
 

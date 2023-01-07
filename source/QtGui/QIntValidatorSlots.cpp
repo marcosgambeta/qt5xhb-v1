@@ -28,7 +28,7 @@ void QIntValidatorSlots::changed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QINTVALIDATOR" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QINTVALIDATOR");
 
     hb_vmEvalBlockV( cb, 1, psender );
 

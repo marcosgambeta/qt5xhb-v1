@@ -16,6 +16,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 #include <QtCore/QString>
+#include <QtGui/QScreen>
 
 #include <QtGui/QOffscreenSurface>
 

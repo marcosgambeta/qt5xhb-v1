@@ -28,7 +28,7 @@ void QMovieSlots::error( QImageReader::ImageReaderError error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMOVIE");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -46,7 +46,7 @@ void QMovieSlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMOVIE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -62,7 +62,7 @@ void QMovieSlots::frameChanged( int frameNumber )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMOVIE");
     PHB_ITEM pframeNumber = hb_itemPutNI( NULL, frameNumber );
 
     hb_vmEvalBlockV( cb, 2, psender, pframeNumber );
@@ -80,7 +80,7 @@ void QMovieSlots::resized( const QSize & size )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMOVIE");
     PHB_ITEM psize = Qt5xHb::Signals_return_object( (void *) &size, "QSIZE" );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );
@@ -98,7 +98,7 @@ void QMovieSlots::started()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMOVIE");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -114,7 +114,7 @@ void QMovieSlots::stateChanged( QMovie::MovieState state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMOVIE");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -132,7 +132,7 @@ void QMovieSlots::updated( const QRect & rect )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QMOVIE");
     PHB_ITEM prect = Qt5xHb::Signals_return_object( (void *) &rect, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );

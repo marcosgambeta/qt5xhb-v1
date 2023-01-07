@@ -28,7 +28,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSTANDARDITEMMODEL" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSTANDARDITEMMODEL");
     PHB_ITEM pitem = Qt5xHb::Signals_return_object( (void *) item, "QSTANDARDITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );

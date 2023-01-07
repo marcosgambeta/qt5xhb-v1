@@ -28,7 +28,7 @@ void QOpenGLContextSlots::aboutToBeDestroyed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QOPENGLCONTEXT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QOPENGLCONTEXT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
