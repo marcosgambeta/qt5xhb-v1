@@ -29,8 +29,8 @@ void QBluetoothTransferManagerSlots::finished( QBluetoothTransferReply * reply )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHTRANSFERMANAGER" );
-    PHB_ITEM preply = Qt5xHb::Signals_return_qobject( (QObject *) reply, "QBLUETOOTHTRANSFERREPLY" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHTRANSFERMANAGER");
+    PHB_ITEM preply = Qt5xHb::Signals_return_qobject(reply, "QBLUETOOTHTRANSFERREPLY");
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
 

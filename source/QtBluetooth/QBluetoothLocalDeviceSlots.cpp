@@ -29,7 +29,7 @@ void QBluetoothLocalDeviceSlots::hostModeStateChanged( QBluetoothLocalDevice::Ho
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHLOCALDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -49,7 +49,7 @@ void QBluetoothLocalDeviceSlots::pairingFinished( const QBluetoothAddress & addr
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHLOCALDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM paddress = Qt5xHb::Signals_return_object( (void *) &address, "QBLUETOOTHADDRESS" );
     PHB_ITEM ppairing = hb_itemPutNI( NULL, (int) pairing );
 
@@ -71,7 +71,7 @@ void QBluetoothLocalDeviceSlots::pairingDisplayPinCode( const QBluetoothAddress 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHLOCALDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM paddress = Qt5xHb::Signals_return_object( (void *) &address, "QBLUETOOTHADDRESS" );
     PHB_ITEM ppin = hb_itemPutC( NULL, (const char *) pin.toLatin1().data() );
 
@@ -93,7 +93,7 @@ void QBluetoothLocalDeviceSlots::pairingDisplayConfirmation( const QBluetoothAdd
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHLOCALDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM paddress = Qt5xHb::Signals_return_object( (void *) &address, "QBLUETOOTHADDRESS" );
     PHB_ITEM ppin = hb_itemPutC( NULL, (const char *) pin.toLatin1().data() );
 
@@ -115,7 +115,7 @@ void QBluetoothLocalDeviceSlots::error( QBluetoothLocalDevice::Error error )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHLOCALDEVICE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHLOCALDEVICE");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );

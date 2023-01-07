@@ -29,7 +29,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::deviceDiscovered( const QBluetoothDevi
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHDEVICEDISCOVERYAGENT");
     PHB_ITEM pinfo = Qt5xHb::Signals_return_object( (void *) &info, "QBLUETOOTHDEVICEINFO" );
 
     hb_vmEvalBlockV( cb, 2, psender, pinfo );
@@ -49,7 +49,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHDEVICEDISCOVERYAGENT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -67,7 +67,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::error( QBluetoothDeviceDiscoveryAgent:
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHDEVICEDISCOVERYAGENT");
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -87,7 +87,7 @@ void QBluetoothDeviceDiscoveryAgentSlots::canceled()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QBLUETOOTHDEVICEDISCOVERYAGENT" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QBLUETOOTHDEVICEDISCOVERYAGENT");
 
     hb_vmEvalBlockV( cb, 1, psender );
 
