@@ -28,7 +28,7 @@ void QSqlDriverSlots::notification( const QString & name )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSQLDRIVER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSQLDRIVER");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
@@ -46,7 +46,7 @@ void QSqlDriverSlots::notification( const QString & name, QSqlDriver::Notificati
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSQLDRIVER" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSQLDRIVER");
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
     PHB_ITEM psource = hb_itemPutNI( NULL, (int) source );
     PHB_ITEM ppayload = Qt5xHb::Signals_return_object( (void *) &payload, "QVARIANT" );
