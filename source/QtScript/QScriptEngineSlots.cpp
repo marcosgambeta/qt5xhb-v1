@@ -28,7 +28,7 @@ void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt5xHb::Signals_return_qobject( (QObject *) object, "QSCRIPTENGINE" );
+    PHB_ITEM psender = Qt5xHb::Signals_return_qobject(object, "QSCRIPTENGINE");
     PHB_ITEM pexception = Qt5xHb::Signals_return_object( (void *) &exception, "QSCRIPTVALUE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pexception );
